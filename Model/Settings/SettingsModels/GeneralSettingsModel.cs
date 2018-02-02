@@ -40,6 +40,8 @@ namespace Model.Settings
 
         public bool IsAPIEnabled { get; set; }
 
+        public bool IsOpponentReportCacheSaved { get; set; }
+
         public GeneralSettingsModel()
         {
             SetDefaults();

@@ -21,5 +21,11 @@ namespace Model.Reports
         IEnumerable<ReportIndicators> GetReport();
 
         void UpdateReport(Playerstatistic stat);
+
+        bool IsPlayerInReport(int playerId);
+
+        void Flush();
+
+        void Reset();
     }
 }

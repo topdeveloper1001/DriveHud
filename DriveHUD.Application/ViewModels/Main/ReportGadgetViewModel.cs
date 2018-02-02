@@ -13,6 +13,8 @@
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.Views;
 using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.Wpf.Actions;
@@ -32,6 +34,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
@@ -165,7 +168,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void DeleteHands()
         {
-            var handsToDelete = SelectedReportHands?.Select(x => x.GameNumber).ToArray();
+            var handsToDelete = SelectedReportHands?.Select(x => new { x.GameNumber, x.PokerSiteId }).ToArray();
 
             if (handsToDelete == null || handsToDelete.Length == 0)
             {
@@ -195,11 +198,14 @@ namespace DriveHUD.Application.ViewModels
                       {
                           var dataservice = ServiceLocator.Current.GetInstance<IDataService>();
 
-                          foreach (var stat in handsToDelete)
+                          handsToDelete.ForEach(x => dataservice.DeleteHandHistory(x.GameNumber, x.PokerSiteId));
+
+                          SelectedReportHands.ForEach(x =>
                           {
-                              //dataservice.DeletePlayerStatisticFromFile(stat);
-                              //StorageModel.StatisticCollection.Remove(stat);
-                          }
+                              ReportSelectedItemStatisticsCollection.Remove(x);
+                              ReportSelectedItem.ReportHands.Remove(x);
+                              StorageModel.StatisticCollection.RemoveByCondition(s => s.GameNumber == x.GameNumber && s.PokersiteId == x.PokerSiteId);
+                          });
 
                           eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = true });
                       }
@@ -330,6 +336,46 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private async void LoadOpponentReportHands()
+        {
+            var report = ReportSelectedItem as OpponentReportIndicators;
+
+            if (report == null || report.ReportHands.Count >= filterAmountDictionarySelectedItem)
+            {
+                FilterReportSelectedItemStatisticsCollection();
+                return;
+            }
+
+            var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+
+            IsHandGridBusy = true;
+
+            if (!ReferenceEquals(report.ReportHands, ReportSelectedItemStatisticsCollection))
+            {
+                ReportSelectedItemStatisticsCollection?.Clear();
+                GC.Collect();
+            }
+
+            await Task.Run(() =>
+            {
+                try
+                {
+                    var statistic = dataService.GetPlayerStatisticFromFile(report.PlayerId, x => !x.IsTourney)
+                        .OrderByDescending(x => x.Time)
+                        .Take(filterAmountDictionarySelectedItem)
+                        .ToArray();
+
+                    ReportSelectedItemStatisticsCollection = new ObservableCollection<ReportHandViewModel>(statistic.Select(x => new ReportHandViewModel(x)));
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Could not load player hands for opponent report", e);
+                }
+            });
+
+            IsHandGridBusy = false;
+        }
+
         internal void RaiseNotification(string content, string title)
         {
             NotificationRequest.Raise(
@@ -423,11 +469,27 @@ namespace DriveHUD.Application.ViewModels
             }
             set
             {
+                if (ReportSelectedItemStat == EnumReports.OpponentAnalysis)
+                {
+                    var report = reportSelectedItem as OpponentReportIndicators;
+
+                    if (report != null)
+                    {
+                        report.ShrinkReportHands();
+                    }
+                }
+
                 SetProperty(ref reportSelectedItem, value);
 
                 if (reportSelectedItem != null)
                 {
                     ReportSelectedItemStatisticsCollection = reportSelectedItem.ReportHands;
+
+                    if (ReportSelectedItemStat == EnumReports.OpponentAnalysis)
+                    {
+                        LoadOpponentReportHands();
+                        return;
+                    }
                 }
                 else
                 {
@@ -436,9 +498,9 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private IEnumerable<ReportHandViewModel> reportSelectedItemStatisticsCollection;
+        private ObservableCollection<ReportHandViewModel> reportSelectedItemStatisticsCollection;
 
-        public IEnumerable<ReportHandViewModel> ReportSelectedItemStatisticsCollection
+        public ObservableCollection<ReportHandViewModel> ReportSelectedItemStatisticsCollection
         {
             get
             {
@@ -534,6 +596,12 @@ namespace DriveHUD.Application.ViewModels
             {
                 SetProperty(ref filterAmountDictionarySelectedItem, value);
 
+                if (ReportSelectedItemStat == EnumReports.OpponentAnalysis)
+                {
+                    LoadOpponentReportHands();
+                    return;
+                }
+
                 FilterReportSelectedItemStatisticsCollection();
             }
         }
@@ -610,6 +678,20 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 SetProperty(ref isBusy, value);
+            }
+        }
+
+        private bool isHandGridBusy;
+
+        public bool IsHandGridBusy
+        {
+            get
+            {
+                return isHandGridBusy;
+            }
+            set
+            {
+                SetProperty(ref isHandGridBusy, value);
             }
         }
 

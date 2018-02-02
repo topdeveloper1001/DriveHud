@@ -22,11 +22,13 @@ namespace Model.Reports
     {
         public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
         {
-            var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();            
+            var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
 
-            var report = new ObservableCollection<ReportIndicators>(opponentReportService.GetReport());
+            var report = opponentReportService.GetReport();
 
-            return report ?? new ObservableCollection<ReportIndicators>();
+            return report != null ?
+                new ObservableCollection<ReportIndicators>(report) :
+                new ObservableCollection<ReportIndicators>();
         }
     }
 }

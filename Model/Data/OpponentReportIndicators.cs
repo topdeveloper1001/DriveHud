@@ -22,6 +22,8 @@ namespace Model.Data
     [ProtoContract]
     public class OpponentReportIndicators : ReportIndicators
     {
+        private const int handsToStore = 100;
+
         [ProtoMember(1)]
         public int PlayerId { get; set; }
 
@@ -31,19 +33,19 @@ namespace Model.Data
         public override void AddStatistic(Playerstatistic statistic)
         {
             base.AddStatistic(statistic);
-           
+
             var shrinkedStat = new ShrinkedStatistic(statistic);
             shrinkedStatistics.Add(shrinkedStat);
         }
 
-        public void ShrinkReportHands(int number)
+        public void ShrinkReportHands()
         {
-            if (ReportHands == null || number < 1)
+            if (ReportHands == null)
             {
                 return;
-            }
+            }      
 
-            ReportHands = new ObservableCollection<ReportHandViewModel>(ReportHands.OrderByDescending(x => x.Time).Take(number));
+            ReportHands = new ObservableCollection<ReportHandViewModel>(ReportHands.OrderByDescending(x => x.Time).Take(handsToStore));
         }
 
         protected override void AddStatToStatistic(Playerstatistic statistic)

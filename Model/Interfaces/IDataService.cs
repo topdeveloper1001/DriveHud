@@ -25,6 +25,8 @@ namespace Model.Interfaces
 
         IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, short? pokersiteId);
 
+        IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, Func<Playerstatistic, bool> filter);
+
         IList<Playerstatistic> GetPlayerStatisticFromFile(string playerName, short? pokersiteId);
 
         void ActOnPlayerStatisticFromFile(int playerId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);
@@ -84,6 +86,8 @@ namespace Model.Interfaces
         /// </summary>
         /// <param name="statistic">Statistic to delete</param>
         void DeletePlayerStatisticFromFile(Playerstatistic statistic);
+
+        void DeleteHandHistory(long handNumber, int pokerSiteId);
 
         IPlayer GetActivePlayer();
 

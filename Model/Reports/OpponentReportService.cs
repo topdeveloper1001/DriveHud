@@ -17,6 +17,7 @@ using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Interfaces;
+using Model.Settings;
 using ProtoBuf;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,8 @@ namespace Model.Reports
 
         private readonly IDataService dataService;
 
+        private readonly ISettingsService settingsService;
+
         private static readonly object syncLock = new object();
 
         private Dictionary<int, OpponentReportIndicators> opponentsData;
@@ -45,6 +48,7 @@ namespace Model.Reports
         {
             storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
         }
 
         /// <summary>
@@ -67,18 +71,22 @@ namespace Model.Reports
 
                 var playersNetWons = dataService.GetTopPlayersByNetWon(top, selectedPlayers);
 
-                var playersNetWonsToAdd = playersNetWons.Where(x => !opponentsData.ContainsKey(x.PlayerId)).ToArray();
+                var playersNetWonsToUpdate = playersNetWons.Where(x => !opponentsData.ContainsKey(x.PlayerId)).ToArray();
 
-                if (playersNetWonsToAdd.Length > 0)
+                if (playersNetWonsToUpdate.Length > 0)
                 {
                     lock (syncLock)
                     {
-                        playersNetWonsToAdd.ForEach(x => LoadPlayerData(x.PlayerId));
+                        playersNetWonsToUpdate.ForEach(x => LoadPlayerData(x.PlayerId));
                         SaveData();
                     }
                 }
 
-                return opponentsData.Values.ToList();
+                return opponentsData.Values
+                    .Where(x => !selectedPlayers.Contains(x.PlayerId))
+                    .OrderByDescending(x => x.NetWon)
+                    .Take(top)
+                    .ToList();
             }
         }
 
@@ -96,6 +104,62 @@ namespace Model.Reports
             lock (syncLock)
             {
                 opponentsData[stat.PlayerId].AddStatistic(stat);
+                opponentsData[stat.PlayerId].ShrinkReportHands();
+            }
+        }
+
+        /// <summary>
+        /// Checks whenever player is presented in the report
+        /// </summary>
+        /// <param name="playerId">Player id</param>
+        /// <returns>True is player exists, otherwise - false</returns>
+        public bool IsPlayerInReport(int playerId)
+        {
+            return opponentsData != null && opponentsData.ContainsKey(playerId);
+        }
+
+        /// <summary>
+        /// Flush cached data to the file
+        /// </summary>k
+        public void Flush()
+        {
+            if (opponentsData == null || opponentsData.Count == 0)
+            {
+                Reset();
+                return;
+            }
+
+            lock (syncLock)
+            {
+                if (!SaveData())
+                {
+                    return;
+                }
+
+                UpdateCacheStatus(true);
+            }
+        }
+
+        /// <summary>
+        /// Resets cached data
+        /// </summary>
+        public void Reset()
+        {
+            lock (syncLock)
+            {
+                opponentsData?.Clear();
+
+                if (File.Exists(ReportFile))
+                {
+                    try
+                    {
+                        File.Delete(ReportFile);
+                    }
+                    catch (Exception e)
+                    {
+                        LogProvider.Log.Error(this, $"Opponent report could not be delete at '{ReportFile}'", e);
+                    }
+                }
             }
         }
 
@@ -117,27 +181,26 @@ namespace Model.Reports
                     return true;
                 }
 
-                if (!File.Exists(ReportFile))
+                if (File.Exists(ReportFile) && InvalidateCache())
                 {
-                    opponentsData = new Dictionary<int, OpponentReportIndicators>();
-                    return false;
-                }
-
-                try
-                {
-                    using (var fs = new FileStream(ReportFile, FileMode.Open, FileAccess.ReadWrite, FileShare.Read))
+                    try
                     {
-                        var deserializedData = Serializer.Deserialize<List<OpponentReportIndicators>>(fs);
-                        opponentsData = deserializedData.ToDictionary(x => x.PlayerId);
-                        return true;
+                        using (var fs = new FileStream(ReportFile, FileMode.Open, FileAccess.ReadWrite, FileShare.Read))
+                        {
+                            var deserializedData = Serializer.Deserialize<List<OpponentReportIndicators>>(fs);
+                            opponentsData = deserializedData.ToDictionary(x => x.PlayerId);
+                            UpdateCacheStatus(false);
+                            return true;
+                        }
                     }
-                }
-                catch (Exception ex)
-                {
-                    LogProvider.Log.Error(this, $"Opponent report could not be loaded from '{ReportFile}'", ex);
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, $"Opponent report could not be loaded from '{ReportFile}'", ex);
+                    }
                 }
 
                 opponentsData = new Dictionary<int, OpponentReportIndicators>();
+                UpdateCacheStatus(false);
             }
 
             return false;
@@ -146,7 +209,7 @@ namespace Model.Reports
         /// <summary>
         /// Saves data to the opponent report file
         /// </summary>
-        private void SaveData()
+        private bool SaveData()
         {
             using (var pf = new PerformanceMonitor(nameof(SaveData)))
             {
@@ -157,12 +220,15 @@ namespace Model.Reports
                     using (var fs = new FileStream(ReportFile, FileMode.Create, FileAccess.ReadWrite, FileShare.Read))
                     {
                         Serializer.Serialize(fs, opponentsDataToSerialize);
+                        return true;
                     }
                 }
                 catch (Exception e)
                 {
                     LogProvider.Log.Error(this, $"Could not save opponent report to '{ReportFile}'", e);
                 }
+
+                return false;
             }
         }
 
@@ -181,7 +247,35 @@ namespace Model.Reports
 
             dataService.ActOnPlayerStatisticFromFile(playerId, x => !x.IsTourney, x => opponentReportIndicators.AddStatistic(x));
 
-            opponentReportIndicators.ShrinkReportHands(100);
+            opponentReportIndicators.ShrinkReportHands();
+        }
+
+        /// <summary>
+        /// Invalidates cache
+        /// </summary>
+        /// <returns>True if cache is valid, otherwise - false</returns>
+        private bool InvalidateCache()
+        {
+            var settingsModel = settingsService.GetSettings();
+
+            return settingsModel != null && settingsModel.GeneralSettings != null ?
+                settingsModel.GeneralSettings.IsOpponentReportCacheSaved :
+                false;
+        }
+
+        /// <summary>
+        /// Updates cache status in settings
+        /// </summary>
+        /// <param name="isValid">Status</param>
+        private void UpdateCacheStatus(bool isValid)
+        {
+            var settingsModel = settingsService.GetSettings();
+
+            if (settingsModel != null && settingsModel.GeneralSettings != null)
+            {
+                settingsModel.GeneralSettings.IsOpponentReportCacheSaved = isValid;
+                settingsService.SaveSettings(settingsModel);
+            }
         }
     }
 }

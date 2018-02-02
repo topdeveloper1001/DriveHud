@@ -13,11 +13,13 @@
 using DriveHUD.Common;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Model.Interfaces;
+using Model.Reports;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
@@ -78,6 +80,15 @@ namespace Model
             ActOnPlayerStatisticFromFile(playerId,
                 stat => !pokersiteId.HasValue || (stat.PokersiteId == pokersiteId),
                 stat => result.Add(stat));
+
+            return result;
+        }
+
+        public IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, Func<Playerstatistic, bool> filter)
+        {
+            var result = new List<Playerstatistic>();
+
+            ActOnPlayerStatisticFromFile(playerId, filter, stat => result.Add(stat));
 
             return result;
         }
@@ -355,8 +366,9 @@ namespace Model
                      .Add(Restrictions.On<Handhistory>(x => x.Gamenumber).IsIn(gameNumbers.ToList()))
                      .Add(Restrictions.Where<Handhistory>(x => x.PokersiteId == pokersiteId)));
 
-                var list = session.QueryOver<Handhistory>().Where(restriction)
-                        .List();
+                var list = session.QueryOver<Handhistory>()
+                    .Where(restriction)
+                    .List();
 
                 foreach (var history in list)
                 {
@@ -908,9 +920,12 @@ namespace Model
             var files = GetPlayerFiles(statistic.PlayerId);
 
             if (files == null || !files.Any())
+            {
                 return;
+            }
 
             string convertedStatistic = string.Empty;
+
             using (var msTestString = new MemoryStream())
             {
                 Serializer.Serialize(msTestString, statistic);
@@ -929,6 +944,7 @@ namespace Model
                     if (allLines.Any(x => x.Equals(convertedStatistic, StringComparison.Ordinal)))
                     {
                         var newLines = new List<string>(allLines.Count());
+
                         foreach (var line in allLines)
                         {
                             if (!line.Equals(convertedStatistic, StringComparison.Ordinal))
@@ -938,6 +954,7 @@ namespace Model
                         }
 
                         File.WriteAllLines(file, newLines);
+
                         return;
                     }
                 }
@@ -951,6 +968,102 @@ namespace Model
                 rwLock.ExitWriteLock();
             }
 
+        }
+
+        public void DeleteHandHistory(long handNumber, int pokerSiteId)
+        {
+            try
+            {
+                var handHistory = GetGame(handNumber, (short)pokerSiteId);
+
+                if (handHistory == null)
+                {
+                    LogProvider.Log.Warn(this, $"Hand {handNumber} has not been found in db. So it can't be deleted.");
+                    return;
+                }
+
+                var allPlayers = GetPlayersList().Where(x => x.PokerSite == (EnumPokerSites)pokerSiteId);
+
+                var players = (from player in allPlayers
+                               join hhPlayer in handHistory.Players on player.Name equals hhPlayer.PlayerName
+                               select player).ToArray();
+
+                var playerStatisticToDelete = new List<Playerstatistic>();
+
+                var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
+                var opponentReportResetRequired = false;
+
+                players.ForEach(x =>
+                {
+                    if (!opponentReportResetRequired && opponentReportService.IsPlayerInReport(x.PlayerId))
+                    {
+                        opponentReportResetRequired = true;
+                    }
+
+                    ActOnPlayerStatisticFromFile(x.PlayerId, s => s.GameNumber == handNumber && s.PokersiteId == pokerSiteId, s => playerStatisticToDelete.Add(s));
+                });
+
+                playerStatisticToDelete.ForEach(x => DeletePlayerStatisticFromFile(x));
+
+                using (var session = ModelEntities.OpenStatelessSession())
+                {
+                    using (var transaction = session.BeginTransaction())
+                    {
+                        var playerIds = playerStatisticToDelete.Select(x => x.PlayerId).ToArray();
+
+                        // update players summary
+                        if (playerIds.Length > 0)
+                        {
+                            var playersEntities = session.Query<Players>().Where(x => playerIds.Contains(x.PlayerId)).ToArray();
+
+                            playersEntities.ForEach(p =>
+                            {
+                                if (handHistory.GameDescription.IsTournament)
+                                {
+                                    p.Tourneyhands--;
+                                }
+                                else
+                                {
+                                    p.Cashhands--;
+                                }
+
+                                session.Update(p);
+                            });
+
+                            var netWons = session.Query<PlayerNetWon>().Where(x => playerIds.Contains(x.PlayerId)).ToArray();
+
+                            netWons.ForEach(n =>
+                            {
+                                var statistic = playerStatisticToDelete.FirstOrDefault(x => x.PlayerId == n.PlayerId && x.CurrencyId == n.Currency);
+
+                                if (statistic != null)
+                                {
+                                    n.NetWon -= Utils.ConvertToCents(statistic.NetWon);
+                                    session.Update(n);
+                                }
+                            });
+                        }
+
+                        var hh = session.Query<Handhistory>().FirstOrDefault(x => x.Gamenumber == handNumber && x.PokersiteId == pokerSiteId);
+
+                        if (hh != null)
+                        {
+                            session.Delete(hh);
+                        }
+
+                        transaction.Commit();
+                    }
+                }
+
+                if (opponentReportResetRequired)
+                {
+                    opponentReportService.Reset();
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, $"Could not delete hand {handNumber} {(EnumPokerSites)pokerSiteId}", ex);
+            }
         }
 
         public IPlayer GetActivePlayer()
