@@ -2192,41 +2192,41 @@ namespace DriveHUD.Entities
             r.UO_PFR_SB = a.UO_PFR_SB + b.UO_PFR_SB;
             r.UO_PFR_BB = a.UO_PFR_BB + b.UO_PFR_BB;
 
-            r.DidThreeBetInBb += a.DidThreeBetInBb + b.DidThreeBetInBb;
-            r.DidThreeBetInBtn += a.DidThreeBetInBtn + b.DidThreeBetInBtn;
-            r.DidThreeBetInCo += a.DidThreeBetInCo + b.DidThreeBetInCo;
-            r.DidThreeBetInMp += a.DidThreeBetInMp + b.DidThreeBetInMp;
-            r.DidThreeBetInSb += a.DidThreeBetInSb + b.DidThreeBetInSb;
+            r.DidThreeBetInBb = a.DidThreeBetInBb + b.DidThreeBetInBb;
+            r.DidThreeBetInBtn = a.DidThreeBetInBtn + b.DidThreeBetInBtn;
+            r.DidThreeBetInCo = a.DidThreeBetInCo + b.DidThreeBetInCo;
+            r.DidThreeBetInMp = a.DidThreeBetInMp + b.DidThreeBetInMp;
+            r.DidThreeBetInSb = a.DidThreeBetInSb + b.DidThreeBetInSb;
 
             r.DidthreebetBluffInSb = a.DidthreebetBluffInSb + b.DidthreebetBluffInSb;
             r.DidthreebetBluffInBb = a.DidthreebetBluffInBb + b.DidthreebetBluffInBb;
             r.DidthreebetBluffInBlinds = a.DidthreebetBluffInBlinds + b.DidthreebetBluffInBlinds;
 
-            r.DidFourBetInBb += a.DidFourBetInBb + b.DidFourBetInBb;
-            r.DidFourBetInBtn += a.DidFourBetInBtn + b.DidFourBetInBtn;
-            r.DidFourBetInCo += a.DidFourBetInCo + b.DidFourBetInCo;
-            r.DidFourBetInMp += a.DidFourBetInMp + b.DidFourBetInMp;
-            r.DidFourBetInSb += a.DidFourBetInSb + b.DidFourBetInSb;
+            r.DidFourBetInBb = a.DidFourBetInBb + b.DidFourBetInBb;
+            r.DidFourBetInBtn = a.DidFourBetInBtn + b.DidFourBetInBtn;
+            r.DidFourBetInCo = a.DidFourBetInCo + b.DidFourBetInCo;
+            r.DidFourBetInMp = a.DidFourBetInMp + b.DidFourBetInMp;
+            r.DidFourBetInSb = a.DidFourBetInSb + b.DidFourBetInSb;
 
             r.DidfourbetBluff = a.DidfourbetBluff + b.DidfourbetBluff;
             r.DidFourBetBluffInBtn = a.DidFourBetBluffInBtn + b.DidFourBetBluffInBtn;
 
-            r.DidColdCallInBb += a.DidColdCallInBb + b.DidColdCallInBb;
-            r.DidColdCallInBtn += a.DidColdCallInBtn + b.DidColdCallInBtn;
-            r.DidColdCallInCo += a.DidColdCallInCo + b.DidColdCallInCo;
-            r.DidColdCallInMp += a.DidColdCallInMp + b.DidColdCallInMp;
-            r.DidColdCallInSb += a.DidColdCallInSb + b.DidColdCallInSb;
-            r.DidColdCallInEp += a.DidColdCallInEp + b.DidColdCallInEp;
-            r.DidColdCallThreeBet += a.DidColdCallThreeBet + b.DidColdCallThreeBet;
-            r.CouldColdCallThreeBet += a.CouldColdCallThreeBet + b.CouldColdCallThreeBet;
-            r.DidColdCallFourBet += a.DidColdCallFourBet + b.DidColdCallFourBet;
-            r.CouldColdCallFourBet += a.CouldColdCallFourBet + b.CouldColdCallFourBet;
-            r.DidColdCallVsOpenRaiseBtn += a.DidColdCallVsOpenRaiseBtn + b.DidColdCallVsOpenRaiseBtn;
-            r.DidColdCallVsOpenRaiseCo += a.DidColdCallVsOpenRaiseCo + b.DidColdCallVsOpenRaiseCo;
-            r.DidColdCallVsOpenRaiseSb += a.DidColdCallVsOpenRaiseSb + b.DidColdCallVsOpenRaiseSb;
-            r.CouldColdCallVsOpenRaiseBtn += a.CouldColdCallVsOpenRaiseBtn + b.CouldColdCallVsOpenRaiseBtn;
-            r.CouldColdCallVsOpenRaiseCo += a.CouldColdCallVsOpenRaiseCo + b.CouldColdCallVsOpenRaiseCo;
-            r.CouldColdCallVsOpenRaiseSb += a.CouldColdCallVsOpenRaiseSb + b.CouldColdCallVsOpenRaiseSb;
+            r.DidColdCallInBb = a.DidColdCallInBb + b.DidColdCallInBb;
+            r.DidColdCallInBtn = a.DidColdCallInBtn + b.DidColdCallInBtn;
+            r.DidColdCallInCo = a.DidColdCallInCo + b.DidColdCallInCo;
+            r.DidColdCallInMp = a.DidColdCallInMp + b.DidColdCallInMp;
+            r.DidColdCallInSb = a.DidColdCallInSb + b.DidColdCallInSb;
+            r.DidColdCallInEp = a.DidColdCallInEp + b.DidColdCallInEp;
+            r.DidColdCallThreeBet = a.DidColdCallThreeBet + b.DidColdCallThreeBet;
+            r.CouldColdCallThreeBet = a.CouldColdCallThreeBet + b.CouldColdCallThreeBet;
+            r.DidColdCallFourBet = a.DidColdCallFourBet + b.DidColdCallFourBet;
+            r.CouldColdCallFourBet = a.CouldColdCallFourBet + b.CouldColdCallFourBet;
+            r.DidColdCallVsOpenRaiseBtn = a.DidColdCallVsOpenRaiseBtn + b.DidColdCallVsOpenRaiseBtn;
+            r.DidColdCallVsOpenRaiseCo = a.DidColdCallVsOpenRaiseCo + b.DidColdCallVsOpenRaiseCo;
+            r.DidColdCallVsOpenRaiseSb = a.DidColdCallVsOpenRaiseSb + b.DidColdCallVsOpenRaiseSb;
+            r.CouldColdCallVsOpenRaiseBtn = a.CouldColdCallVsOpenRaiseBtn + b.CouldColdCallVsOpenRaiseBtn;
+            r.CouldColdCallVsOpenRaiseCo = a.CouldColdCallVsOpenRaiseCo + b.CouldColdCallVsOpenRaiseCo;
+            r.CouldColdCallVsOpenRaiseSb = a.CouldColdCallVsOpenRaiseSb + b.CouldColdCallVsOpenRaiseSb;
 
             r.FirstRaiser = a.FirstRaiser + b.FirstRaiser;
 

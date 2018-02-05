@@ -121,9 +121,11 @@ namespace DriveHUD.Application.Views
             RadMenuItem icmizerHistoryItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ICMizerHandHistory), false,
                 RawExportItem_Click, extraAction: item =>
             {
-                var binding = new Binding(nameof(ReportGadgetViewModel.IsShowTournamentData));
-                binding.Source = reportGadgetViewModel;
-                binding.Converter = new BoolToVisibilityConverter();
+                var binding = new Binding(nameof(ReportGadgetViewModel.IsShowTournamentData))
+                {
+                    Source = reportGadgetViewModel,
+                    Converter = new BoolToVisibilityConverter()
+                };
 
                 item.SetBinding(VisibilityProperty, binding);
             });
@@ -193,9 +195,7 @@ namespace DriveHUD.Application.Views
                 item.Click += clickAction;
             }
 
-            var style = this.TryFindResource("HandGridMenuItemStyle") as Style;
-
-            if (style != null)
+            if (TryFindResource("HandGridMenuItemStyle") is Style style)
             {
                 item.Style = style;
             }
@@ -494,9 +494,7 @@ namespace DriveHUD.Application.Views
 
         private void GridViewKnownHands_RowLoaded(object sender, RowLoadedEventArgs e)
         {
-            var row = e.Row as GridViewRow;
-
-            if (row != null)
+            if (e.Row is GridViewRow row)
             {
                 RadContextMenu.SetContextMenu(row, handsGridContextMenu);
             }
@@ -504,9 +502,7 @@ namespace DriveHUD.Application.Views
 
         private void GridViewReport_RowLoaded(object sender, RowLoadedEventArgs e)
         {
-            var row = e.Row as GridViewRow;
-
-            if (row != null)
+            if (e.Row is GridViewRow row)
             {
                 if (reportGadgetViewModel.ReportSelectedItemStat == EnumReports.Tournaments)
                 {

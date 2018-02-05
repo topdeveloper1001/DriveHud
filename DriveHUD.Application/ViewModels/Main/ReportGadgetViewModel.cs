@@ -98,22 +98,24 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeFilter()
         {
-            filterAmountDictionary = new Dictionary<int, string>();
-
-            filterAmountDictionary.Add(100, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_Last100"));
-            filterAmountDictionary.Add(250, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_Last250"));
-            filterAmountDictionary.Add(1000, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_Last1000"));
-            filterAmountDictionary.Add(int.MaxValue, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_LastAll"));
+            filterAmountDictionary = new Dictionary<int, string>
+            {
+                { 100, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_Last100") },
+                { 250, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_Last250") },
+                { 1000, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_Last1000") },
+                { int.MaxValue, CommonResourceManager.Instance.GetResourceString("Main_ReportGadgetView_LastAll") }
+            };
 
             filterAmountDictionarySelectedItem = filterAmountDictionary.First().Key;
 
-            filterHandTagDictionary = new Dictionary<EnumHandTag, string>();
-
-            filterHandTagDictionary.Add(EnumHandTag.All, CommonResourceManager.Instance.GetResourceString(ResourceStrings.AllResourceString));
-            filterHandTagDictionary.Add(EnumHandTag.ForReview, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagForReview));
-            filterHandTagDictionary.Add(EnumHandTag.Bluff, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagBluff));
-            filterHandTagDictionary.Add(EnumHandTag.HeroCall, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagHeroCall));
-            filterHandTagDictionary.Add(EnumHandTag.BigFold, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagBigFold));
+            filterHandTagDictionary = new Dictionary<EnumHandTag, string>
+            {
+                { EnumHandTag.All, CommonResourceManager.Instance.GetResourceString(ResourceStrings.AllResourceString) },
+                { EnumHandTag.ForReview, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagForReview) },
+                { EnumHandTag.Bluff, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagBluff) },
+                { EnumHandTag.HeroCall, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagHeroCall) },
+                { EnumHandTag.BigFold, CommonResourceManager.Instance.GetResourceString(ResourceStrings.HandTagBigFold) }
+            };
 
             filterHandTagSelectedItem = filterHandTagDictionary.First().Key;
         }
@@ -471,9 +473,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 if (ReportSelectedItemStat == EnumReports.OpponentAnalysis)
                 {
-                    var report = reportSelectedItem as OpponentReportIndicators;
-
-                    if (report != null)
+                    if (reportSelectedItem is OpponentReportIndicators report)
                     {
                         report.ShrinkReportHands();
                     }

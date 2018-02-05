@@ -1255,7 +1255,7 @@ namespace Model.Data
                     CalculateStdDeviation();
                 }
 
-                return stdDev.HasValue ? stdDev.Value : 0m;
+                return stdDev ?? 0m;
             }
         }
 
@@ -1270,7 +1270,7 @@ namespace Model.Data
                     CalculateStdDeviation();
                 }
 
-                return stdDevBB.HasValue ? stdDevBB.Value : 0m;
+                return stdDevBB ?? 0m;
             }
         }
 

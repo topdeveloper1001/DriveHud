@@ -40,7 +40,7 @@ namespace Model
     {
         protected readonly string dataPath = StringFormatter.GetAppDataFolderPath();
 
-        protected virtual string playersPath
+        protected virtual string PlayersPath
         {
             get;
             set;
@@ -50,26 +50,26 @@ namespace Model
 
         public DataService()
         {
-            playersPath = StringFormatter.GetPlayerStatisticDataFolderPath();
+            PlayersPath = StringFormatter.GetPlayerStatisticDataFolderPath();
 
             if (!Directory.Exists(dataPath))
             {
                 Directory.CreateDirectory(dataPath);
             }
 
-            if (!Directory.Exists(playersPath))
+            if (!Directory.Exists(PlayersPath))
             {
-                Directory.CreateDirectory(playersPath);
+                Directory.CreateDirectory(PlayersPath);
             }
         }
 
         public void SetPlayerStatisticPath(string path)
         {
-            playersPath = path;
+            PlayersPath = path;
 
-            if (!Directory.Exists(playersPath))
+            if (!Directory.Exists(PlayersPath))
             {
-                Directory.CreateDirectory(playersPath);
+                Directory.CreateDirectory(PlayersPath);
             }
         }
 
@@ -583,12 +583,12 @@ namespace Model
 
             try
             {
-                if (!Directory.Exists(playersPath))
+                if (!Directory.Exists(PlayersPath))
                 {
-                    Directory.CreateDirectory(playersPath);
+                    Directory.CreateDirectory(PlayersPath);
                 }
 
-                var playerDirectory = Path.Combine(playersPath, statistic.PlayerId.ToString());
+                var playerDirectory = Path.Combine(PlayersPath, statistic.PlayerId.ToString());
 
                 if (!Directory.Exists(playerDirectory))
                 {
@@ -636,8 +636,8 @@ namespace Model
                                     group stat by new { stat.PlayerId, stat.Playedyearandmonth } into grouped
                                     select new
                                     {
-                                        PlayerId = grouped.Key.PlayerId,
-                                        Playedyearandmonth = grouped.Key.Playedyearandmonth,
+                                        grouped.Key.PlayerId,
+                                        grouped.Key.Playedyearandmonth,
                                         Statistic = grouped.OrderBy(x => x.Playedyearandmonth).ToArray()
                                     }).ToArray();
 
@@ -645,14 +645,14 @@ namespace Model
 
             try
             {
-                if (!Directory.Exists(playersPath))
+                if (!Directory.Exists(PlayersPath))
                 {
-                    Directory.CreateDirectory(playersPath);
+                    Directory.CreateDirectory(PlayersPath);
                 }
 
                 foreach (var stats in groupedStatistic)
                 {
-                    var playerDirectory = Path.Combine(playersPath, stats.PlayerId.ToString());
+                    var playerDirectory = Path.Combine(PlayersPath, stats.PlayerId.ToString());
 
                     if (!Directory.Exists(playerDirectory))
                     {
@@ -804,9 +804,9 @@ namespace Model
         {
             try
             {
-                if (!Directory.Exists(playersPath))
+                if (!Directory.Exists(PlayersPath))
                 {
-                    Directory.CreateDirectory(playersPath);
+                    Directory.CreateDirectory(PlayersPath);
                 }
 
                 List<IPlayer> players = new List<IPlayer>();
@@ -1109,9 +1109,7 @@ namespace Model
                     return activePlayer;
                 }
 
-                short pokerSiteId = 0;
-
-                if (!short.TryParse(splittedResult[1], out pokerSiteId))
+                if (!short.TryParse(splittedResult[1], out short pokerSiteId))
                 {
                     return activePlayer;
                 }
@@ -1206,7 +1204,7 @@ namespace Model
         {
             try
             {
-                string playerDirectory = Path.Combine(playersPath, playerId.ToString());
+                string playerDirectory = Path.Combine(PlayersPath, playerId.ToString());
 
                 if (!Directory.Exists(playerDirectory))
                 {

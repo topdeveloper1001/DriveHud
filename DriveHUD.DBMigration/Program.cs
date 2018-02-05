@@ -315,7 +315,7 @@ namespace DriveHUD.DBMigration
 
         private class DataMigrationService : DataService
         {
-            protected override string playersPath
+            protected override string PlayersPath
             {
                 get
                 {
