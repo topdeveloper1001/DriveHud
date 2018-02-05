@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HandHistories.Objects.Hand;
 using System;
+using DriveHUD.Common.Linq;
 
 namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
@@ -57,6 +58,16 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 }
 
                 if (!IsFastFold(handHistory.TableName))
+                {
+                    return handActions;
+                }
+
+                // if there is more than 1 blinds then we don't order actions (another solution is to check dealer pos then find first blind, then use different 
+                // ordered collections of players (for preflop and for others)
+                var blindsCounts = handActions.CountWithConditions(x => x.HandActionType == HandActionType.SMALL_BLIND,
+                    x => x.HandActionType == HandActionType.BIG_BLIND);
+
+                if (blindsCounts.Item1 > 1 || blindsCounts.Item2 > 1)
                 {
                     return handActions;
                 }

@@ -307,5 +307,41 @@ namespace DriveHUD.Common.Linq
 
             return !mustExist;
         }
+
+        public static Tuple<int, int> CountWithConditions<T>(this IEnumerable<T> items, Func<T, bool> predicate1, Func<T, bool> predicate2)
+        {
+            if (items == null)
+            {
+                throw new ArgumentNullException(nameof(items));
+            }
+
+            if (predicate1 == null)
+            {
+                throw new ArgumentNullException(nameof(predicate1));
+            }
+
+            if (predicate2 == null)
+            {
+                throw new ArgumentNullException(nameof(predicate2));
+            }
+
+            var counter1 = 0;
+            var counter2 = 0;
+
+            foreach (var item in items)
+            {
+                if (predicate1(item))
+                {
+                    counter1++;
+                }
+
+                if (predicate2(item))
+                {
+                    counter2++;
+                }
+            }
+
+            return Tuple.Create(counter1, counter2);
+        }
     }
 }
