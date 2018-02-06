@@ -20,6 +20,7 @@ using DriveHUD.Common.Reflection;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Converters;
 using DriveHUD.Entities;
+using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Data;
@@ -56,16 +57,20 @@ namespace DriveHUD.Application.Views
         private Model.Enums.EnumReports reportCache;
         private RadContextMenu handsGridContextMenu;
         private RadContextMenu tournamentsGridContextMenu;
+        private readonly IDataService dataService;
 
         public ReportGadgetView()
         {
             InitializeComponent();
 
+            dataService = ServiceLocator.Current.GetInstance<IDataService>();
+
             ServiceProvider.RegisterPersistenceProvider<ICustomPropertyProvider>(typeof(RadGridView), new GridViewCustomPropertyProvider());
+
             GridViewReportMenu.ItemsSource = GridViewReport.Columns;
             GridViewKnownHandsMenu.ItemsSource = GridViewKnownHands.Columns;
 
-            this.DataContextChanged += (_o, _e) =>
+            DataContextChanged += (o, e) =>
             {
                 try
                 {
@@ -82,7 +87,7 @@ namespace DriveHUD.Application.Views
                 }
             };
 
-            this.Unloaded += (_o, _e) =>
+            Unloaded += (o, e) =>
             {
                 try
                 {
@@ -101,6 +106,7 @@ namespace DriveHUD.Application.Views
         {
             handsGridContextMenu = new RadContextMenu();
             tournamentsGridContextMenu = new RadContextMenu();
+
             /* Calculate equity item */
             RadMenuItem calculateEquityItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.CalculateEquityResourceString), false,
                 EquityCalcMenuItem_Click);
@@ -115,9 +121,11 @@ namespace DriveHUD.Application.Views
             RadMenuItem icmizerHistoryItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ICMizerHandHistory), false,
                 RawExportItem_Click, extraAction: item =>
             {
-                var binding = new Binding(nameof(ReportGadgetViewModel.IsShowTournamentData));
-                binding.Source = reportGadgetViewModel;
-                binding.Converter = new BoolToVisibilityConverter();
+                var binding = new Binding(nameof(ReportGadgetViewModel.IsShowTournamentData))
+                {
+                    Source = reportGadgetViewModel,
+                    Converter = new BoolToVisibilityConverter()
+                };
 
                 item.SetBinding(VisibilityProperty, binding);
             });
@@ -187,9 +195,7 @@ namespace DriveHUD.Application.Views
                 item.Click += clickAction;
             }
 
-            var style = this.TryFindResource("HandGridMenuItemStyle") as Style;
-
-            if (style != null)
+            if (TryFindResource("HandGridMenuItemStyle") is Style style)
             {
                 item.Style = style;
             }
@@ -211,6 +217,7 @@ namespace DriveHUD.Application.Views
         private void MakeNote(object sender, RadRoutedEventArgs e)
         {
             var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
+
             if (item != null)
             {
                 reportGadgetViewModel.MakeNoteCommand.Execute(item.DataContext);
@@ -220,91 +227,104 @@ namespace DriveHUD.Application.Views
         private void TagHand(object sender, RadRoutedEventArgs e)
         {
             var item = sender as RadMenuItem;
-            if (item == null || !(item.DataContext is ComparableCardsStatistic))
+
+            if (item == null)
             {
                 return;
             }
 
-            var stat = (item.DataContext as ComparableCardsStatistic).Statistic;
-            if (stat != null)
-            {
-                var handNoteEntity = stat.HandNote;
-                if (handNoteEntity == null)
-                {
-                    handNoteEntity = new Handnotes
-                    {
-                        Gamenumber = stat.GameNumber,
-                        PokersiteId = (short)stat.PokersiteId,
-                    };
-                    stat.HandNote = handNoteEntity;
-                }
-                handNoteEntity.HandTag = (int)(item.Tag ?? 0);
-                ServiceLocator.Current.GetInstance<IDataService>().Store(handNoteEntity);
+            var reportHand = item.DataContext as ReportHandViewModel;
 
-                if (reportGadgetViewModel.FilterTaggedHands_IsChecked)
-                {
-                    reportGadgetViewModel.RefreshReport();
-                }
+            if (reportHand == null)
+            {
+                return;
             }
+
+            var handNoteEntity = new Handnotes
+            {
+                Note = reportHand.HandNote,
+                Gamenumber = reportHand.GameNumber,
+                PokersiteId = (short)reportHand.PokerSiteId,
+                HandTag = (int)(item.Tag ?? 0)
+            };
+
+            dataService.Store(handNoteEntity);
+
+            reportHand.HandTag = handNoteEntity.HandTag.HasValue ?
+                (EnumHandTag)handNoteEntity.HandTag.Value :
+                EnumHandTag.None;
+
+            var statistic = reportGadgetViewModel.ReportSelectedItem?.Statistics?
+                .FirstOrDefault(x => x.GameNumber == reportHand.GameNumber && x.PokersiteId == reportHand.PokerSiteId);
+
+            if (statistic != null)
+            {
+                statistic.HandNote = handNoteEntity;
+            }
+
+            if (reportGadgetViewModel.FilterTaggedHands_IsChecked)
+            {
+                reportGadgetViewModel.RefreshReport();
+            }
+        }
+
+        private void ExportItem(Func<HandHistory, string> convertToText)
+        {
+            var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
+
+            if (item == null)
+            {
+                return;
+            }
+
+            var reportHand = item.DataContext as ReportHandViewModel;
+
+            if (reportHand == null)
+            {
+                return;
+            }
+
+            var handHistory = dataService.GetGame(reportHand.GameNumber, (short)reportHand.PokerSiteId);
+
+            var handHistoryText = convertToText(handHistory);
+
+            Clipboard.SetText(handHistoryText);
+
+            reportGadgetViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
         }
 
         private void PlainExportItem_Click(object sender, RadRoutedEventArgs e)
         {
-            var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
-            if (item != null)
-            {
-                var playerStatistics = item.DataContext as ComparableCardsStatistic;
-                if (playerStatistics != null)
-                {
-                    var handHistory = ServiceLocator.Current.GetInstance<IDataService>().GetGame(playerStatistics.Statistic.GameNumber, (short)playerStatistics.Statistic.PokersiteId);
-                    String hh = ExportFunctions.ConvertHHToPlainText(handHistory);
-                    Clipboard.SetText(hh);
-                    reportGadgetViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
-                }
-            }
+            ExportItem(handHistory => ExportFunctions.ConvertHHToPlainText(handHistory));
         }
 
         private void GeneralExportItem_Click(object sender, RadRoutedEventArgs e)
         {
-            var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
-            if (item != null)
-            {
-                var playerStatistics = item.DataContext as ComparableCardsStatistic;
-                if (playerStatistics != null)
-                {
-                    var handHistory = ServiceLocator.Current.GetInstance<IDataService>().GetGame(playerStatistics.Statistic.GameNumber, (short)playerStatistics.Statistic.PokersiteId);
-                    String hh = ExportFunctions.ConvertHHToForumFormat(handHistory);
-                    Clipboard.SetText(hh);
-                    reportGadgetViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
-                }
-            }
+            ExportItem(handHistory => ExportFunctions.ConvertHHToForumFormat(handHistory));
         }
 
         private void RawExportItem_Click(object sender, RadRoutedEventArgs e)
         {
-            var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
-            if (item != null)
-            {
-                var playerStatistics = item.DataContext as ComparableCardsStatistic;
-                if (playerStatistics != null)
-                {
-                    var handHistory = ServiceLocator.Current.GetInstance<IDataService>().GetGame(playerStatistics.Statistic.GameNumber, (short)playerStatistics.Statistic.PokersiteId);
-                    Clipboard.SetText(handHistory.FullHandHistoryText);
-                    reportGadgetViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
-                }
-            }
+            ExportItem(handHistory => handHistory.FullHandHistoryText);
         }
 
-        private void EquityCalcMenuItem_Click(object sender, Telerik.Windows.RadRoutedEventArgs e)
+        private void EquityCalcMenuItem_Click(object sender, RadRoutedEventArgs e)
         {
             var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
-            if (item != null)
+
+            if (item == null)
             {
-                if (this.DataContext is ReportGadgetViewModel)
-                {
-                    (this.DataContext as ReportGadgetViewModel).CalculateEquityCommand.Execute((item.DataContext as ComparableCardsStatistic).Statistic);
-                }
+                return;
             }
+
+            var reportHand = item.DataContext as ReportHandViewModel;
+
+            if (reportHand == null)
+            {
+                return;
+            }
+
+            reportGadgetViewModel?.CalculateEquityCommand.Execute(reportHand);
         }
 
         private void ReportGadgetViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -343,6 +363,7 @@ namespace DriveHUD.Application.Views
             try
             {
                 reportGadgetViewModel.IsBusy = true;
+
                 // disable radio button panel to restrict changing the report type during loading
                 ReportRadioButtonPanel.IsEnabled = false;
 
@@ -360,8 +381,6 @@ namespace DriveHUD.Application.Views
 
                 var reportCollection = GetReportCollectionAsync(creator, statistic);
 
-                reportGadgetViewModel.IsBusy = false;
-
                 // clear columns in order to avoid  Binding exceptions
                 GridViewReport.Columns.Clear();
 
@@ -371,6 +390,8 @@ namespace DriveHUD.Application.Views
                 {
                     reportGadgetViewModel.ReportCollection.Add(item);
                 }
+
+                reportGadgetViewModel.IsBusy = false;
 
                 layout.Create(GridViewReport);
 
@@ -388,7 +409,7 @@ namespace DriveHUD.Application.Views
             }
         }
 
-        private Task<ObservableCollection<Indicators>> GetReportCollectionAsync(IReportCreator reportCreator, IList<Playerstatistic> playerstatistics)
+        private Task<ObservableCollection<ReportIndicators>> GetReportCollectionAsync(IReportCreator reportCreator, IList<Playerstatistic> playerstatistics)
         {
             return Task.Run(() =>
             {
@@ -418,6 +439,7 @@ namespace DriveHUD.Application.Views
         private void GridLayoutLoad(RadGridView gridView, string fileName)
         {
             PersistenceManager manager = new PersistenceManager();
+
             try
             {
                 using (Stream file = ServiceLocator.Current.GetInstance<IDataService>().OpenStorageStream(fileName, FileMode.Open))
@@ -435,40 +457,44 @@ namespace DriveHUD.Application.Views
             }
         }
 
-        private void ReplayHand(ComparableCardsStatistic hand)
+        private void ReplayHand(ReportHandViewModel hand)
         {
             if (hand == null)
+            {
                 return;
+            }
 
-            var statistic = (hand as ComparableCardsStatistic).Statistic;
-            bool showHoleCards = (this.DataContext as ReportGadgetViewModel).ReplayerShowHolecards_IsChecked;
+            bool showHoleCards = reportGadgetViewModel.ReplayerShowHolecards_IsChecked;
 
             ServiceLocator.Current.GetInstance<IReplayerService>()
-                .ReplayHand(statistic, reportGadgetViewModel.StorageModel.StatisticCollection.ToList(), showHoleCards);
+                .ReplayHand(hand.PlayerName, hand.GameNumber, (short)hand.PokerSiteId, showHoleCards);
         }
 
         private void ReplayHand(object sender, RadRoutedEventArgs e)
         {
             var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
+
             if (item != null)
             {
-                ReplayHand(item.DataContext as ComparableCardsStatistic);
+                ReplayHand(item.DataContext as ReportHandViewModel);
             }
         }
 
         private void GridViewKnownHands_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var row = GridViewKnownHands.SelectedItem;
-            if (row == null)
-                return;
 
-            ReplayHand(row as ComparableCardsStatistic);
+            if (row == null)
+            {
+                return;
+            }
+
+            ReplayHand(row as ReportHandViewModel);
         }
 
         private void GridViewKnownHands_RowLoaded(object sender, RowLoadedEventArgs e)
         {
-            var row = e.Row as GridViewRow;
-            if (row != null)
+            if (e.Row is GridViewRow row)
             {
                 RadContextMenu.SetContextMenu(row, handsGridContextMenu);
             }
@@ -476,8 +502,7 @@ namespace DriveHUD.Application.Views
 
         private void GridViewReport_RowLoaded(object sender, RowLoadedEventArgs e)
         {
-            var row = e.Row as GridViewRow;
-            if (row != null)
+            if (e.Row is GridViewRow row)
             {
                 if (reportGadgetViewModel.ReportSelectedItemStat == EnumReports.Tournaments)
                 {
@@ -492,72 +517,79 @@ namespace DriveHUD.Application.Views
 
         private void GridViewReport_Sorting(object sender, GridViewSortingEventArgs e)
         {
-            List<Indicators> statistics = new List<Indicators>(e.DataControl.ItemsSource as IEnumerable<Indicators>);
-            if (statistics == null)
+            var reports = new List<ReportIndicators>(e.DataControl.ItemsSource as IEnumerable<ReportIndicators>);
+
+            if (reports == null)
             {
                 e.Cancel = true;
                 return;
             }
 
-            var sorted = SortData<Indicators>(statistics, e);
+            var sorted = SortData(reports, e);
+
             if (sorted != null)
             {
                 e.DataControl.SortDescriptors.Clear();
+
                 var collection = (DataContext as ReportGadgetViewModel).ReportCollection;
 
-                /* Remove and reassign binding to not affect performance
-                *  (In case  if  SelectedItem index changed it will lose selection so HandsGrid will be unloaded)
-                */
-                var binding = System.Windows.Data.BindingOperations.GetBinding(e.DataControl, GridViewDataControl.SelectedItemProperty);
+                // Remove and reassign binding to not affect performance
+                // (In case  if  SelectedItem index changed it will lose selection so HandsGrid will be unloaded)                
+                var binding = BindingOperations.GetBinding(e.DataControl, GridViewDataControl.SelectedItemProperty);
+
                 BindingOperations.ClearBinding(e.DataControl, GridViewDataControl.SelectedItemProperty);
+
                 for (int i = 0; i < sorted.Count(); i++)
                 {
                     collection.Move(collection.IndexOf(sorted.ElementAt(i)), i);
                 }
+
                 BindingOperations.SetBinding(e.DataControl, GridViewDataControl.SelectedItemProperty, binding);
+
                 e.Cancel = true;
             }
         }
 
         private void GridViewKnownHands_Sorting(object sender, GridViewSortingEventArgs e)
         {
-            List<ComparableCardsStatistic> statistics = new List<ComparableCardsStatistic>(e.DataControl.ItemsSource as IEnumerable<ComparableCardsStatistic>);
-            if (statistics == null)
+            var reportHands = new List<ReportHandViewModel>(e.DataControl.ItemsSource as IEnumerable<ReportHandViewModel>);
+
+            if (reportHands == null)
             {
                 e.Cancel = true;
                 return;
             }
 
-            var sorted = SortData<ComparableCardsStatistic>(statistics, e);
+            var sorted = SortData(reportHands, e);
+
             if (sorted != null)
             {
                 e.DataControl.SortDescriptors.Clear();
-                var collection = (DataContext as ReportGadgetViewModel).ReportSelectedItemStatisticsCollection_Filtered;
+
+                var collection = (DataContext as ReportGadgetViewModel).FilteredReportSelectedItemStatisticsCollection;
 
                 for (int i = 0; i < sorted.Count(); i++)
                 {
                     collection.Move(collection.IndexOf(sorted.ElementAt(i)), i);
                 }
+
                 e.Cancel = true;
             }
-        }
-
-        private void GridViewKnownHands_SelectionChanged(object sender, SelectionChangeEventArgs e)
-        {
-            reportGadgetViewModel.SelectedStatistics = new ObservableCollection<Playerstatistic>(((RadGridView)sender).SelectedItems
-                .Select(x => (x as ComparableCardsStatistic).Statistic).OfType<Playerstatistic>());
         }
 
         private IEnumerable<T> SortData<T>(IEnumerable<T> collection, GridViewSortingEventArgs e)
         {
             var columnValues = collection.Select(x => ReflectionHelper.GetMemberValue(x, (e.Column as GridViewDataColumn).GetDataMemberName()));
+
             IEnumerable<T> result = null;
+
             if (columnValues.Any(x => x == null || string.IsNullOrEmpty(x.ToString())))
             {
                 return result;
             }
 
             decimal decValue = 0;
+
             if (!columnValues.Any(x => !Decimal.TryParse(x.ToString(), out decValue)))
             {
                 if (e.OldSortingState == SortingState.None)
@@ -576,10 +608,12 @@ namespace DriveHUD.Application.Views
                     result = collection.OrderByDescending(x => Math.Abs(Decimal.Parse(ReflectionHelper.GetMemberValue(x, (e.Column as GridViewDataColumn).GetDataMemberName()).ToString()))).ToList();
                 }
             }
+
             return result;
         }
 
         #region GridSplitter
+
         private bool isMaxSizeChanged = false;
 
         private void ResizeReportGrid()
@@ -613,6 +647,7 @@ namespace DriveHUD.Application.Views
                 GridViewReport.MaxHeight = double.PositiveInfinity;
             }
         }
+
         #endregion
     }
 }

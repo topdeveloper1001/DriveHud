@@ -22,9 +22,9 @@ namespace Model.Reports
 {
     public class TournamentReportCreator : TournamentBaseReportCreator
     {
-        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
         {
-            var report = new ObservableCollection<Indicators>();
+            var report = new ObservableCollection<ReportIndicators>();
 
             if (statistics == null || statistics.Count == 0)
             {

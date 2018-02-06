@@ -159,7 +159,6 @@ namespace DriveHUD.Application.ViewModels
 
             MenuItemPopupFilter_CommandClick = new RelayCommand(new Action<object>(MenuItemPopupFilter_OnClick));
 
-            PurgeCommand = new RelayCommand(Purge);
             ImportFromFileCommand = new DelegateCommand(x => ImportFromFile(), x => !isManualImportingRunning);
             ImportFromDirectoryCommand = new DelegateCommand(x => ImportFromDirectory(), x => !isManualImportingRunning);
             SupportCommand = new RelayCommand(ShowSupportView);
@@ -761,10 +760,10 @@ namespace DriveHUD.Application.ViewModels
                     hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout);
                 }
 
-                Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
+                decimal getDevisionResult(decimal x, decimal y)
                 {
                     return y != 0 ? x / y : 0;
-                };
+                }
 
                 var trackConditionsInfo = new HudTrackConditionsViewModelInfo
                 {
@@ -854,9 +853,10 @@ namespace DriveHUD.Application.ViewModels
 
         private async void ImportFromFile()
         {
-            var openFileDialog = new Microsoft.Win32.OpenFileDialog();
-
-            openFileDialog.Multiselect = true;
+            var openFileDialog = new Microsoft.Win32.OpenFileDialog
+            {
+                Multiselect = true
+            };
 
             if (openFileDialog.ShowDialog() != true)
             {
@@ -873,9 +873,10 @@ namespace DriveHUD.Application.ViewModels
             {
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
                 Task.Delay(ImportFileUpdateDelay).Wait();
-                UpdateCurrentView();
-                CreatePositionReport();
             });
+
+            UpdateCurrentView();
+            CreatePositionReport();
 
             ProgressViewModel.IsActive = false;
             IsManualImportingRunning = false;
@@ -911,9 +912,10 @@ namespace DriveHUD.Application.ViewModels
             {
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
                 Task.Delay(ImportFileUpdateDelay).Wait();
-                UpdateCurrentView();
-                CreatePositionReport();
             });
+
+            UpdateCurrentView();
+            CreatePositionReport();
 
             ProgressViewModel.IsActive = false;
             IsManualImportingRunning = false;
@@ -931,18 +933,6 @@ namespace DriveHUD.Application.ViewModels
         private void ShowSupportView()
         {
             PopupSupportRequest.Raise(new PopupActionNotification() { Title = "DriveHUD Support" });
-        }
-
-        private async void Purge()
-        {
-            ProgressViewModel.IsActive = true;
-
-            await Task.Factory.StartNew(() => dataService.Purge());
-
-            ProgressViewModel.IsActive = false;
-            StorageModel.PlayerCollection.Clear();
-
-            Load();
         }
 
         private void CreatePositionReport()
@@ -1516,8 +1506,6 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        public ICommand PurgeCommand { get; set; }
-
         public ICommand ImportCommand { get; set; }
 
         public ICommand ImportFromFileCommand { get; set; }
@@ -1618,13 +1606,14 @@ namespace DriveHUD.Application.ViewModels
 
         private void PopupSettingsRequest_Execute(PubSubMessage pubSubMessage)
         {
-            PopupContainerSettingsViewModelNotification notification = new PopupContainerSettingsViewModelNotification();
+            var notification = new PopupContainerSettingsViewModelNotification
+            {
+                Title = "Settings",
+                PubSubMessage = pubSubMessage,
+                Parameter = pubSubMessage?.Parameter
+            };
 
-            notification.Title = "Settings";
-            notification.PubSubMessage = pubSubMessage;
-            notification.Parameter = pubSubMessage?.Parameter;
-
-            this.PopupSettingsRequest.Raise(notification,
+            PopupSettingsRequest.Raise(notification,
                 returned =>
                 {
                     if (returned != null && returned.Confirmed)
@@ -1638,10 +1627,11 @@ namespace DriveHUD.Application.ViewModels
 
         private void PopupFiltersRequestExecute(FilterTuple filterTuple)
         {
-            PopupContainerFiltersViewModelNotification notification = new PopupContainerFiltersViewModelNotification();
-
-            notification.Title = "Filters";
-            notification.FilterTuple = filterTuple;
+            var notification = new PopupContainerFiltersViewModelNotification
+            {
+                Title = "Filters",
+                FilterTuple = filterTuple
+            };
 
             PopupFiltersRequest.Raise(notification,
                 returned => { });
@@ -1654,10 +1644,12 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            PopupActionNotification confirmation = new PopupActionNotification();
-            confirmation.Title = obj.Title;
-            confirmation.Content = obj.Message;
-            confirmation.HyperLinkText = obj.HyperLink;
+            var confirmation = new PopupActionNotification
+            {
+                Title = obj.Title,
+                Content = obj.Message,
+                HyperLinkText = obj.HyperLink
+            };
 
             NotificationRequest.Raise(confirmation);
         }

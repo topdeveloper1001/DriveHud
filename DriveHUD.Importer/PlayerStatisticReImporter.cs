@@ -23,6 +23,7 @@ using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Interfaces;
+using Model.Reports;
 using NHibernate.Linq;
 using ProtoBuf;
 using System;
@@ -86,6 +87,7 @@ namespace DriveHUD.Importers
                 ImportHandHistories();
                 ClosePlayerstatisticStreams();
                 ReplaceOriginalPlayerstatistic();
+                ResetOpponentReport();
             }
             catch (Exception e)
             {
@@ -372,6 +374,15 @@ namespace DriveHUD.Importers
                 LogProvider.Log.Error(this, $"Could not move {playerStatisticTempDataFolder} to {playerStatisticDataFolder}");
                 throw;
             }
+        }
+
+        /// <summary>
+        /// Resets opponent report cache
+        /// </summary>
+        private void ResetOpponentReport()
+        {
+            var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
+            opponentReportService.Reset();
         }
 
         private void StorePlayerStatistic(Playerstatistic statistic)

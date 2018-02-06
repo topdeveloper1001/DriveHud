@@ -90,17 +90,25 @@ namespace DriveHUD.Application.ReportsLayout
         {
             var fef = new FrameworkElementFactory(typeof(TextBlock));
 
-            var bindingText = new Binding(member);
-            bindingText.StringFormat = "{0:c2}";
+            var bindingText = new Binding(member)
+            {
+                StringFormat = "{0:c2}"
+            };
 
             fef.SetBinding(TextBlock.TextProperty, bindingText);
 
-            var bindingForeground = new Binding(member);
-            bindingForeground.Converter = new ValueToColorConverter();
+            var bindingForeground = new Binding(member)
+            {
+                Converter = new ValueToColorConverter()
+            };
+
             fef.SetBinding(TextBlock.ForegroundProperty, bindingForeground);
 
-            var template = new DataTemplate();
-            template.VisualTree = fef;
+            var template = new DataTemplate
+            {
+                VisualTree = fef
+            };
+
             template.Seal();
 
             GridViewDataColumn column = new GridViewDataColumn

@@ -1,0 +1,56 @@
+Game #16714415931 starts.
+
+#Game No : 16714415931 
+***** Hand History for Game 16714415931 *****
+$0.01/$0.02 USD NL Texas Hold'em - Friday, December 01, 13:41:12 CET 2017
+Table Rangoon (Real Money)
+Seat 3 is the button
+Total number of players : 5/6 
+Seat 1: Player1 ( $2.13 USD )
+Seat 2: Player2 ( $2 USD )
+Seat 3: Player3 ( $2.04 USD )
+Seat 4: Player4 ( $2 USD )
+Seat 6: pocket_sevens ( $2 USD )
+Player4 posts small blind [$0.01 USD].
+pocket_sevens posts big blind [$0.02 USD].
+** Dealing down cards **
+Dealt to pocket_sevens [  Ts 7s ]
+Player1 folds
+Player3 folds
+Player5 has joined the table.
+Player4 raises [$0.04 USD]
+pocket_sevens calls [$0.03 USD]
+** Dealing Flop ** [ Kc, 5h, 3d ]
+Player4 bets [$0.06 USD]
+pocket_sevens folds
+Player4 does not show cards.
+Player4 wins $0.16 USD
+Game #16714416790 starts.
+
+#Game No : 16714416790 
+***** Hand History for Game 16714416790 *****
+$0.01/$0.02 USD NL Texas Hold'em - Friday, December 01, 13:41:41 CET 2017
+Table Rangoon (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 4: Player4 ( $2.05 USD )
+Seat 5: Player5 ( $2 USD )
+Seat 6: pocket_sevens ( $2 USD )
+Seat 3: Player3 ( $2.04 USD )
+Seat 2: Player2 ( $2 USD )
+Seat 1: Player1 ( $2.13 USD )
+pocket_sevens posts small blind [$0.01 USD].
+Player1 posts big blind [$0.02 USD].
+** Dealing down cards **
+Dealt to pocket_sevens [  2s Kh ]
+Player3 folds
+Player4 folds
+pocket_sevens folds
+Player1 does not show cards.
+Player1 wins $0.03 USD
+
+Game #16714417571 starts.
+#Game No : 16714417571 
+Table Closed
+The hand history for this hand number is not available here.Please use Instant Hand History in the "Game Rules & Options"  menu to have this hand history delivered to the email address you have registered with us.
+

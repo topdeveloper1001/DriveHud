@@ -12,19 +12,41 @@
 
 using DriveHUD.Entities;
 using Model.Importer;
+using Model.Reports;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Model.Data
 {
+    [ProtoContract]
+    [ProtoInclude(300, typeof(ReportIndicators))]
     public class LightIndicators : Indicators
     {
+        [ProtoMember(1)]
         private int statisticCount;
+
+        [ProtoMember(2)]
         private decimal netWon;
+
+        [ProtoMember(3)]
         private decimal bigBlind;
+
+        [ProtoMember(4)]
         private decimal netWonByBigBlind;
+
+        [ProtoMember(5)]
+        private decimal evInBB;
+
+        [ProtoMember(6)]
         private DateTime sessionStartTime = DateTime.MaxValue;
+
+        [ProtoMember(7)]
         private DateTime sessionEndTime = DateTime.MinValue;
+
+        [ProtoMember(43)]
+        private long gameNumberMax;
 
         public LightIndicators() : base()
         {
@@ -50,6 +72,15 @@ namespace Model.Data
             {
                 var totalhands = statisticCount / 100m;
                 return Math.Round(GetDivisionResult(netWonByBigBlind, totalhands), 2);
+            }
+        }
+
+        public override decimal EVBB
+        {
+            get
+            {
+                var totalhands = statisticCount / 100m;
+                return Math.Round(GetDivisionResult(evInBB, totalhands), 2);
             }
         }
 
@@ -124,7 +155,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionVPIP?.EP, Source.PositionTotal?.EP);
+                return GetPercentage(positionVPIP?.EP, positionTotal?.EP);
             }
         }
 
@@ -132,7 +163,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionVPIP?.MP, Source.PositionTotal?.MP);
+                return GetPercentage(positionVPIP?.MP, positionTotal?.MP);
             }
         }
 
@@ -140,7 +171,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionVPIP?.CO, Source.PositionTotal?.CO);
+                return GetPercentage(positionVPIP?.CO, positionTotal?.CO);
             }
         }
 
@@ -148,7 +179,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionVPIP?.BN, Source.PositionTotal?.BN);
+                return GetPercentage(positionVPIP?.BN, positionTotal?.BN);
             }
         }
 
@@ -156,7 +187,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionVPIP?.SB, Source.PositionTotal?.SB);
+                return GetPercentage(positionVPIP?.SB, positionTotal?.SB);
             }
         }
 
@@ -164,7 +195,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionVPIP?.BB, Source.PositionTotal?.BB);
+                return GetPercentage(positionVPIP?.BB, positionTotal?.BB);
             }
         }
 
@@ -176,7 +207,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.UO_PFR_EP, Source.PositionUnoppened?.EP);
+                return GetPercentage(Source.UO_PFR_EP, positionUnoppened?.EP);
             }
         }
 
@@ -184,7 +215,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.UO_PFR_MP, Source.PositionUnoppened?.MP);
+                return GetPercentage(Source.UO_PFR_MP, positionUnoppened?.MP);
             }
         }
 
@@ -192,7 +223,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.UO_PFR_CO, Source.PositionUnoppened?.CO);
+                return GetPercentage(Source.UO_PFR_CO, positionUnoppened?.CO);
             }
         }
 
@@ -200,7 +231,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.UO_PFR_BN, Source.PositionUnoppened?.BN);
+                return GetPercentage(Source.UO_PFR_BN, positionUnoppened?.BN);
             }
         }
 
@@ -208,7 +239,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.UO_PFR_SB, Source.PositionUnoppened?.SB);
+                return GetPercentage(Source.UO_PFR_SB, positionUnoppened?.SB);
             }
         }
 
@@ -216,7 +247,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.UO_PFR_BB, Source.PositionUnoppened?.BB);
+                return GetPercentage(Source.UO_PFR_BB, positionUnoppened?.BB);
             }
         }
 
@@ -228,7 +259,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidThreeBet?.EP, Source.PositionCouldColdCall?.EP);
+                return GetPercentage(positionDidThreeBet?.EP, positionCouldColdCall?.EP);
             }
         }
 
@@ -236,7 +267,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidThreeBet?.MP, Source.PositionCouldThreeBet?.MP);
+                return GetPercentage(positionDidThreeBet?.MP, positionCouldThreeBet?.MP);
             }
         }
 
@@ -244,7 +275,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidThreeBet?.CO, Source.PositionCouldThreeBet?.CO);
+                return GetPercentage(positionDidThreeBet?.CO, positionCouldThreeBet?.CO);
             }
         }
 
@@ -252,7 +283,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidThreeBet?.BN, Source.PositionCouldThreeBet?.BN);
+                return GetPercentage(positionDidThreeBet?.BN, positionCouldThreeBet?.BN);
             }
         }
 
@@ -260,7 +291,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidThreeBet?.SB, Source.PositionCouldThreeBet?.SB);
+                return GetPercentage(positionDidThreeBet?.SB, positionCouldThreeBet?.SB);
             }
         }
 
@@ -268,7 +299,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidThreeBet?.BB, Source.PositionCouldThreeBet?.BB);
+                return GetPercentage(positionDidThreeBet?.BB, positionCouldThreeBet?.BB);
             }
         }
 
@@ -280,7 +311,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidFourBet?.BB, Source.PositionCouldFourBet?.BB);
+                return GetPercentage(positionDidFourBet?.BB, positionCouldFourBet?.BB);
             }
         }
 
@@ -288,7 +319,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidFourBet?.BN, Source.PositionCouldFourBet?.BN);
+                return GetPercentage(positionDidFourBet?.BN, positionCouldFourBet?.BN);
             }
         }
 
@@ -296,7 +327,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidFourBet?.CO, Source.PositionCouldFourBet?.CO);
+                return GetPercentage(positionDidFourBet?.CO, positionCouldFourBet?.CO);
             }
         }
 
@@ -304,7 +335,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidFourBet?.MP, Source.PositionCouldFourBet?.MP);
+                return GetPercentage(positionDidFourBet?.MP, positionCouldFourBet?.MP);
             }
         }
 
@@ -312,7 +343,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidFourBet?.EP, Source.PositionCouldFourBet?.EP);
+                return GetPercentage(positionDidFourBet?.EP, positionCouldFourBet?.EP);
             }
         }
 
@@ -320,7 +351,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidFourBet?.SB, Source.PositionCouldFourBet?.SB);
+                return GetPercentage(positionDidFourBet?.SB, positionCouldFourBet?.SB);
             }
         }
 
@@ -332,42 +363,42 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.PositionDidColdCall?.EP, Source.PositionCouldColdCall?.EP);
+                return GetPercentage(positionDidColdCall?.EP, positionCouldColdCall?.EP);
             }
         }
         public override decimal ColdCall_MP
         {
             get
             {
-                return GetPercentage(Source.PositionDidColdCall?.MP, Source.PositionCouldColdCall?.MP);
+                return GetPercentage(positionDidColdCall?.MP, positionCouldColdCall?.MP);
             }
         }
         public override decimal ColdCall_CO
         {
             get
             {
-                return GetPercentage(Source.PositionDidColdCall?.CO, Source.PositionCouldColdCall?.CO);
+                return GetPercentage(positionDidColdCall?.CO, positionCouldColdCall?.CO);
             }
         }
         public override decimal ColdCall_BN
         {
             get
             {
-                return GetPercentage(Source.PositionDidColdCall?.BN, Source.PositionCouldColdCall?.BN);
+                return GetPercentage(positionDidColdCall?.BN, positionCouldColdCall?.BN);
             }
         }
         public override decimal ColdCall_SB
         {
             get
             {
-                return GetPercentage(Source.PositionDidColdCall?.SB, Source.PositionCouldColdCall?.SB);
+                return GetPercentage(positionDidColdCall?.SB, positionCouldColdCall?.SB);
             }
         }
         public override decimal ColdCall_BB
         {
             get
             {
-                return GetPercentage(Source.PositionDidColdCall?.BB, Source.PositionCouldColdCall?.BB);
+                return GetPercentage(positionDidColdCall?.BB, positionCouldColdCall?.BB);
             }
         }
 
@@ -375,8 +406,10 @@ namespace Model.Data
 
         #region IP/OOP based stats
 
+        [ProtoMember(8)]
         protected int didDelayedTurnCBetIP;
 
+        [ProtoMember(9)]
         protected int couldDelayedTurnCBetIP;
 
         public override decimal DelayedTurnCBetIP
@@ -387,8 +420,10 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(10)]
         protected int didDelayedTurnCBetOOP;
 
+        [ProtoMember(11)]
         protected int couldDelayedTurnCBetOOP;
 
         public override decimal DelayedTurnCBetOOP
@@ -403,8 +438,10 @@ namespace Model.Data
 
         #region Calculated stats
 
+        [ProtoMember(12)]
         protected int checkRaisedFlopCBet;
 
+        [ProtoMember(13)]
         protected int couldCheckRaiseFlopCBet;
 
         public override decimal CheckRaisedFlopCBet
@@ -415,8 +452,10 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(14)]
         protected int foldToTurnCBetIn3BetPot;
 
+        [ProtoMember(15)]
         protected int facedToTurnCBetIn3BetPot;
 
         public override decimal FoldToTurnCBetIn3BetPot
@@ -427,8 +466,10 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(16)]
         protected int raisedFlopCBetIn3BetPot;
 
+        [ProtoMember(17)]
         protected int couldRaiseFlopCBetIn3BetPot;
 
         public override decimal RaiseFlopCBetIn3BetPot
@@ -439,12 +480,15 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(18)]
         protected int didFlopBet;
 
+        [ProtoMember(19)]
         protected int didTurnBet;
 
         #region FlopBetSize stats
 
+        [ProtoMember(20)]
         protected int flopBetSizeOneHalfOrLess;
 
         public override decimal FlopBetSizeOneHalfOrLess
@@ -455,6 +499,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(21)]
         protected int flopBetSizeOneQuarterOrLess;
 
         public override decimal FlopBetSizeOneQuarterOrLess
@@ -465,6 +510,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(22)]
         protected int flopBetSizeTwoThirdsOrLess;
 
         public override decimal FlopBetSizeTwoThirdsOrLess
@@ -475,6 +521,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(23)]
         protected int flopBetSizeThreeQuartersOrLess;
 
         public override decimal FlopBetSizeThreeQuartersOrLess
@@ -485,6 +532,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(24)]
         protected int flopBetSizeOneOrLess;
 
         public override decimal FlopBetSizeOneOrLess
@@ -495,6 +543,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(25)]
         protected int flopBetSizeMoreThanOne;
 
         public override decimal FlopBetSizeMoreThanOne
@@ -509,6 +558,7 @@ namespace Model.Data
 
         #region TurnBetSize stats
 
+        [ProtoMember(26)]
         protected int turnBetSizeOneHalfOrLess;
 
         public override decimal TurnBetSizeOneHalfOrLess
@@ -519,6 +569,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(27)]
         protected int turnBetSizeOneQuarterOrLess;
 
         public override decimal TurnBetSizeOneQuarterOrLess
@@ -529,6 +580,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(28)]
         protected int turnBetSizeOneThirdOrLess;
 
         public override decimal TurnBetSizeOneThirdOrLess
@@ -539,6 +591,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(29)]
         protected int turnBetSizeTwoThirdsOrLess;
 
         public override decimal TurnBetSizeTwoThirdsOrLess
@@ -549,6 +602,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(30)]
         protected int turnBetSizeThreeQuartersOrLess;
 
         public override decimal TurnBetSizeThreeQuartersOrLess
@@ -559,6 +613,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(31)]
         protected int turnBetSizeOneOrLess;
 
         public override decimal TurnBetSizeOneOrLess
@@ -569,6 +624,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(32)]
         protected int turnBetSizeMoreThanOne;
 
         public override decimal TurnBetSizeMoreThanOne
@@ -583,6 +639,7 @@ namespace Model.Data
 
         #region RiverBetSize stats
 
+        [ProtoMember(33)]
         protected int riverBetSizeMoreThanOne;
 
         public override decimal RiverBetSizeMoreThanOne
@@ -597,8 +654,10 @@ namespace Model.Data
 
         #region WTSD After stats
 
+        [ProtoMember(34)]
         protected int wtsdAfterCalling3Bet;
 
+        [ProtoMember(35)]
         protected int wtsdAfterCalling3BetOpportunity;
 
         public override decimal WTSDAfterCalling3Bet
@@ -609,8 +668,10 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(36)]
         protected int wtsdAfterCallingPfr;
 
+        [ProtoMember(37)]
         protected int wtsdAfterCallingPfrOpportunity;
 
         public override decimal WTSDAfterCallingPfr
@@ -621,8 +682,10 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(38)]
         protected int wtsdAfterNotCBettingFlopAsPfr;
 
+        [ProtoMember(39)]
         protected int wtsdAfterNotCBettingFlopAsPfrOpportunity;
 
         public override decimal WTSDAfterNotCBettingFlopAsPfr
@@ -633,6 +696,7 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(40)]
         protected int wtsdAfterSeeingTurn;
 
         public override decimal WTSDAfterSeeingTurn
@@ -643,8 +707,10 @@ namespace Model.Data
             }
         }
 
+        [ProtoMember(41)]
         protected int wtsdAsPF3Bettor;
 
+        [ProtoMember(42)]
         protected int wtsdAsPF3BettorOpportunity;
 
         public override decimal WTSDAsPF3Bettor
@@ -652,6 +718,42 @@ namespace Model.Data
             get
             {
                 return GetPercentage(wtsdAsPF3Bettor, wtsdAsPF3BettorOpportunity);
+            }
+        }
+
+        [ProtoMember(44)]
+        protected int did4Bet;
+
+        [ProtoMember(45)]
+        protected int could4Bet;
+
+        public override decimal FourBet
+        {
+            get
+            {
+                return GetPercentage(did4Bet, could4Bet);
+            }
+        }
+
+        [ProtoMember(46)]
+        protected int faced3Bet;
+
+        public override decimal ThreeBetCall
+        {
+            get
+            {
+                return GetPercentage(Source.Calledthreebetpreflop, faced3Bet);
+            }
+        }
+
+        [ProtoMember(47)]
+        protected int foldedTo3Bet;
+
+        public override decimal FoldToThreeBet
+        {
+            get
+            {
+                return GetPercentage(foldedTo3Bet, faced3Bet);
             }
         }
 
@@ -665,14 +767,19 @@ namespace Model.Data
 
         public override void AddStatistic(Playerstatistic statistic)
         {
-            statistic.CalculatePositionalStats();
-
             Source += statistic;
+            UpdatePositionalStats(statistic);
+
+            if (gameNumberMax < statistic.GameNumber)
+            {
+                gameNumberMax = statistic.GameNumber;
+            }
 
             statisticCount++;
             netWon += statistic.NetWon;
             bigBlind += statistic.BigBlind;
             netWonByBigBlind += GetDivisionResult(statistic.NetWon, statistic.BigBlind);
+            evInBB += GetDivisionResult(statistic.NetWon + statistic.EVDiff, statistic.BigBlind);
 
             if (sessionStartTime > statistic.Time)
             {
@@ -725,16 +832,24 @@ namespace Model.Data
 
             raisedFlopCBetIn3BetPot += statistic.RaisedFlopCBetIn3BetPot;
             couldRaiseFlopCBetIn3BetPot += statistic.CouldRaiseFlopCBetIn3BetPot;
+
+            did4Bet += statistic.DidfourbetpreflopVirtual;
+            could4Bet += statistic.CouldfourbetpreflopVirtual;
+
+            faced3Bet += statistic.FacedthreebetpreflopVirtual;
+            foldedTo3Bet += statistic.FoldedtothreebetpreflopVirtual;
         }
 
         public override void Clean()
         {
             base.Clean();
 
+            gameNumberMax = 0;
             statisticCount = 0;
             netWon = 0;
             bigBlind = 0;
             netWonByBigBlind = 0;
+            evInBB = 0;
             sessionStartTime = DateTime.MaxValue;
             sessionEndTime = DateTime.MinValue;
 
@@ -779,27 +894,25 @@ namespace Model.Data
 
             raisedFlopCBetIn3BetPot = 0;
             couldRaiseFlopCBetIn3BetPot = 0;
+
+            did4Bet = 0;
+            could4Bet = 0;
+            faced3Bet = 0;
+            foldedTo3Bet = 0;
         }
 
-        #endregion
-
-        #region Help methods
-
-        protected virtual decimal GetPercentage(decimal? actual, decimal? possible)
+        public override int CompareTo(object obj)
         {
-            if (TotalHands == 0)
+            var objIndicator = obj as LightIndicators;
+
+            if (objIndicator == null)
             {
-                return 0;
+                return 1;
             }
 
-            if (!possible.HasValue || !actual.HasValue || possible == 0)
-            {
-                return 0;
-            }
-
-            return (actual.Value / possible.Value) * 100;
+            return objIndicator.gameNumberMax.CompareTo(gameNumberMax);
         }
 
-        #endregion
+        #endregion       
     }
 }

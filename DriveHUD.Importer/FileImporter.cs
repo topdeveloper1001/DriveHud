@@ -31,6 +31,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Importer;
 using Model.Interfaces;
+using Model.Reports;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
@@ -60,12 +61,16 @@ namespace DriveHUD.Importers
         private readonly IImporterSessionCacheService importSessionCacheService;
         private readonly IDataService dataService;
         private readonly IEventAggregator eventAggregator;
+        private readonly IOpponentReportService opponentReportService;
+        private readonly SingletonStorageModel storageModel;
 
         public FileImporter()
         {
             importSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
+            storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
         }
 
         /// <summary>
@@ -434,11 +439,22 @@ namespace DriveHUD.Importers
                 session.Insert(handHistory.HandHistory);
 
                 // join new players with existing
-                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));              
+                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId)).ToArray();
 
                 var calculatedEquity = new Dictionary<string, Dictionary<Street, decimal>>();
 
-                foreach (var existingPlayer in handPlayers.ToArray())
+                var processOpponentReport = false;
+
+                if (storageModel != null && storageModel.PlayerSelectedItem != null)
+                {
+                    var playersIntersection = (from selectedPlayerId in storageModel.PlayerSelectedItem.PlayerIds
+                                               join handPlayer in handPlayers on selectedPlayerId equals handPlayer.PlayerId
+                                               select selectedPlayerId);
+
+                    processOpponentReport = playersIntersection.Any();
+                }
+
+                foreach (var existingPlayer in handPlayers)
                 {
                     if (existingGameType.Istourney)
                     {
@@ -479,13 +495,34 @@ namespace DriveHUD.Importers
 
                         gameInfo.AddToPlayersCacheInfo(cacheInfo);
 
-                        var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
-
-                        if (hh != null)
+                        if (!session.Query<PlayerGameInfo>()
+                            .Any(x => x.PlayerId == existingPlayer.PlayerId && x.GameInfoId == existingGameType.GametypeId))
                         {
-                            hh.GameType = existingGameType;
-                            hh.Player = existingPlayer;
-                            session.Insert(hh);
+                            var playerGameInfo = new PlayerGameInfo
+                            {
+                                PlayerId = existingPlayer.PlayerId,
+                                GameInfoId = existingGameType.GametypeId
+                            };
+
+                            session.Insert(playerGameInfo);
+                        }
+
+                        if (!handHistory.GameType.Istourney)
+                        {
+                            var handPlayer = new HandPlayer
+                            {
+                                HandId = handHistory.HandHistory.HandhistoryId,
+                                PlayerId = existingPlayer.PlayerId,
+                                Currency = playerStat.CurrencyId,
+                                NetWon = Utils.ConvertToCents(playerStat.NetWon)
+                            };
+
+                            session.Insert(handPlayer);
+                        }
+
+                        if (processOpponentReport)
+                        {
+                            opponentReportService.UpdateReport(playerStat);
                         }
 
                         BuildAutoNotes(playerStatCopy, handHistory.Source, session);

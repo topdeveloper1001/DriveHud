@@ -271,6 +271,10 @@ namespace DriveHUD.Application
         /// <returns>True if this is the first instance of the application.</returns>
         public static bool InitializeAsFirstInstance(string uniqueName)
         {
+#if DEBUG
+            return true;
+#endif
+
             commandLineArgs = GetCommandLineArgs(uniqueName);
 
             // Build unique application Id and the IPC channel name.
@@ -480,7 +484,7 @@ namespace DriveHUD.Application
             {
                 return null;
             }
-        }        
+        }
         #endregion
     }
 

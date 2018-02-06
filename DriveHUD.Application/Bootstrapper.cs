@@ -159,7 +159,7 @@ namespace DriveHUD.Application
                     var settingsModel = settingsService.GetSettings();
 
                     if (settingsModel != null && settingsModel.GeneralSettings != null)
-                    {
+                    {                      
                         try
                         {
                             var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
@@ -239,7 +239,6 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IPlayerStatisticCalculator), typeof(PlayerStatisticCalculator), false);
             RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
             RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
-            RegisterTypeIfMissing(typeof(ITopPlayersService), typeof(TopPlayersService), true);
             RegisterTypeIfMissing(typeof(ILayoutMigrator), typeof(LayoutMigrator), false);
             RegisterTypeIfMissing(typeof(ITreatAsService), typeof(TreatAsService), true);
             RegisterTypeIfMissing(typeof(IModuleService), typeof(ModuleService), false);

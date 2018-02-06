@@ -11,8 +11,10 @@
 //----------------------------------------------------------------------
 
 using DriveHud.Tests.UnitTests.Helpers;
+using DriveHUD.Entities;
 using Model.Data;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -25,12 +27,13 @@ namespace DriveHud.Tests.UnitTests
         {
             var playerStatistic = DataServiceHelper.GetPlayerStatisticFromFile(file);
 
-            var indicators = new Indicators(playerStatistic);
+            var indicators = new TestIndicators(playerStatistic);
             var lightIndicators = new LightIndicators(playerStatistic);
 
             Assert.Multiple(() =>
             {
                 Assert.That(lightIndicators.BB, Is.EqualTo(indicators.BB), nameof(HudLightIndicators.BB));
+                Assert.That(lightIndicators.EVBB, Is.EqualTo(indicators.EVBB), nameof(HudLightIndicators.EVBB));
                 Assert.That(lightIndicators.SessionStart, Is.EqualTo(indicators.SessionStart), nameof(HudLightIndicators.SessionStart));
                 Assert.That(lightIndicators.SessionLength, Is.EqualTo(indicators.SessionLength), nameof(HudLightIndicators.SessionLength));
                 Assert.That(lightIndicators.UO_PFR_EP, Is.EqualTo(indicators.UO_PFR_EP), nameof(HudLightIndicators.UO_PFR_EP));
@@ -45,6 +48,8 @@ namespace DriveHud.Tests.UnitTests
                 Assert.That(lightIndicators.ThreeBet_MP, Is.EqualTo(indicators.ThreeBet_MP), nameof(HudLightIndicators.ThreeBet_MP));
                 Assert.That(lightIndicators.ThreeBet_CO, Is.EqualTo(indicators.ThreeBet_CO), nameof(HudLightIndicators.ThreeBet_CO));
                 Assert.That(lightIndicators.ThreeBet_BN, Is.EqualTo(indicators.ThreeBet_BN), nameof(HudLightIndicators.ThreeBet_BN));
+                Assert.That(lightIndicators.FoldToThreeBet, Is.EqualTo(indicators.FoldToThreeBet), nameof(HudLightIndicators.FoldToThreeBet));
+                Assert.That(lightIndicators.FourBet, Is.EqualTo(indicators.FourBet), nameof(HudLightIndicators.FourBet));
                 Assert.That(lightIndicators.FourBetInBB, Is.EqualTo(indicators.FourBetInBB), nameof(HudLightIndicators.FourBetInBB));
                 Assert.That(lightIndicators.FourBetInSB, Is.EqualTo(indicators.FourBetInSB), nameof(HudLightIndicators.FourBetInSB));
                 Assert.That(lightIndicators.FourBetInEP, Is.EqualTo(indicators.FourBetInEP), nameof(HudLightIndicators.FourBetInEP));
@@ -74,10 +79,11 @@ namespace DriveHud.Tests.UnitTests
         {
             var playerStatistic = DataServiceHelper.GetPlayerStatisticFromFile(file);
 
-            var indicators = new Indicators(playerStatistic);
+            var indicators = new TestIndicators(playerStatistic);
             var reportIndicator = new ReportIndicators(playerStatistic);
 
             Assert.That(reportIndicator.BB, Is.EqualTo(indicators.BB), nameof(HudLightIndicators.BB));
+            Assert.That(reportIndicator.EVBB, Is.EqualTo(indicators.EVBB), nameof(HudLightIndicators.EVBB));
             Assert.That(reportIndicator.SessionStart, Is.EqualTo(indicators.SessionStart), nameof(HudLightIndicators.SessionStart));
             Assert.That(reportIndicator.SessionLength, Is.EqualTo(indicators.SessionLength), nameof(HudLightIndicators.SessionLength));
             Assert.That(reportIndicator.UO_PFR_EP, Is.EqualTo(indicators.UO_PFR_EP), nameof(HudLightIndicators.UO_PFR_EP));
@@ -88,6 +94,13 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(reportIndicator.UO_PFR_BB, Is.EqualTo(indicators.UO_PFR_BB), nameof(HudLightIndicators.UO_PFR_BB));
             Assert.That(reportIndicator.HourOfHand, Is.EqualTo(indicators.HourOfHand), nameof(HudLightIndicators.HourOfHand));
             Assert.That(reportIndicator.Statistics.Count, Is.EqualTo(playerStatistic.Count), "Count");
+        }
+
+        private class TestIndicators : Indicators
+        {
+            public TestIndicators(IEnumerable<Playerstatistic> playerStatistic) : base(playerStatistic)
+            {
+            }
         }
     }
 }

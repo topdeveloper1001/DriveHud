@@ -795,8 +795,7 @@ namespace Model
             stat.FacedMultiWayOnFlop = playedFlop && (numberOfActivePlayerOnFlop > 2) ? 1 : 0;
 
             stat.StackInBBs = stat.StartingStack / stat.BigBlind;
-            stat.MRatio = CalculateMRatio(stat);
-            stat.CalculatePositionalStats();
+            stat.MRatio = CalculateMRatio(stat);            
 
             stat.PreflopIP = preflopInPosition ? 1 : 0;
             stat.PreflopOOP = !preflopInPosition ? 1 : 0;
@@ -1529,12 +1528,7 @@ namespace Model
                         {
                             callAfterThreeBet = true;
                         }
-
-                        if (playersCannot3Bet.Contains(action.PlayerName))
-                        {
-                            continue;
-                        }
-
+                     
                         if (action.PlayerName == player && raiser == action.PlayerName)
                         {
                             if (threeBetIsAllIn && !callAfterThreeBet)
@@ -1618,9 +1612,7 @@ namespace Model
                                 {
                                     return;
                                 }
-                            }
-
-                            fourBet.Possible = true;
+                            }                            
 
                             return;
                         }
