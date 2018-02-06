@@ -159,7 +159,7 @@ namespace DriveHUD.Application
                     var settingsModel = settingsService.GetSettings();
 
                     if (settingsModel != null && settingsModel.GeneralSettings != null)
-                    {                      
+                    {
                         try
                         {
                             var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
@@ -287,6 +287,7 @@ namespace DriveHUD.Application
 
             //Settings
             Container.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
+            Container.RegisterType<ICashGraphSettingsService, CashGraphSettingsService>(new ContainerControlledLifetimeManager());
 
             // Settings Table Configurators
             Container.RegisterType<ISiteSettingTableConfigurator, BovadaSiteSettingTableConfigurator>(EnumPokerSites.Ignition.ToString());

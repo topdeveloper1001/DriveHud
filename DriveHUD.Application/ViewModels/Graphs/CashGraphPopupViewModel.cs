@@ -221,6 +221,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 MainGraphViewModel.ShowNonShowdown = viewModelInfo.MoneyWonCashGraphViewModel.ShowNonShowdown;
                 MainGraphViewModel.ShowShowdown = viewModelInfo.MoneyWonCashGraphViewModel.ShowShowdown;
                 MainGraphViewModel.ShowEV = viewModelInfo.MoneyWonCashGraphViewModel.ShowEV;
+                MainGraphViewModel.ValueType = viewModelInfo.MoneyWonCashGraphViewModel.ValueType;
                 MainGraphViewModel.ChartDisplayRange = viewModelInfo.MoneyWonCashGraphViewModel.ChartDisplayRange;
             }
 

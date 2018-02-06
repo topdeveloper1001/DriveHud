@@ -487,7 +487,10 @@
     <Compile Include="ViewModels\Graphs\BarSeriesChartBehavior.cs" />
     <Compile Include="ViewModels\Graphs\CashGraphPopupRequestInfo.cs" />
     <Compile Include="ViewModels\Graphs\CashGraphPopupViewModelInfo.cs" />
+    <Compile Include="ViewModels\Graphs\CashGraphSettings.cs" />
+    <Compile Include="ViewModels\Graphs\CashGraphSettingsService.cs" />
     <Compile Include="ViewModels\Graphs\GraphsProvider.cs" />
+    <Compile Include="ViewModels\Graphs\ICashGraphSettingsService.cs" />
     <Compile Include="ViewModels\Graphs\SeriesProviders\BB100ByTimeOfDaySeriesProvider.cs" />
     <Compile Include="ViewModels\Graphs\SeriesProviders\EVDiffToRealizedEvByMonthSeriesProvider.cs" />
     <Compile Include="ViewModels\Graphs\SeriesProviders\IGraphSeriesProvider.cs" />

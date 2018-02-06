@@ -110,8 +110,7 @@ namespace DriveHUD.Application.ViewModels
                 ShowMoneyWonGraphPopupRequest.Raise(cashGraphPopupRequestInfo);
             });
 
-            InitializeWinningsChart();
-            InitializeBB100Chart();
+            InitializeCharts();
         }
 
         internal void Update()
@@ -155,16 +154,15 @@ namespace DriveHUD.Application.ViewModels
             OnPropertyChanged(() => IndicatorCollection);
         }
 
-        private void InitializeWinningsChart()
+        private void InitializeCharts()
         {
-            var moneyWonChartSeries = ChartSeriesProvider.CreateMoneyWonChartSeries();
-            MoneyWonGraphViewModel = new CashGraphViewModel(moneyWonChartSeries);
-        }
+            var cashGraphSettingsService = ServiceLocator.Current.GetInstance<ICashGraphSettingsService>();
 
-        private void InitializeBB100Chart()
-        {
+            var moneyWonChartSeries = ChartSeriesProvider.CreateMoneyWonChartSeries();
+            MoneyWonGraphViewModel = new CashGraphViewModel(moneyWonChartSeries, cashGraphSettingsService.GetSettings(CashChartType.MoneyWon));
+
             var bb100ChartSeries = ChartSeriesProvider.CreateBB100ChartSeries();
-            BB100GraphViewModel = new CashGraphViewModel(bb100ChartSeries, ChartDisplayRange.Month);
+            BB100GraphViewModel = new CashGraphViewModel(bb100ChartSeries, cashGraphSettingsService.GetSettings(CashChartType.BB100));
         }
     }
 }

@@ -80,7 +80,7 @@ namespace Model.Enums
         PFR,
         BB
     }
-   
+
     public enum ChartCashSeriesWinningType
     {
         Netwon,
@@ -95,9 +95,16 @@ namespace Model.Enums
         BB
     }
 
+
+    public enum CashChartType
+    {
+        MoneyWon = 0,
+        BB100 = 1
+    }
+
     public enum ChartDisplayRange
-    {     
-        None,   
+    {
+        None,
         Week,
         Month,
         Year,

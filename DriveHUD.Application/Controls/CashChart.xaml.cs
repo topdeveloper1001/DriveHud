@@ -96,7 +96,7 @@ namespace DriveHUD.Application.Controls
         }
 
         public static readonly DependencyProperty ShowNonShowdownEnabledProperty = DependencyProperty.Register("ShowNonShowdownEnabled", typeof(bool), typeof(CashChart),
-          new FrameworkPropertyMetadata(false));
+            new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
         public bool ShowNonShowdownEnabled
         {
@@ -111,7 +111,7 @@ namespace DriveHUD.Application.Controls
         }
 
         public static readonly DependencyProperty ShowEVProperty = DependencyProperty.Register("ShowEV", typeof(bool), typeof(CashChart),
-        new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnShowShowdownChanged));
+            new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnShowShowdownChanged));
 
         public bool ShowEV
         {
@@ -126,7 +126,7 @@ namespace DriveHUD.Application.Controls
         }
 
         public static readonly DependencyProperty ValueTypeProperty = DependencyProperty.Register("ValueType", typeof(ChartCashSeriesValueType), typeof(CashChart),
-            new PropertyMetadata(ChartCashSeriesValueType.Currency, OnValueTypeChanged));
+            new FrameworkPropertyMetadata(ChartCashSeriesValueType.Currency, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnValueTypeChanged));
 
         public ChartCashSeriesValueType ValueType
         {
