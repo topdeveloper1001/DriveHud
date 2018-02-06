@@ -164,6 +164,34 @@ namespace DriveHUD.Importers.Bovada
             TableId = tableNumber;
         }
 
+        protected override void ParseGidInfo(BovadaCommandDataObject cmdObj)
+        {
+            if (!cmdObj.gid.Equals("Unjoined", StringComparison.OrdinalIgnoreCase))
+            {
+                return;
+            }
+
+            LogProvider.Log.Info($"Unjoined table [{TableName}, {TableId}, {TableIndex}]. [{Identifier}]");
+
+            ignitionWindowCache.RemoveWindow(WindowHandle);
+
+            WindowHandle = IntPtr.Zero;
+            isConnectedInfoParsed = false;
+        }
+
+        protected override void PreImportChecks()
+        {
+            if (WindowHandle == IntPtr.Zero || WinApi.IsWindow(WindowHandle))
+            {
+                return;
+            }
+
+            LogProvider.Log.Info($"Window [{WindowHandle}] for table [{TableName}, {TableId}, {TableIndex}] doesn't exist. [{Identifier}]");
+
+            ignitionWindowCache.RemoveWindow(WindowHandle);
+            WindowHandle = IntPtr.Zero;
+        }
+
         protected override void UpdateHandNumberCommand()
         {
             // if info didn't come for some reason trying to use title of window            
@@ -211,6 +239,11 @@ namespace DriveHUD.Importers.Bovada
                         var windowTitle = WinApi.GetWindowText(hWnd);
                         var windowClassName = sb.ToString();
 
+                        if (IsAdvancedLoggingEnabled)
+                        {
+                            LogProvider.Log.Info(this, $"Checking if window [{windowTitle}, {windowClassName}] matches table [{TableName}, {TableId}, {TableIndex}]. [{Identifier}]");
+                        }
+
                         if (IsWindowMatch(windowTitle, windowClassName))
                         {
                             // if window is already cached we need to check maybe d/c happened
@@ -229,7 +262,7 @@ namespace DriveHUD.Importers.Bovada
                                 {
                                     if (IsAdvancedLoggingEnabled)
                                     {
-                                        LogProvider.Log.Info(this, $"Window [{windowTitle}, {windowClassName}] was found in the cache, and it does match table [{TableName}, {TableId}, {TableIndex}, {HeroSeat}]. [{Identifier}]");
+                                        LogProvider.Log.Info(this, $"Window [{windowTitle}, {windowClassName}, {hWnd}] was found in the cache, and it does match table [{TableName}, {TableId}, {TableIndex}, {HeroSeat}]. [{Identifier}]");
                                     }
 
                                     windowHandle = hWnd;
@@ -241,7 +274,7 @@ namespace DriveHUD.Importers.Bovada
 
                             if (IsAdvancedLoggingEnabled)
                             {
-                                LogProvider.Log.Info(this, $"Window [{windowTitle}, {windowClassName}] does match table [{TableName}, {TableId}, {TableIndex}]. [{Identifier}]");
+                                LogProvider.Log.Info(this, $"Window [{windowTitle}, {windowClassName}, {hWnd}] does match table [{TableName}, {TableId}, {TableIndex}]. [{Identifier}]");
                             }
 
                             windowHandle = hWnd;
@@ -258,11 +291,6 @@ namespace DriveHUD.Importers.Bovada
 
         private bool IsWindowMatch(string title, string className)
         {
-            if (IsAdvancedLoggingEnabled)
-            {
-                LogProvider.Log.Info(this, $"Checking if window [{title}, {className}] matches table [{TableName}, {TableId}, {TableIndex}]. [{Identifier}]");
-            }
-
             if (string.IsNullOrWhiteSpace(className) ||
                 !className.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase))
             {
