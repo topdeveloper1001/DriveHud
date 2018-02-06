@@ -894,23 +894,15 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            var _validExtensions = new HashSet<string> { ".txt", ".xml" };
-            var filesToImport = Directory.EnumerateFiles(folderDialog.SelectedPath, "*.*", SearchOption.AllDirectories)
-                .Where(f => _validExtensions.Contains(Path.GetExtension(f).ToLower()))
-                .Select(f => new FileInfo(f)).ToArray();
-
-            if (filesToImport.Length == 0)
-            {
-                return;
-            }
+            var directory = new DirectoryInfo(folderDialog.SelectedPath);
 
             var fileImporter = ServiceLocator.Current.GetInstance<IFileImporter>();
 
             IsManualImportingRunning = true;
 
-            await Task.Factory.StartNew(() =>
+            await Task.Run(() =>
             {
-                fileImporter.Import(filesToImport, ProgressViewModel.Progress);
+                fileImporter.Import(directory, ProgressViewModel.Progress);
                 Task.Delay(ImportFileUpdateDelay).Wait();
             });
 

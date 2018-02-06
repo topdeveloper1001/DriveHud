@@ -52,7 +52,7 @@ namespace DriveHUD.Importers
     {
         private const int PlayersPerQuery = 100;
 
-        private readonly string[] importingExtensions = new[] { "txt", "xml" };
+        private readonly HashSet<string> importingExtensions = new HashSet<string> { ".txt", ".xml" };
 
         private static readonly object locker = new object();
 
@@ -97,7 +97,7 @@ namespace DriveHUD.Importers
 
             foreach (var file in files)
             {
-                LogProvider.Log.Info($"Running manual import from  {file.FullName}");
+                LogProvider.Log.Info($"Running manual import from file '{file.FullName}'");
 
                 progress.Report(new LocalizableString("Progress_ReadingFile", file.Name));
 
@@ -119,7 +119,9 @@ namespace DriveHUD.Importers
                         FileName = file.FullName
                     };
 
-                    Import(text, progress, gameInfo);
+                    var result = Import(text, progress, gameInfo);
+
+                    LogProvider.Log.Info($"{result.Count()} hand(s) have been imported.");
                 }
                 catch (DHInternalException ex)
                 {
@@ -147,13 +149,14 @@ namespace DriveHUD.Importers
                 return;
             }
 
-            LogProvider.Log.Info($"Running manual import from  {directory.FullName}");
+            LogProvider.Log.Info($"Running manual import from folder '{directory.FullName}'");
 
             progress.Report(new LocalizableString("Progress_ScanningFolder"));
 
-            var filesForImporting = importingExtensions.SelectMany(x => directory.GetFiles(x, SearchOption.AllDirectories))
-                                    .Distinct(new LambdaComparer<FileInfo>((x, y) => x.FullName.Equals(y.FullName)))
-                                    .ToArray();
+            var filesForImporting = directory.EnumerateFiles("*.*", SearchOption.AllDirectories)
+                .Where(x => importingExtensions.Contains(Path.GetExtension(x.Name)))
+                .Distinct(new LambdaComparer<FileInfo>((x, y) => x.FullName.Equals(y.FullName)))
+                .ToArray();
 
             Import(filesForImporting, progress);
         }
