@@ -23,8 +23,10 @@ using Model.Reports;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
+using NHibernate.Transform;
 using ProtoBuf;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -165,52 +167,57 @@ namespace Model
             {
                 foreach (var file in files)
                 {
-                    try
-                    {
-                        using (var sr = new StreamReader(file))
-                        {
-                            string line = null;
-
-                            while ((line = sr.ReadLine()) != null)
-                            {
-                                try
-                                {
-                                    if (string.IsNullOrWhiteSpace(line))
-                                    {
-                                        LogProvider.Log.Warn(this, $"Empty line in {file}");
-                                        continue;
-                                    }
-
-                                    /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
-                                    byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
-
-                                    using (var ms = new MemoryStream(byteAfter64))
-                                    {
-                                        var stat = Serializer.Deserialize<Playerstatistic>(ms);
-
-                                        if (predicate == null || predicate(stat))
-                                        {
-                                            action(stat);
-                                        }
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    LogProvider.Log.Error($@"Cannot import the file: {file}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
-                                }
-                            }
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        LogProvider.Log.Error(this, $"File '{file}' has not been imported.", e);
-                        return;
-                    }
+                    ActOnPlayerStatisticFromFile(file, predicate, action);
                 }
             }
             finally
             {
                 rwLock.ExitReadLock();
+            }
+        }
+
+        public void ActOnPlayerStatisticFromFile(string file, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action)
+        {
+            try
+            {
+                using (var sr = new StreamReader(file))
+                {
+                    string line = null;
+
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        try
+                        {
+                            if (string.IsNullOrWhiteSpace(line))
+                            {
+                                LogProvider.Log.Warn(this, $"Empty line in {file}");
+                                continue;
+                            }
+
+                            /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
+                            byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
+
+                            using (var ms = new MemoryStream(byteAfter64))
+                            {
+                                var stat = Serializer.Deserialize<Playerstatistic>(ms);
+
+                                if (predicate == null || predicate(stat))
+                                {
+                                    action(stat);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            LogProvider.Log.Error($@"Could not process the file: {file}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"File '{file}' has not been processed.", e);
+                return;
             }
         }
 
@@ -1182,12 +1189,17 @@ namespace Model
             {
                 using (var session = ModelEntities.OpenStatelessSession())
                 {
-                    var result = session
-                        .Query<PlayerNetWon>()
-                        .Where(x => playersToExclude != null && !playersToExclude.Contains(x.PlayerId))
-                        .OrderByDescending(x => x.NetWon)
-                        .Take(top)
-                        .ToList();
+                    var playersToExcludeQuery = string.Join(",", playersToExclude);
+
+                    var query = session.CreateSQLQuery($@"select hpt2.PlayerId, hpt2.Currency, sum(hpt2.NetWon) as NetWon from HandsPlayers hpt1 
+                        join HandsPlayers hpt2 on hpt1.HandId = hpt2.HandId
+                        where hpt1.PlayerId in ({playersToExcludeQuery})
+                        group by hpt2.PlayerId, hpt2.Currency
+                        order by NetWon desc limit 0, {top}");
+
+                    query.SetResultTransformer(PlayerNetWonQuery.Transformer);
+
+                    var result = query.List<PlayerNetWon>();
 
                     return result;
                 }
@@ -1200,7 +1212,7 @@ namespace Model
             return new List<PlayerNetWon>();
         }
 
-        private string[] GetPlayerFiles(int playerId)
+        public string[] GetPlayerFiles(int playerId)
         {
             try
             {
@@ -1217,6 +1229,30 @@ namespace Model
             {
                 LogProvider.Log.Error(this, $"Could not get player [{playerId}] files", e);
                 return new string[0];
+            }
+        }
+
+        private sealed class PlayerNetWonQuery : IResultTransformer
+        {
+            public static readonly PlayerNetWonQuery Transformer = new PlayerNetWonQuery();
+
+            private PlayerNetWonQuery()
+            {
+            }
+
+            public IList TransformList(IList collection)
+            {
+                return collection;
+            }
+
+            public object TransformTuple(object[] tuple, string[] aliases)
+            {
+                return new PlayerNetWon
+                {
+                    PlayerId = Convert.ToInt32(tuple[0]),
+                    Currency = Convert.ToInt32(tuple[1]),
+                    NetWon = Convert.ToInt64(tuple[2])
+                };
             }
         }
     }

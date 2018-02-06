@@ -33,6 +33,15 @@ namespace Model.Interfaces
 
         void ActOnPlayerStatisticFromFile(string playerName, short? pokerSiteId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);
 
+        /// <summary>
+        /// Executes action on each player statistic in the specified file if it matches the specified predicate. 
+        /// <para>*This method is not thread-safe.*</para>        
+        /// </summary>
+        /// <param name="file">File with stats</param>
+        /// <param name="predicate">Predicate to filter data</param>
+        /// <param name="action">Action to execute on each statistic</param>
+        void ActOnPlayerStatisticFromFile(string file, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);
+
         Players GetPlayer(string playerName, short pokersiteId);
 
         IList<Gametypes> GetPlayerGameTypes(IEnumerable<int> playerIds);
@@ -108,5 +117,7 @@ namespace Model.Interfaces
         IList<IPlayer> GetAliasesList();
 
         #endregion
+
+        string[] GetPlayerFiles(int playerId);
     }
 }

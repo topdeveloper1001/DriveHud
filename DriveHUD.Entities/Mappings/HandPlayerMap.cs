@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PlayerNetWon.cs" company="Ace Poker Solutions">
+// <copyright file="HandPlayerMap.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,15 +10,21 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using FluentNHibernate.Mapping;
 
-namespace DriveHUD.Entities
+namespace DriveHUD.Entities.Mappings
 {
-    public class PlayerNetWon
+    public partial class HandPlayerMap : ClassMap<HandPlayer>
     {
-        public virtual int PlayerId { get; set; }
-
-        public virtual int Currency { get; set; }
-
-        public virtual long NetWon { get; set; }
-    }    
+        public HandPlayerMap()
+        {
+            Table("HandsPlayers");
+            LazyLoad();
+            Id(x => x.Id).GeneratedBy.Native().Column("HandPlayerId");
+            Map(x => x.PlayerId).Column("PlayerId").Not.Nullable();
+            Map(x => x.HandId).Column("HandId").Not.Nullable();
+            Map(x => x.Currency).Column("Currency").Not.Nullable();
+            Map(x => x.NetWon).Column("NetWon").Not.Nullable();
+        }
+    }
 }

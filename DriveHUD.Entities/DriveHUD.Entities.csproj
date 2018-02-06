@@ -72,6 +72,7 @@
     <Compile Include="Handhistory.cs" />
     <Compile Include="HandHistoryRecord.cs" />
     <Compile Include="Handnotes.cs" />
+    <Compile Include="HandPlayer.cs" />
     <Compile Include="HudViewType.cs" />
     <Compile Include="ImportedFile.cs" />
     <Compile Include="Mappings\AliasesMap.cs" />
@@ -79,9 +80,9 @@
     <Compile Include="Mappings\HandhistoryMap.cs" />
     <Compile Include="Mappings\HandhistoryrecordMap.cs" />
     <Compile Include="Mappings\HandnotesMap.cs" />
+    <Compile Include="Mappings\HandPlayerMap.cs" />
     <Compile Include="Mappings\ImportedFilesMap.cs" />
     <Compile Include="Mappings\PlayerGameInfoMap.cs" />
-    <Compile Include="Mappings\PlayerNetWonMap.cs" />
     <Compile Include="Mappings\PlayernotesMap.cs" />
     <Compile Include="Mappings\PlayersMap.cs" />
     <Compile Include="Mappings\TournamentsMap.cs" />

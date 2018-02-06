@@ -292,6 +292,7 @@
     <Compile Include="Reports\IOpponentReportService.cs" />
     <Compile Include="Reports\IReportCreatorcs.cs" />
     <Compile Include="Reports\OpponentAnalysisReportCreator.cs" />
+    <Compile Include="Reports\OpponentReportCache.cs" />
     <Compile Include="Reports\OpponentReportService.cs" />
     <Compile Include="Reports\OverAllReportCreator.cs" />
     <Compile Include="Reports\PokerSiteReportCreator.cs" />
@@ -358,7 +359,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">

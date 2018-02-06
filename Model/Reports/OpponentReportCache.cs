@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PlayerNetWonMap.cs" company="Ace Poker Solutions">
+// <copyright file="OpponentReportCache.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,21 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using FluentNHibernate.Mapping;
+using Model.Data;
+using ProtoBuf;
+using System.Collections.Generic;
 
-namespace DriveHUD.Entities.Mappings
+namespace Model.Reports
 {
-    public partial class PlayerNetWonMap : ClassMap<PlayerNetWon>
+    [ProtoContract]
+    public class OpponentReportCache
     {
-        public PlayerNetWonMap()
-        {
-            Table("PlayerNetWon");
-            LazyLoad();
-            Id(x => x.Id).GeneratedBy.Native().Column("PlayerNetWonId");
-            Map(x => x.PlayerId).Column("PlayerId").Not.Nullable();
-            Map(x => x.Currency).Column("Currency").Not.Nullable();
-            Map(x => x.NetWon).Column("NetWon").Not.Nullable();
-            References(x => x.Player).ReadOnly().Column("PlayerId");
-        }
+        [ProtoMember(1)]
+        public int[] PlayerIds { get; set; }
+
+        [ProtoMember(2)]
+        public List<OpponentReportIndicators> Report { get; set; }
     }
 }

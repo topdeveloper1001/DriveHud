@@ -62,6 +62,7 @@ namespace DriveHUD.Importers
         private readonly IDataService dataService;
         private readonly IEventAggregator eventAggregator;
         private readonly IOpponentReportService opponentReportService;
+        private readonly SingletonStorageModel storageModel;
 
         public FileImporter()
         {
@@ -69,6 +70,7 @@ namespace DriveHUD.Importers
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
+            storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
         }
 
         /// <summary>
@@ -437,11 +439,22 @@ namespace DriveHUD.Importers
                 session.Insert(handHistory.HandHistory);
 
                 // join new players with existing
-                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));
+                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId)).ToArray();
 
                 var calculatedEquity = new Dictionary<string, Dictionary<Street, decimal>>();
 
-                foreach (var existingPlayer in handPlayers.ToArray())
+                var processOpponentReport = false;
+
+                if (storageModel != null && storageModel.PlayerSelectedItem != null)
+                {
+                    var playersIntersection = (from selectedPlayerId in storageModel.PlayerSelectedItem.PlayerIds
+                                               join handPlayer in handPlayers on selectedPlayerId equals handPlayer.PlayerId
+                                               select selectedPlayerId);
+
+                    processOpponentReport = playersIntersection.Any();
+                }
+
+                foreach (var existingPlayer in handPlayers)
                 {
                     if (existingGameType.Istourney)
                     {
@@ -496,10 +509,21 @@ namespace DriveHUD.Importers
 
                         if (!handHistory.GameType.Istourney)
                         {
-                            UpdatePlayerNetWon(session, existingPlayer, playerStat);
+                            var handPlayer = new HandPlayer
+                            {
+                                HandId = handHistory.HandHistory.HandhistoryId,
+                                PlayerId = existingPlayer.PlayerId,
+                                Currency = playerStat.CurrencyId,
+                                NetWon = Utils.ConvertToCents(playerStat.NetWon)
+                            };
+
+                            session.Insert(handPlayer);
                         }
 
-                        opponentReportService.UpdateReport(playerStat);
+                        if (processOpponentReport)
+                        {
+                            opponentReportService.UpdateReport(playerStat);
+                        }
 
                         BuildAutoNotes(playerStatCopy, handHistory.Source, session);
                     }
@@ -1120,35 +1144,6 @@ namespace DriveHUD.Importers
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, "Could not build auto notes", e);
-            }
-        }
-
-        /// <summary>
-        /// Insert/Update player net won record for the specified player
-        /// </summary>
-        /// <param name="session">DB session</param>
-        /// <param name="player">Player to insert/update player net won record</param>
-        /// <param name="playerStat">Player stats</param>
-        private void UpdatePlayerNetWon(IStatelessSession session, Players player, Playerstatistic playerStat)
-        {
-            var playerNetWon = session.Query<PlayerNetWon>().FirstOrDefault(x => x.PlayerId == player.PlayerId &&
-                                x.Currency == playerStat.CurrencyId);
-
-            if (playerNetWon == null)
-            {
-                playerNetWon = new PlayerNetWon
-                {
-                    PlayerId = player.PlayerId,
-                    Currency = playerStat.CurrencyId,
-                    NetWon = Utils.ConvertToCents(playerStat.NetWon)
-                };
-
-                session.Insert(playerNetWon);
-            }
-            else
-            {
-                playerNetWon.NetWon += Utils.ConvertToCents(playerStat.NetWon);
-                session.Update(playerNetWon);
             }
         }
     }

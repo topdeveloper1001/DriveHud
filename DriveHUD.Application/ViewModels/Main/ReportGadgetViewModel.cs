@@ -27,6 +27,7 @@ using Model.Events.FilterEvents;
 using Model.Extensions;
 using Model.Filters;
 using Model.Interfaces;
+using Model.Reports;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
 using System;
@@ -342,13 +343,13 @@ namespace DriveHUD.Application.ViewModels
         {
             var report = ReportSelectedItem as OpponentReportIndicators;
 
-            if (report == null || report.ReportHands.Count >= filterAmountDictionarySelectedItem)
+            if (report == null || report.HasAllHands || report.ReportHands.Count >= filterAmountDictionarySelectedItem)
             {
                 FilterReportSelectedItemStatisticsCollection();
                 return;
             }
 
-            var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
 
             IsHandGridBusy = true;
 
@@ -362,11 +363,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 try
                 {
-                    var statistic = dataService.GetPlayerStatisticFromFile(report.PlayerId, x => !x.IsTourney)
-                        .OrderByDescending(x => x.Time)
-                        .Take(filterAmountDictionarySelectedItem)
-                        .ToArray();
-
+                    var statistic = opponentReportService.LoadPlayerHands(report.PlayerId, filterAmountDictionarySelectedItem);
                     ReportSelectedItemStatisticsCollection = new ObservableCollection<ReportHandViewModel>(statistic.Select(x => new ReportHandViewModel(x)));
                 }
                 catch (Exception e)

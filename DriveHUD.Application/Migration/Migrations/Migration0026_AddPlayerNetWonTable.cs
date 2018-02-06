@@ -31,7 +31,6 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
             try
             {
-                CreatePlayerNetWonTable();
                 CreatePlayerGameInfoTable();
             }
             catch (Exception e)
@@ -45,11 +44,6 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         public override void Down()
         {
-            if (Schema.Table(playerNetWonTableName).Exists())
-            {
-                Delete.Table(playerNetWonTableName);
-            }
-
             if (Schema.Table(playerGameInfoTableName).Exists())
             {
                 Delete.Table(playerGameInfoTableName);

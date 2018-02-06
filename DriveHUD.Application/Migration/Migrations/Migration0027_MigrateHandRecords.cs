@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.MigrationService.Migrators;
 using DriveHUD.Common.Log;
 using FluentMigrator;
 using HandHistories.Objects.GameDescription;
@@ -31,9 +32,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
             try
             {
-                TruncateTable(playerNetWonTableName);
-                TruncateTable(playerGameInfoTableName);
-                FillPlayerNetWonTable();
+                MigrationUtils.TruncateTable(playerGameInfoTableName);
                 FillPlayerGameInfoTable();
             }
             catch (Exception e)
@@ -49,8 +48,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
         {
             try
             {
-                TruncateTable(playerNetWonTableName);
-                TruncateTable(playerGameInfoTableName);
+                MigrationUtils.TruncateTable(playerGameInfoTableName);
             }
             catch (Exception e)
             {
@@ -114,19 +112,6 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
                     transaction.Commit();
                 }
-            }
-        }
-
-        private void TruncateTable(string tableName)
-        {
-            LogProvider.Log.Info($"Truncating {tableName}");
-
-            using (var session = ModelEntities.OpenStatelessSession())
-            {
-                var sqlQuery = session
-                           .CreateSQLQuery($"delete from {tableName}");
-
-                sqlQuery.ExecuteUpdate();
             }
         }
     }

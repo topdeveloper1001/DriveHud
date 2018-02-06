@@ -25,10 +25,18 @@ namespace Model.Data
         private const int handsToStore = 100;
 
         [ProtoMember(1)]
-        public int PlayerId { get; set; }
+        private List<ShrinkedStatistic> shrinkedStatistics = new List<ShrinkedStatistic>();
 
         [ProtoMember(2)]
-        private List<ShrinkedStatistic> shrinkedStatistics = new List<ShrinkedStatistic>();
+        public int PlayerId { get; set; }
+
+        public bool HasAllHands
+        {
+            get
+            {
+                return ReportHands != null && ReportHands.Count < handsToStore;
+            }
+        }
 
         public override void AddStatistic(Playerstatistic statistic)
         {
@@ -43,7 +51,7 @@ namespace Model.Data
             if (ReportHands == null)
             {
                 return;
-            }      
+            }
 
             ReportHands = new ObservableCollection<ReportHandViewModel>(ReportHands.OrderByDescending(x => x.Time).Take(handsToStore));
         }
