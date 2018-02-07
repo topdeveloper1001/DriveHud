@@ -171,11 +171,12 @@ namespace DriveHUD.Importers.Bovada
                 return;
             }
 
-            LogProvider.Log.Info($"Unjoined table [{TableName}, {TableId}, {TableIndex}]. [{Identifier}]");
+            LogProvider.Log.Info($"Unjoined table [{TableName}, {TableId}, {TableIndex}, {WindowHandle}]. [{Identifier}]");
 
             ignitionWindowCache.RemoveWindow(WindowHandle);
 
             WindowHandle = IntPtr.Zero;
+            TableName = string.Empty;
             isConnectedInfoParsed = false;
         }
 
@@ -190,6 +191,7 @@ namespace DriveHUD.Importers.Bovada
 
             ignitionWindowCache.RemoveWindow(WindowHandle);
             WindowHandle = IntPtr.Zero;
+            TableName = string.Empty;
         }
 
         protected override void UpdateHandNumberCommand()
@@ -241,7 +243,7 @@ namespace DriveHUD.Importers.Bovada
 
                         if (IsAdvancedLoggingEnabled)
                         {
-                            LogProvider.Log.Info(this, $"Checking if window [{windowTitle}, {windowClassName}] matches table [{TableName}, {TableId}, {TableIndex}]. [{Identifier}]");
+                            LogProvider.Log.Info(this, $"Checking if window [{windowTitle}, {windowClassName}, {hWnd}] matches table [{TableName}, {TableId}, {TableIndex}]. [{Identifier}]");
                         }
 
                         if (IsWindowMatch(windowTitle, windowClassName))
