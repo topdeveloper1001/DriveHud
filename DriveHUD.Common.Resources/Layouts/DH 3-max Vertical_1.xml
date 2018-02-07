@@ -2481,20 +2481,7 @@
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
-        </StatInfo>
-        <StatInfo>
-          <Id>872edb2d-15cf-443f-b6c9-45c56448b268</Id>
-          <Stat>UO_PFR_BB</Stat>
-          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
-          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
-          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
-          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
-        </StatInfo>
+        </StatInfo>       
       </Stats>
       <IsVertical>false</IsVertical>
       <Text>UNOPENED</Text>
