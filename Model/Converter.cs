@@ -124,24 +124,7 @@ namespace Model.Importer
             else if (stat != null && stat.IsBigBlind)
             {
                 return EnumPosition.BB;
-            }
-            else if (stat == null)
-            {
-                if (hand.Players.Any(x => x.SeatNumber == hand.DealerButtonPosition && x.PlayerName == playerName))
-                {
-                    return EnumPosition.BTN;
-                }
-
-                if (hand.HandActions.Any(x => x.HandActionType == HandActionType.BIG_BLIND && x.PlayerName == playerName))
-                {
-                    return EnumPosition.BB;
-                }
-
-                if (hand.HandActions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND && x.PlayerName == playerName))
-                {
-                    return EnumPosition.SB;
-                }
-            }
+            }          
 
             var tableSize = hand.HandActions.Select(x => x.PlayerName).Distinct().Count();
 
