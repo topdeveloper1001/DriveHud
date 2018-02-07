@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
@@ -99,6 +100,28 @@ namespace DriveHUD.Importers.Bovada
             ignitionWindowCache.AddWindow(windowHandle, this);
 
             WindowHandle = windowHandle;
+
+            SendPreImporedData();
+        }
+
+        private void SendPreImporedData()
+        {
+            if (IsZonePokerTable)
+            {
+                return;
+            }
+
+            var gameInfo = new GameInfo
+            {
+                PokerSite = EnumPokerSites.Ignition,
+                TableType = (EnumTableType)MaxSeat,
+                WindowHandle = WindowHandle.ToInt32()
+            };
+
+            var loadingText = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_PreLoadingText_Ignition");
+
+            var eventArgs = new PreImportedDataEventArgs(gameInfo, loadingText);
+            eventAggregator.GetEvent<PreImportedDataEvent>().Publish(eventArgs);
         }
 
         /// <summary>

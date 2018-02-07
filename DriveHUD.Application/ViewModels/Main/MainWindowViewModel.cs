@@ -110,6 +110,7 @@ namespace DriveHUD.Application.ViewModels
             eventAggregator.GetEvent<MainNotificationEvent>().Subscribe(RaiseNotification);
             eventAggregator.GetEvent<PokerStarsDetectedEvent>().Subscribe(OnPokerStarsDetected);
             eventAggregator.GetEvent<LoadDataRequestedEvent>().Subscribe(arg => Load());
+            eventAggregator.GetEvent<PreImportedDataEvent>().Subscribe(OnPreDataImported, ThreadOption.BackgroundThread, false);
 
             InitializeFilters();
             InitializeData();
@@ -454,6 +455,55 @@ namespace DriveHUD.Application.ViewModels
             else if (CurrentViewModel == TournamentViewModel)
             {
                 TournamentViewModel.Update();
+            }
+        }
+
+        private void OnPreDataImported(PreImportedDataEventArgs e)
+        {
+            try
+            {
+                if (e == null || e.GameInfo == null || e.GameInfo.WindowHandle == 0)
+                {
+                    return;
+                }
+
+                var gameInfo = e.GameInfo;
+
+                var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+
+                var activeLayout = hudLayoutsService.GetActiveLayout(gameInfo.PokerSite, gameInfo.TableType, gameInfo.EnumGameType);
+
+                if (activeLayout == null)
+                {
+                    return;
+                }
+
+                var ht = new HudLayout
+                {
+                    WindowId = gameInfo.WindowHandle,
+                    TableType = gameInfo.TableType,
+                    PokerSite = gameInfo.PokerSite,
+                    GameNumber = gameInfo.GameNumber,
+                    GameType = gameInfo.EnumGameType,
+                    LayoutName = activeLayout.Name,
+                    AvailableLayouts = new List<string>(),
+                    PreloadMode = true,
+                    PreloadText = e.LoadingText
+                };
+
+                byte[] serialized;
+
+                using (var msTestString = new MemoryStream())
+                {
+                    Serializer.Serialize(msTestString, ht);
+                    serialized = msTestString.ToArray();
+                }
+
+                hudTransmitter.Send(serialized);
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Preloading data could not be sent to HUD.", ex);
             }
         }
 
@@ -814,7 +864,7 @@ namespace DriveHUD.Application.ViewModels
             }
             catch (Exception ex)
             {
-                LogProvider.Log.Error(this, "Importing failed", ex);
+                LogProvider.Log.Error(this, "Data could not be sent to HUD.", ex);
             }
         }
 

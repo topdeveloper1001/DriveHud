@@ -151,6 +151,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_Ignition {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_Ignition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Changes have been made to your HUD layout. Would you like to save them now?.
         /// </summary>
         internal static string Notifications_HudLayout_SaveDesignContent {

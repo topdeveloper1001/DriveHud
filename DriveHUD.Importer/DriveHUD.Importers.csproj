@@ -275,6 +275,8 @@
     <Compile Include="PokerStars\PokerStarsZoomCatcher.cs" />
     <Compile Include="PokerStars\PokerStarsZoomDataManager.cs" />
     <Compile Include="PokerStars\PokerStarsZoomImporter.cs" />
+    <Compile Include="PreImportedDataEvent.cs" />
+    <Compile Include="PreImportedDataEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionCacheData.cs" />
     <Compile Include="SessionCacheStatistic.cs" />

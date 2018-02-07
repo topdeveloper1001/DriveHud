@@ -59,5 +59,11 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         [XmlIgnore, ProtoMember(9)]
         public IEnumerable<string> AvailableLayouts { get; set; }
+
+        [XmlIgnore, ProtoMember(10)]
+        public bool PreloadMode { get; set; }
+
+        [XmlIgnore, ProtoMember(11)]
+        public string PreloadText { get; set; }
     }
 }

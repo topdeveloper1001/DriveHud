@@ -68,7 +68,7 @@ namespace DriveHUD.Importers.Bovada
 
         private ISiteConfigurationService configurationService;
 
-        private IEventAggregator eventAggregator;
+        protected readonly IEventAggregator eventAggregator;
 
         protected bool playerHasSeat = false;
 

@@ -69,6 +69,7 @@
             HorizontalAlignment="Center">
             <telerik:RadContextMenu.ContextMenu>
                 <telerik:RadContextMenu
+                    Visibility="{Binding PreLoadMode, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
                     ItemClick="OnRadMenuItemClick">
                     <!-- Tag last hand -->
                     <telerik:RadMenuItem
@@ -222,6 +223,25 @@
                 </telerik:RadContextMenu>
             </telerik:RadContextMenu.ContextMenu>
         </Image>
+        <Grid
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Visibility="{Binding PreLoadMode, Converter={dh:BoolToVisibilityConverter}}"
+            Margin="0,1,0,0">
+            <Border
+                BorderThickness="1"
+                BorderBrush="#eeee00"
+                Background="#555555"
+                Opacity="0.6" />
+            <TextBlock
+                Margin="3,2,3,2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="#FFFFFF"
+                FontWeight="Bold"
+                Text="{Binding PreLoadText}" />
+        </Grid>
         <Border
             Grid.Row="1"
             BorderThickness="0">
