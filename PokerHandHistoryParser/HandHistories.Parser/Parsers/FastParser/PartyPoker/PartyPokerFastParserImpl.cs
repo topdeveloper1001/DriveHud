@@ -230,6 +230,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 return ParseTournamentGameType(line);
             }
 
+            line = line.Replace(" fastforward", string.Empty);
+
             // can be either 1 or 2 spaces after the colon for cash game
             int startIndex = line.IndexOf(' ');
             startIndex = line.IndexOf(' ', startIndex + 1) + 1;
