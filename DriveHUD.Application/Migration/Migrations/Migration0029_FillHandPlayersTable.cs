@@ -126,9 +126,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
                     });
                 });
 
-                var conn = session.Connection as SQLiteConnection;                
+                var conn = session.Connection as SQLiteConnection;
 
-                LogProvider.Log.Info("Inserting data");
+                LogProvider.Log.Info($"Inserting data: {handsPlayers.Count} rows");
 
                 using (var cmd = new SQLiteCommand("insert into HandsPlayers (HandId, PlayerId, NetWon) values (@HandId, @PlayerId, @NetWon)", conn))
                 {
