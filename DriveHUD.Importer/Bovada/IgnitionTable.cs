@@ -354,9 +354,7 @@ namespace DriveHUD.Importers.Bovada
 
         private bool JackpotTableMatch(IgnitionTableTitle tableTitleData)
         {
-            uint tournamentId;
-
-            if (!uint.TryParse(tableTitleData.TournamentId, out tournamentId))
+            if (!uint.TryParse(tableTitleData.TournamentId, out uint tournamentId))
             {
                 return false;
             }
@@ -378,10 +376,8 @@ namespace DriveHUD.Importers.Bovada
 
         private bool TournamentTableMatch(IgnitionTableTitle tableTitleData)
         {
-            int tableId;
-
             var match = tableTitleData.TableName.Equals(TableName, StringComparison.OrdinalIgnoreCase) &&
-                int.TryParse(tableTitleData.TableId, out tableId) && (TableIndex == 0 || (TableIndex != 0 && tableId == TableIndex));
+                int.TryParse(tableTitleData.TableId, out int tableId) && (TableIndex == 0 || (TableIndex != 0 && tableId == TableIndex));
 
             if (IsAdvancedLoggingEnabled && match)
             {
