@@ -1004,10 +1004,10 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
     <value>Total MTT$'s Won : </value>
   </data>
   <data name="Common_TournamentView_TotalSnGs" xml:space="preserve">
-    <value>Total S&amp;amp;G's : </value>
+    <value>Total S&amp;G's : </value>
   </data>
   <data name="Common_TournamentView_TotalSnGsWon" xml:space="preserve">
-    <value>Total S&amp;amp;G$'s Won : </value>
+    <value>Total S&amp;G$'s Won : </value>
   </data>
   <data name="Common_BusyIndicator_Loading" xml:space="preserve">
     <value>Loading data... Please wait...</value>
