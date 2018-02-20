@@ -235,6 +235,7 @@ namespace Model.Reports
                             var deserializedData = Serializer.Deserialize<OpponentReportCache>(fs);
                             playerIds = deserializedData.PlayerIds;
                             opponentsData = deserializedData.Report.ToDictionary(x => x.PlayerId);
+                            LoadPlayerHands();
                             UpdateCacheStatus(false);
                             return true;
                         }
@@ -246,7 +247,7 @@ namespace Model.Reports
                 }
 
                 playerIds = new int[0];
-                playerHands = new HashSet<HandHistoryKey>();
+                LoadPlayerHands();
                 opponentsData = new Dictionary<int, OpponentReportIndicators>();
                 UpdateCacheStatus(false);
             }
@@ -336,10 +337,13 @@ namespace Model.Reports
         {
             if (storageModel.StatisticCollection == null)
             {
+                playerHands = new HashSet<HandHistoryKey>();
                 return;
             }
 
-            playerHands = new HashSet<HandHistoryKey>(storageModel.StatisticCollection.Select(x => new HandHistoryKey(x.GameNumber, x.PokersiteId)));
+            playerHands = new HashSet<HandHistoryKey>(storageModel.StatisticCollection
+                .ToArray()
+                .Select(x => new HandHistoryKey(x.GameNumber, x.PokersiteId)));
         }
 
         private class HandHistoryKey

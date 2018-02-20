@@ -39,6 +39,7 @@ namespace Model.Data
             position = statistic.Position;
             positionString = statistic.PositionString;
             equity = statistic.Equity;
+            evDiff = statistic.EVDiff;
             handTag = statistic.HandTag;
             playerName = statistic.PlayerName;
         }

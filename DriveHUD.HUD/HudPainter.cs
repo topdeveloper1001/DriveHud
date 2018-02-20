@@ -13,6 +13,7 @@
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.Views;
 using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using Microsoft.Practices.ServiceLocation;
@@ -54,6 +55,7 @@ namespace DriveHUD.HUD
 
             if (!WinApi.IsWindow(hwnd))
             {
+                LogProvider.Log.Info($"Window {hwnd} doesn't exist.");
                 return;
             }
 

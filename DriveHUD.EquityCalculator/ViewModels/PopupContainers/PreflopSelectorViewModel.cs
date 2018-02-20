@@ -43,14 +43,17 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 if (value is CardSelectorNotification)
                 {
-                    this._notification = value as CardSelectorNotification;
-                    if (this._notification.CardsContainer.Ranges != null)
+                    _notification = value as CardSelectorNotification;
+                    _notification.ReturnType = CardSelectorReturnType.Range;
+
+                    if (_notification.CardsContainer.Ranges != null)
                     {
-                        foreach (var item in this._notification.CardsContainer.Ranges)
+                        foreach (var item in _notification.CardsContainer.Ranges)
                         {
                             var current = PreflopSelectorItems.FirstOrDefault(x => x.Caption == item.Caption);
+
                             if (current != null)
-                            {   
+                            {
                                 current.IsSelected = true;
                                 current.HandSuitsModelList = new List<HandSuitsViewModel>(item.HandSuitsModelList);
                                 current.ItemLikelihood = item.ItemLikelihood;
@@ -247,7 +250,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             _isSliderManualMove = false;
 
-            int i = PreflopSelectorItems.Where(x=> x.IsSelected).Sum(model => model.HandSuitsModelList.Count(x=> x.IsVisible && x.IsSelected));
+            int i = PreflopSelectorItems.Where(x => x.IsSelected).Sum(model => model.HandSuitsModelList.Count(x => x.IsVisible && x.IsSelected));
 
             double prct = Math.Round((double)i * (double)100 / (double)1326, 1);
             SliderValue = (int)prct * 10;
@@ -347,7 +350,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     if (returned != null && returned.ItemsList != null)
                     {
                         Reset(null);
-                        foreach(var s in returned.ItemsList)
+                        foreach (var s in returned.ItemsList)
                         {
                             var current = PreflopSelectorItems.FirstOrDefault(x => x.Caption.Equals(s));
                             if (current != null)
@@ -505,7 +508,6 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 SelectedItem = new RangeSelectorItemViewModel();
             }
 
-            this._notification.ReturnType = CardSelectorReturnType.Range;
             this._notification.CardsContainer.Ranges = new List<RangeSelectorItemViewModel>(PreflopSelectorItems.Where(x => x.IsSelected));
             this.FinishInteraction();
         }

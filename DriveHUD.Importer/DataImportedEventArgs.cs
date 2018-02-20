@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using HandHistories.Objects.Players;
-using Model.Enums;
 using System;
 
 namespace DriveHUD.Importers

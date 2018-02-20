@@ -88,8 +88,8 @@ namespace Model.Filters
         {
             var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
 
-            var lastCashAvailableDate = storageModel.StatisticCollection?.Where(x => !x.IsTourney).MaxOrDefault(x => Converter.ToLocalizedDateTime(x.Time));
-            var lastTournamentAvailableDate = storageModel.StatisticCollection?.Where(x => x.IsTourney).MaxOrDefault(x => Converter.ToLocalizedDateTime(x.Time));
+            var lastCashAvailableDate = storageModel.StatisticCollection?.ToArray().Where(x => !x.IsTourney).MaxOrDefault(x => Converter.ToLocalizedDateTime(x.Time));
+            var lastTournamentAvailableDate = storageModel.StatisticCollection?.ToArray().Where(x => x.IsTourney).MaxOrDefault(x => Converter.ToLocalizedDateTime(x.Time));
 
             lastCashAvailableDate = lastCashAvailableDate ?? DateTime.Now;
             lastTournamentAvailableDate = lastTournamentAvailableDate ?? DateTime.Now;

@@ -446,8 +446,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
                         CreateStatInfo(Stat.UO_PFR_MP),
                         CreateStatInfo(Stat.UO_PFR_CO),
                         CreateStatInfo(Stat.UO_PFR_BN),
-                        CreateStatInfo(Stat.UO_PFR_SB),
-                        CreateStatInfo(Stat.UO_PFR_BB),
+                        CreateStatInfo(Stat.UO_PFR_SB)                        
                     }
                 };
 
@@ -507,7 +506,7 @@ namespace DriveHUD.Application.MigrationService.Migrators
         }
 
         private StatInfo CreateStatInfo(Stat stat)
-        {
+        {            
             var statInfo = availableStats.FirstOrDefault(x => x.Stat == stat);
 
             if (statInfo == null)

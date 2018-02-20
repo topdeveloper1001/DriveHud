@@ -273,5 +273,95 @@ namespace Model.Extensions
 
             return res;
         }
+
+        /// <summary>
+        /// Uncombines cards from groups
+        /// </summary>
+        /// <param name="hands">Cards range</param>
+        /// <returns>List of hole cards</returns>
+        public static List<string> GetHandsUnFormatted(string cards)
+        {
+            if (string.IsNullOrEmpty(cards))
+            {
+                return new List<string>();
+            }
+
+            if (cards.Length < 3 || (cards.Length == 3 && cards[2] != '+'))
+            {
+                return new List<string> { cards };
+            }
+
+            var cardRanks = HandHistories.Objects.Cards.Card.PossibleRanksHighCardFirst.Reverse().ToArray();
+
+            var firstCard = cards.First().ToString();
+            var secondCard = string.Empty;
+            var suit = string.Empty;
+
+            if (cards.Last() == '+')
+            {
+                secondCard = cards.Substring(1, cards.Length - 2);
+
+                if (secondCard.Length == 2)
+                {
+                    suit = secondCard[1].ToString();
+                    secondCard = secondCard[0].ToString();
+                }
+
+                // pairs (QQ+)
+                if (secondCard == firstCard)
+                {
+                    return cardRanks
+                        .SkipWhile(x => x != firstCard)
+                        .Select(x => x + x)
+                        .ToList();
+                }
+
+                // not pair (42s+)
+                return cardRanks
+                        .SkipWhile(x => x != secondCard)
+                        .TakeWhile(x => x != firstCard)
+                        .Select(x => firstCard + x + suit)
+                        .ToList();
+            }
+
+            var cardsFromTo = cards.Split('-');
+
+            if (cardsFromTo.Length != 2)
+            {
+                return new List<string> { cards };
+            }
+
+            var cardsFrom = cardsFromTo[0];
+            var cardsTo = cardsFromTo[1];
+
+            if (cardsFrom.Length != cardsTo.Length ||
+                cardsFrom.Length != 2 && cardsFrom.Length != 3 ||
+                (cardsFrom.Length == 3 && cardsFrom[0] != cardsTo[0]))
+            {
+                return new List<string> { cards };
+            }
+
+            suit = cardsFrom.Length == 3 ? cardsFrom[2].ToString() : string.Empty;
+            secondCard = cardsFrom[1].ToString();
+            var secondToCard = cardsTo[1].ToString();
+
+            Func<string, string> selector;
+
+            if (cardsFrom.Length == 2)
+            {
+                selector = x => x + x;
+            }
+            else
+            {
+                selector = x => firstCard + x + suit;
+            }
+
+            return cardRanks
+                       .SkipWhile(x => x != secondCard)
+                       .TakeWhile(x => x != secondToCard)
+                       .Concat(new[] { secondToCard })
+                       .Select(selector)
+                       .ToList();
+        }
     }
 }

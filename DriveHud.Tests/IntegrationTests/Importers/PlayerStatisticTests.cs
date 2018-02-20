@@ -398,20 +398,24 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         }
 
         [Test]
-        [TestCase(@"DURKADURDUR-Equity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0.884)]
-        [TestCase(@"DURKADURDUR-Equity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0.045)]
-        [TestCase(@"Omaha-HiLo-Equity-1.txt", EnumPokerSites.PokerStars, "deadman426", 0.23)]
-        [TestCase(@"Omaha-HiLo-Equity-1.txt", EnumPokerSites.PokerStars, "tmacnich", 0.43)]
-        [TestCase(@"Omaha-HiLo-Equity-1.txt", EnumPokerSites.PokerStars, "pitervper777", 0.33)]
-        [TestCase(@"Omaha-HiLo-Equity-2.txt", EnumPokerSites.AmericasCardroom, "Mooseslayer", 0.17)]
-        [TestCase(@"Omaha-HiLo-Equity-2.txt", EnumPokerSites.AmericasCardroom, "zc13expert", 0.24)]
-        [TestCase(@"Omaha-HiLo-Equity-2.txt", EnumPokerSites.AmericasCardroom, "SinmanJr", 0.25)]
-        [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "ktm85888", 0.128)]
-        [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "Griffindorgirl", 0.285)]
-        [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "pistike88", 0.62)]
-        public void EquityIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, decimal expected)
+        [TestCase(@"DURKADURDUR-Equity-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 88.41, 0.01)]
+        [TestCase(@"DURKADURDUR-Equity-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 4.54, 0.01)]
+        [TestCase(@"Omaha-HiLo-Equity-1.txt", EnumPokerSites.PokerStars, "deadman426", 23, 3)]
+        [TestCase(@"Omaha-HiLo-Equity-1.txt", EnumPokerSites.PokerStars, "tmacnich", 43, 3)]
+        [TestCase(@"Omaha-HiLo-Equity-1.txt", EnumPokerSites.PokerStars, "pitervper777", 33, 3)]
+        [TestCase(@"Omaha-HiLo-Equity-2.txt", EnumPokerSites.AmericasCardroom, "Mooseslayer", 17, 3)]
+        [TestCase(@"Omaha-HiLo-Equity-2.txt", EnumPokerSites.AmericasCardroom, "zc13expert", 24, 3)]
+        [TestCase(@"Omaha-HiLo-Equity-2.txt", EnumPokerSites.AmericasCardroom, "SinmanJr", 25, 3)]
+        [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "ktm85888", 12.84, 0.01)]
+        [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "Griffindorgirl", 28.57, 0.01)]
+        [TestCase(@"Holdem-Equity-1.txt", EnumPokerSites.PartyPoker, "pistike88", 61.9, 0.01)]
+        [TestCase(@"Holdem-Equity-2.xml", EnumPokerSites.Ignition, "Hero", 17.74, 0.01)]
+        [TestCase(@"Holdem-Equity-2.xml", EnumPokerSites.Ignition, "P2_121759IM", 64.52, 0.01)]
+        [TestCase(@"Holdem-Equity-2.xml", EnumPokerSites.Ignition, "P8_400154CF", 17.74, 0.01)]
+
+        public void EquityIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, decimal expected, double tolerance)
         {
-            AssertThatStatIsCalculated(x => x.Equity, fileName, pokerSite, playerName, expected, 0.03);
+            AssertThatStatIsCalculated(x => x.Equity * 100, fileName, pokerSite, playerName, expected, tolerance);
         }
 
         [Test]

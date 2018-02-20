@@ -1719,6 +1719,24 @@ namespace DriveHUD.Application.ViewModels
             cachedCurrentLayout.LayoutTools = CurrentLayout.LayoutTools;
 
             CloseDesigner();
+
+            var notification = new PopupBaseNotification()
+            {
+                Title = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_SaveDesignTitle"),
+                CancelButtonCaption = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_SaveDesignNo"),
+                ConfirmButtonCaption = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_SaveDesignYes"),
+                Content = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_SaveDesignContent"),
+                IsDisplayH1Text = true
+            };
+
+            NotificationRequest.Raise(notification,
+                  confirmation =>
+                  {
+                      if (confirmation.Confirmed)
+                      {
+                          OpenDataSave();
+                      }
+                  });
         }
 
         /// <summary>

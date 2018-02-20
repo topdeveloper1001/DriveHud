@@ -107,7 +107,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
                             "Tournaments",
                             "HandNotes",
                             "PlayerGameInfo",
-                            "PlayerNetWon",
+                            "HandsPlayers",
                             "PlayerNotes",
                             "HandHistories",
                             "GameInfo",

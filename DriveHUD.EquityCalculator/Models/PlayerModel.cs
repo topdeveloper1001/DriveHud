@@ -234,24 +234,27 @@ namespace DriveHUD.EquityCalculator.Models
         {
             if (obj != null)
             {
-                var range = obj.ToString().Trim('+');
+                var range = CardHelper.GetHandsUnFormatted(obj.ToString());
 
                 if (Ranges.Count() != 0)
                 {
-                    if (Ranges.Any(x => x.Caption == range))
-                    {
-                        SetRanges(Ranges.Where(x => x.Caption != range));
-                        ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<EquityCalculatorRangeRemovedEvent>().Publish(new EventArgs());
-                    }
+                    var ranges = (from rangeItem in Ranges
+                                  join cards in range on rangeItem.Caption equals cards into gj
+                                  from grouped in gj.DefaultIfEmpty()
+                                  where grouped == null
+                                  select rangeItem).ToArray();
+
+                    SetRanges(ranges);
                 }
                 else
                 {
-                    if (PlayerCards.First() == range)
+                    if (PlayerCards.First() == range.First())
                     {
                         SetCollection(null);
-                        ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<EquityCalculatorRangeRemovedEvent>().Publish(new EventArgs());
                     }
                 }
+
+                ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<EquityCalculatorRangeRemovedEvent>().Publish(new EventArgs());
             }
         }
 

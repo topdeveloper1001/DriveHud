@@ -50,7 +50,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
 
             foreach (var handHistoryFile in handHistoryFiles)
             {
-                if (handHistoryFile.FullName.Contains("Tournaments"))
+                if (handHistoryFile.FullName.Contains("Tournaments") 
+                    || handHistoryFile.FullName.Contains("WithInvalid"))
                 {
                     continue;
                 }
@@ -268,6 +269,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"MultipleHands/Neptune-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 90, 0)]
         [TestCase(TestDataFolder + @"MultipleHands/Orange-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 146, 0)]
         [TestCase(TestDataFolder + @"MultipleHands/Union City-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 466, 0)]
+        [TestCase(TestDataFolder + @"MultipleHands/WithInvalid/Kirkcaldy.txt", 2, 1)]
+        [TestCase(TestDataFolder + @"MultipleHands/WithInvalid/Rangoon.txt", 2, 1)]
+        [TestCase(TestDataFolder + @"MultipleHands/WithInvalid/Supersonic 3_35560068.txt", 12, 1)]
         [TestCase(TestDataFolder + @"Tournaments/Flyweight. $150 Gtd KO (138340269) Table #10.txt", 33, 0)]
         [TestCase(TestDataFolder + @"Tournaments/Jab Micro Warm Up PKO - $500 Gtd (156119820) Table #15.txt", 77, 0)]
         public void ParseMultipleHandsTest(string handHistoryFile, int numberOfValidHands, int numberOfInvalidHands)

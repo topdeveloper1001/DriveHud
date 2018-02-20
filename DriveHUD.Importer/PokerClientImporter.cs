@@ -64,8 +64,9 @@ namespace DriveHUD.Importers
                 try
                 {
                     if (IsDisabled())
-                    {
-                        Stop();
+                    {                        
+                        LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "\"{0}\" importer has been disabled. Aborting process.", Identifier));
+                        break;
                     }
 
                     pipeServerHandle = pipeManager.GetHandle(Identifier);
@@ -100,7 +101,15 @@ namespace DriveHUD.Importers
                     // If client is not connected, or no data in raw
                     if (!readResult || numberOfBytesRead == 0)
                     {
-                        Task.Delay(PipeReadingTimeout).Wait();
+                        try
+                        {
+                            Task.Delay(PipeReadingTimeout).Wait(cancellationTokenSource.Token);
+                        }
+                        catch (OperationCanceledException)
+                        {
+                            break;
+                        }
+
                         continue;
                     }
 

@@ -131,7 +131,7 @@ namespace DriveHUD.Common.Ifrastructure
                 HandHistories.Objects.Players.Player heroPlayer = null;
                 StringBuilder res = new StringBuilder();
                 String title = "NL Holdem $" + currentHandHistory.GameDescription.Limit.BigBlind + "(BB)";
-                res.AppendLine("Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com]Poker HUD & Database[/url]");
+                res.AppendLine("Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software");
                 res.Append(Environment.NewLine);
                 res.AppendLine(title);
 

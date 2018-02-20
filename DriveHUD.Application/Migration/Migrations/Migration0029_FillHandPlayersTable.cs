@@ -26,6 +26,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHUD.Application.MigrationService.Migrations
@@ -34,6 +35,12 @@ namespace DriveHUD.Application.MigrationService.Migrations
     public class Migration0029_FillHandPlayersTable : Migration
     {
         private const string HandsPlayersTable = "HandsPlayers";
+
+        private readonly static object locker = new object();
+
+        private readonly IDataService dataService = ServiceLocator.Current.GetInstance<IDataService>();
+
+        private const int fastModeAllowedHands = 1500000;
 
         public override void Down()
         {
@@ -70,8 +77,6 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private void FillHandsPlayersTable()
         {
-            var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-
             MigrationUtils.SetStatusMessage("Preparing data for migration");
 
             using (var session = ModelEntities.OpenStatelessSession())
@@ -104,61 +109,147 @@ namespace DriveHUD.Application.MigrationService.Migrations
                     statisticFiles.AddRange(playerStatsFiles);
                 }
 
-                var handsPlayers = new ConcurrentStack<HandPlayer>();
+                var conn = session.Connection as SQLiteConnection;
 
-                Parallel.ForEach(statisticFiles, file =>
+                if (fastModeAllowedHands >= hands.Count)
                 {
-                    dataService.ActOnPlayerStatisticFromFile(file, stat => !stat.IsTourney, stat =>
-                    {
-                        var handKey = new HandHistoryKey(stat.GameNumber, (short)stat.PokersiteId);
+                    InsertInFastMode(statisticFiles, hands, conn);
+                    return;
+                }
 
-                        if (hands.ContainsKey(handKey))
-                        {
-                            var handPlayer = new HandPlayer
-                            {
-                                PlayerId = stat.PlayerId,
-                                HandId = hands[handKey],
-                                NetWon = Utils.ConvertToCents(stat.NetWon)
-                            };
+                InsertInLowMemoryMode(statisticFiles, hands, conn);
+            }
+        }
 
-                            handsPlayers.Push(handPlayer);
-                        }
-                    });
-                });
+        private void InsertInLowMemoryMode(HashSet<string> statisticFiles, Dictionary<HandHistoryKey, int> hands, SQLiteConnection conn)
+        {
+            LogProvider.Log.Info("Data will be proccessed in low memory mode.");
 
-                var conn = session.Connection as SQLiteConnection;                
+            var insertedRows = 0;
 
-                LogProvider.Log.Info("Inserting data");
+            LogProvider.Log.Info($"Begin data processing: {statisticFiles.Count} files for processing.");
 
+            using (var transaction = conn.BeginTransaction())
+            {
                 using (var cmd = new SQLiteCommand("insert into HandsPlayers (HandId, PlayerId, NetWon) values (@HandId, @PlayerId, @NetWon)", conn))
                 {
-                    cmd.Parameters.Add("@HandId", DbType.Int32);
-                    cmd.Parameters.Add("@PlayerId", DbType.Int32);
-                    cmd.Parameters.Add("@NetWon", DbType.Int64);
+                    var counter = 0;
 
-                    cmd.Prepare();
-
-                    using (var transaction = conn.BeginTransaction())
+                    Parallel.ForEach(statisticFiles, file =>
                     {
-                        var counter = 0;
-
-                        foreach (var hand in handsPlayers)
+                        dataService.ActOnPlayerStatisticFromFile(file, stat => !stat.IsTourney, stat =>
                         {
-                            if (counter % 25000 == 0)
+                            var handKey = new HandHistoryKey(stat.GameNumber, (short)stat.PokersiteId);
+
+                            if (hands.ContainsKey(handKey))
                             {
-                                MigrationUtils.SetStatusMessage($"Inserting data {counter}/{handsPlayers.Count}");
+                                lock (locker)
+                                {
+                                    var handPlayer = new HandPlayer
+                                    {
+                                        PlayerId = stat.PlayerId,
+                                        HandId = hands[handKey],
+                                        NetWon = Utils.ConvertToCents(stat.NetWon)
+                                    };
+
+                                    cmd.Parameters.Add("@HandId", DbType.Int32);
+                                    cmd.Parameters.Add("@PlayerId", DbType.Int32);
+                                    cmd.Parameters.Add("@NetWon", DbType.Int64);
+
+                                    cmd.Prepare();
+
+                                    if (counter % 25 == 0)
+                                    {
+                                        MigrationUtils.SetStatusMessage($"Processing statistic {counter}/{statisticFiles.Count}");
+                                    }
+
+                                    cmd.Parameters[0].Value = handPlayer.HandId;
+                                    cmd.Parameters[1].Value = handPlayer.PlayerId;
+                                    cmd.Parameters[2].Value = handPlayer.NetWon;
+                                    cmd.ExecuteNonQuery();
+
+                                    insertedRows++;
+                                }
                             }
+                        });
 
-                            cmd.Parameters[0].Value = hand.HandId;
-                            cmd.Parameters[1].Value = hand.PlayerId;
-                            cmd.Parameters[2].Value = hand.NetWon;
-                            cmd.ExecuteNonQuery();
+                        Interlocked.Increment(ref counter);
+                    });
+                }
 
-                            counter++;
+                LogProvider.Log.Info($"Inserted data: {insertedRows} rows");
+
+                transaction.Commit();
+            }
+        }
+
+        private void InsertInFastMode(HashSet<string> statisticFiles, Dictionary<HandHistoryKey, int> hands, SQLiteConnection conn)
+        {
+            LogProvider.Log.Info("Data will be proccessed in fast mode.");
+
+            var handsPlayers = new ConcurrentStack<HandPlayer>();
+
+            var counter = 0;
+
+            LogProvider.Log.Info($"Begin the reading of statistic: {statisticFiles.Count} files to read.");
+
+            Parallel.ForEach(statisticFiles, file =>
+            {
+                dataService.ActOnPlayerStatisticFromFile(file, stat => !stat.IsTourney, stat =>
+                {
+                    var handKey = new HandHistoryKey(stat.GameNumber, (short)stat.PokersiteId);
+
+                    if (hands.ContainsKey(handKey))
+                    {
+                        var handPlayer = new HandPlayer
+                        {
+                            PlayerId = stat.PlayerId,
+                            HandId = hands[handKey],
+                            NetWon = Utils.ConvertToCents(stat.NetWon)
+                        };
+
+                        handsPlayers.Push(handPlayer);
+
+                        if (counter % 100 == 0)
+                        {
+                            MigrationUtils.SetStatusMessage($"Reading statistic {counter}/{statisticFiles.Count}");
+                        }
+                    }
+                });
+
+                Interlocked.Increment(ref counter);
+            });
+
+            counter = 0;
+
+            LogProvider.Log.Info($"Begin data inserting : {handsPlayers.Count} rows to insert.");
+
+            using (var cmd = new SQLiteCommand("insert into HandsPlayers (HandId, PlayerId, NetWon) values (@HandId, @PlayerId, @NetWon)", conn))
+            {
+                cmd.Parameters.Add("@HandId", DbType.Int32);
+                cmd.Parameters.Add("@PlayerId", DbType.Int32);
+                cmd.Parameters.Add("@NetWon", DbType.Int64);
+
+                cmd.Prepare();
+
+                using (var transaction = conn.BeginTransaction())
+                {
+                    foreach (var hand in handsPlayers)
+                    {
+                        if (counter % 25000 == 0)
+                        {
+                            MigrationUtils.SetStatusMessage($"Inserting data {counter}/{handsPlayers.Count}");
                         }
 
-                        transaction.Commit();
+                        cmd.Parameters[0].Value = hand.HandId;
+                        cmd.Parameters[1].Value = hand.PlayerId;
+                        cmd.Parameters[2].Value = hand.NetWon;
+                        cmd.ExecuteNonQuery();
+
+                        counter++;
                     }
+
+                    transaction.Commit();
                 }
             }
         }

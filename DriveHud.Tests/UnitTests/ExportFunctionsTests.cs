@@ -31,6 +31,7 @@ namespace DriveHud.Tests.UnitTests
         [Test]
         [TestCase("ExportTest-Forum-Source-MTT.xml", "ExportTest-Forum-Result-MTT.txt")]
         [TestCase("ExportTest-Forum-Source-Zone.xml", "ExportTest-Forum-Result-Zone.txt")]
+        [TestCase("ExportTest-Forum-Source-CashWithPost.xml", "ExportTest-Forum-Result-CashWithPost.txt")]
         public void HandHistoryIsConvertedIntoForumFormat(string sourceFileName, string expectedResultFileName)
         {
             var sourceFile = Path.Combine(testFolder, sourceFileName);

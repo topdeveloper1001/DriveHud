@@ -36,5 +36,23 @@ namespace DriveHud.Tests.UnitTests
 
             Assert.That(result, Is.EqualTo(expected));
         }
+
+        [Test]
+        [TestCase("JJ+", "JJ QQ KK AA")]
+        [TestCase("AA", "AA")]
+        [TestCase("T5s-T8s", "T5s T6s T7s T8s")]
+        [TestCase("T2o+", "T2o T3o T4o T5o T6o T7o T8o T9o")]
+        [TestCase("22-44", "22 33 44")]
+        [TestCase("QQ+", "QQ KK AA")]
+        [TestCase("42s+", "42s 43s")]
+        [TestCase("72o-74o", "72o 73o 74o")]
+        public void TestGetHandsUnFormatted(string cardsToFormat, string expected)
+        {
+            var resultList = CardHelper.GetHandsUnFormatted(cardsToFormat);
+
+            var result = string.Join(splitter, resultList);
+
+            Assert.That(result, Is.EqualTo(expected));
+        }
     }
 }

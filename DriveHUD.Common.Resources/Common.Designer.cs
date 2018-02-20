@@ -2611,7 +2611,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Total S&amp;amp;G&apos;s : .
+        ///   Looks up a localized string similar to Total S&amp;G&apos;s : .
         /// </summary>
         internal static string Common_TournamentView_TotalSnGs {
             get {
@@ -2620,7 +2620,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Total S&amp;amp;G$&apos;s Won : .
+        ///   Looks up a localized string similar to Total S&amp;G$&apos;s Won : .
         /// </summary>
         internal static string Common_TournamentView_TotalSnGsWon {
             get {
