@@ -10,6 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
+using Model;
+using System;
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
@@ -35,6 +38,43 @@ namespace DriveHUD.Application.MigrationService.Migrators
                 var xmlSerializer = new XmlSerializer(typeof(T));
                 return xmlSerializer.CanDeserialize(reader);
             }
+        }
+
+        /// <summary>
+        /// Truncates the specified table
+        /// </summary>
+        /// <param name="tableName">Table to truncate</param>
+        public static void TruncateTable(string tableName)
+        {
+            LogProvider.Log.Info($"Truncating {tableName}");
+
+            try
+            {
+                using (var session = ModelEntities.OpenStatelessSession())
+                {
+                    var sqlQuery = session
+                               .CreateSQLQuery($"delete from {tableName}");
+
+                    sqlQuery.ExecuteUpdate();
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(typeof(MigrationUtils), $"Could not truncate '{tableName}'", e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Sets text as status on splash screen
+        /// </summary>
+        /// <param name="text">Text</param>
+        public static void SetStatusMessage(string text)
+        {
+            App.SplashScreen.Dispatcher.Invoke(() =>
+            {
+                App.SplashScreen.DataContext.Status = text;
+            });
         }
     }
 }

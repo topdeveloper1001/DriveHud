@@ -10,24 +10,27 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using ProtoBuf;
 using System.ComponentModel.DataAnnotations;
 
 namespace DriveHUD.Entities
 {
+    [ProtoContract]
     public partial class Players
     {
+        [ProtoMember(1)]
         public virtual int PlayerId { get; set; }
 
-        [Required]
+        [Required, ProtoMember(2)]
         public virtual string Playername { get; set; }
 
-        [Required]
+        [Required, ProtoMember(3)]
         public virtual short PokersiteId { get; set; }
 
         [Required]
         public virtual int Tourneyhands { get; set; }
 
         [Required]
-        public virtual int Cashhands { get; set; } 
+        public virtual int Cashhands { get; set; }
     }
 }

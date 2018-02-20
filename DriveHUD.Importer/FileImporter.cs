@@ -31,6 +31,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Importer;
 using Model.Interfaces;
+using Model.Reports;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
@@ -51,7 +52,7 @@ namespace DriveHUD.Importers
     {
         private const int PlayersPerQuery = 100;
 
-        private readonly string[] importingExtensions = new[] { "txt", "xml" };
+        private readonly HashSet<string> importingExtensions = new HashSet<string> { ".txt", ".xml" };
 
         private static readonly object locker = new object();
 
@@ -60,12 +61,16 @@ namespace DriveHUD.Importers
         private readonly IImporterSessionCacheService importSessionCacheService;
         private readonly IDataService dataService;
         private readonly IEventAggregator eventAggregator;
+        private readonly IOpponentReportService opponentReportService;
+        private readonly SingletonStorageModel storageModel;
 
         public FileImporter()
         {
             importSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
+            storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
         }
 
         /// <summary>
@@ -92,7 +97,7 @@ namespace DriveHUD.Importers
 
             foreach (var file in files)
             {
-                LogProvider.Log.Info($"Running manual import from  {file.FullName}");
+                LogProvider.Log.Info($"Running manual import from file '{file.FullName}'");
 
                 progress.Report(new LocalizableString("Progress_ReadingFile", file.Name));
 
@@ -114,7 +119,9 @@ namespace DriveHUD.Importers
                         FileName = file.FullName
                     };
 
-                    Import(text, progress, gameInfo);
+                    var result = Import(text, progress, gameInfo);
+
+                    LogProvider.Log.Info($"{result.Count()} hand(s) have been imported.");
                 }
                 catch (DHInternalException ex)
                 {
@@ -142,13 +149,14 @@ namespace DriveHUD.Importers
                 return;
             }
 
-            LogProvider.Log.Info($"Running manual import from  {directory.FullName}");
+            LogProvider.Log.Info($"Running manual import from folder '{directory.FullName}'");
 
             progress.Report(new LocalizableString("Progress_ScanningFolder"));
 
-            var filesForImporting = importingExtensions.SelectMany(x => directory.GetFiles(x, SearchOption.AllDirectories))
-                                    .Distinct(new LambdaComparer<FileInfo>((x, y) => x.FullName.Equals(y.FullName)))
-                                    .ToArray();
+            var filesForImporting = directory.EnumerateFiles("*.*", SearchOption.AllDirectories)
+                .Where(x => importingExtensions.Contains(Path.GetExtension(x.Name)))
+                .Distinct(new LambdaComparer<FileInfo>((x, y) => x.FullName.Equals(y.FullName)))
+                .ToArray();
 
             Import(filesForImporting, progress);
         }
@@ -434,11 +442,22 @@ namespace DriveHUD.Importers
                 session.Insert(handHistory.HandHistory);
 
                 // join new players with existing
-                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId));              
+                var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId)).ToArray();
 
                 var calculatedEquity = new Dictionary<string, Dictionary<Street, decimal>>();
 
-                foreach (var existingPlayer in handPlayers.ToArray())
+                var processOpponentReport = false;
+
+                if (storageModel != null && storageModel.PlayerSelectedItem != null)
+                {
+                    var playersIntersection = (from selectedPlayerId in storageModel.PlayerSelectedItem.PlayerIds
+                                               join handPlayer in handPlayers on selectedPlayerId equals handPlayer.PlayerId
+                                               select selectedPlayerId);
+
+                    processOpponentReport = playersIntersection.Any();
+                }
+
+                foreach (var existingPlayer in handPlayers)
                 {
                     if (existingGameType.Istourney)
                     {
@@ -479,13 +498,34 @@ namespace DriveHUD.Importers
 
                         gameInfo.AddToPlayersCacheInfo(cacheInfo);
 
-                        var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
-
-                        if (hh != null)
+                        if (!session.Query<PlayerGameInfo>()
+                            .Any(x => x.PlayerId == existingPlayer.PlayerId && x.GameInfoId == existingGameType.GametypeId))
                         {
-                            hh.GameType = existingGameType;
-                            hh.Player = existingPlayer;
-                            session.Insert(hh);
+                            var playerGameInfo = new PlayerGameInfo
+                            {
+                                PlayerId = existingPlayer.PlayerId,
+                                GameInfoId = existingGameType.GametypeId
+                            };
+
+                            session.Insert(playerGameInfo);
+                        }
+
+                        if (!handHistory.GameType.Istourney)
+                        {
+                            var handPlayer = new HandPlayer
+                            {
+                                HandId = handHistory.HandHistory.HandhistoryId,
+                                PlayerId = existingPlayer.PlayerId,
+                                Currency = playerStat.CurrencyId,
+                                NetWon = Utils.ConvertToCents(playerStat.NetWon)
+                            };
+
+                            session.Insert(handPlayer);
+                        }
+
+                        if (processOpponentReport)
+                        {
+                            opponentReportService.UpdateReport(playerStat);
                         }
 
                         BuildAutoNotes(playerStatCopy, handHistory.Source, session);

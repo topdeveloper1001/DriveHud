@@ -9,17 +9,17 @@ using Model.Replayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Application.ViewModels.Replayer
 {
     internal class ReplayerService : IReplayerService
     {
         private const int REPLAYER_LAST_HANDS_AMOUNT = 10;
+
         private FixedSizeList<ReplayerDataModel> _replayerDataModelList;
 
         private IDataService _dataService;
+
         private SingletonStorageModel _storageModel { get { return ServiceLocator.Current.GetInstance<SingletonStorageModel>(); } }
 
         public ReplayerService()
@@ -31,6 +31,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         public void ReplayHand(string playerName, long gamenumber, short pokerSiteId, bool showHoleCards)
         {
             var game = _dataService.GetGame(gamenumber, pokerSiteId);
+
             bool displayPotList = true;
 
             if (game == null)
@@ -42,6 +43,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             if (string.IsNullOrWhiteSpace(playerName) || !game.Players.Any(x => x.PlayerName == playerName && !x.IsSittingOut))
             {
                 playerName = game.Players.FirstOrDefault(x => !x.IsSittingOut).PlayerName;
+
                 // didn't find player in the game, so do not display pot list
                 displayPotList = false;
             }
@@ -53,6 +55,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             }
 
             var statistics = _dataService.GetPlayerStatisticFromFile(playerName, pokerSiteId);
+
             var currentStat = statistics.FirstOrDefault(x => x.GameNumber == gamenumber);
 
             if (currentStat == null)
@@ -81,7 +84,9 @@ namespace DriveHUD.Application.ViewModels.Replayer
             _replayerDataModelList.ForEach(x => x.IsActive = false);
 
             var dataModelStatistic = new ReplayerDataModel(currentStat);
+
             var dataModel = _replayerDataModelList.FirstOrDefault(x => x.Equals(dataModelStatistic));
+
             if (dataModel == null)
             {
                 dataModelStatistic.IsActive = true;

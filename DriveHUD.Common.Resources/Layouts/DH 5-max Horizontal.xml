@@ -2730,27 +2730,7 @@
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
-        </StatInfo>
-        <StatInfo>
-          <Id>872edb2d-15cf-443f-b6c9-45c56448b268</Id>
-          <Caption>UO-PFR BB</Caption>
-          <Stat>UO_PFR_BB</Stat>
-          <StatInfoGroup>
-            <Name>PFR</Name>
-          </StatInfoGroup>
-          <GroupName>96</GroupName>
-          <PropertyName>UO_PFR_BB</PropertyName>
-          <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
-          <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
-          <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
-          <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
-        </StatInfo>
+        </StatInfo>        
       </Stats>
       <IsVertical>false</IsVertical>
       <Text>UNOPENED</Text>

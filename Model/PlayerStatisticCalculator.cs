@@ -795,8 +795,7 @@ namespace Model
             stat.FacedMultiWayOnFlop = playedFlop && (numberOfActivePlayerOnFlop > 2) ? 1 : 0;
 
             stat.StackInBBs = stat.StartingStack / stat.BigBlind;
-            stat.MRatio = CalculateMRatio(stat);
-            stat.CalculatePositionalStats();
+            stat.MRatio = CalculateMRatio(stat);            
 
             stat.PreflopIP = preflopInPosition ? 1 : 0;
             stat.PreflopOOP = !preflopInPosition ? 1 : 0;
@@ -1279,11 +1278,24 @@ namespace Model
 
         private static void CalculateUnopenedPot(Playerstatistic stat, HandHistory parsedHand)
         {
-            var firstRaiser = parsedHand.PreFlop.FirstOrDefault(x => x.IsRaise());
-            stat.FirstRaiser = (firstRaiser != null && firstRaiser.PlayerName == stat.PlayerName) ? 1 : 0;
+            foreach (var action in parsedHand.PreFlop)
+            {
+                if (action.IsCall() || action.IsCheck)
+                {
+                    return;
+                }
 
-            if (stat.FirstRaiser == 0)
-                return;
+                if (action.IsRaise())
+                {
+                    if (action.PlayerName == stat.PlayerName)
+                    {
+                        stat.FirstRaiser = 1;
+                        break;
+                    }
+
+                    return;
+                }
+            }
 
             switch (stat.PositionString)
             {
@@ -1516,12 +1528,7 @@ namespace Model
                         {
                             callAfterThreeBet = true;
                         }
-
-                        if (playersCannot3Bet.Contains(action.PlayerName))
-                        {
-                            continue;
-                        }
-
+                     
                         if (action.PlayerName == player && raiser == action.PlayerName)
                         {
                             if (threeBetIsAllIn && !callAfterThreeBet)
@@ -1605,9 +1612,7 @@ namespace Model
                                 {
                                     return;
                                 }
-                            }
-
-                            fourBet.Possible = true;
+                            }                            
 
                             return;
                         }

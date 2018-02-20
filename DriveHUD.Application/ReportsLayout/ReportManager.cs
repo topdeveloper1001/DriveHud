@@ -30,7 +30,6 @@ namespace DriveHUD.Application.ReportsLayout
             Register<HoleCardsLayoutCreator, TournamentHoleCardsReportCreator>(Model.Enums.EnumReports.TournamentHoleCards);
             Register<ShowdownHandsLayoutCreator, TournamentShowdownHandsReportCreator>(Model.Enums.EnumReports.TournamentShowdownHands);
             Register<TournamentPokerSiteLayoutCreator, TournamentPokerSiteReportCreator>(Model.Enums.EnumReports.TournamentPokerSite);
-
         }
 
         private static void Register<TLayout, TCreator>(Model.Enums.EnumReports reportType)

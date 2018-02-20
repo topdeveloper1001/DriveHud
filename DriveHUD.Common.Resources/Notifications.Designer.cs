@@ -19,7 +19,7 @@ namespace DriveHUD.Common.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Notifications {
@@ -147,6 +147,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Notifications_HudLayout_DeleteHudYes {
             get {
                 return ResourceManager.GetString("Notifications_HudLayout_DeleteHudYes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_Ignition {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_Ignition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changes have been made to your HUD layout. Would you like to save them now?.
+        /// </summary>
+        internal static string Notifications_HudLayout_SaveDesignContent {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_SaveDesignContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        internal static string Notifications_HudLayout_SaveDesignNo {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_SaveDesignNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save changes?.
+        /// </summary>
+        internal static string Notifications_HudLayout_SaveDesignTitle {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_SaveDesignTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        internal static string Notifications_HudLayout_SaveDesignYes {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_SaveDesignYes", resourceCulture);
             }
         }
         

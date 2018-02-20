@@ -1280,7 +1280,7 @@
                     </Setter.Value>
                 </Setter>
             </Style>
-            
+
             <Style
                 x:Key="CustomListBoxItem"
                 TargetType="{x:Type ListBoxItem}">
@@ -1424,6 +1424,76 @@
                     </Setter.Value>
                 </Setter>
             </Style>
+
+            <Style
+                x:Key="IndicatorOverlayStyle"
+                TargetType="Rectangle">
+                <Setter
+                    Property="Fill"
+                    Value="Transparent" />
+                <Setter
+                    Property="Stroke"
+                    Value="Transparent" />
+            </Style>
+
+            <Style
+                x:Key="IndicatorProgressBarStyle"
+                TargetType="telerik:RadProgressBar">
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource BackgroundBlueBrush}" />
+                <Setter
+                    Property="Background"
+                    Value="{StaticResource BackgroundBrush}" />
+                <Setter
+                    Property="BorderThickness"
+                    Value="0" />
+                <Setter
+                    Property="Maximum"
+                    Value="100" />
+                <Setter
+                    Property="IsTabStop"
+                    Value="False" />
+                <Setter
+                    Property="Height"
+                    Value="22" />
+                <Setter
+                    Property="Margin"
+                    Value="0,0,0,0" />
+            </Style>
+
+            <Style
+                x:Key="BusyIndicatorStyle"
+                TargetType="{x:Type telerik:RadBusyIndicator}">
+                <Setter
+                    Property="BorderThickness"
+                    Value="1" />
+                <Setter
+                    Property="Height"
+                    Value="24" />
+                <Setter
+                    Property="OverlayStyle"
+                    Value="{StaticResource IndicatorOverlayStyle}" />
+                <Setter
+                    Property="ProgressBarStyle"
+                    Value="{StaticResource IndicatorProgressBarStyle}" />
+                <Setter
+                    Property="Background"
+                    Value="Transparent" />
+                <Setter
+                    Property="BusyContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <TextBlock
+                                FontSize="11"
+                                Margin="0,-24,0,0"
+                                Foreground="#FFFFFF"
+                                Text="{ResX Key=Common_BusyIndicator_Loading}" />
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -1485,7 +1555,7 @@
             <VisualBrush
                 Visual="{Binding ElementName=mask}" />
         </Grid.OpacityMask>
-        
+
         <Border
             Name="mask"
             Background="#181A1D"
@@ -1600,10 +1670,18 @@
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="Poker Site"
+                        Content="{ResX Key=Common_PokerSite}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.PokerSite}}"
+                        Command="{Binding ReportRadioButtonClickCommand}"
+                        Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
+                    <RadioButton
+                        Style="{StaticResource ReportRadioButton}"
+                        Content="{ResX Key=Common_Opponents}"
+                        Width="150"
+                        Height="51"
+                        IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OpponentAnalysis}}"
                         Command="{Binding ReportRadioButtonClickCommand}"
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <!-- Tournament Columns -->
@@ -1691,7 +1769,7 @@
                     MaxHeight="260"
                     VerticalAlignment="Stretch"
                     RowHeight="40"
-                    SelectionMode="Single"                    
+                    SelectionMode="Single"
                     CanUserFreezeColumns="True"
                     CanUserResizeColumns="True"
                     CanUserReorderColumns="True"
@@ -1718,47 +1796,8 @@
 
                 <telerik:RadBusyIndicator
                     Grid.Row="0"
-                    IsBusy="{Binding Path=IsBusy}"
-                    Background="{StaticResource BackgroundBrush}"
-                    Visibility="{Binding Path=IsBusy, Converter={dh:BoolToVisibilityConverter}}">
-                    <telerik:RadBusyIndicator.OverlayStyle>
-                        <Style
-                            TargetType="Rectangle">
-                            <Setter
-                                Property="Fill"
-                                Value="Transparent" />
-                            <Setter
-                                Property="Stroke"
-                                Value="Transparent" />
-                        </Style>
-                    </telerik:RadBusyIndicator.OverlayStyle>
-                    <telerik:RadBusyIndicator.ProgressBarStyle>
-                        <Style
-                            TargetType="telerik:RadProgressBar">
-                            <Setter
-                                Property="Foreground"
-                                Value="{StaticResource BackgroundBlueBrush}" />
-                            <Setter
-                                Property="Background"
-                                Value="{StaticResource BackgroundBrush}" />
-                            <Setter
-                                Property="BorderThickness"
-                                Value="0" />
-                            <Setter
-                                Property="Maximum"
-                                Value="100" />
-                            <Setter
-                                Property="IsTabStop"
-                                Value="False" />
-                            <Setter
-                                Property="Margin"
-                                Value="0,0,0,-20" />
-                        </Style>
-                    </telerik:RadBusyIndicator.ProgressBarStyle>
-                    <telerik:RadBusyIndicator.BusyContentTemplate>
-                        <DataTemplate />
-                    </telerik:RadBusyIndicator.BusyContentTemplate>
-                </telerik:RadBusyIndicator>
+                    Style="{StaticResource BusyIndicatorStyle}"
+                    IsBusy="{Binding IsBusy}" />
 
                 <!-- Filters under reports section -->
                 <ItemsControl
@@ -1963,7 +2002,7 @@
                     Foreground="Red"
                     SelectionMode="Extended"
                     MouseDoubleClick="GridViewKnownHands_MouseDoubleClick"
-                    ItemsSource="{Binding Path=ReportSelectedItemStatisticsCollection_Filtered}"
+                    ItemsSource="{Binding Path=FilteredReportSelectedItemStatisticsCollection}"
                     RowLoaded="GridViewKnownHands_RowLoaded"
                     RowStyle="{StaticResource GridViewKnownHandsRowStyle}"
                     AlternateRowStyle="{StaticResource GridViewKnownHandsAlternateRowStyle}"
@@ -1974,7 +2013,7 @@
 
                     <i:Interaction.Behaviors>
                         <dh:RadGridViewMultiSelectBehavior
-                            SelectedItems="{Binding SelectedComparableCardsStatistic, Mode=OneWay}" />
+                            SelectedItems="{Binding SelectedReportHands, Mode=OneWay}" />
                     </i:Interaction.Behaviors>
 
                     <telerik:RadContextMenu.ContextMenu>
@@ -1991,7 +2030,7 @@
                             Header="{ResX Key=Common_ReportView_Hands_Date}"
                             Width="*"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.Time, Converter={dh:DateTimeToLocalizedDateTimeConverter}}">
+                            DataMemberBinding="{Binding Path=Time, Converter={dh:DateTimeToLocalizedDateTimeConverter}}">
                         </telerik:GridViewDataColumn>
 
                         <telerik:GridViewDataColumn
@@ -1999,11 +2038,11 @@
                             UniqueName="Cards"
                             MinWidth="80"
                             Width="*"
-                            DataMemberBinding="{Binding Path=PlayerCards}">
+                            DataMemberBinding="{Binding Path=Cards}">
                             <telerik:GridViewDataColumn.CellTemplate>
                                 <DataTemplate>
                                     <application:CardUC
-                                        Cards="{Binding Path=PlayerCards.Cards}"
+                                        Cards="{Binding Path=Cards.Cards}"
                                         HorizontalAlignment="Left" />
                                 </DataTemplate>
                             </telerik:GridViewDataColumn.CellTemplate>
@@ -2013,7 +2052,7 @@
                             Header="{ResX Key=Common_ReportView_Hands_Preflop}"
                             Width="*"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.FacingPreflop}"
+                            DataMemberBinding="{Binding Path=FacingPreflop}"
                             CellTemplateSelector="{StaticResource PreflopTemplateSelector}">
 
                         </telerik:GridViewDataColumn>
@@ -2030,7 +2069,7 @@
                                         HorizontalAlignment="Left"
                                         Width="130">
                                         <application:CardUC
-                                            Cards="{Binding Path=Statistic.Board}"
+                                            Cards="{Binding Path=BoardCards.Cards}"
                                             HorizontalAlignment="Left" />
                                     </Grid>
                                 </DataTemplate>
@@ -2041,7 +2080,7 @@
                             Header="{ResX Key=Common_ReportView_Hands_Line}"
                             Width="*"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.Line}">
+                            DataMemberBinding="{Binding Path=Line}">
                         </telerik:GridViewDataColumn>
 
                         <telerik:GridViewDataColumn
@@ -2050,12 +2089,12 @@
                             Width="*"
                             IsResizable="True"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.NetWon}">
+                            DataMemberBinding="{Binding Path=NetWon}">
                             <telerik:GridViewDataColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock
-                                        Text="{Binding Path=Statistic.NetWon, StringFormat=\{0:c2\}}"
-                                        Foreground="{Binding Path=Statistic.NetWon, Converter={StaticResource ValueToColorConverter}}" />
+                                        Text="{Binding Path=NetWon, StringFormat=\{0:c2\}}"
+                                        Foreground="{Binding Path=NetWon, Converter={StaticResource ValueToColorConverter}}" />
                                 </DataTemplate>
                             </telerik:GridViewDataColumn.CellTemplate>
                         </telerik:GridViewDataColumn>
@@ -2064,11 +2103,11 @@
                             Header="{ResX Key=Common_ReportView_Hands_Position}"
                             Width="*"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.Position}">
+                            DataMemberBinding="{Binding Path=Position}">
                             <telerik:GridViewDataColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock
-                                        Text="{Binding Path=Statistic.PositionString}" />
+                                        Text="{Binding Path=PositionString}" />
                                 </DataTemplate>
                             </telerik:GridViewDataColumn.CellTemplate>
                         </telerik:GridViewDataColumn>
@@ -2079,11 +2118,11 @@
                             Width="*"
                             IsResizable="True"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.Equity}">
+                            DataMemberBinding="{Binding Path=Equity}">
                             <telerik:GridViewDataColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock
-                                        Text="{Binding Path=Statistic.Equity, StringFormat=\{0:p2\}, Converter={StaticResource ValueToEquityConverter}}" />
+                                        Text="{Binding Path=Equity, StringFormat=\{0:p2\}, Converter={StaticResource ValueToEquityConverter}}" />
                                 </DataTemplate>
                             </telerik:GridViewDataColumn.CellTemplate>
                         </telerik:GridViewDataColumn>
@@ -2094,18 +2133,24 @@
                             Width="*"
                             IsResizable="True"
                             MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
-                            DataMemberBinding="{Binding Path=Statistic.EVDiff}">
+                            DataMemberBinding="{Binding Path=EVDiff}">
                             <telerik:GridViewDataColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock
-                                        Text="{Binding Path=Statistic.EVDiff, StringFormat=\{0:c2\}}"
-                                        Foreground="{Binding Path=Statistic.EVDiff, Converter={StaticResource ValueToColorConverter}}" />
+                                        Text="{Binding Path=EVDiff, StringFormat=\{0:c2\}}"
+                                        Foreground="{Binding Path=EVDiff, Converter={StaticResource ValueToColorConverter}}" />
                                 </DataTemplate>
                             </telerik:GridViewDataColumn.CellTemplate>
                         </telerik:GridViewDataColumn>
 
                     </telerik:RadGridView.Columns>
                 </telerik:RadGridView>
+
+                <telerik:RadBusyIndicator
+                    Grid.Row="2"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BusyIndicatorStyle}"
+                    IsBusy="{Binding IsHandGridBusy}" />
 
             </Grid>
         </Grid>

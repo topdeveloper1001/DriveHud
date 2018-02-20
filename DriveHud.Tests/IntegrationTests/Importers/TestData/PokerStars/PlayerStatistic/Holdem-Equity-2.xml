@@ -1,0 +1,72 @@
+<session sessioncode="1114654">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.50/$1</gametype>
+		<tablename>Table14266789</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2018-01-31 01:41:51</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>$0+$0</buyin>
+		<totalbuyin>$0</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="3561489867">
+		<general>
+			<startdate>2018-01-31 04:13:49</startdate>
+			<players>
+				<player seat="2" name="P2_121759IM" chips="56.33" dealer="0" win="175.64" bet="56.33" rebuy="0" addon="0" />
+				<player seat="3" name="P3_533676FY" chips="98.5" dealer="1" win="0" bet="4.5" rebuy="0" addon="0" />
+				<player seat="5" name="P5_640320DJ" chips="143" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
+				<player seat="6" name="P6_942888JT" chips="378.67" dealer="0" win="0" bet="4.5" rebuy="0" addon="0" />
+				<player seat="7" name="P7_525886BK" chips="60.13" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="8" name="P8_400154CF" chips="92.43" dealer="0" win="35.53" bet="92.43" rebuy="0" addon="0" />
+				<player seat="9" name="Hero" chips="153.65" dealer="0" win="96.74" bet="153.65" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="P5_640320DJ" type="1" sum="0.5" cards="[cards]" />
+			<action no="2" player="P6_942888JT" type="2" sum="1" cards="[cards]" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="P2_121759IM">SQ DQ</cards>
+			<cards type="Pocket" player="P3_533676FY">X X</cards>
+			<cards type="Pocket" player="P5_640320DJ">X X</cards>
+			<cards type="Pocket" player="P6_942888JT">X X</cards>
+			<cards type="Pocket" player="P7_525886BK">X X</cards>
+			<cards type="Pocket" player="P8_400154CF">SA CK</cards>
+			<cards type="Pocket" player="Hero">DA HK</cards>
+			<action no="3" player="P7_525886BK" type="0" sum="0" cards="" />
+			<action no="4" player="P8_400154CF" type="3" sum="1" cards="" />
+			<action no="5" player="Hero" type="23" sum="4.5" cards="" />
+			<action no="6" player="P2_121759IM" type="3" sum="4.5" cards="" />
+			<action no="7" player="P3_533676FY" type="3" sum="4.5" cards="" />
+			<action no="8" player="P5_640320DJ" type="0" sum="0" cards="" />
+			<action no="9" player="P6_942888JT" type="3" sum="3.5" cards="" />
+			<action no="10" player="P8_400154CF" type="23" sum="18.25" cards="" />
+			<action no="11" player="Hero" type="7" sum="149.15" cards="" />
+			<action no="12" player="P2_121759IM" type="7" sum="51.83" cards="" />
+			<action no="13" player="P3_533676FY" type="0" sum="0" cards="" />
+			<action no="14" player="P6_942888JT" type="0" sum="0" cards="" />
+			<action no="15" player="P8_400154CF" type="7" sum="74.18" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CQ H8 D2</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D7</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D9</cards>
+		</round>
+	</game>
+</session>

@@ -11,37 +11,24 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 
 namespace Model.Reports
 {
     public class OpponentAnalysisReportCreator : CashBaseReportCreator
     {
-        public override ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
         {
-            var report = new ObservableCollection<Indicators>();
+            var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
 
-            if (statistics == null || !statistics.Any())
-            {
-                return report;
-            }
+            var report = opponentReportService.GetReport();
 
-            foreach (var group in statistics.GroupBy(x => x.PlayerName).OrderByDescending(x => x.Sum(p => p.NetWon)).ToArray())
-            {
-                var stat = new ReportIndicators();
-
-                foreach (var playerstatistic in group)
-                {
-                    stat.AddStatistic(playerstatistic);
-                }
-
-                report.Add(stat);
-            }
-
-            return report;
+            return report != null ?
+                new ObservableCollection<ReportIndicators>(report) :
+                new ObservableCollection<ReportIndicators>();
         }
     }
 }

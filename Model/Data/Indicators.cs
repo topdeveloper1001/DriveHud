@@ -14,10 +14,10 @@ using DriveHUD.Common.Linq;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model.Importer;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
 
 namespace Model.Data
@@ -25,9 +25,13 @@ namespace Model.Data
     /// <summary>
     /// This entity holds all high level indicators. These indicators are based on PlayerStatistic fields
     /// </summary>
-    public class Indicators : INotifyPropertyChanged, IComparable
+    [ProtoContract]
+    [ProtoInclude(200, typeof(LightIndicators))]
+    public abstract class Indicators : INotifyPropertyChanged, IComparable
     {
+#pragma warning disable 0067
         public event PropertyChangedEventHandler PropertyChanged;
+#pragma warning restore 0067
 
         /// <summary>
         /// Initializes a new instance of <see cref="Indicators"/>
@@ -46,6 +50,7 @@ namespace Model.Data
             playerStatistic.ForEach(x => AddStatistic(x));
         }
 
+        [ProtoMember(1)]
         public Playerstatistic Source { get; set; }
 
         public List<Playerstatistic> Statistics { get; private set; }
@@ -124,7 +129,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.DidfourbetpreflopVirtualCounter, Source.CouldfourbetpreflopVirtualCounter);
+                return GetPercentage(Statistics.Sum(x => x.DidfourbetpreflopVirtual), Statistics.Sum(x => x.CouldfourbetpreflopVirtual));
             }
         }
 
@@ -156,7 +161,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.Calledthreebetpreflop, Source.FacedthreebetpreflopVirtualCounter);
+                return GetPercentage(Source.Calledthreebetpreflop, Statistics.Sum(x => x.FacedthreebetpreflopVirtual));
             }
         }
 
@@ -268,7 +273,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.FoldedtothreebetpreflopVirtualCounter, Source.FacedthreebetpreflopVirtualCounter);
+                return GetPercentage(Statistics.Sum(x => x.FoldedtothreebetpreflopVirtual), Statistics.Sum(x => x.FacedthreebetpreflopVirtual));
             }
         }
 
@@ -1025,7 +1030,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPositionalPercentage("BB", x => x.DidfourbetpreflopVirtualCounter, x => x.CouldfourbetpreflopVirtualCounter);
+                return GetPercentage(positionDidFourBet?.BB, positionCouldFourBet?.BB);
             }
         }
 
@@ -1033,7 +1038,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPositionalPercentage("BTN", x => x.DidfourbetpreflopVirtualCounter, x => x.CouldfourbetpreflopVirtualCounter);
+                return GetPercentage(positionDidFourBet?.BN, positionCouldFourBet?.BN);
             }
         }
 
@@ -1041,7 +1046,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPositionalPercentage("CO", x => x.DidfourbetpreflopVirtualCounter, x => x.CouldfourbetpreflopVirtualCounter);
+                return GetPercentage(positionDidFourBet?.CO, positionCouldFourBet?.CO);
             }
         }
 
@@ -1049,7 +1054,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPositionalPercentage("MP", x => x.DidfourbetpreflopVirtualCounter, x => x.CouldfourbetpreflopVirtualCounter);
+                return GetPercentage(positionDidFourBet?.MP, positionCouldFourBet?.MP);
             }
         }
 
@@ -1057,7 +1062,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPositionalPercentage("EP", x => x.DidfourbetpreflopVirtualCounter, x => x.CouldfourbetpreflopVirtualCounter);
+                return GetPercentage(positionDidFourBet?.EP, positionCouldFourBet?.EP);
             }
         }
 
@@ -1065,7 +1070,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPositionalPercentage("SB", x => x.DidfourbetpreflopVirtualCounter, x => x.CouldfourbetpreflopVirtualCounter);
+                return GetPercentage(positionDidFourBet?.SB, positionCouldFourBet?.SB);
             }
         }
 
@@ -1250,7 +1255,7 @@ namespace Model.Data
                     CalculateStdDeviation();
                 }
 
-                return stdDev.HasValue ? stdDev.Value : 0m;
+                return stdDev ?? 0m;
             }
         }
 
@@ -1265,7 +1270,7 @@ namespace Model.Data
                     CalculateStdDeviation();
                 }
 
-                return stdDevBB.HasValue ? stdDevBB.Value : 0m;
+                return stdDevBB ?? 0m;
             }
         }
 
@@ -1646,10 +1651,36 @@ namespace Model.Data
 
         #endregion
 
-        public virtual void UpdateSource(Playerstatistic statistic)
-        {
-            Source = statistic;
-        }
+        #region Positional internal stats
+
+        [ProtoMember(2)]
+        protected PositionalStat positionUnoppened = new PositionalStat();
+
+        [ProtoMember(3)]
+        protected PositionalStat positionTotal = new PositionalStat();
+
+        [ProtoMember(4)]
+        protected PositionalStat positionVPIP = new PositionalStat();
+
+        [ProtoMember(5)]
+        protected PositionalStat positionDidColdCall = new PositionalStat();
+
+        [ProtoMember(6)]
+        protected PositionalStat positionCouldColdCall = new PositionalStat();
+
+        [ProtoMember(7)]
+        protected PositionalStat positionDidThreeBet = new PositionalStat();
+
+        [ProtoMember(8)]
+        protected PositionalStat positionCouldThreeBet = new PositionalStat();
+
+        [ProtoMember(9)]
+        protected PositionalStat positionDidFourBet = new PositionalStat();
+
+        [ProtoMember(10)]
+        protected PositionalStat positionCouldFourBet = new PositionalStat();
+
+        #endregion
 
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
         {
@@ -1663,12 +1694,15 @@ namespace Model.Data
         {
             Source += statistic;
             Statistics.Add(statistic);
+
+            UpdatePositionalStats(statistic);
         }
 
         public virtual void Clean()
         {
             Source = new Playerstatistic();
             Statistics = new List<Playerstatistic>();
+            ResetPositionalStats();
         }
 
         public virtual int CompareTo(object obj)
@@ -1688,21 +1722,49 @@ namespace Model.Data
                 : 0;
         }
 
+        protected virtual void UpdatePositionalStats(Playerstatistic statistic)
+        {
+            var unopened = statistic.IsUnopened ? 1 : 0;
+
+            positionTotal?.Add(statistic.Position, 1);
+            positionUnoppened?.Add(statistic.Position, unopened);
+            positionVPIP?.Add(statistic.Position, statistic.Vpiphands);
+            positionDidColdCall?.Add(statistic.Position, statistic.Didcoldcall);
+            positionCouldColdCall?.Add(statistic.Position, statistic.Couldcoldcall);
+            positionDidThreeBet?.Add(statistic.Position, statistic.Didthreebet);
+            positionCouldThreeBet?.Add(statistic.Position, statistic.Couldthreebet);
+            positionDidFourBet?.Add(statistic.Position, statistic.DidfourbetpreflopVirtual);
+            positionCouldFourBet?.Add(statistic.Position, statistic.CouldfourbetpreflopVirtual);
+        }
+
+        protected virtual void ResetPositionalStats()
+        {
+            positionTotal?.Reset();
+            positionUnoppened?.Reset();
+            positionVPIP?.Reset();
+            positionDidColdCall?.Reset();
+            positionCouldColdCall?.Reset();
+            positionDidThreeBet?.Reset();
+            positionCouldThreeBet?.Reset();
+            positionDidFourBet?.Reset();
+            positionCouldFourBet?.Reset();
+        }
+
         #region Helpers
 
-        protected virtual decimal GetPercentage(decimal actual, decimal possible)
+        protected virtual decimal GetPercentage(decimal? actual, decimal? possible)
         {
             if (TotalHands == 0)
             {
                 return 0;
             }
 
-            if (possible == 0)
+            if (!possible.HasValue || !actual.HasValue || possible == 0)
             {
                 return 0;
             }
 
-            return (actual / possible) * 100;
+            return (actual.Value / possible.Value) * 100;
         }
 
         protected virtual decimal GetPositionalPercentage(string position, Func<Playerstatistic, int> actualSelector, Func<Playerstatistic, int> possibleSelector)
@@ -1727,23 +1789,8 @@ namespace Model.Data
             return (actual / possible);
         }
 
-        protected virtual void CalculateStdDeviation()
+        protected virtual void CalculateStdDeviation(NetWonDeviationItem[] netWonCollection)
         {
-            if (Statistics.Count == 0)
-            {
-                return;
-            }
-
-            var statistic = Statistics.ToArray();
-
-            var netWonCollection = statistic
-                .Select(x => new
-                {
-                    NetWon = x.NetWon,
-                    NetWonInBB = GetDivisionResult(x.NetWon, x.BigBlind)
-                })
-                .ToArray();
-
             var netWonMean = 0m;
             var netWonMeanInBB = 0m;
 
@@ -1774,35 +1821,50 @@ namespace Model.Data
             stdDevBB = (decimal)Math.Sqrt((double)netWonVarianceInBB);
         }
 
-        protected virtual decimal CalculateNetWonPerHour()
+        protected virtual void CalculateStdDeviation()
         {
             if (Statistics == null || Statistics.Count == 0)
             {
-                return 0m;
+                return;
             }
 
+            var statistic = Statistics.ToArray();
+
+            var netWonCollection = statistic
+                .Select(x => new NetWonDeviationItem
+                {
+                    NetWon = x.NetWon,
+                    NetWonInBB = GetDivisionResult(x.NetWon, x.BigBlind)
+                })
+                .ToArray();
+
+            CalculateStdDeviation(netWonCollection);
+        }
+
+        protected virtual decimal CalculateNetWonPerHour(DateTime[] orderedTime)
+        {
             var totalMinutes = 0d;
 
             DateTime? sessionStart = null;
             DateTime? sessionEnd = null;
 
-            foreach (var playerstatistic in Statistics.OrderBy(x => x.Time).ToArray())
+            foreach (var time in orderedTime)
             {
-                if (Utils.IsDateInDateRange(playerstatistic.Time, sessionStart, sessionEnd, TimeSpan.FromMinutes(30)))
+                if (Utils.IsDateInDateRange(time, sessionStart, sessionEnd, TimeSpan.FromMinutes(30)))
                 {
                     if (!sessionStart.HasValue)
                     {
-                        sessionStart = playerstatistic.Time;
+                        sessionStart = time;
                     }
 
-                    sessionEnd = playerstatistic.Time;
+                    sessionEnd = time;
                 }
                 else
                 {
                     totalMinutes += (sessionEnd.Value - sessionStart.Value).TotalMinutes;
 
-                    sessionStart = playerstatistic.Time;
-                    sessionEnd = playerstatistic.Time;
+                    sessionStart = time;
+                    sessionEnd = time;
                 }
             }
 
@@ -1816,6 +1878,27 @@ namespace Model.Data
             var netWonPerHour = NetWon / (decimal)totalMinutes * 60;
 
             return netWonPerHour;
+        }
+
+        protected virtual decimal CalculateNetWonPerHour()
+        {
+            if (Statistics == null || Statistics.Count == 0)
+            {
+                return 0m;
+            }
+
+            var orderedTime = Statistics.OrderBy(x => x.Time).Select(x => x.Time).ToArray();
+
+            var netWonPerHour = CalculateNetWonPerHour(orderedTime);
+
+            return netWonPerHour;
+        }
+
+        protected class NetWonDeviationItem
+        {
+            public decimal NetWon { get; set; }
+
+            public decimal NetWonInBB { get; set; }
         }
 
         #endregion        

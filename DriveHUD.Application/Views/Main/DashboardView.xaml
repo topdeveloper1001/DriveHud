@@ -11,7 +11,7 @@
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     xmlns:prism="http://www.codeplex.com/prism"
     xmlns:gaugeExample="clr-namespace:GaugeExample"
-    xmlns:vw="clr-namespace:DriveHUD.Application.Views"  
+    xmlns:vw="clr-namespace:DriveHUD.Application.Views"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="700">
@@ -202,6 +202,7 @@
                     ShowNonShowdown="{Binding MoneyWonGraphViewModel.ShowNonShowdown}"
                     ShowShowdown="{Binding MoneyWonGraphViewModel.ShowShowdown}"
                     ShowEV="{Binding MoneyWonGraphViewModel.ShowEV}"
+                    ValueType="{Binding MoneyWonGraphViewModel.ValueType}"
                     ShowInPopupCommand="{Binding ShowMoneyWonGraphPopupCommand}"
                     LineColors="{StaticResource MoneyWonLineColors}"
                     PointColors="{StaticResource MoneyWonPointColors}"

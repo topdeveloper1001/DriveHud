@@ -68,7 +68,7 @@ namespace DriveHUD.Importers.Bovada
 
         private ISiteConfigurationService configurationService;
 
-        private IEventAggregator eventAggregator;
+        protected readonly IEventAggregator eventAggregator;
 
         protected bool playerHasSeat = false;
 
@@ -434,6 +434,11 @@ namespace DriveHUD.Importers.Bovada
         /// <param name="cmdObj">Command data object</param>
         protected virtual void ProcessCmdObject(BovadaCommandDataObject cmdObj)
         {
+            if (cmdObj.gid != null)
+            {
+                ParseGidInfo(cmdObj);
+            }
+
             if (cmdObj.pid == null)
             {
                 return;
@@ -806,6 +811,8 @@ namespace DriveHUD.Importers.Bovada
 
                     importHandResetEvent.Reset();
 
+                    PreImportChecks();
+
                     ImportHandAsync(handHistoryXml, handModel.HandNumber, gameInfo, game);
 
                     ClearInfo();
@@ -826,6 +833,11 @@ namespace DriveHUD.Importers.Bovada
         }
 
         #region Command Parsers
+
+        protected virtual void ParseGidInfo(BovadaCommandDataObject cmdObj)
+        {
+            // do nothing
+        }
 
         protected virtual void ParseConnectInfo(BovadaCommandDataObject cmdObj)
         {
@@ -903,6 +915,11 @@ namespace DriveHUD.Importers.Bovada
             }
 
             TableIndex = cmdObj.tableNo;
+        }
+
+        protected virtual void PreImportChecks()
+        {
+            // do nothing
         }
 
         #endregion

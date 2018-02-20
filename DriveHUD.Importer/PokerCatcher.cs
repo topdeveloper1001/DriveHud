@@ -139,8 +139,6 @@ namespace DriveHUD.Importers
             {
                 cancellationTokenSource.Cancel();
             }
-
-            isRunning = false;
         }
 
         #endregion
@@ -208,7 +206,9 @@ namespace DriveHUD.Importers
             {
                 if (!IsEnabled())
                 {
-                    Stop();
+                    LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "\"{0}\" catcher has been disabled. Aborting process.", Identifier));
+                    AbortCatching();
+                    return;
                 }
 
                 if (pokerClientProcess == null || pokerClientProcess.HasExited)
@@ -228,7 +228,7 @@ namespace DriveHUD.Importers
 
                     if (cancellationTokenSource.IsCancellationRequested)
                     {
-                        RaiseProcessStopped();
+                        AbortCatching();
                         return;
                     }
 
@@ -236,7 +236,16 @@ namespace DriveHUD.Importers
 
                     if (pokerClientProcess == null)
                     {
-                        Task.Delay(ProcessSearchingTimeout).Wait();
+                        try
+                        {
+                            Task.Delay(ProcessSearchingTimeout).Wait(cancellationTokenSource.Token);
+                        }
+                        catch (OperationCanceledException)
+                        {
+                            AbortCatching();
+                            return;
+                        }
+
                         continue;
                     }
 
@@ -264,29 +273,19 @@ namespace DriveHUD.Importers
 
                 if (cancellationTokenSource.IsCancellationRequested)
                 {
-                    if (pokerClientProcess != null && !pokerClientProcess.HasExited)
-                    {
-                        if (injectedProcessModule != null)
-                        {
-                            try
-                            {
-                                EjectDll(injectedProcessModule.BaseAddress);
-                            }
-                            catch (Exception e)
-                            {
-                                LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Ejecting of processes \"{0}\" failed. [{1}]", ProcessName, Identifier), e);
-                            }
-                        }
-
-                        handle = IntPtr.Zero;
-
-                        RaiseProcessStopped();
-
-                        return;
-                    }
+                    AbortCatching();
+                    return;
                 }
 
-                Task.Delay(ProcessSearchingTimeout).Wait();
+                try
+                {
+                    Task.Delay(ProcessSearchingTimeout).Wait(cancellationTokenSource.Token);
+                }
+                catch (OperationCanceledException)
+                {
+                    AbortCatching();
+                    return;
+                }
             }
         }
 
@@ -300,6 +299,31 @@ namespace DriveHUD.Importers
             ProcessStopped?.Invoke(this, EventArgs.Empty);
 
             LogProvider.Log.Info(this, $"\"{Identifier}\" catcher has been stopped");
+        }
+
+        /// <summary>
+        /// Aborts catching process, ejects dll if it was injected
+        /// </summary>
+        protected void AbortCatching()
+        {
+            if (pokerClientProcess != null && !pokerClientProcess.HasExited)
+            {
+                if (injectedProcessModule != null)
+                {
+                    try
+                    {
+                        EjectDll(injectedProcessModule.BaseAddress);
+                    }
+                    catch (Exception e)
+                    {
+                        LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Ejecting of processes \"{0}\" failed. [{1}]", ProcessName, Identifier), e);
+                    }
+                }
+
+                handle = IntPtr.Zero;
+            }
+
+            RaiseProcessStopped();
         }
 
         #region Dll injection

@@ -100,6 +100,7 @@
                             <StackPanel
                                 Orientation="Horizontal">
                                 <Border
+                                    Visibility="{Binding Label, Converter={dh:NullOrEmptyToVisibilityConverter}, ConverterParameter=1}"
                                     Style="{StaticResource StatInfoBorderStyle}">
                                     <TextBlock
                                         dh:DragDrop.IsDragTarget="True"
@@ -110,6 +111,19 @@
                                         VerticalAlignment="Center"
                                         Margin="3"
                                         Text="{Binding Stat, Converter={dh:EnumToLocalizedStringConverter}, StringFormat='{}{0}:'}" />
+                                </Border>
+                                <Border
+                                    Visibility="{Binding Label, Converter={dh:NullOrEmptyToVisibilityConverter}}"
+                                    Style="{StaticResource StatInfoBorderStyle}">
+                                    <TextBlock
+                                        dh:DragDrop.IsDragTarget="True"
+                                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                                        Style="{StaticResource HudToolTipTextBlockStyle}"
+                                        Foreground="White"
+                                        Height="16"
+                                        VerticalAlignment="Center"
+                                        Margin="3"
+                                        Text="{Binding Label, StringFormat='{}{0}:'}" />
                                 </Border>
                                 <Border
                                     Style="{StaticResource StatInfoBorderStyle}">

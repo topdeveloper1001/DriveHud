@@ -24,10 +24,16 @@ namespace DriveHUD.Application.ViewModels.Graphs
 {
     public class CashGraphViewModel : BaseViewModel
     {
-        public CashGraphViewModel(IEnumerable<ChartSeries> chartSeries, ChartDisplayRange defaultDisplayRange = ChartDisplayRange.Hands)
+        private readonly CashGraphSettings settings;
+
+        public CashGraphViewModel(IEnumerable<ChartSeries> chartSeries) : this(chartSeries, new CashGraphSettings())
+        {
+        }
+
+        public CashGraphViewModel(IEnumerable<ChartSeries> chartSeries, CashGraphSettings cashGraphSettings)
         {
             chartCollection = new ObservableCollection<ChartSeries>(chartSeries);
-            chartDisplayRange = defaultDisplayRange;
+            settings = cashGraphSettings;
         }
 
         private ObservableCollection<ChartSeries> chartCollection;
@@ -44,22 +50,20 @@ namespace DriveHUD.Application.ViewModels.Graphs
             }
         }
 
-        private ChartDisplayRange chartDisplayRange;
-
         public ChartDisplayRange ChartDisplayRange
         {
             get
             {
-                return chartDisplayRange;
+                return settings.ChartDisplayRange;
             }
             set
             {
-                if (chartDisplayRange == value)
+                if (settings.ChartDisplayRange == value)
                 {
                     return;
                 }
 
-                chartDisplayRange = value;
+                settings.ChartDisplayRange = value;
                 Update();
 
                 OnPropertyChanged();
@@ -80,45 +84,75 @@ namespace DriveHUD.Application.ViewModels.Graphs
             }
         }
 
-        private bool showShowdown;
-
         public bool ShowShowdown
         {
             get
             {
-                return showShowdown;
+                return settings.ShowShowdown;
             }
             set
             {
-                SetProperty(ref showShowdown, value);
+                if (settings.ShowShowdown == value)
+                {
+                    return;
+                }
+
+                settings.ShowShowdown = value;
+                OnPropertyChanged();
             }
         }
-
-        private bool showNonShowdown;
 
         public bool ShowNonShowdown
         {
             get
             {
-                return showNonShowdown;
+                return settings.ShowNonShowdown;
             }
             set
             {
-                SetProperty(ref showNonShowdown, value);
+                if (settings.ShowNonShowdown == value)
+                {
+                    return;
+                }
+
+                settings.ShowNonShowdown = value;
+                OnPropertyChanged();
             }
         }
-
-        private bool showEv;
 
         public bool ShowEV
         {
             get
             {
-                return showEv;
+                return settings.ShowEV;
             }
             set
             {
-                SetProperty(ref showEv, value);
+                if (settings.ShowEV == value)
+                {
+                    return;
+                }
+
+                settings.ShowEV = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ChartCashSeriesValueType ValueType
+        {
+            get
+            {
+                return settings.ValueType;
+            }
+            set
+            {
+                if (settings.ValueType == value)
+                {
+                    return;
+                }
+
+                settings.ValueType = value;
+                OnPropertyChanged();
             }
         }
 

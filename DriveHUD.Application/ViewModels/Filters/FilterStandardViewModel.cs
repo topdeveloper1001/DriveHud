@@ -25,27 +25,14 @@ namespace DriveHUD.Application.ViewModels
         {
             var player = StorageModel.PlayerSelectedItem;
 
-            List<Gametypes> gameTypes = new List<Gametypes>();
-            List<PlayerCollectionItem> players = new List<PlayerCollectionItem>();
+            var gameTypes = player != null ?
+                ServiceLocator.Current.GetInstance<IDataService>().GetPlayerGameTypes(player.PlayerIds) :
+                new List<Gametypes>();
 
-            if (player is PlayerCollectionItem)
-            {
-                players.Add(player as PlayerCollectionItem);
-            }
-            else if (player is AliasCollectionItem)
-            {
-                players.AddRange((player as AliasCollectionItem).PlayersInAlias);
-            }
+            FilterModel = (FilterStandardModel)FilterModelManager.FilterModelCollection.FirstOrDefault(x => x.GetType().Equals(typeof(FilterStandardModel)));
+            FilterModel.UpdateFilterSectionStakeLevelCollection(gameTypes);
 
-            foreach (PlayerCollectionItem playerIn in players)
-            {
-                gameTypes.AddRange(ServiceLocator.Current.GetInstance<IDataService>().GetPlayerGameTypes((playerIn?.Name ?? string.Empty), (short)(playerIn?.PokerSite ?? EnumPokerSites.Unknown)));
-            }
-
-            this.FilterModel = (FilterStandardModel)FilterModelManager.FilterModelCollection.FirstOrDefault(x => x.GetType().Equals(typeof(FilterStandardModel)));
-            this.FilterModel.UpdateFilterSectionStakeLevelCollection(gameTypes);
-
-            this.FilterModelClone = (FilterStandardModel)this.FilterModel.Clone();
+            FilterModelClone = (FilterStandardModel)FilterModel.Clone();
         }
 
         private void InitializeBindings()

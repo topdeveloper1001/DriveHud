@@ -90,17 +90,25 @@ namespace DriveHUD.Application.ReportsLayout
         {
             var fef = new FrameworkElementFactory(typeof(TextBlock));
 
-            var bindingText = new Binding(member);
-            bindingText.StringFormat = "{0:c2}";
+            var bindingText = new Binding(member)
+            {
+                StringFormat = "{0:c2}"
+            };
 
             fef.SetBinding(TextBlock.TextProperty, bindingText);
 
-            var bindingForeground = new Binding(member);
-            bindingForeground.Converter = new ValueToColorConverter();
+            var bindingForeground = new Binding(member)
+            {
+                Converter = new ValueToColorConverter()
+            };
+
             fef.SetBinding(TextBlock.ForegroundProperty, bindingForeground);
 
-            var template = new DataTemplate();
-            template.VisualTree = fef;
+            var template = new DataTemplate
+            {
+                VisualTree = fef
+            };
+
             template.Seal();
 
             GridViewDataColumn column = new GridViewDataColumn
@@ -416,8 +424,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeOneOrLess", nameof(Indicators.TurnBetSizeOneOrLess), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeMoreThanOne", nameof(Indicators.TurnBetSizeMoreThanOne), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnCheckRaise", nameof(Indicators.TurnCheckRaise), ColumnType.Percentile),
-            // U
-            new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_BB", nameof(Indicators.UO_PFR_BB), ColumnType.Percentile),
+            // U            
             new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_BTN", nameof(Indicators.UO_PFR_BN), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_CO", nameof(Indicators.UO_PFR_CO), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_UO_PFR_EP", nameof(Indicators.UO_PFR_EP), ColumnType.Percentile),

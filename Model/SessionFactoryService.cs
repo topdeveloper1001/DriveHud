@@ -61,10 +61,9 @@ namespace Model
                     {
                         sqliteSessionFactory = Fluently.Configure()
                             .Database(SQLiteConfiguration.Standard.ConnectionString(StringFormatter.GetSQLiteConnectionString()))
-                            .Mappings(x => x.FluentMappings.AddFromAssemblyOf<DriveHUD.Entities.Mapping.TournamentsMap>())
+                            .Mappings(x => x.FluentMappings.AddFromAssemblyOf<DriveHUD.Entities.Mapping.TournamentsMap>())                           
                             .BuildSessionFactory();
                     }
-
                 }
             }
 

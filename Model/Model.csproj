@@ -77,8 +77,8 @@
       <HintPath>..\packages\NHibernate.4.1.1.4000\lib\net40\NHibernate.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Npgsql">
-      <HintPath>..\dependencies\Npgsql.dll</HintPath>
+    <Reference Include="Npgsql, Version=3.2.6.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.6\lib\net45\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="Prism, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
@@ -124,6 +124,9 @@
     <Reference Include="System.Reactive.Windows.Threading, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Rx-XAML.2.2.5\lib\net45\System.Reactive.Windows.Threading.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -173,6 +176,8 @@
     <Compile Include="Data\LightIndicators.cs" />
     <Compile Include="Data\MRatioReportRecord.cs" />
     <Compile Include="Data\NoteBuilder.cs" />
+    <Compile Include="Data\OpponentReportIndicators.cs" />
+    <Compile Include="Data\ReportHandViewModel.cs" />
     <Compile Include="Data\ReportIndicators.cs" />
     <Compile Include="Data\ShowdownHandsReportRecord.cs" />
     <Compile Include="Data\StatDto.cs" />
@@ -187,8 +192,6 @@
     <Compile Include="Enums\RangeCardsEnums.cs" />
     <Compile Include="Enums\ShowdownHands.cs" />
     <Compile Include="Enums\Stat.cs" />
-    <Compile Include="Events\FilterEvents\OpponentAnalysisBuildingEvent.cs" />
-    <Compile Include="Events\FilterEvents\OpponentAnalysisBuildedEvent.cs" />
     <Compile Include="Events\FilterEvents\UpdateReportEvent.cs" />
     <Compile Include="Events\FilterEvents\BuiltFilterChangedEvent.cs" />
     <Compile Include="Events\CalculateEquityEvent.cs" />
@@ -213,7 +216,7 @@
     <Compile Include="Extensions\HandActionExtension.cs" />
     <Compile Include="Converter.cs" />
     <Compile Include="DataService.cs" />
-    <Compile Include="Extensions\ComparableCardsStatistic.cs" />
+    <Compile Include="Extensions\ComparableCard.cs" />
     <Compile Include="Filters\BuiltFilterModel.cs" />
     <Compile Include="Filters\FilterDataService.cs" />
     <Compile Include="Filters\FilterDateModel.cs" />
@@ -253,7 +256,6 @@
     <Compile Include="HandAnalyzers\StubAnalyzer.cs" />
     <Compile Include="HandAnalyzers\ThreeOfAKindAnalyzers.cs" />
     <Compile Include="HandAnalyzers\TwoPairAnalyzers.cs" />
-    <Compile Include="Interfaces\ITopPlayersService.cs" />
     <Compile Include="Interfaces\ICleanable.cs" />
     <Compile Include="Interfaces\IDataService.cs" />
     <Compile Include="IPlayer.cs" />
@@ -287,8 +289,11 @@
     <Compile Include="Replayer\ReplayerHelpers.cs" />
     <Compile Include="Reports\CashBaseReportCreator.cs" />
     <Compile Include="Reports\HoleCardsReportCreator.cs" />
+    <Compile Include="Reports\IOpponentReportService.cs" />
     <Compile Include="Reports\IReportCreatorcs.cs" />
     <Compile Include="Reports\OpponentAnalysisReportCreator.cs" />
+    <Compile Include="Reports\OpponentReportCache.cs" />
+    <Compile Include="Reports\OpponentReportService.cs" />
     <Compile Include="Reports\OverAllReportCreator.cs" />
     <Compile Include="Reports\PokerSiteReportCreator.cs" />
     <Compile Include="Reports\PositionReportCreator.cs" />
@@ -350,12 +355,13 @@
     <Compile Include="StealAttempt.cs" />
     <Compile Include="PlayerStatisticCalculator.cs" />
     <Compile Include="StringFormatter.cs" />
-    <Compile Include="TopPlayersService.cs" />
     <Compile Include="TournamentResultModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">

@@ -1,0 +1,32 @@
+PokerStars Game #47185603163:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:50:02 ET
+Table 'Laocoon III' 6-max Seat #5 is the button
+Seat 1: 1tormentor ($295.20 in chips)
+Seat 2: angryjamman ($170.55 in chips)
+Seat 3: TODO ADENTR0 ($215.90 in chips)
+Seat 5: HeroTest ($200 in chips)
+Seat 6: FrAnWaN ($294.70 in chips)
+FrAnWaN: posts small blind $1
+1tormentor: posts big blind $2
+Fierytycoon: sits out
+*** HOLE CARDS ***
+angryjamman: calls $2
+TODO ADENTR0: folds
+HeroTest: raises $6 to $8
+FrAnWaN: folds
+1tormentor: folds
+angryjamman: calls $6
+*** FLOP *** [4s 9d Ad]
+angryjamman: checks
+HeroTest: bets $13
+angryjamman: folds
+Uncalled bet ($13) returned to HeroTest
+HeroTest collected $18.05 from pot
+HeroTest: doesn't show hand
+*** SUMMARY ***
+Total pot $19 | Rake $0.95
+Board [4s 9d Ad]
+Seat 1: 1tormentor (big blind) folded before Flop
+Seat 2: angryjamman folded on the Flop
+Seat 3: TODO ADENTR0 folded before Flop (didn't bet)
+Seat 5: HeroTest (button) collected ($18.05)
+Seat 6: FrAnWaN (small blind) folded before Flop

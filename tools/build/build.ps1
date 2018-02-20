@@ -24,7 +24,7 @@ param
 
     [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
     
-    [string] $Version = '1.4.2',
+    [string] $Version = '1.4.3',
 
     [string] $VersionExlcudeFilter = '**DriveHUD.PlayerXRay**,**XR*Reg**',
 
@@ -79,7 +79,9 @@ param
 	
 	[string] $PlayerXRayLicIncludeFilter = 'XR*Reg.dll',
 	
-	[string] $PlayerXRayIncludeFilter = 'DriveHUD.PlayerXRay.dll,Xceed.Wpf.Toolkit.dll'
+	[string] $PlayerXRayIncludeFilter = 'DriveHUD.PlayerXRay.dll,Xceed.Wpf.Toolkit.dll',
+	
+	[string] $ExeToLargeAddressAware = "DriveHUD.Application.exe"
 )
 
 Set-StrictMode -Version Latest
@@ -100,7 +102,8 @@ $session = @{
   Candle = 'C:\Program Files (x86)\WiX Toolset v3.11\bin\candle.exe'
   Light = 'C:\Program Files (x86)\WiX Toolset v3.11\bin\Light.exe'
   Insignia = 'C:\Program Files (x86)\WiX Toolset v3.11\bin\insignia.exe'
-  MSBuild = 'C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\msbuild.exe'
+  MSBuild = 'c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\msbuild.exe'  
+  EditBin = 'c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\editbin.exe'
   Nuget = '.\.nuget\Nuget.exe'
   Git = 'c:\Program Files\Git\bin\git.exe'
   Mode = $Mode
@@ -133,12 +136,14 @@ $session = @{
   PlayerXRaySource = Join-Path $BaseDir (Join-Path $PlayerXRaySource $Mode)
   PlayerXRayLicIncludeFilter = $PlayerXRayLicIncludeFilter
   PlayerXRayIncludeFilter = $PlayerXRayIncludeFilter
+  ExeToLargeAddressAware = $ExeToLargeAddressAware
 }
 
 Import-Module BuildRunner-Log
 Import-Module BuildRunner-Tools
 Import-Module BuildRunner-Versioning
 Import-Module BuildRunner-MSBuild
+Import-Module BuildRunner-EditBin
 Import-Module BuildRunner-Nuget
 Import-Module BuildRunner-Obfuscate
 Import-Module BuildRunner-Sign
@@ -193,6 +198,11 @@ try
    if(-Not (Test-Path($session.MSBuild)))
    {
        throw "MSBuild not found '$($session.MSBuild)'"
+   }
+   
+   if(-Not (Test-Path($session.EditBin)))
+   {
+       throw "EditBin not found '$($session.EditBin)'"
    }
 
    if((-Not $session.SigningCertificate) -Or (-Not (Test-Path($session.SigningCertificate))))
@@ -287,6 +297,9 @@ try
    # obfuscate
    Use-Obfuscator $session $session.Source $session.ObfuscatorIncludeFilter $session.ObfuscatorExcludeFilter $session.ObfuscatorStrongNamedAssemblies
 
+   # editbin
+   Use-EditBinApplyLargeAddress $session 'editbin.log'
+   
    # sign
    Use-Sign $session $session.Source $session.SigningIncludeFilter $session.SigningExcludeFilter   
    

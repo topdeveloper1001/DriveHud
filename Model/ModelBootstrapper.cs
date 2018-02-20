@@ -12,6 +12,7 @@
 
 using Microsoft.Practices.Unity;
 using Model.AppStore;
+using Model.Reports;
 using System;
 
 namespace Model
@@ -35,6 +36,7 @@ namespace Model
             container.RegisterType<ITrainingAppStoreModel, TrainingAppStoreModel>();
             container.RegisterType<IAppsAppStoreRepository, AppsAppStoreRepository>();
             container.RegisterType<IAppsAppStoreModel, AppsAppStoreModel>();
+            container.RegisterType<IOpponentReportService, OpponentReportService>(new ContainerControlledLifetimeManager());
         }
     }
 }

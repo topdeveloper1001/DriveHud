@@ -344,6 +344,10 @@ namespace DriveHud.Tests.UnitTests
                     return false;
                 }
             }
+
+            protected override void PreImportChecks()
+            {
+            }
         }
 
         #endregion

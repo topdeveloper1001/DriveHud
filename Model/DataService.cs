@@ -13,17 +13,20 @@
 using DriveHUD.Common;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
-using Model.Data;
 using Model.Interfaces;
+using Model.Reports;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
+using NHibernate.Transform;
 using ProtoBuf;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -39,7 +42,7 @@ namespace Model
     {
         protected readonly string dataPath = StringFormatter.GetAppDataFolderPath();
 
-        protected virtual string playersPath
+        protected virtual string PlayersPath
         {
             get;
             set;
@@ -49,26 +52,26 @@ namespace Model
 
         public DataService()
         {
-            playersPath = StringFormatter.GetPlayerStatisticDataFolderPath();
+            PlayersPath = StringFormatter.GetPlayerStatisticDataFolderPath();
 
             if (!Directory.Exists(dataPath))
             {
                 Directory.CreateDirectory(dataPath);
             }
 
-            if (!Directory.Exists(playersPath))
+            if (!Directory.Exists(PlayersPath))
             {
-                Directory.CreateDirectory(playersPath);
+                Directory.CreateDirectory(PlayersPath);
             }
         }
 
         public void SetPlayerStatisticPath(string path)
         {
-            playersPath = path;
+            PlayersPath = path;
 
-            if (!Directory.Exists(playersPath))
+            if (!Directory.Exists(PlayersPath))
             {
-                Directory.CreateDirectory(playersPath);
+                Directory.CreateDirectory(PlayersPath);
             }
         }
 
@@ -79,6 +82,15 @@ namespace Model
             ActOnPlayerStatisticFromFile(playerId,
                 stat => !pokersiteId.HasValue || (stat.PokersiteId == pokersiteId),
                 stat => result.Add(stat));
+
+            return result;
+        }
+
+        public IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, Func<Playerstatistic, bool> filter)
+        {
+            var result = new List<Playerstatistic>();
+
+            ActOnPlayerStatisticFromFile(playerId, filter, stat => result.Add(stat));
 
             return result;
         }
@@ -155,47 +167,7 @@ namespace Model
             {
                 foreach (var file in files)
                 {
-                    try
-                    {
-                        using (var sr = new StreamReader(file))
-                        {
-                            string line = null;
-
-                            while ((line = sr.ReadLine()) != null)
-                            {
-                                try
-                                {
-                                    if (string.IsNullOrWhiteSpace(line))
-                                    {
-                                        LogProvider.Log.Warn(this, $"Empty line in {file}");
-                                        continue;
-                                    }
-
-                                    /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
-                                    byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
-
-                                    using (var ms = new MemoryStream(byteAfter64))
-                                    {
-                                        var stat = Serializer.Deserialize<Playerstatistic>(ms);
-
-                                        if (predicate == null || predicate(stat))
-                                        {
-                                            action(stat);
-                                        }
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    LogProvider.Log.Error($@"Cannot import the file: {file}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
-                                }
-                            }
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        LogProvider.Log.Error(this, $"File '{file}' has not been imported.", e);
-                        return;
-                    }
+                    ActOnPlayerStatisticFromFile(file, predicate, action);
                 }
             }
             finally
@@ -204,11 +176,48 @@ namespace Model
             }
         }
 
-        public IList<HandHistoryRecord> GetPlayerHandRecords(string playerName, short pokersiteId)
+        public void ActOnPlayerStatisticFromFile(string file, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action)
         {
-            using (var session = ModelEntities.OpenSession())
+            try
             {
-                return session.Query<HandHistoryRecord>().Where(x => x.Player.Playername == playerName && x.Player.PokersiteId == pokersiteId).ToList();
+                using (var sr = new StreamReader(file))
+                {
+                    string line = null;
+
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        try
+                        {
+                            if (string.IsNullOrWhiteSpace(line))
+                            {
+                                LogProvider.Log.Warn(this, $"Empty line in {file}");
+                                continue;
+                            }
+
+                            /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
+                            byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
+
+                            using (var ms = new MemoryStream(byteAfter64))
+                            {
+                                var stat = Serializer.Deserialize<Playerstatistic>(ms);
+
+                                if (predicate == null || predicate(stat))
+                                {
+                                    action(stat);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            LogProvider.Log.Error($@"Could not process the file: {file}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"File '{file}' has not been processed.", e);
+                return;
             }
         }
 
@@ -276,19 +285,15 @@ namespace Model
 
         #endregion
 
-        public IList<HandHistoryRecord> GetHandHistoryRecords()
+        public IList<Gametypes> GetPlayerGameTypes(IEnumerable<int> playerIds)
         {
-            using (var session = ModelEntities.OpenSession())
+            using (var session = ModelEntities.OpenStatelessSession())
             {
-                return session.Query<HandHistoryRecord>().Fetch(x => x.Player).ToList();
-            }
-        }
-
-        public IList<Gametypes> GetPlayerGameTypes(string playerName, short pokersiteId)
-        {
-            using (var session = ModelEntities.OpenSession())
-            {
-                return session.Query<HandHistoryRecord>().Where(x => x.Player.Playername == playerName && x.Player.PokersiteId == pokersiteId).Select(x => x.GameType).Distinct().ToList();
+                return session.Query<PlayerGameInfo>()
+                    .Where(x => playerIds.Contains(x.PlayerId))
+                    .Select(x => x.GameInfo)
+                    .Distinct()
+                    .ToList();
             }
         }
 
@@ -317,31 +322,6 @@ namespace Model
             }
 
             return new List<Tournaments>();
-        }
-
-        public IList<HandHistoryRecord> GetPlayerHandRecords(IEnumerable<int> playerIds, Func<HandHistoryRecord, bool> predicate)
-        {
-            if (playerIds.IsNullOrEmpty())
-            {
-                return new List<HandHistoryRecord>();
-            }
-
-            try
-            {
-                using (var session = ModelEntities.OpenSession())
-                {
-                    return session.Query<HandHistoryRecord>()
-                        .Where(x => playerIds.Contains(x.Player.PlayerId) && (predicate == null || predicate(x)))
-                        .Fetch(x => x.Player)
-                        .ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                LogProvider.Log.Error(this, "Could not read tournaments", ex);
-            }
-
-            return new List<HandHistoryRecord>();
         }
 
         public Tournaments GetTournament(string tournamentId, string playerName, short pokersiteId)
@@ -393,8 +373,9 @@ namespace Model
                      .Add(Restrictions.On<Handhistory>(x => x.Gamenumber).IsIn(gameNumbers.ToList()))
                      .Add(Restrictions.Where<Handhistory>(x => x.PokersiteId == pokersiteId)));
 
-                var list = session.QueryOver<Handhistory>().Where(restriction)
-                        .List();
+                var list = session.QueryOver<Handhistory>()
+                    .Where(restriction)
+                    .List();
 
                 foreach (var history in list)
                 {
@@ -477,19 +458,6 @@ namespace Model
             }
         }
 
-        /// <summary>
-        /// DO NOT USE - BAD PERFORMANCE
-        /// </summary>
-        /// <param name="gameNumbers"></param>
-        /// <returns></returns>
-        public IList<Handnotes> GetHandNotes(IEnumerable<long> gameNumbers, short pokersiteId)
-        {
-            using (var session = ModelEntities.OpenSession())
-            {
-                return session.Query<Handnotes>().Where(x => gameNumbers.Contains(x.Gamenumber) && x.PokersiteId == pokersiteId).ToList();
-            }
-        }
-
         public IList<Handnotes> GetHandNotes(short pokersiteId)
         {
             using (var session = ModelEntities.OpenSession())
@@ -545,19 +513,6 @@ namespace Model
             }
         }
 
-        public void Purge()
-        {
-            using (var session = ModelEntities.OpenStatelessSession())
-            {
-                session.CreateSQLQuery("TRUNCATE HandNotes, HandHistories, HandRecords, Players CASCADE").ExecuteUpdate();
-            }
-
-            if (Directory.Exists(playersPath))
-            {
-                Directory.Delete(playersPath, true);
-            }
-        }
-
         public void Store(Handnotes handnotes)
         {
             try
@@ -566,7 +521,21 @@ namespace Model
                 {
                     using (var transaction = session.BeginTransaction())
                     {
-                        session.SaveOrUpdate(handnotes);
+                        var existingHandNote = session
+                            .Query<Handnotes>()
+                            .FirstOrDefault(x => x.PokersiteId == handnotes.PokersiteId && x.Gamenumber == handnotes.Gamenumber);
+
+                        if (existingHandNote != null)
+                        {
+                            existingHandNote.HandTag = handnotes.HandTag;
+                            existingHandNote.Note = handnotes.Note;
+                        }
+                        else
+                        {
+                            existingHandNote = handnotes;
+                        }
+
+                        session.SaveOrUpdate(existingHandNote);
                         transaction.Commit();
                     }
                 }
@@ -621,12 +590,12 @@ namespace Model
 
             try
             {
-                if (!Directory.Exists(playersPath))
+                if (!Directory.Exists(PlayersPath))
                 {
-                    Directory.CreateDirectory(playersPath);
+                    Directory.CreateDirectory(PlayersPath);
                 }
 
-                var playerDirectory = Path.Combine(playersPath, statistic.PlayerId.ToString());
+                var playerDirectory = Path.Combine(PlayersPath, statistic.PlayerId.ToString());
 
                 if (!Directory.Exists(playerDirectory))
                 {
@@ -674,8 +643,8 @@ namespace Model
                                     group stat by new { stat.PlayerId, stat.Playedyearandmonth } into grouped
                                     select new
                                     {
-                                        PlayerId = grouped.Key.PlayerId,
-                                        Playedyearandmonth = grouped.Key.Playedyearandmonth,
+                                        grouped.Key.PlayerId,
+                                        grouped.Key.Playedyearandmonth,
                                         Statistic = grouped.OrderBy(x => x.Playedyearandmonth).ToArray()
                                     }).ToArray();
 
@@ -683,14 +652,14 @@ namespace Model
 
             try
             {
-                if (!Directory.Exists(playersPath))
+                if (!Directory.Exists(PlayersPath))
                 {
-                    Directory.CreateDirectory(playersPath);
+                    Directory.CreateDirectory(PlayersPath);
                 }
 
                 foreach (var stats in groupedStatistic)
                 {
-                    var playerDirectory = Path.Combine(playersPath, stats.PlayerId.ToString());
+                    var playerDirectory = Path.Combine(PlayersPath, stats.PlayerId.ToString());
 
                     if (!Directory.Exists(playerDirectory))
                     {
@@ -842,9 +811,9 @@ namespace Model
         {
             try
             {
-                if (!Directory.Exists(playersPath))
+                if (!Directory.Exists(PlayersPath))
                 {
-                    Directory.CreateDirectory(playersPath);
+                    Directory.CreateDirectory(PlayersPath);
                 }
 
                 List<IPlayer> players = new List<IPlayer>();
@@ -958,9 +927,12 @@ namespace Model
             var files = GetPlayerFiles(statistic.PlayerId);
 
             if (files == null || !files.Any())
+            {
                 return;
+            }
 
             string convertedStatistic = string.Empty;
+
             using (var msTestString = new MemoryStream())
             {
                 Serializer.Serialize(msTestString, statistic);
@@ -979,6 +951,7 @@ namespace Model
                     if (allLines.Any(x => x.Equals(convertedStatistic, StringComparison.Ordinal)))
                     {
                         var newLines = new List<string>(allLines.Count());
+
                         foreach (var line in allLines)
                         {
                             if (!line.Equals(convertedStatistic, StringComparison.Ordinal))
@@ -988,6 +961,7 @@ namespace Model
                         }
 
                         File.WriteAllLines(file, newLines);
+
                         return;
                     }
                 }
@@ -1001,6 +975,102 @@ namespace Model
                 rwLock.ExitWriteLock();
             }
 
+        }
+
+        public void DeleteHandHistory(long handNumber, int pokerSiteId)
+        {
+            try
+            {
+                var handHistory = GetGame(handNumber, (short)pokerSiteId);
+
+                if (handHistory == null)
+                {
+                    LogProvider.Log.Warn(this, $"Hand {handNumber} has not been found in db. So it can't be deleted.");
+                    return;
+                }
+
+                var allPlayers = GetPlayersList().Where(x => x.PokerSite == (EnumPokerSites)pokerSiteId);
+
+                var players = (from player in allPlayers
+                               join hhPlayer in handHistory.Players on player.Name equals hhPlayer.PlayerName
+                               select player).ToArray();
+
+                var playerStatisticToDelete = new List<Playerstatistic>();
+
+                var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
+                var opponentReportResetRequired = false;
+
+                players.ForEach(x =>
+                {
+                    if (!opponentReportResetRequired && opponentReportService.IsPlayerInReport(x.PlayerId))
+                    {
+                        opponentReportResetRequired = true;
+                    }
+
+                    ActOnPlayerStatisticFromFile(x.PlayerId, s => s.GameNumber == handNumber && s.PokersiteId == pokerSiteId, s => playerStatisticToDelete.Add(s));
+                });
+
+                playerStatisticToDelete.ForEach(x => DeletePlayerStatisticFromFile(x));
+
+                using (var session = ModelEntities.OpenStatelessSession())
+                {
+                    using (var transaction = session.BeginTransaction())
+                    {
+                        var playerIds = playerStatisticToDelete.Select(x => x.PlayerId).ToArray();
+
+                        // update players summary
+                        if (playerIds.Length > 0)
+                        {
+                            var playersEntities = session.Query<Players>().Where(x => playerIds.Contains(x.PlayerId)).ToArray();
+
+                            playersEntities.ForEach(p =>
+                            {
+                                if (handHistory.GameDescription.IsTournament)
+                                {
+                                    p.Tourneyhands--;
+                                }
+                                else
+                                {
+                                    p.Cashhands--;
+                                }
+
+                                session.Update(p);
+                            });
+
+                            var netWons = session.Query<PlayerNetWon>().Where(x => playerIds.Contains(x.PlayerId)).ToArray();
+
+                            netWons.ForEach(n =>
+                            {
+                                var statistic = playerStatisticToDelete.FirstOrDefault(x => x.PlayerId == n.PlayerId && x.CurrencyId == n.Currency);
+
+                                if (statistic != null)
+                                {
+                                    n.NetWon -= Utils.ConvertToCents(statistic.NetWon);
+                                    session.Update(n);
+                                }
+                            });
+                        }
+
+                        var hh = session.Query<Handhistory>().FirstOrDefault(x => x.Gamenumber == handNumber && x.PokersiteId == pokerSiteId);
+
+                        if (hh != null)
+                        {
+                            session.Delete(hh);
+                        }
+
+                        transaction.Commit();
+                    }
+                }
+
+                if (opponentReportResetRequired)
+                {
+                    opponentReportService.Reset();
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, $"Could not delete hand {handNumber} {(EnumPokerSites)pokerSiteId}", ex);
+            }
         }
 
         public IPlayer GetActivePlayer()
@@ -1046,9 +1116,7 @@ namespace Model
                     return activePlayer;
                 }
 
-                short pokerSiteId = 0;
-
-                if (!short.TryParse(splittedResult[1], out pokerSiteId))
+                if (!short.TryParse(splittedResult[1], out short pokerSiteId))
                 {
                     return activePlayer;
                 }
@@ -1110,11 +1178,45 @@ namespace Model
             }
         }
 
-        private string[] GetPlayerFiles(int playerId)
+        public IEnumerable<PlayerNetWon> GetTopPlayersByNetWon(int top, IEnumerable<int> playersToExclude)
+        {
+            if (top < 1)
+            {
+                return new List<PlayerNetWon>();
+            }
+
+            try
+            {
+                using (var session = ModelEntities.OpenStatelessSession())
+                {
+                    var playersToExcludeQuery = string.Join(",", playersToExclude);
+
+                    var query = session.CreateSQLQuery($@"select hpt2.PlayerId, hpt2.Currency, sum(hpt2.NetWon) as NetWon from HandsPlayers hpt1 
+                        join HandsPlayers hpt2 on hpt1.HandId = hpt2.HandId
+                        where hpt1.PlayerId in ({playersToExcludeQuery})
+                        group by hpt2.PlayerId, hpt2.Currency
+                        order by NetWon desc limit 0, {top}");
+
+                    query.SetResultTransformer(PlayerNetWonQuery.Transformer);
+
+                    var result = query.List<PlayerNetWon>();
+
+                    return result;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not read top players by net won [{top}, {string.Join(";", playersToExclude)}]", e);
+            }
+
+            return new List<PlayerNetWon>();
+        }
+
+        public string[] GetPlayerFiles(int playerId)
         {
             try
             {
-                string playerDirectory = Path.Combine(playersPath, playerId.ToString());
+                string playerDirectory = Path.Combine(PlayersPath, playerId.ToString());
 
                 if (!Directory.Exists(playerDirectory))
                 {
@@ -1127,6 +1229,30 @@ namespace Model
             {
                 LogProvider.Log.Error(this, $"Could not get player [{playerId}] files", e);
                 return new string[0];
+            }
+        }
+
+        private sealed class PlayerNetWonQuery : IResultTransformer
+        {
+            public static readonly PlayerNetWonQuery Transformer = new PlayerNetWonQuery();
+
+            private PlayerNetWonQuery()
+            {
+            }
+
+            public IList TransformList(IList collection)
+            {
+                return collection;
+            }
+
+            public object TransformTuple(object[] tuple, string[] aliases)
+            {
+                return new PlayerNetWon
+                {
+                    PlayerId = Convert.ToInt32(tuple[0]),
+                    Currency = Convert.ToInt32(tuple[1]),
+                    NetWon = Convert.ToInt64(tuple[2])
+                };
             }
         }
     }

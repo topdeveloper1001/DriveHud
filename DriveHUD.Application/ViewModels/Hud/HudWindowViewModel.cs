@@ -106,6 +106,22 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        public bool PreLoadMode
+        {
+            get
+            {
+                return layout?.PreloadMode ?? false;
+            }
+        }
+
+        public string PreLoadText
+        {
+            get
+            {
+                return layout?.PreloadText;
+            }
+        }
+
         private string layoutName;
 
         public string LayoutName
@@ -230,6 +246,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                         LayoutsCollection = new ObservableCollection<string>(layout.AvailableLayouts);
                         SelectedLayout = LayoutsCollection.FirstOrDefault(x => x == layout.LayoutName);
                     }
+
+                    OnPropertyChanged(nameof(PreLoadMode));
+                    OnPropertyChanged(nameof(PreLoadText));
                 }
             }
         }

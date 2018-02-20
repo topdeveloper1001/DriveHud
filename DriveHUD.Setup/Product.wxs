@@ -92,7 +92,7 @@
       </Component>
       <Component Id="XROReg.dll" Guid="{82375140-3197-4247-BD51-C1B06267DC2A}">
         <File Id="XROReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\XROReg.dll" />
-      </Component>   
+      </Component>
       <Component Id="DriveHUD.Updater.exe" Guid="{F62CC064-5D14-4AEA-9A77-FFD13398AFEA}">
         <File Id="DriveHUD.Updater.exe" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.Updater.exe" />
       </Component>
@@ -327,6 +327,9 @@
       </Component>
       <Component Id="Microsoft.Expression.Drawing.dll" Guid="{72509625-8FD7-40E5-93AF-BCFBA0CC091D}">
         <File Id="Microsoft.Expression.Drawing.dll" Name="Microsoft.Expression.Drawing.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Microsoft.Expression.Drawing.dll" />
+      </Component>
+      <Component Id="System.Threading.Tasks.Extensions.dll" Guid="{D2BB84F7-40A9-44FB-8CBB-8BE9A4DC50FE}">
+        <File Id="System.Threading.Tasks.Extensions.dll" Name="System.Threading.Tasks.Extensions.dll" KeyPath="yes" Source="$(var.BuildDirectory)\System.Threading.Tasks.Extensions.dll" />
       </Component>
       <Component Id="websocket.sharp.dll" Guid="{6BCD74FE-B3FB-413B-BC82-460F4B67B238}" Transitive="yes">
         <Condition>False</Condition>
@@ -576,7 +579,7 @@
       <ComponentRef Id="websocket.sharp.dll" />
       <ComponentRef Id="Titanium.Web.Proxy.dll" />
       <ComponentRef Id="StreamExtended.dll" />
-      <ComponentRef Id="BouncyCastle.Crypto.dll" />            
+      <ComponentRef Id="BouncyCastle.Crypto.dll" />
       <ComponentRef Id="System.Reactive.Core.dll" />
       <ComponentRef Id="System.Reactive.Interfaces.dll" />
       <ComponentRef Id="System.Reactive.Linq.dll" />
@@ -587,6 +590,7 @@
       <ComponentRef Id="Microsoft.Practices.Unity.RegistrationByConvention.dll" />
       <ComponentRef Id="Telerik.Windows.Controls.Data.dll" />
       <ComponentRef Id="Microsoft.Expression.Drawing.dll" />
+      <ComponentRef Id="System.Threading.Tasks.Extensions.dll" />
       <ComponentRef Id="CAPPIPEDB.DLL" />
       <ComponentRef Id="CAPPIPEDI.DLL" />
       <ComponentRef Id="CAPPIPEDI2.DLL" />

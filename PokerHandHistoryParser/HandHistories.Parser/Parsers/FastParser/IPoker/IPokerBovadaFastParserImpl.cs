@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HandHistories.Objects.Hand;
 using System;
+using DriveHUD.Common.Linq;
 
 namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
@@ -47,11 +48,26 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
         }
 
-        protected override List<HandAction> OrderHandActions(List<HandAction> handActions, PlayerList players)
+        protected override List<HandAction> OrderHandActions(List<HandAction> handActions, PlayerList players, HandHistory handHistory)
         {
             try
             {
                 if (handActions == null || handActions.Count == 0)
+                {
+                    return handActions;
+                }
+
+                if (!IsFastFold(handHistory.TableName))
+                {
+                    return handActions;
+                }
+
+                // if there is more than 1 blinds then we don't order actions (another solution is to check dealer pos then find first blind, then use different 
+                // ordered collections of players (for preflop and for others)
+                var blindsCounts = handActions.CountWithConditions(x => x.HandActionType == HandActionType.SMALL_BLIND,
+                    x => x.HandActionType == HandActionType.BIG_BLIND);
+
+                if (blindsCounts.Item1 > 1 || blindsCounts.Item2 > 1)
                 {
                     return handActions;
                 }
@@ -70,18 +86,18 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
                 var orderedHandActions = new List<HandAction>();
 
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.Init));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.Preflop));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.Flop));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.Turn));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.River));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.Showdown));
-                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, Street.Summary));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Init));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Preflop));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Flop));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Turn));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.River));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Showdown));
+                orderedHandActions.AddRange(OrderStreetHandActions(handActions, orderedPlayersDictionary, x => x.Street == Street.Summary));
 
                 if (orderedHandActions.Count != handActions.Count)
                 {
                     LogProvider.Log.Error(this, "Could not order hand actions. Arrays sizes doesn't match.");
-                    return base.OrderHandActions(handActions, players);
+                    return base.OrderHandActions(handActions, players, handHistory);
                 }
 
                 return orderedHandActions;
@@ -94,9 +110,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return handActions;
         }
 
-        private List<HandAction> OrderStreetHandActions(List<HandAction> handActions, Dictionary<string, int> orderedPlayersDictionary, Street street)
+        private List<HandAction> OrderStreetHandActions(List<HandAction> handActions, Dictionary<string, int> orderedPlayersDictionary, Func<HandAction, bool> filter)
         {
-            var streetActions = handActions.Where(x => x.Street == street).ToList();
+            var streetActions = handActions.Where(filter).ToList();
 
             if (streetActions.Count == 0)
             {

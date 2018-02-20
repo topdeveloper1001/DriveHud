@@ -37,15 +37,46 @@ namespace DriveHUD.Common.Linq
 
         public static bool EqualsToArray<T>(this T[] a1, T[] a2)
         {
-            if (ReferenceEquals(a1, a2)) return true;
-            if (a1 == null || a2 == null) return false;
-            if (a1.Length != a2.Length) return false;
+            if (ReferenceEquals(a1, a2))
+            {
+                return true;
+            }
+
+            if (a1 == null || a2 == null)
+            {
+                return false;
+            }
+
+            if (a1.Length != a2.Length)
+            {
+                return false;
+            }
+
             EqualityComparer<T> comparer = EqualityComparer<T>.Default;
+
             for (int i = 0; i < a1.Length; i++)
             {
-                if (!comparer.Equals(a1[i], a2[i])) return false;
+                if (!comparer.Equals(a1[i], a2[i]))
+                {
+                    return false;
+                }
             }
             return true;
+        }
+
+        public static bool ItemsEqual<T>(this T[] array1, T[] array2)
+        {
+            if (array1 == null || array2 == null)
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(array1, array2))
+            {
+                return true;
+            }
+
+            return array1.Count() == array2.Count() && !array1.Except(array2).Any();
         }
 
         public static IEnumerable Append(this IEnumerable first, params object[] second)
@@ -306,6 +337,42 @@ namespace DriveHUD.Common.Linq
             }
 
             return !mustExist;
+        }
+
+        public static Tuple<int, int> CountWithConditions<T>(this IEnumerable<T> items, Func<T, bool> predicate1, Func<T, bool> predicate2)
+        {
+            if (items == null)
+            {
+                throw new ArgumentNullException(nameof(items));
+            }
+
+            if (predicate1 == null)
+            {
+                throw new ArgumentNullException(nameof(predicate1));
+            }
+
+            if (predicate2 == null)
+            {
+                throw new ArgumentNullException(nameof(predicate2));
+            }
+
+            var counter1 = 0;
+            var counter2 = 0;
+
+            foreach (var item in items)
+            {
+                if (predicate1(item))
+                {
+                    counter1++;
+                }
+
+                if (predicate2(item))
+                {
+                    counter2++;
+                }
+            }
+
+            return Tuple.Create(counter1, counter2);
         }
     }
 }

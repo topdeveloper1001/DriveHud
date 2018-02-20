@@ -1,0 +1,32 @@
+PokerStars Game #47185457844:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:44:38 ET
+Table 'Regulus' 6-max Seat #3 is the button
+Seat 1: FrAnWaN ($256.05 in chips)
+Seat 2: Fierytycoon ($212.95 in chips)
+Seat 3: TODO ADENTR0 ($386.45 in chips)
+Seat 4: thomaswkm ($323.95 in chips)
+Seat 5: DURKADURDUR ($359.05 in chips)
+Seat 6: Rush51 ($71 in chips)
+thomaswkm: posts small blind $1
+DURKADURDUR: posts big blind $2
+*** HOLE CARDS ***
+Rush51: folds
+FrAnWaN: folds
+Fierytycoon: raises $3 to $5
+TODO ADENTR0: folds
+thomaswkm: calls $4
+DURKADURDUR: raises $17 to $22
+Fierytycoon: folds
+thomaswkm: raises $38 to $60
+DURKADURDUR: raises $299.05 to $359.05 and is all-in
+thomaswkm: folds
+Uncalled bet ($299.05) returned to DURKADURDUR
+DURKADURDUR collected $125 from pot
+DURKADURDUR: doesn't show hand
+*** SUMMARY ***
+Total pot $125 | Rake $0
+Seat 1: FrAnWaN folded before Flop (didn't bet)
+Seat 2: Fierytycoon folded before Flop
+Seat 3: TODO ADENTR0 (button) folded before Flop (didn't bet)
+Seat 4: thomaswkm (small blind) folded before Flop
+Seat 5: DURKADURDUR (big blind) collected ($125)
+Seat 6: Rush51 folded before Flop (didn't bet)

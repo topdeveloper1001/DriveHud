@@ -14,11 +14,8 @@
     xmlns:navigation="clr-namespace:Telerik.Windows.Controls.Navigation;assembly=Telerik.Windows.Controls.Navigation"
     xmlns:Chromes="clr-namespace:Telerik.Windows.Controls.Chromes;assembly=Telerik.Windows.Controls"
     xmlns:application="clr-namespace:DriveHUD.Application"
-    xmlns:gaugeExample="clr-namespace:GaugeExample"
-    xmlns:converter="clr-namespace:DriveHUD.Application.ValueConverters"
     xmlns:cnv="clr-namespace:DriveHUD.Common.Wpf.Converters;assembly=DriveHUD.Common.Wpf"
     xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
-    xmlns:controls="clr-namespace:DriveHUD.Application.Controls"
     xmlns:pb="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
     xmlns:equityCalculator="clr-namespace:DriveHUD.EquityCalculator.Views;assembly=DriveHUD.EquityCalculator"
     xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
@@ -28,10 +25,6 @@
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels"
     xmlns:vmp="clr-namespace:DriveHUD.Application.ViewModels.PopupContainers"
     xmlns:enums="clr-namespace:Model.Enums;assembly=Model"
-    xmlns:templateSelectors="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
-    xmlns:templateCollection="clr-namespace:DriveHUD.Common.Wpf.DataTemplateSelectors;assembly=DriveHUD.Common.Wpf"
-    xmlns:hud="clr-namespace:DriveHUD.Application.Views.Hud"
-    xmlns:cts="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
     navigation:RadWindowInteropHelper.ShowInTaskbar="True"
     WindowStartupLocation="CenterScreen"
     Foreground="#7D7F84"
@@ -432,7 +425,7 @@
                                     </TextBox.Template>
                                 </TextBox>
                                 <TextBlock
-                                    Text="{Binding Path=StorageModel.PlayerSelectedItem.PokerSite, Converter={dh:PokerSiteToShortStringConverter}}"
+                                    Text="{Binding Path=StorageModel.PlayerSelectedItem.ShortDescription}"
                                     HorizontalAlignment="Right"
                                     Margin="0 0 5 0"
                                     Style="{StaticResource Title_H2}" />
@@ -1704,7 +1697,7 @@
                     Background="{StaticResource BackgroundBrush2}"
                     SelectedItem="{Binding StorageModel.PlayerSelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Delay=1000}"
                     DisplayMemberPath="DecodedName"
-                    ItemsSource="{Binding SortedPlayers, Mode=OneWay}"                    
+                    ItemsSource="{Binding SortedPlayers, Mode=OneWay}"
                     Style="{StaticResource PlayerComboBoxStyle}"
                     ItemContainerStyle="{StaticResource PlayerComboBoxItemStyle}">
                     <telerik:RadComboBox.ItemsPanel>
@@ -1737,7 +1730,7 @@
                         </telerik:RadContextMenu>
                     </telerik:RadRibbonDropDownButton.DropDownContent>
                 </telerik:RadRibbonDropDownButton>
-                
+
                 <Button
                     Name="btnPurge"
                     Width="40"

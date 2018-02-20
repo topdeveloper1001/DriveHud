@@ -652,15 +652,18 @@ namespace DriveHUD.Application.ViewModels.Replayer
         {
             var viewModel = new HandNoteViewModel(CurrentHand.GameNumber, CurrentHand.PokersiteId);
 
-            var frm = new HandNoteView(viewModel);
-            frm.Owner = System.Windows.Application.Current.MainWindow;
-            frm.ShowDialog();
+            var handNoteView = new HandNoteView(viewModel)
+            {
+                Owner = System.Windows.Application.Current.MainWindow
+            };
+
+            handNoteView.ShowDialog();
 
             CurrentHand.Statistic.HandNote = viewModel.HandNoteEntity;
 
             ServiceLocator.Current.GetInstance<IEventAggregator>()
                 .GetEvent<HandNoteUpdatedEvent>()
-                .Publish(new HandNoteUpdatedEventArgs(CurrentHand.GameNumber, CurrentHand.Statistic.PlayerName));
+                .Publish(new HandNoteUpdatedEventArgs(CurrentHand.GameNumber, viewModel.HandNoteEntity.Note));
         }
 
         private void ShowSupportForums(object obj)

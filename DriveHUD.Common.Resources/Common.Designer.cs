@@ -19,7 +19,7 @@ namespace DriveHUD.Common.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Common {
@@ -255,6 +255,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_BumperStickers_SelectColor {
             get {
                 return ResourceManager.GetString("Common_BumperStickers_SelectColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading data... Please wait....
+        /// </summary>
+        internal static string Common_BusyIndicator_Loading {
+            get {
+                return ResourceManager.GetString("Common_BusyIndicator_Loading", resourceCulture);
             }
         }
         
@@ -1566,6 +1575,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Opponents.
+        /// </summary>
+        internal static string Common_Opponents {
+            get {
+                return ResourceManager.GetString("Common_Opponents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Percentage.
         /// </summary>
         internal static string Common_Percentage {
@@ -2593,7 +2611,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Total S&amp;amp;G&apos;s : .
+        ///   Looks up a localized string similar to Total S&amp;G&apos;s : .
         /// </summary>
         internal static string Common_TournamentView_TotalSnGs {
             get {
@@ -2602,7 +2620,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Total S&amp;amp;G$&apos;s Won : .
+        ///   Looks up a localized string similar to Total S&amp;G$&apos;s Won : .
         /// </summary>
         internal static string Common_TournamentView_TotalSnGsWon {
             get {
