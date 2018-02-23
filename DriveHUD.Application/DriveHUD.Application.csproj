@@ -442,6 +442,7 @@
     <Compile Include="TableConfigurators\PositionProviders\GGNPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\IPokerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\PartyPokerPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\PMPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\WinningPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\CommonPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\IgnitionPositionProvider.cs" />
@@ -546,6 +547,7 @@
     <Compile Include="ViewModels\Hud\IHudBaseToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\IPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PartyPokerHudPanelService.cs" />
+    <Compile Include="ViewModels\Hud\PMHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />

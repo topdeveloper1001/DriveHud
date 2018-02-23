@@ -39,7 +39,7 @@ namespace DriveHUD.Importers.ExternalImporter
         {
             get
             {
-                return EnumPokerSites.GGN;
+                return EnumPokerSites.Unknown;
             }
         }
 
@@ -124,7 +124,7 @@ namespace DriveHUD.Importers.ExternalImporter
                 return;
             }
 
-            var window = FindWindow(parsingResult);
+            var window = gameInfo.WindowHandle != 0 ? new IntPtr(gameInfo.WindowHandle) : FindWindow(parsingResult);
 
             if (window == IntPtr.Zero)
             {
@@ -143,6 +143,12 @@ namespace DriveHUD.Importers.ExternalImporter
         {
             if (string.IsNullOrWhiteSpace(title) || parsingResult == null ||
               parsingResult.Source == null || parsingResult.Source.GameDescription == null || string.IsNullOrEmpty(parsingResult.Source.TableName))
+            {
+                return false;
+            }
+
+            // temporary solution (need to rework with next external importer)
+            if (parsingResult.Source.GameDescription.Site != EnumPokerSites.GGN)
             {
                 return false;
             }
@@ -176,13 +182,6 @@ namespace DriveHUD.Importers.ExternalImporter
             }
         }
 
-        private Dictionary<int, int> autoCenterSeats = new Dictionary<int, int>
-        {
-            { 4, 3 },
-            { 6, 4 },
-            { 9, 6 }
-        };
-
         protected override PlayerList GetPlayerList(HandHistory handHistory)
         {
             var playerList = handHistory.Players;
@@ -190,6 +189,8 @@ namespace DriveHUD.Importers.ExternalImporter
             var maxPlayers = handHistory.GameDescription.SeatType.MaxPlayers;
 
             var heroSeat = handHistory.Hero != null ? handHistory.Hero.SeatNumber : 0;
+
+            var autoCenterSeats = GetAutoCenterSeats(handHistory.GameDescription.Site);
 
             if (heroSeat != 0 && autoCenterSeats.ContainsKey(maxPlayers))
             {
@@ -206,6 +207,34 @@ namespace DriveHUD.Importers.ExternalImporter
             return playerList;
         }
 
+        protected virtual Dictionary<int, int> GetAutoCenterSeats(EnumPokerSites pokerSite)
+        {
+            switch (pokerSite)
+            {
+                case EnumPokerSites.GGN:
+                    return new Dictionary<int, int>
+                    {
+                        { 4, 3 },
+                        { 6, 4 },
+                        { 9, 6 }
+                    };
+                case EnumPokerSites.PokerMaster:
+                    return new Dictionary<int, int>
+                    {
+                        { 4, 3 },
+                        { 3, 2 },
+                        { 4, 3 },
+                        { 5, 3 },
+                        { 6, 4 },
+                        { 7, 4 },
+                        { 8, 5 },
+                        { 9, 5 }
+                    };
+                default:
+                    return new Dictionary<int, int>();
+            }
+        }
+
         protected override bool IsDisabled()
         {
             return false;
@@ -218,17 +247,12 @@ namespace DriveHUD.Importers.ExternalImporter
 
             public DHImporterService(ExternalImporter importer)
             {
-                if (importer == null)
-                {
-                    throw new ArgumentNullException(nameof(importer));
-                }
-
-                this.importer = importer;
+                this.importer = importer ?? throw new ArgumentNullException(nameof(importer));
             }
 
-            public void ImportHandHistory(string handHistory)
+            public void ImportHandHistory(HandHistoryDto handHistory)
             {
-                if (string.IsNullOrEmpty(handHistory))
+                if (handHistory == null || string.IsNullOrEmpty(handHistory.HandText))
                 {
                     return;
                 }
@@ -237,11 +261,12 @@ namespace DriveHUD.Importers.ExternalImporter
                 {
                     var gameInfo = new GameInfo
                     {
-                        PokerSite = EnumPokerSites.GGN,
-                        UpdateAction = importer.UpdateGameInfo
+                        PokerSite = handHistory.PokerSite,
+                        UpdateAction = importer.UpdateGameInfo,
+                        WindowHandle = handHistory.WindowHandle
                     };
 
-                    importer.ProcessHand(handHistory, gameInfo);
+                    importer.ProcessHand(handHistory.HandText, gameInfo);
                 }
                 catch (Exception e)
                 {

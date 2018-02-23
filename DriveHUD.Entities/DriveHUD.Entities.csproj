@@ -49,6 +49,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,6 +70,7 @@
     <Compile Include="EnumTableType.cs" />
     <Compile Include="GameFormat.cs" />
     <Compile Include="Gametypes.cs" />
+    <Compile Include="HandHistoryDto.cs" />
     <Compile Include="Handhistory.cs" />
     <Compile Include="HandHistoryRecord.cs" />
     <Compile Include="Handnotes.cs" />

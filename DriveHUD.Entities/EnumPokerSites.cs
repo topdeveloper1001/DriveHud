@@ -10,26 +10,48 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Runtime.Serialization;
+
 namespace DriveHUD.Entities
 {
+    [DataContract(Namespace = "")]
     public enum EnumPokerSites : short
     {
+        [EnumMember]
         Unknown = 0,
+        [EnumMember]
         Ignition = 1,
+        [EnumMember]
         IPoker = 2,
+        [EnumMember]
         Bovada = 3,
+        [EnumMember]
         Bodog = 4,
+        [EnumMember]
         BetOnline = 5,
+        [EnumMember]
         SportsBetting = 6,
+        [EnumMember]
         PokerStars = 7,
+        [EnumMember]
         Poker888 = 8,
+        [EnumMember]
         TigerGaming = 9,
+        [EnumMember]
         AmericasCardroom = 10,
+        [EnumMember]
         BlackChipPoker = 11,
+        [EnumMember]
         WinningPokerNetwork = 12,
+        [EnumMember]
         TruePoker = 13,
+        [EnumMember]
         YaPoker = 14,
+        [EnumMember]
         PartyPoker = 15,
-        GGN = 16
+        [EnumMember]
+        GGN = 16,
+        [EnumMember]
+        PokerMaster = 17
     }
 }

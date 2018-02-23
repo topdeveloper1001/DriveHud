@@ -19,7 +19,7 @@ namespace DriveHUD.Common.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Enums {
@@ -264,6 +264,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_EnumPokerSites_Poker888 {
             get {
                 return ResourceManager.GetString("Enum_EnumPokerSites_Poker888", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PokerMaster.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_PokerMaster {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_PokerMaster", resourceCulture);
             }
         }
         

@@ -79,6 +79,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new WinningPokerNetworkFastParserImpl();
                 case EnumPokerSites.GGN:
                     return new CommonHandHistoryParser(EnumPokerSites.GGN);
+                case EnumPokerSites.PokerMaster:
+                    return new CommonHandHistoryParser(EnumPokerSites.PokerMaster);
                 default:
                     throw new NotImplementedException("GetFullHandHistoryParser: No parser for " + siteName);
             }
