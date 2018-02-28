@@ -21,12 +21,11 @@ namespace Simulator
             InitializeCommands();
         }
 
-        public ReactiveCommand<object> RunCommand { get; private set; }
+        public ReactiveCommand RunCommand { get; private set; }
 
         private void InitializeCommands()
         {
-            RunCommand = ReactiveCommand.Create();
-            RunCommand.Subscribe(x => Run());
+            RunCommand = ReactiveCommand.Create(Run);            
         }
 
         private async void Run()

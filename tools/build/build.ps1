@@ -26,7 +26,9 @@ param
     
     [string] $Version = '1.4.4',
 
-    [string] $VersionExlcudeFilter = '**DriveHUD.PlayerXRay**,**XR*Reg**',
+    [string] $VersionIncludeFilter = '**',
+
+    [string] $VersionExlcudeFilter = '**DriveHUD.PlayerXRay**,**XR*Reg**,**DriveHUD.PMCatcher**,**PM*Reg**',
 
     [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll',
 
@@ -61,9 +63,9 @@ param
 
     [string] $LicObfuscatorIncludeFilter = '*Reg.dll',        
 
-    [string] $LicProjectsToUpdate = 'DriveHUD.Application\DriveHUD.Application.csproj',
+    [string] $LicProjectsToUpdate = 'DriveHUD.Application\DriveHUD.Application.csproj,DriveHUD.PMCatcher\DriveHUD.PMCatcher.csproj',
 
-    [string] $LicCSFileToUpdate = 'DriveHUD.Application\App.xaml.cs',
+    [string] $LicCSFileToUpdate = 'DriveHUD.Application\App.xaml.cs,DriveHUD.PMCatcher\PMCatcherModule.cs',
 
     [string] $LicOutputPath = 'dependencies',
 
@@ -111,6 +113,7 @@ $session = @{
   InstallerMSI = Join-Path $BaseDir $InstallerMSI
   InstallerWix = Join-Path $BaseDir $InstallerWix
   Version = $Version
+  VersionIncludeFilter = $VersionIncludeFilter
   VersionExlcudeFilter = $VersionExlcudeFilter
   ObfuscatorIncludeFilter = $ObfuscatorIncludeFilter
   ObfuscatorExcludeFilter = $ObfuscatorExcludeFilter
@@ -139,16 +142,16 @@ $session = @{
   ExeToLargeAddressAware = $ExeToLargeAddressAware
 }
 
-Import-Module BuildRunner-Log
-Import-Module BuildRunner-Tools
-Import-Module BuildRunner-Versioning
-Import-Module BuildRunner-MSBuild
-Import-Module BuildRunner-EditBin
-Import-Module BuildRunner-Nuget
-Import-Module BuildRunner-Obfuscate
-Import-Module BuildRunner-Sign
-Import-Module BuildRunner-SignWixBundle
-Import-Module BuildRunner-LicUpdater
+Import-Module BuildRunner-Log -Force
+Import-Module BuildRunner-Tools -Force
+Import-Module BuildRunner-Versioning -Force
+Import-Module BuildRunner-MSBuild -Force
+Import-Module BuildRunner-EditBin -Force
+Import-Module BuildRunner-Nuget -Force
+Import-Module BuildRunner-Obfuscate -Force
+Import-Module BuildRunner-Sign -Force
+Import-Module BuildRunner-SignWixBundle -Force
+Import-Module BuildRunner-LicUpdater -Force
 
 # setup logging
 if ($LogLevel)
@@ -263,6 +266,10 @@ try
          
    # setup version
    Set-Version($session)  
+
+   # setup pm-catcher version
+   Write-LogInfo 'SETUP' 'Set PM-Catcher version' 
+   & .\tools\build\pmc-build.ps1   
         
    # nuget
    Use-Nuget $session $session.Solution 'nuget.log'   
@@ -331,16 +338,4 @@ catch
     $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
     
     exit(1)
-}
-finally
-{
-    # remove all used modules (for debugging purpose)
-    Remove-Module BuildRunner-Log           
-    Remove-Module BuildRunner-Tools
-    Remove-Module BuildRunner-Versioning 
-    Remove-Module BuildRunner-MSBuild
-    Remove-Module BuildRunner-Obfuscate
-    Remove-Module BuildRunner-LicUpdater
-    Remove-Module BuildRunner-Sign
-    Remove-Module BuildRunner-SignWixBundle
 }
