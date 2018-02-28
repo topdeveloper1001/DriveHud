@@ -23,7 +23,6 @@ using Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DriveHUD.Importers.PokerMaster
 {
@@ -73,7 +72,7 @@ namespace DriveHUD.Importers.PokerMaster
 
                 if (startRoomStateChange == null)
                 {
-                    LogProvider.Log.Info($"Hand #{gameNumber} has no start info. [{Site}]");
+                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Hand #{gameNumber} has no start info. [{Site}]");
                     return null;
                 }
 
@@ -103,7 +102,7 @@ namespace DriveHUD.Importers.PokerMaster
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Could not build hand #{gameNumber} [{Site}]", e);
+                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Could not build hand #{gameNumber} [{Site}]", e);
             }
             finally
             {
@@ -218,11 +217,11 @@ namespace DriveHUD.Importers.PokerMaster
 
         private Player AddOrUpdatePlayer(UserGameInfoNet userGameInfo, int seat, HandHistory handHistory, long heroId)
         {
-            var player = handHistory.Players[userGameInfo.UserInfo.Nick];
+            var player = handHistory.Players[userGameInfo.UserInfo.ShowID];
 
             if (player == null)
             {
-                player = new Player(userGameInfo.UserInfo.Nick, 0, seat);
+                player = new Player(userGameInfo.UserInfo.ShowID, 0, seat);
 
                 handHistory.Players.Add(player);
 
@@ -237,8 +236,8 @@ namespace DriveHUD.Importers.PokerMaster
                 return player;
             }
 
-            handHistory.Players[userGameInfo.UserInfo.Nick].HoleCards = HoleCards.FromCards(userGameInfo.UserInfo.Nick,
-                userGameInfo.CurrentHands.Select(c => Card.GetCardFromIntValue(c)).ToArray());
+            handHistory.Players[userGameInfo.UserInfo.ShowID].HoleCards = HoleCards.FromCards(userGameInfo.UserInfo.ShowID,
+                userGameInfo.CurrentHands.Select(c => Card.GetPMCardFromIntValue(c)).ToArray());
 
             return player;
         }
@@ -282,11 +281,11 @@ namespace DriveHUD.Importers.PokerMaster
                 {
                     var userWinner = userWinners[winnerNum];
 
-                    var winner = handHistory.Players[userWinner.Nick];
+                    var winner = handHistory.Players[userWinner.ShowID];
 
                     if (winner == null)
                     {
-                        throw new HandBuilderException(handHistory.HandId, $"UserWinner [{userWinner.Nick}] has not been found in the player list.");
+                        throw new HandBuilderException(handHistory.HandId, $"UserWinner [{userWinner.ShowID}] has not been found in the player list.");
                     }
 
                     winner.Win += userPots[winnerNum];
@@ -298,7 +297,7 @@ namespace DriveHUD.Importers.PokerMaster
             {
                 handHistory.CommunityCards = BoardCards.FromCards(gameRoomInfo
                     .CurrentCards
-                    .Select(c => Card.GetCardFromIntValue(c))
+                    .Select(c => Card.GetPMCardFromIntValue(c))
                     .ToArray());
             }
         }
@@ -316,10 +315,6 @@ namespace DriveHUD.Importers.PokerMaster
             CalculateUncalledBets(handHistory);
             CalculateTotalPot(handHistory);
             SortHandActions(handHistory);
-
-            // set hero
-            var hero = handHistory.Players.FirstOrDefault(x => x.PlayerId == heroId);
-            handHistory.Hero = hero;
         }
 
         private void AddShowActions(HandHistory handHistory)
@@ -359,7 +354,10 @@ namespace DriveHUD.Importers.PokerMaster
 
             foreach (var player in handHistory.Players)
             {
-                player.Bet = betsByPlayer[player.PlayerName];
+                if (betsByPlayer.ContainsKey(player.PlayerName))
+                {
+                    player.Bet = betsByPlayer[player.PlayerName];
+                }
             }
         }
 
@@ -636,7 +634,7 @@ namespace DriveHUD.Importers.PokerMaster
             if (previousUserGameInfo.RoomGameState == GameRoomGameState.ROOM_GAME_STATE_GameStart &&
                 userGameInfoNet.RoomGameState == GameRoomGameState.ROOM_GAME_STATE_Ante)
             {
-                return new HandAction(userGameInfoNet.UserInfo.Nick,
+                return new HandAction(userGameInfoNet.UserInfo.ShowID,
                    HandActionType.ANTE,
                    userGameInfoNet.BetStacks,
                    Street.Preflop);
@@ -647,7 +645,7 @@ namespace DriveHUD.Importers.PokerMaster
                 previousUserGameInfo.RoomGameState == GameRoomGameState.ROOM_GAME_STATE_Ante) &&
                 userGameInfoNet.GameState == UserGameStates.USER_GAME_STATE_BETTING && userGameInfoNet.BetStacks > 0)
             {
-                return new HandAction(userGameInfoNet.UserInfo.Nick,
+                return new HandAction(userGameInfoNet.UserInfo.ShowID,
                     HandActionType.SMALL_BLIND,
                     userGameInfoNet.BetStacks,
                     Street.Preflop);
@@ -659,7 +657,7 @@ namespace DriveHUD.Importers.PokerMaster
                 userGameInfoNet.GameState == UserGameStates.USER_GAME_STATE_BLIND &&
                 userGameInfoNet.BetStacks > 0)
             {
-                return new HandAction(userGameInfoNet.UserInfo.Nick,
+                return new HandAction(userGameInfoNet.UserInfo.ShowID,
                   HandActionType.BIG_BLIND,
                   userGameInfoNet.BetStacks,
                   Street.Preflop);
@@ -702,10 +700,10 @@ namespace DriveHUD.Importers.PokerMaster
             }
 
             var handAction = userGameInfoNet.RemainStacks == 0 ?
-                new AllInAction(userGameInfoNet.UserInfo.Nick, amount, street,
+                new AllInAction(userGameInfoNet.UserInfo.ShowID, amount, street,
                     handActionType == HandActionType.BET || handActionType == HandActionType.RAISE,
                     handActionType) :
-                new HandAction(userGameInfoNet.UserInfo.Nick, handActionType, amount, street);
+                new HandAction(userGameInfoNet.UserInfo.ShowID, handActionType, amount, street);
 
             return handAction;
         }

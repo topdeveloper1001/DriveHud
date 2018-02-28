@@ -17,6 +17,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Helpers;
+using DriveHUD.Importers.Loggers;
 using DriveHUD.Importers.PokerMaster.Model;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
@@ -49,7 +50,7 @@ namespace DriveHUD.Importers.PokerMaster
 
         private readonly ConcurrentStack<CaptureDevice> captureDevices = new ConcurrentStack<CaptureDevice>();
 
-        private readonly IPMCatcherService pmCatcherService = ServiceLocator.Current.GetInstance<IPMCatcherService>();
+        private readonly IPMCatcherService pmCatcherService = ServiceLocator.Current.TryResolve<IPMCatcherService>();
 
         private Lazy<BodyDecryptor> bodyDecryptor = new Lazy<BodyDecryptor>(false);
 
@@ -118,6 +119,7 @@ namespace DriveHUD.Importers.PokerMaster
                 Directory.CreateDirectory("Hands");
             }
 #endif
+            isReloginRequired = false;
 
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
@@ -147,7 +149,7 @@ namespace DriveHUD.Importers.PokerMaster
                 MessagesInBuffer = 10
             };
 
-            protectedLogger = ServiceLocator.Current.GetInstance<IPokerClientEncryptedLogger>();
+            protectedLogger = ServiceLocator.Current.GetInstance<IPokerClientEncryptedLogger>(LogServices.Base.ToString());
             protectedLogger.Initialize(logger);
             protectedLogger.CleanLogs();
             protectedLogger.StartLogging();
@@ -329,26 +331,6 @@ namespace DriveHUD.Importers.PokerMaster
                         continue;
                     }
 
-                    if (!HeroesKeys.TryGetValue(package.Uuid, out byte[] encryptKey))
-                    {
-                        if (isReloginRequired)
-                        {
-                            continue;
-                        }
-
-                        LogProvider.Log.Info(CustomModulesNames.PMCatcher, "Encryption key not found.");
-
-                        isReloginRequired = true;
-                        continue;
-                    }
-
-                    if (package.Body == null || package.Body.Length == 0)
-                    {
-                        continue;
-                    }
-
-                    var bytes = BodyDecryptor.Decrypt(package.Body, encryptKey, IsAdvancedLogEnabled);
-
                     if (package.Cmd == PackageCommand.Cmd_SCGameRoomStateChange)
                     {
                         var process = connectionsService.GetProcess(capturedPacket);
@@ -361,6 +343,28 @@ namespace DriveHUD.Importers.PokerMaster
                             detectedTableWindows.Add(windowHandle);
                             newlyDetectedTable = true;
                         }
+
+                        if (!HeroesKeys.TryGetValue(package.Uuid, out byte[] encryptKey))
+                        {
+                            if (isReloginRequired)
+                            {
+                                continue;
+                            }
+
+                            LogProvider.Log.Info(CustomModulesNames.PMCatcher, "Encryption key not found.");
+
+                            SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_Relogin", windowHandle);
+
+                            isReloginRequired = true;
+                            continue;
+                        }
+
+                        if (package.Body == null || package.Body.Length == 0)
+                        {
+                            continue;
+                        }
+
+                        var bytes = BodyDecryptor.Decrypt(package.Body, encryptKey, IsAdvancedLogEnabled);
 
                         if (!SerializationHelper.TryDeserialize(bytes, out SCGameRoomStateChange scGameRoomStateChange))
                         {

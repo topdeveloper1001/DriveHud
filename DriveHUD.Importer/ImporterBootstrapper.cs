@@ -18,6 +18,7 @@ using DriveHUD.Importers.IPoker;
 using DriveHUD.Importers.Loggers;
 using DriveHUD.Importers.Pacific888;
 using DriveHUD.Importers.PartyPoker;
+using DriveHUD.Importers.PokerMaster;
 using DriveHUD.Importers.PokerStars;
 using DriveHUD.Importers.WinningPokerNetwork;
 using Microsoft.Practices.ServiceLocation;
@@ -72,6 +73,11 @@ namespace DriveHUD.Importers
             container.RegisterType<IPlayerStatisticReImporter, PlayerStatisticReImporter>();
             container.RegisterType<IIgnitionWindowCache, IgnitionWindowCache>(new ContainerControlledLifetimeManager());
             container.RegisterType<IExternalImporter, ExternalImporter.ExternalImporter>();
+            container.RegisterType<IHandBuilder, HandBuilder>();
+            container.RegisterType<INetworkConnectionsService, NetworkConnectionsService>();
+            container.RegisterType<ITableWindowProvider, TableWindowProvider>();
+            container.RegisterType<IPacketManager, PacketManager>();
+            container.RegisterType<IPMImporter, PMImporter>();
 
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());
@@ -105,6 +111,7 @@ namespace DriveHUD.Importers
             importerService.Register<IPartyPokerImporter>();
             importerService.Register<IIPokerImporter>();
             importerService.Register<IExternalImporter>();
+            importerService.Register<IPMImporter>();
         }
     }
 }

@@ -62,19 +62,28 @@ namespace HandHistories.Objects.GameDescription
         [XmlElement]
         public SeatType SeatType { get; set; }
 
+        [XmlElement(ElementName = "TableType")]
+        public string TableTypeText
+        {
+            get
+            {
+                return TableType.ToString();
+            }
+            set
+            {
+                TableType = TableType.Parse(value);
+            }
+        }
+
         [XmlIgnore]
         public TableType TableType { get; set; }
 
-        [XmlArray]
+        [XmlIgnore]
         public List<TableTypeDescription> TableTypeDescriptors
         {
             get
             {
                 return TableType.GetTableTypeDescriptions().ToList();
-            }
-            set
-            {
-
             }
         }
 

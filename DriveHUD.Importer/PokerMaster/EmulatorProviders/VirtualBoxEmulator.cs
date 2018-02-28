@@ -30,6 +30,8 @@ namespace DriveHUD.Importers.PokerMaster.EmulatorProviders
 
         protected abstract string VbInstanceArgumentPrefix { get; }
 
+        protected virtual int? VbEmptyInstanceNumber { get { return 0; } }
+
         public bool CanProvide(Process process)
         {
             try
@@ -70,7 +72,8 @@ namespace DriveHUD.Importers.PokerMaster.EmulatorProviders
 
                         return instanceNumber.HasValue ?
                             currentNoxInstanceNumber == instanceNumber :
-                            !currentNoxInstanceNumber.HasValue;
+                            (!currentNoxInstanceNumber.HasValue || 
+                                (currentNoxInstanceNumber.HasValue && VbEmptyInstanceNumber == currentNoxInstanceNumber));
                     });
 
                 return emulatorProcess != null ? emulatorProcess.MainWindowHandle : IntPtr.Zero;

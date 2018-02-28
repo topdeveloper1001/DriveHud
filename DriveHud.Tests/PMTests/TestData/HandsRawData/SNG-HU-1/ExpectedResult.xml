@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2018-02-20T13:51:58Z</DateOfHandUtc>
+  <HandId>275254740012</HandId>
+  <DealerButtonPosition>2</DealerButtonPosition>
+  <TableName>sngtest1</TableName>
+  <GameDescription>
+    <PokerFormat>Tournament</PokerFormat>
+    <Site>PokerMaster</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>YUAN</Currency>
+      <SmallBlind>15</SmallBlind>
+      <BigBlind>30</BigBlind>
+      <IsAnteTable>true</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="2" />
+    <TableType>Speed</TableType>
+    <Tournament>
+      <TournamentId>27525474</TournamentId>
+      <TournamentName>sngtest1</TournamentName>
+      <BuyIn>
+        <Currency>YUAN</Currency>
+        <PrizePoolValue>200</PrizePoolValue>
+        <Rake>0</Rake>
+        <IsKnockout>false</IsKnockout>
+        <KnockoutValue>0</KnockoutValue>
+      </BuyIn>
+      <Bounty>0</Bounty>
+      <Rebuy>0</Rebuy>
+      <Addon>0</Addon>
+      <Winning>0</Winning>
+      <FinishPosition>0</FinishPosition>
+      <TotalPlayers>2</TotalPlayers>
+      <StartDate>2018-02-20T13:48:53Z</StartDate>
+      <Speed>Turbo</Speed>
+    </Tournament>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>3920</TotalPot>
+  <HeroName>Peon</HeroName>
+  <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+  <Actions>
+    <HandAction PlayerName="Peon" HandActionType="SMALL_BLIND" Amount="-15" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Alex84" HandActionType="BIG_BLIND" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Peon" HandActionType="CALL" Amount="-15" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Alex84" HandActionType="CHECK" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Alex84" HandActionType="BET" Amount="-40" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="Peon" HandActionType="CALL" Amount="-40" Street="Flop" IsAllIn="false" />
+    <HandAction p3:type="AllInAction" PlayerName="Alex84" HandActionType="ALL_IN" Amount="-1970" Street="Turn" IsAllIn="true" IsRaiseAllIn="true" SourceActionType="BET" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction p3:type="AllInAction" PlayerName="Peon" HandActionType="ALL_IN" Amount="-1890" Street="Turn" IsAllIn="true" IsRaiseAllIn="false" SourceActionType="CALL" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="Alex84" HandActionType="UNCALLED_BET" Amount="80" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="Alex84" HandActionType="SHOW" Amount="0" Street="Showdown" IsAllIn="false" />
+    <HandAction PlayerName="Peon" HandActionType="SHOW" Amount="0" Street="Showdown" IsAllIn="false" />
+    <HandAction p3:type="WinningsAction" PlayerName="Alex84" HandActionType="WINS" Amount="3920" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>AcTh6c6d4d</CommunityCards>
+  <Players>
+    <Player PlayerName="Alex84" StartingStack="2040" Bet="2040" Win="3920" SeatNumber="1" Cards="8h6s" IsSittingOut="false" />
+    <Player PlayerName="Peon" StartingStack="1960" Bet="1960" Win="0" SeatNumber="2" Cards="JsTs" IsSittingOut="false" />
+  </Players>
+</HandHistory>

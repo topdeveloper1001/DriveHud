@@ -228,6 +228,48 @@ namespace HandHistories.Objects.Cards
             return new Card(suitValue, rankValue);
         }
 
+        public static Card GetPMCardFromIntValue(int value)
+        {
+            if (value >= 52 || value < 0)
+            {
+                return new Card();
+            }
+
+            var suit = value / 13;
+            var rank = value % 13;
+
+            var suitPMValue = ((suit + 1) << 4);
+
+            SuitEnum suitValue;           
+
+            if (suitPMValue == 0x10)
+            {
+                suitValue = SuitEnum.Spades;
+            }
+            else if (suitPMValue == 0x20)
+            {
+                suitValue = SuitEnum.Hearts;
+            }
+            else if (suitPMValue == 0x30)
+            {
+                suitValue = SuitEnum.Clubs;
+            }
+            else if (suitPMValue == 0x40)
+            {
+                suitValue = SuitEnum.Diamonds;
+            }
+            else
+            {
+                suitValue = SuitEnum.Unknown;
+            }
+
+            var rankPMValue = rank + 1;
+
+            var rankValue = rankPMValue == 1 ? CardValueEnum._A : (CardValueEnum)rankPMValue;
+
+            return new Card(suitValue, rankValue);
+        }
+
         public static Card Parse(string card)
         {
             if (card.Length != 2)
