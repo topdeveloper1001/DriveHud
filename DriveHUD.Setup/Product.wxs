@@ -164,6 +164,9 @@
       <Component Id="DriveHUD.PlayerXRay.dll" Guid="{E26FF75F-87F3-44E9-ABA6-A1FC3D1F9BB1}">
         <File Id="DriveHUD.PlayerXRay.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.PlayerXRay.dll" />
       </Component>
+      <Component Id="DriveHUD.PMCatcher.dll" Guid="{DB165E97-2D6D-46B5-83B6-E922716CB49A}">
+        <File Id="DriveHUD.PMCatcher.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.PMCatcher.dll" />
+      </Component>
       <Component Id="Xceed.Wpf.Toolkit.dll" Guid="{5E51C286-A865-4A26-9998-AE01C55CBE03}">
         <File Id="Xceed.Wpf.Toolkit.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Xceed.Wpf.Toolkit.dll" />
       </Component>
@@ -535,6 +538,7 @@
       <ComponentRef Id="DriveHUD.EquityCalculator.Base.dll" />
       <ComponentRef Id="DriveHUD.Controls.dll" />
       <ComponentRef Id="DriveHUD.Importers.dll" />
+      <ComponentRef Id="DriveHUD.PMCatcher.dll" />
       <ComponentRef Id="Model.dll" />
       <ComponentRef Id="HandHistories.Objects.dll" />
       <ComponentRef Id="HandHistories.Parser.dll" />
@@ -622,7 +626,7 @@
       <ComponentRef Id="PMTReg.dll" />
       <ComponentRef Id="SharpPcap.dll" />
       <ComponentRef Id="bdec.dll" />
-      <ComponentRef Id="PacketDotNet.dll" />      
+      <ComponentRef Id="PacketDotNet.dll" />
       <ComponentRef Id="BAD_LAG.PNG" />
       <ComponentRef Id="BOOK.PNG" />
       <ComponentRef Id="CAT_2.PNG" />
