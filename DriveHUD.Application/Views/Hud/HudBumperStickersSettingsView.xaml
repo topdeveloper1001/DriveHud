@@ -22,7 +22,8 @@
         <prism:InteractionRequestTrigger
             SourceObject="{Binding Path=PopupFiltersRequest, Mode=OneWay}">
             <infra:PopupTelerikWindowAction
-                IsModal="True" CenterOverAssociatedObject="True">
+                IsModal="True"
+                CenterOverAssociatedObject="True">
                 <infra:PopupTelerikWindowAction.WindowStyle>
                     <Style
                         TargetType="{x:Type telerik:RadWindow}">
@@ -1088,7 +1089,7 @@
         </Grid>
 
         <dh:NonTopmostPopup
-            IsOpen="{Binding IsColorPickerPopupOpened}"
+            IsOpen="{Binding IsColorPickerPopupOpened, Mode=OneWay}"
             StaysOpen="False"
             IsTopmost="True"
             Placement="Mouse">

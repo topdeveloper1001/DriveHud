@@ -20,10 +20,9 @@ namespace DriveHUD.Application.ViewModels.Hud
     {
         public HudSaveFirstTimeNotificationViewModel(Action close)
         {
-            OkCommand = ReactiveCommand.Create();
-            OkCommand.Subscribe(x => close?.Invoke());
+            OkCommand = ReactiveCommand.Create(() => close?.Invoke());
         }
 
-        public ReactiveCommand<object> OkCommand { get; private set; }
+        public ReactiveCommand OkCommand { get; private set; }
     }
 }

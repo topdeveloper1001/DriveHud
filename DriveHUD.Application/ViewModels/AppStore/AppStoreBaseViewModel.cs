@@ -118,6 +118,20 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
         }
 
+        private string viewIconSource;
+
+        public string ViewIconSource
+        {
+            get
+            {
+                return viewIconSource;
+            }
+            protected set
+            {
+                this.RaiseAndSetIfChanged(ref viewIconSource, value);
+            }
+        }
+
         #endregion
 
         #region IAppStoreViewModel implementation

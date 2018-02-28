@@ -61,8 +61,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             Parent = parent;
 
-            RotateCommand = ReactiveCommand.Create();
-            (RotateCommand as ReactiveCommand<object>).Subscribe(x =>
+            RotateCommand = ReactiveCommand.Create(() =>
             {
                 IsVertical = !IsVertical;
 

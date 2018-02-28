@@ -57,8 +57,9 @@
         <prism:InteractionRequestTrigger
             SourceObject="{Binding AppStoreViewModel.ViewRequest, Mode=OneWay}">
             <infra:ShowWindowViewAction
-                SingleOnly="True"         
+                SingleOnly="True"
                 StartupLocation="CenterScreen"
+                IconSource="{Binding AppStoreViewModel.ViewIconSource}"
                 ViewName="{Binding AppStoreViewModel.ViewName}">
                 <infra:ShowWindowViewAction.WindowStyle>
                     <Style
@@ -87,9 +88,6 @@
                         <Setter
                             Property="ShowInTaskbar"
                             Value="True" />
-                        <Setter
-                            Property="Icon"
-                            Value="{markupext:IconExtension  /images/xray.ico, 32}" />
                     </Style>
                 </infra:ShowWindowViewAction.WindowStyle>
             </infra:ShowWindowViewAction>

@@ -52,23 +52,20 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             base.InitializeCommands();
 
-            LoadCommand = ReactiveCommand.Create();
-            LoadCommand.Subscribe(x => Load());
+            LoadCommand = ReactiveCommand.Create(() => Load());
 
             var canDelete = this.WhenAny(x => x.SelectedPlayerType, x => x.Value != null);
 
-            DeleteCommand = ReactiveCommand.Create(canDelete);
-            DeleteCommand.Subscribe(x =>
+            DeleteCommand = ReactiveCommand.Create(() =>
             {
                 if (SelectedPlayerType != null)
                 {
                     PlayerTypes.Remove(SelectedPlayerType);
                     SelectedPlayerType = PlayerTypes.FirstOrDefault();
                 }
-            });
+            }, canDelete);
 
-            ResetCommand = ReactiveCommand.Create(canDelete);
-            ResetCommand.Subscribe(x =>
+            ResetCommand = ReactiveCommand.Create(() =>
             {
                 var defaultPlayerTypes = hudLayoutService.CreateDefaultPlayerTypes(viewModelInfo.TableType);
 
@@ -80,40 +77,26 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
 
                 SelectedPlayerType.StatsToMerge = defaultPlayerType.Stats;
-            });
+            }, canDelete);
 
-            ExportCommand = ReactiveCommand.Create(canDelete);
-            ExportCommand.Subscribe(x =>
-            {
-                Export(new[] { SelectedPlayerType });
-            });
-
-            ExportAllCommand = ReactiveCommand.Create();
-            ExportAllCommand.Subscribe(x =>
-            {
-                Export(playerTypes);
-            });
-
-            ImportCommand = ReactiveCommand.Create();
-            ImportCommand.Subscribe(x =>
-            {
-                Import();
-            });
+            ExportCommand = ReactiveCommand.Create(() => Export(new[] { SelectedPlayerType }), canDelete);
+            ExportAllCommand = ReactiveCommand.Create(() => Export(playerTypes));
+            ImportCommand = ReactiveCommand.Create(() => Import());
         }
 
         #region Commands
 
-        public ReactiveCommand<object> LoadCommand { get; private set; }
+        public ReactiveCommand LoadCommand { get; private set; }
 
-        public ReactiveCommand<object> ResetCommand { get; private set; }
+        public ReactiveCommand ResetCommand { get; private set; }
 
-        public ReactiveCommand<object> DeleteCommand { get; private set; }
+        public ReactiveCommand DeleteCommand { get; private set; }
 
-        public ReactiveCommand<object> ExportCommand { get; private set; }
+        public ReactiveCommand ExportCommand { get; private set; }
 
-        public ReactiveCommand<object> ExportAllCommand { get; private set; }
+        public ReactiveCommand ExportAllCommand { get; private set; }
 
-        public ReactiveCommand<object> ImportCommand { get; private set; }
+        public ReactiveCommand ImportCommand { get; private set; }
 
         #endregion
 

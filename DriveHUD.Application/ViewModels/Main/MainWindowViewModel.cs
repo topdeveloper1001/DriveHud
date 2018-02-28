@@ -111,6 +111,7 @@ namespace DriveHUD.Application.ViewModels
             eventAggregator.GetEvent<PokerStarsDetectedEvent>().Subscribe(OnPokerStarsDetected);
             eventAggregator.GetEvent<LoadDataRequestedEvent>().Subscribe(arg => Load());
             eventAggregator.GetEvent<PreImportedDataEvent>().Subscribe(OnPreDataImported, ThreadOption.BackgroundThread, false);
+            eventAggregator.GetEvent<TableClosedEvent>().Subscribe(OnTableClosed, ThreadOption.BackgroundThread, false);
 
             InitializeFilters();
             InitializeData();
@@ -455,6 +456,28 @@ namespace DriveHUD.Application.ViewModels
             else if (CurrentViewModel == TournamentViewModel)
             {
                 TournamentViewModel.Update();
+            }
+        }
+
+        private void OnTableClosed(TableClosedEventArgs e)
+        {
+            try
+            {
+                if (e == null || e.Handle == 0)
+                {
+                    return;
+                }
+
+                hudTransmitter.CloseTable(e.Handle);
+
+                if (isAdvancedLoggingEnabled)
+                {
+                    LogProvider.Log.Info(this, $"Close table command has been sent to HUD [handle={e.Handle}]");
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Close table command could not be sent to HUD.", ex);
             }
         }
 

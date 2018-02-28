@@ -54,7 +54,7 @@ namespace Model.Settings
                 EnumPokerSites.TruePoker,
                 EnumPokerSites.YaPoker,
                 EnumPokerSites.PartyPoker,
-                EnumPokerSites.IPoker                
+                EnumPokerSites.IPoker
             };
 
             SitesModelList = sites.Select(x => new SiteModel
@@ -133,7 +133,7 @@ namespace Model.Settings
 
         [XmlAttribute]
         public string HeroName { get; set; }
-
+     
         public override object Clone()
         {
             var model = (SiteModel)MemberwiseClone();

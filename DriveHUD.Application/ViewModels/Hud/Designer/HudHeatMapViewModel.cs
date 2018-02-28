@@ -214,8 +214,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         private void InitializeCommands()
         {
-            SaveCommand = ReactiveCommand.Create();
-            (SaveCommand as ReactiveCommand<object>).Subscribe(x =>
+            SaveCommand = ReactiveCommand.Create(() =>
             {
                 IsVisible = false;
                 IsSelected = false;

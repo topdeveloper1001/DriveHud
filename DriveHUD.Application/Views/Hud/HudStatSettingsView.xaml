@@ -971,7 +971,7 @@
         </Grid>
 
         <dh:NonTopmostPopup
-            IsOpen="{Binding IsColorPickerPopupOpened}"
+            IsOpen="{Binding IsColorPickerPopupOpened, Mode=OneWay}"
             StaysOpen="False"
             IsTopmost="True"
             Placement="Mouse">

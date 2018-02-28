@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Wpf.Controls;
+using DriveHUD.Common.Wpf.Helpers;
 using DriveHUD.Common.Wpf.Interactivity;
 using DriveHUD.Common.Wpf.Mvvm;
 using Microsoft.Practices.ServiceLocation;
@@ -52,7 +53,8 @@ namespace DriveHUD.Common.Wpf.Actions
             var window = new Window
             {
                 Title = context != null ? context.Title : string.Empty,
-                ShowActivated = true
+                ShowActivated = true,
+                Icon = IconHelper.CreateIcon(IconSource, 32)
             };
 
             if (StartupLocation == StartupLocationOption.CenterScreen)

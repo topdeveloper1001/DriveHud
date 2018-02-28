@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using ProtoBuf;
 using System;
 using System.IO;
 using System.Text;
@@ -110,6 +111,88 @@ namespace DriveHUD.Common.Extensions
         public static T DeserializeObject<T>(string xml)
         {
             return DeserializeObject<T>(xml, Encoding.UTF8);
+        }
+
+        /// <summary>
+        /// Deserializes an array of bytes into an object using protocol-buffer
+        /// </summary>
+        /// <typeparam name="T">Type of object to deserialize.</typeparam>
+        /// <param name="bytes">Bytes to deserialize</param>
+        /// <returns>Deserialized object.</returns>
+        /// <exception cref="ArgumentNullException" />
+        public static T Deserialize<T>(byte[] bytes)
+        {
+            if (bytes == null)
+            {
+                throw new ArgumentNullException(nameof(bytes));
+            }
+
+            using (var memoryStream = new MemoryStream(bytes))
+            {
+                return Serializer.Deserialize<T>(memoryStream);
+            }
+        }
+
+        /// <summary>
+        /// Deserializes an array of bytes into an object using protocol-buffer. A return value indicates whenever the deserialization succeeded.
+        /// </summary>
+        /// <typeparam name="T">Type of object to deserialize.</typeparam>
+        /// <param name="bytes">Bytes to deserialize</param>
+        /// <param name="result">Deserialized object.</param>
+        /// <returns>True if data was deserialized successfully; otherwise, false</returns>
+        public static bool TryDeserialize<T>(byte[] bytes, out T result)
+        {
+            result = default(T);
+
+            if (bytes == null)
+            {
+                return false;
+            }
+
+            try
+            {
+                using (var memoryStream = new MemoryStream(bytes))
+                {
+                    result = Serializer.Deserialize<T>(memoryStream);
+                    return result != null;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Deserializes an array of bytes into an object using protocol-buffer. A return value indicates whenever the deserialization succeeded.
+        /// </summary>
+        /// <typeparam name="T">Type of object to deserialize.</typeparam>
+        /// <param name="bytes">Bytes to deserialize</param>
+        /// <param name="offset">Start position in the byte array</param>
+        /// <param name="result">Deserialized object</param>
+        /// <returns>True if data was deserialized successfully; otherwise, false</returns>
+        public static bool TryDeserialize<T>(byte[] bytes, long offset, out T result)
+        {
+            result = default(T);
+
+            if (bytes == null)
+            {
+                return false;
+            }
+
+            try
+            {
+                using (var memoryStream = new MemoryStream(bytes))
+                {
+                    memoryStream.Seek(offset, SeekOrigin.Begin);
+                    result = Serializer.Deserialize<T>(memoryStream);
+                    return result != null;
+                }
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

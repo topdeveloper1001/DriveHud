@@ -78,9 +78,9 @@ namespace DriveHUD.Application.ViewModels
 
         #region Commands
 
-        public IReactiveCommand<object> ApplyCommand { get; private set; }
+        public ReactiveCommand ApplyCommand { get; private set; }
 
-        public IReactiveCommand<object> HelpCommand { get; private set; }
+        public ReactiveCommand HelpCommand { get; private set; }
 
         #endregion
 
@@ -109,15 +109,13 @@ namespace DriveHUD.Application.ViewModels
 
             sites.AddRange(sitesToAdd);
 
-            ApplyCommand = ReactiveCommand.Create();
-            ApplyCommand.Subscribe(x =>
+            ApplyCommand = ReactiveCommand.Create(() =>
             {
                 settingsService.SaveSettings(settingsModel);
                 FinishInteraction?.Invoke();
             });
 
-            HelpCommand = ReactiveCommand.Create();
-            HelpCommand.Subscribe(x => OpenHelp(x as SiteSetupViewModel));
+            HelpCommand = ReactiveCommand.Create<SiteSetupViewModel>(x => OpenHelp(x));
         }
 
         private void OpenHelp(SiteSetupViewModel siteSetupViewModel)

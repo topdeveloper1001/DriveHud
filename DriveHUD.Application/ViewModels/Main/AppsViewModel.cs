@@ -123,13 +123,13 @@ namespace DriveHUD.Application.ViewModels
 
         #region Commands
 
-        public ReactiveCommand<object> SelectPageCommand { get; private set; }
+        public ReactiveCommand SelectPageCommand { get; private set; }
 
-        public ReactiveCommand<object> NextPageCommand { get; private set; }
+        public ReactiveCommand NextPageCommand { get; private set; }
 
-        public ReactiveCommand<object> PreviousPageCommand { get; private set; }
+        public ReactiveCommand PreviousPageCommand { get; private set; }
 
-        public ReactiveCommand<object> SearchCommand { get; private set; }
+        public ReactiveCommand SearchCommand { get; private set; }
 
         #endregion
 
@@ -165,19 +165,15 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeCommands()
         {
-            SelectPageCommand = ReactiveCommand.Create();
-            SelectPageCommand.Subscribe(x =>
+            SelectPageCommand = ReactiveCommand.Create<AppStorePageViewModel>(selectedPage =>
             {
-                var selectedPage = x as AppStorePageViewModel;
-
                 if (selectedPage != null)
                 {
                     CurrentPage = selectedPage;
                 }
             });
 
-            PreviousPageCommand = ReactiveCommand.Create();
-            PreviousPageCommand.Subscribe(x =>
+            PreviousPageCommand = ReactiveCommand.Create(() =>
             {
                 if (CurrentPage != null)
                 {
@@ -185,8 +181,7 @@ namespace DriveHUD.Application.ViewModels
                 }
             });
 
-            NextPageCommand = ReactiveCommand.Create();
-            NextPageCommand.Subscribe(x =>
+            NextPageCommand = ReactiveCommand.Create(() =>
             {
                 if (CurrentPage != null)
                 {
@@ -194,8 +189,7 @@ namespace DriveHUD.Application.ViewModels
                 }
             });
 
-            SearchCommand = ReactiveCommand.Create();
-            SearchCommand.Subscribe(x =>
+            SearchCommand = ReactiveCommand.Create(() =>
             {
                 if (AppStoreViewModel != null)
                 {

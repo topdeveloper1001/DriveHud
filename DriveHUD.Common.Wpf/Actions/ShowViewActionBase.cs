@@ -61,6 +61,13 @@ namespace DriveHUD.Common.Wpf.Actions
                 typeof(ShowViewActionBase<T>),
                 new PropertyMetadata(null));
 
+        // Icon of the window
+        public static readonly DependencyProperty IconSourceProperty =
+            DependencyProperty.Register("IconSource",
+                typeof(string),
+                typeof(ShowViewActionBase<T>),
+                new PropertyMetadata(null));
+
         /// <summary>
         /// Gets or sets the name of view of the content of the window
         /// </summary>
@@ -95,6 +102,15 @@ namespace DriveHUD.Common.Wpf.Actions
         {
             get { return (Style)GetValue(WindowStyleProperty); }
             set { SetValue(WindowStyleProperty, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the icon of the window
+        /// </summary>
+        public string IconSource
+        {
+            get { return (string)GetValue(IconSourceProperty); }
+            set { SetValue(IconSourceProperty, value); }
         }
 
         /// <summary>

@@ -25,11 +25,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         protected virtual void InitializeCommands()
         {
-            SaveCommand = ReactiveCommand.Create(CanSave());
-            SaveCommand.Subscribe(x => Save());
-
-            CreateCommand = ReactiveCommand.Create();
-            CreateCommand.Subscribe(x => Create());
+            SaveCommand = ReactiveCommand.Create(() => Save(), CanSave());
+            CreateCommand = ReactiveCommand.Create(() => Create());
         }
 
         protected abstract IObservable<bool> CanSave();
@@ -40,9 +37,9 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         #region Commands
 
-        public ReactiveCommand<object> SaveCommand { get; private set; }
+        public ReactiveCommand SaveCommand { get; private set; }
 
-        public ReactiveCommand<object> CreateCommand { get; private set; }
+        public ReactiveCommand CreateCommand { get; private set; }
 
         #endregion
     }

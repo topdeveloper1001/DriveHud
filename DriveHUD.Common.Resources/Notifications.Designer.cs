@@ -160,6 +160,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PM {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD can&apos;t be loaded. Relogin is required..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PM_Relogin {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PM_Relogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Changes have been made to your HUD layout. Would you like to save them now?.
         /// </summary>
         internal static string Notifications_HudLayout_SaveDesignContent {

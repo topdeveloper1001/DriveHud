@@ -15,16 +15,15 @@ using Model;
 using Model.Enums;
 using Prism.Mvvm;
 using System;
-using System.Threading;
 
 namespace DriveHUD.Common.Infrastructure.Base
 {
     public abstract class BaseViewModel : BindableBase
-    {     
+    {
         private Guid _id = Guid.NewGuid();
         private EnumViewModelType _type = EnumViewModelType.NotDefined;
         private bool _isActive;
-      
+
         public SingletonStorageModel StorageModel
         {
             get { return ServiceLocator.Current.TryResolve<SingletonStorageModel>(); }
@@ -37,7 +36,7 @@ namespace DriveHUD.Common.Infrastructure.Base
             {
                 if (value == _id) return;
                 _id = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -48,7 +47,7 @@ namespace DriveHUD.Common.Infrastructure.Base
             {
                 if (value == _type) return;
                 _type = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -58,7 +57,7 @@ namespace DriveHUD.Common.Infrastructure.Base
             set
             {
                 _isActive = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 

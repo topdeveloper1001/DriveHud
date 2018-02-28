@@ -13,10 +13,10 @@ param
     [string] $Mode = 'Release',
 
     [string] $Source = 'DriveHUD.Application\bin',
-	
-	[string] $MsiSource = 'DriveHUD.Setup\bin',
-	
-	[string] $WixSource = 'DriveHUD.Bootstrapper\bin',
+    
+    [string] $MsiSource = 'DriveHUD.Setup\bin',
+    
+    [string] $WixSource = 'DriveHUD.Bootstrapper\bin',
 
     [string] $Solution = 'DriveHUD.sln',                       
     
@@ -24,7 +24,7 @@ param
 
     [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
     
-    [string] $Version = '1.4.3',
+    [string] $Version = '1.4.4',
 
     [string] $VersionExlcudeFilter = '**DriveHUD.PlayerXRay**,**XR*Reg**',
 
@@ -35,10 +35,10 @@ param
     [string] $ObfuscatorExcludeFilter = 'vshost,DriveHUD.PlayerXRay.dll,XR*Reg.dll',
 
     [string] $SigningIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll,CapPipedB.dll,CapPipedI.dll,CapPipedI2.dll,CapPipedIP.dll',
-	
-	[string] $MsiName = 'DriveHUD.msi',
-	
-	[string] $WixName = 'DriveHUD-install.exe',
+    
+    [string] $MsiName = 'DriveHUD.msi',
+    
+    [string] $WixName = 'DriveHUD-install.exe',
 
     [string] $SigningExcludeFilter = 'vshost',
 
@@ -74,14 +74,14 @@ param
     [string] $HashTool = 'BuildFileHash.exe',
 
     [bool] $UpdateOnlyLic = $false,
-	
-	[string] $PlayerXRaySource = '..\DriveHUD.PlayerXRay\DriveHUD.PlayerXRay\bin',
-	
-	[string] $PlayerXRayLicIncludeFilter = 'XR*Reg.dll',
-	
-	[string] $PlayerXRayIncludeFilter = 'DriveHUD.PlayerXRay.dll,Xceed.Wpf.Toolkit.dll',
-	
-	[string] $ExeToLargeAddressAware = "DriveHUD.Application.exe"
+    
+    [string] $PlayerXRaySource = '..\DriveHUD.PlayerXRay\DriveHUD.PlayerXRay\bin',
+    
+    [string] $PlayerXRayLicIncludeFilter = 'XR*Reg.dll',
+    
+    [string] $PlayerXRayIncludeFilter = 'DriveHUD.PlayerXRay.dll,Xceed.Wpf.Toolkit.dll',
+    
+    [string] $ExeToLargeAddressAware = "DriveHUD.Application.exe"
 )
 
 Set-StrictMode -Version Latest
@@ -222,7 +222,7 @@ try
    
    if(-Not (Test-Path($session.InstallerMSI)))
    {
-		throw "InstallerMSI not found '$($session.InstallerMSI)'"
+        throw "InstallerMSI not found '$($session.InstallerMSI)'"
    }
 
    if(-Not (Test-Path($session.Nuget)))
@@ -326,10 +326,10 @@ catch
     $ErrorMessage = $_.Exception.Message    
     Write-Host $ErrorMessage -ForegroundColor Red        
     
-	Write-Host "Press any key to continue ..."
+    Write-Host "Press any key to continue ..."
 
-	$host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-	
+    $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+    
     exit(1)
 }
 finally
@@ -342,5 +342,5 @@ finally
     Remove-Module BuildRunner-Obfuscate
     Remove-Module BuildRunner-LicUpdater
     Remove-Module BuildRunner-Sign
-	Remove-Module BuildRunner-SignWixBundle
+    Remove-Module BuildRunner-SignWixBundle
 }

@@ -11,6 +11,9 @@
 //----------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Security;
 using System.Text;
@@ -79,6 +82,9 @@ namespace DriveHUD.Common.WinApi
         /// <returns></returns>
         [DllImport("psapi.dll")]
         public static extern uint GetModuleFileNameEx(IntPtr hProcess, IntPtr hModule, [Out] StringBuilder lpBaseName, [In] [MarshalAs(UnmanagedType.U4)] int nSize);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.None, ExactSpelling = false, SetLastError = true)]
+        public static extern IntPtr LoadLibraryEx(string file, IntPtr handle, uint flags);
 
         #endregion
 
@@ -516,6 +522,136 @@ namespace DriveHUD.Common.WinApi
         public static extern bool GetWindowRect(IntPtr hwnd, out RECT lpRect);
 
         #endregion
+
+        #endregion
+
+        #region Network
+
+        public const int AF_INET = 2;
+        public const int AF_INET6 = 23;
+
+        /// <summary>
+        /// Retrieves a table that contains a list of TCP endpoints available to the application.
+        /// </summary>
+        /// <param name="pTcpTable">A pointer to the table structure that contains the filtered TCP endpoints available to the application. For information about how to determine the type of table returned based on specific input parameter combinations.</param>
+        /// <param name="dwOutBufLen">The estimated size of the structure returned in <paramref name="pTcpTable"/>, in bytes. If this value is set too small, ERROR_INSUFFICIENT_BUFFER is returned by this function, and this field will contain the correct size of the structure.</param>
+        /// <param name="sort">A value that specifies whether the TCP connection table should be sorted. If this parameter is set to TRUE, the TCP endpoints in the table are sorted in ascending order, starting with the lowest local IP address. If this parameter is set to FALSE, the TCP endpoints in the table appear in the order in which they were retrieved.</param>
+        /// <param name="ipVersion">The version of IP used by the TCP endpoints.</param>
+        /// <param name="tblClass">The type of the TCP table structure to retrieve. This parameter can be one of the values from the <see cref="TcpTableClass"/> enumeration.</param>
+        /// <param name="reserved">Reserved. This value must be zero.</param>
+        /// <returns></returns>
+        [DllImport("iphlpapi.dll", SetLastError = true)]
+        public static extern uint GetExtendedTcpTable(IntPtr pTcpTable, ref int dwOutBufLen, bool sort, int ipVersion, TcpTableClass tblClass, uint reserved = 0);
+
+        /// <summary>
+        /// Retrieves a table that contains a list of TCP endpoints available to the application.
+        /// </summary>
+        /// <param name="pUdpTable">A pointer to the table structure that contains the filtered UDP endpoints available to the application. For information about how to determine the type of table returned based on specific input parameter combinations</param>
+        /// <param name="dwOutBufLen">The estimated size of the structure returned in <paramref name="pUdpTable"/>, in bytes. If this value is set too small, ERROR_INSUFFICIENT_BUFFER is returned by this function, and this field will contain the correct size of the structure.</param>
+        /// <param name="sort">A value that specifies whether the UDP endpoint table should be sorted. If this parameter is set to TRUE, the UDP endpoints in the table are sorted in ascending order, starting with the lowest local IP address. If this parameter is set to FALSE, the UDP endpoints in the table appear in the order in which they were retrieved.</param>
+        /// <param name="ipVersion">The version of IP used by the UDP endpoint.</param>
+        /// <param name="tblClass">The type of the UDP table structure to retrieve. This parameter can be one of the values from the <see cref="UdpTableClass"/> enumeration.</param>
+        /// <param name="reserved">Reserved. This value must be zero.</param>
+        /// <returns></returns>
+        [DllImport("iphlpapi.dll", SetLastError = true)]
+        public static extern uint GetExtendedUdpTable(IntPtr pUdpTable, ref int dwOutBufLen, bool sort, int ipVersion, UdpTableClass tblClass, uint reserved = 0);
+
+        /// <summary>
+        /// Gets all TCP connections
+        /// </summary>
+        /// <returns>Return lists of <see cref="MibTcpRowOwnerPid"></returns>
+        public static List<MibTcpRowOwnerPid> GetAllTCPConnections()
+        {
+            return GetLocalConnections<MibTcpRowOwnerPid, MibTcpTableOwnerPid>(AF_INET, ProtocolType.Tcp);
+        }
+
+        /// <summary>
+        /// Gets all TCP v6 connections
+        /// </summary>
+        /// <returns>Return lists of <see cref="MibTcp6RowOwnerPid"></returns>
+        public static List<MibTcp6RowOwnerPid> GetAllTCPv6Connections()
+        {
+            return GetLocalConnections<MibTcp6RowOwnerPid, MibTcp6TableOwnerPid>(AF_INET6, ProtocolType.Tcp);
+        }
+
+        /// <summary>
+        /// Gets all UDP connections
+        /// </summary>
+        /// <returns>Return lists of <see cref="MibTcpRowOwnerPid"></returns>
+        public static List<MibUdpRowOwnerPid> GetAllUDPConnections()
+        {
+            return GetLocalConnections<MibUdpRowOwnerPid, MibUdpTableOwnerPid>(AF_INET, ProtocolType.Udp);
+        }
+
+        /// <summary>
+        /// Gets all UDP v6 connections
+        /// </summary>
+        /// <returns>Return lists of <see cref="MibTcpRowOwnerPid"></returns>
+        public static List<MibUdp6RowOwnerPid> GetAllUDPv6Connections()
+        {
+            return GetLocalConnections<MibUdp6RowOwnerPid, MibUdp6TableOwnerPid>(AF_INET6, ProtocolType.Udp);
+        }
+
+
+        private static uint GetExtendedLocalConnectionTable(IntPtr pTable, ref int dwOutBufLen, bool sort, int ipVersion, ProtocolType protocolType)
+        {
+            switch (protocolType)
+            {
+                case ProtocolType.Tcp:
+                    return GetExtendedTcpTable(pTable, ref dwOutBufLen, sort, ipVersion, TcpTableClass.TCP_TABLE_OWNER_PID_ALL);
+                case ProtocolType.Udp:
+                    return GetExtendedUdpTable(pTable, ref dwOutBufLen, sort, ipVersion, UdpTableClass.UDP_TABLE_OWNER_PID);
+                default:
+                    throw new NotSupportedException($"{protocolType} isn't supported.");
+            }
+        }
+
+        private static List<IPR> GetLocalConnections<IPR, IPT>(int ipVersion, ProtocolType protocolType)
+        {
+            IPR[] tableRows;
+
+            int buffSize = 0;
+
+            var dwNumEntriesField = typeof(IPT).GetField("dwNumEntries");
+
+            uint ret = GetExtendedLocalConnectionTable(IntPtr.Zero, ref buffSize, true, ipVersion, protocolType);
+
+            IntPtr tcpTablePtr = Marshal.AllocHGlobal(buffSize);
+
+            try
+            {
+                ret = GetExtendedLocalConnectionTable(tcpTablePtr, ref buffSize, true, ipVersion, protocolType);
+
+                if (ret != 0)
+                {
+                    return new List<IPR>();
+                }
+
+                // get the number of entries in the table
+                IPT table = (IPT)Marshal.PtrToStructure(tcpTablePtr, typeof(IPT));
+
+                int rowStructSize = Marshal.SizeOf(typeof(IPR));
+                uint numEntries = (uint)dwNumEntriesField.GetValue(table);
+
+                // buffer we will be returning
+                tableRows = new IPR[numEntries];
+
+                IntPtr rowPtr = (IntPtr)((long)tcpTablePtr + 4);
+
+                for (int i = 0; i < numEntries; i++)
+                {
+                    IPR tcpRow = (IPR)Marshal.PtrToStructure(rowPtr, typeof(IPR));
+                    tableRows[i] = tcpRow;
+                    rowPtr = (IntPtr)((long)rowPtr + rowStructSize);
+                }
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(tcpTablePtr);
+            }
+
+            return tableRows != null ? tableRows.ToList() : new List<IPR>();
+        }
 
         #endregion
     }
