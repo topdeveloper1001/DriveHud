@@ -221,7 +221,10 @@ namespace DriveHUD.Importers.PokerMaster
 
             if (player == null)
             {
-                player = new Player(userGameInfo.UserInfo.ShowID, 0, seat);
+                player = new Player(userGameInfo.UserInfo.ShowID, 0, seat)
+                {
+                    PlayerNick = userGameInfo.UserInfo.Nick
+                };
 
                 handHistory.Players.Add(player);
 

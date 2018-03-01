@@ -183,7 +183,7 @@ namespace DriveHUD.Common.Wpf.Actions
 
                 if (args.Context != null && viewModel is IConfigurableViewModel)
                 {
-                    ((IConfigurableViewModel)viewModel).Configure(args.Context.Content);
+                    Configure(window, (IConfigurableViewModel)viewModel, args.Context.Content);
                 }
             }
 
@@ -238,5 +238,7 @@ namespace DriveHUD.Common.Wpf.Actions
         protected abstract void OnClosed(T window, Action callback, string viewName);
 
         protected abstract void OnClosing(T window, ICloseableViewModel viewModel);
+
+        protected abstract void Configure(T window, IConfigurableViewModel viewModel, object viewModelInfo);
     }
 }

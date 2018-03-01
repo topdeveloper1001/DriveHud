@@ -707,7 +707,8 @@ namespace DriveHUD.Application.ViewModels
                     }
 
                     playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
-                    playerHudContent.HudElement.PlayerName = player.PlayerName;
+                    playerHudContent.HudElement.PlayerName = !string.IsNullOrWhiteSpace(player.PlayerNick) ? 
+                        $"{player.PlayerName} / {player.PlayerNick}" : player.PlayerName;
                     playerHudContent.HudElement.PokerSiteId = (short)site;
                     playerHudContent.HudElement.TotalHands = playerData.TotalHands;
 

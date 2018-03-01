@@ -239,6 +239,7 @@ namespace PMCatcher.Tests
                 for (var i = 0; i < actual.Players.Count; i++)
                 {
                     Assert.That(actual.Players[i].PlayerName, Is.EqualTo(expected.Players[i].PlayerName), $"Player.PlayerName must be equal [{expected.Players[i].PlayerName}]");
+                    Assert.That(actual.Players[i].PlayerNick, Is.EqualTo(expected.Players[i].PlayerNick), $"Player.PlayerNick must be equal [{expected.Players[i].PlayerNick}]");
                     Assert.That(actual.Players[i].Bet, Is.EqualTo(expected.Players[i].Bet), $"Player.Bet must be equal [{expected.Players[i].PlayerName}]");
                     Assert.That(actual.Players[i].Cards, Is.EqualTo(expected.Players[i].Cards), $"Player.Cards must be equal [{expected.Players[i].PlayerName}]");
                     Assert.That(actual.Players[i].SeatNumber, Is.EqualTo(expected.Players[i].SeatNumber), $"Player.SeatNumber must be equal [{expected.Players[i].PlayerName}]");

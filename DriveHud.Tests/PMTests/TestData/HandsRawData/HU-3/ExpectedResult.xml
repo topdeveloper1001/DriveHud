@@ -21,28 +21,28 @@
   <Cancelled>false</Cancelled>
   <NumPlayersSeated>2</NumPlayersSeated>
   <TotalPot>22</TotalPot>
-  <HeroName>Peon</HeroName>
+  <HeroName>2530943140</HeroName>
   <Actions>
-    <HandAction PlayerName="Alex84" HandActionType="ANTE" Amount="-1" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="Peon" HandActionType="ANTE" Amount="-1" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="Alex84" HandActionType="SMALL_BLIND" Amount="-1" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="Peon" HandActionType="BIG_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="Alex84" HandActionType="CALL" Amount="-1" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="Peon" HandActionType="RAISE" Amount="-4" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="Alex84" HandActionType="CALL" Amount="-4" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="Peon" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
-    <HandAction PlayerName="Alex84" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
-    <HandAction PlayerName="Peon" HandActionType="BET" Amount="-4" Street="Turn" IsAllIn="false" />
-    <HandAction PlayerName="Alex84" HandActionType="CALL" Amount="-4" Street="Turn" IsAllIn="false" />
-    <HandAction PlayerName="Peon" HandActionType="CHECK" Amount="0" Street="River" IsAllIn="false" />
-    <HandAction PlayerName="Alex84" HandActionType="CHECK" Amount="0" Street="River" IsAllIn="false" />
-    <HandAction PlayerName="Peon" HandActionType="SHOW" Street="Showdown" IsAllIn="false" />
-    <HandAction PlayerName="Alex84" HandActionType="SHOW" Street="Showdown" IsAllIn="false" />
-    <HandAction p3:type="WinningsAction" PlayerName="Peon" HandActionType="WINS" Amount="22" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="2550761448" HandActionType="ANTE" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="ANTE" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="SMALL_BLIND" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="BIG_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="CALL" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="RAISE" Amount="-4" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="CALL" Amount="-4" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="BET" Amount="-4" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="CALL" Amount="-4" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="CHECK" Amount="0" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="CHECK" Amount="0" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="SHOW" Street="Showdown" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="SHOW" Street="Showdown" IsAllIn="false" />
+    <HandAction p3:type="WinningsAction" PlayerName="2530943140" HandActionType="WINS" Amount="22" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
   </Actions>
   <CommunityCards>4c7dTsJcQs</CommunityCards>
   <Players>
-    <Player PlayerName="Alex84" StartingStack="100" Bet="11" Win="0" SeatNumber="6" Cards="Ac6c" IsSittingOut="false" />
-    <Player PlayerName="Peon" StartingStack="100" Bet="11" Win="22" SeatNumber="3" Cards="JsAd" IsSittingOut="false" />
+    <Player PlayerName="2550761448" StartingStack="100" Bet="11" Win="0" SeatNumber="6" Cards="Ac6c" IsSittingOut="false" />
+    <Player PlayerName="2530943140" StartingStack="100" Bet="11" Win="22" SeatNumber="3" Cards="JsAd" IsSittingOut="false" />
   </Players>
 </HandHistory>

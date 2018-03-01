@@ -9,8 +9,9 @@
     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     mc:Ignorable="d"
     Style="{DynamicResource BaseFontStyle}"
-    d:DesignHeight="300"
-    d:DesignWidth="300">
+    x:Name="MainView"
+    MinWidth="550"
+    MinHeight="390">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -144,10 +145,10 @@
         </Border>
 
         <dh:NonTopmostPopup
-            IsOpen="{Binding PopupIsOpen}"
+            IsOpen="{Binding PopupIsOpen, Delay=200}"
             AllowsTransparency="True"
             IsTopmost="False"
-            IgnoreDisableTopmost="True"
+            IgnoreDisableTopmost="True"            
             Placement="Center">
 
             <i:Interaction.Behaviors>

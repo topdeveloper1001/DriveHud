@@ -21,19 +21,19 @@
   <Cancelled>false</Cancelled>
   <NumPlayersSeated>0</NumPlayersSeated>
   <TotalPot>5</TotalPot>
-  <HeroName>Peon</HeroName>
+  <HeroName>2530943140</HeroName>
   <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
   <Actions>
-    <HandAction PlayerName="Alex84" HandActionType="ANTE" Amount="-1" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="Peon" HandActionType="ANTE" Amount="-1" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="Alex84" HandActionType="SMALL_BLIND" Amount="-1" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="Peon" HandActionType="BIG_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="Peon" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />        
-    <HandAction p3:type="WinningsAction" PlayerName="Alex84" HandActionType="WINS" Amount="5" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />    
+    <HandAction PlayerName="2550761448" HandActionType="ANTE" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="ANTE" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="SMALL_BLIND" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="BIG_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />        
+    <HandAction p3:type="WinningsAction" PlayerName="2550761448" HandActionType="WINS" Amount="5" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />    
   </Actions>
   <CommunityCards />
   <Players>
-    <Player PlayerName="Alex84" StartingStack="167" Bet="2" Win="5" SeatNumber="4" Cards="" IsSittingOut="false" />
-    <Player PlayerName="Peon" StartingStack="233" Bet="3" Win="0" SeatNumber="6" Cards="Jc7d" IsSittingOut="false" />
+    <Player PlayerName="2550761448" StartingStack="167" Bet="2" Win="5" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="2530943140" StartingStack="233" Bet="3" Win="0" SeatNumber="6" Cards="Jc7d" IsSittingOut="false" />
   </Players>
 </HandHistory>

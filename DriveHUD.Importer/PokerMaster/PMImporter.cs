@@ -316,7 +316,9 @@ namespace DriveHUD.Importers.PokerMaster
                         continue;
                     }
 
-                    if (package.Cmd == PackageCommand.Cmd_SCLeaveGameRoomRsp)
+                    if (package.Cmd == PackageCommand.Cmd_SCLeaveGameRoomRsp ||
+                        package.Cmd == PackageCommand.Cmd_SCLeaveMTTGameRoom ||
+                        package.Cmd == PackageCommand.Cmd_SCLeaveSNGGameRoomRsp)
                     {
                         LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room.");
 
@@ -526,6 +528,7 @@ namespace DriveHUD.Importers.PokerMaster
             {
                 PokerSite = Site,
                 WindowHandle = windowHandle.ToInt32(),
+                GameNumber = handHistory.HandId,
                 Session = windowHandle.ToInt32().ToString()
             };
 
@@ -534,14 +537,14 @@ namespace DriveHUD.Importers.PokerMaster
 
         private Dictionary<int, int> autoCenterSeats = new Dictionary<int, int>
         {
-            { 2, 2 },
-            { 3, 2 },
-            { 4, 3 },
-            { 5, 3 },
-            { 6, 4 },
-            { 7, 4 },
-            { 8, 5 },
-            { 9, 5 }
+            { 2, 1 },
+            { 3, 1 },
+            { 4, 1 },
+            { 5, 1 },
+            { 6, 1 },
+            { 7, 1 },
+            { 8, 1 },
+            { 9, 1 }
         };
 
         protected override PlayerList GetPlayerList(HandHistory handHistory)

@@ -24,9 +24,8 @@ namespace PMCatcher.Tests
     [TestFixture]
     class MemuEmulatorProviderTest
     {
-        //[TestCase(2696, true)]
-        //[TestCase(10576, true)]
-        //[TestCase(22496, false)]
+        //[TestCase(17208, true)]
+        //[TestCase(7772, true)]        
         public void CanProvideTest(int processId, bool expected)
         {
             var process = Process.GetProcessById(processId);
@@ -39,8 +38,8 @@ namespace PMCatcher.Tests
             Assert.That(result, Is.EqualTo(expected));
         }
 
-        //[TestCase(2696, 2951682)]
-        //[TestCase(10576, 2365226)]
+        //[TestCase(17208, 0x0006125C)]
+        //[TestCase(7772, 0x00061272)]
         public void GetProcessWindowHandleTest(int processId, int expected)
         {
             var process = Process.GetProcessById(processId);

@@ -150,5 +150,16 @@ namespace DriveHUD.Common.Wpf.Actions
 
             window.Show();
         }
+
+        protected override void Configure(Window window, IConfigurableViewModel viewModel, object viewModelInfo)
+        {
+            void OnRendered(object s, EventArgs e)
+            {
+                window.ContentRendered -= OnRendered;
+                viewModel.Configure(viewModelInfo);
+            }
+
+            window.ContentRendered += OnRendered;
+        }
     }
 }

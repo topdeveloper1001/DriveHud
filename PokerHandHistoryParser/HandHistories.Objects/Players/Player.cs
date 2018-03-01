@@ -18,6 +18,9 @@ namespace HandHistories.Objects.Players
         public string PlayerName { get; set; }
 
         [XmlAttribute]
+        public string PlayerNick { get; set; }
+
+        [XmlAttribute]
         public decimal StartingStack { get; set; }
 
         [XmlAttribute]

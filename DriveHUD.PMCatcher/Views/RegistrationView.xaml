@@ -6,7 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     mc:Ignorable="d"
-    Width="560">
+    Width="400">
     <UserControl.Resources>
 
         <ResourceDictionary>
@@ -173,8 +173,7 @@
             Value="{Binding TrialDaysLeft, Mode=OneWay}"
             Maximum="30"
             BorderBrush="{StaticResource SelectionBackgroundBrush}"
-            BorderThickness="1"
-            Width="530"
+            BorderThickness="1"            
             Margin="0,0,0,10"
             Visibility="{Binding IsTrialProgressBarVisible, Converter={dh:BoolToVisibilityConverter} }"
             Style="{StaticResource ProgressBarExStyle1}">

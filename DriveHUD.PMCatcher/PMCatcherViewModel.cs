@@ -49,6 +49,11 @@ namespace DriveHUD.PMCatcher
 
             OnInitialized();
 
+            var settingsModel = settingsService.GetSettings();
+
+            Enabled = settingsModel.Enabled;
+            AdvancedLogging = settingsModel.IsAdvancedLoggingEnabled;
+
             var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
 
             if (licenseService.IsTrial ||
@@ -242,12 +247,7 @@ namespace DriveHUD.PMCatcher
         private void Initialize(ILicenseService licenseService)
         {
             IsUpgradable = licenseService.IsUpgradable;
-            IsTrial = licenseService.IsTrial;
-
-            var settingsModel = settingsService.GetSettings();
-
-            Enabled = settingsModel.Enabled;
-            AdvancedLogging = settingsModel.IsAdvancedLoggingEnabled;
+            IsTrial = licenseService.IsTrial;            
         }
 
         private void SaveSettings()
