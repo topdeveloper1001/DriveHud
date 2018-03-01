@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PMOReg.cs" company="Ace Poker Solutions">
+// <copyright file="PMTReg.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,22 +11,25 @@
 //----------------------------------------------------------------------
 
 using DeployLX.Licensing.v5;
-using DriveHUD.Common.Security;
+using System.ComponentModel;
 
-namespace PMCatcher.Security
+namespace PMNRegistration
 {
-    internal class PMOReg : ILicenseManager
+    /// <summary>
+    /// Normal license manager
+    /// </summary>
+    [LicenseProvider(typeof(SecureLicenseManager))]
+    public class PMNReg
     {
-        private readonly PMORegistration.PMOReg licenseManager = new PMORegistration.PMOReg();
-
         public void ResetCacheForLicense(SecureLicense license)
         {
-            licenseManager.ResetCacheForLicense(license);
+            SecureLicenseManager.ResetCacheForLicense(license);
         }
 
         public SecureLicense Validate(LicenseValidationRequestInfo requestInfo)
         {
-            return licenseManager.Validate(requestInfo);
+            var license = SecureLicenseManager.Validate(this, typeof(PMNReg), requestInfo);
+            return license;
         }
     }
 }

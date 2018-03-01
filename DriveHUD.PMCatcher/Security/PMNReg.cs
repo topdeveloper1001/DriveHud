@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PMHReg.cs" company="Ace Poker Solutions">
+// <copyright file="PMNReg.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,9 +15,9 @@ using DriveHUD.Common.Security;
 
 namespace PMCatcher.Security
 {
-    internal class PMHReg : ILicenseManager
+    internal class PMNReg : ILicenseManager
     {
-        private readonly PMHRegistration.PMHReg licenseManager = new PMHRegistration.PMHReg();
+        private readonly PMNRegistration.PMNReg licenseManager = new PMNRegistration.PMNReg();
 
         public void ResetCacheForLicense(SecureLicense license)
         {

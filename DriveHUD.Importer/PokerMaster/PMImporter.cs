@@ -395,6 +395,20 @@ namespace DriveHUD.Importers.PokerMaster
                                 LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Hand #{handHistory.HandId}: Found process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
                             }
 
+                            if (!pmCatcherService.CheckHand(handHistory))
+                            {
+                                if (handHistory.GameDescription.IsTournament)
+                                {
+                                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"License doesn't support tourney hand {handHistory.HandId}. [buyin={handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue}]");
+                                }
+                                else
+                                {
+                                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"License doesn't support cash hand {handHistory.HandId}. [bb={handHistory.GameDescription.Limit.BigBlind}]");
+                                }
+
+                                continue;
+                            }
+
                             ExportHandHistory(package.Uuid, handHistory, windowHandle);
                         }
                     }

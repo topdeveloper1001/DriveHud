@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="LicenseType.cs" company="Ace Poker Solutions">
+// <copyright file="LicenseSubType.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,17 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Reflection;
-
 namespace DriveHUD.PMCatcher.Licensing
 {
-    /// <summary>
-    /// Types of license
-    /// </summary>
-    [Obfuscation(Exclude = true)]
-    internal enum LicenseType : short
+    internal enum LicenseSubType
     {
-        PMCTrial = 1,
-        PMCNormal = 2
-    } 
+        None = 0,
+        Trial = 1,
+        Standard = 2,
+        Pro = 3,
+    }
 }

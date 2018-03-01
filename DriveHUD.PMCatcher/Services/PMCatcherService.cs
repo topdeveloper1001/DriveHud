@@ -13,8 +13,10 @@
 using DriveHUD.Common.Infrastructure.CustomServices;
 using DriveHUD.PMCatcher.Licensing;
 using DriveHUD.PMCatcher.Settings;
+using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DriveHUD.PMCatcher.Services
 {
@@ -50,6 +52,32 @@ namespace DriveHUD.PMCatcher.Services
             var settingsModel = settingsService.GetSettings();
             settingsModel.Heroes = heroes;
             settingsService.SaveSettings(settingsModel);
+        }
+
+        public bool CheckHand(HandHistory handHistory)
+        {
+            var registeredLicenses = licenseService.LicenseInfos.Where(x => x.IsRegistered).ToArray();
+
+            // if any license is not trial
+            if (registeredLicenses.Any(x => !x.IsTrial))
+            {
+                registeredLicenses = registeredLicenses.Where(x => !x.IsTrial).ToArray();
+            }
+
+            if (registeredLicenses.Length == 0)
+            {
+                return false;
+            }
+
+            if (handHistory.GameDescription.IsTournament)
+            {
+                var tournamentLimit = registeredLicenses.Max(x => x.TournamentLimit);
+                return handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue <= tournamentLimit;
+            }
+
+            var cashLimit = registeredLicenses.Max(x => x.CashLimit);
+
+            return handHistory.GameDescription.Limit.BigBlind <= cashLimit;
         }
     }
 }

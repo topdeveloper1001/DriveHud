@@ -58,9 +58,7 @@ namespace DriveHUD.PMCatcher.Licensing
             var licenseTypes = new LicenseType[]
             {
                 LicenseType.PMCTrial,
-                LicenseType.PMCHoldem,
-                LicenseType.PMCOmaha,
-                LicenseType.PMCCombo
+                LicenseType.PMCNormal
             };
 
             // validate each possible type 
@@ -540,24 +538,15 @@ namespace DriveHUD.PMCatcher.Licensing
         /// <returns>Type of license</returns>
         public LicenseType? GetTypeFromSerial(string serial)
         {
-            if (serial.StartsWith("PMH", StringComparison.Ordinal))
+            if (serial.StartsWith("PMS", StringComparison.Ordinal)
+                || serial.StartsWith("PMP", StringComparison.Ordinal))
             {
-                return LicenseType.PMCHoldem;
-            }
-
-            if (serial.StartsWith("PMO", StringComparison.Ordinal))
-            {
-                return LicenseType.PMCOmaha;
+                return LicenseType.PMCNormal;
             }
 
             if (serial.StartsWith("PMT", StringComparison.Ordinal))
             {
                 return LicenseType.PMCTrial;
-            }
-
-            if (serial.StartsWith("PMC", StringComparison.Ordinal))
-            {
-                return LicenseType.PMCCombo;
             }
 
             return null;
@@ -594,26 +583,7 @@ namespace DriveHUD.PMCatcher.Licensing
 
             switch (licenseType)
             {
-                case LicenseType.PMCHoldem:
-                    gameTypes.Add(GameType.CapNoLimitHoldem);
-                    gameTypes.Add(GameType.FixedLimitHoldem);
-                    gameTypes.Add(GameType.NoLimitHoldem);
-                    gameTypes.Add(GameType.PotLimitHoldem);
-                    gameTypes.Add(GameType.SpreadLimitHoldem);
-                    break;
-                case LicenseType.PMCOmaha:
-                    gameTypes.Add(GameType.CapPotLimitOmaha);
-                    gameTypes.Add(GameType.FiveCardPotLimitOmaha);
-                    gameTypes.Add(GameType.FiveCardPotLimitOmahaHiLo);
-                    gameTypes.Add(GameType.FiveCardPotLimitOmaha);
-                    gameTypes.Add(GameType.FixedLimitOmaha);
-                    gameTypes.Add(GameType.FixedLimitOmahaHiLo);
-                    gameTypes.Add(GameType.NoLimitOmaha);
-                    gameTypes.Add(GameType.NoLimitOmahaHiLo);
-                    gameTypes.Add(GameType.PotLimitOmaha);
-                    gameTypes.Add(GameType.PotLimitOmahaHiLo);
-                    break;
-                case LicenseType.PMCCombo:
+                case LicenseType.PMCNormal:
                 case LicenseType.PMCTrial:
                     foreach (GameType gameType in Enum.GetValues(typeof(GameType)))
                     {

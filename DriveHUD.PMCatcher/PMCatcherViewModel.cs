@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.PMCatcher.Events;
 using DriveHUD.PMCatcher.Licensing;
@@ -46,6 +47,9 @@ namespace DriveHUD.PMCatcher
         public override void Configure(object viewModelInfo)
         {
             UpgradeCommand = ReactiveCommand.Create(() => Upgrade());
+            ManualCommand = ReactiveCommand.Create(() => BrowserHelper.OpenLinkInBrowser(CommonResourceManager.Instance.GetResourceString("PMC_MainView_ManualLink")));
+            TutorialCommand = ReactiveCommand.Create(() => BrowserHelper.OpenLinkInBrowser(CommonResourceManager.Instance.GetResourceString("PMC_MainView_TutorialLink")));
+            PurchaseCommand = ReactiveCommand.Create(() => BrowserHelper.OpenLinkInBrowser(CommonResourceManager.Instance.GetResourceString("PMC_BuyLink")));
 
             OnInitialized();
 
@@ -232,6 +236,12 @@ namespace DriveHUD.PMCatcher
 
         public ReactiveCommand UpgradeCommand { get; private set; }
 
+        public ReactiveCommand ManualCommand { get; private set; }
+
+        public ReactiveCommand TutorialCommand { get; private set; }
+
+        public ReactiveCommand PurchaseCommand { get; private set; }
+
         #endregion
 
         #region IDisposable implementation
@@ -247,7 +257,7 @@ namespace DriveHUD.PMCatcher
         private void Initialize(ILicenseService licenseService)
         {
             IsUpgradable = licenseService.IsUpgradable;
-            IsTrial = licenseService.IsTrial;            
+            IsTrial = licenseService.IsTrial;
         }
 
         private void SaveSettings()

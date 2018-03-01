@@ -124,6 +124,51 @@ namespace DriveHUD.PMCatcher.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Manual.
+        /// </summary>
+        internal static string PMC_MainView_Manual {
+            get {
+                return ResourceManager.GetString("PMC_MainView_Manual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://drivehud.com/pmhudmanual.
+        /// </summary>
+        internal static string PMC_MainView_ManualLink {
+            get {
+                return ResourceManager.GetString("PMC_MainView_ManualLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Purchase.
+        /// </summary>
+        internal static string PMC_MainView_Purchase {
+            get {
+                return ResourceManager.GetString("PMC_MainView_Purchase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tutorial.
+        /// </summary>
+        internal static string PMC_MainView_Tutorial {
+            get {
+                return ResourceManager.GetString("PMC_MainView_Tutorial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://drivehud.com/pmhudmanual.
+        /// </summary>
+        internal static string PMC_MainView_TutorialLink {
+            get {
+                return ResourceManager.GetString("PMC_MainView_TutorialLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to UPGRADE.
         /// </summary>
         internal static string PMC_MainView_Upgrade {

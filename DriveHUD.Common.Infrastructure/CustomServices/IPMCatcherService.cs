@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using HandHistories.Objects.Hand;
 using System.Collections.Generic;
 
 namespace DriveHUD.Common.Infrastructure.CustomServices
@@ -21,5 +22,7 @@ namespace DriveHUD.Common.Infrastructure.CustomServices
         void SaveHeroes(Dictionary<long, string> heroes);
 
         bool IsEnabled();
+
+        bool CheckHand(HandHistory handHistory);
     }
 }

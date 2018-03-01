@@ -138,6 +138,21 @@
   <data name="PMC_MainView_License" xml:space="preserve">
     <value>License:</value>
   </data>
+  <data name="PMC_MainView_Manual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="PMC_MainView_ManualLink" xml:space="preserve">
+    <value>https://drivehud.com/pmhudmanual</value>
+  </data>
+  <data name="PMC_MainView_Purchase" xml:space="preserve">
+    <value>Purchase</value>
+  </data>
+  <data name="PMC_MainView_Tutorial" xml:space="preserve">
+    <value>Tutorial</value>
+  </data>
+  <data name="PMC_MainView_TutorialLink" xml:space="preserve">
+    <value>https://drivehud.com/pmhudmanual</value>
+  </data>
   <data name="PMC_MainView_Upgrade" xml:space="preserve">
     <value>UPGRADE</value>
   </data>

@@ -25,7 +25,12 @@ namespace DriveHUD.PMCatcher.Licensing
         /// <summary>
         /// Type of license
         /// </summary>
-        LicenseType LicenseType { get; }      
+        LicenseType LicenseType { get; }
+
+        /// <summary>
+        /// Sub type of license (micro, small, etc.)
+        /// </summary>
+        LicenseSubType LicenseSubType { get; }
 
         /// <summary>
         /// True if user has valid serial (trial or common)
@@ -56,7 +61,17 @@ namespace DriveHUD.PMCatcher.Licensing
         /// Determine when license expired
         /// </summary>
         bool IsExpired { get; set; }
-     
+
+        /// <summary>
+        /// Tournament buy-in limit
+        /// </summary>
+        decimal TournamentLimit { get; }
+
+        /// <summary>
+        /// Cash limit
+        /// </summary>
+        int CashLimit { get; }
+
         /// <summary>
         /// Exception in validation
         /// </summary>

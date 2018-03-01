@@ -206,7 +206,7 @@ namespace DriveHUD.PMCatcher.ViewModels
 
             IsTrialProgressBarVisible = true;
             IsLicenseDaysLeftVisible = false;
-            IsResetLicensesButtonVisible = false;
+            IsResetLicensesButtonVisible = true;
         }
 
         /// <summary>
