@@ -1,0 +1,24 @@
+Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software
+
+NL Holdem $2(BB)
+[color=red]HERO[/color] ($100)
+SB ($100)
+BB ($100)
+[color=red]STRDL[/color] ($100)
+
+Dealt to Hero K:diamond: 9:heart:
+
+[color=red]HERO Calls $4 (Rem. Stack: 96)[/color], SB Folds, BB Folds, STRDL Checks
+
+Flop ($11) 7:spade: Q:club: 7:heart:
+STRDL Checks, HERO Checks
+
+Turn ($11) 7:spade: Q:club: 7:heart: 4:heart:
+STRDL Checks, HERO Checks
+
+River ($11) 7:spade: Q:club: 7:heart: 4:heart: K:spade:
+STRDL Checks, HERO Checks
+
+STRDL shows A:heart: 5:heart:
+
+HERO wins $11

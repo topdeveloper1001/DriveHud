@@ -61,7 +61,7 @@ namespace DriveHUD.PMCatcher.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/product/pmhud.
+        ///   Looks up a localized string similar to http://drivehud.com/product/pokermasterhud.
         /// </summary>
         internal static string PMC_BuyLink {
             get {

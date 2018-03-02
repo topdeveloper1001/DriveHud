@@ -308,6 +308,8 @@
     <Compile Include="PokerMaster\Model\RaiseShortcutsOptions.cs" />
     <Compile Include="PokerMaster\Model\SCGameRoomStateChange.cs" />
     <Compile Include="PokerMaster\Model\SCLoginRsp.cs" />
+    <Compile Include="PokerMaster\Model\SCLoginThirdPartyRsp.cs" />
+    <Compile Include="PokerMaster\Model\SCUploadVerifyCodeRsp.cs" />
     <Compile Include="PokerMaster\Model\ShowCardItemFee.cs" />
     <Compile Include="PokerMaster\Model\SngBlindsStructure.cs" />
     <Compile Include="PokerMaster\Model\SNGGameRoomBaseInfo.cs" />

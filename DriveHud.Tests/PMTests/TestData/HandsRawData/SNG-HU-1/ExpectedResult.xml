@@ -58,7 +58,7 @@
   </Actions>
   <CommunityCards>AcTh6c6d4d</CommunityCards>
   <Players>
-    <Player PlayerName="2550761448" StartingStack="2040" Bet="2040" Win="3920" SeatNumber="1" Cards="8h6s" IsSittingOut="false" />
-    <Player PlayerName="2530943140" StartingStack="1960" Bet="1960" Win="0" SeatNumber="2" Cards="JsTs" IsSittingOut="false" />
+    <Player PlayerName="2550761448" PlayerNick="Alex84" StartingStack="2040" Bet="2040" Win="3920" SeatNumber="1" Cards="8h6s" IsSittingOut="false" />
+    <Player PlayerName="2530943140" PlayerNick="Peon" StartingStack="1960" Bet="1960" Win="0" SeatNumber="2" Cards="JsTs" IsSittingOut="false" />
   </Players>
 </HandHistory>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="PMC_BuyLink" xml:space="preserve">
-    <value>http://drivehud.com/product/pmhud</value>
+    <value>http://drivehud.com/product/pokermasterhud</value>
   </data>
   <data name="PMC_LicenseType_None" xml:space="preserve">
     <value>None</value>

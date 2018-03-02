@@ -20,6 +20,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -49,15 +50,17 @@ namespace PMCatcher.Tests
          * 5. Straddle hands
          * 6. Side pots
          */
-        [TestCase("HU-1", 1044518)]
-        [TestCase("HU-2", 1044518)]
-        [TestCase("HU-3", 1044518)]
-        [TestCase("HU-4", 1044518)]
-        [TestCase("HU-5", 1044518)]
-        [TestCase("SNG-HU-1", 1044518)]
-        public void TryBuildTest(string dataFolder, long heroId)
+        [TestCase("HU-1", 1044518, false)]
+        [TestCase("HU-2", 1044518, false)]
+        [TestCase("HU-3", 1044518, false)]
+        [TestCase("HU-4", 1044518, false)]
+        [TestCase("HU-5", 1044518, false)]
+        [TestCase("SNG-HU-1", 1044518, false)]
+        [TestCase("6-max-Straddle-1", 1044518, true)]
+        [TestCase("6-max-Straddle-2", 1044518, true)]
+        public void TryBuildTest(string dataFolder, long heroId, bool isStringEnum)
         {
-            var jsonTestData = GetJsonFileFromFolder(dataFolder);
+            var jsonTestData = GetJsonFileFromFolder(dataFolder, isStringEnum);
 
             var handBuilder = new HandBuilder();
 
@@ -66,6 +69,8 @@ namespace PMCatcher.Tests
 
             foreach (var gameRoomStateChange in jsonTestData.GameRoomStateChanges)
             {
+                var res = JsonConvert.SerializeObject(gameRoomStateChange, new StringEnumConverter());
+
                 result = handBuilder.TryBuild(gameRoomStateChange, heroId, out actual);
             }
 
@@ -126,11 +131,11 @@ namespace PMCatcher.Tests
         }
 
         //[Test]
-        //[TestCase(@"d:\Git\PMCatcher\PMCatcher\bin\Debug\Hands\hand_imported_1044518_275254740012.json", @"d:\Git\PMCatcher\PMCatcher.Tests\TestData\HandsRawData\SNG-HU-1")]
+        //[TestCase(@"d:\Git\DriveHUD\DriveHUD.Application\bin\Debug\Hands\hand_imported_1044518_277331530005.json", @"d:\Git\DriveHUD\DriveHud.Tests\PMTests\TestData\HandsRawData\6-max-Straddle-2")]
         //[TestCase(@"d:\Git\PMCatcher\PMCatcher\bin\Debug\Hands\hand_imported_1044518_275254740013.json", @"d:\Git\PMCatcher\PMCatcher.Tests\TestData\HandsRawData\SNG-HU-2")]
         public void SplitTestToFile(string file, string folder)
         {
-            if (Directory.Exists(folder))
+            if (Directory.Exists(folder) && Directory.EnumerateFiles(folder).Any())
             {
                 Directory.Delete(folder, true);
             }
@@ -167,7 +172,9 @@ namespace PMCatcher.Tests
                 var indexStr = index + 1 < 10 ? $"0{index + 1}" : (index + 1).ToString();
                 var newFile = Path.Combine(folder, $"{indexStr}-{GetStateTxt(scGameRoomStateChange.GameRoomInfo.GameState)}.json");
 
-                File.WriteAllText(newFile, json);
+                var newJson = JsonConvert.SerializeObject(scGameRoomStateChange, Formatting.Indented, new StringEnumConverter());
+
+                File.WriteAllText(newFile, newJson);
             }
         }
 
@@ -263,7 +270,7 @@ namespace PMCatcher.Tests
             });
         }
 
-        private JsonTestData GetJsonFileFromFolder(string folderName)
+        private JsonTestData GetJsonFileFromFolder(string folderName, bool isStringEnum)
         {
             var folder = Path.Combine(TestDataFolder, folderName);
 
@@ -296,7 +303,9 @@ namespace PMCatcher.Tests
                 try
                 {
                     var gameRoomStateChangeText = File.ReadAllText(file);
-                    var gameRoomStateChange = JsonConvert.DeserializeObject<SCGameRoomStateChange>(gameRoomStateChangeText);
+                    var gameRoomStateChange = isStringEnum ?
+                        JsonConvert.DeserializeObject<SCGameRoomStateChange>(gameRoomStateChangeText, new StringEnumConverter()) :
+                        JsonConvert.DeserializeObject<SCGameRoomStateChange>(gameRoomStateChangeText);
 
                     jsonTestData.GameRoomStateChanges.Add(gameRoomStateChange);
                 }

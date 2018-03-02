@@ -242,6 +242,7 @@ namespace Model
             // First big blind action is from player who is actually on BB spot, next actions are from players that joined game and payer BB
             var isBigBlind = parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.BIG_BLIND)?.PlayerName == player;
             var isSmallBlind = parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName == player;
+            var isStraddle = parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.STRADDLE)?.PlayerName == player;
             var isDealer = GetDealerPlayer(parsedHand)?.PlayerName == player;
 
             CalculateSteal(stealAttempt, parsedHand, player, isBigBlind || isSmallBlind);
@@ -358,6 +359,7 @@ namespace Model
             }
             stat.IsSmallBlind = isSmallBlind;
             stat.IsBigBlind = isBigBlind;
+            stat.IsStraddle = isStraddle;
             stat.IsCutoff = cutoff != null && cutoff.PlayerName == player;
             stat.IsDealer = dealer != null && dealer.PlayerName == player;
 
@@ -795,7 +797,7 @@ namespace Model
             stat.FacedMultiWayOnFlop = playedFlop && (numberOfActivePlayerOnFlop > 2) ? 1 : 0;
 
             stat.StackInBBs = stat.StartingStack / stat.BigBlind;
-            stat.MRatio = CalculateMRatio(stat);            
+            stat.MRatio = CalculateMRatio(stat);
 
             stat.PreflopIP = preflopInPosition ? 1 : 0;
             stat.PreflopOOP = !preflopInPosition ? 1 : 0;
@@ -1377,6 +1379,7 @@ namespace Model
             stealers.Add(parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName);
 
             bool wasSteal = false;
+
             foreach (var action in parsedHand.PreFlop.Where(x => !x.IsBlinds))
             {
                 if (wasSteal)
@@ -1528,7 +1531,7 @@ namespace Model
                         {
                             callAfterThreeBet = true;
                         }
-                     
+
                         if (action.PlayerName == player && raiser == action.PlayerName)
                         {
                             if (threeBetIsAllIn && !callAfterThreeBet)
@@ -1612,7 +1615,7 @@ namespace Model
                                 {
                                     return;
                                 }
-                            }                            
+                            }
 
                             return;
                         }

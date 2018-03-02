@@ -318,6 +318,7 @@ namespace DriveHUD.Importers.PokerMaster
             CalculateUncalledBets(handHistory);
             CalculateTotalPot(handHistory);
             SortHandActions(handHistory);
+            RemoveSittingOutPlayers(handHistory);
         }
 
         private void AddShowActions(HandHistory handHistory)
@@ -471,9 +472,9 @@ namespace DriveHUD.Importers.PokerMaster
             else
             {
                 var blindsCount = handHistory.PreFlop
-                    .Count(x => x.HandActionType == HandActionType.SMALL_BLIND || x.HandActionType == HandActionType.BIG_BLIND);
+                    .Count(x => x.HandActionType == HandActionType.SMALL_BLIND || x.HandActionType == HandActionType.BIG_BLIND || x.HandActionType == HandActionType.STRADDLE);
 
-                blindsCount = blindsCount > 1 ? 2 : blindsCount;
+                //blindsCount = blindsCount > 1 ? 2 : blindsCount;
 
                 var preflopOrderedPlayers = orderedPlayers.Skip(blindsCount).Concat(orderedPlayers.Take(blindsCount)).ToArray();
                 var preflopOrderedPlayersDictionary = OrderedPlayersToDict(preflopOrderedPlayers);
@@ -573,6 +574,24 @@ namespace DriveHUD.Importers.PokerMaster
             raiseAction.HandActionType = HandActionType.BET;
         }
 
+        private void RemoveSittingOutPlayers(HandHistory handHistory)
+        {
+            foreach (var player in handHistory.Players.ToArray())
+            {
+                if (handHistory.HandActions.Any(x => x.PlayerName == player.PlayerName))
+                {
+                    continue;
+                }
+
+                handHistory.Players.Remove(player);
+
+                if (handHistory.Hero == player)
+                {
+                    handHistory.Hero = null;
+                }
+            }
+        }
+
         private TableType ParseTableType(GameRoomInfo gameRoomInfo)
         {
             if (gameRoomInfo.GameRoomType == GameRoomType.GAME_ROOM_SNG && gameRoomInfo.SNGGameRoomBaseInfo != null)
@@ -644,9 +663,10 @@ namespace DriveHUD.Importers.PokerMaster
             }
 
             // Small blind
-            if ((previousUserGameInfo.RoomGameState == GameRoomGameState.ROOM_GAME_STATE_GameStart ||
-                previousUserGameInfo.RoomGameState == GameRoomGameState.ROOM_GAME_STATE_Ante) &&
-                userGameInfoNet.GameState == UserGameStates.USER_GAME_STATE_BETTING && userGameInfoNet.BetStacks > 0)
+            if (IsPrePreflopAction(previousUserGameInfo.RoomGameState) &&
+                userGameInfoNet.GameRole == UserGameRoles.USER_GAME_ROLE_SMALL_BLIND &&
+                (userGameInfoNet.GameState == UserGameStates.USER_GAME_STATE_BETTING || userGameInfoNet.GameState == UserGameStates.USER_GAME_STATE_BLIND) &&
+                userGameInfoNet.BetStacks > 0)
             {
                 return new HandAction(userGameInfoNet.UserInfo.ShowID,
                     HandActionType.SMALL_BLIND,
@@ -655,13 +675,25 @@ namespace DriveHUD.Importers.PokerMaster
             }
 
             // Big blind
-            if ((previousUserGameInfo.RoomGameState == GameRoomGameState.ROOM_GAME_STATE_GameStart ||
-                previousUserGameInfo.RoomGameState == GameRoomGameState.ROOM_GAME_STATE_Ante) &&
-                userGameInfoNet.GameState == UserGameStates.USER_GAME_STATE_BLIND &&
+            if (IsPrePreflopAction(previousUserGameInfo.RoomGameState) &&
+                userGameInfoNet.GameRole == UserGameRoles.USER_GAME_ROLE_BIG_BLIND &&
+                (userGameInfoNet.GameState == UserGameStates.USER_GAME_STATE_BETTING || userGameInfoNet.GameState == UserGameStates.USER_GAME_STATE_BLIND) &&
                 userGameInfoNet.BetStacks > 0)
             {
                 return new HandAction(userGameInfoNet.UserInfo.ShowID,
                   HandActionType.BIG_BLIND,
+                  userGameInfoNet.BetStacks,
+                  Street.Preflop);
+            }
+
+            // Straddle
+            if (IsPrePreflopAction(previousUserGameInfo.RoomGameState) &&
+                userGameInfoNet.GameRole == UserGameRoles.USER_GAME_ROLE_STRADDLE &&
+                (userGameInfoNet.GameState == UserGameStates.USER_GAME_STATE_BETTING || userGameInfoNet.GameState == UserGameStates.USER_GAME_STATE_BLIND) &&
+                userGameInfoNet.BetStacks > 0)
+            {
+                return new HandAction(userGameInfoNet.UserInfo.ShowID,
+                  HandActionType.STRADDLE,
                   userGameInfoNet.BetStacks,
                   Street.Preflop);
             }
@@ -709,6 +741,13 @@ namespace DriveHUD.Importers.PokerMaster
                 new HandAction(userGameInfoNet.UserInfo.ShowID, handActionType, amount, street);
 
             return handAction;
+        }
+
+        private bool IsPrePreflopAction(GameRoomGameState gameRoomGameState)
+        {
+            return gameRoomGameState == GameRoomGameState.ROOM_GAME_STATE_GameStart ||
+                gameRoomGameState == GameRoomGameState.ROOM_GAME_STATE_GameWait ||
+                gameRoomGameState == GameRoomGameState.ROOM_GAME_STATE_Ante;
         }
 
         private HandActionType ParseHandActionType(UserGameInfoNet userGameInfoNet)

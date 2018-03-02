@@ -302,7 +302,7 @@ namespace DriveHUD.Importers.PokerMaster
                         continue;
                     }
 #if DEBUG
-                    if (package.Uuid == 1061512)
+                    if (package.Uuid == 1061512 || package.Uuid == 1071479)
                     {
                         continue;
                     }
@@ -312,7 +312,19 @@ namespace DriveHUD.Importers.PokerMaster
 
                     if (package.Cmd == PackageCommand.Cmd_SCLoginRsp)
                     {
-                        ParseLoginPackage(package);
+                        ParseLoginPackage<SCLoginRsp>(package, x => x?.UserInfo, x => x?.EncryptKey);
+                        continue;
+                    }
+
+                    if (package.Cmd == PackageCommand.Cmd_SCUploadVerifyCodeRsp)
+                    {
+                        ParseLoginPackage<SCUploadVerifyCodeRsp>(package, x => x?.UserInfo, x => x?.EncryptKey);
+                        continue;
+                    }
+
+                    if (package.Cmd == PackageCommand.Cmd_SCLoginThirdPartyRsp)
+                    {
+                        ParseLoginPackage<SCLoginThirdPartyRsp>(package, x => x?.UserInfo, x => x?.EncryptKey);
                         continue;
                     }
 
@@ -442,24 +454,25 @@ namespace DriveHUD.Importers.PokerMaster
         /// Parses login package
         /// </summary>
         /// <param name="package">Package to parse</param>
-        private void ParseLoginPackage(Package package)
+        private void ParseLoginPackage<T>(Package package, Func<T, UserBaseInfoNet> getUserInfo, Func<T, string> getEncryptKey)
         {
             if (IsAdvancedLogEnabled)
             {
-                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Login package has been received.");
+                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Login package [{package.Cmd}] has been received.");
             }
 
             var bytes = BodyDecryptor.Decrypt(package.Body);
 
             if (bytes == null)
             {
-                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Failed to parse login package.");
+                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Failed to parse login package [{package.Cmd}].");
                 return;
             }
 
-            var scLoginRsp = SerializationHelper.Deserialize<SCLoginRsp>(bytes);
+            var scLoginRsp = SerializationHelper.Deserialize<T>(bytes);
+            var userInfo = getUserInfo(scLoginRsp);
 
-            if (scLoginRsp == null || scLoginRsp.UserInfo == null)
+            if (scLoginRsp == null || userInfo == null)
             {
                 LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"UserInfo is missing.");
                 return;
@@ -467,19 +480,21 @@ namespace DriveHUD.Importers.PokerMaster
 
             if (IsAdvancedLogEnabled)
             {
-                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User [{scLoginRsp.UserInfo.Uuid}, {scLoginRsp.UserInfo.ShowID}] has logged in.");
+                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User [{userInfo.Uuid}, {userInfo.ShowID}] has logged in.");
             }
 
-            if (string.IsNullOrWhiteSpace(scLoginRsp.EncryptKey))
+            var encryptKeyText = getEncryptKey(scLoginRsp);
+
+            if (string.IsNullOrWhiteSpace(encryptKeyText))
             {
                 LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"EncryptKey is missing.");
                 return;
             }
 
             // update settings
-            var encryptKey = scLoginRsp.EncryptKey.ToBytes();
+            var encryptKey = encryptKeyText.ToBytes();
             var base64EncryptKey = Convert.ToBase64String(encryptKey);
-            var heroId = scLoginRsp.UserInfo.Uuid;
+            var heroId = userInfo.Uuid;
 
             if (!HeroesKeys.ContainsKey(heroId))
             {

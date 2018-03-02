@@ -258,6 +258,12 @@
     <Compile Include="UnitTests\StatResourcesTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\ExpectedResult.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\ExpectedResult.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="PMTests\TestData\HandsRawData\HU-1\action-sample.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -289,11 +295,17 @@
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-CashWithPost.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Straddle.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Zone.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Source-CashWithPost.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Straddle.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Zone.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -316,6 +328,39 @@
     <Content Include="UnitTests\TestData\WindfallHand-3max.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\01-Gamestart.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\02-Gamewait.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\03-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\04-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\05-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\06-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\07-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\08-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\09-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\10-Result.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\11-Showcard.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DriveHUD.Application\DriveHUD.Application.csproj">
@@ -705,6 +750,60 @@
     <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\13-Showcard.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\01-Gamestart.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\02-Gamewait.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\03-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\04-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\05-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\06-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\07-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\08-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\09-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\10-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\11-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\12-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\13-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\14-River.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\15-River.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\16-River.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\17-Result.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\18-Showcard.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

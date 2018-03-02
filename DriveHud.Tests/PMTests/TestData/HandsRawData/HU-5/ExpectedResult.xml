@@ -33,7 +33,7 @@
   </Actions>
   <CommunityCards />
   <Players>
-    <Player PlayerName="2550761448" StartingStack="167" Bet="2" Win="5" SeatNumber="4" Cards="" IsSittingOut="false" />
-    <Player PlayerName="2530943140" StartingStack="233" Bet="3" Win="0" SeatNumber="6" Cards="Jc7d" IsSittingOut="false" />
+    <Player PlayerName="2550761448" PlayerNick="Alex84" StartingStack="167" Bet="2" Win="5" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="2530943140" PlayerNick="Peon" StartingStack="233" Bet="3" Win="0" SeatNumber="6" Cards="Jc7d" IsSittingOut="false" />
   </Players>
 </HandHistory>
