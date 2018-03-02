@@ -17,6 +17,7 @@
     </Limit>
     <SeatType MaxPlayers="6" />
     <TableType>Regular</TableType>
+    <IsStraddle>true</IsStraddle>
   </GameDescription>
   <Cancelled>false</Cancelled>
   <NumPlayersSeated>0</NumPlayersSeated>

@@ -138,6 +138,8 @@ namespace DriveHUD.Importers.PokerMaster
                     SeatType.FromMaxPlayers(gameRoomBaseInfo.GameRoomUserMaxNums),
                     null
                 );
+
+            handHistory.GameDescription.IsStraddle = gameRoomBaseInfo.Straddle;
         }
 
         private void ParseTournamentStartRoomStateChange(SCGameRoomStateChange startRoomStateChange, GameRoomInfo gameRoomInfo, HandHistory handHistory)

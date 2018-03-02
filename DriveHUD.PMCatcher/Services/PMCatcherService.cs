@@ -77,7 +77,14 @@ namespace DriveHUD.PMCatcher.Services
 
             var cashLimit = registeredLicenses.Max(x => x.CashLimit);
 
-            return handHistory.GameDescription.Limit.BigBlind <= cashLimit;
+            var limit = handHistory.GameDescription.Limit.BigBlind;
+
+            if (handHistory.GameDescription.IsStraddle)
+            {
+                limit *= 2;
+            }
+
+            return limit <= cashLimit;
         }
     }
 }

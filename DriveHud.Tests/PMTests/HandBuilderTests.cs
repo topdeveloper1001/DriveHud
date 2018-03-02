@@ -212,6 +212,7 @@ namespace PMCatcher.Tests
                 Assert.That(actual.GameDescription.GameType, Is.EqualTo(expected.GameDescription.GameType), "GameDescription.GameType must be equal");
                 Assert.That(actual.GameDescription.PokerFormat, Is.EqualTo(expected.GameDescription.PokerFormat), "GameDescription.PokerFormat must be equal");
                 Assert.That(actual.GameDescription.Site, Is.EqualTo(expected.GameDescription.Site), "GameDescription.Site must be equal");
+                Assert.That(actual.GameDescription.IsStraddle, Is.EqualTo(expected.GameDescription.IsStraddle), "GameDescription.IsStraddle must be equal");
                 Assert.That(actual.GameDescription.SeatType.MaxPlayers, Is.EqualTo(expected.GameDescription.SeatType.MaxPlayers), "GameDescription.SeatType.MaxPlayers must be equal");
                 Assert.That(actual.GameDescription.Limit.Ante, Is.EqualTo(expected.GameDescription.Limit.Ante), "GameDescription.Limit.Ante must be equal");
                 Assert.That(actual.GameDescription.Limit.BigBlind, Is.EqualTo(expected.GameDescription.Limit.BigBlind), "GameDescription.Limit.BigBlind must be equal");

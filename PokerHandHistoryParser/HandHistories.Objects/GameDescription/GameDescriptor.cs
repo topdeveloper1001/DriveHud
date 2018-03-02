@@ -2,6 +2,7 @@ using DriveHUD.Entities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
@@ -89,6 +90,9 @@ namespace HandHistories.Objects.GameDescription
 
         [XmlElement]
         public TournamentDescriptor Tournament { get; set; }
+
+        [XmlElement, DefaultValue(false)]
+        public bool IsStraddle { get; set; }
 
         [XmlElement]
         public bool IsTournament

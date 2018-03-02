@@ -418,6 +418,8 @@ namespace DriveHUD.Importers.PokerMaster
                                     LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"License doesn't support cash hand {handHistory.HandId}. [bb={handHistory.GameDescription.Limit.BigBlind}]");
                                 }
 
+                                SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_NoLicense", windowHandle);
+
                                 continue;
                             }
 
@@ -433,22 +435,7 @@ namespace DriveHUD.Importers.PokerMaster
                     }
                 }
             }
-        }
-
-        private void SendPreImporedData(string loadingTextKey, IntPtr windowHandle)
-        {
-            var gameInfo = new GameInfo
-            {
-                PokerSite = Site,
-                TableType = EnumTableType.Nine,
-                WindowHandle = windowHandle.ToInt32()
-            };
-
-            var loadingText = CommonResourceManager.Instance.GetResourceString(loadingTextKey);
-
-            var eventArgs = new PreImportedDataEventArgs(gameInfo, loadingText);
-            eventAggregator.GetEvent<PreImportedDataEvent>().Publish(eventArgs);
-        }
+        }       
 
         /// <summary>
         /// Parses login package

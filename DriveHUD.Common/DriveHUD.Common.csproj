@@ -74,6 +74,7 @@
     <Compile Include="Check.cs" />
     <Compile Include="Exceptions\DHBusinessException.cs" />
     <Compile Include="Exceptions\DHInternalException.cs" />
+    <Compile Include="Exceptions\DHLicenseNotSupportedException.cs" />
     <Compile Include="Exceptions\ErrorPurpose.cs" />
     <Compile Include="Exceptions\IDetailedException.cs" />
     <Compile Include="Exceptions\IOwnLogPoliticsException.cs" />

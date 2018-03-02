@@ -1372,11 +1372,12 @@ namespace Model
 
         private static void CalculateSteal(StealAttempt stealAttempt, HandHistory parsedHand, string player, bool isBlindPosition)
         {
-            var stealers = new List<string>();
-
-            stealers.Add(GetCutOffPlayer(parsedHand)?.PlayerName);
-            stealers.Add(parsedHand.Players.FirstOrDefault(x => x.SeatNumber == parsedHand.DealerButtonPosition)?.PlayerName);
-            stealers.Add(parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName);
+            var stealers = new List<string>
+            {
+                GetCutOffPlayer(parsedHand)?.PlayerName,
+                parsedHand.Players.FirstOrDefault(x => x.SeatNumber == parsedHand.DealerButtonPosition)?.PlayerName,
+                parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName
+            };
 
             bool wasSteal = false;
 
