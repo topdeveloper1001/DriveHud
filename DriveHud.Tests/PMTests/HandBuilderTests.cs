@@ -58,6 +58,7 @@ namespace PMCatcher.Tests
         [TestCase("SNG-HU-1", 1044518, false)]
         [TestCase("6-max-Straddle-1", 1044518, true)]
         [TestCase("6-max-Straddle-2", 1044518, true)]
+        [TestCase("6-max-Omaha", 1044518, true)]
         public void TryBuildTest(string dataFolder, long heroId, bool isStringEnum)
         {
             var jsonTestData = GetJsonFileFromFolder(dataFolder, isStringEnum);
@@ -72,6 +73,11 @@ namespace PMCatcher.Tests
                 var res = JsonConvert.SerializeObject(gameRoomStateChange, new StringEnumConverter());
 
                 result = handBuilder.TryBuild(gameRoomStateChange, heroId, out actual);
+
+                if (result)
+                {
+                    break;
+                }
             }
 
             Assert.IsTrue(result, "Result must be true");
@@ -131,7 +137,7 @@ namespace PMCatcher.Tests
         }
 
         //[Test]
-        //[TestCase(@"d:\Git\DriveHUD\DriveHUD.Application\bin\Debug\Hands\hand_imported_1044518_277331530005.json", @"d:\Git\DriveHUD\DriveHud.Tests\PMTests\TestData\HandsRawData\6-max-Straddle-2")]
+        //[TestCase(@"d:\Git\DriveHUD\DriveHUD.Application\bin\Debug\Hands\hand_imported_1044518_277937980002.json", @"d:\Git\DriveHUD\DriveHud.Tests\PMTests\TestData\HandsRawData\6-max-Omaha")]
         //[TestCase(@"d:\Git\PMCatcher\PMCatcher\bin\Debug\Hands\hand_imported_1044518_275254740013.json", @"d:\Git\PMCatcher\PMCatcher.Tests\TestData\HandsRawData\SNG-HU-2")]
         public void SplitTestToFile(string file, string folder)
         {

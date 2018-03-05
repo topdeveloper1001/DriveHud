@@ -53,9 +53,14 @@ namespace DriveHUD.Importers.PokerMaster
                 handsRoomStateChanges.Add(gameRoomStateChange.GameNumber, gameRoomStateChanges);
             }
 
+            if (gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_SHOWCARD)
+            {
+                return false;
+            }
+
             gameRoomStateChanges.Add(gameRoomStateChange);
 
-            if (gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_SHOWCARD)
+            if (gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_Result)
             {
                 handHistory = BuildHand(gameRoomStateChange.GameNumber, gameRoomStateChanges, heroId);
             }
