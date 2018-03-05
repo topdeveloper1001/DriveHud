@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2018-03-05T10:08:07Z</DateOfHandUtc>
+  <HandId>277964540007</HandId>
+  <DealerButtonPosition>6</DealerButtonPosition>
+  <TableName>omaha test</TableName>
+  <GameDescription>
+    <PokerFormat>CashGame</PokerFormat>
+    <Site>PokerMaster</Site>
+    <GameType>NoLimitOmaha</GameType>
+    <Limit>
+      <Currency>YUAN</Currency>
+      <SmallBlind>1</SmallBlind>
+      <BigBlind>2</BigBlind>
+      <IsAnteTable>false</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="6" />
+    <TableType>Regular</TableType>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>57</TotalPot>
+  <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+  <Actions>
+    <HandAction PlayerName="2550761448" HandActionType="SMALL_BLIND" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2572356156" HandActionType="BIG_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="CALL" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="RAISE" Amount="-4" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2572356156" HandActionType="CALL" Amount="-3" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="CALL" Amount="-3" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="2572356156" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="2572356156" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="BET" Amount="-7" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="2572356156" HandActionType="RAISE" Amount="-21" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="2530943140" HandActionType="FOLD" Amount="0" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="CALL" Amount="-14" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="2550761448" HandActionType="SHOW" Amount="0" Street="Showdown" IsAllIn="false" />
+    <HandAction PlayerName="2572356156" HandActionType="SHOW" Amount="0" Street="Showdown" IsAllIn="false" />
+    <HandAction p3:type="WinningsAction" PlayerName="2572356156" HandActionType="WINS" Amount="57" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>Qc6cTd8d6d</CommunityCards>
+  <Players>
+    <Player PlayerName="2550761448" PlayerNick="Alex84" StartingStack="94" Bet="26" Win="0" SeatNumber="3" Cards="As4cAd8s" IsSittingOut="false" />
+    <Player PlayerName="2572356156" PlayerNick="NoonDear" StartingStack="116" Bet="26" Win="57" SeatNumber="5" Cards="2h2d3c3d" IsSittingOut="false" />
+    <Player PlayerName="2530943140" PlayerNick="Peon" StartingStack="90" Bet="5" Win="0" SeatNumber="6" Cards="Ks2s5c5h" IsSittingOut="false" />
+  </Players>
+  <HeroName>2530943140</HeroName>
+</HandHistory>

@@ -53,7 +53,9 @@ namespace DriveHUD.Importers.PokerMaster
                 handsRoomStateChanges.Add(gameRoomStateChange.GameNumber, gameRoomStateChanges);
             }
 
-            if (gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_SHOWCARD)
+            if (gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_SHOWCARD
+                || gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_GameWait
+                || gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_GamePrepare)
             {
                 return false;
             }
@@ -173,6 +175,17 @@ namespace DriveHUD.Importers.PokerMaster
             var gameRoomInfo = GetGameRoomInfo(startRoomStateChange, handHistory);
             var userGameInfos = GetUserGameInfos(gameRoomInfo, handHistory);
 
+            // first action time is hand time
+            if (userGameInfos.Length > 0 && handHistory.DateOfHandUtc == DateTime.MinValue)
+            {
+                var actTime = userGameInfos.Max(x => x.ActTime);
+
+                if (actTime != 0)
+                {
+                    handHistory.DateOfHandUtc = DateTimeHelper.UnixTimeToDateTime(actTime / 1000);
+                }
+            }
+
             for (var seat = 0; seat < userGameInfos.Length; seat++)
             {
                 var userGameInfo = userGameInfos[seat];
@@ -191,12 +204,6 @@ namespace DriveHUD.Importers.PokerMaster
                 if (handHistory.DealerButtonPosition == 0 && userGameInfos[seat].GameDealer)
                 {
                     handHistory.DealerButtonPosition = seat + 1;
-                }
-
-                // first action time is hand time
-                if (handHistory.DateOfHandUtc == DateTime.MinValue && userGameInfo.ActTime != 0)
-                {
-                    handHistory.DateOfHandUtc = DateTimeHelper.UnixTimeToDateTime(userGameInfo.ActTime / 1000);
                 }
 
                 userGameInfo.RoomGameState = gameRoomInfo.GameState;
