@@ -332,7 +332,7 @@ namespace DriveHUD.Importers.PokerMaster
                         package.Cmd == PackageCommand.Cmd_SCLeaveMTTGameRoom ||
                         package.Cmd == PackageCommand.Cmd_SCLeaveSNGGameRoomRsp)
                     {
-                        LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room.");
+                        ParseLeaveGameRoomPackage(package);
 
                         var process = connectionsService.GetProcess(capturedPacket);
                         var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
@@ -435,7 +435,7 @@ namespace DriveHUD.Importers.PokerMaster
                     }
                 }
             }
-        }       
+        }
 
         /// <summary>
         /// Parses login package
@@ -506,6 +506,26 @@ namespace DriveHUD.Importers.PokerMaster
             pmCatcherService.SaveHeroes(heroes);
 
             isReloginRequired = false;
+        }
+
+        /// <summary>
+        /// Parses leave game room package
+        /// </summary>
+        /// <param name="package">Package to parse</param>
+        private void ParseLeaveGameRoomPackage(Package package)
+        {
+            if (HeroesKeys.TryGetValue(package.Uuid, out byte[] encryptKey))
+            {
+                var bytes = BodyDecryptor.Decrypt(package.Body, encryptKey, IsAdvancedLogEnabled);
+
+                if (SerializationHelper.TryDeserialize(bytes, out SCLeaveGameRoomRsp scLeaverGameRoomRsp))
+                {
+                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room {scLeaverGameRoomRsp.RoomId}.");
+                    return;
+                }
+            }
+
+            LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room. ");
         }
 
         /// <summary>
