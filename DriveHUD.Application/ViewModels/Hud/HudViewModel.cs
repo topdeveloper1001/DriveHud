@@ -351,37 +351,37 @@ namespace DriveHUD.Application.ViewModels
 
         #region Commands
 
-        public ReactiveCommand<object> DataSaveCommand { get; private set; }
+        public ReactiveCommand DataSaveCommand { get; private set; }
 
-        public ReactiveCommand<object> DataDeleteCommand { get; private set; }
+        public ReactiveCommand DataDeleteCommand { get; private set; }
 
-        public ReactiveCommand<object> DataImportCommand { get; private set; }
+        public ReactiveCommand DataImportCommand { get; private set; }
 
-        public ReactiveCommand<object> DataExportCommand { get; private set; }
+        public ReactiveCommand DataExportCommand { get; private set; }
 
-        public ReactiveCommand<object> SpliterAddCommand { get; private set; }
+        public ReactiveCommand SpliterAddCommand { get; private set; }
 
-        public ReactiveCommand<object> SettingsStatInfoCommand { get; private set; }
+        public ReactiveCommand SettingsStatInfoCommand { get; private set; }
 
-        public ReactiveCommand<object> PlayerTypeStatsCommand { get; private set; }
+        public ReactiveCommand PlayerTypeStatsCommand { get; private set; }
 
-        public ReactiveCommand<object> BumperStickersCommand { get; private set; }
+        public ReactiveCommand BumperStickersCommand { get; private set; }
 
-        public ReactiveCommand<object> DesignerToolCommand { get; private set; }
+        public ReactiveCommand DesignerToolCommand { get; private set; }
 
-        public ReactiveCommand<object> SaveDesignCommand { get; private set; }
+        public ReactiveCommand SaveDesignCommand { get; private set; }
 
-        public ReactiveCommand<object> CancelDesignCommand { get; private set; }
+        public ReactiveCommand CancelDesignCommand { get; private set; }
 
         public ICommand AddToolCommand { get; private set; }
 
-        public ReactiveCommand<object> RemoveToolCommand { get; private set; }
+        public ReactiveCommand RemoveToolCommand { get; private set; }
 
-        public ReactiveCommand<object> StatClickCommand { get; private set; }
+        public ReactiveCommand StatClickCommand { get; private set; }
 
-        public ReactiveCommand<object> ToolClickCommand { get; private set; }
+        public ReactiveCommand ToolClickCommand { get; private set; }
 
-        public ReactiveCommand<object> DuplicateCommand { get; private set; }
+        public ReactiveCommand DuplicateCommand { get; private set; }
 
         #endregion
 
@@ -487,38 +487,17 @@ namespace DriveHUD.Application.ViewModels
 
             var canUseDataCommands = this.WhenAny(x => x.IsInDesignMode, x => !x.Value);
 
-            DataSaveCommand = ReactiveCommand.Create(canUseDataCommands);
-            DataSaveCommand.Subscribe(x => OpenDataSave());
-
-            DataDeleteCommand = ReactiveCommand.Create(canUseDataCommands);
-            DataDeleteCommand.Subscribe(x => DataDelete());
-
-            DataImportCommand = ReactiveCommand.Create(canUseDataCommands);
-            DataImportCommand.Subscribe(x => DataImport());
-
-            DataExportCommand = ReactiveCommand.Create(canUseDataCommands);
-            DataExportCommand.Subscribe(x => DataExport());
-
-            DuplicateCommand = ReactiveCommand.Create(canUseDataCommands);
-            DuplicateCommand.Subscribe(x => OpenDuplicate());
-
-            SpliterAddCommand = ReactiveCommand.Create();
-            SpliterAddCommand.Subscribe(x => SpliterAdd());
-
-            SettingsStatInfoCommand = ReactiveCommand.Create();
-            SettingsStatInfoCommand.Subscribe(x => OpenStatsSettings(x as StatInfo));
-
-            PlayerTypeStatsCommand = ReactiveCommand.Create();
-            PlayerTypeStatsCommand.Subscribe(x => OpenPlayerTypeStats(x as StatInfo));
-
-            BumperStickersCommand = ReactiveCommand.Create();
-            BumperStickersCommand.Subscribe(x => OpenBumperStickers(x as StatInfo));
-
-            DesignerToolCommand = ReactiveCommand.Create();
-            DesignerToolCommand.Subscribe(x => InitializeDesigner());
-
-            CancelDesignCommand = ReactiveCommand.Create();
-            CancelDesignCommand.Subscribe(x => CloseDesigner());
+            DataSaveCommand = ReactiveCommand.Create(() => OpenDataSave(), canUseDataCommands);
+            DataDeleteCommand = ReactiveCommand.Create(() => DataDelete(), canUseDataCommands);
+            DataImportCommand = ReactiveCommand.Create(() => DataImport(), canUseDataCommands);
+            DataExportCommand = ReactiveCommand.Create(() => DataExport(), canUseDataCommands);
+            DuplicateCommand = ReactiveCommand.Create(() => OpenDuplicate(), canUseDataCommands);
+            SpliterAddCommand = ReactiveCommand.Create(() => SpliterAdd());
+            SettingsStatInfoCommand = ReactiveCommand.Create<StatInfo>(x => OpenStatsSettings(x));
+            PlayerTypeStatsCommand = ReactiveCommand.Create<StatInfo>(x => OpenPlayerTypeStats(x));
+            BumperStickersCommand = ReactiveCommand.Create<StatInfo>(x => OpenBumperStickers(x));
+            DesignerToolCommand = ReactiveCommand.Create(() => InitializeDesigner());
+            CancelDesignCommand = ReactiveCommand.Create(() => CloseDesigner());
 
             AddToolCommand = new RelayCommand(x =>
             {
@@ -588,26 +567,12 @@ namespace DriveHUD.Application.ViewModels
                 return false;
             });
 
-            RemoveToolCommand = ReactiveCommand.Create();
-            RemoveToolCommand.Subscribe(x =>
-            {
-                var toolToRemove = x as HudBaseToolViewModel;
-
-                if (toolToRemove == null)
-                {
-                    return;
-                }
-
-                RemoveTool(toolToRemove);
-            });
+            RemoveToolCommand = ReactiveCommand.Create<HudBaseToolViewModel>(x => RemoveTool(x));
 
             var canUserStatClickCommand = this.WhenAny(x => x.IsInDesignMode, x => x.Value && DesignerHudElementViewModel != null);
 
-            StatClickCommand = ReactiveCommand.Create(canUserStatClickCommand);
-            StatClickCommand.Subscribe(x =>
+            StatClickCommand = ReactiveCommand.Create<StatInfo>(statInfo =>
             {
-                var statInfo = x as StatInfo;
-
                 if (statInfo == null)
                 {
                     return;
@@ -620,13 +585,10 @@ namespace DriveHUD.Application.ViewModels
                     .ToArray();
 
                 ShowTools(toolsToShow);
-            });
+            }, canUserStatClickCommand);
 
-            ToolClickCommand = ReactiveCommand.Create(canUserStatClickCommand);
-            ToolClickCommand.Subscribe(x =>
+            ToolClickCommand = ReactiveCommand.Create<HudBaseToolViewModel>(toolViewModel =>
             {
-                var toolViewModel = x as HudBaseToolViewModel;
-
                 if (toolViewModel == null)
                 {
                     return;
@@ -639,10 +601,9 @@ namespace DriveHUD.Application.ViewModels
                     .ToArray();
 
                 ShowTools(toolsToShow);
-            });
+            }, canUserStatClickCommand);
 
-            SaveDesignCommand = ReactiveCommand.Create();
-            SaveDesignCommand.Subscribe(x => SaveDesign());
+            SaveDesignCommand = ReactiveCommand.Create(() => SaveDesign());
         }
 
         /// <summary>

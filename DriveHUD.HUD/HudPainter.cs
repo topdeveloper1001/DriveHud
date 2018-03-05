@@ -98,6 +98,25 @@ namespace DriveHUD.HUD
             CreateHudWindow(hwnd, hudLayout);
         }
 
+        public static void CloseHudWindow(int handle)
+        {
+            if (handle == 0)
+            {
+                return;
+            }
+
+            var hwnd = new IntPtr(handle);
+
+            if (!windows.ContainsKey(hwnd))
+            {
+                return;
+            }
+
+            var window = windows[hwnd];
+            window.Window.Dispatcher.Invoke(() => window.Window.Close());
+            windows.Remove(hwnd);
+        }
+
         private static void CreateHudWindow(IntPtr hwnd, HudLayout hudLayout)
         {
             var thread = new Thread(() =>
@@ -190,9 +209,8 @@ namespace DriveHUD.HUD
             }
 
             var window = windows[hwnd];
-            windows.Remove(hwnd);
-
             window.Window.Dispatcher.Invoke(() => window.Window.Close());
+            windows.Remove(hwnd);            
         }
 
         private static void UpdateWindowOverlay(IntPtr handle)

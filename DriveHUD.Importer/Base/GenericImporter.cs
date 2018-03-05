@@ -10,8 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using HandHistories.Objects.GameDescription;
@@ -61,6 +63,17 @@ namespace DriveHUD.Importers
             try
             {
                 parsingResult = ImportHand(handHistory, gameInfo, importer, progress);
+            }
+            catch (DHLicenseNotSupportedException)
+            {
+                LogProvider.Log.Error(this, $"Hand(s) has not been imported. License issue. [{SiteString}]");
+
+                var windowHwnd = new IntPtr(gameInfo.WindowHandle);
+
+                if (windowHwnd != IntPtr.Zero && WinApi.IsWindow(windowHwnd))
+                {
+                    SendPreImporedData("Notifications_HudLayout_PreLoadingText_NoLicense", windowHwnd);
+                }
             }
             catch (Exception e)
             {
@@ -114,6 +127,21 @@ namespace DriveHUD.Importers
         protected virtual IEnumerable<ParsingResult> ImportHand(string handHistory, GameInfo gameInfo, IFileImporter importer, DHProgress progress)
         {
             return importer.Import(handHistory, progress, gameInfo);
+        }
+
+        protected virtual void SendPreImporedData(string loadingTextKey, IntPtr windowHandle)
+        {
+            var gameInfo = new GameInfo
+            {
+                PokerSite = Site,
+                TableType = EnumTableType.Nine,
+                WindowHandle = windowHandle.ToInt32()
+            };
+
+            var loadingText = CommonResourceManager.Instance.GetResourceString(loadingTextKey);
+
+            var eventArgs = new PreImportedDataEventArgs(gameInfo, loadingText);
+            eventAggregator.GetEvent<PreImportedDataEvent>().Publish(eventArgs);
         }
 
         protected virtual IntPtr FindWindow(ParsingResult parsingResult)

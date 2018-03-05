@@ -58,7 +58,7 @@ namespace DriveHUD.Application.ViewModels
 
         #region Commands
 
-        public IReactiveCommand<object> ApplyCommand { get; private set; }
+        public ReactiveCommand ApplyCommand { get; private set; }
 
         #endregion
 
@@ -148,8 +148,7 @@ namespace DriveHUD.Application.ViewModels
 
             sites.AddRange(sitesToAdd);
 
-            ApplyCommand = ReactiveCommand.Create();
-            ApplyCommand.Subscribe(x =>
+            ApplyCommand = ReactiveCommand.Create(() =>
             {
                 validationResults.ForEach(p =>
                 {

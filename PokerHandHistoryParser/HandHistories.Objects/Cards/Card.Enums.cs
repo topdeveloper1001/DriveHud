@@ -1,16 +1,17 @@
-﻿using System;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
 namespace HandHistories.Objects.Cards
 {
     public partial struct Card
     {
         #region EnumLookups
+
         static CardValueEnum[] rankParseLookup = initRankParseLookup();
 
         private static CardValueEnum[] initRankParseLookup()
         {
             CardValueEnum[] ranks = new CardValueEnum[128];
+
             ranks['A'] = CardValueEnum._A;
             ranks['a'] = CardValueEnum._A;
             ranks['K'] = CardValueEnum._K;
@@ -21,10 +22,12 @@ namespace HandHistories.Objects.Cards
             ranks['j'] = CardValueEnum._J;
             ranks['T'] = CardValueEnum._T;
             ranks['t'] = CardValueEnum._T;
+
             for (int i = 2; i <= 9; i++)
             {
                 ranks[i.ToString()[0]] = (CardValueEnum)i;
             }
+
             return ranks;
         }
 
@@ -46,6 +49,7 @@ namespace HandHistories.Objects.Cards
         #endregion
 
         #region Enums
+
         enum CardValueEnum : byte
         {
             Unknown = 0,

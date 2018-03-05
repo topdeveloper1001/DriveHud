@@ -24,19 +24,16 @@ namespace DriveHUD.Application.ViewModels.AppStore
     {
         #region Commands
 
-        public ReactiveCommand<object> LearnMoreCommand { get; private set; }
+        public ReactiveCommand LearnMoreCommand { get; private set; }
 
-        public ReactiveCommand<object> AddToCartCommand { get; private set; }
+        public ReactiveCommand AddToCartCommand { get; private set; }
 
         #endregion
 
         protected override void InitializeCommands()
         {
-            LearnMoreCommand = ReactiveCommand.Create();
-            LearnMoreCommand.Subscribe(x => OnLearnMore(x));
-
-            AddToCartCommand = ReactiveCommand.Create();
-            AddToCartCommand.Subscribe(x => OnAddToCart(x));
+            LearnMoreCommand = ReactiveCommand.Create<object>(x => OnLearnMore(x));
+            AddToCartCommand = ReactiveCommand.Create<object>(x => OnAddToCart(x));
         }
 
         protected abstract void OnLearnMore(object item);

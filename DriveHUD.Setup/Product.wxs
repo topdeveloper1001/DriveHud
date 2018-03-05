@@ -102,6 +102,24 @@
       <Component Id="DriveHUD.Updater.Core.dll" Guid="{B7076833-4E68-4B7C-BF29-3515D5B002FC}">
         <File Id="DriveHUD.Updater.Core.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.Updater.Core.dll" />
       </Component>
+      <Component Id="PMCReg.dll" Guid="{EC48F6E1-0332-424E-9F43-16BCEC6918EF}" Transitive="yes">
+        <Condition>False</Condition>
+        <File Id="PMCReg.dll" KeyPath="yes" Source="$(var.ProjectDir)\..\dependencies\Fake\PMCReg.dll" />
+      </Component>
+      <Component Id="PMHReg.dll" Guid="{D27809F2-4674-4006-9C26-F7CECF3AFC54}" Transitive="yes">
+        <Condition>False</Condition>
+        <File Id="PMHReg.dll" KeyPath="yes" Source="$(var.ProjectDir)\..\dependencies\Fake\PMHReg.dll" />
+      </Component>
+      <Component Id="PMOReg.dll" Guid="{B40098A1-6C3E-4618-A697-571A6E63BCFA}" Transitive="yes">
+        <Condition>False</Condition>
+        <File Id="PMOReg.dll" KeyPath="yes" Source="$(var.ProjectDir)\..\dependencies\Fake\PMOReg.dll" />
+      </Component>
+      <Component Id="PMTReg.dll" Guid="{4CB16442-E331-45DA-8C5E-0B47F0908179}">
+        <File Id="PMTReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\PMTReg.dll" />
+      </Component>
+      <Component Id="PMNReg.dll" Guid="{BA60930E-8AF3-4CC9-BA1B-62F55134E604}">
+        <File Id="PMNReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\PMNReg.dll" />
+      </Component>
     </DirectoryRef>
 
     <DirectoryRef Id="INSTALLDIR">
@@ -151,6 +169,9 @@
       </Component>
       <Component Id="DriveHUD.PlayerXRay.dll" Guid="{E26FF75F-87F3-44E9-ABA6-A1FC3D1F9BB1}">
         <File Id="DriveHUD.PlayerXRay.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.PlayerXRay.dll" />
+      </Component>
+      <Component Id="DriveHUD.PMCatcher.dll" Guid="{DB165E97-2D6D-46B5-83B6-E922716CB49A}">
+        <File Id="DriveHUD.PMCatcher.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.PMCatcher.dll" />
       </Component>
       <Component Id="Xceed.Wpf.Toolkit.dll" Guid="{5E51C286-A865-4A26-9998-AE01C55CBE03}">
         <File Id="Xceed.Wpf.Toolkit.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Xceed.Wpf.Toolkit.dll" />
@@ -347,6 +368,15 @@
         <Condition>False</Condition>
         <File Id="BouncyCastle.Crypto.dll" Name="BouncyCastle.Crypto.dll" Source="$(var.ProjectDir)\..\dependencies\Fake\BouncyCastle.Crypto.dll" />
       </Component>
+      <Component Id="SharpPcap.dll" Guid="{E6B116FD-276F-47D7-B1FC-444D98D3D0F6}">
+        <File Id="SharpPcap.dll" KeyPath="yes" Source="$(var.BuildDirectory)\SharpPcap.dll" />
+      </Component>
+      <Component Id="bdec.dll" Guid="{A5AC0EC1-EF36-4182-9337-7E3AA1CDC734}">
+        <File Id="bdec.dll" KeyPath="yes" Name="bdec.dll" Source="$(var.BuildDirectory)\bdec.dll" />
+      </Component>
+      <Component Id="PacketDotNet.dll" Guid="{FC119EF2-5799-4947-AD33-A65CE0D00924}">
+        <File Id="PacketDotNet.dll" KeyPath="yes" Name="PacketDotNet.dll" Source="$(var.BuildDirectory)\PacketDotNet.dll" />
+      </Component>
     </DirectoryRef>
 
     <DirectoryRef Id="LIB">
@@ -514,6 +544,7 @@
       <ComponentRef Id="DriveHUD.EquityCalculator.Base.dll" />
       <ComponentRef Id="DriveHUD.Controls.dll" />
       <ComponentRef Id="DriveHUD.Importers.dll" />
+      <ComponentRef Id="DriveHUD.PMCatcher.dll" />
       <ComponentRef Id="Model.dll" />
       <ComponentRef Id="HandHistories.Objects.dll" />
       <ComponentRef Id="HandHistories.Parser.dll" />
@@ -595,6 +626,14 @@
       <ComponentRef Id="CAPPIPEDI.DLL" />
       <ComponentRef Id="CAPPIPEDI2.DLL" />
       <ComponentRef Id="CAPPIPEDP.DLL" />
+      <ComponentRef Id="PMCReg.dll" />
+      <ComponentRef Id="PMHReg.dll" />
+      <ComponentRef Id="PMOReg.dll" />
+      <ComponentRef Id="PMTReg.dll" />
+      <ComponentRef Id="PMNReg.dll" />
+      <ComponentRef Id="SharpPcap.dll" />
+      <ComponentRef Id="bdec.dll" />
+      <ComponentRef Id="PacketDotNet.dll" />
       <ComponentRef Id="BAD_LAG.PNG" />
       <ComponentRef Id="BOOK.PNG" />
       <ComponentRef Id="CAT_2.PNG" />

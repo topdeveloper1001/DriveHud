@@ -57,8 +57,9 @@
         <prism:InteractionRequestTrigger
             SourceObject="{Binding AppStoreViewModel.ViewRequest, Mode=OneWay}">
             <infra:ShowWindowViewAction
-                SingleOnly="True"         
+                SingleOnly="True"
                 StartupLocation="CenterScreen"
+                IconSource="{Binding AppStoreViewModel.ViewIconSource}"
                 ViewName="{Binding AppStoreViewModel.ViewName}">
                 <infra:ShowWindowViewAction.WindowStyle>
                     <Style
@@ -69,15 +70,18 @@
                         <Setter
                             Property="Background"
                             Value="{StaticResource BackgroundBrush1}" />
-                        <Setter
+                        <!--<Setter
                             Property="Height"
-                            Value="750" />
+                            Value="750" />-->
+                        <Setter
+                            Property="SizeToContent"
+                            Value="WidthAndHeight" />
                         <Setter
                             Property="ResizeMode"
                             Value="CanResize" />
-                        <Setter
+                        <!--<Setter
                             Property="Width"
-                            Value="1000" />
+                            Value="1000" />-->
                         <Setter
                             Property="SnapsToDevicePixels"
                             Value="True" />
@@ -87,9 +91,6 @@
                         <Setter
                             Property="ShowInTaskbar"
                             Value="True" />
-                        <Setter
-                            Property="Icon"
-                            Value="{markupext:IconExtension  /images/xray.ico, 32}" />
                     </Style>
                 </infra:ShowWindowViewAction.WindowStyle>
             </infra:ShowWindowViewAction>

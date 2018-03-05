@@ -11,7 +11,8 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Ifrastructure;
-using HandHistories.Parser.Parsers.FastParser.IPoker;
+using DriveHUD.Entities;
+using HandHistories.Parser.Parsers.Factory;
 using NUnit.Framework;
 using System;
 using System.IO;
@@ -29,10 +30,11 @@ namespace DriveHud.Tests.UnitTests
         }
 
         [Test]
-        [TestCase("ExportTest-Forum-Source-MTT.xml", "ExportTest-Forum-Result-MTT.txt")]
-        [TestCase("ExportTest-Forum-Source-Zone.xml", "ExportTest-Forum-Result-Zone.txt")]
-        [TestCase("ExportTest-Forum-Source-CashWithPost.xml", "ExportTest-Forum-Result-CashWithPost.txt")]
-        public void HandHistoryIsConvertedIntoForumFormat(string sourceFileName, string expectedResultFileName)
+        [TestCase("ExportTest-Forum-Source-MTT.xml", "ExportTest-Forum-Result-MTT.txt", EnumPokerSites.Ignition)]
+        [TestCase("ExportTest-Forum-Source-Zone.xml", "ExportTest-Forum-Result-Zone.txt", EnumPokerSites.Ignition)]
+        [TestCase("ExportTest-Forum-Source-CashWithPost.xml", "ExportTest-Forum-Result-CashWithPost.txt", EnumPokerSites.Ignition)]
+        [TestCase("ExportTest-Forum-Source-Straddle.xml", "ExportTest-Forum-Result-Straddle.txt", EnumPokerSites.PokerMaster)]
+        public void HandHistoryIsConvertedIntoForumFormat(string sourceFileName, string expectedResultFileName, EnumPokerSites site)
         {
             var sourceFile = Path.Combine(testFolder, sourceFileName);
             var expectedResultFile = Path.Combine(testFolder, expectedResultFileName);
@@ -49,7 +51,9 @@ namespace DriveHud.Tests.UnitTests
 
             var handHistoryText = File.ReadAllText(sourceFile);
 
-            var parser = new IPokerBovadaFastParserImpl();
+            var factory = new HandHistoryParserFactoryImpl();
+
+            var parser = factory.GetFullHandHistoryParser(site);
 
             var handHistory = parser.ParseFullHandHistory(handHistoryText);
 

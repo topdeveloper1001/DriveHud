@@ -55,5 +55,10 @@ namespace DriveHUD.Common.Extensions
                 }
             }
         }
+
+        public static byte[] ToBytes(this string input)
+        {
+            return input.Select(x => (byte)x).ToArray();
+        }
     }
 }

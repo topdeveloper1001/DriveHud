@@ -1,5 +1,4 @@
-﻿using DriveHUD.Application.ViewModels;
-using DriveHUD.Application.ViewModels.Hud;
+﻿using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using DriveHUD.HUD.Service;
@@ -12,6 +11,23 @@ namespace DriveHUD.HUD.Services
 {
     public class HudNamedPipeBindingServiceImpl : HudNamedPipeBindingService
     {
+        public override void CloseTable(int windowHandle)
+        {
+            try
+            {
+                System.Windows.Application.Current.Dispatcher.Invoke(() =>
+                {
+                    HudPainter.CloseHudWindow(windowHandle);
+                });
+
+                LogProvider.Log.Info($"Closed table {windowHandle}.");
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "HUD service failed to close table", e);
+            }
+        }
+
         public override void ConnectCallbackChannel(string name)
         {
             if (_callback != null)

@@ -24,11 +24,10 @@ namespace DriveHUD.Application.ViewModels
 
         protected virtual void InitializeCommands()
         {
-            ClosePopupCommand = ReactiveCommand.Create();
-            ClosePopupCommand.Subscribe(x => ClosePopup());
+            ClosePopupCommand = ReactiveCommand.Create(() => ClosePopup());
         }
 
-        public ReactiveCommand<object> ClosePopupCommand { get; private set; }
+        public ReactiveCommand ClosePopupCommand { get; private set; }
 
         protected bool isPopupOpened;
 
@@ -59,7 +58,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         protected virtual void ClosePopup()
-        {            
+        {
             IsPopupOpened = false;
             PopupViewModel = null;
         }

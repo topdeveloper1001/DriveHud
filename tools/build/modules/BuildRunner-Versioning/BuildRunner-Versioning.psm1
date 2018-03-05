@@ -31,6 +31,13 @@ function Set-Version($session)
         $excludeFilters = $session.VersionExlcudeFilter -split ',' | ForEach-Object { Get-MatchPattern $_ }        
    }    
 
+   [string[]]$includeFilters = @()
+
+   if(-Not [string]::IsNullOrWhiteSpace($session.VersionIncludeFilter))
+   {
+        $includeFilters = $session.VersionIncludeFilter -split ',' | ForEach-Object { Get-MatchPattern $_ }        
+   }    
+
    $version = [Version]($session.Version)
    $version = New-Object System.Version($version.Major, $version.Minor, $version.Build, $revisionNumber)
       
@@ -45,8 +52,9 @@ function Set-Version($session)
         Get-ChildItem -Path $session.BaseDir -Filter $fileTemplate  -Recurse | ForEach-Object {
             
             $doExclude = Get-IsFilterMatch $_.FullName $excludeFilters
+            $doInclude = Get-IsFilterMatch $_.FullName $includeFilters
 
-            if(-Not $doExclude) {
+            if(-Not $doExclude -and $doInclude) {
 
                 Write-LogInfo $ModuleName "Updating $($_.FullName)"
 

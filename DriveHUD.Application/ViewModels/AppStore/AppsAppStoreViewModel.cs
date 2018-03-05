@@ -12,8 +12,6 @@
 
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Wpf.Interactivity;
-using DriveHUD.Common.Wpf.Mvvm;
-using Microsoft.Practices.ServiceLocation;
 using Model.AppStore;
 using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
@@ -40,20 +38,17 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
         #region Commands
 
-        public ReactiveCommand<object> LaunchCommand { get; private set; }
+        public ReactiveCommand LaunchCommand { get; private set; }
 
         #endregion
 
         protected override void InitializeCommands()
         {
-            LaunchCommand = ReactiveCommand.Create();
-            LaunchCommand.Subscribe(x => Launch(x));
+            LaunchCommand = ReactiveCommand.Create<AppStoreModule>(x => Launch(x));
         }
 
-        private void Launch(object item)
+        private void Launch(AppStoreModule appStoreModule)
         {
-            var appStoreModule = item as AppStoreModule;
-
             if (appStoreModule == null || string.IsNullOrEmpty(appStoreModule.ModuleName))
             {
                 return;
@@ -67,6 +62,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
                 };
 
                 ViewName = appStoreModule.ModuleName;
+                ViewIconSource = appStoreModule.WindowIconSource;
                 ViewRequest?.Raise(moduleViewRequest);
             }
             catch (Exception e)

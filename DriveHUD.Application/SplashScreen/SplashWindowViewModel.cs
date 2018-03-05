@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels;
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Progress;
 using System.Globalization;
@@ -39,7 +38,7 @@ namespace DriveHUD.Application.SplashScreen
             set
             {
                 status = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 

@@ -14,6 +14,6 @@ namespace DriveHUD.Entities
 {
     public enum EnumPosition
     {
-        SB, BB, EP, UTG, UTG_1, UTG_2, MP, MP1, MP2, MP3, CO, BTN, Undefined
+        SB, BB, EP, UTG, UTG_1, UTG_2, MP, MP1, MP2, MP3, CO, BTN, Undefined, STRDL
     }
 }

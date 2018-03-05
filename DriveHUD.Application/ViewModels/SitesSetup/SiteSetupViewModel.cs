@@ -52,8 +52,7 @@ namespace DriveHUD.Application.ViewModels
             issues = new ObservableCollection<string>(validationResult.Issues);
             handHistoryLocations = new ObservableCollection<string>(validationResult.HandHistoryLocations);
 
-            EnableCommand = ReactiveCommand.Create();
-            EnableCommand.Subscribe(x => Enabled = !Enabled);
+            EnableCommand = ReactiveCommand.Create(() => Enabled = !Enabled);
         }
 
         #region Properties
@@ -150,7 +149,7 @@ namespace DriveHUD.Application.ViewModels
 
         #region Commands
 
-        public IReactiveCommand<object> EnableCommand { get; private set; }
+        public ReactiveCommand EnableCommand { get; private set; }
 
         #endregion
     }

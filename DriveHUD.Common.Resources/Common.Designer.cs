@@ -638,6 +638,42 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Copy to clipboard.
+        /// </summary>
+        internal static string Common_ErrorView_CopyToClipboard {
+            get {
+                return ResourceManager.GetString("Common_ErrorView_CopyToClipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorry, something went wrong! Please contact support if this error happens again..
+        /// </summary>
+        internal static string Common_ErrorView_Error {
+            get {
+                return ResourceManager.GetString("Common_ErrorView_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string Common_ErrorView_OK {
+            get {
+                return ResourceManager.GetString("Common_ErrorView_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stack trace:.
+        /// </summary>
+        internal static string Common_ErrorView_StackTrace {
+            get {
+                return ResourceManager.GetString("Common_ErrorView_StackTrace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Equity Calculation + Hand History.
         /// </summary>
         internal static string Common_Export_Both {
@@ -679,6 +715,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_FastFilter {
             get {
                 return ResourceManager.GetString("Common_FastFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fatal error: DriveHUD will be closed.
+        /// </summary>
+        internal static string Common_FatalError {
+            get {
+                return ResourceManager.GetString("Common_FatalError", resourceCulture);
             }
         }
         

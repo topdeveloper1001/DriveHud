@@ -219,12 +219,14 @@ namespace DriveHUD.Importers
 
                 return parsingResult;
             }
+            catch (DHLicenseNotSupportedException)
+            {
+                throw;
+            }
             catch (Exception e)
             {
                 var logger = ServiceLocator.Current.GetInstance<IFileImporterLogger>();
                 logger.Log(text);
-
-                Console.WriteLine(text);
 
                 throw new DHInternalException(new NonLocalizableString("Could not import hand."), e);
             }
@@ -340,7 +342,7 @@ namespace DriveHUD.Importers
 
             if (!userSession.IsMatch(matchInfo))
             {
-                throw new DHBusinessException(new NonLocalizableString("License doesn't support hand."));
+                throw new DHLicenseNotSupportedException(new NonLocalizableString("License doesn't support hand."));
             }
 
             return parsingResult;

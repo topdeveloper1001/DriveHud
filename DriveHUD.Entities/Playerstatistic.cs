@@ -983,6 +983,9 @@ namespace DriveHUD.Entities
         [ProtoMember(352)]
         public virtual int CouldBetFlopWhenCheckedToSRP { get; set; }
 
+        [ProtoMember(353)]
+        public virtual bool IsStraddle { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual

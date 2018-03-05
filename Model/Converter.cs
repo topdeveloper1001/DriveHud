@@ -125,6 +125,10 @@ namespace Model.Importer
             {
                 return EnumPosition.BB;
             }
+            else if (stat != null && stat.IsStraddle)
+            {
+                return EnumPosition.STRDL;
+            }
 
             var tableSize = hand.HandActions.Select(x => x.PlayerName).Distinct().Count();
 
@@ -141,6 +145,11 @@ namespace Model.Importer
 
             if (firstPlayerAction != null)
             {
+                if (firstPlayerAction.HandActionType == HandActionType.STRADDLE)
+                {
+                    return EnumPosition.STRDL;
+                }
+
                 var blindActionsCount = handActions
                     .Where(x => x.HandActionType == HandActionType.SMALL_BLIND ||
                         x.HandActionType == HandActionType.BIG_BLIND ||
@@ -496,6 +505,8 @@ namespace Model.Importer
                     return "All in";
                 case HandActionType.POSTS:
                     return "Posts";
+                case HandActionType.STRADDLE:
+                    return "Straddle";
                 case HandActionType.WINS:
                 case HandActionType.WINS_SIDE_POT:
                 case HandActionType.WINS_THE_LOW:
@@ -508,11 +519,7 @@ namespace Model.Importer
 
         public static EnumFacingPreflop ToFacingPreflop(IEnumerable<HandAction> preflopHandActions, string playerName)
         {
-            HandAction firstPlayerAction = preflopHandActions.FirstOrDefault(x => x.PlayerName == playerName
-                                                                && x.HandActionType != HandActionType.ANTE
-                                                                && x.HandActionType != HandActionType.POSTS
-                                                                && x.HandActionType != HandActionType.SMALL_BLIND
-                                                                && x.HandActionType != HandActionType.BIG_BLIND);
+            HandAction firstPlayerAction = preflopHandActions.FirstOrDefault(x => x.PlayerName == playerName && !x.IsBlinds);
             if (firstPlayerAction == null)
             {
                 return EnumFacingPreflop.None;
@@ -522,10 +529,7 @@ namespace Model.Importer
 
             IEnumerable<HandAction> actions = preflopHandActions
                                                     .Take(indexOfFirstPlayerAction)
-                                                    .Where(x => x.HandActionType != HandActionType.ANTE
-                                                            && x.HandActionType != HandActionType.POSTS
-                                                            && x.HandActionType != HandActionType.SMALL_BLIND
-                                                            && x.HandActionType != HandActionType.BIG_BLIND);
+                                                    .Where(x => !x.IsBlinds);
 
             if (actions.Any(x => x.IsRaise()))
             {

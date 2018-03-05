@@ -56,28 +56,21 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             base.InitializeCommands();
 
-            SelectColorCommand = ReactiveCommand.Create();
-            SelectColorCommand.Subscribe(x => SelectColor(x));
-
-            PickerSelectColorCommand = ReactiveCommand.Create();
-            PickerSelectColorCommand.Subscribe(x => IsColorPickerPopupOpened = false);
-
-            FilterCommand = ReactiveCommand.Create();
-            FilterCommand.Subscribe(x => PopupFiltersRequestExecute(Service.FilterTupleCollection.FirstOrDefault(f => f.ModelType == EnumFilterModelType.FilterHandGridModel)));
-
-            ButtonFilterModelSectionRemoveCommand = ReactiveCommand.Create();
-            ButtonFilterModelSectionRemoveCommand.Subscribe(x => ButtonFilterModelSectionRemove(x));
+            SelectColorCommand = ReactiveCommand.Create<object>(x => SelectColor(x));
+            PickerSelectColorCommand = ReactiveCommand.Create(() => IsColorPickerPopupOpened = false);
+            FilterCommand = ReactiveCommand.Create(() => PopupFiltersRequestExecute(Service.FilterTupleCollection.FirstOrDefault(f => f.ModelType == EnumFilterModelType.FilterHandGridModel)));
+            ButtonFilterModelSectionRemoveCommand = ReactiveCommand.Create<object>(x => ButtonFilterModelSectionRemove(x));
         }
 
         #region Commands
 
-        public ReactiveCommand<object> ButtonFilterModelSectionRemoveCommand { get; private set; }
+        public ReactiveCommand ButtonFilterModelSectionRemoveCommand { get; private set; }
 
-        public ReactiveCommand<object> SelectColorCommand { get; private set; }
+        public ReactiveCommand SelectColorCommand { get; private set; }
 
-        public ReactiveCommand<object> PickerSelectColorCommand { get; private set; }
+        public ReactiveCommand PickerSelectColorCommand { get; private set; }
 
-        public ReactiveCommand<object> FilterCommand { get; private set; }
+        public ReactiveCommand FilterCommand { get; private set; }
 
         #endregion
 

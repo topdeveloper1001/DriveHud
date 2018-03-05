@@ -429,6 +429,8 @@ namespace DriveHUD.Common.Ifrastructure
                     return "BTN";
                 case EnumPosition.CO:
                     return "CO";
+                case EnumPosition.STRDL:
+                    return "STRDL";
                 default:
                     var tableSize = hand.HandActions.Select(x => x.PlayerName).Distinct().Count();
 

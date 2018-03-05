@@ -150,6 +150,18 @@
   <data name="Notifications_HudLayout_PreLoadingText_Ignition" xml:space="preserve">
     <value>One full hand must be played before HUD appears. Please wait.</value>
   </data>
+  <data name="Notifications_HudLayout_PreLoadingText_NoLicense" xml:space="preserve">
+    <value>HUD can't be loaded. DH License doesn't support this table.</value>
+  </data>
+  <data name="Notifications_HudLayout_PreLoadingText_PM" xml:space="preserve">
+    <value>One full hand must be played before HUD appears. Please wait.</value>
+  </data>
+  <data name="Notifications_HudLayout_PreLoadingText_PM_NoLicense" xml:space="preserve">
+    <value>HUD can't be loaded. PRO version of catcher is required.</value>
+  </data>
+  <data name="Notifications_HudLayout_PreLoadingText_PM_Relogin" xml:space="preserve">
+    <value>HUD can't be loaded. Relogin is required.</value>
+  </data>
   <data name="Notifications_HudLayout_SaveDesignContent" xml:space="preserve">
     <value>Changes have been made to your HUD layout. Would you like to save them now?</value>
   </data>

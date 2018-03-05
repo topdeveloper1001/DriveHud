@@ -2,6 +2,7 @@ using DriveHUD.Entities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
@@ -62,24 +63,36 @@ namespace HandHistories.Objects.GameDescription
         [XmlElement]
         public SeatType SeatType { get; set; }
 
+        [XmlElement(ElementName = "TableType")]
+        public string TableTypeText
+        {
+            get
+            {
+                return TableType.ToString();
+            }
+            set
+            {
+                TableType = TableType.Parse(value);
+            }
+        }
+
         [XmlIgnore]
         public TableType TableType { get; set; }
 
-        [XmlArray]
+        [XmlIgnore]
         public List<TableTypeDescription> TableTypeDescriptors
         {
             get
             {
                 return TableType.GetTableTypeDescriptions().ToList();
             }
-            set
-            {
-
-            }
         }
 
         [XmlElement]
         public TournamentDescriptor Tournament { get; set; }
+
+        [XmlElement, DefaultValue(false)]
+        public bool IsStraddle { get; set; }
 
         [XmlElement]
         public bool IsTournament

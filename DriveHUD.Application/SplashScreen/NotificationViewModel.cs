@@ -12,10 +12,6 @@
 
 using DriveHUD.Common.Infrastructure.Base;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.SplashScreen
@@ -47,7 +43,7 @@ namespace DriveHUD.Application.SplashScreen
                 }
 
                 title = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -67,7 +63,7 @@ namespace DriveHUD.Application.SplashScreen
                 }
 
                 message = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -87,7 +83,7 @@ namespace DriveHUD.Application.SplashScreen
                 }
 
                 button1Text = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -107,7 +103,7 @@ namespace DriveHUD.Application.SplashScreen
                 }
 
                 button1Action = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -127,7 +123,7 @@ namespace DriveHUD.Application.SplashScreen
                 }
 
                 button2Text = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -147,7 +143,7 @@ namespace DriveHUD.Application.SplashScreen
                 }
 
                 button2Action = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -167,7 +163,7 @@ namespace DriveHUD.Application.SplashScreen
                 }
 
                 button3Text = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -187,7 +183,7 @@ namespace DriveHUD.Application.SplashScreen
                 }
 
                 button3Action = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 

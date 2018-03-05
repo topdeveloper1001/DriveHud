@@ -65,7 +65,7 @@ namespace DriveHUD.Application.HudServices
                 var existingClientProcess = Process.GetProcessesByName(hudProcessName).FirstOrDefault();
 
                 if (existingClientProcess != null)
-                {                   
+                {
                     try
                     {
                         existingClientProcess.Kill();
@@ -151,6 +151,16 @@ namespace DriveHUD.Application.HudServices
 
         public void Send(byte[] data)
         {
+            WrapBindingServiceAction(() => _namedPipeBindingProxy.UpdateHUD(data));
+        }
+
+        public void CloseTable(int windowHandle)
+        {
+            WrapBindingServiceAction(() => _namedPipeBindingProxy.CloseTable(windowHandle));
+        }
+
+        private void WrapBindingServiceAction(Action action)
+        {
             if (!isInitialized)
             {
                 LogProvider.Log.Error(this, "HUD hasn't been initialized.");
@@ -168,7 +178,7 @@ namespace DriveHUD.Application.HudServices
 
             try
             {
-                _namedPipeBindingProxy.UpdateHUD(data);
+                action();
             }
             catch (Exception e)
             {

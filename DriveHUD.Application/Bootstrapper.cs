@@ -93,14 +93,14 @@ namespace DriveHUD.Application
             var tournamentCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
             tournamentCacheService.Initialize();
 
-            ImporterBootstrapper.ConfigureImporterService();
+            var moduleService = ServiceLocator.Current.GetInstance<IModuleService>();
+            moduleService.InitializeModules(Container);
 
             var sqliteBootstrapper = ServiceLocator.Current.GetInstance<ISQLiteBootstrapper>();
             sqliteBootstrapper.InitializeDatabase();
 
-            var moduleService = ServiceLocator.Current.GetInstance<IModuleService>();
-            moduleService.InitializeModules(Container);
-
+            ImporterBootstrapper.ConfigureImporterService();
+             
             ShowMainWindow();
         }
 

@@ -154,5 +154,27 @@ namespace DriveHUD.Common.Wpf.Actions
             window.Show();
             window.BringToFront();
         }
+
+        protected override void Configure(RadWindow window, IConfigurableViewModel viewModel, object viewModelInfo)
+        {
+            window.Loaded += (o, a) =>
+            {
+                var parent = window.Parent as Window;
+
+                if (parent == null)
+                {
+                    viewModel.Configure(viewModelInfo);
+                    return;
+                }
+
+                void OnRendered(object s, EventArgs e)
+                {
+                    parent.ContentRendered -= OnRendered;
+                    viewModel.Configure(viewModelInfo);
+                }
+
+                parent.ContentRendered += OnRendered;
+            };
+        }
     }
 }

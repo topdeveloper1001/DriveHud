@@ -160,7 +160,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
 
         #region Commands
 
-        public ReactiveCommand<object> CloseCommand { get; private set; }
+        public ReactiveCommand CloseCommand { get; private set; }
 
         #endregion     
 
@@ -173,8 +173,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
 
         private void InitializeCommands()
         {
-            CloseCommand = ReactiveCommand.Create();
-            CloseCommand.Subscribe(x => OnClosed());
+            CloseCommand = ReactiveCommand.Create(() => OnClosed());
         }
 
         private void InitializeMetricsCollections()

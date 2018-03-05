@@ -36,8 +36,7 @@ namespace DriveHUD.Application.ViewModels
             progress = new DHProgress(cancellationTokerSource.Token);
             progress.ProgressChanged += OnProgressChanged;
 
-            StopCommand = ReactiveCommand.Create();
-            StopCommand.Subscribe(x => Stop());
+            StopCommand = ReactiveCommand.Create(() => Stop());
         }
 
         public void Reset()
@@ -119,7 +118,7 @@ namespace DriveHUD.Application.ViewModels
 
         #region Commands
 
-        public ReactiveCommand<object> StopCommand { get; private set; }
+        public ReactiveCommand StopCommand { get; private set; }
 
         #endregion
 

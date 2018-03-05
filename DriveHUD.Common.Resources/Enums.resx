@@ -923,4 +923,7 @@
   <data name="Enum_Stat_WTSDAsPF3Bettor" xml:space="preserve">
     <value>WTSD% as PF 3-Bettor%</value>
   </data>
+  <data name="Enum_EnumPokerSites_PokerMaster" xml:space="preserve">
+    <value>PokerMaster</value>
+  </data>
 </root>

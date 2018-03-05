@@ -102,9 +102,9 @@ namespace DriveHUD.Application.ViewModels.Settings
 
         #region ICommand
 
-        public ReactiveCommand<object> SaveCommand { get; private set; }
+        public ReactiveCommand SaveCommand { get; private set; }
 
-        public ReactiveCommand<object> CancelCommand { get; private set; }
+        public ReactiveCommand CancelCommand { get; private set; }
 
         #endregion
 
@@ -114,11 +114,8 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             var canSaveChanges = this.WhenAny(x => x.BonusName, x => x.Player, (x, y) => !string.IsNullOrWhiteSpace(x.Value) && y.Value != null);
 
-            SaveCommand = ReactiveCommand.Create(canSaveChanges);
-            SaveCommand.Subscribe(x => SaveChanges());
-
-            CancelCommand = ReactiveCommand.Create();
-            CancelCommand.Subscribe(x => Cancel());
+            SaveCommand = ReactiveCommand.Create(() => SaveChanges(), canSaveChanges);
+            CancelCommand = ReactiveCommand.Create(() => Cancel());
         }
 
         private void InitializeData(SettingsRakeBackViewModelInfo<BonusModel> info)
