@@ -19,6 +19,7 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
+using HandHistories.Parser.Utils.FastParsing;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -53,9 +54,16 @@ namespace DriveHUD.Importers.PokerMaster
                 handsRoomStateChanges.Add(gameRoomStateChange.GameNumber, gameRoomStateChanges);
             }
 
+            if (gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_SHOWCARD
+                || gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_GameWait
+                || gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_GamePrepare)
+            {
+                return false;
+            }
+
             gameRoomStateChanges.Add(gameRoomStateChange);
 
-            if (gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_SHOWCARD)
+            if (gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_Result)
             {
                 handHistory = BuildHand(gameRoomStateChange.GameNumber, gameRoomStateChanges, heroId);
             }
@@ -168,6 +176,17 @@ namespace DriveHUD.Importers.PokerMaster
             var gameRoomInfo = GetGameRoomInfo(startRoomStateChange, handHistory);
             var userGameInfos = GetUserGameInfos(gameRoomInfo, handHistory);
 
+            // first action time is hand time
+            if (userGameInfos.Length > 0 && handHistory.DateOfHandUtc == DateTime.MinValue)
+            {
+                var actTime = userGameInfos.Max(x => x.ActTime);
+
+                if (actTime != 0)
+                {
+                    handHistory.DateOfHandUtc = DateTimeHelper.UnixTimeToDateTime(actTime / 1000);
+                }
+            }
+
             for (var seat = 0; seat < userGameInfos.Length; seat++)
             {
                 var userGameInfo = userGameInfos[seat];
@@ -186,12 +205,6 @@ namespace DriveHUD.Importers.PokerMaster
                 if (handHistory.DealerButtonPosition == 0 && userGameInfos[seat].GameDealer)
                 {
                     handHistory.DealerButtonPosition = seat + 1;
-                }
-
-                // first action time is hand time
-                if (handHistory.DateOfHandUtc == DateTime.MinValue && userGameInfo.ActTime != 0)
-                {
-                    handHistory.DateOfHandUtc = DateTimeHelper.UnixTimeToDateTime(userGameInfo.ActTime / 1000);
                 }
 
                 userGameInfo.RoomGameState = gameRoomInfo.GameState;
@@ -317,7 +330,7 @@ namespace DriveHUD.Importers.PokerMaster
             AddShowActions(handHistory);
             AddWinningActions(handHistory);
             CalculateBets(handHistory);
-            CalculateUncalledBets(handHistory);
+            ParserUtils.CalculateUncalledBets(handHistory);
             CalculateTotalPot(handHistory);
             SortHandActions(handHistory);
             RemoveSittingOutPlayers(handHistory);
@@ -365,86 +378,6 @@ namespace DriveHUD.Importers.PokerMaster
                     player.Bet = betsByPlayer[player.PlayerName];
                 }
             }
-        }
-
-        private void CalculateUncalledBets(HandHistory handHistory)
-        {
-            var playersPutInPot = new Dictionary<string, decimal>();
-
-            foreach (var action in handHistory.HandActions)
-            {
-                if (action.Street == Street.Showdown || action.Street == Street.Summary)
-                {
-                    continue;
-                }
-
-                if (!playersPutInPot.ContainsKey(action.PlayerName))
-                {
-                    playersPutInPot.Add(action.PlayerName, 0);
-                }
-
-                playersPutInPot[action.PlayerName] += Math.Abs(action.Amount);
-            }
-
-            var playerPutMaxInPot = new KeyValuePair<string, decimal>();
-            var playerPutSecondMaxInPot = new KeyValuePair<string, decimal>();
-
-            foreach (KeyValuePair<string, decimal> playerPutInPot in playersPutInPot)
-            {
-                if (playerPutInPot.Value > playerPutMaxInPot.Value)
-                {
-                    playerPutSecondMaxInPot = playerPutMaxInPot;
-                    playerPutMaxInPot = playerPutInPot;
-                }
-                else
-                {
-                    if (playerPutInPot.Value > playerPutSecondMaxInPot.Value)
-                    {
-                        playerPutSecondMaxInPot = playerPutInPot;
-                    }
-                }
-            }
-
-            var diffBetweenPots = playerPutMaxInPot.Value - playerPutSecondMaxInPot.Value;
-
-            if (diffBetweenPots <= 0)
-            {
-                return;
-            }
-
-            var winAction = handHistory.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.WINS && x.PlayerName == playerPutMaxInPot.Key);
-
-            if (winAction == null)
-            {
-                var folded = handHistory.HandActions.Any(x => x.PlayerName == playerPutMaxInPot.Key && x.IsFold);
-
-                if (folded)
-                {
-                    return;
-                }
-
-                var actionNumber = handHistory.HandActions.Max(x => x.ActionNumber);
-                winAction = new WinningsAction(playerPutMaxInPot.Key, HandActionType.WINS, diffBetweenPots, 0, ++actionNumber);
-                handHistory.HandActions.Add(winAction);
-                return;
-            }
-
-            winAction.Amount -= diffBetweenPots;
-            handHistory.Players[playerPutMaxInPot.Key].Win -= diffBetweenPots;
-
-            var lastRaiseAction = handHistory.HandActions.LastOrDefault(x => x.PlayerName == playerPutMaxInPot.Key && x.Amount < 0);
-
-            if (lastRaiseAction == null)
-            {
-                throw new HandBuilderException(handHistory.HandId, "Last raise has not been found.");
-            }
-
-            var uncalledBet = new HandAction(playerPutMaxInPot.Key, HandActionType.UNCALLED_BET, diffBetweenPots, lastRaiseAction.Street);
-
-            var lastStreeAction = handHistory.HandActions.Street(lastRaiseAction.Street).LastOrDefault();
-            var indexOfLastStreetAction = handHistory.HandActions.IndexOf(lastStreeAction);
-
-            handHistory.HandActions.Insert(indexOfLastStreetAction + 1, uncalledBet);
         }
 
         private void CalculateTotalPot(HandHistory handHistory)

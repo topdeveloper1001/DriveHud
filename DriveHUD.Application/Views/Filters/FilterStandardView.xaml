@@ -165,8 +165,7 @@
                 <DataTemplate>
                     <CheckBox
                         Content="{Binding Path=Name}"
-                        Margin="3"
-                        Width="100"
+                        Margin="3"                        
                         Height="30"
                         Style="{StaticResource ButtonLeftCheckBoxStyle}"
                         IsChecked="{Binding Path=IsChecked, Mode=TwoWay}">

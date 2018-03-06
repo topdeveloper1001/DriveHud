@@ -215,7 +215,7 @@ namespace DriveHUD.Importers
                     return parsingResult.TournamentsTags == TournamentsTags.MTT ? GameFormat.MTT : GameFormat.SnG;
                 }
 
-                if (Site == EnumPokerSites.PokerStars && parsingResult.Source.GameDescription.TableType.Contains(TableTypeDescription.Zoom))
+                if (Site == EnumPokerSites.PokerStars && parsingResult.Source.GameDescription.TableType.Contains(TableTypeDescription.FastFold))
                 {
                     return GameFormat.Zoom;
                 }

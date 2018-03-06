@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
 
 namespace HandHistories.Objects.GameDescription
@@ -11,6 +10,7 @@ namespace HandHistories.Objects.GameDescription
     public struct TableType : IEnumerable<TableTypeDescription>
     {
         #region Statics
+
         private static readonly Regex ParseRegex = new Regex("[-,;_]");
 
         public static TableType Parse(string tableType)
@@ -29,6 +29,7 @@ namespace HandHistories.Objects.GameDescription
         {
             return new TableType(tableTypeDescriptions);
         }
+
         #endregion
 
         private readonly TableTypeDescription _tableTypeDescriptions;
@@ -36,6 +37,7 @@ namespace HandHistories.Objects.GameDescription
         public TableType(params TableTypeDescription[] tableTypeDescriptions)
         {
             _tableTypeDescriptions = TableTypeDescription.Unknown;
+
             foreach (var item in tableTypeDescriptions)
             {
                 _tableTypeDescriptions |= item;
@@ -45,9 +47,18 @@ namespace HandHistories.Objects.GameDescription
         public TableType(IEnumerable<TableTypeDescription> tableTypeDescriptions)
         {
             _tableTypeDescriptions = TableTypeDescription.Unknown;
+
             foreach (var item in tableTypeDescriptions)
             {
                 _tableTypeDescriptions |= item;
+            }
+        }
+
+        public TableTypeDescription Descriptions
+        {
+            get
+            {
+                return _tableTypeDescriptions;
             }
         }
 
@@ -68,7 +79,7 @@ namespace HandHistories.Objects.GameDescription
                 TableTypeDescription.Regular, TableTypeDescription.Anonymous, TableTypeDescription.SuperSpeed, TableTypeDescription.Deep,
                 TableTypeDescription.Ante, TableTypeDescription.Cap, TableTypeDescription.Speed,
                 TableTypeDescription.Jackpot, TableTypeDescription.SevenDeuceGame, TableTypeDescription.FiftyBigBlindsMin,
-                TableTypeDescription.Shallow, TableTypeDescription.PushFold, TableTypeDescription.Zoom,
+                TableTypeDescription.Shallow, TableTypeDescription.PushFold, TableTypeDescription.FastFold,
                 TableTypeDescription.Strobe,
             };
 
@@ -79,6 +90,6 @@ namespace HandHistories.Objects.GameDescription
         public override string ToString()
         {
             return _tableTypeDescriptions.ToString().Replace(", ", "-");
-        }
+        }    
     }
 }

@@ -543,7 +543,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             // Stars does not right out things such as speed/shallow/fast to hands right now.
             if (line1.Contains(" Zoom") || line0.Contains(" Zoom"))
             {
-                return TableType.FromTableTypeDescriptions(TableTypeDescription.Zoom);
+                return TableType.FromTableTypeDescriptions(TableTypeDescription.FastFold);
             }
 
             if (line1.Contains("100-250 bb"))

@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers.PokerMaster;
 using DriveHUD.Importers.PokerMaster.Model;
@@ -43,12 +44,12 @@ namespace PMCatcher.Tests
         }
 
         /*** Testcases to add *** 
-         * 1. SnG hands                            
-         * 2. MTT hands
+         * 1. SnG hands (done)                            
+         * 2. MTT hands (not done)
          * 3. 6-max (done)
          * 4. Uncalled bets (done)
-         * 5. Straddle hands
-         * 6. Side pots
+         * 5. Straddle hands (done)
+         * 6. Side pots (not done)
          */
         [TestCase("HU-1", 1044518, false)]
         [TestCase("HU-2", 1044518, false)]
@@ -58,6 +59,10 @@ namespace PMCatcher.Tests
         [TestCase("SNG-HU-1", 1044518, false)]
         [TestCase("6-max-Straddle-1", 1044518, true)]
         [TestCase("6-max-Straddle-2", 1044518, true)]
+        [TestCase("6-max-Omaha-1", 1044518, true)]
+        [TestCase("6-max-Omaha-2", 1044518, true)]
+        [TestCase("6-max-Omaha-3", 1044518, true)]
+        [TestCase("6-max-Omaha-4", 1044518, true)]
         public void TryBuildTest(string dataFolder, long heroId, bool isStringEnum)
         {
             var jsonTestData = GetJsonFileFromFolder(dataFolder, isStringEnum);
@@ -71,7 +76,22 @@ namespace PMCatcher.Tests
             {
                 var res = JsonConvert.SerializeObject(gameRoomStateChange, new StringEnumConverter());
 
+                foreach (var c in gameRoomStateChange.GameRoomInfo.UserGameInfos)
+                {
+                    if (!c.IsActive)
+                    {
+                        continue;
+                    }
+
+                    Console.WriteLine($"{c.GameState}, {c.UserInfo.Nick}: {DateTimeHelper.UnixTimeToDateTime(c.ActTime / 1000)}");
+                }
+
                 result = handBuilder.TryBuild(gameRoomStateChange, heroId, out actual);
+
+                if (result)
+                {
+                    break;
+                }
             }
 
             Assert.IsTrue(result, "Result must be true");
@@ -131,7 +151,7 @@ namespace PMCatcher.Tests
         }
 
         //[Test]
-        //[TestCase(@"d:\Git\DriveHUD\DriveHUD.Application\bin\Debug\Hands\hand_imported_1044518_277331530005.json", @"d:\Git\DriveHUD\DriveHud.Tests\PMTests\TestData\HandsRawData\6-max-Straddle-2")]
+        //[TestCase(@"d:\Git\DriveHUD\DriveHUD.Application\bin\Debug\Hands\hand_imported_1044518_277964540025.json", @"d:\Git\DriveHUD\DriveHud.Tests\PMTests\TestData\HandsRawData\6-max-Omaha-4")]
         //[TestCase(@"d:\Git\PMCatcher\PMCatcher\bin\Debug\Hands\hand_imported_1044518_275254740013.json", @"d:\Git\PMCatcher\PMCatcher.Tests\TestData\HandsRawData\SNG-HU-2")]
         public void SplitTestToFile(string file, string folder)
         {

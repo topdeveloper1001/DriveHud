@@ -986,6 +986,9 @@ namespace DriveHUD.Entities
         [ProtoMember(353)]
         public virtual bool IsStraddle { get; set; }
 
+        [ProtoMember(354)]
+        public virtual uint TableTypeDescription { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual

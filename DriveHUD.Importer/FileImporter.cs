@@ -313,7 +313,8 @@ namespace DriveHUD.Importers
                 Istourney = parsedHand.GameDescription.IsTournament,
                 PokergametypeId = (short)(parsedHand.GameDescription.GameType),
                 Smallblindincents = Utils.ConvertToCents(parsedHand.GameDescription.Limit.SmallBlind),
-                Tablesize = gameInfo != null ? (short)gameInfo.TableType : (short)parsedHand.GameDescription.SeatType.MaxPlayers
+                Tablesize = gameInfo != null ? (short)gameInfo.TableType : (short)parsedHand.GameDescription.SeatType.MaxPlayers,
+                TableType = (uint)parsedHand.GameDescription.TableType.Descriptions
             };
 
             var players = parsedHand.Players.Select(player => new Players
@@ -798,6 +799,7 @@ namespace DriveHUD.Importers
                 x.PokergametypeId == handhistory.GameType.PokergametypeId &&
                 x.Smallblindincents == handhistory.GameType.Smallblindincents &&
                 x.Tablesize == handhistory.GameType.Tablesize &&
+                x.TableType == handhistory.GameType.TableType &&
                 x.Istourney == handhistory.GameType.Istourney);
 
             if (existingGameType == null)

@@ -10,16 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Annotations;
+using Prism.Mvvm;
 using System;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Xml.Serialization;
 
 namespace Model.Filters
 {
     [Serializable]
-    public abstract class FilterBaseEntity : INotifyPropertyChanged, ICloneable
+    public abstract class FilterBaseEntity : BindableBase, ICloneable
     {
         public virtual object Clone()
         {
@@ -38,12 +35,10 @@ namespace Model.Filters
             }
             set
             {
-                if (value == _id) return;
-                _id = value;
-                OnPropertyChanged();
+                SetProperty(ref _id, value);
             }
         }
-     
+
         public string Name
         {
             get
@@ -52,9 +47,7 @@ namespace Model.Filters
             }
             set
             {
-                if (value == _name) return;
-                _name = value;
-                OnPropertyChanged();
+                SetProperty(ref _name, value);
             }
         }
 
@@ -66,18 +59,8 @@ namespace Model.Filters
             }
             set
             {
-                if (value == _isActive) return;
-                _isActive = value;
-                OnPropertyChanged();
+                SetProperty(ref _isActive, value);
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        public virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

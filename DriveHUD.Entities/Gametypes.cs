@@ -39,6 +39,9 @@ namespace DriveHUD.Entities
         [Required]
         public virtual int Anteincents { get; set; }
 
+        [Required]
+        public virtual uint TableType { get; set; }
+
         protected bool Equals(Gametypes other)
         {
             return GametypeId == other.GametypeId && PokergametypeId == other.PokergametypeId && Tablesize == other.Tablesize && Smallblindincents == other.Smallblindincents && CurrencytypeId == other.CurrencytypeId && Bigblindincents == other.Bigblindincents && Istourney.Equals(other.Istourney) && Anteincents == other.Anteincents;
@@ -56,6 +59,7 @@ namespace DriveHUD.Entities
                 hashCode = (hashCode * 397) ^ Bigblindincents;
                 hashCode = (hashCode * 397) ^ Istourney.GetHashCode();
                 hashCode = (hashCode * 397) ^ Anteincents;
+                hashCode = (hashCode * 397) ^ TableType.GetHashCode();
                 return hashCode;
             }
         }
@@ -72,9 +76,21 @@ namespace DriveHUD.Entities
 
         public override bool Equals(object obj)
         {
-            if (ReferenceEquals(null, obj)) return false;
-            if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
+            if (obj == null)
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
             return Equals((Gametypes)obj);
         }
     }
