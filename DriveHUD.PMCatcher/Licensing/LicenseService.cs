@@ -527,7 +527,7 @@ namespace DriveHUD.PMCatcher.Licensing
         {
             get
             {
-                return !licenseInfos.Any(x => x.IsRegistered && !x.IsExpired && x.Serial.StartsWith("PMC"));
+                return !licenseInfos.Any(x => x.IsRegistered && !x.IsExpired && x.Serial.StartsWith("PMP"));
             }
         }
 
