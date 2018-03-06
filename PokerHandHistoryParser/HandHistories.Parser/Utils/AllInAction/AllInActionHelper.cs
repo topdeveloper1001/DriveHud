@@ -63,10 +63,22 @@ namespace HandHistories.Parser.Utils
                 //Update the remaining stack with our action's amount
                 playerStackRemaining[action.PlayerName] += action.Amount;
 
-                if (playerStackRemaining[action.PlayerName] == 0 && !action.IsBlinds)
+                if (playerStackRemaining[action.PlayerName] == 0)
                 {
+                    if (action.IsBlinds)
+                    {
+                        action.IsAllIn = true;
+                        identifiedActions.Add(action);
+                        continue;
+                    }
+
                     //This was a bet/raise/call for our remaining chips - we are all in
-                    AllInAction allInAction = new AllInAction(action.PlayerName, action.Amount, action.Street, true);
+                    var allInAction = new AllInAction(action.PlayerName,
+                        action.Amount,
+                        action.Street,
+                        action.HandActionType == HandActionType.RAISE || action.HandActionType == HandActionType.BET,
+                        action.HandActionType);
+
                     identifiedActions.Add(allInAction);
                 }
                 else
@@ -85,13 +97,18 @@ namespace HandHistories.Parser.Utils
         internal static List<HandAction> UpdateAllInActions(List<HandAction> handActions)
         {
             List<HandAction> identifiedActions = new List<HandAction>(handActions.Count);
+
             foreach (HandAction action in handActions)
             {
                 if (action is AllInAction)
                 {
                     HandActionType actionType = GetAllInActionType(action.PlayerName, action.Amount, action.Street, identifiedActions);
 
-                    identifiedActions.Add(new HandAction(action.PlayerName, actionType, action.Amount, action.Street, AllInAction: true));
+                    identifiedActions.Add(new AllInAction(action.PlayerName,
+                        action.Amount,
+                        action.Street,
+                        actionType == HandActionType.RAISE || actionType == HandActionType.BET,
+                        actionType));
                 }
                 else
                 {

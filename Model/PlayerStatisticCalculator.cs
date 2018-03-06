@@ -720,9 +720,7 @@ namespace Model
             stat.PositionString = Converter.ToPositionString(stat.Position);
             stat.FacingPreflop = Converter.ToFacingPreflop(parsedHand.PreFlop, player);
 
-            HandAction lastHeroActionStreetAction;
-
-            if (Converter.CanAllInEquity(parsedHand, stat, out lastHeroActionStreetAction))
+            if (Converter.CanAllInEquity(parsedHand, stat, out HandAction lastHeroActionStreetAction))
             {
                 if (calculatedEquity != null && calculatedEquity.ContainsKey(player) && calculatedEquity[player].ContainsKey(lastHeroActionStreetAction.Street))
                 {

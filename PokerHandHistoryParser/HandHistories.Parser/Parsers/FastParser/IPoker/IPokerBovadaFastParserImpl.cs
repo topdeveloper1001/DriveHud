@@ -49,6 +49,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
         }
 
+        public override bool RequiresUncalledBetCalculations
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         protected override List<HandAction> OrderHandActions(List<HandAction> handActions, PlayerList players, HandHistory handHistory)
         {
             try

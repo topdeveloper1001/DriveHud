@@ -20,6 +20,7 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Utils;
+using HandHistories.Parser.Utils.FastParsing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,6 +79,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         }
 
         public virtual bool RequiresTournamentSpeedAdjustment
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        public virtual bool RequiresUncalledBetCalculations
         {
             get
             {
@@ -269,6 +278,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 if (handHistory.GameDescription.IsTournament && RequiresTournamentSpeedAdjustment)
                 {
                     AdjustTournamentSpeed(handHistory);
+                }
+
+                if (RequiresUncalledBetCalculations)
+                {
+                    CalculateUncalledBets(handHistory);
                 }
 
                 HandAction anteAction = handHistory.HandActions.FirstOrDefault(a => a.HandActionType == HandActionType.ANTE);
@@ -710,6 +724,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         protected virtual void AdjustTournamentSpeed(HandHistory handHistory)
         {
+        }
+
+        protected virtual void CalculateUncalledBets(HandHistory handHistory)
+        {
+            ParserUtils.CalculateUncalledBets(handHistory);
         }
     }
 }

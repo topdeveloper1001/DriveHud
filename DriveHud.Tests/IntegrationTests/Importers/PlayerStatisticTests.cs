@@ -421,9 +421,11 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [Test]
         [TestCase(@"Hero-ExpectedValue-1.xml", EnumPokerSites.IPoker, "Hero", -754)]
         [TestCase(@"Hero-ExpectedValue-2.xml", EnumPokerSites.IPoker, "Hero", -3421)]
+        [TestCase(@"Hero-ExpectedValue-3.xml", EnumPokerSites.Ignition, "Hero", 887)]
         [TestCase(@"DURKADURDUR-ExpectedValue-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 7728)]
         [TestCase(@"DURKADURDUR-ExpectedValue-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", -14786)]
         [TestCase(@"Peon84-ExpectedValue-1.txt", EnumPokerSites.PartyPoker, "Peon84", 1316758)]
+
         public void EVDiffIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             var expectedEVDiff = expected / 100m;

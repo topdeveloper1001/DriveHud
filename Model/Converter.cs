@@ -345,6 +345,12 @@ namespace Model.Importer
                 hand.HandActions.Any(x => x.Street == lastHeroStreetAction.Street && (x.IsAllInAction || x.IsAllIn));
         }
 
+        /// <summary>
+        /// Calculates equities for all players with known hole cards on the street where hero of the specified <paramref name="stat"/> went all-in
+        /// </summary>
+        /// <param name="hand"></param>
+        /// <param name="stat"></param>
+        /// <returns>Dictionary with players equities</returns>
         public static Dictionary<string, decimal> CalculateAllInEquity(HandHistory hand, Playerstatistic stat)
         {
             // last hero street action
