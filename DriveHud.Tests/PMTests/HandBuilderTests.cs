@@ -44,12 +44,12 @@ namespace PMCatcher.Tests
         }
 
         /*** Testcases to add *** 
-         * 1. SnG hands                            
-         * 2. MTT hands
+         * 1. SnG hands (done)                            
+         * 2. MTT hands (not done)
          * 3. 6-max (done)
          * 4. Uncalled bets (done)
-         * 5. Straddle hands
-         * 6. Side pots
+         * 5. Straddle hands (done)
+         * 6. Side pots (not done)
          */
         [TestCase("HU-1", 1044518, false)]
         [TestCase("HU-2", 1044518, false)]
