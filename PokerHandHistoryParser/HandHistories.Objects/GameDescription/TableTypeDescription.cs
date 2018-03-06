@@ -46,7 +46,7 @@ namespace HandHistories.Objects.GameDescription
         [EnumMember]
         PushFold = 0x1 << 11,
         [EnumMember]
-        Zoom = 0x1 << 12,
+        FastFold = 0x1 << 12,
         [EnumMember]
         Strobe = 0x1 << 13,
         [EnumMember]

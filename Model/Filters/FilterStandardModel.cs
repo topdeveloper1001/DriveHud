@@ -175,27 +175,55 @@ namespace Model.Filters
         public void UpdateFilterSectionStakeLevelCollection(IList<Gametypes> gameTypes)
         {
             bool isModified = false;
+
             List<StakeLevelItem> gameTypesList = new List<StakeLevelItem>();
+
             foreach (var gameType in gameTypes.Where(x => !x.Istourney))
             {
-                var limit = Limit.FromSmallBlindBigBlind(gameType.Smallblindincents / 100m, gameType.Bigblindincents / 100m, (Currency)gameType.CurrencytypeId);
-                var gtString = String.Format("{0}{1}{2}", limit.GetCurrencySymbol(), Math.Abs(limit.BigBlind), GameTypeUtils.GetShortName((GameType)gameType.PokergametypeId));
-                var stakeLevelItem = new StakeLevelItem() { Name = gtString, StakeLimit = limit, IsChecked = true, PokergametypeId = gameType.PokergametypeId };
+                var limit = Limit.FromSmallBlindBigBlind(gameType.Smallblindincents / 100m,
+                    gameType.Bigblindincents / 100m,
+                    (Currency)gameType.CurrencytypeId);
+
+                var isFastFold = ((TableTypeDescription)gameType.TableType & TableTypeDescription.FastFold) == TableTypeDescription.FastFold;
+
+                var gtString = String.Format("{0}{1}{2}{3}",
+                    limit.GetCurrencySymbol(),
+                    Math.Abs(limit.BigBlind),
+                    GameTypeUtils.GetShortName((GameType)gameType.PokergametypeId),
+                    isFastFold ? " Fast" : string.Empty);
+
+                var stakeLevelItem = new StakeLevelItem
+                {
+                    Name = gtString,
+                    StakeLimit = limit,
+                    IsChecked = true,
+                    PokergametypeId = gameType.PokergametypeId,
+                    TableType = gameType.TableType
+                };
+
                 gameTypesList.Add(stakeLevelItem);
+
                 if (!StakeLevelCollection.Any(x => x.Name == gtString))
                 {
                     StakeLevelCollection.Add(stakeLevelItem);
+
                     if (!isModified)
+                    {
                         isModified = true;
+                    }
                 }
             }
 
             var removeList = StakeLevelCollection.Where(x => !gameTypesList.Any(g => x.Name == g.Name)).ToList();
+
             foreach (var limit in removeList)
             {
                 StakeLevelCollection.Remove(limit);
+
                 if (!isModified)
+                {
                     isModified = true;
+                }
             }
 
             if (isModified)
@@ -382,10 +410,12 @@ namespace Model.Filters
         {
             var predicate = PredicateBuilder.True<Playerstatistic>();
             var uncheckedStakes = StakeLevelCollection.Where(x => !x.IsChecked);
+
             foreach (var state in uncheckedStakes)
             {
                 predicate = predicate.And(x => !(x.BigBlind == state.StakeLimit.BigBlind
                                             && x.CurrencyId == (short)state.StakeLimit.Currency
+                                            && (x.TableTypeDescription & state.TableType) == x.TableTypeDescription
                                             && x.PokergametypeId == state.PokergametypeId));
             }
 
@@ -699,31 +729,32 @@ namespace Model.Filters
     public class StakeLevelItem : FilterBaseEntity
     {
         public static Action OnIsChecked;
-        private bool _isChecked;
-        private Limit _stakeLimit;
-        private short _pokergametypeId;
+        private bool isChecked;
+        private Limit stakeLimit;
+        private short pokergametypeId;
 
         public Limit StakeLimit
         {
-            get { return _stakeLimit; }
+            get
+            {
+                return stakeLimit;
+            }
             set
             {
-                if (value == _stakeLimit) return;
-                _stakeLimit = value;
-                OnPropertyChanged();
+                SetProperty(ref stakeLimit, value);
             }
         }
 
         public bool IsChecked
         {
-            get { return _isChecked; }
+            get
+            {
+                return isChecked;
+            }
             set
             {
-                if (value == _isChecked) return;
-                _isChecked = value;
-                OnPropertyChanged();
-
-                if (OnIsChecked != null) OnIsChecked.Invoke();
+                SetProperty(ref isChecked, value);
+                OnIsChecked?.Invoke();
             }
         }
 
@@ -731,12 +762,26 @@ namespace Model.Filters
         {
             get
             {
-                return _pokergametypeId;
+                return pokergametypeId;
             }
 
             set
             {
-                _pokergametypeId = value;
+                SetProperty(ref pokergametypeId, value);
+            }
+        }
+
+        private uint tableType;
+
+        public uint TableType
+        {
+            get
+            {
+                return tableType;
+            }
+            set
+            {
+                SetProperty(ref tableType, value);
             }
         }
     }
@@ -875,7 +920,7 @@ namespace Model.Filters
         {
         }
 
-        private string _propertyName;        
+        private string _propertyName;
 
         public string PropertyName
         {
@@ -906,5 +951,5 @@ namespace Model.Filters
                 }
             }
         }
-    }   
+    }
 }

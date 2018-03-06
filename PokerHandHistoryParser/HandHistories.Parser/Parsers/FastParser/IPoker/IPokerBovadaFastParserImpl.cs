@@ -19,6 +19,7 @@ using System.Linq;
 using HandHistories.Objects.Hand;
 using System;
 using DriveHUD.Common.Linq;
+using HandHistories.Objects.GameDescription;
 
 namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
@@ -218,6 +219,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 return;
             }
+
+            handHistory.GameDescription.TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.FastFold);
 
             AdjustFastFoldHandHistory(handHistory);
         }

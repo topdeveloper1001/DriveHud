@@ -194,7 +194,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", TableTypeDescription.Regular)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Zoom-6-max-0.02-0.05.txt", TableTypeDescription.Zoom)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Zoom-6-max-0.02-0.05.txt", TableTypeDescription.FastFold)]
         public void TableDescriptionIsParsedTest(string handHistoryFile, TableTypeDescription tableDescription)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

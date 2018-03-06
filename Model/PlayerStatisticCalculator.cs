@@ -15,6 +15,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
+using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
@@ -696,6 +697,7 @@ namespace Model
             stat.GameNumber = parsedHand.HandId;
             stat.PokersiteId = result.HandHistory.PokersiteId;
             stat.TableType = parsedHand.GameDescription.TableType.ToString();
+            stat.TableTypeDescription = (uint)parsedHand.GameDescription.TableType.Descriptions;
             stat.Time = parsedHand.DateOfHandUtc;
             stat.Cards = Converter.ToHoleCards(currentPlayer.HoleCards);
 
@@ -761,7 +763,11 @@ namespace Model
 
             if (parsedHand.GameDescription.Limit.SmallBlind > 0 && parsedHand.GameDescription.Limit.BigBlind > 0)
             {
-                stat.GameType = string.Format("{0}/{1} - {2}", parsedHand.GameDescription.Limit.SmallBlind, parsedHand.GameDescription.Limit.BigBlind, parsedHand.GameDescription.GameType);
+                stat.GameType = string.Format("{0}/{1} - {2}{3}",
+                    parsedHand.GameDescription.Limit.SmallBlind,
+                    parsedHand.GameDescription.Limit.BigBlind,
+                    parsedHand.GameDescription.GameType,
+                    parsedHand.GameDescription.TableTypeDescriptors.Contains(TableTypeDescription.FastFold) ? " (Fast)" : string.Empty);
             }
             else
             {

@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
 using FluentNHibernate.Mapping;
 
 namespace DriveHUD.Entities.Mapping
@@ -29,6 +28,7 @@ namespace DriveHUD.Entities.Mapping
             Map(x => x.Bigblindincents).Column("BigBlind").Not.Nullable();
             Map(x => x.Istourney).Column("IsTournament").Not.Nullable();
             Map(x => x.Anteincents).Column("Ante").Not.Nullable();
+            Map(x => x.TableType).Column("TableType").Not.Nullable();
         }
     }
 }

@@ -119,11 +119,13 @@ namespace Model.Filters
         public void BindFilterSectionCollection()
         {
             #region Standard Filter actions
+
             // Make StatItemSection_IsActive depending on any FilterSectionItem is/not Checked
             StatItem.OnTriState = () =>
             {
                 SetStatItems();
             };
+
             StatItem.OnTriState.Invoke();
 
             // Make StakeLevelSection_IsActive depending on any FilterSectionItem is/not Checked
@@ -131,6 +133,7 @@ namespace Model.Filters
             {
                 SetStakeLevelItems();
             };
+
             StakeLevelItem.OnIsChecked.Invoke();
 
             // Make PreFlopActionSection_IsActive depending on any FilterSectionItem is/not Checked
@@ -138,6 +141,7 @@ namespace Model.Filters
             {
                 SetPreFlopActionItems();
             };
+
             PreFlopActionItem.OnIsChecked.Invoke();
 
             // Make CurrencySection_IsActive depending on any FilterSectionItem is/not Checked
@@ -145,6 +149,7 @@ namespace Model.Filters
             {
                 SetCurrencyItems();
             };
+
             CurrencyItem.OnIsChecked.Invoke();
 
             // Make TableRingSection_IsActive depending on any FilterSectionItem is/not Checked
@@ -158,7 +163,9 @@ namespace Model.Filters
             {
                 SetPlayersBetweenItems();
             };
+
             FilterStandardModel.OnPlayersBetweenChanged.Invoke();
+
             #endregion
 
             #region Hole Cards actions
