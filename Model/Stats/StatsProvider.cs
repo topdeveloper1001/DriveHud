@@ -454,7 +454,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.CheckRiverOnBXLine },
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.CheckRiverAfterBBLine },
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.FoldToRiverCBet },
-                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.FoldToRiverCheckRaise },
+                new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[6], Stat = Stat.FoldToRiverCheckRaise },
 
                 new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.MRatio },
                 new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.BBs },
