@@ -57,7 +57,12 @@ namespace Model.Reports
         /// </summary>        
         public IEnumerable<ReportIndicators> GetReport(bool forceRefresh)
         {
-            if (!TryLoadCachedData() || !ValidateCache() || forceRefresh)
+            if (!TryLoadCachedData())
+            {
+                ValidateCache();
+                BuildReportData();
+            }
+            else if (!ValidateCache() || forceRefresh)
             {
                 BuildReportData();
             }

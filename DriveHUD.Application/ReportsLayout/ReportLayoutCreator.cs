@@ -192,8 +192,8 @@ namespace DriveHUD.Application.ReportsLayout
             GridViewDataColumn column = new GridViewDataColumn
             {
                 Header = CommonResourceManager.Instance.GetResourceString(resourceKey),
-                DataMemberBinding = new Binding(member),
-                Width = new GridViewLength(1, GridViewLengthUnitType.Star),
+                DataMemberBinding = new Binding(member),                
+                Width = GetColumnHeaderWidth("Standard Reg") + 40,
                 CellTemplate = dataTemplate,
                 UniqueName = member,
             };

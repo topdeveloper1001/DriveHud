@@ -18,10 +18,12 @@ namespace DriveHUD.Application.ReportsLayout
 {
     public class PopulationAnalysisLayoutCreator : ReportLayoutCreator
     {
-        private readonly static string[] defaultColumns = new[] { nameof(Indicators.VPIP), nameof(Indicators.PFR), nameof(Indicators.ThreeBet), nameof(Indicators.ThreeBetCall),
-            nameof(Indicators.WTSD), nameof(Indicators.WSSD), nameof(Indicators.AggPr), nameof(Indicators.Agg), nameof(Indicators.WSWSF), nameof(Indicators.FlopCBet),
-            nameof(Indicators.Steal), nameof(Indicators.BlindsReraiseSteal), nameof(Indicators.BlindsFoldSteal), nameof(Indicators.FourBetRange), nameof(Indicators.UO_PFR_EP),
-            nameof(Indicators.UO_PFR_MP), nameof(Indicators.UO_PFR_CO), nameof(Indicators.UO_PFR_BN), nameof(Indicators.UO_PFR_SB) };
+        private readonly static string[] defaultColumns = new[] { nameof(Indicators.VPIP), nameof(Indicators.PFR), nameof(Indicators.AggPr), nameof(Indicators.ThreeBet),
+            nameof(Indicators.FourBet), nameof(Indicators.ThreeBetVsSteal), nameof(Indicators.FoldCBet),  nameof(Indicators.FoldToThreeBet), nameof(Indicators.FoldToFourBet),
+            nameof(Indicators.CheckRaisedFlopCBet), nameof(Indicators.RaiseFlop), nameof(Indicators.RaiseTurn), nameof(Indicators.RaiseRiver),
+            nameof(Indicators.FoldToTurnCBet), nameof(Indicators.FoldToFlopRaise),  nameof(Indicators.CheckRiverAfterBBLine),  nameof(Indicators.CheckRiverOnBXLine),
+            nameof(Indicators.DidDelayedTurnCBet), nameof(Indicators.BetWhenCheckedTo), nameof(Indicators.RiverBetSizeMoreThanOne),
+            nameof(Indicators.WTSDAfterCalling3Bet), nameof(Indicators.WTSDAfterSeeingTurn), nameof(Indicators.WTSDAsPF3Bettor) };
 
         public override void Create(RadGridView gridView)
         {
@@ -29,19 +31,19 @@ namespace DriveHUD.Application.ReportsLayout
 
             gridView.Columns.Add(AddPlayerType("Reports_Columns_PlayerType", ReflectionHelper.GetPath<PopulationReportIndicators>(o => o.PlayerType)));
             gridView.Columns.Add(Add("Reports_Column_TotalHands", nameof(Indicators.TotalHands)));
-            gridView.Columns.Add(AddFinancial("Reports_Column_TotalWon", nameof(Indicators.TotalWon)));
             gridView.Columns.Add(Add("Reports_Column_BB100", nameof(Indicators.BB)));
             gridView.Columns.Add(Add("Reports_Column_EVBB100", nameof(Indicators.EVBB)));
-            gridView.Columns.Add(AddFinancial("Reports_Column_StdDev", nameof(Indicators.StdDev), false));
-            gridView.Columns.Add(Add("Reports_Column_StdDevBB", nameof(Indicators.StdDevBB), false, stringFormat: "{0:n2}"));
-            gridView.Columns.Add(Add("Reports_Column_StdDevBB100", nameof(Indicators.StdDevBBPer100Hands), false, stringFormat: "{0:n2}"));
-            gridView.Columns.Add(AddFinancial("Reports_Column_UsdPerHour", nameof(Indicators.NetWonPerHour), false));
 
             AddDefaultStats(gridView, defaultColumns);
 
-            foreach (var column in gridView.Columns)
+            for (int i = 0; i < gridView.Columns.Count; i++)
             {
-                column.Width = GetColumnWidth(column);
+                if (i == 0)
+                {
+                    continue;
+                }
+
+                gridView.Columns[i].Width = GetColumnWidth(gridView.Columns[i]);
             }
         }
     }
