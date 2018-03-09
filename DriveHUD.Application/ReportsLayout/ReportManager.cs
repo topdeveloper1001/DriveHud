@@ -21,6 +21,7 @@ namespace DriveHUD.Application.ReportsLayout
             Register<ShowdownHandsLayoutCreator, ShowdownHandsReportCreator>(Model.Enums.EnumReports.ShowdownHands);
             Register<PokerSiteLayoutCreator, PokerSiteReportCreator>(Model.Enums.EnumReports.PokerSite);
             Register<OpponentAnalysisLayoutCreator, OpponentAnalysisReportCreator>(Model.Enums.EnumReports.OpponentAnalysis);
+            Register<PopulationAnalysisLayoutCreator, PopulationAnalysisReportCreator>(Model.Enums.EnumReports.PopulationAnalysis);
             /*  Tournaments Tab */
             Register<TournamentsResultLayoutCreator, TournamentOverAllReportCreator>(Model.Enums.EnumReports.TournamentResults);
             Register<TournamentsLayoutCreator, TournamentReportCreator>(Model.Enums.EnumReports.Tournaments);

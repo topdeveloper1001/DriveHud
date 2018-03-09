@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudPlayerSettingsViewModel.cs" company="Ace Poker Solutions">
+// <copyright file="IHudRangeStat.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,19 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
-using Model.Hud;
-using System;
-using System.Collections.Generic;
+using Model.Enums;
 
-namespace DriveHUD.Application.ViewModels.Hud
+namespace Model.Hud
 {
-    public class HudPlayerSettingsViewModelInfo
+    public interface IHudRangeStat
     {
-        public EnumTableType TableType { get; set; }
+        decimal? Low { get; set; }
 
-        public IEnumerable<HudPlayerType> PlayerTypes { get; set; }
+        decimal? High { get; set; }
 
-        public Action Save { get; set; }
+        Stat Stat { get; set; }
+
+        IHudRangeStat Clone();
     }
 }

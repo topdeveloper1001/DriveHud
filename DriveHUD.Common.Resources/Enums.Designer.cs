@@ -808,6 +808,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to bb/100.
+        /// </summary>
+        internal static string Enum_Stat_BB100 {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BB100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BBs.
         /// </summary>
         internal static string Enum_Stat_BBs {

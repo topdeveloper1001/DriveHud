@@ -160,6 +160,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Refresh Report.
+        /// </summary>
+        internal static string Main_ContextMenu_RefreshReport {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_RefreshReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Replay Hand.
         /// </summary>
         internal static string Main_ContextMenu_ReplayHand {

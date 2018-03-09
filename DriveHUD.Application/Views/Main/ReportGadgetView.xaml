@@ -1684,6 +1684,14 @@
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OpponentAnalysis}}"
                         Command="{Binding ReportRadioButtonClickCommand}"
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
+                    <RadioButton
+                        Style="{StaticResource ReportRadioButton}"
+                        Content="{ResX Key=Common_Population}"
+                        Width="150"
+                        Height="51"
+                        IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.PopulationAnalysis}}"
+                        Command="{Binding ReportRadioButtonClickCommand}"
+                        Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <!-- Tournament Columns -->
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
@@ -1887,6 +1895,7 @@
                 x:Name="HandHistoryArea"
                 Grid.Row="4"
                 Background="#181A1D"
+                Visibility="{Binding ReportSelectedItemStat, Converter={dh:EnumNotToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static enums:EnumReports.PopulationAnalysis}}"
                 Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition

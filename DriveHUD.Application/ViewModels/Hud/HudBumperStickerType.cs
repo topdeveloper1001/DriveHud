@@ -15,6 +15,7 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model.Enums;
 using Model.Filters;
+using Model.Hud;
 using ProtoBuf;
 using ReactiveUI;
 using System;

@@ -165,6 +165,7 @@
     <Compile Include="Data\MRatioReportRecord.cs" />
     <Compile Include="Data\NoteBuilder.cs" />
     <Compile Include="Data\OpponentReportIndicators.cs" />
+    <Compile Include="Data\PopulationReportIndicators.cs" />
     <Compile Include="Data\ReportHandViewModel.cs" />
     <Compile Include="Data\ReportIndicators.cs" />
     <Compile Include="Data\ShowdownHandsReportRecord.cs" />
@@ -248,6 +249,12 @@
     <Compile Include="HandAnalyzers\ThreeOfAKindAnalyzers.cs" />
     <Compile Include="HandAnalyzers\TwoPairAnalyzers.cs" />
     <Compile Include="ExpectedValueSolver\IExpectedValueSolver.cs" />
+    <Compile Include="Hud\BaseHudRangeStat.cs" />
+    <Compile Include="Hud\HudPlayerType.cs" />
+    <Compile Include="Hud\HudPlayerTypeService.cs" />
+    <Compile Include="Hud\HudPlayerTypeStat.cs" />
+    <Compile Include="Hud\IHudPlayerTypeService.cs" />
+    <Compile Include="Hud\IHudRangeStat.cs" />
     <Compile Include="Interfaces\ICleanable.cs" />
     <Compile Include="Interfaces\IDataService.cs" />
     <Compile Include="IPlayer.cs" />
@@ -282,12 +289,16 @@
     <Compile Include="Reports\CashBaseReportCreator.cs" />
     <Compile Include="Reports\HoleCardsReportCreator.cs" />
     <Compile Include="Reports\IOpponentReportService.cs" />
+    <Compile Include="Reports\IPopulationReportService.cs" />
     <Compile Include="Reports\IReportCreatorcs.cs" />
     <Compile Include="Reports\OpponentAnalysisReportCreator.cs" />
     <Compile Include="Reports\OpponentReportCache.cs" />
     <Compile Include="Reports\OpponentReportService.cs" />
     <Compile Include="Reports\OverAllReportCreator.cs" />
     <Compile Include="Reports\PokerSiteReportCreator.cs" />
+    <Compile Include="Reports\PopulationAnalysisReportCreator.cs" />
+    <Compile Include="Reports\PopulationReportCache.cs" />
+    <Compile Include="Reports\PopulationReportService.cs" />
     <Compile Include="Reports\PositionReportCreator.cs" />
     <Compile Include="Reports\SessionsReportCreator.cs" />
     <Compile Include="Reports\ShowdownHandsReportCreator.cs" />

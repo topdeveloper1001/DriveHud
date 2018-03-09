@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="TournamentBaseReportCreator.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="PopulationReportCache.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -12,21 +12,31 @@
 
 using DriveHUD.Entities;
 using Model.Data;
+using ProtoBuf;
+using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
 namespace Model.Reports
 {
-    public abstract class TournamentBaseReportCreator : IReportCreator
+    [ProtoContract]
+    internal class PopulationReportCache
     {
-        public bool IsTournament
-        {
-            get
-            {
-                return true;
-            }
-        }
+        [ProtoMember(1)]
+        public List<PopulationReportIndicators> Report { get; set; }
 
-        public abstract ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false);
+        [ProtoMember(2)]
+        public EnumPokerSites? PokerSite { get; set; }
+
+        [ProtoMember(3)]
+        public DateTime StartDate { get; set; }
+
+        [ProtoMember(4)]
+        public DateTime EndDate { get; set; }
+
+        [ProtoMember(5)]
+        public int PlayersFrom { get; set; }
+
+        [ProtoMember(6)]
+        public int PlayersTo { get; set; }
     }
 }

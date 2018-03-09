@@ -23,7 +23,7 @@ namespace Model.Reports
     /// </summary>
     public class TimeReportCreator : CashBaseReportCreator
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false)
         {
             var report = new ObservableCollection<ReportIndicators>();
 

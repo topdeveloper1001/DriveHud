@@ -21,6 +21,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Enums;
 using Model.Filters;
+using Model.Hud;
 using Model.Settings;
 using Model.Stats;
 using System;

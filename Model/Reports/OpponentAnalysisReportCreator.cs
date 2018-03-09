@@ -20,7 +20,7 @@ namespace Model.Reports
 {
     public class OpponentAnalysisReportCreator : CashBaseReportCreator
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false)
         {
             var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
 

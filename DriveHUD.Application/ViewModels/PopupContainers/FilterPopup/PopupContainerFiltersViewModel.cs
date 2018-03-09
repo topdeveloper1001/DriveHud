@@ -165,6 +165,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             StorageModel.FilterPredicate = currentFilter;
 
             var isApplyForBoth = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.IsApplyFiltersToTournamentsAndCashGames;
+
             if (isApplyForBoth)
             {
                 FilterModelManager.SpreadFilter();

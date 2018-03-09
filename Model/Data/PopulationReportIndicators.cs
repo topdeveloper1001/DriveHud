@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IHudRangeStat.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="PopulationReportIndicators.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,18 +10,22 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.Enums;
+using DriveHUD.Entities;
+using Model.Hud;
+using ProtoBuf;
 
-namespace DriveHUD.Application.ViewModels.Hud
+namespace Model.Data
 {
-    public interface IHudRangeStat
+    [ProtoContract]
+    public class PopulationReportIndicators : OpponentReportIndicators
     {
-        decimal? Low { get; set; }
+        [ProtoMember(1)]
+        public string PlayerTypeName { get; set; }
 
-        decimal? High { get; set; }
+        public HudPlayerType PlayerType { get; set; }
 
-        Stat Stat { get; set; }
-
-        IHudRangeStat Clone();
+        protected override void AddReportHand(Playerstatistic statistic)
+        {            
+        }
     }
 }
