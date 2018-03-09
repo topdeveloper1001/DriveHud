@@ -12,6 +12,7 @@
 
 using Microsoft.Practices.Unity;
 using Model.AppStore;
+using Model.Hud;
 using Model.Reports;
 using System;
 
@@ -37,6 +38,8 @@ namespace Model
             container.RegisterType<IAppsAppStoreRepository, AppsAppStoreRepository>();
             container.RegisterType<IAppsAppStoreModel, AppsAppStoreModel>();
             container.RegisterType<IOpponentReportService, OpponentReportService>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IPopulationReportService, PopulationReportService>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IHudPlayerTypeService, HudPlayerTypeService>();
         }
     }
 }

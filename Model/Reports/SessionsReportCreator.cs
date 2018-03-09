@@ -22,7 +22,7 @@ namespace Model.Reports
 {
     public class SessionsReportCreator : CashBaseReportCreator
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false)
         {
             var report = new ObservableCollection<ReportIndicators>();
 

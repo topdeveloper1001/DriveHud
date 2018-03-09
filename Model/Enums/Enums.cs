@@ -137,7 +137,8 @@ namespace Model.Enums
         PokerSite,
         TournamentShowdownHands,
         ShowdownHands,
-        OpponentAnalysis
+        OpponentAnalysis,
+        PopulationAnalysis
     }
 
     public enum EnumReplayerTableType : byte

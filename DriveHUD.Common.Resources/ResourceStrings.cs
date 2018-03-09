@@ -75,7 +75,7 @@ namespace DriveHUD.Common.Resources
         public static string AllResourceString = "Main_ContextMenu_All";
 
         public static string EditTournamentResourceString = "Main_ContextMenu_EditTournament";
-
+        public static string RefreshReportResourceString = "Main_ContextMenu_RefreshReport";
         public static string DeleteHandResourceString = "Main_ContextMenu_DeleteHand";
 
         #endregion

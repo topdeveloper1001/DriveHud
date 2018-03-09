@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
-using Model.Reports;
 using ProtoBuf;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,7 +18,7 @@ using System.Collections.ObjectModel;
 namespace Model.Data
 {
     [ProtoContract]
-    [ProtoInclude(100, typeof(OpponentReportIndicators))]
+    [ProtoInclude(100, typeof(OpponentReportIndicators))]    
     public class ReportIndicators : LightIndicators
     {
         public ReportIndicators() : base()

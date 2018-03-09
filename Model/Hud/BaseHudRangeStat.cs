@@ -14,7 +14,7 @@ using Model.Enums;
 using ProtoBuf;
 using ReactiveUI;
 
-namespace DriveHUD.Application.ViewModels.Hud
+namespace Model.Hud
 {
     [ProtoContract]
     public class BaseHudRangeStat : ReactiveObject, IHudRangeStat

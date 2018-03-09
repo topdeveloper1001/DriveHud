@@ -12,7 +12,7 @@
 
 using System;
 
-namespace DriveHUD.Application.ViewModels.Hud
+namespace Model.Hud
 {
     /// <summary>
     /// Hud player type stat range

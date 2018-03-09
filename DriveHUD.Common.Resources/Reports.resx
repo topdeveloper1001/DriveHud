@@ -741,4 +741,7 @@
   <data name="Reports_Column_FoldTo3BetOOP" xml:space="preserve">
     <value>Fold to 3-Bet OOP %</value>
   </data>
+  <data name="Reports_Columns_PlayerType" xml:space="preserve">
+    <value>Player type</value>
+  </data>
 </root>

@@ -17,6 +17,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Win32;
+using Model.Hud;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     {
         private readonly HudPlayerSettingsViewModelInfo viewModelInfo;
         private readonly IHudLayoutsService hudLayoutService;
+        private readonly IHudPlayerTypeService playerTypeService;
 
         public HudPlayerSettingsViewModel(HudPlayerSettingsViewModelInfo viewModelInfo) : base()
         {
@@ -38,6 +40,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             this.viewModelInfo = viewModelInfo;
 
             hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+            playerTypeService = ServiceLocator.Current.GetInstance<IHudPlayerTypeService>();
 
             Initialize();
         }
@@ -67,7 +70,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             ResetCommand = ReactiveCommand.Create(() =>
             {
-                var defaultPlayerTypes = hudLayoutService.CreateDefaultPlayerTypes(viewModelInfo.TableType);
+                var defaultPlayerTypes = playerTypeService.CreateDefaultPlayerTypes(viewModelInfo.TableType);
 
                 var defaultPlayerType = defaultPlayerTypes.FirstOrDefault(p => p.Name == SelectedPlayerType.Name);
 
@@ -169,7 +172,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private void Load()
         {
-            var initialDirectory = hudLayoutService.GetImageDirectory();
+            var initialDirectory = playerTypeService.GetImageDirectory();
 
             var openFileDialog = new OpenFileDialog
             {

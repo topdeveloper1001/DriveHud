@@ -22,7 +22,7 @@ namespace Model.Reports
 {
     public class ShowdownHandsReportCreator : CashBaseReportCreator
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false)
         {
             var report = new ObservableCollection<ReportIndicators>();
 
@@ -75,7 +75,7 @@ namespace Model.Reports
 
     public class TournamentShowdownHandsReportCreator : TournamentBaseReportCreator
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false)
         {
             var report = new ObservableCollection<ReportIndicators>();
             var analyzer = new HandAnalyzer(HandAnalyzer.GetReportAnalyzers());

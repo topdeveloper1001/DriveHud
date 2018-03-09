@@ -407,9 +407,7 @@ namespace DriveHUD.Importers.PokerMaster
             else
             {
                 var blindsCount = handHistory.PreFlop
-                    .Count(x => x.HandActionType == HandActionType.SMALL_BLIND || x.HandActionType == HandActionType.BIG_BLIND || x.HandActionType == HandActionType.STRADDLE);
-
-                //blindsCount = blindsCount > 1 ? 2 : blindsCount;
+                    .Count(x => x.HandActionType == HandActionType.SMALL_BLIND || x.HandActionType == HandActionType.BIG_BLIND || x.HandActionType == HandActionType.STRADDLE);                
 
                 var preflopOrderedPlayers = orderedPlayers.Skip(blindsCount).Concat(orderedPlayers.Take(blindsCount)).ToArray();
                 var preflopOrderedPlayersDictionary = OrderedPlayersToDict(preflopOrderedPlayers);

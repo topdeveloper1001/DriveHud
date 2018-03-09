@@ -19,7 +19,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Xml.Serialization;
 
-namespace DriveHUD.Application.ViewModels.Hud
+namespace Model.Hud
 {
     /// <summary>
     /// Hud player profile type
@@ -257,6 +257,6 @@ namespace DriveHUD.Application.ViewModels.Hud
                 s.CurrentStat.Low = s.Stat.Low;
                 s.CurrentStat.High = s.Stat.High;
             });
-        }
+        }     
     }
 }

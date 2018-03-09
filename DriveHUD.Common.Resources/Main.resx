@@ -150,6 +150,9 @@
   <data name="Main_ContextMenu_MakeNote" xml:space="preserve">
     <value>Make Note</value>
   </data>
+  <data name="Main_ContextMenu_RefreshReport" xml:space="preserve">
+    <value>Refresh Report</value>
+  </data>
   <data name="Main_ContextMenu_ReplayHand" xml:space="preserve">
     <value>Replay Hand</value>
   </data>

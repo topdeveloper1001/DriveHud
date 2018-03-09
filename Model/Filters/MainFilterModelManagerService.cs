@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Model.Enums;
-using System.ComponentModel;
-using DriveHUD.Common.Annotations;
-using System.Runtime.CompilerServices;
-using System.Collections.ObjectModel;
+﻿using DriveHUD.Common.Annotations;
 using DriveHUD.Common.Linq;
+using Model.Enums;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace Model.Filters
 {
@@ -110,6 +108,7 @@ namespace Model.Filters
         }
 
         #region Properties
+
         private EnumFilterType _enumFilterType;
 
         public Dictionary<EnumFilterType, ObservableCollection<IFilterModel>> _filterModelCollections;
@@ -143,6 +142,7 @@ namespace Model.Filters
         #endregion
 
         #region NotifyPropertyChanged
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
@@ -150,6 +150,7 @@ namespace Model.Filters
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
         #endregion
     }
 }

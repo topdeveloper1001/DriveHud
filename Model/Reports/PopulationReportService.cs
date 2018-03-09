@@ -1,0 +1,301 @@
+﻿//-----------------------------------------------------------------------
+// <copyright file="PopulationReportService.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHud.Common.Log;
+using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
+using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
+using Model.Data;
+using Model.Enums;
+using Model.Filters;
+using Model.Hud;
+using Model.Importer;
+using Model.Interfaces;
+using Model.Settings;
+using ProtoBuf;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Model.Reports
+{
+    internal class PopulationReportService : IPopulationReportService
+    {
+        private const string ReportFileName = "PopulationReport.data";
+
+        private readonly string ReportFile = Path.Combine(StringFormatter.GetAppDataFolderPath(), ReportFileName);
+
+        private readonly IDataService dataService;
+
+        private readonly IHudPlayerTypeService hudPlayerTypeService;
+
+        private PopulationReportCache populationData;
+
+        private static readonly object syncLock = new object();
+
+        public PopulationReportService()
+        {
+            dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            hudPlayerTypeService = ServiceLocator.Current.GetInstance<IHudPlayerTypeService>();
+        }
+
+        /// <summary>
+        /// Gets population data
+        /// </summary>        
+        public IEnumerable<ReportIndicators> GetReport(bool forceRefresh)
+        {
+            if (!TryLoadCachedData() || !ValidateCache() || forceRefresh)
+            {
+                BuildReportData();
+            }
+
+            return populationData.Report.ToList();
+        }
+
+        private bool ValidateCache()
+        {
+            if (populationData == null)
+            {
+                return false;
+            }
+
+            // load existing filters
+            var filterModelManagerService = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString());
+            var filterModelDictionary = filterModelManagerService.GetFilterModelDictionary();
+            var cashFilterModel = filterModelDictionary[EnumFilterType.Cash];
+
+            var filterStandardModel = (FilterStandardModel)cashFilterModel.FirstOrDefault(x => x is FilterStandardModel);
+            var filterDateModel = (FilterDateModel)cashFilterModel.FirstOrDefault(x => x is FilterDateModel);
+
+            var playersFrom = filterStandardModel.PlayerCountMinSelectedItem ?? 0;
+            var playersTo = filterStandardModel.PlayerCountMaxSelectedItem ?? 10;
+
+            var startDate = DateTime.MinValue;
+            var endDate = DateTime.MaxValue;
+
+            switch (filterDateModel.DateFilterType.EnumDateRange)
+            {
+                case EnumDateFiterStruct.EnumDateFiter.Today:
+                    startDate = DateTime.Now.StartOfDay();
+                    break;
+                case EnumDateFiterStruct.EnumDateFiter.ThisWeek:
+                    var firstDayOfWeek = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.StartDayOfWeek;
+                    startDate = DateTime.Now.FirstDayOfWeek(firstDayOfWeek);
+                    break;
+                case EnumDateFiterStruct.EnumDateFiter.ThisMonth:
+                    startDate = DateTime.Now.FirstDayOfMonth();
+                    break;
+                case EnumDateFiterStruct.EnumDateFiter.ThisYear:
+                    startDate = DateTime.Now.FirstDayOfYear();
+                    break;
+                case EnumDateFiterStruct.EnumDateFiter.CustomDateRange:
+                    startDate = filterDateModel.DateFilterType.DateFrom;
+                    endDate = filterDateModel.DateFilterType.DateTo;
+                    break;
+                case EnumDateFiterStruct.EnumDateFiter.LastMonth:
+                    var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
+
+                    var lastCashAvailableDate = storageModel.StatisticCollection?
+                        .ToArray()
+                        .Where(x => !x.IsTourney)
+                        .MaxOrDefault(x => Converter.ToLocalizedDateTime(x.Time));
+
+                    lastCashAvailableDate = lastCashAvailableDate ?? DateTime.Now;
+
+                    startDate = lastCashAvailableDate.Value.FirstDayOfMonth();
+                    break;
+            }
+
+            // compare with filters which was used to build that cache
+            var isValid = playersFrom == populationData.PlayersFrom && playersTo == populationData.PlayersTo &&
+                startDate == populationData.StartDate && endDate == populationData.EndDate;
+
+            populationData.PlayersFrom = playersFrom;
+            populationData.PlayersTo = playersTo;
+            populationData.StartDate = startDate;
+            populationData.EndDate = endDate;
+
+            return isValid;
+        }
+
+        /// <summary>
+        /// Tries to load data from the population report cache
+        /// </summary>
+        /// <returns>True if data is loaded; otherwise - false</returns>
+        private bool TryLoadCachedData()
+        {
+            if (populationData != null)
+            {
+                return true;
+            }
+
+            lock (syncLock)
+            {
+                if (populationData != null)
+                {
+                    return true;
+                }
+
+                if (File.Exists(ReportFile))
+                {
+                    try
+                    {
+                        using (var fs = new FileStream(ReportFile, FileMode.Open, FileAccess.ReadWrite, FileShare.Read))
+                        {
+                            populationData = Serializer.Deserialize<PopulationReportCache>(fs);
+                            LoadPlayerTypes();
+                            return true;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, $"Population report could not be loaded from '{ReportFile}'", ex);
+                    }
+                }
+
+                populationData = new PopulationReportCache
+                {
+                    Report = new List<PopulationReportIndicators>()
+                };
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Builds report data
+        /// </summary>
+        private void BuildReportData()
+        {
+            lock (syncLock)
+            {
+                try
+                {
+                    var tableType = GetTableType();
+
+                    var playerTypes = hudPlayerTypeService.CreateDefaultPlayerTypes(tableType);
+
+                    var players = dataService.GetPlayersList();
+
+                    var populationIndicators = playerTypes.Select(x => new PopulationReportIndicators
+                    {
+                        PlayerTypeName = x.Name,
+                        PlayerType = x
+                    }).ToDictionary(x => x.PlayerTypeName);
+
+                    Parallel.ForEach(players, player =>
+                    {
+                        var playerIndicators = new LightIndicators();
+
+                        dataService.ActOnPlayerStatisticFromFile(player.PlayerId,
+                            x => !x.IsTourney && FilterStatistic(x),
+                            x => playerIndicators.AddStatistic(x)
+                        );
+
+                        var playerType = hudPlayerTypeService.Match(playerIndicators, playerTypes, true);
+
+                        if (playerType != null)
+                        {
+                            dataService.ActOnPlayerStatisticFromFile(player.PlayerId,
+                                x => !x.IsTourney && FilterStatistic(x),
+                                x =>
+                                {
+                                    lock (populationIndicators[playerType.Name])
+                                    {
+                                        populationIndicators[playerType.Name].AddStatistic(x);
+                                    }
+                                }
+                            );
+                        }
+                    });
+
+                    populationData.Report = populationIndicators.Values.ToList();
+
+                    SaveCachedData();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Could build population report data.", e);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Saves data to the opponent report file
+        /// </summary>
+        private bool SaveCachedData()
+        {
+            try
+            {
+                using (var fs = new FileStream(ReportFile, FileMode.Create, FileAccess.ReadWrite, FileShare.Read))
+                {
+                    Serializer.Serialize(fs, populationData);
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not save population report to '{ReportFile}'", e);
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Load player types and set them to report indicators
+        /// </summary>
+        private void LoadPlayerTypes()
+        {
+            var tableType = GetTableType();
+
+            var playerTypes = hudPlayerTypeService.CreateDefaultPlayerTypes(tableType).ToDictionary(x => x.Name);
+
+            populationData.Report.ForEach(x =>
+            {
+                if (playerTypes.ContainsKey(x.PlayerTypeName))
+                {
+                    x.PlayerType = playerTypes[x.PlayerTypeName];
+                }
+            });
+        }
+
+        /// <summary>
+        /// Gets table type based on filters
+        /// </summary>
+        /// <returns></returns>
+        private EnumTableType GetTableType()
+        {
+            if (populationData != null && populationData.PlayersFrom > 6)
+            {
+                return EnumTableType.Nine;
+            }
+
+            return EnumTableType.Six;
+        }
+
+        /// <summary>
+        /// Filters the specified <see cref="Playerstatistic"/>
+        /// </summary>
+        /// <param name="stat"></param>
+        /// <returns></returns>
+        private bool FilterStatistic(Playerstatistic stat)
+        {
+            return populationData != null &&
+                stat.Numberofplayers >= populationData.PlayersFrom && stat.Numberofplayers <= populationData.PlayersTo &&
+                stat.Time >= populationData.StartDate && stat.Time <= populationData.EndDate;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudPlayerSettingsViewModel.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="IPopulationReportService.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,19 +10,20 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
-using Model.Hud;
-using System;
+using Model.Data;
 using System.Collections.Generic;
 
-namespace DriveHUD.Application.ViewModels.Hud
+namespace Model.Reports
 {
-    public class HudPlayerSettingsViewModelInfo
+    /// <summary>
+    /// Exposes service to read/update/cache data for population report
+    /// </summary>
+    public interface IPopulationReportService
     {
-        public EnumTableType TableType { get; set; }
-
-        public IEnumerable<HudPlayerType> PlayerTypes { get; set; }
-
-        public Action Save { get; set; }
+        /// <summary>
+        /// Gets the population report 
+        /// </summary>
+        /// <returns>The list of <see cref="Indicators"/></returns>
+        IEnumerable<ReportIndicators> GetReport(bool forceRefresh);                       
     }
 }

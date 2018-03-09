@@ -57,6 +57,7 @@ namespace DriveHUD.Application.Views
         private Model.Enums.EnumReports reportCache;
         private RadContextMenu handsGridContextMenu;
         private RadContextMenu tournamentsGridContextMenu;
+        private RadContextMenu reportsGridContextMenu;
         private readonly IDataService dataService;
 
         public ReportGadgetView()
@@ -106,6 +107,7 @@ namespace DriveHUD.Application.Views
         {
             handsGridContextMenu = new RadContextMenu();
             tournamentsGridContextMenu = new RadContextMenu();
+            reportsGridContextMenu = new RadContextMenu();
 
             /* Calculate equity item */
             RadMenuItem calculateEquityItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.CalculateEquityResourceString), false,
@@ -169,6 +171,9 @@ namespace DriveHUD.Application.Views
             handsGridContextMenu.Items.Add(deleteHandItem);
 
             tournamentsGridContextMenu.Items.Add(editTournamentItem);
+            tournamentsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RefreshReportResourceString), false, RefreshReport));
+
+            reportsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RefreshReportResourceString), false, RefreshReport));
         }
 
         private RadMenuItem CreateRadMenuItem(string header, bool isCheckable, RadRoutedEventHandler clickAction, object tag = null, Action<RadMenuItem> extraAction = null, string command = null)
@@ -208,10 +213,16 @@ namespace DriveHUD.Application.Views
         private void EditTournament(object sender, RadRoutedEventArgs e)
         {
             var item = tournamentsGridContextMenu.GetClickedElement<GridViewRow>();
+
             if (item != null)
             {
                 reportGadgetViewModel.EditTournamentCommand.Execute(item.DataContext);
             }
+        }
+
+        private void RefreshReport(object sender, RadRoutedEventArgs e)
+        {
+            ReportUpdate(true);
         }
 
         private void MakeNote(object sender, RadRoutedEventArgs e)
@@ -358,7 +369,7 @@ namespace DriveHUD.Application.Views
             GridLayoutSave(GridViewReport, string.Format("{0}ReportLayout.data", reportCache));
         }
 
-        private async Task ReportSet(EnumReports reportType)
+        private async Task ReportSet(EnumReports reportType, bool forceRefresh)
         {
             try
             {
@@ -379,7 +390,7 @@ namespace DriveHUD.Application.Views
 
                 var statistic = creator.IsTournament ? storageModel.FilteredTournamentPlayerStatistic : storageModel.FilteredCashPlayerStatistic;
 
-                var reportCollection = GetReportCollectionAsync(creator, statistic);
+                var reportCollection = GetReportCollectionAsync(creator, statistic, forceRefresh);
 
                 // clear columns in order to avoid  Binding exceptions
                 GridViewReport.Columns.Clear();
@@ -409,18 +420,18 @@ namespace DriveHUD.Application.Views
             }
         }
 
-        private Task<ObservableCollection<ReportIndicators>> GetReportCollectionAsync(IReportCreator reportCreator, IList<Playerstatistic> playerstatistics)
+        private Task<ObservableCollection<ReportIndicators>> GetReportCollectionAsync(IReportCreator reportCreator, IList<Playerstatistic> playerstatistics, bool forceRefresh)
         {
             return Task.Run(() =>
             {
-                return reportCreator.Create(playerstatistics);
+                return reportCreator.Create(playerstatistics, forceRefresh);
             });
         }
 
-        private async void ReportUpdate()
+        private async void ReportUpdate(bool forceRefresh = false)
         {
             ResizeReportGrid();
-            await ReportSet(reportGadgetViewModel.ReportSelectedItemStat);
+            await ReportSet(reportGadgetViewModel.ReportSelectedItemStat, forceRefresh);
 
             ReportLayoutLoad();
         }
@@ -510,7 +521,7 @@ namespace DriveHUD.Application.Views
                 }
                 else
                 {
-                    RadContextMenu.SetContextMenu(row, null);
+                    RadContextMenu.SetContextMenu(row, reportsGridContextMenu);
                 }
             }
         }
