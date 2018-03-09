@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="TournamentBaseReportCreator.cs" company="Ace Poker Solutions">
+// <copyright file="PopulationAnalysisReportCreator.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,22 +11,24 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace Model.Reports
 {
-    public abstract class TournamentBaseReportCreator : IReportCreator
+    public class PopulationAnalysisReportCreator : CashBaseReportCreator
     {
-        public bool IsTournament
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false)
         {
-            get
-            {
-                return true;
-            }
-        }
+            var populationReportService = ServiceLocator.Current.GetInstance<IPopulationReportService>();
 
-        public abstract ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false);
+            var report = populationReportService.GetReport(forceRefresh);
+
+            return report != null ?
+                new ObservableCollection<ReportIndicators>(report) :
+                new ObservableCollection<ReportIndicators>();
+        }
     }
 }

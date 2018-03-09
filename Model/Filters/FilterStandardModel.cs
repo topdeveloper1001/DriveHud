@@ -535,7 +535,7 @@ namespace Model.Filters
             {
                 if (value == _type) return;
                 _type = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -546,7 +546,7 @@ namespace Model.Filters
             {
                 if (value == _description) return;
                 _description = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -557,7 +557,7 @@ namespace Model.Filters
             {
                 if (value == _playerCountMinAvailable) return;
                 _playerCountMinAvailable = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -568,7 +568,7 @@ namespace Model.Filters
             {
                 if (value != null && _playerCountMinList != null && value.SequenceEqual(_playerCountMinList)) return;
                 _playerCountMinList = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 PlayerCountListSet();
             }
@@ -581,7 +581,7 @@ namespace Model.Filters
             {
                 if (value == _playerCountMinSelectedItem) return;
                 _playerCountMinSelectedItem = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 PlayerCountListSet();
             }
@@ -594,7 +594,7 @@ namespace Model.Filters
             {
                 if (value == _playerCountMaxAvailable) return;
                 _playerCountMaxAvailable = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -605,7 +605,7 @@ namespace Model.Filters
             {
                 if (value != null && _playerCountMaxList != null && value.SequenceEqual(_playerCountMaxList)) return;
                 _playerCountMaxList = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 PlayerCountListSet();
             }
@@ -618,7 +618,7 @@ namespace Model.Filters
             {
                 if (value == _playerCountMaxSelectedItem) return;
                 _playerCountMaxSelectedItem = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 PlayerCountListSet();
             }
@@ -631,7 +631,7 @@ namespace Model.Filters
             {
                 if (value == _preFlopActionCollection) return;
                 _preFlopActionCollection = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -642,7 +642,7 @@ namespace Model.Filters
             {
                 if (value == _stakeLevelCollection) return;
                 _stakeLevelCollection = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -653,7 +653,7 @@ namespace Model.Filters
             {
                 if (value == _currencyCollection) return;
                 _currencyCollection = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -664,7 +664,7 @@ namespace Model.Filters
             {
                 if (value == _statCollection) return;
                 _statCollection = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -675,7 +675,7 @@ namespace Model.Filters
             {
                 if (value == _table6maxCollection) return;
                 _table6maxCollection = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -686,7 +686,7 @@ namespace Model.Filters
             {
                 if (value == _tableFullRingCollection) return;
                 _tableFullRingCollection = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -707,7 +707,7 @@ namespace Model.Filters
             {
                 if (value == _itemType) return;
                 _itemType = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -807,7 +807,7 @@ namespace Model.Filters
             {
                 if (value == _isChecked) return;
                 _isChecked = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 if (OnIsChecked != null) OnIsChecked.Invoke();
             }
@@ -830,7 +830,7 @@ namespace Model.Filters
             {
                 if (value == _isChecked) return;
                 _isChecked = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 if (OnIsChecked != null) OnIsChecked.Invoke();
             }
@@ -891,7 +891,7 @@ namespace Model.Filters
             {
                 if (value == _value) return;
                 _value = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -902,7 +902,7 @@ namespace Model.Filters
             {
                 if (value == _isChecked) return;
                 _isChecked = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 if (OnIsChecked != null) OnIsChecked.Invoke();
             }
@@ -943,7 +943,7 @@ namespace Model.Filters
 
                 currentTriState = value;
 
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 if (OnTriState != null)
                 {

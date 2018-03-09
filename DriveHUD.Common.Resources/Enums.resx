@@ -926,4 +926,7 @@
   <data name="Enum_EnumPokerSites_PokerMaster" xml:space="preserve">
     <value>PokerMaster</value>
   </data>
+  <data name="Enum_Stat_BB100" xml:space="preserve">
+    <value>bb/100</value>
+  </data>
 </root>

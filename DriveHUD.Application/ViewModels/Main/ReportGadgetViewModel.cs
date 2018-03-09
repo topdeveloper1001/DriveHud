@@ -253,7 +253,7 @@ namespace DriveHUD.Application.ViewModels
                 }
                 else
                 {
-                    OnPropertyChanged(nameof(ReportSelectedItemStat));
+                    RaisePropertyChanged(nameof(ReportSelectedItemStat));
                 }
             });
 
@@ -417,7 +417,7 @@ namespace DriveHUD.Application.ViewModels
                 }
 
                 SetProperty(ref isShowTournamentData, value);
-                OnPropertyChanged(nameof(IsShowCashData));
+                RaisePropertyChanged(nameof(IsShowCashData));
             }
         }
 

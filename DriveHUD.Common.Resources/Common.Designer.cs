@@ -1674,6 +1674,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Population.
+        /// </summary>
+        internal static string Common_Population {
+            get {
+                return ResourceManager.GetString("Common_Population", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Position.
         /// </summary>
         internal static string Common_Position {

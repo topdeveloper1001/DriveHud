@@ -398,6 +398,7 @@
     <Compile Include="Modules\IModuleService.cs" />
     <Compile Include="Modules\ModuleService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\PopulationAnalysisLayoutCreator.cs" />
     <Compile Include="Security\DHCReg.cs" />
     <Compile Include="Security\DHHReg.cs" />
     <Compile Include="Security\DHOReg.cs" />
@@ -528,11 +529,11 @@
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudStatsDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\IHudBaseToolViewModel.cs" />
+    <Compile Include="ViewModels\Hud\IHudLayoutsService.cs" />
     <Compile Include="ViewModels\Hud\IPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PartyPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PMHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
-    <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />
     <Compile Include="ViewModels\Hud\BetOnlineHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\HudBumperStickersSettingsViewModel.cs" />
@@ -542,7 +543,6 @@
     <Compile Include="ViewModels\Hud\HudTrackConditionsViewModelInfo.cs" />
     <Compile Include="Controls\IDropDownMenuItem.cs" />
     <Compile Include="ViewModels\Hud\HudWindowViewModel.cs" />
-    <Compile Include="ViewModels\Hud\IHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\IHudWindowElement.cs" />
     <Compile Include="ViewModels\Hud\Poker888HudPanelService.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutBumperStickersTool.cs" />
@@ -729,8 +729,6 @@
     <Compile Include="ViewModels\Hud\HudPanelService.cs" />
     <Compile Include="ViewModels\Hud\HudPlayerSettingsViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudPlayerSettingsViewModelInfo.cs" />
-    <Compile Include="ViewModels\Hud\HudPlayerType.cs" />
-    <Compile Include="ViewModels\Hud\HudPlayerTypeStat.cs" />
     <Compile Include="ViewModels\Hud\HudSavedDataInfo.cs" />
     <Compile Include="ViewModels\Hud\HudSavedLayout.cs" />
     <Compile Include="ViewModels\Hud\HudSelectLayoutViewModel.cs" />
@@ -739,7 +737,6 @@
     <Compile Include="ViewModels\Hud\HudStatSettingsViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudStatSettingsViewModelInfo.cs" />
     <Compile Include="ViewModels\Hud\IHudElementViewModelCreator.cs" />
-    <Compile Include="ViewModels\Hud\IHudLayoutsService.cs" />
     <Compile Include="ViewModels\Hud\IHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PlayerHudContent.cs" />
     <Compile Include="ViewModels\IProgressViewModel.cs" />

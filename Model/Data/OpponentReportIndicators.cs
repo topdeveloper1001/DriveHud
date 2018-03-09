@@ -20,6 +20,7 @@ using System.Linq;
 namespace Model.Data
 {
     [ProtoContract]
+    [ProtoInclude(100, typeof(PopulationReportIndicators))]
     public class OpponentReportIndicators : ReportIndicators
     {
         private const int handsToStore = 100;

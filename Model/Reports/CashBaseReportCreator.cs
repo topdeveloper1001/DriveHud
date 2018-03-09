@@ -27,6 +27,6 @@ namespace Model.Reports
             }
         }
 
-        public abstract ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics);
+        public abstract ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false);
     }
 }

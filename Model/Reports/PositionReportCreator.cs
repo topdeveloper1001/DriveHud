@@ -23,7 +23,7 @@ namespace Model.Reports
     /// </summary>
     public class PositionReportCreator : CashBaseReportCreator
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false)
         {
             var report = new ObservableCollection<ReportIndicators>();
 
@@ -50,7 +50,7 @@ namespace Model.Reports
 
     public class TournamentPositionReportCreator : TournamentBaseReportCreator
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false)
         {
             var report = new ObservableCollection<ReportIndicators>();
 

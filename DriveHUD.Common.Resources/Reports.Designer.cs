@@ -1931,5 +1931,14 @@ namespace DriveHUD.Common.Resources {
                 return ResourceManager.GetString("Reports_Column_WTSDAsPF3Bettor", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player type.
+        /// </summary>
+        internal static string Reports_Columns_PlayerType {
+            get {
+                return ResourceManager.GetString("Reports_Columns_PlayerType", resourceCulture);
+            }
+        }
     }
 }

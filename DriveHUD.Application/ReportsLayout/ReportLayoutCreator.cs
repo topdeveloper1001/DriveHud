@@ -16,10 +16,13 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Helpers;
 using Model.Data;
 using System;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Markup;
+using System.Xml;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.ReportsLayout
@@ -156,6 +159,43 @@ namespace DriveHUD.Application.ReportsLayout
                 CellTemplate = template,
                 UniqueName = member,
                 IsVisible = isVisible
+            };
+
+            return column;
+        }
+
+        public virtual GridViewDataColumn AddPlayerType(string resourceKey, string member)
+        {
+            var stringReader = new StringReader(@"<DataTemplate 
+                xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation""
+                 xmlns:dh=""http://www.acepokersolutions.com/winfx/2015/xaml/presentation"">
+                    <StackPanel Orientation=""Horizontal"">
+                        <Image 
+                            Source=""{Binding PlayerType.Image, Converter={dh:StringToImageSourceConverter}}"" 
+                            Width=""24""
+                            Height=""24""
+                            VerticalAlignment=""Center""
+                            HorizontalAlignment=""Center""
+                            />
+                        <TextBlock 
+                            Text=""{Binding PlayerType.Name}"" 
+                            Margin=""5,0,0,0""
+                            VerticalAlignment=""Center"" />
+                    </StackPanel>
+                </DataTemplate>");
+
+            var xmlReader = XmlReader.Create(stringReader);
+
+            var dataTemplate = (DataTemplate)XamlReader.Load(xmlReader);
+            dataTemplate.Seal();
+
+            GridViewDataColumn column = new GridViewDataColumn
+            {
+                Header = CommonResourceManager.Instance.GetResourceString(resourceKey),
+                DataMemberBinding = new Binding(member),
+                Width = new GridViewLength(1, GridViewLengthUnitType.Star),
+                CellTemplate = dataTemplate,
+                UniqueName = member,
             };
 
             return column;

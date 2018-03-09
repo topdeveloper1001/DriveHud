@@ -791,8 +791,7 @@ namespace DriveHUD.Importers.Bovada
 
                     InitializeActiveTableDict(handModel, configuration);
 
-                    Game game = null;
-                    var handHistoryXml = handHistoryBuilder.BuildXml(handModel, this, configuration, out game);
+                    var handHistoryXml = handHistoryBuilder.BuildXml(handModel, this, configuration, out Game game);
 
                     UpdatePlayersAddedRemoved(handModel, configuration, false);
 
@@ -915,6 +914,7 @@ namespace DriveHUD.Importers.Bovada
             }
 
             TableIndex = cmdObj.tableNo;
+    
         }
 
         protected virtual void PreImportChecks()
