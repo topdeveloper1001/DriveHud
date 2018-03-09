@@ -267,7 +267,7 @@ namespace Model.Hud
         /// <returns>Path to the image directory</returns>
         public string GetImageDirectory()
         {
-            var executingApp = Assembly.GetExecutingAssembly().Location;
+            var executingApp = Assembly.GetEntryAssembly().Location;
             return Path.Combine(Path.GetDirectoryName(executingApp), PathToImages);
         }
 
