@@ -27,10 +27,12 @@ namespace DriveHUD.Application.ReportsLayout
 
         public override void Create(RadGridView gridView)
         {
+            gridView.FrozenColumnCount = 1;            
             gridView.Columns.Clear();
 
             gridView.Columns.Add(AddPlayerType("Reports_Columns_PlayerType", ReflectionHelper.GetPath<PopulationReportIndicators>(o => o.PlayerType)));
             gridView.Columns.Add(Add("Reports_Column_TotalHands", nameof(Indicators.TotalHands)));
+            gridView.Columns.Add(AddFinancial("Reports_Column_TotalWon", nameof(Indicators.TotalWon)));
             gridView.Columns.Add(Add("Reports_Column_BB100", nameof(Indicators.BB)));
             gridView.Columns.Add(Add("Reports_Column_EVBB100", nameof(Indicators.EVBB)));
 

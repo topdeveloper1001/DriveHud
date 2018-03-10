@@ -403,6 +403,7 @@ namespace DriveHUD.Application.Views
                 }
 
                 reportGadgetViewModel.IsBusy = false;
+                GridViewReport.FrozenColumnCount = 0;
 
                 layout.Create(GridViewReport);
 

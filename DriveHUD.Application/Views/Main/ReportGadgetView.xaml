@@ -1778,6 +1778,7 @@
                     VerticalAlignment="Stretch"
                     RowHeight="40"
                     SelectionMode="Single"
+                    FrozenColumnsSplitterVisibility="Collapsed"
                     CanUserFreezeColumns="True"
                     CanUserResizeColumns="True"
                     CanUserReorderColumns="True"
@@ -1786,6 +1787,7 @@
                     SelectedItem="{Binding Path=ReportSelectedItem, Mode=TwoWay}"
                     RowStyle="{StaticResource CustomSelectionIfSingleGridViewRowStyle}"
                     Sorting="GridViewReport_Sorting">
+
                     <telerik:RadContextMenu.ContextMenu>
                         <telerik:RadContextMenu
                             x:Name="GridViewReportMenu"

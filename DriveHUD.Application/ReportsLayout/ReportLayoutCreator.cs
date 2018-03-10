@@ -157,7 +157,7 @@ namespace DriveHUD.Application.ReportsLayout
                 DataMemberBinding = new Binding(member),
                 Width = width == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
                 CellTemplate = template,
-                UniqueName = member,
+                UniqueName = member,                
                 IsVisible = isVisible
             };
 
@@ -195,7 +195,7 @@ namespace DriveHUD.Application.ReportsLayout
                 DataMemberBinding = new Binding(member),                
                 Width = GetColumnHeaderWidth("Standard Reg") + 40,
                 CellTemplate = dataTemplate,
-                UniqueName = member,
+                UniqueName = member                
             };
 
             return column;
