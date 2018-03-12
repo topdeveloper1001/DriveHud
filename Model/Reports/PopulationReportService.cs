@@ -14,6 +14,7 @@ using DriveHud.Common.Log;
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Data;
@@ -201,13 +202,29 @@ namespace Model.Reports
                         PlayerType = x
                     }).ToDictionary(x => x.PlayerTypeName);
 
+                    var allPlayersType = CreateAllPlayersType();
+
+                    var allPlayersIndicator = new PopulationReportIndicators
+                    {
+                        PlayerTypeName = allPlayersType.Name,
+                        PlayerType = allPlayersType
+                    };
+
                     Parallel.ForEach(players, player =>
                     {
                         var playerIndicators = new LightIndicators();
 
                         dataService.ActOnPlayerStatisticFromFile(player.PlayerId,
                             x => !x.IsTourney && FilterStatistic(x),
-                            x => playerIndicators.AddStatistic(x)
+                            x =>
+                            {
+                                playerIndicators.AddStatistic(x);
+
+                                lock (allPlayersIndicator)
+                                {
+                                    allPlayersIndicator.AddStatistic(x);
+                                }
+                            }
                         );
 
                         var playerType = hudPlayerTypeService.Match(playerIndicators, playerTypes, true);
@@ -226,6 +243,8 @@ namespace Model.Reports
                             );
                         }
                     });
+
+                    populationIndicators.Add(allPlayersIndicator.PlayerTypeName, allPlayersIndicator);
 
                     populationData.Report = populationIndicators.Values.ToList();
 
@@ -266,7 +285,10 @@ namespace Model.Reports
         {
             var tableType = GetTableType();
 
-            var playerTypes = hudPlayerTypeService.CreateDefaultPlayerTypes(tableType).ToDictionary(x => x.Name);
+            var playerTypes = hudPlayerTypeService
+                .CreateDefaultPlayerTypes(tableType)
+                .Concat(new[] { CreateAllPlayersType() })
+                .ToDictionary(x => x.Name);
 
             populationData.Report.ForEach(x =>
             {
@@ -275,6 +297,16 @@ namespace Model.Reports
                     x.PlayerType = playerTypes[x.PlayerTypeName];
                 }
             });
+        }
+
+        private HudPlayerType CreateAllPlayersType()
+        {
+            var hudPlayerType = new HudPlayerType
+            {
+                Name = CommonResourceManager.Instance.GetResourceString("Reports_AllPlayers_PlayerType")
+            };
+
+            return hudPlayerType;
         }
 
         /// <summary>

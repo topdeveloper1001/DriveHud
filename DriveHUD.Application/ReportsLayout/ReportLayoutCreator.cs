@@ -157,7 +157,7 @@ namespace DriveHUD.Application.ReportsLayout
                 DataMemberBinding = new Binding(member),
                 Width = width == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
                 CellTemplate = template,
-                UniqueName = member,                
+                UniqueName = member,
                 IsVisible = isVisible
             };
 
@@ -172,6 +172,7 @@ namespace DriveHUD.Application.ReportsLayout
                     <StackPanel Orientation=""Horizontal"">
                         <Image 
                             Source=""{Binding PlayerType.Image, Converter={dh:StringToImageSourceConverter}}"" 
+                            Visibility=""{Binding PlayerType.Image, Converter={dh:NullOrEmptyToVisibilityConverter}}""
                             Width=""24""
                             Height=""24""
                             VerticalAlignment=""Center""
@@ -192,10 +193,10 @@ namespace DriveHUD.Application.ReportsLayout
             GridViewDataColumn column = new GridViewDataColumn
             {
                 Header = CommonResourceManager.Instance.GetResourceString(resourceKey),
-                DataMemberBinding = new Binding(member),                
+                DataMemberBinding = new Binding(member),
                 Width = GetColumnHeaderWidth("Standard Reg") + 40,
                 CellTemplate = dataTemplate,
-                UniqueName = member                
+                UniqueName = member
             };
 
             return column;

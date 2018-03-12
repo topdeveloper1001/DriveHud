@@ -707,7 +707,7 @@ namespace DriveHUD.Application.ViewModels
                     }
 
                     playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
-                    playerHudContent.HudElement.PlayerName = !string.IsNullOrWhiteSpace(player.PlayerNick) ? 
+                    playerHudContent.HudElement.PlayerName = !string.IsNullOrWhiteSpace(player.PlayerNick) ?
                         $"{player.PlayerName} / {player.PlayerNick}" : player.PlayerName;
                     playerHudContent.HudElement.PokerSiteId = (short)site;
                     playerHudContent.HudElement.TotalHands = playerData.TotalHands;
@@ -1073,30 +1073,15 @@ namespace DriveHUD.Application.ViewModels
 
         private void AddHandTags(IList<Playerstatistic> statistics)
         {
-            var notes = new List<Handnotes>();
+            var notes = (from pokerSite in StorageModel.PlayerSelectedItem.PokerSites
+                         from note in dataService.GetHandNotes((short)pokerSite)
+                         select note).ToArray();
 
-            var allPlayers = new List<PlayerCollectionItem>();
+            var statisticsToUpdate = (from note in notes
+                                      join statistic in statistics on note.Gamenumber equals statistic.GameNumber
+                                      select new { Note = note, Statistic = statistic }).ToArray();
 
-            if (StorageModel.PlayerSelectedItem is PlayerCollectionItem)
-            {
-                allPlayers.Add(StorageModel.PlayerSelectedItem as PlayerCollectionItem);
-            }
-            else if (StorageModel.PlayerSelectedItem is AliasCollectionItem)
-            {
-                allPlayers.AddRange((StorageModel.PlayerSelectedItem as AliasCollectionItem).PlayersInAlias);
-            }
-
-#warning inefficient code            
-            foreach (var player in allPlayers)
-            {
-                notes.AddRange(dataService.GetHandNotes((short)(player?.PokerSite ?? EnumPokerSites.Unknown)));
-            }
-
-            var statisticsForUpdate = (from note in notes
-                                       join statistic in statistics on note.Gamenumber equals statistic.GameNumber
-                                       select new { Note = note, Statistic = statistic }).ToArray();
-
-            foreach (var statisticForUpdate in statisticsForUpdate)
+            foreach (var statisticForUpdate in statisticsToUpdate)
             {
                 statisticForUpdate.Statistic.HandNote = statisticForUpdate.Note;
             }

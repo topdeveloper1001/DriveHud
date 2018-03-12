@@ -25,7 +25,6 @@ using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Data;
 using Model.Enums;
-using Model.Extensions;
 using Model.Interfaces;
 using Model.Reports;
 using System;
@@ -661,5 +660,10 @@ namespace DriveHUD.Application.Views
         }
 
         #endregion
+
+        private void scrollviewer_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+
+        }
     }
 }

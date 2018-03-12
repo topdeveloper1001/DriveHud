@@ -61,6 +61,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All players.
+        /// </summary>
+        internal static string Reports_AllPlayers_PlayerType {
+            get {
+                return ResourceManager.GetString("Reports_AllPlayers_PlayerType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 3-Bet%.
         /// </summary>
         internal static string Reports_Column_3Bet {

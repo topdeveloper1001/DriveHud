@@ -744,4 +744,7 @@
   <data name="Reports_Columns_PlayerType" xml:space="preserve">
     <value>Player type</value>
   </data>
+  <data name="Reports_AllPlayers_PlayerType" xml:space="preserve">
+    <value>All players</value>
+  </data>
 </root>
