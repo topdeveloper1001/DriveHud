@@ -15,6 +15,7 @@ using DriveHUD.Common.Infrastructure.CustomServices;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Helpers;
 using DriveHUD.Importers.Loggers;
@@ -287,6 +288,8 @@ namespace DriveHUD.Importers.PokerMaster
 
             var detectedTableWindows = new HashSet<IntPtr>();
 
+            var userRooms = new Dictionary<long, Tuple<long, IntPtr>>();
+
             while (!cancellationTokenSource.IsCancellationRequested)
             {
                 try
@@ -301,12 +304,7 @@ namespace DriveHUD.Importers.PokerMaster
                     {
                         continue;
                     }
-#if DEBUG
-                    if (package.Uuid == 1061512 || package.Uuid == 1071479)
-                    {
-                        continue;
-                    }
-
+#if DEBUG                 
                     LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Cmd: {package.Cmd} Uuid: {package.Uuid} [{capturedPacket}].");
 #endif                
 
@@ -333,8 +331,16 @@ namespace DriveHUD.Importers.PokerMaster
                         package.Cmd == PackageCommand.Cmd_SCLeaveSNGGameRoomRsp)
                     {
                         ParsePackage<SCLeaveGameRoomRsp>(package,
-                            body => LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room {body.RoomId}."),
-                            () => LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room."));                        
+                            body =>
+                            {
+                                if (userRooms.ContainsKey(package.Uuid))
+                                {
+                                    userRooms.Remove(package.Uuid);
+                                }
+
+                                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room {body.RoomId}.");
+                            },
+                            () => LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room."));
 
                         var process = connectionsService.GetProcess(capturedPacket);
                         var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
@@ -352,7 +358,7 @@ namespace DriveHUD.Importers.PokerMaster
                         ParsePackage<SCEnterGameRoomRsp>(package,
                            body => LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} entered room {body.RoomId}."),
                            () => LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} entered room."));
-                        
+
                         continue;
                     }
 
@@ -405,6 +411,10 @@ namespace DriveHUD.Importers.PokerMaster
 #if DEBUG
                         File.AppendAllText($"Hands\\hand_imported_{package.Uuid}_{scGameRoomStateChange.GameNumber}.json", JsonConvert.SerializeObject(scGameRoomStateChange, Formatting.Indented));
 #endif
+                        if (!ValidateRoom(package.Uuid, scGameRoomStateChange, userRooms, windowHandle))
+                        {
+                            continue;
+                        }
 
                         if (IsAdvancedLogEnabled)
                         {
@@ -446,6 +456,47 @@ namespace DriveHUD.Importers.PokerMaster
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// Validates if room is supported
+        /// </summary>
+        /// <param name="scGameRoomStateChange">Room state change</param>
+        /// <param name="userRooms">User rooms</param>
+        /// <param name="windowHandle">Handle of window of table</param>
+        /// <returns></returns>
+        private bool ValidateRoom(long userId, SCGameRoomStateChange scGameRoomStateChange, Dictionary<long, Tuple<long, IntPtr>> userRooms, IntPtr windowHandle)
+        {
+            if (scGameRoomStateChange.GameRoomInfo == null)
+            {
+                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Room info is empty.");
+                return false;
+            }
+
+            var roomId = scGameRoomStateChange.GameRoomInfo.IsTournament ?
+                    scGameRoomStateChange.GameRoomInfo.SNGGameRoomBaseInfo.GameRoomId :
+                    scGameRoomStateChange.GameRoomInfo.GameRoomBaseInfo.GameRoomId;
+
+            if (!userRooms.ContainsKey(userId))
+            {
+                userRooms.Add(userId, Tuple.Create(roomId, windowHandle));
+            }
+            else
+            {
+                userRooms[userId] = Tuple.Create(roomId, windowHandle);
+            }
+
+            var accountsPerRoom = userRooms.Values
+                .Count(x => x.Item1 == roomId && WinApi.IsWindow(x.Item2));
+
+            if (accountsPerRoom > 1)
+            {
+                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"More than 1 account detected in room {roomId}.");
+                SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_AccountPerTable", windowHandle);
+                return false;
+            }
+
+            return true;
         }
 
         /// <summary>
@@ -542,7 +593,7 @@ namespace DriveHUD.Importers.PokerMaster
 
             onFail?.Invoke();
         }
-        
+
         /// <summary>
         /// Checks whenever the specified package has to be processed
         /// </summary>

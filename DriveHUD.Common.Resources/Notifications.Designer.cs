@@ -178,6 +178,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PM catcher only supports one account per table..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PM_AccountPerTable {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PM_AccountPerTable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to HUD can&apos;t be loaded. PRO version of catcher is required..
         /// </summary>
         internal static string Notifications_HudLayout_PreLoadingText_PM_NoLicense {

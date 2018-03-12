@@ -1362,9 +1362,6 @@
                                                 <DataTrigger
                                                     Binding="{Binding ElementName=scrollviewer, Path=HorizontalOffset}"
                                                     Value="0">
-                                                    <!--<DataTrigger.Value>
-                                                        <sys:Double>0</sys:Double>
-                                                    </DataTrigger.Value>-->
                                                     <Setter
                                                         Property="Visibility"
                                                         Value="Hidden" />
