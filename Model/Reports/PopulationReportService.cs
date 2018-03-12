@@ -207,81 +207,78 @@ namespace Model.Reports
         /// </summary>
         private void BuildReportData()
         {
-            using (var pf = new PerformanceMonitor(nameof(BuildReportData)))
+            lock (syncLock)
             {
-                lock (syncLock)
+                try
                 {
-                    try
+                    var tableType = GetTableType();
+
+                    var playerTypes = hudPlayerTypeService.CreateDefaultPlayerTypes(tableType);
+
+                    var players = dataService.GetPlayersList();
+
+                    var populationIndicators = playerTypes.Select(x => new PopulationReportIndicators
                     {
-                        var tableType = GetTableType();
+                        PlayerTypeName = x.Name,
+                        PlayerType = x
+                    }).ToDictionary(x => x.PlayerTypeName);
 
-                        var playerTypes = hudPlayerTypeService.CreateDefaultPlayerTypes(tableType);
+                    var allPlayersType = CreateAllPlayersType();
 
-                        var players = dataService.GetPlayersList();
+                    var allPlayersIndicator = new PopulationReportIndicators
+                    {
+                        PlayerTypeName = allPlayersType.Name,
+                        PlayerType = allPlayersType,
+                        CanAddHands = false
+                    };
 
-                        var populationIndicators = playerTypes.Select(x => new PopulationReportIndicators
+                    Parallel.ForEach(players, player =>
+                    {
+                        var playerIndicators = new LightIndicators();
+
+                        dataService.ActOnPlayerStatisticFromFile(player.PlayerId,
+                            x => !x.IsTourney && FilterStatistic(x),
+                            x =>
+                            {
+                                playerIndicators.AddStatistic(x);
+
+                                lock (allPlayersIndicator)
+                                {
+                                    allPlayersIndicator.AddStatistic(x);
+                                }
+                            }
+                        );
+
+                        var playerType = hudPlayerTypeService.Match(playerIndicators, playerTypes, true);
+
+                        if (playerType != null)
                         {
-                            PlayerTypeName = x.Name,
-                            PlayerType = x
-                        }).ToDictionary(x => x.PlayerTypeName);
-
-                        var allPlayersType = CreateAllPlayersType();
-
-                        var allPlayersIndicator = new PopulationReportIndicators
-                        {
-                            PlayerTypeName = allPlayersType.Name,
-                            PlayerType = allPlayersType,
-                            CanAddHands = false
-                        };
-
-                        Parallel.ForEach(players, player =>
-                        {
-                            var playerIndicators = new LightIndicators();
-
                             dataService.ActOnPlayerStatisticFromFile(player.PlayerId,
                                 x => !x.IsTourney && FilterStatistic(x),
                                 x =>
                                 {
-                                    playerIndicators.AddStatistic(x);
-
-                                    lock (allPlayersIndicator)
+                                    lock (populationIndicators[playerType.Name])
                                     {
-                                        allPlayersIndicator.AddStatistic(x);
+                                        populationIndicators[playerType.Name].AddStatistic(x);
                                     }
                                 }
                             );
+                        }
+                    });
 
-                            var playerType = hudPlayerTypeService.Match(playerIndicators, playerTypes, true);
+                    allPlayersIndicator.PrepareHands(storageModel?.FilteredCashPlayerStatistic);
 
-                            if (playerType != null)
-                            {
-                                dataService.ActOnPlayerStatisticFromFile(player.PlayerId,
-                                    x => !x.IsTourney && FilterStatistic(x),
-                                    x =>
-                                    {
-                                        lock (populationIndicators[playerType.Name])
-                                        {
-                                            populationIndicators[playerType.Name].AddStatistic(x);
-                                        }
-                                    }
-                                );
-                            }
-                        });
+                    populationIndicators.Add(allPlayersIndicator.PlayerTypeName, allPlayersIndicator);
 
-                        allPlayersIndicator.PrepareHands(storageModel?.FilteredCashPlayerStatistic);
+                    populationIndicators.Values.ForEach(x => x.PrepareHands());
 
-                        populationIndicators.Add(allPlayersIndicator.PlayerTypeName, allPlayersIndicator);
+                    populationData.Report = populationIndicators.Values.ToList();
 
-                        populationIndicators.Values.ForEach(x => x.PrepareHands());
-
-                        populationData.Report = populationIndicators.Values.ToList();
-
-                        SaveCachedData();
-                    }
-                    catch (Exception e)
-                    {
-                        LogProvider.Log.Error(this, "Could build population report data.", e);
-                    }
+                    SaveCachedData();
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Could build population report data.", e);
                 }
             }
         }

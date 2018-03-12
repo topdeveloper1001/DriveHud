@@ -62,6 +62,10 @@ namespace Model.Data
             reportHands.Add(reportHandKey, new ReportHandViewModel(statistic));
         }
 
+        protected override void AddShrinkedStatistic(Playerstatistic statistic)
+        {
+        }
+
         public bool CanAddHands { get; set; } = true;
 
         public void PrepareHands()
