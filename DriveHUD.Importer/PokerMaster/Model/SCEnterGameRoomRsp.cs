@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="SCLeaveGameRoomRsp.cs" company="Ace Poker Solutions">
+// <copyright file="SCEnterGameRoomRsp.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,12 +15,24 @@ using ProtoBuf;
 namespace DriveHUD.Importers.PokerMaster.Model
 {
     [ProtoContract]
-    internal class SCLeaveGameRoomRsp
+    internal class SCEnterGameRoomRsp
     {
         [ProtoMember(1)]
         public ErrorCodeType ErrCode { get; set; }
 
         [ProtoMember(2)]
+        public GameRoomInfo GameRoomInfo { get; set; }
+
+        [ProtoMember(3)]
         public long RoomId { get; set; }
+
+        [ProtoMember(4)]
+        public long ClubId { get; set; }
+
+        [ProtoMember(5)]
+        public string ClubName { get; set; }
+
+        [ProtoMember(6)]
+        public string CryptCode { get; set; }
     }
 }

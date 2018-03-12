@@ -332,7 +332,9 @@ namespace DriveHUD.Importers.PokerMaster
                         package.Cmd == PackageCommand.Cmd_SCLeaveMTTGameRoom ||
                         package.Cmd == PackageCommand.Cmd_SCLeaveSNGGameRoomRsp)
                     {
-                        ParseLeaveGameRoomPackage(package);
+                        ParsePackage<SCLeaveGameRoomRsp>(package,
+                            body => LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room {body.RoomId}."),
+                            () => LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room."));                        
 
                         var process = connectionsService.GetProcess(capturedPacket);
                         var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
@@ -342,6 +344,15 @@ namespace DriveHUD.Importers.PokerMaster
 
                         detectedTableWindows.Remove(windowHandle);
 
+                        continue;
+                    }
+
+                    if (package.Cmd == PackageCommand.Cmd_SCEnterGameRoomRsp)
+                    {
+                        ParsePackage<SCEnterGameRoomRsp>(package,
+                           body => LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} entered room {body.RoomId}."),
+                           () => LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} entered room."));
+                        
                         continue;
                     }
 
@@ -382,7 +393,7 @@ namespace DriveHUD.Importers.PokerMaster
 
                         if (!SerializationHelper.TryDeserialize(bytes, out SCGameRoomStateChange scGameRoomStateChange))
                         {
-                            LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Package has not been decrypted. Relogin is required.");
+                            LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Package has not been decrypted. Relogin [User {package.Uuid}] is required.");
                             SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_Relogin", windowHandle);
                             continue;
                         }
@@ -509,25 +520,29 @@ namespace DriveHUD.Importers.PokerMaster
         }
 
         /// <summary>
-        /// Parses leave game room package
+        /// Parses package body into the specified type <see cref="{T}"/>, then performs <paramref name="onSuccess"/> if parsing succeed, 
+        /// or <paramref name="onFail"/> if parsing failed
         /// </summary>
+        /// <typeparam name="T">Type of the package body</typeparam>
         /// <param name="package">Package to parse</param>
-        private void ParseLeaveGameRoomPackage(Package package)
+        /// <param name="onSuccess">Action to perform if parsing succeed</param>
+        /// <param name="onFail">Action to perform if parsing failed</param>
+        private void ParsePackage<T>(Package package, Action<T> onSuccess, Action onFail)
         {
             if (HeroesKeys.TryGetValue(package.Uuid, out byte[] encryptKey))
             {
                 var bytes = BodyDecryptor.Decrypt(package.Body, encryptKey, IsAdvancedLogEnabled);
 
-                if (SerializationHelper.TryDeserialize(bytes, out SCLeaveGameRoomRsp scLeaverGameRoomRsp))
+                if (SerializationHelper.TryDeserialize(bytes, out T packageBody))
                 {
-                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room {scLeaverGameRoomRsp.RoomId}.");
+                    onSuccess?.Invoke(packageBody);
                     return;
                 }
             }
 
-            LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room. ");
+            onFail?.Invoke();
         }
-
+        
         /// <summary>
         /// Checks whenever the specified package has to be processed
         /// </summary>
