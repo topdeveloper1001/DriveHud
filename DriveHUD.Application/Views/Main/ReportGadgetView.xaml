@@ -1937,8 +1937,7 @@
             <Grid
                 x:Name="HandHistoryArea"
                 Grid.Row="4"
-                Background="#181A1D"
-                Visibility="{Binding ReportSelectedItemStat, Converter={dh:EnumNotToVisibilityConverterCollapsedByDef}, ConverterParameter={x:Static enums:EnumReports.PopulationAnalysis}}"
+                Background="#181A1D"                
                 Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition

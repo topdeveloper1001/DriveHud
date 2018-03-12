@@ -37,13 +37,19 @@ namespace Model.Reports
     {
         private const string ReportFileName = "PopulationReport.data";
 
+        private const long MaxReportFileSize = 50000000;
+
         private readonly string ReportFile = Path.Combine(StringFormatter.GetAppDataFolderPath(), ReportFileName);
 
         private readonly IDataService dataService;
 
         private readonly IHudPlayerTypeService hudPlayerTypeService;
 
+        private readonly SingletonStorageModel storageModel;
+
         private PopulationReportCache populationData;
+
+        private bool resetOnRead = false;
 
         private static readonly object syncLock = new object();
 
@@ -51,6 +57,7 @@ namespace Model.Reports
         {
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
             hudPlayerTypeService = ServiceLocator.Current.GetInstance<IHudPlayerTypeService>();
+            storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
         }
 
         /// <summary>
@@ -58,17 +65,27 @@ namespace Model.Reports
         /// </summary>        
         public IEnumerable<ReportIndicators> GetReport(bool forceRefresh)
         {
-            if (!TryLoadCachedData())
+            try
             {
-                ValidateCache();
-                BuildReportData();
-            }
-            else if (!ValidateCache() || forceRefresh)
-            {
-                BuildReportData();
-            }
+                if (!TryLoadCachedData())
+                {
+                    ValidateCache();
+                    BuildReportData();
+                }
+                else if (!ValidateCache() || forceRefresh)
+                {
+                    BuildReportData();
+                }
 
-            return populationData.Report.ToList();
+                return populationData.Report.ToList();
+            }
+            finally
+            {
+                if (resetOnRead)
+                {
+                    populationData = null;
+                }
+            }
         }
 
         private bool ValidateCache()
@@ -155,8 +172,12 @@ namespace Model.Reports
                     return true;
                 }
 
-                if (File.Exists(ReportFile))
+                var reportFileInfo = new FileInfo(ReportFile);
+
+                if (reportFileInfo.Exists)
                 {
+                    resetOnRead = reportFileInfo.Length > MaxReportFileSize;
+
                     try
                     {
                         using (var fs = new FileStream(ReportFile, FileMode.Open, FileAccess.ReadWrite, FileShare.Read))
@@ -186,73 +207,81 @@ namespace Model.Reports
         /// </summary>
         private void BuildReportData()
         {
-            lock (syncLock)
+            using (var pf = new PerformanceMonitor(nameof(BuildReportData)))
             {
-                try
+                lock (syncLock)
                 {
-                    var tableType = GetTableType();
-
-                    var playerTypes = hudPlayerTypeService.CreateDefaultPlayerTypes(tableType);
-
-                    var players = dataService.GetPlayersList();
-
-                    var populationIndicators = playerTypes.Select(x => new PopulationReportIndicators
+                    try
                     {
-                        PlayerTypeName = x.Name,
-                        PlayerType = x
-                    }).ToDictionary(x => x.PlayerTypeName);
+                        var tableType = GetTableType();
 
-                    var allPlayersType = CreateAllPlayersType();
+                        var playerTypes = hudPlayerTypeService.CreateDefaultPlayerTypes(tableType);
 
-                    var allPlayersIndicator = new PopulationReportIndicators
-                    {
-                        PlayerTypeName = allPlayersType.Name,
-                        PlayerType = allPlayersType
-                    };
+                        var players = dataService.GetPlayersList();
 
-                    Parallel.ForEach(players, player =>
-                    {
-                        var playerIndicators = new LightIndicators();
-
-                        dataService.ActOnPlayerStatisticFromFile(player.PlayerId,
-                            x => !x.IsTourney && FilterStatistic(x),
-                            x =>
-                            {
-                                playerIndicators.AddStatistic(x);
-
-                                lock (allPlayersIndicator)
-                                {
-                                    allPlayersIndicator.AddStatistic(x);
-                                }
-                            }
-                        );
-
-                        var playerType = hudPlayerTypeService.Match(playerIndicators, playerTypes, true);
-
-                        if (playerType != null)
+                        var populationIndicators = playerTypes.Select(x => new PopulationReportIndicators
                         {
+                            PlayerTypeName = x.Name,
+                            PlayerType = x
+                        }).ToDictionary(x => x.PlayerTypeName);
+
+                        var allPlayersType = CreateAllPlayersType();
+
+                        var allPlayersIndicator = new PopulationReportIndicators
+                        {
+                            PlayerTypeName = allPlayersType.Name,
+                            PlayerType = allPlayersType,
+                            CanAddHands = false
+                        };
+
+                        Parallel.ForEach(players, player =>
+                        {
+                            var playerIndicators = new LightIndicators();
+
                             dataService.ActOnPlayerStatisticFromFile(player.PlayerId,
                                 x => !x.IsTourney && FilterStatistic(x),
                                 x =>
                                 {
-                                    lock (populationIndicators[playerType.Name])
+                                    playerIndicators.AddStatistic(x);
+
+                                    lock (allPlayersIndicator)
                                     {
-                                        populationIndicators[playerType.Name].AddStatistic(x);
+                                        allPlayersIndicator.AddStatistic(x);
                                     }
                                 }
                             );
-                        }
-                    });
 
-                    populationIndicators.Add(allPlayersIndicator.PlayerTypeName, allPlayersIndicator);
+                            var playerType = hudPlayerTypeService.Match(playerIndicators, playerTypes, true);
 
-                    populationData.Report = populationIndicators.Values.ToList();
+                            if (playerType != null)
+                            {
+                                dataService.ActOnPlayerStatisticFromFile(player.PlayerId,
+                                    x => !x.IsTourney && FilterStatistic(x),
+                                    x =>
+                                    {
+                                        lock (populationIndicators[playerType.Name])
+                                        {
+                                            populationIndicators[playerType.Name].AddStatistic(x);
+                                        }
+                                    }
+                                );
+                            }
+                        });
 
-                    SaveCachedData();
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(this, "Could build population report data.", e);
+                        allPlayersIndicator.PrepareHands(storageModel?.FilteredCashPlayerStatistic);
+
+                        populationIndicators.Add(allPlayersIndicator.PlayerTypeName, allPlayersIndicator);
+
+                        populationIndicators.Values.ForEach(x => x.PrepareHands());
+
+                        populationData.Report = populationIndicators.Values.ToList();
+
+                        SaveCachedData();
+                    }
+                    catch (Exception e)
+                    {
+                        LogProvider.Log.Error(this, "Could build population report data.", e);
+                    }
                 }
             }
         }

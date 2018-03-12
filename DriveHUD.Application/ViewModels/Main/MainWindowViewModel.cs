@@ -1073,6 +1073,11 @@ namespace DriveHUD.Application.ViewModels
 
         private void AddHandTags(IList<Playerstatistic> statistics)
         {
+            if (StorageModel.PlayerSelectedItem == null || StorageModel.PlayerSelectedItem.PokerSites == null)
+            {
+                return;
+            }
+
             var notes = (from pokerSite in StorageModel.PlayerSelectedItem.PokerSites
                          from note in dataService.GetHandNotes((short)pokerSite)
                          select note).ToArray();
