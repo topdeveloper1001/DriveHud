@@ -1651,6 +1651,13 @@
                 Grid.ColumnSpan="3"
                 HorizontalAlignment="Left"
                 Style="{StaticResource ListBoxWithAutoScrollHorizontal}">
+                <telerik:RadContextMenu.ContextMenu>
+                    <telerik:RadContextMenu>
+                        <telerik:RadMenuItem
+                            Header="{ResX Key=Main_ContextMenu_RefreshReport}"
+                            Click="RefreshReport" />
+                    </telerik:RadContextMenu>
+                </telerik:RadContextMenu.ContextMenu>
                 <ListBox.Items>
                     <!-- Cash Columns -->
                     <RadioButton
@@ -1937,7 +1944,7 @@
             <Grid
                 x:Name="HandHistoryArea"
                 Grid.Row="4"
-                Background="#181A1D"                
+                Background="#181A1D"
                 Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition
