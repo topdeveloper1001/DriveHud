@@ -28,5 +28,13 @@ namespace Model.Site
                 return "True Poker";
             }
         }
+
+        protected override string DefaultInstallPath
+        {
+            get
+            {
+                return @"C:\True Poker";
+            }
+        }
     }
 }
