@@ -1140,27 +1140,27 @@ namespace Model.Data
 
         public virtual decimal LimpEp
         {
-            get { return GetPercentage(Source.LimpEp, Source.LimpPossible); }
+            get { return GetPercentage(positionLimpMade?.EP, positionLimpPossible?.EP); }
         }
 
         public virtual decimal LimpMp
         {
-            get { return GetPercentage(Source.LimpMp, Source.LimpPossible); }
+            get { return GetPercentage(positionLimpMade?.MP, positionLimpPossible?.MP); }
         }
 
         public virtual decimal LimpCo
         {
-            get { return GetPercentage(Source.LimpCo, Source.LimpPossible); }
+            get { return GetPercentage(positionLimpMade?.CO, positionLimpPossible?.CO); }
         }
 
         public virtual decimal LimpBtn
         {
-            get { return GetPercentage(Source.LimpBtn, Source.LimpPossible); }
+            get { return GetPercentage(positionLimpMade?.BN, positionLimpPossible?.BN); }
         }
 
         public virtual decimal LimpSb
         {
-            get { return GetPercentage(Source.LimpSb, Source.LimpPossible); }
+            get { return GetPercentage(positionLimpMade?.SB, positionLimpPossible?.SB); }
         }
 
         public virtual decimal DidLimpCall
@@ -1680,6 +1680,12 @@ namespace Model.Data
         [ProtoMember(10)]
         protected PositionalStat positionCouldFourBet = new PositionalStat();
 
+        [ProtoMember(11)]
+        protected PositionalStat positionLimpMade = new PositionalStat();
+
+        [ProtoMember(12)]
+        protected PositionalStat positionLimpPossible = new PositionalStat();
+
         #endregion
 
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
@@ -1735,6 +1741,8 @@ namespace Model.Data
             positionCouldThreeBet?.Add(statistic.Position, statistic.Couldthreebet);
             positionDidFourBet?.Add(statistic.Position, statistic.DidfourbetpreflopVirtual);
             positionCouldFourBet?.Add(statistic.Position, statistic.CouldfourbetpreflopVirtual);
+            positionLimpMade?.Add(statistic.Position, statistic.LimpMade);
+            positionLimpPossible?.Add(statistic.Position, statistic.LimpPossible);
         }
 
         protected virtual void ResetPositionalStats()
@@ -1748,6 +1756,8 @@ namespace Model.Data
             positionCouldThreeBet?.Reset();
             positionDidFourBet?.Reset();
             positionCouldFourBet?.Reset();
+            positionLimpMade?.Reset();
+            positionLimpPossible?.Reset();
         }
 
         #region Helpers

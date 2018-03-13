@@ -1492,6 +1492,20 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region Positional Limp
+
+        public virtual int LimpPossibleSB => IsSBPosition ? LimpPossible : 0;
+
+        public virtual int LimpPossibleEP => IsEPPosition ? LimpPossible : 0;
+
+        public virtual int LimpPossibleMP => IsMPPosition ? LimpPossible : 0;
+
+        public virtual int LimpPossibleCO => IsCOPosition ? LimpPossible : 0;
+
+        public virtual int LimpPossibleBN => IsBNPosition ? LimpPossible : 0;
+
+        #endregion
+
         #endregion
 
         public virtual decimal TotalPot { get; set; }
