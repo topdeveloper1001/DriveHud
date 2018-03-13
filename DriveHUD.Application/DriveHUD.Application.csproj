@@ -386,6 +386,7 @@
     <Compile Include="Migration\Migrations\Migration0028_AddHandPlayersTable.cs" />
     <Compile Include="Migration\Migrations\Migration0029_FillHandPlayersTable.cs" />
     <Compile Include="Migration\Migrations\Migration0030_AddTableTypeColumnToGameInfo.cs" />
+    <Compile Include="Migration\Migrations\Migration0031_UpdateHudPopupTextStyles.cs" />
     <Compile Include="Migration\Migrators\HudLayoutsMigrationService.cs" />
     <Compile Include="Migration\Migrators\ILayoutMigrator.cs" />
     <Compile Include="Migration\Migrators\LayoutMigrator.cs" />

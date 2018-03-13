@@ -750,9 +750,22 @@
 
                 <StackPanel>
 
-                    <TextBlock
-                        Text="{ResX Key=Common_HudStatSettings_ColorRange}"
-                        Margin="0,0,0,12" />
+                    <DockPanel>
+                        <TextBlock
+                            DockPanel.Dock="Left"
+                            Text="{ResX Key=Common_HudStatSettings_ColorRange}"
+                            Margin="0,0,0,12" />
+                        <Button
+                            Width="50"
+                            Height="22"
+                            DockPanel.Dock="Right"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Margin="0,-2,0,0"
+                            Content="{ResX Key=Common_HudStatSettings_Reset}"
+                            Command="{Binding ResetRangeColorsCommand}"
+                            Foreground="{StaticResource ActiveTextForeground}" />
+                    </DockPanel>
 
                     <ListBox
                         Padding="0,5,0,5"

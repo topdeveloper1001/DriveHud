@@ -1485,6 +1485,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reset.
+        /// </summary>
+        internal static string Common_HudStatSettings_Reset {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         internal static string Common_HudStatSettings_TableFilterEmptyText {

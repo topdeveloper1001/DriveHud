@@ -93,6 +93,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             CancelCommand = ReactiveCommand.Create(() => viewModelInfo.Cancel?.Invoke());
             SelectColorCommand = ReactiveCommand.Create<StatInfoOptionValueRange>(x => SelectColor(x));
             PickerSelectColorCommand = ReactiveCommand.Create(() => IsColorPickerPopupOpened = false);
+            ResetRangeColorsCommand = ReactiveCommand.Create(() => SelectedItem?.Initialize());
         }
 
         public ReactiveCommand SaveCommand { get; private set; }
@@ -102,6 +103,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         public ReactiveCommand SelectColorCommand { get; private set; }
 
         public ReactiveCommand PickerSelectColorCommand { get; private set; }
+
+        public ReactiveCommand ResetRangeColorsCommand { get; private set; }
 
         private ObservableCollection<StatInfo> items;
 

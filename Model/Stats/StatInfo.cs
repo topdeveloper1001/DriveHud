@@ -868,13 +868,14 @@ namespace Model.Stats
         [NotifyPropertyChangedInvocator]
         private void SettingsAppearanceValueRangeSelectedItem_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == "Color" || e.PropertyName == "IsChecked")
+            if (e.PropertyName == nameof(StatInfoOptionValueRange.Color) ||
+                e.PropertyName == nameof(StatInfoOptionValueRange.IsChecked))
             {
-                ValueSetColor(this.CurrentValue);
+                ValueSetColor(CurrentValue);
             }
 
             // re-sort color ranges
-            if (e.PropertyName == ReflectionHelper.GetPath<StatInfoOptionValueRange>(o => o.Value))
+            if (e.PropertyName == nameof(StatInfoOptionValueRange.Value))
             {
                 var orderedItems = SettingsAppearanceValueRangeCollection.OrderBy(x => x.Value).ToArray();
 

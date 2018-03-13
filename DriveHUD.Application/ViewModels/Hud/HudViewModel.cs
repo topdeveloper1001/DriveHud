@@ -1268,6 +1268,11 @@ namespace DriveHUD.Application.ViewModels
             {
                 mergeItem.OldItem.Merge(mergeItem.NewItem);
 
+                if (SelectedToolViewModel != null && SelectedToolViewModel is HudGaugeIndicatorViewModel)
+                {
+                    mergeItem.OldItem.UpdateColor();
+                }
+
                 var previewStat = PreviewHudElementViewModel.ToolsStatInfoCollection.FirstOrDefault(x => x.Stat == mergeItem.NewItem.Stat);
                 previewStat?.Merge(mergeItem.NewItem);
                 previewStat?.UpdateColor();
