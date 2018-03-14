@@ -89,6 +89,8 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\XmlExtensions.cs" />
     <Compile Include="Images\ImageHelper.cs" />
+    <Compile Include="Linq\ExpressionVisitor.cs" />
+    <Compile Include="Linq\ExpressionHashCodeCalculation.cs" />
     <Compile Include="Linq\IEnumerableExtensions.cs" />
     <Compile Include="Linq\LambdaComparer.cs" />
     <Compile Include="Linq\ObjectReferenceEqualityComparerer.cs" />
