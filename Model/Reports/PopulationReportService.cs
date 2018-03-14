@@ -212,6 +212,8 @@ namespace Model.Reports
         /// </summary>
         private void BuildReportData()
         {
+            LogProvider.Log.Info("Building population report.");
+
             lock (syncLock)
             {
                 try
@@ -285,6 +287,8 @@ namespace Model.Reports
                     populationData.Report = populationIndicators.Values.ToList();
 
                     SaveCachedData();
+
+                    LogProvider.Log.Info("Population report has been built.");
                 }
                 catch (Exception e)
                 {
