@@ -1,4 +1,16 @@
-﻿using DriveHUD.Application.ViewModels.Filters;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PopupContainerBaseFilterViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Application.ViewModels.Filters;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.Views;
 using DriveHUD.Common.Infrastructure.Base;
@@ -16,8 +28,6 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.PopupContainers
@@ -56,7 +66,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         protected void InitializeViewModel(FilterTuple filterTupleStartup)
         {
-            if (this.FilterViewCollection == null)
+            if (FilterViewCollection == null)
             {
                 InitializeViewModelCollection();
             }
@@ -70,18 +80,18 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             {
                 EnumViewModelType enumViewModelTypeStartup = filterTupleStartup.ViewModelType;
 
-                if (this.FilterViewCollection.Where(x => x.ViewModel.GetType().Name == filterTupleStartup.ViewModelType.ToString()).Any())
+                if (FilterViewCollection.Where(x => x.ViewModel.GetType().Name == filterTupleStartup.ViewModelType.ToString()).Any())
                 {
-                    this.FilterViewSelectedItem = this.FilterViewCollection.FirstOrDefault(x => x.ViewModel.GetType().Name == filterTupleStartup.ViewModelType.ToString());
+                    FilterViewSelectedItem = FilterViewCollection.FirstOrDefault(x => x.ViewModel.GetType().Name == filterTupleStartup.ViewModelType.ToString());
                 }
                 else
                 {
-                    this.FilterViewSelectedItem = this.FilterViewCollection.ElementAt(0);
+                    FilterViewSelectedItem = FilterViewCollection.ElementAt(0);
                 }
             }
             else
             {
-                this.FilterViewSelectedItem = this.FilterViewCollection.ElementAt(0);
+                FilterViewSelectedItem = FilterViewCollection.ElementAt(0);
             }
 
             CurrentlyBuiltFilter = new BuiltFilterModel(FilterService);
@@ -94,14 +104,14 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         private void OkInteraction()
         {
-            this._notification.Confirmed = true;
-            this.FinishInteraction();
+            _notification.Confirmed = true;
+            FinishInteraction();
         }
 
         private void CancelInteraction()
         {
-            this._notification.Confirmed = false;
-            this.FinishInteraction();
+            _notification.Confirmed = false;
+            FinishInteraction();
         }
 
         protected void ResetAllFilters()
@@ -131,17 +141,30 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         {
             try
             {
-                var defaultStateModels = FilterViewCollection.Select(x => x.ViewModel.GetDefaultStateModel() as FilterBaseEntity).Where(x => x != null).ToList();
-                var loadedList = loadedFilter.Select(x => x as FilterBaseEntity).Where(x => x != null);
+                var defaultStateModels = FilterViewCollection
+                    .Select(x => x.ViewModel.GetDefaultStateModel() as FilterBaseEntity)
+                    .Where(x => x != null)
+                    .ToList();
+
+                var loadedList = loadedFilter
+                    .Select(x => x as FilterBaseEntity)
+                    .Where(x => x != null);
+
                 foreach (var viewModel in FilterViewCollection)
                 {
                     var model = viewModel.ViewModel.GetDefaultStateModel() as FilterBaseEntity;
+
                     if (model == null)
+                    {
                         continue;
+                    }
 
                     var loadedModel = loadedList.FirstOrDefault(x => x.Id == model.Id);
+
                     if (loadedModel == null)
+                    {
                         continue;
+                    }
 
                     viewModel.ViewModel.UpdateDefaultStateModel(loadedModel);
                 }
@@ -156,7 +179,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         private void ViewModelSwitch(FilterTuple filterTuple)
         {
-            this.FilterViewSelectedItem = this.FilterViewCollection.FirstOrDefault(x => x.ViewModel.GetType().Name == filterTuple.ViewModelType.ToString());
+            FilterViewSelectedItem = FilterViewCollection.FirstOrDefault(x => x.ViewModel.GetType().Name == filterTuple.ViewModelType.ToString());
         }
 
         protected virtual Expression<Func<Playerstatistic, bool>> GetCurrentFilter()
@@ -174,7 +197,6 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
                         predicate = predicate.And(filterPredicate);
                     }
                 }
-
             }
 
             return predicate;
@@ -185,35 +207,44 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         #region Properties
 
         public object _filterViewModelSelectedItem;
+
         public object FilterViewSelectedItem
         {
-            get { return _filterViewModelSelectedItem; }
+            get
+            {
+                return _filterViewModelSelectedItem;
+            }
             set
             {
-                _filterViewModelSelectedItem = value;
-                OnPropertyChanged();
+                SetProperty(ref _filterViewModelSelectedItem, value);
             }
         }
 
         public ObservableCollection<IFilterView> _filterViewCollection;
+
         public ObservableCollection<IFilterView> FilterViewCollection
         {
-            get { return _filterViewCollection; }
+            get
+            {
+                return _filterViewCollection;
+            }
             set
             {
-                _filterViewCollection = value;
-                OnPropertyChanged();
+                SetProperty(ref _filterViewCollection, value);
             }
         }
 
         private BuiltFilterModel _currentlyBuiltFilter;
+
         public BuiltFilterModel CurrentlyBuiltFilter
         {
-            get { return _currentlyBuiltFilter; }
+            get
+            {
+                return _currentlyBuiltFilter;
+            }
             set
             {
-                _currentlyBuiltFilter = value;
-                OnPropertyChanged();
+                SetProperty(ref _currentlyBuiltFilter, value);
             }
         }
 
@@ -233,18 +264,21 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         #region Commands
 
         public ICommand ButtonFilterModelSectionRemove_CommandClick { get; set; }
+
         private void ButtonFilterModelSectionRemove_OnClick(object param)
         {
             CurrentlyBuiltFilter.RemoveBuiltFilterItem((FilterSectionItem)param);
         }
 
         public ICommand RadioButtonGroupFilters_CommandClick { get; private set; }
+
         protected virtual void RadioButtonGroupFilters_OnClick(object param)
         {
             ViewModelSwitch((FilterTuple)param);
         }
 
         public ICommand Ok_CommandClick { get; private set; }
+
         protected virtual void Ok_OnClick()
         {
             Apply_OnClick(null);
@@ -252,21 +286,27 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         }
 
         public ICommand Cancel_CommandClick { get; private set; }
+
         protected virtual void Cancel_OnClick()
         {
             CancelInteraction();
         }
 
         public ICommand Apply_CommandClick { get; private set; }
+
         protected abstract void Apply_OnClick(object obj);
 
         public ICommand Save_CommandClick { get; private set; }
+
         protected virtual void Save_OnClick()
         {
-            if (this.CurrentlyBuiltFilter.FilterSectionCollection.Any(x => x.IsActive))
+            if (CurrentlyBuiltFilter.FilterSectionCollection.Any(x => x.IsActive))
             {
-                SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = $"DriveHUD Filters ({FilterFileExtension})|*{FilterFileExtension}" };
-                saveFileDialog.InitialDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data");
+                var saveFileDialog = new SaveFileDialog
+                {
+                    Filter = $"DriveHUD Filters ({FilterFileExtension})|*{FilterFileExtension}",
+                    InitialDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data")
+                };
 
                 if (saveFileDialog.ShowDialog() == true)
                 {
@@ -276,6 +316,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         }
 
         public ICommand Load_CommandClick { get; private set; }
+
         protected virtual void Load_OnClick()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = $"DriveHUD Filters ({FilterFileExtension})|*{FilterFileExtension}" };
@@ -288,12 +329,14 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         }
 
         public ICommand Reset_CommandClick { get; private set; }
+
         protected virtual void Reset_OnClick()
         {
             ResetAllFilters();
         }
 
         public ICommand RestoreDefaultFiltersState_Command { get; private set; }
+
         protected virtual void RestoreDefaultFiltersState()
         {
             foreach (var filter in FilterViewCollection)
@@ -312,15 +355,16 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         public virtual INotification Notification
         {
-            get { return this._notification; }
+            get
+            {
+                return _notification;
+            }
             set
             {
-                if (value is PopupContainerFiltersViewModelNotification)
+                if (value is PopupContainerFiltersViewModelNotification notification)
                 {
-                    this._notification = value as PopupContainerFiltersViewModelNotification;
-                    this.OnPropertyChanged(() => this.Notification);
-
-                    InitializeViewModel((value as PopupContainerFiltersViewModelNotification).FilterTuple);
+                    SetProperty(ref _notification, notification);
+                    InitializeViewModel(notification.FilterTuple);
                 }
             }
         }

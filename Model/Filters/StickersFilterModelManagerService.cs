@@ -10,23 +10,21 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Annotations;
 using DriveHUD.Common.Linq;
 using Model.Enums;
+using Newtonsoft.Json;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 namespace Model.Filters
 {
-    public class StickersFilterModelManagerService : IFilterModelManagerService
+    internal class StickersFilterModelManagerService : BindableBase, IFilterModelManagerService
     {
         public StickersFilterModelManagerService()
         {
-            FilterTupleCollection = new ObservableCollection<FilterTuple>(
-                new List<FilterTuple>()
+            FilterTupleCollection = new ReadOnlyObservableCollection<FilterTuple>(new ObservableCollection<FilterTuple>
                 {
                     new FilterTuple { Name = "Hole Cards", ModelType = EnumFilterModelType.FilterHandGridModel, ViewModelType = EnumViewModelType.FilterHandGridViewModel, },
                     new FilterTuple { Name = "Hand Value", ModelType = EnumFilterModelType.FilterHandValueModel, ViewModelType = EnumViewModelType.FilterHandValueViewModel, },
@@ -38,9 +36,9 @@ namespace Model.Filters
             FilterModelCollection = GetFilterModelsList();
         }
 
-        public ObservableCollection<IFilterModel> GetFilterModelsList()
+        public ReadOnlyObservableCollection<IFilterModel> GetFilterModelsList()
         {
-            var list = new ObservableCollection<IFilterModel>
+            var list = new ReadOnlyObservableCollection<IFilterModel>(new ObservableCollection<IFilterModel>
             {
                 new FilterHoleCardsModel { Id = Guid.Parse("{064EA6DE-BCD0-40EE-9EB8-31BB1B97873C}") },
                 new FilterHandValueModel { Id = Guid.Parse("{A5665500-35E9-40FF-AEFE-27FDD6826437}") },
@@ -49,40 +47,45 @@ namespace Model.Filters
                 new FilterQuickModel { Id = Guid.Parse("{D8AE4CE4-7FFE-4D68-B99E-4DCED4EE8812}") },
                 new FilterOmahaHandGridModel { Id = Guid.Parse("{ABFBCA7F-8DB7-437F-8DEE-A26C5EADF6B3}") },
                 new FilterHandGridModel { Id = Guid.Parse("{95C3B90B-A7C3-4988-9F39-16CE09399D61}"), Name = "Hand Grid" },
-            };
+            });
 
             list.ForEach(x => x.Initialize());
 
             return list;
         }
 
-        private ObservableCollection<IFilterModel> _filterModelCollection;
+        private ReadOnlyObservableCollection<IFilterModel> filterModelCollection;
 
-        public ObservableCollection<IFilterModel> FilterModelCollection
+        public ReadOnlyObservableCollection<IFilterModel> FilterModelCollection
         {
-            get { return _filterModelCollection; }
+            get
+            {
+                return filterModelCollection;
+            }
             set
             {
-                _filterModelCollection = value;
-                OnPropertyChanged(nameof(FilterModelCollection));
+                SetProperty(ref filterModelCollection, value);
             }
         }
 
-        private ObservableCollection<FilterTuple> _filterTupleCollection;
+        private ReadOnlyObservableCollection<FilterTuple> filterTupleCollection;
 
-        public ObservableCollection<FilterTuple> FilterTupleCollection
+        public ReadOnlyObservableCollection<FilterTuple> FilterTupleCollection
         {
-            get { return _filterTupleCollection; }
+            get
+            {
+                return filterTupleCollection;
+            }
             set
             {
-                _filterTupleCollection = value;
-                OnPropertyChanged(nameof(FilterTupleCollection));
+                SetProperty(ref filterTupleCollection, value);
+
             }
         }
 
         #region Not used
 
-        public Dictionary<EnumFilterType, ObservableCollection<IFilterModel>> GetFilterModelDictionary()
+        public Dictionary<EnumFilterType, ReadOnlyObservableCollection<IFilterModel>> GetFilterModelDictionary()
         {
             throw new NotImplementedException();
         }
@@ -97,16 +100,20 @@ namespace Model.Filters
             throw new NotImplementedException();
         }
 
-        #endregion
-
-        #region NotifyPropertyChanged
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        public int GetFiltersHashCode()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            unchecked
+            {
+                var hashcode = 23;
+
+                FilterModelCollection.ForEach(model =>
+                {
+                    var modelHashCode = JsonConvert.SerializeObject(model);
+                    hashcode = (hashcode * 31) + modelHashCode.GetHashCode();
+                });
+
+                return hashcode;
+            }
         }
 
         #endregion

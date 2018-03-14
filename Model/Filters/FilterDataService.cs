@@ -1,4 +1,16 @@
-﻿using DriveHUD.Common.Log;
+﻿//-----------------------------------------------------------------------
+// <copyright file="FilterDataService.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Log;
 using Model.Enums;
 using Newtonsoft.Json;
 using System;
@@ -6,13 +18,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 
 namespace Model.Filters
 {
-    public class FilterDataService : IFilterDataService
+    internal class FilterDataService : IFilterDataService
     {
         private static readonly string _defaultFilterFileName = "filter.df";
         private static object lockObject = new object();
@@ -28,7 +37,7 @@ namespace Model.Filters
             _defaultFolderPath = defaultFolderPath;
         }
 
-        public void SaveDefaultFilter(Dictionary<EnumFilterType, ObservableCollection<IFilterModel>> _filtersDictionary)
+        public void SaveDefaultFilter(Dictionary<EnumFilterType, ReadOnlyObservableCollection<IFilterModel>> _filtersDictionary)
         {
             foreach (var filter in _filtersDictionary)
             {
@@ -44,33 +53,34 @@ namespace Model.Filters
                 {
                     using (var fs = File.CreateText(path))
                     {
-                        JsonSerializer serializer = new JsonSerializer()
+                        var serializer = new JsonSerializer()
                         {
                             Formatting = Formatting.Indented,
                             TypeNameHandling = TypeNameHandling.Objects,
-                            TypeNameAssemblyFormat = System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple
+                            TypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Simple
                         };
+
                         serializer.Serialize(fs, filtersCollection);
                     }
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, $"Could not save filter at {path}", e);
             }
         }
 
-        public void LoadDefaultFilter(Dictionary<EnumFilterType, ObservableCollection<IFilterModel>> _filtersDictionary)
+        public void LoadDefaultFilter(Dictionary<EnumFilterType, ReadOnlyObservableCollection<IFilterModel>> _filtersDictionary)
         {
             for (int i = 0; i < _filtersDictionary.Count(); i++)
             {
                 var key = _filtersDictionary.ElementAt(i).Key;
 
                 var loadedFiltersCollection = LoadFilter(Path.Combine(_defaultFolderPath, GetFilterFileName(key)));
+
                 if (loadedFiltersCollection != null)
                 {
-                    //_filtersDictionary[key] = new ObservableCollection<IFilterModel>(loadedFiltersCollection);
-                    foreach(var filter in _filtersDictionary[key])
+                    foreach (var filter in _filtersDictionary[key])
                     {
                         var loadedFilter = loadedFiltersCollection.FirstOrDefault(x => x.GetType() == filter.GetType());
                         filter.LoadFilter(loadedFilter);
@@ -91,21 +101,23 @@ namespace Model.Filters
                 lock (lockObject)
                 {
                     using (StreamReader fs = File.OpenText(path))
-                    using (JsonTextReader jsonTextReader = new JsonTextReader(fs))
                     {
-                        JsonSerializer serializer = new JsonSerializer()
+                        using (var jsonTextReader = new JsonTextReader(fs))
                         {
-                            TypeNameHandling = TypeNameHandling.Objects,
-                            ObjectCreationHandling = ObjectCreationHandling.Replace
-                        };
+                            var serializer = new JsonSerializer()
+                            {
+                                TypeNameHandling = TypeNameHandling.Objects,
+                                ObjectCreationHandling = ObjectCreationHandling.Replace
+                            };
 
-                        return serializer.Deserialize<Collection<IFilterModel>>(jsonTextReader);
+                            return serializer.Deserialize<Collection<IFilterModel>>(jsonTextReader);
+                        }
                     }
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, $"Could not load filter at {path}", e);
             }
 
             return null;

@@ -1,16 +1,27 @@
-﻿using DriveHUD.Common.Annotations;
+﻿//-----------------------------------------------------------------------
+// <copyright file="MainFilterModelManagerService.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
 using DriveHUD.Common.Linq;
 using Model.Enums;
+using Newtonsoft.Json;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace Model.Filters
 {
-    public class MainFilterModelManagerService : IFilterModelManagerService, INotifyPropertyChanged
+    internal class MainFilterModelManagerService : BindableBase, IFilterModelManagerService
     {
         public MainFilterModelManagerService()
         {
@@ -19,9 +30,9 @@ namespace Model.Filters
 
         private void Initialize()
         {
-            _enumFilterType = EnumFilterType.Cash;
+            enumFilterType = EnumFilterType.Cash;
 
-            this.FilterTupleCollection = new ObservableCollection<FilterTuple>
+            FilterTupleCollection = new ReadOnlyObservableCollection<FilterTuple>(new ObservableCollection<FilterTuple>
             (
                 new List<FilterTuple>()
                 {
@@ -32,18 +43,18 @@ namespace Model.Filters
                     new FilterTuple() { Name = "Hand Action", ModelType = EnumFilterModelType.FilterHandActionModel, ViewModelType = EnumViewModelType.FilterHandActionViewModel, },
                     new FilterTuple() { Name = "Quick Filters", ModelType = EnumFilterModelType.FilterQuickModel, ViewModelType = EnumViewModelType.FilterQuickViewModel, },
                 }
-            );
+            ));
 
-            this._filterModelCollections = new Dictionary<EnumFilterType, ObservableCollection<IFilterModel>>()
+            filterModelCollections = new Dictionary<EnumFilterType, ReadOnlyObservableCollection<IFilterModel>>()
             {
                 { EnumFilterType.Cash, GetFilterModelsList() },
                 { EnumFilterType.Tournament, GetFilterModelsList() }
             };
         }
 
-        public ObservableCollection<IFilterModel> GetFilterModelsList()
+        public ReadOnlyObservableCollection<IFilterModel> GetFilterModelsList()
         {
-            var list = new ObservableCollection<IFilterModel>
+            var list = new ReadOnlyObservableCollection<IFilterModel>(new ObservableCollection<IFilterModel>
             {
                     new FilterStandardModel() { Id = Guid.Parse("00000000-0000-0000-0000-000000000000"), Name = "Standard Filters" },
                     new FilterHoleCardsModel() { Id = Guid.Parse("11111111-1111-1111-1111-111111111111"), Name = "Hole Cards" },
@@ -54,7 +65,7 @@ namespace Model.Filters
                     new FilterDateModel() { Id = Guid.Parse("66666666-6666-6666-6666-666666666666"), Name = "Date Filter" },
                     new FilterOmahaHandGridModel() { Id = Guid.Parse("77777777-7777-7777-7777-777777777777"), Name = "Omaha Hand Grid" },
                     new FilterHandGridModel() { Id = Guid.Parse("88888888-8888-8888-8888-888888888888"), Name = "Hand Grid" },
-            };
+            });
 
             list.ForEach(x => x.Initialize());
 
@@ -66,34 +77,36 @@ namespace Model.Filters
             switch (filterType)
             {
                 case EnumFilterType.Tournament:
-                    _enumFilterType = EnumFilterType.Tournament;
+                    enumFilterType = EnumFilterType.Tournament;
                     break;
                 case EnumFilterType.Cash:
                 default:
-                    _enumFilterType = EnumFilterType.Cash;
+                    enumFilterType = EnumFilterType.Cash;
                     break;
             }
         }
 
         public void SpreadFilter()
         {
-            EnumFilterType fromType = _enumFilterType;
+            EnumFilterType fromType = enumFilterType;
 
-            for (int i = 0; i < _filterModelCollections.Count; i++)
+            for (int i = 0; i < filterModelCollections.Count; i++)
             {
-                var key = _filterModelCollections.ElementAt(i).Key;
+                var key = filterModelCollections.ElementAt(i).Key;
+
                 if (key == fromType)
                 {
                     continue;
                 }
 
-                var filterCollection = _filterModelCollections[key];
-                var fromCollection = _filterModelCollections[fromType];
+                var filterCollection = filterModelCollections[key];
+                var fromCollection = filterModelCollections[fromType];
 
                 for (int j = 0; j < filterCollection.Count; j++)
                 {
                     var currentFilter = filterCollection[j];
                     var fromFilter = fromCollection.FirstOrDefault(x => x.Type == currentFilter.Type);
+
                     if (fromFilter != null)
                     {
                         currentFilter.LoadFilter(fromFilter);
@@ -102,55 +115,66 @@ namespace Model.Filters
             }
         }
 
-        public Dictionary<EnumFilterType, ObservableCollection<IFilterModel>> GetFilterModelDictionary()
+        public Dictionary<EnumFilterType, ReadOnlyObservableCollection<IFilterModel>> GetFilterModelDictionary()
         {
-            return _filterModelCollections;
+            return filterModelCollections;
+        }
+
+        public int GetFiltersHashCode()
+        {
+            unchecked
+            {
+                var hashcode = 23;
+
+                FilterModelCollection.ForEach(model =>
+                {
+                    var modelHashCode = JsonConvert.SerializeObject(model);
+                    hashcode = (hashcode * 31) + modelHashCode.GetHashCode();
+                });
+
+                return hashcode;
+            }
         }
 
         #region Properties
 
-        private EnumFilterType _enumFilterType;
+        private EnumFilterType enumFilterType;
 
-        public Dictionary<EnumFilterType, ObservableCollection<IFilterModel>> _filterModelCollections;
+        public Dictionary<EnumFilterType, ReadOnlyObservableCollection<IFilterModel>> filterModelCollections;
 
-        private ObservableCollection<FilterTuple> _filterTupleCollection;
+        private ReadOnlyObservableCollection<FilterTuple> filterTupleCollection;
 
-        public ObservableCollection<FilterTuple> FilterTupleCollection
+        public ReadOnlyObservableCollection<FilterTuple> FilterTupleCollection
         {
-            get { return _filterTupleCollection; }
+            get
+            {
+                return filterTupleCollection;
+            }
             set
             {
-                _filterTupleCollection = value;
-                OnPropertyChanged();
+                SetProperty(ref filterTupleCollection, value);
             }
         }
 
-        public ObservableCollection<IFilterModel> FilterModelCollection
+        public ReadOnlyObservableCollection<IFilterModel> FilterModelCollection
         {
-            get { return _filterModelCollections[_enumFilterType]; }
+            get
+            {
+                return filterModelCollections[enumFilterType];
+            }
             set
             {
-                if (!_filterModelCollections.ContainsKey(_enumFilterType))
+                if (!filterModelCollections.ContainsKey(enumFilterType))
                 {
                     return;
                 }
-                _filterModelCollections[_enumFilterType] = value;
-                OnPropertyChanged();
+
+                filterModelCollections[enumFilterType] = value;
+
+                RaisePropertyChanged();
             }
         }
 
-        #endregion
-
-        #region NotifyPropertyChanged
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        #endregion
+        #endregion      
     }
 }

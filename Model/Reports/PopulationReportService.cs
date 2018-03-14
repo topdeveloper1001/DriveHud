@@ -109,6 +109,8 @@ namespace Model.Reports
             var startDate = DateTime.MinValue;
             var endDate = DateTime.MaxValue;
 
+            var filtersHashCode = filterModelManagerService.GetFiltersHashCode();
+           
             switch (filterDateModel.DateFilterType.EnumDateRange)
             {
                 case EnumDateFiterStruct.EnumDateFiter.Today:
@@ -144,12 +146,13 @@ namespace Model.Reports
 
             // compare with filters which was used to build that cache
             var isValid = playersFrom == populationData.PlayersFrom && playersTo == populationData.PlayersTo &&
-                startDate == populationData.StartDate && endDate == populationData.EndDate;
+                startDate == populationData.StartDate && endDate == populationData.EndDate && filtersHashCode == populationData.FiltersHashCode;
 
             populationData.PlayersFrom = playersFrom;
             populationData.PlayersTo = playersTo;
             populationData.StartDate = startDate;
             populationData.EndDate = endDate;
+            populationData.FiltersHashCode = filtersHashCode;
 
             return isValid;
         }
@@ -232,6 +235,8 @@ namespace Model.Reports
                         CanAddHands = false
                     };
 
+                    var filterPredicate = storageModel.FilterPredicate.Compile();
+
                     Parallel.ForEach(players, player =>
                     {
                         var playerIndicators = new LightIndicators();
@@ -242,9 +247,12 @@ namespace Model.Reports
                             {
                                 playerIndicators.AddStatistic(x);
 
-                                lock (allPlayersIndicator)
+                                if (filterPredicate(x))
                                 {
-                                    allPlayersIndicator.AddStatistic(x);
+                                    lock (allPlayersIndicator)
+                                    {
+                                        allPlayersIndicator.AddStatistic(x);
+                                    }
                                 }
                             }
                         );
@@ -254,7 +262,7 @@ namespace Model.Reports
                         if (playerType != null)
                         {
                             dataService.ActOnPlayerStatisticFromFile(player.PlayerId,
-                                x => !x.IsTourney && FilterStatistic(x),
+                                x => !x.IsTourney && FilterStatistic(x) && filterPredicate(x),
                                 x =>
                                 {
                                     lock (populationIndicators[playerType.Name])

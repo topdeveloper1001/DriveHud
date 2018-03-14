@@ -252,7 +252,7 @@ namespace DriveHUD.Application.ViewModels
 
         internal void UpdateHeader()
         {
-            OnPropertyChanged(nameof(AppStartupHeader));
+            RaisePropertyChanged(nameof(AppStartupHeader));
         }
 
         internal async void RebuildStats()
@@ -1057,7 +1057,6 @@ namespace DriveHUD.Application.ViewModels
                     HudViewModel = new HudViewModel();
                 }
 
-                filterModelManager.SetFilterType(EnumFilterType.Cash);
                 CurrentViewModel = HudViewModel;
             }
             else if (viewModelType == EnumViewModelType.AppsViewModel)
@@ -1180,7 +1179,7 @@ namespace DriveHUD.Application.ViewModels
         public bool RadDropDownButtonFilterKeepOpen
         {
             get { return _radDropDownButtonFilterKeepOpen; }
-            set { _radDropDownButtonFilterKeepOpen = value; OnPropertyChanged(); }
+            set { _radDropDownButtonFilterKeepOpen = value; RaisePropertyChanged(); }
         }
 
         private bool _radDropDownButtonFilterIsOpen { get; set; }
@@ -1188,7 +1187,7 @@ namespace DriveHUD.Application.ViewModels
         public bool RadDropDownButtonFilterIsOpen
         {
             get { return _radDropDownButtonFilterIsOpen; }
-            set { _radDropDownButtonFilterIsOpen = value; OnPropertyChanged(); }
+            set { _radDropDownButtonFilterIsOpen = value; RaisePropertyChanged(); }
         }
 
         private DateTime _calendarFrom { get; set; }
@@ -1196,7 +1195,7 @@ namespace DriveHUD.Application.ViewModels
         public DateTime CalendarFrom
         {
             get { return _calendarFrom; }
-            set { _calendarFrom = value; OnPropertyChanged(); }
+            set { _calendarFrom = value; RaisePropertyChanged(); }
         }
 
         private DateTime _calendarTo { get; set; }
@@ -1204,7 +1203,7 @@ namespace DriveHUD.Application.ViewModels
         public DateTime CalendarTo
         {
             get { return _calendarTo; }
-            set { _calendarTo = value; OnPropertyChanged(); }
+            set { _calendarTo = value; RaisePropertyChanged(); }
         }
 
         public Version Version
@@ -1226,7 +1225,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 isTrial = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1241,7 +1240,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 isUpgradable = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1256,7 +1255,7 @@ namespace DriveHUD.Application.ViewModels
             private set
             {
                 isManualImportingRunning = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
                 RefreshCommandsCanExecute();
             }
         }
@@ -1267,7 +1266,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 _dashboardViewModel = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1277,7 +1276,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 _tournamentViewModel = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1287,7 +1286,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 _hudViewModel = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1306,7 +1305,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 _reportGadgetViewModel = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1316,7 +1315,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 _currentViewModel = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 if (this.DashboardViewModel != null) this.DashboardViewModel.IsActive = value.GetType().Equals(typeof(DashboardViewModel));
                 if (this.TournamentViewModel != null) this.TournamentViewModel.IsActive = value.GetType().Equals(typeof(TournamentViewModel));
@@ -1354,7 +1353,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 _currentViewModelType = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1364,7 +1363,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 _reportGadgetView_IsVisible = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1385,7 +1384,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 isHudRunning = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1402,7 +1401,7 @@ namespace DriveHUD.Application.ViewModels
                 if (isLowResolutionMode != value)
                 {
                     isLowResolutionMode = value;
-                    OnPropertyChanged();
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -1420,7 +1419,7 @@ namespace DriveHUD.Application.ViewModels
                 if (windowMinWidth != value)
                 {
                     windowMinWidth = value;
-                    OnPropertyChanged();
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -1438,7 +1437,7 @@ namespace DriveHUD.Application.ViewModels
                 if (windowWidth != value)
                 {
                     windowWidth = value;
-                    OnPropertyChanged();
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -1456,7 +1455,7 @@ namespace DriveHUD.Application.ViewModels
                 if (isEnabled != value)
                 {
                     isEnabled = value;
-                    OnPropertyChanged();
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -1478,7 +1477,7 @@ namespace DriveHUD.Application.ViewModels
 
                 sortedPlayers = value;
 
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 

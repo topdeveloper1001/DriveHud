@@ -20,11 +20,12 @@ namespace Model.Filters
 
         public FilterStandardModel(int playerCountMinAvailable = 2, int playerCountMinSelectedItem = 2, int playerCountMaxAvailable = 10, int playerCountMaxSelectedItem = 10)
         {
-            this.Name = "Standard Filters";
-            this.Type = EnumFilterModelType.FilterStandardModel;
+            Name = "Standard Filters";
 
-            this.PlayerCountMinAvailable = playerCountMinAvailable;
-            this.PlayerCountMaxAvailable = playerCountMaxAvailable;
+            Type = EnumFilterModelType.FilterStandardModel;
+
+            PlayerCountMinAvailable = playerCountMinAvailable;
+            PlayerCountMaxAvailable = playerCountMaxAvailable;
 
             FilterSectionPlayersBetweenCollectionInitialize();
         }
@@ -41,7 +42,9 @@ namespace Model.Filters
         #endregion
 
         #region Actions
+
         public static Action OnPlayersBetweenChanged;
+
         #endregion
 
         #region Methods
@@ -50,7 +53,7 @@ namespace Model.Filters
         {
             ////////////////////////////////
             // Initialize StatItemCollection
-            this.StatCollection = new ObservableCollection<StatItem>
+            StatCollection = new ObservableCollection<StatItem>
                 (
                     new List<StatItem>()
                     {
@@ -122,25 +125,27 @@ namespace Model.Filters
 
         public void PlayerCountListSet()
         {
-            if (this.PlayerCountMinAvailable == 0 || this.PlayerCountMaxAvailable == 0) return;
+            if (PlayerCountMinAvailable == 0 || PlayerCountMaxAvailable == 0)
+            {
+                return;
+            }
 
-            int minCount = (this.PlayerCountMaxSelectedItem ?? this.PlayerCountMaxAvailable) - 2;
-            this.PlayerCountMinList = (from v in Enumerable.Range(this.PlayerCountMinAvailable, minCount) select v).ToList();
-            this.PlayerCountMinSelectedItem = this._playerCountMinList.Contains(this.PlayerCountMinSelectedItem ?? -1) ? this.PlayerCountMinSelectedItem : this.PlayerCountMinList.ElementAt(0);
+            var minCount = (PlayerCountMaxSelectedItem ?? PlayerCountMaxAvailable) - 2;
 
-            int maxCount = this.PlayerCountMaxAvailable - (this.PlayerCountMinSelectedItem ?? this.PlayerCountMinAvailable);
-            this.PlayerCountMaxList = (from v in Enumerable.Range((this.PlayerCountMinSelectedItem ?? this.PlayerCountMinAvailable) + 1, maxCount) select v).ToList();
-            this.PlayerCountMaxSelectedItem = this._playerCountMaxList.Contains(this.PlayerCountMaxSelectedItem ?? -1) ? this.PlayerCountMaxSelectedItem : this.PlayerCountMaxList.ElementAt(0);
+            PlayerCountMinList = (from v in Enumerable.Range(PlayerCountMinAvailable, minCount) select v).ToList();
+            PlayerCountMinSelectedItem = _playerCountMinList.Contains(PlayerCountMinSelectedItem ?? -1) ? PlayerCountMinSelectedItem : PlayerCountMinList.ElementAt(0);
 
+            var maxCount = this.PlayerCountMaxAvailable - (PlayerCountMinSelectedItem ?? PlayerCountMinAvailable);
 
-            if (OnPlayersBetweenChanged != null) OnPlayersBetweenChanged.Invoke();
+            PlayerCountMaxList = (from v in Enumerable.Range((PlayerCountMinSelectedItem ?? PlayerCountMinAvailable) + 1, maxCount) select v).ToList();
+            PlayerCountMaxSelectedItem = _playerCountMaxList.Contains(PlayerCountMaxSelectedItem ?? -1) ? PlayerCountMaxSelectedItem : PlayerCountMaxList.ElementAt(0);
+
+            OnPlayersBetweenChanged?.Invoke();
         }
 
         public void FilterSectionTableRingCollectionInitialize()
         {
-            ////////////////////////////////
-            // Initialize TableRingCollections
-            this.Table6MaxCollection = new ObservableCollection<TableRingItem>()
+            Table6MaxCollection = new ObservableCollection<TableRingItem>()
             {
                 new TableRingItem() { IsChecked = true, Seat = 5, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.BTN, Name = "BTN" },
                 new TableRingItem() { IsChecked = true, Seat = 6, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.SB, Name = "SB" },
@@ -150,7 +155,7 @@ namespace Model.Filters
                 new TableRingItem() { IsChecked = true, Seat = 4, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.CO, Name = "CO" },
             };
 
-            this.TableFullRingCollection = new ObservableCollection<TableRingItem>()
+            TableFullRingCollection = new ObservableCollection<TableRingItem>()
             {
                 new TableRingItem() { IsChecked = true, Seat = 6, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.BTN, Name = "BTN" },
                 new TableRingItem() { IsChecked = true, Seat = 7, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.SB, Name = "SB" },
@@ -235,6 +240,7 @@ namespace Model.Filters
         public override object Clone()
         {
             FilterStandardModel model = this.DeepCloneJson();
+
             model.PlayerCountMaxSelectedItem = PlayerCountMaxSelectedItem;
             model.PlayerCountMinSelectedItem = PlayerCountMinSelectedItem;
 

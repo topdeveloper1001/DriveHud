@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Newtonsoft.Json;
 using Prism.Mvvm;
 using System;
 
@@ -27,6 +28,7 @@ namespace Model.Filters
         private string _name;
         private bool _isActive;
 
+        [JsonIgnore]
         public Guid Id
         {
             get

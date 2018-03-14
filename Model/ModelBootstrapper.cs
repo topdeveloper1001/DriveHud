@@ -12,6 +12,8 @@
 
 using Microsoft.Practices.Unity;
 using Model.AppStore;
+using Model.Enums;
+using Model.Filters;
 using Model.Hud;
 using Model.Reports;
 using System;
@@ -29,7 +31,10 @@ namespace Model
             {
                 throw new ArgumentNullException(nameof(container));
             }
-
+            
+            container.RegisterType<IFilterDataService, FilterDataService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
+            container.RegisterType<IFilterModelManagerService, MainFilterModelManagerService>(FilterServices.Main.ToString(), new ContainerControlledLifetimeManager());
+            container.RegisterType<IFilterModelManagerService, StickersFilterModelManagerService>(FilterServices.Stickers.ToString(), new ContainerControlledLifetimeManager());
             container.RegisterType<ISessionFactoryService, SessionFactoryService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IProductAppStoreRepository, ProductAppStoreRepository>();
             container.RegisterType<IProductAppStoreModel, ProductAppStoreModel>();
