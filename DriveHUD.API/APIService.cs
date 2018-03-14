@@ -5,10 +5,9 @@ using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Interfaces;
-using System.Collections.Generic;
-using System.Linq;
 using System;
 using System.Globalization;
+using System.Linq;
 using System.ServiceModel.Web;
 
 namespace DriveHUD.API
@@ -16,13 +15,15 @@ namespace DriveHUD.API
     public class APIService : IAPIService
     {
         private const string DATE_TIME_FORMAT = "yyyyMMdd";
-        private IDataService _dataService;
-        private SingletonStorageModel _storageModel;
+        private readonly IDataService dataService;
+        private readonly IPlayerStatisticRepository playerStatisticRepository;
+        private readonly SingletonStorageModel storageModel;
 
         public APIService()
         {
-            _dataService = ServiceLocator.Current.GetInstance<IDataService>();
-            _storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
+            dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
+            playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
         }
 
         public HandHistory GetHandById(string id, string pokerSite)
@@ -40,10 +41,10 @@ namespace DriveHUD.API
                 // Return hand for currently selected user
                 if (site == EnumPokerSites.Unknown)
                 {
-                    site = _storageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown;
+                    site = storageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown;
                 }
 
-                return _dataService.GetGame(parsedId, (short)site);
+                return dataService.GetGame(parsedId, (short)site);
             }
             else
             {
@@ -53,7 +54,7 @@ namespace DriveHUD.API
 
         public HandHistory[] GetHands(string date)
         {
-            var statisticCollection = _storageModel.StatisticCollection.ToList();
+            var statisticCollection = storageModel.StatisticCollection.ToList();
 
             DateTime parsedDate = ParseDate(date, statisticCollection.Max(x => x.Time));
 
@@ -65,7 +66,7 @@ namespace DriveHUD.API
             }
 
             var pokerSiteId = handsToSelect.FirstOrDefault().PokersiteId;
-            return _dataService.GetGames(handsToSelect.Select(x => x.GameNumber), (short)pokerSiteId).ToArray();
+            return dataService.GetGames(handsToSelect.Select(x => x.GameNumber), (short)pokerSiteId).ToArray();
         }
 
         public HandHistory[] GetPlayerHands(string playerName, string pokerSite, string date)
@@ -77,7 +78,7 @@ namespace DriveHUD.API
                 throw new WebFaultException<string>($"Cannot recognise site {pokerSite}", System.Net.HttpStatusCode.BadRequest);
             }
 
-            var statistic = _dataService.GetPlayerStatisticFromFile(playerName, (short)site);
+            var statistic = playerStatisticRepository.GetPlayerStatistic(playerName, (short)site);
 
             DateTime parsedDate = ParseDate(date, statistic.Max(x => x.Time));
 
@@ -90,12 +91,12 @@ namespace DriveHUD.API
 
             var pokerSiteId = handsToSelect.FirstOrDefault().PokersiteId;
 
-            return _dataService.GetGames(handsToSelect.Select(x => x.GameNumber), (short)pokerSiteId).ToArray();
+            return dataService.GetGames(handsToSelect.Select(x => x.GameNumber), (short)pokerSiteId).ToArray();
         }
 
         public HandInfoDataContract[] GetHandsList(string date)
         {
-            var statisticCollection = _storageModel.StatisticCollection.ToList();
+            var statisticCollection = storageModel.StatisticCollection.ToList();
 
             DateTime parsedDate = ParseDate(date, statisticCollection.Max(x => x.Time));
 
@@ -118,7 +119,7 @@ namespace DriveHUD.API
                 throw new WebFaultException<string>($"Cannot recognise site {pokerSite}", System.Net.HttpStatusCode.BadRequest);
             }
 
-            var statistic = _dataService.GetPlayerStatisticFromFile(playerName, (short)site);
+            var statistic = playerStatisticRepository.GetPlayerStatistic(playerName, (short)site);
 
             DateTime parsedDate = DateTime.Now;
 

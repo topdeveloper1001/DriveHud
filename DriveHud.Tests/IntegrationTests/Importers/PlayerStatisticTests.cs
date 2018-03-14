@@ -14,6 +14,7 @@ using DriveHud.Common.Log;
 using DriveHud.Tests.IntegrationTests.Base;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
+using Model;
 using Model.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
@@ -123,8 +124,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             {
                 var playerstatistic = new List<Playerstatistic>();
 
-                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-                dataService.Store(Arg.Is<Playerstatistic>(x => GetPlayerstatisticCollectionFromStoreCall(ref playerstatistic, x, playerName)));
+                var playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
+                playerStatisticRepository.Store(Arg.Is<Playerstatistic>(x => GetPlayerstatisticCollectionFromStoreCall(ref playerstatistic, x, playerName)));
 
                 FillDatabaseFromSingleFile(fileName, pokerSite);
 
@@ -1229,8 +1230,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             {
                 Playerstatistic playerstatistic = null;
 
-                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-                dataService.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
+                var playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
+                playerStatisticRepository.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
 
                 FillDatabaseFromSingleFile(fileName, pokerSite);
 

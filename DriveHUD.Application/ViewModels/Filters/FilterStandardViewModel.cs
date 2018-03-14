@@ -1,16 +1,12 @@
-﻿using System.Linq;
-using System.Windows.Input;
-using Prism.Commands;
-using DriveHUD.Common.Infrastructure.Base;
+﻿using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.Filters;
-using Microsoft.Practices.ServiceLocation;
 using Model.Interfaces;
+using Prism.Commands;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using DriveHUD.Application.ViewModels;
-using DriveHUD.Entities;
-using Model;
+using System.Linq;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
 {

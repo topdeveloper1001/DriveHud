@@ -54,6 +54,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
         {
             InitializeImporterSessionCacheService(unityContainer);
             InitializeDataService(unityContainer);
+            InitializePlayerStatisticRepository(unityContainer);
             InitializeSessionFactoryService(unityContainer);
             InitializeHandHistoryParserFactory(unityContainer);
             InitializePlayerStatisticCalculator(unityContainer);
@@ -62,7 +63,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
             InitializeSessionService(unityContainer);
             InitializeEventAggregator(unityContainer);
             InitializeOpponentReportService(unityContainer);
-            InitializeResources();            
+            InitializeResources();
         }
 
         protected virtual void InitializeDatabase()
@@ -166,6 +167,12 @@ namespace DriveHud.Tests.IntegrationTests.Base
         {
             var dataService = Substitute.For<IDataService>();
             unityContainer.RegisterInstance(dataService);
+        }
+
+        protected virtual void InitializePlayerStatisticRepository(UnityContainer unityContainer)
+        {
+            var playerStatisticRepository = Substitute.For<IPlayerStatisticRepository>();
+            unityContainer.RegisterInstance(playerStatisticRepository);
         }
 
         protected virtual void InitializeSessionFactoryService(UnityContainer unityContainer)

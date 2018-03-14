@@ -48,7 +48,7 @@ namespace DriveHUD.Importers
         private readonly string playerStatisticBackupDataFolder;
         private readonly string playerStatisticOldDataFolder;
         private readonly IHandHistoryParserFactory handHistoryParserFactory;
-        private readonly IDataService dataService;
+        private readonly IPlayerStatisticRepository playerStatisticRepository;
         private const int handHistoryRowsPerQuery = 1000;
         private Dictionary<PlayerPokerSiteKey, Players> playersDictionary;
 
@@ -64,7 +64,7 @@ namespace DriveHUD.Importers
             this.playerStatisticBackupDataFolder = playerStatisticBackupDataFolder;
             this.playerStatisticOldDataFolder = playerStatisticOldDataFolder;
             handHistoryParserFactory = ServiceLocator.Current.GetInstance<IHandHistoryParserFactory>();
-            dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace DriveHUD.Importers
             }
             finally
             {
-                dataService?.SetPlayerStatisticPath(StringFormatter.GetPlayerStatisticDataFolderPath());
+                playerStatisticRepository?.SetPlayerStatisticPath(StringFormatter.GetPlayerStatisticDataFolderPath());
             }
         }
 
@@ -179,7 +179,7 @@ namespace DriveHUD.Importers
 
             Directory.CreateDirectory(playerStatisticTempDataFolder);
 
-            dataService.SetPlayerStatisticPath(playerStatisticTempDataFolder);
+            playerStatisticRepository.SetPlayerStatisticPath(playerStatisticTempDataFolder);
 
             if (playerStatisticStreamWriters.Count > 0)
             {

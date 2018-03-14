@@ -60,6 +60,7 @@ namespace DriveHUD.Importers
 
         private readonly IImporterSessionCacheService importSessionCacheService;
         private readonly IDataService dataService;
+        private readonly IPlayerStatisticRepository playerStatisticRepository;
         private readonly IEventAggregator eventAggregator;
         private readonly IOpponentReportService opponentReportService;
         private readonly SingletonStorageModel storageModel;
@@ -68,6 +69,7 @@ namespace DriveHUD.Importers
         {
             importSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
             storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
@@ -653,11 +655,11 @@ namespace DriveHUD.Importers
         {
             if (string.IsNullOrEmpty(session))
             {
-                Task.Run(() => dataService.Store(playerStat));
+                Task.Run(() => playerStatisticRepository.Store(playerStat));
                 return;
             }
 
-            dataService.Store(playerStat);
+            playerStatisticRepository.Store(playerStat);
         }
 
         /// <summary>

@@ -70,6 +70,8 @@ namespace DriveHUD.Application.ViewModels
 
         private IDataService dataService;
 
+        private IPlayerStatisticRepository playerStatisticRepository;
+
         private IEventAggregator eventAggregator;
 
         private IImporterSessionCacheService importerSessionCacheService;
@@ -93,6 +95,7 @@ namespace DriveHUD.Application.ViewModels
         internal MainWindowViewModel()
         {
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
 
             importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             importerService = ServiceLocator.Current.GetInstance<IImporterService>();
@@ -227,11 +230,11 @@ namespace DriveHUD.Application.ViewModels
 
             if (player is PlayerCollectionItem)
             {
-                statistics.AddRange(dataService.GetPlayerStatisticFromFile((StorageModel.PlayerSelectedItem?.Name ?? string.Empty), (short)(StorageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown)));
+                statistics.AddRange(playerStatisticRepository.GetPlayerStatistic((StorageModel.PlayerSelectedItem?.Name ?? string.Empty), (short)(StorageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown)));
             }
             else if (player is AliasCollectionItem)
             {
-                (player as AliasCollectionItem).PlayersInAlias.ForEach(pl => statistics.AddRange(dataService.GetPlayerStatisticFromFile((pl?.Name ?? string.Empty), (short)(pl?.PokerSite ?? EnumPokerSites.Unknown))));
+                (player as AliasCollectionItem).PlayersInAlias.ForEach(pl => statistics.AddRange(playerStatisticRepository.GetPlayerStatistic((pl?.Name ?? string.Empty), (short)(pl?.PokerSite ?? EnumPokerSites.Unknown))));
             }
 
             AddHandTags(statistics);

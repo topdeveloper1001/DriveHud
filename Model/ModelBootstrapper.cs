@@ -31,7 +31,8 @@ namespace Model
             {
                 throw new ArgumentNullException(nameof(container));
             }
-            
+
+            container.RegisterType<IPlayerStatisticRepository, PlayerStatisticRepository>(new ContainerControlledLifetimeManager());
             container.RegisterType<IFilterDataService, FilterDataService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
             container.RegisterType<IFilterModelManagerService, MainFilterModelManagerService>(FilterServices.Main.ToString(), new ContainerControlledLifetimeManager());
             container.RegisterType<IFilterModelManagerService, StickersFilterModelManagerService>(FilterServices.Stickers.ToString(), new ContainerControlledLifetimeManager());

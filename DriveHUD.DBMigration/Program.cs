@@ -313,7 +313,7 @@ namespace DriveHUD.DBMigration
             }
         }
 
-        private class DataMigrationService : DataService
+        private class DataMigrationService : PlayerStatisticRepository
         {
             protected override string PlayersPath
             {

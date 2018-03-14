@@ -178,28 +178,8 @@ namespace HandHistories.Objects.Actions
             }
 
             throw new ArgumentException("GetAdjustedAmount: Unknown action " + type + " to have amount " + amount);
-        }
-
-        [XmlIgnore]
-        public bool IsRaise
-        {
-            get
-            {
-                return HandActionType == HandActionType.RAISE ||
-                       IsAllInAction;
-            }
-        }
-
-        [XmlIgnore]
-        public bool IsPreFlopRaise
-        {
-            get
-            {
-                return Street == Street.Preflop &&
-                       (HandActionType == HandActionType.RAISE || IsAllInAction);
-            }
-        }
-
+        }       
+     
         [XmlIgnore]
         public bool IsAllInAction
         {
@@ -231,7 +211,7 @@ namespace HandHistories.Objects.Actions
         }
 
         [XmlIgnore]
-        public bool IsBlinds
+        public virtual bool IsBlinds
         {
             get
             {
@@ -263,7 +243,7 @@ namespace HandHistories.Objects.Actions
         }
 
         [XmlIgnore]
-        public bool IsCall
+        public virtual bool IsCall
         {
             get
             {

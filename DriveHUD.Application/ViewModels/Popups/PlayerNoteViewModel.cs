@@ -14,6 +14,7 @@ using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
+using Model;
 using Model.Data;
 using Model.Interfaces;
 using System;
@@ -25,7 +26,7 @@ namespace DriveHUD.Application.ViewModels.Popups
 {
     public class PlayerNoteViewModel : BaseViewModel
     {
-        private readonly IDataService dataService;
+        private readonly IDataService dataService;        
 
         private List<Playernotes> playerNoteEntities;
 
@@ -34,7 +35,7 @@ namespace DriveHUD.Application.ViewModels.Popups
         public PlayerNoteViewModel(short pokerSiteId, string playerName)
         {
             SaveCommand = new RelayCommand(Save);
-            dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            dataService = ServiceLocator.Current.GetInstance<IDataService>();            
 
             PokersiteId = pokerSiteId;
             PlayerName = playerName;

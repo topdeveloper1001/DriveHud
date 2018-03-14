@@ -41,6 +41,21 @@ namespace HandHistories.Objects.Actions
             SourceActionType = actionType;
         }
 
+        [XmlIgnore]
+        public override bool IsBlinds
+        {
+            get
+            {
+                return SourceActionType == HandActionType.SMALL_BLIND ||
+                       SourceActionType == HandActionType.BIG_BLIND ||
+                       SourceActionType == HandActionType.POSTS ||
+                       SourceActionType == HandActionType.STRADDLE ||
+                       SourceActionType == HandActionType.ANTE;
+            }
+        }
+
+        public override bool IsCall => SourceActionType == HandActionType.CALL;
+
         public override string ToString()
         {
             return base.ToString() + "-RaiseAllIn=" + IsRaiseAllIn;

@@ -16,4 +16,4 @@ UTG Folds, MP Folds, HJ Folds, CO Checks, [color=red]HERO Raises To $4 (Rem. Sta
 Flop ($33.0) 4:heart: A:spade: K:heart:
 SB Bets $19.25 (Rem. Stack: 67.61), [color=red]HERO Raises To $84 (allin) (Rem. Stack: 0.0)[/color], SB Folds
 
-HERO wins $132.68
+HERO wins $67.93

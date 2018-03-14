@@ -128,10 +128,10 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         /// <returns></returns>
         private HudLightIndicators GetIndicators(string playerName, EnumPokerSites pokerSite, string playerStatisticFolder)
         {
-            var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-            dataService.SetPlayerStatisticPath(playerStatisticFolder);
+            var playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
+            playerStatisticRepository.SetPlayerStatisticPath(playerStatisticFolder);
 
-            var playerStatistic = dataService.GetPlayerStatisticFromFile(playerName, (short)pokerSite);
+            var playerStatistic = playerStatisticRepository.GetPlayerStatistic(playerName, (short)pokerSite);
 
             var indicators = new HudLightIndicators(playerStatistic);
 
@@ -347,6 +347,11 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         protected override void InitializeDataService(UnityContainer unityContainer)
         {
             unityContainer.RegisterType<IDataService, DataService>(new ContainerControlledLifetimeManager());
+        }
+
+        protected override void InitializePlayerStatisticRepository(UnityContainer unityContainer)
+        {
+            unityContainer.RegisterType<IPlayerStatisticRepository, PlayerStatisticRepository>(new ContainerControlledLifetimeManager());
         }
 
         protected override void InitializeSessionFactoryService(UnityContainer unityContainer)

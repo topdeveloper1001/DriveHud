@@ -24,7 +24,6 @@ using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
 using NHibernate.Transform;
-using ProtoBuf;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -40,193 +39,13 @@ namespace Model
     /// </summary>
     public class DataService : IDataService
     {
-        protected readonly string dataPath = StringFormatter.GetAppDataFolderPath();
+        private readonly string appDataFolder = StringFormatter.GetAppDataFolderPath();
 
-        protected virtual string PlayersPath
-        {
-            get;
-            set;
-        }
-
-        private static ReaderWriterLockSlim rwLock = new ReaderWriterLockSlim();
+        private readonly IPlayerStatisticRepository playerStatisticRepository;
 
         public DataService()
         {
-            PlayersPath = StringFormatter.GetPlayerStatisticDataFolderPath();
-
-            if (!Directory.Exists(dataPath))
-            {
-                Directory.CreateDirectory(dataPath);
-            }
-
-            if (!Directory.Exists(PlayersPath))
-            {
-                Directory.CreateDirectory(PlayersPath);
-            }
-        }
-
-        public void SetPlayerStatisticPath(string path)
-        {
-            PlayersPath = path;
-
-            if (!Directory.Exists(PlayersPath))
-            {
-                Directory.CreateDirectory(PlayersPath);
-            }
-        }
-
-        public IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, short? pokersiteId)
-        {
-            var result = new List<Playerstatistic>();
-
-            ActOnPlayerStatisticFromFile(playerId,
-                stat => !pokersiteId.HasValue || (stat.PokersiteId == pokersiteId),
-                stat => result.Add(stat));
-
-            return result;
-        }
-
-        public IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, Func<Playerstatistic, bool> filter)
-        {
-            var result = new List<Playerstatistic>();
-
-            ActOnPlayerStatisticFromFile(playerId, filter, stat => result.Add(stat));
-
-            return result;
-        }
-
-        public IList<Playerstatistic> GetPlayerStatisticFromFile(string playerName, short? pokersiteId)
-        {
-            try
-            {
-                using (var session = ModelEntities.OpenStatelessSession())
-                {
-                    var player = session.Query<Players>().FirstOrDefault(x => x.Playername.Equals(playerName) && x.PokersiteId == pokersiteId);
-
-                    if (player == null)
-                    {
-                        return new List<Playerstatistic>();
-                    }
-
-                    return GetPlayerStatisticFromFile(player.PlayerId, pokersiteId);
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, "Couldn't get player", e);
-            }
-
-            return new List<Playerstatistic>();
-        }
-
-        /// <summary>
-        /// Reads player statistic for the specified player name, invoke action for the filtered by predicate statistic 
-        /// </summary>      
-        public void ActOnPlayerStatisticFromFile(string playerName, short? pokerSiteId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action)
-        {
-            try
-            {
-                using (var session = ModelEntities.OpenStatelessSession())
-                {
-                    var player = session.Query<Players>().FirstOrDefault(x => x.Playername.Equals(playerName) && x.PokersiteId == pokerSiteId);
-
-                    if (player == null)
-                    {
-                        return;
-                    }
-
-                    ActOnPlayerStatisticFromFile(player.PlayerId, predicate, action);
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, "Couldn't get player", e);
-            }
-        }
-
-        /// <summary>
-        /// Reads player statistic for the specified player id, invoke action for the filtered by predicate statistic 
-        /// </summary>      
-        public void ActOnPlayerStatisticFromFile(int playerId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action)
-        {
-            if (action == null)
-            {
-                return;
-            }
-
-            var files = GetPlayerFiles(playerId);
-
-            if (files == null || !files.Any())
-            {
-                return;
-            }
-
-            rwLock.EnterReadLock();
-
-            try
-            {
-                foreach (var file in files)
-                {
-                    ActOnPlayerStatisticFromFile(file, predicate, action);
-                }
-            }
-            finally
-            {
-                rwLock.ExitReadLock();
-            }
-        }
-
-        public void ActOnPlayerStatisticFromFile(string file, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action)
-        {
-            try
-            {
-                using (var sr = new StreamReader(file))
-                {
-                    string line = null;
-
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        try
-                        {
-                            if (string.IsNullOrWhiteSpace(line))
-                            {
-                                LogProvider.Log.Warn(this, $"Empty line in {file}");
-                                continue;
-                            }
-
-                            /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
-                            byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
-
-                            using (var ms = new MemoryStream(byteAfter64))
-                            {
-                                var stat = Serializer.Deserialize<Playerstatistic>(ms);
-
-                                if (predicate == null || predicate(stat))
-                                {
-                                    action(stat);
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            LogProvider.Log.Error($@"Could not process the file: {file}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
-                        }
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"File '{file}' has not been processed.", e);
-                return;
-            }
-        }
-
-        public Players GetPlayer(string playerName, short pokersiteId)
-        {
-            using (var session = ModelEntities.OpenSession())
-            {
-                return session.Query<Players>().FirstOrDefault(x => x.Playername == playerName && x.PokersiteId == pokersiteId);
-            }
+            playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
         }
 
         #region Aliases
@@ -284,6 +103,14 @@ namespace Model
         }
 
         #endregion
+
+        public Players GetPlayer(string playerName, short pokersiteId)
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                return session.Query<Players>().FirstOrDefault(x => x.Playername == playerName && x.PokersiteId == pokersiteId);
+            }
+        }
 
         public IList<Gametypes> GetPlayerGameTypes(IEnumerable<int> playerIds)
         {
@@ -584,134 +411,17 @@ namespace Model
             }
         }
 
-        public void Store(Playerstatistic statistic)
-        {
-            rwLock.EnterWriteLock();
-
-            try
-            {
-                if (!Directory.Exists(PlayersPath))
-                {
-                    Directory.CreateDirectory(PlayersPath);
-                }
-
-                var playerDirectory = Path.Combine(PlayersPath, statistic.PlayerId.ToString());
-
-                if (!Directory.Exists(playerDirectory))
-                {
-                    Directory.CreateDirectory(playerDirectory);
-                }
-
-                var fileName = Path.Combine(playerDirectory, statistic.Playedyearandmonth.ToString()) + ".stat";
-
-                var data = string.Empty;
-
-                using (var msTestString = new MemoryStream())
-                {
-                    Serializer.Serialize(msTestString, statistic);
-                    data = Convert.ToBase64String(msTestString.ToArray()).Trim();
-                }
-
-                File.AppendAllLines(fileName, new[] { data });
-
-                var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
-
-                if (storageModel.PlayerSelectedItem != null &&
-                    (statistic.PlayerId == storageModel.PlayerSelectedItem.PlayerId || storageModel.PlayerSelectedItem.PlayerIds.Contains(statistic.PlayerId)))
-                {
-                    storageModel.StatisticCollection.Add(statistic);
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, e);
-            }
-            finally
-            {
-                rwLock.ExitWriteLock();
-            }
-        }
-
-        public void Store(IEnumerable<Playerstatistic> statistic)
-        {
-            if (statistic == null || !statistic.Any())
-            {
-                return;
-            }
-
-            var groupedStatistic = (from stat in statistic
-                                    group stat by new { stat.PlayerId, stat.Playedyearandmonth } into grouped
-                                    select new
-                                    {
-                                        grouped.Key.PlayerId,
-                                        grouped.Key.Playedyearandmonth,
-                                        Statistic = grouped.OrderBy(x => x.Playedyearandmonth).ToArray()
-                                    }).ToArray();
-
-            rwLock.EnterWriteLock();
-
-            try
-            {
-                if (!Directory.Exists(PlayersPath))
-                {
-                    Directory.CreateDirectory(PlayersPath);
-                }
-
-                foreach (var stats in groupedStatistic)
-                {
-                    var playerDirectory = Path.Combine(PlayersPath, stats.PlayerId.ToString());
-
-                    if (!Directory.Exists(playerDirectory))
-                    {
-                        Directory.CreateDirectory(playerDirectory);
-                    }
-
-                    var fileName = Path.Combine(playerDirectory, stats.Playedyearandmonth.ToString()) + ".stat";
-
-                    var statisticStringsToAppend = new List<string>();
-
-                    foreach (var stat in stats.Statistic)
-                    {
-                        using (var msTestString = new MemoryStream())
-                        {
-                            Serializer.Serialize(msTestString, stat);
-                            var data = Convert.ToBase64String(msTestString.ToArray()).Trim();
-
-                            statisticStringsToAppend.Add(data);
-                        }
-                    }
-
-                    File.AppendAllLines(fileName, statisticStringsToAppend);
-
-                    var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
-
-                    if (storageModel.PlayerSelectedItem != null && stats.PlayerId == storageModel.PlayerSelectedItem.PlayerId)
-                    {
-                        storageModel.StatisticCollection.AddRange(stats.Statistic);
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, "Couldn't save player statistic", e);
-            }
-            finally
-            {
-                rwLock.ExitWriteLock();
-            }
-        }
-
         public Stream OpenStorageStream(string filename, FileMode mode)
         {
-            if (File.Exists(Path.Combine(dataPath, filename)))
+            if (File.Exists(Path.Combine(appDataFolder, filename)))
             {
-                return File.Open(Path.Combine(dataPath, filename), mode);
+                return File.Open(Path.Combine(appDataFolder, filename), mode);
             }
             else
             {
                 if (mode == FileMode.Create)
                 {
-                    return File.Open(Path.Combine(dataPath, filename), mode);
+                    return File.Open(Path.Combine(appDataFolder, filename), mode);
                 }
                 else
                 {
@@ -811,11 +521,6 @@ namespace Model
         {
             try
             {
-                if (!Directory.Exists(PlayersPath))
-                {
-                    Directory.CreateDirectory(PlayersPath);
-                }
-
                 List<IPlayer> players = new List<IPlayer>();
 
                 using (var session = ModelEntities.OpenSession())
@@ -907,74 +612,15 @@ namespace Model
         {
             try
             {
-                if (Directory.Exists(dataPath))
+                if (Directory.Exists(appDataFolder))
                 {
-                    Directory.Delete(dataPath, true);
+                    Directory.Delete(appDataFolder, true);
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Couldn't delete directory '{dataPath}'", e);
+                LogProvider.Log.Error(this, $"Couldn't delete directory '{appDataFolder}'", e);
             }
-        }
-
-        /// <summary>
-        /// Deletes specific player's statistic from file storage
-        /// </summary>
-        /// <param name="statistic">Statistic to delete</param>
-        public void DeletePlayerStatisticFromFile(Playerstatistic statistic)
-        {
-            var files = GetPlayerFiles(statistic.PlayerId);
-
-            if (files == null || !files.Any())
-            {
-                return;
-            }
-
-            string convertedStatistic = string.Empty;
-
-            using (var msTestString = new MemoryStream())
-            {
-                Serializer.Serialize(msTestString, statistic);
-                convertedStatistic = Convert.ToBase64String(msTestString.ToArray());
-            }
-
-            rwLock.EnterWriteLock();
-
-            try
-            {
-                foreach (var file in files)
-                {
-                    string[] allLines = null;
-                    allLines = File.ReadAllLines(file);
-
-                    if (allLines.Any(x => x.Equals(convertedStatistic, StringComparison.Ordinal)))
-                    {
-                        var newLines = new List<string>(allLines.Count());
-
-                        foreach (var line in allLines)
-                        {
-                            if (!line.Equals(convertedStatistic, StringComparison.Ordinal))
-                            {
-                                newLines.Add(line);
-                            }
-                        }
-
-                        File.WriteAllLines(file, newLines);
-
-                        return;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, e);
-            }
-            finally
-            {
-                rwLock.ExitWriteLock();
-            }
-
         }
 
         public void DeleteHandHistory(long handNumber, int pokerSiteId)
@@ -1007,10 +653,11 @@ namespace Model
                         opponentReportResetRequired = true;
                     }
 
-                    ActOnPlayerStatisticFromFile(x.PlayerId, s => s.GameNumber == handNumber && s.PokersiteId == pokerSiteId, s => playerStatisticToDelete.Add(s));
+                    var statisticToDelete = playerStatisticRepository.GetPlayerStatistic(x.PlayerId).Where(s => s.GameNumber == handNumber && s.PokersiteId == pokerSiteId);
+                    playerStatisticToDelete.AddRange(statisticToDelete);
                 });
 
-                playerStatisticToDelete.ForEach(x => DeletePlayerStatisticFromFile(x));
+                playerStatisticToDelete.ForEach(x => playerStatisticRepository.DeletePlayerStatisticFromFile(x));
 
                 using (var session = ModelEntities.OpenStatelessSession())
                 {
@@ -1210,26 +857,6 @@ namespace Model
             }
 
             return new List<PlayerNetWon>();
-        }
-
-        public string[] GetPlayerFiles(int playerId)
-        {
-            try
-            {
-                string playerDirectory = Path.Combine(PlayersPath, playerId.ToString());
-
-                if (!Directory.Exists(playerDirectory))
-                {
-                    return new string[0];
-                }
-
-                return Directory.GetFiles(playerDirectory, "*.stat");
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Could not get player [{playerId}] files", e);
-                return new string[0];
-            }
         }
 
         private sealed class PlayerNetWonQuery : IResultTransformer

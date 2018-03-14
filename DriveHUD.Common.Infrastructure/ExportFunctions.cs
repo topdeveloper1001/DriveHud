@@ -455,7 +455,10 @@ namespace DriveHUD.Common.Ifrastructure
 
             foreach (var action in actions)
             {
-                if (action.IsBlinds) continue;
+                if (action.IsBlinds || action.HandActionType == HandActionType.UNCALLED_BET)
+                {
+                    continue;
+                }
 
                 pot += Math.Abs(action.Amount);
                 bool allIn = action.IsAllInAction;
@@ -477,7 +480,10 @@ namespace DriveHUD.Common.Ifrastructure
 
             foreach (var action in actions)
             {
-                if (action.IsBlinds) continue;
+                if (action.IsBlinds || action.HandActionType == HandActionType.UNCALLED_BET)
+                {
+                    continue;
+                }
 
                 pot += Math.Abs(action.Amount);
                 bool allIn = action.IsAllInAction;
@@ -495,7 +501,12 @@ namespace DriveHUD.Common.Ifrastructure
         private static string GetPlayersActionString(HandAction action, decimal remainingStack, bool isPreflop = false)
         {
             string resultString = string.Empty;
-            switch (action.HandActionType)
+
+            var handActionType = action is AllInAction allInAction ?
+                allInAction.SourceActionType :
+                action.HandActionType;
+
+            switch (handActionType)
             {
                 case HandActionType.SMALL_BLIND:
                     resultString = "SB";

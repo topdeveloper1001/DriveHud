@@ -44,13 +44,13 @@ namespace DriveHUD.Importers
 
         private Dictionary<string, SessionCacheData> cachedData;
 
-        private readonly IDataService dataService;
+        private readonly IPlayerStatisticRepository playerStatisticRepository;
 
         private bool isStarted;
 
         public ImporterSessionCacheService()
         {
-            dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
         }
 
         /// <summary>
@@ -152,12 +152,13 @@ namespace DriveHUD.Importers
                             GameFormat = cacheInfo.GameFormat
                         };
 
-                        dataService.ActOnPlayerStatisticFromFile(cacheInfo.Player.PlayerId,
-                            stat => (stat.PokersiteId == (short)cacheInfo.Player.PokerSite) &&
-                                    stat.IsTourney == cacheInfo.Stats.IsTourney &&
-                                    GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)cacheInfo.Stats.PokergametypeId) &&
-                                    (cacheInfo.Filter == null || cacheInfo.Filter.Apply(stat)),
-                            stat =>
+                        playerStatisticRepository
+                            .GetPlayerStatistic(cacheInfo.Player.PlayerId)
+                            .Where(stat => (stat.PokersiteId == (short)cacheInfo.Player.PokerSite) &&
+                                stat.IsTourney == cacheInfo.Stats.IsTourney &&
+                                GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)cacheInfo.Stats.PokergametypeId) &&
+                                (cacheInfo.Filter == null || cacheInfo.Filter.Apply(stat)))
+                            .ForEach(stat =>
                             {
                                 var isCurrentGame = stat.GameNumber == cacheInfo.Stats.GameNumber;
 
@@ -337,15 +338,16 @@ namespace DriveHUD.Importers
                             sessionData.StatisticByPlayer[playerStickersCacheData.Player].SessionHands :
                             new HashSet<long>();
 
-                    dataService.ActOnPlayerStatisticFromFile(playerStickersCacheData.Player.PlayerId,
-                          stat => (stat.PokersiteId == (short)playerStickersCacheData.Player.PokerSite) &&
-                                  stat.IsTourney == playerStickersCacheData.Statistic.IsTourney &&
-                                  ((playerStickersCacheData.IsHero && sessionHands.Contains(stat.GameNumber)) || !playerStickersCacheData.IsHero) &&
-                                  GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)playerStickersCacheData.Statistic.PokergametypeId),
-                          stat =>
-                          {
-                              addStatToSticker(stat);
-                          });
+                    playerStatisticRepository
+                        .GetPlayerStatistic(playerStickersCacheData.Player.PlayerId)
+                        .Where(stat => (stat.PokersiteId == (short)playerStickersCacheData.Player.PokerSite) &&
+                            stat.IsTourney == playerStickersCacheData.Statistic.IsTourney &&
+                            ((playerStickersCacheData.IsHero && sessionHands.Contains(stat.GameNumber)) || !playerStickersCacheData.IsHero) &&
+                            GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)playerStickersCacheData.Statistic.PokergametypeId))
+                        .ForEach(stat =>
+                        {
+                            addStatToSticker(stat);
+                        });
 
                     return;
                 }

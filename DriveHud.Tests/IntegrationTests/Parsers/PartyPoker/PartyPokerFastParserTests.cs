@@ -50,7 +50,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
 
             foreach (var handHistoryFile in handHistoryFiles)
             {
-                if (handHistoryFile.FullName.Contains("Tournaments") 
+                if (handHistoryFile.FullName.Contains("Tournaments")
                     || handHistoryFile.FullName.Contains("WithInvalid"))
                 {
                     continue;
@@ -238,7 +238,11 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         public void AllInIsParsed(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, bool isAllin)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
-            var action = handHistory.HandActions.Where(x => x.Street == street && x.PlayerName.Equals(playerName) && x.HandActionType == handActionType && x.Amount == amount).FirstOrDefault();
+            var action = handHistory
+                .HandActions
+                .OfType<AllInAction>()
+                .Where(x => x.Street == street && x.PlayerName.Equals(playerName) && x.SourceActionType == handActionType && x.Amount == amount)
+                .FirstOrDefault();
 
             Assert.That(action?.IsAllIn, Is.EqualTo(isAllin));
         }

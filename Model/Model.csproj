@@ -259,6 +259,7 @@
     <Compile Include="Interfaces\IDataService.cs" />
     <Compile Include="IPlayer.cs" />
     <Compile Include="IPlayerStatisticCalculator.cs" />
+    <Compile Include="IPlayerStatisticRepository.cs" />
     <Compile Include="ISessionFactoryService.cs" />
     <Compile Include="LocalCalculator\PreflopRange.cs" />
     <Compile Include="Mapping\HandhistoryrecordMap.cs" />
@@ -280,6 +281,7 @@
     <Compile Include="Mapping\TournamentsMap.cs" />
     <Compile Include="ModelEntities.cs" />
     <Compile Include="PlayerCollectionItem.cs" />
+    <Compile Include="PlayerStatisticRepository.cs" />
     <Compile Include="PreDefinedRangeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ChartData\CashChartData.cs" />

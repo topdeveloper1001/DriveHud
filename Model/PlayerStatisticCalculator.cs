@@ -1455,7 +1455,7 @@ namespace Model
                     if (action.PlayerName == player)
                     {
                         stealAtempt.Faced = true;
-                        stealAtempt.Defended = action.IsCall || action.IsRaise();
+                        stealAtempt.Defended = action.IsCall() || action.IsRaise();
                         stealAtempt.Raised = action.IsRaise();
                         stealAtempt.Folded = action.IsFold;
                         return;
@@ -1701,7 +1701,7 @@ namespace Model
                     if (action.PlayerName == player)
                         coldCall3Bet.Possible = true;
 
-                    if (action.IsRaise)
+                    if (action.IsRaise())
                         return;
 
                     if (!action.IsCall() || action.PlayerName != player)
@@ -1745,7 +1745,7 @@ namespace Model
                     if (action.PlayerName == player)
                         coldCall4Bet.Possible = true;
 
-                    if (action.IsRaise)
+                    if (action.IsRaise())
                         return;
 
                     if (!action.IsCall() || action.PlayerName != player)
@@ -2031,11 +2031,11 @@ namespace Model
                 }
                 else
                 {
-                    if (!action.IsFold && !action.IsRaise)
+                    if (!action.IsFold && !action.IsRaise())
                         return;
-                    if (action.IsRaise && action.PlayerName == playerPositionalOpenRaiseName)
+                    if (action.IsRaise() && action.PlayerName == playerPositionalOpenRaiseName)
                         btnOpen = true;
-                    if (action.IsRaise && action.PlayerName != playerPositionalOpenRaiseName)
+                    if (action.IsRaise() && action.PlayerName != playerPositionalOpenRaiseName)
                         return;
                     if (action.IsFold && action.PlayerName == player)
                         return;

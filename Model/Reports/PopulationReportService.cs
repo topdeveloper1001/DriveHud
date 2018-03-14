@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Common.Log;
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
@@ -43,6 +42,8 @@ namespace Model.Reports
 
         private readonly IDataService dataService;
 
+        private readonly IPlayerStatisticRepository playerStatisticRepository;
+
         private readonly IHudPlayerTypeService hudPlayerTypeService;
 
         private readonly SingletonStorageModel storageModel;
@@ -56,6 +57,7 @@ namespace Model.Reports
         public PopulationReportService()
         {
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
             hudPlayerTypeService = ServiceLocator.Current.GetInstance<IHudPlayerTypeService>();
             storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
         }
@@ -110,7 +112,7 @@ namespace Model.Reports
             var endDate = DateTime.MaxValue;
 
             var filtersHashCode = filterModelManagerService.GetFiltersHashCode();
-           
+
             switch (filterDateModel.DateFilterType.EnumDateRange)
             {
                 case EnumDateFiterStruct.EnumDateFiter.Today:
@@ -241,9 +243,9 @@ namespace Model.Reports
                     {
                         var playerIndicators = new LightIndicators();
 
-                        dataService.ActOnPlayerStatisticFromFile(player.PlayerId,
-                            x => !x.IsTourney && FilterStatistic(x),
-                            x =>
+                        playerStatisticRepository.GetPlayerStatistic(player.PlayerId)
+                            .Where(x => !x.IsTourney && FilterStatistic(x))
+                            .ForEach(x =>
                             {
                                 playerIndicators.AddStatistic(x);
 
@@ -261,9 +263,9 @@ namespace Model.Reports
 
                         if (playerType != null)
                         {
-                            dataService.ActOnPlayerStatisticFromFile(player.PlayerId,
-                                x => !x.IsTourney && FilterStatistic(x) && filterPredicate(x),
-                                x =>
+                            playerStatisticRepository.GetPlayerStatistic(player.PlayerId)
+                                .Where(x => !x.IsTourney && FilterStatistic(x) && filterPredicate(x))
+                                .ForEach(x =>
                                 {
                                     lock (populationIndicators[playerType.Name])
                                     {
