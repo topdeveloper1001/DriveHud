@@ -406,7 +406,7 @@ namespace DriveHUD.Importers.PokerMaster
                         {
                             LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Package has not been decrypted. Relogin [User {package.Uuid}] is required.");
 
-                            var base64Body = Convert.ToBase64String(bytes);
+                            var base64Body = Convert.ToBase64String(package.Body);
                             var base64Key = Convert.ToBase64String(encryptKey);
 
                             LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Package body: [{base64Key}, {base64Body}]");
