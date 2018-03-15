@@ -13,6 +13,7 @@
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils.Network;
 using DriveHUD.Entities;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -63,13 +64,13 @@ namespace DriveHUD.Importers.PokerMaster
 
                 if (localConnection == null)
                 {
-                    LogProvider.Log.Info($"Could not find associated process for packet {capturedPacket} [{Site}]");
+                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Could not find associated process for packet {capturedPacket} [{Site}]");
                     return null;
                 }
 
                 if (localConnection.ProcessId == 0)
                 {
-                    LogProvider.Log.Info($"Associated process isn't defined for packet {capturedPacket} [{Site}]");
+                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Associated process isn't defined for packet {capturedPacket} [{Site}]");
                     return null;
                 }
 
@@ -102,7 +103,7 @@ namespace DriveHUD.Importers.PokerMaster
                 }
                 catch (Exception e)
                 {
-                    LogProvider.Log.Error(this, $"Process [{Process.Id}] could not be validated. [{EnumPokerSites.PokerMaster}]", e);
+                    LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Process [{Process.Id}] could not be validated. [{EnumPokerSites.PokerMaster}]", e);
                 }
 
                 return false;

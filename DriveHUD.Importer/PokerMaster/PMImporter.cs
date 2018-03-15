@@ -59,7 +59,7 @@ namespace DriveHUD.Importers.PokerMaster
 
         private const int NoDataDelay = 100;
 
-        private bool isReloginRequired = false;
+        private Dictionary<long, bool> isReloginRequired = new Dictionary<long, bool>();
 
         private IPokerClientEncryptedLogger protectedLogger;
 
@@ -120,7 +120,7 @@ namespace DriveHUD.Importers.PokerMaster
                 Directory.CreateDirectory("Hands");
             }
 #endif
-            isReloginRequired = false;
+            isReloginRequired.Clear();
 
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
@@ -377,16 +377,21 @@ namespace DriveHUD.Importers.PokerMaster
 
                         if (!HeroesKeys.TryGetValue(package.Uuid, out byte[] encryptKey))
                         {
-                            if (isReloginRequired)
+                            if (!isReloginRequired.ContainsKey(package.Uuid))
+                            {
+                                isReloginRequired.Add(package.Uuid, false);
+                            }
+
+                            if (isReloginRequired[package.Uuid])
                             {
                                 continue;
                             }
 
-                            LogProvider.Log.Info(CustomModulesNames.PMCatcher, "Encryption key not found.");
+                            LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Encryption key not found [User {package.Uuid}].");
 
                             SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_Relogin", windowHandle);
 
-                            isReloginRequired = true;
+                            isReloginRequired[package.Uuid] = true;
                             continue;
                         }
 
@@ -400,6 +405,12 @@ namespace DriveHUD.Importers.PokerMaster
                         if (!SerializationHelper.TryDeserialize(bytes, out SCGameRoomStateChange scGameRoomStateChange))
                         {
                             LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Package has not been decrypted. Relogin [User {package.Uuid}] is required.");
+
+                            var base64Body = Convert.ToBase64String(bytes);
+                            var base64Key = Convert.ToBase64String(encryptKey);
+
+                            LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Package body: [{base64Key}, {base64Body}]");
+
                             SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_Relogin", windowHandle);
                             continue;
                         }
@@ -521,16 +532,19 @@ namespace DriveHUD.Importers.PokerMaster
             var scLoginRsp = SerializationHelper.Deserialize<T>(bytes);
             var userInfo = getUserInfo(scLoginRsp);
 
-            if (scLoginRsp == null || userInfo == null)
+            if (scLoginRsp == null)
+            {
+                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Login package is empty.");
+                return;
+            }
+
+            if (userInfo == null)
             {
                 LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"UserInfo is missing.");
                 return;
             }
 
-            if (IsAdvancedLogEnabled)
-            {
-                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User [{userInfo.Uuid}, {userInfo.ShowID}] has logged in.");
-            }
+            LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User [{userInfo.Uuid}, {userInfo.ShowID}] has logged in.");
 
             var encryptKeyText = getEncryptKey(scLoginRsp);
 
@@ -567,7 +581,13 @@ namespace DriveHUD.Importers.PokerMaster
 
             pmCatcherService.SaveHeroes(heroes);
 
-            isReloginRequired = false;
+            if (!isReloginRequired.ContainsKey(package.Uuid))
+            {
+                isReloginRequired.Add(package.Uuid, false);
+                return;
+            }
+
+            isReloginRequired[package.Uuid] = false;
         }
 
         /// <summary>
