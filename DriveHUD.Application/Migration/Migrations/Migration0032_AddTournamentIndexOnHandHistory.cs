@@ -32,6 +32,12 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
             try
             {
+                if (Schema.Table(handHistoriesTableName).Index(tournamentNumberPokerSiteIdIndexName).Exists())
+                {
+                    LogProvider.Log.Info("Index already exists. Migration #32 skipped.");
+                    return;
+                }
+
                 Create.Index(tournamentNumberPokerSiteIdIndexName)
                     .OnTable(handHistoriesTableName)
                     .OnColumn("TournamentNumber").Ascending()

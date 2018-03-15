@@ -590,6 +590,8 @@ namespace Model
 
         public void DeleteHandHistory(long handNumber, int pokerSiteId)
         {
+            LogProvider.Log.Info($"Deleting hand #{handNumber} [{(EnumPokerSites)pokerSiteId}]");
+
             try
             {
                 var handHistory = GetGame(handNumber, (short)pokerSiteId);
@@ -606,31 +608,23 @@ namespace Model
                                join hhPlayer in handHistory.Players on player.Name equals hhPlayer.PlayerName
                                select player).ToArray();
 
-                var playerStatisticToDelete = new List<Playerstatistic>();
-
                 var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
-                var opponentReportResetRequired = false;
-
-                players.ForEach(x =>
-                {
-                    if (!opponentReportResetRequired && opponentReportService.IsPlayerInReport(x.PlayerId))
-                    {
-                        opponentReportResetRequired = true;
-                    }
-
-                    var statisticToDelete = playerStatisticRepository.GetPlayerStatistic(x.PlayerId).Where(s => s.GameNumber == handNumber && s.PokersiteId == pokerSiteId);
-                    playerStatisticToDelete.AddRange(statisticToDelete);
-                });
-
-                playerStatisticToDelete.ForEach(x => playerStatisticRepository.DeletePlayerStatisticFromFile(x));
+                var opponentReportResetRequired = players.Any(x => opponentReportService.IsPlayerInReport(x.PlayerId));
 
                 using (var session = ModelEntities.OpenStatelessSession())
                 {
                     using (var transaction = session.BeginTransaction())
                     {
-                        var playerIds = playerStatisticToDelete.Select(x => x.PlayerId).ToArray();
+                        var hh = session.Query<Handhistory>().FirstOrDefault(x => x.Gamenumber == handNumber && x.PokersiteId == pokerSiteId);
 
-                        // update players summary
+                        if (hh == null)
+                        {
+                            LogProvider.Log.Info(this, $"Hand [{handNumber}, {(EnumPokerSites)pokerSiteId}] could not be found in db.");
+                            return;
+                        }
+
+                        var playerIds = players.Select(x => x.PlayerId).Distinct().ToArray();
+
                         if (playerIds.Length > 0)
                         {
                             var playersEntities = session.Query<Players>().Where(x => playerIds.Contains(x.PlayerId)).ToArray();
@@ -648,27 +642,16 @@ namespace Model
 
                                 session.Update(p);
                             });
-
-                            var netWons = session.Query<PlayerNetWon>().Where(x => playerIds.Contains(x.PlayerId)).ToArray();
-
-                            netWons.ForEach(n =>
-                            {
-                                var statistic = playerStatisticToDelete.FirstOrDefault(x => x.PlayerId == n.PlayerId && x.CurrencyId == n.Currency);
-
-                                if (statistic != null)
-                                {
-                                    n.NetWon -= Utils.ConvertToCents(statistic.NetWon);
-                                    session.Update(n);
-                                }
-                            });
                         }
-
-                        var hh = session.Query<Handhistory>().FirstOrDefault(x => x.Gamenumber == handNumber && x.PokersiteId == pokerSiteId);
 
                         if (hh != null)
                         {
                             session.Delete(hh);
                         }
+
+                        var playerHandsToDelete = playerIds.ToDictionary(x => x, x => new List<Handhistory> { hh });
+
+                        playerStatisticRepository.DeletePlayerStatistic(playerHandsToDelete);
 
                         transaction.Commit();
                     }
@@ -678,6 +661,8 @@ namespace Model
                 {
                     opponentReportService.Reset();
                 }
+
+                LogProvider.Log.Info($"Hand #{handNumber} [{(EnumPokerSites)pokerSiteId}] deleted.");
             }
             catch (Exception ex)
             {
@@ -723,6 +708,12 @@ namespace Model
                     using (var transaction = session.BeginTransaction())
                     {
                         playerStatisticRepository.DeletePlayerStatistic(playersHandHistories);
+
+                        tournaments.ForEach(tournament =>
+                        {
+                            tournament.Player.Tourneyhands -= playersHandHistories[tournament.Player.PlayerId].Count;
+                            session.Update(tournament.Player);
+                        });
 
                         handHistories.ForEach(x => session.Delete(x));
                         tournaments.ForEach(x => session.Delete(x));
