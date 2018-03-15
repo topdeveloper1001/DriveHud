@@ -80,7 +80,21 @@ namespace DriveHUD.Importers.PokerMaster
 
                 if (startRoomStateChange == null)
                 {
-                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Hand #{gameNumber} has no start info. [{Site}]");
+                    var roomStateChange = gameRoomStateChanges.FirstOrDefault();
+
+                    if (roomStateChange != null && roomStateChange.GameRoomInfo != null)
+                    {
+                        var roomId = roomStateChange.GameRoomInfo.IsTournament ?
+                            roomStateChange.GameRoomInfo.SNGGameRoomBaseInfo?.GameRoomId :
+                            roomStateChange.GameRoomInfo.GameRoomBaseInfo?.GameRoomId;
+
+                        LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Hand #{gameNumber} has no start info. Room #{roomId} [{Site}]");
+                    }
+                    else
+                    {
+                        LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Hand #{gameNumber} has no start info. [{Site}]");
+                    }
+
                     return null;
                 }
 
@@ -407,7 +421,7 @@ namespace DriveHUD.Importers.PokerMaster
             else
             {
                 var blindsCount = handHistory.PreFlop
-                    .Count(x => x.HandActionType == HandActionType.SMALL_BLIND || x.HandActionType == HandActionType.BIG_BLIND || x.HandActionType == HandActionType.STRADDLE);                
+                    .Count(x => x.HandActionType == HandActionType.SMALL_BLIND || x.HandActionType == HandActionType.BIG_BLIND || x.HandActionType == HandActionType.STRADDLE);
 
                 var preflopOrderedPlayers = orderedPlayers.Skip(blindsCount).Concat(orderedPlayers.Take(blindsCount)).ToArray();
                 var preflopOrderedPlayersDictionary = OrderedPlayersToDict(preflopOrderedPlayers);
