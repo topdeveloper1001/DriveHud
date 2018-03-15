@@ -65,6 +65,8 @@ namespace DriveHUD.Application.ViewModels
 
         public ICommand EditTournamentCommand { get; set; }
 
+        public ICommand DeleteTournamentCommand { get; set; }
+
         public ICommand ReportRadioButtonClickCommand { get; set; }
 
         #endregion
@@ -232,6 +234,37 @@ namespace DriveHUD.Application.ViewModels
             tournamentView.ShowDialog();
         }
 
+        private void DeleteTournament(object obj)
+        {
+            var tournament = obj as TournamentReportRecord;
+
+            if (tournament == null)
+            {
+                return;
+            }
+
+            var notification = new PopupBaseNotification()
+            {
+                Title = CommonResourceManager.Instance.GetResourceString("Notifications_DeleteTournament_Title"),
+                CancelButtonCaption = CommonResourceManager.Instance.GetResourceString("Notifications_DeleteHand_Cancel"),
+                ConfirmButtonCaption = CommonResourceManager.Instance.GetResourceString("Notifications_DeleteHand_Yes"),
+                Content = CommonResourceManager.Instance.GetResourceString("Notifications_DeleteTournament_Content"),
+                IsDisplayH1Text = true
+            };
+
+            PopupRequest.Raise(notification,
+               confirmation =>
+               {
+                   if (confirmation.Confirmed)
+                   {
+                       var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+                       dataService.DeleteTournament(tournament.TournamentId);                  
+
+                       eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = true });
+                   }
+               });
+        }
+
         private void ReportRadioButtonClick(object obj)
         {
             eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = false });
@@ -249,7 +282,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 if (ReportSelectedItemStat == EnumReports.None)
                 {
-                    SetDefaultItemStat(this.IsShowTournamentData);
+                    SetDefaultItemStat(IsShowTournamentData);
                 }
                 else
                 {

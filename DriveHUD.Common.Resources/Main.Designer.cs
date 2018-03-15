@@ -106,6 +106,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete tournament.
+        /// </summary>
+        internal static string Main_ContextMenu_DeleteTournament {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_DeleteTournament", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit Note.
         /// </summary>
         internal static string Main_ContextMenu_EditNote {

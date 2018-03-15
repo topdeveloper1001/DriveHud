@@ -155,12 +155,11 @@ namespace DriveHUD.Application.Views
             tagHandItem.Items.Add(heroCallitem);
             tagHandItem.Items.Add(bigFold);
             tagHandItem.Items.Add(removeTag);
-            /* Make Note */
-            RadMenuItem makeNoteItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.MakeNote), false, MakeNote);
-            /* Edit tournament */
-            RadMenuItem editTournamentItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.EditTournamentResourceString), false, EditTournament);
-            /* Delete Hand */
-            RadMenuItem deleteHandItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DeleteHandResourceString), false, null, command: nameof(ReportGadgetViewModel.DeleteHandCommand));
+
+            var makeNoteItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.MakeNote), false, MakeNote);
+            var editTournamentItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.EditTournamentResourceString), false, EditTournament);
+            var deleteHandItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DeleteHandResourceString), false, null, command: nameof(ReportGadgetViewModel.DeleteHandCommand));
+            var deleteTournamentItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DeleteTournamentResourceString), false, DeleteTournament);
 
             handsGridContextMenu.Items.Add(calculateEquityItem);
             handsGridContextMenu.Items.Add(exportHandItem);
@@ -170,6 +169,7 @@ namespace DriveHUD.Application.Views
             handsGridContextMenu.Items.Add(deleteHandItem);
 
             tournamentsGridContextMenu.Items.Add(editTournamentItem);
+            tournamentsGridContextMenu.Items.Add(deleteTournamentItem);
             tournamentsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RefreshReportResourceString), false, RefreshReport));
 
             reportsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RefreshReportResourceString), false, RefreshReport));
@@ -216,6 +216,16 @@ namespace DriveHUD.Application.Views
             if (item != null)
             {
                 reportGadgetViewModel.EditTournamentCommand.Execute(item.DataContext);
+            }
+        }
+
+        private void DeleteTournament(object sender, RadRoutedEventArgs e)
+        {
+            var item = tournamentsGridContextMenu.GetClickedElement<GridViewRow>();
+
+            if (item != null)
+            {
+                reportGadgetViewModel.DeleteTournamentCommand.Execute(item.DataContext);
             }
         }
 
@@ -438,22 +448,30 @@ namespace DriveHUD.Application.Views
 
         private void GridLayoutSave(RadGridView gridView, string fileName)
         {
-            PersistenceManager manager = new PersistenceManager();
-
-            var stream = manager.Save(gridView);
-            using (Stream file = ServiceLocator.Current.GetInstance<IDataService>().OpenStorageStream(fileName, FileMode.Create))
+            try
             {
-                stream.CopyTo(file);
+                var manager = new PersistenceManager();
+
+                var stream = manager.Save(gridView);
+
+                using (var file = dataService.OpenStorageStream(fileName, FileMode.Create))
+                {
+                    stream.CopyTo(file);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not save grid layout.", e);
             }
         }
 
         private void GridLayoutLoad(RadGridView gridView, string fileName)
         {
-            PersistenceManager manager = new PersistenceManager();
+            var manager = new PersistenceManager();
 
             try
             {
-                using (Stream file = ServiceLocator.Current.GetInstance<IDataService>().OpenStorageStream(fileName, FileMode.Open))
+                using (var file = dataService.OpenStorageStream(fileName, FileMode.Open))
                 {
                     if (file != null)
                     {
@@ -465,6 +483,10 @@ namespace DriveHUD.Application.Views
             catch (FileNotFoundException)
             {
                 // If there is no file proceed normally;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not load grid layout.", e);
             }
         }
 

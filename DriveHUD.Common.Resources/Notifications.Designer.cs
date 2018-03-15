@@ -115,6 +115,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the selected tournament?.
+        /// </summary>
+        internal static string Notifications_DeleteTournament_Content {
+            get {
+                return ResourceManager.GetString("Notifications_DeleteTournament_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete tournament.
+        /// </summary>
+        internal static string Notifications_DeleteTournament_Title {
+            get {
+                return ResourceManager.GetString("Notifications_DeleteTournament_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string Notifications_HudLayout_DeleteHudCancel {

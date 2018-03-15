@@ -25,6 +25,8 @@ namespace Model
 {
     public class PlayerStatisticRepository : IPlayerStatisticRepository
     {
+        private const string PlayerStatisticExtension = ".stat";
+
         private static ReaderWriterLockSlim rwLock = new ReaderWriterLockSlim();
 
         protected readonly string dataPath = StringFormatter.GetAppDataFolderPath();
@@ -38,10 +40,7 @@ namespace Model
                 Directory.CreateDirectory(dataPath);
             }
 
-            if (!Directory.Exists(PlayersPath))
-            {
-                Directory.CreateDirectory(PlayersPath);
-            }
+            CreatePlayersFolderIfNotExist();
         }
 
         protected virtual string PlayersPath
@@ -50,17 +49,15 @@ namespace Model
             set;
         }
 
-        public void SetPlayerStatisticPath(string path)
+        #region Public methods
+
+        public virtual void SetPlayerStatisticPath(string path)
         {
             PlayersPath = path;
-
-            if (!Directory.Exists(PlayersPath))
-            {
-                Directory.CreateDirectory(PlayersPath);
-            }
+            CreatePlayersFolderIfNotExist();
         }
 
-        public IEnumerable<Playerstatistic> GetPlayerStatisticFromFiles(IEnumerable<string> files)
+        public virtual IEnumerable<Playerstatistic> GetPlayerStatisticFromFiles(IEnumerable<string> files)
         {
             if (files == null)
             {
@@ -115,18 +112,18 @@ namespace Model
             }
         }
 
-        public IEnumerable<Playerstatistic> GetPlayerStatisticFromFile(string file)
+        public virtual IEnumerable<Playerstatistic> GetPlayerStatisticFromFile(string file)
         {
             return GetPlayerStatisticFromFiles(new[] { file });
         }
 
-        public IEnumerable<Playerstatistic> GetPlayerStatistic(int playerId)
+        public virtual IEnumerable<Playerstatistic> GetPlayerStatistic(int playerId)
         {
             var files = GetPlayerFiles(playerId);
             return GetPlayerStatisticFromFiles(files);
         }
 
-        public IEnumerable<Playerstatistic> GetPlayerStatistic(string playerName, short? pokersiteId)
+        public virtual IEnumerable<Playerstatistic> GetPlayerStatistic(string playerName, short? pokersiteId)
         {
             try
             {
@@ -154,7 +151,7 @@ namespace Model
             return new List<Playerstatistic>();
         }
 
-        public string[] GetPlayerFiles(int playerId)
+        public virtual string[] GetPlayerFiles(int playerId)
         {
             try
             {
@@ -165,7 +162,7 @@ namespace Model
                     return new string[0];
                 }
 
-                return Directory.GetFiles(playerDirectory, "*.stat");
+                return Directory.GetFiles(playerDirectory, $"*{PlayerStatisticExtension}");
             }
             catch (Exception e)
             {
@@ -174,47 +171,33 @@ namespace Model
             }
         }
 
-        public void Store(Playerstatistic statistic)
+        public virtual void Store(Playerstatistic statistic)
         {
             rwLock.EnterWriteLock();
 
+            var file = string.Empty;
+
             try
             {
-                if (!Directory.Exists(PlayersPath))
-                {
-                    Directory.CreateDirectory(PlayersPath);
-                }
+                CreatePlayersFolderIfNotExist();
 
-                var playerDirectory = Path.Combine(PlayersPath, statistic.PlayerId.ToString());
-
-                if (!Directory.Exists(playerDirectory))
-                {
-                    Directory.CreateDirectory(playerDirectory);
-                }
-
-                var fileName = Path.Combine(playerDirectory, statistic.Playedyearandmonth.ToString()) + ".stat";
+                file = GetPlayerstatisticFile(statistic, true);
 
                 var data = string.Empty;
 
-                using (var msTestString = new MemoryStream())
+                using (var memoryStream = new MemoryStream())
                 {
-                    Serializer.Serialize(msTestString, statistic);
-                    data = Convert.ToBase64String(msTestString.ToArray()).Trim();
+                    Serializer.Serialize(memoryStream, statistic);
+                    data = Convert.ToBase64String(memoryStream.ToArray()).Trim();
                 }
 
-                File.AppendAllLines(fileName, new[] { data });
+                File.AppendAllLines(file, new[] { data });
 
-                var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
-
-                if (storageModel.PlayerSelectedItem != null &&
-                    (statistic.PlayerId == storageModel.PlayerSelectedItem.PlayerId || storageModel.PlayerSelectedItem.PlayerIds.Contains(statistic.PlayerId)))
-                {
-                    storageModel.StatisticCollection.Add(statistic);
-                }
+                UpdateStorageModel(statistic);
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, $"Could not save player statistic to the {file}.", e);
             }
             finally
             {
@@ -222,7 +205,7 @@ namespace Model
             }
         }
 
-        public void Store(IEnumerable<Playerstatistic> statistic)
+        public virtual void Store(IEnumerable<Playerstatistic> statistic)
         {
             if (statistic == null || !statistic.Any())
             {
@@ -242,21 +225,11 @@ namespace Model
 
             try
             {
-                if (!Directory.Exists(PlayersPath))
-                {
-                    Directory.CreateDirectory(PlayersPath);
-                }
+                CreatePlayersFolderIfNotExist();
 
                 foreach (var stats in groupedStatistic)
                 {
-                    var playerDirectory = Path.Combine(PlayersPath, stats.PlayerId.ToString());
-
-                    if (!Directory.Exists(playerDirectory))
-                    {
-                        Directory.CreateDirectory(playerDirectory);
-                    }
-
-                    var fileName = Path.Combine(playerDirectory, stats.Playedyearandmonth.ToString()) + ".stat";
+                    var fileName = GetPlayerstatisticFile(stats.PlayerId, stats.Playedyearandmonth.ToString(), true);
 
                     var statisticStringsToAppend = new List<string>();
 
@@ -273,17 +246,12 @@ namespace Model
 
                     File.AppendAllLines(fileName, statisticStringsToAppend);
 
-                    var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
-
-                    if (storageModel.PlayerSelectedItem != null && stats.PlayerId == storageModel.PlayerSelectedItem.PlayerId)
-                    {
-                        storageModel.StatisticCollection.AddRange(stats.Statistic);
-                    }
+                    UpdateStorageModel(stats.PlayerId, stats.Statistic);
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, "Couldn't save player statistic", e);
+                LogProvider.Log.Error(this, $"Could not save player statistic.", e);
             }
             finally
             {
@@ -291,7 +259,7 @@ namespace Model
             }
         }
 
-        public void DeletePlayerStatisticFromFile(Playerstatistic statistic)
+        public virtual void DeletePlayerStatisticFromFile(Playerstatistic statistic)
         {
             var files = GetPlayerFiles(statistic.PlayerId);
 
@@ -345,6 +313,10 @@ namespace Model
             }
         }
 
+        #endregion
+
+        #region Infrastructure
+
         private bool TryParsePlayerStatistic(string line, string file, out Playerstatistic stat)
         {
             stat = null;
@@ -374,6 +346,64 @@ namespace Model
             return false;
         }
 
+        private string GetPlayerstatisticFile(Playerstatistic statistic, bool createPlayerDirectory = false)
+        {
+            return GetPlayerstatisticFile(statistic.PlayerId, statistic.Playedyearandmonth.ToString(), createPlayerDirectory);
+        }
+
+        private string GetPlayerstatisticFile(int playerId, string date, bool createPlayerDirectory = false)
+        {
+            var playerDirectory = Path.Combine(PlayersPath, playerId.ToString());
+
+            if (createPlayerDirectory && !Directory.Exists(playerDirectory))
+            {
+                Directory.CreateDirectory(playerDirectory);
+            }
+
+            var playerStatisticFile = Path.Combine(playerDirectory, date);
+            playerStatisticFile = Path.ChangeExtension(playerStatisticFile, PlayerStatisticExtension);
+
+            return playerStatisticFile;
+        }
+
+        private void UpdateStorageModel(int playerId, IEnumerable<Playerstatistic> statistic)
+        {
+            var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
+
+            if (storageModel != null && storageModel.PlayerSelectedItem != null &&
+                (playerId == storageModel.PlayerSelectedItem.PlayerId || storageModel.PlayerSelectedItem.PlayerIds.Contains(playerId)))
+            {
+                storageModel.StatisticCollection.AddRange(statistic);
+            }
+        }
+
+        private void UpdateStorageModel(Playerstatistic statistic)
+        {
+            UpdateStorageModel(statistic.PlayerId, new[] { statistic });
+        }
+
+        private void CreatePlayersFolderIfNotExist()
+        {
+            try
+            {
+                if (Directory.Exists(PlayersPath))
+                {
+                    return;
+                }
+
+                Directory.CreateDirectory(PlayersPath);
+            }
+            catch
+            {
+                LogProvider.Log.Error($"Could not create directory at '{PlayersPath}'.");
+                throw;
+            }
+        }
+
+        #endregion
+
+        #region Helpers
+
         private class StreamReaderWrapper : IDisposable
         {
             private StreamReader streamReader;
@@ -400,5 +430,7 @@ namespace Model
                 streamReader?.Dispose();
             }
         }
+
+        #endregion
     }
 }
