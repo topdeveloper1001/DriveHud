@@ -37,6 +37,8 @@ namespace Model
 
         void DeletePlayerStatisticFromFile(Playerstatistic statistic);
 
+        void DeletePlayerStatistic(Dictionary<int, List<Handhistory>> playersHands);
+
         string[] GetPlayerFiles(int playerId);
     }
 }

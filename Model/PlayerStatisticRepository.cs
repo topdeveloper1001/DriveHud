@@ -20,12 +20,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Model
 {
     public class PlayerStatisticRepository : IPlayerStatisticRepository
     {
         private const string PlayerStatisticExtension = ".stat";
+
+        private const string PlayerStatisticBackupExtenstion = ".bak";
 
         private static ReaderWriterLockSlim rwLock = new ReaderWriterLockSlim();
 
@@ -70,6 +73,8 @@ namespace Model
             {
                 foreach (var file in files)
                 {
+                    RestoreBackupFile(file);
+
                     using (var sr = new StreamReaderWrapper(file))
                     {
                         string line = null;
@@ -183,6 +188,8 @@ namespace Model
 
                 file = GetPlayerstatisticFile(statistic, true);
 
+                RestoreBackupFile(file);
+
                 var data = string.Empty;
 
                 using (var memoryStream = new MemoryStream())
@@ -230,6 +237,8 @@ namespace Model
                 foreach (var stats in groupedStatistic)
                 {
                     var fileName = GetPlayerstatisticFile(stats.PlayerId, stats.Playedyearandmonth.ToString(), true);
+
+                    RestoreBackupFile(fileName);
 
                     var statisticStringsToAppend = new List<string>();
 
@@ -311,6 +320,142 @@ namespace Model
             {
                 rwLock.ExitWriteLock();
             }
+        }
+
+        public virtual void DeletePlayerStatistic(Dictionary<int, List<Handhistory>> playersHands)
+        {
+            if (playersHands == null || playersHands.Count == 0)
+            {
+                return;
+            }
+
+            var fileHands = (from playerHands in playersHands
+                             from hand in playerHands.Value
+                             where hand.Handtimestamp.HasValue
+                             let date = hand.Handtimestamp.Value.ToString("yyyyMM")
+                             let playerStatisticFile = GetPlayerstatisticFile(playerHands.Key, date)
+                             group new { File = playerStatisticFile, hand.Gamenumber } by playerStatisticFile
+                             ).ToDictionary(x => x.Key, x => x.Select(y => y.Gamenumber).ToArray());
+
+            rwLock.EnterWriteLock();
+
+            try
+            {
+                Parallel.ForEach(fileHands, fh => DeletePlayerStatisticFromFile(fh.Key, new HashSet<long>(fh.Value.Distinct())));
+            }
+            catch
+            {
+                var players = string.Join(", ", playersHands.Select(x => x.Key).ToArray());
+                LogProvider.Log.Error(this, $"Could not delete player statistic for players [{players}].");
+                throw;
+            }
+            finally
+            {
+                rwLock.ExitWriteLock();
+            }
+        }
+
+        private void DeletePlayerStatisticFromFile(string file, HashSet<long> handNumbers)
+        {
+            if (!File.Exists(file))
+            {
+                return;
+            }
+
+            try
+            {
+                CreateBackupFile(file);
+
+                var lines = new List<string>();
+
+                using (var sr = new StreamReaderWrapper(file))
+                {
+                    string line = null;
+
+                    while (sr != null && ((line = sr.ReadLine()) != null))
+                    {
+                        if (!TryParsePlayerStatistic(line, file, out Playerstatistic stat))
+                        {
+                            continue;
+                        }
+
+                        if (!handNumbers.Contains(stat.GameNumber))
+                        {
+                            lines.Add(line);
+                        }
+                    }
+                }
+
+                File.WriteAllLines(file, lines);
+
+                DeleteBackupFile(file);
+            }
+            catch
+            {
+                LogProvider.Log.Error(this, $"Could not delete player statistic from file '{file}'");
+                throw;
+            }
+        }
+
+        private void CreateBackupFile(string file)
+        {
+            var backupFile = GetBackupFile(file);
+
+            try
+            {
+                File.Copy(file, backupFile);
+            }
+            catch
+            {
+                LogProvider.Log.Error(this, $"Could not create backup file '{backupFile}'");
+                throw;
+            }
+        }
+
+        private void DeleteBackupFile(string file)
+        {
+            var backupFile = GetBackupFile(file);
+
+            try
+            {
+                File.Delete(backupFile);
+            }
+            catch
+            {
+                LogProvider.Log.Error(this, $"Could not delete backup file '{backupFile}'");
+                throw;
+            }
+        }
+
+        private void RestoreBackupFile(string file)
+        {
+            var backupFile = GetBackupFile(file);
+
+            if (!File.Exists(backupFile))
+            {
+                return;
+            }
+
+            try
+            {
+                if (File.Exists(file))
+                {
+                    File.Delete(file);
+                }
+
+                File.Move(backupFile, file);
+
+                LogProvider.Log.Info(this, $"Restored stat file '{file}' from '{backupFile}'.");
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not restore backup file '{backupFile}'", e);
+            }
+        }
+
+        private static string GetBackupFile(string file)
+        {
+            return Path.ChangeExtension(file, PlayerStatisticBackupExtenstion);
         }
 
         #endregion

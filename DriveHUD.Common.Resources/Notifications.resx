@@ -135,6 +135,12 @@
   <data name="Notifications_DeleteHand_Yes" xml:space="preserve">
     <value>Yes</value>
   </data>
+  <data name="Notifications_DeleteTournament_Content" xml:space="preserve">
+    <value>Are you sure you want to delete the selected tournament?</value>
+  </data>
+  <data name="Notifications_DeleteTournament_Title" xml:space="preserve">
+    <value>Delete tournament</value>
+  </data>
   <data name="Notifications_HudLayout_DeleteHudCancel" xml:space="preserve">
     <value>Cancel</value>
   </data>

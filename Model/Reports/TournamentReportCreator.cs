@@ -37,35 +37,38 @@ namespace Model.Reports
 
             foreach (var tournament in tournaments)
             {
-                var stat = new TournamentReportRecord();
+                var reportRecord = new TournamentReportRecord();
 
-                foreach (var playerstatistic in statistics.Where(x => tournament.Tourneynumber == x.TournamentId).ToArray())
+                foreach (var playerstatistic in statistics
+                    .Where(x => tournament.Tourneynumber == x.TournamentId && tournament.SiteId == x.PokersiteId)
+                    .ToArray())
                 {
-                    stat.AddStatistic(playerstatistic);
+                    reportRecord.AddStatistic(playerstatistic);
                 }
 
-                if (stat.StatisticsCount == 0)
+                if (reportRecord.StatisticsCount == 0)
                 {
                     continue;
                 }
 
-                stat.PlayerName = tournament.PlayerName;
-                stat.TournamentId = tournament.Tourneynumber;
+                reportRecord.PlayerName = tournament.PlayerName;
+                reportRecord.TournamentId = tournament.Tourneynumber;
+                reportRecord.PokerSiteId = tournament.SiteId;
 
-                stat.SetBuyIn(tournament.Buyinincents);
-                stat.SetTotalBuyIn(tournament.Buyinincents);
-                stat.SetRake(tournament.Rakeincents);
-                stat.SetRebuy(tournament.Rebuyamountincents);
-                stat.SetTableType(tournament.Tourneytagscsv);
-                stat.SetSpeed(tournament.SpeedtypeId);
-                stat.SetGameType(tournament.PokergametypeId);
-                stat.SetTournamentLength(tournament.Firsthandtimestamp, tournament.Lasthandtimestamp);
-                stat.SetWinning(tournament.Winningsincents);
+                reportRecord.SetBuyIn(tournament.Buyinincents);
+                reportRecord.SetTotalBuyIn(tournament.Buyinincents);
+                reportRecord.SetRake(tournament.Rakeincents);
+                reportRecord.SetRebuy(tournament.Rebuyamountincents);
+                reportRecord.SetTableType(tournament.Tourneytagscsv);
+                reportRecord.SetSpeed(tournament.SpeedtypeId);
+                reportRecord.SetGameType(tournament.PokergametypeId);
+                reportRecord.SetTournamentLength(tournament.Firsthandtimestamp, tournament.Lasthandtimestamp);
+                reportRecord.SetWinning(tournament.Winningsincents);
 
-                stat.Started = tournament.Firsthandtimestamp;
-                stat.FinishPosition = tournament.Finishposition;
-                stat.TableSize = tournament.Tablesize;
-                report.Add(stat);
+                reportRecord.Started = tournament.Firsthandtimestamp;
+                reportRecord.FinishPosition = tournament.Finishposition;
+                reportRecord.TableSize = tournament.Tablesize;
+                report.Add(reportRecord);
             }
 
             return report;

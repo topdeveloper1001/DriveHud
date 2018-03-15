@@ -685,8 +685,58 @@ namespace Model
             }
         }
 
-        public void DeleteTournament(string tournamentId)
+        public void DeleteTournament(string tournamentId, int pokerSiteId)
         {
+            if (string.IsNullOrEmpty(tournamentId))
+            {
+                return;
+            }
+
+            try
+            {
+                LogProvider.Log.Info($"Deleting tournament #{tournamentId} [{(EnumPokerSites)pokerSiteId}]");
+
+                // get all hands and players
+                using (var session = ModelEntities.OpenSession())
+                {
+                    var tournaments = session
+                        .Query<Tournaments>()
+                        .Where(x => x.Tourneynumber == tournamentId && x.SiteId == pokerSiteId)
+                        .Fetch(x => x.Player)
+                        .ToList();
+
+                    var handHistories = (from handHistory in session.Query<Handhistory>()
+                                         where handHistory.Tourneynumber == tournamentId && handHistory.PokersiteId == pokerSiteId
+                                         select new Handhistory
+                                         {
+                                             HandhistoryId = handHistory.HandhistoryId,
+                                             Gamenumber = handHistory.Gamenumber,
+                                             HandhistoryVal = string.Empty,
+                                             Handtimestamp = handHistory.Handtimestamp
+                                         }).ToList();
+
+                    var playersHandHistories = tournaments
+                        .Select(x => x.Player.PlayerId)
+                        .Distinct()
+                        .ToDictionary(x => x, x => handHistories);
+
+                    using (var transaction = session.BeginTransaction())
+                    {
+                        playerStatisticRepository.DeletePlayerStatistic(playersHandHistories);
+
+                        handHistories.ForEach(x => session.Delete(x));
+                        tournaments.ForEach(x => session.Delete(x));
+
+                        transaction.Commit();
+                    }
+                }
+
+                LogProvider.Log.Info($"Tournament #{tournamentId} [{(EnumPokerSites)pokerSiteId}] deleted.");
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not delete tournament ${tournamentId} [{(EnumPokerSites)pokerSiteId}].", e);
+            }
         }
 
         public void Store(Tournaments tournament)
@@ -880,8 +930,8 @@ namespace Model
             return new List<IPlayer>();
         }
 
-        #endregion         
-      
+        #endregion
+
         private sealed class PlayerNetWonQuery : IResultTransformer
         {
             public static readonly PlayerNetWonQuery Transformer = new PlayerNetWonQuery();

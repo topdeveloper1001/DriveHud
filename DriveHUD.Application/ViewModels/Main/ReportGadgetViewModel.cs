@@ -88,6 +88,7 @@ namespace DriveHUD.Application.ViewModels
             MakeNoteCommand = new RelayCommand(MakeNote);
             DeleteHandCommand = new RelayCommand(x => DeleteHands());
             EditTournamentCommand = new RelayCommand(EditTournament);
+            DeleteTournamentCommand = new RelayCommand(DeleteTournament);
             ReportRadioButtonClickCommand = new RelayCommand(ReportRadioButtonClick);
 
             InitializeFilter();
@@ -258,7 +259,12 @@ namespace DriveHUD.Application.ViewModels
                    if (confirmation.Confirmed)
                    {
                        var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-                       dataService.DeleteTournament(tournament.TournamentId);                  
+                       dataService.DeleteTournament(tournament.TournamentId, tournament.PokerSiteId);
+
+                       //if (ReportSelectedItem != null)
+                       //{
+                       //    ReportCollection.Remove(ReportSelectedItem);
+                       //}
 
                        eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = true });
                    }

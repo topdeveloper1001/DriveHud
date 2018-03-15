@@ -16,6 +16,7 @@
     xmlns:enums="clr-namespace:Model.Enums;assembly=Model"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels"
     mc:Ignorable="d"
     d:DesignHeight="1300"
     d:DesignWidth="1300">
@@ -1293,12 +1294,7 @@
                     <Setter.Value>
                         <ControlTemplate
                             TargetType="ListBoxItem">
-                            <Border
-                                Name="Border"
-                                Padding="1"
-                                SnapsToDevicePixels="true">
-                                <ContentPresenter />
-                            </Border>
+                            <ContentPresenter />
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
@@ -1559,7 +1555,10 @@
                             Property="Background"
                             Value="{StaticResource BackgroundBrush1}" />
                         <Setter
-                            Property="Height"
+                            Property="SizeToContent"
+                            Value="True" />
+                        <Setter
+                            Property="MinHeight"
                             Value="145" />
                         <Setter
                             Property="Width"

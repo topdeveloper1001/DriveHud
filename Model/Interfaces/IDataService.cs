@@ -83,7 +83,7 @@ namespace Model.Interfaces
 
         void DeleteHandHistory(long handNumber, int pokerSiteId);
 
-        void DeleteTournament(string tournamentId);
+        void DeleteTournament(string tournamentId, int pokerSiteId);
 
         void Store(Tournaments tournament);
 

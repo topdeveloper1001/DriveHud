@@ -22,6 +22,8 @@ namespace Model.Data
 
         public virtual string TournamentId { get; set; }
 
+        public virtual int PokerSiteId { get; set; }
+
         public virtual int TournamentsPlayed { get; set; }
 
         public virtual int TournamentsInPrizes { get; set; }
