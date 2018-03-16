@@ -279,17 +279,11 @@
             Grid.Row="4"
             Orientation="Horizontal">
             <Button
-                Content="{ResX Common_OK}"
-                Margin="10"
-                Width="85"
-                Height="30"
-                Click="OK_Click" />
-            <Button
                 Content="{ResX Common_Apply}"
                 Margin="10"
                 Width="85"
                 Height="30"
-                Click="Apply_Click" />
+                Command="{Binding Ok_CommandClick}" />
         </StackPanel>
     </Grid>
 </UserControl>
