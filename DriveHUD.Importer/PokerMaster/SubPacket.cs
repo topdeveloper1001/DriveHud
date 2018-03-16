@@ -18,39 +18,46 @@ namespace DriveHUD.Importers.PokerMaster
 {
     internal class SubPacket<T> where T : class
     {
-        public SubPacket(byte[] bytes, int expectedLength, DateTime createdDate)
+        public SubPacket(byte[] bytes, int expectedLength, DateTime createdDate, uint sequenceNumber)
         {
             Bytes = new List<byte>(bytes);
             DateReceived = DateTime.Now;
             ExpectedLength = expectedLength;
             CreatedDate = createdDate;
+            SequenceNumber = sequenceNumber;
         }
 
-        private List<byte> Bytes
+        public List<byte> Bytes
         {
             get;
             set;
         }
 
-        private DateTime DateReceived
+        public DateTime DateReceived
         {
             get;
             set;
         }
 
-        private DateTime CreatedDate
+        public DateTime CreatedDate
         {
             get;
             set;
         }
 
-        private int ExpectedLength
+        public int ExpectedLength
         {
             get;
             set;
         }
 
-        private int CurrentLength
+        public uint SequenceNumber
+        {
+            get;
+            set;
+        }
+
+        public int CurrentLength
         {
             get
             {
@@ -88,8 +95,18 @@ namespace DriveHUD.Importers.PokerMaster
             return partialBytes.Length + CurrentLength == ExpectedLength;
         }
 
-        public bool IsExpired(int expirationPeriod)
+        public bool CanCompleteBySubPacket(byte[] partialBytes, uint partialPacketSequenceNumber)
         {
+            if (partialPacketSequenceNumber < SequenceNumber)
+            {
+                return false;
+            }
+
+            return partialBytes.Length + CurrentLength == ExpectedLength;
+        }
+
+        public bool IsExpired(int expirationPeriod)
+        {         
             return (DateTime.Now - DateReceived).TotalMilliseconds > expirationPeriod;
         }
 

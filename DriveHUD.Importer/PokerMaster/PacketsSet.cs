@@ -19,12 +19,28 @@ namespace DriveHUD.Importers.PokerMaster
 {
     internal class PacketsSet<T> where T : class
     {
+        private const int ProcessedPacketsMaxSize = 50;
+
+        private SortedSet<uint> processedPackets = new SortedSet<uint>();
+
         private List<SubPacket<T>> packets = new List<SubPacket<T>>();
 
-        public SubPacket<T> AddSubPacket(byte[] bytes, DateTime createdDate)
+        private List<SubPacket<T>> secondPackets = new List<SubPacket<T>>();
+
+        public SubPacket<T> AddSubPacket(byte[] bytes, DateTime createdDate, uint sequenceNumber)
         {
+            if (processedPackets.Contains(sequenceNumber))
+            {
+                return null;
+            }
+
+            processedPackets.Add(sequenceNumber);
+
             if (packets.Count == 0)
             {
+                // add packet without heading packet to the special collection
+                var secondPacket = new SubPacket<T>(bytes, 0, createdDate, sequenceNumber);
+                secondPackets.Add(secondPacket);               
                 return null;
             }
 
@@ -54,10 +70,30 @@ namespace DriveHUD.Importers.PokerMaster
             return null;
         }
 
-        public SubPacket<T> AddStartingPacket(byte[] body, int expectedLength, DateTime dateCreated)
+        public SubPacket<T> AddStartingPacket(byte[] body, int expectedLength, DateTime dateCreated, uint sequenceNumber)
         {
-            var subPacket = new SubPacket<T>(body, expectedLength, dateCreated);
+            if (processedPackets.Contains(sequenceNumber))
+            {
+                return null;
+            }
+
+            var subPacket = new SubPacket<T>(body, expectedLength, dateCreated, sequenceNumber);
+
+            if (secondPackets.Count > 0)
+            {
+                var secondPacket = secondPackets.FirstOrDefault(x => subPacket.CanCompleteBySubPacket(x.Bytes.ToArray(), x.SequenceNumber));
+
+                if (secondPacket != null)
+                {
+                    subPacket.Add(secondPacket.Bytes.ToArray());
+                    secondPackets.Remove(secondPacket);
+                }
+            }
+
             packets.Add(subPacket);
+
+            processedPackets.Add(sequenceNumber);
+
             return subPacket;
         }
 
@@ -68,7 +104,14 @@ namespace DriveHUD.Importers.PokerMaster
 
         public void RemoveExpiredPackets(int expirationPeriod = 3500)
         {
-            packets.RemoveByCondition(x => x.IsExpired(expirationPeriod));
+            packets.RemoveByCondition(p => p.IsExpired(expirationPeriod));
+            secondPackets.RemoveByCondition(p => p.IsExpired(expirationPeriod));
+
+            if (processedPackets.Count > ProcessedPacketsMaxSize)
+            {
+                var packetsToRemove = processedPackets.Take(processedPackets.Count - ProcessedPacketsMaxSize).ToArray();
+                processedPackets.RemoveRange(packetsToRemove);
+            }
         }
     }
 }

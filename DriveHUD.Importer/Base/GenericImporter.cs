@@ -44,6 +44,8 @@ namespace DriveHUD.Importers
 
         protected virtual bool IsAdvancedLogEnabled { get; set; }
 
+        protected virtual bool SupportDuplicates => false;
+
         #endregion
 
         #region Infrastructure
@@ -92,7 +94,7 @@ namespace DriveHUD.Importers
                     continue;
                 }
 
-                if (result.IsDuplicate)
+                if (!SupportDuplicates && result.IsDuplicate)
                 {
                     LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. Duplicate. [{1}]", result.HandHistory.Gamenumber, SiteString));
                     continue;

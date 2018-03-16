@@ -22,7 +22,7 @@ namespace PMCatcher.Tests
             return BitConverter.ToString(bytes).Replace("-", " ");
         }
 
-        public static byte[] FromHextStringToBytes(this string str)
+        public static byte[] FromHexStringToBytes(this string str)
         {
             return (
                 from x in Enumerable.Range(0, str.Length)

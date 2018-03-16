@@ -17,6 +17,7 @@
     </Limit>
     <SeatType MaxPlayers="2" />
     <TableType>Speed</TableType>
+    <Identifier>27525474</Identifier>
     <Tournament>
       <TournamentId>27525474</TournamentId>
       <TournamentName>sngtest1</TournamentName>

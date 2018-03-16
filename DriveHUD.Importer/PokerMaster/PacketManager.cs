@@ -34,8 +34,8 @@ namespace DriveHUD.Importers.PokerMaster
             var packetsSet = GetPacketsSet(packet);
 
             var subPacket = !IsStartingPacket(packet.Bytes) ?
-              packetsSet.AddSubPacket(packet.Bytes, packet.CreatedTimeStamp) :
-              packetsSet.AddStartingPacket(packet.Bytes, ReadPacketLength(packet.Bytes), packet.CreatedTimeStamp);
+              packetsSet.AddSubPacket(packet.Bytes, packet.CreatedTimeStamp, packet.SequenceNumber) :
+              packetsSet.AddStartingPacket(packet.Bytes, ReadPacketLength(packet.Bytes), packet.CreatedTimeStamp, packet.SequenceNumber);
 
             if (subPacket == null || !subPacket.TryParse(packetHeaderLength, out package))
             {
@@ -89,7 +89,7 @@ namespace DriveHUD.Importers.PokerMaster
             return true;
         }
 
-        private static int ReadPacketLength(byte[] bytes)
+        public static int ReadPacketLength(byte[] bytes)
         {
             if (bytes.Length < packetHeaderLength)
             {

@@ -326,7 +326,6 @@ namespace Model
             }
         }
 
-
         public IPlayer GetActivePlayer()
         {
             IPlayer activePlayer = new PlayerCollectionItem();

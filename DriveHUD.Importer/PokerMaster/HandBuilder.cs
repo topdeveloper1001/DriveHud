@@ -29,7 +29,7 @@ namespace DriveHUD.Importers.PokerMaster
 {
     internal class HandBuilder : IHandBuilder
     {
-        private Dictionary<long, List<SCGameRoomStateChange>> handsRoomStateChanges = new Dictionary<long, List<SCGameRoomStateChange>>();
+        private Dictionary<long, Dictionary<long, List<SCGameRoomStateChange>>> handsRoomStateChanges = new Dictionary<long, Dictionary<long, List<SCGameRoomStateChange>>>();
 
         private EnumPokerSites Site
         {
@@ -48,10 +48,16 @@ namespace DriveHUD.Importers.PokerMaster
                 return false;
             }
 
-            if (!handsRoomStateChanges.TryGetValue(gameRoomStateChange.GameNumber, out List<SCGameRoomStateChange> gameRoomStateChanges))
+            if (!handsRoomStateChanges.TryGetValue(heroId, out Dictionary<long, List<SCGameRoomStateChange>> userGameRoomStateChanges))
+            {
+                userGameRoomStateChanges = new Dictionary<long, List<SCGameRoomStateChange>>();
+                handsRoomStateChanges.Add(heroId, userGameRoomStateChanges);
+            }
+
+            if (!userGameRoomStateChanges.TryGetValue(gameRoomStateChange.GameNumber, out List<SCGameRoomStateChange> gameRoomStateChanges))
             {
                 gameRoomStateChanges = new List<SCGameRoomStateChange>();
-                handsRoomStateChanges.Add(gameRoomStateChange.GameNumber, gameRoomStateChanges);
+                userGameRoomStateChanges.Add(gameRoomStateChange.GameNumber, gameRoomStateChanges);
             }
 
             if (gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_SHOWCARD
@@ -162,6 +168,7 @@ namespace DriveHUD.Importers.PokerMaster
                 );
 
             handHistory.GameDescription.IsStraddle = gameRoomBaseInfo.Straddle;
+            handHistory.GameDescription.Identifier = gameRoomBaseInfo.GameRoomId;
         }
 
         private void ParseTournamentStartRoomStateChange(SCGameRoomStateChange startRoomStateChange, GameRoomInfo gameRoomInfo, HandHistory handHistory)
@@ -177,7 +184,10 @@ namespace DriveHUD.Importers.PokerMaster
                     ParseTableType(gameRoomInfo),
                     SeatType.FromMaxPlayers(gameRoomBaseInfo.GameRoomUserMaxNums),
                     ParseTournamentDescriptor(gameRoomInfo)
-                );
+                )
+            {
+                Identifier = gameRoomBaseInfo.GameRoomId
+            };
         }
 
         /// <summary>

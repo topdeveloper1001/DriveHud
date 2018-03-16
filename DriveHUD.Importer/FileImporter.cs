@@ -25,7 +25,6 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Base;
-using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Model;
@@ -38,7 +37,6 @@ using NHibernate.Linq;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -57,8 +55,7 @@ namespace DriveHUD.Importers
         private static readonly object locker = new object();
 
         private FileInfo processingFile;
-
-        private readonly IImporterSessionCacheService importSessionCacheService;
+        
         private readonly IDataService dataService;
         private readonly IPlayerStatisticRepository playerStatisticRepository;
         private readonly IEventAggregator eventAggregator;
@@ -66,8 +63,7 @@ namespace DriveHUD.Importers
         private readonly SingletonStorageModel storageModel;
 
         public FileImporter()
-        {
-            importSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
+        {            
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
             playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
