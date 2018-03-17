@@ -24,6 +24,8 @@ namespace DriveHUD.Importers.PokerMaster.EmulatorProviders
 
         protected override string VbInstanceArgumentPrefix => "leidian";
 
+        protected override int? EmptyInstanceNumber => 0;
+
         protected override string ExtractInstanceNumber(string instanceIndexText)
         {
             return instanceIndexText.TrimEnd('|');
