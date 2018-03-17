@@ -774,6 +774,11 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
+            if (selectedToolViewModel is HudGaugeIndicatorViewModel)
+            {
+                statsCollection.ForEach(x => x.SetPopupDefaults());
+            }
+
             var statTool = GetToolToModifyStats();
 
             if (statTool == null)
