@@ -304,9 +304,10 @@ namespace DriveHUD.Importers.PokerMaster
                         continue;
                     }
 
-#if DEBUG
-                    LogPacket(capturedPacket, ".log");
-#endif               
+                    if (IsAdvancedLogEnabled)
+                    {
+                        LogPacket(capturedPacket, ".log");
+                    }
 
                     if (!packetManager.TryParse(capturedPacket, out Package package) || !IsAllowedPackage(package))
                     {
@@ -659,6 +660,8 @@ namespace DriveHUD.Importers.PokerMaster
         /// </summary>
         private void ExportHandHistory(HandHistoryData handHistoryData, ConcurrentDictionary<long, List<HandHistoryData>> handHistoriesToProcess)
         {
+            LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Hand #{handHistoryData.HandHistory.HandId} has been sent [{handHistoryData.Uuid}].");
+
             var handId = handHistoryData.HandHistory.HandId;
 
             if (!handHistoriesToProcess.TryGetValue(handId, out List<HandHistoryData> handHistoriesData))
@@ -749,7 +752,8 @@ namespace DriveHUD.Importers.PokerMaster
                                     PokerSite = playerCashInfo.Player.PokerSite,
                                 },
                                 Stats = playerCashInfo.Stats.Copy(),
-                                IsHero = handHistoryData.HandHistory.HeroName.Equals(playerCashInfo.Player.Name),
+                                IsHero = handHistoryData.HandHistory.HeroName != null && 
+                                    handHistoryData.HandHistory.HeroName.Equals(playerCashInfo.Player.Name),
                                 GameFormat = playerCashInfo.GameFormat,
                                 GameNumber = playerCashInfo.GameNumber
                             };
@@ -813,8 +817,6 @@ namespace DriveHUD.Importers.PokerMaster
             return false;
         }
 
-#if DEBUG
-
         private void LogPacket(CapturedPacket capturedPacket, string ext)
         {
             var packageFileName = Path.Combine("Logs", capturedPacket.ToString().Replace(":", ".").Replace("->", "-")) + ext;
@@ -834,8 +836,6 @@ namespace DriveHUD.Importers.PokerMaster
 
             File.AppendAllText(packageFileName, sb.ToString());
         }
-
-#endif
 
         private class HandHistoryData
         {

@@ -774,7 +774,7 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            if (selectedToolViewModel is HudGaugeIndicatorViewModel)
+            if (SelectedToolViewModel != null && SelectedToolViewModel is HudGaugeIndicatorViewModel)
             {
                 statsCollection.ForEach(x => x.SetPopupDefaults());
             }
