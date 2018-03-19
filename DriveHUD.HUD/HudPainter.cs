@@ -147,7 +147,7 @@ namespace DriveHUD.HUD
                     Owner = windowHandle
                 };
 
-                window.Closed += (s, e) => window.Dispatcher.BeginInvokeShutdown(DispatcherPriority.Background);
+                window.Closed += (s, e) => window.Dispatcher.InvokeShutdown();
 
                 window.Initialize(hudLayout, hwnd);
 
@@ -208,9 +208,16 @@ namespace DriveHUD.HUD
                 return;
             }
 
-            var window = windows[hwnd];
-            window.Window.Dispatcher.Invoke(() => window.Window.Close());
-            windows.Remove(hwnd);            
+            try
+            {
+                var window = windows[hwnd];
+                windows.Remove(hwnd);
+                window.Window.Dispatcher.Invoke(() => window.Window.Close());
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(typeof(HudPainter), $"Error occurred during the attempt to close window. [{hwnd}]", e);
+            }
         }
 
         private static void UpdateWindowOverlay(IntPtr handle)
