@@ -349,6 +349,8 @@ namespace DriveHUD.Importers.BetOnline
                 gameInfo.PokerSite = site;
             }
 
+            general.Site = gameInfo.PokerSite;
+
             var handHistory = new HandHistory
             {
                 SessionCode = sessionCode,

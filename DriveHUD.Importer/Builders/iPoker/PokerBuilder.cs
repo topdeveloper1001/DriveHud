@@ -567,6 +567,7 @@ namespace DriveHUD.Importers.Builders.iPoker
             var general = new General
             {
                 Mode = PokerConfiguration.DefaultMode,
+                Site = EnumPokerSites.Ignition,
                 GameType = GetGameType(),
                 TableName = GetTableName(),
                 StartDate = GetTableTimeUTC(),

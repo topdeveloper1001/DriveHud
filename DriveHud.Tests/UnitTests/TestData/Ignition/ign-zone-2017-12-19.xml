@@ -19,6 +19,7 @@
     <buyin>$0+$0</buyin>
     <totalbuyin>$0</totalbuyin>
     <win>0</win>
+    <pokersite>Ignition</pokersite>
   </general>
   <game gamecode="3543640728">
     <general>
@@ -665,7 +666,7 @@
         <player seat="3" name="P3_213746MD" chips="78.9" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="4" name="P4_793444RG" chips="91.34" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
         <player seat="5" name="P5_287318CR" chips="45.25" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
-        <player seat="6" name="Hero" chips="55.54" dealer="1" win="0" bet="9.61" rebuy="0" addon="0" />
+        <player seat="6" name="Hero" chips="55.79" dealer="1" win="0" bet="9.86" rebuy="0" addon="0" />
       </players>
     </general>
     <round no="0">
@@ -682,7 +683,7 @@
       <action no="3" player="P3_213746MD" type="0" sum="0" cards="" />
       <action no="4" player="P4_793444RG" type="0" sum="0" cards="" />
       <action no="5" player="P5_287318CR" type="0" sum="0" cards="" />
-      <action no="6" player="Hero" type="23" sum="1.25" cards="" />
+      <action no="6" player="Hero" type="23" sum="1.5" cards="" />
       <action no="7" player="P1_976653UR" type="0" sum="0" cards="" />
       <action no="8" player="P2_373430WW" type="3" sum="1" cards="" />
     </round>

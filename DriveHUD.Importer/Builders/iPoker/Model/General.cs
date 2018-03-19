@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DriveHUD.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
@@ -95,5 +96,8 @@ namespace DriveHUD.Importers.Builders.iPoker
 
         [XmlElement("maxplayers"), DefaultValue(0)]
         public int MaxPlayers { get; set; }
+
+        [XmlElement("pokersite")]
+        public EnumPokerSites? Site { get; set; }
     }
 }

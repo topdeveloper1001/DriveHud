@@ -19,6 +19,7 @@
     <buyin>$0+$0</buyin>
     <totalbuyin>$0</totalbuyin>
     <win>0</win>
+    <pokersite>Ignition</pokersite>
   </general>
   <game gamecode="3533011285">
     <general>
@@ -3018,7 +3019,6 @@
       <cards type="Pocket" player="Hero">DJ S6</cards>
       <action no="3" player="P5_842252CG" type="0" sum="0" cards="" />
       <action no="4" player="Hero" type="0" sum="0" cards="" />
-      <action no="5" player="Hero" type="0" sum="0" cards="" />
     </round>
   </game>
   <game gamecode="3533023793">
@@ -3713,7 +3713,6 @@
     </round>
     <round no="2">
       <cards type="Flop" player="">C8 HJ HQ</cards>
-      <action no="9" player="Hero" type="0" sum="0" cards="" />
     </round>
   </game>
   <game gamecode="3533026595">
