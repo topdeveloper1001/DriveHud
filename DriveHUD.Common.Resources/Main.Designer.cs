@@ -151,6 +151,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export to Excel.
+        /// </summary>
+        internal static string Main_ContextMenu_ExportToExcel {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_ExportToExcel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Load HUD.
         /// </summary>
         internal static string Main_ContextMenu_LoadHud {

@@ -1661,7 +1661,7 @@
                     <!-- Cash Columns -->
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="OverAll"
+                        Content="{ResX Key=Enum_EnumReports_OverAll}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OverAll}}"
@@ -1669,7 +1669,7 @@
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="Position"
+                        Content="{ResX Key=Enum_EnumReports_Position}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Position}}"
@@ -1677,7 +1677,7 @@
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="Sessions"
+                        Content="{ResX Key=Enum_EnumReports_Sessions}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Session}}"
@@ -1685,7 +1685,7 @@
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="Stakes"
+                        Content="{ResX Key=Enum_EnumReports_Stakes}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Stake}}"
@@ -1693,7 +1693,7 @@
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="Holecards"
+                        Content="{ResX Key=Enum_EnumReports_Holecards}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.HoleCards}}"
@@ -1701,7 +1701,7 @@
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="Time"
+                        Content="{ResX Key=Enum_EnumReports_Time}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Time}}"
@@ -1709,7 +1709,7 @@
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Common_ShowdownHands}"
+                        Content="{ResX Key=Enum_EnumReports_ShowdownHands}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.ShowdownHands}}"
@@ -1717,7 +1717,7 @@
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Common_PokerSite}"
+                        Content="{ResX Key=Enum_EnumReports_PokerSite}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.PokerSite}}"
@@ -1725,7 +1725,7 @@
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Common_Opponents}"
+                        Content="{ResX Key=Enum_EnumReports_OpponentAnalysis}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OpponentAnalysis}}"
@@ -1733,7 +1733,7 @@
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Common_Population}"
+                        Content="{ResX Key=Enum_EnumReports_PopulationAnalysis}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.PopulationAnalysis}}"
@@ -1742,7 +1742,7 @@
                     <!-- Tournament Columns -->
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Common_Results}"
+                        Content="{ResX Key=Enum_EnumReports_TournamentResults}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentResults}}"
@@ -1750,7 +1750,7 @@
                         Visibility="{Binding IsShowTournamentData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Common_Tournaments}"
+                        Content="{ResX Key=Enum_EnumReports_Tournaments}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Tournaments}}"
@@ -1758,7 +1758,7 @@
                         Visibility="{Binding IsShowTournamentData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Common_Stats}"
+                        Content="{ResX Key=Enum_EnumReports_TournamentStats}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentStats}}"
@@ -1766,7 +1766,7 @@
                         Visibility="{Binding IsShowTournamentData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Common_StackSize}"
+                        Content="{ResX Key=Enum_EnumReports_TournamentStackSizes}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentStackSizes}}"
@@ -1774,7 +1774,7 @@
                         Visibility="{Binding IsShowTournamentData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Common_Position}"
+                        Content="{ResX Key=Enum_EnumReports_TournamentPosition}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentPosition}}"
@@ -1782,7 +1782,7 @@
                         Visibility="{Binding IsShowTournamentData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Common_HoleCards}"
+                        Content="{ResX Key=Enum_EnumReports_TournamentHoleCards}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentHoleCards}}"
@@ -1790,7 +1790,7 @@
                         Visibility="{Binding IsShowTournamentData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Common_ShowdownHands}"
+                        Content="{ResX Key=Enum_EnumReports_TournamentShowdownHands}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentShowdownHands}}"
@@ -1798,7 +1798,7 @@
                         Visibility="{Binding IsShowTournamentData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Common_PokerSite}"
+                        Content="{ResX Key=Enum_EnumReports_TournamentPokerSite}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentPokerSite}}"

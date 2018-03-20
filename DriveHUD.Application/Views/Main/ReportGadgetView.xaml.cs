@@ -22,17 +22,21 @@ using DriveHUD.Common.Wpf.Converters;
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;
+using Microsoft.Win32;
 using Model;
 using Model.Data;
 using Model.Enums;
+using Model.Hud;
 using Model.Interfaces;
 using Model.Reports;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -171,8 +175,10 @@ namespace DriveHUD.Application.Views
             tournamentsGridContextMenu.Items.Add(editTournamentItem);
             tournamentsGridContextMenu.Items.Add(deleteTournamentItem);
             tournamentsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RefreshReportResourceString), false, RefreshReport));
+            tournamentsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ExportToExcelReportResourceString), false, ExportReport));
 
             reportsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RefreshReportResourceString), false, RefreshReport));
+            reportsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ExportToExcelReportResourceString), false, ExportReport));
         }
 
         private RadMenuItem CreateRadMenuItem(string header, bool isCheckable, RadRoutedEventHandler clickAction, object tag = null, Action<RadMenuItem> extraAction = null, string command = null)
@@ -232,6 +238,92 @@ namespace DriveHUD.Application.Views
         private void RefreshReport(object sender, RadRoutedEventArgs e)
         {
             ReportUpdate(true);
+        }
+
+        private void ExportReport(object sender, RadRoutedEventArgs e)
+        {
+            try
+            {
+                string extension = "xls";
+
+                var dialog = new SaveFileDialog()
+                {
+                    DefaultExt = extension,
+                    Filter = String.Format("{1} files (.{0})|.{0}|All files (.)|.", extension, "Excel"),
+                    FilterIndex = 1
+                };                
+
+                if (dialog.ShowDialog() == true)
+                {
+                    using (var stream = dialog.OpenFile())
+                    {
+                        using (var excel = new ExcelPackage(stream))
+                        {
+                            var reportName = CommonResourceManager.Instance.GetEnumResource(reportGadgetViewModel.ReportSelectedItemStat);
+
+                            var ws = excel.Workbook.Worksheets.Add(reportName);
+
+                            using (var ms = new MemoryStream())
+                            {
+                                GridViewReport.ElementExporting += GridViewReport_ElementExporting;
+
+                                GridViewReport.Export(ms, new GridViewCsvExportOptions
+                                {
+                                    Format = ExportFormat.Csv,
+                                    Encoding = Encoding.UTF8,
+                                    ShowColumnHeaders = true,
+                                    ShowColumnFooters = false,
+                                    ShowGroupFooters = false,
+                                    ColumnDelimiter = ";"
+                                });
+
+                                GridViewReport.ElementExporting -= GridViewReport_ElementExporting;
+
+                                var csv = Encoding.UTF8.GetString(ms.ToArray()).Replace("\"", string.Empty);
+
+                                var textFormat = new ExcelTextFormat
+                                {
+                                    Delimiter = ';'
+                                };
+
+                                var columns = csv.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+
+                                if (columns.Length > 0)
+                                {
+                                    var columsCount = columns[0].Count(x => x == ';') + 1;
+                                    textFormat.DataTypes = Enumerable.Range(0, columsCount).Select(x => eDataTypes.String).ToArray();
+                                }
+
+                                ws.Cells["A1"].LoadFromText(csv, textFormat);
+                                ws.Cells.AutoFitColumns();
+
+                                excel.Save();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not export report to excel format.", ex);
+                ErrorBox.Show("Error", ex, "Unexpected error occurred. Please contact support.");
+            }
+        }
+
+        private void GridViewReport_ElementExporting(object sender, GridViewElementExportingEventArgs e)
+        {
+            if (e.Element == ExportElement.Cell)
+            {
+                if (e.Value is HudPlayerType hudPlayerType)
+                {
+                    e.Value = hudPlayerType.Name;
+                }
+                else if (e.Value is EnumMRatio mRatio)
+                {
+                    var converter = new MRatioToTextConverter();
+                    e.Value = converter.Convert(e.Value, typeof(string), null, null);
+                }
+            }
         }
 
         private void MakeNote(object sender, RadRoutedEventArgs e)

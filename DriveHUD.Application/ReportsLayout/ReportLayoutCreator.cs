@@ -76,6 +76,11 @@ namespace DriveHUD.Application.ReportsLayout
                 IsVisible = isVisible
             };
 
+            if (stringFormat != null)
+            {
+                column.DataFormatString = stringFormat;
+            }
+
             return column;
         }
 
@@ -120,6 +125,7 @@ namespace DriveHUD.Application.ReportsLayout
                 DataMemberBinding = new Binding(member),
                 Width = width == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
                 CellTemplate = template,
+                DataFormatString = "{0:c2}",
                 UniqueName = member,
                 IsVisible = isVisible
             };
@@ -139,24 +145,12 @@ namespace DriveHUD.Application.ReportsLayout
 
         protected virtual GridViewDataColumn AddPercentile(string resourceKey, string member, GridViewLength width, bool isVisible)
         {
-            var fef = new FrameworkElementFactory(typeof(TextBlock));
-
-            var bindingText = new Binding(member)
-            {
-                StringFormat = "{0:n1}"
-            };
-
-            fef.SetBinding(TextBlock.TextProperty, bindingText);
-
-            DataTemplate template = new DataTemplate { VisualTree = fef };
-            template.Seal();
-
-            GridViewDataColumn column = new GridViewDataColumn
+            var column = new GridViewDataColumn
             {
                 Header = CommonResourceManager.Instance.GetResourceString(resourceKey),
                 DataMemberBinding = new Binding(member),
                 Width = width == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
-                CellTemplate = template,
+                DataFormatString = "{0:n1}",
                 UniqueName = member,
                 IsVisible = isVisible
             };

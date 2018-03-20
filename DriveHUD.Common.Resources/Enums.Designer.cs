@@ -331,6 +331,168 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hole Cards.
+        /// </summary>
+        internal static string Enum_EnumReports_Holecards {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_Holecards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Opponents.
+        /// </summary>
+        internal static string Enum_EnumReports_OpponentAnalysis {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_OpponentAnalysis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OverAll.
+        /// </summary>
+        internal static string Enum_EnumReports_OverAll {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_OverAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Poker Site.
+        /// </summary>
+        internal static string Enum_EnumReports_PokerSite {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_PokerSite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Population.
+        /// </summary>
+        internal static string Enum_EnumReports_PopulationAnalysis {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_PopulationAnalysis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position.
+        /// </summary>
+        internal static string Enum_EnumReports_Position {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_Position", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sessions.
+        /// </summary>
+        internal static string Enum_EnumReports_Sessions {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_Sessions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Showdown Hands.
+        /// </summary>
+        internal static string Enum_EnumReports_ShowdownHands {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_ShowdownHands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stakes.
+        /// </summary>
+        internal static string Enum_EnumReports_Stakes {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_Stakes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        internal static string Enum_EnumReports_Time {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hole Cards.
+        /// </summary>
+        internal static string Enum_EnumReports_TournamentHoleCards {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_TournamentHoleCards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Poker Site.
+        /// </summary>
+        internal static string Enum_EnumReports_TournamentPokerSite {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_TournamentPokerSite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position.
+        /// </summary>
+        internal static string Enum_EnumReports_TournamentPosition {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_TournamentPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Results.
+        /// </summary>
+        internal static string Enum_EnumReports_TournamentResults {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_TournamentResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tournaments.
+        /// </summary>
+        internal static string Enum_EnumReports_Tournaments {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_Tournaments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Showdown Hands.
+        /// </summary>
+        internal static string Enum_EnumReports_TournamentShowdownHands {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_TournamentShowdownHands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stack Size.
+        /// </summary>
+        internal static string Enum_EnumReports_TournamentStackSizes {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_TournamentStackSizes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stats.
+        /// </summary>
+        internal static string Enum_EnumReports_TournamentStats {
+            get {
+                return ResourceManager.GetString("Enum_EnumReports_TournamentStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Less Than.
         /// </summary>
         internal static string Enum_EnumStatInfoValueRangeType_LessThan {
