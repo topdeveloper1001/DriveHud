@@ -18,13 +18,18 @@ namespace DriveHUD.Importers.PokerMaster
 {
     internal class SubPacket<T> where T : class
     {
-        public SubPacket(byte[] bytes, int expectedLength, DateTime createdDate, uint sequenceNumber)
+        private SubPacket()
+        {
+        }
+
+        public SubPacket(byte[] bytes, int expectedLength, DateTime createdDate, uint sequenceNumber, bool isStarting = false)
         {
             Bytes = new List<byte>(bytes);
             DateReceived = DateTime.Now;
             ExpectedLength = expectedLength;
             CreatedDate = createdDate;
             SequenceNumber = sequenceNumber;
+            IsStarting = isStarting;
         }
 
         public List<byte> Bytes
@@ -62,6 +67,20 @@ namespace DriveHUD.Importers.PokerMaster
             get
             {
                 return Bytes.Count;
+            }
+        }
+
+        public bool IsStarting
+        {
+            get;
+            set;
+        }
+
+        public bool IsCompleted
+        {
+            get
+            {
+                return ExpectedLength != 0 && ExpectedLength == CurrentLength;
             }
         }
 
@@ -106,7 +125,7 @@ namespace DriveHUD.Importers.PokerMaster
         }
 
         public bool IsExpired(int expirationPeriod)
-        {         
+        {
             return (DateTime.Now - DateReceived).TotalMilliseconds > expirationPeriod;
         }
 
@@ -120,6 +139,21 @@ namespace DriveHUD.Importers.PokerMaster
             }
 
             return SerializationHelper.TryDeserialize(Bytes.ToArray(), startingPosition, out package);
+        }
+
+        public SubPacket<T> Clone()
+        {
+            var clone = new SubPacket<T>()
+            {
+                Bytes = new List<byte>(Bytes),
+                DateReceived = DateReceived,
+                ExpectedLength = ExpectedLength,
+                CreatedDate = CreatedDate,
+                SequenceNumber = SequenceNumber,
+                IsStarting = IsStarting,
+            };
+
+            return clone;
         }
     }
 }

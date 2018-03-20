@@ -20,11 +20,11 @@ namespace DriveHUD.Importers.PokerMaster
     {
         private static readonly int packetHeaderLength = 5;
 
-        private static readonly byte[] startingPacketBytes = new byte[] { 254, 0, 0 };
+        private static readonly byte[] startingPacketBytes = new byte[] { 254, 0 };
 
         private Dictionary<SourceDestination, PacketsSet<Package>> packetsBytes = new Dictionary<SourceDestination, PacketsSet<Package>>();
 
-        public bool IsStartingPacket(byte[] bytes)
+        public static bool IsStartingPacket(byte[] bytes)
         {
             return StartsWith(bytes, startingPacketBytes);
         }
@@ -43,8 +43,6 @@ namespace DriveHUD.Importers.PokerMaster
                 package = null;
                 return false;
             }
-
-            packetsSet.Remove(subPacket);
 
             return true;
         }
@@ -96,14 +94,14 @@ namespace DriveHUD.Importers.PokerMaster
                 throw new ArgumentException(nameof(bytes), $"Packet must have more than {packetHeaderLength} bytes");
             }
 
-            var numArray = new byte[] { bytes[3], bytes[4] };
+            var numArray = new byte[] { bytes[1], bytes[2], bytes[3], bytes[4] };
 
             if (BitConverter.IsLittleEndian)
             {
                 Array.Reverse(numArray);
             }
 
-            return BitConverter.ToInt16(numArray, 0);
+            return BitConverter.ToInt32(numArray, 0);
         }
 
         private class SourceDestination

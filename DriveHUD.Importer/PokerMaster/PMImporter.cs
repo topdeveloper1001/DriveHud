@@ -274,10 +274,10 @@ namespace DriveHUD.Importers.PokerMaster
                 Destination = new IPEndPoint(ipPacket.DestinationAddress, tcpPacket.DestinationPort),
                 CreatedTimeStamp = rawCapture.Timeval.Date,
                 SequenceNumber = tcpPacket.SequenceNumber
-            };
+            };     
 
             packetBuffer.Add(capturedPacket);
-        }
+        }      
 
         /// <summary>
         /// Processes packets in the buffer
@@ -752,7 +752,7 @@ namespace DriveHUD.Importers.PokerMaster
                                     PokerSite = playerCashInfo.Player.PokerSite,
                                 },
                                 Stats = playerCashInfo.Stats.Copy(),
-                                IsHero = handHistoryData.HandHistory.HeroName != null && 
+                                IsHero = handHistoryData.HandHistory.HeroName != null &&
                                     handHistoryData.HandHistory.HeroName.Equals(playerCashInfo.Player.Name),
                                 GameFormat = playerCashInfo.GameFormat,
                                 GameNumber = playerCashInfo.GameNumber
@@ -826,7 +826,7 @@ namespace DriveHUD.Importers.PokerMaster
             sb.AppendLine($"Date: {capturedPacket.CreatedTimeStamp}");
             sb.AppendLine($"Date Now: {DateTime.Now}");
             sb.AppendLine($"SequenceNumber: {capturedPacket.SequenceNumber}");
-            sb.AppendLine($"Packet Full Length: {PacketManager.ReadPacketLength(capturedPacket.Bytes)}");
+            sb.AppendLine($"Packet Full Length: {(PacketManager.IsStartingPacket(capturedPacket.Bytes) ? PacketManager.ReadPacketLength(capturedPacket.Bytes) : 0)}");
             sb.AppendLine($"Packet Current Length: {capturedPacket.Bytes.Length}");
             sb.AppendLine($"Body:");
             sb.AppendLine("---------body begin-------------");

@@ -19,93 +19,104 @@ namespace DriveHUD.Importers.PokerMaster
 {
     internal class PacketsSet<T> where T : class
     {
-        private const int ProcessedPacketsMaxSize = 50;
+        private const int ProcessedPacketsMaxSize = 150;
 
         private SortedSet<uint> processedPackets = new SortedSet<uint>();
 
-        private List<SubPacket<T>> packets = new List<SubPacket<T>>();
+        private SortedDictionary<uint, SubPacket<T>> packets = new SortedDictionary<uint, SubPacket<T>>();
 
-        private List<SubPacket<T>> secondPackets = new List<SubPacket<T>>();
-
-        public SubPacket<T> AddSubPacket(byte[] bytes, DateTime createdDate, uint sequenceNumber)
+        public SubPacket<T> AddSubPacket(byte[] body, DateTime createdDate, uint sequenceNumber)
         {
-            if (processedPackets.Contains(sequenceNumber))
-            {
-                return null;
-            }
-
-            processedPackets.Add(sequenceNumber);
-
-            if (packets.Count == 0)
-            {
-                // add packet without heading packet to the special collection
-                var secondPacket = new SubPacket<T>(bytes, 0, createdDate, sequenceNumber);
-                secondPackets.Add(secondPacket);               
-                return null;
-            }
-
-            if (packets.Count == 1 && packets[0].CanAddSubPacket(bytes, createdDate))
-            {
-                packets[0].Add(bytes);
-                return packets[0];
-            }
-
-            var subPacket = packets.FirstOrDefault(x => x.CanCompleteBySubPacket(bytes, createdDate));
-
-            if (subPacket != null)
-            {
-                subPacket.Add(bytes);
-                return subPacket;
-            }
-
-            var packetCanBeCompleted = packets
-                .LastOrDefault(x => x.CanAddSubPacket(bytes, createdDate));
-
-            if (packetCanBeCompleted != null)
-            {
-                packetCanBeCompleted.Add(bytes);
-                return packetCanBeCompleted;
-            }
-
-            return null;
+            return AddPacket(body, 0, createdDate, sequenceNumber, false);
         }
 
-        public SubPacket<T> AddStartingPacket(byte[] body, int expectedLength, DateTime dateCreated, uint sequenceNumber)
+        public SubPacket<T> AddStartingPacket(byte[] body, int expectedLength, DateTime createdDate, uint sequenceNumber)
+        {
+            return AddPacket(body, expectedLength, createdDate, sequenceNumber, true);
+        }
+
+        private SubPacket<T> AddPacket(byte[] body, int expectedLength, DateTime createdDate, uint sequenceNumber, bool isStarting)
         {
             if (processedPackets.Contains(sequenceNumber))
             {
                 return null;
             }
 
-            var subPacket = new SubPacket<T>(body, expectedLength, dateCreated, sequenceNumber);
+            var subPacket = new SubPacket<T>(body, expectedLength, createdDate, sequenceNumber, isStarting);
 
-            if (secondPackets.Count > 0)
-            {
-                var secondPacket = secondPackets.FirstOrDefault(x => subPacket.CanCompleteBySubPacket(x.Bytes.ToArray(), x.SequenceNumber));
-
-                if (secondPacket != null)
-                {
-                    subPacket.Add(secondPacket.Bytes.ToArray());
-                    secondPackets.Remove(secondPacket);
-                }
-            }
-
-            packets.Add(subPacket);
+            packets.Add(sequenceNumber, subPacket);
 
             processedPackets.Add(sequenceNumber);
+
+            if (TryAssemblyPacket(out SubPacket<T> reassembliedPacket))
+            {
+                return reassembliedPacket;
+            }
 
             return subPacket;
         }
 
+        private bool TryAssemblyPacket(out SubPacket<T> subPacket)
+        {
+            subPacket = null;
+
+            SubPacket<T> startingPacket = null;
+
+            var packetsToRemove = new List<uint>();
+
+            foreach (var packet in packets.Values.ToArray())
+            {
+                if (packet.IsStarting)
+                {
+                    if (packet.IsCompleted)
+                    {
+                        subPacket = packet;
+                        Remove(packet);
+                        return true;
+                    }
+
+                    packetsToRemove.Clear();
+                    packetsToRemove.Add(packet.SequenceNumber);
+
+                    startingPacket = packet.Clone();
+
+                    continue;
+                }
+
+                if (startingPacket == null)
+                {
+                    continue;
+                }
+
+                var packetBytes = packet.Bytes.ToArray();
+
+                if (startingPacket.CanAddSubPacket(packetBytes, packet.CreatedDate))
+                {
+                    packetsToRemove.Add(packet.SequenceNumber);
+
+                    if (startingPacket.CanCompleteBySubPacket(packetBytes, packet.SequenceNumber))
+                    {
+                        startingPacket.Add(packetBytes);
+                        subPacket = startingPacket;
+                        packetsToRemove.ForEach(x => packets.Remove(x));
+                        return true;
+                    }
+
+                    startingPacket.Add(packetBytes);
+                }
+            }
+
+            return false;
+        }
+
         public void Remove(SubPacket<T> packet)
         {
-            packets.Remove(packet);
+            packets.Remove(packet.SequenceNumber);
         }
 
         public void RemoveExpiredPackets(int expirationPeriod = 3500)
         {
-            packets.RemoveByCondition(p => p.IsExpired(expirationPeriod));
-            secondPackets.RemoveByCondition(p => p.IsExpired(expirationPeriod));
+            packets.RemoveByCondition(p => p.Value.IsExpired(expirationPeriod));
 
             if (processedPackets.Count > ProcessedPacketsMaxSize)
             {

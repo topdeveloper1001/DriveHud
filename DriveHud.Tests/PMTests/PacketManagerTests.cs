@@ -13,9 +13,11 @@
 using DriveHUD.Common.Extensions;
 using DriveHUD.Importers.PokerMaster;
 using DriveHUD.Importers.PokerMaster.Model;
+using Microsoft.QualityTools.Testing.Fakes;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Fakes;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -33,19 +35,17 @@ namespace PMCatcher.Tests
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
-        [Test]
         [TestCase(@"Packets\Packet1.txt", true)]
         public void PacketIsStartingPacketTest(string file, bool expected)
         {
             var bytes = ReadPacketFile(file);
             var packetManager = new PacketManager();
 
-            var actual = packetManager.IsStartingPacket(bytes);
+            var actual = PacketManager.IsStartingPacket(bytes);
 
             Assert.That(actual, Is.EqualTo(expected));
         }
 
-        [Test]
         [TestCase(@"Packets\Packet1.txt")]
         public void TryParsePacketTest(string file)
         {
@@ -67,7 +67,6 @@ namespace PMCatcher.Tests
             Assert.IsNotNull(actual);
         }
 
-        [Test]
         [TestCase(@"Packets\SCLoginBody.txt", "Peon")]
         public void DeserializationTest(string file, string username)
         {
@@ -84,12 +83,14 @@ namespace PMCatcher.Tests
             Assert.That(scLoginRsp.UserInfo.Nick, Is.EqualTo(username));
         }
 
-        [TestCase(@"Packets\119.28.109.172.9188-192.168.0.104.60251.txt", "OTU1MTI1NTY4Mzg0NTk3Ng==")]
-        [TestCase(@"Packets\119.28.109.172.9188-192.168.0.104.49082.txt", "OTQwMWNkNTAzZDQzMmJiMw==")]
-        [TestCase(@"Packets\119.28.109.172.9188-192.168.0.104.60235.txt", "NGNiMzZjMDFmZTAwOTFlOQ==")]
-        public void TryParseTest(string file, string decryptKey)
+        [TestCase(@"Packets\119.28.109.172.9188-192.168.0.104.60251.txt", "OTU1MTI1NTY4Mzg0NTk3Ng==", @"Packets\119.28.109.172.9188-192.168.0.104.60251-cmd.txt", "dd/MM/yyyy HH:mm:ss")]
+        [TestCase(@"Packets\119.28.109.172.9188-192.168.0.104.49082.txt", "OTQwMWNkNTAzZDQzMmJiMw==", @"Packets\119.28.109.172.9188-192.168.0.104.49082-cmd.txt", "dd/MM/yyyy HH:mm:ss")]
+        [TestCase(@"Packets\119.28.109.172.9188-192.168.0.104.60235.txt", "NGNiMzZjMDFmZTAwOTFlOQ==", @"Packets\119.28.109.172.9188-192.168.0.104.60235-cmd.txt", "dd/MM/yyyy HH:mm:ss")]
+        [TestCase(@"Packets\218.98.62.171.9188-10.0.0.81.3511.txt", "NWE4N2MxNjMyNWM2OWFlMA==", @"Packets\218.98.62.171.9188-10.0.0.81.3511-cmd.txt", "yyyy/M/dd H:mm:ss")]
+        public void TryParseTest(string file, string decryptKey, string expectedCommandsFile, string dateFormat)
         {
-            var packets = ReadCapturedPackets(file);
+            var packets = ReadCapturedPackets(file, dateFormat);
+            var expectedCommands = GetCommandList(expectedCommandsFile);
 
             var packetManager = new PacketManager();
 
@@ -97,24 +98,47 @@ namespace PMCatcher.Tests
 
             var bodyDecryptor = new BodyDecryptor();
 
-            foreach (var packet in packets)
-            {
-                if (packetManager.TryParse(packet, out Package package))
-                {                    
-                    if (package.Cmd == PackageCommand.Cmd_SCGameRoomStateChange)
-                    {                        
-                        var body = bodyDecryptor.Decrypt(package.Body, decryptKeyBytes, false);                       
+            var expectedCommandsIndex = 0;
 
-                        if (!SerializationHelper.TryDeserialize(body, out SCGameRoomStateChange sCGameRoomStateChange))
+            using (ShimsContext.Create())
+            {
+                foreach (var packet in packets)
+                {
+                    ShimDateTime.NowGet = () => packet.CreatedTimeStamp;
+
+                    if (packetManager.TryParse(packet, out Package package))
+                    {
+                        Console.WriteLine(package.Cmd);
+
+                        Assert.That(package.Cmd, Is.EqualTo(expectedCommands[expectedCommandsIndex++]));
+
+                        if (package.Cmd == PackageCommand.Cmd_SCGameRoomStateChange)
                         {
-                            Assert.Fail($"Packet {packet.SequenceNumber} was incorrectly combined with other packets. So result can't be deserialized.");
+                            var body = bodyDecryptor.Decrypt(package.Body, decryptKeyBytes, false);
+
+                            if (!SerializationHelper.TryDeserialize(body, out SCGameRoomStateChange sCGameRoomStateChange))
+                            {
+                                Assert.Fail($"Packet {packet.SequenceNumber} was incorrectly combined with other packets. So result can't be deserialized.");
+                            }
                         }
                     }
                 }
             }
         }
 
-        private List<CapturedPacket> ReadCapturedPackets(string file)
+        private List<PackageCommand> GetCommandList(string file)
+        {
+            file = Path.Combine(TestDataFolder, file);
+            FileAssert.Exists(file);
+
+            var commands = File.ReadAllLines(file)
+                .Select(x => (PackageCommand)Enum.Parse(typeof(PackageCommand), x))
+                .ToList();
+
+            return commands;
+        }
+
+        private List<CapturedPacket> ReadCapturedPackets(string file, string dateFormat)
         {
             file = Path.Combine(TestDataFolder, file);
             FileAssert.Exists(file);
@@ -145,7 +169,7 @@ namespace PMCatcher.Tests
                 if (line.StartsWith("Date:", StringComparison.OrdinalIgnoreCase))
                 {
                     var dateText = line.Substring(5).Trim();
-                    capturedPacket.CreatedTimeStamp = DateTime.ParseExact(dateText, "dd/MM/yyyy HH:mm:ss", null);
+                    capturedPacket.CreatedTimeStamp = DateTime.ParseExact(dateText, dateFormat, null);
                     continue;
                 }
 
