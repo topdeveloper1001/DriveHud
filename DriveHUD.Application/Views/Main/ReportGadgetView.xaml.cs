@@ -247,7 +247,7 @@ namespace DriveHUD.Application.Views
                 string extension = "xls";
 
                 var dialog = new SaveFileDialog()
-                {
+                {                    
                     DefaultExt = extension,
                     Filter = String.Format("{1} files (.{0})|.{0}|All files (.)|.", extension, "Excel"),
                     FilterIndex = 1
