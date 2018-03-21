@@ -156,7 +156,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return isColorPickerPopupOpened;
             }
-            private set
+            set
             {
                 this.RaiseAndSetIfChanged(ref isColorPickerPopupOpened, value);
             }
@@ -271,6 +271,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             IsColorPickerPopupOpened = true;
             selectedStatInfoOptionValueRange = statInfoValueRange;
+            SelectedColor = statInfoValueRange.Color;
         }
 
         public class TableTypeFilterViewModel : ViewModelBase
