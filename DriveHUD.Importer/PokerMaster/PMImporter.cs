@@ -14,7 +14,6 @@ using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Infrastructure.CustomServices;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
-using DriveHUD.Common.Resources;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Helpers;
@@ -312,10 +311,7 @@ namespace DriveHUD.Importers.PokerMaster
                     if (!packetManager.TryParse(capturedPacket, out Package package) || !IsAllowedPackage(package))
                     {
                         continue;
-                    }
-#if DEBUG                 
-                    //LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Cmd: {package.Cmd} Uuid: {package.Uuid} [{capturedPacket}].");
-#endif                
+                    }               
 
                     if (package.Cmd == PackageCommand.Cmd_SCLoginRsp)
                     {
@@ -825,6 +821,7 @@ namespace DriveHUD.Importers.PokerMaster
             sb.AppendLine("-----------begin----------------");
             sb.AppendLine($"Date: {capturedPacket.CreatedTimeStamp}");
             sb.AppendLine($"Date Now: {DateTime.Now}");
+            sb.AppendLine($"Date Now (ticks): {DateTime.Now.Ticks}");
             sb.AppendLine($"SequenceNumber: {capturedPacket.SequenceNumber}");
             sb.AppendLine($"Packet Full Length: {(PacketManager.IsStartingPacket(capturedPacket.Bytes) ? PacketManager.ReadPacketLength(capturedPacket.Bytes) : 0)}");
             sb.AppendLine($"Packet Current Length: {capturedPacket.Bytes.Length}");

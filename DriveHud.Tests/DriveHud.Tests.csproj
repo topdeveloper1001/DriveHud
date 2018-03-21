@@ -549,6 +549,18 @@
     <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-10.0.0.81.3511-cmd.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-192.168.0.102.60431-cmd.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-192.168.0.102.60431.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-192.168.0.102.60462-cmd.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-192.168.0.102.60462.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="PMTests\TestData\Packets\Packet1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

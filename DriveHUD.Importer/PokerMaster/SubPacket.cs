@@ -94,9 +94,10 @@ namespace DriveHUD.Importers.PokerMaster
             Bytes.AddRange(bytes);
         }
 
-        public bool CanAddSubPacket(byte[] bytes, DateTime createdDate)
+        public bool CanAddSubPacket(byte[] bytes, uint partialPacketSequenceNumber)
         {
-            if (createdDate < CreatedDate)
+            if (partialPacketSequenceNumber < SequenceNumber &&
+                (partialPacketSequenceNumber - SequenceNumber) != CurrentLength)
             {
                 return false;
             }
@@ -104,19 +105,10 @@ namespace DriveHUD.Importers.PokerMaster
             return bytes.Length + CurrentLength <= ExpectedLength;
         }
 
-        public bool CanCompleteBySubPacket(byte[] partialBytes, DateTime partialPacketCreatedDate)
-        {
-            if (partialPacketCreatedDate < CreatedDate)
-            {
-                return false;
-            }
-
-            return partialBytes.Length + CurrentLength == ExpectedLength;
-        }
-
         public bool CanCompleteBySubPacket(byte[] partialBytes, uint partialPacketSequenceNumber)
         {
-            if (partialPacketSequenceNumber < SequenceNumber)
+            if (partialPacketSequenceNumber < SequenceNumber &&
+                (partialPacketSequenceNumber - SequenceNumber) != CurrentLength)
             {
                 return false;
             }

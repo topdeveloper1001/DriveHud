@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Linq;
 using DriveHUD.Importers.PokerMaster;
 using DriveHUD.Importers.PokerMaster.Model;
 using Microsoft.QualityTools.Testing.Fakes;
@@ -87,10 +88,14 @@ namespace PMCatcher.Tests
         [TestCase(@"Packets\119.28.109.172.9188-192.168.0.104.49082.txt", "OTQwMWNkNTAzZDQzMmJiMw==", @"Packets\119.28.109.172.9188-192.168.0.104.49082-cmd.txt", "dd/MM/yyyy HH:mm:ss")]
         [TestCase(@"Packets\119.28.109.172.9188-192.168.0.104.60235.txt", "NGNiMzZjMDFmZTAwOTFlOQ==", @"Packets\119.28.109.172.9188-192.168.0.104.60235-cmd.txt", "dd/MM/yyyy HH:mm:ss")]
         [TestCase(@"Packets\218.98.62.171.9188-10.0.0.81.3511.txt", "NWE4N2MxNjMyNWM2OWFlMA==", @"Packets\218.98.62.171.9188-10.0.0.81.3511-cmd.txt", "yyyy/M/dd H:mm:ss")]
+        [TestCase(@"Packets\218.98.62.171.9188-192.168.0.102.60431.txt", "NGQ0ODUwZTBiZjRhMGZhMQ==", @"Packets\218.98.62.171.9188-192.168.0.102.60431-cmd.txt", "yyyy/M/dd H:mm:ss")]
+        [TestCase(@"Packets\218.98.62.171.9188-192.168.0.102.60462.txt", "YWMzYjJhYjg0MjljMmQxZA==", @"Packets\218.98.62.171.9188-192.168.0.102.60462-cmd.txt", "yyyy/M/dd H:mm:ss")]
         public void TryParseTest(string file, string decryptKey, string expectedCommandsFile, string dateFormat)
         {
             var packets = ReadCapturedPackets(file, dateFormat);
-            var expectedCommands = GetCommandList(expectedCommandsFile);
+            var expectedCommands = !string.IsNullOrEmpty(expectedCommandsFile) ?
+                    GetCommandList(expectedCommandsFile) :
+                    new List<PackageCommand>();
 
             var packetManager = new PacketManager();
 
@@ -110,7 +115,10 @@ namespace PMCatcher.Tests
                     {
                         Console.WriteLine(package.Cmd);
 
-                        Assert.That(package.Cmd, Is.EqualTo(expectedCommands[expectedCommandsIndex++]));
+                        if (expectedCommands.Count > 0)
+                        {
+                            Assert.That(package.Cmd, Is.EqualTo(expectedCommands[expectedCommandsIndex++]));
+                        }
 
                         if (package.Cmd == PackageCommand.Cmd_SCGameRoomStateChange)
                         {
@@ -202,6 +210,17 @@ namespace PMCatcher.Tests
                     capturedPackets.Add(capturedPacket);
                 }
             }
+
+            var packetsToUpdate = capturedPackets.GroupBy(x => x.CreatedTimeStamp)
+                .Select(x => new { Date = x.Key, Packets = x.ToList() })
+                .Where(x => x.Packets.Count > 1)
+                .ToArray();
+
+            packetsToUpdate.ForEach(x =>
+            {
+                var delta = 0;
+                x.Packets.ForEach(y => y.CreatedTimeStamp = y.CreatedTimeStamp.AddTicks(delta++));
+            });
 
             return capturedPackets;
         }

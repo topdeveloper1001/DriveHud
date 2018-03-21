@@ -90,7 +90,7 @@ namespace DriveHUD.Importers.PokerMaster
 
                 var packetBytes = packet.Bytes.ToArray();
 
-                if (startingPacket.CanAddSubPacket(packetBytes, packet.CreatedDate))
+                if (startingPacket.CanAddSubPacket(packetBytes, packet.SequenceNumber))
                 {
                     packetsToRemove.Add(packet.SequenceNumber);
 
@@ -114,7 +114,7 @@ namespace DriveHUD.Importers.PokerMaster
             packets.Remove(packet.SequenceNumber);
         }
 
-        public void RemoveExpiredPackets(int expirationPeriod = 3500)
+        public void RemoveExpiredPackets(int expirationPeriod = 3000)
         {
             packets.RemoveByCondition(p => p.Value.IsExpired(expirationPeriod));
 
