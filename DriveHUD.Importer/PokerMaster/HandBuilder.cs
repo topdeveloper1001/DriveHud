@@ -130,7 +130,7 @@ namespace DriveHUD.Importers.PokerMaster
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Could not build hand #{gameNumber} [{Site}]", e);
+                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Could not build hand #{gameNumber} [{heroId}]", e);
             }
             finally
             {
