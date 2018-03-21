@@ -151,7 +151,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Export to Excel.
+        ///   Looks up a localized string similar to Export Report.
         /// </summary>
         internal static string Main_ContextMenu_ExportToExcel {
             get {
