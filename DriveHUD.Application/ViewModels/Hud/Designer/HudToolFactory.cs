@@ -375,7 +375,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <returns>Graph view model</returns>
         private HudBaseToolViewModel CreateHeatMapTool(HudToolCreationInfo creationInfo)
         {
-            Check.Require(creationInfo.Layout != null, "Layout isn't defined. Heat map has not been created.");
+            Check.Require(creationInfo.Tools != null, "Layout.Tools isn't defined. Heat map has not been created.");
 
             var statInfo = creationInfo.Source as StatInfo;
 
@@ -400,7 +400,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             var toolViewModel = layoutTool.CreateViewModel(creationInfo.HudElement);
             toolViewModel.Position = creationInfo.Position;
 
-            creationInfo.Layout.LayoutTools.Add(layoutTool);
+            creationInfo.Tools.Add(layoutTool);
 
             return toolViewModel;
         }

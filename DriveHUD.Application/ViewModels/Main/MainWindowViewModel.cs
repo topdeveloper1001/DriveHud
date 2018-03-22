@@ -735,7 +735,13 @@ namespace DriveHUD.Application.ViewModels
                         graphTool.StatSessionCollection = new ReactiveList<decimal>(sessionStats[graphTool.MainStat.Stat]);
                     }
 
-                    var heatMapTools = playerHudContent.HudElement.Tools.OfType<HudHeatMapViewModel>().ToArray();
+                    var heatMapTools = playerHudContent.HudElement.Tools.OfType<HudHeatMapViewModel>()
+                        .Concat(playerHudContent.HudElement.Tools.OfType<HudGaugeIndicatorViewModel>()
+                            .SelectMany(x => x.GroupedStats)
+                            .SelectMany(x => x.Stats)
+                            .Where(x => x.HeatMapViewModel != null)
+                            .Select(x => x.HeatMapViewModel))
+                        .ToArray();
 
                     heatMapTools.ForEach(x =>
                     {

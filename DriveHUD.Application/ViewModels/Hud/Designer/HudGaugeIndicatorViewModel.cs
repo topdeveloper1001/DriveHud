@@ -16,6 +16,7 @@ using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Wpf.AttachedBehaviors;
 using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Stats;
 using ProtoBuf;
@@ -25,6 +26,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Windows;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -64,10 +66,10 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                 Stats.ItemChanged
                     .Where(x => x.PropertyName == nameof(StatInfo.IsPopupBarNotSupported))
-                    .Subscribe(x => this.RaisePropertyChanged(nameof(GroupedStats)));
+                    .Subscribe(x => RefreshGroupedStats());
             }
 
-            InitializeCommands();
+            InitializeCommands();            
         }
 
         /// <summary>
@@ -182,11 +184,23 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        [ProtoMember(7)]
+        private ReactiveList<HudGaugeIndicatorStatsGroupViewModel> groupedStats;
+
         public ReactiveList<HudGaugeIndicatorStatsGroupViewModel> GroupedStats
         {
             get
             {
-                return HudGaugeIndicatorStatsGroupViewModel.GroupStats(tool.Stats);
+                if (groupedStats == null)
+                {
+                    RefreshGroupedStats();
+                }
+
+                return groupedStats;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref groupedStats, value);
             }
         }
 
@@ -219,6 +233,15 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Gets the command for drag & drop actions
         /// </summary>
         public virtual ICommand DragDropCommand
+        {
+            get;
+            protected set;
+        }
+
+        /// <summary>
+        /// Gets the command to remove heat map
+        /// </summary>
+        public virtual ICommand RemoveHeatMapCommand
         {
             get;
             protected set;
@@ -319,6 +342,27 @@ namespace DriveHUD.Application.ViewModels.Hud
                 IsSelected = false;
             });
 
+            RemoveHeatMapCommand = ReactiveCommand.Create<HudGaugeIndicatorStatInfo>(statInfo =>
+            {
+                if (statInfo == null || statInfo.Stat == null)
+                {
+                    return;
+                }
+
+                var heatMapTool = tool.Tools
+                    .OfType<HudLayoutHeatMapTool>()
+                    .FirstOrDefault(x => x.BaseStat.Stat == statInfo.Stat.Stat);
+
+                if (heatMapTool == null)
+                {
+                    return;
+                }
+
+                tool.Tools.Remove(heatMapTool);
+
+                RefreshGroupedStats();
+            });
+
             DragDropCommand = new RelayCommand(x =>
             {
                 var dragDropDataObject = x as DragDropDataObject;
@@ -328,23 +372,24 @@ namespace DriveHUD.Application.ViewModels.Hud
                     return;
                 }
 
-                var dropStatInfoSource = dragDropDataObject.Source as StatInfo;
+                var dropStatInfoSource = dragDropDataObject.Source as HudGaugeIndicatorStatInfo;
 
                 if (dropStatInfoSource == null)
                 {
                     return;
                 }
 
-                var dropStatInfoSourceIndex = Stats.IndexOf(dropStatInfoSource) + 1;
+                var toolType = dragDropDataObject.DropData as HudDesignerToolType?;
 
-                if (dropStatInfoSourceIndex < 0 || dropStatInfoSourceIndex >= Stats.Count)
+                switch (toolType)
                 {
-                    return;
+                    case HudDesignerToolType.LineBreak:
+                        InsertLineBreak(dropStatInfoSource.Stat);
+                        return;
+                    case HudDesignerToolType.HeatMap:
+                        InsertHeatMap(dropStatInfoSource, dragDropDataObject.Position);
+                        return;
                 }
-
-                IsSelected = false;
-                Stats.Insert(dropStatInfoSourceIndex, new StatInfoBreak());
-                IsSelected = true;
             }, x =>
             {
                 var dragDropDataObject = x as DragDropDataObject;
@@ -356,8 +401,52 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                 var toolType = dragDropDataObject.DropData as HudDesignerToolType?;
 
-                return toolType == HudDesignerToolType.LineBreak;
+                return toolType == HudDesignerToolType.LineBreak || toolType == HudDesignerToolType.HeatMap;
             });
+        }
+
+        /// <summary>
+        /// Inserts linebreak tool
+        /// </summary>
+        private void InsertLineBreak(StatInfo dropStatInfoSource)
+        {
+            var dropStatInfoSourceIndex = Stats.IndexOf(dropStatInfoSource) + 1;
+
+            if (dropStatInfoSourceIndex < 0 || dropStatInfoSourceIndex >= Stats.Count)
+            {
+                return;
+            }
+
+            IsSelected = false;
+            Stats.Insert(dropStatInfoSourceIndex, new StatInfoBreak());
+            IsSelected = true;
+        }
+
+        /// <summary>
+        /// Inserts heat map tool 
+        /// </summary>
+        /// <param name="dropStatInfoSource">Target <see cref="StatInfo"/> to insert heat map</param>
+        private void InsertHeatMap(HudGaugeIndicatorStatInfo dropStatInfoSource, Point position)
+        {
+            if (dropStatInfoSource.HeatMapViewModel != null)
+            {
+                return;
+            }
+
+            var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
+
+            var creationInfo = new HudToolCreationInfo
+            {
+                HudElement = Parent,
+                Position = position,
+                ToolType = HudDesignerToolType.HeatMap,
+                Tools = tool.Tools,
+                Source = dropStatInfoSource.Stat
+            };
+
+            factory.CreateTool(creationInfo);
+
+            RefreshGroupedStats();
         }
 
         /// <summary>
@@ -385,6 +474,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
 
             this.RaisePropertyChanged(nameof(GroupedStats));
+        }
+
+        /// <summary>
+        /// Refreshes group stats
+        /// </summary>
+        private void RefreshGroupedStats()
+        {
+            GroupedStats = HudGaugeIndicatorStatsGroupViewModel.GroupStats(tool, Parent);
         }
     }
 }

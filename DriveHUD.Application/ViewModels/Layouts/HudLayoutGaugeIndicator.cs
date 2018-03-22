@@ -67,6 +67,12 @@ namespace DriveHUD.Application.ViewModels.Layouts
         public string HeaderText { get; set; }
 
         /// <summary>
+        /// Gets or sets the child tools of gauge indicator
+        /// </summary>
+        [ProtoMember(7)]
+        public ReactiveList<HudLayoutTool> Tools { get; set; }
+
+        /// <summary>
         /// Gets or sets the position info of gauge indicator
         /// </summary>        
         public HudPositionInfo PositionInfo { get; set; }
@@ -83,9 +89,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
                 BaseStat = BaseStat?.Clone(),
                 Stats = new ReactiveList<StatInfo>(Stats.Select(x =>
                 {
-                    var statInfoBreak = x as StatInfoBreak;
-
-                    if (statInfoBreak != null)
+                    if (x is StatInfoBreak statInfoBreak)
                     {
                         return statInfoBreak.Clone();
                     }
@@ -95,7 +99,8 @@ namespace DriveHUD.Application.ViewModels.Layouts
                 IsVertical = IsVertical,
                 Text = Text,
                 HeaderText = HeaderText,
-                PositionInfo = PositionInfo?.Clone()
+                PositionInfo = PositionInfo?.Clone(),
+                Tools = new ReactiveList<HudLayoutTool>(Tools.Select(x => x.Clone()))
             };
 
             return cloned;

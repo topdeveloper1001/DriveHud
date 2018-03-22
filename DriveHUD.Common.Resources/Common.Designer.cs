@@ -1052,6 +1052,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Heat Map.
+        /// </summary>
+        internal static string Common_HudLayout_HeatMapLabelTooltip {
+            get {
+                return ResourceManager.GetString("Common_HudLayout_HeatMapLabelTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter layout&apos;s name:.
         /// </summary>
         internal static string Common_HudLayout_InputLabel {

@@ -659,7 +659,7 @@ namespace DriveHUD.Application.ViewModels
 
             var cardRanges = Card.GetCardRanges();
 
-            previewHudElementViewModel.Tools.OfType<HudHeatMapViewModel>().ForEach(tool =>
+            void initializeHeatMapPreview(HudHeatMapViewModel tool)
             {
                 tool.BaseStat.CurrentValue = random.Next(0, 100);
 
@@ -671,7 +671,17 @@ namespace DriveHUD.Application.ViewModels
                 };
 
                 tool.HeatMap = heatMap;
-            });
+            }
+
+            previewHudElementViewModel.Tools
+                .OfType<HudHeatMapViewModel>()
+                .ForEach(tool => initializeHeatMapPreview(tool));
+
+            previewHudElementViewModel.Tools.OfType<HudGaugeIndicatorViewModel>()
+                .SelectMany(x => x.GroupedStats)
+                .SelectMany(x => x.Stats)
+                .Where(x => x.HeatMapViewModel != null)
+                .ForEach(x => initializeHeatMapPreview(x.HeatMapViewModel));
 
             previewHudElementViewModel.Seat = 1;
             previewHudElementViewModel.PlayerName = string.Format(HudDefaultSettings.TablePlayerNameFormat, previewHudElementViewModel.Seat);
@@ -1565,6 +1575,7 @@ namespace DriveHUD.Application.ViewModels
                 TableType = CurrentTableType,
                 ToolType = toolType,
                 Layout = CurrentLayout,
+                Tools = CurrentLayout.LayoutTools,
                 Source = source
             };
 
@@ -1579,21 +1590,17 @@ namespace DriveHUD.Application.ViewModels
 
             toolViewModel.IsSelected = true;
 
-            if (toolViewModel is IHudBaseStatToolViewModel)
+            if ((toolViewModel is IHudBaseStatToolViewModel hudBaseStatToolViewModel) &&
+                hudBaseStatToolViewModel.BaseStat != null)
             {
-                var hudBaseStatToolViewModel = toolViewModel as IHudBaseStatToolViewModel;
+                var statsToUpdate = DesignerHudElementViewModel.Tools
+                    .OfType<IHudStatsToolViewModel>()
+                    .Where(x => !(x is IHudBaseStatToolViewModel))
+                    .SelectMany(x => x.Stats)
+                    .Where(x => x.Stat == hudBaseStatToolViewModel.BaseStat.Stat)
+                    .ToArray();
 
-                if (hudBaseStatToolViewModel.BaseStat != null)
-                {
-                    var statsToUpdate = DesignerHudElementViewModel.Tools
-                        .OfType<IHudStatsToolViewModel>()
-                        .Where(x => !(x is IHudBaseStatToolViewModel))
-                        .SelectMany(x => x.Stats)
-                        .Where(x => x.Stat == hudBaseStatToolViewModel.BaseStat.Stat)
-                        .ToArray();
-
-                    statsToUpdate.ForEach(x => x.HasAttachedTools = true);
-                }
+                statsToUpdate.ForEach(x => x.HasAttachedTools = true);
             }
 
             InitializePreview();
