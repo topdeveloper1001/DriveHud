@@ -10,19 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common;
+using DriveHUD.Entities;
+using DriveHUD.Importers.Bovada;
+using Model.Site;
+using Model.Solvers;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Xml;
-using System.IO;
-using System.Xml.Serialization;
 using System.Text.RegularExpressions;
-using DriveHUD.Importers.Bovada;
-using DriveHUD.Common;
-using Model.Enums;
-using Model.Site;
-using DriveHUD.Entities;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace DriveHUD.Importers.Builders.iPoker
 {

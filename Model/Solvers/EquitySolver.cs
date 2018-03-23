@@ -1,0 +1,435 @@
+﻿//-----------------------------------------------------------------------
+// <copyright file="EquitySolver.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
+using DriveHUD.EquityCalculator.Base.OmahaCalculations;
+using HandHistories.Objects.Actions;
+using HandHistories.Objects.Cards;
+using HandHistories.Objects.Hand;
+using HoldemHand;
+using Microsoft.Practices.ServiceLocation;
+using Model.Enums;
+using Model.Extensions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Model.Solvers
+{
+    internal class EquitySolver : IEquitySolver
+    {
+        public Dictionary<string, EquityData> CalculateEquity(HandHistory handHistory)
+        {
+            if (handHistory == null)
+            {
+                throw new ArgumentNullException(nameof(handHistory));
+            }
+
+            var result = new Dictionary<string, EquityData>();
+
+            if (handHistory.HandActions == null)
+            {
+                return result;
+            }
+
+            var equityPlayers = GetEquityPlayers(handHistory);
+
+            var pots = BuildPots(equityPlayers);
+
+            // if there is no pots except main pot do nothing
+            if (pots.Count == 0)
+            {
+                return result;
+            }
+
+            var gameType = new GeneralGameTypeEnum().ParseGameType(handHistory.GameDescription.GameType);
+
+            CalculateEquity(equityPlayers, handHistory, gameType);
+            pots.ForEach(pot => CalculateEvDiff(pot, handHistory, gameType));
+
+            result = equityPlayers.Select(x => new EquityData
+            {
+                Equity = x.Equity,
+                EVDiff = x.EvDiff,
+                PlayerName = x.Name
+            }).ToDictionary(x => x.PlayerName);
+
+            return result;
+        }
+
+        private void CalculateEvDiff(EquityPot pot, HandHistory handHistory, GeneralGameTypeEnum gameType)
+        {
+            if (pot.Players.Count < 2)
+            {
+                return;
+            }
+
+            var putInPot = pot.Pot / pot.Players.Count;
+
+            var pokerEvaluator = ServiceLocator.Current.GetInstance<IPokerEvaluator>(gameType.ToString());
+
+            pokerEvaluator.SetCardsOnTable(handHistory.CommunityCards);
+
+            pot.Players
+                .Where(x => x.HoleCards != null)
+                .ForEach(x => pokerEvaluator.SetPlayerCards(x.Seat, x.HoleCards));
+
+            var winnersBySeat = pokerEvaluator.GetWinners().ToList();
+
+            if (winnersBySeat.Count == 0)
+            {
+                LogProvider.Log.Error($"Could not find a winner of pot #{pot.Index} hand #{handHistory.HandId}");
+                return;
+            }
+
+            var netWonPerWinner = pot.Pot / winnersBySeat.Count - putInPot;
+
+            foreach (var player in pot.Players.Where(p => p.Equity != 0))
+            {
+                var ev = pot.Pot * player.Equity - putInPot;
+
+                if (winnersBySeat.Contains(player.Seat))
+                {
+                    player.EvDiff += ev - netWonPerWinner;
+                    continue;
+                }
+
+                player.EvDiff += ev + putInPot;
+            }
+        }
+
+        /// <summary>
+        /// Calculates equity for the specified player if possible
+        /// </summary>
+        /// <param name="equityPlayers">Players to calculate equity</param>
+        /// <param name="handHistory">Hand history</param>
+        private void CalculateEquity(List<EquityPlayer> equityPlayers, HandHistory handHistory, GeneralGameTypeEnum gameType)
+        {
+            var playersByName = handHistory.Players
+                .GroupBy(x => x.PlayerName)
+                .ToDictionary(x => x.Key, x => x.FirstOrDefault());
+
+            // equity can be calculated only for player who didn't fold, whose last action was before river, whose hole cards are known
+            var eligibleEquityPlayers = equityPlayers
+                .Where(x => x.LastAction.Street != Street.River &&
+                    !x.LastAction.IsFold &&
+                    playersByName.ContainsKey(x.Name) && playersByName[x.Name].hasHoleCards)
+                .ToList();
+
+            // equity can't be calculated for single player
+            if (eligibleEquityPlayers.Count < 2)
+            {
+                return;
+            }
+
+            // set known hole cards
+            eligibleEquityPlayers.ForEach(p => p.HoleCards = playersByName[p.Name].HoleCards);
+
+            try
+            {
+                var streets = eligibleEquityPlayers.Select(x => x.LastAction.Street).Distinct().ToArray();
+
+                foreach (var street in streets)
+                {
+                    var boardCards = CardHelper.IsStreetAvailable(handHistory.CommunityCards.ToString(), street)
+                         ? handHistory.CommunityCards.GetBoardOnStreet(street)
+                         : handHistory.CommunityCards;
+
+                    if (gameType == GeneralGameTypeEnum.Holdem)
+                    {
+                        CalculateHoldemEquity(eligibleEquityPlayers, street, boardCards);
+                    }
+                    else
+                    {
+                        CalculateOmahaEquity(eligibleEquityPlayers, street, boardCards, gameType == GeneralGameTypeEnum.OmahaHiLo);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not calculate equity for hand #{handHistory.HandId}", e);
+            }
+        }
+
+        /// <summary>
+        /// Calculates Holdem equity for the specified players which last action was at the specified street
+        /// </summary>
+        /// <param name="players">Player to calculate equity</param>
+        /// <param name="street">Street</param>
+        /// <param name="boardCards">Board cards</param>
+        private void CalculateHoldemEquity(List<EquityPlayer> players, Street street, BoardCards boardCards)
+        {
+            var wins = new long[players.Count];
+            var losses = new long[players.Count];
+            var ties = new long[players.Count];
+
+            long totalhands = 0;
+
+            Hand.HandWinOdds(players.Select(x => x.HoleCards.ToString()).ToArray(), boardCards.ToString(), string.Empty, wins, ties, losses, ref totalhands);
+
+            if (totalhands == 0)
+            {
+                return;
+            }
+
+            var playersOdds = new List<PlayerOdds>();
+
+            for (var i = 0; i < wins.Length; i++)
+            {
+                var playerOdds = new PlayerOdds
+                {
+                    PlayerName = players[i].Name,
+                    Wins = wins[i],
+                    Ties = ties[i]
+                };
+
+                playersOdds.Add(playerOdds);
+            }
+
+            var allInEquity = CalculateEquity(playersOdds, totalhands);
+
+            players.Where(p => p.LastAction.Street == street && allInEquity.ContainsKey(p.Name))
+                .ForEach(p => p.Equity = allInEquity[p.Name]);
+        }
+
+        /// <summary>
+        /// Calculates Omaha equity for the specified players which last action was at the specified street
+        /// </summary>
+        /// <param name="players">Player to calculate equity</param>
+        /// <param name="street">Street</param>
+        /// <param name="boardCards">Board cards</param>
+        /// <param name="isHiLo">Determine whenever Omaha is Omaha HiLo</param>
+        private void CalculateOmahaEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, bool isHiLo)
+        {
+            var calc = new OmahaEquityCalculatorMain(true, isHiLo);
+
+            var eq = calc.Equity(boardCards.Select(x => x.ToString()).ToArray(),
+                players.Select(x => x.HoleCards.Select(c => c.ToString()).ToArray()).ToArray(),
+                new string[] { }, 0);
+
+            var allInEquity = new Dictionary<string, decimal>();
+
+            for (var i = 0; i < eq.Length; i++)
+            {
+                var player = players.Count > i ? players[i] : null;
+
+                if (player != null && !allInEquity.ContainsKey(player.Name))
+                {
+                    var equity = (decimal)eq[i].TotalEq / 100;
+                    allInEquity.Add(player.Name, equity);
+                }
+            }
+
+            players.Where(p => p.LastAction.Street == street && allInEquity.ContainsKey(p.Name))
+                .ForEach(p => p.Equity = allInEquity[p.Name]);
+        }
+
+        /// <summary>
+        /// Calculates equity by player odd
+        /// </summary>
+        /// <param name="playersOdds">Odds of player</param>
+        /// <param name="total">Total</param>
+        /// <returns>Dictionary with players odds</returns>
+        private static Dictionary<string, decimal> CalculateEquity(IEnumerable<PlayerOdds> playersOdds, long total)
+        {
+            var sortedPlayerOdds = playersOdds.OrderBy(x => x.Ties).ToList();
+
+            while (sortedPlayerOdds.Count > 0)
+            {
+                var playerOdds = sortedPlayerOdds.FirstOrDefault();
+                playerOdds.Ties = playerOdds.Ties / sortedPlayerOdds.Count;
+                playerOdds.Equity = (decimal)(playerOdds.Ties + playerOdds.Wins) / total;
+
+                sortedPlayerOdds.Remove(playerOdds);
+                sortedPlayerOdds.ForEach(x => x.Ties -= playerOdds.Ties);
+            }
+
+            var result = playersOdds
+                .Select(x => new { x.PlayerName, x.Equity })
+                .ToDictionary(x => x.PlayerName, x => x.Equity);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Builds pots except pot of players who didn't go all-in
+        /// </summary>
+        /// <param name="equityPlayers">Player to build pots</param>
+        /// <returns>List of <see cref="EquityPot"/></returns>
+        private List<EquityPot> BuildPots(List<EquityPlayer> equityPlayers)
+        {
+            var pots = new List<EquityPot>();
+
+            var equityPlayersWentAllIn = equityPlayers
+                .Where(x => x.WentAllIn)
+                .OrderBy(x => x.PutInPot)
+                .ToList();
+
+            // nobody went all-in, then there will be only one pot
+            if (equityPlayersWentAllIn.Count == 0)
+            {
+                return pots;
+            }
+
+            var potIndex = 0;
+
+            EquityPot pot;
+
+            while ((pot = BuildPot(equityPlayersWentAllIn.Where(x => x.PutInPot > 0),
+                equityPlayers.Where(x => x.PutInPot > 0), potIndex++)) != null)
+            {
+                pots.Add(pot);
+            }
+
+            return pots;
+        }
+
+        /// <summary>
+        /// Builds pot of the specified players
+        /// </summary>
+        /// <param name="equityPlayersWentAllIn">All-in players</param>
+        /// <param name="equityPlayers">Players</param>
+        /// <param name="potIndex">Index of pot</param>
+        /// <returns>Pot of the specified players or null if there is no all-in players</returns>
+        private EquityPot BuildPot(IEnumerable<EquityPlayer> equityPlayersWentAllIn, IEnumerable<EquityPlayer> equityPlayers, int potIndex)
+        {
+            if (equityPlayersWentAllIn.IsNullOrEmpty())
+            {
+                return null;
+            }
+
+            var eligibleEquityPlayers = equityPlayers.Where(x => x.PutInPot > 0).ToList();
+
+            if (eligibleEquityPlayers.Count < 2)
+            {
+                return null;
+            }
+
+            var equityAllInPlayer = equityPlayersWentAllIn.First();
+
+            var pot = new EquityPot
+            {
+                Index = potIndex++,
+                Street = equityAllInPlayer.LastAction.Street
+            };
+
+            var allInPlayerPutInPot = equityAllInPlayer.PutInPot;
+
+            foreach (var equityPlayer in eligibleEquityPlayers)
+            {
+                if (equityPlayer.PutInPot < allInPlayerPutInPot)
+                {
+                    pot.Pot += equityPlayer.PutInPot;
+                    equityPlayer.PutInPot = 0;
+                }
+                else
+                {
+                    pot.Pot += allInPlayerPutInPot;
+                    equityPlayer.PutInPot -= allInPlayerPutInPot;
+                }
+
+                if (equityPlayer.PutInPot != 0 || !equityPlayer.LastAction.IsFold)
+                {
+                    pot.Players.Add(equityPlayer);
+                }
+            }
+
+            return pot;
+        }
+
+        private List<EquityPlayer> GetEquityPlayers(HandHistory handHistory)
+        {
+            var playerSeats = handHistory.Players
+                .GroupBy(x => x.PlayerName)
+                .ToDictionary(x => x.Key, x => x.FirstOrDefault().SeatNumber);
+
+            var equityPlayers = new Dictionary<string, EquityPlayer>();
+
+            foreach (var handAction in handHistory.HandActions.Where(x => x.IsGameAction))
+            {
+                if (!equityPlayers.TryGetValue(handAction.PlayerName, out EquityPlayer equityPlayer))
+                {
+                    equityPlayer = new EquityPlayer
+                    {
+                        Name = handAction.PlayerName,
+                        Seat = playerSeats.ContainsKey(handAction.PlayerName) ?
+                                playerSeats[handAction.PlayerName] : 0
+                    };
+
+                    equityPlayers.Add(equityPlayer.Name, equityPlayer);
+                }
+
+                if (handAction.IsAllIn || handAction.IsAllInAction)
+                {
+                    equityPlayer.WentAllIn = true;
+                }
+
+                equityPlayer.PutInPot += Math.Abs(handAction.Amount);
+                equityPlayer.LastAction = handAction;
+            }
+
+            return equityPlayers.Values.ToList();
+        }
+
+        /// <summary>
+        /// Represents players for equity calculations
+        /// </summary>
+        private class EquityPlayer
+        {
+            public string Name { get; set; }
+
+            public int Seat { get; set; }
+
+            public decimal PutInPot { get; set; }
+
+            public bool WentAllIn { get; set; }
+
+            public HandAction LastAction { get; set; }
+
+            public decimal Equity { get; set; }
+
+            public decimal EvDiff { get; set; }
+
+            public HoleCards HoleCards { get; set; }
+        }
+
+        /// <summary>
+        /// Represents the pot of hand
+        /// </summary>
+        private class EquityPot
+        {
+            public int Index { get; set; }
+
+            public decimal Pot { get; set; }
+
+            public Street Street { get; set; }
+
+            public List<EquityPlayer> Players { get; set; } = new List<EquityPlayer>();
+        }
+
+        /// <summary>
+        /// Represents odds of player
+        /// </summary>
+        private class PlayerOdds
+        {
+            public string PlayerName { get; set; }
+
+            public long Wins { get; set; }
+
+            public long Ties { get; set; }
+
+            public decimal Equity { get; set; }
+        }
+
+    }
+}

@@ -234,6 +234,7 @@
     <Compile Include="UnitTests\BoardTextureTests.cs" />
     <Compile Include="UnitTests\BovadaConverterTests.cs" />
     <Compile Include="UnitTests\CardHelperTests.cs" />
+    <Compile Include="UnitTests\EquitySolverTests.cs" />
     <Compile Include="UnitTests\ExternalImporterUtilsTests.cs" />
     <Compile Include="UnitTests\Helpers\IgnitionInfoDataManagerStub.cs" />
     <Compile Include="UnitTests\Helpers\IgnitionTestsHelper.cs" />
@@ -259,6 +260,7 @@
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />
     <Compile Include="UnitTests\HudLayoutSerializationTests.cs" />
+    <Compile Include="UnitTests\PokerEvaluatorTests.cs" />
     <Compile Include="UnitTests\ReportCreatorTests.cs" />
     <Compile Include="UnitTests\StatInfoTests.cs" />
     <Compile Include="UnitTests\StatResourcesTests.cs" />
@@ -565,6 +567,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="PMTests\TestData\Packets\SCLoginBody.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\EquitySolverData\AllIn-on-BB-Hero-raised.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-CashWithPost.txt">

@@ -1,7 +1,5 @@
-﻿using System;
+﻿using Model.Solvers;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DriveHUD.Importers.Builders.iPoker
 {

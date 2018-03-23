@@ -348,6 +348,10 @@
     <Compile Include="Site\ISiteConfigurationService.cs" />
     <Compile Include="Site\PokerStarsConfiguration.cs" />
     <Compile Include="Site\SiteConfigurationService.cs" />
+    <Compile Include="Solvers\EquityData.cs" />
+    <Compile Include="Solvers\EquitySolver.cs" />
+    <Compile Include="Solvers\IEquitySolver.cs" />
+    <Compile Include="Solvers\IPokerEvaluator.cs" />
     <Compile Include="Stats\StatBase.cs" />
     <Compile Include="Site\TruePokerConfiguration.cs" />
     <Compile Include="Site\YaPokerConfiguration.cs" />

@@ -103,34 +103,6 @@ namespace DriveHud.Tests.UnitTests
             infoDataManager.Clear();
         }
 
-        //[Test]
-        //public void TempTest()
-        //{
-        //    var lines = File.ReadAllLines(@"d:\Git\BovadaCardCatcher\Tools\LogsDecryptor\LogsDecryptor\bin\Debug\ign-v2-games-2018-03-18.log");
-
-        //    var uids = new HashSet<string>();
-
-        //    foreach (var line in lines)
-        //    {
-        //        if (!line.StartsWith("\"uid"))
-        //        {
-        //            continue;
-        //        }
-
-        //        var colonIndex = line.IndexOf(":");
-
-        //        var uid = line.Substring(colonIndex + 2).Trim('"', ' ', ',');
-
-        //        if (!uids.Contains(uid))
-        //        {
-        //            uids.Add(uid);
-        //        }
-
-        //    }
-
-        //    uids.ForEach(x => Console.WriteLine(x));
-        //}
-
         /// <summary>
         /// Convert original data from injector in iPoker format (for manual checks, because some data are randomized, so need to develop smart comparer)
         /// </summary>                

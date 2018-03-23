@@ -190,7 +190,6 @@
     <Compile Include="Builders\iPoker\HoldemEvaluator.cs" />
     <Compile Include="Builders\iPoker\ICardsConverter.cs" />
     <Compile Include="Builders\iPoker\IHandHistoryBuilder.cs" />
-    <Compile Include="Builders\iPoker\IPokerEvaluator.cs" />
     <Compile Include="Builders\iPoker\Model\Action.cs" />
     <Compile Include="Builders\iPoker\Card.cs" />
     <Compile Include="Builders\iPoker\Model\ActionType.cs" />

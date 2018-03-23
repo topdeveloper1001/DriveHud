@@ -60,5 +60,10 @@ namespace DriveHUD.Common.Extensions
         {
             return input.Select(x => (byte)x).ToArray();
         }
+
+        public static string Reverse(this string input)
+        {
+            return new string(input.ToCharArray().Reverse().ToArray());
+        }
     }
 }
