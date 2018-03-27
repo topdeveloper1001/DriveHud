@@ -353,11 +353,11 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ipoker-old-format-1.xml", "IPokerTest", 0.23)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ipoker-new-format-1.xml", "IPokerTest", 0.16)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ipoker-new-format-2.xml", "IPokerTest", 2.75)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ipoker-new-format-3.xml", "FAT1Raccoon", 0.08)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max.xml", "Peon384", 0.19)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ipoker-old-format-1.xml", "IPokerTest", 0.13)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ipoker-new-format-1.xml", "IPokerTest", 0.1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ipoker-new-format-2.xml", "IPokerTest", 1.39)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ipoker-new-format-3.xml", "FAT1Raccoon", 0.05)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max.xml", "Peon384", 0.13)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-DON-won.xml", "Peon384", 3205)]
         public void WinActionsAreParsed(string handHistoryFile, string playerName, decimal amount)
         {

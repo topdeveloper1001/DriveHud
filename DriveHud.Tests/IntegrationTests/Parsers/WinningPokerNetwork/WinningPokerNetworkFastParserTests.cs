@@ -21,7 +21,11 @@ using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.Factory;
 using HandHistories.Parser.Parsers.FastParser.Winning;
+using Microsoft.Practices.ServiceLocation;
+using Microsoft.Practices.Unity;
 using Model;
+using Model.Enums;
+using Model.Solvers;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -38,10 +42,23 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
     {
         private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData";
 
+        private IUnityContainer unityContainer;
+
         [OneTimeSetUp]
         public void Initialize()
         {
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+
+            unityContainer = new UnityContainer();
+
+            unityContainer.RegisterType<IPokerEvaluator, DriveHUD.Importers.Builders.iPoker.HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
+            unityContainer.RegisterType<IPokerEvaluator, DriveHUD.Importers.Builders.iPoker.OmahaEvaluator>(GeneralGameTypeEnum.Omaha.ToString());
+            unityContainer.RegisterType<IPokerEvaluator, DriveHUD.Importers.Builders.iPoker.OmahaEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
+            unityContainer.RegisterType<IEquitySolver, EquitySolver>();
+
+            var locator = new UnityServiceLocator(unityContainer);
+
+            ServiceLocator.SetLocatorProvider(() => locator);
         }
 
         [Test]
@@ -355,8 +372,19 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         {
             var parsingResult = GetParsingResult(handHistoryFile);
 
+            var playerStatisticCreationInfo = new PlayerStatisticCreationInfo
+            {
+                ParsingResult = parsingResult,
+                Player = new Players
+                {
+                    Playername = playername,
+                    PokersiteId = (short)EnumPokerSites.WinningPokerNetwork,
+                    PlayerId = 1
+                }
+            };
+
             var calc = new PlayerStatisticCalculator();
-            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 }, null);
+            var stat = calc.CalculateStatistic(playerStatisticCreationInfo);
             Assert.That(stat.PositionString, Is.EqualTo(position.ToString()));
         }
 
@@ -366,8 +394,19 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         {
             var parsingResult = GetParsingResult(handHistoryFile);
 
+            var playerStatisticCreationInfo = new PlayerStatisticCreationInfo
+            {
+                ParsingResult = parsingResult,
+                Player = new Players
+                {
+                    Playername = playername,
+                    PokersiteId = (short)EnumPokerSites.WinningPokerNetwork,
+                    PlayerId = 1
+                }
+            };
+
             var calc = new PlayerStatisticCalculator();
-            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 }, null);
+            var stat = calc.CalculateStatistic(playerStatisticCreationInfo);
             Assert.That(stat.Position, Is.EqualTo(EnumPosition.BB));
         }
 
@@ -377,8 +416,19 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         {
             var parsingResult = GetParsingResult(handHistoryFile);
 
+            var playerStatisticCreationInfo = new PlayerStatisticCreationInfo
+            {
+                ParsingResult = parsingResult,
+                Player = new Players
+                {
+                    Playername = playername,
+                    PokersiteId = (short)EnumPokerSites.WinningPokerNetwork,
+                    PlayerId = 1
+                }
+            };
+
             var calc = new PlayerStatisticCalculator();
-            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 }, null);
+            var stat = calc.CalculateStatistic(playerStatisticCreationInfo);
             Assert.That(stat.Position, Is.EqualTo(EnumPosition.SB));
         }
 

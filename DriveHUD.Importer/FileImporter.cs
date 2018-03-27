@@ -55,7 +55,7 @@ namespace DriveHUD.Importers
         private static readonly object locker = new object();
 
         private FileInfo processingFile;
-        
+
         private readonly IDataService dataService;
         private readonly IPlayerStatisticRepository playerStatisticRepository;
         private readonly IEventAggregator eventAggregator;
@@ -63,7 +63,7 @@ namespace DriveHUD.Importers
         private readonly SingletonStorageModel storageModel;
 
         public FileImporter()
-        {            
+        {
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
             playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
@@ -445,7 +445,10 @@ namespace DriveHUD.Importers
                 // join new players with existing
                 var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId)).ToArray();
 
-                var calculatedEquity = new Dictionary<string, Dictionary<Street, decimal>>();
+                var playerStatisticCreationInfo = new PlayerStatisticCreationInfo
+                {
+                    ParsingResult = handHistory
+                };
 
                 var processOpponentReport = false;
 
@@ -471,7 +474,9 @@ namespace DriveHUD.Importers
 
                     session.Update(existingPlayer);
 
-                    var playerStat = ProcessPlayerStatistic(handHistory, existingPlayer, importerSession, calculatedEquity);
+                    playerStatisticCreationInfo.Player = existingPlayer;
+
+                    var playerStat = ProcessPlayerStatistic(playerStatisticCreationInfo, importerSession);
 
                     if (playerStat != null)
                     {
@@ -616,13 +621,13 @@ namespace DriveHUD.Importers
         /// <param name="handHistory">Hand history</param>
         /// <param name="player">Player</param>
         /// <returns>Calculated player statistic</returns>
-        protected virtual Playerstatistic ProcessPlayerStatistic(ParsingResult handHistory, Players player, string session, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
+        protected virtual Playerstatistic ProcessPlayerStatistic(PlayerStatisticCreationInfo playerStatisticCreationInfo, string session)
         {
             try
             {
                 var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
 
-                var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player, calculatedEquity);
+                var playerStat = playerStatisticCalculator.CalculateStatistic(playerStatisticCreationInfo);
 
                 if (playerStat == null)
                 {

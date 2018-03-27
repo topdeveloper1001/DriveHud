@@ -29,7 +29,8 @@
     <HandAction p3:type="AllInAction" PlayerName="Hero" HandActionType="ALL_IN" Amount="-6320" Street="Preflop" IsAllIn="true" IsRaiseAllIn="false" SourceActionType="RAISE" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
     <HandAction PlayerName="P2_875424AY" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />  
     <HandAction PlayerName="Hero" HandActionType="UNCALLED_BET" Amount="6120" Street="Preflop" IsAllIn="false" />
-    <HandAction p3:type="WinningsAction" PlayerName="2550761448" HandActionType="WINS" Amount="4" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction p3:type="WinningsAction" PlayerName="P6_391468UT" HandActionType="WINS" Amount="45" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+	<HandAction p3:type="WinningsAction" PlayerName="Hero" HandActionType="WINS" Amount="370" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
   </Actions>
   <CommunityCards>2s7c7s9hQs</CommunityCards>
   <Players>

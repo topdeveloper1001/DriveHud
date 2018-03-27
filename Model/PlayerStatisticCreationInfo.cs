@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPlayerStatisticCalculator.cs" company="Ace Poker Solutions">
+// <copyright file="PlayerStatisticCreationInfo.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,11 +11,18 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using HandHistories.Parser.Parsers;
+using Model.Solvers;
+using System.Collections.Generic;
 
 namespace Model
 {
-    public interface IPlayerStatisticCalculator
+    public class PlayerStatisticCreationInfo
     {
-        Playerstatistic CalculateStatistic(PlayerStatisticCreationInfo creationInfo);
+        public ParsingResult ParsingResult { get; set; }
+
+        public Players Player { get; set; }
+
+        public Dictionary<string, EquityData> EquityData { get; set; }
     }
 }

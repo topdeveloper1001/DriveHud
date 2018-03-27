@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DriveHUD.Importers.Builders.iPoker
 {
@@ -28,7 +27,6 @@ namespace DriveHUD.Importers.Builders.iPoker
             cardsHistogram = (from card in cards
                               group card by card.Rank into grouped
                               let count = grouped.Count()
-                              orderby count descending
                               select new { CardRank = grouped.Key, Count = count }).ToDictionary(x => x.CardRank, x => x.Count);
 
             if (cardsHistogram.Count < 2)
@@ -89,10 +87,15 @@ namespace DriveHUD.Importers.Builders.iPoker
                 return;
             }
 
+            var orderedCardsHistogram = cardsHistogram
+                .OrderByDescending(x => x.Value)
+                .Select(x => x.Value)
+                .ToArray();
+
             // Two pair
-            if (cardsHistogram.ElementAt(0).Value == 2)
+            if (orderedCardsHistogram.ElementAt(0) == 2)
             {
-                if (cardsHistogram.ElementAt(1).Value == 2)
+                if (orderedCardsHistogram.ElementAt(1) == 2)
                 {
                     combination = HandCombo.TwoPair;
                 }
@@ -113,9 +116,9 @@ namespace DriveHUD.Importers.Builders.iPoker
             }
 
             // Straight 
-            var cardsSorted = cards.Select(x => x.Rank).OrderBy(x => x);
+            var cardsSorted = cards.Select(x => x.Rank).GroupBy(x => x).Select(x => x.Key).OrderBy(x => x).ToArray();
 
-            if (((cardsSorted.Last() - cardsSorted.First()) == 4) ||
+            if (cardsSorted.Length == 5 && ((cardsSorted.Last() - cardsSorted.First()) == 4) ||
                 (cardsSorted.Last() == "A".ConvertCardToRank() && cardsSorted.ElementAt(3) == 5))
             {
                 if (combination == HandCombo.Flush)
@@ -129,7 +132,7 @@ namespace DriveHUD.Importers.Builders.iPoker
                 }
 
                 return;
-            }            
+            }
         }
     }
 }

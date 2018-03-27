@@ -17,13 +17,16 @@ using DriveHUD.Common.Progress;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
+using DriveHUD.Importers.Builders.iPoker;
 using DriveHUD.Importers.Loggers;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.Unity;
 using Model;
+using Model.Enums;
 using Model.Interfaces;
 using Model.Reports;
+using Model.Solvers;
 using NSubstitute;
 using NUnit.Framework;
 using Prism.Events;
@@ -63,7 +66,8 @@ namespace DriveHud.Tests.IntegrationTests.Base
             InitializeSessionService(unityContainer);
             InitializeEventAggregator(unityContainer);
             InitializeOpponentReportService(unityContainer);
-            InitializeResources();
+            InitializeEquityResolver(unityContainer);
+            InitializeResources();            
         }
 
         protected virtual void InitializeDatabase()
@@ -229,6 +233,14 @@ namespace DriveHud.Tests.IntegrationTests.Base
         protected virtual void InitializeResources()
         {
             ResourceRegistrator.Initialization();
+        }
+
+        protected virtual void InitializeEquityResolver(UnityContainer unityContainer)
+        {
+            unityContainer.RegisterType<IEquitySolver, EquitySolver>();
+            unityContainer.RegisterType<IPokerEvaluator, HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
+            unityContainer.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.Omaha.ToString());
+            unityContainer.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
         }
 
         #endregion

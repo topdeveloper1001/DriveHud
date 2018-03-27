@@ -95,9 +95,7 @@ namespace PMCatcher.Tests
             }
 
             Assert.IsTrue(result, "Result must be true");
-            Assert.IsNotNull(actual, "Hand history must be built as a result.");
-
-            var xx = SerializationHelper.SerializeObject(actual);
+            Assert.IsNotNull(actual, "Hand history must be built as a result.");            
 
             AssertHandHistory(actual, jsonTestData.ExpectedResult);
         }

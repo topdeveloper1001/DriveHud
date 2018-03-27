@@ -354,7 +354,7 @@ namespace DriveHUD.Importers.PokerMaster
             AddShowActions(handHistory);
             AddWinningActions(handHistory);
             CalculateBets(handHistory);
-            ParserUtils.CalculateUncalledBets(handHistory);
+            ParserUtils.CalculateUncalledBets(handHistory, true);
             CalculateTotalPot(handHistory);
             SortHandActions(handHistory);
             RemoveSittingOutPlayers(handHistory);

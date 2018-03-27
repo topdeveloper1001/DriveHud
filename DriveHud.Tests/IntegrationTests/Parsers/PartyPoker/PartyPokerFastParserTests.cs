@@ -224,12 +224,14 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", "ragga22", -0.05, HandActionType.SMALL_BLIND, Street.Preflop, 1)]
         [TestCase(TestDataFolder + @"Hands/NLHoldem2_4.txt", "PotatoGun", 7.56, HandActionType.WINS, Street.Summary, 1)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", "marlboro man", -0.71, HandActionType.CALL, Street.Flop, 1)]
+        [TestCase(TestDataFolder + @"Hands/NLHoldem2_4_allin.txt", "Moose4Life", 371.87, HandActionType.UNCALLED_BET, Street.Preflop, 1)]
+        [TestCase(TestDataFolder + @"Hands/NLHoldem2_4_allin.txt", "Moose4Life", 265.92, HandActionType.WINS, Street.Summary, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             var actions = handHistory.HandActions.Where(x => x.Street == street && x.PlayerName.Equals(playerName) && x.HandActionType == handActionType && x.Amount == amount).ToArray();
 
-            Assert.That(actions.Length, Is.EqualTo(numberOfActions));
+            Assert.That(actions.Length, Is.EqualTo(numberOfActions), $"Expected action [{handActionType}, {amount}, {playerName}, {street}] not found");
         }
 
         [Test]

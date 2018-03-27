@@ -16,6 +16,7 @@ using Model.Enums;
 using Model.Filters;
 using Model.Hud;
 using Model.Reports;
+using Model.Solvers;
 using System;
 
 namespace Model
@@ -46,6 +47,7 @@ namespace Model
             container.RegisterType<IOpponentReportService, OpponentReportService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IPopulationReportService, PopulationReportService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IHudPlayerTypeService, HudPlayerTypeService>();
+            container.RegisterType<IEquitySolver, EquitySolver>();
         }
     }
 }

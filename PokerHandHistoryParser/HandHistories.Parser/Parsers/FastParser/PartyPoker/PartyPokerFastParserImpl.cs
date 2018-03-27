@@ -1,22 +1,17 @@
-﻿using DriveHUD.Common.Log;
+﻿using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
-using HandHistories.Parser.Utils;
-using HandHistories.Parser.Utils.Extensions;
 using HandHistories.Parser.Utils.FastParsing;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using HandHistories.Objects.Hand;
 
 namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 {
@@ -51,6 +46,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         public override bool RequiresAllInUpdates
         {
             get { return true; }
+        }
+
+        public override bool RequiresUncalledBetCalculations
+        {
+            get
+            {
+                return true;
+            }
         }
 
         // So the same parser can be used for It and Fr variations
@@ -655,6 +658,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             {
                 return new WinningsAction(playerName, HandActionType.WINS_SIDE_POT, amount, potID);
             }
+
             return new WinningsAction(playerName, HandActionType.WINS, amount, potID);
         }
 
@@ -786,7 +790,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 if (amountStartIndex == -1)//Wins Side Pot
                 {
                     string sidePotID = " from the side pot ";
+
                     int idStartIndex = line.IndexOf(sidePotID);
+
                     if (idStartIndex != -1)
                     {
                         int idEndIndex = line.IndexOf(' ', idStartIndex + sidePotID.Length);
@@ -1240,6 +1246,31 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
 
             return line.Substring(startIndex, endIndex - startIndex);
+        }
+
+        protected override void CalculateUncalledBets(string[] handLines, HandHistory handHistory)
+        {
+            var winningActions = handHistory.WinningActions
+                .GroupBy(x => x.PlayerName)
+                .Select(x => new { PlayerName = x.Key, Win = x.Sum(p => p.Amount), WinningActions = x.ToList() });
+
+            winningActions.Where(x => x.WinningActions.Count > 1).ForEach(wa =>
+            {
+                var winningAction = wa.WinningActions.FirstOrDefault(x => x.HandActionType == HandActionType.WINS) ?? wa.WinningActions.First();
+                winningAction.Amount = wa.Win;
+
+                foreach (var action in wa.WinningActions)
+                {
+                    if (winningAction == action)
+                    {
+                        continue;
+                    }
+
+                    handHistory.HandActions.Remove(action);
+                }
+            });
+
+            base.CalculateUncalledBets(handLines, handHistory);
         }
     }
 }

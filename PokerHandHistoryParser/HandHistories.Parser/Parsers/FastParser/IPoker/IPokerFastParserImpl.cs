@@ -97,6 +97,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
         }
 
+        public override bool RequiresUncalledBetCalculations
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         protected override string[] SplitHandsLines(string handText)
         {
             // convert hand text to XML to be able to parse it string by string
@@ -1379,15 +1387,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             handHistory.GameDescription.Tournament.Speed = TournamentSpeed.Turbo;
         }
 
-        protected override void ParseExtraHandInformation(string[] handLines, HandHistorySummary handHistorySummary)
+        protected override void CalculateUncalledBets(string[] handLines, HandHistory handHistory)
         {
-            var handHistory = handHistorySummary as HandHistory;
-
-            if (handHistory == null || handHistory.HandActions.Count == 0)
-            {
-                return;
-            }
-
             var uncalledBetEnabled = false;
 
             for (var i = 0; i < handLines.Length; i++)
@@ -1402,65 +1403,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 }
             }
 
-            if (!uncalledBetEnabled)
-            {
-                return;
-            }
-
-            var playersPutInPot = new Dictionary<string, decimal>();
-
-            foreach (var action in handHistory.HandActions)
-            {
-                if (action.Street == Street.Showdown || action.Street == Street.Summary)
-                {
-                    continue;
-                }
-
-                if (!playersPutInPot.ContainsKey(action.PlayerName))
-                {
-                    playersPutInPot.Add(action.PlayerName, 0);
-                }
-
-                playersPutInPot[action.PlayerName] += Math.Abs(action.Amount);
-            }
-
-            var playerPutMaxInPot = new KeyValuePair<string, decimal>();
-            var playerPutSecondMaxInPot = new KeyValuePair<string, decimal>();
-
-            foreach (KeyValuePair<string, decimal> playerPutInPot in playersPutInPot)
-            {
-                if (playerPutInPot.Value > playerPutMaxInPot.Value)
-                {
-                    playerPutSecondMaxInPot = playerPutMaxInPot;
-                    playerPutMaxInPot = playerPutInPot;
-                }
-                else
-                {
-                    if (playerPutInPot.Value > playerPutSecondMaxInPot.Value)
-                    {
-                        playerPutSecondMaxInPot = playerPutInPot;
-                    }
-                }
-            }
-
-            var diffBetweenPots = playerPutMaxInPot.Value - playerPutSecondMaxInPot.Value;
-
-            if (diffBetweenPots <= 0)
-            {
-                return;
-            }
-
-            var winAction = handHistory.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.WINS && x.PlayerName == playerPutMaxInPot.Key);
-
-            if (winAction == null)
-            {
-                var actionNumber = handHistory.HandActions.Max(x => x.ActionNumber);
-                winAction = new WinningsAction(playerPutMaxInPot.Key, HandActionType.WINS, diffBetweenPots, 0, ++actionNumber);
-                handHistory.HandActions.Add(winAction);
-                return;
-            }
-
-            winAction.Amount += diffBetweenPots;
+            ParserUtils.CalculateUncalledBets(handHistory, !uncalledBetEnabled);
         }
 
         private bool TryParseSeatNumber(HandHistory handHistory, string playerNumberText)

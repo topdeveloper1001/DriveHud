@@ -85,14 +85,14 @@ namespace HandHistories.Parser.Utils.Extensions
                     // iPoker starts with <session>
                     if (xElement.Name.LocalName.Equals("session", StringComparison.OrdinalIgnoreCase))
                     {
-                        TryParseSite(xElement, out siteName, EnumPokerSites.IPoker);
+                        TryParseSite(xElement, "pokersite", out siteName, EnumPokerSites.IPoker);
                         return true;
                     }
 
                     // command hand starts with <HandHistory
                     if (xElement.Name.LocalName.Equals("HandHistory", StringComparison.OrdinalIgnoreCase))
                     {
-                        return TryParseSite(xElement, out siteName);
+                        return TryParseSite(xElement, "Site", out siteName);
                     }
                 }
                 catch (XmlException)
@@ -104,11 +104,11 @@ namespace HandHistories.Parser.Utils.Extensions
             return false;
         }
 
-        private static bool TryParseSite(XElement xElement, out EnumPokerSites pokerSite, EnumPokerSites defaultSite = EnumPokerSites.Unknown)
+        private static bool TryParseSite(XElement xElement, string siteTag, out EnumPokerSites pokerSite, EnumPokerSites defaultSite = EnumPokerSites.Unknown)
         {
             pokerSite = defaultSite;
 
-            var siteNode = xElement.Descendants("Site").FirstOrDefault();
+            var siteNode = xElement.Descendants(siteTag).FirstOrDefault();
 
             if (siteNode == null)
             {

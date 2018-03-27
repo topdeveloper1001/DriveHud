@@ -1,0 +1,30 @@
+#Game No : 931910381
+***** 888poker Hand History for Game 931910381 *****
+$200/$400 Blinds No Limit Holdem - *** 14 09 2017 13:48:26
+Tournament #109007995 $0.08 + $0.02 - Table #1 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 2: Peon_84 ( $2,560 )
+Seat 5: drakoniukas1 ( $760 )
+Seat 6: Hero ( $11,680 )
+drakoniukas1 posts ante [$40]
+Peon_84 posts ante [$40]
+Hero posts ante [$40]
+Peon_84 posts small blind [$200]
+drakoniukas1 posts big blind [$400]
+** Dealing down cards **
+Dealt to Peon_84 [ Qs, 9d ]
+Hero calls [$400]
+Peon_84 calls [$200]
+drakoniukas1 checks
+** Dealing flop ** [ Qc, 6h, 5h ]
+Peon_84 bets [$400]
+drakoniukas1 folds
+Hero raises [$11,240]
+Peon_84 calls [$1,720]
+** Dealing turn ** [ 9c ]
+** Dealing river ** [ 7c ]
+** Summary **
+Peon_84 shows [ Qs, 9d ]
+Hero shows [ Qh, Qd ]
+Hero collected [ $5,560 ]

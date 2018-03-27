@@ -664,7 +664,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.TowerTorneos
             string rawHand = File.ReadAllText(handHistoryFile);
             HandHistory hand = parser.ParseFullHandHistory(rawHand, true);
 
-            Assert.AreEqual(hand.Hero.Win, win);
+            Assert.AreEqual(win, hand.Hero.Win);
         }
 
         [Test]

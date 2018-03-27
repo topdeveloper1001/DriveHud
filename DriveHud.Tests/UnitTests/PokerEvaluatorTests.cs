@@ -77,6 +77,56 @@ namespace DriveHud.Tests.UnitTests
                      { 8, HoleCards.FromCards("8d8s") }
                  },
                  Winners = new List<int> { 8 }
+            },
+            new TableTestDataGroupCards
+            {
+                 CardsOnTable =  BoardCards.FromCards("9d2h2d2s2c"),
+                 PlayerCards = new Dictionary<int, HoleCards>
+                 {
+                     { 2, HoleCards.FromCards("JsJc") },
+                     { 4, HoleCards.FromCards("8dQd") }
+                 },
+                 Winners = new List<int> { 4 }
+            },
+            new TableTestDataGroupCards
+            {
+                 CardsOnTable =  BoardCards.FromCards("2h2d2s7d9c"),
+                 PlayerCards = new Dictionary<int, HoleCards>
+                 {
+                     { 2, HoleCards.FromCards("JsJc") },
+                     { 4, HoleCards.FromCards("QdQc") }
+                 },
+                 Winners = new List<int> { 4 }
+            },
+            new TableTestDataGroupCards
+            {
+                 CardsOnTable =  BoardCards.FromCards("2h2dQh9d8h"),
+                 PlayerCards = new Dictionary<int, HoleCards>
+                 {
+                     { 2, HoleCards.FromCards("2s2c") },
+                     { 4, HoleCards.FromCards("QdQc") }
+                 },
+                 Winners = new List<int> { 2 }
+            },
+            new TableTestDataGroupCards
+            {
+                 CardsOnTable =  BoardCards.FromCards("Ah8c2d3sJs"),
+                 PlayerCards = new Dictionary<int, HoleCards>
+                 {
+                     { 2, HoleCards.FromCards("7cAc") },
+                     { 4, HoleCards.FromCards("QdAd") }
+                 },
+                 Winners = new List<int> { 4 }
+            },
+            new TableTestDataGroupCards
+            {
+                 CardsOnTable =  BoardCards.FromCards("5s2c6cJsQs"),
+                 PlayerCards = new Dictionary<int, HoleCards>
+                 {
+                     { 3, HoleCards.FromCards("KsKd") },
+                     { 4, HoleCards.FromCards("3d4d") }
+                 },
+                 Winners = new List<int> { 4 }
             }
         };
 

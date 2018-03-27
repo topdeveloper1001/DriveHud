@@ -281,6 +281,7 @@
     <Compile Include="Mapping\TournamentsMap.cs" />
     <Compile Include="ModelEntities.cs" />
     <Compile Include="PlayerCollectionItem.cs" />
+    <Compile Include="PlayerStatisticCreationInfo.cs" />
     <Compile Include="PlayerStatisticRepository.cs" />
     <Compile Include="PreDefinedRangeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

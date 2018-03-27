@@ -1,0 +1,38 @@
+PokerStars Game #47144001190:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 1:40:23 ET
+Table 'Sagitta V' 6-max Seat #3 is the button
+Seat 1: vulgokrusty ($204.90 in chips) 
+Seat 2: Hero ($369.25 in chips) 
+Seat 3: pablostar ($318.40 in chips) 
+Seat 4: scriber98 ($68.60 in chips) 
+Seat 5: asseral ($252.85 in chips) 
+Seat 6: HeidiKlummm ($228.75 in chips) 
+scriber98: posts small blind $1
+asseral: posts big blind $2
+*** HOLE CARDS ***
+HeidiKlummm: folds 
+vulgokrusty: folds 
+Hero: raises $4 to $6
+pablostar: folds 
+scriber98: calls $5
+asseral: folds 
+*** FLOP *** [9d 2h 2d]
+scriber98: checks 
+Hero: bets $11
+scriber98: raises $51.60 to $62.60 and is all-in
+Hero: calls $51.60
+*** TURN *** [9d 2h 2d] [2s]
+*** RIVER *** [9d 2h 2d 2s] [2c]
+*** SHOW DOWN ***
+scriber98: shows [8d Qd] (four of a kind, Deuces)
+Hero: shows [Js Jc] (four of a kind, Deuces - lower kicker)
+scriber98 collected $136.20 from pot
+*** SUMMARY ***
+Total pot $139.20 | Rake $3 
+Board [9d 2h 2d 2s 2c]
+Seat 1: vulgokrusty folded before Flop (didn't bet)
+Seat 2: Hero showed [Js Jc] and lost with four of a kind, Deuces
+Seat 3: pablostar (button) folded before Flop (didn't bet)
+Seat 4: scriber98 (small blind) showed [8d Qd] and won ($136.20) with four of a kind, Deuces
+Seat 5: asseral (big blind) folded before Flop
+Seat 6: HeidiKlummm folded before Flop (didn't bet)
+

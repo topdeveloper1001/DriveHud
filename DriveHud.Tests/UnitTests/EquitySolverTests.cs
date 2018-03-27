@@ -20,6 +20,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -43,26 +44,28 @@ namespace DriveHud.Tests.UnitTests
 
             ServiceLocator.SetLocatorProvider(() => locator);
         }
-
-        [TestCaseSource("TestDataCase")]
-        public void CalculateEquityTest(TestData testData)
+        
+        [TestCaseSource("TestDataCase", Category = "EquitySolver.EvDiff")]
+        public void CalculateEquityTest(string handHistoryFile, double tolerance, EquityData[] expectedResults)
         {
-            var handHistory = ReadHandHistory(testData.HandHistoryFile);
+            var handHistory = ReadHandHistory(handHistoryFile);
 
             var equitySolver = new EquitySolver();
 
-            var actualResult = equitySolver.CalculateEquity(handHistory);
+            var actualResult = equitySolver.CalculateEquity(handHistory)
+                .Where(x => x.Value.Equity != 0 || x.Value.EVDiff != 0)
+                .ToDictionary(x => x.Key, x => x.Value);
 
-            Assert.That(actualResult.Count, Is.EqualTo(testData.ExpectedResult.Length));
+            Assert.That(actualResult.Count, Is.EqualTo(expectedResults.Length));
 
             Assert.Multiple(() =>
             {
-                foreach (var expectedResult in testData.ExpectedResult)
+                foreach (var expectedResult in expectedResults)
                 {
                     Assert.IsTrue(actualResult.ContainsKey(expectedResult.PlayerName), $"{expectedResult.PlayerName} has not been found in results.");
 
-                    Assert.That(actualResult[expectedResult.PlayerName].Equity * 100, Is.EqualTo(expectedResult.Equity).Within(0.01), "Equity must be equal");
-                    Assert.That(actualResult[expectedResult.PlayerName].EVDiff, Is.EqualTo(expectedResult.EVDiff).Within(0.001), "EV Diff must be equal");
+                    Assert.That(actualResult[expectedResult.PlayerName].Equity * 100, Is.EqualTo(expectedResult.Equity).Within(0.1), $"Equity must be equal [{expectedResult.PlayerName}]");
+                    Assert.That(actualResult[expectedResult.PlayerName].EVDiff, Is.EqualTo(expectedResult.EVDiff).Within(tolerance), $"EV Diff must be equal [{expectedResult.PlayerName}]");
                 }
             });
         }
@@ -88,12 +91,12 @@ namespace DriveHud.Tests.UnitTests
             return handHistory;
         }
 
-        private static List<TestData> TestDataCase = new List<TestData>
+        private static IEnumerable<TestCaseData> TestDataCase()
         {
-            new TestData
-            {
-                HandHistoryFile = "AllIn-on-BB-Hero-raised.xml",
-                ExpectedResult = new []
+            yield return new TestCaseData(
+                "AllIn-on-BB-Hero-raised.xml",
+                0.01,
+                new[]
                 {
                     new EquityData
                     {
@@ -106,22 +109,173 @@ namespace DriveHud.Tests.UnitTests
                         PlayerName = "P6_391468UT",
                         Equity = 80.3m,
                         EVDiff = -8.865m
+                    }
+                }).SetName("EVDifference: AllIn-on-BB-Hero-raised");
+
+            yield return new TestCaseData(
+                "Hero-AllIn-Preflop-Rake.txt",
+                0.01,
+                new[]
+                {
+                    new EquityData
+                    {
+                        PlayerName = "Hero",
+                        Equity = 43.1m,
+                        EVDiff = 77.28m
                     },
                     new EquityData
                     {
-                        PlayerName = "P1_928114KV",
-                        Equity = 0,
-                        EVDiff = 0
+                        PlayerName = "darasxxx",
+                        Equity = 56.9m,
+                        EVDiff = -77.28m
+                    }
+                }).SetName("EVDifference: Hero-AllIn-Preflop-Rake");
+
+            yield return new TestCaseData(
+                "Hero-ExpectedValue-1.xml",
+                0.01,
+                new[]
+                {
+                    new EquityData
+                    {
+                        PlayerName = "Hero",
+                        Equity = 90.9m,
+                        EVDiff = -7.54m
+                    },
+                    new EquityData
+                    {
+                        PlayerName = "P3_600431XL",
+                        Equity = 9.1m,
+                        EVDiff = 7.54m
+                    }
+                }).SetName("EVDifference: Hero-ExpectedValue-1");
+
+            yield return new TestCaseData(
+                "DURKADURDUR-ExpectedValue-2.txt",
+                0.2,
+                new[]
+                {
+                    new EquityData
+                    {
+                        PlayerName = "DURKADURDUR",
+                        Equity = 76.2m,
+                        EVDiff = -147.86m
+                    },
+                    new EquityData
+                    {
+                        PlayerName = "Nehekus",
+                        Equity = 0m,
+                        EVDiff = -45.17m
+                    },
+                    new EquityData
+                    {
+                        PlayerName = "skipper8922",
+                        Equity = 23.8m,
+                        EVDiff = 193.02m
+                    }
+                }).SetName("EVDifference: DURKADURDUR-ExpectedValue-2");
+
+            yield return new TestCaseData(
+                "Hero-ExpectedValue-2.txt",
+                1.5,
+                new[]
+                {
+                    new EquityData
+                    {
+                        PlayerName = "Hero",
+                        Equity = 21.6m,
+                        EVDiff = -1889.93m
+                    },
+                    new EquityData
+                    {
+                        PlayerName = "P6_391468UT",
+                        Equity = 61.8m,
+                        EVDiff = -34.39m
                     },
                     new EquityData
                     {
                         PlayerName = "P2_875424AY",
-                        Equity = 0,
-                        EVDiff = 0
+                        Equity = 16.6m,
+                        EVDiff = 1924.32m
                     }
-                }
-            }
-        };
+                }).SetName("EVDifference: Hero-ExpectedValue-2");
+
+            yield return new TestCaseData(
+              "Hero-ExpectedValue-3.txt",
+              0.01,
+              new[]
+              {
+                    new EquityData
+                    {
+                        PlayerName = "Hero",
+                        Equity = 60m,
+                        EVDiff = 81.72m
+                    },
+                    new EquityData
+                    {
+                        PlayerName = "scriber98",
+                        Equity = 40m,
+                        EVDiff = -81.72m
+                    }
+              }).SetName("EVDifference: Hero-ExpectedValue-3");
+
+            yield return new TestCaseData(
+                "Hero-ExpectedValue-4.txt",
+                0.01,
+                new[]
+                {
+                        new EquityData
+                        {
+                            PlayerName = "Hero",
+                            Equity = 16.7m,
+                            EVDiff = 12.47m
+                        },
+                        new EquityData
+                        {
+                            PlayerName = "scriber98",
+                            Equity = 83.3m,
+                            EVDiff = -12.47m
+                        }
+                }).SetName("EVDifference: Hero-ExpectedValue-4");
+
+            yield return new TestCaseData(
+                "Hero-ExpectedValue-5.txt",
+                0.01,
+                new[]
+                {
+                        new EquityData
+                        {
+                            PlayerName = "Hero",
+                            Equity = 3.3m,
+                            EVDiff = 25.47m
+                        },
+                        new EquityData
+                        {
+                            PlayerName = "Desateur",
+                            Equity = 96.7m,
+                            EVDiff = -25.47m
+                        }
+                }).SetName("EVDifference: Hero-ExpectedValue-5");
+
+            yield return new TestCaseData(
+                "Peon84-ExpectedValue-1.txt",
+                1.5,
+                new[]
+                {
+                        new EquityData
+                        {
+                            PlayerName = "Peon84",
+                            Equity = 26.3m,
+                            EVDiff = 13168m
+                        },
+                        new EquityData
+                        {
+                            PlayerName = "Kalkulatorek",
+                            Equity = 73.7m,
+                            EVDiff = -13168m
+                        }
+                }).SetName("EVDifference: Peon84-ExpectedValue-1");
+        }
 
         public class TestData
         {

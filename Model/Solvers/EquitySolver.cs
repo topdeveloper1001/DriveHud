@@ -52,14 +52,19 @@ namespace Model.Solvers
                 return result;
             }
 
+            // intialize equity for all plaeyers
+            equityPlayers.ForEach(p => p.Equity = new decimal[pots.Count]);
+
             var gameType = new GeneralGameTypeEnum().ParseGameType(handHistory.GameDescription.GameType);
 
-            CalculateEquity(equityPlayers, handHistory, gameType);
+            CalculatePotEquity(pots, handHistory, gameType);
+            CalculatePotRakes(pots, handHistory);
+
             pots.ForEach(pot => CalculateEvDiff(pot, handHistory, gameType));
 
             result = equityPlayers.Select(x => new EquityData
             {
-                Equity = x.Equity,
+                Equity = x.Equity[0],
                 EVDiff = x.EvDiff,
                 PlayerName = x.Name
             }).ToDictionary(x => x.PlayerName);
@@ -67,14 +72,36 @@ namespace Model.Solvers
             return result;
         }
 
+        /// <summary>
+        /// Calculates rake of each pot accordingly on pot sizes
+        /// </summary>
+        /// <param name="pots">Pots to calculate rakes</param>
+        private void CalculatePotRakes(List<EquityPot> pots, HandHistory handHistory)
+        {
+            var totalPot = pots.Sum(x => x.Pot);
+
+            if (totalPot == 0)
+            {
+                return;
+            }         
+
+            var rake = totalPot - handHistory.WinningActions.Sum(x => x.Amount);
+
+            pots.ForEach(pot => pot.Rake = pot.Pot / totalPot * rake);
+        }
+
+        /// <summary>
+        /// Calculates EV Diff for the players involved into the specified pots
+        /// </summary>
+        /// <param name="pot">Pots to calculate EV diff</param>
+        /// <param name="handHistory">Hand history</param>
+        /// <param name="gameType">Type of game</param>
         private void CalculateEvDiff(EquityPot pot, HandHistory handHistory, GeneralGameTypeEnum gameType)
         {
             if (pot.Players.Count < 2)
             {
                 return;
             }
-
-            var putInPot = pot.Pot / pot.Players.Count;
 
             var pokerEvaluator = ServiceLocator.Current.GetInstance<IPokerEvaluator>(gameType.ToString());
 
@@ -92,11 +119,16 @@ namespace Model.Solvers
                 return;
             }
 
-            var netWonPerWinner = pot.Pot / winnersBySeat.Count - putInPot;
-
-            foreach (var player in pot.Players.Where(p => p.Equity != 0))
+            foreach (var player in pot.Players)
             {
-                var ev = pot.Pot * player.Equity - putInPot;
+                if (!pot.PlayersPutInPot.ContainsKey(player))
+                {
+                    continue;
+                }               
+
+                var netWonPerWinner = (pot.Pot - pot.Rake) / winnersBySeat.Count - pot.PlayersPutInPot[player];
+
+                var ev = (pot.Pot - pot.Rake) * player.Equity[pot.Index] - pot.PlayersPutInPot[player];
 
                 if (winnersBySeat.Contains(player.Seat))
                 {
@@ -104,7 +136,17 @@ namespace Model.Solvers
                     continue;
                 }
 
-                player.EvDiff += ev + putInPot;
+                player.EvDiff += ev + pot.PlayersPutInPot[player];
+            }
+        }
+
+        private void CalculatePotEquity(List<EquityPot> pots, HandHistory handHistory, GeneralGameTypeEnum gameType)
+        {
+            var mainPotPlayers = pots[0].Players;
+
+            for (var potIndex = 0; potIndex < pots.Count; potIndex++)
+            {
+                CalculateEquity(pots[potIndex].Players, mainPotPlayers, handHistory, gameType, potIndex);
             }
         }
 
@@ -113,7 +155,7 @@ namespace Model.Solvers
         /// </summary>
         /// <param name="equityPlayers">Players to calculate equity</param>
         /// <param name="handHistory">Hand history</param>
-        private void CalculateEquity(List<EquityPlayer> equityPlayers, HandHistory handHistory, GeneralGameTypeEnum gameType)
+        private void CalculateEquity(List<EquityPlayer> equityPlayers, List<EquityPlayer> mainPotPlayers, HandHistory handHistory, GeneralGameTypeEnum gameType, int potIndex)
         {
             var playersByName = handHistory.Players
                 .GroupBy(x => x.PlayerName)
@@ -137,22 +179,21 @@ namespace Model.Solvers
 
             try
             {
-                var streets = eligibleEquityPlayers.Select(x => x.LastAction.Street).Distinct().ToArray();
+                var street = eligibleEquityPlayers.Select(x => x.LastAction.Street).Distinct().Max();
 
-                foreach (var street in streets)
+                var boardCards = CardHelper.IsStreetAvailable(handHistory.CommunityCards.ToString(), street)
+                     ? handHistory.CommunityCards.GetBoardOnStreet(street)
+                     : handHistory.CommunityCards;
+
+                var deadCards = string.Join(string.Empty, mainPotPlayers.Except(equityPlayers).Where(x => x.HoleCards != null).Select(x => x.HoleCards.ToString()));
+
+                if (gameType == GeneralGameTypeEnum.Holdem)
                 {
-                    var boardCards = CardHelper.IsStreetAvailable(handHistory.CommunityCards.ToString(), street)
-                         ? handHistory.CommunityCards.GetBoardOnStreet(street)
-                         : handHistory.CommunityCards;
-
-                    if (gameType == GeneralGameTypeEnum.Holdem)
-                    {
-                        CalculateHoldemEquity(eligibleEquityPlayers, street, boardCards);
-                    }
-                    else
-                    {
-                        CalculateOmahaEquity(eligibleEquityPlayers, street, boardCards, gameType == GeneralGameTypeEnum.OmahaHiLo);
-                    }
+                    CalculateHoldemEquity(eligibleEquityPlayers, street, boardCards, deadCards, potIndex);
+                }
+                else
+                {
+                    CalculateOmahaEquity(eligibleEquityPlayers, street, boardCards, gameType == GeneralGameTypeEnum.OmahaHiLo, potIndex);
                 }
             }
             catch (Exception e)
@@ -167,7 +208,7 @@ namespace Model.Solvers
         /// <param name="players">Player to calculate equity</param>
         /// <param name="street">Street</param>
         /// <param name="boardCards">Board cards</param>
-        private void CalculateHoldemEquity(List<EquityPlayer> players, Street street, BoardCards boardCards)
+        private void CalculateHoldemEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, string dead, int potIndex)
         {
             var wins = new long[players.Count];
             var losses = new long[players.Count];
@@ -175,7 +216,7 @@ namespace Model.Solvers
 
             long totalhands = 0;
 
-            Hand.HandWinOdds(players.Select(x => x.HoleCards.ToString()).ToArray(), boardCards.ToString(), string.Empty, wins, ties, losses, ref totalhands);
+            Hand.HandWinOdds(players.Select(x => x.HoleCards.ToString()).ToArray(), boardCards.ToString(), dead, wins, ties, losses, ref totalhands);
 
             if (totalhands == 0)
             {
@@ -198,8 +239,8 @@ namespace Model.Solvers
 
             var allInEquity = CalculateEquity(playersOdds, totalhands);
 
-            players.Where(p => p.LastAction.Street == street && allInEquity.ContainsKey(p.Name))
-                .ForEach(p => p.Equity = allInEquity[p.Name]);
+            players.Where(p => allInEquity.ContainsKey(p.Name))
+                .ForEach(p => p.Equity[potIndex] = allInEquity[p.Name]);
         }
 
         /// <summary>
@@ -209,7 +250,7 @@ namespace Model.Solvers
         /// <param name="street">Street</param>
         /// <param name="boardCards">Board cards</param>
         /// <param name="isHiLo">Determine whenever Omaha is Omaha HiLo</param>
-        private void CalculateOmahaEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, bool isHiLo)
+        private void CalculateOmahaEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, bool isHiLo, int potIndex)
         {
             var calc = new OmahaEquityCalculatorMain(true, isHiLo);
 
@@ -231,7 +272,7 @@ namespace Model.Solvers
             }
 
             players.Where(p => p.LastAction.Street == street && allInEquity.ContainsKey(p.Name))
-                .ForEach(p => p.Equity = allInEquity[p.Name]);
+                .ForEach(p => p.Equity[potIndex] = allInEquity[p.Name]);
         }
 
         /// <summary>
@@ -248,7 +289,7 @@ namespace Model.Solvers
             {
                 var playerOdds = sortedPlayerOdds.FirstOrDefault();
                 playerOdds.Ties = playerOdds.Ties / sortedPlayerOdds.Count;
-                playerOdds.Equity = (decimal)(playerOdds.Ties + playerOdds.Wins) / total;
+                playerOdds.Equity = (playerOdds.Ties + playerOdds.Wins) / total;
 
                 sortedPlayerOdds.Remove(playerOdds);
                 sortedPlayerOdds.ForEach(x => x.Ties -= playerOdds.Ties);
@@ -327,14 +368,18 @@ namespace Model.Solvers
 
             foreach (var equityPlayer in eligibleEquityPlayers)
             {
+                var putInThisPot = 0m;
+
                 if (equityPlayer.PutInPot < allInPlayerPutInPot)
                 {
                     pot.Pot += equityPlayer.PutInPot;
+                    putInThisPot = equityPlayer.PutInPot;
                     equityPlayer.PutInPot = 0;
                 }
                 else
                 {
                     pot.Pot += allInPlayerPutInPot;
+                    putInThisPot = allInPlayerPutInPot;
                     equityPlayer.PutInPot -= allInPlayerPutInPot;
                 }
 
@@ -342,6 +387,8 @@ namespace Model.Solvers
                 {
                     pot.Players.Add(equityPlayer);
                 }
+
+                pot.PlayersPutInPot.Add(equityPlayer, putInThisPot);
             }
 
             return pot;
@@ -378,6 +425,18 @@ namespace Model.Solvers
                 equityPlayer.LastAction = handAction;
             }
 
+            // apply uncalled bets
+            if (equityPlayers.Count > 1)
+            {
+                var orderedEquityPlayers = equityPlayers.Values.OrderBy(x => x.PutInPot).ToArray();
+                var uncalledBet = orderedEquityPlayers[orderedEquityPlayers.Length - 1].PutInPot - orderedEquityPlayers[orderedEquityPlayers.Length - 2].PutInPot;
+
+                if (uncalledBet > 0)
+                {
+                    orderedEquityPlayers[orderedEquityPlayers.Length - 1].PutInPot -= uncalledBet;                    
+                }
+            }
+
             return equityPlayers.Values.ToList();
         }
 
@@ -396,7 +455,7 @@ namespace Model.Solvers
 
             public HandAction LastAction { get; set; }
 
-            public decimal Equity { get; set; }
+            public decimal[] Equity { get; set; }
 
             public decimal EvDiff { get; set; }
 
@@ -415,6 +474,10 @@ namespace Model.Solvers
             public Street Street { get; set; }
 
             public List<EquityPlayer> Players { get; set; } = new List<EquityPlayer>();
+
+            public Dictionary<EquityPlayer, decimal> PlayersPutInPot { get; set; } = new Dictionary<EquityPlayer, decimal>();
+
+            public decimal Rake { get; set; }
         }
 
         /// <summary>
@@ -424,9 +487,9 @@ namespace Model.Solvers
         {
             public string PlayerName { get; set; }
 
-            public long Wins { get; set; }
+            public decimal Wins { get; set; }
 
-            public long Ties { get; set; }
+            public decimal Ties { get; set; }
 
             public decimal Equity { get; set; }
         }

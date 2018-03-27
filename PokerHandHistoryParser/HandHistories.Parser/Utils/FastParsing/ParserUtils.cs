@@ -225,17 +225,23 @@ namespace HandHistories.Parser.Utils.FastParsing
             return string.Empty;
         }
 
-        public static void CalculateUncalledBets(HandHistory handHistory)
+        /// <summary>
+        /// Adds uncalled bets to the hand history and adjust winnings
+        /// </summary>
+        /// <param name="handHistory">Hand history to update</param>
+        /// <param name="winsIncludeUncalledBet">Determines whenvers winnings include uncalled bet</param>
+        public static void CalculateUncalledBets(HandHistory handHistory, bool winsIncludeUncalledBet)
         {
+            if (handHistory == null || handHistory.HandActions.Count == 0)
+            {
+                return;
+            }
+
             var playersPutInPot = new Dictionary<string, decimal>();
 
-            foreach (var action in handHistory.HandActions)
+            foreach (var action in handHistory.HandActions
+                .Where(x => x.IsGameAction && x.Street != Street.Showdown && x.Street != Street.Summary))
             {
-                if (action.Street == Street.Showdown || action.Street == Street.Summary)
-                {
-                    continue;
-                }
-
                 if (!playersPutInPot.ContainsKey(action.PlayerName))
                 {
                     playersPutInPot.Add(action.PlayerName, 0);
@@ -270,31 +276,38 @@ namespace HandHistories.Parser.Utils.FastParsing
                 return;
             }
 
-            var winAction = handHistory.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.WINS && x.PlayerName == playerPutMaxInPot.Key);
+            var totalWinnings = handHistory.WinningActions.Sum(x => x.Amount);
+            var totalPot = playersPutInPot.Sum(x => x.Value) - diffBetweenPots;
 
-            if (winAction == null)
+            // we don't know if winning commands includes uncalled bet or not, but if winning are greater than all players put into the pot 
+            // then we know what uncalled bet is in winnings
+            if (totalWinnings > totalPot || winsIncludeUncalledBet)
             {
-                var folded = handHistory.HandActions.Any(x => x.PlayerName == playerPutMaxInPot.Key && x.IsFold);
+                var winAction = handHistory.HandActions
+                    .FirstOrDefault(x => x.HandActionType == HandActionType.WINS && x.PlayerName == playerPutMaxInPot.Key);
 
-                if (folded)
+                if (winAction != null)
                 {
-                    return;
-                }
+                    winAction.Amount -= diffBetweenPots;
 
-                var actionNumber = handHistory.HandActions.Max(x => x.ActionNumber);
-                winAction = new WinningsAction(playerPutMaxInPot.Key, HandActionType.WINS, diffBetweenPots, 0, ++actionNumber);
-                handHistory.HandActions.Add(winAction);
-                return;
+                    if (handHistory.Players[playerPutMaxInPot.Key].Win > 0)
+                    {
+                        handHistory.Players[playerPutMaxInPot.Key].Win -= diffBetweenPots;
+                    }
+                }
             }
 
-            winAction.Amount -= diffBetweenPots;
-            handHistory.Players[playerPutMaxInPot.Key].Win -= diffBetweenPots;
-
-            var lastRaiseAction = handHistory.HandActions.LastOrDefault(x => x.PlayerName == playerPutMaxInPot.Key && x.Amount < 0);
+            var lastRaiseAction = handHistory.HandActions.LastOrDefault(x => x.PlayerName == playerPutMaxInPot.Key && x.IsGameAction);
 
             if (lastRaiseAction == null)
             {
                 throw new InvalidOperationException("Last raise has not been found.");
+            }
+
+            // folded players can't get uncalled bet
+            if (lastRaiseAction.IsFold)
+            {
+                return;
             }
 
             var uncalledBet = new HandAction(playerPutMaxInPot.Key, HandActionType.UNCALLED_BET, diffBetweenPots, lastRaiseAction.Street);

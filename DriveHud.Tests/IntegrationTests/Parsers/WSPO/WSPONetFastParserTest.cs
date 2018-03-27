@@ -764,7 +764,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WSPONet
         }
 
         [Test]
-        [TestCase(FilePath_Tournament_SuperTurboNoLimits, new double[] { 100, 75, 0, 75, 100, 75, 0, 75, 100, 75, 0, 90, 120, 90, 120, 90 })]
+        [TestCase(FilePath_Tournament_SuperTurboNoLimits, new double[] { 100, 50, 0, 50, 100, 50, 0, 50, 100, 50, 0, 60, 120, 60, 120, 60 })]
         public void HeroWinIsParsedTest(string handHistoryFile, double[] win)
         {
             var parser = new Poker888FastParserImpl();
