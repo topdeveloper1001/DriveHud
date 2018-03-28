@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPokerEvaluator.cs" company="Ace Poker Solutions">
+// <copyright file="OmahaHiLoEvaluator.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,22 +10,24 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using HandHistories.Objects.Cards;
-using System.Collections.Generic;
-using System.Linq;
+using Model.Solvers;
 
-namespace Model.Solvers
+namespace DriveHUD.Importers.Builders.iPoker
 {
-    public interface IPokerEvaluator
+    internal class OmahaHiLoEvaluator : OmahaEvaluator, IPokerEvaluator
     {
-        void SetCardsOnTable(string cards);
+        protected override HandWinners GetWinnersInternal()
+        {
+            var hiComparer = new HiCardsComparer();
+            var loComparer = new LoCardsComparer();
 
-        void SetCardsOnTable(BoardCards cards);
+            var winners = new HandWinners
+            {
+                Hi = GetWinnersInternal(hiComparer),
+                Lo = GetWinnersInternal(loComparer)
+            };
 
-        void SetPlayerCards(int seat, string cards);
-
-        void SetPlayerCards(int seat, HoleCards cards);
-
-        HandWinners GetWinners();    
-    }    
+            return winners;
+        }
+    }
 }

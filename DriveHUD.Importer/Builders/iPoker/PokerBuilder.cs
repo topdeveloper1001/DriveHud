@@ -94,7 +94,7 @@ namespace DriveHUD.Importers.Builders.iPoker
 
                 handHistoryXmlDocument.DocumentElement.AppendChild(gameXmlNodeImported);
             }
-            
+
             return handHistoryXmlDocument;
         }
 
@@ -124,7 +124,7 @@ namespace DriveHUD.Importers.Builders.iPoker
                     CloseOutput = false,
                     Encoding = Encoding.UTF8,
                     OmitXmlDeclaration = false,
-                    Indent = true                  
+                    Indent = true
                 };
 
                 using (var xw = XmlWriter.Create(ms, xmlWriterSettings))
@@ -510,7 +510,7 @@ namespace DriveHUD.Importers.Builders.iPoker
 
             return gameGeneral;
         }
-        
+
         /// <summary>
         /// Adjusts players seats based on Preferred Seat setting
         /// </summary>
@@ -525,7 +525,7 @@ namespace DriveHUD.Importers.Builders.iPoker
                 return 0;
             }
 
-            return RotatePlayerSeats(players, preferredSeats[handModel.TableType]);      
+            return RotatePlayerSeats(players, preferredSeats[handModel.TableType]);
         }
 
         /// <summary>
@@ -598,7 +598,7 @@ namespace DriveHUD.Importers.Builders.iPoker
             var gameTableType = GetGameTypeString(handModel.GameType, handModel.GameLimit);
 
             if (handModel.CashOrTournament != CashOrTournament.Tournament)
-            {           
+            {
                 return GetHoldemGameTypeString(gameTableType);
             }
 
@@ -697,7 +697,7 @@ namespace DriveHUD.Importers.Builders.iPoker
         }
 
         private string GetTableName()
-        {           
+        {
             if (handModel.CashOrTournament == CashOrTournament.Tournament)
             {
                 return string.Format(PokerConfiguration.TournamentTableTitleTemplate, handModel.TableName, handModel.TournamentNumber);
@@ -1070,9 +1070,9 @@ namespace DriveHUD.Importers.Builders.iPoker
                 evaluator.SetPlayerCards(playerCards.Seat, playerCards.Value);
             }
 
-            var winners = evaluator.GetWinners().ToList();
+            var winners = evaluator.GetWinners();
 
-            return winners;
+            return winners.All?.ToList() ?? new List<int>();
         }
 
         #endregion

@@ -24,16 +24,19 @@ namespace DriveHUD.Importers.Builders.iPoker
         protected string cardsOnTable;
         protected Dictionary<int, string> playersCards = new Dictionary<int, string>();
 
-        public IEnumerable<int> GetWinners()
+        public HandWinners GetWinners()
         {
             if (playersCards.Count == 0 || string.IsNullOrWhiteSpace(cardsOnTable))
             {
-                return new List<int>();
+                return new HandWinners();
             }
 
             if (playersCards.Count == 1)
             {
-                return new List<int>(playersCards.Keys);
+                return new HandWinners
+                {
+                    Hi = new List<int>(playersCards.Keys)
+                };
             }
 
             var winners = GetWinnersInternal();
@@ -67,7 +70,9 @@ namespace DriveHUD.Importers.Builders.iPoker
             SetPlayerCards(seat, ConvertCards(cards));
         }
 
-        protected abstract IEnumerable<int> GetWinnersInternal();
+        protected abstract HandWinners GetWinnersInternal();
+
+        protected abstract IEnumerable<int> GetWinnersInternal(ICardsComparer comparer);
 
         protected List<string> GetAllCombinations(string cardsToCombinate, int k)
         {

@@ -1,0 +1,34 @@
+PokerStars Hand #181053519514:  Omaha Hi/Lo Pot Limit (€0.02/€0.05 EUR) - 2018/01/15 16:56:34 ET
+Table 'Anacreon' 6-max Seat #5 is the button
+Seat 1: norefedrina (€1.19 in chips)
+Seat 2: NORIALEX99 (€3 in chips)
+Seat 3: iamthenr1 (€15.11 in chips)
+Seat 5: nuvolai1967 (€5.90 in chips)
+norefedrina: posts small blind €0.02
+NORIALEX99: posts big blind €0.05
+*** HOLE CARDS ***
+iamthenr1: folds
+nuvolai1967: raises €0.05 to €0.10
+norefedrina: calls €0.08
+NORIALEX99: folds
+*** FLOP *** [3d 6d Ah]
+norefedrina: bets €0.24
+nuvolai1967: calls €0.24
+*** TURN *** [3d 6d Ah] [Ad]
+norefedrina: bets €0.69
+nuvolai1967: raises €2.07 to €2.76
+norefedrina: calls €0.16 and is all-in
+Uncalled bet (€1.91) returned to nuvolai1967
+*** RIVER *** [3d 6d Ah Ad] [8h]
+*** SHOW DOWN ***
+norefedrina: shows [Ts 8c 6h 6c] (HI: a full house, Sixes full of Aces)
+nuvolai1967: shows [As Kh Qc 4d] (HI: three of a kind, Aces; LO: 8,6,4,3,A)
+norefedrina collected €1.15 from pot
+nuvolai1967 collected €1.15 from pot
+*** SUMMARY ***
+Total pot €2.43 | Rake €0.13
+Board [3d 6d Ah Ad 8h]
+Seat 1: norefedrina (small blind) showed [Ts 8c 6h 6c] and won (€1.15) with HI: a full house, Sixes full of Aces
+Seat 2: NORIALEX99 (big blind) folded before Flop
+Seat 3: iamthenr1 folded before Flop (didn't bet)
+Seat 5: nuvolai1967 (button) showed [As Kh Qc 4d] and won (€1.15) with HI: three of a kind, Aces; LO: 8,6,4,3,A

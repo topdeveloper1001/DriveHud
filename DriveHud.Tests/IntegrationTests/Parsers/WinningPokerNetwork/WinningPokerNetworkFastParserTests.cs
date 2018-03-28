@@ -53,7 +53,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 
             unityContainer.RegisterType<IPokerEvaluator, DriveHUD.Importers.Builders.iPoker.HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
             unityContainer.RegisterType<IPokerEvaluator, DriveHUD.Importers.Builders.iPoker.OmahaEvaluator>(GeneralGameTypeEnum.Omaha.ToString());
-            unityContainer.RegisterType<IPokerEvaluator, DriveHUD.Importers.Builders.iPoker.OmahaEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
+            unityContainer.RegisterType<IPokerEvaluator, DriveHUD.Importers.Builders.iPoker.OmahaHiLoEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
             unityContainer.RegisterType<IEquitySolver, EquitySolver>();
 
             var locator = new UnityServiceLocator(unityContainer);

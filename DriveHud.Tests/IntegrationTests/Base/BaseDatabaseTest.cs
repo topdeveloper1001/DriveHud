@@ -240,7 +240,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
             unityContainer.RegisterType<IEquitySolver, EquitySolver>();
             unityContainer.RegisterType<IPokerEvaluator, HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
             unityContainer.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.Omaha.ToString());
-            unityContainer.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
+            unityContainer.RegisterType<IPokerEvaluator, OmahaHiLoEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
         }
 
         #endregion

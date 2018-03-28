@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DriveHUD.Importers.Builders.iPoker
 {
-    internal class HiCardsComparer : IComparer<string>
+    internal class HiCardsComparer : ICardsComparer
     {
         public int Compare(string cards1, string cards2)
         {
@@ -38,6 +38,11 @@ namespace DriveHUD.Importers.Builders.iPoker
             }
 
             throw new Exception("Unexpected result of hand comparison.");
+        }
+
+        public bool IsValid(string cards)
+        {
+            return true;
         }
 
         protected int CompareByHistogram(Hand hand1, Hand hand2)

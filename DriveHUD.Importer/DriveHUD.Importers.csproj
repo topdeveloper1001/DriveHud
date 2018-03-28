@@ -188,8 +188,10 @@
     <Compile Include="Builders\iPoker\HandCombo.cs" />
     <Compile Include="Builders\iPoker\HiCardsComparer.cs" />
     <Compile Include="Builders\iPoker\HoldemEvaluator.cs" />
+    <Compile Include="Builders\iPoker\ICardsComparer.cs" />
     <Compile Include="Builders\iPoker\ICardsConverter.cs" />
     <Compile Include="Builders\iPoker\IHandHistoryBuilder.cs" />
+    <Compile Include="Builders\iPoker\LoCardsComparer.cs" />
     <Compile Include="Builders\iPoker\Model\Action.cs" />
     <Compile Include="Builders\iPoker\Card.cs" />
     <Compile Include="Builders\iPoker\Model\ActionType.cs" />
@@ -203,6 +205,7 @@
     <Compile Include="Builders\iPoker\Model\Player.cs" />
     <Compile Include="Builders\iPoker\Model\Round.cs" />
     <Compile Include="Builders\iPoker\OmahaEvaluator.cs" />
+    <Compile Include="Builders\iPoker\OmahaHiLoEvaluator.cs" />
     <Compile Include="Builders\iPoker\PokerBuilder.cs" />
     <Compile Include="Builders\iPoker\PokerCardsConverter.cs" />
     <Compile Include="Builders\iPoker\PokerConfiguration.cs" />

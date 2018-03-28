@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPokerEvaluator.cs" company="Ace Poker Solutions">
+// <copyright file="ICardsComparer.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,22 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using HandHistories.Objects.Cards;
 using System.Collections.Generic;
-using System.Linq;
 
-namespace Model.Solvers
+namespace DriveHUD.Importers.Builders.iPoker
 {
-    public interface IPokerEvaluator
+    internal interface ICardsComparer : IComparer<string>
     {
-        void SetCardsOnTable(string cards);
-
-        void SetCardsOnTable(BoardCards cards);
-
-        void SetPlayerCards(int seat, string cards);
-
-        void SetPlayerCards(int seat, HoleCards cards);
-
-        HandWinners GetWinners();    
-    }    
+        bool IsValid(string cards);
+    }
 }

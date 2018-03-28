@@ -83,7 +83,7 @@ namespace Model.Solvers
             if (totalPot == 0)
             {
                 return;
-            }         
+            }
 
             var rake = totalPot - handHistory.WinningActions.Sum(x => x.Amount);
 
@@ -111,8 +111,30 @@ namespace Model.Solvers
                 .Where(x => x.HoleCards != null)
                 .ForEach(x => pokerEvaluator.SetPlayerCards(x.Seat, x.HoleCards));
 
-            var winnersBySeat = pokerEvaluator.GetWinners().ToList();
+            var winners = pokerEvaluator.GetWinners();
 
+            if (winners.Lo == null || winners.Lo.IsNullOrEmpty())
+            {
+                CalculateEvDiffByPot(pot, handHistory, winners.Hi.ToList());
+                return;
+            }
+
+            var splitPot = new EquityPot
+            {
+                Index = pot.Index,
+                Players = pot.Players,
+                PlayersPutInPot = pot.PlayersPutInPot,
+                Pot = pot.Pot / 2,
+                Rake = pot.Rake / 2,
+                Street = pot.Street
+            };
+
+            CalculateEvDiffByPot(splitPot, handHistory, winners.Hi.ToList());
+            CalculateEvDiffByPot(splitPot, handHistory, winners.Lo.ToList());
+        }
+
+        private void CalculateEvDiffByPot(EquityPot pot, HandHistory handHistory, List<int> winnersBySeat)
+        {
             if (winnersBySeat.Count == 0)
             {
                 LogProvider.Log.Error($"Could not find a winner of pot #{pot.Index} hand #{handHistory.HandId}");
@@ -124,7 +146,7 @@ namespace Model.Solvers
                 if (!pot.PlayersPutInPot.ContainsKey(player))
                 {
                     continue;
-                }               
+                }
 
                 var netWonPerWinner = (pot.Pot - pot.Rake) / winnersBySeat.Count - pot.PlayersPutInPot[player];
 
@@ -433,7 +455,7 @@ namespace Model.Solvers
 
                 if (uncalledBet > 0)
                 {
-                    orderedEquityPlayers[orderedEquityPlayers.Length - 1].PutInPot -= uncalledBet;                    
+                    orderedEquityPlayers[orderedEquityPlayers.Length - 1].PutInPot -= uncalledBet;
                 }
             }
 

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPokerEvaluator.cs" company="Ace Poker Solutions">
+// <copyright file="HandWinners.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,22 +10,25 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using HandHistories.Objects.Cards;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Model.Solvers
 {
-    public interface IPokerEvaluator
+    public class HandWinners
     {
-        void SetCardsOnTable(string cards);
+        public IEnumerable<int> Hi { get; set; } = new List<int>();
 
-        void SetCardsOnTable(BoardCards cards);
+        public IEnumerable<int> Lo { get; set; } = new List<int>();
 
-        void SetPlayerCards(int seat, string cards);
-
-        void SetPlayerCards(int seat, HoleCards cards);
-
-        HandWinners GetWinners();    
-    }    
+        public IEnumerable<int> All
+        {
+            get
+            {
+                return Hi != null && Lo != null ?
+                        Hi.Concat(Lo).Distinct() :
+                        (Hi ?? Lo);
+            }
+        }
+    }
 }

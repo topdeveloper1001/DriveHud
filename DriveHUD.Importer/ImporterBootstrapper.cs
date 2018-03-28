@@ -82,7 +82,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IPMImporter, PMImporter>();
             container.RegisterType<IPokerEvaluator, HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
             container.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.Omaha.ToString());
-            container.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
+            container.RegisterType<IPokerEvaluator, OmahaHiLoEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
 
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());

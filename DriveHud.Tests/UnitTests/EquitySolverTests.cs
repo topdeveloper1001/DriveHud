@@ -38,13 +38,13 @@ namespace DriveHud.Tests.UnitTests
 
             unityContainer.RegisterType<IPokerEvaluator, HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
             unityContainer.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.Omaha.ToString());
-            unityContainer.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
+            unityContainer.RegisterType<IPokerEvaluator, OmahaHiLoEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
 
             var locator = new UnityServiceLocator(unityContainer);
 
             ServiceLocator.SetLocatorProvider(() => locator);
         }
-        
+
         [TestCaseSource("TestDataCase", Category = "EquitySolver.EvDiff")]
         public void CalculateEquityTest(string handHistoryFile, double tolerance, EquityData[] expectedResults)
         {
@@ -275,6 +275,94 @@ namespace DriveHud.Tests.UnitTests
                             EVDiff = -13168m
                         }
                 }).SetName("EVDifference: Peon84-ExpectedValue-1");
+
+            yield return new TestCaseData(
+                "OmahaHiLo-ExpectedValue-1.txt",
+                0.5,
+                new[]
+                {
+                        new EquityData
+                        {
+                            PlayerName = "getlucky675",
+                            Equity = 47.2m,
+                            EVDiff = -213m
+                        },
+                        new EquityData
+                        {
+                            PlayerName = "akashra",
+                            Equity = 43.1m,
+                            EVDiff = -533m
+                        },
+                        new EquityData
+                        {
+                            PlayerName = "ThreeBetStack",
+                            Equity = 9.7m,
+                            EVDiff = 747m
+                        }
+                }).SetName("EVDifference: OmahaHiLo-ExpectedValue-1");
+
+            yield return new TestCaseData(
+                "OmahaHiLo-ExpectedValue-2.txt",
+                0.01,
+                new[]
+                {
+                        new EquityData
+                        {
+                            PlayerName = "norefedrina",
+                            Equity = 73.8m,
+                            EVDiff = 0.64m
+                        },
+                        new EquityData
+                        {
+                            PlayerName = "nuvolai1967",
+                            Equity = 26.3m,
+                            EVDiff = -0.64m
+                        }
+                }).SetName("EVDifference: OmahaHiLo-ExpectedValue-2");
+
+            yield return new TestCaseData(
+               "OmahaHiLo-ExpectedValue-3.txt",
+               0.01,
+               new[]
+               {
+                        new EquityData
+                        {
+                            PlayerName = "norefedrina",
+                            Equity = 60m,
+                            EVDiff = 0.23m
+                        },
+                        new EquityData
+                        {
+                            PlayerName = "nuvolai1967",
+                            Equity = 40m,
+                            EVDiff = -0.23m
+                        }
+               }).SetName("EVDifference: OmahaHiLo-ExpectedValue-3");
+
+            yield return new TestCaseData(
+              "OmahaHiLo-ExpectedValue-4.txt",
+              0.01,
+              new[]
+              {
+                        new EquityData
+                        {
+                            PlayerName = "norefedrina",
+                            Equity = 26.5m,
+                            EVDiff = -1.29m
+                        },
+                        new EquityData
+                        {
+                            PlayerName = "NORIALEX99",
+                            Equity = 22.3m,
+                            EVDiff = 2.09m
+                        },
+                        new EquityData
+                        {
+                            PlayerName = "bo12327",
+                            Equity = 51.2m,
+                            EVDiff = -0.8m
+                        }
+              }).SetName("EVDifference: OmahaHiLo-ExpectedValue-4");
         }
 
         public class TestData
