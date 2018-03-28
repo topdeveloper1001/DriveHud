@@ -39,6 +39,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHUD.Importers
@@ -61,6 +62,7 @@ namespace DriveHUD.Importers
         private readonly IEventAggregator eventAggregator;
         private readonly IOpponentReportService opponentReportService;
         private readonly SingletonStorageModel storageModel;
+        private readonly IReportStatusService reportStatusService;
 
         public FileImporter()
         {
@@ -69,6 +71,7 @@ namespace DriveHUD.Importers
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
             storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
+            reportStatusService = ServiceLocator.Current.GetInstance<IReportStatusService>();
         }
 
         /// <summary>
@@ -214,6 +217,7 @@ namespace DriveHUD.Importers
 #if DEBUG
                 }
 #endif
+                UpdateReportStatus(parsingResult);
 
                 return parsingResult;
             }
@@ -228,6 +232,24 @@ namespace DriveHUD.Importers
 
                 throw new DHInternalException(new NonLocalizableString("Could not import hand."), e);
             }
+        }
+
+        private void UpdateReportStatus(List<ParsingResult> parsingResult)
+        {
+            var result = parsingResult.FirstOrDefault();
+
+            if (result == null || result.Source == null || result.Source.GameDescription == null)
+            {
+                return;
+            }
+
+            if (result.Source.GameDescription.IsTournament)
+            {
+                reportStatusService.TournamentUpdated = true;
+                return;
+            }
+
+            reportStatusService.CashUpdated = true;
         }
 
         /// <summary>

@@ -98,7 +98,9 @@ namespace Model.Solvers
         /// <param name="gameType">Type of game</param>
         private void CalculateEvDiff(EquityPot pot, HandHistory handHistory, GeneralGameTypeEnum gameType)
         {
-            if (pot.Players.Count < 2)
+            if (pot.Players
+                .Where(x => x.HoleCards != null)
+                .Count() < 2)
             {
                 return;
             }

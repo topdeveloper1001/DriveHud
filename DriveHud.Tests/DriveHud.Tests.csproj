@@ -600,6 +600,9 @@
     <Content Include="UnitTests\TestData\EquitySolverData\Hero-ExpectedValue-5.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\EquitySolverData\Hero-ExpectedValue-6.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\EquitySolverData\OmahaHiLo-ExpectedValue-1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

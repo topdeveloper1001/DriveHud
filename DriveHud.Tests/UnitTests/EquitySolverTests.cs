@@ -53,7 +53,7 @@ namespace DriveHud.Tests.UnitTests
             var equitySolver = new EquitySolver();
 
             var actualResult = equitySolver.CalculateEquity(handHistory)
-                .Where(x => x.Value.Equity != 0 || x.Value.EVDiff != 0)
+                .Where(x => x.Value.Equity != 0 || x.Value.EVDiff != 0 || expectedResults.Any(e => e.PlayerName.Equals(x.Value.PlayerName)))
                 .ToDictionary(x => x.Key, x => x.Value);
 
             Assert.That(actualResult.Count, Is.EqualTo(expectedResults.Length));
@@ -256,6 +256,19 @@ namespace DriveHud.Tests.UnitTests
                             EVDiff = -25.47m
                         }
                 }).SetName("EVDifference: Hero-ExpectedValue-5");
+
+            yield return new TestCaseData(
+                "Hero-ExpectedValue-6.txt",
+                0.01,
+                new[]
+                {
+                    new EquityData
+                    {
+                        PlayerName = "Hero",
+                        Equity = 0m,
+                        EVDiff = 0m
+                    }
+                }).SetName("EVDifference: Hero-ExpectedValue-6");
 
             yield return new TestCaseData(
                 "Peon84-ExpectedValue-1.txt",

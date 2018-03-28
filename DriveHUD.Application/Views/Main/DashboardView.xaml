@@ -21,6 +21,8 @@
 
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary
+                    Source="/DriveHUD.Application;Component/ControlStyles/AppStoreResources.xaml" />
+                <ResourceDictionary
                     Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/CashChartColors.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
@@ -188,42 +190,50 @@
                 MinHeight="410"
                 MinWidth="270">
 
-                <ctl:CashChart
-                    Caption="{ResX Key=Common_Chart_MoneyWonCaption}"
-                    CaptionColor="#4BA516"
-                    DisplayRange="{Binding MoneyWonGraphViewModel.ChartDisplayRange}"
-                    ItemsSource="{Binding MoneyWonGraphViewModel.ChartCollection}"
-                    HandsAxisMaxValue="{Binding MoneyWonGraphViewModel.HandsCount}"
-                    HandsAxisLabelsCount="7"
-                    HeaderStartColor="#4BA516"
-                    HeaderStopColor="#deef6c"
-                    Height="205"
-                    ShowNonShowdownEnabled="True"
-                    ShowNonShowdown="{Binding MoneyWonGraphViewModel.ShowNonShowdown}"
-                    ShowShowdown="{Binding MoneyWonGraphViewModel.ShowShowdown}"
-                    ShowEV="{Binding MoneyWonGraphViewModel.ShowEV}"
-                    ValueType="{Binding MoneyWonGraphViewModel.ValueType}"
-                    ShowInPopupCommand="{Binding ShowMoneyWonGraphPopupCommand}"
-                    LineColors="{StaticResource MoneyWonLineColors}"
-                    PointColors="{StaticResource MoneyWonPointColors}"
-                    TrackBallColors="{StaticResource MoneyWonTrackBallColors}"
-                    WinningValueTypeEnabled="True" />
+                <telerik:RadBusyIndicator
+                    IsBusy="{Binding MoneyWonGraphViewModel.OperationInfo.IsBusy, FallbackValue=True}"
+                    Style="{DynamicResource AppStoreRadBusyIndicatorStyle}">
+                    <ctl:CashChart
+                        Caption="{ResX Key=Common_Chart_MoneyWonCaption}"
+                        CaptionColor="#4BA516"
+                        DisplayRange="{Binding MoneyWonGraphViewModel.ViewModel.ChartDisplayRange}"
+                        ItemsSource="{Binding MoneyWonGraphViewModel.ViewModel.ChartCollection}"
+                        HandsAxisMaxValue="{Binding MoneyWonGraphViewModel.ViewModel.HandsCount}"
+                        HandsAxisLabelsCount="7"
+                        HeaderStartColor="#4BA516"
+                        HeaderStopColor="#deef6c"
+                        Height="205"
+                        ShowNonShowdownEnabled="True"
+                        ShowNonShowdown="{Binding MoneyWonGraphViewModel.ViewModel.ShowNonShowdown}"
+                        ShowShowdown="{Binding MoneyWonGraphViewModel.ViewModel.ShowShowdown}"
+                        ShowEV="{Binding MoneyWonGraphViewModel.ViewModel.ShowEV}"
+                        ValueType="{Binding MoneyWonGraphViewModel.ViewModel.ValueType}"
+                        ShowInPopupCommand="{Binding ShowMoneyWonGraphPopupCommand}"
+                        LineColors="{StaticResource MoneyWonLineColors}"
+                        PointColors="{StaticResource MoneyWonPointColors}"
+                        TrackBallColors="{StaticResource MoneyWonTrackBallColors}"
+                        WinningValueTypeEnabled="True" />
+                </telerik:RadBusyIndicator>
 
-                <ctl:CashChart
-                    Caption="{ResX Key=Common_Chart_BB100Caption}"
-                    CaptionColor="#bd5922"
-                    DisplayRange="{Binding BB100GraphViewModel.ChartDisplayRange}"
-                    ItemsSource="{Binding BB100GraphViewModel.ChartCollection}"
-                    HandsAxisMaxValue="{Binding BB100GraphViewModel.HandsCount}"
-                    HandsAxisLabelsCount="7"
-                    HeaderStartColor="#fd3e0e"
-                    HeaderStopColor="#ffdc50"
-                    Height="205"
-                    ShowNonShowdown="{Binding BB100GraphViewModel.ShowNonShowdown}"
-                    ShowShowdown="{Binding BB100GraphViewModel.ShowShowdown}"
-                    LineColors="{StaticResource BB100LineColors}"
-                    PointColors="{StaticResource BB100PointColors}"
-                    TrackBallColors="{StaticResource BB100TrackBallColors}" />
+                <telerik:RadBusyIndicator
+                    IsBusy="{Binding BB100GraphViewModel.OperationInfo.IsBusy, FallbackValue=True}"
+                    Style="{DynamicResource AppStoreRadBusyIndicatorStyle}">
+                    <ctl:CashChart
+                        Caption="{ResX Key=Common_Chart_BB100Caption}"
+                        CaptionColor="#bd5922"
+                        DisplayRange="{Binding BB100GraphViewModel.ViewModel.ChartDisplayRange}"
+                        ItemsSource="{Binding BB100GraphViewModel.ViewModel.ChartCollection}"
+                        HandsAxisMaxValue="{Binding BB100GraphViewModel.ViewModel.HandsCount}"
+                        HandsAxisLabelsCount="7"
+                        HeaderStartColor="#fd3e0e"
+                        HeaderStopColor="#ffdc50"
+                        Height="205"
+                        ShowNonShowdown="{Binding BB100GraphViewModel.ViewModel.ShowNonShowdown}"
+                        ShowShowdown="{Binding BB100GraphViewModel.ViewModel.ShowShowdown}"
+                        LineColors="{StaticResource BB100LineColors}"
+                        PointColors="{StaticResource BB100PointColors}"
+                        TrackBallColors="{StaticResource BB100TrackBallColors}" />
+                </telerik:RadBusyIndicator>
 
             </StackPanel>
 

@@ -480,6 +480,8 @@
     <Compile Include="ViewModels\Graphs\CashGraphSettings.cs" />
     <Compile Include="ViewModels\Graphs\CashGraphSettingsService.cs" />
     <Compile Include="ViewModels\Graphs\GraphsProvider.cs" />
+    <Compile Include="ViewModels\Graphs\GraphViewModel.cs" />
+    <Compile Include="ViewModels\Graphs\IBaseGraphViewModel.cs" />
     <Compile Include="ViewModels\Graphs\ICashGraphSettingsService.cs" />
     <Compile Include="ViewModels\Graphs\SeriesProviders\BB100ByTimeOfDaySeriesProvider.cs" />
     <Compile Include="ViewModels\Graphs\SeriesProviders\EVDiffToRealizedEvByMonthSeriesProvider.cs" />

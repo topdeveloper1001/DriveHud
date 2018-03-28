@@ -14,122 +14,131 @@
 
     <UserControl.Resources>
 
-        <!-- Gold Bracelet -->
-        <Style
-            x:Key="GoldBraceletStyle"
-            TargetType="ctl:BraceletControl">
-            <Setter
-                Property="HeaderColor"
-                Value="#FFE5A816" />
-            <Setter
-                Property="BraceletSideBrush"
-                Value="#FF694A02" />
-            <Setter
-                Property="BraceletTopBrush"
-                Value="#FFE5A715" />
-            <Setter
-                Property="BraceletInsideBrush"
-                Value="#FF463306" />
-            <Setter
-                Property="BraceletLightBrush"
-                Value="#FFFFDC8A" />
-            <Setter
-                Property="BraceletFrontOuterBrush"
-                Value="#FFE3A209" />
-            <Setter
-                Property="BraceletFrontDarkColor"
-                Value="#FFFFC845" />
-            <Setter
-                Property="BraceletFrontLightColor"
-                Value="#FFFFDC8A" />
-            <Setter
-                Property="BraceletFrontSemiLightColor"
-                Value="#FFF8BE37" />
-            <Setter
-                Property="BraceletFrontSemiDarkColor"
-                Value="#FFF0B325" />
-            <Setter
-                Property="BraceletCircleColor"
-                Value="#FFE3A209" />
-        </Style>
+        <ResourceDictionary>
 
-        <!-- Silver Bracelet -->
-        <Style
-            x:Key="SilverBraceletStyle"
-            TargetType="ctl:BraceletControl">
-            <Setter
-                Property="HeaderColor"
-                Value="#FFA5A5A5" />
-            <Setter
-                Property="BraceletSideBrush"
-                Value="#FF4C4C4C" />
-            <Setter
-                Property="BraceletTopBrush"
-                Value="#FFA9A9A9" />
-            <Setter
-                Property="BraceletInsideBrush"
-                Value="#FF333333" />
-            <Setter
-                Property="BraceletLightBrush"
-                Value="#FFDADADA" />
-            <Setter
-                Property="BraceletFrontOuterBrush"
-                Value="#FFA2A2A2" />
-            <Setter
-                Property="BraceletFrontDarkColor"
-                Value="#FFCACACA" />
-            <Setter
-                Property="BraceletFrontLightColor"
-                Value="#FFDCDCDC" />
-            <Setter
-                Property="BraceletFrontSemiLightColor"
-                Value="#DBDBDB" />
-            <Setter
-                Property="BraceletFrontSemiDarkColor"
-                Value="#FFC9C9C9" />
-            <Setter
-                Property="BraceletCircleColor"
-                Value="#FF7C7C7C" />
-        </Style>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="/DriveHUD.Application;Component/ControlStyles/AppStoreResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
 
-        <!--  Bronze Bracelet -->
-        <Style
-            x:Key="BronzeBraceletStyle"
-            TargetType="ctl:BraceletControl">
-            <Setter
-                Property="HeaderColor"
-                Value="#FFAB4A03" />
-            <Setter
-                Property="BraceletSideBrush"
-                Value="#FF7D3E10" />
-            <Setter
-                Property="BraceletTopBrush"
-                Value="#FFDA9B6D" />
-            <Setter
-                Property="BraceletInsideBrush"
-                Value="#FF5E2901" />
-            <Setter
-                Property="BraceletLightBrush"
-                Value="#FFFFD6B7" />
-            <Setter
-                Property="BraceletFrontOuterBrush"
-                Value="#FFD69769" />
-            <Setter
-                Property="BraceletFrontDarkColor"
-                Value="#FFFBBC8E" />
-            <Setter
-                Property="BraceletFrontLightColor"
-                Value="#FFFED2B1" />
-            <Setter
-                Property="BraceletFrontSemiLightColor"
-                Value="#FFFFC7A3" />
-            <Setter
-                Property="BraceletFrontSemiDarkColor"
-                Value="#FFFFBE96" />
-            <Setter
-                Property="BraceletCircleColor"
-                Value="#FFFF8C49" />
-        </Style>
+            <!-- Gold Bracelet -->
+            <Style
+                x:Key="GoldBraceletStyle"
+                TargetType="ctl:BraceletControl">
+                <Setter
+                    Property="HeaderColor"
+                    Value="#FFE5A816" />
+                <Setter
+                    Property="BraceletSideBrush"
+                    Value="#FF694A02" />
+                <Setter
+                    Property="BraceletTopBrush"
+                    Value="#FFE5A715" />
+                <Setter
+                    Property="BraceletInsideBrush"
+                    Value="#FF463306" />
+                <Setter
+                    Property="BraceletLightBrush"
+                    Value="#FFFFDC8A" />
+                <Setter
+                    Property="BraceletFrontOuterBrush"
+                    Value="#FFE3A209" />
+                <Setter
+                    Property="BraceletFrontDarkColor"
+                    Value="#FFFFC845" />
+                <Setter
+                    Property="BraceletFrontLightColor"
+                    Value="#FFFFDC8A" />
+                <Setter
+                    Property="BraceletFrontSemiLightColor"
+                    Value="#FFF8BE37" />
+                <Setter
+                    Property="BraceletFrontSemiDarkColor"
+                    Value="#FFF0B325" />
+                <Setter
+                    Property="BraceletCircleColor"
+                    Value="#FFE3A209" />
+            </Style>
+
+            <!-- Silver Bracelet -->
+            <Style
+                x:Key="SilverBraceletStyle"
+                TargetType="ctl:BraceletControl">
+                <Setter
+                    Property="HeaderColor"
+                    Value="#FFA5A5A5" />
+                <Setter
+                    Property="BraceletSideBrush"
+                    Value="#FF4C4C4C" />
+                <Setter
+                    Property="BraceletTopBrush"
+                    Value="#FFA9A9A9" />
+                <Setter
+                    Property="BraceletInsideBrush"
+                    Value="#FF333333" />
+                <Setter
+                    Property="BraceletLightBrush"
+                    Value="#FFDADADA" />
+                <Setter
+                    Property="BraceletFrontOuterBrush"
+                    Value="#FFA2A2A2" />
+                <Setter
+                    Property="BraceletFrontDarkColor"
+                    Value="#FFCACACA" />
+                <Setter
+                    Property="BraceletFrontLightColor"
+                    Value="#FFDCDCDC" />
+                <Setter
+                    Property="BraceletFrontSemiLightColor"
+                    Value="#DBDBDB" />
+                <Setter
+                    Property="BraceletFrontSemiDarkColor"
+                    Value="#FFC9C9C9" />
+                <Setter
+                    Property="BraceletCircleColor"
+                    Value="#FF7C7C7C" />
+            </Style>
+
+            <!--  Bronze Bracelet -->
+            <Style
+                x:Key="BronzeBraceletStyle"
+                TargetType="ctl:BraceletControl">
+                <Setter
+                    Property="HeaderColor"
+                    Value="#FFAB4A03" />
+                <Setter
+                    Property="BraceletSideBrush"
+                    Value="#FF7D3E10" />
+                <Setter
+                    Property="BraceletTopBrush"
+                    Value="#FFDA9B6D" />
+                <Setter
+                    Property="BraceletInsideBrush"
+                    Value="#FF5E2901" />
+                <Setter
+                    Property="BraceletLightBrush"
+                    Value="#FFFFD6B7" />
+                <Setter
+                    Property="BraceletFrontOuterBrush"
+                    Value="#FFD69769" />
+                <Setter
+                    Property="BraceletFrontDarkColor"
+                    Value="#FFFBBC8E" />
+                <Setter
+                    Property="BraceletFrontLightColor"
+                    Value="#FFFED2B1" />
+                <Setter
+                    Property="BraceletFrontSemiLightColor"
+                    Value="#FFFFC7A3" />
+                <Setter
+                    Property="BraceletFrontSemiDarkColor"
+                    Value="#FFFFBE96" />
+                <Setter
+                    Property="BraceletCircleColor"
+                    Value="#FFFF8C49" />
+            </Style>
+
+        </ResourceDictionary>
     </UserControl.Resources>
     <telerik:RadExpander
         Style="{StaticResource RadExpanderStyle_CollapseButton}"
@@ -235,14 +244,20 @@
                     </Grid>
                     <Grid
                         Grid.Row="1">
-                        <ctl:ChartGadget
-                            DataContext="{Binding ChartSeriesCollection}"
-                            Margin="0 10 0 0"
-                            HeaderStartColor="#fd3e0e"
-                            HeaderStopColor="#ffdc50"
-                            CaptionColor="#2c437f"
-                            Caption=""
-                            SelectedRange="{Binding RelativeSource={RelativeSource AncestorType={x:Type Grid}}, Path=DataContext.ChartSeriesDisplayRange, Mode=TwoWay}" />
+
+                        <telerik:RadBusyIndicator
+                            IsBusy="{Binding IsBusy, FallbackValue=True}"
+                            Style="{DynamicResource AppStoreRadBusyIndicatorStyle}">
+                            <ctl:ChartGadget
+                                DataContext="{Binding ChartSeriesCollection}"
+                                Margin="0 10 0 0"
+                                HeaderStartColor="#fd3e0e"
+                                HeaderStopColor="#ffdc50"
+                                CaptionColor="#2c437f"
+                                Caption=""
+                                SelectedRange="{Binding RelativeSource={RelativeSource AncestorType={x:Type Grid}}, Path=DataContext.ChartSeriesDisplayRange, Mode=TwoWay}" />
+                        </telerik:RadBusyIndicator>
+
                     </Grid>
                 </Grid>
             </ctl:GadgetPanel>

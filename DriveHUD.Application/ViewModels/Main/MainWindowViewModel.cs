@@ -41,6 +41,7 @@ using Model.Enums;
 using Model.Events;
 using Model.Filters;
 using Model.Interfaces;
+using Model.Reports;
 using Model.Settings;
 using Model.Stats;
 using Prism.Events;
@@ -68,19 +69,21 @@ namespace DriveHUD.Application.ViewModels
     {
         #region Fields
 
-        private IDataService dataService;
+        private readonly IDataService dataService;
 
-        private IPlayerStatisticRepository playerStatisticRepository;
+        private readonly IPlayerStatisticRepository playerStatisticRepository;
 
-        private IEventAggregator eventAggregator;
+        private readonly IEventAggregator eventAggregator;
 
-        private IImporterSessionCacheService importerSessionCacheService;
+        private readonly IImporterSessionCacheService importerSessionCacheService;
 
-        private IImporterService importerService;
+        private readonly IImporterService importerService;
 
-        private IHudTransmitter hudTransmitter;
+        private readonly IHudTransmitter hudTransmitter;
 
-        private IFilterModelManagerService filterModelManager;
+        private readonly IFilterModelManagerService filterModelManager;
+
+        private readonly IReportStatusService reportStatusService;
 
         private bool isAdvancedLoggingEnabled = false;
 
@@ -96,6 +99,7 @@ namespace DriveHUD.Application.ViewModels
         {
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
             playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
+            reportStatusService = ServiceLocator.Current.GetInstance<IReportStatusService>();
 
             importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             importerService = ServiceLocator.Current.GetInstance<IImporterService>();
@@ -1032,10 +1036,18 @@ namespace DriveHUD.Application.ViewModels
                 DashboardViewModel.IsActive = true;
                 CurrentViewModel = DashboardViewModel;
                 ReportGadgetViewModel.IsShowTournamentData = false;
-                UpdateCurrentView();
 
                 filterModelManager.SetFilterType(EnumFilterType.Cash);
-                eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
+
+                if (reportStatusService.CashUpdated)
+                {
+                    eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
+                    reportStatusService.CashUpdated = false;
+                }
+                else
+                {
+                    ReportGadgetViewModel.UpdateReport();
+                }
             }
             else if (viewModelType == EnumViewModelType.TournamentViewModel)
             {
@@ -1054,10 +1066,18 @@ namespace DriveHUD.Application.ViewModels
 
                 CurrentViewModel = TournamentViewModel;
                 ReportGadgetViewModel.IsShowTournamentData = true;
-                UpdateCurrentView();
 
                 filterModelManager.SetFilterType(EnumFilterType.Tournament);
-                eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
+
+                if (reportStatusService.TournamentUpdated)
+                {
+                    eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
+                    reportStatusService.TournamentUpdated = false;
+                }
+                else
+                {
+                    ReportGadgetViewModel.UpdateReport();
+                }
             }
             else if (viewModelType == EnumViewModelType.HudViewModel)
             {

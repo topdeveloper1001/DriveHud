@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Infrastructure.Base;
-using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
@@ -26,6 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
@@ -143,7 +143,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 SetProperty(ref chartSeriesDisplayRange, value);
-                SetSerieData(ChartSeriesCollection, ChartSeriesDisplayRange);
+                SetSerieDataAsync(ChartSeriesCollection, ChartSeriesDisplayRange);
             }
         }
 
@@ -231,6 +231,20 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private bool isBusy;
+
+        public bool IsBusy
+        {
+            get
+            {
+                return isBusy;
+            }
+            private set
+            {
+                SetProperty(ref isBusy, value);
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -246,7 +260,7 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            SetSerieData(ChartSeriesCollection, ChartSeriesDisplayRange);
+            SetSerieDataAsync(ChartSeriesCollection, ChartSeriesDisplayRange);
 
             var playerTournaments = StorageModel.PlayerSelectedItem != null ?
                 ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(StorageModel.PlayerSelectedItem.PlayerIds) :
@@ -263,21 +277,21 @@ namespace DriveHUD.Application.ViewModels
 
             foreach (var tournament in filteredTournaments)
             {
-                TournamentsTags tag;
-
-                if (Enum.TryParse(tournament.Tourneytagscsv, out tag))
+                if (!Enum.TryParse(tournament.Tourneytagscsv, out TournamentsTags tag))
                 {
-                    switch (tag)
-                    {
-                        case TournamentsTags.MTT:
-                            MTTWon += (tournament.Winningsincents - tournament.Buyinincents - tournament.Rakeincents) / 100m;
-                            TotalMTT++;
-                            break;
-                        case TournamentsTags.STT:
-                            STTWon += (tournament.Winningsincents - tournament.Buyinincents - tournament.Rakeincents) / 100m;
-                            TotalSTT++;
-                            break;
-                    }
+                    continue;
+                }
+
+                switch (tag)
+                {
+                    case TournamentsTags.MTT:
+                        MTTWon += (tournament.Winningsincents - tournament.Buyinincents - tournament.Rakeincents) / 100m;
+                        TotalMTT++;
+                        break;
+                    case TournamentsTags.STT:
+                        STTWon += (tournament.Winningsincents - tournament.Buyinincents - tournament.Rakeincents) / 100m;
+                        TotalSTT++;
+                        break;
                 }
             }
 
@@ -334,11 +348,13 @@ namespace DriveHUD.Application.ViewModels
                 ColorsPalette = orangeResource
             };
 
-            ChartSeriesCollection = new ObservableCollection<ChartSeries>();
-            ChartSeriesCollection.Add(series0);
-            ChartSeriesCollection.Add(series1);
-            ChartSeriesCollection.Add(series2);
-            ChartSeriesCollection.Add(series3);
+            ChartSeriesCollection = new ObservableCollection<ChartSeries>
+            {
+                series0,
+                series1,
+                series2,
+                series3
+            };
         }
 
         private void SetBraceletData(Bracelet bracelet, IEnumerable<Tournaments> playerTournaments)
@@ -355,6 +371,28 @@ namespace DriveHUD.Application.ViewModels
                     AmountString = String.Format("{0} {1:0.##}", limit.GetCurrencySymbol(), item.Winningsincents / 100m)
                 });
             }
+        }
+
+        private void SetSerieDataAsync(IEnumerable<ChartSeries> chartCollection, ChartDisplayRange displayRange)
+        {
+            if (IsBusy)
+            {
+                return;
+            }
+
+            IsBusy = true;
+
+            Task.Run(() =>
+            {
+                try
+                {
+                    SetSerieData(chartCollection, displayRange);
+                }
+                finally
+                {
+                    IsBusy = false;
+                }
+            });
         }
 
         private void SetSerieData(IEnumerable<ChartSeries> chartCollection, ChartDisplayRange displayRange)

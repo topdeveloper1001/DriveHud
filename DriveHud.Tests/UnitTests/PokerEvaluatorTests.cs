@@ -152,6 +152,16 @@ namespace DriveHud.Tests.UnitTests
                  },
                 Winners = new List<int> { 4 }
             }).SetName($"{nameof(HoldemEvaluator)}: GetWinners - 7");
+
+            yield return new TestCaseData(new TableTestDataGroupCards
+            {
+                CardsOnTable = BoardCards.FromCards("2dJs5d9s6s"),
+                PlayerCards = new Dictionary<int, HoleCards>
+                 {
+                     { 1, HoleCards.FromCards("KcJc") }                     
+                 },
+                Winners = new List<int> { 1 }
+            }).SetName($"{nameof(HoldemEvaluator)}: GetWinners - 8");
         }
 
         private static IEnumerable<TestCaseData> HoldemTestDataCase()

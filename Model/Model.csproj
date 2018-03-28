@@ -294,6 +294,7 @@
     <Compile Include="Reports\IOpponentReportService.cs" />
     <Compile Include="Reports\IPopulationReportService.cs" />
     <Compile Include="Reports\IReportCreatorcs.cs" />
+    <Compile Include="Reports\IReportStatusService.cs" />
     <Compile Include="Reports\OpponentAnalysisReportCreator.cs" />
     <Compile Include="Reports\OpponentReportCache.cs" />
     <Compile Include="Reports\OpponentReportService.cs" />
@@ -303,6 +304,7 @@
     <Compile Include="Reports\PopulationReportCache.cs" />
     <Compile Include="Reports\PopulationReportService.cs" />
     <Compile Include="Reports\PositionReportCreator.cs" />
+    <Compile Include="Reports\ReportStatusService.cs" />
     <Compile Include="Reports\SessionsReportCreator.cs" />
     <Compile Include="Reports\ShowdownHandsReportCreator.cs" />
     <Compile Include="Reports\StakesReportCreator.cs" />
@@ -351,6 +353,7 @@
     <Compile Include="Site\SiteConfigurationService.cs" />
     <Compile Include="Solvers\EquityData.cs" />
     <Compile Include="Solvers\EquitySolver.cs" />
+    <Compile Include="Solvers\HandWinners.cs" />
     <Compile Include="Solvers\IEquitySolver.cs" />
     <Compile Include="Solvers\IPokerEvaluator.cs" />
     <Compile Include="Stats\StatBase.cs" />

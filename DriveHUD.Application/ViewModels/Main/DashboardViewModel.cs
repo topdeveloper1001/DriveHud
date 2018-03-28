@@ -44,9 +44,9 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private CashGraphViewModel moneyWonGraphViewModel;
+        private GraphViewModel moneyWonGraphViewModel;
 
-        public CashGraphViewModel MoneyWonGraphViewModel
+        public GraphViewModel MoneyWonGraphViewModel
         {
             get
             {
@@ -58,9 +58,9 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private CashGraphViewModel bb100GraphViewModel;
+        private GraphViewModel bb100GraphViewModel;
 
-        public CashGraphViewModel BB100GraphViewModel
+        public GraphViewModel BB100GraphViewModel
         {
             get
             {
@@ -102,7 +102,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 var cashGraphPopupViewModelInfo = new CashGraphPopupViewModelInfo
                 {
-                    MoneyWonCashGraphViewModel = MoneyWonGraphViewModel
+                    MoneyWonCashGraphViewModel = MoneyWonGraphViewModel.ViewModel as CashGraphViewModel
                 };
 
                 var cashGraphPopupRequestInfo = new CashGraphPopupRequestInfo(cashGraphPopupViewModelInfo);
@@ -115,15 +115,10 @@ namespace DriveHUD.Application.ViewModels
 
         internal void Update()
         {
-            if (!IsActive)
-            {
-                return;
-            }
-
             if (StorageModel.StatisticCollection == null)
             {
                 return;
-            }
+            }       
 
             UpdateFilteredData();
 
@@ -151,7 +146,7 @@ namespace DriveHUD.Application.ViewModels
 
             IndicatorCollection.UpdateSource(statistics);
 
-            OnPropertyChanged(() => IndicatorCollection);
+            RaisePropertyChanged(nameof(IndicatorCollection));
         }
 
         private void InitializeCharts()
@@ -159,10 +154,10 @@ namespace DriveHUD.Application.ViewModels
             var cashGraphSettingsService = ServiceLocator.Current.GetInstance<ICashGraphSettingsService>();
 
             var moneyWonChartSeries = ChartSeriesProvider.CreateMoneyWonChartSeries();
-            MoneyWonGraphViewModel = new CashGraphViewModel(moneyWonChartSeries, cashGraphSettingsService.GetSettings(CashChartType.MoneyWon));
+            MoneyWonGraphViewModel = new GraphViewModel(new CashGraphViewModel(moneyWonChartSeries, cashGraphSettingsService.GetSettings(CashChartType.MoneyWon)));
 
             var bb100ChartSeries = ChartSeriesProvider.CreateBB100ChartSeries();
-            BB100GraphViewModel = new CashGraphViewModel(bb100ChartSeries, cashGraphSettingsService.GetSettings(CashChartType.BB100));
+            BB100GraphViewModel = new GraphViewModel(new CashGraphViewModel(bb100ChartSeries, cashGraphSettingsService.GetSettings(CashChartType.BB100)));
         }
     }
 }
