@@ -70,13 +70,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.4.4.2110, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.4.4.2116, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.4.4.2110, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.4.4.2116, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.4.4.2110, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.4.4.2116, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="EPPlus, Version=4.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
@@ -579,6 +579,7 @@
     <Compile Include="ViewModels\Graphs\ICashGraphPopupViewModel.cs" />
     <Compile Include="ViewModels\Main\ErrorViewModel.cs" />
     <Compile Include="ViewModels\Main\ErrorViewModelInfo.cs" />
+    <Compile Include="ViewModels\Main\IMainTabViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupBaseNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBaseFilterViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerAliasViewModelNotification.cs" />
@@ -1558,7 +1559,7 @@ editbin /largeaddressaware $(TargetPath)</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>tasklist /fi "imagename eq DriveHUD.HUD.exe" | find ":" &gt; nul
-if errorlevel 1 taskkill /f /t /im "DriveHUD.HUD.exe"
+if errorlevel 1 taskkill /f /t /im "DriveHUD.HUD.exe" 
 exit</PreBuildEvent>
   </PropertyGroup>
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.107.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.107.0\build\net46\System.Data.SQLite.Core.targets')" />
