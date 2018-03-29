@@ -83,17 +83,26 @@ namespace Model.Filters
             }
         }
 
+        private EnumFilterType enumFilterType;
+
+        public EnumFilterType FilterType
+        {
+            get
+            {
+                return enumFilterType;
+            }
+            set
+            {
+                SetProperty(ref enumFilterType, value);
+            }
+        }
+
         #region Not used
 
         public Dictionary<EnumFilterType, ReadOnlyObservableCollection<IFilterModel>> GetFilterModelDictionary()
         {
             throw new NotImplementedException();
-        }
-
-        public void SetFilterType(EnumFilterType filterType)
-        {
-            throw new NotImplementedException();
-        }
+        }      
 
         public void SpreadFilter()
         {

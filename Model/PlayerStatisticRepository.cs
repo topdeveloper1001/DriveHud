@@ -16,6 +16,7 @@ using Microsoft.Practices.ServiceLocation;
 using NHibernate.Linq;
 using ProtoBuf;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -60,6 +61,35 @@ namespace Model
             CreatePlayersFolderIfNotExist();
         }
 
+        public virtual IEnumerable<Playerstatistic> GetAllPlayerStatistic(string playerName, short? pokersiteId)
+        {
+            try
+            {
+                using (var session = ModelEntities.OpenStatelessSession())
+                {
+                    var player = session.Query<Players>()
+                        .FirstOrDefault(x => x.Playername.Equals(playerName) && x.PokersiteId == pokersiteId);
+
+                    if (player == null)
+                    {
+                        return new List<Playerstatistic>();
+                    }
+
+                    var files = GetPlayerFiles(player.PlayerId);
+
+                    var result = GetAllPlayerStatisticFromFiles(files, pokersiteId);
+
+                    return result;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Couldn't get player's {playerName} playerName.", e);
+            }
+
+            return new List<Playerstatistic>();
+        }
+
         public virtual IEnumerable<Playerstatistic> GetPlayerStatisticFromFiles(IEnumerable<string> files)
         {
             if (files == null)
@@ -71,41 +101,44 @@ namespace Model
 
             try
             {
-                foreach (var file in files)
+                using (var pf = new PerformanceMonitor(nameof(GetPlayerStatisticFromFiles)))
                 {
-                    RestoreBackupFile(file);
-
-                    using (var sr = new StreamReaderWrapper(file))
+                    foreach (var file in files)
                     {
-                        string line = null;
+                        RestoreBackupFile(file);
 
-                        while (sr != null && ((line = sr.ReadLine()) != null))
+                        using (var sr = new StreamReaderWrapper(file))
                         {
-                            Playerstatistic stat = null;
+                            string line = null;
 
-                            try
+                            while (sr != null && ((line = sr.ReadLine()) != null))
                             {
-                                if (string.IsNullOrWhiteSpace(line))
+                                Playerstatistic stat = null;
+
+                                try
                                 {
-                                    LogProvider.Log.Warn(this, $"Empty line in {file}");
+                                    if (string.IsNullOrWhiteSpace(line))
+                                    {
+                                        LogProvider.Log.Warn(this, $"Empty line in {file}");
+                                    }
+
+                                    /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
+                                    byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
+
+                                    using (var ms = new MemoryStream(byteAfter64))
+                                    {
+                                        stat = Serializer.Deserialize<Playerstatistic>(ms);
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    LogProvider.Log.Error($@"Could not process the file: {file}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
                                 }
 
-                                /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
-                                byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
-
-                                using (var ms = new MemoryStream(byteAfter64))
+                                if (stat != null)
                                 {
-                                    stat = Serializer.Deserialize<Playerstatistic>(ms);
+                                    yield return stat;
                                 }
-                            }
-                            catch (Exception ex)
-                            {
-                                LogProvider.Log.Error($@"Could not process the file: {file}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
-                            }
-
-                            if (stat != null)
-                            {
-                                yield return stat;
                             }
                         }
                     }
@@ -456,6 +489,88 @@ namespace Model
         private static string GetBackupFile(string file)
         {
             return Path.ChangeExtension(file, PlayerStatisticBackupExtenstion);
+        }
+
+        protected virtual IEnumerable<Playerstatistic> GetAllPlayerStatisticFromFiles(IEnumerable<string> files, short? pokerSite)
+        {
+            if (files == null)
+            {
+                throw new ArgumentNullException(nameof(files));
+            }
+
+            rwLock.EnterReadLock();
+
+            try
+            {
+                var maxThreads = 8;
+
+                var runningTasks = new List<Task>();
+
+                var fileQueue = new Queue<string>(files);
+
+                var stats = new BlockingCollection<Playerstatistic>();
+
+                while (fileQueue.Count > 0)
+                {
+                    while (runningTasks.Count < maxThreads && fileQueue.Count > 0)
+                    {
+                        var file = fileQueue.Dequeue();
+
+                        runningTasks.Add(Task.Run(() =>
+                        {
+                            RestoreBackupFile(file);
+
+                            using (var sr = new StreamReaderWrapper(file))
+                            {
+                                string line = null;
+
+                                while (sr != null && ((line = sr.ReadLine()) != null))
+                                {
+                                    Playerstatistic stat = null;
+
+                                    try
+                                    {
+                                        if (string.IsNullOrWhiteSpace(line))
+                                        {
+                                            LogProvider.Log.Warn(this, $"Empty line in {file}");
+                                        }
+
+                                        /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
+                                        byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
+
+                                        using (var ms = new MemoryStream(byteAfter64))
+                                        {
+                                            stat = Serializer.Deserialize<Playerstatistic>(ms);
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        LogProvider.Log.Error($@"Could not process the file: {file}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
+                                    }
+
+                                    if (stat != null &&
+                                        (pokerSite.HasValue && stat.PokersiteId == pokerSite || !pokerSite.HasValue))
+                                    {
+                                        stats.Add(stat);
+                                    }
+                                }
+                            }
+                        }));
+                    }
+
+                    var completedTask = Task.WhenAny(runningTasks).Result;
+
+                    runningTasks.Remove(completedTask);
+                }
+
+                Task.WhenAll(runningTasks).Wait();
+
+                return stats.ToList();
+            }
+            finally
+            {
+                rwLock.ExitReadLock();
+            }
         }
 
         #endregion

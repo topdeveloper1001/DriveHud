@@ -27,8 +27,8 @@ namespace Model.Filters
         /// </summary>
         /// <param name="filterType"><see cref="EnumFilterType.Cash"/> for cash filters, <see cref="EnumFilterType.Tournament"/>
         /// for tournament filters. Cash is default</param>
-        void SetFilterType(EnumFilterType filterType);
-
+        EnumFilterType FilterType { get; set; }
+     
         /// <summary>
         /// Copies data from specified in <see cref="SetFilterType(EnumFilterType)"/> collection into all other available collections
         /// </summary>

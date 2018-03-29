@@ -41,7 +41,6 @@ using Model.Enums;
 using Model.Events;
 using Model.Filters;
 using Model.Interfaces;
-using Model.Reports;
 using Model.Settings;
 using Model.Stats;
 using Prism.Events;
@@ -83,8 +82,6 @@ namespace DriveHUD.Application.ViewModels
 
         private readonly IFilterModelManagerService filterModelManager;
 
-        private readonly IReportStatusService reportStatusService;
-
         private bool isAdvancedLoggingEnabled = false;
 
         private const int ImportFileUpdateDelay = 750;
@@ -99,7 +96,6 @@ namespace DriveHUD.Application.ViewModels
         {
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
             playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
-            reportStatusService = ServiceLocator.Current.GetInstance<IReportStatusService>();
 
             importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             importerService = ServiceLocator.Current.GetInstance<IImporterService>();
@@ -125,7 +121,6 @@ namespace DriveHUD.Application.ViewModels
             InitializeBindings();
 
             HudViewModel = new HudViewModel();
-            filterModelManager.SetFilterType(EnumFilterType.Cash);
 
             PokerStarsDetectorSingletonService.Instance.Start();
 
@@ -149,7 +144,7 @@ namespace DriveHUD.Application.ViewModels
             StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
             StorageModel.PlayerCollection = new ObservableCollection<IPlayer>(dataService.GetPlayersList());
             StorageModel.PlayerCollection.AddRange(dataService.GetAliasesList());
-            StorageModel.PropertyChanged += StorageModel_PropertyChanged;
+            StorageModel.PropertyChanged += OnStorageModelPropertyChanged;
 
             ProgressViewModel = new ProgressViewModel();
 
@@ -228,17 +223,23 @@ namespace DriveHUD.Application.ViewModels
 
         internal void Load()
         {
+
             var player = StorageModel.PlayerSelectedItem;
 
             List<Playerstatistic> statistics = new List<Playerstatistic>();
 
             if (player is PlayerCollectionItem)
             {
-                statistics.AddRange(playerStatisticRepository.GetPlayerStatistic((StorageModel.PlayerSelectedItem?.Name ?? string.Empty), (short)(StorageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown)));
+                statistics.AddRange(playerStatisticRepository
+                    .GetAllPlayerStatistic((StorageModel.PlayerSelectedItem?.Name ?? string.Empty),
+                        (short)(StorageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown)));
             }
             else if (player is AliasCollectionItem)
             {
-                (player as AliasCollectionItem).PlayersInAlias.ForEach(pl => statistics.AddRange(playerStatisticRepository.GetPlayerStatistic((pl?.Name ?? string.Empty), (short)(pl?.PokerSite ?? EnumPokerSites.Unknown))));
+                (player as AliasCollectionItem).PlayersInAlias
+                    .ForEach(pl => statistics.AddRange(playerStatisticRepository
+                        .GetAllPlayerStatistic((pl?.Name ?? string.Empty),
+                            (short)(pl?.PokerSite ?? EnumPokerSites.Unknown))));
             }
 
             AddHandTags(statistics);
@@ -419,7 +420,13 @@ namespace DriveHUD.Application.ViewModels
             }
             finally
             {
-                System.Windows.Application.Current?.Dispatcher.Invoke(() => RefreshCommandsCanExecute());
+                try
+                {
+                    System.Windows.Application.Current?.Dispatcher.Invoke(() => RefreshCommandsCanExecute());
+                }
+                catch (TaskCanceledException)
+                {
+                }
             }
         }
 
@@ -434,7 +441,7 @@ namespace DriveHUD.Application.ViewModels
                 StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
             }
 
-            if (CurrentViewModelType == EnumViewModelType.HudViewModel)
+            if (CurrentViewModel.ViewModelType == EnumViewModelType.HudViewModel)
             {
                 HudViewModel.RefreshHudTable();
             }
@@ -456,7 +463,8 @@ namespace DriveHUD.Application.ViewModels
             {
                 return;
             }
-            else if (CurrentViewModel == DashboardViewModel)
+
+            if (CurrentViewModel == DashboardViewModel)
             {
                 DashboardViewModel.Update();
             }
@@ -1025,59 +1033,42 @@ namespace DriveHUD.Application.ViewModels
 
             if (viewModelType == EnumViewModelType.DashboardViewModel)
             {
+                filterModelManager.FilterType = EnumFilterType.Cash;
+
+                // initialize filters            
+                eventAggregator.GetEvent<UpdateFilterRequestEvent>()
+                    .Publish(new UpdateFilterRequestEventArgs());
+
                 if (DashboardViewModel == null)
                 {
-                    DashboardViewModel = new DashboardViewModel
-                    {
-                        Type = EnumViewModelType.DashboardViewModel,
-                    };
+                    DashboardViewModel = new DashboardViewModel();
                 }
 
-                DashboardViewModel.IsActive = true;
                 CurrentViewModel = DashboardViewModel;
+
                 ReportGadgetViewModel.IsShowTournamentData = false;
 
-                filterModelManager.SetFilterType(EnumFilterType.Cash);
-
-                if (reportStatusService.CashUpdated)
-                {
-                    eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
-                    reportStatusService.CashUpdated = false;
-                }
-                else
-                {
-                    ReportGadgetViewModel.UpdateReport();
-                }
+                DashboardViewModel.Update();
+                ReportGadgetViewModel.UpdateReport();
             }
             else if (viewModelType == EnumViewModelType.TournamentViewModel)
             {
+                filterModelManager.FilterType = EnumFilterType.Tournament;
+
+                // initialize filters            
+                eventAggregator.GetEvent<UpdateFilterRequestEvent>()
+                    .Publish(new UpdateFilterRequestEventArgs());
+
                 if (TournamentViewModel == null)
                 {
-                    TournamentViewModel = new TournamentViewModel()
-                    {
-                        Type = EnumViewModelType.TournamentViewModel,
-                    };
-                }
-
-                if (DashboardViewModel != null)
-                {
-                    DashboardViewModel.IsActive = false;
+                    TournamentViewModel = new TournamentViewModel();
                 }
 
                 CurrentViewModel = TournamentViewModel;
                 ReportGadgetViewModel.IsShowTournamentData = true;
 
-                filterModelManager.SetFilterType(EnumFilterType.Tournament);
-
-                if (reportStatusService.TournamentUpdated)
-                {
-                    eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
-                    reportStatusService.TournamentUpdated = false;
-                }
-                else
-                {
-                    ReportGadgetViewModel.UpdateReport();
-                }
+                TournamentViewModel.Update();
+                ReportGadgetViewModel.UpdateReport();
             }
             else if (viewModelType == EnumViewModelType.HudViewModel)
             {
@@ -1163,8 +1154,7 @@ namespace DriveHUD.Application.ViewModels
         private ReportGadgetViewModel _reportGadgetViewModel;
         private bool _isShowEquityCalculator;
 
-        private object _currentViewModel;
-        private EnumViewModelType _currentViewModelType;
+        private IMainTabViewModel currentViewModel;
 
         private bool _reportGadgetView_IsVisible;
 
@@ -1338,51 +1328,28 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        public object CurrentViewModel
+        public IMainTabViewModel CurrentViewModel
         {
-            get { return _currentViewModel; }
-            set
+            get
             {
-                _currentViewModel = value;
-                RaisePropertyChanged();
-
-                if (this.DashboardViewModel != null) this.DashboardViewModel.IsActive = value.GetType().Equals(typeof(DashboardViewModel));
-                if (this.TournamentViewModel != null) this.TournamentViewModel.IsActive = value.GetType().Equals(typeof(TournamentViewModel));
-                if (this.HudViewModel != null) this.HudViewModel.IsActive = value.GetType().Equals(typeof(HudViewModel));
-                if (this.AppsViewModel != null) this.AppsViewModel.IsActive = value.GetType().Equals(typeof(AppsViewModel));
-
-                this.ReportGadgetView_IsVisible = !value.GetType().Equals(typeof(HudViewModel))
-                    && !value.GetType().Equals(typeof(AppsViewModel));
-
-                if (value.GetType().Equals(typeof(DashboardViewModel)))
-                {
-                    _currentViewModelType = EnumViewModelType.DashboardViewModel;
-                }
-
-                if (value.GetType().Equals(typeof(TournamentViewModel)))
-                {
-                    _currentViewModelType = EnumViewModelType.TournamentViewModel;
-                }
-
-                if (value.GetType().Equals(typeof(HudViewModel)))
-                {
-                    _currentViewModelType = EnumViewModelType.HudViewModel;
-                }
-
-                if (value.GetType().Equals(typeof(AppsViewModel)))
-                {
-                    _currentViewModelType = EnumViewModelType.AppsViewModel;
-                }
+                return currentViewModel;
             }
-        }
-
-        public EnumViewModelType CurrentViewModelType
-        {
-            get { return _currentViewModelType; }
             set
             {
-                _currentViewModelType = value;
-                RaisePropertyChanged();
+                if (currentViewModel != null)
+                {
+                    currentViewModel.IsActive = false;
+                }
+
+                SetProperty(ref currentViewModel, value);
+
+                if (currentViewModel != null)
+                {
+                    currentViewModel.IsActive = true;
+                }
+
+                ReportGadgetView_IsVisible = currentViewModel.ViewModelType == EnumViewModelType.DashboardViewModel ||
+                    currentViewModel.ViewModelType == EnumViewModelType.TournamentViewModel;
             }
         }
 
@@ -1658,7 +1625,7 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void StorageModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void OnStorageModelPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == ReflectionHelper.GetPath<SingletonStorageModel>(p => p.PlayerSelectedItem))
             {

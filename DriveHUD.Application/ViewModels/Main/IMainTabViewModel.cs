@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ReportStatusService.cs" company="Ace Poker Solutions">
-// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="IMainTabViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,12 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace Model.Reports
-{
-    internal class ReportStatusService : IReportStatusService
-    {
-        public bool CashUpdated { get; set; } = false;
+using Model.Enums;
+using System.ComponentModel;
 
-        public bool TournamentUpdated { get; set; } = false;
+namespace DriveHUD.Application.ViewModels
+{
+    public interface IMainTabViewModel : INotifyPropertyChanged
+    {
+        bool IsActive { get; set; }
+
+        EnumViewModelType ViewModelType { get; }
     }
 }

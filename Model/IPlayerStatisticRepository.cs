@@ -11,17 +11,15 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model
 {
     public interface IPlayerStatisticRepository
     {
-        void SetPlayerStatisticPath(string path);
+        void SetPlayerStatisticPath(string path);        
+
+        IEnumerable<Playerstatistic> GetAllPlayerStatistic(string playerName, short? pokersiteId);
 
         IEnumerable<Playerstatistic> GetPlayerStatisticFromFiles(IEnumerable<string> files);
 

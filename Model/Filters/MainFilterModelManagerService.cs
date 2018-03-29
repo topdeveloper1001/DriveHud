@@ -72,20 +72,18 @@ namespace Model.Filters
             return list;
         }
 
-        public void SetFilterType(EnumFilterType filterType)
+        public EnumFilterType FilterType
         {
-            switch (filterType)
+            get
             {
-                case EnumFilterType.Tournament:
-                    enumFilterType = EnumFilterType.Tournament;
-                    break;
-                case EnumFilterType.Cash:
-                default:
-                    enumFilterType = EnumFilterType.Cash;
-                    break;
+                return enumFilterType;
+            }
+            set
+            {
+                SetProperty(ref enumFilterType, value);
             }
         }
-
+     
         public void SpreadFilter()
         {
             EnumFilterType fromType = enumFilterType;

@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ReportStatusService.cs" company="Ace Poker Solutions">
-// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="DashboardIndicators.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,12 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace Model.Reports
-{
-    internal class ReportStatusService : IReportStatusService
-    {
-        public bool CashUpdated { get; set; } = false;
+using DriveHUD.Entities;
 
-        public bool TournamentUpdated { get; set; } = false;
+namespace Model.Data
+{
+    public class DashboardIndicators : LightIndicators
+    {      
+        public override void AddStatistic(Playerstatistic statistic)
+        {
+            Source += statistic;
+
+            statisticCount++;
+            netWon += statistic.NetWon;
+            netWonByBigBlind += GetDivisionResult(statistic.NetWon, statistic.BigBlind);
+        }
     }
 }

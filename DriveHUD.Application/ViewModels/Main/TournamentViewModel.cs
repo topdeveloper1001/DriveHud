@@ -20,6 +20,7 @@ using Model.Enums;
 using Model.Events;
 using Model.Filters;
 using Model.Interfaces;
+using Model.Reports;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
@@ -30,8 +31,10 @@ using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
 {
-    public class TournamentViewModel : BaseViewModel
+    public class TournamentViewModel : BaseViewModel, IMainTabViewModel
     {
+        private readonly IReportStatusService reportStatusService;
+
         #region Fields
 
         private bool showLabels = true;
@@ -53,10 +56,14 @@ namespace DriveHUD.Application.ViewModels
         private readonly IEventAggregator eventAggregator;
         private readonly IFilterModelManagerService filterModelManagerService;
 
+        private bool updateIsRequired = true;
+
         #endregion
 
         internal TournamentViewModel()
         {
+            reportStatusService = ServiceLocator.Current.GetInstance<IReportStatusService>();
+
             InitializeChartSeries();
 
             GoldenBracelet = new Bracelet { PlaceNumber = 1 };
@@ -69,7 +76,15 @@ namespace DriveHUD.Application.ViewModels
 
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             eventAggregator.GetEvent<TournamentDataUpdatedEvent>().Subscribe(x => Update());
-            eventAggregator.GetEvent<BuiltFilterChangedEvent>().Subscribe(x => Update());
+            eventAggregator.GetEvent<BuiltFilterChangedEvent>()
+                .Subscribe(e =>
+                {
+                    if (e.AffectedFilter.Contains(EnumFilterType.Tournament))
+                    {
+                        updateIsRequired = true;
+                        Update();
+                    }
+                });
         }
 
         #region Properties
@@ -245,6 +260,16 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private bool UpdateIsRequired
+        {
+            get
+            {
+                return updateIsRequired || reportStatusService.CashUpdated;
+            }
+        }
+
+        public EnumViewModelType ViewModelType => EnumViewModelType.TournamentViewModel;
+
         #endregion
 
         #region Commands
@@ -254,6 +279,16 @@ namespace DriveHUD.Application.ViewModels
         #endregion
 
         internal void Update()
+        {
+            if (!IsActive || !UpdateIsRequired)
+            {
+                return;
+            }
+
+            InternalUpdate();
+        }
+
+        internal void InternalUpdate()
         {
             if (StorageModel.StatisticCollection == null)
             {
@@ -301,6 +336,9 @@ namespace DriveHUD.Application.ViewModels
                 SetBraceletData(SilverBracelet, filteredTournaments);
                 SetBraceletData(BronzeBracelet, filteredTournaments);
             });
+
+            updateIsRequired = false;
+            reportStatusService.TournamentUpdated = false;
         }
 
         private void InitializeChartSeries()

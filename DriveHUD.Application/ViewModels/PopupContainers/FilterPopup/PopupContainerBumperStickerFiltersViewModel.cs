@@ -60,7 +60,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             }
         }
 
-        protected override void Apply_OnClick(object obj)
+        protected override void ApplyFilters(object obj)
         {
             foreach (var filter in FilterViewCollection)
             {

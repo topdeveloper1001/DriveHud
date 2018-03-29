@@ -239,7 +239,7 @@ namespace Model.Reports
                         CanAddHands = false
                     };
 
-                    var filterPredicate = storageModel.FilterPredicate.Compile();
+                    var filterPredicate = storageModel.CashFilterPredicate.Compile();
 
                     Parallel.ForEach(players, player =>
                     {
@@ -272,7 +272,7 @@ namespace Model.Reports
                                     lock (populationIndicators[playerType.Name])
                                     {
                                         populationIndicators[playerType.Name].AddStatistic(x);
-                                    }
+                                    }                                    
                                 }
                             );
                         }

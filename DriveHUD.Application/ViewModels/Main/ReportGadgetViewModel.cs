@@ -98,6 +98,7 @@ namespace DriveHUD.Application.ViewModels
             eventAggregator.GetEvent<BuiltFilterChangedEvent>().Subscribe(UpdateBuiltFilter);
             eventAggregator.GetEvent<HandNoteUpdatedEvent>().Subscribe(UpdateHandNote);
             eventAggregator.GetEvent<TournamentDataUpdatedEvent>().Subscribe(UpdateReport);
+            eventAggregator.GetEvent<BuiltFilterRefreshEvent>().Subscribe(e => CurrentlyBuiltFilter = e.BuiltFilter);
         }
 
         private void InitializeFilter()
@@ -282,7 +283,11 @@ namespace DriveHUD.Application.ViewModels
 
         internal void UpdateReport(object obj = null)
         {
-            eventAggregator.GetEvent<UpdateReportEvent>().Publish(StorageModel?.FilterPredicate);
+            var filterPredicate = IsShowTournamentData ?
+                StorageModel?.TournamentFilterPredicate :
+                StorageModel?.CashFilterPredicate;
+
+            eventAggregator.GetEvent<UpdateReportEvent>().Publish(filterPredicate);
 
             App.Current.Dispatcher.Invoke(() =>
             {

@@ -53,7 +53,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         {
             Ok_CommandClick = new RelayCommand(Ok_OnClick);
             Cancel_CommandClick = new RelayCommand(Cancel_OnClick);
-            Apply_CommandClick = new RelayCommand(Apply_OnClick);
+            Apply_CommandClick = new RelayCommand(ApplyFilters);
             Save_CommandClick = new RelayCommand(Save_OnClick);
             Load_CommandClick = new RelayCommand(Load_OnClick);
             Reset_CommandClick = new RelayCommand(Reset_OnClick);
@@ -281,7 +281,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         protected virtual void Ok_OnClick()
         {
-            Apply_OnClick(null);
+            ApplyFilters(null);
             OkInteraction();
         }
 
@@ -294,7 +294,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         public ICommand Apply_CommandClick { get; private set; }
 
-        protected abstract void Apply_OnClick(object obj);
+        protected abstract void ApplyFilters(object obj);
 
         public ICommand Save_CommandClick { get; private set; }
 

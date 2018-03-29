@@ -95,8 +95,8 @@ namespace Model
                 case NotifyCollectionChangedAction.Add:
                     var newItems = e.NewItems?.Cast<Playerstatistic>().ToList();
 
-                    var cashItems = newItems.Where(x => !x.IsTourney).AsQueryable().Where(FilterPredicate).ToList();
-                    var tournamentItems = newItems.Where(x => x.IsTourney).AsQueryable().Where(FilterPredicate).ToList();
+                    var cashItems = newItems.Where(x => !x.IsTourney).AsQueryable().Where(CashFilterPredicate).ToList();
+                    var tournamentItems = newItems.Where(x => x.IsTourney).AsQueryable().Where(TournamentFilterPredicate).ToList();
 
                     if (cashItems != null && cashItems.Any())
                     {
@@ -124,8 +124,8 @@ namespace Model
         private void UpdateFilteredStatistics()
         {
             var statistic = StatisticCollection?.ToList();
-            FilteredCashPlayerStatistic = statistic?.Where(x => !x.IsTourney).AsQueryable().Where(FilterPredicate).ToList();
-            FilteredTournamentPlayerStatistic = statistic?.Where(x => x.IsTourney).AsQueryable().Where(FilterPredicate).ToList();
+            FilteredCashPlayerStatistic = statistic?.Where(x => !x.IsTourney).AsQueryable().Where(CashFilterPredicate).ToList();
+            FilteredTournamentPlayerStatistic = statistic?.Where(x => x.IsTourney).AsQueryable().Where(TournamentFilterPredicate).ToList();
         }
 
         #endregion
@@ -138,8 +138,6 @@ namespace Model
         private RangeObservableCollection<Playerstatistic> _statisticCollection;
         private ObservableCollection<IPlayer> _playerCollection;
         private IPlayer _playerSelectedItem;
-
-        private Expression<Func<Playerstatistic, bool>> _filterPredicate = PredicateBuilder.True<Playerstatistic>();
 
         public RangeObservableCollection<Playerstatistic> StatisticCollection
         {
@@ -183,19 +181,54 @@ namespace Model
                 if (_playerSelectedItem == value) return;
 
                 _playerSelectedItem = value;
-                OnPropertyChanged();
 
+                OnPropertyChanged();
                 OnPropertyChanged("Indicators");
             }
         }
 
-        public Expression<Func<Playerstatistic, bool>> FilterPredicate
+        private Expression<Func<Playerstatistic, bool>> cashFilterPredicate = PredicateBuilder.True<Playerstatistic>();
+
+        public Expression<Func<Playerstatistic, bool>> CashFilterPredicate
         {
-            get { return _filterPredicate; }
+            get
+            {
+                return cashFilterPredicate;
+            }
             set
             {
-                _filterPredicate = value;
-                UpdateFilteredStatistics();
+                cashFilterPredicate = value;
+
+                FilteredCashPlayerStatistic = StatisticCollection?
+                    .ToList()
+                    .Where(x => !x.IsTourney)
+                    .AsQueryable()
+                    .Where(CashFilterPredicate)
+                    .ToList();
+
+                OnPropertyChanged();
+            }
+        }
+
+        private Expression<Func<Playerstatistic, bool>> tournamentFilterPredicate = PredicateBuilder.True<Playerstatistic>();
+
+        public Expression<Func<Playerstatistic, bool>> TournamentFilterPredicate
+        {
+            get
+            {
+                return tournamentFilterPredicate;
+            }
+            set
+            {
+                tournamentFilterPredicate = value;
+
+                FilteredTournamentPlayerStatistic = StatisticCollection?
+                    .ToList()
+                    .Where(x => x.IsTourney)
+                    .AsQueryable()
+                    .Where(TournamentFilterPredicate)
+                    .ToList();
+
                 OnPropertyChanged();
             }
         }
@@ -253,6 +286,5 @@ namespace Model
         }
 
         #endregion
-
     }
 }

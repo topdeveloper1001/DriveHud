@@ -25,28 +25,28 @@ namespace Model.Data
     public class LightIndicators : Indicators
     {
         [ProtoMember(1)]
-        private int statisticCount;
+        protected int statisticCount;
 
         [ProtoMember(2)]
-        private decimal netWon;
+        protected decimal netWon;
 
         [ProtoMember(3)]
-        private decimal bigBlind;
+        protected decimal bigBlind;
 
         [ProtoMember(4)]
-        private decimal netWonByBigBlind;
+        protected decimal netWonByBigBlind;
 
         [ProtoMember(5)]
-        private decimal evInBB;
+        protected decimal evInBB;
 
         [ProtoMember(6)]
-        private DateTime sessionStartTime = DateTime.MaxValue;
+        protected DateTime sessionStartTime = DateTime.MaxValue;
 
         [ProtoMember(7)]
-        private DateTime sessionEndTime = DateTime.MinValue;
+        protected DateTime sessionEndTime = DateTime.MinValue;
 
         [ProtoMember(43)]
-        private long gameNumberMax;
+        protected long gameNumberMax;
 
         public LightIndicators() : base()
         {

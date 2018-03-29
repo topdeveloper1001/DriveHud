@@ -17,6 +17,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Enums;
 using Model.Events;
+using Model.Reports;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
 using System.Linq;
@@ -24,11 +25,15 @@ using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
 {
-    public class DashboardViewModel : BaseViewModel
+    public class DashboardViewModel : BaseViewModel, IMainTabViewModel
     {
+        private readonly IReportStatusService reportStatusService;
+
         #region Properties
 
         public InteractionRequest<INotification> ShowMoneyWonGraphPopupRequest { get; private set; }
+
+        private bool updateIsRequired = true;
 
         private bool isExpanded = true;
 
@@ -86,16 +91,35 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private bool UpdateIsRequired
+        {
+            get
+            {
+                return updateIsRequired || reportStatusService.CashUpdated;
+            }
+        }
+
         public ICommand ShowMoneyWonGraphPopupCommand { get; private set; }
+
+        public EnumViewModelType ViewModelType => EnumViewModelType.DashboardViewModel;
 
         #endregion
 
         internal DashboardViewModel()
         {
+            reportStatusService = ServiceLocator.Current.GetInstance<IReportStatusService>();
+
             ServiceLocator.Current
                 .GetInstance<IEventAggregator>()
                 .GetEvent<BuiltFilterChangedEvent>()
-                .Subscribe(arg => Update());
+                .Subscribe(e =>
+                {
+                    if (e.AffectedFilter.Contains(EnumFilterType.Cash))
+                    {
+                        updateIsRequired = true;
+                        Update();
+                    }
+                });
 
             ShowMoneyWonGraphPopupRequest = new InteractionRequest<INotification>();
             ShowMoneyWonGraphPopupCommand = new RelayCommand(() =>
@@ -115,22 +139,35 @@ namespace DriveHUD.Application.ViewModels
 
         internal void Update()
         {
+            if (!IsActive || !UpdateIsRequired)
+            {
+                return;
+            }
+
+            InternalUpdate();
+        }
+
+        private void InternalUpdate()
+        {
             if (StorageModel.StatisticCollection == null)
             {
                 return;
-            }       
+            }
 
             UpdateFilteredData();
 
             MoneyWonGraphViewModel?.Update();
             BB100GraphViewModel?.Update();
+
+            updateIsRequired = false;
+            reportStatusService.CashUpdated = false;
         }
 
         private void UpdateFilteredData()
         {
             if (IndicatorCollection == null)
             {
-                IndicatorCollection = new LightIndicators();
+                IndicatorCollection = new DashboardIndicators();
             }
             else
             {

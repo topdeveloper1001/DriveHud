@@ -96,7 +96,7 @@
                                 FontSize="14"
                                 VerticalAlignment="Center"
                                 Foreground="White"
-                                Text="{Binding IndicatorCollection.Source.NetWon}" />
+                                Text="{Binding IndicatorCollection.NetWon}" />
                         </StackPanel>
                         <StackPanel
                             Grid.Column="2"

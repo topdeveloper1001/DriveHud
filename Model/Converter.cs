@@ -1,21 +1,19 @@
-using System;
-using System.Linq;
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
+using DriveHUD.Entities;
+using DriveHUD.EquityCalculator.Base.OmahaCalculations;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Hand;
-using HoldemHand;
-using Model.Enums;
-using System.Collections.Generic;
-using DriveHUD.Common.Linq;
-using DriveHUD.Common.Log;
-using Model.Settings;
-using Microsoft.Practices.ServiceLocation;
-using DriveHUD.Entities;
-using Model.Extensions;
-using DriveHUD.EquityCalculator.Base.OmahaCalculations;
 using HandHistories.Objects.Players;
-using Card = HandHistories.Objects.Cards.Card;
-using DriveHud.Common.Log;
+using HoldemHand;
+using Microsoft.Practices.ServiceLocation;
+using Model.Enums;
+using Model.Extensions;
+using Model.Settings;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Model.Importer
 {

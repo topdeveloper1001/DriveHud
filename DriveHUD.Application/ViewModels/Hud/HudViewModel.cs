@@ -17,7 +17,6 @@ using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
-using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Common.Wpf.AttachedBehaviors;
 using DriveHUD.Entities;
 using HandHistories.Objects.Cards;
@@ -35,7 +34,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
@@ -48,7 +46,7 @@ namespace DriveHUD.Application.ViewModels
     /// <summary>
     /// Represents view model of hud screen
     /// </summary>
-    public class HudViewModel : PopupViewModelBase
+    public class HudViewModel : PopupViewModelBase, IMainTabViewModel
     {
         private IHudLayoutsService HudLayoutsService => ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
@@ -75,6 +73,8 @@ namespace DriveHUD.Application.ViewModels
         }
 
         #region Properties
+
+        public EnumViewModelType ViewModelType => EnumViewModelType.HudViewModel;
 
         public InteractionRequest<PopupBaseNotification> NotificationRequest { get; private set; }
 
