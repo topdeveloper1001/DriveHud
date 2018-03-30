@@ -235,7 +235,7 @@ namespace DriveHUD.Application.TableConfigurators
         private ReplayerHudPanel CreateHudPanel(ReplayerViewModel viewModel, int zeroBasedSeatNumber)
         {
             var player = viewModel.PlayersCollection[zeroBasedSeatNumber];
-
+            
             player.Parent = new HudElementViewModel { Seat = zeroBasedSeatNumber };
 
             var panel = new ReplayerHudPanel
@@ -270,10 +270,12 @@ namespace DriveHUD.Application.TableConfigurators
             item.Click += (s, e) =>
             {
                 PlayerNoteViewModel viewModel = new PlayerNoteViewModel(pokerSiteId, playerName);
+
                 var frm = new PlayerNoteView(viewModel)
                 {
                     Owner = System.Windows.Application.Current.MainWindow
                 };
+
                 frm.ShowDialog();
 
                 var clickedItem = s as FrameworkElement;

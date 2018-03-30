@@ -235,6 +235,14 @@ namespace Model
             }
         }
 
+        public Players GetPlayer(int playerId)
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                return session.Query<Players>().FirstOrDefault(x => x.PlayerId == playerId);
+            }
+        }
+
         public IList<Gametypes> GetPlayerGameTypes(IEnumerable<int> playerIds)
         {
             using (var session = ModelEntities.OpenStatelessSession())

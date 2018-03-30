@@ -53,6 +53,8 @@ namespace Model.Interfaces
 
         Players GetPlayer(string playerName, short pokersiteId);
 
+        Players GetPlayer(int playerId);
+
         IList<Gametypes> GetPlayerGameTypes(IEnumerable<int> playerIds);
      
         IList<IPlayer> GetPlayersList();

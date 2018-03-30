@@ -722,9 +722,10 @@ namespace DriveHUD.Application.ViewModels
                     }
 
                     playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
+                    playerHudContent.HudElement.PlayerId = player.PlayerId;
                     playerHudContent.HudElement.PlayerName = !string.IsNullOrWhiteSpace(player.PlayerNick) ?
                         $"{player.PlayerName} / {player.PlayerNick}" : player.PlayerName;
-                    playerHudContent.HudElement.PokerSiteId = (short)site;
+                    playerHudContent.HudElement.PokerSiteId = (short)site; 
                     playerHudContent.HudElement.TotalHands = playerData.TotalHands;
 
                     var playerNotes = dataService.GetPlayerNotes(player.PlayerId);

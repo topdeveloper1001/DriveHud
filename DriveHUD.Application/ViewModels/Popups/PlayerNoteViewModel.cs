@@ -26,29 +26,39 @@ namespace DriveHUD.Application.ViewModels.Popups
 {
     public class PlayerNoteViewModel : BaseViewModel
     {
-        private readonly IDataService dataService;        
+        private readonly IDataService dataService = ServiceLocator.Current.GetInstance<IDataService>();
 
         private List<Playernotes> playerNoteEntities;
 
         private string initialNotes = string.Empty;
 
+        private readonly Players player;
+
+        public PlayerNoteViewModel(int playerId)
+        {
+            player = dataService.GetPlayer(playerId);
+            Initialize();
+        }
+
         public PlayerNoteViewModel(short pokerSiteId, string playerName)
         {
+            player = dataService.GetPlayer(playerName, pokerSiteId);
+            Initialize();
+        }
+
+        private void Initialize()
+        {
             SaveCommand = new RelayCommand(Save);
-            dataService = ServiceLocator.Current.GetInstance<IDataService>();            
-
-            PokersiteId = pokerSiteId;
-            PlayerName = playerName;
             Note = string.Empty;
-
             playerNoteEntities = new List<Playernotes>();
-
             LoadNote();
         }
 
         private void LoadNote()
         {
-            playerNoteEntities = dataService.GetPlayerNotes(PlayerName, PokersiteId).ToList();
+            playerNoteEntities = player != null ?
+                dataService.GetPlayerNotes(player.PlayerId).ToList() :
+                null;
 
             if (playerNoteEntities != null)
             {
@@ -67,31 +77,12 @@ namespace DriveHUD.Application.ViewModels.Popups
             set { SetProperty(ref note, value); }
         }
 
-        private string playerName;
-
-        public string PlayerName
-        {
-            get { return playerName; }
-            private set
-            {
-                SetProperty(ref playerName, value);
-            }
-        }
-
         public bool HasNotes
         {
             get
             {
                 return playerNoteEntities != null && playerNoteEntities.Count > 0;
             }
-        }
-
-        private short pokersiteId;
-
-        public short PokersiteId
-        {
-            get { return pokersiteId; }
-            set { SetProperty(ref pokersiteId, value); }
         }
 
         public Action CloseAction { get; set; }
@@ -110,8 +101,6 @@ namespace DriveHUD.Application.ViewModels.Popups
         {
             if (!HasNotes)
             {
-                var player = dataService.GetPlayer(PlayerName, PokersiteId);
-
                 if (player == null)
                 {
                     CloseAction?.Invoke();
@@ -119,7 +108,7 @@ namespace DriveHUD.Application.ViewModels.Popups
                 }
 
                 // check if notes exist because notes might be added on another table
-                var notes = dataService.GetPlayerNotes(PlayerName, PokersiteId);
+                var notes = dataService.GetPlayerNotes(player.PlayerId);
 
                 var manualNote = notes.FirstOrDefault(x => !x.IsAutoNote);
 
@@ -128,7 +117,7 @@ namespace DriveHUD.Application.ViewModels.Popups
                     manualNote = new Playernotes
                     {
                         PlayerId = player.PlayerId,
-                        PokersiteId = PokersiteId,
+                        PokersiteId = player.PokersiteId,
                         Timestamp = DateTime.UtcNow
                     };
 
@@ -215,8 +204,6 @@ namespace DriveHUD.Application.ViewModels.Popups
 
                 if (manualNote == null)
                 {
-                    var player = dataService.GetPlayer(PlayerName, PokersiteId);
-
                     if (player == null)
                     {
                         CloseAction?.Invoke();
@@ -226,7 +213,7 @@ namespace DriveHUD.Application.ViewModels.Popups
                     manualNote = new Playernotes
                     {
                         PlayerId = player.PlayerId,
-                        PokersiteId = PokersiteId,
+                        PokersiteId = player.PokersiteId,
                         Timestamp = DateTime.UtcNow
                     };
 
