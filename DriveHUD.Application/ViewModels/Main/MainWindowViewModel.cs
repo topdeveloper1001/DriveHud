@@ -41,6 +41,7 @@ using Model.Enums;
 using Model.Events;
 using Model.Filters;
 using Model.Interfaces;
+using Model.Reports;
 using Model.Settings;
 using Model.Stats;
 using Prism.Events;
@@ -82,6 +83,8 @@ namespace DriveHUD.Application.ViewModels
 
         private readonly IFilterModelManagerService filterModelManager;
 
+        private readonly IReportStatusService reportStatusService;
+
         private bool isAdvancedLoggingEnabled = false;
 
         private const int ImportFileUpdateDelay = 750;
@@ -96,6 +99,7 @@ namespace DriveHUD.Application.ViewModels
         {
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
             playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
+            reportStatusService = ServiceLocator.Current.GetInstance<IReportStatusService>();
 
             importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             importerService = ServiceLocator.Current.GetInstance<IImporterService>();
@@ -255,7 +259,7 @@ namespace DriveHUD.Application.ViewModels
 
             CreatePositionReport();
 
-            UpdateCurrentView();
+            UpdateCurrentView(true);
         }
 
         internal void UpdateHeader()
@@ -407,7 +411,7 @@ namespace DriveHUD.Application.ViewModels
                     {
                         // update data after hud is stopped
                         CreatePositionReport();
-                        UpdateCurrentView();
+                        UpdateCurrentView(true);
                     }
                     catch (Exception ex)
                     {
@@ -449,7 +453,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void UpdateCurrentView(UpdateViewRequestedEventArgs args)
         {
-            UpdateCurrentView();
+            UpdateCurrentView(false);
 
             if (args != null && args.IsUpdateReportRequested)
             {
@@ -457,11 +461,17 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void UpdateCurrentView()
+        private void UpdateCurrentView(bool forceUpdate)
         {
             if (CurrentViewModel == null)
             {
                 return;
+            }
+
+            if (forceUpdate)
+            {
+                reportStatusService.CashUpdated = true;
+                reportStatusService.TournamentUpdated = true;
             }
 
             if (CurrentViewModel == DashboardViewModel)
@@ -725,7 +735,7 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.PlayerId = player.PlayerId;
                     playerHudContent.HudElement.PlayerName = !string.IsNullOrWhiteSpace(player.PlayerNick) ?
                         $"{player.PlayerName} / {player.PlayerNick}" : player.PlayerName;
-                    playerHudContent.HudElement.PokerSiteId = (short)site; 
+                    playerHudContent.HudElement.PokerSiteId = (short)site;
                     playerHudContent.HudElement.TotalHands = playerData.TotalHands;
 
                     var playerNotes = dataService.GetPlayerNotes(player.PlayerId);
@@ -971,7 +981,7 @@ namespace DriveHUD.Application.ViewModels
                 Task.Delay(ImportFileUpdateDelay).Wait();
             });
 
-            UpdateCurrentView();
+            UpdateCurrentView(true);
             CreatePositionReport();
 
             ProgressViewModel.IsActive = false;
@@ -1002,7 +1012,7 @@ namespace DriveHUD.Application.ViewModels
                 Task.Delay(ImportFileUpdateDelay).Wait();
             });
 
-            UpdateCurrentView();
+            UpdateCurrentView(true);
             CreatePositionReport();
 
             ProgressViewModel.IsActive = false;

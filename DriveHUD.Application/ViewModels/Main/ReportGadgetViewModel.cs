@@ -262,10 +262,10 @@ namespace DriveHUD.Application.ViewModels
                        var dataService = ServiceLocator.Current.GetInstance<IDataService>();
                        dataService.DeleteTournament(tournament.TournamentId, tournament.PokerSiteId);
 
-                       //if (ReportSelectedItem != null)
-                       //{
-                       //    ReportCollection.Remove(ReportSelectedItem);
-                       //}
+                       if (ReportSelectedItem != null)
+                       {
+                           ReportCollection.Remove(ReportSelectedItem);
+                       }
 
                        eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = true });
                    }

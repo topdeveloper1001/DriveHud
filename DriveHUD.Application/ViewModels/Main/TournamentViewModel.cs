@@ -264,7 +264,7 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return updateIsRequired || reportStatusService.CashUpdated;
+                return updateIsRequired || reportStatusService.TournamentUpdated;
             }
         }
 
