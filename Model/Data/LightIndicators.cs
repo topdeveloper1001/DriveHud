@@ -901,6 +901,93 @@ namespace Model.Data
             foldedTo3Bet = 0;
         }
 
+        public virtual void AddIndicator(LightIndicators indicator)
+        {
+            Source += indicator.Source;
+
+            positionTotal?.Add(indicator.positionTotal);
+            positionUnoppened?.Add(indicator.positionUnoppened);
+            positionVPIP?.Add(indicator.positionVPIP);
+            positionDidColdCall?.Add(indicator.positionDidColdCall);
+            positionCouldColdCall?.Add(indicator.positionCouldColdCall);
+            positionDidThreeBet?.Add(indicator.positionDidThreeBet);
+            positionCouldThreeBet?.Add(indicator.positionCouldThreeBet);
+            positionDidFourBet?.Add(indicator.positionDidFourBet);
+            positionCouldFourBet?.Add(indicator.positionCouldFourBet);
+            positionLimpMade?.Add(indicator.positionLimpMade);
+            positionLimpPossible?.Add(indicator.positionLimpPossible);
+
+            if (gameNumberMax < indicator.gameNumberMax)
+            {
+                gameNumberMax = indicator.gameNumberMax;
+            }
+
+            statisticCount += indicator.statisticCount;
+            netWon += indicator.netWon;
+            bigBlind += indicator.bigBlind;
+            netWonByBigBlind += indicator.netWonByBigBlind;
+
+            evInBB += indicator.evInBB;
+
+            if (sessionStartTime > indicator.sessionStartTime)
+            {
+                sessionStartTime = indicator.sessionStartTime;
+            }
+
+            if (sessionEndTime < indicator.sessionEndTime)
+            {
+                sessionEndTime = indicator.sessionEndTime;
+            }
+
+            didDelayedTurnCBetIP += indicator.didDelayedTurnCBetIP;
+            couldDelayedTurnCBetIP += indicator.couldDelayedTurnCBetIP;
+            didDelayedTurnCBetOOP += indicator.didDelayedTurnCBetOOP;
+            couldDelayedTurnCBetOOP += indicator.couldDelayedTurnCBetOOP;
+            checkRaisedFlopCBet += indicator.checkRaisedFlopCBet;
+            couldCheckRaiseFlopCBet += indicator.couldCheckRaiseFlopCBet;
+
+            didFlopBet += indicator.didFlopBet;
+            flopBetSizeMoreThanOne += indicator.flopBetSizeMoreThanOne;
+            flopBetSizeOneHalfOrLess += indicator.flopBetSizeOneHalfOrLess;
+            flopBetSizeOneQuarterOrLess += indicator.flopBetSizeOneQuarterOrLess;
+            flopBetSizeTwoThirdsOrLess += indicator.flopBetSizeTwoThirdsOrLess;
+            flopBetSizeThreeQuartersOrLess += indicator.flopBetSizeThreeQuartersOrLess;
+            flopBetSizeOneOrLess += indicator.flopBetSizeOneOrLess;
+
+            didTurnBet += indicator.didTurnBet;
+            turnBetSizeMoreThanOne += indicator.turnBetSizeMoreThanOne;
+            turnBetSizeOneHalfOrLess += indicator.turnBetSizeOneHalfOrLess;
+            turnBetSizeOneQuarterOrLess += indicator.turnBetSizeOneQuarterOrLess;
+            turnBetSizeOneThirdOrLess += indicator.turnBetSizeOneThirdOrLess;
+            turnBetSizeTwoThirdsOrLess += indicator.turnBetSizeTwoThirdsOrLess;
+            turnBetSizeThreeQuartersOrLess += indicator.turnBetSizeThreeQuartersOrLess;
+            turnBetSizeOneOrLess += indicator.turnBetSizeOneOrLess;
+
+            riverBetSizeMoreThanOne += indicator.riverBetSizeMoreThanOne;
+
+            wtsdAfterCalling3Bet += indicator.wtsdAfterCalling3Bet;
+            wtsdAfterCalling3BetOpportunity += indicator.wtsdAfterCalling3BetOpportunity;
+            wtsdAfterCallingPfr += indicator.wtsdAfterCallingPfr;
+            wtsdAfterCallingPfrOpportunity += indicator.wtsdAfterCallingPfrOpportunity;
+            wtsdAfterNotCBettingFlopAsPfr += indicator.wtsdAfterNotCBettingFlopAsPfr;
+            wtsdAfterNotCBettingFlopAsPfrOpportunity += indicator.wtsdAfterNotCBettingFlopAsPfrOpportunity;
+            wtsdAfterSeeingTurn += indicator.wtsdAfterSeeingTurn;
+            wtsdAsPF3Bettor += indicator.wtsdAsPF3Bettor;
+            wtsdAsPF3BettorOpportunity += indicator.wtsdAsPF3BettorOpportunity;
+
+            foldToTurnCBetIn3BetPot += indicator.foldToTurnCBetIn3BetPot;
+            facedToTurnCBetIn3BetPot += indicator.facedToTurnCBetIn3BetPot;
+
+            raisedFlopCBetIn3BetPot += indicator.raisedFlopCBetIn3BetPot;
+            couldRaiseFlopCBetIn3BetPot += indicator.couldRaiseFlopCBetIn3BetPot;
+
+            did4Bet += indicator.did4Bet;
+            could4Bet += indicator.could4Bet;
+
+            faced3Bet += indicator.faced3Bet;
+            foldedTo3Bet += indicator.foldedTo3Bet;
+        }
+
         public override int CompareTo(object obj)
         {
             var objIndicator = obj as LightIndicators;

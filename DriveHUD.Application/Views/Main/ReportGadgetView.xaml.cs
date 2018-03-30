@@ -522,7 +522,7 @@ namespace DriveHUD.Application.Views
             }
         }
 
-        private Task<ObservableCollection<ReportIndicators>> GetReportCollectionAsync(IReportCreator reportCreator, IList<Playerstatistic> playerstatistics, bool forceRefresh)
+        private Task<ObservableCollection<ReportIndicators>> GetReportCollectionAsync(IReportCreator reportCreator, List<Playerstatistic> playerstatistics, bool forceRefresh)
         {
             return Task.Run(() =>
             {

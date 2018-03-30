@@ -169,6 +169,7 @@
     <Compile Include="Data\PopulationReportIndicators.cs" />
     <Compile Include="Data\ReportHandViewModel.cs" />
     <Compile Include="Data\ReportIndicators.cs" />
+    <Compile Include="Data\SessionReportIndicators.cs" />
     <Compile Include="Data\ShowdownHandsReportRecord.cs" />
     <Compile Include="Data\StatDto.cs" />
     <Compile Include="Data\TournamentReportRecord.cs" />
@@ -290,8 +291,12 @@
     <Compile Include="Replayer\ChipModel.cs" />
     <Compile Include="Replayer\ReplayerDataModel.cs" />
     <Compile Include="Replayer\ReplayerHelpers.cs" />
+    <Compile Include="Reports\BaseReportCreator.cs" />
     <Compile Include="Reports\CashBaseReportCreator.cs" />
+    <Compile Include="Reports\CashGroupingReportCreator.cs" />
+    <Compile Include="Reports\GroupingReportCreator.cs" />
     <Compile Include="Reports\HoleCardsReportCreator.cs" />
+    <Compile Include="Reports\HoleCardsReportStringExtensions.cs" />
     <Compile Include="Reports\IOpponentReportService.cs" />
     <Compile Include="Reports\IPopulationReportService.cs" />
     <Compile Include="Reports\IReportCreatorcs.cs" />
@@ -311,7 +316,13 @@
     <Compile Include="Reports\StakesReportCreator.cs" />
     <Compile Include="Reports\TimeReportCreator.cs" />
     <Compile Include="Reports\TournamentBaseReportCreator.cs" />
+    <Compile Include="Reports\TournamentGroupingReportCreator.cs" />
+    <Compile Include="Reports\TournamentHoleCardsReportCreator.cs" />
+    <Compile Include="Reports\TournamentOverAllReportCreator.cs" />
+    <Compile Include="Reports\TournamentPokerSiteReportCreator.cs" />
+    <Compile Include="Reports\TournamentPositionReportCreator.cs" />
     <Compile Include="Reports\TournamentReportCreator.cs" />
+    <Compile Include="Reports\TournamentShowdownHandsReportCreator.cs" />
     <Compile Include="Reports\TournamentStackSizeReportCreator.cs" />
     <Compile Include="SessionFactoryService.cs" />
     <Compile Include="Settings\DatabaseSettingsProviders\BaseDatabaseSettingsProvider.cs" />

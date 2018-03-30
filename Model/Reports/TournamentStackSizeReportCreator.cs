@@ -14,37 +14,35 @@ using DriveHUD.Entities;
 using Model.Data;
 using Model.Enums;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Model.Reports
 {
-    public class TournamentStackSizeReportCreator : TournamentBaseReportCreator
+    public class TournamentStackSizeReportCreator : TournamentGroupingReportCreator<MRatioReportRecord, EnumMRatio>
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false)
+        protected override MRatioReportRecord CreateIndicator(EnumMRatio groupKey)
         {
-            var report = new ObservableCollection<ReportIndicators>();
-
-            if (statistics == null)
+            var report = new MRatioReportRecord
             {
-                return report;
-            }
-
-            foreach (var group in statistics.GroupBy(x => GetMRatio(x)).ToArray())
-            {
-                var stat = new MRatioReportRecord();
-
-                foreach (var playerstatistic in group)
-                {
-                    stat.AddStatistic(playerstatistic);
-                }
-
-                stat.MRatioZone = group.Key;
-
-                report.Add(stat);
-            }
+                MRatioZone = groupKey
+            };
 
             return report;
+        }
+
+        protected override EnumMRatio GroupBy(Playerstatistic statistic)
+        {
+            return GetMRatio(statistic);
+        }
+
+        protected override EnumMRatio GroupBy(MRatioReportRecord indicator)
+        {
+            return indicator.MRatioZone;
+        }
+
+        protected override IEnumerable<MRatioReportRecord> OrderResult(IEnumerable<MRatioReportRecord> reports)
+        {
+            return reports.OrderBy(x => x.MRatioZone);
         }
 
         private EnumMRatio GetMRatio(Playerstatistic stat)

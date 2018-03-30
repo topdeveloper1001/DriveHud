@@ -13,7 +13,6 @@
 using DriveHUD.Entities;
 using Model.Data;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Model.Reports
@@ -21,57 +20,31 @@ namespace Model.Reports
     /// <summary>
     /// This report groups games by players position : Button, Small Blind, Early Position e.t.c
     /// </summary>
-    public class PositionReportCreator : CashBaseReportCreator
+    public class PositionReportCreator : CashGroupingReportCreator<ReportIndicators, string>
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false)
+        protected override ReportIndicators CreateIndicator(string groupKey)
         {
-            var report = new ObservableCollection<ReportIndicators>();
-
-            if (statistics == null)
-            {
-                return report;
-            }
-
-            foreach (var group in statistics.GroupBy(x => x.PositionString).ToArray())
-            {
-                var stat = new ReportIndicators();
-
-                foreach (var playerstatistic in group)
-                {
-                    stat.AddStatistic(playerstatistic);
-                }
-
-                report.Add(stat);
-            }
-
+            var report = new ReportIndicators();
             return report;
         }
-    }
 
-    public class TournamentPositionReportCreator : TournamentBaseReportCreator
-    {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false)
+        protected override string GroupBy(Playerstatistic statistic)
         {
-            var report = new ObservableCollection<ReportIndicators>();
-
-            if (statistics == null)
-            {
-                return report;
-            }
-
-            foreach (var group in statistics.GroupBy(x => x.PositionString).ToArray())
-            {
-                var stat = new ReportIndicators();
-
-                foreach (var playerstatistic in group)
-                {
-                    stat.AddStatistic(playerstatistic);
-                }
-
-                report.Add(stat);
-            }
-
-            return report;
+            return statistic.PositionString;
         }
-    }
+
+        protected override string GroupBy(ReportIndicators indicator)
+        {
+            return indicator.Source.PositionString;
+        }
+
+        protected override IEnumerable<ReportIndicators> OrderResult(IEnumerable<ReportIndicators> reports)
+        {
+#if DEBUG
+            return reports.OrderBy(x => x.Source.Position);
+#else
+            return reports.Where(x => x.Source.Position != EnumPosition.Undefined).OrderBy(x => x.Source.Position);
+#endif
+        }
+    }   
 }

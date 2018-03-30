@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="TournamentBaseReportCreator.cs" company="Ace Poker Solutions">
+// <copyright file="TournamentHoleCardsReportCreator.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,19 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.Data;
-
 namespace Model.Reports
 {
-    public abstract class TournamentBaseReportCreator<T> : BaseReportCreator<T>
-        where T : ReportIndicators
+    public class TournamentHoleCardsReportCreator : HoleCardsReportCreator
     {
-        public override bool IsTournament
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool IsTournament => true;
     }
 }

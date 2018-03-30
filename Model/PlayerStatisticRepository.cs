@@ -502,7 +502,7 @@ namespace Model
 
             try
             {
-                var maxThreads = 8;
+                var maxThreads = Environment.ProcessorCount + 1;
 
                 var runningTasks = new List<Task>();
 

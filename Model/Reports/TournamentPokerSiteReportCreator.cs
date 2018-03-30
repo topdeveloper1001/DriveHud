@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="TournamentReportCreator.cs" company="Ace Poker Solutions">
+// <copyright file="TournamentPokerSiteReportCreator.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,6 +15,7 @@ using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Interfaces;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -22,15 +23,23 @@ using System.Linq;
 
 namespace Model.Reports
 {
-    public class TournamentReportCreator : TournamentBaseReportCreator<TournamentReportRecord>
+    public class TournamentPokerSiteReportCreator : TournamentBaseReportCreator<TournamentReportRecord>
     {
-        private IList<Tournaments> tournaments;
+        private Dictionary<short, TournamentGrouped> groupedTournaments;
 
         public override ObservableCollection<ReportIndicators> Create(List<Playerstatistic> statistics, bool forceRefresh = false)
-        {            
+        {
             var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
 
-            tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player?.PlayerIds);
+            groupedTournaments = ServiceLocator.Current.GetInstance<IDataService>()
+                .GetPlayerTournaments(player?.PlayerIds)
+                .GroupBy(x => x.SiteId)
+                .ToDictionary(x => x.Key, x => new TournamentGrouped
+                {
+                    TournamentIds = new HashSet<string>(x.Select(t => t.Tourneynumber).Distinct()),
+                    Started = x.Min(t => t.Firsthandtimestamp),
+                    Winning = x.Sum(t => t.Winningsincents)
+                });
 
             return base.Create(statistics, forceRefresh);
         }
@@ -39,7 +48,7 @@ namespace Model.Reports
         {
             var reports = new List<TournamentReportRecord>();
 
-            foreach (var chunkedIndicatorsGroup in chunkedIndicators.GroupBy(x => new { x.TournamentId, x.PokerSiteId }))
+            foreach (var chunkedIndicatorsGroup in chunkedIndicators.GroupBy(x => x.PokerSiteId))
             {
                 var report = chunkedIndicatorsGroup.First();
 
@@ -52,46 +61,39 @@ namespace Model.Reports
 
         protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<TournamentReportRecord> chunkedIndicators)
         {
-            if (tournaments == null)
+            if (groupedTournaments == null)
             {
                 return;
             }
 
-            foreach (var tournament in tournaments)
+            foreach (var tournaments in groupedTournaments)
             {
-                var reportRecord = new TournamentReportRecord();
+                var report = new TournamentReportRecord();
 
-                foreach (var playerstatistic in statistics
-                    .Where(x => tournament.Tourneynumber == x.TournamentId && tournament.SiteId == x.PokersiteId))
+                foreach (var playerstatistic in statistics.Where(x => tournaments.Key == x.PokersiteId && tournaments.Value.TournamentIds.Contains(x.TournamentId)))
                 {
-                    reportRecord.AddStatistic(playerstatistic);
+                    report.AddStatistic(playerstatistic);
                 }
 
-                if (reportRecord.StatisticsCount == 0)
+                if (report.TotalHands == 0)
                 {
                     continue;
                 }
 
-                reportRecord.PlayerName = tournament.PlayerName;
-                reportRecord.TournamentId = tournament.Tourneynumber;
-                reportRecord.PokerSiteId = tournament.SiteId;
+                report.Started = tournaments.Value.Started;
+                report.SetWinning(tournaments.Value.Winning);
 
-                reportRecord.SetBuyIn(tournament.Buyinincents);
-                reportRecord.SetTotalBuyIn(tournament.Buyinincents);
-                reportRecord.SetRake(tournament.Rakeincents);
-                reportRecord.SetRebuy(tournament.Rebuyamountincents);
-                reportRecord.SetTableType(tournament.Tourneytagscsv);
-                reportRecord.SetSpeed(tournament.SpeedtypeId);
-                reportRecord.SetGameType(tournament.PokergametypeId);
-                reportRecord.SetTournamentLength(tournament.Firsthandtimestamp, tournament.Lasthandtimestamp);
-                reportRecord.SetWinning(tournament.Winningsincents);
-
-                reportRecord.Started = tournament.Firsthandtimestamp;
-                reportRecord.FinishPosition = tournament.Finishposition;
-                reportRecord.TableSize = tournament.Tablesize;
-
-                chunkedIndicators.Add(reportRecord);
+                chunkedIndicators.Add(report);
             }
+        }
+
+        private class TournamentGrouped
+        {
+            public HashSet<string> TournamentIds { get; set; }
+
+            public DateTime Started { get; set; }
+
+            public int Winning { get; set; }
         }
     }
 }

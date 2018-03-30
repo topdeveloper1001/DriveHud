@@ -1978,6 +1978,7 @@ namespace DriveHUD.Entities
             Playerstatistic r = new Playerstatistic();
             r.GameNumber = b.GameNumber;
             r.PokersiteId = b.PokersiteId;
+            r.Time = b.Time;
             r.Pot = b.Pot;
             r.Numberofplayers = b.Numberofplayers;
             r.GametypeId = b.GametypeId;
