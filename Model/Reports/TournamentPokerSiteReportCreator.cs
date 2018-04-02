@@ -68,7 +68,10 @@ namespace Model.Reports
 
             foreach (var tournaments in groupedTournaments)
             {
-                var report = new TournamentReportRecord();
+                var report = new TournamentReportRecord
+                {
+                    PokerSiteId = tournaments.Key
+                };
 
                 foreach (var playerstatistic in statistics.Where(x => tournaments.Key == x.PokersiteId && tournaments.Value.TournamentIds.Contains(x.TournamentId)))
                 {
