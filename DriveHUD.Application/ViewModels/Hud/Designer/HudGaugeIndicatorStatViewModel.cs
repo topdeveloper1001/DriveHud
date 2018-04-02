@@ -51,7 +51,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                 if (hudElementViewModel != null)
                 {
-                    gaugeIndicatorStatInfo.HeatMapViewModel = (HudHeatMapViewModel)tool.Tools
+                    gaugeIndicatorStatInfo.HeatMapViewModel = (HudHeatMapViewModel)tool.Tools?
                         .OfType<HudLayoutHeatMapTool>()
                         .FirstOrDefault(x => x.BaseStat != null && x.BaseStat.Stat == stat.Stat)?
                         .CreateViewModel(hudElementViewModel);

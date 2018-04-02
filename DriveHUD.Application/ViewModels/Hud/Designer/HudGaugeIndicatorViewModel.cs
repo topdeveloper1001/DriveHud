@@ -69,7 +69,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     .Subscribe(x => RefreshGroupedStats());
             }
 
-            InitializeCommands();            
+            InitializeCommands();
         }
 
         /// <summary>
@@ -349,7 +349,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     return;
                 }
 
-                var heatMapTool = tool.Tools
+                var heatMapTool = tool.Tools?
                     .OfType<HudLayoutHeatMapTool>()
                     .FirstOrDefault(x => x.BaseStat.Stat == statInfo.Stat.Stat);
 
@@ -435,6 +435,11 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var factory = ServiceLocator.Current.GetInstance<IHudToolFactory>();
 
+            if (tool.Tools == null)
+            {
+                tool.Tools = new ReactiveList<HudLayoutTool>();
+            }
+
             var creationInfo = new HudToolCreationInfo
             {
                 HudElement = Parent,
@@ -473,7 +478,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 });
             }
 
-            this.RaisePropertyChanged(nameof(GroupedStats));
+            RefreshGroupedStats();
         }
 
         /// <summary>

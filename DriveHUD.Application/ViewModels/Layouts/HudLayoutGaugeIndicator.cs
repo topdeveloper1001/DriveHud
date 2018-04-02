@@ -34,6 +34,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
         {
             ToolType = HudDesignerToolType.GaugeIndicator;
             Stats = new ReactiveList<StatInfo>();
+            Tools = new ReactiveList<HudLayoutTool>();
         }
 
         [ProtoMember(2)]
@@ -100,7 +101,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
                 Text = Text,
                 HeaderText = HeaderText,
                 PositionInfo = PositionInfo?.Clone(),
-                Tools = new ReactiveList<HudLayoutTool>(Tools.Select(x => x.Clone()))
+                Tools = Tools != null ? new ReactiveList<HudLayoutTool>(Tools.Select(x => x.Clone())) : null
             };
 
             return cloned;
