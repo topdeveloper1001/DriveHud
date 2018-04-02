@@ -101,44 +101,41 @@ namespace Model
 
             try
             {
-                using (var pf = new PerformanceMonitor(nameof(GetPlayerStatisticFromFiles)))
+                foreach (var file in files)
                 {
-                    foreach (var file in files)
+                    RestoreBackupFile(file);
+
+                    using (var sr = new StreamReaderWrapper(file))
                     {
-                        RestoreBackupFile(file);
+                        string line = null;
 
-                        using (var sr = new StreamReaderWrapper(file))
+                        while (sr != null && ((line = sr.ReadLine()) != null))
                         {
-                            string line = null;
+                            Playerstatistic stat = null;
 
-                            while (sr != null && ((line = sr.ReadLine()) != null))
+                            try
                             {
-                                Playerstatistic stat = null;
-
-                                try
+                                if (string.IsNullOrWhiteSpace(line))
                                 {
-                                    if (string.IsNullOrWhiteSpace(line))
-                                    {
-                                        LogProvider.Log.Warn(this, $"Empty line in {file}");
-                                    }
-
-                                    /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
-                                    byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
-
-                                    using (var ms = new MemoryStream(byteAfter64))
-                                    {
-                                        stat = Serializer.Deserialize<Playerstatistic>(ms);
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    LogProvider.Log.Error($@"Could not process the file: {file}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
+                                    LogProvider.Log.Warn(this, $"Empty line in {file}");
                                 }
 
-                                if (stat != null)
+                                /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
+                                byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
+
+                                using (var ms = new MemoryStream(byteAfter64))
                                 {
-                                    yield return stat;
+                                    stat = Serializer.Deserialize<Playerstatistic>(ms);
                                 }
+                            }
+                            catch (Exception ex)
+                            {
+                                LogProvider.Log.Error($@"Could not process the file: {file}{Environment.NewLine}Error at line: {line}{Environment.NewLine}", ex);
+                            }
+
+                            if (stat != null)
+                            {
+                                yield return stat;
                             }
                         }
                     }
