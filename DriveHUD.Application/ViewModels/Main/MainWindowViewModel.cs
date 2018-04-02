@@ -453,12 +453,14 @@ namespace DriveHUD.Application.ViewModels
 
         private void UpdateCurrentView(UpdateViewRequestedEventArgs args)
         {
-            UpdateCurrentView(false);
-
             if (args != null && args.IsUpdateReportRequested)
             {
+                UpdateCurrentView(true);
                 ReportGadgetViewModel?.UpdateReport();
+                return;
             }
+
+            UpdateCurrentView(false);
         }
 
         private void UpdateCurrentView(bool forceUpdate)
