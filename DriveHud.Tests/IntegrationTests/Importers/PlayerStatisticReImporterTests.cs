@@ -330,7 +330,11 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.RaiseFlopCBetIn3BetPot, Is.EqualTo(expected.RaiseFlopCBetIn3BetPot), nameof(HudLightIndicators.RaiseFlopCBetIn3BetPot));
                 Assert.That(actual.FoldToThreeBetIP, Is.EqualTo(expected.FoldToThreeBetIP), nameof(HudLightIndicators.FoldToThreeBetIP));
                 Assert.That(actual.FoldToThreeBetOOP, Is.EqualTo(expected.FoldToThreeBetOOP), nameof(HudLightIndicators.FoldToThreeBetOOP));
-                Assert.That(actual.BetFlopWhenCheckedToSRP, Is.EqualTo(expected.BetFlopWhenCheckedToSRP), nameof(HudLightIndicators.BetFlopWhenCheckedToSRP));
+                Assert.That(actual.BetFlopWhenCheckedToSRP, Is.EqualTo(expected.BetFlopWhenCheckedToSRP), nameof(HudLightIndicators.BetFlopWhenCheckedToSRP));                
+                Assert.That(actual.TurnBet, Is.EqualTo(expected.TurnBet), nameof(HudLightIndicators.TurnBet));
+                Assert.That(actual.FlopBet, Is.EqualTo(expected.FlopBet), nameof(HudLightIndicators.FlopBet));
+                Assert.That(actual.RiverCBet, Is.EqualTo(expected.RiverCBet), nameof(HudLightIndicators.RiverCBet));
+                Assert.That(actual.FoldFlop, Is.EqualTo(expected.FoldFlop), nameof(HudLightIndicators.FoldFlop));
                 // add new stats here            
             });
         }

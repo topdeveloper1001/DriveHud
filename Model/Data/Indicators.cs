@@ -189,6 +189,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal RiverCBet
+        {
+            get
+            {
+                return GetPercentage(Source.Rivercontinuationbetmade, Source.Rivercontinuationbetpossible);
+            }
+        }
+
         public virtual decimal FlopCBetInThreeBetPot
         {
             get
@@ -682,6 +690,22 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.DidRiverBet, Source.CouldRiverBet);
+            }
+        }
+
+        public virtual decimal TurnBet
+        {
+            get
+            {
+                return GetPercentage(Source.DidTurnBet, Source.CouldTurnBet);
+            }
+        }
+
+        public virtual decimal FlopBet
+        {
+            get
+            {
+                return GetPercentage(Source.DidFlopBet, Source.CouldFlopBet);
             }
         }
 
@@ -1456,6 +1480,14 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.FoldedTurn, Source.FacedBetOnTurn);
+            }
+        }
+
+        public virtual decimal FoldFlop
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedFlop, Source.FacedBetOnFlop);
             }
         }
 

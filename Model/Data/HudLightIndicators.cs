@@ -189,6 +189,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto RiverCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RiverCBet,
+                    Occurred = Source.Rivercontinuationbetmade,
+                    CouldOccurred = Source.Rivercontinuationbetpossible
+                };
+            }
+        }
+
         public virtual StatDto FlopCBetInThreeBetPotObject
         {
             get
@@ -749,6 +762,32 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto TurnBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBet,
+                    Occurred = Source.DidTurnBet,
+                    CouldOccurred = Source.CouldTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto FlopBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBet,
+                    Occurred = Source.DidFlopBet,
+                    CouldOccurred = Source.CouldFlopBet
+                };
+            }
+        }
+
         public virtual StatDto CBetIPObject
         {
             get
@@ -1031,6 +1070,19 @@ namespace Model.Data
                     Value = FoldTurn,
                     Occurred = Source.FoldedTurn,
                     CouldOccurred = Source.FacedBetOnTurn
+                };
+            }
+        }
+
+        public virtual StatDto FoldFlopObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldFlop,
+                    Occurred = Source.FoldedFlop,
+                    CouldOccurred = Source.FacedBetOnFlop
                 };
             }
         }

@@ -983,4 +983,16 @@
   <data name="Enum_EnumReports_TournamentStats" xml:space="preserve">
     <value>Stats</value>
   </data>
+  <data name="Enum_Stat_FlopBet" xml:space="preserve">
+    <value>Flop Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldFlop" xml:space="preserve">
+    <value>Fold Flop%</value>
+  </data>
+  <data name="Enum_Stat_TripleBarrel" xml:space="preserve">
+    <value>Triple Barrel%</value>
+  </data>
+  <data name="Enum_Stat_TurnBet" xml:space="preserve">
+    <value>Turn Bet%</value>
+  </data>
 </root>

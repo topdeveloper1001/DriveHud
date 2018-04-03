@@ -436,6 +436,26 @@ namespace Model.Data
 
         #endregion
 
+        #region Bet stats
+
+        public override decimal TurnBet
+        {
+            get
+            {
+                return GetPercentage(didTurnBet, Source.CouldTurnBet);
+            }
+        }
+
+        public override decimal FlopBet
+        {
+            get
+            {
+                return GetPercentage(didFlopBet, Source.CouldFlopBet);
+            }
+        }
+
+        #endregion
+
         #region Calculated stats
 
         [ProtoMember(12)]

@@ -571,15 +571,20 @@ namespace Model
             stat.Rivercallippassonturncb = riverIpPassFlopCbet.Called ? 1 : 0;
             stat.Riverraiseippassonturncb = riverIpPassFlopCbet.Raised ? 1 : 0;
 
+            var playerPlayedRiver = playerHandActions.Any(x => x.Street == Street.River);
+
             stat.CheckedRiverAfterBBLine = betOnFlop && betOnTurn && playerHandActions.Any(x => x.Street == Street.River && x.IsCheck) ? 1 : 0;
-            stat.CouldCheckRiverAfterBBLine = playedRiver && betOnFlop && betOnTurn && parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
+            stat.CouldCheckRiverAfterBBLine = playerPlayedRiver && betOnFlop && betOnTurn && parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
 
             var checkOnTurn = playerHandActions.TurnAny(x => x.IsCheck);
 
             stat.DidRiverBet = betOnRiver ? 1 : 0;
-            stat.CouldRiverBet = parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
+            stat.CouldRiverBet = playerPlayedRiver && parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
             stat.DidBetRiverOnBXLine = betOnFlop && checkOnTurn && betOnRiver ? 1 : 0;
             stat.CouldBetRiverOnBXLine = betOnFlop && checkOnTurn && stat.CouldRiverBet == 1 ? 1 : 0;
+
+            stat.CouldTurnBet = playerHandActions.Any(x => x.Street == Street.Turn) && parsedHand.Turn.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
+            stat.CouldFlopBet = playerHandActions.Any(x => x.Street == Street.Flop) && parsedHand.Flop.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
 
             stat.Playedyearandmonth = int.Parse(parsedHand.DateOfHandUtc.ToString("yyyyMM"));
 
@@ -809,6 +814,17 @@ namespace Model
             {
                 stat.DidFlopCheckBehind = playedTurn && lastFlopAction.PlayerName == player && lastFlopAction.IsCheck ? 1 : 0;
                 stat.CouldFlopCheckBehind = preflopInPosition && !parsedHand.Flop.Any(x => x.IsBet() && x.PlayerName != player) ? 1 : 0;
+            }
+
+            if (playedFlop)
+            {
+                var playerActionOnFlopBet = GetPlayerActionOnBet(parsedHand.Flop, player, true, true);
+
+                if (playerActionOnFlopBet != null)
+                {
+                    stat.FacedBetOnFlop = 1;
+                    stat.FoldedFlop = playerActionOnFlopBet.IsFold ? 1 : 0;
+                }
             }
 
             if (playedTurn)

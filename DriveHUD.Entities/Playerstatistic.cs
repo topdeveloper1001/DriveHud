@@ -989,6 +989,18 @@ namespace DriveHUD.Entities
         [ProtoMember(354)]
         public virtual uint TableTypeDescription { get; set; }
 
+        [ProtoMember(355)]
+        public virtual int CouldTurnBet { get; set; }
+
+        [ProtoMember(356)]
+        public virtual int CouldFlopBet { get; set; }
+
+        [ProtoMember(357)]
+        public virtual int FoldedFlop { get; set; }
+
+        [ProtoMember(358)]
+        public virtual int FacedBetOnFlop { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1771,6 +1783,12 @@ namespace DriveHUD.Entities
             DidRiverBet += a.DidRiverBet;
             CouldRiverBet += a.CouldRiverBet;
 
+            CouldTurnBet += a.CouldTurnBet;
+            CouldFlopBet += a.CouldFlopBet;
+
+            FoldedFlop += a.FoldedFlop;
+            FacedBetOnFlop += a.FacedBetOnFlop;
+
             IsRelativePosition = a.IsRelativePosition;
             IsRelative3BetPosition = a.IsRelative3BetPosition;
 
@@ -2187,6 +2205,12 @@ namespace DriveHUD.Entities
             r.CouldBetRiverOnBXLine = a.CouldBetRiverOnBXLine + b.CouldBetRiverOnBXLine;
             r.DidRiverBet = a.DidRiverBet + b.DidRiverBet;
             r.CouldRiverBet = a.CouldRiverBet + b.CouldRiverBet;
+
+            r.CouldTurnBet = a.CouldTurnBet + b.CouldTurnBet;
+            r.CouldFlopBet = a.CouldFlopBet + b.CouldFlopBet;
+
+            r.FoldedFlop = a.FoldedFlop + b.FoldedFlop;
+            r.FacedBetOnFlop = a.FacedBetOnFlop + b.FacedBetOnFlop;
 
             r.IsRaisedLimpers = a.IsRaisedLimpers + b.IsRaisedLimpers;
             r.SawUnopenedPot = a.SawUnopenedPot + b.SawUnopenedPot;

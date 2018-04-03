@@ -1465,6 +1465,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Flop Bet%.
+        /// </summary>
+        internal static string Enum_Stat_FlopBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Flop Overbet Pot%.
         /// </summary>
         internal static string Enum_Stat_FlopBetSizeMoreThanOne {
@@ -1578,6 +1587,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_FlopCheckRaise {
             get {
                 return ResourceManager.GetString("Enum_Stat_FlopCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold Flop%.
+        /// </summary>
+        internal static string Enum_Stat_FoldFlop {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldFlop", resourceCulture);
             }
         }
         
@@ -2347,6 +2365,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Triple Barrel%.
+        /// </summary>
+        internal static string Enum_Stat_TripleBarrel {
+            get {
+                return ResourceManager.GetString("Enum_Stat_TripleBarrel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to True Aggression% (TAP).
         /// </summary>
         internal static string Enum_Stat_TrueAggression {
@@ -2370,6 +2397,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_TurnAGG {
             get {
                 return ResourceManager.GetString("Enum_Stat_TurnAGG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet%.
+        /// </summary>
+        internal static string Enum_Stat_TurnBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_TurnBet", resourceCulture);
             }
         }
         

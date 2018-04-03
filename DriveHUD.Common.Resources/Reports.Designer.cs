@@ -790,6 +790,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Flop Bet%.
+        /// </summary>
+        internal static string Reports_Column_FlopBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Flop Overbet Pot%.
         /// </summary>
         internal static string Reports_Column_FlopBetSizeMoreThanOne {
@@ -867,6 +876,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_FoldCBet {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold Flop%.
+        /// </summary>
+        internal static string Reports_Column_FoldFlop {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldFlop", resourceCulture);
             }
         }
         
@@ -1015,7 +1033,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold to River C-Bet%.
+        ///   Looks up a localized string similar to Fold to Triple Barrel%.
         /// </summary>
         internal static string Reports_Column_FoldToRiverCBet {
             get {
@@ -1618,6 +1636,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Triple Barrel%.
+        /// </summary>
+        internal static string Reports_Column_TripleBarrel {
+            get {
+                return ResourceManager.GetString("Reports_Column_TripleBarrel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to True Aggression% (TAP).
         /// </summary>
         internal static string Reports_Column_TrueAgg {
@@ -1641,6 +1668,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_TurnAgg {
             get {
                 return ResourceManager.GetString("Reports_Column_TurnAgg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Bet%.
+        /// </summary>
+        internal static string Reports_Column_TurnBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnBet", resourceCulture);
             }
         }
         

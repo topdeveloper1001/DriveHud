@@ -67,6 +67,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
             InitializeEventAggregator(unityContainer);
             InitializeOpponentReportService(unityContainer);
             InitializeEquityResolver(unityContainer);
+            InitializeReportStatusService(unityContainer);
             InitializeResources();            
         }
 
@@ -228,6 +229,12 @@ namespace DriveHud.Tests.IntegrationTests.Base
         {
             var opponentReportService = Substitute.For<IOpponentReportService>();
             unityContainer.RegisterInstance(opponentReportService);
+        }
+
+        protected virtual void InitializeReportStatusService(UnityContainer unityContainer)
+        {
+            var reportStatusService = Substitute.For<IReportStatusService>();
+            unityContainer.RegisterInstance(reportStatusService);
         }
 
         protected virtual void InitializeResources()

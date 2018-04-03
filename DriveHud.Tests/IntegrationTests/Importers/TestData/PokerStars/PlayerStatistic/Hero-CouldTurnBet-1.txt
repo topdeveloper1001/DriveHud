@@ -1,0 +1,41 @@
+PokerStars Game #47185492589:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:45:56 ET
+Table 'Neckar VII' 6-max Seat #5 is the button
+Seat 1: Marker275 ($148.10 in chips) 
+Seat 2: Hero ($319.10 in chips) 
+Seat 3: Fierytycoon ($239 in chips) 
+Seat 4: jaeh00d ($203 in chips) 
+Seat 5: imthesky ($200 in chips) 
+Marker275: posts small blind $1
+Hero: posts big blind $2
+*** HOLE CARDS ***
+Fierytycoon: raises $4 to $6
+jaeh00d: calls $6
+imthesky: folds 
+Marker275: folds 
+Hero: calls $4
+*** FLOP *** [7h Ts 9h]
+Hero: checks 
+Fierytycoon: checks 
+jaeh00d: checks 
+*** TURN *** [7h Ts 9h] [6c]
+Hero: checks 
+Fierytycoon: checks 
+jaeh00d: checks 
+*** RIVER *** [7h Ts 9h 6c] [Td]
+Hero: checks 
+Fierytycoon: checks 
+jaeh00d: checks 
+*** SHOW DOWN ***
+Hero: shows [3d 4d] (a pair of Tens)
+Fierytycoon: shows [Kc Ac] (a pair of Tens - Ace kicker)
+jaeh00d: mucks hand 
+Fierytycoon collected $18.05 from pot
+*** SUMMARY ***
+Total pot $19 | Rake $0.95 
+Board [7h Ts 9h 6c Td]
+Seat 1: Marker275 (small blind) folded before Flop
+Seat 2: Hero (big blind) showed [3d 4d] and lost with a pair of Tens
+Seat 3: Fierytycoon showed [Kc Ac] and won ($18.05) with a pair of Tens
+Seat 4: jaeh00d mucked
+Seat 5: imthesky (button) folded before Flop (didn't bet)
+
