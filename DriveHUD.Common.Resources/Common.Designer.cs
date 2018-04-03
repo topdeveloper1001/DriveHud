@@ -926,6 +926,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Selected Stats.
+        /// </summary>
+        internal static string Common_Hud_SelectedStats {
+            get {
+                return ResourceManager.GetString("Common_Hud_SelectedStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show line bar.
         /// </summary>
         internal static string Common_Hud_ShowLineBarTooltip {

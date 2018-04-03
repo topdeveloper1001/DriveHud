@@ -34,6 +34,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
@@ -167,6 +168,42 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private string statFilter;
+
+        public string StatFilter
+        {
+            get
+            {
+                return statFilter;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref statFilter, value);
+                ApplyFilterToCollectionView();
+            }
+        }
+
+        private HashSet<Stat> statInfoCollectionDuplicates = new HashSet<Stat>();
+
+        private List<StatInfo> statInfoCollectionNotDuplicates = new List<StatInfo>();
+
+        private void ApplyFilterToCollectionView()
+        {
+            statInfoCollectionDuplicates.Clear();
+            statInfoCollectionNotDuplicates.Clear();
+            StatInfoCollectionView.SortDescriptions.Clear();
+            StatInfoCollectionView.GroupDescriptions.Clear();
+
+            if (string.IsNullOrEmpty(statFilter))
+            {
+                StatInfoCollectionView.GroupDescriptions.Add(new PropertyGroupDescription("StatInfoGroup.Name"));
+                StatInfoCollectionView.SortDescriptions.Add(new SortDescription("GroupName", ListSortDirection.Ascending));
+            }
+
+            StatInfoCollectionView.SortDescriptions.Add(new SortDescription("Caption", ListSortDirection.Ascending));
+            StatInfoCollectionView.Refresh();
+        }
+
         private ReactiveList<StatInfo> statInfoCollection;
 
         /// <summary>
@@ -198,7 +235,24 @@ namespace DriveHUD.Application.ViewModels
                         return false;
                     }
 
-                    return stat.IsListed && !stat.IsNotVisible;
+                    var filterCondition = true;
+
+                    if (!string.IsNullOrEmpty(statFilter))
+                    {
+                        filterCondition = stat.Caption.IndexOf(statFilter, StringComparison.OrdinalIgnoreCase) >= 0;
+
+                        if (!statInfoCollectionDuplicates.Contains(stat.Stat))
+                        {
+                            statInfoCollectionDuplicates.Add(stat.Stat);
+                            statInfoCollectionNotDuplicates.Add(stat);
+                        }
+                        else
+                        {
+                            filterCondition = filterCondition && statInfoCollectionNotDuplicates.Any(x => ReferenceEquals(x, stat));
+                        }
+                    }
+
+                    return stat.IsListed && !stat.IsNotVisible && filterCondition;
                 };
 
                 var statFiltering = collectionViewSource as ICollectionViewLiveShaping;
@@ -208,6 +262,8 @@ namespace DriveHUD.Application.ViewModels
                     statFiltering.LiveFilteringProperties.Add(nameof(StatInfo.IsNotVisible));
                     statFiltering.IsLiveFiltering = true;
                 }
+
+                statFiltering.IsLiveSorting = true;
 
                 StatInfoCollectionView = collectionViewSource;
             }

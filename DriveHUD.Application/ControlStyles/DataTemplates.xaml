@@ -199,6 +199,7 @@
                     HorizontalAlignment="Left"
                     Foreground="#4a4b4f"
                     Background="#1d1e20"
+                    FontWeight="Bold"
                     FontSize="13"
                     Text="{Binding Caption}" />
 

@@ -70,18 +70,12 @@
                         <Setter
                             Property="Background"
                             Value="{StaticResource BackgroundBrush1}" />
-                        <!--<Setter
-                            Property="Height"
-                            Value="750" />-->
                         <Setter
                             Property="SizeToContent"
                             Value="WidthAndHeight" />
                         <Setter
                             Property="ResizeMode"
                             Value="CanResize" />
-                        <!--<Setter
-                            Property="Width"
-                            Value="1000" />-->
                         <Setter
                             Property="SnapsToDevicePixels"
                             Value="True" />
