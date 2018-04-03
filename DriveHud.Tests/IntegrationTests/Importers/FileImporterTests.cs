@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Common.Log;
 using DriveHud.Tests.IntegrationTests.Base;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;

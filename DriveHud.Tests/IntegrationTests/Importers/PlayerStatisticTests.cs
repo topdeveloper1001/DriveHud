@@ -10,12 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Common.Log;
 using DriveHud.Tests.IntegrationTests.Base;
+using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model;
-using Model.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
 using System;
