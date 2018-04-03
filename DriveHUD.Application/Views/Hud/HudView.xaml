@@ -1134,7 +1134,7 @@
                                         <Setter.Value>
                                             <ControlTemplate>
                                                 <telerik:RadExpander
-                                                    IsExpanded="True"
+                                                    IsExpanded="False"
                                                     FontWeight="Bold"
                                                     Foreground="Silver"
                                                     Style="{StaticResource RadExpanderStyle_TripleArrow}"
