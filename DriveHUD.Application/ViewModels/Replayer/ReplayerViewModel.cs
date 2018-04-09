@@ -349,6 +349,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         }
 
         private ReplayerPlayerViewModel _playerInState { get; set; }
+
         private void RefreshBoard(List<decimal> equities, Street street)
         {
             foreach (ReplayerTableState replayerTableState in TableStateList.Where(st => st.CurrentStreet == street))

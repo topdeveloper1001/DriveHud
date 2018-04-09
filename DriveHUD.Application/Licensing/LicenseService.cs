@@ -337,6 +337,7 @@ namespace DriveHUD.Application.Licensing
 
             if (!errorOccurred)
             {
+                LogProvider.Log.Info($"License has been reset.");
                 return;
             }
 

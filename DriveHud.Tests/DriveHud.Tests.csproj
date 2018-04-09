@@ -31,6 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -263,6 +264,7 @@
     <Compile Include="UnitTests\IgnitionTableTitleTests.cs" />
     <Compile Include="UnitTests\LightIndicatorsTests.cs" />
     <Compile Include="UnitTests\LoCardsComparerTests.cs" />
+    <Compile Include="UnitTests\OddsCalculatorTests.cs" />
     <Compile Include="UnitTests\ParserUtilsTests.cs" />
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />
@@ -742,6 +744,10 @@
     <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
       <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
       <Name>DriveHUD.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.EquityCalculator.Base\DriveHUD.EquityCalculator.Base.csproj">
+      <Project>{18f3327c-ee94-478a-80b8-a89bda614c65}</Project>
+      <Name>DriveHUD.EquityCalculator.Base</Name>
     </ProjectReference>
     <ProjectReference Include="..\DriveHUD.Importer\DriveHUD.Importers.csproj">
       <Project>{67ee116c-c86b-46aa-964a-f80cae372a8b}</Project>

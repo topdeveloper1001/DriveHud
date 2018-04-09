@@ -367,13 +367,13 @@ namespace DriveHud.Tests.UnitTests
                         {
                             PlayerName = "NORIALEX99",
                             Equity = 22.3m,
-                            EVDiff = 2.09m
+                            EVDiff = 1.99m
                         },
                         new EquityData
                         {
                             PlayerName = "bo12327",
                             Equity = 51.2m,
-                            EVDiff = -0.8m
+                            EVDiff = -0.69m
                         }
               }).SetName("EVDifference: OmahaHiLo-ExpectedValue-4");
         }

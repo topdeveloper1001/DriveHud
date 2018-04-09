@@ -12,6 +12,7 @@
 
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.WinApi;
 using DriveHUD.EquityCalculator.Base.OmahaCalculations;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
@@ -22,12 +23,19 @@ using Model.Enums;
 using Model.Extensions;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace Model.Solvers
 {
     internal class EquitySolver : IEquitySolver
     {
+        public EquitySolver()
+        {
+            LoadPokerEvalLibrary();
+        }
+
         public Dictionary<string, EquityData> CalculateEquity(HandHistory handHistory)
         {
             if (handHistory == null)
@@ -209,9 +217,13 @@ namespace Model.Solvers
                      ? handHistory.CommunityCards.GetBoardOnStreet(street)
                      : handHistory.CommunityCards;
 
-                var deadCards = string.Join(string.Empty, mainPotPlayers.Except(equityPlayers).Where(x => x.HoleCards != null).Select(x => x.HoleCards.ToString()));
+                var deadCards = mainPotPlayers.Except(equityPlayers).Where(x => x.HoleCards != null).Select(x => x.HoleCards).ToArray();
 
-                if (gameType == GeneralGameTypeEnum.Holdem)
+                if (pokerEvalLibLoaded)
+                {
+                    CalculateEquity(eligibleEquityPlayers, street, boardCards, deadCards, gameType, potIndex);
+                }
+                else if (gameType == GeneralGameTypeEnum.Holdem)
                 {
                     CalculateHoldemEquity(eligibleEquityPlayers, street, boardCards, deadCards, potIndex);
                 }
@@ -226,13 +238,52 @@ namespace Model.Solvers
             }
         }
 
+        private void CalculateEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, HoleCards[] dead, GeneralGameTypeEnum gameType, int potIndex)
+        {
+            var cardsDelimeter = " ";
+
+            var gameTypeArg = gameType == GeneralGameTypeEnum.Holdem ? "-h" :
+                    (gameType == GeneralGameTypeEnum.OmahaHiLo ? "-o8" : "-o");
+
+            var playerCardsArgs = string.Join(" - ", players.Select(x => x.HoleCards.ToString(cardsDelimeter)).ToArray());
+            var boardCardsArgs = boardCards.ToString(cardsDelimeter);
+            var deadCardsArgs = string.Join(cardsDelimeter, dead.Select(x => x.ToString(cardsDelimeter)).ToArray());
+
+            // use monte-carlo simulation for omaha w/o board
+            var prefix = gameType != GeneralGameTypeEnum.Holdem && string.IsNullOrEmpty(boardCardsArgs) ? "p -mc 10000" : "p";
+
+            var argsLine = $"{prefix} {gameTypeArg} {playerCardsArgs}";
+
+            if (!string.IsNullOrEmpty(boardCardsArgs))
+            {
+                argsLine += $" -- {boardCardsArgs}";
+            }
+
+            if (!string.IsNullOrEmpty(deadCardsArgs))
+            {
+                argsLine += $" / {deadCardsArgs}";
+            }
+
+            var argv = argsLine.Split(' ');
+
+            CalculateEquity(argv.Length, argv, out CalculationResult result);
+
+            unsafe
+            {
+                for (var i = 0; i < players.Count; i++)
+                {
+                    players[i].Equity[potIndex] = (decimal)result.ev[i];
+                }
+            }
+        }
+
         /// <summary>
         /// Calculates Holdem equity for the specified players which last action was at the specified street
         /// </summary>
         /// <param name="players">Player to calculate equity</param>
         /// <param name="street">Street</param>
         /// <param name="boardCards">Board cards</param>
-        private void CalculateHoldemEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, string dead, int potIndex)
+        private void CalculateHoldemEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, HoleCards[] dead, int potIndex)
         {
             var wins = new long[players.Count];
             var losses = new long[players.Count];
@@ -240,7 +291,9 @@ namespace Model.Solvers
 
             long totalhands = 0;
 
-            Hand.HandWinOdds(players.Select(x => x.HoleCards.ToString()).ToArray(), boardCards.ToString(), dead, wins, ties, losses, ref totalhands);
+            var deadCards = string.Join(string.Empty, dead.Select(x => x.ToString()));
+
+            Hand.HandWinOdds(players.Select(x => x.HoleCards.ToString()).ToArray(), boardCards.ToString(), deadCards, wins, ties, losses, ref totalhands);
 
             if (totalhands == 0)
             {
@@ -462,6 +515,51 @@ namespace Model.Solvers
             }
 
             return equityPlayers.Values.ToList();
+        }
+
+        private static bool pokerEvalLibLoaded;
+
+        private void LoadPokerEvalLibrary()
+        {
+            if (pokerEvalLibLoaded)
+            {
+                return;
+            }
+
+#if DEBUG
+            var pokerEvalLib = Path.Combine(Environment.CurrentDirectory, "pokereval.dll");
+#else
+            var pokerEvalLib = Path.Combine(Environment.CurrentDirectory, "bin", "pokereval.dll");
+#endif
+
+            if (!File.Exists(pokerEvalLib))
+            {
+                LogProvider.Log.Error($"Library {pokerEvalLib} has not been found");
+            }
+
+            if (WinApi.LoadLibraryEx(pokerEvalLib, IntPtr.Zero, 0) == IntPtr.Zero)
+            {
+                LogProvider.Log.Error($"Library {pokerEvalLib} has not been loaded: {Marshal.GetLastWin32Error()}");
+            }
+
+            pokerEvalLibLoaded = true;
+        }
+
+        [DllImport("pokereval.dll", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
+        private static extern int CalculateEquity(int argc,
+           [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 0, ArraySubType = UnmanagedType.LPStr)] string[] argv,
+           out CalculationResult result);
+
+        [StructLayout(LayoutKind.Sequential)]
+        private unsafe struct CalculationResult
+        {
+            public fixed uint nwinhi[12];
+            public fixed uint ntiehi[12];
+            public fixed uint nlosehi[12];
+            public fixed uint nwinlo[12];
+            public fixed uint ntielo[12];
+            public fixed uint nloselo[12];
+            public fixed double ev[12];
         }
 
         /// <summary>
