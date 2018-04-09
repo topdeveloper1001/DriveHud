@@ -264,7 +264,6 @@
     <Compile Include="UnitTests\IgnitionTableTitleTests.cs" />
     <Compile Include="UnitTests\LightIndicatorsTests.cs" />
     <Compile Include="UnitTests\LoCardsComparerTests.cs" />
-    <Compile Include="UnitTests\OddsCalculatorTests.cs" />
     <Compile Include="UnitTests\ParserUtilsTests.cs" />
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />

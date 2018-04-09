@@ -80,6 +80,49 @@ namespace Model.Solvers
             return result;
         }
 
+        public decimal[] CalculateEquity(HoleCards[] playersCards, HandHistories.Objects.Cards.Card[] boardCards, HoleCards[] dead, GeneralGameTypeEnum gameType)
+        {
+            var cardsDelimeter = " ";
+
+            var gameTypeArg = gameType == GeneralGameTypeEnum.Holdem ? "-h" :
+                    (gameType == GeneralGameTypeEnum.OmahaHiLo ? "-o8" : "-o");
+
+            var playerCardsArgs = string.Join(" - ", playersCards.Select(x => x.ToString(cardsDelimeter)).ToArray());
+            var boardCardsArgs = string.Join(cardsDelimeter, boardCards.Select(x => x.ToString()));
+            var deadCardsArgs = string.Join(cardsDelimeter, dead.Select(x => x.ToString(cardsDelimeter)).ToArray());
+
+            // use monte-carlo simulation for omaha w/o board
+            var prefix = gameType != GeneralGameTypeEnum.Holdem && string.IsNullOrEmpty(boardCardsArgs) ? "p -mc 10000" : "p";
+
+            var argsLine = $"{prefix} {gameTypeArg} {playerCardsArgs}";
+
+            if (!string.IsNullOrEmpty(boardCardsArgs))
+            {
+                argsLine += $" -- {boardCardsArgs}";
+            }
+
+            if (!string.IsNullOrEmpty(deadCardsArgs))
+            {
+                argsLine += $" / {deadCardsArgs}";
+            }
+
+            var argv = argsLine.Split(' ');
+
+            CalculateEquity(argv.Length, argv, out CalculationResult result);
+
+            var equity = new decimal[playersCards.Length];
+
+            unsafe
+            {
+                for (var i = 0; i < playersCards.Length; i++)
+                {
+                    equity[i] = (decimal)result.ev[i];
+                }
+            }
+
+            return equity;
+        }
+
         /// <summary>
         /// Calculates rake of each pot accordingly on pot sizes
         /// </summary>
@@ -237,43 +280,17 @@ namespace Model.Solvers
                 LogProvider.Log.Error(this, $"Could not calculate equity for hand #{handHistory.HandId}", e);
             }
         }
-
+        
         private void CalculateEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, HoleCards[] dead, GeneralGameTypeEnum gameType, int potIndex)
         {
-            var cardsDelimeter = " ";
+            var equity = CalculateEquity(players.Select(x => x.HoleCards).ToArray(),
+                boardCards.ToArray(),
+                dead,
+                gameType);
 
-            var gameTypeArg = gameType == GeneralGameTypeEnum.Holdem ? "-h" :
-                    (gameType == GeneralGameTypeEnum.OmahaHiLo ? "-o8" : "-o");
-
-            var playerCardsArgs = string.Join(" - ", players.Select(x => x.HoleCards.ToString(cardsDelimeter)).ToArray());
-            var boardCardsArgs = boardCards.ToString(cardsDelimeter);
-            var deadCardsArgs = string.Join(cardsDelimeter, dead.Select(x => x.ToString(cardsDelimeter)).ToArray());
-
-            // use monte-carlo simulation for omaha w/o board
-            var prefix = gameType != GeneralGameTypeEnum.Holdem && string.IsNullOrEmpty(boardCardsArgs) ? "p -mc 10000" : "p";
-
-            var argsLine = $"{prefix} {gameTypeArg} {playerCardsArgs}";
-
-            if (!string.IsNullOrEmpty(boardCardsArgs))
+            for (var i = 0; i < players.Count; i++)
             {
-                argsLine += $" -- {boardCardsArgs}";
-            }
-
-            if (!string.IsNullOrEmpty(deadCardsArgs))
-            {
-                argsLine += $" / {deadCardsArgs}";
-            }
-
-            var argv = argsLine.Split(' ');
-
-            CalculateEquity(argv.Length, argv, out CalculationResult result);
-
-            unsafe
-            {
-                for (var i = 0; i < players.Count; i++)
-                {
-                    players[i].Equity[potIndex] = (decimal)result.ev[i];
-                }
+                players[i].Equity[potIndex] = equity[i];
             }
         }
 

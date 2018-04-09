@@ -10,7 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using HandHistories.Objects.Cards;
 using HandHistories.Objects.Hand;
+using Model.Enums;
 using System.Collections.Generic;
 
 namespace Model.Solvers
@@ -18,5 +20,7 @@ namespace Model.Solvers
     public interface IEquitySolver
     {
         Dictionary<string, EquityData> CalculateEquity(HandHistory handHistory);
+
+        decimal[] CalculateEquity(HoleCards[] playersCards, HandHistories.Objects.Cards.Card[] boardCards, HoleCards[] dead, GeneralGameTypeEnum gameType);
     }
 }
