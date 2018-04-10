@@ -302,6 +302,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
             // searching for dead cards and removing this player from list of ActivePlayerHasHoleCard 
             ActivePlayerHasHoleCardFolded = new List<Player>();
 
+            AllDeadCards.Clear();
+
             foreach (ReplayerTableState replayerTableState in TableStateList)
             {
                 Player playerInTableState = CurrentGame.Players.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName);
@@ -324,7 +326,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             var equities = equitySolver.CalculateEquity(ActivePlayerHasHoleCard.Select(x => x.HoleCards).ToArray(),
                 CurrentBoard,
-                AllDeadCards.ToArray(),
+                AllDeadCards.Distinct(new LambdaComparer<HoleCards>((x, y) => x.ToString().Equals(y.ToString()))).ToArray(),
                 gameType)
                 .Select(x => Math.Round(x * 100, 2))
                 .ToArray();

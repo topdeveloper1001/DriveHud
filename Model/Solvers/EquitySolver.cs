@@ -23,6 +23,7 @@ using Model.Enums;
 using Model.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -38,6 +39,9 @@ namespace Model.Solvers
 
         public Dictionary<string, EquityData> CalculateEquity(HandHistory handHistory)
         {
+            var sw = new Stopwatch();
+            sw.Start();
+
             if (handHistory == null)
             {
                 throw new ArgumentNullException(nameof(handHistory));
@@ -76,6 +80,13 @@ namespace Model.Solvers
                 EVDiff = x.EvDiff,
                 PlayerName = x.Name
             }).ToDictionary(x => x.PlayerName);
+
+            sw.Stop();
+
+            if (sw.ElapsedMilliseconds > 5000)
+            {
+                LogProvider.Log.Info($"Hand #{handHistory.HandId} was processed too slow (>5s) because of EquityCalculations");
+            }
 
             return result;
         }
@@ -280,7 +291,7 @@ namespace Model.Solvers
                 LogProvider.Log.Error(this, $"Could not calculate equity for hand #{handHistory.HandId}", e);
             }
         }
-        
+
         private void CalculateEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, HoleCards[] dead, GeneralGameTypeEnum gameType, int potIndex)
         {
             var equity = CalculateEquity(players.Select(x => x.HoleCards).ToArray(),
@@ -552,11 +563,13 @@ namespace Model.Solvers
             if (!File.Exists(pokerEvalLib))
             {
                 LogProvider.Log.Error($"Library {pokerEvalLib} has not been found");
+                return;
             }
 
             if (WinApi.LoadLibraryEx(pokerEvalLib, IntPtr.Zero, 0) == IntPtr.Zero)
             {
                 LogProvider.Log.Error($"Library {pokerEvalLib} has not been loaded: {Marshal.GetLastWin32Error()}");
+                return;
             }
 
             pokerEvalLibLoaded = true;

@@ -35,6 +35,7 @@ using NHibernate.Linq;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -400,6 +401,14 @@ namespace DriveHUD.Importers
 
                             for (var i = 0; i < parsingResult.Count; i++)
                             {
+                                Stopwatch sw = null;
+
+                                if (!string.IsNullOrEmpty(importerSession))
+                                {
+                                    sw = new Stopwatch();
+                                    sw.Start();
+                                }
+
                                 var handHistory = parsingResult[i];
 
                                 // skip error hand
@@ -435,6 +444,12 @@ namespace DriveHUD.Importers
                                 {
                                     progress.Report(new LocalizableString("Progress_StoppingImport"));
                                     break;
+                                }
+
+                                if (sw != null)
+                                {
+                                    sw.Stop();
+                                    handHistory.Duration = sw.ElapsedMilliseconds;
                                 }
                             }
 

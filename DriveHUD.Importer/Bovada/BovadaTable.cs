@@ -25,6 +25,7 @@ using Prism.Events;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -1020,7 +1021,7 @@ namespace DriveHUD.Importers.Bovada
                     continue;
                 }
 
-                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
+                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported in {2}ms. [{1}]", result.HandHistory.Gamenumber, Identifier, result.Duration));
 
                 var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo, result.Source.Hero, result.Source.HandId);
 

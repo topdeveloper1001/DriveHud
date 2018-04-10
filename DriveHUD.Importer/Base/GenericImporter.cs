@@ -62,6 +62,11 @@ namespace DriveHUD.Importers
 
             IEnumerable<ParsingResult> parsingResult = null;
 
+            if (gameInfo.GameNumber != 0)
+            {
+                LogProvider.Log.Info(this, $"Hand {gameInfo.GameNumber} processed. [{SiteString}]");
+            }
+
             try
             {
                 parsingResult = ImportHand(handHistory, gameInfo, importer, progress);
@@ -106,7 +111,7 @@ namespace DriveHUD.Importers
                     continue;
                 }
 
-                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, SiteString));
+                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported in {2}ms. [{1}]", result.HandHistory.Gamenumber, SiteString, result.Duration));
 
                 var playerList = GetPlayerList(result.Source);
 
