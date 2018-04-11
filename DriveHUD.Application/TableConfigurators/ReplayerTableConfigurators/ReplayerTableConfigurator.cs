@@ -235,7 +235,7 @@ namespace DriveHUD.Application.TableConfigurators
         private ReplayerHudPanel CreateHudPanel(ReplayerViewModel viewModel, int zeroBasedSeatNumber)
         {
             var player = viewModel.PlayersCollection[zeroBasedSeatNumber];
-            
+
             player.Parent = new HudElementViewModel { Seat = zeroBasedSeatNumber };
 
             var panel = new ReplayerHudPanel
@@ -303,7 +303,7 @@ namespace DriveHUD.Application.TableConfigurators
             if (storageModel.PlayerSelectedItem.Name == replayerPlayer.Name &&
                 (short?)storageModel.PlayerSelectedItem.PokerSite == replayerViewModel.CurrentHand.PokersiteId)
             {
-                hudIndicators = new HudLightIndicators(storageModel.StatisticCollection);
+                hudIndicators = new HudLightIndicators(storageModel.StatisticCollection.ToList());
             }
             else
             {

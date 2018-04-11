@@ -658,6 +658,24 @@
     <Content Include="UnitTests\TestData\Ignition\ign-zone-2018-03-18-4.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\SNG-4-max-no-relocate-ipoker.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\SNG-4-max-no-relocate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\SNG-4-max-relocate-ipoker-pivot-1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\SNG-4-max-relocate-ipoker-pivot-2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\SNG-4-max-relocate-ipoker-std.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\SNG-4-max-relocate.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\WindfallHand-3max-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

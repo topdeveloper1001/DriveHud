@@ -22,7 +22,6 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Xml.Linq;
 
 namespace DriveHUD.Importers.BetOnline
@@ -232,8 +231,20 @@ namespace DriveHUD.Importers.BetOnline
                 playersOnTable[actions.Seat].Bet = bet;
             }
 
+            // in case of 4-max table
+            if (maxPlayers == 4)
+            {
+                foreach (var player in game.General.Players)
+                {
+                    player.Seat = player.Seat * 2;
+                }
 
-            RelocateSeats(game.General.Players);
+                RelocateSeats(game.General.Players, 8);
+            }
+            else
+            {
+                RelocateSeats(game.General.Players, maxPlayers);
+            }
 
             // seats and players
             foreach (var player in game.General.Players)
@@ -619,7 +630,7 @@ namespace DriveHUD.Importers.BetOnline
 
             maxPlayers = int.Parse(seatsNode.Attribute("number").Value);
 
-            gameInfo.TableType = (EnumTableType)maxPlayers;
+            gameInfo.TableType = maxPlayers == 4 ? EnumTableType.Eight : (EnumTableType)maxPlayers;
 
             var dealer = int.Parse(seatsNode.Attribute("dealer").Value);
 
@@ -965,7 +976,7 @@ namespace DriveHUD.Importers.BetOnline
             }
         }
 
-        private void RelocateSeats(List<Player> players)
+        private void RelocateSeats(List<Player> players, int maxPlayers)
         {
             if (relocationData == null)
             {

@@ -85,7 +85,7 @@ namespace DriveHUD.Application.ViewModels
 
         private readonly IReportStatusService reportStatusService;
 
-        private bool isAdvancedLoggingEnabled = false;
+        private bool isAdvancedLoggingEnabled = true;
 
         private const int ImportFileUpdateDelay = 750;
 
@@ -580,7 +580,6 @@ namespace DriveHUD.Application.ViewModels
 
                 var players = e.Players;
                 var gameInfo = e.GameInfo;
-                var maxSeats = (int)gameInfo.TableType;
                 var site = e.GameInfo.PokerSite;
 
                 var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
@@ -651,7 +650,7 @@ namespace DriveHUD.Application.ViewModels
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
 
-                for (int seatNumber = 1; seatNumber <= maxSeats; seatNumber++)
+                for (int seatNumber = 1; seatNumber <= 12; seatNumber++)
                 {
                     var player = players.FirstOrDefault(x => x.SeatNumber == seatNumber);
 

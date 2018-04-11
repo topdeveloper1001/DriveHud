@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HandHistory>
+  <TableDetails type="TOURNAMENT_TABLE" id="92-cc8a6" name="Table #1" share-type="LOCAL">
+    <TournamentTable mode="PLAYMONEY" pocket="CASH" game="TEXAS_HOLDEM" buyIn="250" fee="0" knockoutType="SINGLE" knockoutFee="50" knockoutPercent="100" type="SITANDGO_TOURNAMENT" tournamentName="200 PM - 4 Player Ultra Fast Bounty #11890" limit="NO_LIMIT">
+      <Parameters ante="0" lowStake="15" highStake="30" />
+      <Seats number="4" />
+    </TournamentTable>
+    <PROTOCOL_FEATURES>
+      <PROTOCOL_FEATURE name="buy_in_preferences" />
+      <PROTOCOL_FEATURE name="client_waiting_list" />
+      <PROTOCOL_FEATURE name="contest_instant_prize_v2" />
+      <PROTOCOL_FEATURE name="contest_jackpots" />
+      <PROTOCOL_FEATURE name="contests" />
+      <PROTOCOL_FEATURE name="cp_exchange" />
+      <PROTOCOL_FEATURE name="currency_exchange_rates" />
+      <PROTOCOL_FEATURE name="fast_blinds" />
+      <PROTOCOL_FEATURE name="locked_bonuses" />
+      <PROTOCOL_FEATURE name="may_wait_for_bb" />
+      <PROTOCOL_FEATURE name="multi_bbj" />
+      <PROTOCOL_FEATURE name="tags_v2" />
+    </PROTOCOL_FEATURES>
+  </TableDetails>
+  <GameState hand="6344975" serverTime="1523453772419" mucked="0">
+    <TournamentInfo status="RUNNING" startTime="1523453505738" initialTimeBank="0" timeBank="0">
+      <CurrentLevel number="3" lowStake="20" highStake="40" />
+      <NextLevel number="4" periodFrom="1523453865738" lowStake="30" highStake="60" />
+      <Break periodFrom="1523454705738" duration="300000" />
+      <Participants total="4" remaining="3" tablesCount="1" placesPaid="1" />
+      <RebuyTypes>
+        <RebuyType type="BALANCE" />
+      </RebuyTypes>
+      <Stacks lowestStack="146" averageStack="2666.6667" largestStack="4084" />
+    </TournamentInfo>
+    <Seats number="4" dealer="3" winners="false">
+      <Seat id="0">
+        <PlayerInfo nickname="COCO3758" avatar="1-26d" level="0" uuid="5c9aee08-3e42-4cbb-a745-3d594b3529c1" rank="0.06">
+          <Location city="Homosassa" countryId="840" network="bol" />
+          <Chips stack-size="4084" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="1" />
+      <Seat id="2">
+        <PlayerInfo nickname="Jester49" avatar="36-188d0d5b" level="0" uuid="27ccec07-3e54-4aa4-9be8-8fdd20d8728e" rank="96.18">
+          <Location city="Winnipeg" countryId="124" network="tg" />
+          <Chips stack-size="3770" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="3">
+        <PlayerInfo nickname="flip7445" avatar="1-260" level="0" uuid="804184a6-0e28-4fb2-8e96-af69761c7b95" rank="139.6">
+          <Location city="st petersburg" countryId="840" network="bol" />
+          <Chips stack-size="146" />
+        </PlayerInfo>
+      </Seat>
+    </Seats>
+  </GameState>
+  <Changes>
+    <NewHand dealer="3" number="6344975" startTime="1523453771845" change_time="1523453772" />
+    <ActiveSeats change_time="1523453772">
+      <Seat id="0" />
+      <Seat id="2" />
+      <Seat id="3" />
+    </ActiveSeats>
+    <PlayerAction seat="0" change_time="1523453772">
+      <PostSmallBlind amount="20" />
+    </PlayerAction>
+    <PlayerAction seat="2" change_time="1523453772">
+      <PostBigBlind amount="40" />
+    </PlayerAction>
+    <DealingCards change_time="1523453772">
+      <Seat id="0">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="2">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="3">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+    </DealingCards>
+    <ActiveChange timeBank="0" elapsed="0" seat="3" time="10000" startTime="1523453771845" change_time="1523453772" />
+    <PlayerAction seat="3" change_time="1523453775">
+      <Raise amount="146" />
+    </PlayerAction>
+    <ActiveChange timeBank="0" autoTimeBank="true" elapsed="0" seat="0" time="10000" startTime="1523453775534" change_time="1523453775" />
+    <PlayerAction seat="0" change_time="1523453776">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="0" autoTimeBank="true" elapsed="0" seat="2" time="10000" startTime="1523453776924" change_time="1523453776" />
+    <PlayerAction seat="2" change_time="1523453779">
+      <Call amount="106" />
+    </PlayerAction>
+    <PlayerAction seat="2" change_time="1523453779">
+      <Show>
+        <Cards>
+          <Card id="0">8h</Card>
+          <Card id="1">Ts</Card>
+        </Cards>
+      </Show>
+    </PlayerAction>
+    <CombinationChange seat="2" change_time="1523453779" />
+    <PlayerAction seat="3" change_time="1523453779">
+      <Show>
+        <Cards>
+          <Card id="0">4c</Card>
+          <Card id="1">Tc</Card>
+        </Cards>
+      </Show>
+    </PlayerAction>
+    <CombinationChange seat="3" change_time="1523453779" />
+    <PotsChange change_time="1523453779">
+      <Pot pot="0" change="20" seat="0" />
+      <Pot pot="0" change="146" seat="2" />
+      <Pot pot="0" change="146" seat="3" />
+    </PotsChange>
+    <DealingFlop change_time="1523453780">
+      <Cards>
+        <Card id="0">4s</Card>
+        <Card id="1">Td</Card>
+        <Card id="2">3c</Card>
+      </Cards>
+    </DealingFlop>
+    <CombinationChange seat="2" strength="a pair of, Tens" winProbability="17" change_time="1523453780" />
+    <CombinationChange seat="3" strength="two pairs, Tens and Fours" winProbability="83" change_time="1523453780" />
+    <DealingTurn change_time="1523453781">
+      <Cards>
+        <Card id="3">2d</Card>
+      </Cards>
+    </DealingTurn>
+    <CombinationChange seat="2" strength="a pair of, Tens" winProbability="7" change_time="1523453781" />
+    <CombinationChange seat="3" strength="two pairs, Tens and Fours" winProbability="93" change_time="1523453781" />
+    <DealingRiver change_time="1523453782">
+      <Cards>
+        <Card id="4">Kc</Card>
+      </Cards>
+    </DealingRiver>
+    <CombinationChange seat="2" strength="a pair of, Tens" winProbability="0" change_time="1523453782" />
+    <CombinationChange seat="3" strength="two pairs, Tens and Fours" winProbability="100" change_time="1523453782" />
+    <Winners change_time="1523453783">
+      <Winner pot="0" amount="312" seat="3" combination="two pairs, Tens and Fours">
+        <Cards>
+          <Card id="0">Tc</Card>
+          <Card id="1">Td</Card>
+          <Card id="2">4c</Card>
+          <Card id="3">4s</Card>
+          <Card id="4">Kc</Card>
+        </Cards>
+      </Winner>
+    </Winners>
+    <EndHand change_time="1523453786" />
+  </Changes>
+</HandHistory>
