@@ -14,7 +14,13 @@ using DriveHud.Tests.IntegrationTests.Base;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
 using DriveHUD.Entities;
+using DriveHUD.Importers.BetOnline;
+using DriveHUD.Importers.Builders.iPoker;
+using Microsoft.Practices.ServiceLocation;
+using Microsoft.Practices.Unity;
 using Model;
+using Model.Settings;
+using Model.Site;
 using NHibernate.Linq;
 using NSubstitute;
 using NUnit.Framework;
@@ -46,6 +52,37 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         public void TearDown()
         {
             RemoveDatabase();
+        }
+
+        protected override void InitializeContainer(UnityContainer unityContainer)
+        {
+            base.InitializeContainer(unityContainer);
+
+            unityContainer.RegisterType<ICardsConverter, PokerCardsConverter>();
+            unityContainer.RegisterType<ITournamentsCacheService, TournamentsCacheService>();
+            unityContainer.RegisterType<IBetOnlineTableService, BetOnlineTableServiceStub>();
+            unityContainer.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Ignition.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.BetOnline.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, TigerGamingConfiguration>(EnumPokerSites.TigerGaming.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, SportsBettingConfiguration>(EnumPokerSites.SportsBetting.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, PokerStarsConfiguration>(EnumPokerSites.PokerStars.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, Poker888Configuration>(EnumPokerSites.Poker888.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, AmericasCardroomConfiguration>(EnumPokerSites.AmericasCardroom.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, TruePokerConfiguration>(EnumPokerSites.TruePoker.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, IPokerConfiguration>(EnumPokerSites.IPoker.ToString());
+            unityContainer.RegisterType<ISiteConfigurationService, SiteConfigurationService>(new ContainerControlledLifetimeManager());
+            unityContainer.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
+        }
+
+        protected override void Initalize()
+        {
+            base.Initalize();
+
+            var configurationService = ServiceLocator.Current.GetInstance<ISiteConfigurationService>();
+            configurationService.Initialize();
         }
 
         [Test]
@@ -89,6 +126,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("102233028", "Peon84", 1)]
         [TestCase("8192538", "Granny_Annie", 2)]
         [TestCase("918178286", "Peon384", 1)]
+        [TestCase("2450627306", "Peon84", 2)]
+        [TestCase("2450627306", "koko55", 1)]
         public void TournamentsFinishPositionIsImported(string tournamentNumber, string playerName, int expectedFinishPosition)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsPlacesAreImported"))
@@ -253,7 +292,14 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
                 foreach (var testCase in TestCaseDataSet)
                 {
-                    FillDatabaseFromSingleFile(testCase.Item1, testCase.Item2);
+                    if (testCase.Item3 == null)
+                    {
+                        FillDatabaseFromSingleFile(testCase.Item1, testCase.Item2);
+                    }
+                    else
+                    {
+                        FillDatabaseFromSingleFile(testCase.Item1, testCase.Item2, testCase.Item3);
+                    }
                 }
             }
         }
@@ -261,21 +307,29 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         /// <summary>
         /// Set of hh files to fill DB, summaries must follow normal hh, summary data must be added for WPN hh
         /// </summary>
-        private Tuple<string, EnumPokerSites>[] TestCaseDataSet = new Tuple<string, EnumPokerSites>[]
+        private Tuple<string, EnumPokerSites, IFileTestImporter>[] TestCaseDataSet = new Tuple<string, EnumPokerSites, IFileTestImporter>[]
         {
-            Tuple.Create(@"WinningPokerNetwork\HH20170216 T6995792-G39795657.txt", EnumPokerSites.Unknown),
-            Tuple.Create(@"WinningPokerNetwork\HH20180107 T8192538-G39795657.txt", EnumPokerSites.AmericasCardroom),
-            Tuple.Create(@"iPoker\NLH-6-max-5944035303.xml", EnumPokerSites.BetOnline),
-            Tuple.Create(@"iPoker\NLH-9-max-5569123611.xml", EnumPokerSites.BetOnline),
-            Tuple.Create(@"iPoker\NLH-6-max-DON-6732774762.xml", EnumPokerSites.IPoker),
-            Tuple.Create(@"iPoker\NLH-2-max-125460058.xml", EnumPokerSites.BetOnline),
-            Tuple.Create(@"iPoker\NLH-6-max-102233028.xml", EnumPokerSites.BetOnline),
-            Tuple.Create(@"iPoker\NLH-3-max-Windfall-101810121.xml", EnumPokerSites.BetOnline),
-            Tuple.Create(@"iPoker\NLH-Zone-many-players.xml", EnumPokerSites.Ignition),
-            Tuple.Create(@"iPoker\NLH-9-max-6780120497.xml", EnumPokerSites.IPoker),
-            Tuple.Create(@"PokerStars\HH20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
-            Tuple.Create(@"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown),
-            Tuple.Create(@"WinningPokerNetwork\20170507_20170511_Sng2HH.txt", EnumPokerSites.Unknown)
+            Tuple.Create(@"BetOnline\SNG-4-max-playmoney.xml", EnumPokerSites.BetOnline, (IFileTestImporter)(new BetOnlineRawFileTestImporter())),
+            Tuple.Create(@"WinningPokerNetwork\HH20170216 T6995792-G39795657.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),
+            Tuple.Create(@"WinningPokerNetwork\HH20180107 T8192538-G39795657.txt", EnumPokerSites.AmericasCardroom, (IFileTestImporter)null),
+            Tuple.Create(@"iPoker\NLH-6-max-5944035303.xml", EnumPokerSites.BetOnline, (IFileTestImporter)null),
+            Tuple.Create(@"iPoker\NLH-9-max-5569123611.xml", EnumPokerSites.BetOnline, (IFileTestImporter)null),
+            Tuple.Create(@"iPoker\NLH-6-max-DON-6732774762.xml", EnumPokerSites.IPoker, (IFileTestImporter)null),
+            Tuple.Create(@"iPoker\NLH-2-max-125460058.xml", EnumPokerSites.BetOnline, (IFileTestImporter)null),
+            Tuple.Create(@"iPoker\NLH-6-max-102233028.xml", EnumPokerSites.BetOnline, (IFileTestImporter)null),
+            Tuple.Create(@"iPoker\NLH-3-max-Windfall-101810121.xml", EnumPokerSites.BetOnline, (IFileTestImporter)null),
+            Tuple.Create(@"iPoker\NLH-Zone-many-players.xml", EnumPokerSites.Ignition, (IFileTestImporter)null),
+            Tuple.Create(@"iPoker\NLH-9-max-6780120497.xml", EnumPokerSites.IPoker, (IFileTestImporter)null),            
+            Tuple.Create(@"PokerStars\HH20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),
+            Tuple.Create(@"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),
+            Tuple.Create(@"WinningPokerNetwork\20170507_20170511_Sng2HH.txt", EnumPokerSites.Unknown, (IFileTestImporter)null)
         };
+
+        private class TestDataSet
+        {
+            public string File { get; set; }
+
+            public EnumPokerSites Site { get; set; }
+        }
     }
 }

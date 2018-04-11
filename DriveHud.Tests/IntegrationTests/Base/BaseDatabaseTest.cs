@@ -68,7 +68,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
             InitializeOpponentReportService(unityContainer);
             InitializeEquityResolver(unityContainer);
             InitializeReportStatusService(unityContainer);
-            InitializeResources();            
+            InitializeResources();
         }
 
         protected virtual void InitializeDatabase()
@@ -136,10 +136,20 @@ namespace DriveHud.Tests.IntegrationTests.Base
         /// <returns>The result of importing</returns>
         protected virtual IEnumerable<ParsingResult> FillDatabaseFromSingleFile(string fileName, EnumPokerSites pokerSite)
         {
+            return FillDatabaseFromSingleFile(fileName, pokerSite, new BasicFileTestImporter());
+        }
+
+        /// <summary>        
+        /// Fills the database with the data from the specified hand history file
+        /// </summary>        
+        /// <param name="fileName">File with hh</param>
+        /// <param name="pokerSite">Site</param>
+        /// <param name="fileTestImporter">Importer</param>
+        /// <returns>The result of importing</returns>
+        protected virtual IEnumerable<ParsingResult> FillDatabaseFromSingleFile(string fileName, EnumPokerSites pokerSite, IFileTestImporter fileTestImporter)
+        {
             using (var perfScope = new PerformanceMonitor("FillDatabaseFromSingleFile"))
             {
-                var progress = Substitute.For<IDHProgress>();
-
                 var fileImporter = new TestFileImporter();
 
                 var handHistoryFileFullName = Path.Combine(TestDataFolder, fileName);
@@ -156,7 +166,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
                     FileName = handHistoryFileInfo.FullName
                 };
 
-                return fileImporter.Import(handHistoryText, progress, gameInfo);
+                return fileTestImporter.Import(fileImporter, handHistoryText, gameInfo);
             }
         }
 

@@ -45,7 +45,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         {
             get
             {
-                return false;
+                return true;
             }
         }     
 

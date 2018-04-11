@@ -1,0 +1,1359 @@
+<session sessioncode="2450627306">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL</gametype>
+		<tablename>Table #1, 200 PM - 4 Player Ultra Fast Bounty #11895</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2018-04-11 14:24:26</startdate>
+		<currency>USD</currency>
+		<nickname>Peon84</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<tournamentname>200 PM - 4 Player Ultra Fast Bounty #11895</tournamentname>
+		<place>0</place>
+		<buyin>$250+$0</buyin>
+		<totalbuyin>$250</totalbuyin>
+		<win>0</win>
+		<maxplayers>4</maxplayers>
+		<pokersite>BetOnline</pokersite>
+	</general>
+	<game gamecode="6345389">
+		<general>
+			<startdate>2018-04-11 14:24:26</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="2000" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="2000" dealer="0" win="0" bet="180" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2000" dealer="0" win="480" bet="300" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2000" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="flip7445" type="1" sum="10" cards="" />
+			<action no="2" player="koko55" type="2" sum="20" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">H5 S7</cards>
+			<cards type="Pocket" player="flip7445">X X</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="all_aces" type="0" sum="0" cards="" />
+			<action no="4" player="Peon84" type="0" sum="0" cards="" />
+			<action no="5" player="flip7445" type="3" sum="10" cards="" />
+			<action no="6" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CA DQ C6</cards>
+			<action no="7" player="flip7445" type="4" sum="0" cards="" />
+			<action no="8" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">SQ</cards>
+			<action no="9" player="flip7445" type="5" sum="40" cards="" />
+			<action no="10" player="koko55" type="3" sum="40" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">D10</cards>
+			<action no="11" player="flip7445" type="5" sum="120" cards="" />
+			<action no="12" player="koko55" type="23" sum="240" cards="" />
+			<action no="13" player="flip7445" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345397">
+		<general>
+			<startdate>2018-04-11 14:25:14</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="2000" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1820" dealer="1" win="0" bet="60" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2180" dealer="0" win="160" bet="80" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2000" dealer="0" win="0" bet="20" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="koko55" type="1" sum="10" cards="" />
+			<action no="2" player="all_aces" type="2" sum="20" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">C4 C3</cards>
+			<cards type="Pocket" player="flip7445">X X</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="Peon84" type="0" sum="0" cards="" />
+			<action no="4" player="flip7445" type="3" sum="20" cards="" />
+			<action no="5" player="koko55" type="3" sum="10" cards="" />
+			<action no="6" player="all_aces" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C7 CK H2</cards>
+			<action no="7" player="koko55" type="5" sum="20" cards="" />
+			<action no="8" player="all_aces" type="0" sum="0" cards="" />
+			<action no="9" player="flip7445" type="3" sum="20" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D5</cards>
+			<action no="10" player="koko55" type="5" sum="20" cards="" />
+			<action no="11" player="flip7445" type="3" sum="20" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">DJ</cards>
+			<action no="12" player="koko55" type="5" sum="20" cards="" />
+			<action no="13" player="flip7445" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345402">
+		<general>
+			<startdate>2018-04-11 14:25:46</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="2000" dealer="0" win="0" bet="20" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1760" dealer="0" win="0" bet="20" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2260" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="1980" dealer="0" win="80" bet="40" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="all_aces" type="1" sum="10" cards="" />
+			<action no="2" player="Peon84" type="2" sum="20" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">H5 HA</cards>
+			<cards type="Pocket" player="flip7445">X X</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="flip7445" type="3" sum="20" cards="" />
+			<action no="4" player="koko55" type="0" sum="0" cards="" />
+			<action no="5" player="all_aces" type="3" sum="10" cards="" />
+			<action no="6" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DK SQ CQ</cards>
+			<action no="7" player="all_aces" type="5" sum="20" cards="" />
+			<action no="8" player="Peon84" type="0" sum="0" cards="" />
+			<action no="9" player="flip7445" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345404">
+		<general>
+			<startdate>2018-04-11 14:26:03</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="1980" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1740" dealer="0" win="0" bet="80" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2260" dealer="0" win="170" bet="80" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2020" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="1" sum="10" cards="" />
+			<action no="2" player="flip7445" type="2" sum="20" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">DK CK</cards>
+			<cards type="Pocket" player="flip7445">X X</cards>
+			<cards type="Pocket" player="koko55">SQ HA</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="koko55" type="3" sum="20" cards="" />
+			<action no="4" player="all_aces" type="0" sum="0" cards="" />
+			<action no="5" player="Peon84" type="0" sum="0" cards="" />
+			<action no="6" player="flip7445" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S3 S6 SA</cards>
+			<action no="7" player="flip7445" type="4" sum="0" cards="" />
+			<action no="8" player="koko55" type="5" sum="20" cards="" />
+			<action no="9" player="flip7445" type="3" sum="20" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H5</cards>
+			<action no="10" player="flip7445" type="4" sum="0" cards="" />
+			<action no="11" player="koko55" type="5" sum="20" cards="" />
+			<action no="12" player="flip7445" type="3" sum="20" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">SJ</cards>
+			<action no="13" player="flip7445" type="4" sum="0" cards="" />
+			<action no="14" player="koko55" type="5" sum="20" cards="" />
+			<action no="15" player="flip7445" type="3" sum="20" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345409">
+		<general>
+			<startdate>2018-04-11 14:26:31</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="1970" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1660" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2350" dealer="0" win="0" bet="120" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2020" dealer="0" win="600" bet="420" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="flip7445" type="1" sum="15" cards="" />
+			<action no="2" player="koko55" type="2" sum="30" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">D10 CA</cards>
+			<cards type="Pocket" player="flip7445">X X</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="all_aces" type="23" sum="60" cards="" />
+			<action no="4" player="Peon84" type="0" sum="0" cards="" />
+			<action no="5" player="flip7445" type="3" sum="45" cards="" />
+			<action no="6" player="koko55" type="3" sum="30" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H8 S10 H10</cards>
+			<action no="7" player="flip7445" type="4" sum="0" cards="" />
+			<action no="8" player="koko55" type="4" sum="0" cards="" />
+			<action no="9" player="all_aces" type="5" sum="30" cards="" />
+			<action no="10" player="flip7445" type="0" sum="0" cards="" />
+			<action no="11" player="koko55" type="3" sum="30" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D2</cards>
+			<action no="12" player="koko55" type="4" sum="0" cards="" />
+			<action no="13" player="all_aces" type="5" sum="30" cards="" />
+			<action no="14" player="koko55" type="3" sum="30" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">H2</cards>
+			<action no="15" player="koko55" type="4" sum="0" cards="" />
+			<action no="16" player="all_aces" type="5" sum="300" cards="" />
+			<action no="17" player="koko55" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345417">
+		<general>
+			<startdate>2018-04-11 14:27:23</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="1970" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1600" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2230" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2200" dealer="0" win="45" bet="30" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="koko55" type="1" sum="15" cards="" />
+			<action no="2" player="all_aces" type="2" sum="30" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">C7 S5</cards>
+			<cards type="Pocket" player="flip7445">X X</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="Peon84" type="0" sum="0" cards="" />
+			<action no="4" player="flip7445" type="0" sum="0" cards="" />
+			<action no="5" player="koko55" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345418">
+		<general>
+			<startdate>2018-04-11 14:27:40</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="1970" dealer="0" win="0" bet="30" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1600" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2215" dealer="1" win="105" bet="60" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2215" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="all_aces" type="1" sum="15" cards="" />
+			<action no="2" player="Peon84" type="2" sum="30" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">H2 H9</cards>
+			<cards type="Pocket" player="flip7445">X X</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="flip7445" type="0" sum="0" cards="" />
+			<action no="4" player="koko55" type="3" sum="30" cards="" />
+			<action no="5" player="all_aces" type="0" sum="0" cards="" />
+			<action no="6" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SK C10 D9</cards>
+			<action no="7" player="Peon84" type="4" sum="0" cards="" />
+			<action no="8" player="koko55" type="5" sum="30" cards="" />
+			<action no="9" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345422">
+		<general>
+			<startdate>2018-04-11 14:28:09</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="1940" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1600" dealer="0" win="45" bet="30" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2260" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2200" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="1" sum="15" cards="" />
+			<action no="2" player="flip7445" type="2" sum="30" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">CQ DJ</cards>
+			<cards type="Pocket" player="flip7445">X X</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="koko55" type="0" sum="0" cards="" />
+			<action no="4" player="all_aces" type="0" sum="0" cards="" />
+			<action no="5" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345425">
+		<general>
+			<startdate>2018-04-11 14:28:21</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="1925" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1615" dealer="0" win="720" bet="360" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2260" dealer="0" win="0" bet="360" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2200" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="flip7445" type="1" sum="15" cards="" />
+			<action no="2" player="koko55" type="2" sum="30" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">C8 DQ</cards>
+			<cards type="Pocket" player="flip7445">HK H3</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="all_aces" type="0" sum="0" cards="" />
+			<action no="4" player="Peon84" type="0" sum="0" cards="" />
+			<action no="5" player="flip7445" type="3" sum="15" cards="" />
+			<action no="6" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D3 D5 DA</cards>
+			<action no="7" player="flip7445" type="5" sum="60" cards="" />
+			<action no="8" player="koko55" type="3" sum="60" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S10</cards>
+			<action no="9" player="flip7445" type="4" sum="0" cards="" />
+			<action no="10" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">S3</cards>
+			<action no="11" player="flip7445" type="4" sum="0" cards="" />
+			<action no="12" player="koko55" type="5" sum="30" cards="" />
+			<action no="13" player="flip7445" type="23" sum="270" cards="" />
+			<action no="14" player="koko55" type="3" sum="240" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345427">
+		<general>
+			<startdate>2018-04-11 14:28:49</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="1925" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1975" dealer="1" win="0" bet="80" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="1900" dealer="0" win="400" bet="280" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2200" dealer="0" win="0" bet="40" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="koko55" type="1" sum="20" cards="" />
+			<action no="2" player="all_aces" type="2" sum="40" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">SQ DQ</cards>
+			<cards type="Pocket" player="flip7445">X X</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="Peon84" type="0" sum="0" cards="" />
+			<action no="4" player="flip7445" type="3" sum="40" cards="" />
+			<action no="5" player="koko55" type="23" sum="80" cards="" />
+			<action no="6" player="all_aces" type="0" sum="0" cards="" />
+			<action no="7" player="flip7445" type="3" sum="40" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D2 DJ S4</cards>
+			<action no="8" player="koko55" type="5" sum="200" cards="" />
+			<action no="9" player="flip7445" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345433">
+		<general>
+			<startdate>2018-04-11 14:29:19</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="1925" dealer="0" win="0" bet="40" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1895" dealer="0" win="0" bet="600" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2020" dealer="1" win="1260" bet="600" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2160" dealer="0" win="0" bet="20" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="all_aces" type="1" sum="20" cards="" />
+			<action no="2" player="Peon84" type="2" sum="40" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">D2 C7</cards>
+			<cards type="Pocket" player="flip7445">HA SJ</cards>
+			<cards type="Pocket" player="koko55">HQ HK</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="flip7445" type="3" sum="40" cards="" />
+			<action no="4" player="koko55" type="3" sum="40" cards="" />
+			<action no="5" player="all_aces" type="0" sum="0" cards="" />
+			<action no="6" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H10 C5 CQ</cards>
+			<action no="7" player="Peon84" type="4" sum="0" cards="" />
+			<action no="8" player="flip7445" type="4" sum="0" cards="" />
+			<action no="9" player="koko55" type="5" sum="140" cards="" />
+			<action no="10" player="Peon84" type="0" sum="0" cards="" />
+			<action no="11" player="flip7445" type="3" sum="140" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C10</cards>
+			<action no="12" player="flip7445" type="4" sum="0" cards="" />
+			<action no="13" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">D7</cards>
+			<action no="14" player="flip7445" type="5" sum="420" cards="" />
+			<action no="15" player="koko55" type="3" sum="420" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345438">
+		<general>
+			<startdate>2018-04-11 14:29:57</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="1885" dealer="0" win="120" bet="80" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1295" dealer="0" win="0" bet="40" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2680" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2140" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="1" sum="20" cards="" />
+			<action no="2" player="flip7445" type="2" sum="40" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">DQ DK</cards>
+			<cards type="Pocket" player="flip7445">X X</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="koko55" type="0" sum="0" cards="" />
+			<action no="4" player="all_aces" type="0" sum="0" cards="" />
+			<action no="5" player="Peon84" type="3" sum="20" cards="" />
+			<action no="6" player="flip7445" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H9 S10 CK</cards>
+			<action no="7" player="Peon84" type="4" sum="0" cards="" />
+			<action no="8" player="flip7445" type="4" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C9</cards>
+			<action no="9" player="Peon84" type="4" sum="0" cards="" />
+			<action no="10" player="flip7445" type="4" sum="0" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">S8</cards>
+			<action no="11" player="Peon84" type="5" sum="40" cards="" />
+			<action no="12" player="flip7445" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345440">
+		<general>
+			<startdate>2018-04-11 14:30:33</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="1925" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1255" dealer="0" win="120" bet="60" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2680" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2140" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="flip7445" type="1" sum="30" cards="" />
+			<action no="2" player="koko55" type="2" sum="60" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">H6 C3</cards>
+			<cards type="Pocket" player="flip7445">DJ H9</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="all_aces" type="0" sum="0" cards="" />
+			<action no="4" player="Peon84" type="0" sum="0" cards="" />
+			<action no="5" player="flip7445" type="3" sum="30" cards="" />
+			<action no="6" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C2 H7 D6</cards>
+			<action no="7" player="flip7445" type="4" sum="0" cards="" />
+			<action no="8" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H8</cards>
+			<action no="9" player="flip7445" type="4" sum="0" cards="" />
+			<action no="10" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">D2</cards>
+			<action no="11" player="flip7445" type="4" sum="0" cards="" />
+			<action no="12" player="koko55" type="4" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345463">
+		<general>
+			<startdate>2018-04-11 14:32:53</startdate>
+			<players>
+				<player seat="3" name="Peon84" chips="1945" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="flip7445" chips="1295" dealer="0" win="0" bet="1295" rebuy="0" addon="0" />
+				<player seat="7" name="koko55" chips="2740" dealer="0" win="2670" bet="1295" rebuy="0" addon="0" />
+				<player seat="1" name="all_aces" chips="2020" dealer="0" win="0" bet="80" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="flip7445" type="1" sum="40" cards="" />
+			<action no="2" player="koko55" type="2" sum="80" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">HJ S4</cards>
+			<cards type="Pocket" player="flip7445">SK SA</cards>
+			<cards type="Pocket" player="koko55">SQ HK</cards>
+			<cards type="Pocket" player="all_aces">X X</cards>
+			<action no="3" player="all_aces" type="3" sum="80" cards="" />
+			<action no="4" player="Peon84" type="0" sum="0" cards="" />
+			<action no="5" player="flip7445" type="23" sum="160" cards="" />
+			<action no="6" player="koko55" type="3" sum="80" cards="" />
+			<action no="7" player="all_aces" type="0" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CQ CK H9</cards>
+			<action no="8" player="flip7445" type="5" sum="1135" cards="" />
+			<action no="9" player="koko55" type="3" sum="1135" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S7</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D6</cards>
+		</round>
+	</game>
+	<game gamecode="6345467">
+		<general>
+			<startdate>2018-04-11 14:33:15</startdate>
+			<players>
+				<player seat="5" name="Peon84" chips="1945" dealer="1" win="0" bet="160" rebuy="0" addon="0" />
+				<player seat="1" name="koko55" chips="4115" dealer="0" win="4040" bet="1940" rebuy="0" addon="0" />
+				<player seat="3" name="all_aces" chips="1940" dealer="0" win="0" bet="1940" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="koko55" type="1" sum="40" cards="" />
+			<action no="2" player="all_aces" type="2" sum="80" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">S4 CA</cards>
+			<cards type="Pocket" player="koko55">H6 DA</cards>
+			<cards type="Pocket" player="all_aces">SQ HJ</cards>
+			<action no="3" player="Peon84" type="3" sum="80" cards="" />
+			<action no="4" player="koko55" type="3" sum="40" cards="" />
+			<action no="5" player="all_aces" type="23" sum="160" cards="" />
+			<action no="6" player="Peon84" type="3" sum="80" cards="" />
+			<action no="7" player="koko55" type="3" sum="80" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S2 HA HQ</cards>
+			<action no="8" player="koko55" type="4" sum="0" cards="" />
+			<action no="9" player="all_aces" type="5" sum="1780" cards="" />
+			<action no="10" player="Peon84" type="0" sum="0" cards="" />
+			<action no="11" player="koko55" type="3" sum="1780" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D9</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S5</cards>
+		</round>
+	</game>
+	<game gamecode="6345475">
+		<general>
+			<startdate>2018-04-11 14:33:51</startdate>
+			<players>
+				<player seat="6" name="Peon84" chips="1785" dealer="0" win="0" bet="240" rebuy="0" addon="0" />
+				<player seat="2" name="koko55" chips="6215" dealer="1" win="480" bet="240" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="koko55" type="1" sum="40" cards="" />
+			<action no="2" player="Peon84" type="2" sum="80" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">HQ C4</cards>
+			<cards type="Pocket" player="koko55">S9 D6</cards>
+			<action no="3" player="koko55" type="3" sum="40" cards="" />
+			<action no="4" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CJ H10 H9</cards>
+			<action no="5" player="Peon84" type="4" sum="0" cards="" />
+			<action no="6" player="koko55" type="5" sum="80" cards="" />
+			<action no="7" player="Peon84" type="3" sum="80" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S10</cards>
+			<action no="8" player="Peon84" type="4" sum="0" cards="" />
+			<action no="9" player="koko55" type="5" sum="80" cards="" />
+			<action no="10" player="Peon84" type="3" sum="80" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">C5</cards>
+			<action no="11" player="Peon84" type="4" sum="0" cards="" />
+			<action no="12" player="koko55" type="4" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345480">
+		<general>
+			<startdate>2018-04-11 14:34:20</startdate>
+			<players>
+				<player seat="6" name="Peon84" chips="1545" dealer="1" win="160" bet="80" rebuy="0" addon="0" />
+				<player seat="2" name="koko55" chips="6455" dealer="0" win="0" bet="80" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="1" sum="40" cards="" />
+			<action no="2" player="koko55" type="2" sum="80" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">D9 C4</cards>
+			<cards type="Pocket" player="koko55">C10 DJ</cards>
+			<action no="3" player="Peon84" type="3" sum="40" cards="" />
+			<action no="4" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C5 D8 HQ</cards>
+			<action no="5" player="koko55" type="4" sum="0" cards="" />
+			<action no="6" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">SA</cards>
+			<action no="7" player="koko55" type="4" sum="0" cards="" />
+			<action no="8" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">D4</cards>
+			<action no="9" player="koko55" type="4" sum="0" cards="" />
+			<action no="10" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345483">
+		<general>
+			<startdate>2018-04-11 14:34:40</startdate>
+			<players>
+				<player seat="7" name="Peon84" chips="1625" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+				<player seat="3" name="koko55" chips="6375" dealer="1" win="320" bet="210" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="10" cards="" />
+			<action no="2" player="koko55" type="15" sum="10" cards="" />
+			<action no="3" player="koko55" type="1" sum="50" cards="" />
+			<action no="4" player="Peon84" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">D5 CA</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="3" sum="50" cards="" />
+			<action no="6" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CK SJ CJ</cards>
+			<action no="7" player="Peon84" type="4" sum="0" cards="" />
+			<action no="8" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H7</cards>
+			<action no="9" player="Peon84" type="4" sum="0" cards="" />
+			<action no="10" player="koko55" type="5" sum="100" cards="" />
+			<action no="11" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345487">
+		<general>
+			<startdate>2018-04-11 14:35:01</startdate>
+			<players>
+				<player seat="7" name="Peon84" chips="1515" dealer="1" win="0" bet="60" rebuy="0" addon="0" />
+				<player seat="3" name="koko55" chips="6485" dealer="0" win="170" bet="110" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="10" cards="" />
+			<action no="2" player="koko55" type="15" sum="10" cards="" />
+			<action no="3" player="Peon84" type="1" sum="50" cards="" />
+			<action no="4" player="koko55" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">H5 D2</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345489">
+		<general>
+			<startdate>2018-04-11 14:35:07</startdate>
+			<players>
+				<player seat="7" name="Peon84" chips="1455" dealer="0" win="0" bet="110" rebuy="0" addon="0" />
+				<player seat="3" name="koko55" chips="6545" dealer="1" win="220" bet="110" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="10" cards="" />
+			<action no="2" player="koko55" type="15" sum="10" cards="" />
+			<action no="3" player="koko55" type="1" sum="50" cards="" />
+			<action no="4" player="Peon84" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">S9 D6</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="3" sum="50" cards="" />
+			<action no="6" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345490">
+		<general>
+			<startdate>2018-04-11 14:35:16</startdate>
+			<players>
+				<player seat="7" name="Peon84" chips="1345" dealer="1" win="1555" bet="1345" rebuy="0" addon="0" />
+				<player seat="3" name="koko55" chips="6655" dealer="0" win="0" bet="210" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="10" cards="" />
+			<action no="2" player="koko55" type="15" sum="10" cards="" />
+			<action no="3" player="Peon84" type="1" sum="50" cards="" />
+			<action no="4" player="koko55" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">CA SA</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="Peon84" type="23" sum="200" cards="" />
+			<action no="6" player="koko55" type="3" sum="100" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DK DA HA</cards>
+			<action no="7" player="koko55" type="4" sum="0" cards="" />
+			<action no="8" player="Peon84" type="5" sum="1135" cards="" />
+			<action no="9" player="koko55" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345493">
+		<general>
+			<startdate>2018-04-11 14:35:32</startdate>
+			<players>
+				<player seat="7" name="Peon84" chips="1555" dealer="0" win="320" bet="210" rebuy="0" addon="0" />
+				<player seat="3" name="koko55" chips="6445" dealer="1" win="0" bet="110" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="10" cards="" />
+			<action no="2" player="koko55" type="15" sum="10" cards="" />
+			<action no="3" player="koko55" type="1" sum="50" cards="" />
+			<action no="4" player="Peon84" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">C3 H4</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="3" sum="50" cards="" />
+			<action no="6" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D6 S6 H2</cards>
+			<action no="7" player="Peon84" type="4" sum="0" cards="" />
+			<action no="8" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C4</cards>
+			<action no="9" player="Peon84" type="5" sum="100" cards="" />
+			<action no="10" player="koko55" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345499">
+		<general>
+			<startdate>2018-04-11 14:35:52</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="1665" dealer="1" win="620" bet="310" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="6335" dealer="0" win="0" bet="310" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="10" cards="" />
+			<action no="2" player="koko55" type="15" sum="10" cards="" />
+			<action no="3" player="Peon84" type="1" sum="50" cards="" />
+			<action no="4" player="koko55" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">H7 HK</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="Peon84" type="3" sum="50" cards="" />
+			<action no="6" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S7 H10 C6</cards>
+			<action no="7" player="koko55" type="4" sum="0" cards="" />
+			<action no="8" player="Peon84" type="5" sum="100" cards="" />
+			<action no="9" player="koko55" type="3" sum="100" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">CJ</cards>
+			<action no="10" player="koko55" type="4" sum="0" cards="" />
+			<action no="11" player="Peon84" type="5" sum="100" cards="" />
+			<action no="12" player="koko55" type="3" sum="100" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">DA</cards>
+			<action no="13" player="koko55" type="4" sum="0" cards="" />
+			<action no="14" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345503">
+		<general>
+			<startdate>2018-04-11 14:36:16</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="1975" dealer="0" win="720" bet="610" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="6025" dealer="1" win="0" bet="110" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="10" cards="" />
+			<action no="2" player="koko55" type="15" sum="10" cards="" />
+			<action no="3" player="koko55" type="1" sum="50" cards="" />
+			<action no="4" player="Peon84" type="2" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">C2 S8</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="3" sum="50" cards="" />
+			<action no="6" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CQ DA S2</cards>
+			<action no="7" player="Peon84" type="4" sum="0" cards="" />
+			<action no="8" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">HA</cards>
+			<action no="9" player="Peon84" type="4" sum="0" cards="" />
+			<action no="10" player="koko55" type="4" sum="0" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">C7</cards>
+			<action no="11" player="Peon84" type="5" sum="500" cards="" />
+			<action no="12" player="koko55" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345509">
+		<general>
+			<startdate>2018-04-11 14:36:46</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="2085" dealer="1" win="0" bet="90" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="5915" dealer="0" win="255" bet="165" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="15" cards="" />
+			<action no="2" player="koko55" type="15" sum="15" cards="" />
+			<action no="3" player="Peon84" type="1" sum="75" cards="" />
+			<action no="4" player="koko55" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">S4 HJ</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345510">
+		<general>
+			<startdate>2018-04-11 14:36:53</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="1995" dealer="0" win="255" bet="165" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="6005" dealer="1" win="0" bet="90" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="15" cards="" />
+			<action no="2" player="koko55" type="15" sum="15" cards="" />
+			<action no="3" player="koko55" type="1" sum="75" cards="" />
+			<action no="4" player="Peon84" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">S7 HJ</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345511">
+		<general>
+			<startdate>2018-04-11 14:36:59</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="2085" dealer="1" win="0" bet="90" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="5915" dealer="0" win="255" bet="165" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="15" cards="" />
+			<action no="2" player="koko55" type="15" sum="15" cards="" />
+			<action no="3" player="Peon84" type="1" sum="75" cards="" />
+			<action no="4" player="koko55" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">S3 H7</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345514">
+		<general>
+			<startdate>2018-04-11 14:37:06</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="1995" dealer="0" win="0" bet="165" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="6005" dealer="1" win="480" bet="315" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="15" cards="" />
+			<action no="2" player="koko55" type="15" sum="15" cards="" />
+			<action no="3" player="koko55" type="1" sum="75" cards="" />
+			<action no="4" player="Peon84" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">H8 D10</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="3" sum="75" cards="" />
+			<action no="6" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D3 S9 SA</cards>
+			<action no="7" player="Peon84" type="4" sum="0" cards="" />
+			<action no="8" player="koko55" type="5" sum="150" cards="" />
+			<action no="9" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345517">
+		<general>
+			<startdate>2018-04-11 14:37:20</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="1830" dealer="1" win="0" bet="90" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="6170" dealer="0" win="255" bet="165" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="15" cards="" />
+			<action no="2" player="koko55" type="15" sum="15" cards="" />
+			<action no="3" player="Peon84" type="1" sum="75" cards="" />
+			<action no="4" player="koko55" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">C5 C2</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345519">
+		<general>
+			<startdate>2018-04-11 14:37:26</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="1740" dealer="0" win="2055" bet="1740" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="6260" dealer="1" win="0" bet="315" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="15" cards="" />
+			<action no="2" player="koko55" type="15" sum="15" cards="" />
+			<action no="3" player="koko55" type="1" sum="75" cards="" />
+			<action no="4" player="Peon84" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">D6 C7</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="3" sum="75" cards="" />
+			<action no="6" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D5 C6 H9</cards>
+			<action no="7" player="Peon84" type="5" sum="150" cards="" />
+			<action no="8" player="koko55" type="3" sum="150" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C8</cards>
+			<action no="9" player="Peon84" type="5" sum="1425" cards="" />
+			<action no="10" player="koko55" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345524">
+		<general>
+			<startdate>2018-04-11 14:37:46</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="2055" dealer="1" win="480" bet="315" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="5945" dealer="0" win="0" bet="165" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="15" cards="" />
+			<action no="2" player="koko55" type="15" sum="15" cards="" />
+			<action no="3" player="Peon84" type="1" sum="75" cards="" />
+			<action no="4" player="koko55" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">SK HK</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="Peon84" type="23" sum="300" cards="" />
+			<action no="6" player="koko55" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345526">
+		<general>
+			<startdate>2018-04-11 14:37:57</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="2220" dealer="0" win="255" bet="165" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="5780" dealer="1" win="0" bet="90" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="15" cards="" />
+			<action no="2" player="koko55" type="15" sum="15" cards="" />
+			<action no="3" player="koko55" type="1" sum="75" cards="" />
+			<action no="4" player="Peon84" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">S3 DQ</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345528">
+		<general>
+			<startdate>2018-04-11 14:38:03</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="2310" dealer="1" win="0" bet="90" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="5690" dealer="0" win="255" bet="165" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="15" cards="" />
+			<action no="2" player="koko55" type="15" sum="15" cards="" />
+			<action no="3" player="Peon84" type="1" sum="75" cards="" />
+			<action no="4" player="koko55" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">D2 S4</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345529">
+		<general>
+			<startdate>2018-04-11 14:38:10</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="2220" dealer="0" win="0" bet="165" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="5780" dealer="1" win="480" bet="315" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="15" cards="" />
+			<action no="2" player="koko55" type="15" sum="15" cards="" />
+			<action no="3" player="koko55" type="1" sum="75" cards="" />
+			<action no="4" player="Peon84" type="2" sum="150" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">C9 S5</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="3" sum="75" cards="" />
+			<action no="6" player="Peon84" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D4 S7 SK</cards>
+			<action no="7" player="Peon84" type="4" sum="0" cards="" />
+			<action no="8" player="koko55" type="5" sum="150" cards="" />
+			<action no="9" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345532">
+		<general>
+			<startdate>2018-04-11 14:38:25</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="2055" dealer="1" win="4110" bet="2055" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="5945" dealer="0" win="3890" bet="5945" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="20" cards="" />
+			<action no="2" player="koko55" type="15" sum="20" cards="" />
+			<action no="3" player="Peon84" type="1" sum="100" cards="" />
+			<action no="4" player="koko55" type="2" sum="200" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">C9 HK</cards>
+			<cards type="Pocket" player="koko55">CJ CA</cards>
+			<action no="5" player="Peon84" type="3" sum="100" cards="" />
+			<action no="6" player="koko55" type="23" sum="5925" cards="" />
+			<action no="7" player="Peon84" type="3" sum="1835" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SK HQ H8</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H3</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S4</cards>
+		</round>
+	</game>
+	<game gamecode="6345536">
+		<general>
+			<startdate>2018-04-11 14:38:39</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="4110" dealer="0" win="0" bet="220" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="3890" dealer="1" win="4110" bet="3890" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="20" cards="" />
+			<action no="2" player="koko55" type="15" sum="20" cards="" />
+			<action no="3" player="koko55" type="1" sum="100" cards="" />
+			<action no="4" player="Peon84" type="2" sum="200" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">H2 D8</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="23" sum="3870" cards="" />
+			<action no="6" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345538">
+		<general>
+			<startdate>2018-04-11 14:38:50</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="3890" dealer="1" win="1040" bet="620" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="4110" dealer="0" win="0" bet="420" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="20" cards="" />
+			<action no="2" player="koko55" type="15" sum="20" cards="" />
+			<action no="3" player="Peon84" type="1" sum="100" cards="" />
+			<action no="4" player="koko55" type="2" sum="200" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">DK HJ</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="Peon84" type="23" sum="400" cards="" />
+			<action no="6" player="koko55" type="3" sum="200" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CQ C7 S10</cards>
+			<action no="7" player="koko55" type="4" sum="0" cards="" />
+			<action no="8" player="Peon84" type="5" sum="200" cards="" />
+			<action no="9" player="koko55" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345542">
+		<general>
+			<startdate>2018-04-11 14:39:08</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="4310" dealer="0" win="0" bet="220" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="3690" dealer="1" win="3910" bet="3690" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="20" cards="" />
+			<action no="2" player="koko55" type="15" sum="20" cards="" />
+			<action no="3" player="koko55" type="1" sum="100" cards="" />
+			<action no="4" player="Peon84" type="2" sum="200" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">H8 H9</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="23" sum="3670" cards="" />
+			<action no="6" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345545">
+		<general>
+			<startdate>2018-04-11 14:39:18</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="4090" dealer="1" win="180" bet="4090" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="3910" dealer="0" win="7820" bet="3910" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="20" cards="" />
+			<action no="2" player="koko55" type="15" sum="20" cards="" />
+			<action no="3" player="Peon84" type="1" sum="100" cards="" />
+			<action no="4" player="koko55" type="2" sum="200" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">CK SA</cards>
+			<cards type="Pocket" player="koko55">HK D3</cards>
+			<action no="5" player="Peon84" type="23" sum="400" cards="" />
+			<action no="6" player="koko55" type="3" sum="200" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C6 C10 S3</cards>
+			<action no="7" player="koko55" type="5" sum="3490" cards="" />
+			<action no="8" player="Peon84" type="23" sum="3670" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S2</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">H7</cards>
+		</round>
+	</game>
+	<game gamecode="6345547">
+		<general>
+			<startdate>2018-04-11 14:39:35</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="180" dealer="0" win="360" bet="180" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="7820" dealer="1" win="7640" bet="7820" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="20" cards="" />
+			<action no="2" player="koko55" type="15" sum="20" cards="" />
+			<action no="3" player="koko55" type="1" sum="100" cards="" />
+			<action no="4" player="Peon84" type="2" sum="160" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">CJ D10</cards>
+			<cards type="Pocket" player="koko55">SA HJ</cards>
+			<action no="5" player="koko55" type="23" sum="7800" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C7 H4 HK</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">CK</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C10</cards>
+		</round>
+	</game>
+	<game gamecode="6345551">
+		<general>
+			<startdate>2018-04-11 14:39:45</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="360" dealer="1" win="720" bet="360" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="7640" dealer="0" win="0" bet="360" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="20" cards="" />
+			<action no="2" player="koko55" type="15" sum="20" cards="" />
+			<action no="3" player="Peon84" type="1" sum="100" cards="" />
+			<action no="4" player="koko55" type="2" sum="200" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">HK S3</cards>
+			<cards type="Pocket" player="koko55">D8 SA</cards>
+			<action no="5" player="Peon84" type="23" sum="340" cards="" />
+			<action no="6" player="koko55" type="3" sum="140" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DK SJ C2</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C6</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S5</cards>
+		</round>
+	</game>
+	<game gamecode="6345554">
+		<general>
+			<startdate>2018-04-11 14:39:58</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="720" dealer="0" win="340" bet="220" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="7280" dealer="1" win="0" bet="120" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="20" cards="" />
+			<action no="2" player="koko55" type="15" sum="20" cards="" />
+			<action no="3" player="koko55" type="1" sum="100" cards="" />
+			<action no="4" player="Peon84" type="2" sum="200" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">S3 S8</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345556">
+		<general>
+			<startdate>2018-04-11 14:40:04</startdate>
+			<players>
+				<player seat="1" name="Peon84" chips="840" dealer="1" win="0" bet="120" rebuy="0" addon="0" />
+				<player seat="5" name="koko55" chips="7160" dealer="0" win="340" bet="220" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="20" cards="" />
+			<action no="2" player="koko55" type="15" sum="20" cards="" />
+			<action no="3" player="Peon84" type="1" sum="100" cards="" />
+			<action no="4" player="koko55" type="2" sum="200" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">C2 HK</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345557">
+		<general>
+			<startdate>2018-04-11 14:40:12</startdate>
+			<players>
+				<player seat="2" name="Peon84" chips="720" dealer="0" win="0" bet="220" rebuy="0" addon="0" />
+				<player seat="6" name="koko55" chips="7280" dealer="1" win="7500" bet="7280" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="20" cards="" />
+			<action no="2" player="koko55" type="15" sum="20" cards="" />
+			<action no="3" player="koko55" type="1" sum="100" cards="" />
+			<action no="4" player="Peon84" type="2" sum="200" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">H2 C7</cards>
+			<cards type="Pocket" player="koko55">X X</cards>
+			<action no="5" player="koko55" type="23" sum="7260" cards="" />
+			<action no="6" player="Peon84" type="0" sum="0" cards="" />
+		</round>
+	</game>
+	<game gamecode="6345560">
+		<general>
+			<startdate>2018-04-11 14:40:21</startdate>
+			<players>
+				<player seat="2" name="Peon84" chips="500" dealer="1" win="0" bet="500" rebuy="0" addon="0" />
+				<player seat="6" name="koko55" chips="7500" dealer="0" win="1000" bet="500" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Peon84" type="15" sum="20" cards="" />
+			<action no="2" player="koko55" type="15" sum="20" cards="" />
+			<action no="3" player="Peon84" type="1" sum="100" cards="" />
+			<action no="4" player="koko55" type="2" sum="200" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Peon84">D8 H4</cards>
+			<cards type="Pocket" player="koko55">SA C4</cards>
+			<action no="5" player="Peon84" type="23" sum="480" cards="" />
+			<action no="6" player="koko55" type="3" sum="280" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H6 H7 S9</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">CJ</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C9</cards>
+		</round>
+	</game>
+</session>
