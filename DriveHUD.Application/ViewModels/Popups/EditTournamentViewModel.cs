@@ -1,15 +1,14 @@
 ﻿using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Entities;
 using HandHistories.Objects.GameDescription;
 using Microsoft.Practices.ServiceLocation;
-using DriveHUD.Entities;
 using Model.Events;
 using Model.Interfaces;
+using Model.Reports;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
@@ -82,7 +81,14 @@ namespace DriveHUD.Application.ViewModels
         private void Save(object obj)
         {
             UpdateEntity();
-            ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<TournamentDataUpdatedEvent>().Publish(new TournamentDataUpdatedEventArgs());
+
+            var reportStatusService = ServiceLocator.Current.GetInstance<IReportStatusService>();
+            reportStatusService.TournamentUpdated = true;
+
+            ServiceLocator.Current
+                .GetInstance<IEventAggregator>()
+                .GetEvent<TournamentDataUpdatedEvent>()
+                .Publish(new TournamentDataUpdatedEventArgs());
 
             if (CloseAction != null)
             {
@@ -101,6 +107,7 @@ namespace DriveHUD.Application.ViewModels
         #region ICommand
 
         public ICommand SaveCommand { get; set; }
+
         public ICommand CancelCommand { get; set; }
 
         #endregion
@@ -215,6 +222,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         public Action CloseAction;
+
         #endregion
     }
 }
