@@ -933,9 +933,13 @@ namespace DriveHUD.Importers.Bovada
             {
                 HeroWasMoved = true;
             }
+            else if (!IsTournament && !IsZonePokerTable)
+            {
+                PlayersOnTable.Clear();
+                ClearInfo();
+            }
 
             TableIndex = cmdObj.tableNo;
-
         }
 
         protected virtual void PreImportChecks()

@@ -653,6 +653,9 @@
     <Content Include="UnitTests\TestData\Ignition\ign-mtt-2018-01-14.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-omaha-cash-2018-04-07.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\Ignition\ign-zone-2018-03-18-2.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -740,6 +743,9 @@
     <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-10.0.0.81.3511.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="UnitTests\TestData\Ignition\ign-omaha-cash-2018-04-07.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DriveHUD.Application\DriveHUD.Application.csproj">
