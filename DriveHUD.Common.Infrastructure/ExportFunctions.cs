@@ -14,6 +14,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
+using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
@@ -130,7 +131,7 @@ namespace DriveHUD.Common.Ifrastructure
 
                 HandHistories.Objects.Players.Player heroPlayer = null;
                 StringBuilder res = new StringBuilder();
-                String title = "NL Holdem $" + currentHandHistory.GameDescription.Limit.BigBlind + "(BB)";
+                var title = $"{ConvertGameType(currentHandHistory)} ${currentHandHistory.GameDescription.Limit.BigBlind}(BB)";
                 res.AppendLine("Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software");
                 res.Append(Environment.NewLine);
                 res.AppendLine(title);
@@ -255,8 +256,8 @@ namespace DriveHUD.Common.Ifrastructure
                 }
 
                 HandHistories.Objects.Players.Player heroPlayer = null;
-                StringBuilder res = new StringBuilder();
-                String title = "NL Holdem $" + currentHandHistory.GameDescription.Limit.BigBlind + "(BB)";
+                var res = new StringBuilder();
+                var title = $"{ConvertGameType(currentHandHistory)} ${currentHandHistory.GameDescription.Limit.BigBlind}(BB)";
                 res.AppendLine("Hand History driven straight to this forum by DriveHUD - http://drivehud.com");
                 res.Append(Environment.NewLine);
                 res.AppendLine(title);
@@ -366,6 +367,34 @@ namespace DriveHUD.Common.Ifrastructure
                 LogProvider.Log.Error("ExportFunctions", String.Format("HandID: {0}", currentHandHistory.HandId), exc);
             }
             return "";
+        }
+
+        private static string ConvertGameType(HandHistory handHistory)
+        {
+            switch (handHistory.GameDescription.GameType)
+            {
+                case GameType.FixedLimitHoldem:
+                    return "FL Holdem";
+                case GameType.FixedLimitOmaha:
+                    return "FL Omaha";
+                case GameType.FixedLimitOmahaHiLo:
+                    return "FL Omaha HiLo";
+                case GameType.NoLimitOmaha:
+                    return "NL Omaha";
+                case GameType.NoLimitOmahaHiLo:
+                    return "NL Omaha HiLo";
+                case GameType.PotLimitHoldem:
+                    return "PL Holdem";
+                case GameType.CapPotLimitOmaha:
+                case GameType.FiveCardPotLimitOmaha:
+                case GameType.PotLimitOmaha:
+                    return "PL Omaha";
+                case GameType.FiveCardPotLimitOmahaHiLo:
+                case GameType.PotLimitOmahaHiLo:
+                    return "PL Omaha HiLo";
+                default:
+                    return "NL Holdem";
+            }
         }
 
         private static String SurroundWithColorIfInHand(string player, bool isInHand)
