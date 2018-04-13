@@ -136,6 +136,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmaha.txt", GameType.PotLimitOmaha)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", GameType.PotLimitOmahaHiLo)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", GameType.PotLimitHoldem)]
+        [TestCase(TestDataFolder + @"Hands/JackpotSnG.txt", GameType.NoLimitHoldem)]
         public void ParseGameTypeTest(string handHistoryFile, GameType gameType)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -210,6 +211,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", "Manila")]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", "Table  131342 (No DP)")]
         [TestCase(TestDataFolder + @"Hands/Tournament157.txt", "Table #10")]
+        [TestCase(TestDataFolder + @"Hands/JackpotSnG.txt", "Table #1")]
         public void ParseTableNameTest(string handHistoryFile, string tableName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -280,6 +282,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"MultipleHands/WithInvalid/Supersonic 3_35560068.txt", 12, 1)]
         [TestCase(TestDataFolder + @"Tournaments/Flyweight. $150 Gtd KO (138340269) Table #10.txt", 33, 0)]
         [TestCase(TestDataFolder + @"Tournaments/Jab Micro Warm Up PKO - $500 Gtd (156119820) Table #15.txt", 77, 0)]
+        [TestCase(TestDataFolder + @"Tournaments/$0.25 Sit & Go 3-Handed (159743601) Table #1.txt", 27, 0)]
         public void ParseMultipleHandsTest(string handHistoryFile, int numberOfValidHands, int numberOfInvalidHands)
         {
             var parser = new HandHistories.Parser.Parsers.FastParser.PartyPoker.PartyPokerFastParserImpl();
@@ -310,6 +313,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"Hands/Tournament157.txt", GameType.NoLimitHoldem, "138340269", "Flyweight. $150 Gtd KO", 0.55, 0, TournamentSpeed.Regular, 157, 0)]
         [TestCase(TestDataFolder + @"Hands/Tournament211.txt", GameType.NoLimitHoldem, "138340262", "Flyweight. $400 Gtd KO", 1.1, 0, TournamentSpeed.Regular, 211, 0)]
         [TestCase(TestDataFolder + @"Hands/Tournament2.txt", GameType.NoLimitHoldem, "143085353", "Turbo", 1.1, 0, TournamentSpeed.Turbo, 2, 2.61)]
+        [TestCase(TestDataFolder + @"Tournaments/$0.25 Sit & Go 3-Handed (159743601) Table #1.txt", GameType.NoLimitHoldem, "159743600", "$0.25 Sit & Go 3-Handed", 0.25, 0, TournamentSpeed.Turbo, 1, 1)]
         public void ParseTournamentSummaryTest(string handHistoryFile, GameType gameType, string tournamentId, string tournamentName, decimal tournamentBuyIn, decimal tournamentRake, TournamentSpeed speed, int finishPosition, decimal wonAmount)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
