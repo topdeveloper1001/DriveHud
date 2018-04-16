@@ -1,12 +1,84 @@
-﻿<Window x:Class="Simulator.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Simulator"
-        mc:Ignorable="d"
-        Title="Simulator" Height="350" Width="525">
-    <Grid>
-        <Button Width="100" Height="20" Content="Run" Command="{Binding RunCommand}" />
-    </Grid>
+﻿<Window
+    x:Class="Simulator.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Simulator"
+    mc:Ignorable="d"
+    Title="DriveHUD Poker Client Emulator"
+    Height="350"
+    Width="525"
+    Icon="drivehud.ico">
+    <Window.Resources>
+
+        <Style
+            TargetType="Button">
+            <Setter
+                Property="Width"
+                Value="100" />
+            <Setter
+                Property="Height"
+                Value="30" />
+        </Style>
+
+        <DataTemplate
+            DataType="{x:Type local:PokerStarsEmulator}">
+            <local:PokerStarsEmulatorSettings />
+        </DataTemplate>
+
+    </Window.Resources>
+    <Border
+        Background="#EEEEEE"
+        Padding="5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="5" />
+                <RowDefinition
+                    Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                Orientation="Vertical">
+                <TextBlock
+                    FontWeight="Bold"
+                    Text="Select emulator:" />
+                <ComboBox
+                    DisplayMemberPath="Name"
+                    SelectedItem="{Binding SelectedEmulator}"
+                    ItemsSource="{Binding Emulators}" />
+            </StackPanel>
+
+            <StackPanel
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalAlignment="Center">
+                <Button
+                    Content="Run"
+                    Command="{Binding RunCommand}" />
+                <Button
+                    Margin="0,2,0,0"
+                    Content="Stop"
+                    Command="{Binding StopCommand}" />
+            </StackPanel>
+
+            <ContentControl
+                Content="{Binding SelectedEmulator}"
+                Grid.Column="0"
+                Grid.Row="2"
+                Grid.ColumnSpan="2" />
+
+        </Grid>
+    </Border>
 </Window>
