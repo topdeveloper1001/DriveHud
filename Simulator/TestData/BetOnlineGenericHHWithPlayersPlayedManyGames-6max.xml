@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6727821106">
+  <general>    
+    <mode>real</mode>
+    <gametype>Holdem NL $1/$2</gametype>
+    <tablename>TestTable, 817749865</tablename>
+    <tablecurrency>EUR</tablecurrency>
+    <duration>00:07:10</duration>
+    <gamecount>12</gamecount>
+    <startdate>2018-04-14 15:15:38</startdate>
+    <currency>USD</currency>
+    <nickname>floatmania</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <statuspoints>0.00</statuspoints>
+    <awardpoints>0.00</awardpoints>
+    <ipoints>0.00</ipoints>
+    <maxplayers>6</maxplayers>
+    <pokersite>BetOnline</pokersite>
+  </general>
+  <game gamecode="277331530002">
+    <general>
+      <startdate>2017-09-01 15:17:33</startdate>
+      <players>
+        <player name="pwrtothepeople" bet="$1" chips="$100" seat="1" win="$0" dealer="0"/>
+        <player name="floatmania" bet="$2" chips="$100" seat="2" win="$2" dealer="0"/>
+        <player name="huiloTJ" bet="$0" chips="$100" seat="3" win="$0" dealer="1"/>
+        <player name="Tyler_Drdn" bet="$0" chips="$100" seat="4" win="$0" dealer="0"/>
+        <player name="douchbag" bet="$0" chips="$100" seat="5" win="$0" dealer="0"/>
+        <player name="stayerST" bet="$0" chips="$100" seat="6" win="$0" dealer="0"/>
+      </players>
+    </general>
+    <round no="0">
+      <action cards="" type="1" no="1" sum="$1" player="pwrtothepeople"/>
+      <action cards="" type="2" no="2" sum="$2" player="floatmania"/>
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="huiloTJ">X X</cards>
+      <action cards="" type="0" no="3" sum="$0" player="huiloTJ"/>
+      <cards type="Pocket" player="Tyler_Drdn">X X</cards>
+      <action cards="" type="0" no="4" sum="$0" player="Tyler_Drdn"/>
+      <cards type="Pocket" player="douchbag">X X</cards>
+      <action cards="" type="0" no="5" sum="$0" player="douchbag"/>
+      <cards type="Pocket" player="stayerST">X X</cards>
+      <action cards="" type="0" no="6" sum="$0" player="stayerST"/>
+      <cards type="Pocket" player="pwrtothepeople">X X</cards>
+      <action cards="" type="0" no="7" sum="$0" player="pwrtothepeople"/>
+      <cards type="Pocket" player="floatmania">HA DA</cards>
+    </round>    
+  </game>
+</session>

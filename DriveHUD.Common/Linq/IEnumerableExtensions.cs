@@ -382,5 +382,24 @@ namespace DriveHUD.Common.Linq
                 yield return items.GetRange(i, Math.Min(nSize, items.Count - i));
             }
         }
+
+        public static IEnumerable<List<T>> SplitListByChunk<T>(this List<T> items, int chunks)
+        {
+            var result = new List<List<T>>();
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                var index = i % chunks;
+
+                if (result.Count <= index)
+                {
+                    result.Add(new List<T>());
+                }
+
+                result[index].Add(items[i]);
+            }
+
+            return result;
+        }
     }
 }
