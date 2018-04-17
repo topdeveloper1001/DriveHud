@@ -25,6 +25,7 @@ using Model.Data;
 using HandHistories.Objects.GameDescription;
 using Model.Enums;
 using DriveHUD.Common.Log;
+using System.Threading.Tasks;
 
 namespace DriveHUD.Importers
 {
@@ -36,7 +37,12 @@ namespace DriveHUD.Importers
         /// <summary>
         /// Interval in minutes after which session will expire and will be removed from cache
         /// </summary>
-        private const int sessionLifeTime = 12;
+        private const int SessionLifeTime = 12;
+
+        /// <summary>
+        /// Amount of hands required to start using existing sessions instead of loading full data
+        /// </summary>
+        private const int TotalHandsToUseExistingSession = 1000;
 
         private ReaderWriterLockSlim cacheLock = new ReaderWriterLockSlim();
 
@@ -105,9 +111,9 @@ namespace DriveHUD.Importers
         /// Stores specified player data in cache
         /// </summary>
         /// <param name="cacheInfo"><see cref="PlayerStatsSessionCacheInfo"/> to store in cache</param>    
-        public void AddOrUpdatePlayerStats(PlayerStatsSessionCacheInfo cacheInfo)
+        public void AddOrUpdatePlayersStats(IEnumerable<PlayerStatsSessionCacheInfo> cacheInfos, string session, ISessionStatisticFilter filter)
         {
-            if (!isStarted || cacheInfo == null || string.IsNullOrEmpty(cacheInfo.Session))
+            if (!isStarted || cacheInfos == null || !cacheInfos.Any() || string.IsNullOrEmpty(session))
             {
                 return;
             }
@@ -116,114 +122,162 @@ namespace DriveHUD.Importers
 
             try
             {
-                var sessionData = GetOrAddSessionData(cacheInfo.Session);
+                var cacheCreationInfo = cacheInfos.First();
+
+                var sessionCreationInfo = new SessionCreationInfo
+                {
+                    Session = session,
+                    PokerSiteId = (int)cacheCreationInfo.Player.PokerSite,
+                    IsTourney = cacheCreationInfo.Stats.IsTourney,
+                    PokerGameTypeId = cacheCreationInfo.Stats.PokergametypeId
+                };
+
+                var sessionData = GetOrAddSessionData(sessionCreationInfo);
 
                 // clear statistic for all players except for hero if filter was changed                
-                if (!cacheInfo.Filter.Equals(sessionData.Filter))
+                if (!filter.Equals(sessionData.Filter))
                 {
                     sessionData.StatisticByPlayer.RemoveByCondition(x => !x.Value.IsHero);
-                    sessionData.Filter = cacheInfo.Filter;
+                    sessionData.Filter = filter;
                 }
 
-                SessionCacheStatistic sessionCacheStatistic = null;
+                var playerSessionCacheStatistic = GetSessionCacheStatistic(cacheInfos, sessionData);
 
-                bool skipAdding = false;
+                foreach (var playerSessionCache in playerSessionCacheStatistic)
+                {
+                    var cacheInfo = playerSessionCache.Key;
+                    var sessionCacheStatistic = playerSessionCache.Value;
 
-                // get or initialize new session 
-                if (sessionData.StatisticByPlayer.ContainsKey(cacheInfo.Player))
-                {
-                    sessionCacheStatistic = sessionData.StatisticByPlayer[cacheInfo.Player];
-                }
-                else
-                {
-                    // if not hero read data from storage
-                    if (cacheInfo.IsHero)
+                    // Add last hand info
+                    if (sessionData.LastHandStatisticByPlayer.ContainsKey(cacheInfo.Player))
                     {
-                        sessionCacheStatistic = new SessionCacheStatistic
-                        {
-                            IsHero = true,
-                            GameFormat = cacheInfo.GameFormat
-                        };
+                        sessionData.LastHandStatisticByPlayer[cacheInfo.Player] = cacheInfo.Stats.Copy();
                     }
                     else
                     {
-                        sessionCacheStatistic = new SessionCacheStatistic
-                        {
-                            GameFormat = cacheInfo.GameFormat
-                        };
-
-                        playerStatisticRepository
-                            .GetPlayerStatistic(cacheInfo.Player.PlayerId)
-                            .Where(stat => (stat.PokersiteId == (short)cacheInfo.Player.PokerSite) &&
-                                stat.IsTourney == cacheInfo.Stats.IsTourney &&
-                                GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)cacheInfo.Stats.PokergametypeId) &&
-                                (cacheInfo.Filter == null || cacheInfo.Filter.Apply(stat)))
-                            .ForEach(stat =>
-                            {
-                                var isCurrentGame = stat.GameNumber == cacheInfo.Stats.GameNumber;
-
-                                if (isCurrentGame)
-                                {
-                                    stat.CalculateTotalPot();
-                                    stat.SessionCode = cacheInfo.Session;
-                                }
-
-                                sessionCacheStatistic.PlayerData.AddStatistic(stat);
-
-                                if (isCurrentGame)
-                                {
-                                    sessionCacheStatistic.SessionPlayerData.AddStatistic(stat);
-
-                                    InitSessionCardsCollections(sessionCacheStatistic.PlayerData, stat);
-                                    InitSessionCardsCollections(sessionCacheStatistic.SessionPlayerData, stat);
-                                    InitSessionStatCollections(sessionCacheStatistic.PlayerData, stat);
-                                    InitSessionStatCollections(sessionCacheStatistic.SessionPlayerData, stat);
-                                }
-
-                                if (!skipAdding)
-                                {
-                                    skipAdding = true;
-                                }
-                            });
+                        sessionData.LastHandStatisticByPlayer.Add(cacheInfo.Player, cacheInfo.Stats.Copy());
                     }
 
-                    sessionData.StatisticByPlayer.Add(cacheInfo.Player, sessionCacheStatistic);
-                }
+                    if (cacheInfo.IsHero && !sessionCacheStatistic.SessionHands.Contains(cacheInfo.Stats.GameNumber))
+                    {
+                        sessionCacheStatistic.SessionHands.Add(cacheInfo.Stats.GameNumber);
+                    }
 
-                if (sessionData.LastHandStatisticByPlayer.ContainsKey(cacheInfo.Player))
-                {
-                    sessionData.LastHandStatisticByPlayer[cacheInfo.Player] = cacheInfo.Stats.Copy();
-                }
-                else
-                {
-                    sessionData.LastHandStatisticByPlayer.Add(cacheInfo.Player, cacheInfo.Stats.Copy());
-                }
+                    sessionCacheStatistic.PlayerData.AddStatistic(cacheInfo.Stats);
 
-                if (skipAdding)
-                {
-                    return;
-                }
+                    InitSessionCardsCollections(sessionCacheStatistic.PlayerData, cacheInfo.Stats);
+                    InitSessionStatCollections(sessionCacheStatistic.PlayerData, cacheInfo.Stats);
 
-                if (cacheInfo.IsHero && !sessionCacheStatistic.SessionHands.Contains(cacheInfo.Stats.GameNumber))
-                {
-                    sessionCacheStatistic.SessionHands.Add(cacheInfo.Stats.GameNumber);
-                }
+                    if (cacheInfo.Stats.SessionCode == session)
+                    {
+                        sessionCacheStatistic.SessionPlayerData.AddStatistic(cacheInfo.Stats);
 
-                sessionCacheStatistic.PlayerData.AddStatistic(cacheInfo.Stats);
-                InitSessionCardsCollections(sessionCacheStatistic.PlayerData, cacheInfo.Stats);
-                InitSessionStatCollections(sessionCacheStatistic.PlayerData, cacheInfo.Stats);
-
-                if (cacheInfo.Stats.SessionCode == cacheInfo.Session)
-                {
-                    sessionCacheStatistic.SessionPlayerData.AddStatistic(cacheInfo.Stats);
-                    InitSessionCardsCollections(sessionCacheStatistic.SessionPlayerData, cacheInfo.Stats);
-                    InitSessionStatCollections(sessionCacheStatistic.SessionPlayerData, cacheInfo.Stats);
+                        InitSessionCardsCollections(sessionCacheStatistic.SessionPlayerData, cacheInfo.Stats);
+                        InitSessionStatCollections(sessionCacheStatistic.SessionPlayerData, cacheInfo.Stats);
+                    }
                 }
             }
             finally
             {
                 cacheLock.ExitWriteLock();
             }
+        }
+
+        /// <summary>
+        /// Gets player session cache data using existing data or loading from DB
+        /// </summary>
+        /// <param name="cacheInfos"></param>
+        /// <param name="sessionData"></param>
+        /// <returns></returns>
+        private Dictionary<PlayerStatsSessionCacheInfo, SessionCacheStatistic> GetSessionCacheStatistic(IEnumerable<PlayerStatsSessionCacheInfo> cacheInfos,
+            SessionCacheData sessionData)
+        {
+            var playerSessionCacheStatistic = new Dictionary<PlayerStatsSessionCacheInfo, SessionCacheStatistic>();
+
+            var playerSessionCacheStatisticTasks = new List<Task>();
+
+            foreach (var cacheInfo in cacheInfos)
+            {
+                if (playerSessionCacheStatistic.ContainsKey(cacheInfo))
+                {
+                    continue;
+                }
+
+                SessionCacheStatistic sessionCacheStatistic = null;
+
+                var isNewSessionCacheStatistic = true;
+
+                // existing statistic
+                if (sessionData.StatisticByPlayer.ContainsKey(cacheInfo.Player))
+                {
+                    sessionCacheStatistic = sessionData.StatisticByPlayer[cacheInfo.Player];
+                    isNewSessionCacheStatistic = false;
+                }
+                // hero starts empty session
+                else if (cacheInfo.IsHero)
+                {
+                    sessionCacheStatistic = new SessionCacheStatistic
+                    {
+                        IsHero = true,
+                        GameFormat = cacheInfo.GameFormat
+                    };
+                }
+                // try to check existing sessions for this player
+                else
+                {
+                    var similarPlayerSession = cachedData.Values.FirstOrDefault(x => x.PokerSiteId == sessionData.PokerSiteId &&
+                        x.IsTourney == sessionData.IsTourney &&
+                        GameTypeUtils.CompareGameType((GameType)x.PokerGameTypeId, (GameType)sessionData.PokerGameTypeId) &&
+                        ((x.Filter == null && sessionData.Filter == null) || x.Filter.Equals(sessionData.Filter)) &&
+                        x.StatisticByPlayer.ContainsKey(cacheInfo.Player));
+
+                    if (similarPlayerSession != null &&
+                        similarPlayerSession.StatisticByPlayer[cacheInfo.Player].PlayerData.TotalHands >= TotalHandsToUseExistingSession)
+                    {
+                        sessionCacheStatistic = similarPlayerSession.StatisticByPlayer[cacheInfo.Player].Clone();
+                    }
+                }
+
+                var needToReadStatistic = sessionCacheStatistic == null;
+
+                if (needToReadStatistic)
+                {
+                    sessionCacheStatistic = new SessionCacheStatistic
+                    {
+                        GameFormat = cacheInfo.GameFormat
+                    };
+                }
+
+                playerSessionCacheStatistic.Add(cacheInfo, sessionCacheStatistic);
+
+                if (isNewSessionCacheStatistic)
+                {
+                    sessionData.StatisticByPlayer.Add(cacheInfo.Player, sessionCacheStatistic); ;
+                }
+
+                if (!needToReadStatistic)
+                {
+                    continue;
+                }
+
+                // read data from statistic
+                var taskToReadPlayerStats = Task.Run(() =>
+                    playerStatisticRepository
+                        .GetPlayerStatistic(cacheInfo.Player.PlayerId)
+                        .Where(stat => (stat.PokersiteId == (short)cacheInfo.Player.PokerSite) &&
+                            stat.IsTourney == cacheInfo.Stats.IsTourney &&
+                            GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)cacheInfo.Stats.PokergametypeId) &&
+                            (cacheInfo.Filter == null || cacheInfo.Filter.Apply(stat))
+                            && stat.GameNumber != cacheInfo.Stats.GameNumber)
+                        .ForEach(stat => sessionCacheStatistic.PlayerData.AddStatistic(stat))
+                );
+
+                playerSessionCacheStatisticTasks.Add(taskToReadPlayerStats);
+            }
+
+            Task.WhenAll(playerSessionCacheStatisticTasks).Wait();
+
+            return playerSessionCacheStatistic;
         }
 
         /// <summary>
@@ -262,9 +316,9 @@ namespace DriveHUD.Importers
         /// <param name="session">Session</param>
         /// <param name="player">Player name</param>
         /// <param name="stickersStats">Dictionary of statistic accessed by sticker name</param>
-        public void AddOrUpdatePlayerStickerStats(PlayerStickersCacheData playerStickersCacheData)
+        public void AddOrUpdatePlayerStickerStats(IEnumerable<PlayerStickersCacheData> playersStickersCacheData, string session)
         {
-            if (!isStarted || playerStickersCacheData == null || !playerStickersCacheData.IsValid())
+            if (!isStarted || playersStickersCacheData == null || !playersStickersCacheData.Any())
             {
                 return;
             }
@@ -273,13 +327,95 @@ namespace DriveHUD.Importers
 
             try
             {
-                var sessionData = GetSessionData(playerStickersCacheData.Session);
+                var sessionData = GetSessionData(session);
 
                 if (sessionData == null)
                 {
                     return;
                 }
 
+                var playersStickersCacheDataInfo = PreparePlayerStickersCacheDataInfo(playersStickersCacheData, sessionData);
+
+                playersStickersCacheDataInfo.Where(x => !x.ReloadRequired).ForEach(x => AddStatToSticker(x.PlayerStickersCacheData.Statistic.Copy(),
+                    x.PlayerStickersCacheData, x.PlayerStickersDictionary));
+
+                var tasksToReloadStickersData = new List<Task>();
+
+                playersStickersCacheDataInfo.Where(x => x.ReloadRequired).ForEach(x =>
+                {
+                    var playerStickersCacheData = x.PlayerStickersCacheData;
+
+                    var sessionHands = sessionData.StatisticByPlayer.ContainsKey(playerStickersCacheData.Player) ?
+                            sessionData.StatisticByPlayer[x.PlayerStickersCacheData.Player].SessionHands :
+                            new HashSet<long>();
+
+                    var task = Task.Run(() =>
+                        playerStatisticRepository
+                            .GetPlayerStatistic(playerStickersCacheData.Player.PlayerId)
+                            .Where(stat => (stat.PokersiteId == (short)playerStickersCacheData.Player.PokerSite) &&
+                                stat.IsTourney == playerStickersCacheData.Statistic.IsTourney &&
+                                ((playerStickersCacheData.IsHero && sessionHands.Contains(stat.GameNumber)) || !playerStickersCacheData.IsHero) &&
+                                GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)playerStickersCacheData.Statistic.PokergametypeId))
+                            .ForEach(stat =>
+                            {
+                                AddStatToSticker(stat, playerStickersCacheData, x.PlayerStickersDictionary);
+                            })
+                    );
+
+                    tasksToReloadStickersData.Add(task);
+                });
+
+                Task.WhenAll(tasksToReloadStickersData).Wait();
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not add stickers stat to cache.", e);
+            }
+            finally
+            {
+                cacheLock.ExitWriteLock();
+            }
+        }
+
+        /// <summary>
+        /// Adds stat to sticker data
+        /// </summary>
+        /// <param name="stat"></param>
+        /// <param name="playerStickersCacheData"></param>
+        /// <param name="playerStickersDictionary"></param>
+        private void AddStatToSticker(Playerstatistic stat, PlayerStickersCacheData playerStickersCacheData, Dictionary<string, Playerstatistic> playerStickersDictionary)
+        {
+            foreach (var stickerFilter in playerStickersCacheData.StickerFilters)
+            {
+                if (!stickerFilter.Value(stat))
+                {
+                    continue;
+                }
+
+                if (playerStickersDictionary.ContainsKey(stickerFilter.Key))
+                {
+                    playerStickersDictionary[stickerFilter.Key].Add(stat);
+                }
+                else
+                {
+                    playerStickersDictionary.Add(stickerFilter.Key, stat.Copy());
+                }
+            }
+        }
+
+        /// <summary>
+        /// Prepares data to update player stickers
+        /// </summary>
+        /// <param name="playersStickersCacheData"></param>
+        /// <param name="sessionData"></param>
+        /// <returns></returns>
+        private List<PlayerStickersCacheDataInfo> PreparePlayerStickersCacheDataInfo(IEnumerable<PlayerStickersCacheData> playersStickersCacheData,
+            SessionCacheData sessionData)
+        {
+            var playersStickersCacheDataInfo = new List<PlayerStickersCacheDataInfo>();
+
+            foreach (var playerStickersCacheData in playersStickersCacheData)
+            {
                 var layoutWasChanged = !sessionData.LayoutByPlayer.ContainsKey(playerStickersCacheData.Player) ||
                      sessionData.LayoutByPlayer[playerStickersCacheData.Player] != playerStickersCacheData.Layout;
 
@@ -312,56 +448,18 @@ namespace DriveHUD.Importers
                     sessionData.StickersStatisticByPlayer.Add(playerStickersCacheData.Player, playerStickersDictionary);
                 }
 
-                Action<Playerstatistic> addStatToSticker = stat =>
-                {
-                    foreach (var stickerFilter in playerStickersCacheData.StickerFilters)
-                    {
-                        if (!stickerFilter.Value(stat))
-                        {
-                            continue;
-                        }
 
-                        if (playerStickersDictionary.ContainsKey(stickerFilter.Key))
-                        {
-                            playerStickersDictionary[stickerFilter.Key].Add(stat);
-                        }
-                        else
-                        {
-                            playerStickersDictionary.Add(stickerFilter.Key, stat.Copy());
-                        }
-                    }
+                var playerStickersCacheDataInfo = new PlayerStickersCacheDataInfo
+                {
+                    PlayerStickersCacheData = playerStickersCacheData,
+                    PlayerStickersDictionary = playerStickersDictionary,
+                    ReloadRequired = layoutWasChanged
                 };
 
-                if (layoutWasChanged)
-                {
-                    var sessionHands = sessionData.StatisticByPlayer.ContainsKey(playerStickersCacheData.Player) ?
-                            sessionData.StatisticByPlayer[playerStickersCacheData.Player].SessionHands :
-                            new HashSet<long>();
-
-                    playerStatisticRepository
-                        .GetPlayerStatistic(playerStickersCacheData.Player.PlayerId)
-                        .Where(stat => (stat.PokersiteId == (short)playerStickersCacheData.Player.PokerSite) &&
-                            stat.IsTourney == playerStickersCacheData.Statistic.IsTourney &&
-                            ((playerStickersCacheData.IsHero && sessionHands.Contains(stat.GameNumber)) || !playerStickersCacheData.IsHero) &&
-                            GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)playerStickersCacheData.Statistic.PokergametypeId))
-                        .ForEach(stat =>
-                        {
-                            addStatToSticker(stat);
-                        });
-
-                    return;
-                }
-
-                addStatToSticker(playerStickersCacheData.Statistic.Copy());
+                playersStickersCacheDataInfo.Add(playerStickersCacheDataInfo);
             }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, "Could not add stickers stat to cache.", e);
-            }
-            finally
-            {
-                cacheLock.ExitWriteLock();
-            }
+
+            return playersStickersCacheDataInfo;
         }
 
         /// <summary>
@@ -399,21 +497,27 @@ namespace DriveHUD.Importers
         /// </summary>
         /// <param name="session">Session</param>
         /// <returns>Session data of specified session</returns>
-        private SessionCacheData GetOrAddSessionData(string session)
+        private SessionCacheData GetOrAddSessionData(SessionCreationInfo sessionCreationInfo)
         {
             Check.Require(!cacheLock.IsWriteLockHeld, "Write lock must be held before using this function");
 
             SessionCacheData sessionData = null;
 
-            if (cachedData.ContainsKey(session))
+            if (cachedData.ContainsKey(sessionCreationInfo.Session))
             {
-                sessionData = cachedData[session];
+                sessionData = cachedData[sessionCreationInfo.Session];
                 sessionData.LastModified = DateTime.Now;
             }
             else
             {
-                sessionData = new SessionCacheData();
-                cachedData.Add(session, sessionData);
+                sessionData = new SessionCacheData
+                {
+                    PokerSiteId = sessionCreationInfo.PokerSiteId,
+                    IsTourney = sessionCreationInfo.IsTourney,
+                    PokerGameTypeId = sessionCreationInfo.PokerGameTypeId
+                };
+
+                cachedData.Add(sessionCreationInfo.Session, sessionData);
             }
 
             RemoveExpiredSessions();
@@ -479,11 +583,31 @@ namespace DriveHUD.Importers
             {
                 var timeSinceLastUpdate = now - cachedData[sessionKey].LastModified;
 
-                if (timeSinceLastUpdate.TotalMinutes >= sessionLifeTime)
+                if (timeSinceLastUpdate.TotalMinutes >= SessionLifeTime)
                 {
                     cachedData.Remove(sessionKey);
                 }
             }
+        }
+
+        private class SessionCreationInfo
+        {
+            public string Session { get; set; }
+
+            public int PokerSiteId { get; set; }
+
+            public bool IsTourney { get; set; }
+
+            public short PokerGameTypeId { get; set; }
+        }
+
+        private class PlayerStickersCacheDataInfo
+        {
+            public Dictionary<string, Playerstatistic> PlayerStickersDictionary { get; set; }
+
+            public PlayerStickersCacheData PlayerStickersCacheData { get; set; }
+
+            public bool ReloadRequired { get; set; }
         }
     }
 }

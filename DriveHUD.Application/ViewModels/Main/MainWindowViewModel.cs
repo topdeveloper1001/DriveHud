@@ -578,7 +578,7 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                var players = e.Players;
+                var players = e.Players.Where(x => !string.IsNullOrEmpty(x.PlayerName)).ToList();
                 var gameInfo = e.GameInfo;
                 var site = e.GameInfo.PokerSite;
 
@@ -600,26 +600,63 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                var playersCacheInfo = gameInfo.GetPlayersCacheInfo();
-
-                if (e.DoNotUpdateHud)
+                using (var pf = new PerformanceMonitor("Loading cache"))
                 {
+                    var playersCacheInfo = gameInfo.GetPlayersCacheInfo();
+
                     // update cache if even we don't need to build HUD
                     if (playersCacheInfo != null)
                     {
-                        foreach (var playerCacheInfo in playersCacheInfo)
+                        playersCacheInfo.ForEach(x => x.GameFormat = gameInfo.GameFormat);
+
+                        var filter = activeLayout.Filter != null ?
+                            activeLayout.Filter.Clone() :
+                            new HudLayoutFilter();
+
+                        if (!e.DoNotUpdateHud)
                         {
-                            playerCacheInfo.GameFormat = gameInfo.GameFormat;
+                            playersCacheInfo = playersCacheInfo.Where(x => x.GameNumber == e.GameNumber).ToList();
+                        }
 
-                            playerCacheInfo.Filter = activeLayout.Filter != null ?
-                                activeLayout.Filter.Clone() :
-                                new HudLayoutFilter();
+                        importerSessionCacheService.AddOrUpdatePlayersStats(playersCacheInfo, gameInfo.Session, filter);
+                    }
+                }
 
-                            importerSessionCacheService.AddOrUpdatePlayerStats(playerCacheInfo);
+                if (e.DoNotUpdateHud)
+                {
+                    return;
+                }
+
+                using (var pf = new PerformanceMonitor("Loading stickers"))
+                {
+                    if (gameInfo.PokerSite != EnumPokerSites.PokerStars && activeLayout != null)
+                    {
+                        var stickers = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
+
+                        if (stickers.Count > 0)
+                        {
+                            var playersStickersCacheData = (from player in players
+                                                            let playerItem = new PlayerCollectionItem
+                                                            {
+                                                                PlayerId = player.PlayerId,
+                                                                Name = player.PlayerName,
+                                                                PokerSite = site
+                                                            }
+                                                            let lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerItem)
+                                                            where lastHandStatistic != null
+                                                            select new PlayerStickersCacheData
+                                                            {
+                                                                Session = gameInfo.Session,
+                                                                Player = playerItem,
+                                                                Layout = activeLayout.Name,
+                                                                Statistic = lastHandStatistic,
+                                                                StickerFilters = stickers,
+                                                                IsHero = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerItem)?.IsHero ?? false
+                                                            }).ToArray();
+
+                            importerSessionCacheService.AddOrUpdatePlayerStickerStats(playersStickersCacheData, gameInfo.Session);
                         }
                     }
-
-                    return;
                 }
 
                 // stats involved into player types and bumper stickers
@@ -650,15 +687,8 @@ namespace DriveHUD.Application.ViewModels
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
 
-                for (int seatNumber = 1; seatNumber <= 12; seatNumber++)
+                foreach (var player in players)
                 {
-                    var player = players.FirstOrDefault(x => x.SeatNumber == seatNumber);
-
-                    if (player == null || string.IsNullOrEmpty(player.PlayerName))
-                    {
-                        continue;
-                    }
-
                     var playerCollectionItem = new PlayerCollectionItem
                     {
                         PlayerId = player.PlayerId,
@@ -666,23 +696,10 @@ namespace DriveHUD.Application.ViewModels
                         PokerSite = site
                     };
 
-                    var playerCacheInfo = playersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem && x.GameNumber == e.GameNumber);
-
-                    if (playerCacheInfo != null)
-                    {
-                        playerCacheInfo.GameFormat = gameInfo.GameFormat;
-
-                        playerCacheInfo.Filter = activeLayout.Filter != null ?
-                            activeLayout.Filter.Clone() :
-                            new HudLayoutFilter();
-
-                        importerSessionCacheService.AddOrUpdatePlayerStats(playerCacheInfo);
-                    }
-
                     var playerHudContent = new PlayerHudContent
                     {
                         Name = player.PlayerName,
-                        SeatNumber = seatNumber
+                        SeatNumber = player.SeatNumber
                     };
 
                     // cache service must return light indicators or hud light indicators
@@ -722,7 +739,7 @@ namespace DriveHUD.Application.ViewModels
                         GameType = gameInfo.EnumGameType,
                         HudLayoutInfo = activeLayout,
                         PokerSite = gameInfo.PokerSite,
-                        SeatNumber = seatNumber
+                        SeatNumber = player.SeatNumber
                     };
 
                     playerHudContent.HudElement = hudElementCreator.Create(hudElementCreationInfo);
@@ -836,23 +853,6 @@ namespace DriveHUD.Application.ViewModels
 
                     if (gameInfo.PokerSite != EnumPokerSites.PokerStars && lastHandStatistic != null && activeLayout != null)
                     {
-                        var stickers = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
-
-                        var playerStickersCacheData = new PlayerStickersCacheData
-                        {
-                            Session = gameInfo.Session,
-                            Player = playerCollectionItem,
-                            Layout = activeLayout.Name,
-                            Statistic = lastHandStatistic,
-                            StickerFilters = stickers,
-                            IsHero = sessionCacheStatistic.IsHero
-                        };
-
-                        if (stickers.Count > 0)
-                        {
-                            importerSessionCacheService.AddOrUpdatePlayerStickerStats(playerStickersCacheData);
-                        }
-
                         hudLayoutsService.SetStickers(playerHudContent.HudElement,
                             importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerCollectionItem),
                             activeLayout);
