@@ -20,8 +20,6 @@ namespace Simulator
 {
     public class PokerStarsEmulator : ViewModelBase, IPokerEmulator
     {
-        private const string HandHistoryFilter = "*.txt";
-
         private const int delayBetweenHands = 15000;
 
         public PokerStarsEmulator()
@@ -39,9 +37,11 @@ namespace Simulator
             });
         }
 
-        public string Name { get => "PokerStars Emulator"; }
+        protected virtual string HandHistoryFilter { get => "*.txt"; }
 
-        public EnumPokerSites Site => EnumPokerSites.PokerStars;
+        public virtual string Name { get => "PokerStars Emulator"; }
+
+        public virtual EnumPokerSites Site => EnumPokerSites.PokerStars;
 
         private ObservableCollection<int> tablesToEmulateCollection;
 
@@ -96,8 +96,6 @@ namespace Simulator
         public ICommand BrowseCommand { get; private set; }
 
         #endregion
-
-        
 
         public Task Run(CancellationToken cancellationToken)
         {
