@@ -600,26 +600,23 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                using (var pf = new PerformanceMonitor("Loading cache"))
+                var playersCacheInfo = gameInfo.GetPlayersCacheInfo();
+
+                // update cache if even we don't need to build HUD
+                if (playersCacheInfo != null)
                 {
-                    var playersCacheInfo = gameInfo.GetPlayersCacheInfo();
+                    playersCacheInfo.ForEach(x => x.GameFormat = gameInfo.GameFormat);
 
-                    // update cache if even we don't need to build HUD
-                    if (playersCacheInfo != null)
+                    var filter = activeLayout.Filter != null ?
+                        activeLayout.Filter.Clone() :
+                        new HudLayoutFilter();
+
+                    if (!e.DoNotUpdateHud)
                     {
-                        playersCacheInfo.ForEach(x => x.GameFormat = gameInfo.GameFormat);
-
-                        var filter = activeLayout.Filter != null ?
-                            activeLayout.Filter.Clone() :
-                            new HudLayoutFilter();
-
-                        if (!e.DoNotUpdateHud)
-                        {
-                            playersCacheInfo = playersCacheInfo.Where(x => x.GameNumber == e.GameNumber).ToList();
-                        }
-
-                        importerSessionCacheService.AddOrUpdatePlayersStats(playersCacheInfo, gameInfo.Session, filter);
+                        playersCacheInfo = playersCacheInfo.Where(x => x.GameNumber == e.GameNumber).ToList();
                     }
+
+                    importerSessionCacheService.AddOrUpdatePlayersStats(playersCacheInfo, gameInfo.Session, filter);
                 }
 
                 if (e.DoNotUpdateHud)
@@ -627,35 +624,32 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                using (var pf = new PerformanceMonitor("Loading stickers"))
+                if (gameInfo.PokerSite != EnumPokerSites.PokerStars && activeLayout != null)
                 {
-                    if (gameInfo.PokerSite != EnumPokerSites.PokerStars && activeLayout != null)
+                    var stickers = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
+
+                    if (stickers.Count > 0)
                     {
-                        var stickers = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
+                        var playersStickersCacheData = (from player in players
+                                                        let playerItem = new PlayerCollectionItem
+                                                        {
+                                                            PlayerId = player.PlayerId,
+                                                            Name = player.PlayerName,
+                                                            PokerSite = site
+                                                        }
+                                                        let lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerItem)
+                                                        where lastHandStatistic != null
+                                                        select new PlayerStickersCacheData
+                                                        {
+                                                            Session = gameInfo.Session,
+                                                            Player = playerItem,
+                                                            Layout = activeLayout.Name,
+                                                            Statistic = lastHandStatistic,
+                                                            StickerFilters = stickers,
+                                                            IsHero = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerItem)?.IsHero ?? false
+                                                        }).ToArray();
 
-                        if (stickers.Count > 0)
-                        {
-                            var playersStickersCacheData = (from player in players
-                                                            let playerItem = new PlayerCollectionItem
-                                                            {
-                                                                PlayerId = player.PlayerId,
-                                                                Name = player.PlayerName,
-                                                                PokerSite = site
-                                                            }
-                                                            let lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerItem)
-                                                            where lastHandStatistic != null
-                                                            select new PlayerStickersCacheData
-                                                            {
-                                                                Session = gameInfo.Session,
-                                                                Player = playerItem,
-                                                                Layout = activeLayout.Name,
-                                                                Statistic = lastHandStatistic,
-                                                                StickerFilters = stickers,
-                                                                IsHero = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerItem)?.IsHero ?? false
-                                                            }).ToArray();
-
-                            importerSessionCacheService.AddOrUpdatePlayerStickerStats(playersStickersCacheData, gameInfo.Session);
-                        }
+                        importerSessionCacheService.AddOrUpdatePlayerStickerStats(playersStickersCacheData, gameInfo.Session);
                     }
                 }
 
