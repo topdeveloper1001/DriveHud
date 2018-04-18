@@ -12,10 +12,11 @@
 
 using DriveHUD.Entities;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Model
 {
-    public interface IPlayer
+    public interface IPlayer : INotifyPropertyChanged
     {
         int PlayerId { get; set; }
 

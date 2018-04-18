@@ -31,6 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -39,6 +40,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
@@ -156,6 +158,7 @@
     <Compile Include="Condition.cs" />
     <Compile Include="ConditionalBet.cs" />
     <Compile Include="CustomModulesNames.cs" />
+    <Compile Include="Data\DashboardIndicators.cs" />
     <Compile Include="Data\HeatMapDto.cs" />
     <Compile Include="Data\HoleCardsReportRecord.cs" />
     <Compile Include="Data\HudIndicators.cs" />
@@ -168,6 +171,7 @@
     <Compile Include="Data\PopulationReportIndicators.cs" />
     <Compile Include="Data\ReportHandViewModel.cs" />
     <Compile Include="Data\ReportIndicators.cs" />
+    <Compile Include="Data\SessionReportIndicators.cs" />
     <Compile Include="Data\ShowdownHandsReportRecord.cs" />
     <Compile Include="Data\StatDto.cs" />
     <Compile Include="Data\TournamentReportRecord.cs" />
@@ -259,6 +263,7 @@
     <Compile Include="Interfaces\IDataService.cs" />
     <Compile Include="IPlayer.cs" />
     <Compile Include="IPlayerStatisticCalculator.cs" />
+    <Compile Include="IPlayerStatisticRepository.cs" />
     <Compile Include="ISessionFactoryService.cs" />
     <Compile Include="LocalCalculator\PreflopRange.cs" />
     <Compile Include="Mapping\HandhistoryrecordMap.cs" />
@@ -280,17 +285,24 @@
     <Compile Include="Mapping\TournamentsMap.cs" />
     <Compile Include="ModelEntities.cs" />
     <Compile Include="PlayerCollectionItem.cs" />
+    <Compile Include="PlayerStatisticCreationInfo.cs" />
+    <Compile Include="PlayerStatisticRepository.cs" />
     <Compile Include="PreDefinedRangeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ChartData\CashChartData.cs" />
     <Compile Include="Replayer\ChipModel.cs" />
     <Compile Include="Replayer\ReplayerDataModel.cs" />
     <Compile Include="Replayer\ReplayerHelpers.cs" />
+    <Compile Include="Reports\BaseReportCreator.cs" />
     <Compile Include="Reports\CashBaseReportCreator.cs" />
+    <Compile Include="Reports\CashGroupingReportCreator.cs" />
+    <Compile Include="Reports\GroupingReportCreator.cs" />
     <Compile Include="Reports\HoleCardsReportCreator.cs" />
+    <Compile Include="Reports\HoleCardsReportStringExtensions.cs" />
     <Compile Include="Reports\IOpponentReportService.cs" />
     <Compile Include="Reports\IPopulationReportService.cs" />
     <Compile Include="Reports\IReportCreatorcs.cs" />
+    <Compile Include="Reports\IReportStatusService.cs" />
     <Compile Include="Reports\OpponentAnalysisReportCreator.cs" />
     <Compile Include="Reports\OpponentReportCache.cs" />
     <Compile Include="Reports\OpponentReportService.cs" />
@@ -300,12 +312,19 @@
     <Compile Include="Reports\PopulationReportCache.cs" />
     <Compile Include="Reports\PopulationReportService.cs" />
     <Compile Include="Reports\PositionReportCreator.cs" />
+    <Compile Include="Reports\ReportStatusService.cs" />
     <Compile Include="Reports\SessionsReportCreator.cs" />
     <Compile Include="Reports\ShowdownHandsReportCreator.cs" />
     <Compile Include="Reports\StakesReportCreator.cs" />
     <Compile Include="Reports\TimeReportCreator.cs" />
     <Compile Include="Reports\TournamentBaseReportCreator.cs" />
+    <Compile Include="Reports\TournamentGroupingReportCreator.cs" />
+    <Compile Include="Reports\TournamentHoleCardsReportCreator.cs" />
+    <Compile Include="Reports\TournamentOverAllReportCreator.cs" />
+    <Compile Include="Reports\TournamentPokerSiteReportCreator.cs" />
+    <Compile Include="Reports\TournamentPositionReportCreator.cs" />
     <Compile Include="Reports\TournamentReportCreator.cs" />
+    <Compile Include="Reports\TournamentShowdownHandsReportCreator.cs" />
     <Compile Include="Reports\TournamentStackSizeReportCreator.cs" />
     <Compile Include="SessionFactoryService.cs" />
     <Compile Include="Settings\DatabaseSettingsProviders\BaseDatabaseSettingsProvider.cs" />
@@ -346,6 +365,11 @@
     <Compile Include="Site\ISiteConfigurationService.cs" />
     <Compile Include="Site\PokerStarsConfiguration.cs" />
     <Compile Include="Site\SiteConfigurationService.cs" />
+    <Compile Include="Solvers\EquityData.cs" />
+    <Compile Include="Solvers\EquitySolver.cs" />
+    <Compile Include="Solvers\HandWinners.cs" />
+    <Compile Include="Solvers\IEquitySolver.cs" />
+    <Compile Include="Solvers\IPokerEvaluator.cs" />
     <Compile Include="Stats\StatBase.cs" />
     <Compile Include="Site\TruePokerConfiguration.cs" />
     <Compile Include="Site\YaPokerConfiguration.cs" />

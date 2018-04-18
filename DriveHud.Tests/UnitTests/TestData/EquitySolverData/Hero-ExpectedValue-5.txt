@@ -1,0 +1,41 @@
+PokerStars Game #47150606039:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:42:03 ET
+Table 'Libussa' 6-max Seat #1 is the button
+Seat 1: whollyflush ($200 in chips) 
+Seat 2: FIrmFighter ($210.30 in chips) 
+Seat 3: Hero ($389 in chips) 
+Seat 4: Desateur ($604.60 in chips) 
+Seat 5: stopme10 ($200 in chips) 
+Seat 6: BNNJH ($182 in chips) 
+FIrmFighter: posts small blind $1
+Hero: posts big blind $2
+*** HOLE CARDS ***
+Desateur: raises $4 to $6
+stopme10: folds 
+BNNJH: folds 
+whollyflush: folds 
+BNNJH leaves the table
+FIrmFighter: folds 
+maestroB joins the table at seat #6 
+Hero: raises $14 to $20
+Desateur: calls $14
+*** FLOP *** [5s 2c 6c]
+Hero: bets $27
+Desateur: raises $33 to $60
+Hero: raises $309 to $369 and is all-in
+Desateur: calls $309
+*** TURN *** [5s 2c 6c] [Js]
+*** RIVER *** [5s 2c 6c Js] [Qs]
+*** SHOW DOWN ***
+Hero: shows [Ks Kd] (a pair of Kings)
+Desateur: shows [3d 4d] (a straight, Deuce to Six)
+Desateur collected $776 from pot
+*** SUMMARY ***
+Total pot $779 | Rake $3 
+Board [5s 2c 6c Js Qs]
+Seat 1: whollyflush (button) folded before Flop (didn't bet)
+Seat 2: FIrmFighter (small blind) folded before Flop
+Seat 3: Hero (big blind) showed [Ks Kd] and lost with a pair of Kings
+Seat 4: Desateur showed [3d 4d] and won ($776) with a straight, Deuce to Six
+Seat 5: stopme10 folded before Flop (didn't bet)
+Seat 6: BNNJH folded before Flop (didn't bet)
+

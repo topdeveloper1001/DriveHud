@@ -20,11 +20,11 @@ namespace DriveHUD.Importers.PokerMaster
     {
         private static readonly int packetHeaderLength = 5;
 
-        private static readonly byte[] startingPacketBytes = new byte[] { 254, 0, 0 };
+        private static readonly byte[] startingPacketBytes = new byte[] { 254, 0 };
 
         private Dictionary<SourceDestination, PacketsSet<Package>> packetsBytes = new Dictionary<SourceDestination, PacketsSet<Package>>();
 
-        public bool IsStartingPacket(byte[] bytes)
+        public static bool IsStartingPacket(byte[] bytes)
         {
             return StartsWith(bytes, startingPacketBytes);
         }
@@ -34,8 +34,8 @@ namespace DriveHUD.Importers.PokerMaster
             var packetsSet = GetPacketsSet(packet);
 
             var subPacket = !IsStartingPacket(packet.Bytes) ?
-              packetsSet.AddSubPacket(packet.Bytes, packet.CreatedTimeStamp) :
-              packetsSet.AddStartingPacket(packet.Bytes, ReadPacketLength(packet.Bytes), packet.CreatedTimeStamp);
+              packetsSet.AddSubPacket(packet.Bytes, packet.CreatedTimeStamp, packet.SequenceNumber) :
+              packetsSet.AddStartingPacket(packet.Bytes, ReadPacketLength(packet.Bytes), packet.CreatedTimeStamp, packet.SequenceNumber);
 
             if (subPacket == null || !subPacket.TryParse(packetHeaderLength, out package))
             {
@@ -43,8 +43,6 @@ namespace DriveHUD.Importers.PokerMaster
                 package = null;
                 return false;
             }
-
-            packetsSet.Remove(subPacket);
 
             return true;
         }
@@ -89,21 +87,21 @@ namespace DriveHUD.Importers.PokerMaster
             return true;
         }
 
-        private static int ReadPacketLength(byte[] bytes)
+        public static int ReadPacketLength(byte[] bytes)
         {
             if (bytes.Length < packetHeaderLength)
             {
                 throw new ArgumentException(nameof(bytes), $"Packet must have more than {packetHeaderLength} bytes");
             }
 
-            var numArray = new byte[] { bytes[3], bytes[4] };
+            var numArray = new byte[] { bytes[1], bytes[2], bytes[3], bytes[4] };
 
             if (BitConverter.IsLittleEndian)
             {
                 Array.Reverse(numArray);
             }
 
-            return BitConverter.ToInt16(numArray, 0);
+            return BitConverter.ToInt32(numArray, 0);
         }
 
         private class SourceDestination

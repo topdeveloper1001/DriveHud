@@ -22,6 +22,7 @@
     <totalbuyin>0</totalbuyin>
     <win>0</win>
     <maxplayers>8</maxplayers>
+    <pokersite>BetOnline</pokersite>
   </general>
   <game gamecode="4858076">
     <general>

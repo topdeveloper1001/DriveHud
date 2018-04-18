@@ -34,6 +34,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("ExportTest-Forum-Source-Zone.xml", "ExportTest-Forum-Result-Zone.txt", EnumPokerSites.Ignition)]
         [TestCase("ExportTest-Forum-Source-CashWithPost.xml", "ExportTest-Forum-Result-CashWithPost.txt", EnumPokerSites.Ignition)]
         [TestCase("ExportTest-Forum-Source-Straddle.xml", "ExportTest-Forum-Result-Straddle.txt", EnumPokerSites.PokerMaster)]
+        [TestCase("ExportTest-Forum-Source-Omaha.txt", "ExportTest-Forum-Result-Omaha.txt", EnumPokerSites.WinningPokerNetwork)]
         public void HandHistoryIsConvertedIntoForumFormat(string sourceFileName, string expectedResultFileName, EnumPokerSites site)
         {
             var sourceFile = Path.Combine(testFolder, sourceFileName);

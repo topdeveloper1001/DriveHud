@@ -23,6 +23,7 @@
     <totalprize>$60</totalprize>
     <win>0</win>
     <maxplayers>3</maxplayers>
+    <pokersite>BetOnline</pokersite>
   </general>
   <game gamecode="249361905">
     <general>

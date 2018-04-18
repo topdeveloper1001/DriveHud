@@ -114,7 +114,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
             if (isUpdatePlayersRequired && StorageModel.PlayerSelectedItem != null)
             {
-                _dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
+                _dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short?)StorageModel.PlayerSelectedItem.PokerSite);
             }
 
             _settingsService.SaveSettings(_settingsModel);

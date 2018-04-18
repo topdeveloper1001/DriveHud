@@ -13,6 +13,7 @@
 using DriveHUD.Application.ViewModels.AppStore;
 using DriveHUD.Common.Wpf.Mvvm;
 using Model.AppStore;
+using Model.Enums;
 using ReactiveUI;
 using System;
 using System.Collections.ObjectModel;
@@ -22,7 +23,7 @@ using System.Reactive.Linq;
 
 namespace DriveHUD.Application.ViewModels
 {
-    public class AppsViewModel : WindowViewModelBase
+    public class AppsViewModel : WindowViewModelBase, IMainTabViewModel
     {
         public AppsViewModel()
         {
@@ -119,6 +120,8 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        public EnumViewModelType ViewModelType => EnumViewModelType.AppsViewModel;
+
         #endregion
 
         #region Commands
@@ -130,7 +133,7 @@ namespace DriveHUD.Application.ViewModels
         public ReactiveCommand PreviousPageCommand { get; private set; }
 
         public ReactiveCommand SearchCommand { get; private set; }
-
+        
         #endregion
 
         #region Infrastructure

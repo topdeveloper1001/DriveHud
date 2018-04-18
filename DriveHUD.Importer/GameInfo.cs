@@ -54,14 +54,21 @@ namespace DriveHUD.Importers
 
         public HandHistories.Objects.GameDescription.TournamentSpeed? TournamentSpeed { get; set; }
 
-        public Action<IEnumerable<ParsingResult>, GameInfo> UpdateAction { get; set; }      
-        
+        public Action<IEnumerable<ParsingResult>, GameInfo> UpdateAction { get; set; }
+
         public string FileName { get; set; }
 
         public string FullFileName { get; set; }
 
+        public bool DoNotReset { get; set; }
+
         public void ResetPlayersCacheInfo()
         {
+            if (DoNotReset)
+            {
+                return;
+            }
+
             lock (locker)
             {
                 playersCacheInfo = new List<PlayerStatsSessionCacheInfo>();

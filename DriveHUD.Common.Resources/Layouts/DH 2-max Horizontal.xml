@@ -1332,22 +1332,14 @@
       <Stats>
         <StatInfo>
           <Id>aa3fd88e-847d-413b-9f01-ff9f5647f4aa</Id>
-          <Caption>VPIP%</Caption>
           <Stat>VPIP</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>One</GroupName>
-          <PropertyName>VPIP</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -1446,26 +1438,17 @@
               </Color>
             </StatInfoOptionValueRange>
           </SettingsAppearanceValueRangeCollection>
-          <StatInfoToolTipCollection />
         </StatInfo>
         <StatInfo>
           <Id>2db43e26-087c-42ff-ac7b-7a7ee0cf0ae7</Id>
-          <Caption>PFR%</Caption>
           <Stat>PFR</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>One</GroupName>
-          <PropertyName>PFR</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -1564,26 +1547,17 @@
               </Color>
             </StatInfoOptionValueRange>
           </SettingsAppearanceValueRangeCollection>
-          <StatInfoToolTipCollection />
         </StatInfo>
         <StatInfo>
           <Id>0e1a1862-8a7c-4339-a848-65a5f08ffb8f</Id>
-          <Caption>3-bet%</Caption>
           <Stat>S3Bet</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>One</GroupName>
-          <PropertyName>ThreeBet</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>true</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -1682,26 +1656,17 @@
               </Color>
             </StatInfoOptionValueRange>
           </SettingsAppearanceValueRangeCollection>
-          <StatInfoToolTipCollection />
         </StatInfo>
         <StatInfo>
           <Id>e2325127-63fa-4b7c-9eda-866ffed9a81c</Id>
-          <Caption>AGG%</Caption>
           <Stat>AGG</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>One</GroupName>
-          <PropertyName>AggPr</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -1800,7 +1765,6 @@
               </Color>
             </StatInfoOptionValueRange>
           </SettingsAppearanceValueRangeCollection>
-          <StatInfoToolTipCollection />
         </StatInfo>
       </Stats>
       <IsVertical>false</IsVertical>
@@ -2047,22 +2011,14 @@
       <Stats>
         <StatInfo>
           <Id>954ded7e-353d-4617-b601-e745aa58228b</Id>
-          <Caption>C-bet%</Caption>
           <Stat>CBet</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>One</GroupName>
-          <PropertyName>FlopCBet</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -2161,26 +2117,17 @@
               </Color>
             </StatInfoOptionValueRange>
           </SettingsAppearanceValueRangeCollection>
-          <StatInfoToolTipCollection />
         </StatInfo>
         <StatInfo>
           <Id>63225760-c9b2-414d-acb3-7bef3852042a</Id>
-          <Caption>Fold to C-Bet%</Caption>
           <Stat>FoldToCBet</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>One</GroupName>
-          <PropertyName>FoldCBet</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -2279,26 +2226,17 @@
               </Color>
             </StatInfoOptionValueRange>
           </SettingsAppearanceValueRangeCollection>
-          <StatInfoToolTipCollection />
         </StatInfo>
         <StatInfo>
           <Id>ff432ea5-6120-449c-a6ba-360daaa33a23</Id>
-          <Caption>WWSF</Caption>
           <Stat>WWSF</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>One</GroupName>
-          <PropertyName>WWSF</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -2397,26 +2335,17 @@
               </Color>
             </StatInfoOptionValueRange>
           </SettingsAppearanceValueRangeCollection>
-          <StatInfoToolTipCollection />
         </StatInfo>
         <StatInfo>
           <Id>737fdad2-93a6-4f86-b4d4-683365e06ef5</Id>
-          <Caption>Total Hands</Caption>
           <Stat>TotalHands</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>One</GroupName>
-          <PropertyName>TotalHands</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
           <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
-          <SettingsAppearanceFontUnderline />
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection>
             <StatInfoOptionValueRange>
@@ -2515,7 +2444,6 @@
               </Color>
             </StatInfoOptionValueRange>
           </SettingsAppearanceValueRangeCollection>
-          <StatInfoToolTipCollection />
         </StatInfo>
       </Stats>
     </HudLayoutTool>
@@ -3003,20 +2931,13 @@
       <Stats>
         <StatInfo>
           <Id>f3d154a5-f6b5-4010-a820-fefc336d724a</Id>
-          <Caption>Net Won</Caption>
           <Stat>NetWon</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>1</GroupName>
-          <PropertyName>NetWon</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
           <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
           <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
           <SettingsAppearanceValueRangeCollection />
@@ -3268,20 +3189,13 @@
     <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="662495e5-78f1-459c-ac56-1d73b7faf4fc">
       <BaseStat>
         <Id>6591b4dd-4bf8-4a04-9bc6-ef69908c308e</Id>
-        <Caption>VPIP%</Caption>
         <Stat>VPIP</Stat>
-        <StatInfoGroup>
-          <Name>Most Popular</Name>
-        </StatInfoGroup>
-        <GroupName>1</GroupName>
-        <PropertyName>VPIP</PropertyName>
+        <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
         <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
         <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
         <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-        <SettingsAppearanceFontBold />
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-        <SettingsAppearanceFontItalic />
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection />
@@ -3289,123 +3203,657 @@
       <Stats>
         <StatInfo>
           <Id>cb24fa16-0394-4de1-bce8-9be1fba21828</Id>
-          <Caption>EP VPIP%</Caption>
           <Stat>VPIP_EP</Stat>
-          <StatInfoGroup>
-            <Name>VPIP</Name>
-          </StatInfoGroup>
-          <GroupName>94</GroupName>
-          <PropertyName>VPIP_EP</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>8803a683-4941-45b7-a355-2dcfc836550c</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>3925b795-9072-4172-9f9f-c850696bcc2f</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>a6d94114-d979-4995-a87c-699063b64119</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>7045f021-a205-4111-ba07-89699ba68d4e</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>e964228e-b388-4f53-9e98-f832463a108d</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>2280d94a-4523-4bcf-82a2-5d1f7a6d2101</Id>
-          <Caption>MP VPIP%</Caption>
           <Stat>VPIP_MP</Stat>
-          <StatInfoGroup>
-            <Name>VPIP</Name>
-          </StatInfoGroup>
-          <GroupName>94</GroupName>
-          <PropertyName>VPIP_MP</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>f9e0d194-e32d-4fe8-9cc1-3dccdc28787f</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>b1e893f3-d19a-4ea0-9ea4-483df79719ba</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>ed01ee15-748a-46ac-8a8d-05d4b3af3be2</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>4c3025a5-5ffb-43b3-a63d-8f27f3d2ef3d</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>de310963-9a39-42ae-ad0c-1ac055e38e8b</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>889205fa-2c98-4773-bb23-ca4359d9bc07</Id>
-          <Caption>CO VPIP%</Caption>
           <Stat>VPIP_CO</Stat>
-          <StatInfoGroup>
-            <Name>VPIP</Name>
-          </StatInfoGroup>
-          <GroupName>94</GroupName>
-          <PropertyName>VPIP_CO</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>5cc09d0b-9efb-40ee-9e11-15a669a11b9f</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>02fde146-6a01-4d81-a153-c7d1b3a6a761</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>24e2ce9e-00d8-41b0-b1c9-37bc242f7df6</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>93d3c4dd-26d0-46e2-b4ff-b3313aac7101</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>394ece9e-584c-48c9-a277-a29c4810b399</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>3d9be773-83a3-4bd9-a4e0-2e4f0e3d008c</Id>
-          <Caption>BN VPIP%</Caption>
           <Stat>VPIP_BN</Stat>
-          <StatInfoGroup>
-            <Name>VPIP</Name>
-          </StatInfoGroup>
-          <GroupName>94</GroupName>
-          <PropertyName>VPIP_BN</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>be81a846-0b4b-4516-b6fe-dcde5a7289a2</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>f1949ce6-94ea-411e-bc63-7f69441c1c0a</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>c3e8785f-92e8-4ec9-80b2-a3494d11d130</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>466572e8-0613-4c6b-b6ca-9156c3703a92</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>ea1e59d0-df70-4601-98f3-107e9571bfab</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>23e5c668-7d46-44c1-9aca-0be3c12e6b4f</Id>
-          <Caption>SB VPIP%</Caption>
           <Stat>VPIP_SB</Stat>
-          <StatInfoGroup>
-            <Name>VPIP</Name>
-          </StatInfoGroup>
-          <GroupName>94</GroupName>
-          <PropertyName>VPIP_SB</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>84baa63f-f188-4951-9912-4147cc65f5fb</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>f4b80ca6-a2be-43fd-b47d-cfd1a052f92b</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>bf1b942d-d0fa-45e1-838f-2702a84abb71</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>33b67b1e-e666-49de-8b67-6ef90a6a3754</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>a3ea1b88-4820-4036-b75b-5742fdb928cb</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>eafdbf56-e504-4217-bac3-04bb3a155e98</Id>
-          <Caption>BB VPIP%</Caption>
           <Stat>VPIP_BB</Stat>
-          <StatInfoGroup>
-            <Name>VPIP</Name>
-          </StatInfoGroup>
-          <GroupName>94</GroupName>
-          <PropertyName>VPIP_BB</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>049ad369-1a2f-4ced-ba5e-ad47bd65715c</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>ae5a71d9-6347-44d9-9cf1-ad85df37b4b7</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>b79eef19-bab8-4eb4-ab06-704576867d62</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>688dd792-54a6-47b7-a5f3-c0046bc0447b</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>9b396044-3457-4db8-a94e-67663628ba87</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
       </Stats>
       <IsVertical>false</IsVertical>
@@ -3415,20 +3863,13 @@
     <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="08989bd3-992a-4034-a5c2-52f979bc2665">
       <BaseStat>
         <Id>6591b4dd-4bf8-4a04-9bc6-ef69908c308e</Id>
-        <Caption>VPIP%</Caption>
         <Stat>VPIP</Stat>
-        <StatInfoGroup>
-          <Name>Most Popular</Name>
-        </StatInfoGroup>
-        <GroupName>1</GroupName>
-        <PropertyName>VPIP</PropertyName>
+        <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
         <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
         <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
         <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-        <SettingsAppearanceFontBold />
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-        <SettingsAppearanceFontItalic />
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection />
@@ -3436,123 +3877,657 @@
       <Stats>
         <StatInfo>
           <Id>c844360b-5012-4447-a5f9-d0fbf022bf9e</Id>
-          <Caption>EP Cold Call%</Caption>
           <Stat>ColdCall_EP</Stat>
-          <StatInfoGroup>
-            <Name>Cold call</Name>
-          </StatInfoGroup>
-          <GroupName>95</GroupName>
-          <PropertyName>ColdCall_EP</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>27085d30-f193-4396-8738-b491fc065e79</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>a55ea5f5-968b-4372-aaaa-7edb3387ad70</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>219f7598-a719-4970-9e0a-0ac6a395d834</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>9478774b-374b-48b4-a246-be806ae70d06</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>c2fd7705-f325-4558-9926-749d729bc987</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>e2e98026-f4e4-4591-96ef-1dfddaed761e</Id>
-          <Caption>MP Cold Call%</Caption>
           <Stat>ColdCall_MP</Stat>
-          <StatInfoGroup>
-            <Name>Cold call</Name>
-          </StatInfoGroup>
-          <GroupName>95</GroupName>
-          <PropertyName>ColdCall_MP</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>62a55e35-6f9a-4850-9f9e-f844f68afe1c</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>79c594be-102e-4f3b-821d-f6777e59f206</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>9d1c7b25-804e-4cd0-8de5-5c794b8543e0</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>1d9864b8-9d18-497c-a589-685a98000753</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>7b529808-714a-46dc-9e48-aaba097ec31a</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>a6e7fbc2-7397-4d8f-b698-1f90ce23857f</Id>
-          <Caption>CO Cold Call%</Caption>
           <Stat>ColdCall_CO</Stat>
-          <StatInfoGroup>
-            <Name>Cold call</Name>
-          </StatInfoGroup>
-          <GroupName>95</GroupName>
-          <PropertyName>ColdCall_CO</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>da5f4085-c063-498e-815d-2e54f98c7413</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>d0514c5e-a21c-4f01-835d-75f1de3e0d38</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>b1b8d5ce-8603-4e12-90b0-c44532191f77</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>706a75fa-d094-45e7-9339-4ce29f4ea6af</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>fba13d0a-2f50-4a57-9216-c9d403eb2723</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>556c5a68-e838-48e6-a90a-f508d01c8eb7</Id>
-          <Caption>BN Cold Call%</Caption>
           <Stat>ColdCall_BN</Stat>
-          <StatInfoGroup>
-            <Name>Cold call</Name>
-          </StatInfoGroup>
-          <GroupName>95</GroupName>
-          <PropertyName>ColdCall_BN</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>baa9054d-87e2-4a69-aa68-2d8379b7dffe</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>38eee3f0-419e-4fdd-94c9-630c20efd0ae</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>a2259d2b-2b17-49f4-a313-3237461d085d</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>b6861bb6-8ba4-4dd3-b33b-48a9e88fb311</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>d2cc248f-3f69-43b7-95e3-b3da4e6c7745</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>d410abcf-c952-46eb-b9f7-bb5f2b4f95e6</Id>
-          <Caption>SB Cold Call%</Caption>
           <Stat>ColdCall_SB</Stat>
-          <StatInfoGroup>
-            <Name>Cold call</Name>
-          </StatInfoGroup>
-          <GroupName>95</GroupName>
-          <PropertyName>ColdCall_SB</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>d35c2b9b-4486-4fba-b5ff-a58491740d7a</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>0fb667df-4786-40ab-9074-2fc64a829c1b</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>96e1594b-6925-488b-9594-349dde3b011b</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>e99b3cf9-a58d-4ad1-8b4b-b015cc9e659a</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>152e6536-dc67-4ae9-832b-fc4221995823</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>299f271c-aded-4a53-b531-46240eab5b65</Id>
-          <Caption>BB Cold Call%</Caption>
           <Stat>ColdCall_BB</Stat>
-          <StatInfoGroup>
-            <Name>Cold call</Name>
-          </StatInfoGroup>
-          <GroupName>95</GroupName>
-          <PropertyName>ColdCall_BB</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>bc3cac6d-ba1a-4f29-b106-09db53fed2a1</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>3326ca45-cc2f-4404-bbc0-8358bd8d6e95</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>ba6727bb-86a6-4c7a-8bbd-bbc75858b1e1</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>b8a8af30-c4f4-4e8c-aa40-d39144fd7ea4</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>09d1af89-8847-465c-a9be-a66c1fc77a16</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
       </Stats>
       <IsVertical>false</IsVertical>
@@ -3562,20 +4537,13 @@
     <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="2e4ff18f-55bc-48d7-acb5-aadbed689ff0">
       <BaseStat>
         <Id>3d914c4a-fe53-47a9-82e4-3142aab3863a</Id>
-        <Caption>PFR%</Caption>
         <Stat>PFR</Stat>
-        <StatInfoGroup>
-          <Name>Most Popular</Name>
-        </StatInfoGroup>
-        <GroupName>1</GroupName>
-        <PropertyName>PFR</PropertyName>
+        <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
         <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
         <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
         <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-        <SettingsAppearanceFontBold />
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-        <SettingsAppearanceFontItalic />
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection />
@@ -3583,104 +4551,549 @@
       <Stats>
         <StatInfo>
           <Id>87706683-b221-4789-a432-3bdc3dc3f714</Id>
-          <Caption>UO-PFR EP</Caption>
           <Stat>UO_PFR_EP</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>1</GroupName>
-          <PropertyName>UO_PFR_EP</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>5cbb1f50-430f-4c05-bc9a-afd57cc9be43</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>2778c710-1363-4b25-b0c0-a58cd7d5e827</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>fe8a8aa9-7fef-4f24-839f-26d05b128fc1</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>f4348870-8edb-4f45-96b0-02ed01c01fdf</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>3003fdbd-73d8-454e-a4a8-b368d4235397</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>9b1abc8a-5771-4c36-9dcb-4f8706bb89a3</Id>
-          <Caption>UO-PFR MP</Caption>
           <Stat>UO_PFR_MP</Stat>
-          <StatInfoGroup>
-            <Name>PFR</Name>
-          </StatInfoGroup>
-          <GroupName>96</GroupName>
-          <PropertyName>UO_PFR_MP</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>134b2a7a-995f-4813-81bc-c0c47d408d83</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>fd919389-7388-4a13-9b58-7d2f63aa4297</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>2c1e314d-047a-486d-95f1-e4a6d26554c5</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>f099d7a4-06a0-4e5f-9adb-536f6d913b9e</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>979e3124-45f5-420a-92a4-4aecec98cb21</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>0c7024fc-d22d-4b65-975d-0b7820256e64</Id>
-          <Caption>UO-PFR CO</Caption>
           <Stat>UO_PFR_CO</Stat>
-          <StatInfoGroup>
-            <Name>PFR</Name>
-          </StatInfoGroup>
-          <GroupName>96</GroupName>
-          <PropertyName>UO_PFR_CO</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>5220824a-d53f-426c-845f-56dacddfaa8d</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>7bdd397c-de85-43c4-8df0-8846625f31c9</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>5e25d39c-bf3e-4ffc-a869-27baadc15e5c</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>7f92e171-d133-4046-b9d6-cb9cc75df0f6</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>b31e9a25-5d18-4d25-86b0-ba6bc1dd3caa</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>0b6ecbe5-5bc8-46c2-a173-814009d432fe</Id>
-          <Caption>UO-PFR BN</Caption>
           <Stat>UO_PFR_BN</Stat>
-          <StatInfoGroup>
-            <Name>PFR</Name>
-          </StatInfoGroup>
-          <GroupName>96</GroupName>
-          <PropertyName>UO_PFR_BN</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>83e7698d-46c3-4180-8eed-cea104f6d4c9</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>7a820fb7-9d98-4e2d-913d-e2fd56c6c1b6</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>e39ed9e6-b77d-45e7-ba83-685920cd374d</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>64185f61-a422-408a-bc59-62327a75eeee</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>8db651f1-bb6f-4c35-ada4-d5a3c63b3f7e</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>676d5140-8ac2-41ab-b447-5d4365d317d9</Id>
-          <Caption>UO-PFR SB</Caption>
           <Stat>UO_PFR_SB</Stat>
-          <StatInfoGroup>
-            <Name>PFR</Name>
-          </StatInfoGroup>
-          <GroupName>96</GroupName>
-          <PropertyName>UO_PFR_SB</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
-        </StatInfo>        
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>a8473050-9a6a-4652-ba6c-927c83e73965</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>660f3158-aad8-4bf2-bd53-f1a2eb3eb952</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>1fc8b2ff-2508-4d57-be18-5754cc9c2fa4</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>b2ecec40-1bac-470c-ac63-7681e4d0334c</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>a2824db4-dee2-42ec-847d-b5bc8362a5b8</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
+        </StatInfo>
       </Stats>
       <IsVertical>false</IsVertical>
       <Text>UNOPENED</Text>
@@ -3689,20 +5102,13 @@
     <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="9b246bdb-ba35-4412-96e6-175cff6d8931">
       <BaseStat>
         <Id>81451605-e856-4418-bd1c-aaaf5e99899f</Id>
-        <Caption>3-bet%</Caption>
         <Stat>S3Bet</Stat>
-        <StatInfoGroup>
-          <Name>Most Popular</Name>
-        </StatInfoGroup>
-        <GroupName>1</GroupName>
-        <PropertyName>ThreeBet</PropertyName>
+        <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
         <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
         <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
         <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-        <SettingsAppearanceFontBold />
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-        <SettingsAppearanceFontItalic />
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection />
@@ -3710,123 +5116,657 @@
       <Stats>
         <StatInfo>
           <Id>e1731694-6c82-4ced-ab59-13416e10ca6c</Id>
-          <Caption>3-Bet EP%</Caption>
           <Stat>ThreeBet_EP</Stat>
-          <StatInfoGroup>
-            <Name>3-Bet</Name>
-          </StatInfoGroup>
-          <GroupName>3</GroupName>
-          <PropertyName>ThreeBet_EP</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>14f07bf1-757d-4edc-b4fd-1d86fc34d3df</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>cdb9801c-1498-44e4-a2c3-8c325057913f</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>fda24a4e-0ece-4f28-8db2-c12dda3ebf8e</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>ad413b9e-28a8-4bf8-b1f0-95ce5ac06f46</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>fb25f204-d356-4048-b2c4-01fd2612e75b</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>9d48f2c0-2d93-4683-810b-b147693e49d0</Id>
-          <Caption>3-Bet MP%</Caption>
           <Stat>ThreeBet_MP</Stat>
-          <StatInfoGroup>
-            <Name>3-Bet</Name>
-          </StatInfoGroup>
-          <GroupName>3</GroupName>
-          <PropertyName>ThreeBet_MP</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>6fa9a230-6fb2-4c62-9ef3-a533408a70ef</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>806be623-a944-4f56-b1e9-df0d55f5526f</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>247b4c02-eadc-46f2-9445-a118077c230c</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>128abadf-808c-4e97-8d39-1c62e47aa10c</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>ba0c807c-9344-4f75-b6d0-de6756bfd717</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>605d9ca6-3a73-4525-b948-e90acaec1ebc</Id>
-          <Caption>3-Bet CO%</Caption>
           <Stat>ThreeBet_CO</Stat>
-          <StatInfoGroup>
-            <Name>3-Bet</Name>
-          </StatInfoGroup>
-          <GroupName>3</GroupName>
-          <PropertyName>ThreeBet_CO</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>852f4398-7f93-461c-978f-ba34763b9653</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>d89bc7f8-1cf9-4a56-b4f7-1cd4e30eeb72</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>eb6d91b7-5fa6-4f71-a6f7-d0704e76fa69</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>1e551101-7de9-4fb1-a97a-bd24bf64066a</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>5a36dd83-01c8-419d-943f-ab862e91036e</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>4f037a65-a363-42b1-9f70-ca9ccd418e5e</Id>
-          <Caption>3-Bet BN%</Caption>
           <Stat>ThreeBet_BN</Stat>
-          <StatInfoGroup>
-            <Name>3-Bet</Name>
-          </StatInfoGroup>
-          <GroupName>3</GroupName>
-          <PropertyName>ThreeBet_BN</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>b72d24e2-c952-4c13-a3f0-763bdf47eda2</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>c6b6f895-f8d3-4767-8996-a8f080933af3</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>41a308e7-8961-4bf6-909f-8b19df0113ea</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>952c5721-8ec0-4be8-a03d-949de7f6284d</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>b9641917-5c3e-4f76-807e-da1e3a18afb1</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>84d32959-1644-4608-807e-8866f581061a</Id>
-          <Caption>3-Bet SB%</Caption>
           <Stat>ThreeBet_SB</Stat>
-          <StatInfoGroup>
-            <Name>3-Bet</Name>
-          </StatInfoGroup>
-          <GroupName>3</GroupName>
-          <PropertyName>ThreeBet_SB</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>bd744e7f-33a9-4984-b2f6-45478a41f642</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>4fd39521-3c8e-4540-b398-9cba1afa9ac9</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>93a563ce-26cd-4d97-8690-91e06f46f2c5</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>306953f0-dfb0-40a3-b863-eec2984206da</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>4b38f57f-babc-4fe4-8151-e0a60c9eb4ff</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>e69e7920-853c-445d-beac-7ee5c91033a5</Id>
-          <Caption>3-Bet BB%</Caption>
           <Stat>ThreeBet_BB</Stat>
-          <StatInfoGroup>
-            <Name>3-Bet</Name>
-          </StatInfoGroup>
-          <GroupName>3</GroupName>
-          <PropertyName>ThreeBet_BB</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>e1bd33b5-1c48-4b9f-b65d-c6f5b3fcfa08</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>40b8b3b1-eb3f-4cc4-92dc-9eb897276b83</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>210204e6-d903-4f64-8b95-efaef694d04f</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>39667d12-605d-4e3e-b113-0633fbe519f8</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>0d3a0847-8e62-483d-95a2-ea4cd86912cc</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
       </Stats>
       <IsVertical>false</IsVertical>
@@ -3836,20 +5776,13 @@
     <HudLayoutTool xsi:type="HudLayoutGaugeIndicator" Id="453f90df-d2f1-4997-b824-62013ce0937d">
       <BaseStat>
         <Id>453f682a-4df0-4f30-a14b-c4658908e4ce</Id>
-        <Caption>AGG%</Caption>
         <Stat>AGG</Stat>
-        <StatInfoGroup>
-          <Name>Most Popular</Name>
-        </StatInfoGroup>
-        <GroupName>1</GroupName>
-        <PropertyName>AggPr</PropertyName>
+        <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
         <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
         <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
         <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
         <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-        <SettingsAppearanceFontBold />
         <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-        <SettingsAppearanceFontItalic />
         <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
         <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
         <SettingsAppearanceValueRangeCollection />
@@ -3857,83 +5790,439 @@
       <Stats>
         <StatInfo>
           <Id>51dd4e70-e1e5-4b89-b792-f4457c382fc0</Id>
-          <Caption>Flop AGG%</Caption>
           <Stat>FlopAGG</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>1</GroupName>
-          <PropertyName>FlopAgg</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>c2878f4c-421b-4c8b-a0b5-d38d62ea3758</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>faeaefed-981d-4e74-93a5-9f7b44c8c623</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>b61b3228-261a-4713-8e7d-227e956a19fd</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>5423c56a-5df4-46d4-bd14-2610be74b241</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>300cee4f-3805-48d3-9583-d3d5db5709a2</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>c07f99d9-ec3a-4a13-bd89-3033e6533952</Id>
-          <Caption>Turn AGG%</Caption>
           <Stat>TurnAGG</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>1</GroupName>
-          <PropertyName>TurnAgg</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>3cf6838e-559e-41d0-93c3-bfa3ae7d4d38</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>7515cb27-d1d0-4f83-be3e-dca55b41189a</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>fbbee8ad-4fa5-4212-9d53-f46ffbb1e502</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>c430d489-28e1-45c8-a79c-ce57e4a62fa8</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>f1513d31-f63e-4d71-a979-df8cc01611e1</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>3b957b39-0544-4e90-9a9a-7900beffbb11</Id>
-          <Caption>River AGG%</Caption>
           <Stat>RiverAGG</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>1</GroupName>
-          <PropertyName>RiverAgg</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>3aeb7af1-7481-4888-a966-5f618501fdaa</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>efa884f7-d998-418d-9336-bbf964edf664</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>bb38c620-f960-4a2f-b78c-e44c8766e43b</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>c401e379-ac4c-41ea-9309-d28a5e77763f</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>edd63e17-8fe4-4aeb-94f5-c9f72c59c985</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
         <StatInfo>
           <Id>29613609-9db0-443e-9848-534b83cae0d3</Id>
-          <Caption>Recent AGG%</Caption>
           <Stat>RecentAgg</Stat>
-          <StatInfoGroup>
-            <Name>Most Popular</Name>
-          </StatInfoGroup>
-          <GroupName>1</GroupName>
-          <PropertyName>RecentAggPr</PropertyName>
+          <DigitsAfterDecimalPoint>1</DigitsAfterDecimalPoint>
           <SettingsAppearance_IsChecked>false</SettingsAppearance_IsChecked>
           <SettingsPlayerType_IsChecked>false</SettingsPlayerType_IsChecked>
           <SettingsAppearanceFontSource>Segoe UI</SettingsAppearanceFontSource>
-          <SettingsAppearanceFontSize>10</SettingsAppearanceFontSize>
-          <SettingsAppearanceFontBold />
-          <SettingsAppearanceFontBold_IsChecked>false</SettingsAppearanceFontBold_IsChecked>
-          <SettingsAppearanceFontItalic />
+          <SettingsAppearanceFontSize>12</SettingsAppearanceFontSize>
+          <SettingsAppearanceFontBold_IsChecked>true</SettingsAppearanceFontBold_IsChecked>
           <SettingsAppearanceFontItalic_IsChecked>false</SettingsAppearanceFontItalic_IsChecked>
           <SettingsAppearanceFontUnderline_IsChecked>false</SettingsAppearanceFontUnderline_IsChecked>
-          <SettingsAppearanceValueRangeCollection />
+          <SettingsAppearanceValueRangeCollection>
+            <StatInfoOptionValueRange>
+              <Id>9acc1559-ae1e-4ef3-898c-3eaa32d0ea20</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>1</SortOrder>
+              <Value>20</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>c2019fd6-cb77-4526-be55-a7440382056e</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>2</SortOrder>
+              <Value>40</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>ea5dafff-b5ce-4bc3-963f-a41acea973b5</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>3</SortOrder>
+              <Value>60</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>83554cc7-c28f-4784-9a8b-b3afe601bf8e</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>4</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>LessThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+            <StatInfoOptionValueRange>
+              <Id>4db9db8b-6644-4745-9d22-08f717fc8da8</Id>
+              <IsEditable>true</IsEditable>
+              <IsChecked>true</IsChecked>
+              <SortOrder>5</SortOrder>
+              <Value>80</Value>
+              <Value_IsValid>false</Value_IsValid>
+              <ValueRangeType>MoreThan</ValueRangeType>
+              <Color>
+                <A>255</A>
+                <R>255</R>
+                <G>255</G>
+                <B>255</B>
+                <ScA>1</ScA>
+                <ScR>1</ScR>
+                <ScG>1</ScG>
+                <ScB>1</ScB>
+              </Color>
+            </StatInfoOptionValueRange>
+          </SettingsAppearanceValueRangeCollection>
         </StatInfo>
       </Stats>
       <IsVertical>false</IsVertical>

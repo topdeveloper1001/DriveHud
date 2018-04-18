@@ -13,7 +13,6 @@
 using DriveHUD.Entities;
 using Model.Data;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Model.Reports
@@ -21,30 +20,26 @@ namespace Model.Reports
     /// <summary>
     /// This report groups games by stakes. Ex - 0,25$/0,5$
     /// </summary>
-    public class StakesReportCreator : CashBaseReportCreator
+    public class StakesReportCreator : CashGroupingReportCreator<ReportIndicators, string>
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics, bool forceRefresh = false)
+        protected override ReportIndicators CreateIndicator(string groupKey)
         {
-            var report = new ObservableCollection<ReportIndicators>();
+            return new ReportIndicators();
+        }
 
-            if (statistics == null)
-            {
-                return report;
-            }
+        protected override string GroupBy(Playerstatistic statistic)
+        {
+            return statistic.GameType;
+        }
 
-            foreach (var group in statistics.GroupBy(x => x.GameType).ToArray())
-            {
-                var stat = new ReportIndicators();
+        protected override string GroupBy(ReportIndicators indicator)
+        {
+            return indicator.Source.GameType;
+        }
 
-                foreach (var playerstatistic in group)
-                {
-                    stat.AddStatistic(playerstatistic);
-                }
-
-                report.Add(stat);
-            }
-
-            return report;
+        protected override IEnumerable<ReportIndicators> OrderResult(IEnumerable<ReportIndicators> reports)
+        {
+            return reports.OrderBy(x => x.Source.GameType);
         }
     }
 }

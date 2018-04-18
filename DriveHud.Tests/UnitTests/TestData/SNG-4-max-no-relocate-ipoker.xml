@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<session sessioncode="153929894">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL</gametype>
+    <tablename>Table #1, 200 PM - 4 Player Ultra Fast Bounty #11890</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2018-04-11 13:36:12</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <tournamentname>200 PM - 4 Player Ultra Fast Bounty #11890</tournamentname>
+    <place>0</place>
+    <buyin>$250+$0</buyin>
+    <totalbuyin>$250</totalbuyin>
+    <win>0</win>
+    <maxplayers>4</maxplayers>
+    <pokersite>BetOnline</pokersite>
+  </general>
+  <game gamecode="6344975">
+    <general>
+      <startdate>2018-04-11 13:36:12</startdate>
+      <players>
+        <player seat="1" name="COCO3758" chips="4084" dealer="0" win="0" bet="20" rebuy="0" addon="0" />
+        <player seat="5" name="Jester49" chips="3770" dealer="0" win="0" bet="146" rebuy="0" addon="0" />
+        <player seat="7" name="flip7445" chips="146" dealer="1" win="312" bet="146" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="COCO3758" type="1" sum="20" cards="" />
+      <action no="2" player="Jester49" type="2" sum="40" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="COCO3758">X X</cards>
+      <cards type="Pocket" player="Jester49">H8 S10</cards>
+      <cards type="Pocket" player="flip7445">C4 C10</cards>
+      <action no="3" player="flip7445" type="23" sum="146" cards="" />
+      <action no="4" player="COCO3758" type="0" sum="0" cards="" />
+      <action no="5" player="Jester49" type="3" sum="106" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">S4 D10 C3</cards>
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">D2</cards>
+    </round>
+    <round no="4">
+      <cards type="River" player="">CK</cards>
+    </round>
+  </game>
+</session>

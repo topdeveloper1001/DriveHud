@@ -115,6 +115,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the selected tournament?.
+        /// </summary>
+        internal static string Notifications_DeleteTournament_Content {
+            get {
+                return ResourceManager.GetString("Notifications_DeleteTournament_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete tournament.
+        /// </summary>
+        internal static string Notifications_DeleteTournament_Title {
+            get {
+                return ResourceManager.GetString("Notifications_DeleteTournament_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string Notifications_HudLayout_DeleteHudCancel {
@@ -174,6 +192,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Notifications_HudLayout_PreLoadingText_PM {
             get {
                 return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PM catcher only supports one account per table..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PM_AccountPerTable {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PM_AccountPerTable", resourceCulture);
             }
         }
         

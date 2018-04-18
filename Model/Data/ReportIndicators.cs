@@ -12,13 +12,14 @@
 
 using DriveHUD.Entities;
 using ProtoBuf;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace Model.Data
 {
     [ProtoContract]
-    [ProtoInclude(100, typeof(OpponentReportIndicators))]    
+    [ProtoInclude(100, typeof(OpponentReportIndicators))]
     public class ReportIndicators : LightIndicators
     {
         public ReportIndicators() : base()
@@ -44,6 +45,19 @@ namespace Model.Data
         {
             base.Clean();
             ReportHands.Clear();
+        }
+
+        public virtual void AddIndicator(ReportIndicators indicator)
+        {
+            if (indicator == null)
+            {
+                throw new ArgumentNullException(nameof(indicator));
+            }
+
+            base.AddIndicator(indicator);
+
+            ReportHands?.AddRange(indicator.ReportHands);
+            Statistics?.AddRange(indicator.Statistics);
         }
 
         protected virtual void AddStatToStatistic(Playerstatistic statistic)

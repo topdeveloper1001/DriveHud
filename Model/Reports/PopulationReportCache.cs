@@ -38,5 +38,8 @@ namespace Model.Reports
 
         [ProtoMember(6)]
         public int PlayersTo { get; set; }
+
+        [ProtoMember(7)]
+        public int FiltersHashCode { get; set; }
     }
 }

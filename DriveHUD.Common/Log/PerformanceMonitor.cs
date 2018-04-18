@@ -10,11 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Log;
 using System;
 using System.Diagnostics;
 
-namespace DriveHud.Common.Log
+namespace DriveHUD.Common.Log
 {
     public class PerformanceMonitor : IDisposable
     {

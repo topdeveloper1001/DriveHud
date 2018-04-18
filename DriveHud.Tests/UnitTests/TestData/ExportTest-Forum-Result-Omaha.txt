@@ -1,0 +1,32 @@
+Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software
+
+NL Omaha HiLo $40(BB)
+HJ ($2595)
+CO ($2245)
+HERO ($2395)
+[color=red]SB[/color] ($2790)
+[color=red]BB[/color] ($7535)
+UTG ($2380)
+[color=red]MP[/color] ($2560)
+MP ($2500)
+
+Dealt to Hero K:spade: J:heart: J:diamond: 7:diamond:
+
+UTG Folds, [color=red]MP Calls $40 (Rem. Stack: 2520)[/color], MP Folds, HJ Folds, CO Folds, HERO Folds, [color=red]SB Raises To $60 (Rem. Stack: 2710)[/color], [color=red]BB Calls $40 (Rem. Stack: 7455)[/color], [color=red]MP Raises To $80 (Rem. Stack: 2440)[/color], [color=red]SB Calls $40 (Rem. Stack: 2670)[/color], [color=red]BB Calls $40 (Rem. Stack: 7455)[/color]
+
+Flop ($360) A:heart: 8:spade: 8:club:
+SB Checks, [color=red]BB Bets $200 (Rem. Stack: 7215)[/color], [color=red]MP Calls $200 (Rem. Stack: 2240)[/color], [color=red]SB Calls $200 (Rem. Stack: 2470)[/color]
+
+Turn ($960) A:heart: 8:spade: 8:club: 2:diamond:
+SB Checks, [color=red]BB Bets $620 (Rem. Stack: 6595)[/color], [color=red]MP Calls $620 (Rem. Stack: 1620)[/color], [color=red]SB Raises To $2470 (allin) (Rem. Stack: 0)[/color], [color=red]BB Raises To $6595 (allin) (Rem. Stack: 0)[/color], [color=red]MP Calls $1620 (allin) (Rem. Stack: 0)[/color]
+
+River ($12885) A:heart: 8:spade: 8:club: 2:diamond: 9:club:
+
+SB shows 4:diamond: 6:diamond: 3:spade: A:spade:
+
+BB shows A:diamond: 3:heart: 5:club: Q:club:
+
+MP shows 5:heart: T:diamond: 4:club: A:club:
+
+SB wins $4070
+BB wins $4070

@@ -20,13 +20,13 @@ namespace DriveHUD.Importers.PokerMaster.Model
         [ProtoMember(1)]
         public GameRoomInfo GameRoomInfo { get; set; }
 
-        [ProtoMember(2)]
+        [ProtoMember(3)]
         public int[] GivenCards { get; set; }
 
-        [ProtoMember(3)]
+        [ProtoMember(4)]
         public int[] GivenHands { get; set; }
 
-        [ProtoMember(4)]
+        [ProtoMember(5)]
         public long Uuid { get; set; }
 
         public long GameNumber

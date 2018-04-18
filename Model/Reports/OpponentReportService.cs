@@ -40,6 +40,8 @@ namespace Model.Reports
 
         private readonly IDataService dataService;
 
+        private readonly IPlayerStatisticRepository playerStatisticRepository;
+
         private readonly ISettingsService settingsService;
 
         private static readonly object syncLock = new object();
@@ -54,6 +56,7 @@ namespace Model.Reports
         {
             storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
             settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
         }
 
@@ -200,7 +203,8 @@ namespace Model.Reports
                 tempPlayerHands = new HashSet<HandHistoryKey>(playerHands);
             }
 
-            var statistic = dataService.GetPlayerStatisticFromFile(playerId, x => playerHands.Contains(new HandHistoryKey(x.GameNumber, x.PokersiteId)) && !x.IsTourney)
+            var statistic = playerStatisticRepository.GetPlayerStatistic(playerId)
+                       .Where(x => playerHands.Contains(new HandHistoryKey(x.GameNumber, x.PokersiteId)) && !x.IsTourney)
                        .OrderByDescending(x => x.Time)
                        .Take(count)
                        .ToArray();
@@ -295,9 +299,9 @@ namespace Model.Reports
 
             opponentsData.Add(playerId, opponentReportIndicators);
 
-            dataService.ActOnPlayerStatisticFromFile(playerId,
-                x => playerHands.Contains(new HandHistoryKey(x.GameNumber, x.PokersiteId)) && !x.IsTourney,
-                x => opponentReportIndicators.AddStatistic(x));
+            playerStatisticRepository.GetPlayerStatistic(playerId)
+                .Where(x => playerHands.Contains(new HandHistoryKey(x.GameNumber, x.PokersiteId)) && !x.IsTourney)
+                .ForEach(x => opponentReportIndicators.AddStatistic(x));
 
             opponentReportIndicators.ShrinkReportHands();
         }

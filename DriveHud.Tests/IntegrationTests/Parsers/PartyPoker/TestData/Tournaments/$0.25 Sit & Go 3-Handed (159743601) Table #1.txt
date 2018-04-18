@@ -1,0 +1,666 @@
+Game #16831929931 starts.
+
+#Game No : 16831929931 
+***** Hand History for Game 16831929931 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:03:49 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 500 )
+Seat 1: Reverantium ( 500 )
+Seat 3: Tobofish ( 500 )
+Trny: 159743600 Level: 1 
+Blinds(10/20)
+BigStin posts small blind [10].
+Tobofish posts big blind [20].
+** Dealing down cards **
+Dealt to BigStin [  3s 6d ]
+Reverantium raises [40]
+BigStin folds
+Tobofish folds
+Reverantium does not show cards.
+Reverantium wins 70 chips
+Game #16831930149 starts.
+
+#Game No : 16831930149 
+***** Hand History for Game 16831930149 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:03:59 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 490 )
+Seat 1: Reverantium ( 530 )
+Seat 3: Tobofish ( 480 )
+Trny: 159743600 Level: 1 
+Blinds(10/20)
+Tobofish posts small blind [10].
+Reverantium posts big blind [20].
+** Dealing down cards **
+Dealt to BigStin [  8d Jh ]
+BigStin folds
+Tobofish folds
+Reverantium does not show cards.
+Reverantium wins 30 chips
+Game #16831930383 starts.
+
+#Game No : 16831930383 
+***** Hand History for Game 16831930383 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:04:08 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 490 )
+Seat 1: Reverantium ( 540 )
+Seat 3: Tobofish ( 470 )
+Trny: 159743600 Level: 1 
+Blinds(10/20)
+Reverantium posts small blind [10].
+BigStin posts big blind [20].
+** Dealing down cards **
+Dealt to BigStin [  4s Tc ]
+Tobofish folds
+Reverantium calls [10]
+BigStin checks
+** Dealing Flop ** [ 5d, 9s, 8d ]
+Reverantium bets [32]
+BigStin folds
+Reverantium does not show cards.
+Reverantium wins 72 chips
+Game #16831931507 starts.
+
+#Game No : 16831931507 
+***** Hand History for Game 16831931507 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:04:31 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 470 )
+Seat 1: Reverantium ( 560 )
+Seat 3: Tobofish ( 470 )
+Trny: 159743600 Level: 1 
+Blinds(10/20)
+BigStin posts small blind [10].
+Tobofish posts big blind [20].
+** Dealing down cards **
+Dealt to BigStin [  2c 3c ]
+Reverantium folds
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+BigStin raises [30]
+Tobofish calls [20]
+** Dealing Flop ** [ 6c, 4c, 3s ]
+BigStin bets [48]
+Tobofish calls [48]
+** Dealing Turn ** [ 7h ]
+BigStin checks
+Tobofish bets [117]
+BigStin calls [117]
+** Dealing River ** [ 9c ]
+BigStin bets [143]
+Tobofish calls [143]
+BigStin shows [ 2c, 3c ]a flush, Nine high.
+Tobofish doesn't show [ 5s, Jd ]a straight, Three to Seven.
+BigStin wins 696 chips from the main pot with a flush, Nine high.
+Game #16831932817 starts.
+
+#Game No : 16831932817 
+***** Hand History for Game 16831932817 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:05:22 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 818 )
+Seat 1: Reverantium ( 560 )
+Seat 3: Tobofish ( 122 )
+Trny: 159743600 Level: 1 
+Blinds(10/20)
+Tobofish posts small blind [10].
+Reverantium posts big blind [20].
+** Dealing down cards **
+Dealt to BigStin [  Ad Th ]
+BigStin raises [40]
+Tobofish folds
+Reverantium calls [20]
+** Dealing Flop ** [ 3h, Ac, 6d ]
+Reverantium checks
+BigStin bets [54]
+Reverantium raises [146]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+BigStin will be using their time bank for this hand.
+BigStin is all-In  [724]
+Reverantium folds
+BigStin does not show cards.
+BigStin wins 1,014 chips
+Game #16831934331 starts.
+
+#Game No : 16831934331 
+***** Hand History for Game 16831934331 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:06:01 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 1,014 )
+Seat 1: Reverantium ( 374 )
+Seat 3: Tobofish ( 112 )
+Trny: 159743600 Level: 1 
+Blinds(10/20)
+Reverantium posts small blind [10].
+BigStin posts big blind [20].
+** Dealing down cards **
+Dealt to BigStin [  7d 8d ]
+Tobofish is all-In  [112]
+Reverantium folds
+BigStin calls [92]
+** Dealing Flop ** [ 6d, 7c, Qd ]
+** Dealing Turn ** [ Tc ]
+** Dealing River ** [ 2c ]
+Tobofish shows [ Qc, 9h ]a pair of Queens.
+BigStin shows [ 7d, 8d ]a pair of Sevens.
+Tobofish wins 234 chips from the main pot with a pair of Queens.
+Game #16831934737 starts.
+
+#Game No : 16831934737 
+***** Hand History for Game 16831934737 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:06:16 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 902 )
+Seat 1: Reverantium ( 364 )
+Seat 3: Tobofish ( 234 )
+Trny: 159743600 Level: 1 
+Blinds(10/20)
+BigStin posts small blind [10].
+Tobofish posts big blind [20].
+** Dealing down cards **
+Dealt to BigStin [  2c 7c ]
+Reverantium folds
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+BigStin raises [30]
+Tobofish folds
+BigStin does not show cards.
+BigStin wins 60 chips
+Game #16831935195 starts.
+
+#Game No : 16831935195 
+***** Hand History for Game 16831935195 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:06:34 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 922 )
+Seat 1: Reverantium ( 364 )
+Seat 3: Tobofish ( 214 )
+Trny: 159743600 Level: 1 
+Blinds(10/20)
+Tobofish posts small blind [10].
+Reverantium posts big blind [20].
+** Dealing down cards **
+Dealt to BigStin [  3c 7c ]
+BigStin folds
+Tobofish raises [40]
+Reverantium calls [30]
+** Dealing Flop ** [ 5c, 6d, Qd ]
+Tobofish bets [75]
+Reverantium folds
+Tobofish does not show cards.
+Tobofish wins 175 chips
+Game #16831935668 starts.
+
+#Game No : 16831935668 
+***** Hand History for Game 16831935668 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:06:51 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 922 )
+Seat 1: Reverantium ( 314 )
+Seat 3: Tobofish ( 264 )
+Trny: 159743600 Level: 1 
+Blinds(10/20)
+Reverantium posts small blind [10].
+BigStin posts big blind [20].
+** Dealing down cards **
+Dealt to BigStin [  Ah Kc ]
+Tobofish raises [60]
+Reverantium folds
+BigStin is all-In  [902]
+Tobofish is all-In  [204]
+** Dealing Flop ** [ 6d, 7d, Th ]
+** Dealing Turn ** [ 9c ]
+** Dealing River ** [ 8c ]
+Tobofish shows [ Ac, Ts ]a straight, Six to Ten.
+BigStin shows [ Ah, Kc ]a straight, Six to Ten.
+BigStin wins 658 chips from the side pot 1 with a straight, Six to Ten.
+Tobofish wins 269 chips from the main pot with a straight, Six to Ten.
+BigStin wins 269 chips from the main pot with a straight, Six to Ten.
+Game #16831936262 starts.
+
+#Game No : 16831936262 
+***** Hand History for Game 16831936262 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:07:13 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 927 )
+Seat 1: Reverantium ( 304 )
+Seat 3: Tobofish ( 269 )
+Trny: 159743600 Level: 2 
+Blinds(15/30)
+BigStin posts small blind [15].
+Tobofish posts big blind [30].
+** Dealing down cards **
+Dealt to BigStin [  8h Jh ]
+Reverantium is all-In  [304]
+BigStin folds
+Tobofish folds
+Reverantium does not show cards.
+Reverantium wins 349 chips
+Game #16831936548 starts.
+
+#Game No : 16831936548 
+***** Hand History for Game 16831936548 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:07:25 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 912 )
+Seat 1: Reverantium ( 349 )
+Seat 3: Tobofish ( 239 )
+Trny: 159743600 Level: 2 
+Blinds(15/30)
+Tobofish posts small blind [15].
+Reverantium posts big blind [30].
+** Dealing down cards **
+Dealt to BigStin [  5s 5c ]
+BigStin raises [75]
+Tobofish folds
+Reverantium calls [45]
+** Dealing Flop ** [ Kc, 6s, 2s ]
+Reverantium checks
+BigStin bets [99]
+Reverantium is all-In  [274]
+BigStin folds
+Reverantium does not show cards.
+Reverantium wins 538 chips
+Game #16831937261 starts.
+
+#Game No : 16831937261 
+***** Hand History for Game 16831937261 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:07:51 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 738 )
+Seat 1: Reverantium ( 538 )
+Seat 3: Tobofish ( 224 )
+Trny: 159743600 Level: 2 
+Blinds(15/30)
+Reverantium posts small blind [15].
+BigStin posts big blind [30].
+** Dealing down cards **
+Dealt to BigStin [  Tc 9c ]
+Tobofish raises [75]
+Reverantium folds
+BigStin calls [45]
+** Dealing Flop ** [ 8s, 8c, Jd ]
+BigStin checks
+Tobofish is all-In  [149]
+BigStin calls [149]
+** Dealing Turn ** [ 4d ]
+** Dealing River ** [ Td ]
+BigStin shows [ Tc, 9c ]two pairs, Tens and Eights.
+Tobofish shows [ Qs, Qd ]two pairs, Queens and Eights.
+Tobofish wins 463 chips from the main pot with two pairs, Queens and Eights.
+Game #16831938026 starts.
+
+#Game No : 16831938026 
+***** Hand History for Game 16831938026 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:08:18 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 514 )
+Seat 1: Reverantium ( 523 )
+Seat 3: Tobofish ( 463 )
+Trny: 159743600 Level: 2 
+Blinds(15/30)
+BigStin posts small blind [15].
+Tobofish posts big blind [30].
+** Dealing down cards **
+Dealt to BigStin [  Ts Jd ]
+Reverantium raises [60]
+BigStin folds
+Tobofish calls [30]
+** Dealing Flop ** [ Ah, 8s, 6h ]
+Tobofish bets [30]
+Reverantium raises [150]
+Tobofish folds
+Reverantium does not show cards.
+Reverantium wins 315 chips
+Game #16831938464 starts.
+
+#Game No : 16831938464 
+***** Hand History for Game 16831938464 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:08:33 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 499 )
+Seat 1: Reverantium ( 628 )
+Seat 3: Tobofish ( 373 )
+Trny: 159743600 Level: 2 
+Blinds(15/30)
+Tobofish posts small blind [15].
+Reverantium posts big blind [30].
+** Dealing down cards **
+Dealt to BigStin [  Qs 4c ]
+BigStin folds
+Tobofish raises [45]
+Reverantium folds
+Tobofish does not show cards.
+Tobofish wins 90 chips
+Game #16831938915 starts.
+
+#Game No : 16831938915 
+***** Hand History for Game 16831938915 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:08:51 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 499 )
+Seat 1: Reverantium ( 598 )
+Seat 3: Tobofish ( 403 )
+Trny: 159743600 Level: 2 
+Blinds(15/30)
+Reverantium posts small blind [15].
+BigStin posts big blind [30].
+** Dealing down cards **
+Dealt to BigStin [  6d 7s ]
+Tobofish raises [75]
+Reverantium folds
+BigStin folds
+Tobofish does not show cards.
+Tobofish wins 120 chips
+Game #16831939276 starts.
+
+#Game No : 16831939276 
+***** Hand History for Game 16831939276 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:09:05 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 469 )
+Seat 1: Reverantium ( 583 )
+Seat 3: Tobofish ( 448 )
+Trny: 159743600 Level: 2 
+Blinds(15/30)
+BigStin posts small blind [15].
+Tobofish posts big blind [30].
+** Dealing down cards **
+Dealt to BigStin [  2c 9s ]
+Reverantium raises [60]
+BigStin folds
+Tobofish calls [30]
+** Dealing Flop ** [ 6h, Th, Ks ]
+Tobofish bets [30]
+Reverantium raises [150]
+Tobofish calls [120]
+** Dealing Turn ** [ Ac ]
+Tobofish is all-In  [238]
+Reverantium folds
+Tobofish does not show cards.
+Tobofish wins 673 chips
+Game #16831940763 starts.
+
+#Game No : 16831940763 
+***** Hand History for Game 16831940763 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:09:42 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 454 )
+Seat 1: Reverantium ( 373 )
+Seat 3: Tobofish ( 673 )
+Trny: 159743600 Level: 2 
+Blinds(15/30)
+Tobofish posts small blind [15].
+Reverantium posts big blind [30].
+** Dealing down cards **
+Dealt to BigStin [  2d Jd ]
+BigStin folds
+Tobofish folds
+Reverantium does not show cards.
+Reverantium wins 45 chips
+Game #16831941250 starts.
+
+#Game No : 16831941250 
+***** Hand History for Game 16831941250 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:10:00 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 454 )
+Seat 1: Reverantium ( 388 )
+Seat 3: Tobofish ( 658 )
+Trny: 159743600 Level: 3 
+Blinds(20/40)
+Reverantium posts small blind [20].
+BigStin posts big blind [40].
+** Dealing down cards **
+Dealt to BigStin [  Kh 3c ]
+Tobofish folds
+Reverantium folds
+BigStin does not show cards.
+BigStin wins 60 chips
+Game #16831941555 starts.
+
+#Game No : 16831941555 
+***** Hand History for Game 16831941555 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:10:11 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 474 )
+Seat 1: Reverantium ( 368 )
+Seat 3: Tobofish ( 658 )
+Trny: 159743600 Level: 3 
+Blinds(20/40)
+BigStin posts small blind [20].
+Tobofish posts big blind [40].
+** Dealing down cards **
+Dealt to BigStin [  9h Jc ]
+Reverantium is all-In  [368]
+BigStin folds
+Tobofish folds
+Reverantium does not show cards.
+Reverantium wins 428 chips
+Game #16831941817 starts.
+
+#Game No : 16831941817 
+***** Hand History for Game 16831941817 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:10:21 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 454 )
+Seat 1: Reverantium ( 428 )
+Seat 3: Tobofish ( 618 )
+Trny: 159743600 Level: 3 
+Blinds(20/40)
+Tobofish posts small blind [20].
+Reverantium posts big blind [40].
+** Dealing down cards **
+Dealt to BigStin [  Th 3c ]
+BigStin folds
+Tobofish folds
+Reverantium does not show cards.
+Reverantium wins 60 chips
+Game #16831941993 starts.
+
+#Game No : 16831941993 
+***** Hand History for Game 16831941993 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:10:27 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 454 )
+Seat 1: Reverantium ( 448 )
+Seat 3: Tobofish ( 598 )
+Trny: 159743600 Level: 3 
+Blinds(20/40)
+Reverantium posts small blind [20].
+BigStin posts big blind [40].
+** Dealing down cards **
+Dealt to BigStin [  Td 9d ]
+Tobofish raises [100]
+Reverantium folds
+BigStin folds
+Tobofish does not show cards.
+Tobofish wins 160 chips
+Game #16831942420 starts.
+
+#Game No : 16831942420 
+***** Hand History for Game 16831942420 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:10:42 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 414 )
+Seat 1: Reverantium ( 428 )
+Seat 3: Tobofish ( 658 )
+Trny: 159743600 Level: 3 
+Blinds(20/40)
+BigStin posts small blind [20].
+Tobofish posts big blind [40].
+** Dealing down cards **
+Dealt to BigStin [  5s As ]
+Reverantium folds
+BigStin is all-In  [394]
+Tobofish calls [374]
+** Dealing Flop ** [ 5h, 6c, Ac ]
+** Dealing Turn ** [ Qh ]
+** Dealing River ** [ Kd ]
+BigStin shows [ 5s, As ]two pairs, Aces and Fives.
+Tobofish shows [ 2d, Qd ]a pair of Queens.
+BigStin wins 828 chips from the main pot with two pairs, Aces and Fives.
+Game #16831942904 starts.
+
+#Game No : 16831942904 
+***** Hand History for Game 16831942904 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:11:00 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 2: BigStin ( 828 )
+Seat 1: Reverantium ( 428 )
+Seat 3: Tobofish ( 244 )
+Trny: 159743600 Level: 3 
+Blinds(20/40)
+Tobofish posts small blind [20].
+Reverantium posts big blind [40].
+** Dealing down cards **
+Dealt to BigStin [  8s 8c ]
+BigStin is all-In  [828]
+Tobofish is all-In  [224]
+Reverantium folds
+** Dealing Flop ** [ 4h, 2h, 5s ]
+** Dealing Turn ** [ 7d ]
+** Dealing River ** [ Qh ]
+BigStin shows [ 8s, 8c ]a pair of Eights.
+Tobofish shows [ Jh, Ac ]high card Ace.
+BigStin wins 584 chips from the side pot 1 with a pair of Eights.
+BigStin wins 528 chips from the main pot with a pair of Eights.
+Player Tobofish finished in 3.
+Game #16831943474 starts.
+
+#Game No : 16831943474 
+***** Hand History for Game 16831943474 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:11:21 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 2/3 
+Seat 2: BigStin ( 1,112 )
+Seat 1: Reverantium ( 388 )
+Trny: 159743600 Level: 3 
+Blinds(20/40)
+Reverantium posts small blind [20].
+BigStin posts big blind [40].
+** Dealing down cards **
+Dealt to BigStin [  7h 6d ]
+Reverantium is all-In  [368]
+BigStin folds
+Reverantium does not show cards.
+Reverantium wins 428 chips
+Game #16831943723 starts.
+
+#Game No : 16831943723 
+***** Hand History for Game 16831943723 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:11:30 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 2: BigStin ( 1,072 )
+Seat 1: Reverantium ( 428 )
+Trny: 159743600 Level: 3 
+Blinds(20/40)
+BigStin posts small blind [20].
+Reverantium posts big blind [40].
+** Dealing down cards **
+Dealt to BigStin [  8c 3c ]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+BigStin folds
+Reverantium does not show cards.
+Reverantium wins 60 chips
+Game #16831944004 starts.
+
+#Game No : 16831944004 
+***** Hand History for Game 16831944004 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:11:40 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 2/3 
+Seat 2: BigStin ( 1,052 )
+Seat 1: Reverantium ( 448 )
+Trny: 159743600 Level: 3 
+Blinds(20/40)
+Reverantium posts small blind [20].
+BigStin posts big blind [40].
+** Dealing down cards **
+Dealt to BigStin [  6d 9d ]
+Reverantium calls [20]
+BigStin checks
+** Dealing Flop ** [ 9s, 4c, 3s ]
+BigStin bets [48]
+Reverantium raises [132]
+BigStin is all-In  [964]
+Reverantium folds
+BigStin does not show cards.
+BigStin wins 1,224 chips
+Game #16831944779 starts.
+
+#Game No : 16831944779 
+***** Hand History for Game 16831944779 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Saturday, January 06, 06:12:08 AST 2018
+Table $0.25 Sit & Go 3-Handed (159743600) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 2: BigStin ( 1,224 )
+Seat 1: Reverantium ( 276 )
+Trny: 159743600 Level: 3 
+Blinds(20/40)
+BigStin posts small blind [20].
+Reverantium posts big blind [40].
+** Dealing down cards **
+Dealt to BigStin [  Js Tc ]
+BigStin is all-In  [1,204]
+Reverantium is all-In  [236]
+** Dealing Flop ** [ Qc, Jc, Qh ]
+** Dealing Turn ** [ 9d ]
+** Dealing River ** [ 4c ]
+BigStin shows [ Js, Tc ]two pairs, Queens and Jacks.
+Reverantium shows [ Ah, 9c ]two pairs, Queens and Nines.
+BigStin wins 948 chips from the side pot 1 with two pairs, Queens and Jacks.
+BigStin wins 552 chips from the main pot with two pairs, Queens and Jacks.
+Congratulations to player BigStin for winning tournament $0.25 Sit & Go 3-Handed
+Player Reverantium finished in 2.
+Player BigStin finished in 1 place and received $1 USD 

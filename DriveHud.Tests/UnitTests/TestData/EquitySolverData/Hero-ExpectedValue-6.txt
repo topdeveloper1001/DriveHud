@@ -1,0 +1,36 @@
+PokerStars Game #47142128981:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 0:11:54 ET
+Table 'Mizar IV' 6-max Seat #1 is the button
+Seat 1: mpm135 ($333.65 in chips)
+Seat 2: Hero ($113.35 in chips)
+Seat 3: tb1216 ($63.60 in chips)
+Seat 5: fromeros ($121.40 in chips)
+Seat 6: iluvlindsay1 ($100 in chips)
+Hero: posts small blind $1
+tb1216: posts big blind $2
+pokerlovenn: sits out
+*** HOLE CARDS ***
+fromeros: folds
+iluvlindsay1: folds
+mpm135: raises $3 to $5
+Hero: raises $3 to $8
+tb1216: folds
+mpm135: calls $3
+*** FLOP *** [2d Js 5d]
+Hero: bets $12
+mpm135: raises $313.65 to $325.65 and is all-in
+Hero: calls $93.35 and is all-in
+Uncalled bet ($220.30) returned to mpm135
+*** TURN *** [2d Js 5d] [9s]
+*** RIVER *** [2d Js 5d 9s] [6s]
+*** SHOW DOWN ***
+Hero: shows [Kc Jc] (a pair of Jacks)
+mpm135: mucks hand
+Hero collected $226.70 from pot
+*** SUMMARY ***
+Total pot $228.70 | Rake $2
+Board [2d Js 5d 9s 6s]
+Seat 1: mpm135 (button) mucked
+Seat 2: Hero (small blind) showed [Kc Jc] and won ($226.70) with a pair of Jacks
+Seat 3: tb1216 (big blind) folded before Flop
+Seat 5: fromeros folded before Flop (didn't bet)
+Seat 6: iluvlindsay1 folded before Flop (didn't bet)

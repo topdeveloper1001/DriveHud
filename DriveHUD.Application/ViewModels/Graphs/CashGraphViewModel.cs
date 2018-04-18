@@ -22,7 +22,7 @@ using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Graphs
 {
-    public class CashGraphViewModel : BaseViewModel
+    public class CashGraphViewModel : BaseViewModel, IBaseGraphViewModel
     {
         private readonly CashGraphSettings settings;
 
@@ -66,7 +66,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 settings.ChartDisplayRange = value;
                 Update();
 
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -98,7 +98,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 }
 
                 settings.ShowShowdown = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -116,7 +116,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 }
 
                 settings.ShowNonShowdown = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -134,7 +134,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 }
 
                 settings.ShowEV = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -152,11 +152,11 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 }
 
                 settings.ValueType = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
-        internal void Update()
+        public void Update()
         {
             var chartItemDataBuilder = CreateCharItemDataBuilder(ChartDisplayRange);
 
@@ -230,7 +230,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
             }
             else
             {
-                chartCollection.ForEach(x => x.ItemsCollection.Clear());
+                App.Current.Dispatcher.Invoke(() => chartCollection.ForEach(x => x.ItemsCollection.Clear()));
             }
         }
 

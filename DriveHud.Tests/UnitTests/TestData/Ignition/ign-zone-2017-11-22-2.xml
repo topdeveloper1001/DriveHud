@@ -19,6 +19,7 @@
     <buyin>$0+$0</buyin>
     <totalbuyin>$0</totalbuyin>
     <win>0</win>
+    <pokersite>Ignition</pokersite>
   </general>
   <game gamecode="3531593873">
     <general>
@@ -264,7 +265,6 @@
       <action no="11" player="P6_320332CW" type="4" sum="0" cards="" />
       <action no="12" player="P1_954753HS" type="5" sum="4.5" cards="" />
       <action no="13" player="P2_865049LQ" type="23" sum="9.5" cards="" />
-      <action no="14" player="Hero" type="0" sum="0" cards="" />
     </round>
   </game>
   <game gamecode="3531594758">

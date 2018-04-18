@@ -40,5 +40,12 @@ namespace DriveHUD.Importers.Bovada
             this.CommandObject = null;
             this.CommandCodeEnum = commandCodeEnum;
         }
+
+#if DEBUG
+        public override string ToString()
+        {
+            return $"[{CommandCodeEnum.ToString().ToUpper()}]: {CommandObject} [{HandNumber}]";
+        }
+#endif
     }
 }

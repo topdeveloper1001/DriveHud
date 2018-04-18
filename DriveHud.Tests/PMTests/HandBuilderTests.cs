@@ -95,9 +95,7 @@ namespace PMCatcher.Tests
             }
 
             Assert.IsTrue(result, "Result must be true");
-            Assert.IsNotNull(actual, "Hand history must be built as a result.");
-
-            var xx = SerializationHelper.SerializeObject(actual);
+            Assert.IsNotNull(actual, "Hand history must be built as a result.");            
 
             AssertHandHistory(actual, jsonTestData.ExpectedResult);
         }
@@ -242,9 +240,10 @@ namespace PMCatcher.Tests
                 CollectionAssert.AreEquivalent(actual.GameDescription.TableType, expected.GameDescription.TableType, "GameDescription.TableType must be equivalent");
                 CollectionAssert.AreEquivalent(actual.GameDescription.TableTypeDescriptors, expected.GameDescription.TableTypeDescriptors, "GameDescription.TableTypeDescriptors must be equivalent");
                 Assert.That(actual.GameDescription.IsTournament, Is.EqualTo(expected.GameDescription.IsTournament), "GameDescription.IsTournament must be equal");
+                Assert.That(actual.GameDescription.Identifier, Is.EqualTo(expected.GameDescription.Identifier), "GameDescription.Identifier must be equal");
 
                 if (actual.GameDescription.IsTournament)
-                {
+                {                    
                     Assert.That(actual.GameDescription.Tournament.TournamentId, Is.EqualTo(expected.GameDescription.Tournament.TournamentId), "GameDescription.Tournament.TournamentId must be equal");
                     Assert.That(actual.GameDescription.Tournament.TournamentInGameId, Is.EqualTo(expected.GameDescription.Tournament.TournamentInGameId), "GameDescription.Tournament.TournamentInGameId must be equal");
                     Assert.That(actual.GameDescription.Tournament.TournamentName, Is.EqualTo(expected.GameDescription.Tournament.TournamentName), "GameDescription.Tournament.TournamentName must be equal");

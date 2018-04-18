@@ -7,7 +7,7 @@ namespace ExportTools
     {
         public const string AppDataFolder = "DriveHUD";
 
-        public const string DbFileName = "drivehud.db-large";
+        public const string DbFileName = "drivehud.db-omaha";
 
         public static string GetAppDataFolderPath()
         {

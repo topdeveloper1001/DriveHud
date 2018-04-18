@@ -929,4 +929,70 @@
   <data name="Enum_Stat_BB100" xml:space="preserve">
     <value>bb/100</value>
   </data>
+  <data name="Enum_EnumReports_Holecards" xml:space="preserve">
+    <value>Hole Cards</value>
+  </data>
+  <data name="Enum_EnumReports_OpponentAnalysis" xml:space="preserve">
+    <value>Opponents</value>
+  </data>
+  <data name="Enum_EnumReports_OverAll" xml:space="preserve">
+    <value>OverAll</value>
+  </data>
+  <data name="Enum_EnumReports_PokerSite" xml:space="preserve">
+    <value>Poker Site</value>
+  </data>
+  <data name="Enum_EnumReports_PopulationAnalysis" xml:space="preserve">
+    <value>Population</value>
+  </data>
+  <data name="Enum_EnumReports_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Enum_EnumReports_Sessions" xml:space="preserve">
+    <value>Sessions</value>
+  </data>
+  <data name="Enum_EnumReports_ShowdownHands" xml:space="preserve">
+    <value>Showdown Hands</value>
+  </data>
+  <data name="Enum_EnumReports_Stakes" xml:space="preserve">
+    <value>Stakes</value>
+  </data>
+  <data name="Enum_EnumReports_Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Enum_EnumReports_TournamentHoleCards" xml:space="preserve">
+    <value>Hole Cards</value>
+  </data>
+  <data name="Enum_EnumReports_TournamentPokerSite" xml:space="preserve">
+    <value>Poker Site</value>
+  </data>
+  <data name="Enum_EnumReports_TournamentPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Enum_EnumReports_TournamentResults" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="Enum_EnumReports_Tournaments" xml:space="preserve">
+    <value>Tournaments</value>
+  </data>
+  <data name="Enum_EnumReports_TournamentShowdownHands" xml:space="preserve">
+    <value>Showdown Hands</value>
+  </data>
+  <data name="Enum_EnumReports_TournamentStackSizes" xml:space="preserve">
+    <value>Stack Size</value>
+  </data>
+  <data name="Enum_EnumReports_TournamentStats" xml:space="preserve">
+    <value>Stats</value>
+  </data>
+  <data name="Enum_Stat_FlopBet" xml:space="preserve">
+    <value>Flop Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldFlop" xml:space="preserve">
+    <value>Fold Flop%</value>
+  </data>
+  <data name="Enum_Stat_TripleBarrel" xml:space="preserve">
+    <value>Triple Barrel%</value>
+  </data>
+  <data name="Enum_Stat_TurnBet" xml:space="preserve">
+    <value>Turn Bet%</value>
+  </data>
 </root>

@@ -1,0 +1,34 @@
+﻿Game #17189134520 starts.
+
+#Game No : 17189134520 
+***** Hand History for Game 17189134520 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 22:21:47 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169125922) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Lars8588 ( 1,170 )
+Seat 1: Peon84 ( 330 )
+Trny: 169125922 Level: 1 
+Blinds(10/20)
+Lars8588 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  8s Kc ]
+Lars8588 raises [90]
+Peon84 calls [80]
+** Dealing Flop ** [ 2s, 2d, As ]
+Peon84 checks
+Lars8588 checks
+** Dealing Turn ** [ 3c ]
+Peon84 checks
+Lars8588 bets [100]
+Peon84 calls [100]
+** Dealing River ** [ Ah ]
+Peon84 is all-In  [130]
+Lars8588 calls [130]
+Peon84 shows [ 8s, Kc ]two pairs, Aces and Twos.
+Lars8588 shows [ 8d, Ac ]a full house, Aces full of Twos.
+Lars8588 wins 660 chips from the main pot with a full house, Aces full of Twos.
+Congratulations to player Lars8588 for winning tournament $0.25 Sit & Go 3-Handed
+Player Peon84 finished in 2.
+Player Lars8588 finished in 1 place and received $0.50 USD 

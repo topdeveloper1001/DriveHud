@@ -377,6 +377,12 @@
       <Component Id="PacketDotNet.dll" Guid="{FC119EF2-5799-4947-AD33-A65CE0D00924}">
         <File Id="PacketDotNet.dll" KeyPath="yes" Name="PacketDotNet.dll" Source="$(var.BuildDirectory)\PacketDotNet.dll" />
       </Component>
+      <Component Id="EPPlus.dll" Guid="{52FE52E0-97A8-4D00-BB68-9F269B82BF3B}">
+        <File Id="EPPlus.dll" KeyPath="yes" Name="EPPlus.dll" Source="$(var.BuildDirectory)\EPPlus.dll" />
+      </Component>
+      <Component Id="pokereval.dll" Guid="{468C33DB-AD98-4DF6-9431-6B5F59A58F78}">
+        <File Id="pokereval.dll" KeyPath="yes" Name="pokereval.dll" Source="$(var.BuildDirectory)\pokereval.dll" />
+      </Component>
     </DirectoryRef>
 
     <DirectoryRef Id="LIB">
@@ -633,7 +639,9 @@
       <ComponentRef Id="PMNReg.dll" />
       <ComponentRef Id="SharpPcap.dll" />
       <ComponentRef Id="bdec.dll" />
+      <ComponentRef Id="pokereval.dll" />
       <ComponentRef Id="PacketDotNet.dll" />
+      <ComponentRef Id="EPPlus.dll" />
       <ComponentRef Id="BAD_LAG.PNG" />
       <ComponentRef Id="BOOK.PNG" />
       <ComponentRef Id="CAT_2.PNG" />

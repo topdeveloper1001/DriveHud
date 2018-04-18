@@ -188,7 +188,14 @@ namespace DriveHud.Tests.UnitTests
                 },
                 Text = "Test",
                 HeaderText = "HeaderText",
-                IsVertical = true
+                IsVertical = true,
+                Tools = new ReactiveList<HudLayoutTool>
+                {
+                    new HudLayoutHeatMapTool
+                    {
+                        BaseStat = new StatInfo { Stat = Stat.VPIP }
+                    }
+                }
             };
 
             var hudLayoutToolActual = SerializerHelper.GetSerializedDeserializedObject(hudLayoutToolExpected);
@@ -200,6 +207,8 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudLayoutToolActual.BaseStat.Stat, Is.EqualTo(hudLayoutToolExpected.BaseStat.Stat));
             Assert.That(hudLayoutToolActual.Stats.Count, Is.EqualTo(hudLayoutToolExpected.Stats.Count));
             Assert.That(hudLayoutToolActual.Stats.FirstOrDefault().Stat, Is.EqualTo(hudLayoutToolExpected.Stats.FirstOrDefault().Stat));
+            Assert.That(hudLayoutToolActual.Tools.Count, Is.EqualTo(hudLayoutToolExpected.Tools.Count));
+            Assert.That(hudLayoutToolActual.Tools.FirstOrDefault().ToolType, Is.EqualTo(hudLayoutToolExpected.Tools.FirstOrDefault().ToolType));
         }
 
         /// <summary>
@@ -220,7 +229,14 @@ namespace DriveHud.Tests.UnitTests
                 },
                 Text = "test",
                 IsVertical = true,
-                HeaderText = "HeaderText"
+                HeaderText = "HeaderText",
+                Tools = new ReactiveList<HudLayoutTool>
+                {
+                    new HudLayoutHeatMapTool
+                    {
+                        BaseStat = new StatInfo { Stat = Stat.PFR}
+                    }
+                }
             };
 
             var hudElement = new HudElementViewModel
@@ -230,6 +246,8 @@ namespace DriveHud.Tests.UnitTests
 
             var hudToolViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudGaugeIndicatorViewModel;
             hudToolViewModelExpected.IsGraphIndicatorsDisabled = true;
+
+            Assert.IsNotNull(hudToolViewModelExpected.GroupedStats);
 
             var hudToolViewModelActual = SerializerHelper.GetSerializedDeserializedObject(hudToolViewModelExpected);
 
@@ -243,6 +261,25 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
             Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
             Assert.That(hudToolViewModelActual.IsGraphIndicatorsDisabled, Is.EqualTo(hudToolViewModelExpected.IsGraphIndicatorsDisabled));
+            Assert.That(hudToolViewModelActual.GroupedStats.Count, Is.EqualTo(hudToolViewModelExpected.GroupedStats.Count));
+
+            var hudGaugeIndicatorStats = hudToolViewModelActual.GroupedStats.SelectMany(x => x.Stats).ToArray();
+
+            foreach (var groupedStat in hudToolViewModelExpected.GroupedStats)
+            {
+                foreach (var expectedHudGaugeIndicatorStat in groupedStat.Stats)
+                {
+                    var actualHudGaugeIndicatorStat = hudGaugeIndicatorStats.FirstOrDefault(x => x.Stat.Stat == expectedHudGaugeIndicatorStat.Stat.Stat);
+
+                    Assert.IsNotNull(actualHudGaugeIndicatorStat);
+
+                    if (expectedHudGaugeIndicatorStat.IsHeatMapVisible)
+                    {
+                        Assert.That(actualHudGaugeIndicatorStat.IsHeatMapVisible, Is.EqualTo(expectedHudGaugeIndicatorStat.IsHeatMapVisible));
+                        Assert.That(actualHudGaugeIndicatorStat.HeatMapViewModel.BaseStat.Stat, Is.EqualTo(expectedHudGaugeIndicatorStat.HeatMapViewModel.BaseStat.Stat));
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -660,7 +697,7 @@ namespace DriveHud.Tests.UnitTests
             var hudToolViewModelExpected = hudLayoutToolExpected.CreateViewModel(hudElement) as HudHeatMapViewModel;
 
             var heatMap = new HeatMapDto();
-            heatMap.OccuredByCardRange.Add("AA", 10);            
+            heatMap.OccuredByCardRange.Add("AA", 10);
 
             hudToolViewModelExpected.HeatMap = heatMap;
 
@@ -673,7 +710,7 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(hudToolViewModelActual.Height, Is.EqualTo(hudToolViewModelExpected.Height));
             Assert.That(hudToolViewModelActual.Position, Is.EqualTo(hudToolViewModelExpected.Position));
             Assert.That(hudToolViewModelActual.HeatMap.OccuredByCardRange.Count, Is.EqualTo(hudToolViewModelExpected.HeatMap.OccuredByCardRange.Count));
-            Assert.That(hudToolViewModelActual.HeatMap.OccuredByCardRange.Keys.First(), Is.EqualTo(hudToolViewModelExpected.HeatMap.OccuredByCardRange.Keys.First()));            
+            Assert.That(hudToolViewModelActual.HeatMap.OccuredByCardRange.Keys.First(), Is.EqualTo(hudToolViewModelExpected.HeatMap.OccuredByCardRange.Keys.First()));
         }
 
         /// <summary>

@@ -32,6 +32,8 @@ namespace DriveHUD.Importers.PokerMaster.EmulatorProviders
 
         protected virtual int? VbEmptyInstanceNumber { get { return 0; } }
 
+        protected virtual int? EmptyInstanceNumber { get { return null; } }
+
         public bool CanProvide(Process process)
         {
             try
@@ -56,7 +58,7 @@ namespace DriveHUD.Importers.PokerMaster.EmulatorProviders
 
                 var cmd = process.GetCommandLine();
 
-                var instanceNumber = GetInstanceNumber(cmd, VbInstanceArgumentPrefix);
+                var instanceNumber = GetInstanceNumber(cmd, VbInstanceArgumentPrefix, null);
 
                 var emulatorProcess = Process.GetProcesses().
                     FirstOrDefault(x =>
@@ -68,11 +70,11 @@ namespace DriveHUD.Importers.PokerMaster.EmulatorProviders
 
                         var cmdLine = x.GetCommandLine();
 
-                        var currentNoxInstanceNumber = GetInstanceNumber(cmdLine, InstanceArgumentPrefix);
+                        var currentNoxInstanceNumber = GetInstanceNumber(cmdLine, InstanceArgumentPrefix, EmptyInstanceNumber);
 
                         return instanceNumber.HasValue ?
                             currentNoxInstanceNumber == instanceNumber :
-                            (!currentNoxInstanceNumber.HasValue || 
+                            (!currentNoxInstanceNumber.HasValue ||
                                 (currentNoxInstanceNumber.HasValue && VbEmptyInstanceNumber == currentNoxInstanceNumber));
                     });
 
@@ -86,9 +88,9 @@ namespace DriveHUD.Importers.PokerMaster.EmulatorProviders
             return IntPtr.Zero;
         }
 
-        private int? GetInstanceNumber(string cmd, string argumentPrefix)
+        private int? GetInstanceNumber(string cmd, string argumentPrefix, int? emptyInstanceNumber)
         {
-            int? instanceNumber = null;
+            int? instanceNumber = emptyInstanceNumber;
 
             var instanceArgumentPrefixLength = argumentPrefix.Length;
             var instanceIndex = cmd.IndexOf(argumentPrefix, StringComparison.OrdinalIgnoreCase);

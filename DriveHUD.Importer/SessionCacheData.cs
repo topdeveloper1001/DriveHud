@@ -25,14 +25,14 @@ namespace DriveHUD.Importers
         private readonly Dictionary<PlayerCollectionItem, SessionCacheStatistic> statisticByPlayer;
         private readonly Dictionary<PlayerCollectionItem, Playerstatistic> lastHandStatisticByPlayer;
         private readonly Dictionary<PlayerCollectionItem, Dictionary<string, Playerstatistic>> stickersStatisticByPlayer;
-        private readonly Dictionary<PlayerCollectionItem, string> playerLayoutMap;        
+        private readonly Dictionary<PlayerCollectionItem, string> playerLayoutMap;
 
         public SessionCacheData()
         {
             statisticByPlayer = new Dictionary<PlayerCollectionItem, SessionCacheStatistic>();
             lastHandStatisticByPlayer = new Dictionary<PlayerCollectionItem, Playerstatistic>();
             stickersStatisticByPlayer = new Dictionary<PlayerCollectionItem, Dictionary<string, Playerstatistic>>();
-            playerLayoutMap = new Dictionary<PlayerCollectionItem, string>();            
+            playerLayoutMap = new Dictionary<PlayerCollectionItem, string>();
             LastModified = DateTime.Now;
         }
 
@@ -58,7 +58,7 @@ namespace DriveHUD.Importers
             {
                 return stickersStatisticByPlayer;
             }
-        }     
+        }
 
         public DateTime LastModified
         {
@@ -79,5 +79,11 @@ namespace DriveHUD.Importers
                 return playerLayoutMap;
             }
         }
+
+        public int PokerSiteId { get; set; }
+
+        public bool IsTourney { get; set; }
+
+        public short PokerGameTypeId { get; set; }
     }
 }

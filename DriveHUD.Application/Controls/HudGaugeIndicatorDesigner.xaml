@@ -2,11 +2,9 @@
     x:Class="DriveHUD.Application.Controls.HudGaugeIndicatorDesigner"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:DriveHUD.Application.Controls"
-    xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
-    xmlns:app="clr-namespace:DriveHUD.Application"
     xmlns:tpls="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
+    xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
     Width="{Binding Width}"
     Height="{Binding Height}">
 
@@ -16,6 +14,21 @@
                 <ResourceDictionary
                     Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudGaugeIndicatorStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Style
+                x:Key="HeatMapButtonStyle"
+                BasedOn="{StaticResource HeatMapButtonBaseStyle}"
+                TargetType="{x:Type Button}">
+                <Setter
+                    Property="Command"
+                    Value="{Binding DataContext.RemoveHeatMapCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ItemsControl}, AncestorLevel=2}}" />
+                <Setter
+                    Property="CommandParameter"
+                    Value="{Binding}" />
+                <Setter
+                    Property="ToolTip"
+                    Value="{ResX Key=Common_HudLayout_HeatMapLabelTooltip}" />
+            </Style>
 
             <DataTemplate
                 x:Key="LineBarStatInfoTextTemplate">
@@ -43,15 +56,24 @@
 
                                 <Border
                                     Style="{StaticResource StatInfoBorderStyle}">
-                                    <TextBlock
-                                        dh:DragDrop.IsDragTarget="True"
-                                        dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
-                                        Style="{StaticResource HudToolTipTextBlockStyle}"
-                                        Foreground="White"
-                                        Height="16"
-                                        VerticalAlignment="Center"
-                                        Margin="3"
-                                        Text="{Binding ToolTip}" />
+                                    <StackPanel
+                                        Orientation="Horizontal">
+                                        <TextBlock
+                                            dh:DragDrop.IsDragTarget="True"
+                                            dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
+                                            Style="{StaticResource HudToolTipTextBlockStyle}"
+                                            Foreground="{Binding Stat.CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                            FontFamily="{Binding Stat.SettingsAppearanceFontFamily}"
+                                            FontSize="{Binding Stat.SettingsAppearanceFontSize}"
+                                            FontWeight="{Binding Stat.SettingsAppearanceFontBold}"
+                                            FontStyle="{Binding Stat.SettingsAppearanceFontItalic}"
+                                            TextDecorations="{Binding Stat.SettingsAppearanceFontUnderline}"
+                                            VerticalAlignment="Center"
+                                            Margin="3,3,0,3"
+                                            Text="{Binding Stat.ToolTip}" />
+                                        <Button
+                                            Style="{StaticResource HeatMapButtonStyle}" />
+                                    </StackPanel>
                                 </Border>
 
                                 <Border
@@ -73,10 +95,15 @@
                                         dh:DragDrop.IsDragTarget="True"
                                         dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
                                         Style="{StaticResource HudToolTipTextBlockStyle}"
+                                        Foreground="{Binding Stat.CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                        FontFamily="{Binding Stat.SettingsAppearanceFontFamily}"
+                                        FontSize="{Binding Stat.SettingsAppearanceFontSize}"
+                                        FontWeight="{Binding Stat.SettingsAppearanceFontBold}"
+                                        FontStyle="{Binding Stat.SettingsAppearanceFontItalic}"
+                                        TextDecorations="{Binding Stat.SettingsAppearanceFontUnderline}"
                                         Margin="3"
-                                        Height="16"
                                         VerticalAlignment="Center"
-                                        Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                                        Text="{Binding Stat.CurrentValue, StringFormat={}{0:0}%}" />
                                 </Border>
 
                             </Grid>
@@ -100,17 +127,21 @@
                             <StackPanel
                                 Orientation="Horizontal">
                                 <Border
-                                    Visibility="{Binding Label, Converter={dh:NullOrEmptyToVisibilityConverter}, ConverterParameter=1}"
+                                    Visibility="{Binding Stat.Label, Converter={dh:NullOrEmptyToVisibilityConverter}, ConverterParameter=1}"
                                     Style="{StaticResource StatInfoBorderStyle}">
                                     <TextBlock
                                         dh:DragDrop.IsDragTarget="True"
                                         dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
                                         Style="{StaticResource HudToolTipTextBlockStyle}"
-                                        Foreground="White"
-                                        Height="16"
+                                        Foreground="{Binding Stat.CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                        FontFamily="{Binding Stat.SettingsAppearanceFontFamily}"
+                                        FontSize="{Binding Stat.SettingsAppearanceFontSize}"
+                                        FontWeight="{Binding Stat.SettingsAppearanceFontBold}"
+                                        FontStyle="{Binding Stat.SettingsAppearanceFontItalic}"
+                                        TextDecorations="{Binding Stat.SettingsAppearanceFontUnderline}"
                                         VerticalAlignment="Center"
                                         Margin="3"
-                                        Text="{Binding Stat, Converter={dh:EnumToLocalizedStringConverter}, StringFormat='{}{0}:'}" />
+                                        Text="{Binding Stat.Stat, Converter={dh:EnumToLocalizedStringConverter}, StringFormat='{}{0}:'}" />
                                 </Border>
                                 <Border
                                     Visibility="{Binding Label, Converter={dh:NullOrEmptyToVisibilityConverter}}"
@@ -119,11 +150,15 @@
                                         dh:DragDrop.IsDragTarget="True"
                                         dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
                                         Style="{StaticResource HudToolTipTextBlockStyle}"
-                                        Foreground="White"
-                                        Height="16"
+                                        Foreground="{Binding Stat.CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                        FontFamily="{Binding Stat.SettingsAppearanceFontFamily}"
+                                        FontSize="{Binding Stat.SettingsAppearanceFontSize}"
+                                        FontWeight="{Binding Stat.SettingsAppearanceFontBold}"
+                                        FontStyle="{Binding Stat.SettingsAppearanceFontItalic}"
+                                        TextDecorations="{Binding Stat.SettingsAppearanceFontUnderline}"
                                         VerticalAlignment="Center"
                                         Margin="3"
-                                        Text="{Binding Label, StringFormat='{}{0}:'}" />
+                                        Text="{Binding Stat.Label, StringFormat='{}{0}:'}" />
                                 </Border>
                                 <Border
                                     Style="{StaticResource StatInfoBorderStyle}">
@@ -131,10 +166,15 @@
                                         dh:DragDrop.IsDragTarget="True"
                                         dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
                                         Style="{StaticResource HudToolTipTextBlockStyle}"
+                                        Foreground="{Binding Stat.CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                        FontFamily="{Binding Stat.SettingsAppearanceFontFamily}"
+                                        FontSize="{Binding Stat.SettingsAppearanceFontSize}"
+                                        FontWeight="{Binding Stat.SettingsAppearanceFontBold}"
+                                        FontStyle="{Binding Stat.SettingsAppearanceFontItalic}"
+                                        TextDecorations="{Binding Stat.SettingsAppearanceFontUnderline}"
                                         Margin="3"
-                                        Height="16"
                                         VerticalAlignment="Center"
-                                        Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                                        Text="{Binding Stat.CurrentValue, StringFormat={}{0:0}%}" />
                                 </Border>
                                 <Border
                                     Style="{StaticResource StatInfoBorderStyle}">
@@ -142,11 +182,19 @@
                                         dh:DragDrop.IsDragTarget="True"
                                         dh:DragDrop.DragDropCommand="{Binding DataContext.DragDropCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}"
                                         Style="{StaticResource HudToolTipTextBlockStyle}"
-                                        Margin="3"
+                                        Foreground="{Binding Stat.CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                        FontFamily="{Binding Stat.SettingsAppearanceFontFamily}"
+                                        FontSize="{Binding Stat.SettingsAppearanceFontSize}"
+                                        FontWeight="{Binding Stat.SettingsAppearanceFontBold}"
+                                        FontStyle="{Binding Stat.SettingsAppearanceFontItalic}"
+                                        TextDecorations="{Binding Stat.SettingsAppearanceFontUnderline}"
+                                        Margin="3,3,0,3"
                                         Height="16"
                                         VerticalAlignment="Center"
-                                        Text="{Binding IterationsText}" />
+                                        Text="{Binding Stat.IterationsText}" />
                                 </Border>
+                                <Button
+                                    Style="{StaticResource HeatMapButtonStyle}" />
                             </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>

@@ -10,9 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Common.Log;
 using DriveHud.Tests.UnitTests.Helpers;
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using Model.Reports;
 using NUnit.Framework;
@@ -32,7 +32,7 @@ namespace DriveHud.Tests.UnitTests
             LoadTestPlayerStatistic();
         }
 
-        private Dictionary<string, IList<Playerstatistic>> playerStatisticDictionary;
+        private Dictionary<string, List<Playerstatistic>> playerStatisticDictionary;
 
         [Test]
         [TestCase(@"..\..\UnitTests\TestData\testdata.stat")]
@@ -86,7 +86,7 @@ namespace DriveHud.Tests.UnitTests
         {
             using (var perfScope = new PerformanceMonitor("ReportCreatorTests.LoadTestPlayerStatistic"))
             {
-                playerStatisticDictionary = new Dictionary<string, IList<Playerstatistic>>();
+                playerStatisticDictionary = new Dictionary<string, List<Playerstatistic>>();
 
                 PlayerStatisticsFiles.ForEach(file =>
                 {

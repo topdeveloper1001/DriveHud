@@ -159,6 +159,8 @@ namespace DriveHUD.Importers.BetOnline
 
             IEnumerable<ParsingResult> parsingResult = null;
 
+            LogProvider.Log.Info(this, $"Hand {convertedResult.HandNumber} processed. [{Identifier}]");
+
             try
             {
                 parsingResult = dbImporter.Import(convertedResult.ConvertedXml, progress, convertedResult.GameInfo);
@@ -192,7 +194,7 @@ namespace DriveHUD.Importers.BetOnline
                     continue;
                 }
 
-                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
+                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported in {2}ms. [{1}]", result.HandHistory.Gamenumber, Identifier, result.Duration));
 
                 var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, convertedResult.GameInfo, result.Source.Hero, result.Source.HandId);
 

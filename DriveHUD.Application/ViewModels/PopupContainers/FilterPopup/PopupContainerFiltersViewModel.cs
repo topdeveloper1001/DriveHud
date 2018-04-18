@@ -13,7 +13,6 @@
 using DriveHUD.Application.ViewModels.Filters;
 using DriveHUD.Application.Views;
 using DriveHUD.Common.Linq;
-using DriveHUD.Common.Reflection;
 using DriveHUD.Common.Utils;
 using Microsoft.Practices.ServiceLocation;
 using Model;
@@ -22,6 +21,7 @@ using Model.Events;
 using Model.Filters;
 using Model.Settings;
 using Prism.Events;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -30,9 +30,10 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 {
     public class PopupContainerFiltersViewModel : PopupContainerBaseFilterViewModel
     {
+        private readonly IEventAggregator eventAggregator;
+
         protected override string FilterFileExtension
         {
-            // drivehud filter
             get { return ".df"; }
         }
 
@@ -45,7 +46,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         public PopupContainerFiltersViewModel()
         {
-            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             eventAggregator.GetEvent<DateFilterChangedEvent>().Subscribe(UpdateDateFilter);
             eventAggregator.GetEvent<ResetFiltersEvent>().Subscribe(ResetFilters);
             eventAggregator.GetEvent<SettingsUpdatedEvent>().Subscribe(OnSettingsUpdated);
@@ -58,7 +59,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         protected override void InitializeViewModelCollection()
         {
-            this.FilterViewCollection = new ObservableCollection<IFilterView>
+            FilterViewCollection = new ObservableCollection<IFilterView>
                 (
                     new List<IFilterView>()
                     {
@@ -76,7 +77,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         {
             base.InitializeBindings();
 
-            StorageModel.PropertyChanged += StorageModel_PropertyChanged;
+            StorageModel.PropertyChanged += OnStorageModelPropertyChanged;
         }
 
         #endregion
@@ -86,9 +87,22 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         private void UpdateFilter(UpdateFilterRequestEventArgs obj)
         {
             InitializeViewModel(null);
+
             FilterViewCollection.ForEach(x => x.ViewModel.InitializeFilterModel());
 
-            Apply_OnClick(null);
+            var currentFilter = GetCurrentFilter();
+
+            if (FilterModelManager.FilterType == EnumFilterType.Cash)
+            {
+                StorageModel.CashFilterPredicate = currentFilter;
+            }
+            else
+            {
+                StorageModel.TournamentFilterPredicate = currentFilter;
+            }
+
+            var builtFilterArgs = new BuiltFilterChangedEventArgs(CurrentlyBuiltFilter.DeepCloneJson(), currentFilter);
+            eventAggregator.GetEvent<BuiltFilterRefreshEvent>().Publish(builtFilterArgs);
         }
 
         private void ResetFilters(ResetFiltersEventArgs obj)
@@ -101,7 +115,8 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             {
                 ResetAllFilters();
             }
-            Apply_OnClick(null);
+
+            ApplyFilters(null);
         }
 
         private void OnSettingsUpdated(SettingsUpdatedEventArgs obj)
@@ -112,6 +127,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             }
 
             var dateFilter = FilterModelManager.FilterModelCollection.OfType<FilterDateModel>().FirstOrDefault();
+
             if (dateFilter != null)
             {
                 if (dateFilter.DateFilterType.EnumDateRange != EnumDateFiterStruct.EnumDateFiter.ThisWeek)
@@ -139,7 +155,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             if (dateFilter != null)
             {
                 dateFilter.DateFilterType = obj.DateFilterType;
-                Apply_OnClick(null);
+                ApplyFilters(null);
             }
         }
 
@@ -154,7 +170,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             filterDataService.SaveDefaultFilter(FilterModelManager.GetFilterModelDictionary());
         }
 
-        protected override void Apply_OnClick(object obj)
+        protected override void ApplyFilters(object obj)
         {
             foreach (var filter in FilterViewCollection)
             {
@@ -162,30 +178,47 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             }
 
             var currentFilter = GetCurrentFilter();
-            StorageModel.FilterPredicate = currentFilter;
 
-            var isApplyForBoth = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.IsApplyFiltersToTournamentsAndCashGames;
+            var builtFilterArgs = new BuiltFilterChangedEventArgs(CurrentlyBuiltFilter.DeepCloneJson(), currentFilter);
+
+            var isApplyForBoth = ServiceLocator.Current.GetInstance<ISettingsService>()
+                .GetSettings()
+                .GeneralSettings
+                .IsApplyFiltersToTournamentsAndCashGames;
 
             if (isApplyForBoth)
             {
+                StorageModel.CashFilterPredicate = currentFilter;
+                StorageModel.TournamentFilterPredicate = currentFilter;
+
+                builtFilterArgs.AffectedFilter = new[] { EnumFilterType.Cash, EnumFilterType.Tournament };
+
                 FilterModelManager.SpreadFilter();
             }
+            else if (FilterModelManager.FilterType == EnumFilterType.Cash)
+            {
+                StorageModel.CashFilterPredicate = currentFilter;
+                builtFilterArgs.AffectedFilter = new[] { EnumFilterType.Cash };
+            }
+            else
+            {
+                StorageModel.TournamentFilterPredicate = currentFilter;
+                builtFilterArgs.AffectedFilter = new[] { EnumFilterType.Tournament };
+            }
 
-            ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<BuiltFilterChangedEvent>().Publish(new BuiltFilterChangedEventArgs(this.CurrentlyBuiltFilter.DeepCloneJson(), currentFilter));
+            eventAggregator
+                .GetEvent<BuiltFilterChangedEvent>()
+                .Publish(builtFilterArgs);
         }
 
         #endregion
 
-        #region Events
-
-        private void StorageModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        private void OnStorageModelPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == ReflectionHelper.GetPath<SingletonStorageModel>(p => p.PlayerSelectedItem))
+            if (e.PropertyName == nameof(SingletonStorageModel.PlayerSelectedItem))
             {
                 InitializeViewModelCollection();
             }
         }
-
-        #endregion
     }
 }

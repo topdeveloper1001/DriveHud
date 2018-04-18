@@ -15,9 +15,7 @@ using DriveHUD.Importers.PokerMaster.Model;
 namespace DriveHUD.Importers.PokerMaster
 {
     internal interface IPacketManager
-    {
-        bool IsStartingPacket(byte[] bytes);
-
+    {     
         bool TryParse(CapturedPacket packet, out Package package);
     }
 }

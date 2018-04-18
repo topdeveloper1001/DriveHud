@@ -188,9 +188,10 @@
     <Compile Include="Builders\iPoker\HandCombo.cs" />
     <Compile Include="Builders\iPoker\HiCardsComparer.cs" />
     <Compile Include="Builders\iPoker\HoldemEvaluator.cs" />
+    <Compile Include="Builders\iPoker\ICardsComparer.cs" />
     <Compile Include="Builders\iPoker\ICardsConverter.cs" />
     <Compile Include="Builders\iPoker\IHandHistoryBuilder.cs" />
-    <Compile Include="Builders\iPoker\IPokerEvaluator.cs" />
+    <Compile Include="Builders\iPoker\LoCardsComparer.cs" />
     <Compile Include="Builders\iPoker\Model\Action.cs" />
     <Compile Include="Builders\iPoker\Card.cs" />
     <Compile Include="Builders\iPoker\Model\ActionType.cs" />
@@ -204,6 +205,7 @@
     <Compile Include="Builders\iPoker\Model\Player.cs" />
     <Compile Include="Builders\iPoker\Model\Round.cs" />
     <Compile Include="Builders\iPoker\OmahaEvaluator.cs" />
+    <Compile Include="Builders\iPoker\OmahaHiLoEvaluator.cs" />
     <Compile Include="Builders\iPoker\PokerBuilder.cs" />
     <Compile Include="Builders\iPoker\PokerCardsConverter.cs" />
     <Compile Include="Builders\iPoker\PokerConfiguration.cs" />
@@ -306,6 +308,7 @@
     <Compile Include="PokerMaster\Model\PackageCommand.cs" />
     <Compile Include="PokerMaster\Model\PotInfo.cs" />
     <Compile Include="PokerMaster\Model\RaiseShortcutsOptions.cs" />
+    <Compile Include="PokerMaster\Model\SCEnterGameRoomRsp.cs" />
     <Compile Include="PokerMaster\Model\SCGameRoomStateChange.cs" />
     <Compile Include="PokerMaster\Model\SCLeaveGameRoomRsp.cs" />
     <Compile Include="PokerMaster\Model\SCLoginRsp.cs" />

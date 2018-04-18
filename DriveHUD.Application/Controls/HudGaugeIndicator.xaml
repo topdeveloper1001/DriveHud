@@ -2,12 +2,10 @@
     x:Class="DriveHUD.Application.Controls.HudGaugeIndicator"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:DriveHUD.Application.Controls"
-    xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
-    xmlns:app="clr-namespace:DriveHUD.Application"
     xmlns:control="clr-namespace:DriveHUD.Application.Controls"
     xmlns:tpls="clr-namespace:DriveHUD.Application.ControlTemplateSelectors"
+    xmlns:res="clr-namespace:DriveHUD.Common.Resources;assembly=DriveHUD.Common.Resources"
     Width="{Binding Width}"
     Height="{Binding Height}">
 
@@ -17,6 +15,24 @@
                 <ResourceDictionary
                     Source="pack://application:,,,/DriveHUD.Application;component/ControlStyles/HudGaugeIndicatorStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Style
+                x:Key="HeatMapButtonStyle"
+                BasedOn="{StaticResource HeatMapButtonBaseStyle}"
+                TargetType="{x:Type Button}">
+                <Setter
+                    Property="ToolTipService.InitialShowDelay"
+                    Value="{x:Static res:HudDefaultSettings.PopupShowDelay}" />
+                <Setter
+                    Property="ToolTipService.ShowDuration"
+                    Value="60000" />
+                <Setter
+                    Property="ToolTipService.VerticalOffset"
+                    Value="-5" />
+                <Setter
+                    Property="ToolTipService.Placement"
+                    Value="Top" />
+            </Style>
 
             <DataTemplate
                 x:Key="LineBarStatInfoTextTemplate">
@@ -43,30 +59,66 @@
                                         SharedSizeGroup="RightGroup" />
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock
-                                    Grid.Column="0"
-                                    Style="{StaticResource HudToolTipTextBlockStyle}"
-                                    Foreground="White"
-                                    Height="16"
-                                    VerticalAlignment="Center"
-                                    Margin="3"
-                                    Text="{Binding ToolTip}" />
+                                <StackPanel
+                                    Orientation="Horizontal"
+                                    Grid.Column="0">
+                                    <TextBlock
+                                        Style="{StaticResource HudToolTipTextBlockStyle}"
+                                        Foreground="{Binding Stat.CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                        FontFamily="{Binding Stat.SettingsAppearanceFontFamily}"
+                                        FontSize="{Binding Stat.SettingsAppearanceFontSize}"
+                                        FontWeight="{Binding Stat.SettingsAppearanceFontBold}"
+                                        FontStyle="{Binding Stat.SettingsAppearanceFontItalic}"
+                                        TextDecorations="{Binding Stat.SettingsAppearanceFontUnderline}"
+                                        VerticalAlignment="Center"
+                                        Margin="3,3,0,3"
+                                        Text="{Binding Stat.ToolTip}" />
+                                    <Button
+                                        Content="{Binding HeatMapViewModel}">
+                                        <Button.Style>
+                                            <Style
+                                                TargetType="Button"
+                                                BasedOn="{StaticResource HeatMapButtonStyle}">
+                                                <Setter
+                                                    Property="ToolTipService.ToolTip">
+                                                    <Setter.Value>
+                                                        <ToolTip
+                                                            BorderThickness="0"
+                                                            Background="Transparent">
+                                                            <ToolTip.ContentTemplate>
+                                                                <DataTemplate>
+                                                                    <control:HudHeatMap
+                                                                        DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Button}}, Path=Content}" />
+                                                                </DataTemplate>
+                                                            </ToolTip.ContentTemplate>
+                                                        </ToolTip>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </Button.Style>
+                                    </Button>
+                                </StackPanel>
 
                                 <ContentControl
                                     Grid.Column="1"
                                     Margin="3"
                                     Style="{StaticResource MeterControlStyle}"
                                     Height="16"
-                                    Visibility="{Binding IsGraphIndicatorsDisabled, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
+                                    Visibility="{Binding DataContext.IsGraphIndicatorsDisabled, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ItemsControl}, AncestorLevel=2}}"
                                     VerticalAlignment="Center" />
 
                                 <TextBlock
                                     Grid.Column="2"
                                     Style="{StaticResource HudToolTipTextBlockStyle}"
                                     Margin="3"
-                                    Height="16"
+                                    Foreground="{Binding Stat.CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                    FontFamily="{Binding Stat.SettingsAppearanceFontFamily}"
+                                    FontSize="{Binding Stat.SettingsAppearanceFontSize}"
+                                    FontWeight="{Binding Stat.SettingsAppearanceFontBold}"
+                                    FontStyle="{Binding Stat.SettingsAppearanceFontItalic}"
+                                    TextDecorations="{Binding Stat.SettingsAppearanceFontUnderline}"
                                     VerticalAlignment="Center"
-                                    Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                                    Text="{Binding Stat.CurrentValue, StringFormat={}{0:0}%}" />
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
@@ -89,33 +141,74 @@
                                 Orientation="Horizontal">
                                 <TextBlock
                                     Style="{StaticResource HudToolTipTextBlockStyle}"
-                                    Foreground="White"
-                                    Height="16"
+                                    Foreground="{Binding Stat.CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                    FontFamily="{Binding Stat.SettingsAppearanceFontFamily}"
+                                    FontSize="{Binding Stat.SettingsAppearanceFontSize}"
+                                    FontWeight="{Binding Stat.SettingsAppearanceFontBold}"
+                                    FontStyle="{Binding Stat.SettingsAppearanceFontItalic}"
+                                    TextDecorations="{Binding Stat.SettingsAppearanceFontUnderline}"
                                     VerticalAlignment="Center"
                                     Margin="3"
-                                    Visibility="{Binding Label, Converter={dh:NullOrEmptyToVisibilityConverter}, ConverterParameter=1}"
-                                    Text="{Binding Stat, Converter={dh:EnumToLocalizedStringConverter}, StringFormat='{}{0}:'}" />
+                                    Visibility="{Binding Stat.Label, Converter={dh:NullOrEmptyToVisibilityConverter}, ConverterParameter=1}"
+                                    Text="{Binding Stat.Stat, Converter={dh:EnumToLocalizedStringConverter}, StringFormat='{}{0}:'}" />
                                 <TextBlock
                                     Style="{StaticResource HudToolTipTextBlockStyle}"
-                                    Foreground="White"
-                                    Height="16"
+                                    Foreground="{Binding Stat.CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                    FontFamily="{Binding Stat.SettingsAppearanceFontFamily}"
+                                    FontSize="{Binding Stat.SettingsAppearanceFontSize}"
+                                    FontWeight="{Binding Stat.SettingsAppearanceFontBold}"
+                                    FontStyle="{Binding Stat.SettingsAppearanceFontItalic}"
+                                    TextDecorations="{Binding Stat.SettingsAppearanceFontUnderline}"
                                     VerticalAlignment="Center"
                                     Margin="3"
-                                    Visibility="{Binding Label, Converter={dh:NullOrEmptyToVisibilityConverter}}"
-                                    Text="{Binding Label, StringFormat='{}{0}:'}" />
+                                    Visibility="{Binding Stat.Label, Converter={dh:NullOrEmptyToVisibilityConverter}}"
+                                    Text="{Binding Stat.Label, StringFormat='{}{0}:'}" />
                                 <TextBlock
                                     Style="{StaticResource HudToolTipTextBlockStyle}"
                                     Margin="3,3,0,3"
-                                    Height="16"
+                                    Foreground="{Binding Stat.CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                    FontFamily="{Binding Stat.SettingsAppearanceFontFamily}"
+                                    FontSize="{Binding Stat.SettingsAppearanceFontSize}"
+                                    FontWeight="{Binding Stat.SettingsAppearanceFontBold}"
+                                    FontStyle="{Binding Stat.SettingsAppearanceFontItalic}"
+                                    TextDecorations="{Binding Stat.SettingsAppearanceFontUnderline}"
                                     VerticalAlignment="Center"
-                                    Text="{Binding CurrentValue, StringFormat={}{0:0}%}" />
+                                    Text="{Binding Stat.CurrentValue, StringFormat={}{0:0}%}" />
                                 <TextBlock
                                     Style="{StaticResource HudToolTipTextBlockStyle}"
-                                    Foreground="White"
-                                    Height="16"
+                                    Foreground="{Binding Stat.CurrentColor, Converter={dh:ColorToSolidBrushConverter}}"
+                                    FontFamily="{Binding Stat.SettingsAppearanceFontFamily}"
+                                    FontSize="{Binding Stat.SettingsAppearanceFontSize}"
+                                    FontWeight="{Binding Stat.SettingsAppearanceFontBold}"
+                                    FontStyle="{Binding Stat.SettingsAppearanceFontItalic}"
+                                    TextDecorations="{Binding Stat.SettingsAppearanceFontUnderline}"
                                     VerticalAlignment="Center"
                                     Margin="3,3,0,3"
-                                    Text="{Binding IterationsText}" />
+                                    Text="{Binding Stat.IterationsText}" />
+                                <Button
+                                    Content="{Binding HeatMapViewModel}">
+                                    <Button.Style>
+                                        <Style
+                                            TargetType="Button"
+                                            BasedOn="{StaticResource HeatMapButtonStyle}">
+                                            <Setter
+                                                Property="ToolTipService.ToolTip">
+                                                <Setter.Value>
+                                                    <ToolTip
+                                                        BorderThickness="0"
+                                                        Background="Transparent">
+                                                        <ToolTip.ContentTemplate>
+                                                            <DataTemplate>
+                                                                <control:HudHeatMap
+                                                                    DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type Button}}, Path=Content}" />
+                                                            </DataTemplate>
+                                                        </ToolTip.ContentTemplate>
+                                                    </ToolTip>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
                             </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>

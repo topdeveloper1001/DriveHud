@@ -870,7 +870,7 @@ namespace DriveHUD.Application.ViewModels.Registration
 
                 if (licenseType == LicenseType.Trial)
                 {
-                    InitializeMessage("Common_RegistrationView_TrialExpiredText");
+                    InitializeMessage("Common_RegistrationView_TrialExpiredText");                    
                 }
                 else
                 {

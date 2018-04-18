@@ -103,6 +103,12 @@ namespace HandHistories.Objects.GameDescription
             }
         }
 
+        [XmlElement]
+        public long Identifier
+        {
+            get; set;
+        }
+
         public override bool Equals(object obj)
         {
             var descriptor = obj as GameDescriptor;

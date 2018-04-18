@@ -517,7 +517,7 @@
     <value>Fold to Flop Raise%</value>
   </data>
   <data name="Reports_Column_FoldToRiverCBet" xml:space="preserve">
-    <value>Fold to River C-Bet%</value>
+    <value>Fold to Triple Barrel%</value>
   </data>
   <data name="Reports_Column_FoldToSqueez" xml:space="preserve">
     <value>Fold to Squeeze%</value>
@@ -743,5 +743,20 @@
   </data>
   <data name="Reports_Columns_PlayerType" xml:space="preserve">
     <value>Player type</value>
+  </data>
+  <data name="Reports_AllPlayers_PlayerType" xml:space="preserve">
+    <value>All players</value>
+  </data>
+  <data name="Reports_Column_FlopBet" xml:space="preserve">
+    <value>Flop Bet%</value>
+  </data>
+  <data name="Reports_Column_FoldFlop" xml:space="preserve">
+    <value>Fold Flop%</value>
+  </data>
+  <data name="Reports_Column_TripleBarrel" xml:space="preserve">
+    <value>Triple Barrel%</value>
+  </data>
+  <data name="Reports_Column_TurnBet" xml:space="preserve">
+    <value>Turn Bet%</value>
   </data>
 </root>

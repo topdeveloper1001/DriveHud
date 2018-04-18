@@ -926,6 +926,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Selected Stats.
+        /// </summary>
+        internal static string Common_Hud_SelectedStats {
+            get {
+                return ResourceManager.GetString("Common_Hud_SelectedStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show line bar.
         /// </summary>
         internal static string Common_Hud_ShowLineBarTooltip {
@@ -1048,6 +1057,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudLayout_HeatMap {
             get {
                 return ResourceManager.GetString("Common_HudLayout_HeatMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heat Map.
+        /// </summary>
+        internal static string Common_HudLayout_HeatMapLabelTooltip {
+            get {
+                return ResourceManager.GetString("Common_HudLayout_HeatMapLabelTooltip", resourceCulture);
             }
         }
         
@@ -1481,6 +1499,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudStatSettings_OK {
             get {
                 return ResourceManager.GetString("Common_HudStatSettings_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset.
+        /// </summary>
+        internal static string Common_HudStatSettings_Reset {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettings_Reset", resourceCulture);
             }
         }
         

@@ -54,6 +54,11 @@ namespace HandHistories.Parser.Parsers
         public bool IsDuplicate { get; set; }
 
         /// <summary>
+        /// Time spent on importing
+        /// </summary>
+        public long Duration { get; set; }
+
+        /// <summary>
         /// Flag if result is just summary hand
         /// </summary>
         public bool IsSummary

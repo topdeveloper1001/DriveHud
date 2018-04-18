@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Linq;
-using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
@@ -19,8 +18,10 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
+using Microsoft.Practices.ServiceLocation;
 using Model.Extensions;
 using Model.Importer;
+using Model.Solvers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,18 +33,18 @@ namespace Model
     /// </summary>
     public class PlayerStatisticCalculator : IPlayerStatisticCalculator
     {
-        public Playerstatistic CalculateStatistic(ParsingResult result, Players u, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
+        public Playerstatistic CalculateStatistic(PlayerStatisticCreationInfo creationInfo)
         {
-            HandHistory parsedHand = result.Source;
-            var player = u.Playername;
+            var parsedHand = creationInfo.ParsingResult.Source;
+            var player = creationInfo.Player.Playername;
 
-            Playerstatistic stat = new Playerstatistic
+            var stat = new Playerstatistic
             {
                 PlayerName = player,
                 Numberofplayers = (short)parsedHand.NumPlayersActive,
-                PlayerId = u.PlayerId,
-                GametypeId = (short)result.GameType.GametypeId,
-                MaxPlayers = result.GameType.Tablesize
+                PlayerId = creationInfo.Player.PlayerId,
+                GametypeId = (short)creationInfo.ParsingResult.GameType.GametypeId,
+                MaxPlayers = creationInfo.ParsingResult.GameType.Tablesize
             };
 
             var currentPlayer = parsedHand.Players.FirstOrDefault(x => string.Equals(x.PlayerName, player, StringComparison.OrdinalIgnoreCase));
@@ -570,15 +571,20 @@ namespace Model
             stat.Rivercallippassonturncb = riverIpPassFlopCbet.Called ? 1 : 0;
             stat.Riverraiseippassonturncb = riverIpPassFlopCbet.Raised ? 1 : 0;
 
+            var playerPlayedRiver = playerHandActions.Any(x => x.Street == Street.River);
+
             stat.CheckedRiverAfterBBLine = betOnFlop && betOnTurn && playerHandActions.Any(x => x.Street == Street.River && x.IsCheck) ? 1 : 0;
-            stat.CouldCheckRiverAfterBBLine = playedRiver && betOnFlop && betOnTurn && parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
+            stat.CouldCheckRiverAfterBBLine = playerPlayedRiver && betOnFlop && betOnTurn && parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
 
             var checkOnTurn = playerHandActions.TurnAny(x => x.IsCheck);
 
             stat.DidRiverBet = betOnRiver ? 1 : 0;
-            stat.CouldRiverBet = parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
+            stat.CouldRiverBet = playerPlayedRiver && parsedHand.River.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
             stat.DidBetRiverOnBXLine = betOnFlop && checkOnTurn && betOnRiver ? 1 : 0;
             stat.CouldBetRiverOnBXLine = betOnFlop && checkOnTurn && stat.CouldRiverBet == 1 ? 1 : 0;
+
+            stat.CouldTurnBet = playerHandActions.Any(x => x.Street == Street.Turn) && parsedHand.Turn.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
+            stat.CouldFlopBet = playerHandActions.Any(x => x.Street == Street.Flop) && parsedHand.Flop.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
 
             stat.Playedyearandmonth = int.Parse(parsedHand.DateOfHandUtc.ToString("yyyyMM"));
 
@@ -695,7 +701,7 @@ namespace Model
             #region Additional
 
             stat.GameNumber = parsedHand.HandId;
-            stat.PokersiteId = result.HandHistory.PokersiteId;
+            stat.PokersiteId = creationInfo.ParsingResult.HandHistory.PokersiteId;
             stat.TableType = parsedHand.GameDescription.TableType.ToString();
             stat.TableTypeDescription = (uint)parsedHand.GameDescription.TableType.Descriptions;
             stat.Time = parsedHand.DateOfHandUtc;
@@ -720,44 +726,7 @@ namespace Model
             stat.PositionString = Converter.ToPositionString(stat.Position);
             stat.FacingPreflop = Converter.ToFacingPreflop(parsedHand.PreFlop, player);
 
-            if (Converter.CanAllInEquity(parsedHand, stat, out HandAction lastHeroActionStreetAction))
-            {
-                if (calculatedEquity != null && calculatedEquity.ContainsKey(player) && calculatedEquity[player].ContainsKey(lastHeroActionStreetAction.Street))
-                {
-                    stat.Equity = calculatedEquity[player][lastHeroActionStreetAction.Street];
-                }
-                else
-                {
-                    var equityByPlayer = Converter.CalculateAllInEquity(parsedHand, stat);
-
-                    stat.Equity = equityByPlayer != null && equityByPlayer.ContainsKey(player) ? equityByPlayer[player] : 0;
-
-                    if (equityByPlayer != null && calculatedEquity != null)
-                    {
-                        foreach (var equity in equityByPlayer)
-                        {
-                            if (!calculatedEquity.ContainsKey(equity.Key))
-                            {
-                                calculatedEquity.Add(equity.Key, new Dictionary<Street, decimal>());
-                            }
-
-                            if (!calculatedEquity[equity.Key].ContainsKey(lastHeroActionStreetAction.Street))
-                            {
-                                calculatedEquity[equity.Key].Add(lastHeroActionStreetAction.Street, equity.Value);
-                            }
-                        }
-                    }
-                }
-            }
-
-            if (stat.Equity > 0)
-            {
-                stat.EVDiff = GetExpectedValue(parsedHand, playerHandActions, stat.Equity, player) - netWon;
-            }
-            else
-            {
-                stat.EVDiff = 0;
-            }
+            CalculateEquity(creationInfo, stat);
 
             if (parsedHand.GameDescription.Limit.SmallBlind > 0 && parsedHand.GameDescription.Limit.BigBlind > 0)
             {
@@ -845,6 +814,17 @@ namespace Model
             {
                 stat.DidFlopCheckBehind = playedTurn && lastFlopAction.PlayerName == player && lastFlopAction.IsCheck ? 1 : 0;
                 stat.CouldFlopCheckBehind = preflopInPosition && !parsedHand.Flop.Any(x => x.IsBet() && x.PlayerName != player) ? 1 : 0;
+            }
+
+            if (playedFlop)
+            {
+                var playerActionOnFlopBet = GetPlayerActionOnBet(parsedHand.Flop, player, true, true);
+
+                if (playerActionOnFlopBet != null)
+                {
+                    stat.FacedBetOnFlop = 1;
+                    stat.FoldedFlop = playerActionOnFlopBet.IsFold ? 1 : 0;
+                }
             }
 
             if (playedTurn)
@@ -1455,7 +1435,7 @@ namespace Model
                     if (action.PlayerName == player)
                     {
                         stealAtempt.Faced = true;
-                        stealAtempt.Defended = action.IsCall || action.IsRaise();
+                        stealAtempt.Defended = action.IsCall() || action.IsRaise();
                         stealAtempt.Raised = action.IsRaise();
                         stealAtempt.Folded = action.IsFold;
                         return;
@@ -1701,7 +1681,7 @@ namespace Model
                     if (action.PlayerName == player)
                         coldCall3Bet.Possible = true;
 
-                    if (action.IsRaise)
+                    if (action.IsRaise())
                         return;
 
                     if (!action.IsCall() || action.PlayerName != player)
@@ -1745,7 +1725,7 @@ namespace Model
                     if (action.PlayerName == player)
                         coldCall4Bet.Possible = true;
 
-                    if (action.IsRaise)
+                    if (action.IsRaise())
                         return;
 
                     if (!action.IsCall() || action.PlayerName != player)
@@ -2031,11 +2011,11 @@ namespace Model
                 }
                 else
                 {
-                    if (!action.IsFold && !action.IsRaise)
+                    if (!action.IsFold && !action.IsRaise())
                         return;
-                    if (action.IsRaise && action.PlayerName == playerPositionalOpenRaiseName)
+                    if (action.IsRaise() && action.PlayerName == playerPositionalOpenRaiseName)
                         btnOpen = true;
-                    if (action.IsRaise && action.PlayerName != playerPositionalOpenRaiseName)
+                    if (action.IsRaise() && action.PlayerName != playerPositionalOpenRaiseName)
                         return;
                     if (action.IsFold && action.PlayerName == player)
                         return;
@@ -2386,6 +2366,21 @@ namespace Model
                     donkBet.Happened = true;
                     donkBet.HappenedByPlayer = action.PlayerName;
                 }
+            }
+        }
+
+        private static void CalculateEquity(PlayerStatisticCreationInfo creationInfo, Playerstatistic stat)
+        {
+            if (creationInfo.EquityData == null)
+            {
+                var equitySolver = ServiceLocator.Current.GetInstance<IEquitySolver>();
+                creationInfo.EquityData = equitySolver.CalculateEquity(creationInfo.ParsingResult.Source);
+            }
+
+            if (creationInfo.EquityData.ContainsKey(stat.PlayerName))
+            {
+                stat.Equity = creationInfo.EquityData[stat.PlayerName].Equity;
+                stat.EVDiff = creationInfo.EquityData[stat.PlayerName].EVDiff;
             }
         }
 

@@ -38,6 +38,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -70,14 +71,17 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.4.4.2057, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.4.4.2150, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.4.4.2057, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.4.4.2150, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.4.4.2057, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.4.4.2150, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.1.1\lib\net40\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -386,6 +390,8 @@
     <Compile Include="Migration\Migrations\Migration0028_AddHandPlayersTable.cs" />
     <Compile Include="Migration\Migrations\Migration0029_FillHandPlayersTable.cs" />
     <Compile Include="Migration\Migrations\Migration0030_AddTableTypeColumnToGameInfo.cs" />
+    <Compile Include="Migration\Migrations\Migration0031_UpdateHudPopupTextStyles.cs" />
+    <Compile Include="Migration\Migrations\Migration0032_AddTournamentIndexOnHandHistory.cs" />
     <Compile Include="Migration\Migrators\HudLayoutsMigrationService.cs" />
     <Compile Include="Migration\Migrators\ILayoutMigrator.cs" />
     <Compile Include="Migration\Migrators\LayoutMigrator.cs" />
@@ -475,6 +481,8 @@
     <Compile Include="ViewModels\Graphs\CashGraphSettings.cs" />
     <Compile Include="ViewModels\Graphs\CashGraphSettingsService.cs" />
     <Compile Include="ViewModels\Graphs\GraphsProvider.cs" />
+    <Compile Include="ViewModels\Graphs\GraphViewModel.cs" />
+    <Compile Include="ViewModels\Graphs\IBaseGraphViewModel.cs" />
     <Compile Include="ViewModels\Graphs\ICashGraphSettingsService.cs" />
     <Compile Include="ViewModels\Graphs\SeriesProviders\BB100ByTimeOfDaySeriesProvider.cs" />
     <Compile Include="ViewModels\Graphs\SeriesProviders\EVDiffToRealizedEvByMonthSeriesProvider.cs" />
@@ -496,6 +504,7 @@
     <Compile Include="ViewModels\Hud\Designer\HudBumperStickersViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudDesignerToolTypeExtensions.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudGaugeIndicatorStatGroupType.cs" />
+    <Compile Include="ViewModels\Hud\Designer\HudGaugeIndicatorStatInfo.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudGaugeIndicatorStatViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudGraphViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBaseNonPopupToolViewModel.cs" />
@@ -571,6 +580,7 @@
     <Compile Include="ViewModels\Graphs\ICashGraphPopupViewModel.cs" />
     <Compile Include="ViewModels\Main\ErrorViewModel.cs" />
     <Compile Include="ViewModels\Main\ErrorViewModelInfo.cs" />
+    <Compile Include="ViewModels\Main\IMainTabViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupBaseNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBaseFilterViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerAliasViewModelNotification.cs" />
@@ -1519,6 +1529,9 @@
     <Content Include="Lib\CapPipedP.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="pokereval.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\clean_db.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1550,7 +1563,7 @@ editbin /largeaddressaware $(TargetPath)</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>tasklist /fi "imagename eq DriveHUD.HUD.exe" | find ":" &gt; nul
-if errorlevel 1 taskkill /f /t /im "DriveHUD.HUD.exe"
+if errorlevel 1 taskkill /f /t /im "DriveHUD.HUD.exe" 
 exit</PreBuildEvent>
   </PropertyGroup>
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.107.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.107.0\build\net46\System.Data.SQLite.Core.targets')" />

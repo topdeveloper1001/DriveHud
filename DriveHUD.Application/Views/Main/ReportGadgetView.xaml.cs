@@ -22,18 +22,21 @@ using DriveHUD.Common.Wpf.Converters;
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;
+using Microsoft.Win32;
 using Model;
 using Model.Data;
 using Model.Enums;
-using Model.Extensions;
+using Model.Hud;
 using Model.Interfaces;
 using Model.Reports;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -156,12 +159,11 @@ namespace DriveHUD.Application.Views
             tagHandItem.Items.Add(heroCallitem);
             tagHandItem.Items.Add(bigFold);
             tagHandItem.Items.Add(removeTag);
-            /* Make Note */
-            RadMenuItem makeNoteItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.MakeNote), false, MakeNote);
-            /* Edit tournament */
-            RadMenuItem editTournamentItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.EditTournamentResourceString), false, EditTournament);
-            /* Delete Hand */
-            RadMenuItem deleteHandItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DeleteHandResourceString), false, null, command: nameof(ReportGadgetViewModel.DeleteHandCommand));
+
+            var makeNoteItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.MakeNote), false, MakeNote);
+            var editTournamentItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.EditTournamentResourceString), false, EditTournament);
+            var deleteHandItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DeleteHandResourceString), false, null, command: nameof(ReportGadgetViewModel.DeleteHandCommand));
+            var deleteTournamentItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DeleteTournamentResourceString), false, DeleteTournament);
 
             handsGridContextMenu.Items.Add(calculateEquityItem);
             handsGridContextMenu.Items.Add(exportHandItem);
@@ -171,9 +173,12 @@ namespace DriveHUD.Application.Views
             handsGridContextMenu.Items.Add(deleteHandItem);
 
             tournamentsGridContextMenu.Items.Add(editTournamentItem);
+            tournamentsGridContextMenu.Items.Add(deleteTournamentItem);
             tournamentsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RefreshReportResourceString), false, RefreshReport));
+            tournamentsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ExportToExcelReportResourceString), false, ExportReport));
 
             reportsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RefreshReportResourceString), false, RefreshReport));
+            reportsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ExportToExcelReportResourceString), false, ExportReport));
         }
 
         private RadMenuItem CreateRadMenuItem(string header, bool isCheckable, RadRoutedEventHandler clickAction, object tag = null, Action<RadMenuItem> extraAction = null, string command = null)
@@ -220,9 +225,105 @@ namespace DriveHUD.Application.Views
             }
         }
 
+        private void DeleteTournament(object sender, RadRoutedEventArgs e)
+        {
+            var item = tournamentsGridContextMenu.GetClickedElement<GridViewRow>();
+
+            if (item != null)
+            {
+                reportGadgetViewModel.DeleteTournamentCommand.Execute(item.DataContext);
+            }
+        }
+
         private void RefreshReport(object sender, RadRoutedEventArgs e)
         {
             ReportUpdate(true);
+        }
+
+        private void ExportReport(object sender, RadRoutedEventArgs e)
+        {
+            try
+            {
+                string extension = "xls";
+
+                var dialog = new SaveFileDialog()
+                {                    
+                    DefaultExt = extension,
+                    Filter = String.Format("{1} files (.{0})|.{0}|All files (.)|.", extension, "Excel"),
+                    FilterIndex = 1
+                };                
+
+                if (dialog.ShowDialog() == true)
+                {
+                    using (var stream = dialog.OpenFile())
+                    {
+                        using (var excel = new ExcelPackage(stream))
+                        {
+                            var reportName = CommonResourceManager.Instance.GetEnumResource(reportGadgetViewModel.ReportSelectedItemStat);
+
+                            var ws = excel.Workbook.Worksheets.Add(reportName);
+
+                            using (var ms = new MemoryStream())
+                            {
+                                GridViewReport.ElementExporting += GridViewReport_ElementExporting;
+
+                                GridViewReport.Export(ms, new GridViewCsvExportOptions
+                                {
+                                    Format = ExportFormat.Csv,
+                                    Encoding = Encoding.UTF8,
+                                    ShowColumnHeaders = true,
+                                    ShowColumnFooters = false,
+                                    ShowGroupFooters = false,
+                                    ColumnDelimiter = ";"
+                                });
+
+                                GridViewReport.ElementExporting -= GridViewReport_ElementExporting;
+
+                                var csv = Encoding.UTF8.GetString(ms.ToArray()).Replace("\"", string.Empty);
+
+                                var textFormat = new ExcelTextFormat
+                                {
+                                    Delimiter = ';'
+                                };
+
+                                var columns = csv.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+
+                                if (columns.Length > 0)
+                                {
+                                    var columsCount = columns[0].Count(x => x == ';') + 1;
+                                    textFormat.DataTypes = Enumerable.Range(0, columsCount).Select(x => eDataTypes.String).ToArray();
+                                }
+
+                                ws.Cells["A1"].LoadFromText(csv, textFormat);
+                                ws.Cells.AutoFitColumns();
+
+                                excel.Save();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not export report to excel format.", ex);
+                ErrorBox.Show("Error", ex, "Unexpected error occurred. Please contact support.");
+            }
+        }
+
+        private void GridViewReport_ElementExporting(object sender, GridViewElementExportingEventArgs e)
+        {
+            if (e.Element == ExportElement.Cell)
+            {
+                if (e.Value is HudPlayerType hudPlayerType)
+                {
+                    e.Value = hudPlayerType.Name;
+                }
+                else if (e.Value is EnumMRatio mRatio)
+                {
+                    var converter = new MRatioToTextConverter();
+                    e.Value = converter.Convert(e.Value, typeof(string), null, null);
+                }
+            }
         }
 
         private void MakeNote(object sender, RadRoutedEventArgs e)
@@ -403,6 +504,7 @@ namespace DriveHUD.Application.Views
                 }
 
                 reportGadgetViewModel.IsBusy = false;
+                GridViewReport.FrozenColumnCount = 0;
 
                 layout.Create(GridViewReport);
 
@@ -420,7 +522,7 @@ namespace DriveHUD.Application.Views
             }
         }
 
-        private Task<ObservableCollection<ReportIndicators>> GetReportCollectionAsync(IReportCreator reportCreator, IList<Playerstatistic> playerstatistics, bool forceRefresh)
+        private Task<ObservableCollection<ReportIndicators>> GetReportCollectionAsync(IReportCreator reportCreator, List<Playerstatistic> playerstatistics, bool forceRefresh)
         {
             return Task.Run(() =>
             {
@@ -438,22 +540,30 @@ namespace DriveHUD.Application.Views
 
         private void GridLayoutSave(RadGridView gridView, string fileName)
         {
-            PersistenceManager manager = new PersistenceManager();
-
-            var stream = manager.Save(gridView);
-            using (Stream file = ServiceLocator.Current.GetInstance<IDataService>().OpenStorageStream(fileName, FileMode.Create))
+            try
             {
-                stream.CopyTo(file);
+                var manager = new PersistenceManager();
+
+                var stream = manager.Save(gridView);
+
+                using (var file = dataService.OpenStorageStream(fileName, FileMode.Create))
+                {
+                    stream.CopyTo(file);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not save grid layout.", e);
             }
         }
 
         private void GridLayoutLoad(RadGridView gridView, string fileName)
         {
-            PersistenceManager manager = new PersistenceManager();
+            var manager = new PersistenceManager();
 
             try
             {
-                using (Stream file = ServiceLocator.Current.GetInstance<IDataService>().OpenStorageStream(fileName, FileMode.Open))
+                using (var file = dataService.OpenStorageStream(fileName, FileMode.Open))
                 {
                     if (file != null)
                     {
@@ -465,6 +575,10 @@ namespace DriveHUD.Application.Views
             catch (FileNotFoundException)
             {
                 // If there is no file proceed normally;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not load grid layout.", e);
             }
         }
 
@@ -660,5 +774,10 @@ namespace DriveHUD.Application.Views
         }
 
         #endregion
+
+        private void scrollviewer_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2018-03-23T13:00:00Z</DateOfHandUtc>
+  <HandId>100000000001</HandId>
+  <DealerButtonPosition>4</DealerButtonPosition>
+  <TableName>TestTable</TableName>
+  <GameDescription>
+    <PokerFormat>CashGame</PokerFormat>
+    <Site>PokerMaster</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>USD</Currency>
+      <SmallBlind>100</SmallBlind>
+      <BigBlind>200</BigBlind>
+      <IsAnteTable>false</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="6" />
+    <TableType>Regular</TableType>    
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>4</NumPlayersSeated>
+  <TotalPot>415</TotalPot>
+  <HeroName>Hero</HeroName>
+  <Actions>
+    <HandAction p3:type="AllInAction" PlayerName="P6_391468UT" HandActionType="ALL_IN" Amount="-15" Street="Preflop" IsAllIn="true" IsRaiseAllIn="false" SourceActionType="SMALL_BLIND" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="P2_875424AY" HandActionType="BIG_BLIND" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="P1_928114KV" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction p3:type="AllInAction" PlayerName="Hero" HandActionType="ALL_IN" Amount="-6320" Street="Preflop" IsAllIn="true" IsRaiseAllIn="false" SourceActionType="RAISE" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="P2_875424AY" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />  
+    <HandAction PlayerName="Hero" HandActionType="UNCALLED_BET" Amount="6120" Street="Preflop" IsAllIn="false" />
+    <HandAction p3:type="WinningsAction" PlayerName="P6_391468UT" HandActionType="WINS" Amount="45" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+	<HandAction p3:type="WinningsAction" PlayerName="Hero" HandActionType="WINS" Amount="370" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>2s7c7s9hQs</CommunityCards>
+  <Players>
+    <Player PlayerName="P1_928114KV" StartingStack="1370" Bet="0" Win="0" SeatNumber="1" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Hero" StartingStack="6320" Bet="6320" Win="370" SeatNumber="4" Cards="QdJd" IsSittingOut="false" />
+    <Player PlayerName="P6_391468UT" StartingStack="15" Bet="15" Win="45" SeatNumber="5" Cards="AsAc" IsSittingOut="false" />
+    <Player PlayerName="P2_875424AY" StartingStack="1295" Bet="200" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+  </Players>
+</HandHistory>

@@ -1,21 +1,19 @@
-using System;
-using System.Linq;
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
+using DriveHUD.Entities;
+using DriveHUD.EquityCalculator.Base.OmahaCalculations;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Hand;
-using HoldemHand;
-using Model.Enums;
-using System.Collections.Generic;
-using DriveHUD.Common.Linq;
-using DriveHUD.Common.Log;
-using Model.Settings;
-using Microsoft.Practices.ServiceLocation;
-using DriveHUD.Entities;
-using Model.Extensions;
-using DriveHUD.EquityCalculator.Base.OmahaCalculations;
 using HandHistories.Objects.Players;
-using Card = HandHistories.Objects.Cards.Card;
-using DriveHud.Common.Log;
+using HoldemHand;
+using Microsoft.Practices.ServiceLocation;
+using Model.Enums;
+using Model.Extensions;
+using Model.Settings;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Model.Importer
 {
@@ -47,38 +45,19 @@ namespace Model.Importer
 
         public static HandHistoryRecord ToHandHistoryRecord(HandHistory hand, Playerstatistic stat)
         {
-            var player = hand.Players.FirstOrDefault(x => string.Equals(x.PlayerName, stat.PlayerName, StringComparison.OrdinalIgnoreCase));
-
-            if (player == null)
-            {
-                return null;
-            }
-
-            var actionStings = hand.HandActions
-                .Where(x => x.PlayerName == stat.PlayerName || x is StreetAction)
-                .Select(ActionToString).ToArray();
-
             var record = new HandHistoryRecord
             {
-                Time = hand.DateOfHandUtc,
-                Cards = player.HoleCards == null ? string.Empty : player.HoleCards.ToString(),
-                Line = actionStings.Length > 0 ? actionStings.Aggregate((x, y) => x + y).Trim(',') : string.Empty,
-                Board = hand.CommunityCards.ToString(),
+                Time = stat.Time,
+                Cards = stat.Cards,
+                Line = stat.Line,
+                Board = stat.Board,
                 NetWonInCents = stat.Totalamountwonincents,
                 BBinCents = stat.Totalamountwonincents / stat.BigBlind,
-                Pos = ToPositionString(ToPosition(hand, stat)),
-                Allin = ToAllin(hand, stat),
-                Action = ToAction(stat),
-                Equity = stat.Equity
+                Pos = stat.PositionString,
+                Equity = stat.Equity,
+                EquityDiff = stat.EquityDiff,
+                FacingPreflop = stat.FacingPreflop.ToString()
             };
-
-            if (record.Equity != 0 && hand.TotalPot != null)
-            {
-                if (stat.Wonhand == 1)
-                    record.EquityDiff = -(decimal)(hand.TotalPot * (1 - record.Equity));
-                else
-                    record.EquityDiff = (decimal)((hand.TotalPot ?? 0) * record.Equity);
-            }
 
             return record;
         }

@@ -1,22 +1,17 @@
-﻿using DriveHUD.Common.Log;
+﻿using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
-using HandHistories.Parser.Utils;
-using HandHistories.Parser.Utils.Extensions;
 using HandHistories.Parser.Utils.FastParsing;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using HandHistories.Objects.Hand;
 
 namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 {
@@ -51,6 +46,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         public override bool RequiresAllInUpdates
         {
             get { return true; }
+        }
+
+        public override bool RequiresUncalledBetCalculations
+        {
+            get
+            {
+                return true;
+            }
         }
 
         // So the same parser can be used for It and Fr variations
@@ -164,10 +167,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         protected override PokerFormat ParsePokerFormat(string[] handLines)
         {
-            if (handLines[1].IndexOf("Trny:") > -1)
+            if (handLines[1].IndexOf("Trny:") > -1 || handLines.Any(x => x.StartsWith("Trny:")))
             {
                 return PokerFormat.Tournament;
             }
+
             return PokerFormat.CashGame;
         }
 
@@ -223,6 +227,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             // Expect the fourth line to look like this: 
             // "$600 USD PL Omaha - Thursday, September 25, 01:10:46 EDT 2014"
             // or "NL Texas Hold'em $1.10 USD Buy-in Trny:138340262 Level:1  Blinds-Antes(75/150 -25) - Saturday, May 20, 18:00:07 BST 2017" for tournaments
+            // NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 22:21:47 MSK 2018
             string line = handLines[1];
 
             if (ParsePokerFormat(handLines) == PokerFormat.Tournament)
@@ -333,11 +338,24 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
             if (isTournament)
             {
-                int startIndex = line.IndexOf("Blinds");
-                int endIndex = line.IndexOf(' ', startIndex);
-                startIndex = line.LastIndexOf('(', endIndex) + 1;
+                var blindsLine = handLines.FirstOrDefault(x => x.StartsWith("Blinds", StringComparison.OrdinalIgnoreCase));
 
-                limitSubstring = line.Substring(startIndex, endIndex - startIndex);
+                if (blindsLine == null)
+                {
+                    throw new InvalidOperationException("Blinds line wasn't found");
+                }
+
+                int startIndex = blindsLine.IndexOf("Blinds");
+                int endIndex = blindsLine.IndexOf(' ', startIndex);
+
+                if (endIndex < 0)
+                {
+                    endIndex = blindsLine.Length - 1;
+                }
+
+                startIndex = blindsLine.LastIndexOf('(', endIndex) + 1;
+
+                limitSubstring = blindsLine.Substring(startIndex, endIndex - startIndex);
 
                 currency = ParseLimitCurrency(GetBuyInString(handLines[1]));
             }
@@ -655,6 +673,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             {
                 return new WinningsAction(playerName, HandActionType.WINS_SIDE_POT, amount, potID);
             }
+
             return new WinningsAction(playerName, HandActionType.WINS, amount, potID);
         }
 
@@ -786,7 +805,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 if (amountStartIndex == -1)//Wins Side Pot
                 {
                     string sidePotID = " from the side pot ";
+
                     int idStartIndex = line.IndexOf(sidePotID);
+
                     if (idStartIndex != -1)
                     {
                         int idEndIndex = line.IndexOf(' ', idStartIndex + sidePotID.Length);
@@ -1159,9 +1180,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         protected override TournamentDescriptor ParseTournament(string[] handLines)
         {
-            var tournamentIdStartIndex = handLines[1].IndexOf("Trny:") + "Trny:".Length;
-            var tournamentIdEndIndex = handLines[1].Substring(tournamentIdStartIndex).IndexOf(' ');
-            var tournamentId = handLines[1].Substring(tournamentIdStartIndex, tournamentIdEndIndex);
+            var trnyLine = handLines.FirstOrDefault(x => x.StartsWith("Trny:", StringComparison.OrdinalIgnoreCase)) ?? handLines[1];
+
+            var tournamentIdStartIndex = trnyLine.IndexOf("Trny: ") + "Trny: ".Length;
+            var tournamentIdEndIndex = trnyLine.Substring(tournamentIdStartIndex).Trim().IndexOf(' ');
+            var tournamentId = trnyLine.Substring(tournamentIdStartIndex, tournamentIdEndIndex).Trim();
 
             var speed = ParserUtils.ParseTournamentSpeed(handLines[2]);
 
@@ -1240,6 +1263,31 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
 
             return line.Substring(startIndex, endIndex - startIndex);
+        }
+
+        protected override void CalculateUncalledBets(string[] handLines, HandHistory handHistory)
+        {
+            var winningActions = handHistory.WinningActions
+                .GroupBy(x => x.PlayerName)
+                .Select(x => new { PlayerName = x.Key, Win = x.Sum(p => p.Amount), WinningActions = x.ToList() });
+
+            winningActions.Where(x => x.WinningActions.Count > 1).ForEach(wa =>
+            {
+                var winningAction = wa.WinningActions.FirstOrDefault(x => x.HandActionType == HandActionType.WINS) ?? wa.WinningActions.First();
+                winningAction.Amount = wa.Win;
+
+                foreach (var action in wa.WinningActions)
+                {
+                    if (winningAction == action)
+                    {
+                        continue;
+                    }
+
+                    handHistory.HandActions.Remove(action);
+                }
+            });
+
+            base.CalculateUncalledBets(handLines, handHistory);
         }
     }
 }

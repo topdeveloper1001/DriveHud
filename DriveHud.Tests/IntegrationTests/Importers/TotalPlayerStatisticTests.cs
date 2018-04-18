@@ -10,11 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Common.Log;
 using DriveHud.Tests.IntegrationTests.Base;
+using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
-using Model.Interfaces;
+using Model;
 using NSubstitute;
 using NUnit.Framework;
 using System.IO;
@@ -74,8 +74,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             {
                 Playerstatistic playerstatistic = null;
 
-                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-                dataService.Store(Arg.Is<Playerstatistic>(x => GetCombinedPlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
+                var playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
+                playerStatisticRepository.Store(Arg.Is<Playerstatistic>(x => GetCombinedPlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
 
                 var testDataDirectory = new DirectoryInfo(TestDataFolder);
 
@@ -88,9 +88,9 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
                 Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
 
-                Assert.That(playerstatistic.LimpCalled, Is.EqualTo(3),nameof(playerstatistic.LimpCalled));
+                Assert.That(playerstatistic.LimpCalled, Is.EqualTo(3), nameof(playerstatistic.LimpCalled));
 
-                Assert.That(playerstatistic.LimpSb, Is.EqualTo(1),nameof(playerstatistic.LimpSb));
+                Assert.That(playerstatistic.LimpSb, Is.EqualTo(1), nameof(playerstatistic.LimpSb));
                 Assert.That(playerstatistic.LimpEp, Is.EqualTo(3), nameof(playerstatistic.LimpEp));
                 Assert.That(playerstatistic.LimpMp, Is.EqualTo(1), nameof(playerstatistic.LimpMp));
                 Assert.That(playerstatistic.LimpCo, Is.EqualTo(1), nameof(playerstatistic.LimpCo));

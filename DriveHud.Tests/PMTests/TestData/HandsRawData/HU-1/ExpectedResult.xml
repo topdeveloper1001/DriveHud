@@ -17,6 +17,7 @@
     </Limit>
     <SeatType MaxPlayers="2" />
     <TableType>Regular</TableType>
+    <Identifier>27442159</Identifier>
   </GameDescription>
   <Cancelled>false</Cancelled>
   <NumPlayersSeated>2</NumPlayersSeated>

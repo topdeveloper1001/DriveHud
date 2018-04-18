@@ -16,21 +16,24 @@ namespace DriveHUD.Application.ViewModels.Replayer
     {
         private const int REPLAYER_LAST_HANDS_AMOUNT = 10;
 
-        private FixedSizeList<ReplayerDataModel> _replayerDataModelList;
+        private FixedSizeList<ReplayerDataModel> replayerDataModelList;
 
-        private IDataService _dataService;
+        private readonly IDataService dataService;
+
+        private readonly IPlayerStatisticRepository playerStatisticRepository;
 
         private SingletonStorageModel _storageModel { get { return ServiceLocator.Current.GetInstance<SingletonStorageModel>(); } }
 
         public ReplayerService()
         {
-            _replayerDataModelList = new FixedSizeList<ReplayerDataModel>(REPLAYER_LAST_HANDS_AMOUNT);
-            _dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            replayerDataModelList = new FixedSizeList<ReplayerDataModel>(REPLAYER_LAST_HANDS_AMOUNT);
+            dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
         }
 
         public void ReplayHand(string playerName, long gamenumber, short pokerSiteId, bool showHoleCards)
         {
-            var game = _dataService.GetGame(gamenumber, pokerSiteId);
+            var game = dataService.GetGame(gamenumber, pokerSiteId);
 
             bool displayPotList = true;
 
@@ -54,7 +57,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 return;
             }
 
-            var statistics = _dataService.GetPlayerStatisticFromFile(playerName, pokerSiteId);
+            var statistics = playerStatisticRepository.GetPlayerStatistic(playerName, pokerSiteId).ToList();
 
             var currentStat = statistics.FirstOrDefault(x => x.GameNumber == gamenumber);
 
@@ -81,26 +84,26 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 return;
             }
 
-            _replayerDataModelList.ForEach(x => x.IsActive = false);
+            replayerDataModelList.ForEach(x => x.IsActive = false);
 
             var dataModelStatistic = new ReplayerDataModel(currentStat);
 
-            var dataModel = _replayerDataModelList.FirstOrDefault(x => x.Equals(dataModelStatistic));
+            var dataModel = replayerDataModelList.FirstOrDefault(x => x.Equals(dataModelStatistic));
 
             if (dataModel == null)
             {
                 dataModelStatistic.IsActive = true;
-                _replayerDataModelList.Add(dataModelStatistic);
+                replayerDataModelList.Add(dataModelStatistic);
             }
             else
             {
                 dataModel.IsActive = true;
-                _replayerDataModelList.Move(_replayerDataModelList.IndexOf(dataModel), _replayerDataModelList.Count - 1);
+                replayerDataModelList.Move(replayerDataModelList.IndexOf(dataModel), replayerDataModelList.Count - 1);
             }
 
             App.Current.Dispatcher.Invoke(() =>
             {
-                ReplayerView replayer = new ReplayerView(_replayerDataModelList, ReplayerHelpers.CreateSessionHandsList(statistics, currentStat), showHoleCards);
+                ReplayerView replayer = new ReplayerView(replayerDataModelList, ReplayerHelpers.CreateSessionHandsList(statistics, currentStat), showHoleCards);
                 replayer.IsTopmost = true;
                 replayer.Show();
                 replayer.IsTopmost = false;

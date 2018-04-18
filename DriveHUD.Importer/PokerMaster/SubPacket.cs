@@ -18,43 +18,69 @@ namespace DriveHUD.Importers.PokerMaster
 {
     internal class SubPacket<T> where T : class
     {
-        public SubPacket(byte[] bytes, int expectedLength, DateTime createdDate)
+        private SubPacket()
+        {
+        }
+
+        public SubPacket(byte[] bytes, int expectedLength, DateTime createdDate, uint sequenceNumber, bool isStarting = false)
         {
             Bytes = new List<byte>(bytes);
             DateReceived = DateTime.Now;
             ExpectedLength = expectedLength;
             CreatedDate = createdDate;
+            SequenceNumber = sequenceNumber;
+            IsStarting = isStarting;
         }
 
-        private List<byte> Bytes
+        public List<byte> Bytes
         {
             get;
             set;
         }
 
-        private DateTime DateReceived
+        public DateTime DateReceived
         {
             get;
             set;
         }
 
-        private DateTime CreatedDate
+        public DateTime CreatedDate
         {
             get;
             set;
         }
 
-        private int ExpectedLength
+        public int ExpectedLength
         {
             get;
             set;
         }
 
-        private int CurrentLength
+        public uint SequenceNumber
+        {
+            get;
+            set;
+        }
+
+        public int CurrentLength
         {
             get
             {
                 return Bytes.Count;
+            }
+        }
+
+        public bool IsStarting
+        {
+            get;
+            set;
+        }
+
+        public bool IsCompleted
+        {
+            get
+            {
+                return ExpectedLength != 0 && ExpectedLength == CurrentLength;
             }
         }
 
@@ -68,9 +94,10 @@ namespace DriveHUD.Importers.PokerMaster
             Bytes.AddRange(bytes);
         }
 
-        public bool CanAddSubPacket(byte[] bytes, DateTime createdDate)
+        public bool CanAddSubPacket(byte[] bytes, uint partialPacketSequenceNumber)
         {
-            if (createdDate < CreatedDate)
+            if (partialPacketSequenceNumber < SequenceNumber &&
+                (partialPacketSequenceNumber - SequenceNumber) != CurrentLength)
             {
                 return false;
             }
@@ -78,9 +105,10 @@ namespace DriveHUD.Importers.PokerMaster
             return bytes.Length + CurrentLength <= ExpectedLength;
         }
 
-        public bool CanCompleteBySubPacket(byte[] partialBytes, DateTime partialPacketCreatedDate)
+        public bool CanCompleteBySubPacket(byte[] partialBytes, uint partialPacketSequenceNumber)
         {
-            if (partialPacketCreatedDate < CreatedDate)
+            if (partialPacketSequenceNumber < SequenceNumber &&
+                (partialPacketSequenceNumber - SequenceNumber) != CurrentLength)
             {
                 return false;
             }
@@ -103,6 +131,21 @@ namespace DriveHUD.Importers.PokerMaster
             }
 
             return SerializationHelper.TryDeserialize(Bytes.ToArray(), startingPosition, out package);
+        }
+
+        public SubPacket<T> Clone()
+        {
+            var clone = new SubPacket<T>()
+            {
+                Bytes = new List<byte>(Bytes),
+                DateReceived = DateReceived,
+                ExpectedLength = ExpectedLength,
+                CreatedDate = CreatedDate,
+                SequenceNumber = SequenceNumber,
+                IsStarting = IsStarting,
+            };
+
+            return clone;
         }
     }
 }

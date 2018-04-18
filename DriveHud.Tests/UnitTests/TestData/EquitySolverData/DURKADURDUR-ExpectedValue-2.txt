@@ -1,0 +1,48 @@
+PokerStars Game #47181629359:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:35:41 ET
+Table 'Thoas' 6-max Seat #3 is the button
+Seat 1: sexygee ($200 in chips) 
+Seat 2: DURKADURDUR ($208 in chips) 
+Seat 3: rivichico ($480.15 in chips) 
+Seat 4: skipper8922 ($302.85 in chips) 
+Seat 5: Nehekus ($1357.85 in chips) 
+Seat 6: P1ngPoNgPr0 ($601.10 in chips) 
+skipper8922: posts small blind $1
+Nehekus: posts big blind $2
+*** HOLE CARDS ***
+P1ngPoNgPr0: folds 
+sexygee: folds 
+DURKADURDUR: raises $4 to $6
+rivichico: folds 
+skipper8922: calls $5
+Nehekus: calls $4
+*** FLOP *** [5c 7c Th]
+skipper8922: checks 
+Nehekus: bets $14
+DURKADURDUR: calls $14
+skipper8922: raises $32 to $46
+Nehekus: calls $32
+DURKADURDUR: calls $32
+*** TURN *** [5c 7c Th] [Jc]
+skipper8922: checks 
+Nehekus: checks 
+DURKADURDUR: bets $156 and is all-in
+skipper8922: calls $156
+Nehekus: raises $1149.85 to $1305.85 and is all-in
+skipper8922: calls $94.85 and is all-in
+Uncalled bet ($1055) returned to Nehekus
+*** RIVER *** [5c 7c Th Jc] [Kc]
+*** SHOW DOWN ***
+skipper8922: shows [Js Jd] (three of a kind, Jacks)
+Nehekus: shows [8c Qc] (a flush, King high)
+Nehekus collected $189.70 from side pot
+DURKADURDUR: shows [Ac 9c] (a flush, Ace high)
+DURKADURDUR collected $621 from main pot
+*** SUMMARY ***
+Total pot $813.70 Main pot $621. Side pot $189.70. | Rake $3 
+Board [5c 7c Th Jc Kc]
+Seat 1: sexygee folded before Flop (didn't bet)
+Seat 2: DURKADURDUR showed [Ac 9c] and won ($621) with a flush, Ace high
+Seat 3: rivichico (button) folded before Flop (didn't bet)
+Seat 4: skipper8922 (small blind) showed [Js Jd] and lost with three of a kind, Jacks
+Seat 5: Nehekus (big blind) showed [8c Qc] and won ($189.70) with a flush, King high
+Seat 6: P1ngPoNgPr0 folded before Flop (didn't bet)

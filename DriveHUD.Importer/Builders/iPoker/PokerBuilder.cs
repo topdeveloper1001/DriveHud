@@ -10,19 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common;
+using DriveHUD.Entities;
+using DriveHUD.Importers.Bovada;
+using Model.Site;
+using Model.Solvers;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Xml;
-using System.IO;
-using System.Xml.Serialization;
 using System.Text.RegularExpressions;
-using DriveHUD.Importers.Bovada;
-using DriveHUD.Common;
-using Model.Enums;
-using Model.Site;
-using DriveHUD.Entities;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace DriveHUD.Importers.Builders.iPoker
 {
@@ -94,7 +94,7 @@ namespace DriveHUD.Importers.Builders.iPoker
 
                 handHistoryXmlDocument.DocumentElement.AppendChild(gameXmlNodeImported);
             }
-            
+
             return handHistoryXmlDocument;
         }
 
@@ -124,7 +124,7 @@ namespace DriveHUD.Importers.Builders.iPoker
                     CloseOutput = false,
                     Encoding = Encoding.UTF8,
                     OmitXmlDeclaration = false,
-                    Indent = true                  
+                    Indent = true
                 };
 
                 using (var xw = XmlWriter.Create(ms, xmlWriterSettings))
@@ -510,7 +510,7 @@ namespace DriveHUD.Importers.Builders.iPoker
 
             return gameGeneral;
         }
-        
+
         /// <summary>
         /// Adjusts players seats based on Preferred Seat setting
         /// </summary>
@@ -525,7 +525,7 @@ namespace DriveHUD.Importers.Builders.iPoker
                 return 0;
             }
 
-            return RotatePlayerSeats(players, preferredSeats[handModel.TableType]);      
+            return RotatePlayerSeats(players, preferredSeats[handModel.TableType]);
         }
 
         /// <summary>
@@ -567,6 +567,7 @@ namespace DriveHUD.Importers.Builders.iPoker
             var general = new General
             {
                 Mode = PokerConfiguration.DefaultMode,
+                Site = EnumPokerSites.Ignition,
                 GameType = GetGameType(),
                 TableName = GetTableName(),
                 StartDate = GetTableTimeUTC(),
@@ -597,7 +598,7 @@ namespace DriveHUD.Importers.Builders.iPoker
             var gameTableType = GetGameTypeString(handModel.GameType, handModel.GameLimit);
 
             if (handModel.CashOrTournament != CashOrTournament.Tournament)
-            {           
+            {
                 return GetHoldemGameTypeString(gameTableType);
             }
 
@@ -696,7 +697,7 @@ namespace DriveHUD.Importers.Builders.iPoker
         }
 
         private string GetTableName()
-        {           
+        {
             if (handModel.CashOrTournament == CashOrTournament.Tournament)
             {
                 return string.Format(PokerConfiguration.TournamentTableTitleTemplate, handModel.TableName, handModel.TournamentNumber);
@@ -1069,9 +1070,9 @@ namespace DriveHUD.Importers.Builders.iPoker
                 evaluator.SetPlayerCards(playerCards.Seat, playerCards.Value);
             }
 
-            var winners = evaluator.GetWinners().ToList();
+            var winners = evaluator.GetWinners();
 
-            return winners;
+            return winners.All?.ToList() ?? new List<int>();
         }
 
         #endregion

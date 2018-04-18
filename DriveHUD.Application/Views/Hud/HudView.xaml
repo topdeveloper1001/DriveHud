@@ -504,7 +504,54 @@
             <Setter
                 Property="Margin"
                 Value="0,0,0,10" />
+        </Style>
 
+        <Style
+            x:Key="SearchTextBoxStyle"
+            TargetType="{x:Type TextBox}"
+            BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter
+                Property="BorderThickness"
+                Value="0" />
+            <Setter
+                Property="FontSize"
+                Value="12px" />
+            <Setter
+                Property="Width"
+                Value="135" />
+            <Setter
+                Property="Height"
+                Value="26" />
+            <Setter
+                Property="Background"
+                Value="{StaticResource DarkControlBackground}" />
+            <Setter
+                Property="Template">
+                <Setter.Value>
+                    <ControlTemplate
+                        TargetType="{x:Type TextBox}">
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="2"
+                            Padding="2,0,0,0"
+                            BorderBrush="{TemplateBinding BorderBrush}">
+                            <Grid>
+                                <Image
+                                    HorizontalAlignment="Left"
+                                    Margin="5,0,0,0"
+                                    Width="16"
+                                    Height="16"
+                                    Source="pack://application:,,,/DriveHUD.Common.Resources;component/images/search.png" />
+                                <ScrollViewer
+                                    Margin="25,0,0,0"
+                                    x:Name="PART_ContentHost"
+                                    VerticalAlignment="Center" />
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
     </UserControl.Resources>
@@ -753,7 +800,7 @@
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/plain stat box.png"                        
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/plain stat box.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource PlainStatBoxAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlainStatBox}">
@@ -766,7 +813,7 @@
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/graph.png"                        
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/graph.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.Graph}">
@@ -779,7 +826,7 @@
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/heatmap.png"                        
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/heatmap.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.HeatMap}">
@@ -792,7 +839,7 @@
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/4-stat.png"                        
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/4-stat.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource FourStatBoxAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.FourStatBox}">
@@ -805,7 +852,7 @@
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/profile.png"                        
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/profile.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource PlayerIconAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}">
@@ -818,7 +865,7 @@
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/bumpers.png"                        
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/bumpers.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource BumperStickersAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.BumperStickers}">
@@ -831,7 +878,7 @@
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/break line.png"                        
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/break line.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.LineBreak}">
                         <controls:ImageButton.ToolTip>
@@ -843,7 +890,7 @@
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/tilt.meter.png"                        
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/tilt.meter.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource TiltMeterAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TiltMeter}">
@@ -856,7 +903,7 @@
 
                     <controls:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
-                        Image="/DriveHUD.Common.Resources;Component/images/icons/textbox.png"                        
+                        Image="/DriveHUD.Common.Resources;Component/images/icons/textbox.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource TextBoxAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TextBox}">
@@ -1037,13 +1084,32 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock
+                        <Grid
                             Grid.Row="0"
-                            Grid.Column="0"
-                            Foreground="#93c940"
-                            FontSize="13"
-                            Text="{ResX Key=Common_Hud_AllStats}">
-                        </TextBlock>
+                            Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="Auto" />
+                                <ColumnDefinition
+                                    Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock
+                                Grid.Column="0"
+                                Foreground="#93c940"
+                                FontSize="13"
+                                VerticalAlignment="Center"
+                                Text="{ResX Key=Common_Hud_AllStats}">
+                            </TextBlock>
+
+                            <TextBox                                
+                                Grid.Column="1"
+                                Style="{StaticResource SearchTextBoxStyle}"                                                     
+                                Margin="0,0,7,0"
+                                HorizontalAlignment="Right"
+                                Text="{Binding StatFilter, UpdateSourceTrigger=PropertyChanged}" />
+
+                        </Grid>
 
                         <telerik:RadListBox
                             Grid.Row="1"
@@ -1054,7 +1120,7 @@
                             ScrollViewer.CanContentScroll="False"
                             ScrollViewer.VerticalScrollBarVisibility="Visible"
                             BorderThickness="0"
-                            Background="#111315"
+                            Background="{StaticResource DarkControlBackground}"
                             Style="{StaticResource RadListBoxStyle_StatInfo}"
                             ItemsSource="{Binding StatInfoCollectionView}"
                             ItemTemplate="{StaticResource RadListBoxItemTemplate_StatInfo}">
@@ -1158,7 +1224,8 @@
                                 Grid.Column="0"
                                 Foreground="#93c940"
                                 FontSize="13"
-                                Text="Selected Stats" />
+                                VerticalAlignment="Center"
+                                Text="{ResX Key=Common_Hud_SelectedStats}" />
 
                             <StackPanel
                                 Grid.Column="1"
@@ -1190,7 +1257,7 @@
                             VerticalAlignment="Stretch"
                             HorizontalAlignment="Stretch"
                             BorderThickness="0"
-                            Background="#111315"
+                            Background="{StaticResource DarkControlBackground}"
                             Padding="0,0,0,10"
                             SelectedItem="{Binding Path=StatInfoObserveSelectedItem, Mode=TwoWay}"
                             ItemsSource="{Binding Path=StatInfoObserveCollection}"

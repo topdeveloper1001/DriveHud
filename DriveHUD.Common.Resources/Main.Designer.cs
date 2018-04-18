@@ -106,6 +106,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete tournament.
+        /// </summary>
+        internal static string Main_ContextMenu_DeleteTournament {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_DeleteTournament", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit Note.
         /// </summary>
         internal static string Main_ContextMenu_EditNote {
@@ -138,6 +147,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Main_ContextMenu_ExportLastHand {
             get {
                 return ResourceManager.GetString("Main_ContextMenu_ExportLastHand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export Report.
+        /// </summary>
+        internal static string Main_ContextMenu_ExportToExcel {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_ExportToExcel", resourceCulture);
             }
         }
         

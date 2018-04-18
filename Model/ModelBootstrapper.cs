@@ -12,8 +12,11 @@
 
 using Microsoft.Practices.Unity;
 using Model.AppStore;
+using Model.Enums;
+using Model.Filters;
 using Model.Hud;
 using Model.Reports;
+using Model.Solvers;
 using System;
 
 namespace Model
@@ -30,6 +33,11 @@ namespace Model
                 throw new ArgumentNullException(nameof(container));
             }
 
+            container.RegisterType<IReportStatusService, ReportStatusService>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IPlayerStatisticRepository, PlayerStatisticRepository>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IFilterDataService, FilterDataService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
+            container.RegisterType<IFilterModelManagerService, MainFilterModelManagerService>(FilterServices.Main.ToString(), new ContainerControlledLifetimeManager());
+            container.RegisterType<IFilterModelManagerService, StickersFilterModelManagerService>(FilterServices.Stickers.ToString(), new ContainerControlledLifetimeManager());
             container.RegisterType<ISessionFactoryService, SessionFactoryService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IProductAppStoreRepository, ProductAppStoreRepository>();
             container.RegisterType<IProductAppStoreModel, ProductAppStoreModel>();
@@ -40,6 +48,7 @@ namespace Model
             container.RegisterType<IOpponentReportService, OpponentReportService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IPopulationReportService, PopulationReportService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IHudPlayerTypeService, HudPlayerTypeService>();
+            container.RegisterType<IEquitySolver, EquitySolver>();
         }
     }
 }

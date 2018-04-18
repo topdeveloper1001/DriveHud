@@ -29,7 +29,7 @@ namespace DriveHUD.Importers.PokerMaster
 {
     internal class HandBuilder : IHandBuilder
     {
-        private Dictionary<long, List<SCGameRoomStateChange>> handsRoomStateChanges = new Dictionary<long, List<SCGameRoomStateChange>>();
+        private Dictionary<long, Dictionary<long, List<SCGameRoomStateChange>>> handsRoomStateChanges = new Dictionary<long, Dictionary<long, List<SCGameRoomStateChange>>>();
 
         private EnumPokerSites Site
         {
@@ -48,10 +48,16 @@ namespace DriveHUD.Importers.PokerMaster
                 return false;
             }
 
-            if (!handsRoomStateChanges.TryGetValue(gameRoomStateChange.GameNumber, out List<SCGameRoomStateChange> gameRoomStateChanges))
+            if (!handsRoomStateChanges.TryGetValue(heroId, out Dictionary<long, List<SCGameRoomStateChange>> userGameRoomStateChanges))
+            {
+                userGameRoomStateChanges = new Dictionary<long, List<SCGameRoomStateChange>>();
+                handsRoomStateChanges.Add(heroId, userGameRoomStateChanges);
+            }
+
+            if (!userGameRoomStateChanges.TryGetValue(gameRoomStateChange.GameNumber, out List<SCGameRoomStateChange> gameRoomStateChanges))
             {
                 gameRoomStateChanges = new List<SCGameRoomStateChange>();
-                handsRoomStateChanges.Add(gameRoomStateChange.GameNumber, gameRoomStateChanges);
+                userGameRoomStateChanges.Add(gameRoomStateChange.GameNumber, gameRoomStateChanges);
             }
 
             if (gameRoomStateChange.GameRoomInfo.GameState == GameRoomGameState.ROOM_GAME_STATE_SHOWCARD
@@ -80,7 +86,21 @@ namespace DriveHUD.Importers.PokerMaster
 
                 if (startRoomStateChange == null)
                 {
-                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Hand #{gameNumber} has no start info. [{Site}]");
+                    var roomStateChange = gameRoomStateChanges.FirstOrDefault();
+
+                    if (roomStateChange != null && roomStateChange.GameRoomInfo != null)
+                    {
+                        var roomId = roomStateChange.GameRoomInfo.IsTournament ?
+                            roomStateChange.GameRoomInfo.SNGGameRoomBaseInfo?.GameRoomId :
+                            roomStateChange.GameRoomInfo.GameRoomBaseInfo?.GameRoomId;
+
+                        LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Hand #{gameNumber} has no start info. Room #{roomId} [{Site}]");
+                    }
+                    else
+                    {
+                        LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Hand #{gameNumber} has no start info. [{Site}]");
+                    }
+
                     return null;
                 }
 
@@ -110,7 +130,7 @@ namespace DriveHUD.Importers.PokerMaster
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Could not build hand #{gameNumber} [{Site}]", e);
+                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Could not build hand #{gameNumber} [{heroId}]", e);
             }
             finally
             {
@@ -148,6 +168,7 @@ namespace DriveHUD.Importers.PokerMaster
                 );
 
             handHistory.GameDescription.IsStraddle = gameRoomBaseInfo.Straddle;
+            handHistory.GameDescription.Identifier = gameRoomBaseInfo.GameRoomId;
         }
 
         private void ParseTournamentStartRoomStateChange(SCGameRoomStateChange startRoomStateChange, GameRoomInfo gameRoomInfo, HandHistory handHistory)
@@ -163,7 +184,10 @@ namespace DriveHUD.Importers.PokerMaster
                     ParseTableType(gameRoomInfo),
                     SeatType.FromMaxPlayers(gameRoomBaseInfo.GameRoomUserMaxNums),
                     ParseTournamentDescriptor(gameRoomInfo)
-                );
+                )
+            {
+                Identifier = gameRoomBaseInfo.GameRoomId
+            };
         }
 
         /// <summary>
@@ -330,7 +354,7 @@ namespace DriveHUD.Importers.PokerMaster
             AddShowActions(handHistory);
             AddWinningActions(handHistory);
             CalculateBets(handHistory);
-            ParserUtils.CalculateUncalledBets(handHistory);
+            ParserUtils.CalculateUncalledBets(handHistory, true);
             CalculateTotalPot(handHistory);
             SortHandActions(handHistory);
             RemoveSittingOutPlayers(handHistory);
@@ -407,7 +431,7 @@ namespace DriveHUD.Importers.PokerMaster
             else
             {
                 var blindsCount = handHistory.PreFlop
-                    .Count(x => x.HandActionType == HandActionType.SMALL_BLIND || x.HandActionType == HandActionType.BIG_BLIND || x.HandActionType == HandActionType.STRADDLE);                
+                    .Count(x => x.HandActionType == HandActionType.SMALL_BLIND || x.HandActionType == HandActionType.BIG_BLIND || x.HandActionType == HandActionType.STRADDLE);
 
                 var preflopOrderedPlayers = orderedPlayers.Skip(blindsCount).Concat(orderedPlayers.Take(blindsCount)).ToArray();
                 var preflopOrderedPlayersDictionary = OrderedPlayersToDict(preflopOrderedPlayers);

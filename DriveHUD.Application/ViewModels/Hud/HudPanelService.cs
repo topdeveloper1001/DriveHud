@@ -237,9 +237,9 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             menuItem.Click += (s, e) =>
             {
-                var playerNoteViewModel = new PlayerNoteViewModel(hudToolViewModel.Parent.PokerSiteId, hudToolViewModel.Parent.PlayerName);
-            
-                var playerNoteView = new PlayerNoteView(playerNoteViewModel);                
+                var playerNoteViewModel = new PlayerNoteViewModel(hudToolViewModel.Parent.PlayerId);
+
+                var playerNoteView = new PlayerNoteView(playerNoteViewModel);
                 playerNoteView.ShowDialog();
 
                 if (!playerNoteViewModel.HasNotes)

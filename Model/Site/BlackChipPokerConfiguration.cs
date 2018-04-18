@@ -28,5 +28,13 @@ namespace Model.Site
                 return "BlackChipPoker";
             }
         }
+
+        protected override string DefaultInstallPath
+        {
+            get
+            {
+                return @"C:\BlackChipPoker";
+            }
+        }
     }
 }

@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Entities;
+using System.Collections.Generic;
 using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -45,6 +46,11 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Gets or sets <see cref="HudLayoutInfoV2"/>
         /// </summary>
         public HudLayoutInfoV2 Layout { get; set; }
+
+        /// <summary>
+        /// Gets or sets list of tools to add new tool
+        /// </summary>
+        public IList<HudLayoutTool> Tools { get; set; }
 
         /// <summary>
         /// Gets or sets the source of drag and drop target

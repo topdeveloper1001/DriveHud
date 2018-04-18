@@ -13,48 +13,21 @@
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using NHibernate;
-using System;
 using System.Collections.Generic;
 using System.IO;
 
 namespace Model.Interfaces
 {
+    /// <summary>
+    /// Exposes service to operate with stored data
+    /// </summary>
     public interface IDataService
     {
-        void SetPlayerStatisticPath(string path);
-
-        IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, short? pokersiteId);
-
-        IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, Func<Playerstatistic, bool> filter);
-
-        IList<Playerstatistic> GetPlayerStatisticFromFile(string playerName, short? pokersiteId);
-
-        void ActOnPlayerStatisticFromFile(int playerId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);
-
-        void ActOnPlayerStatisticFromFile(string playerName, short? pokerSiteId, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);
-
-        /// <summary>
-        /// Executes action on each player statistic in the specified file if it matches the specified predicate. 
-        /// <para>*This method is not thread-safe.*</para>        
-        /// </summary>
-        /// <param name="file">File with stats</param>
-        /// <param name="predicate">Predicate to filter data</param>
-        /// <param name="action">Action to execute on each statistic</param>
-        void ActOnPlayerStatisticFromFile(string file, Func<Playerstatistic, bool> predicate, Action<Playerstatistic> action);
-
-        Players GetPlayer(string playerName, short pokersiteId);
-
-        IList<Gametypes> GetPlayerGameTypes(IEnumerable<int> playerIds);
-
-        IList<Tournaments> GetPlayerTournaments(IEnumerable<int> playerIds);
-
-        Tournaments GetTournament(string tournamentId, string playerName, short pokersiteId);
-
-        HandHistory GetGame(long gameNumber, short pokersiteId);
-
-        IList<HandHistory> GetGames(IEnumerable<long> gameNumbers, short pokersiteId);
+        #region Notes
 
         Handnotes GetHandNote(long gameNumber, short pokersiteId);
+
+        IList<Handnotes> GetHandNotes(short pokersiteId);
 
         IEnumerable<Playernotes> GetPlayerNotes(string playerName, short pokersiteId);
 
@@ -62,49 +35,71 @@ namespace Model.Interfaces
 
         void DeletePlayerNotes(IEnumerable<Playernotes> playernotes);
 
-        IList<Handnotes> GetHandNotes(short pokersiteId);
+        void Store(Handnotes handNote);
 
-        Handhistory GetHandHistory(long gameNumber, short pokersiteId);
+        void Store(Playernotes playernotes);
+
+        #endregion
+
+        #region Imported files
 
         IEnumerable<ImportedFile> GetImportedFiles(IEnumerable<string> fileNames, ISession session);
 
         IEnumerable<ImportedFile> GetImportedFiles(IEnumerable<string> fileNames);
 
-        void Store(Playerstatistic statistic);
+        #endregion 
 
-        void Store(IEnumerable<Playerstatistic> statistic);
+        #region Players
 
-        void Store(Handnotes handNote);
+        Players GetPlayer(string playerName, short pokersiteId);
 
-        void Store(Playernotes playernotes);
+        Players GetPlayer(int playerId);
 
-        void Store(Tournaments tournament);
-
-        Stream OpenStorageStream(string filename, FileMode mode);
-
+        IList<Gametypes> GetPlayerGameTypes(IEnumerable<int> playerIds);
+     
         IList<IPlayer> GetPlayersList();
 
         void AddPlayerToList(IPlayer playerItem);
 
         void AddPlayerRangeToList(IEnumerable<IPlayer> playerItems);
 
-        void RemoveAppData();
-
-        /// <summary>
-        /// Deletes specific player's statistic from file storage
-        /// </summary>
-        /// <param name="statistic">Statistic to delete</param>
-        void DeletePlayerStatisticFromFile(Playerstatistic statistic);
-
-        void DeleteHandHistory(long handNumber, int pokerSiteId);
-
         IPlayer GetActivePlayer();
 
         void SaveActivePlayer(string playerName, short? pokersiteId);
 
+        IEnumerable<PlayerNetWon> GetTopPlayersByNetWon(int top, IEnumerable<int> playersToExclude);
+
+        #endregion
+
+        #region HandHistory/Tournaments
+
+        HandHistory GetGame(long gameNumber, short pokersiteId);
+
+        IList<HandHistory> GetGames(IEnumerable<long> gameNumbers, short pokersiteId);
+
+        Handhistory GetHandHistory(long gameNumber, short pokersiteId);
+
+        Tournaments GetTournament(string tournamentId, string playerName, short pokersiteId);
+
+        IList<Tournaments> GetPlayerTournaments(IEnumerable<int> playerIds);
+
+        void DeleteHandHistory(long handNumber, int pokerSiteId);
+
+        void DeleteTournament(string tournamentId, int pokerSiteId);
+
+        void Store(Tournaments tournament);
+
+        #endregion
+
+        #region System 
+
         void VacuumDatabase();
 
-        IEnumerable<PlayerNetWon> GetTopPlayersByNetWon(int top, IEnumerable<int> playersToExclude);
+        void RemoveAppData();
+
+        Stream OpenStorageStream(string filename, FileMode mode);
+
+        #endregion
 
         #region Aliases
 
@@ -116,8 +111,6 @@ namespace Model.Interfaces
 
         IList<IPlayer> GetAliasesList();
 
-        #endregion
-
-        string[] GetPlayerFiles(int playerId);
+        #endregion    
     }
 }

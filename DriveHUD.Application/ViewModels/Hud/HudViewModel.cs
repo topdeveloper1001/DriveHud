@@ -17,7 +17,6 @@ using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
-using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Common.Wpf.AttachedBehaviors;
 using DriveHUD.Entities;
 using HandHistories.Objects.Cards;
@@ -48,7 +47,7 @@ namespace DriveHUD.Application.ViewModels
     /// <summary>
     /// Represents view model of hud screen
     /// </summary>
-    public class HudViewModel : PopupViewModelBase
+    public class HudViewModel : PopupViewModelBase, IMainTabViewModel
     {
         private IHudLayoutsService HudLayoutsService => ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
@@ -75,6 +74,8 @@ namespace DriveHUD.Application.ViewModels
         }
 
         #region Properties
+
+        public EnumViewModelType ViewModelType => EnumViewModelType.HudViewModel;
 
         public InteractionRequest<PopupBaseNotification> NotificationRequest { get; private set; }
 
@@ -167,6 +168,42 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private string statFilter;
+
+        public string StatFilter
+        {
+            get
+            {
+                return statFilter;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref statFilter, value);
+                ApplyFilterToCollectionView();
+            }
+        }
+
+        private HashSet<Stat> statInfoCollectionDuplicates = new HashSet<Stat>();
+
+        private List<StatInfo> statInfoCollectionNotDuplicates = new List<StatInfo>();
+
+        private void ApplyFilterToCollectionView()
+        {
+            statInfoCollectionDuplicates.Clear();
+            statInfoCollectionNotDuplicates.Clear();
+            StatInfoCollectionView.SortDescriptions.Clear();
+            StatInfoCollectionView.GroupDescriptions.Clear();
+
+            if (string.IsNullOrEmpty(statFilter))
+            {
+                StatInfoCollectionView.GroupDescriptions.Add(new PropertyGroupDescription("StatInfoGroup.Name"));
+                StatInfoCollectionView.SortDescriptions.Add(new SortDescription("GroupName", ListSortDirection.Ascending));
+            }
+
+            StatInfoCollectionView.SortDescriptions.Add(new SortDescription("Caption", ListSortDirection.Ascending));
+            StatInfoCollectionView.Refresh();
+        }
+
         private ReactiveList<StatInfo> statInfoCollection;
 
         /// <summary>
@@ -198,7 +235,24 @@ namespace DriveHUD.Application.ViewModels
                         return false;
                     }
 
-                    return stat.IsListed && !stat.IsNotVisible;
+                    var filterCondition = true;
+
+                    if (!string.IsNullOrEmpty(statFilter))
+                    {
+                        filterCondition = stat.Caption.IndexOf(statFilter, StringComparison.OrdinalIgnoreCase) >= 0;
+
+                        if (!statInfoCollectionDuplicates.Contains(stat.Stat))
+                        {
+                            statInfoCollectionDuplicates.Add(stat.Stat);
+                            statInfoCollectionNotDuplicates.Add(stat);
+                        }
+                        else
+                        {
+                            filterCondition = filterCondition && statInfoCollectionNotDuplicates.Any(x => ReferenceEquals(x, stat));
+                        }
+                    }
+
+                    return stat.IsListed && !stat.IsNotVisible && filterCondition;
                 };
 
                 var statFiltering = collectionViewSource as ICollectionViewLiveShaping;
@@ -208,6 +262,8 @@ namespace DriveHUD.Application.ViewModels
                     statFiltering.LiveFilteringProperties.Add(nameof(StatInfo.IsNotVisible));
                     statFiltering.IsLiveFiltering = true;
                 }
+
+                statFiltering.IsLiveSorting = true;
 
                 StatInfoCollectionView = collectionViewSource;
             }
@@ -659,7 +715,7 @@ namespace DriveHUD.Application.ViewModels
 
             var cardRanges = Card.GetCardRanges();
 
-            previewHudElementViewModel.Tools.OfType<HudHeatMapViewModel>().ForEach(tool =>
+            void initializeHeatMapPreview(HudHeatMapViewModel tool)
             {
                 tool.BaseStat.CurrentValue = random.Next(0, 100);
 
@@ -671,7 +727,17 @@ namespace DriveHUD.Application.ViewModels
                 };
 
                 tool.HeatMap = heatMap;
-            });
+            }
+
+            previewHudElementViewModel.Tools
+                .OfType<HudHeatMapViewModel>()
+                .ForEach(tool => initializeHeatMapPreview(tool));
+
+            previewHudElementViewModel.Tools.OfType<HudGaugeIndicatorViewModel>()
+                .SelectMany(x => x.GroupedStats)
+                .SelectMany(x => x.Stats)
+                .Where(x => x.HeatMapViewModel != null)
+                .ForEach(x => initializeHeatMapPreview(x.HeatMapViewModel));
 
             previewHudElementViewModel.Seat = 1;
             previewHudElementViewModel.PlayerName = string.Format(HudDefaultSettings.TablePlayerNameFormat, previewHudElementViewModel.Seat);
@@ -772,6 +838,11 @@ namespace DriveHUD.Application.ViewModels
             if (statsCollection == null || (isInDesignMode && SelectedToolViewModel == null) || (SelectedToolViewModel != null && !(SelectedToolViewModel is IHudStatsToolViewModel)))
             {
                 return;
+            }
+
+            if (SelectedToolViewModel != null && SelectedToolViewModel is HudGaugeIndicatorViewModel)
+            {
+                statsCollection.ForEach(x => x.SetPopupDefaults());
             }
 
             var statTool = GetToolToModifyStats();
@@ -1268,6 +1339,11 @@ namespace DriveHUD.Application.ViewModels
             {
                 mergeItem.OldItem.Merge(mergeItem.NewItem);
 
+                if (SelectedToolViewModel != null && SelectedToolViewModel is HudGaugeIndicatorViewModel)
+                {
+                    mergeItem.OldItem.UpdateColor();
+                }
+
                 var previewStat = PreviewHudElementViewModel.ToolsStatInfoCollection.FirstOrDefault(x => x.Stat == mergeItem.NewItem.Stat);
                 previewStat?.Merge(mergeItem.NewItem);
                 previewStat?.UpdateColor();
@@ -1555,6 +1631,7 @@ namespace DriveHUD.Application.ViewModels
                 TableType = CurrentTableType,
                 ToolType = toolType,
                 Layout = CurrentLayout,
+                Tools = CurrentLayout.LayoutTools,
                 Source = source
             };
 
@@ -1569,21 +1646,17 @@ namespace DriveHUD.Application.ViewModels
 
             toolViewModel.IsSelected = true;
 
-            if (toolViewModel is IHudBaseStatToolViewModel)
+            if ((toolViewModel is IHudBaseStatToolViewModel hudBaseStatToolViewModel) &&
+                hudBaseStatToolViewModel.BaseStat != null)
             {
-                var hudBaseStatToolViewModel = toolViewModel as IHudBaseStatToolViewModel;
+                var statsToUpdate = DesignerHudElementViewModel.Tools
+                    .OfType<IHudStatsToolViewModel>()
+                    .Where(x => !(x is IHudBaseStatToolViewModel))
+                    .SelectMany(x => x.Stats)
+                    .Where(x => x.Stat == hudBaseStatToolViewModel.BaseStat.Stat)
+                    .ToArray();
 
-                if (hudBaseStatToolViewModel.BaseStat != null)
-                {
-                    var statsToUpdate = DesignerHudElementViewModel.Tools
-                        .OfType<IHudStatsToolViewModel>()
-                        .Where(x => !(x is IHudBaseStatToolViewModel))
-                        .SelectMany(x => x.Stats)
-                        .Where(x => x.Stat == hudBaseStatToolViewModel.BaseStat.Stat)
-                        .ToArray();
-
-                    statsToUpdate.ForEach(x => x.HasAttachedTools = true);
-                }
+                statsToUpdate.ForEach(x => x.HasAttachedTools = true);
             }
 
             InitializePreview();

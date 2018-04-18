@@ -24,8 +24,8 @@ namespace PMCatcher.Tests
     [TestFixture]
     class MomoEmulatorProviderTest
     {
-        //[TestCase(16592, true)]
-        //[TestCase(22564, true)]
+        //[TestCase(4532, true)]
+        //[TestCase(21080, true)]
         //[TestCase(14112, false)]
         public void CanProvideTest(int processId, bool expected)
         {
@@ -39,8 +39,8 @@ namespace PMCatcher.Tests
             Assert.That(result, Is.EqualTo(expected));
         }
 
-        //[TestCase(16592, 0x003A188A)]
-        //[TestCase(22564, 0x00350C30)]
+        //[TestCase(4532, 0x001F10F4)]
+        //[TestCase(21080, 0x00D40EB2)]
         public void GetProcessWindowHandleTest(int processId, int expected)
         {
             var process = Process.GetProcessById(processId);

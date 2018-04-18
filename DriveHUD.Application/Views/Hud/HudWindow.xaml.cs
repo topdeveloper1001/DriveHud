@@ -116,7 +116,7 @@ namespace DriveHUD.Application.Views
                 {
                     trackerConditionsMeterPositionOffset = new Point(hudTrackConditionsViewModel.OffsetX, hudTrackConditionsViewModel.OffsetY);
                 }
-
+               
                 dgCanvas.Children.Remove(panel);
             }
 

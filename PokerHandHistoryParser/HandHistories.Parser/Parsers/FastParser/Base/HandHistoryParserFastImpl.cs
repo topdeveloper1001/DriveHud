@@ -199,9 +199,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     return ParseSummaryHand(handLines, handHistory);
                 }
 
-                bool isCancelled;
-
-                if (!IsValidOrCanceledHand(handLines, out isCancelled))
+                if (!IsValidOrCanceledHand(handLines, out bool isCancelled))
                 {
                     throw new InvalidHandException(handText ?? "NULL");
                 }
@@ -282,7 +280,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 if (RequiresUncalledBetCalculations)
                 {
-                    CalculateUncalledBets(handHistory);
+                    CalculateUncalledBets(handLines, handHistory);
                 }
 
                 HandAction anteAction = handHistory.HandActions.FirstOrDefault(a => a.HandActionType == HandActionType.ANTE);
@@ -726,9 +724,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
         }
 
-        protected virtual void CalculateUncalledBets(HandHistory handHistory)
+        protected virtual void CalculateUncalledBets(string[] handLines, HandHistory handHistory)
         {
-            ParserUtils.CalculateUncalledBets(handHistory);
+            ParserUtils.CalculateUncalledBets(handHistory, true);
         }
     }
 }

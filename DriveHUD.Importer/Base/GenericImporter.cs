@@ -44,6 +44,8 @@ namespace DriveHUD.Importers
 
         protected virtual bool IsAdvancedLogEnabled { get; set; }
 
+        protected virtual bool SupportDuplicates => false;
+
         #endregion
 
         #region Infrastructure
@@ -59,6 +61,11 @@ namespace DriveHUD.Importers
             var progress = new DHProgress();
 
             IEnumerable<ParsingResult> parsingResult = null;
+
+            if (gameInfo.GameNumber != 0)
+            {
+                LogProvider.Log.Info(this, $"Hand {gameInfo.GameNumber} processed. [{SiteString}]");
+            }
 
             try
             {
@@ -92,7 +99,7 @@ namespace DriveHUD.Importers
                     continue;
                 }
 
-                if (result.IsDuplicate)
+                if (!SupportDuplicates && result.IsDuplicate)
                 {
                     LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. Duplicate. [{1}]", result.HandHistory.Gamenumber, SiteString));
                     continue;
@@ -104,7 +111,7 @@ namespace DriveHUD.Importers
                     continue;
                 }
 
-                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, SiteString));
+                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported in {2}ms. [{1}]", result.HandHistory.Gamenumber, SiteString, result.Duration));
 
                 var playerList = GetPlayerList(result.Source);
 

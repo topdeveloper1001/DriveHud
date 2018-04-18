@@ -42,9 +42,6 @@ namespace Model.Data
         public override void AddStatistic(Playerstatistic statistic)
         {
             base.AddStatistic(statistic);
-
-            var shrinkedStat = new ShrinkedStatistic(statistic);
-            shrinkedStatistics.Add(shrinkedStat);
         }
 
         public void ShrinkReportHands()
@@ -59,6 +56,12 @@ namespace Model.Data
 
         protected override void AddStatToStatistic(Playerstatistic statistic)
         {
+        }
+
+        protected virtual void AddShrinkedStatistic(Playerstatistic statistic)
+        {
+            var shrinkedStat = new ShrinkedStatistic(statistic);
+            shrinkedStatistics.Add(shrinkedStat);
         }
 
         protected override void CalculateStdDeviation()
