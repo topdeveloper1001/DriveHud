@@ -11,14 +11,11 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
-using HandHistories.Objects.Cards;
-using HandHistories.Parser.Parsers;
-using System.Collections.Generic;
 
 namespace Model
 {
     public interface IPlayerStatisticCalculator
     {
-        Playerstatistic CalculateStatistic(ParsingResult result, Players u, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity);
+        Playerstatistic CalculateStatistic(PlayerStatisticCreationInfo creationInfo);
     }
 }

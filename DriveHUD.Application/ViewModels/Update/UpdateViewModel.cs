@@ -41,11 +41,8 @@ namespace DriveHUD.Application.ViewModels.Update
 
             BuildNotes();
 
-            CancelCommand = ReactiveCommand.Create();
-            CancelCommand.Subscribe(x => Cancel());
-
-            UpdateCommand = ReactiveCommand.Create();
-            UpdateCommand.Subscribe(x => Update());
+            CancelCommand = ReactiveCommand.Create(() => Cancel());
+            UpdateCommand = ReactiveCommand.Create(() => Update());
         }
 
         #region Properties
@@ -195,9 +192,9 @@ namespace DriveHUD.Application.ViewModels.Update
 
         #region Commands
 
-        public ReactiveCommand<object> CancelCommand { get; private set; }
+        public ReactiveCommand CancelCommand { get; private set; }
 
-        public ReactiveCommand<object> UpdateCommand { get; private set; }
+        public ReactiveCommand UpdateCommand { get; private set; }
 
         #endregion
 

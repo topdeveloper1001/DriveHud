@@ -17,5 +17,9 @@ namespace Model
         public const string PlayerXRay = "PlayerXRay";
 
         public const string PlayerXRayAssembly = "DriveHUD.PlayerXRay.dll";
+
+        public const string PMCatcher = "PMCatcher";
+
+        public const string PMCatcherAssembly = "DriveHUD.PMCatcher.dll";
     }
 }

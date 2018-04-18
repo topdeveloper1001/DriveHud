@@ -11,9 +11,10 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
 using Model.Data;
+using Model.Settings;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Model.Reports
@@ -21,30 +22,31 @@ namespace Model.Reports
     /// <summary>
     /// This report groups games by daily hours.
     /// </summary>
-    public class TimeReportCreator : CashBaseReportCreator
+    public class TimeReportCreator : CashGroupingReportCreator<ReportIndicators, int>
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
+        protected override ReportIndicators CreateIndicator(int groupKey)
         {
-            var report = new ObservableCollection<ReportIndicators>();
+            return new ReportIndicators();
+        }
 
-            if (statistics == null)
-            {
-                return report;
-            }
+        protected override int GroupBy(Playerstatistic statistic)
+        {
+            return statistic.Time.Hour;
+        }
 
-            foreach (var group in statistics.GroupBy(x => x.Time.Hour).ToArray())
-            {
-                var stat = new ReportIndicators();
+        protected override int GroupBy(ReportIndicators indicator)
+        {
+            return indicator.Source.Time.Hour;
+        }
 
-                foreach (var playerstatistic in group)
-                {
-                    stat.AddStatistic(playerstatistic);
-                }
+        protected override IEnumerable<ReportIndicators> OrderResult(IEnumerable<ReportIndicators> reports)
+        {
+            var timeZoneOffset = ServiceLocator.Current.GetInstance<ISettingsService>()
+                .GetSettings()
+                .GeneralSettings
+                .TimeZoneOffset;
 
-                report.Add(stat);
-            }
-
-            return report;
+            return reports.OrderBy(x => x.Source.Time.AddHours(timeZoneOffset).Hour);
         }
     }
 }

@@ -10,23 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
 using Model.Data;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
 namespace Model.Reports
 {
-    public abstract class CashBaseReportCreator : IReportCreator
+    public abstract class CashBaseReportCreator<T> : BaseReportCreator<T>
+        where T : ReportIndicators
     {
-        public bool IsTournament
+        public override bool IsTournament
         {
             get
             {
                 return false;
             }
         }
-
-        public abstract ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics);
     }
 }

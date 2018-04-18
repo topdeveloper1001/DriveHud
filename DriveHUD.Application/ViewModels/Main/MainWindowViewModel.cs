@@ -41,6 +41,7 @@ using Model.Enums;
 using Model.Events;
 using Model.Filters;
 using Model.Interfaces;
+using Model.Reports;
 using Model.Settings;
 using Model.Stats;
 using Prism.Events;
@@ -68,19 +69,23 @@ namespace DriveHUD.Application.ViewModels
     {
         #region Fields
 
-        private IDataService dataService;
+        private readonly IDataService dataService;
 
-        private IEventAggregator eventAggregator;
+        private readonly IPlayerStatisticRepository playerStatisticRepository;
 
-        private IImporterSessionCacheService importerSessionCacheService;
+        private readonly IEventAggregator eventAggregator;
 
-        private IImporterService importerService;
+        private readonly IImporterSessionCacheService importerSessionCacheService;
 
-        private IHudTransmitter hudTransmitter;
+        private readonly IImporterService importerService;
 
-        private IFilterModelManagerService filterModelManager;
+        private readonly IHudTransmitter hudTransmitter;
 
-        private bool isAdvancedLoggingEnabled = false;
+        private readonly IFilterModelManagerService filterModelManager;
+
+        private readonly IReportStatusService reportStatusService;
+
+        private bool isAdvancedLoggingEnabled = true;
 
         private const int ImportFileUpdateDelay = 750;
 
@@ -93,6 +98,8 @@ namespace DriveHUD.Application.ViewModels
         internal MainWindowViewModel()
         {
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
+            reportStatusService = ServiceLocator.Current.GetInstance<IReportStatusService>();
 
             importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             importerService = ServiceLocator.Current.GetInstance<IImporterService>();
@@ -111,13 +118,13 @@ namespace DriveHUD.Application.ViewModels
             eventAggregator.GetEvent<PokerStarsDetectedEvent>().Subscribe(OnPokerStarsDetected);
             eventAggregator.GetEvent<LoadDataRequestedEvent>().Subscribe(arg => Load());
             eventAggregator.GetEvent<PreImportedDataEvent>().Subscribe(OnPreDataImported, ThreadOption.BackgroundThread, false);
+            eventAggregator.GetEvent<TableClosedEvent>().Subscribe(OnTableClosed, ThreadOption.BackgroundThread, false);
 
             InitializeFilters();
             InitializeData();
             InitializeBindings();
 
             HudViewModel = new HudViewModel();
-            filterModelManager.SetFilterType(EnumFilterType.Cash);
 
             PokerStarsDetectorSingletonService.Instance.Start();
 
@@ -141,7 +148,7 @@ namespace DriveHUD.Application.ViewModels
             StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
             StorageModel.PlayerCollection = new ObservableCollection<IPlayer>(dataService.GetPlayersList());
             StorageModel.PlayerCollection.AddRange(dataService.GetAliasesList());
-            StorageModel.PropertyChanged += StorageModel_PropertyChanged;
+            StorageModel.PropertyChanged += OnStorageModelPropertyChanged;
 
             ProgressViewModel = new ProgressViewModel();
 
@@ -220,17 +227,23 @@ namespace DriveHUD.Application.ViewModels
 
         internal void Load()
         {
+
             var player = StorageModel.PlayerSelectedItem;
 
             List<Playerstatistic> statistics = new List<Playerstatistic>();
 
             if (player is PlayerCollectionItem)
             {
-                statistics.AddRange(dataService.GetPlayerStatisticFromFile((StorageModel.PlayerSelectedItem?.Name ?? string.Empty), (short)(StorageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown)));
+                statistics.AddRange(playerStatisticRepository
+                    .GetAllPlayerStatistic((StorageModel.PlayerSelectedItem?.Name ?? string.Empty),
+                        (short)(StorageModel.PlayerSelectedItem?.PokerSite ?? EnumPokerSites.Unknown)));
             }
             else if (player is AliasCollectionItem)
             {
-                (player as AliasCollectionItem).PlayersInAlias.ForEach(pl => statistics.AddRange(dataService.GetPlayerStatisticFromFile((pl?.Name ?? string.Empty), (short)(pl?.PokerSite ?? EnumPokerSites.Unknown))));
+                (player as AliasCollectionItem).PlayersInAlias
+                    .ForEach(pl => statistics.AddRange(playerStatisticRepository
+                        .GetAllPlayerStatistic((pl?.Name ?? string.Empty),
+                            (short)(pl?.PokerSite ?? EnumPokerSites.Unknown))));
             }
 
             AddHandTags(statistics);
@@ -246,12 +259,12 @@ namespace DriveHUD.Application.ViewModels
 
             CreatePositionReport();
 
-            UpdateCurrentView();
+            UpdateCurrentView(true);
         }
 
         internal void UpdateHeader()
         {
-            OnPropertyChanged(nameof(AppStartupHeader));
+            RaisePropertyChanged(nameof(AppStartupHeader));
         }
 
         internal async void RebuildStats()
@@ -398,7 +411,7 @@ namespace DriveHUD.Application.ViewModels
                     {
                         // update data after hud is stopped
                         CreatePositionReport();
-                        UpdateCurrentView();
+                        UpdateCurrentView(true);
                     }
                     catch (Exception ex)
                     {
@@ -411,7 +424,13 @@ namespace DriveHUD.Application.ViewModels
             }
             finally
             {
-                System.Windows.Application.Current?.Dispatcher.Invoke(() => RefreshCommandsCanExecute());
+                try
+                {
+                    System.Windows.Application.Current?.Dispatcher.Invoke(() => RefreshCommandsCanExecute());
+                }
+                catch (TaskCanceledException)
+                {
+                }
             }
         }
 
@@ -426,7 +445,7 @@ namespace DriveHUD.Application.ViewModels
                 StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
             }
 
-            if (CurrentViewModelType == EnumViewModelType.HudViewModel)
+            if (CurrentViewModel.ViewModelType == EnumViewModelType.HudViewModel)
             {
                 HudViewModel.RefreshHudTable();
             }
@@ -434,27 +453,58 @@ namespace DriveHUD.Application.ViewModels
 
         private void UpdateCurrentView(UpdateViewRequestedEventArgs args)
         {
-            UpdateCurrentView();
-
             if (args != null && args.IsUpdateReportRequested)
             {
+                UpdateCurrentView(true);
                 ReportGadgetViewModel?.UpdateReport();
+                return;
             }
+
+            UpdateCurrentView(false);
         }
 
-        private void UpdateCurrentView()
+        private void UpdateCurrentView(bool forceUpdate)
         {
             if (CurrentViewModel == null)
             {
                 return;
             }
-            else if (CurrentViewModel == DashboardViewModel)
+
+            if (forceUpdate)
+            {
+                reportStatusService.CashUpdated = true;
+                reportStatusService.TournamentUpdated = true;
+            }
+
+            if (CurrentViewModel == DashboardViewModel)
             {
                 DashboardViewModel.Update();
             }
             else if (CurrentViewModel == TournamentViewModel)
             {
                 TournamentViewModel.Update();
+            }
+        }
+
+        private void OnTableClosed(TableClosedEventArgs e)
+        {
+            try
+            {
+                if (e == null || e.Handle == 0)
+                {
+                    return;
+                }
+
+                hudTransmitter.CloseTable(e.Handle);
+
+                if (isAdvancedLoggingEnabled)
+                {
+                    LogProvider.Log.Info(this, $"Close table command has been sent to HUD [handle={e.Handle}]");
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Close table command could not be sent to HUD.", ex);
             }
         }
 
@@ -528,9 +578,8 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                var players = e.Players;
+                var players = e.Players.Where(x => !string.IsNullOrEmpty(x.PlayerName)).ToList();
                 var gameInfo = e.GameInfo;
-                var maxSeats = (int)gameInfo.TableType;
                 var site = e.GameInfo.PokerSite;
 
                 var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
@@ -553,24 +602,55 @@ namespace DriveHUD.Application.ViewModels
 
                 var playersCacheInfo = gameInfo.GetPlayersCacheInfo();
 
-                if (e.DoNotUpdateHud)
+                // update cache if even we don't need to build HUD
+                if (playersCacheInfo != null)
                 {
-                    // update cache if even we don't need to build HUD
-                    if (playersCacheInfo != null)
+                    playersCacheInfo.ForEach(x => x.GameFormat = gameInfo.GameFormat);
+
+                    var filter = activeLayout.Filter != null ?
+                        activeLayout.Filter.Clone() :
+                        new HudLayoutFilter();
+
+                    if (!e.DoNotUpdateHud)
                     {
-                        foreach (var playerCacheInfo in playersCacheInfo)
-                        {
-                            playerCacheInfo.GameFormat = gameInfo.GameFormat;
-
-                            playerCacheInfo.Filter = activeLayout.Filter != null ?
-                                activeLayout.Filter.Clone() :
-                                new HudLayoutFilter();
-
-                            importerSessionCacheService.AddOrUpdatePlayerStats(playerCacheInfo);
-                        }
+                        playersCacheInfo = playersCacheInfo.Where(x => x.GameNumber == e.GameNumber).ToList();
                     }
 
+                    importerSessionCacheService.AddOrUpdatePlayersStats(playersCacheInfo, gameInfo.Session, filter);
+                }
+
+                if (e.DoNotUpdateHud)
+                {
                     return;
+                }
+
+                if (gameInfo.PokerSite != EnumPokerSites.PokerStars && activeLayout != null)
+                {
+                    var stickers = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
+
+                    if (stickers.Count > 0)
+                    {
+                        var playersStickersCacheData = (from player in players
+                                                        let playerItem = new PlayerCollectionItem
+                                                        {
+                                                            PlayerId = player.PlayerId,
+                                                            Name = player.PlayerName,
+                                                            PokerSite = site
+                                                        }
+                                                        let lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerItem)
+                                                        where lastHandStatistic != null
+                                                        select new PlayerStickersCacheData
+                                                        {
+                                                            Session = gameInfo.Session,
+                                                            Player = playerItem,
+                                                            Layout = activeLayout.Name,
+                                                            Statistic = lastHandStatistic,
+                                                            StickerFilters = stickers,
+                                                            IsHero = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerItem)?.IsHero ?? false
+                                                        }).ToArray();
+
+                        importerSessionCacheService.AddOrUpdatePlayerStickerStats(playersStickersCacheData, gameInfo.Session);
+                    }
                 }
 
                 // stats involved into player types and bumper stickers
@@ -601,15 +681,8 @@ namespace DriveHUD.Application.ViewModels
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
 
-                for (int seatNumber = 1; seatNumber <= maxSeats; seatNumber++)
+                foreach (var player in players)
                 {
-                    var player = players.FirstOrDefault(x => x.SeatNumber == seatNumber);
-
-                    if (player == null || string.IsNullOrEmpty(player.PlayerName))
-                    {
-                        continue;
-                    }
-
                     var playerCollectionItem = new PlayerCollectionItem
                     {
                         PlayerId = player.PlayerId,
@@ -617,23 +690,10 @@ namespace DriveHUD.Application.ViewModels
                         PokerSite = site
                     };
 
-                    var playerCacheInfo = playersCacheInfo?.FirstOrDefault(x => x.Player == playerCollectionItem && x.GameNumber == e.GameNumber);
-
-                    if (playerCacheInfo != null)
-                    {
-                        playerCacheInfo.GameFormat = gameInfo.GameFormat;
-
-                        playerCacheInfo.Filter = activeLayout.Filter != null ?
-                            activeLayout.Filter.Clone() :
-                            new HudLayoutFilter();
-
-                        importerSessionCacheService.AddOrUpdatePlayerStats(playerCacheInfo);
-                    }
-
                     var playerHudContent = new PlayerHudContent
                     {
                         Name = player.PlayerName,
-                        SeatNumber = seatNumber
+                        SeatNumber = player.SeatNumber
                     };
 
                     // cache service must return light indicators or hud light indicators
@@ -673,7 +733,7 @@ namespace DriveHUD.Application.ViewModels
                         GameType = gameInfo.EnumGameType,
                         HudLayoutInfo = activeLayout,
                         PokerSite = gameInfo.PokerSite,
-                        SeatNumber = seatNumber
+                        SeatNumber = player.SeatNumber
                     };
 
                     playerHudContent.HudElement = hudElementCreator.Create(hudElementCreationInfo);
@@ -684,7 +744,9 @@ namespace DriveHUD.Application.ViewModels
                     }
 
                     playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
-                    playerHudContent.HudElement.PlayerName = player.PlayerName;
+                    playerHudContent.HudElement.PlayerId = player.PlayerId;
+                    playerHudContent.HudElement.PlayerName = !string.IsNullOrWhiteSpace(player.PlayerNick) ?
+                        $"{player.PlayerName} / {player.PlayerNick}" : player.PlayerName;
                     playerHudContent.HudElement.PokerSiteId = (short)site;
                     playerHudContent.HudElement.TotalHands = playerData.TotalHands;
 
@@ -708,7 +770,13 @@ namespace DriveHUD.Application.ViewModels
                         graphTool.StatSessionCollection = new ReactiveList<decimal>(sessionStats[graphTool.MainStat.Stat]);
                     }
 
-                    var heatMapTools = playerHudContent.HudElement.Tools.OfType<HudHeatMapViewModel>().ToArray();
+                    var heatMapTools = playerHudContent.HudElement.Tools.OfType<HudHeatMapViewModel>()
+                        .Concat(playerHudContent.HudElement.Tools.OfType<HudGaugeIndicatorViewModel>()
+                            .SelectMany(x => x.GroupedStats)
+                            .SelectMany(x => x.Stats)
+                            .Where(x => x.HeatMapViewModel != null)
+                            .Select(x => x.HeatMapViewModel))
+                        .ToArray();
 
                     heatMapTools.ForEach(x =>
                     {
@@ -779,23 +847,6 @@ namespace DriveHUD.Application.ViewModels
 
                     if (gameInfo.PokerSite != EnumPokerSites.PokerStars && lastHandStatistic != null && activeLayout != null)
                     {
-                        var stickers = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
-
-                        var playerStickersCacheData = new PlayerStickersCacheData
-                        {
-                            Session = gameInfo.Session,
-                            Player = playerCollectionItem,
-                            Layout = activeLayout.Name,
-                            Statistic = lastHandStatistic,
-                            StickerFilters = stickers,
-                            IsHero = sessionCacheStatistic.IsHero
-                        };
-
-                        if (stickers.Count > 0)
-                        {
-                            importerSessionCacheService.AddOrUpdatePlayerStickerStats(playerStickersCacheData);
-                        }
-
                         hudLayoutsService.SetStickers(playerHudContent.HudElement,
                             importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerCollectionItem),
                             activeLayout);
@@ -925,7 +976,7 @@ namespace DriveHUD.Application.ViewModels
                 Task.Delay(ImportFileUpdateDelay).Wait();
             });
 
-            UpdateCurrentView();
+            UpdateCurrentView(true);
             CreatePositionReport();
 
             ProgressViewModel.IsActive = false;
@@ -956,7 +1007,7 @@ namespace DriveHUD.Application.ViewModels
                 Task.Delay(ImportFileUpdateDelay).Wait();
             });
 
-            UpdateCurrentView();
+            UpdateCurrentView(true);
             CreatePositionReport();
 
             ProgressViewModel.IsActive = false;
@@ -988,43 +1039,42 @@ namespace DriveHUD.Application.ViewModels
 
             if (viewModelType == EnumViewModelType.DashboardViewModel)
             {
+                filterModelManager.FilterType = EnumFilterType.Cash;
+
+                // initialize filters            
+                eventAggregator.GetEvent<UpdateFilterRequestEvent>()
+                    .Publish(new UpdateFilterRequestEventArgs());
+
                 if (DashboardViewModel == null)
                 {
-                    DashboardViewModel = new DashboardViewModel
-                    {
-                        Type = EnumViewModelType.DashboardViewModel,
-                    };
+                    DashboardViewModel = new DashboardViewModel();
                 }
 
-                DashboardViewModel.IsActive = true;
                 CurrentViewModel = DashboardViewModel;
-                ReportGadgetViewModel.IsShowTournamentData = false;
-                UpdateCurrentView();
 
-                filterModelManager.SetFilterType(EnumFilterType.Cash);
-                eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
+                ReportGadgetViewModel.IsShowTournamentData = false;
+
+                DashboardViewModel.Update();
+                ReportGadgetViewModel.UpdateReport();
             }
             else if (viewModelType == EnumViewModelType.TournamentViewModel)
             {
+                filterModelManager.FilterType = EnumFilterType.Tournament;
+
+                // initialize filters            
+                eventAggregator.GetEvent<UpdateFilterRequestEvent>()
+                    .Publish(new UpdateFilterRequestEventArgs());
+
                 if (TournamentViewModel == null)
                 {
-                    TournamentViewModel = new TournamentViewModel()
-                    {
-                        Type = EnumViewModelType.TournamentViewModel,
-                    };
-                }
-
-                if (DashboardViewModel != null)
-                {
-                    DashboardViewModel.IsActive = false;
+                    TournamentViewModel = new TournamentViewModel();
                 }
 
                 CurrentViewModel = TournamentViewModel;
                 ReportGadgetViewModel.IsShowTournamentData = true;
-                UpdateCurrentView();
 
-                filterModelManager.SetFilterType(EnumFilterType.Tournament);
-                eventAggregator.GetEvent<UpdateFilterRequestEvent>().Publish(new UpdateFilterRequestEventArgs());
+                TournamentViewModel.Update();
+                ReportGadgetViewModel.UpdateReport();
             }
             else if (viewModelType == EnumViewModelType.HudViewModel)
             {
@@ -1033,7 +1083,6 @@ namespace DriveHUD.Application.ViewModels
                     HudViewModel = new HudViewModel();
                 }
 
-                filterModelManager.SetFilterType(EnumFilterType.Cash);
                 CurrentViewModel = HudViewModel;
             }
             else if (viewModelType == EnumViewModelType.AppsViewModel)
@@ -1049,30 +1098,20 @@ namespace DriveHUD.Application.ViewModels
 
         private void AddHandTags(IList<Playerstatistic> statistics)
         {
-            var notes = new List<Handnotes>();
-
-            var allPlayers = new List<PlayerCollectionItem>();
-
-            if (StorageModel.PlayerSelectedItem is PlayerCollectionItem)
+            if (StorageModel.PlayerSelectedItem == null || StorageModel.PlayerSelectedItem.PokerSites == null)
             {
-                allPlayers.Add(StorageModel.PlayerSelectedItem as PlayerCollectionItem);
-            }
-            else if (StorageModel.PlayerSelectedItem is AliasCollectionItem)
-            {
-                allPlayers.AddRange((StorageModel.PlayerSelectedItem as AliasCollectionItem).PlayersInAlias);
+                return;
             }
 
-#warning inefficient code            
-            foreach (var player in allPlayers)
-            {
-                notes.AddRange(dataService.GetHandNotes((short)(player?.PokerSite ?? EnumPokerSites.Unknown)));
-            }
+            var notes = (from pokerSite in StorageModel.PlayerSelectedItem.PokerSites
+                         from note in dataService.GetHandNotes((short)pokerSite)
+                         select note).ToArray();
 
-            var statisticsForUpdate = (from note in notes
-                                       join statistic in statistics on note.Gamenumber equals statistic.GameNumber
-                                       select new { Note = note, Statistic = statistic }).ToArray();
+            var statisticsToUpdate = (from note in notes
+                                      join statistic in statistics on note.Gamenumber equals statistic.GameNumber
+                                      select new { Note = note, Statistic = statistic }).ToArray();
 
-            foreach (var statisticForUpdate in statisticsForUpdate)
+            foreach (var statisticForUpdate in statisticsToUpdate)
             {
                 statisticForUpdate.Statistic.HandNote = statisticForUpdate.Note;
             }
@@ -1121,8 +1160,7 @@ namespace DriveHUD.Application.ViewModels
         private ReportGadgetViewModel _reportGadgetViewModel;
         private bool _isShowEquityCalculator;
 
-        private object _currentViewModel;
-        private EnumViewModelType _currentViewModelType;
+        private IMainTabViewModel currentViewModel;
 
         private bool _reportGadgetView_IsVisible;
 
@@ -1166,7 +1204,7 @@ namespace DriveHUD.Application.ViewModels
         public bool RadDropDownButtonFilterKeepOpen
         {
             get { return _radDropDownButtonFilterKeepOpen; }
-            set { _radDropDownButtonFilterKeepOpen = value; OnPropertyChanged(); }
+            set { _radDropDownButtonFilterKeepOpen = value; RaisePropertyChanged(); }
         }
 
         private bool _radDropDownButtonFilterIsOpen { get; set; }
@@ -1174,7 +1212,7 @@ namespace DriveHUD.Application.ViewModels
         public bool RadDropDownButtonFilterIsOpen
         {
             get { return _radDropDownButtonFilterIsOpen; }
-            set { _radDropDownButtonFilterIsOpen = value; OnPropertyChanged(); }
+            set { _radDropDownButtonFilterIsOpen = value; RaisePropertyChanged(); }
         }
 
         private DateTime _calendarFrom { get; set; }
@@ -1182,7 +1220,7 @@ namespace DriveHUD.Application.ViewModels
         public DateTime CalendarFrom
         {
             get { return _calendarFrom; }
-            set { _calendarFrom = value; OnPropertyChanged(); }
+            set { _calendarFrom = value; RaisePropertyChanged(); }
         }
 
         private DateTime _calendarTo { get; set; }
@@ -1190,7 +1228,7 @@ namespace DriveHUD.Application.ViewModels
         public DateTime CalendarTo
         {
             get { return _calendarTo; }
-            set { _calendarTo = value; OnPropertyChanged(); }
+            set { _calendarTo = value; RaisePropertyChanged(); }
         }
 
         public Version Version
@@ -1212,7 +1250,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 isTrial = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1227,7 +1265,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 isUpgradable = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1242,7 +1280,7 @@ namespace DriveHUD.Application.ViewModels
             private set
             {
                 isManualImportingRunning = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
                 RefreshCommandsCanExecute();
             }
         }
@@ -1253,7 +1291,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 _dashboardViewModel = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1263,7 +1301,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 _tournamentViewModel = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1273,7 +1311,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 _hudViewModel = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1292,55 +1330,32 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 _reportGadgetViewModel = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
-        public object CurrentViewModel
+        public IMainTabViewModel CurrentViewModel
         {
-            get { return _currentViewModel; }
-            set
+            get
             {
-                _currentViewModel = value;
-                OnPropertyChanged();
-
-                if (this.DashboardViewModel != null) this.DashboardViewModel.IsActive = value.GetType().Equals(typeof(DashboardViewModel));
-                if (this.TournamentViewModel != null) this.TournamentViewModel.IsActive = value.GetType().Equals(typeof(TournamentViewModel));
-                if (this.HudViewModel != null) this.HudViewModel.IsActive = value.GetType().Equals(typeof(HudViewModel));
-                if (this.AppsViewModel != null) this.AppsViewModel.IsActive = value.GetType().Equals(typeof(AppsViewModel));
-
-                this.ReportGadgetView_IsVisible = !value.GetType().Equals(typeof(HudViewModel))
-                    && !value.GetType().Equals(typeof(AppsViewModel));
-
-                if (value.GetType().Equals(typeof(DashboardViewModel)))
-                {
-                    _currentViewModelType = EnumViewModelType.DashboardViewModel;
-                }
-
-                if (value.GetType().Equals(typeof(TournamentViewModel)))
-                {
-                    _currentViewModelType = EnumViewModelType.TournamentViewModel;
-                }
-
-                if (value.GetType().Equals(typeof(HudViewModel)))
-                {
-                    _currentViewModelType = EnumViewModelType.HudViewModel;
-                }
-
-                if (value.GetType().Equals(typeof(AppsViewModel)))
-                {
-                    _currentViewModelType = EnumViewModelType.AppsViewModel;
-                }
+                return currentViewModel;
             }
-        }
-
-        public EnumViewModelType CurrentViewModelType
-        {
-            get { return _currentViewModelType; }
             set
             {
-                _currentViewModelType = value;
-                OnPropertyChanged();
+                if (currentViewModel != null)
+                {
+                    currentViewModel.IsActive = false;
+                }
+
+                SetProperty(ref currentViewModel, value);
+
+                if (currentViewModel != null)
+                {
+                    currentViewModel.IsActive = true;
+                }
+
+                ReportGadgetView_IsVisible = currentViewModel.ViewModelType == EnumViewModelType.DashboardViewModel ||
+                    currentViewModel.ViewModelType == EnumViewModelType.TournamentViewModel;
             }
         }
 
@@ -1350,7 +1365,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 _reportGadgetView_IsVisible = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1371,7 +1386,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 isHudRunning = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1388,7 +1403,7 @@ namespace DriveHUD.Application.ViewModels
                 if (isLowResolutionMode != value)
                 {
                     isLowResolutionMode = value;
-                    OnPropertyChanged();
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -1406,7 +1421,7 @@ namespace DriveHUD.Application.ViewModels
                 if (windowMinWidth != value)
                 {
                     windowMinWidth = value;
-                    OnPropertyChanged();
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -1424,7 +1439,7 @@ namespace DriveHUD.Application.ViewModels
                 if (windowWidth != value)
                 {
                     windowWidth = value;
-                    OnPropertyChanged();
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -1442,7 +1457,7 @@ namespace DriveHUD.Application.ViewModels
                 if (isEnabled != value)
                 {
                     isEnabled = value;
-                    OnPropertyChanged();
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -1464,7 +1479,7 @@ namespace DriveHUD.Application.ViewModels
 
                 sortedPlayers = value;
 
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -1616,7 +1631,7 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void StorageModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void OnStorageModelPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == ReflectionHelper.GetPath<SingletonStorageModel>(p => p.PlayerSelectedItem))
             {

@@ -1,12 +1,19 @@
-﻿<Window x:Class="Simulator.PokerTable"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Simulator"
-        mc:Ignorable="d"
-        Title="PokerClient" Height="200" Width="625">
+﻿<Window
+    x:Class="Simulator.PokerTable"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="PokerClient"
+    Height="200"
+    Width="625"
+    Background="#999999">
     <Grid>
-        
+        <TextBlock
+            Foreground="#ECECEC"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Text="EMULATOR WINDOW" />
     </Grid>
 </Window>

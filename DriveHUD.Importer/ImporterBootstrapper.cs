@@ -18,10 +18,13 @@ using DriveHUD.Importers.IPoker;
 using DriveHUD.Importers.Loggers;
 using DriveHUD.Importers.Pacific888;
 using DriveHUD.Importers.PartyPoker;
+using DriveHUD.Importers.PokerMaster;
 using DriveHUD.Importers.PokerStars;
 using DriveHUD.Importers.WinningPokerNetwork;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
+using Model.Enums;
+using Model.Solvers;
 using System;
 
 namespace DriveHUD.Importers
@@ -72,6 +75,14 @@ namespace DriveHUD.Importers
             container.RegisterType<IPlayerStatisticReImporter, PlayerStatisticReImporter>();
             container.RegisterType<IIgnitionWindowCache, IgnitionWindowCache>(new ContainerControlledLifetimeManager());
             container.RegisterType<IExternalImporter, ExternalImporter.ExternalImporter>();
+            container.RegisterType<IHandBuilder, HandBuilder>();
+            container.RegisterType<INetworkConnectionsService, NetworkConnectionsService>();
+            container.RegisterType<ITableWindowProvider, TableWindowProvider>();
+            container.RegisterType<IPacketManager, PacketManager>();
+            container.RegisterType<IPMImporter, PMImporter>();
+            container.RegisterType<IPokerEvaluator, HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
+            container.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.Omaha.ToString());
+            container.RegisterType<IPokerEvaluator, OmahaHiLoEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
 
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());
@@ -105,6 +116,7 @@ namespace DriveHUD.Importers
             importerService.Register<IPartyPokerImporter>();
             importerService.Register<IIPokerImporter>();
             importerService.Register<IExternalImporter>();
+            importerService.Register<IPMImporter>();
         }
     }
 }

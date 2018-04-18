@@ -104,29 +104,14 @@ namespace DriveHUD.Application.ViewModels.Registration
         {
             var canSend = this.WhenAny(x => x.Email, x => Utils.IsValidEmail(x.Value));
 
-            SendCommand = ReactiveCommand.Create(canSend);
-            SendCommand.Subscribe(x => Send());
-
-            CancelCommand = ReactiveCommand.Create();
-            CancelCommand.Subscribe(x => Cancel());
-
-            TrialCommand = ReactiveCommand.Create();
-            TrialCommand.Subscribe(x => InitializeTrial());
-
-            BackCommand = ReactiveCommand.Create();
-            BackCommand.Subscribe(x => Back());
-
-            OKCommand = ReactiveCommand.Create();
-            OKCommand.Subscribe(x => Cancel());
-
-            RegisterCommand = ReactiveCommand.Create();
-            RegisterCommand.Subscribe(x => InitializeRegister(false));
-
-            ActivateCommand = ReactiveCommand.Create();
-            ActivateCommand.Subscribe(x => Register());
-
-            BuyCommand = ReactiveCommand.Create();
-            BuyCommand.Subscribe(x =>
+            SendCommand = ReactiveCommand.Create(() => Send(), canSend);
+            CancelCommand = ReactiveCommand.Create(() => Cancel());
+            TrialCommand = ReactiveCommand.Create(() => InitializeTrial());
+            BackCommand = ReactiveCommand.Create(() => Back());
+            OKCommand = ReactiveCommand.Create(() => Cancel());
+            RegisterCommand = ReactiveCommand.Create(() => InitializeRegister(false));
+            ActivateCommand = ReactiveCommand.Create(() => Register());
+            BuyCommand = ReactiveCommand.Create(() =>
             {
                 try
                 {
@@ -138,8 +123,7 @@ namespace DriveHUD.Application.ViewModels.Registration
                 }
             });
 
-            RenewCommand = ReactiveCommand.Create();
-            RenewCommand.Subscribe(x =>
+            RenewCommand = ReactiveCommand.Create(() =>
             {
                 try
                 {
@@ -159,8 +143,7 @@ namespace DriveHUD.Application.ViewModels.Registration
                 }
             });
 
-            ResetLicensesCommand = ReactiveCommand.Create();
-            ResetLicensesCommand.Subscribe(x =>
+            ResetLicensesCommand = ReactiveCommand.Create(() =>
             {
                 try
                 {
@@ -748,25 +731,25 @@ namespace DriveHUD.Application.ViewModels.Registration
 
         #region Commands        
 
-        public ReactiveCommand<object> CancelCommand { get; private set; }
+        public ReactiveCommand CancelCommand { get; private set; }
 
-        public ReactiveCommand<object> SendCommand { get; private set; }
+        public ReactiveCommand SendCommand { get; private set; }
 
-        public ReactiveCommand<object> TrialCommand { get; private set; }
+        public ReactiveCommand TrialCommand { get; private set; }
 
-        public ReactiveCommand<object> BuyCommand { get; private set; }
+        public ReactiveCommand BuyCommand { get; private set; }
 
-        public ReactiveCommand<object> RegisterCommand { get; private set; }
+        public ReactiveCommand RegisterCommand { get; private set; }
 
-        public ReactiveCommand<object> RenewCommand { get; private set; }
+        public ReactiveCommand RenewCommand { get; private set; }
 
-        public ReactiveCommand<object> OKCommand { get; private set; }
+        public ReactiveCommand OKCommand { get; private set; }
 
-        public ReactiveCommand<object> ActivateCommand { get; private set; }
+        public ReactiveCommand ActivateCommand { get; private set; }
 
-        public ReactiveCommand<object> BackCommand { get; private set; }
+        public ReactiveCommand BackCommand { get; private set; }
 
-        public ReactiveCommand<object> ResetLicensesCommand { get; private set; }
+        public ReactiveCommand ResetLicensesCommand { get; private set; }
 
         #endregion
 
@@ -887,7 +870,7 @@ namespace DriveHUD.Application.ViewModels.Registration
 
                 if (licenseType == LicenseType.Trial)
                 {
-                    InitializeMessage("Common_RegistrationView_TrialExpiredText");
+                    InitializeMessage("Common_RegistrationView_TrialExpiredText");                    
                 }
                 else
                 {

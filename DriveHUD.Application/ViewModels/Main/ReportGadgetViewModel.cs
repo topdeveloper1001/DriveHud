@@ -65,6 +65,8 @@ namespace DriveHUD.Application.ViewModels
 
         public ICommand EditTournamentCommand { get; set; }
 
+        public ICommand DeleteTournamentCommand { get; set; }
+
         public ICommand ReportRadioButtonClickCommand { get; set; }
 
         #endregion
@@ -86,6 +88,7 @@ namespace DriveHUD.Application.ViewModels
             MakeNoteCommand = new RelayCommand(MakeNote);
             DeleteHandCommand = new RelayCommand(x => DeleteHands());
             EditTournamentCommand = new RelayCommand(EditTournament);
+            DeleteTournamentCommand = new RelayCommand(DeleteTournament);
             ReportRadioButtonClickCommand = new RelayCommand(ReportRadioButtonClick);
 
             InitializeFilter();
@@ -95,6 +98,7 @@ namespace DriveHUD.Application.ViewModels
             eventAggregator.GetEvent<BuiltFilterChangedEvent>().Subscribe(UpdateBuiltFilter);
             eventAggregator.GetEvent<HandNoteUpdatedEvent>().Subscribe(UpdateHandNote);
             eventAggregator.GetEvent<TournamentDataUpdatedEvent>().Subscribe(UpdateReport);
+            eventAggregator.GetEvent<BuiltFilterRefreshEvent>().Subscribe(e => CurrentlyBuiltFilter = e.BuiltFilter);
         }
 
         private void InitializeFilter()
@@ -232,6 +236,42 @@ namespace DriveHUD.Application.ViewModels
             tournamentView.ShowDialog();
         }
 
+        private void DeleteTournament(object obj)
+        {
+            var tournament = obj as TournamentReportRecord;
+
+            if (tournament == null)
+            {
+                return;
+            }
+
+            var notification = new PopupBaseNotification()
+            {
+                Title = CommonResourceManager.Instance.GetResourceString("Notifications_DeleteTournament_Title"),
+                CancelButtonCaption = CommonResourceManager.Instance.GetResourceString("Notifications_DeleteHand_Cancel"),
+                ConfirmButtonCaption = CommonResourceManager.Instance.GetResourceString("Notifications_DeleteHand_Yes"),
+                Content = CommonResourceManager.Instance.GetResourceString("Notifications_DeleteTournament_Content"),
+                IsDisplayH1Text = true
+            };
+
+            PopupRequest.Raise(notification,
+               confirmation =>
+               {
+                   if (confirmation.Confirmed)
+                   {
+                       var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+                       dataService.DeleteTournament(tournament.TournamentId, tournament.PokerSiteId);
+
+                       if (ReportSelectedItem != null)
+                       {
+                           ReportCollection.Remove(ReportSelectedItem);
+                       }
+
+                       eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = true });
+                   }
+               });
+        }
+
         private void ReportRadioButtonClick(object obj)
         {
             eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = false });
@@ -243,17 +283,21 @@ namespace DriveHUD.Application.ViewModels
 
         internal void UpdateReport(object obj = null)
         {
-            eventAggregator.GetEvent<UpdateReportEvent>().Publish(StorageModel?.FilterPredicate);
+            var filterPredicate = IsShowTournamentData ?
+                StorageModel?.TournamentFilterPredicate :
+                StorageModel?.CashFilterPredicate;
+
+            eventAggregator.GetEvent<UpdateReportEvent>().Publish(filterPredicate);
 
             App.Current.Dispatcher.Invoke(() =>
             {
                 if (ReportSelectedItemStat == EnumReports.None)
                 {
-                    SetDefaultItemStat(this.IsShowTournamentData);
+                    SetDefaultItemStat(IsShowTournamentData);
                 }
                 else
                 {
-                    OnPropertyChanged(nameof(ReportSelectedItemStat));
+                    RaisePropertyChanged(nameof(ReportSelectedItemStat));
                 }
             });
 
@@ -417,7 +461,7 @@ namespace DriveHUD.Application.ViewModels
                 }
 
                 SetProperty(ref isShowTournamentData, value);
-                OnPropertyChanged(nameof(IsShowCashData));
+                RaisePropertyChanged(nameof(IsShowCashData));
             }
         }
 

@@ -13,6 +13,7 @@
 using DriveHUD.Application.ViewModels.AppStore;
 using DriveHUD.Common.Wpf.Mvvm;
 using Model.AppStore;
+using Model.Enums;
 using ReactiveUI;
 using System;
 using System.Collections.ObjectModel;
@@ -22,7 +23,7 @@ using System.Reactive.Linq;
 
 namespace DriveHUD.Application.ViewModels
 {
-    public class AppsViewModel : WindowViewModelBase
+    public class AppsViewModel : WindowViewModelBase, IMainTabViewModel
     {
         public AppsViewModel()
         {
@@ -119,18 +120,20 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        public EnumViewModelType ViewModelType => EnumViewModelType.AppsViewModel;
+
         #endregion
 
         #region Commands
 
-        public ReactiveCommand<object> SelectPageCommand { get; private set; }
+        public ReactiveCommand SelectPageCommand { get; private set; }
 
-        public ReactiveCommand<object> NextPageCommand { get; private set; }
+        public ReactiveCommand NextPageCommand { get; private set; }
 
-        public ReactiveCommand<object> PreviousPageCommand { get; private set; }
+        public ReactiveCommand PreviousPageCommand { get; private set; }
 
-        public ReactiveCommand<object> SearchCommand { get; private set; }
-
+        public ReactiveCommand SearchCommand { get; private set; }
+        
         #endregion
 
         #region Infrastructure
@@ -165,19 +168,15 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeCommands()
         {
-            SelectPageCommand = ReactiveCommand.Create();
-            SelectPageCommand.Subscribe(x =>
+            SelectPageCommand = ReactiveCommand.Create<AppStorePageViewModel>(selectedPage =>
             {
-                var selectedPage = x as AppStorePageViewModel;
-
                 if (selectedPage != null)
                 {
                     CurrentPage = selectedPage;
                 }
             });
 
-            PreviousPageCommand = ReactiveCommand.Create();
-            PreviousPageCommand.Subscribe(x =>
+            PreviousPageCommand = ReactiveCommand.Create(() =>
             {
                 if (CurrentPage != null)
                 {
@@ -185,8 +184,7 @@ namespace DriveHUD.Application.ViewModels
                 }
             });
 
-            NextPageCommand = ReactiveCommand.Create();
-            NextPageCommand.Subscribe(x =>
+            NextPageCommand = ReactiveCommand.Create(() =>
             {
                 if (CurrentPage != null)
                 {
@@ -194,8 +192,7 @@ namespace DriveHUD.Application.ViewModels
                 }
             });
 
-            SearchCommand = ReactiveCommand.Create();
-            SearchCommand.Subscribe(x =>
+            SearchCommand = ReactiveCommand.Create(() =>
             {
                 if (AppStoreViewModel != null)
                 {

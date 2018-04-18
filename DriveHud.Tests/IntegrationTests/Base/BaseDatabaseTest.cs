@@ -10,20 +10,23 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Common.Log;
 using DriveHUD.Application.Licensing;
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
+using DriveHUD.Importers.Builders.iPoker;
 using DriveHUD.Importers.Loggers;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.Unity;
 using Model;
+using Model.Enums;
 using Model.Interfaces;
 using Model.Reports;
+using Model.Solvers;
 using NSubstitute;
 using NUnit.Framework;
 using Prism.Events;
@@ -54,6 +57,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
         {
             InitializeImporterSessionCacheService(unityContainer);
             InitializeDataService(unityContainer);
+            InitializePlayerStatisticRepository(unityContainer);
             InitializeSessionFactoryService(unityContainer);
             InitializeHandHistoryParserFactory(unityContainer);
             InitializePlayerStatisticCalculator(unityContainer);
@@ -62,7 +66,9 @@ namespace DriveHud.Tests.IntegrationTests.Base
             InitializeSessionService(unityContainer);
             InitializeEventAggregator(unityContainer);
             InitializeOpponentReportService(unityContainer);
-            InitializeResources();            
+            InitializeEquityResolver(unityContainer);
+            InitializeReportStatusService(unityContainer);
+            InitializeResources();
         }
 
         protected virtual void InitializeDatabase()
@@ -130,10 +136,20 @@ namespace DriveHud.Tests.IntegrationTests.Base
         /// <returns>The result of importing</returns>
         protected virtual IEnumerable<ParsingResult> FillDatabaseFromSingleFile(string fileName, EnumPokerSites pokerSite)
         {
+            return FillDatabaseFromSingleFile(fileName, pokerSite, new BasicFileTestImporter());
+        }
+
+        /// <summary>        
+        /// Fills the database with the data from the specified hand history file
+        /// </summary>        
+        /// <param name="fileName">File with hh</param>
+        /// <param name="pokerSite">Site</param>
+        /// <param name="fileTestImporter">Importer</param>
+        /// <returns>The result of importing</returns>
+        protected virtual IEnumerable<ParsingResult> FillDatabaseFromSingleFile(string fileName, EnumPokerSites pokerSite, IFileTestImporter fileTestImporter)
+        {
             using (var perfScope = new PerformanceMonitor("FillDatabaseFromSingleFile"))
             {
-                var progress = Substitute.For<IDHProgress>();
-
                 var fileImporter = new TestFileImporter();
 
                 var handHistoryFileFullName = Path.Combine(TestDataFolder, fileName);
@@ -150,7 +166,7 @@ namespace DriveHud.Tests.IntegrationTests.Base
                     FileName = handHistoryFileInfo.FullName
                 };
 
-                return fileImporter.Import(handHistoryText, progress, gameInfo);
+                return fileTestImporter.Import(fileImporter, handHistoryText, gameInfo);
             }
         }
 
@@ -166,6 +182,12 @@ namespace DriveHud.Tests.IntegrationTests.Base
         {
             var dataService = Substitute.For<IDataService>();
             unityContainer.RegisterInstance(dataService);
+        }
+
+        protected virtual void InitializePlayerStatisticRepository(UnityContainer unityContainer)
+        {
+            var playerStatisticRepository = Substitute.For<IPlayerStatisticRepository>();
+            unityContainer.RegisterInstance(playerStatisticRepository);
         }
 
         protected virtual void InitializeSessionFactoryService(UnityContainer unityContainer)
@@ -219,9 +241,23 @@ namespace DriveHud.Tests.IntegrationTests.Base
             unityContainer.RegisterInstance(opponentReportService);
         }
 
+        protected virtual void InitializeReportStatusService(UnityContainer unityContainer)
+        {
+            var reportStatusService = Substitute.For<IReportStatusService>();
+            unityContainer.RegisterInstance(reportStatusService);
+        }
+
         protected virtual void InitializeResources()
         {
             ResourceRegistrator.Initialization();
+        }
+
+        protected virtual void InitializeEquityResolver(UnityContainer unityContainer)
+        {
+            unityContainer.RegisterType<IEquitySolver, EquitySolver>();
+            unityContainer.RegisterType<IPokerEvaluator, HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
+            unityContainer.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.Omaha.ToString());
+            unityContainer.RegisterType<IPokerEvaluator, OmahaHiLoEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
         }
 
         #endregion

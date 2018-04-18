@@ -20,11 +20,12 @@ namespace Model.Filters
 
         public FilterStandardModel(int playerCountMinAvailable = 2, int playerCountMinSelectedItem = 2, int playerCountMaxAvailable = 10, int playerCountMaxSelectedItem = 10)
         {
-            this.Name = "Standard Filters";
-            this.Type = EnumFilterModelType.FilterStandardModel;
+            Name = "Standard Filters";
 
-            this.PlayerCountMinAvailable = playerCountMinAvailable;
-            this.PlayerCountMaxAvailable = playerCountMaxAvailable;
+            Type = EnumFilterModelType.FilterStandardModel;
+
+            PlayerCountMinAvailable = playerCountMinAvailable;
+            PlayerCountMaxAvailable = playerCountMaxAvailable;
 
             FilterSectionPlayersBetweenCollectionInitialize();
         }
@@ -41,7 +42,9 @@ namespace Model.Filters
         #endregion
 
         #region Actions
+
         public static Action OnPlayersBetweenChanged;
+
         #endregion
 
         #region Methods
@@ -50,7 +53,7 @@ namespace Model.Filters
         {
             ////////////////////////////////
             // Initialize StatItemCollection
-            this.StatCollection = new ObservableCollection<StatItem>
+            StatCollection = new ObservableCollection<StatItem>
                 (
                     new List<StatItem>()
                     {
@@ -122,25 +125,27 @@ namespace Model.Filters
 
         public void PlayerCountListSet()
         {
-            if (this.PlayerCountMinAvailable == 0 || this.PlayerCountMaxAvailable == 0) return;
+            if (PlayerCountMinAvailable == 0 || PlayerCountMaxAvailable == 0)
+            {
+                return;
+            }
 
-            int minCount = (this.PlayerCountMaxSelectedItem ?? this.PlayerCountMaxAvailable) - 2;
-            this.PlayerCountMinList = (from v in Enumerable.Range(this.PlayerCountMinAvailable, minCount) select v).ToList();
-            this.PlayerCountMinSelectedItem = this._playerCountMinList.Contains(this.PlayerCountMinSelectedItem ?? -1) ? this.PlayerCountMinSelectedItem : this.PlayerCountMinList.ElementAt(0);
+            var minCount = (PlayerCountMaxSelectedItem ?? PlayerCountMaxAvailable) - 2;
 
-            int maxCount = this.PlayerCountMaxAvailable - (this.PlayerCountMinSelectedItem ?? this.PlayerCountMinAvailable);
-            this.PlayerCountMaxList = (from v in Enumerable.Range((this.PlayerCountMinSelectedItem ?? this.PlayerCountMinAvailable) + 1, maxCount) select v).ToList();
-            this.PlayerCountMaxSelectedItem = this._playerCountMaxList.Contains(this.PlayerCountMaxSelectedItem ?? -1) ? this.PlayerCountMaxSelectedItem : this.PlayerCountMaxList.ElementAt(0);
+            PlayerCountMinList = (from v in Enumerable.Range(PlayerCountMinAvailable, minCount) select v).ToList();
+            PlayerCountMinSelectedItem = _playerCountMinList.Contains(PlayerCountMinSelectedItem ?? -1) ? PlayerCountMinSelectedItem : PlayerCountMinList.ElementAt(0);
 
+            var maxCount = this.PlayerCountMaxAvailable - (PlayerCountMinSelectedItem ?? PlayerCountMinAvailable);
 
-            if (OnPlayersBetweenChanged != null) OnPlayersBetweenChanged.Invoke();
+            PlayerCountMaxList = (from v in Enumerable.Range((PlayerCountMinSelectedItem ?? PlayerCountMinAvailable) + 1, maxCount) select v).ToList();
+            PlayerCountMaxSelectedItem = _playerCountMaxList.Contains(PlayerCountMaxSelectedItem ?? -1) ? PlayerCountMaxSelectedItem : PlayerCountMaxList.ElementAt(0);
+
+            OnPlayersBetweenChanged?.Invoke();
         }
 
         public void FilterSectionTableRingCollectionInitialize()
         {
-            ////////////////////////////////
-            // Initialize TableRingCollections
-            this.Table6MaxCollection = new ObservableCollection<TableRingItem>()
+            Table6MaxCollection = new ObservableCollection<TableRingItem>()
             {
                 new TableRingItem() { IsChecked = true, Seat = 5, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.BTN, Name = "BTN" },
                 new TableRingItem() { IsChecked = true, Seat = 6, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.SB, Name = "SB" },
@@ -150,7 +155,7 @@ namespace Model.Filters
                 new TableRingItem() { IsChecked = true, Seat = 4, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.CO, Name = "CO" },
             };
 
-            this.TableFullRingCollection = new ObservableCollection<TableRingItem>()
+            TableFullRingCollection = new ObservableCollection<TableRingItem>()
             {
                 new TableRingItem() { IsChecked = true, Seat = 6, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.BTN, Name = "BTN" },
                 new TableRingItem() { IsChecked = true, Seat = 7, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.SB, Name = "SB" },
@@ -175,27 +180,55 @@ namespace Model.Filters
         public void UpdateFilterSectionStakeLevelCollection(IList<Gametypes> gameTypes)
         {
             bool isModified = false;
+
             List<StakeLevelItem> gameTypesList = new List<StakeLevelItem>();
+
             foreach (var gameType in gameTypes.Where(x => !x.Istourney))
             {
-                var limit = Limit.FromSmallBlindBigBlind(gameType.Smallblindincents / 100m, gameType.Bigblindincents / 100m, (Currency)gameType.CurrencytypeId);
-                var gtString = String.Format("{0}{1}{2}", limit.GetCurrencySymbol(), Math.Abs(limit.BigBlind), GameTypeUtils.GetShortName((GameType)gameType.PokergametypeId));
-                var stakeLevelItem = new StakeLevelItem() { Name = gtString, StakeLimit = limit, IsChecked = true, PokergametypeId = gameType.PokergametypeId };
+                var limit = Limit.FromSmallBlindBigBlind(gameType.Smallblindincents / 100m,
+                    gameType.Bigblindincents / 100m,
+                    (Currency)gameType.CurrencytypeId);
+
+                var isFastFold = ((TableTypeDescription)gameType.TableType & TableTypeDescription.FastFold) == TableTypeDescription.FastFold;
+
+                var gtString = String.Format("{0}{1}{2}{3}",
+                    limit.GetCurrencySymbol(),
+                    Math.Abs(limit.BigBlind),
+                    GameTypeUtils.GetShortName((GameType)gameType.PokergametypeId),
+                    isFastFold ? " Fast" : string.Empty);
+
+                var stakeLevelItem = new StakeLevelItem
+                {
+                    Name = gtString,
+                    StakeLimit = limit,
+                    IsChecked = true,
+                    PokergametypeId = gameType.PokergametypeId,
+                    TableType = gameType.TableType
+                };
+
                 gameTypesList.Add(stakeLevelItem);
+
                 if (!StakeLevelCollection.Any(x => x.Name == gtString))
                 {
                     StakeLevelCollection.Add(stakeLevelItem);
+
                     if (!isModified)
+                    {
                         isModified = true;
+                    }
                 }
             }
 
             var removeList = StakeLevelCollection.Where(x => !gameTypesList.Any(g => x.Name == g.Name)).ToList();
+
             foreach (var limit in removeList)
             {
                 StakeLevelCollection.Remove(limit);
+
                 if (!isModified)
+                {
                     isModified = true;
+                }
             }
 
             if (isModified)
@@ -207,6 +240,7 @@ namespace Model.Filters
         public override object Clone()
         {
             FilterStandardModel model = this.DeepCloneJson();
+
             model.PlayerCountMaxSelectedItem = PlayerCountMaxSelectedItem;
             model.PlayerCountMinSelectedItem = PlayerCountMinSelectedItem;
 
@@ -382,10 +416,12 @@ namespace Model.Filters
         {
             var predicate = PredicateBuilder.True<Playerstatistic>();
             var uncheckedStakes = StakeLevelCollection.Where(x => !x.IsChecked);
+
             foreach (var state in uncheckedStakes)
             {
                 predicate = predicate.And(x => !(x.BigBlind == state.StakeLimit.BigBlind
                                             && x.CurrencyId == (short)state.StakeLimit.Currency
+                                            && (x.TableTypeDescription & state.TableType) == x.TableTypeDescription
                                             && x.PokergametypeId == state.PokergametypeId));
             }
 
@@ -505,7 +541,7 @@ namespace Model.Filters
             {
                 if (value == _type) return;
                 _type = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -516,7 +552,7 @@ namespace Model.Filters
             {
                 if (value == _description) return;
                 _description = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -527,7 +563,7 @@ namespace Model.Filters
             {
                 if (value == _playerCountMinAvailable) return;
                 _playerCountMinAvailable = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -538,7 +574,7 @@ namespace Model.Filters
             {
                 if (value != null && _playerCountMinList != null && value.SequenceEqual(_playerCountMinList)) return;
                 _playerCountMinList = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 PlayerCountListSet();
             }
@@ -551,7 +587,7 @@ namespace Model.Filters
             {
                 if (value == _playerCountMinSelectedItem) return;
                 _playerCountMinSelectedItem = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 PlayerCountListSet();
             }
@@ -564,7 +600,7 @@ namespace Model.Filters
             {
                 if (value == _playerCountMaxAvailable) return;
                 _playerCountMaxAvailable = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -575,7 +611,7 @@ namespace Model.Filters
             {
                 if (value != null && _playerCountMaxList != null && value.SequenceEqual(_playerCountMaxList)) return;
                 _playerCountMaxList = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 PlayerCountListSet();
             }
@@ -588,7 +624,7 @@ namespace Model.Filters
             {
                 if (value == _playerCountMaxSelectedItem) return;
                 _playerCountMaxSelectedItem = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 PlayerCountListSet();
             }
@@ -601,7 +637,7 @@ namespace Model.Filters
             {
                 if (value == _preFlopActionCollection) return;
                 _preFlopActionCollection = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -612,7 +648,7 @@ namespace Model.Filters
             {
                 if (value == _stakeLevelCollection) return;
                 _stakeLevelCollection = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -623,7 +659,7 @@ namespace Model.Filters
             {
                 if (value == _currencyCollection) return;
                 _currencyCollection = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -634,7 +670,7 @@ namespace Model.Filters
             {
                 if (value == _statCollection) return;
                 _statCollection = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -645,7 +681,7 @@ namespace Model.Filters
             {
                 if (value == _table6maxCollection) return;
                 _table6maxCollection = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -656,7 +692,7 @@ namespace Model.Filters
             {
                 if (value == _tableFullRingCollection) return;
                 _tableFullRingCollection = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -677,7 +713,7 @@ namespace Model.Filters
             {
                 if (value == _itemType) return;
                 _itemType = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -699,31 +735,32 @@ namespace Model.Filters
     public class StakeLevelItem : FilterBaseEntity
     {
         public static Action OnIsChecked;
-        private bool _isChecked;
-        private Limit _stakeLimit;
-        private short _pokergametypeId;
+        private bool isChecked;
+        private Limit stakeLimit;
+        private short pokergametypeId;
 
         public Limit StakeLimit
         {
-            get { return _stakeLimit; }
+            get
+            {
+                return stakeLimit;
+            }
             set
             {
-                if (value == _stakeLimit) return;
-                _stakeLimit = value;
-                OnPropertyChanged();
+                SetProperty(ref stakeLimit, value);
             }
         }
 
         public bool IsChecked
         {
-            get { return _isChecked; }
+            get
+            {
+                return isChecked;
+            }
             set
             {
-                if (value == _isChecked) return;
-                _isChecked = value;
-                OnPropertyChanged();
-
-                if (OnIsChecked != null) OnIsChecked.Invoke();
+                SetProperty(ref isChecked, value);
+                OnIsChecked?.Invoke();
             }
         }
 
@@ -731,12 +768,26 @@ namespace Model.Filters
         {
             get
             {
-                return _pokergametypeId;
+                return pokergametypeId;
             }
 
             set
             {
-                _pokergametypeId = value;
+                SetProperty(ref pokergametypeId, value);
+            }
+        }
+
+        private uint tableType;
+
+        public uint TableType
+        {
+            get
+            {
+                return tableType;
+            }
+            set
+            {
+                SetProperty(ref tableType, value);
             }
         }
     }
@@ -762,7 +813,7 @@ namespace Model.Filters
             {
                 if (value == _isChecked) return;
                 _isChecked = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 if (OnIsChecked != null) OnIsChecked.Invoke();
             }
@@ -785,7 +836,7 @@ namespace Model.Filters
             {
                 if (value == _isChecked) return;
                 _isChecked = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 if (OnIsChecked != null) OnIsChecked.Invoke();
             }
@@ -846,7 +897,7 @@ namespace Model.Filters
             {
                 if (value == _value) return;
                 _value = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -857,7 +908,7 @@ namespace Model.Filters
             {
                 if (value == _isChecked) return;
                 _isChecked = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 if (OnIsChecked != null) OnIsChecked.Invoke();
             }
@@ -875,7 +926,7 @@ namespace Model.Filters
         {
         }
 
-        private string _propertyName;        
+        private string _propertyName;
 
         public string PropertyName
         {
@@ -898,7 +949,7 @@ namespace Model.Filters
 
                 currentTriState = value;
 
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 if (OnTriState != null)
                 {
@@ -906,5 +957,5 @@ namespace Model.Filters
                 }
             }
         }
-    }   
+    }
 }

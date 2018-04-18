@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.HUD.Service;
 using System;
 using System.Threading.Tasks;
 
@@ -21,5 +20,7 @@ namespace DriveHUD.Application.HudServices
         Task InitializeAsync();
 
         void Send(byte[] data);
+
+        void CloseTable(int handle);
     }
 }

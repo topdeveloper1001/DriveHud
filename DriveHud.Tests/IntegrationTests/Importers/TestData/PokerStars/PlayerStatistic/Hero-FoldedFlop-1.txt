@@ -1,0 +1,43 @@
+PokerStars Game #47185321779:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:39:42 ET
+Table 'Neckar VII' 6-max Seat #2 is the button
+Seat 1: Marker275 ($171 in chips) 
+Seat 2: Hero ($315.45 in chips) 
+Seat 3: Fierytycoon ($253 in chips) 
+Seat 4: jaeh00d ($200 in chips) 
+Seat 5: imthesky ($200 in chips) 
+Seat 6: Cubsfan28 ($148.30 in chips) 
+Fierytycoon: posts small blind $1
+jaeh00d: posts big blind $2
+*** HOLE CARDS ***
+imthesky: raises $6 to $8
+Cubsfan28: calls $8
+Marker275: calls $8
+Hero: calls $8
+Fierytycoon: folds 
+jaeh00d: folds 
+*** FLOP *** [Tc 7d 6c]
+imthesky: checks 
+Cubsfan28: bets $18
+Marker275: calls $18
+Hero: folds 
+imthesky: folds 
+*** TURN *** [Tc 7d 6c] [2h]
+Cubsfan28: bets $58
+Marker275: raises $87 to $145 and is all-in
+Cubsfan28: calls $64.30 and is all-in
+Uncalled bet ($22.70) returned to Marker275
+*** RIVER *** [Tc 7d 6c 2h] [3d]
+*** SHOW DOWN ***
+Cubsfan28: shows [6d 6s] (three of a kind, Sixes)
+Marker275: shows [Kd Th] (a pair of Tens)
+Cubsfan28 collected $312.60 from pot
+*** SUMMARY ***
+Total pot $315.60 | Rake $3 
+Board [Tc 7d 6c 2h 3d]
+Seat 1: Marker275 showed [Kd Th] and lost with a pair of Tens
+Seat 2: Hero (button) folded on the Flop
+Seat 3: Fierytycoon (small blind) folded before Flop
+Seat 4: jaeh00d (big blind) folded before Flop
+Seat 5: imthesky folded on the Flop
+Seat 6: Cubsfan28 showed [6d 6s] and won ($312.60) with three of a kind, Sixes
+

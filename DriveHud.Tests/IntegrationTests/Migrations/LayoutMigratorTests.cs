@@ -16,6 +16,7 @@ using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Extensions;
 using DriveHUD.Entities;
 using Model.Enums;
+using Model.Hud;
 using Model.Stats;
 using NUnit.Framework;
 using System;

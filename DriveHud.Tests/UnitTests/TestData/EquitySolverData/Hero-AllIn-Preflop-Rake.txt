@@ -1,0 +1,36 @@
+﻿PokerStars Game #47149038684:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 6:30:39 ET
+Table 'Siri III' 6-max Seat #3 is the button
+Seat 1: Hero ($254.10 in chips) 
+Seat 2: iLeftFTP ($692.80 in chips) 
+Seat 3: darasxxx ($89.60 in chips) 
+Seat 4: tristyle ($469.10 in chips) 
+Seat 5: Chojjasd ($200 in chips) 
+Seat 6: Desateur ($200 in chips) 
+tristyle: posts small blind $1
+Chojjasd: posts big blind $2
+*** HOLE CARDS ***
+Desateur: folds 
+Hero: raises $4 to $6
+iLeftFTP: folds 
+darasxxx: raises $18 to $24
+tristyle: folds 
+Chojjasd: folds 
+Hero: raises $230.10 to $254.10 and is all-in
+darasxxx: calls $65.60 and is all-in
+Uncalled bet ($164.50) returned to Hero
+*** FLOP *** [9s 2h 7d]
+*** TURN *** [9s 2h 7d] [9h]
+*** RIVER *** [9s 2h 7d 9h] [5s]
+*** SHOW DOWN ***
+Hero: shows [Kd As] (a pair of Nines)
+darasxxx: shows [Td Th] (two pair, Tens and Nines)
+darasxxx collected $179.20 from pot
+*** SUMMARY ***
+Total pot $182.20 | Rake $3 
+Board [9s 2h 7d 9h 5s]
+Seat 1: Hero showed [Kd As] and lost with a pair of Nines
+Seat 2: iLeftFTP folded before Flop (didn't bet)
+Seat 3: darasxxx (button) showed [Td Th] and won ($179.20) with two pair, Tens and Nines
+Seat 4: tristyle (small blind) folded before Flop
+Seat 5: Chojjasd (big blind) folded before Flop
+Seat 6: Desateur folded before Flop (didn't bet)

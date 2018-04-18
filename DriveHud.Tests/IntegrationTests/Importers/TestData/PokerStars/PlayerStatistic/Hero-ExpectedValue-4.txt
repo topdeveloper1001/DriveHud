@@ -1,0 +1,30 @@
+PokerStars Game #100000001:  Hold'em No Limit ($100/$200 USD) - 2018/03/23 13:00:00 ET
+Table 'Test' 6-max Seat #6 is the button
+Seat 1: P1_928114KV ($1370 in chips) 
+Seat 4: Hero ($6320 in chips) 
+Seat 5: P6_391468UT ($15 in chips) 
+Seat 6: P2_875424AY ($1295 in chips) 
+P6_391468UT: posts small blind $15 and is all-in
+P2_875424AY: posts big blind $200
+*** HOLE CARDS ***
+P1_928114KV: folds
+Hero: raises $400 to $600
+P2_875424AY: calls $400
+*** FLOP *** [2s 7c 7s]
+Hero: bets $200
+P2_875424AY: folds
+Uncalled bet ($200) returned to Hero
+*** TURN *** [2s 7c 7s] [Kh]
+*** RIVER *** [2s 7c 7s Kh] [Qs]
+*** SHOW DOWN ***
+P6_391468UT: shows [As Kc] (two pair, Kings and Sevens)
+Hero: shows [Qd Jd] (two pair, Queens and Sevens)
+P6_391468UT collected $45 from main pot
+Hero collected $1170 from side pot
+*** SUMMARY ***
+Total pot $1215 Main pot $45. Side pot $1170. | Rake $0 
+Board [2s 7c 7s Kh Qs]
+Seat 1: P1_928114KV folded before Flop (didn't bet)
+Seat 4: Hero (button) showed [Qd Jd] and won ($1170) with two pair, Queens and Sevens
+Seat 5: P6_391468UT (small blind) showed [As Ac] and won ($45) with two pair, Aces and Sevens
+Seat 6: P2_875424AY folded

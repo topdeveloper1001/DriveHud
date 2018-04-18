@@ -112,13 +112,11 @@ namespace DriveHUD.Application.Views
 
                 ViewModel.UpdatePanelOffset(toolViewModel);
 
-                var hudTrackConditionsViewModel = panel.DataContext as HudTrackConditionsViewModel;
-
-                if (hudTrackConditionsViewModel != null)
+                if (panel.DataContext is HudTrackConditionsViewModel hudTrackConditionsViewModel)
                 {
                     trackerConditionsMeterPositionOffset = new Point(hudTrackConditionsViewModel.OffsetX, hudTrackConditionsViewModel.OffsetY);
                 }
-
+               
                 dgCanvas.Children.Remove(panel);
             }
 
@@ -222,10 +220,11 @@ namespace DriveHUD.Application.Views
                 return;
             }
 
-            var trackConditionViewModel = new HudTrackConditionsViewModel(trackConditionViewModelInfo);
-
-            trackConditionViewModel.OffsetX = trackerConditionsMeterPositionOffset.X;
-            trackConditionViewModel.OffsetY = trackerConditionsMeterPositionOffset.Y;
+            var trackConditionViewModel = new HudTrackConditionsViewModel(trackConditionViewModelInfo)
+            {
+                OffsetX = trackerConditionsMeterPositionOffset.X,
+                OffsetY = trackerConditionsMeterPositionOffset.Y
+            };
 
             var trackConditionView = new TrackConditionsMeterView
             {

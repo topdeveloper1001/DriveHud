@@ -12,34 +12,47 @@
 
 using DriveHUD.Entities;
 using System;
+using System.Runtime.Serialization;
 
 namespace Model.Settings
 {
-    [Serializable]
+    [DataContract]
     public class GeneralSettingsModel : SettingsBase
     {
+        [DataMember]
         public bool IsAutomaticallyDownloadUpdates { get; set; }
 
+        [DataMember]
         public bool IsApplyFiltersToTournamentsAndCashGames { get; set; }
 
+        [DataMember]
         public bool IsSaveFiltersOnExit { get; set; }
 
+        [DataMember]
         public bool IsAdvancedLoggingEnabled { get; set; }
 
+        [DataMember]
         public bool IsSQLiteEnabled { get; set; }
 
+        [DataMember]
         public int TimeZoneOffset { get; set; }
 
+        [DataMember]
         public DayOfWeek StartDayOfWeek { get; set; }
 
+        [DataMember]
         public int HudViewMode { get; set; }
 
+        [DataMember]
         public bool IsHudSavedAtFirstTime { get; set; }
 
+        [DataMember]
         public bool RunSiteDetection { get; set; }
 
+        [DataMember]
         public bool IsAPIEnabled { get; set; }
 
+        [DataMember]
         public bool IsOpponentReportCacheSaved { get; set; }
 
         public GeneralSettingsModel()

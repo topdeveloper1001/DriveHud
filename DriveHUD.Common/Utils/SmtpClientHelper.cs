@@ -108,6 +108,7 @@ namespace DriveHUD.Common.Utils
                     logs.AddRange(Directory.GetFiles(logsFolder, "drivehud*log*"));
                     logs.AddRange(Directory.GetFiles(logsFolder, "playerxray*log*"));
                     logs.AddRange(Directory.GetFiles(logsFolder, "hud*log*"));
+                    logs.AddRange(Directory.GetFiles(logsFolder, "pmcatcher*log*"));
                 }
             }
 
@@ -115,6 +116,13 @@ namespace DriveHUD.Common.Utils
             {
                 logs.Add(Path.Combine(dataFolder, "Settings.xml"));
                 logs.Add(Path.Combine(dataFolder, "CurrentPlayer.txt"));
+
+                var pmSettings = Path.Combine(dataFolder, "PMSettings.xml");
+
+                if (File.Exists(pmSettings))
+                {
+                    logs.Add(pmSettings);
+                }
             }
 
             logs = logs.Where(x => File.Exists(x)).ToList();

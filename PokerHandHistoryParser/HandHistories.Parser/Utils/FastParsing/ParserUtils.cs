@@ -12,9 +12,12 @@
 
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Log;
+using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -220,6 +223,99 @@ namespace HandHistories.Parser.Utils.FastParsing
             }
 
             return string.Empty;
+        }
+
+        /// <summary>
+        /// Adds uncalled bets to the hand history and adjust winnings
+        /// </summary>
+        /// <param name="handHistory">Hand history to update</param>
+        /// <param name="winsIncludeUncalledBet">Determines whenvers winnings include uncalled bet</param>
+        public static void CalculateUncalledBets(HandHistory handHistory, bool winsIncludeUncalledBet)
+        {
+            if (handHistory == null || handHistory.HandActions.Count == 0)
+            {
+                return;
+            }
+
+            var playersPutInPot = new Dictionary<string, decimal>();
+
+            foreach (var action in handHistory.HandActions
+                .Where(x => x.IsGameAction && x.Street != Street.Showdown && x.Street != Street.Summary))
+            {
+                if (!playersPutInPot.ContainsKey(action.PlayerName))
+                {
+                    playersPutInPot.Add(action.PlayerName, 0);
+                }
+
+                playersPutInPot[action.PlayerName] += Math.Abs(action.Amount);
+            }
+
+            var playerPutMaxInPot = new KeyValuePair<string, decimal>();
+            var playerPutSecondMaxInPot = new KeyValuePair<string, decimal>();
+
+            foreach (KeyValuePair<string, decimal> playerPutInPot in playersPutInPot)
+            {
+                if (playerPutInPot.Value > playerPutMaxInPot.Value)
+                {
+                    playerPutSecondMaxInPot = playerPutMaxInPot;
+                    playerPutMaxInPot = playerPutInPot;
+                }
+                else
+                {
+                    if (playerPutInPot.Value > playerPutSecondMaxInPot.Value)
+                    {
+                        playerPutSecondMaxInPot = playerPutInPot;
+                    }
+                }
+            }
+
+            var diffBetweenPots = playerPutMaxInPot.Value - playerPutSecondMaxInPot.Value;
+
+            if (diffBetweenPots <= 0)
+            {
+                return;
+            }
+
+            var totalWinnings = handHistory.WinningActions.Sum(x => x.Amount);
+            var totalPot = playersPutInPot.Sum(x => x.Value) - diffBetweenPots;
+
+            // we don't know if winning commands includes uncalled bet or not, but if winning are greater than all players put into the pot 
+            // then we know what uncalled bet is in winnings
+            if (totalWinnings > totalPot || winsIncludeUncalledBet)
+            {
+                var winAction = handHistory.HandActions
+                    .FirstOrDefault(x => x.HandActionType == HandActionType.WINS && x.PlayerName == playerPutMaxInPot.Key);
+
+                if (winAction != null)
+                {
+                    winAction.Amount -= diffBetweenPots;
+
+                    if (handHistory.Players[playerPutMaxInPot.Key].Win > 0)
+                    {
+                        handHistory.Players[playerPutMaxInPot.Key].Win -= diffBetweenPots;
+                    }
+                }
+            }
+
+            var lastRaiseAction = handHistory.HandActions.LastOrDefault(x => x.PlayerName == playerPutMaxInPot.Key && x.IsGameAction);
+
+            if (lastRaiseAction == null)
+            {
+                throw new InvalidOperationException("Last raise has not been found.");
+            }
+
+            // folded players can't get uncalled bet
+            if (lastRaiseAction.IsFold)
+            {
+                return;
+            }
+
+            var uncalledBet = new HandAction(playerPutMaxInPot.Key, HandActionType.UNCALLED_BET, diffBetweenPots, lastRaiseAction.Street);
+
+            var lastStreeAction = handHistory.HandActions.Street(lastRaiseAction.Street).LastOrDefault();
+            var indexOfLastStreetAction = handHistory.HandActions.IndexOf(lastStreeAction);
+
+            handHistory.HandActions.Insert(indexOfLastStreetAction + 1, uncalledBet);
         }
     }
 }

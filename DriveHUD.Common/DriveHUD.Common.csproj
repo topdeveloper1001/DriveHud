@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DriveHUD.Common</RootNamespace>
     <AssemblyName>DriveHUD.Common</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,17 +42,25 @@
     </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework" />
+    <Reference Include="protobuf-net, Version=2.3.7.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.3.7\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,11 +74,14 @@
     <Compile Include="Check.cs" />
     <Compile Include="Exceptions\DHBusinessException.cs" />
     <Compile Include="Exceptions\DHInternalException.cs" />
+    <Compile Include="Exceptions\DHLicenseNotSupportedException.cs" />
     <Compile Include="Exceptions\ErrorPurpose.cs" />
     <Compile Include="Exceptions\IDetailedException.cs" />
     <Compile Include="Exceptions\IOwnLogPoliticsException.cs" />
     <Compile Include="Exceptions\ITypeSpecifiedException.cs" />
     <Compile Include="Exceptions\LocalizableException.cs" />
+    <Compile Include="Exceptions\ProcessExtensions.cs" />
+    <Compile Include="Extensions\ConcurrentCollectionExtensions.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\ReaderWriterLockSlimExtensions.cs" />
     <Compile Include="Extensions\SerializationHelper.cs" />
@@ -112,6 +124,9 @@
     <Compile Include="Utils\FileHelper.cs" />
     <Compile Include="Utils\FixedSizeList.cs" />
     <Compile Include="Utils\IniFileHelpers.cs" />
+    <Compile Include="Utils\Network\LocalConnection.cs" />
+    <Compile Include="Utils\Network\MibTcpExtenstions.cs" />
+    <Compile Include="Utils\Network\NetworkUtils.cs" />
     <Compile Include="Utils\ObjectCopier.cs" />
     <Compile Include="Utils\PredicateBuilder.cs" />
     <Compile Include="Utils\RandomProvider.cs" />
@@ -125,6 +140,17 @@
     <Compile Include="WinApi\AllocationType.cs" />
     <Compile Include="WinApi\GetWindowType.cs" />
     <Compile Include="WinApi\MemoryProtection.cs" />
+    <Compile Include="WinApi\Network\TCP\MibTcp6RowOwnerPid.cs" />
+    <Compile Include="WinApi\Network\TCP\MibTcp6TableOwnerPid.cs" />
+    <Compile Include="WinApi\Network\TCP\MibTcpRowOwnerPid.cs" />
+    <Compile Include="WinApi\Network\TCP\MibTcpState.cs" />
+    <Compile Include="WinApi\Network\TCP\MibTcpTableOwnerPid.cs" />
+    <Compile Include="WinApi\Network\TCP\TcpTableClass.cs" />
+    <Compile Include="WinApi\Network\UDP\MibUdp6RowOwnerPid.cs" />
+    <Compile Include="WinApi\Network\UDP\MibUdp6TableOwnerPid.cs" />
+    <Compile Include="WinApi\Network\UDP\MibUdpRowOwnerPid.cs" />
+    <Compile Include="WinApi\Network\UDP\MibUdpTableOwnerPid.cs" />
+    <Compile Include="WinApi\Network\UDP\UdpTableClass.cs" />
     <Compile Include="WinApi\PipeMode.cs" />
     <Compile Include="WinApi\PipeNative.cs" />
     <Compile Include="WinApi\PipeOpenMode.cs" />
@@ -140,11 +166,10 @@
     <Compile Include="WinApi\WinTrust.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Certificates\lic-assemb-sign.pfx" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Certificates\lic-assemb-sign.pfx" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

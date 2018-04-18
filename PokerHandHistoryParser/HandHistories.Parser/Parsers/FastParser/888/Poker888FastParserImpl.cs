@@ -58,6 +58,14 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             get { return true; }
         }
 
+        public override bool RequiresUncalledBetCalculations
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
         {
             NegativeSign = "-",
@@ -417,7 +425,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 throw new HandActionException(handLine, "Unknown hand line.");
             }
 
-            return FixUncalledBets(handActions, null, null);
+            return handActions;
         }
 
         private static decimal ParseAmount(string amountString)
@@ -584,97 +592,6 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             return null;
         }
 
-        private List<HandAction> FixUncalledBets(List<HandAction> handActions, decimal? totalPot, decimal? rake)
-        {
-            // Pacific does not correctly return uncalled bets, sometimes declaring them as winnings
-            // as we calculate the rake manually, we need to make sure uncalled bets are declared correctly
-
-            // this fix only takes place when the TotalPot - Rake != Winnings
-            if (totalPot != null && rake != null)
-            {
-                if (totalPot - rake == handActions.Where(a => a.IsWinningsAction).Sum(a => a.Amount))
-                    return handActions;
-            }
-
-            if (handActions.Sum(a => a.Amount) == 0m)
-                return handActions;
-
-
-            var playerActions = handActions.Where(a => !a.IsWinningsAction
-                                                  && !a.HandActionType.Equals(HandActionType.SHOW)
-                                                  && !a.HandActionType.Equals(HandActionType.MUCKS))
-                                         .GroupBy(p => p.PlayerName)
-                                         .Select(s => s.Select(a => a).ToList());
-
-            HandAction handActionToAdd = null;
-            foreach (var actions in playerActions)
-            {
-                var lastAction = actions[actions.Count - 1];
-
-                if (lastAction.HandActionType == HandActionType.BET || lastAction.HandActionType == HandActionType.RAISE)
-                {
-                    var totalInvestedAmount = handActions.Where(a => a.PlayerName.Equals(lastAction.PlayerName) && !a.IsWinningsAction).Sum(a => a.Amount);
-
-                    var deadMoneyAction = handActions.FirstOrDefault(a => a.PlayerName.Equals(lastAction.PlayerName) && a.HandActionType.Equals(HandActionType.POSTS));
-
-                    if (deadMoneyAction != null && deadMoneyAction.Amount < handActions.First(a => a.HandActionType.Equals(HandActionType.BIG_BLIND)).Amount)
-                    {
-                        totalInvestedAmount -= handActions.First(a => a.HandActionType.Equals(HandActionType.SMALL_BLIND)).Amount;
-                    }
-
-
-                    var totalInvestedAmountsByOtherPlayers = handActions.Where(a => a.PlayerName != lastAction.PlayerName && !a.IsWinningsAction)
-                                                                        .GroupBy(a => a.PlayerName)
-                                                                        .Select(p => new
-                                                                        {
-                                                                            PlayerName = p.Key,
-                                                                            Invested = p.Sum(x => x.Amount)
-                                                                        });
-
-                    var totalInvestedAmountOtherPlayer = 0.0m;
-                    foreach (var investedByPlayer in totalInvestedAmountsByOtherPlayers)
-                    {
-                        var invested = investedByPlayer.Invested;
-                        deadMoneyAction = handActions.FirstOrDefault(a => a.PlayerName.Equals(investedByPlayer.PlayerName) && a.HandActionType.Equals(HandActionType.POSTS));
-
-                        if (deadMoneyAction != null && deadMoneyAction.Amount < handActions.First(a => a.HandActionType.Equals(HandActionType.BIG_BLIND)).Amount)
-                        {
-                            invested -= handActions.First(a => a.HandActionType.Equals(HandActionType.SMALL_BLIND)).Amount;
-                        }
-
-                        if (invested < totalInvestedAmountOtherPlayer)
-                        {
-                            totalInvestedAmountOtherPlayer = invested;
-                        }
-                    }
-
-
-                    if (totalInvestedAmountOtherPlayer > totalInvestedAmount)
-                    {
-                        var uncalledBet = Math.Abs(totalInvestedAmount - totalInvestedAmountOtherPlayer);
-
-                        // only add this if we don't have a similar WIN line
-                        var winAction = handActions.FirstOrDefault(h => h.PlayerName == lastAction.PlayerName
-                                                                     && h.HandActionType == HandActionType.WINS
-                                                                     && h.Amount == uncalledBet);
-
-                        if (winAction != null && handActions.Count(h => h.IsWinningsAction) > 1)
-                        {
-                            handActions.Remove(winAction);
-                        }
-
-                        handActionToAdd = (new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, uncalledBet, Street.Showdown));
-                    }
-                }
-            }
-
-            // only add the uncalled bet if we had a caller
-            if (handActionToAdd != null)
-                handActions.Add(handActionToAdd);
-
-            return handActions;
-        }
-
         protected override TournamentDescriptor ParseTournament(string[] handLines)
         {
             var line = handLines[3];
@@ -839,6 +756,11 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             var indexOfColon = line.IndexOf(":");
             var parsedText = line.Substring(indexOfColon + 1).Trim();
             return parsedText;
+        }
+
+        protected override void CalculateUncalledBets(string[] handLines, HandHistory handHistory)
+        {
+            ParserUtils.CalculateUncalledBets(handHistory, false);
         }
     }
 }

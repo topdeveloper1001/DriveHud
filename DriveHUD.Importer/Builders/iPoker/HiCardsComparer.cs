@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DriveHUD.Importers.Builders.iPoker
 {
-    internal class HiCardsComparer : IComparer<string>
+    internal class HiCardsComparer : ICardsComparer
     {
         public int Compare(string cards1, string cards2)
         {
@@ -26,6 +25,7 @@ namespace DriveHUD.Importers.Builders.iPoker
                 case HandCombo.Quads:
                 case HandCombo.FullHouse:
                 case HandCombo.Set:
+                case HandCombo.TwoPair:
                     return CompareByHistogram(hand1, hand2);
                 case HandCombo.Flush:
                 case HandCombo.HighCard:
@@ -35,20 +35,39 @@ namespace DriveHUD.Importers.Builders.iPoker
                 case HandCombo.Straight:
                 case HandCombo.StraightFlush:
                     return CompareStraight(hand1, hand2);
-                case HandCombo.TwoPair:
-                    return CompareTwoPair(hand1, hand2);
             }
 
             throw new Exception("Unexpected result of hand comparison.");
         }
 
+        public bool IsValid(string cards)
+        {
+            return true;
+        }
+
         protected int CompareByHistogram(Hand hand1, Hand hand2)
         {
-            var rank1 = hand1.CardsHistogram.Keys.First();
-            var rank2 = hand2.CardsHistogram.Keys.First();
+            var ranks1 = hand1.CardsHistogram.OrderByDescending(x => x.Value).ThenByDescending(x => x.Key).Select(x => x.Key).ToArray();
+            var ranks2 = hand2.CardsHistogram.OrderByDescending(x => x.Value).ThenByDescending(x => x.Key).Select(x => x.Key).ToArray();
 
-            // we don't need to comparer kickers because it's impossible to have 2 hands with similiar quads          
-            return rank1.CompareTo(rank2);
+            if (ranks1.Length != ranks2.Length)
+            {
+                throw new InvalidOperationException("Histograms are expected to have same length.");
+            }
+
+            int result = 0;
+
+            for (var i = 0; i < ranks1.Length; i++)
+            {
+                result = ranks1[i].CompareTo(ranks2[i]);
+
+                if (result != 0)
+                {
+                    return result;
+                }
+            }
+
+            return result;
         }
 
         protected int CompareByRank(Hand hand1, Hand hand2)
@@ -76,8 +95,8 @@ namespace DriveHUD.Importers.Builders.iPoker
 
         protected int CompareOnePair(Hand hand1, Hand hand2)
         {
-            var ranks1 = hand1.CardsHistogram.Select(x => x.Key).ToArray();
-            var ranks2 = hand2.CardsHistogram.Select(x => x.Key).ToArray();
+            var ranks1 = hand1.CardsHistogram.OrderByDescending(x => x.Value).Select(x => x.Key).ToArray();
+            var ranks2 = hand2.CardsHistogram.OrderByDescending(x => x.Value).Select(x => x.Key).ToArray();
 
             var pairCompareResult = ranks1[0].CompareTo(ranks2[0]);
 
@@ -108,27 +127,6 @@ namespace DriveHUD.Importers.Builders.iPoker
             var highestCard2 = hand2.Cards.Select(x => x.Rank).Max();
 
             return highestCard1.CompareTo(highestCard2);
-        }
-
-        protected int CompareTwoPair(Hand hand1, Hand hand2)
-        {
-            var ranks1 = hand1.CardsHistogram.Select(x => x.Key).ToArray();
-            var ranks2 = hand2.CardsHistogram.Select(x => x.Key).ToArray();
-
-            var pairs1 = ranks1.Take(2).OrderByDescending(x => x).ToArray();
-            var pairs2 = ranks2.Take(2).OrderByDescending(x => x).ToArray();
-
-            for (var i = 0; i < pairs1.Length; i++)
-            {
-                var compareResult = pairs1[i].CompareTo(pairs2[i]);
-
-                if (compareResult != 0)
-                {
-                    return compareResult;
-                }
-            }
-
-            return ranks1.Last().CompareTo(ranks2.Last());
         }
     }
 }

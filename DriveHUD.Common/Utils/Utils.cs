@@ -273,6 +273,6 @@ namespace DriveHUD.Common.Utils
             Array.Copy(data, cleanData, i + 1);
 
             return cleanData;
-        }
+        }       
     }
 }

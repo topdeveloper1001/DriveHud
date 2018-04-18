@@ -14,60 +14,68 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model.Data;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Model.Reports
 {
-    public class SessionsReportCreator : CashBaseReportCreator
+    public class SessionsReportCreator : CashBaseReportCreator<SessionReportIndicators>
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
-        {
-            var report = new ObservableCollection<ReportIndicators>();
+        private static TimeSpan sessionInterval = TimeSpan.FromMinutes(30);
 
-            if (statistics == null)
+        protected override List<SessionReportIndicators> CombineChunkedIndicators(BlockingCollection<SessionReportIndicators> chunkedIndicators)
+        {
+            var reports = new List<SessionReportIndicators>();
+
+            SessionReportIndicators report = null;
+
+            foreach (var chunkedIndicator in chunkedIndicators.OrderByDescending(x => x.SessionEnd))
             {
-                return report;
+                if (report != null && chunkedIndicator.SessionEnd.HasValue &&
+                    Utils.IsDateInDateRange(chunkedIndicator.SessionEnd.Value, report.SessionStart, report.SessionEnd, sessionInterval))
+                {
+                    report.AddIndicator(chunkedIndicator);
+
+                    continue;
+                }
+
+                report = chunkedIndicator;
+                reports.Add(report);
             }
 
-            var stat = new ReportIndicators();
-            var gametypes = new List<string>();
+            return reports;
+        }
+
+        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<SessionReportIndicators> chunkedIndicators)
+        {
+            SessionReportIndicators report = null;
 
             foreach (var playerstatistic in statistics.OrderByDescending(x => x.Time).ToArray())
             {
-                if (stat.Statistics == null || stat.StatisticsCount == 0)
+                if (report != null &&
+                    Utils.IsDateInDateRange(playerstatistic.Time, report.SessionStart, report.SessionEnd, sessionInterval))
                 {
-                    gametypes.Add(playerstatistic.GameType);
-                    stat.AddStatistic(playerstatistic);
-                }
-                else if (Utils.IsDateInDateRange(playerstatistic.Time, stat.SessionStart, stat.SessionEnd, TimeSpan.FromMinutes(30)))
-                {
-                    if (!gametypes.Contains(playerstatistic.GameType))
+                    if (!report.GameTypes.Contains(playerstatistic.GameType))
                     {
-                        gametypes.Add(playerstatistic.GameType);
+                        report.GameTypes.Add(playerstatistic.GameType);
                     }
 
-                    stat.AddStatistic(playerstatistic);
+                    report.AddStatistic(playerstatistic);
+                    continue;
                 }
-                else
-                {
-                    stat.GameType = string.Join(",", gametypes);
-                    report.Add(stat);
-                    stat = new ReportIndicators();
-                    gametypes.Clear();
-                    stat.AddStatistic(playerstatistic);
-                    gametypes.Add(playerstatistic.GameType);
-                }
-            }
 
-            if (stat.Statistics != null && stat.StatisticsCount > 0)
-            {
-                stat.GameType = string.Join(",", gametypes);
-                report.Add(stat);
-            }
+                report = new SessionReportIndicators();
+                report.AddStatistic(playerstatistic);
+                report.GameTypes.Add(playerstatistic.GameType);
 
-            return report;
+                chunkedIndicators.Add(report);
+            }
+        }
+
+        protected override IEnumerable<SessionReportIndicators> OrderResult(IEnumerable<SessionReportIndicators> reports)
+        {
+            return reports.OrderByDescending(x => x.SessionStart);
         }
     }
 }

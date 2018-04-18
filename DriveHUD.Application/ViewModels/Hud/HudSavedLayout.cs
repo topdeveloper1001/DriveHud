@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using Model.Enums;
+using Model.Hud;
 using Model.Stats;
 using System;
 using System.Collections.Generic;

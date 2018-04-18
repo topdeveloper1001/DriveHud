@@ -1,0 +1,44 @@
+PokerStars Hand #181052791803:  Omaha Hi/Lo Pot Limit (€0.02/€0.05 EUR) - 2018/01/15 16:43:46 ET
+Table 'Anacreon' 6-max Seat #1 is the button
+Seat 1: norefedrina (€1.35 in chips)
+Seat 3: iamthenr1 (€13.88 in chips)
+Seat 4: piera61 (€1.99 in chips)
+Seat 5: nuvolai1967 (€5.85 in chips)
+Seat 6: Yarling1 (€3.97 in chips)
+iamthenr1: posts small blind €0.02
+piera61: posts big blind €0.05
+*** HOLE CARDS ***
+nuvolai1967: calls €0.05
+Yarling1: calls €0.05
+norefedrina: calls €0.05
+iamthenr1: calls €0.03
+piera61: checks
+*** FLOP *** [6s 3s 9d]
+iamthenr1: checks
+piera61: checks
+nuvolai1967: checks
+Yarling1: checks
+norefedrina: bets €0.24
+iamthenr1: folds
+piera61: folds
+nuvolai1967: raises €0.72 to €0.96
+Yarling1: folds
+norefedrina: calls €0.72
+*** TURN *** [6s 3s 9d] [Th]
+nuvolai1967: bets €2.06
+norefedrina: calls €0.34 and is all-in
+Uncalled bet (€1.72) returned to nuvolai1967
+*** RIVER *** [6s 3s 9d Th] [8d]
+*** SHOW DOWN ***
+nuvolai1967: shows [6c 4c 6d 2c] (HI: three of a kind, Sixes; LO: 8,6,4,3,2)
+norefedrina: shows [2h 9s 7c 9c] (HI: a straight, Six to Ten; LO: 8,7,6,3,2)
+norefedrina collected €1.35 from pot
+nuvolai1967 collected €1.35 from pot
+*** SUMMARY ***
+Total pot €2.85 | Rake €0.15
+Board [6s 3s 9d Th 8d]
+Seat 1: norefedrina (button) showed [2h 9s 7c 9c] and won (€1.35) with HI: a straight, Six to Ten; LO: 8,7,6,3,2
+Seat 3: iamthenr1 (small blind) folded on the Flop
+Seat 4: piera61 (big blind) folded on the Flop
+Seat 5: nuvolai1967 showed [6c 4c 6d 2c] and won (€1.35) with HI: three of a kind, Sixes; LO: 8,6,4,3,2
+Seat 6: Yarling1 folded on the Flop

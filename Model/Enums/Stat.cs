@@ -204,6 +204,11 @@ namespace Model.Enums
         RaiseFlopCBetIn3BetPot,
         FoldTo3BetIP,
         FoldTo3BetOOP,
-        BetFlopWhenCheckedToSRP
+        BetFlopWhenCheckedToSRP,
+        BB100,
+        TripleBarrel,
+        TurnBet,
+        FlopBet,
+        FoldFlop
     }
 }

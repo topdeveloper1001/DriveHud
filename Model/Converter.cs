@@ -1,21 +1,19 @@
-using System;
-using System.Linq;
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
+using DriveHUD.Entities;
+using DriveHUD.EquityCalculator.Base.OmahaCalculations;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Hand;
-using HoldemHand;
-using Model.Enums;
-using System.Collections.Generic;
-using DriveHUD.Common.Linq;
-using DriveHUD.Common.Log;
-using Model.Settings;
-using Microsoft.Practices.ServiceLocation;
-using DriveHUD.Entities;
-using Model.Extensions;
-using DriveHUD.EquityCalculator.Base.OmahaCalculations;
 using HandHistories.Objects.Players;
-using Card = HandHistories.Objects.Cards.Card;
-using DriveHud.Common.Log;
+using HoldemHand;
+using Microsoft.Practices.ServiceLocation;
+using Model.Enums;
+using Model.Extensions;
+using Model.Settings;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Model.Importer
 {
@@ -47,38 +45,19 @@ namespace Model.Importer
 
         public static HandHistoryRecord ToHandHistoryRecord(HandHistory hand, Playerstatistic stat)
         {
-            var player = hand.Players.FirstOrDefault(x => string.Equals(x.PlayerName, stat.PlayerName, StringComparison.OrdinalIgnoreCase));
-
-            if (player == null)
-            {
-                return null;
-            }
-
-            var actionStings = hand.HandActions
-                .Where(x => x.PlayerName == stat.PlayerName || x is StreetAction)
-                .Select(ActionToString).ToArray();
-
             var record = new HandHistoryRecord
             {
-                Time = hand.DateOfHandUtc,
-                Cards = player.HoleCards == null ? string.Empty : player.HoleCards.ToString(),
-                Line = actionStings.Length > 0 ? actionStings.Aggregate((x, y) => x + y).Trim(',') : string.Empty,
-                Board = hand.CommunityCards.ToString(),
+                Time = stat.Time,
+                Cards = stat.Cards,
+                Line = stat.Line,
+                Board = stat.Board,
                 NetWonInCents = stat.Totalamountwonincents,
                 BBinCents = stat.Totalamountwonincents / stat.BigBlind,
-                Pos = ToPositionString(ToPosition(hand, stat)),
-                Allin = ToAllin(hand, stat),
-                Action = ToAction(stat),
-                Equity = stat.Equity
+                Pos = stat.PositionString,
+                Equity = stat.Equity,
+                EquityDiff = stat.EquityDiff,
+                FacingPreflop = stat.FacingPreflop.ToString()
             };
-
-            if (record.Equity != 0 && hand.TotalPot != null)
-            {
-                if (stat.Wonhand == 1)
-                    record.EquityDiff = -(decimal)(hand.TotalPot * (1 - record.Equity));
-                else
-                    record.EquityDiff = (decimal)((hand.TotalPot ?? 0) * record.Equity);
-            }
 
             return record;
         }
@@ -125,6 +104,10 @@ namespace Model.Importer
             {
                 return EnumPosition.BB;
             }
+            else if (stat != null && stat.IsStraddle)
+            {
+                return EnumPosition.STRDL;
+            }
 
             var tableSize = hand.HandActions.Select(x => x.PlayerName).Distinct().Count();
 
@@ -141,6 +124,11 @@ namespace Model.Importer
 
             if (firstPlayerAction != null)
             {
+                if (firstPlayerAction.HandActionType == HandActionType.STRADDLE)
+                {
+                    return EnumPosition.STRDL;
+                }
+
                 var blindActionsCount = handActions
                     .Where(x => x.HandActionType == HandActionType.SMALL_BLIND ||
                         x.HandActionType == HandActionType.BIG_BLIND ||
@@ -336,6 +324,12 @@ namespace Model.Importer
                 hand.HandActions.Any(x => x.Street == lastHeroStreetAction.Street && (x.IsAllInAction || x.IsAllIn));
         }
 
+        /// <summary>
+        /// Calculates equities for all players with known hole cards on the street where hero of the specified <paramref name="stat"/> went all-in
+        /// </summary>
+        /// <param name="hand"></param>
+        /// <param name="stat"></param>
+        /// <returns>Dictionary with players equities</returns>
         public static Dictionary<string, decimal> CalculateAllInEquity(HandHistory hand, Playerstatistic stat)
         {
             // last hero street action
@@ -496,6 +490,8 @@ namespace Model.Importer
                     return "All in";
                 case HandActionType.POSTS:
                     return "Posts";
+                case HandActionType.STRADDLE:
+                    return "Straddle";
                 case HandActionType.WINS:
                 case HandActionType.WINS_SIDE_POT:
                 case HandActionType.WINS_THE_LOW:
@@ -508,11 +504,7 @@ namespace Model.Importer
 
         public static EnumFacingPreflop ToFacingPreflop(IEnumerable<HandAction> preflopHandActions, string playerName)
         {
-            HandAction firstPlayerAction = preflopHandActions.FirstOrDefault(x => x.PlayerName == playerName
-                                                                && x.HandActionType != HandActionType.ANTE
-                                                                && x.HandActionType != HandActionType.POSTS
-                                                                && x.HandActionType != HandActionType.SMALL_BLIND
-                                                                && x.HandActionType != HandActionType.BIG_BLIND);
+            HandAction firstPlayerAction = preflopHandActions.FirstOrDefault(x => x.PlayerName == playerName && !x.IsBlinds);
             if (firstPlayerAction == null)
             {
                 return EnumFacingPreflop.None;
@@ -522,10 +514,7 @@ namespace Model.Importer
 
             IEnumerable<HandAction> actions = preflopHandActions
                                                     .Take(indexOfFirstPlayerAction)
-                                                    .Where(x => x.HandActionType != HandActionType.ANTE
-                                                            && x.HandActionType != HandActionType.POSTS
-                                                            && x.HandActionType != HandActionType.SMALL_BLIND
-                                                            && x.HandActionType != HandActionType.BIG_BLIND);
+                                                    .Where(x => !x.IsBlinds);
 
             if (actions.Any(x => x.IsRaise()))
             {

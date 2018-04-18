@@ -1,0 +1,37 @@
+PokerStars Game #47185787613:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:57:37 ET
+Table 'Thoas' 6-max Seat #5 is the button
+Seat 1: mdeckND ($284.20 in chips)
+Seat 2: Hero ($702.25 in chips)
+Seat 4: mojox ($56.75 in chips)
+Seat 5: FrAnWaN ($319.50 in chips)
+Seat 6: asseral ($241.80 in chips)
+asseral: posts small blind $1
+mdeckND: posts big blind $2
+TODO ADENTR0: sits out
+*** HOLE CARDS ***
+Hero: folds
+mojox: calls $2
+FrAnWaN: folds
+asseral: folds
+mdeckND: raises $8 to $10
+mojox: calls $8
+*** FLOP *** [3d Td 4d]
+mdeckND: bets $14
+mojox: calls $14
+*** TURN *** [3d Td 4d] [4s]
+mdeckND: bets $34
+mojox: calls $32.75 and is all-in
+Uncalled bet ($1.25) returned to mdeckND
+*** RIVER *** [3d Td 4d 4s] [5h]
+*** SHOW DOWN ***
+mdeckND: shows [Qh Qs] (two pair, Queens and Fours)
+mojox: shows [Ad Kc] (a pair of Fours)
+mdeckND collected $112.50 from pot
+*** SUMMARY ***
+Total pot $114.50 | Rake $2
+Board [3d Td 4d 4s 5h]
+Seat 1: mdeckND (big blind) showed [Qh Qs] and won ($112.50) with two pair, Queens and Fours
+Seat 2: Hero folded before Flop (didn't bet)
+Seat 4: mojox showed [Ad Kc] and lost with a pair of Fours
+Seat 5: FrAnWaN (button) folded before Flop (didn't bet)
+Seat 6: asseral (small blind) folded before Flop

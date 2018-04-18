@@ -10,8 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using HandHistories.Objects.GameDescription;
@@ -42,6 +44,8 @@ namespace DriveHUD.Importers
 
         protected virtual bool IsAdvancedLogEnabled { get; set; }
 
+        protected virtual bool SupportDuplicates => false;
+
         #endregion
 
         #region Infrastructure
@@ -58,9 +62,25 @@ namespace DriveHUD.Importers
 
             IEnumerable<ParsingResult> parsingResult = null;
 
+            if (gameInfo.GameNumber != 0)
+            {
+                LogProvider.Log.Info(this, $"Hand {gameInfo.GameNumber} processed. [{SiteString}]");
+            }
+
             try
             {
                 parsingResult = ImportHand(handHistory, gameInfo, importer, progress);
+            }
+            catch (DHLicenseNotSupportedException)
+            {
+                LogProvider.Log.Error(this, $"Hand(s) has not been imported. License issue. [{SiteString}]");
+
+                var windowHwnd = new IntPtr(gameInfo.WindowHandle);
+
+                if (windowHwnd != IntPtr.Zero && WinApi.IsWindow(windowHwnd))
+                {
+                    SendPreImporedData("Notifications_HudLayout_PreLoadingText_NoLicense", windowHwnd);
+                }
             }
             catch (Exception e)
             {
@@ -79,7 +99,7 @@ namespace DriveHUD.Importers
                     continue;
                 }
 
-                if (result.IsDuplicate)
+                if (!SupportDuplicates && result.IsDuplicate)
                 {
                     LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. Duplicate. [{1}]", result.HandHistory.Gamenumber, SiteString));
                     continue;
@@ -91,7 +111,7 @@ namespace DriveHUD.Importers
                     continue;
                 }
 
-                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, SiteString));
+                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported in {2}ms. [{1}]", result.HandHistory.Gamenumber, SiteString, result.Duration));
 
                 var playerList = GetPlayerList(result.Source);
 
@@ -114,6 +134,21 @@ namespace DriveHUD.Importers
         protected virtual IEnumerable<ParsingResult> ImportHand(string handHistory, GameInfo gameInfo, IFileImporter importer, DHProgress progress)
         {
             return importer.Import(handHistory, progress, gameInfo);
+        }
+
+        protected virtual void SendPreImporedData(string loadingTextKey, IntPtr windowHandle)
+        {
+            var gameInfo = new GameInfo
+            {
+                PokerSite = Site,
+                TableType = EnumTableType.Nine,
+                WindowHandle = windowHandle.ToInt32()
+            };
+
+            var loadingText = CommonResourceManager.Instance.GetResourceString(loadingTextKey);
+
+            var eventArgs = new PreImportedDataEventArgs(gameInfo, loadingText);
+            eventAggregator.GetEvent<PreImportedDataEvent>().Publish(eventArgs);
         }
 
         protected virtual IntPtr FindWindow(ParsingResult parsingResult)
@@ -187,7 +222,7 @@ namespace DriveHUD.Importers
                     return parsingResult.TournamentsTags == TournamentsTags.MTT ? GameFormat.MTT : GameFormat.SnG;
                 }
 
-                if (Site == EnumPokerSites.PokerStars && parsingResult.Source.GameDescription.TableType.Contains(TableTypeDescription.Zoom))
+                if (Site == EnumPokerSites.PokerStars && parsingResult.Source.GameDescription.TableType.Contains(TableTypeDescription.FastFold))
                 {
                     return GameFormat.Zoom;
                 }

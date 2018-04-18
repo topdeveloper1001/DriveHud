@@ -10,9 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using System.Runtime.Serialization;
 using HandHistories.Objects.Cards;
+using System;
 using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Actions
@@ -150,30 +149,24 @@ namespace HandHistories.Objects.Actions
 
             switch (type)
             {
-                case HandActionType.CALL:
-                    return amount * -1;
                 case HandActionType.WINS:
                     return amount;
                 case HandActionType.WINS_SIDE_POT:
                     return amount;
                 case HandActionType.TIES:
                     return amount;
-                case HandActionType.RAISE:
-                    return amount * -1;
+                case HandActionType.ANTE:
                 case HandActionType.ALL_IN:
-                    return amount * -1;
                 case HandActionType.BET:
-                    return amount * -1;
-                case HandActionType.SMALL_BLIND:
-                    return amount * -1;
                 case HandActionType.BIG_BLIND:
+                case HandActionType.CALL:
+                case HandActionType.POSTS:
+                case HandActionType.RAISE:
+                case HandActionType.SMALL_BLIND:
+                case HandActionType.STRADDLE:
                     return amount * -1;
                 case HandActionType.UNCALLED_BET:
                     return amount;
-                case HandActionType.POSTS:
-                    return amount * -1;
-                case HandActionType.ANTE:
-                    return amount * -1;
                 case HandActionType.WINS_THE_LOW:
                     return amount;
                 case HandActionType.ADDS:
@@ -185,28 +178,8 @@ namespace HandHistories.Objects.Actions
             }
 
             throw new ArgumentException("GetAdjustedAmount: Unknown action " + type + " to have amount " + amount);
-        }
-
-        [XmlIgnore]
-        public bool IsRaise
-        {
-            get
-            {
-                return HandActionType == HandActionType.RAISE ||
-                       IsAllInAction;
-            }
-        }
-
-        [XmlIgnore]
-        public bool IsPreFlopRaise
-        {
-            get
-            {
-                return Street == Street.Preflop &&
-                       (HandActionType == HandActionType.RAISE || IsAllInAction);
-            }
-        }
-
+        }       
+     
         [XmlIgnore]
         public bool IsAllInAction
         {
@@ -238,13 +211,14 @@ namespace HandHistories.Objects.Actions
         }
 
         [XmlIgnore]
-        public bool IsBlinds
+        public virtual bool IsBlinds
         {
             get
             {
                 return HandActionType == HandActionType.SMALL_BLIND ||
                        HandActionType == HandActionType.BIG_BLIND ||
                        HandActionType == HandActionType.POSTS ||
+                       HandActionType == HandActionType.STRADDLE ||
                        HandActionType == HandActionType.ANTE;
             }
         }
@@ -254,21 +228,22 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return HandActionType == Actions.HandActionType.SMALL_BLIND ||
-                    HandActionType == Actions.HandActionType.BIG_BLIND ||
-                    HandActionType == Actions.HandActionType.ANTE ||
-                    HandActionType == Actions.HandActionType.POSTS ||
-                    HandActionType == Actions.HandActionType.BET ||
-                    HandActionType == Actions.HandActionType.CHECK ||
-                    HandActionType == Actions.HandActionType.FOLD ||
-                    HandActionType == Actions.HandActionType.ALL_IN ||
-                    HandActionType == Actions.HandActionType.CALL ||
-                    HandActionType == Actions.HandActionType.RAISE;
+                return HandActionType == HandActionType.SMALL_BLIND ||
+                    HandActionType == HandActionType.BIG_BLIND ||
+                    HandActionType == HandActionType.ANTE ||
+                    HandActionType == HandActionType.POSTS ||
+                    HandActionType == HandActionType.STRADDLE ||
+                    HandActionType == HandActionType.BET ||
+                    HandActionType == HandActionType.CHECK ||
+                    HandActionType == HandActionType.FOLD ||
+                    HandActionType == HandActionType.ALL_IN ||
+                    HandActionType == HandActionType.CALL ||
+                    HandActionType == HandActionType.RAISE;
             }
         }
 
         [XmlIgnore]
-        public bool IsCall
+        public virtual bool IsCall
         {
             get
             {

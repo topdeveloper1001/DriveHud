@@ -61,6 +61,13 @@ namespace DriveHUD.Common.Wpf.Actions
                 typeof(ShowViewActionBase<T>),
                 new PropertyMetadata(null));
 
+        // Icon of the window
+        public static readonly DependencyProperty IconSourceProperty =
+            DependencyProperty.Register("IconSource",
+                typeof(string),
+                typeof(ShowViewActionBase<T>),
+                new PropertyMetadata(null));
+
         /// <summary>
         /// Gets or sets the name of view of the content of the window
         /// </summary>
@@ -95,6 +102,15 @@ namespace DriveHUD.Common.Wpf.Actions
         {
             get { return (Style)GetValue(WindowStyleProperty); }
             set { SetValue(WindowStyleProperty, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the icon of the window
+        /// </summary>
+        public string IconSource
+        {
+            get { return (string)GetValue(IconSourceProperty); }
+            set { SetValue(IconSourceProperty, value); }
         }
 
         /// <summary>
@@ -167,7 +183,7 @@ namespace DriveHUD.Common.Wpf.Actions
 
                 if (args.Context != null && viewModel is IConfigurableViewModel)
                 {
-                    ((IConfigurableViewModel)viewModel).Configure(args.Context.Content);
+                    Configure(window, (IConfigurableViewModel)viewModel, args.Context.Content);
                 }
             }
 
@@ -222,5 +238,7 @@ namespace DriveHUD.Common.Wpf.Actions
         protected abstract void OnClosed(T window, Action callback, string viewName);
 
         protected abstract void OnClosing(T window, ICloseableViewModel viewModel);
+
+        protected abstract void Configure(T window, IConfigurableViewModel viewModel, object viewModelInfo);
     }
 }

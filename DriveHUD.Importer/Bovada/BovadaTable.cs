@@ -25,7 +25,9 @@ using Prism.Events;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
@@ -245,6 +247,12 @@ namespace DriveHUD.Importers.Bovada
         #endregion
 
         public uint CurrentHandNumber
+        {
+            get;
+            private set;
+        }
+
+        public uint LastHandNumber
         {
             get;
             private set;
@@ -665,14 +673,21 @@ namespace DriveHUD.Importers.Bovada
                                 heroAccount = initialStacks[HeroSeat];
                             }
 
-                            var foldObj = new BovadaCommandDataObject
-                            {
-                                btn = (int)BovadaPlayerActionType.Fold,
-                                seat = HeroSeat,
-                                account = heroAccount
-                            };
+                            var heroFolded = commands
+                                .FilterCommands<PlayerAction>(CommandCodeEnum.PlayerAction)
+                                .Any(x => x.SeatNumber == HeroSeat && x.PlayerActionEnum == PlayerActionEnum.Fold);
 
-                            AddPlayerActionCommand(foldObj);
+                            if (LastHandNumber != CurrentHandNumber && !heroFolded)
+                            {
+                                var foldObj = new BovadaCommandDataObject
+                                {
+                                    btn = (int)BovadaPlayerActionType.Fold,
+                                    seat = HeroSeat,
+                                    account = heroAccount
+                                };
+
+                                AddPlayerActionCommand(foldObj);
+                            }
                         }
 
                         isResultCommand = true;
@@ -770,6 +785,10 @@ namespace DriveHUD.Importers.Bovada
                         RemoveNotEnoughPlayersCommand();
                     }
 
+                    var sb = new StringBuilder();
+                    commands.ForEach(x => sb.AppendLine(x.ToString()));
+                    var c = sb.ToString();
+
                     // Push hand                    
                     var handModel = new HandModel2(commands.ToList());
 
@@ -791,8 +810,7 @@ namespace DriveHUD.Importers.Bovada
 
                     InitializeActiveTableDict(handModel, configuration);
 
-                    Game game = null;
-                    var handHistoryXml = handHistoryBuilder.BuildXml(handModel, this, configuration, out game);
+                    var handHistoryXml = handHistoryBuilder.BuildXml(handModel, this, configuration, out Game game);
 
                     UpdatePlayersAddedRemoved(handModel, configuration, false);
 
@@ -816,6 +834,8 @@ namespace DriveHUD.Importers.Bovada
                     ImportHandAsync(handHistoryXml, handModel.HandNumber, gameInfo, game);
 
                     ClearInfo();
+
+                    LastHandNumber = CurrentHandNumber;
                 }
             }
         }
@@ -913,6 +933,11 @@ namespace DriveHUD.Importers.Bovada
             {
                 HeroWasMoved = true;
             }
+            else if (!IsTournament && !IsZonePokerTable)
+            {
+                PlayersOnTable.Clear();
+                ClearInfo();
+            }
 
             TableIndex = cmdObj.tableNo;
         }
@@ -1000,7 +1025,7 @@ namespace DriveHUD.Importers.Bovada
                     continue;
                 }
 
-                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
+                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported in {2}ms. [{1}]", result.HandHistory.Gamenumber, Identifier, result.Duration));
 
                 var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo, result.Source.Hero, result.Source.HandId);
 
@@ -1702,7 +1727,7 @@ namespace DriveHUD.Importers.Bovada
             removeCommunityCards(handModel.RiverCommands);
             removeCommunityCards(handModel.ShowDownCommands);
 
-            handModel.PostflopCommands.InsertRange(1, communityCardsCommands.Take(3));
+            handModel.PostflopCommands.InsertRange(handModel.PostflopCommands.Count == 0 ? 0 : 1, communityCardsCommands.Take(3));
 
             if (communityCardsCommands.Count > 3 && handModel.TurnCommands != null)
             {

@@ -41,58 +41,66 @@ function ValidateTools
        throw "HashTool not found '$($session.HashTool)'"
    }
 
-   if(-Not (Test-Path($session.LicCSFileToUpdate)))
-   {
-       throw "LicCSFileToUpdate not found '$($session.LicCSFileToUpdate)'"
+   $session.LicCSFileToUpdate -split ',' | ForEach-Object {
+        if(-Not (Test-Path($_)))
+        {
+            throw "LicCSFileToUpdate not found '$($_)'"
+        }
    }
 
-   if(-Not (Test-Path($session.LicProjectsToUpdate)))
-   {
-       throw "LicProjectsToUpdate not found '$($session.LicProjectsToUpdate)'"
+   $session.LicProjectsToUpdate -split ',' | ForEach-Object {   
+       if(-Not (Test-Path($_)))
+       {
+           throw "LicProjectsToUpdate not found '$($_)'"
+       }
    }
 }
 
 function Patch-CSFile($session, $licAssemblies)
 {
-    Write-LogInfo $ModuleName "Patching $($session.LicCSFileToUpdate)"
+    $licCSFilesToUpdate = $session.LicCSFileToUpdate -split ','
 
-    $csContext = Get-Content $session.LicCSFileToUpdate
+    foreach($licCSFileToUpdate in $licCSFilesToUpdate) {
+        Write-LogInfo $ModuleName "Patching $($licCSFileToUpdate)"
 
-    for($i = 0; $i -lt $csContext.Length; $i++)
-    {
-        if($csContext[$i].Contains('void ValidateLicenseAssemblies'))
+        $csContext = Get-Content $licCSFileToUpdate
+
+        for($i = 0; $i -lt $csContext.Length; $i++)
         {
-            Write-LogInfo $ModuleName 'Found ValidateLicenseAssemblies method'
+            if($csContext[$i].Contains('void ValidateLicenseAssemblies'))
+            {
+                Write-LogInfo $ModuleName 'Found ValidateLicenseAssemblies method'
 
-            $assembliesLine = $csContext[$i + 2]
+                $assembliesLine = $csContext[$i + 2]
 
-            $bracketStartIndex = $assembliesLine.IndexOf('{');
-            $bracketEndIndex = $assembliesLine.IndexOf('}');
+                $bracketStartIndex = $assembliesLine.IndexOf('{');
+                $bracketEndIndex = $assembliesLine.IndexOf('}');
 
-            $assembliesCode = $assembliesLine.Substring($bracketStartIndex + 1, $bracketEndIndex - $bracketStartIndex - 1).Trim();
+                $assembliesCode = $assembliesLine.Substring($bracketStartIndex + 1, $bracketEndIndex - $bracketStartIndex - 1).Trim();
 
-            Write-LogInfo $ModuleName "Found lic assemblies code: $assembliesCode"
+                Write-LogInfo $ModuleName "Found lic assemblies code: $assembliesCode"
 
-            $assemblyHashes = @()
-            $assemblySizes = @()
+                $assemblyHashes = @()
+                $assemblySizes = @()
 
-            $assembliesSplit = $assembliesCode -split ',' | ForEach-Object {            
-                $assembly = Join-Path $session.LicOutputPath $_.Trim("""", " ")                
-                $hash = (&$session.HashTool $assembly)
-                $size =  (Get-Item $assembly).Length
+                $assembliesSplit = $assembliesCode -split ',' | ForEach-Object {            
+                    $assembly = Join-Path $session.LicOutputPath $_.Trim("""", " ")                
+                    $hash = (&$session.HashTool $assembly)
+                    $size =  (Get-Item $assembly).Length
 
-                $assemblyHashes += $hash
-                $assemblySizes += $size
-            }
+                    $assemblyHashes += $hash
+                    $assemblySizes += $size
+                }
 
-            $assembliesHashesLine = $csContext[$i + 3]
+                $assembliesHashesLine = $csContext[$i + 3]
             
-            $csContext[$i + 3] = Patch-CSFileLine $csContext[$i + 3]  ($assemblyHashes | ForEach-Object { """$_""" })
-            $csContext[$i + 4] = Patch-CSFileLine $csContext[$i + 4]  $assemblySizes
-        }
-    }    
+                $csContext[$i + 3] = Patch-CSFileLine $csContext[$i + 3]  ($assemblyHashes | ForEach-Object { """$_""" })
+                $csContext[$i + 4] = Patch-CSFileLine $csContext[$i + 4]  $assemblySizes
+            }
+        }    
 
-    $csContext | Out-File -FilePath $session.LicCSFileToUpdate -Force
+        $csContext | Out-File -FilePath $licCSFileToUpdate -Force
+    }
 }
 
 function Patch-CSFileLine($line, $patch)
@@ -109,34 +117,38 @@ function Patch-CSFileLine($line, $patch)
 
 function Patch-ProjectFile($session, $licAssemblies)
 {
-    Write-LogInfo $ModuleName "Patching $($session.LicProjectsToUpdate)"
+    $licProjectsToUpdate = $session.LicProjectsToUpdate -split ','
 
-    $project = [xml](Get-Content $session.LicProjectsToUpdate)
+    foreach($licProjectToUpdate in $licProjectsToUpdate) {
+        Write-LogInfo $ModuleName "Patching $($licProjectToUpdate)"
 
-    $ns = New-Object System.Xml.XmlNamespaceManager($project.NameTable)
-    $ns.AddNamespace("ns", $project.DocumentElement.NamespaceURI)
+        $project = [xml](Get-Content $licProjectToUpdate)
 
-    $references = $project.SelectNodes("//ns:Reference", $ns);
+        $ns = New-Object System.Xml.XmlNamespaceManager($project.NameTable)
+        $ns.AddNamespace("ns", $project.DocumentElement.NamespaceURI)
 
-    foreach($reference in $references)
-    {
-        foreach($licAssembly in $licAssemblies)
+        $references = $project.SelectNodes("//ns:Reference", $ns);
+
+        foreach($reference in $references)
         {
-            if($reference.Include.StartsWith($licAssembly.Name))
+            foreach($licAssembly in $licAssemblies)
             {
-                Write-LogInfo $ModuleName "Found reference: '$($reference.Include)'"
+                if($reference.Include.StartsWith($licAssembly.Name))
+                {
+                    Write-LogInfo $ModuleName "Found reference: '$($reference.Include)'"
 
-                $indexOfVersion = $reference.Include.IndexOf("Version=")
-                $lastIndexOfVersion = $reference.Include.IndexOf(",", $indexOfVersion)
+                    $indexOfVersion = $reference.Include.IndexOf("Version=")
+                    $lastIndexOfVersion = $reference.Include.IndexOf(",", $indexOfVersion)
 
-                $reference.Include = $reference.Include.Remove($indexOfVersion + 8, $lastIndexOfVersion - $indexOfVersion - 8).Insert($indexOfVersion + 8, $licAssembly.Version)
+                    $reference.Include = $reference.Include.Remove($indexOfVersion + 8, $lastIndexOfVersion - $indexOfVersion - 8).Insert($indexOfVersion + 8, $licAssembly.Version)
 
-                Write-LogInfo $ModuleName "Reference was updated: '$($reference.Include)'"
+                    Write-LogInfo $ModuleName "Reference was updated: '$($reference.Include)'"
+                }
             }
         }
-    }
 
-    $project.Save($session.LicProjectsToUpdate);
+        $project.Save($licProjectToUpdate);
+    }
 }
 
 Export-ModuleMember Use-LicUpdater

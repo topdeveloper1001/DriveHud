@@ -28,5 +28,13 @@ namespace Model.Site
                 return "YaPoker";
             }
         }
+
+        protected override string DefaultInstallPath
+        {
+            get
+            {
+                return @"C:\YaPoker";
+            }
+        }
     }
 }

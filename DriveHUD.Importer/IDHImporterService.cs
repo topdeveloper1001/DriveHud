@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using System.ServiceModel;
 
 namespace DriveHUD.Importers
@@ -18,6 +19,6 @@ namespace DriveHUD.Importers
     public interface IDHImporterService
     {
         [OperationContract]
-        void ImportHandHistory(string handHistory);
+        void ImportHandHistory(HandHistoryDto handHistory);
     }
 }

@@ -10,7 +10,6 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Reflection;
 using DriveHUD.Common.Wpf.Converters;
 using DriveHUD.Entities;
-using DriveHUD.ViewModels;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using Microsoft.Practices.ServiceLocation;
@@ -75,6 +74,7 @@ namespace DriveHUD.Application.TableConfigurators
         private RadDiagramShape table;
         private IHudLayoutsService hudLayoutsService;
         private IDataService dataService;
+        private IPlayerStatisticRepository playerStatisticRepository;
         private SingletonStorageModel storageModel;
 
         #endregion
@@ -84,6 +84,7 @@ namespace DriveHUD.Application.TableConfigurators
             hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
             storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
+            playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
         }
 
         public void ConfigureTable(RadDiagram diagram, ReplayerViewModel viewModel)
@@ -109,7 +110,7 @@ namespace DriveHUD.Application.TableConfigurators
 
                 if (statInfoCollection != null && statInfoCollection.Any())
                 {
-                    viewModel.PlayersCollection.ForEach(x => LoadPlayerHudStats(x, viewModel, statInfoCollection, dataService));
+                    viewModel.PlayersCollection.ForEach(x => LoadPlayerHudStats(x, viewModel, statInfoCollection));
                 }
                 else
                 {
@@ -118,7 +119,7 @@ namespace DriveHUD.Application.TableConfigurators
 
                     if (statInfoCollection != null && statInfoCollection.Any())
                     {
-                        viewModel.PlayersCollection.ForEach(x => LoadPlayerHudStats(x, viewModel, statInfoCollection, dataService));
+                        viewModel.PlayersCollection.ForEach(x => LoadPlayerHudStats(x, viewModel, statInfoCollection));
                     }
                 }
             }
@@ -269,8 +270,12 @@ namespace DriveHUD.Application.TableConfigurators
             item.Click += (s, e) =>
             {
                 PlayerNoteViewModel viewModel = new PlayerNoteViewModel(pokerSiteId, playerName);
-                var frm = new PlayerNoteView(viewModel);
-                frm.Owner = System.Windows.Application.Current.MainWindow;
+
+                var frm = new PlayerNoteView(viewModel)
+                {
+                    Owner = System.Windows.Application.Current.MainWindow
+                };
+
                 frm.ShowDialog();
 
                 var clickedItem = s as FrameworkElement;
@@ -289,21 +294,24 @@ namespace DriveHUD.Application.TableConfigurators
             return radMenu;
         }
 
-        private void LoadPlayerHudStats(ReplayerPlayerViewModel replayerPlayer, ReplayerViewModel replayerViewModel, IList<StatInfo> statInfoCollection, IDataService dataService)
+        private void LoadPlayerHudStats(ReplayerPlayerViewModel replayerPlayer, ReplayerViewModel replayerViewModel, IList<StatInfo> statInfoCollection)
         {
             replayerPlayer.StatInfoCollection.Clear();
-            
+
             HudLightIndicators hudIndicators;
 
             if (storageModel.PlayerSelectedItem.Name == replayerPlayer.Name &&
                 (short?)storageModel.PlayerSelectedItem.PokerSite == replayerViewModel.CurrentHand.PokersiteId)
             {
-                hudIndicators = new HudLightIndicators(storageModel.StatisticCollection);
+                hudIndicators = new HudLightIndicators(storageModel.StatisticCollection.ToList());
             }
             else
             {
                 hudIndicators = new HudLightIndicators();
-                dataService.ActOnPlayerStatisticFromFile(replayerPlayer.Name, replayerViewModel.CurrentHand.PokersiteId, null, stat => hudIndicators.AddStatistic(stat));
+
+                playerStatisticRepository
+                    .GetPlayerStatistic(replayerPlayer.Name, replayerViewModel.CurrentHand.PokersiteId)
+                    .ForEach(stat => hudIndicators.AddStatistic(stat));
             }
 
             if (hudIndicators != null)

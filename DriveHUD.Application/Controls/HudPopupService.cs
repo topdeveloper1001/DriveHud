@@ -10,14 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls.Primitives;
-using System.Windows.Media.Animation;
+using System.Windows.Input;
 using System.Windows.Threading;
 
 namespace DriveHUD.Application.Controls
@@ -46,7 +43,7 @@ namespace DriveHUD.Application.Controls
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             return element.GetValue(PopupProperty);
@@ -62,7 +59,7 @@ namespace DriveHUD.Application.Controls
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             element.SetValue(PopupProperty, value);
@@ -96,7 +93,7 @@ namespace DriveHUD.Application.Controls
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             return (int)element.GetValue(InitialShowDelayProperty);
@@ -112,7 +109,7 @@ namespace DriveHUD.Application.Controls
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             element.SetValue(InitialShowDelayProperty, value);
@@ -134,7 +131,7 @@ namespace DriveHUD.Application.Controls
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             return (int)element.GetValue(CloseDelayProperty);
@@ -150,7 +147,7 @@ namespace DriveHUD.Application.Controls
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             element.SetValue(CloseDelayProperty, value);
@@ -172,7 +169,7 @@ namespace DriveHUD.Application.Controls
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             return (double)element.GetValue(VerticalOffsetProperty);
@@ -189,7 +186,7 @@ namespace DriveHUD.Application.Controls
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             element.SetValue(VerticalOffsetProperty, value);
@@ -211,7 +208,7 @@ namespace DriveHUD.Application.Controls
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             return (double)element.GetValue(HorizontalOffsetProperty);
@@ -227,7 +224,7 @@ namespace DriveHUD.Application.Controls
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             element.SetValue(HorizontalOffsetProperty, value);
@@ -249,7 +246,7 @@ namespace DriveHUD.Application.Controls
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             return (PlacementMode)element.GetValue(PlacementProperty);
@@ -265,7 +262,7 @@ namespace DriveHUD.Application.Controls
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             element.SetValue(PlacementProperty, value);
@@ -299,34 +296,60 @@ namespace DriveHUD.Application.Controls
             popup.VerticalOffset = verticalOffset;
             popup.HorizontalOffset = horizontalOffset;
 
+            void openTimerTick(object t, EventArgs x) => popup.IsOpen = true;
+            void closeTimerTick(object t, EventArgs x) => popup.IsOpen = false;
+
             var openTimer = new DispatcherTimer();
             openTimer.Interval = TimeSpan.FromMilliseconds(initialShowDelay);
-            openTimer.Tick += (t, x) => popup.IsOpen = true;
+            openTimer.Tick += openTimerTick;
 
             var closeTimer = new DispatcherTimer();
             closeTimer.Interval = TimeSpan.FromMilliseconds(closeDelay);
-            closeTimer.Tick += (t, x) => popup.IsOpen = false;
+            closeTimer.Tick += closeTimerTick;
 
-            popup.MouseEnter += (s, a) =>
+            void popupMouseEnter(object s, MouseEventArgs a)
             {
                 closeTimer.Stop();
-            };
+            }
 
-            popup.MouseLeave += (s, a) =>
+            void popupMouseLeave(object s, MouseEventArgs a)
             {
                 closeTimer.Start();
-            };
+            }
 
-            element.MouseEnter += (s, a) =>
+            popup.MouseEnter += popupMouseEnter;
+            popup.MouseLeave += popupMouseLeave;
+
+            void elementMouseEnter(object s, MouseEventArgs a)
             {
                 closeTimer.Stop();
                 openTimer.Start();
-            };
+            }
 
-            element.MouseLeave += (s, a) =>
+            void elementMouseLeave(object s, MouseEventArgs a)
             {
                 openTimer.Stop();
                 closeTimer.Start();
+            }
+
+            element.MouseEnter += elementMouseEnter;
+            element.MouseLeave += elementMouseLeave;
+
+            element.Unloaded += (s, a) =>
+            {
+                element.MouseEnter -= elementMouseEnter;
+                element.MouseLeave -= elementMouseLeave;
+                popup.MouseEnter -= popupMouseEnter;
+                popup.MouseLeave -= popupMouseLeave;
+
+                openTimer.Stop();
+                closeTimer.Stop();
+
+                openTimer.Tick -= openTimerTick;
+                closeTimer.Tick -= closeTimerTick;
+
+                openTimer = null;
+                closeTimer = null;
             };
         }
 

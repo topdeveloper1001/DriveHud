@@ -27,5 +27,24 @@ namespace DriveHUD.Importers
         public GameFormat GameFormat { get; set; }
 
         public HashSet<long> SessionHands { get; set; } = new HashSet<long>();
+
+        /// <summary>
+        /// Clones indicator without session data
+        /// </summary>
+        /// <returns></returns>
+        public SessionCacheStatistic Clone()
+        {
+            var clonePlayerData = new HudIndicators();
+            clonePlayerData.AddIndicator(PlayerData);
+
+            var clone = new SessionCacheStatistic
+            {
+                IsHero = IsHero,
+                GameFormat = GameFormat,
+                PlayerData = clonePlayerData
+            };
+
+            return clone;
+        }
     }
 }

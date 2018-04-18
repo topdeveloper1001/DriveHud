@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<session sessioncode="153191521">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL</gametype>
+    <tablename>Table #1, 200 PM - 4 Player Ultra Fast Bounty #11884</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2018-04-11 10:25:41</startdate>
+    <currency>USD</currency>
+    <nickname>Peon84</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <tournamentname>200 PM - 4 Player Ultra Fast Bounty #11884</tournamentname>
+    <place>0</place>
+    <buyin>$250+$0</buyin>
+    <totalbuyin>$250</totalbuyin>
+    <win>0</win>
+    <maxplayers>4</maxplayers>
+    <pokersite>BetOnline</pokersite>
+  </general>
+  <game gamecode="6344162">
+    <general>
+      <startdate>2018-04-11 10:25:41</startdate>
+      <players>
+        <player seat="1" name="mauiboricua" chips="2000" dealer="0" win="0" bet="40" rebuy="0" addon="0" />
+        <player seat="3" name="Hoyop2015" chips="2000" dealer="1" win="0" bet="40" rebuy="0" addon="0" />
+        <player seat="5" name="Peon84" chips="2000" dealer="0" win="180" bet="80" rebuy="0" addon="0" />
+        <player seat="7" name="cicciuzzu" chips="2000" dealer="0" win="0" bet="20" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="Peon84" type="1" sum="10" cards="" />
+      <action no="2" player="cicciuzzu" type="2" sum="20" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="mauiboricua">X X</cards>
+      <cards type="Pocket" player="Hoyop2015">X X</cards>
+      <cards type="Pocket" player="Peon84">H10 D10</cards>
+      <cards type="Pocket" player="cicciuzzu">X X</cards>
+      <action no="3" player="mauiboricua" type="3" sum="20" cards="" />
+      <action no="4" player="Hoyop2015" type="3" sum="20" cards="" />
+      <action no="5" player="Peon84" type="23" sum="40" cards="" />
+      <action no="6" player="cicciuzzu" type="0" sum="0" cards="" />
+      <action no="7" player="mauiboricua" type="3" sum="20" cards="" />
+      <action no="8" player="Hoyop2015" type="3" sum="20" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">D6 H4 HA</cards>
+      <action no="9" player="Peon84" type="4" sum="0" cards="" />
+      <action no="10" player="mauiboricua" type="4" sum="0" cards="" />
+      <action no="11" player="Hoyop2015" type="4" sum="0" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">S6</cards>
+      <action no="12" player="Peon84" type="5" sum="40" cards="" />
+      <action no="13" player="mauiboricua" type="0" sum="0" cards="" />
+      <action no="14" player="Hoyop2015" type="0" sum="0" cards="" />
+    </round>
+  </game>
+</session>

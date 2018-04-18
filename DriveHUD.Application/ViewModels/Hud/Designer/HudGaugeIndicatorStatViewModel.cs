@@ -10,46 +10,60 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Wpf.Mvvm;
+using DriveHUD.Application.ViewModels.Layouts;
 using Model.Stats;
+using Prism.Mvvm;
+using ProtoBuf;
 using ReactiveUI;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
-    public class HudGaugeIndicatorStatsGroupViewModel : ViewModelBase
+    [ProtoContract]
+    public class HudGaugeIndicatorStatsGroupViewModel : BindableBase
     {
-        public static ReactiveList<HudGaugeIndicatorStatsGroupViewModel> GroupStats(IEnumerable<StatInfo> stats)
+        public static ReactiveList<HudGaugeIndicatorStatsGroupViewModel> GroupStats(HudLayoutGaugeIndicator tool, HudElementViewModel hudElementViewModel)
         {
             var groupedStats = new ReactiveList<HudGaugeIndicatorStatsGroupViewModel>();
 
-            if (stats == null)
+            if (tool.Stats == null)
             {
                 return groupedStats;
             }
 
             HudGaugeIndicatorStatsGroupViewModel group = null;
 
-            foreach (var stat in stats)
+            foreach (var stat in tool.Stats)
             {
                 var groupType = GetStatGroupType(stat);
 
                 if (group == null || group.GroupType != groupType)
-                {                   
+                {
                     group = new HudGaugeIndicatorStatsGroupViewModel
                     {
                         GroupType = groupType
                     };
 
                     groupedStats.Add(group);
-                }                
+                }
 
-                group.Stats.Add(stat);
+                var gaugeIndicatorStatInfo = new HudGaugeIndicatorStatInfo(stat);
+
+                if (hudElementViewModel != null)
+                {
+                    gaugeIndicatorStatInfo.HeatMapViewModel = (HudHeatMapViewModel)tool.Tools?
+                        .OfType<HudLayoutHeatMapTool>()
+                        .FirstOrDefault(x => x.BaseStat != null && x.BaseStat.Stat == stat.Stat)?
+                        .CreateViewModel(hudElementViewModel);
+                }
+
+                group.Stats.Add(gaugeIndicatorStatInfo);
             }
 
             return groupedStats;
         }
 
+        [ProtoMember(1)]
         private HudGaugeIndicatorStatGroupType groupType;
 
         public HudGaugeIndicatorStatGroupType GroupType
@@ -60,13 +74,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
             private set
             {
-                this.RaiseAndSetIfChanged(ref groupType, value);
+                SetProperty(ref groupType, value);
             }
         }
 
-        private readonly ReactiveList<StatInfo> stats = new ReactiveList<StatInfo>();
+        [ProtoMember(2)]
+        private ReactiveList<HudGaugeIndicatorStatInfo> stats = new ReactiveList<HudGaugeIndicatorStatInfo>();
 
-        public ReactiveList<StatInfo> Stats
+        public ReactiveList<HudGaugeIndicatorStatInfo> Stats
         {
             get
             {
@@ -88,5 +103,5 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             return HudGaugeIndicatorStatGroupType.LineBar;
         }
-    }  
+    }    
 }

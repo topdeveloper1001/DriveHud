@@ -374,5 +374,32 @@ namespace DriveHUD.Common.Linq
 
             return Tuple.Create(counter1, counter2);
         }
+
+        public static IEnumerable<List<T>> SplitList<T>(this List<T> items, int nSize)
+        {
+            for (int i = 0; i < items.Count; i += nSize)
+            {
+                yield return items.GetRange(i, Math.Min(nSize, items.Count - i));
+            }
+        }
+
+        public static IEnumerable<List<T>> SplitListByChunk<T>(this List<T> items, int chunks)
+        {
+            var result = new List<List<T>>();
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                var index = i % chunks;
+
+                if (result.Count <= index)
+                {
+                    result.Add(new List<T>());
+                }
+
+                result[index].Add(items[i]);
+            }
+
+            return result;
+        }
     }
 }

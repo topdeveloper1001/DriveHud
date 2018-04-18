@@ -29,7 +29,7 @@ namespace DriveHud.Tests.UnitTests.Helpers
         /// <param name="file">File with statistic</param>
         /// <param name="filter">Filter</param>
         /// <returns>Player statistic collection</returns>
-        public static IList<Playerstatistic> GetPlayerStatisticFromFile(string file, Func<Playerstatistic, bool> filter = null)
+        public static List<Playerstatistic> GetPlayerStatisticFromFile(string file, Func<Playerstatistic, bool> filter = null)
         {
             List<Playerstatistic> result = new List<Playerstatistic>();
 

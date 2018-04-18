@@ -19,7 +19,7 @@ namespace DriveHUD.Common.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Main {
@@ -106,6 +106,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete tournament.
+        /// </summary>
+        internal static string Main_ContextMenu_DeleteTournament {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_DeleteTournament", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit Note.
         /// </summary>
         internal static string Main_ContextMenu_EditNote {
@@ -142,6 +151,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export Report.
+        /// </summary>
+        internal static string Main_ContextMenu_ExportToExcel {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_ExportToExcel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Load HUD.
         /// </summary>
         internal static string Main_ContextMenu_LoadHud {
@@ -156,6 +174,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Main_ContextMenu_MakeNote {
             get {
                 return ResourceManager.GetString("Main_ContextMenu_MakeNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh Report.
+        /// </summary>
+        internal static string Main_ContextMenu_RefreshReport {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_RefreshReport", resourceCulture);
             }
         }
         

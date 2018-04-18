@@ -18,6 +18,9 @@ namespace HandHistories.Objects.Players
         public string PlayerName { get; set; }
 
         [XmlAttribute]
+        public string PlayerNick { get; set; }
+
+        [XmlAttribute]
         public decimal StartingStack { get; set; }
 
         [XmlAttribute]
@@ -94,7 +97,7 @@ namespace HandHistories.Objects.Players
 
         public override string ToString()
         {
-            string s = string.Format("Seat {0}: {1} [{2}] with '{3}'", SeatNumber, PlayerName, StartingStack.ToString("N2"), (hasHoleCards ? HoleCards.ToString() : ""));
+            string s = string.Format("Seat {0}: {1} {2} [{3}] with '{4}'", SeatNumber, PlayerName, PlayerNick, StartingStack.ToString("N2"), (hasHoleCards ? HoleCards.ToString() : ""));
 
             if (IsSittingOut)
             {

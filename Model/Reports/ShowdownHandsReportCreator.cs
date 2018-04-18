@@ -10,112 +10,78 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using Model.Data;
 using Model.HandAnalyzers;
+using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using Cards = HandHistories.Objects.Cards;
 
 namespace Model.Reports
 {
-    public class ShowdownHandsReportCreator : CashBaseReportCreator
+    public class ShowdownHandsReportCreator : CashBaseReportCreator<ShowdownHandsReportRecord>
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
-        {
-            var report = new ObservableCollection<ReportIndicators>();
+        private Lazy<HandAnalyzer> analyzer = new Lazy<HandAnalyzer>(() => new HandAnalyzer(HandAnalyzer.GetReportAnalyzers()));
 
-            if (statistics == null)
+        private HandAnalyzer Analyzer
+        {
+            get
             {
-                return report;
+                return analyzer.Value;
+            }
+        }
+
+        protected override List<ShowdownHandsReportRecord> CombineChunkedIndicators(BlockingCollection<ShowdownHandsReportRecord> chunkedIndicators)
+        {
+            var reports = new List<ShowdownHandsReportRecord>();
+
+            foreach (var chunkedIndicatorsByCards in chunkedIndicators.GroupBy(x => x.ShowdownHand))
+            {
+                var report = chunkedIndicatorsByCards.First();
+
+                chunkedIndicatorsByCards.Skip(1).ForEach(r => report.AddIndicator(r));
+                reports.Add(report);
             }
 
-            var analyzer = new HandAnalyzer(HandAnalyzer.GetReportAnalyzers());
+            return reports;
+        }
 
-            var s = statistics
+        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<ShowdownHandsReportRecord> chunkedIndicators)
+        {
+            var showdownStatistic = statistics
                 .Where(x => !string.IsNullOrEmpty(x.Cards) &&
                     Cards.CardGroup.Parse(x.Cards).Count() == 2 &&
                     !string.IsNullOrEmpty(x.Board) &&
                     Cards.BoardCards.FromCards(x.Board).Count == 5)
-                .ToArray();
+                .GroupBy(x => Analyzer.Analyze(Cards.CardGroup.Parse(x.Cards), Cards.BoardCards.FromCards(x.Board)));
 
-            var hands = s
-                .GroupBy(x => analyzer.Analyze(Cards.CardGroup.Parse(x.Cards), Cards.BoardCards.FromCards(x.Board)))
-                .ToList();
+            showdownStatistic = ShowdownHandsReportRecord.FilterHands(showdownStatistic);
 
-            if (hands == null || hands.Count == 0)
+            foreach (var showdownStatisticByCards in showdownStatistic)
             {
-                return report;
-            }
-
-            hands = ShowdownHandsReportRecord.FilterHands(hands).ToList();
-
-            foreach (var group in hands)
-            {
-                if (group.Key == null)
+                if (showdownStatisticByCards.Key == null)
                 {
                     continue;
                 }
 
-                var stat = new ShowdownHandsReportRecord();
+                var report = new ShowdownHandsReportRecord();
 
-                foreach (var playerstatistic in group)
+                foreach (var playerstatistic in showdownStatisticByCards)
                 {
-                    stat.AddStatistic(playerstatistic);
-                    stat.ShowdownHand = group.Key.GetRank();
+                    report.AddStatistic(playerstatistic);
+                    report.ShowdownHand = showdownStatisticByCards.Key.GetRank();
                 }
 
-                report.Add(stat);
+                chunkedIndicators.Add(report);
             }
-
-            return report;
         }
-    }
 
-    public class TournamentShowdownHandsReportCreator : TournamentBaseReportCreator
-    {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
+        protected override IEnumerable<ShowdownHandsReportRecord> OrderResult(IEnumerable<ShowdownHandsReportRecord> reports)
         {
-            var report = new ObservableCollection<ReportIndicators>();
-            var analyzer = new HandAnalyzer(HandAnalyzer.GetReportAnalyzers());
-
-            var s = statistics
-                .Where(x => !string.IsNullOrEmpty(x.Cards) &&
-                    Cards.CardGroup.Parse(x.Cards).Count() == 2 &&
-                    !string.IsNullOrEmpty(x.Board) &&
-                    Cards.BoardCards.FromCards(x.Board).Count == 5)
-                .ToArray();
-
-            var hands = s
-                .GroupBy(x => analyzer.Analyze(Cards.CardGroup.Parse(x.Cards), Cards.BoardCards.FromCards(x.Board)))
-                .ToList();
-
-            if (hands == null || hands.Count == 0)
-            {
-                return report;
-            }
-
-            hands = ShowdownHandsReportRecord.FilterHands(hands).ToList();
-
-            foreach (var group in hands)
-            {
-                if (group.Key == null)
-                {
-                    continue;
-                }
-
-                var stat = new ShowdownHandsReportRecord();
-                foreach (var playerstatistic in group)
-                {
-                    stat.AddStatistic(playerstatistic);
-                    stat.ShowdownHand = group.Key.GetRank();
-                }
-
-                report.Add(stat);
-            }
-
-            return report;
+            return reports.OrderBy(x => x.ShowdownHand);
         }
-    }
+    }  
 }

@@ -10,8 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Common.Log;
 using DriveHud.Tests.IntegrationTests.Base;
+using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using Microsoft.Practices.ServiceLocation;
@@ -128,10 +128,10 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         /// <returns></returns>
         private HudLightIndicators GetIndicators(string playerName, EnumPokerSites pokerSite, string playerStatisticFolder)
         {
-            var dataService = ServiceLocator.Current.GetInstance<IDataService>();
-            dataService.SetPlayerStatisticPath(playerStatisticFolder);
+            var playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
+            playerStatisticRepository.SetPlayerStatisticPath(playerStatisticFolder);
 
-            var playerStatistic = dataService.GetPlayerStatisticFromFile(playerName, (short)pokerSite);
+            var playerStatistic = playerStatisticRepository.GetPlayerStatistic(playerName, (short)pokerSite);
 
             var indicators = new HudLightIndicators(playerStatistic);
 
@@ -330,7 +330,11 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.RaiseFlopCBetIn3BetPot, Is.EqualTo(expected.RaiseFlopCBetIn3BetPot), nameof(HudLightIndicators.RaiseFlopCBetIn3BetPot));
                 Assert.That(actual.FoldToThreeBetIP, Is.EqualTo(expected.FoldToThreeBetIP), nameof(HudLightIndicators.FoldToThreeBetIP));
                 Assert.That(actual.FoldToThreeBetOOP, Is.EqualTo(expected.FoldToThreeBetOOP), nameof(HudLightIndicators.FoldToThreeBetOOP));
-                Assert.That(actual.BetFlopWhenCheckedToSRP, Is.EqualTo(expected.BetFlopWhenCheckedToSRP), nameof(HudLightIndicators.BetFlopWhenCheckedToSRP));
+                Assert.That(actual.BetFlopWhenCheckedToSRP, Is.EqualTo(expected.BetFlopWhenCheckedToSRP), nameof(HudLightIndicators.BetFlopWhenCheckedToSRP));                
+                Assert.That(actual.TurnBet, Is.EqualTo(expected.TurnBet), nameof(HudLightIndicators.TurnBet));
+                Assert.That(actual.FlopBet, Is.EqualTo(expected.FlopBet), nameof(HudLightIndicators.FlopBet));
+                Assert.That(actual.RiverCBet, Is.EqualTo(expected.RiverCBet), nameof(HudLightIndicators.RiverCBet));
+                Assert.That(actual.FoldFlop, Is.EqualTo(expected.FoldFlop), nameof(HudLightIndicators.FoldFlop));
                 // add new stats here            
             });
         }
@@ -347,6 +351,11 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         protected override void InitializeDataService(UnityContainer unityContainer)
         {
             unityContainer.RegisterType<IDataService, DataService>(new ContainerControlledLifetimeManager());
+        }
+
+        protected override void InitializePlayerStatisticRepository(UnityContainer unityContainer)
+        {
+            unityContainer.RegisterType<IPlayerStatisticRepository, PlayerStatisticRepository>(new ContainerControlledLifetimeManager());
         }
 
         protected override void InitializeSessionFactoryService(UnityContainer unityContainer)

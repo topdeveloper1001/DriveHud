@@ -132,6 +132,9 @@
   <data name="Main_ContextMenu_DeleteHand" xml:space="preserve">
     <value>Delete Hand</value>
   </data>
+  <data name="Main_ContextMenu_DeleteTournament" xml:space="preserve">
+    <value>Delete tournament</value>
+  </data>
   <data name="Main_ContextMenu_EditNote" xml:space="preserve">
     <value>Edit Note</value>
   </data>
@@ -144,11 +147,17 @@
   <data name="Main_ContextMenu_ExportLastHand" xml:space="preserve">
     <value>Export Last Hand</value>
   </data>
+  <data name="Main_ContextMenu_ExportToExcel" xml:space="preserve">
+    <value>Export Report</value>
+  </data>
   <data name="Main_ContextMenu_LoadHud" xml:space="preserve">
     <value>Load HUD</value>
   </data>
   <data name="Main_ContextMenu_MakeNote" xml:space="preserve">
     <value>Make Note</value>
+  </data>
+  <data name="Main_ContextMenu_RefreshReport" xml:space="preserve">
+    <value>Refresh Report</value>
   </data>
   <data name="Main_ContextMenu_ReplayHand" xml:space="preserve">
     <value>Replay Hand</value>

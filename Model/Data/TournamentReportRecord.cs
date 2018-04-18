@@ -17,10 +17,12 @@ using System;
 namespace Model.Data
 {
     public class TournamentReportRecord : ReportIndicators
-    {
+    {        
         public virtual string PlayerName { get; set; }
 
         public virtual string TournamentId { get; set; }
+
+        public virtual int PokerSiteId { get; set; }
 
         public virtual int TournamentsPlayed { get; set; }
 
@@ -100,11 +102,9 @@ namespace Model.Data
 
         public void SetTableType(string tournamentTag)
         {
-            this.TableType = string.Empty;
+            TableType = string.Empty;
 
-            TournamentsTags tag;
-
-            if (Enum.TryParse(tournamentTag, out tag))
+            if (Enum.TryParse(tournamentTag, out TournamentsTags tag))
             {
                 switch (tag)
                 {
@@ -137,9 +137,7 @@ namespace Model.Data
         {
             TournamentSpeed = string.Empty;
 
-            TournamentSpeed speed;
-
-            if (Enum.TryParse(speedTypeId.ToString(), out speed))
+            if (Enum.TryParse(speedTypeId.ToString(), out TournamentSpeed speed))
             {
                 TournamentSpeed = speed.ToString();
             }
@@ -149,9 +147,7 @@ namespace Model.Data
         {
             GameType = string.Empty;
 
-            GameType gametype;
-
-            if (Enum.TryParse(pokergametypeId.ToString(), out gametype))
+            if (Enum.TryParse(pokergametypeId.ToString(), out GameType gametype))
             {
                 GameType = gametype.ToString();
             }

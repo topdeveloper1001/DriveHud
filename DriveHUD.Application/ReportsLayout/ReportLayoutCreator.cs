@@ -16,10 +16,13 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Helpers;
 using Model.Data;
 using System;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Markup;
+using System.Xml;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.ReportsLayout
@@ -73,6 +76,11 @@ namespace DriveHUD.Application.ReportsLayout
                 IsVisible = isVisible
             };
 
+            if (stringFormat != null)
+            {
+                column.DataFormatString = stringFormat;
+            }
+
             return column;
         }
 
@@ -117,6 +125,7 @@ namespace DriveHUD.Application.ReportsLayout
                 DataMemberBinding = new Binding(member),
                 Width = width == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
                 CellTemplate = template,
+                DataFormatString = "{0:c2}",
                 UniqueName = member,
                 IsVisible = isVisible
             };
@@ -136,26 +145,52 @@ namespace DriveHUD.Application.ReportsLayout
 
         protected virtual GridViewDataColumn AddPercentile(string resourceKey, string member, GridViewLength width, bool isVisible)
         {
-            var fef = new FrameworkElementFactory(typeof(TextBlock));
-
-            var bindingText = new Binding(member)
+            var column = new GridViewDataColumn
             {
-                StringFormat = "{0:n1}"
+                Header = CommonResourceManager.Instance.GetResourceString(resourceKey),
+                DataMemberBinding = new Binding(member),
+                Width = width == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
+                DataFormatString = "{0:n1}",
+                UniqueName = member,
+                IsVisible = isVisible
             };
 
-            fef.SetBinding(TextBlock.TextProperty, bindingText);
+            return column;
+        }
 
-            DataTemplate template = new DataTemplate { VisualTree = fef };
-            template.Seal();
+        public virtual GridViewDataColumn AddPlayerType(string resourceKey, string member)
+        {
+            var stringReader = new StringReader(@"<DataTemplate 
+                xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation""
+                 xmlns:dh=""http://www.acepokersolutions.com/winfx/2015/xaml/presentation"">
+                    <StackPanel Orientation=""Horizontal"">
+                        <Image 
+                            Source=""{Binding PlayerType.Image, Converter={dh:StringToImageSourceConverter}}"" 
+                            Visibility=""{Binding PlayerType.Image, Converter={dh:NullOrEmptyToVisibilityConverter}}""
+                            Width=""24""
+                            Height=""24""
+                            VerticalAlignment=""Center""
+                            HorizontalAlignment=""Center""
+                            />
+                        <TextBlock 
+                            Text=""{Binding PlayerType.Name}"" 
+                            Margin=""5,0,0,0""
+                            VerticalAlignment=""Center"" />
+                    </StackPanel>
+                </DataTemplate>");
+
+            var xmlReader = XmlReader.Create(stringReader);
+
+            var dataTemplate = (DataTemplate)XamlReader.Load(xmlReader);
+            dataTemplate.Seal();
 
             GridViewDataColumn column = new GridViewDataColumn
             {
                 Header = CommonResourceManager.Instance.GetResourceString(resourceKey),
                 DataMemberBinding = new Binding(member),
-                Width = width == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
-                CellTemplate = template,
-                UniqueName = member,
-                IsVisible = isVisible
+                Width = GetColumnHeaderWidth("Standard Reg") + 40,
+                CellTemplate = dataTemplate,
+                UniqueName = member
             };
 
             return column;
@@ -348,12 +383,14 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_FlopCheckRaise", nameof(Indicators.FlopCheckRaise), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopCheckBehind", nameof(Indicators.FlopCheckBehind), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopAgg", nameof(Indicators.FlopAgg), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_FlopBet", nameof(Indicators.FlopBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopBetSizeOneHalfOrLess", nameof(Indicators.FlopBetSizeOneHalfOrLess), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopBetSizeOneQuarterOrLess", nameof(Indicators.FlopBetSizeOneQuarterOrLess), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopBetSizeTwoThirdsOrLess", nameof(Indicators.FlopBetSizeTwoThirdsOrLess), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopBetSizeThreeQuartersOrLess", nameof(Indicators.FlopBetSizeThreeQuartersOrLess), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopBetSizeOneOrLess", nameof(Indicators.FlopBetSizeOneOrLess), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FlopBetSizeMoreThanOne", nameof(Indicators.FlopBetSizeMoreThanOne), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_FoldFlop", nameof(Indicators.FoldFlop), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldTo3Bet", nameof(Indicators.FoldToThreeBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldTo3BetIP", nameof(Indicators.FoldToThreeBetIP), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_FoldTo3BetOOP", nameof(Indicators.FoldToThreeBetOOP), ColumnType.Percentile),
@@ -414,8 +451,10 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_SeenRiver", nameof(Indicators.RiverSeen), ColumnType.Percentile),
             // T
             new Tuple<string, string, ColumnType>("Reports_Column_TrueAgg", nameof(Indicators.TrueAggression), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_TripleBarrel", nameof(Indicators.RiverCBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnAF", nameof(Indicators.TurnAF), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnAgg", nameof(Indicators.TurnAgg), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_TurnBet", nameof(Indicators.TurnBet), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeOneHalfOrLess", nameof(Indicators.TurnBetSizeOneHalfOrLess), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeOneQuarterOrLess", nameof(Indicators.TurnBetSizeOneQuarterOrLess), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_TurnBetSizeOneThirdOrLess", nameof(Indicators.TurnBetSizeOneThirdOrLess), ColumnType.Percentile),

@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Entities;
+using Model.Hud;
 using System.Collections.Generic;
 using System.IO;
 
@@ -104,19 +105,6 @@ namespace DriveHUD.Application.ViewModels.Hud
         void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics, HudLayoutInfoV2 layout);
 
         /// <summary>
-        /// Get path to image directory
-        /// </summary>
-        /// <returns>Path to image directory</returns>
-        string GetImageDirectory();
-
-        /// <summary>
-        /// Get link to image
-        /// </summary>
-        /// <param name="image">Image alias</param>
-        /// <returns>Full path to image</returns>
-        string GetImageLink(string image);
-
-        /// <summary>
         /// Sets active layout for the specified <see cref="EnumPokerSites"/> poker site, <see cref="EnumGameType"/> game type and <see cref="EnumTableType"/> table type
         /// </summary>
         /// <param name="hudToLoad">Layout to be set as active</param>
@@ -164,13 +152,6 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="layoutName">Name of the duplicated layout</param>
         /// <param name="layoutToDuplicate">Layout to duplicate</param>
         /// <returns>The duplicated layout</returns>
-        HudLayoutInfoV2 DuplicateLayout(EnumTableType tableType, string layoutName, HudLayoutInfoV2 layoutToDuplicate);
-
-        /// <summary>
-        /// Gets default player types for the specified <see cref="EnumTableType"/>
-        /// </summary>
-        /// <param name="tableType">Table type to get player types</param>
-        /// <returns>The collection of <see cref="HudPlayerType"/></returns>
-        IEnumerable<HudPlayerType> CreateDefaultPlayerTypes(EnumTableType tableType);
+        HudLayoutInfoV2 DuplicateLayout(EnumTableType tableType, string layoutName, HudLayoutInfoV2 layoutToDuplicate);      
     }
 }

@@ -1,10 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//-----------------------------------------------------------------------
+// <copyright file="IconExtension.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Wpf.Helpers;
+using System;
 using System.Windows.Markup;
-using System.Windows.Media.Imaging;
 
 namespace DriveHUD.Common.Wpf.MarkupExtensions
 {
@@ -34,17 +42,7 @@ namespace DriveHUD.Common.Wpf.MarkupExtensions
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
-            var decoder = BitmapDecoder.Create(new Uri(Source),
-                                               BitmapCreateOptions.DelayCreation,
-                                               BitmapCacheOption.OnDemand);
-
-            var result = decoder.Frames.SingleOrDefault(f => f.Width == Size);
-            if (result == default(BitmapFrame))
-            {
-                result = decoder.Frames.OrderBy(f => f.Width).First();
-            }
-
-            return result;
+            return IconHelper.CreateIcon(Source, Size);
         }
 
         public IconExtension(string source, int size)

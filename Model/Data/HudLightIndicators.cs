@@ -189,6 +189,19 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto RiverCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RiverCBet,
+                    Occurred = Source.Rivercontinuationbetmade,
+                    CouldOccurred = Source.Rivercontinuationbetpossible
+                };
+            }
+        }
+
         public virtual StatDto FlopCBetInThreeBetPotObject
         {
             get
@@ -749,6 +762,32 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto TurnBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TurnBet,
+                    Occurred = Source.DidTurnBet,
+                    CouldOccurred = Source.CouldTurnBet
+                };
+            }
+        }
+
+        public virtual StatDto FlopBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopBet,
+                    Occurred = Source.DidFlopBet,
+                    CouldOccurred = Source.CouldFlopBet
+                };
+            }
+        }
+
         public virtual StatDto CBetIPObject
         {
             get
@@ -1031,6 +1070,19 @@ namespace Model.Data
                     Value = FoldTurn,
                     Occurred = Source.FoldedTurn,
                     CouldOccurred = Source.FacedBetOnTurn
+                };
+            }
+        }
+
+        public virtual StatDto FoldFlopObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldFlop,
+                    Occurred = Source.FoldedFlop,
+                    CouldOccurred = Source.FacedBetOnFlop
                 };
             }
         }
@@ -1413,8 +1465,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = LimpEp,
-                    Occurred = Source.LimpEp,
-                    CouldOccurred = Source.LimpPossible
+                    Occurred = positionLimpMade?.EP ?? 0,
+                    CouldOccurred = positionLimpPossible?.EP ?? 0,
                 };
             }
         }
@@ -1426,8 +1478,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = LimpMp,
-                    Occurred = Source.LimpMp,
-                    CouldOccurred = Source.LimpPossible
+                    Occurred = positionLimpMade?.MP ?? 0,
+                    CouldOccurred = positionLimpPossible?.MP ?? 0,
                 };
             }
         }
@@ -1439,8 +1491,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = LimpCo,
-                    Occurred = Source.LimpCo,
-                    CouldOccurred = Source.LimpPossible
+                    Occurred = positionLimpMade?.CO ?? 0,
+                    CouldOccurred = positionLimpPossible?.CO ?? 0,
                 };
             }
         }
@@ -1452,8 +1504,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = LimpBtn,
-                    Occurred = Source.LimpBtn,
-                    CouldOccurred = Source.LimpPossible
+                    Occurred = positionLimpMade?.BN ?? 0,
+                    CouldOccurred = positionLimpPossible?.BN ?? 0,
                 };
             }
         }
@@ -1465,8 +1517,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = LimpSb,
-                    Occurred = Source.LimpSb,
-                    CouldOccurred = Source.LimpPossible
+                    Occurred = positionLimpMade?.SB ?? 0,
+                    CouldOccurred = positionLimpPossible?.SB ?? 0,
                 };
             }
         }

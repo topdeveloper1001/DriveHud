@@ -82,7 +82,7 @@ namespace Model.Site
                 return tableTypes;
             }
         }
-   
+
         public override bool IsHandHistoryLocationRequired
         {
             get
@@ -97,7 +97,7 @@ namespace Model.Site
             {
                 return true;
             }
-        }    
+        }
 
         public override string LogoSource
         {
@@ -112,6 +112,14 @@ namespace Model.Site
             get
             {
                 return "AmericasCardroom";
+            }
+        }
+
+        protected virtual string DefaultInstallPath
+        {
+            get
+            {
+                return @"C:\AmericasCardroom";
             }
         }
 
@@ -183,6 +191,11 @@ namespace Model.Site
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, $"Could read data from registry for {softwareName}. [{Site}] ", e);
+            }
+
+            if (Directory.Exists(DefaultInstallPath))
+            {
+                return DefaultInstallPath;
             }
 
             return string.Empty;

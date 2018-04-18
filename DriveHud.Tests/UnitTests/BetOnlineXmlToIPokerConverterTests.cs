@@ -10,8 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHud.Tests.IntegrationTests.Base;
 using DriveHUD.Common.Resources;
-using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers.BetOnline;
 using DriveHUD.Importers.Builders.iPoker;
@@ -29,62 +29,7 @@ namespace DriveHud.Tests
 {
     [TestFixture]
     public class BetOnlineXmlToIPokerXmlConverterTests
-    {
-        private const int SessionCode = 7777777;
-
-        private class TableServiceStub : IBetOnlineTableService
-        {
-            public bool IsRunning
-            {
-                get
-                {
-                    throw new NotImplementedException();
-                }
-            }
-
-            public event EventHandler ProcessStopped;
-
-            public void Dispose()
-            {
-                throw new NotImplementedException();
-            }
-
-            public string GetRandomPlayerName(string sessionCode, int seat)
-            {
-                return Utils.GenerateRandomPlayerName(seat);
-            }
-
-            public int GetSessionCode(string tableName, out EnumPokerSites site)
-            {
-                site = EnumPokerSites.BetOnline;
-                return SessionCode;
-            }
-
-            public int GetWindowHandle(ulong handId, out EnumPokerSites site)
-            {
-                site = EnumPokerSites.BetOnline;
-                return SessionCode;
-            }
-
-            public void Reset()
-            {
-            }
-
-            public void ResetCache()
-            {
-            }
-
-            public void Start()
-            {
-                throw new NotImplementedException();
-            }
-
-            public void Stop()
-            {
-                throw new NotImplementedException();
-            }
-        }
-
+    {                
         [OneTimeSetUp]
         public void SetUp()
         {
@@ -96,7 +41,7 @@ namespace DriveHud.Tests
 
             unityContainer.RegisterType<ICardsConverter, PokerCardsConverter>();
             unityContainer.RegisterType<ITournamentsCacheService, TournamentsCacheService>();
-            unityContainer.RegisterType<IBetOnlineTableService, TableServiceStub>();
+            unityContainer.RegisterType<IBetOnlineTableService, BetOnlineTableServiceStub>();
             unityContainer.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Ignition.ToString());
             unityContainer.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.BetOnline.ToString());
             unityContainer.RegisterType<ISiteConfiguration, TigerGamingConfiguration>(EnumPokerSites.TigerGaming.ToString());
@@ -129,6 +74,10 @@ namespace DriveHud.Tests
         [TestCase("CashOmaha-10-max-big-rake-error", "CashOmaha-10-max-big-rake-error-ipoker", "")]
         [TestCase("MTT-Holdem-10-max-invalid-relocation", "MTT-Holdem-10-max-invalid-relocation-ipoker", "<RelocationData me=\"1\" pivot=\"5\" />")]
         [TestCase("WindfallHand-3max", "WindfallHand-3max-ipoker", "")]
+        [TestCase("SNG-4-max-relocate", "SNG-4-max-relocate-ipoker-std", "")]
+        [TestCase("SNG-4-max-relocate", "SNG-4-max-relocate-ipoker-pivot-2", "<RelocationData me=\"2\" pivot=\"2\" hand=\"6344162\" />")]
+        [TestCase("SNG-4-max-relocate", "SNG-4-max-relocate-ipoker-pivot-1", "<RelocationData me=\"2\" pivot=\"1\" hand=\"6344162\" />")]
+        [TestCase("SNG-4-max-no-relocate", "SNG-4-max-no-relocate-ipoker", "")]
         public void TestConverter(string sourceXmlFile, string expectedXmlFile, string rellocation)
         {
             var source = File.ReadAllText(GetTestDataFilePath(sourceXmlFile));

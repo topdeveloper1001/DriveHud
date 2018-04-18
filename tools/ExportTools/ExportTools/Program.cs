@@ -26,37 +26,74 @@ namespace ExportTools
                     Directory.CreateDirectory(ExportFolder);
                 }
 
-                using (var session = SessionFactory.Instance.OpenStatelessSession())
-                {
-                    var entitiesCount = session.Query<Handhistory>().Count(x => x.PokersiteId == (int)EnumPokerSites.BetOnline);
-
-                    var numOfQueries = (int)Math.Ceiling((double)entitiesCount / handHistoryRowsPerQuery);
-
-                    for (var i = 0; i < numOfQueries; i++)
-                    {
-                        Console.WriteLine($"Processing {i}/{numOfQueries}...");
-
-                        var numOfRowToStartQuery = i * handHistoryRowsPerQuery;
-
-                        var handHistories = session.Query<Handhistory>()
-                            .Where(x => x.PokersiteId == (int)EnumPokerSites.BetOnline)
-                            .OrderBy(x => x.HandhistoryId)
-                            .Skip(numOfRowToStartQuery)
-                            .Take(handHistoryRowsPerQuery)
-                            .ToArray();
-
-                        var handHistoriesBySessionCode = BuildHandHistories(handHistories);
-
-                        foreach (KeyValuePair<string, XDocument> handHistoryBySessionCode in handHistoriesBySessionCode)
-                        {
-                            SaveHandHistoryToFile(handHistoryBySessionCode.Key, handHistoryBySessionCode.Value);
-                        }
-                    }                    
-                }
+                ExportACRTournamentHands();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
+            }
+        }
+
+        private static void ExportACRTournamentHands()
+        {
+            using (var session = SessionFactory.Instance.OpenStatelessSession())
+            {
+                var entitiesCount = session.Query<Handhistory>().Count(x => x.PokersiteId == (int)EnumPokerSites.AmericasCardroom && 
+                    x.Tourneynumber != null && x.Tourneynumber != string.Empty);
+
+                var numOfQueries = (int)Math.Ceiling((double)entitiesCount / handHistoryRowsPerQuery);
+
+                for (var i = 0; i < numOfQueries; i++)
+                {
+                    Console.WriteLine($"Processing {i}/{numOfQueries}...");
+
+                    var numOfRowToStartQuery = i * handHistoryRowsPerQuery;
+
+                    var handHistories = session.Query<Handhistory>()
+                        .Where(x => x.PokersiteId == (int)EnumPokerSites.AmericasCardroom && x.Tourneynumber != null && x.Tourneynumber != string.Empty)
+                        .OrderBy(x => x.HandhistoryId)
+                        .Skip(numOfRowToStartQuery)
+                        .Take(handHistoryRowsPerQuery)
+                        .ToArray();
+
+                    foreach (var handHistory in handHistories)
+                    {
+                        var fileName = Path.Combine(ExportFolder, $"{handHistory.Tourneynumber}.txt");
+
+                        File.AppendAllLines(fileName, new[] { handHistory.HandhistoryVal, string.Empty });
+                    }
+                }
+            }
+        }
+
+        private static void ExportBetOnlineHands()
+        {
+            using (var session = SessionFactory.Instance.OpenStatelessSession())
+            {
+                var entitiesCount = session.Query<Handhistory>().Count(x => x.PokersiteId == (int)EnumPokerSites.BetOnline);
+
+                var numOfQueries = (int)Math.Ceiling((double)entitiesCount / handHistoryRowsPerQuery);
+
+                for (var i = 0; i < numOfQueries; i++)
+                {
+                    Console.WriteLine($"Processing {i}/{numOfQueries}...");
+
+                    var numOfRowToStartQuery = i * handHistoryRowsPerQuery;
+
+                    var handHistories = session.Query<Handhistory>()
+                        .Where(x => x.PokersiteId == (int)EnumPokerSites.BetOnline)
+                        .OrderBy(x => x.HandhistoryId)
+                        .Skip(numOfRowToStartQuery)
+                        .Take(handHistoryRowsPerQuery)
+                        .ToArray();
+
+                    var handHistoriesBySessionCode = BuildHandHistories(handHistories);
+
+                    foreach (KeyValuePair<string, XDocument> handHistoryBySessionCode in handHistoriesBySessionCode)
+                    {
+                        SaveHandHistoryToFile(handHistoryBySessionCode.Key, handHistoryBySessionCode.Value);
+                    }
+                }
             }
         }
 

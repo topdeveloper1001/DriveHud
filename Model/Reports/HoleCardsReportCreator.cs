@@ -22,100 +22,34 @@ namespace Model.Reports
     /// <summary>
     /// This report groups games by cards that was dealt to player
     /// </summary>
-    public class HoleCardsReportCreator : CashBaseReportCreator
+    public class HoleCardsReportCreator : CashGroupingReportCreator<HoleCardsReportRecord, string>
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
+        protected override HoleCardsReportRecord CreateIndicator(string groupKey)
         {
-            var report = new ObservableCollection<ReportIndicators>();
-
-            if (statistics == null)
+            var report = new HoleCardsReportRecord
             {
-                return report;
-            }
-
-            foreach (var group in statistics.GroupBy(x => x.Cards.ToCards()).ToArray())
-            {
-                var stat = new HoleCardsReportRecord();
-
-                foreach (var playerstatistic in group)
+                Cards = new ComparableReportCards
                 {
-                    stat.AddStatistic(playerstatistic);
-
-                    if (stat.Cards == null)
-                    {
-                        stat.Cards = new ComparableReportCards();
-                    }
-
-                    stat.Cards.CardsString = group.Key;
+                    CardsString = groupKey
                 }
-
-                report.Add(stat);
-            }
+            };
 
             return report;
         }
-    }
 
-    public class TournamentHoleCardsReportCreator : TournamentBaseReportCreator
-    {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
+        protected override string GroupBy(Playerstatistic statistic)
         {
-            var report = new ObservableCollection<ReportIndicators>();
-
-            if (statistics == null)
-            {
-                return report;
-            }
-
-            foreach (var group in statistics.GroupBy(x => x.Cards.ToCards()).ToArray())
-            {
-                var stat = new HoleCardsReportRecord();
-
-                foreach (var playerstatistic in group)
-                {
-                    stat.AddStatistic(playerstatistic);
-
-                    if (stat.Cards == null)
-                    {
-                        stat.Cards = new ComparableReportCards();
-                    }
-
-                    stat.Cards.CardsString = group.Key;
-                }
-
-                report.Add(stat);
-            }
-
-            return report;
+            return statistic.Cards.ToCards();
         }
-    }
 
-    public static class HoleCardsReportStringExtensions
-    {
-        public static string ToCards(this string holeCards)
+        protected override string GroupBy(HoleCardsReportRecord indicator)
         {
-            if (string.IsNullOrWhiteSpace(holeCards))
-            {
-                return string.Empty;
-            }
-
-            var cards = CardHelper.Split(holeCards);
-
-            if (cards.Count != 2)
-            {
-                return string.Empty;
-            }
-
-            var value1 = cards[0].TrimEnd('c', 'd', 'h', 's');
-            var value2 = cards[1].TrimEnd('c', 'd', 'h', 's');
-
-            var result = value1 + value2;
-            if (value1 != value2)
-            {
-                result += cards[0].Last() == cards[1].Last() ? "s" : "o";
-            }
-
-            return result;
+            return indicator.Cards.CardsString;
         }
-    }
+
+        protected override IEnumerable<HoleCardsReportRecord> OrderResult(IEnumerable<HoleCardsReportRecord> reports)
+        {
+            return reports.Where(x => !string.IsNullOrEmpty(x.Cards.CardsString)).OrderByDescending(x => x.Cards);
+        }
+    }      
 }

@@ -59,22 +59,13 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var canSave = this.WhenAny(x => x.Name, x => !string.IsNullOrWhiteSpace(x.Value));
 
-            SaveCommand = ReactiveCommand.Create(canSave);
-            SaveCommand.Subscribe(x =>
-            {
-                viewModelInfo.Save?.Invoke();
-            });
-
-            CancelCommand = ReactiveCommand.Create();
-            CancelCommand.Subscribe(x =>
-            {
-                viewModelInfo.Cancel?.Invoke();
-            });
+            SaveCommand = ReactiveCommand.Create(() => viewModelInfo.Save?.Invoke(), canSave);
+            CancelCommand = ReactiveCommand.Create(() => viewModelInfo.Cancel?.Invoke());
         }
 
-        public ReactiveCommand<object> SaveCommand { get; private set; }
+        public ReactiveCommand SaveCommand { get; private set; }
 
-        public ReactiveCommand<object> CancelCommand { get; private set; }
+        public ReactiveCommand CancelCommand { get; private set; }
 
         public string Header
         {

@@ -1,0 +1,45 @@
+PokerStars Hand #181054765017:  Omaha Hi/Lo Pot Limit (€0.02/€0.05 EUR) - 2018/01/15 17:19:12 ET
+Table 'Anacreon' 6-max Seat #6 is the button
+Seat 1: norefedrina (€1.87 in chips)
+Seat 2: NORIALEX99 (€3.36 in chips)
+Seat 3: iamthenr1 (€15.06 in chips)
+Seat 4: piera61 (€11.36 in chips)
+Seat 5: bo12327 (€4.02 in chips)
+Seat 6: Yarling1 (€4.21 in chips)
+norefedrina: posts small blind €0.02
+NORIALEX99: posts big blind €0.05
+*** HOLE CARDS ***
+iamthenr1: folds
+piera61: calls €0.05
+bo12327: raises €0.17 to €0.22
+Yarling1: folds
+norefedrina: calls €0.20
+NORIALEX99: calls €0.17
+piera61: calls €0.17
+*** FLOP *** [3c 9h 5h]
+norefedrina: bets €0.84
+NORIALEX99: calls €0.84
+piera61: folds
+bo12327: raises €2.96 to €3.80 and is all-in
+norefedrina: calls €0.81 and is all-in
+NORIALEX99: calls €2.30 and is all-in
+Uncalled bet (€0.66) returned to bo12327
+*** TURN *** [3c 9h 5h] [9s]
+*** RIVER *** [3c 9h 5h 9s] [6c]
+*** SHOW DOWN ***
+NORIALEX99: shows [As Th Tc Kh] (HI: two pair, Tens and Nines)
+bo12327: shows [Kd Ks 4h Ad] (HI: two pair, Kings and Nines; LO: 6,5,4,3,A)
+bo12327 collected €1.41 from side pot
+bo12327 collected €1.41 from side pot
+norefedrina: shows [3h 4c 8h 2h] (HI: a straight, Deuce to Six; LO: 6,5,4,3,2)
+norefedrina collected €2.76 from main pot
+bo12327 collected €2.75 from main pot
+*** SUMMARY ***
+Total pot €8.81 Main pot €5.51. Side pot €2.82. | Rake €0.48
+Board [3c 9h 5h 9s 6c]
+Seat 1: norefedrina (small blind) showed [3h 4c 8h 2h] and won (€2.76) with HI: a straight, Deuce to Six; LO: 6,5,4,3,2
+Seat 2: NORIALEX99 (big blind) showed [As Th Tc Kh] and lost with HI: two pair, Tens and Nines
+Seat 3: iamthenr1 folded before Flop (didn't bet)
+Seat 4: piera61 folded on the Flop
+Seat 5: bo12327 showed [Kd Ks 4h Ad] and won (€5.57) with HI: two pair, Kings and Nines; LO: 6,5,4,3,A
+Seat 6: Yarling1 (button) folded before Flop (didn't bet)

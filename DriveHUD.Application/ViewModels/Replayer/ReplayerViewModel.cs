@@ -20,10 +20,12 @@ using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Players;
 using Microsoft.Practices.ServiceLocation;
+using Model.Enums;
 using Model.Events;
 using Model.Importer;
 using Model.Interfaces;
 using Model.Replayer;
+using Model.Solvers;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
 using System;
@@ -300,6 +302,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
             // searching for dead cards and removing this player from list of ActivePlayerHasHoleCard 
             ActivePlayerHasHoleCardFolded = new List<Player>();
 
+            AllDeadCards.Clear();
+
             foreach (ReplayerTableState replayerTableState in TableStateList)
             {
                 Player playerInTableState = CurrentGame.Players.FirstOrDefault(x => x.PlayerName == replayerTableState.CurrentAction.PlayerName);
@@ -316,12 +320,16 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 }
             }
 
-            var equities = Converter.CalculateEquity(CurrentGame,
-                ActivePlayerHasHoleCard,
-                AllDeadCards,
-                AllDeadCardsString,
-                CurrentBoardCards,
-                CurrentBoard);
+            var equitySolver = ServiceLocator.Current.GetInstance<IEquitySolver>();
+
+            var gameType = new GeneralGameTypeEnum().ParseGameType(CurrentGame.GameDescription.GameType);
+
+            var equities = equitySolver.CalculateEquity(ActivePlayerHasHoleCard.Select(x => x.HoleCards).ToArray(),
+                CurrentBoard,
+                AllDeadCards.Distinct(new LambdaComparer<HoleCards>((x, y) => x.ToString().Equals(y.ToString()))).ToArray(),
+                gameType)
+                .Select(x => Math.Round(x * 100, 2))
+                .ToArray();
 
             // updating states in replayer view             
             if (equities != null)
@@ -330,26 +338,17 @@ namespace DriveHUD.Application.ViewModels.Replayer
             }
 
             //case of last state. Needed for All-in before River for some cases
-            if (TableStateList.IndexOf(state) + 1 == TableStateList.Count)
+            if (TableStateList.IndexOf(state) + 1 == TableStateList.Count &&
+                equities != null)
             {
-                //calculation of probabilities
-                equities = Converter.CalculateEquity(CurrentGame,
-                    ActivePlayerHasHoleCard,
-                    AllDeadCards,
-                    AllDeadCardsString,
-                    CurrentBoardCards,
-                    CurrentBoard);
-
                 // updating states in replayer view
-                if (equities != null)
-                {
-                    RefreshBoard(equities, Street.Preflop);
-                }
+                RefreshBoard(equities, Street.Preflop);
             }
         }
 
         private ReplayerPlayerViewModel _playerInState { get; set; }
-        private void RefreshBoard(List<decimal> equities, Street street)
+
+        private void RefreshBoard(decimal[] equities, Street street)
         {
             foreach (ReplayerTableState replayerTableState in TableStateList.Where(st => st.CurrentStreet == street))
             {

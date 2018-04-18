@@ -1,0 +1,82 @@
+Game started at: 2018/1/7 13:11:36 *** Summary: GameType: NL, TournamentId: 8192909, TournamentBuyIn: 13.20
+Game ID: 1092653110 20/40 $10K NLO8 Satellite - 2 Seats GTD, Table 1 (Omaha HiLow)
+Seat 3 is the button
+Seat 1: workstrong (2595).
+Seat 2: UnLuckyMrLucky (2245).
+Seat 3: Granny_Annie (2395).
+Seat 4: getlucky675 (2790).
+Seat 5: akashra (7535).
+Seat 6: QUADSBRUHHH (2380).
+Seat 8: ThreeBetStack (2560).
+Seat 9: whisper28 (2500).
+Player getlucky675 has small blind (20)
+Player akashra has big blind (40)
+Player getlucky675 received a card.
+Player getlucky675 received a card.
+Player getlucky675 received a card.
+Player getlucky675 received a card.
+Player akashra received a card.
+Player akashra received a card.
+Player akashra received a card.
+Player akashra received a card.
+Player QUADSBRUHHH received a card.
+Player QUADSBRUHHH received a card.
+Player QUADSBRUHHH received a card.
+Player QUADSBRUHHH received a card.
+Player ThreeBetStack received a card.
+Player ThreeBetStack received a card.
+Player ThreeBetStack received a card.
+Player ThreeBetStack received a card.
+Player whisper28 received a card.
+Player whisper28 received a card.
+Player whisper28 received a card.
+Player whisper28 received a card.
+Player workstrong received a card.
+Player workstrong received a card.
+Player workstrong received a card.
+Player workstrong received a card.
+Player UnLuckyMrLucky received a card.
+Player UnLuckyMrLucky received a card.
+Player UnLuckyMrLucky received a card.
+Player UnLuckyMrLucky received a card.
+Player Granny_Annie received card: [Ks]
+Player Granny_Annie received card: [Jh]
+Player Granny_Annie received card: [Jd]
+Player Granny_Annie received card: [7d]
+Player QUADSBRUHHH folds
+Player ThreeBetStack calls (40)
+Player whisper28 folds
+Player workstrong folds
+Player UnLuckyMrLucky folds
+Player Granny_Annie folds
+Player getlucky675 raises (60)
+Player akashra calls (40)
+Player ThreeBetStack raises (80)
+Player getlucky675 calls (40)
+Player akashra calls (40)
+*** FLOP ***: [Ah 8s 8c]
+Player getlucky675 checks
+Player akashra bets (200)
+Player ThreeBetStack calls (200)
+Player getlucky675 calls (200)
+*** TURN ***: [Ah 8s 8c] [2d]
+Player getlucky675 checks
+Player akashra bets (620)
+Player ThreeBetStack calls (620)
+Player getlucky675 allin (2470)
+Player akashra allin (6595)
+Player ThreeBetStack allin (1620)
+Uncalled bet (4745) returned to akashra
+*** RIVER ***: [Ah 8s 8c 2d] [9c]
+------ Summary ------
+Pot: 8140
+Board: [Ah 8s 8c 2d 9c]
+Player workstrong does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player UnLuckyMrLucky does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Granny_Annie does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player getlucky675 shows: Two pairs. As and 8s [4d 6d 3s As] Low hand (A A 2 3 4 8 ).Bets: 2790. Collects: 4070. Wins: 1280.
+*Player akashra shows: Two pairs. As and 8s (kicker Q) [Ad 3h 5c Qc]. Bets: 2790. Collects: 4070. Wins: 1280.
+Player QUADSBRUHHH does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player ThreeBetStack shows: Two pairs. As and 8s [5h 10d 4c Ac]. Bets: 2560. Collects: 0. Loses: 2560.
+Player whisper28 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2018/1/7 13:14:9

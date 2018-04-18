@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHud.Tests.UnitTests.Helpers;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Progress;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
@@ -104,8 +105,7 @@ namespace DriveHud.Tests.UnitTests
 
         /// <summary>
         /// Convert original data from injector in iPoker format (for manual checks, because some data are randomized, so need to develop smart comparer)
-        /// </summary>        
-        [Test]
+        /// </summary>                
         [TestCase("ign-zone-2017-11-21.log", "ign-info.log", "ign-zone-2017-11-21.xml")]
         [TestCase("ign-zone-2017-11-21-2.log", "ign-info.log", "ign-zone-2017-11-21-2.xml")]
         [TestCase("ign-zone-2017-11-22-1.log", "ign-info.log", "ign-zone-2017-11-22-1.xml")]
@@ -120,6 +120,10 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("ign-mtt-2018-01-07.log", "ign-info.log", "ign-mtt-2018-01-07.xml")]
         [TestCase("ign-mtt-2018-01-07.log", "ign-info.log", "ign-mtt-2018-01-07.xml")]
         [TestCase("ign-mtt-2018-01-14.log", "ign-info.log", "ign-mtt-2018-01-14.xml")]
+        [TestCase("ign-zone-2018-03-18-2.log", "ign-info.log", "ign-zone-2018-03-18-2.xml")]
+        [TestCase("ign-zone-2018-03-18-3.log", "ign-info.log", "ign-zone-2018-03-18-3.xml")]
+        [TestCase("ign-zone-2018-03-18-4.log", "ign-info.log", "ign-zone-2018-03-18-4.xml")]
+        [TestCase("ign-omaha-cash-2018-04-07.log", "ign-info.log", "ign-omaha-cash-2018-04-07.xml")]
         public void HandsAreImported(string testData, string infoTestData, string expectedFile)
         {
             // initialize info manager with test data
@@ -153,7 +157,7 @@ namespace DriveHud.Tests.UnitTests
             var expectedXml = ObfuscateXml(File.ReadAllText(GetTestDataFilePath(expectedFile)));
 
             Assert.That(actualXml, Is.EqualTo(expectedXml), "Xml must be equal to expected.");
-        }
+        }   
 
         private void InitializeInfoDataManager(string fileName)
         {
@@ -188,9 +192,14 @@ namespace DriveHud.Tests.UnitTests
                 if (string.IsNullOrWhiteSpace(textLine))
                 {
                     var dataText = sb.ToString();
-                    var catcherDataObject = JsonConvert.DeserializeObject<BovadaCatcherDataObjectWithTime>(dataText);
-
-                    bovadaCatcherDataObjects.Add(catcherDataObject);
+                    try
+                    {
+                        var catcherDataObject = JsonConvert.DeserializeObject<BovadaCatcherDataObjectWithTime>(dataText);
+                        bovadaCatcherDataObjects.Add(catcherDataObject);
+                    }
+                    catch
+                    {
+                    }
 
                     sb.Clear();
                 }

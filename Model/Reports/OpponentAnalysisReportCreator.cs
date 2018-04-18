@@ -13,14 +13,16 @@
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Data;
+using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace Model.Reports
 {
-    public class OpponentAnalysisReportCreator : CashBaseReportCreator
+    public class OpponentAnalysisReportCreator : CashBaseReportCreator<ReportIndicators>
     {
-        public override ObservableCollection<ReportIndicators> Create(IList<Playerstatistic> statistics)
+        public override ObservableCollection<ReportIndicators> Create(List<Playerstatistic> statistics, bool forceRefresh = false)
         {
             var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
 
@@ -29,6 +31,16 @@ namespace Model.Reports
             return report != null ?
                 new ObservableCollection<ReportIndicators>(report) :
                 new ObservableCollection<ReportIndicators>();
+        }
+
+        protected override List<ReportIndicators> CombineChunkedIndicators(BlockingCollection<ReportIndicators> chunkedIndicators)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<ReportIndicators> chunkedIndicators)
+        {
+            throw new NotImplementedException();
         }
     }
 }

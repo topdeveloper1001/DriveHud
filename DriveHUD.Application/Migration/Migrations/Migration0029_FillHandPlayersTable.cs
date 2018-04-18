@@ -38,7 +38,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private readonly static object locker = new object();
 
-        private readonly IDataService dataService = ServiceLocator.Current.GetInstance<IDataService>();
+        private readonly IPlayerStatisticRepository playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
 
         private const int fastModeAllowedHands = 1500000;
 
@@ -105,7 +105,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
                 foreach (var playerId in playersId)
                 {
-                    var playerStatsFiles = dataService.GetPlayerFiles(playerId);
+                    var playerStatsFiles = playerStatisticRepository.GetPlayerFiles(playerId);
                     statisticFiles.AddRange(playerStatsFiles);
                 }
 
@@ -137,41 +137,41 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
                     Parallel.ForEach(statisticFiles, file =>
                     {
-                        dataService.ActOnPlayerStatisticFromFile(file, stat => !stat.IsTourney, stat =>
-                        {
-                            var handKey = new HandHistoryKey(stat.GameNumber, (short)stat.PokersiteId);
+                        playerStatisticRepository.GetPlayerStatisticFromFile(file).Where(stat => !stat.IsTourney).ForEach(stat =>
+                       {
+                           var handKey = new HandHistoryKey(stat.GameNumber, (short)stat.PokersiteId);
 
-                            if (hands.ContainsKey(handKey))
-                            {
-                                lock (locker)
-                                {
-                                    var handPlayer = new HandPlayer
-                                    {
-                                        PlayerId = stat.PlayerId,
-                                        HandId = hands[handKey],
-                                        NetWon = Utils.ConvertToCents(stat.NetWon)
-                                    };
+                           if (hands.ContainsKey(handKey))
+                           {
+                               lock (locker)
+                               {
+                                   var handPlayer = new HandPlayer
+                                   {
+                                       PlayerId = stat.PlayerId,
+                                       HandId = hands[handKey],
+                                       NetWon = Utils.ConvertToCents(stat.NetWon)
+                                   };
 
-                                    cmd.Parameters.Add("@HandId", DbType.Int32);
-                                    cmd.Parameters.Add("@PlayerId", DbType.Int32);
-                                    cmd.Parameters.Add("@NetWon", DbType.Int64);
+                                   cmd.Parameters.Add("@HandId", DbType.Int32);
+                                   cmd.Parameters.Add("@PlayerId", DbType.Int32);
+                                   cmd.Parameters.Add("@NetWon", DbType.Int64);
 
-                                    cmd.Prepare();
+                                   cmd.Prepare();
 
-                                    if (counter % 25 == 0)
-                                    {
-                                        MigrationUtils.SetStatusMessage($"Processing statistic {counter}/{statisticFiles.Count}");
-                                    }
+                                   if (counter % 25 == 0)
+                                   {
+                                       MigrationUtils.SetStatusMessage($"Processing statistic {counter}/{statisticFiles.Count}");
+                                   }
 
-                                    cmd.Parameters[0].Value = handPlayer.HandId;
-                                    cmd.Parameters[1].Value = handPlayer.PlayerId;
-                                    cmd.Parameters[2].Value = handPlayer.NetWon;
-                                    cmd.ExecuteNonQuery();
+                                   cmd.Parameters[0].Value = handPlayer.HandId;
+                                   cmd.Parameters[1].Value = handPlayer.PlayerId;
+                                   cmd.Parameters[2].Value = handPlayer.NetWon;
+                                   cmd.ExecuteNonQuery();
 
-                                    insertedRows++;
-                                }
-                            }
-                        });
+                                   insertedRows++;
+                               }
+                           }
+                       });
 
                         Interlocked.Increment(ref counter);
                     });
@@ -195,7 +195,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
             Parallel.ForEach(statisticFiles, file =>
             {
-                dataService.ActOnPlayerStatisticFromFile(file, stat => !stat.IsTourney, stat =>
+                playerStatisticRepository.GetPlayerStatisticFromFile(file).Where(stat => !stat.IsTourney).ForEach(stat =>
                 {
                     var handKey = new HandHistoryKey(stat.GameNumber, (short)stat.PokersiteId);
 

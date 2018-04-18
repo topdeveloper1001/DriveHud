@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using Model.Hud;
 using System;
 using System.Collections.Generic;
 

@@ -1,0 +1,57 @@
+<session sessioncode="1837280">
+	<general>
+		<mode>real</mode>		
+		<gametype>Holdem NL $100/$200</gametype>
+		<tablename>Table13648006</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2018-02-07 01:47:34</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>				
+		<place>0</place>
+		<buyin>$0+$0</buyin>
+		<totalbuyin>$0</totalbuyin>
+		<win>0</win>
+		<pokersite>Ignition</pokersite>
+	</general>
+	<game gamecode="3629769660">
+		<general>
+			<startdate>2018-02-07 02:41:08</startdate>
+			<players>
+				<player seat="6" name="P2_875424AY" chips="1295" dealer="0" win="0" bet="200" rebuy="0" addon="0" />
+				<player seat="1" name="P1_928114KV" chips="1370" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="4" name="Hero" chips="6320" dealer="1" win="6490" bet="6320" rebuy="0" addon="0" />
+				<player seat="5" name="P6_391468UT" chips="15" dealer="0" win="45" bet="15" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="P2_875424AY" type="2" sum="200" cards="[cards]" />
+			<action no="2" player="P6_391468UT" type="2" sum="15" cards="[cards]" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="P2_875424AY">X X</cards>
+			<cards type="Pocket" player="P1_928114KV">X X</cards>
+			<cards type="Pocket" player="Hero">DQ DJ</cards>
+			<cards type="Pocket" player="P6_391468UT">SA CA</cards>
+			<action no="3" player="P1_928114KV" type="0" sum="0" cards="" />
+			<action no="4" player="Hero" type="7" sum="6320" cards="" />
+			<action no="5" player="P2_875424AY" type="0" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S2 C7 S7</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H9</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">SQ</cards>
+		</round>
+	</game>
+</session>

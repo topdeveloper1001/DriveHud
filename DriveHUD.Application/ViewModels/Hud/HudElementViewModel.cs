@@ -359,6 +359,24 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        [ProtoMember(19)]
+        private int playerId;
+
+        /// <summary>
+        /// Player id
+        /// </summary>
+        public int PlayerId
+        {
+            get
+            {
+                return playerId;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref playerId, value);
+            }
+        }
+
         #endregion
 
         #region Infrastructure

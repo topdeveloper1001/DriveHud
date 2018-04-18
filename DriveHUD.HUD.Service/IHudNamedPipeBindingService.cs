@@ -25,6 +25,9 @@ namespace DriveHUD.HUD.Service
         [OperationContract(Name = "UpdateHUD", IsOneWay = true)]
         void UpdateHUD(byte[] data);
 
+        [OperationContract(Name = "CloseTable", IsOneWay = true)]
+        void CloseTable(int windowHandle);
+
         #region Callback connection manager
 
         [OperationContract(Name = "ConnectCallbackChannel", IsOneWay = true)]

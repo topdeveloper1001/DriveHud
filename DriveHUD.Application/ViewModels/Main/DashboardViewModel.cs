@@ -17,6 +17,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Enums;
 using Model.Events;
+using Model.Reports;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
 using System.Linq;
@@ -24,11 +25,15 @@ using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
 {
-    public class DashboardViewModel : BaseViewModel
+    public class DashboardViewModel : BaseViewModel, IMainTabViewModel
     {
+        private readonly IReportStatusService reportStatusService;
+
         #region Properties
 
         public InteractionRequest<INotification> ShowMoneyWonGraphPopupRequest { get; private set; }
+
+        private bool updateIsRequired = true;
 
         private bool isExpanded = true;
 
@@ -44,9 +49,9 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private CashGraphViewModel moneyWonGraphViewModel;
+        private GraphViewModel moneyWonGraphViewModel;
 
-        public CashGraphViewModel MoneyWonGraphViewModel
+        public GraphViewModel MoneyWonGraphViewModel
         {
             get
             {
@@ -58,9 +63,9 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private CashGraphViewModel bb100GraphViewModel;
+        private GraphViewModel bb100GraphViewModel;
 
-        public CashGraphViewModel BB100GraphViewModel
+        public GraphViewModel BB100GraphViewModel
         {
             get
             {
@@ -86,23 +91,42 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private bool UpdateIsRequired
+        {
+            get
+            {
+                return updateIsRequired || reportStatusService.CashUpdated;
+            }
+        }
+
         public ICommand ShowMoneyWonGraphPopupCommand { get; private set; }
+
+        public EnumViewModelType ViewModelType => EnumViewModelType.DashboardViewModel;
 
         #endregion
 
         internal DashboardViewModel()
         {
+            reportStatusService = ServiceLocator.Current.GetInstance<IReportStatusService>();
+
             ServiceLocator.Current
                 .GetInstance<IEventAggregator>()
                 .GetEvent<BuiltFilterChangedEvent>()
-                .Subscribe(arg => Update());
+                .Subscribe(e =>
+                {
+                    if (e.AffectedFilter.Contains(EnumFilterType.Cash))
+                    {
+                        updateIsRequired = true;
+                        Update();
+                    }
+                });
 
             ShowMoneyWonGraphPopupRequest = new InteractionRequest<INotification>();
             ShowMoneyWonGraphPopupCommand = new RelayCommand(() =>
             {
                 var cashGraphPopupViewModelInfo = new CashGraphPopupViewModelInfo
                 {
-                    MoneyWonCashGraphViewModel = MoneyWonGraphViewModel
+                    MoneyWonCashGraphViewModel = MoneyWonGraphViewModel.ViewModel as CashGraphViewModel
                 };
 
                 var cashGraphPopupRequestInfo = new CashGraphPopupRequestInfo(cashGraphPopupViewModelInfo);
@@ -115,11 +139,16 @@ namespace DriveHUD.Application.ViewModels
 
         internal void Update()
         {
-            if (!IsActive)
+            if (!IsActive || !UpdateIsRequired)
             {
                 return;
             }
 
+            InternalUpdate();
+        }
+
+        private void InternalUpdate()
+        {
             if (StorageModel.StatisticCollection == null)
             {
                 return;
@@ -129,13 +158,16 @@ namespace DriveHUD.Application.ViewModels
 
             MoneyWonGraphViewModel?.Update();
             BB100GraphViewModel?.Update();
+
+            updateIsRequired = false;
+            reportStatusService.CashUpdated = false;
         }
 
         private void UpdateFilteredData()
         {
             if (IndicatorCollection == null)
             {
-                IndicatorCollection = new LightIndicators();
+                IndicatorCollection = new DashboardIndicators();
             }
             else
             {
@@ -151,7 +183,7 @@ namespace DriveHUD.Application.ViewModels
 
             IndicatorCollection.UpdateSource(statistics);
 
-            OnPropertyChanged(() => IndicatorCollection);
+            RaisePropertyChanged(nameof(IndicatorCollection));
         }
 
         private void InitializeCharts()
@@ -159,10 +191,10 @@ namespace DriveHUD.Application.ViewModels
             var cashGraphSettingsService = ServiceLocator.Current.GetInstance<ICashGraphSettingsService>();
 
             var moneyWonChartSeries = ChartSeriesProvider.CreateMoneyWonChartSeries();
-            MoneyWonGraphViewModel = new CashGraphViewModel(moneyWonChartSeries, cashGraphSettingsService.GetSettings(CashChartType.MoneyWon));
+            MoneyWonGraphViewModel = new GraphViewModel(new CashGraphViewModel(moneyWonChartSeries, cashGraphSettingsService.GetSettings(CashChartType.MoneyWon)));
 
             var bb100ChartSeries = ChartSeriesProvider.CreateBB100ChartSeries();
-            BB100GraphViewModel = new CashGraphViewModel(bb100ChartSeries, cashGraphSettingsService.GetSettings(CashChartType.BB100));
+            BB100GraphViewModel = new GraphViewModel(new CashGraphViewModel(bb100ChartSeries, cashGraphSettingsService.GetSettings(CashChartType.BB100)));
         }
     }
 }

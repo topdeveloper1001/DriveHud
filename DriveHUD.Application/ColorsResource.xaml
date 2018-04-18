@@ -108,12 +108,12 @@
         x:Key="DatagridCurrentCellBorderColor">Black</Color>
     <Color
         x:Key="SliderTrackDarkColor">#FFC5CBF9</Color>
-
     <Color
         x:Key="NavButtonFrameColor">#FF3843C4</Color>
-
     <Color
         x:Key="ComboboxBackGroundColor">#FF212327</Color>
+    <Color
+        x:Key="DarkControlColor">#FF111315</Color>
 
     <SolidColorBrush
         x:Key="ComboboxBackGroundBrush"
@@ -122,6 +122,10 @@
     <SolidColorBrush
         x:Key="ForegroundBrush"
         Color="{StaticResource ForegroundColor}" />
+
+    <SolidColorBrush
+        x:Key="DarkControlBackground"
+        Color="{StaticResource DarkControlColor}" />
 
     <LinearGradientBrush
         x:Key="MenuPopupBrush"
@@ -488,7 +492,7 @@
 
     <SolidColorBrush
         x:Key="PieChartInnerBackgroundBrush">#121316</SolidColorBrush>
-    
+
     <!--#endregion-->
 
 </ResourceDictionary>

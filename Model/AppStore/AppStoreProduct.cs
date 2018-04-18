@@ -37,7 +37,7 @@ namespace Model.AppStore
                 }
 
                 productName = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -57,7 +57,7 @@ namespace Model.AppStore
                 }
 
                 productDescription = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -77,7 +77,7 @@ namespace Model.AppStore
                 }
 
                 price = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -97,7 +97,7 @@ namespace Model.AppStore
                 }
 
                 cartLink = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -117,7 +117,7 @@ namespace Model.AppStore
                 }
 
                 learnMoreLink = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -137,7 +137,7 @@ namespace Model.AppStore
                 }
 
                 imageLink = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 
@@ -157,7 +157,7 @@ namespace Model.AppStore
                 }
 
                 isAnimatedGif = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
     }

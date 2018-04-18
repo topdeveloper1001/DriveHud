@@ -37,18 +37,10 @@ namespace DriveHUD.Importers.PokerStars
 {
     internal class PokerStarsZoomDataManager : IPokerStarsZoomDataManager
     {
-        private IEventAggregator eventAggregator;
-        private IImporterSessionCacheService importerSessionCacheService;
-        private IPokerClientEncryptedLogger logger;
-        private bool isLoggingEnabled;
-        private string site;
-
-        /// <summary>
-        /// Interval in minutes after which session will expire and will be removed from cache
-        /// </summary>
-        private const int cacheLifeTime = 3;
-
-        private Dictionary<int, PokerStarsZoomCacheData> cachedData = new Dictionary<int, PokerStarsZoomCacheData>();
+        private readonly IEventAggregator eventAggregator;
+        private IImporterSessionCacheService importerSessionCacheService;     
+                 
+        private readonly Dictionary<int, PokerStarsZoomCacheData> cachedData = new Dictionary<int, PokerStarsZoomCacheData>();
 
         public PokerStarsZoomDataManager(IEventAggregator eventAggregator)
         {
@@ -57,17 +49,8 @@ namespace DriveHUD.Importers.PokerStars
 
         public void Initialize(PokerClientDataManagerInfo dataManagerInfo)
         {
-            Check.ArgumentNotNull(() => dataManagerInfo);
-
-            logger = dataManagerInfo.Logger;
-            site = dataManagerInfo.Site;
-
-            var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
-            var settings = settingsService.GetSettings();
-
-            importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
-
-            isLoggingEnabled = settings.GeneralSettings.IsAdvancedLoggingEnabled;
+            Check.ArgumentNotNull(() => dataManagerInfo);                              
+            importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();            
         }
 
         public void ProcessData(byte[] data)
@@ -153,7 +136,7 @@ namespace DriveHUD.Importers.PokerStars
 
                 cachedObject.IsProcessed = true;
 #if DEBUG
-                Console.WriteLine($"Data has been send to {catcherDataObject.Title}, {catcherDataObject.Handle}, {catcherDataObject.Size}-max, {string.Join(", ", players.Select(x => $"{x.PlayerName}[{x.PlayerId}]").ToArray())}");
+                Console.WriteLine($@"Data has been send to {catcherDataObject.Title}, {catcherDataObject.Handle}, {catcherDataObject.Size}-max, {string.Join(", ", players.Select(x => $"{x.PlayerName}[{x.PlayerId}]").ToArray())}");
 #endif
             }
             catch (Exception ex)
@@ -168,12 +151,12 @@ namespace DriveHUD.Importers.PokerStars
             {
                 encryptedData = Utils.RemoveTrailingZeros(encryptedData);
 
-                var key = "5u8x/A?D(G+KbPeShVmYq3t6w9y$B&E)";
+                const string key = "5u8x/A?D(G+KbPeShVmYq3t6w9y$B&E)";
 
                 using (var aesCryptoProvider = new AesManaged())
                 {
                     aesCryptoProvider.Mode = CipherMode.ECB;
-                    aesCryptoProvider.IV = new byte[16] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+                    aesCryptoProvider.IV = new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
                     aesCryptoProvider.Key = Encoding.UTF8.GetBytes(key);
                     aesCryptoProvider.Padding = PaddingMode.None;
 
@@ -192,10 +175,10 @@ namespace DriveHUD.Importers.PokerStars
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 LogProvider.Log.Error("Could not recognize data");
-                throw e;
+                throw;
             }
         }
 
@@ -242,7 +225,7 @@ namespace DriveHUD.Importers.PokerStars
             }
         }
 
-        private Dictionary<string, int> playerNamePlayerIdMap = new Dictionary<string, int>();
+        private readonly Dictionary<string, int> playerNamePlayerIdMap = new Dictionary<string, int>();
 
         private void LoadPlayers(IEnumerable<string> players)
         {
@@ -304,7 +287,7 @@ namespace DriveHUD.Importers.PokerStars
 
             if (heroPlayer == null)
             {
-                return heroPlayer;
+                return null;
             }
 
             int prefferedSeatNumber = 0;
@@ -323,8 +306,6 @@ namespace DriveHUD.Importers.PokerStars
                     case EnumTableType.Nine:
                         prefferedSeatNumber = 5;
                         break;
-                    default:
-                        break;
                 }
             }
             else
@@ -332,7 +313,7 @@ namespace DriveHUD.Importers.PokerStars
                 var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().
                                        SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == EnumPokerSites.PokerStars)?.PrefferedSeats;
 
-                var prefferedSeat = preferredSeats.FirstOrDefault(x => (int)x.TableType == catcherDataObject.Size && x.IsPreferredSeatEnabled);
+                var prefferedSeat = preferredSeats?.FirstOrDefault(x => (int)x.TableType == catcherDataObject.Size && x.IsPreferredSeatEnabled);
 
                 if (prefferedSeat != null)
                 {
@@ -398,20 +379,13 @@ namespace DriveHUD.Importers.PokerStars
             return null;
         }
 
-        private readonly static string[] ZoomTables = new[] { "McNaught", "Borrelllly", "Halley", "Lovejoy", "Hyakutake", "Donati", "Lynx", "Hartley", "Aludra", "Devanssay",
+        private static readonly string[] ZoomTables = new[] { "McNaught", "Borrelllly", "Halley", "Lovejoy", "Hyakutake", "Donati", "Lynx", "Hartley", "Aludra", "Devanssay",
             "Eulalia", "Nansen", "Amundsen", "Whirlpool", "Hydra", "Thyestes", "Arp", "Baade", "Aquarius Dwarf", "Serpens Caput", "Triangulum", "Gotha", "Aenaa", "Diotima",
             "Lambda Velorum", "Humason", "Centaurus", "Dorado", "Lupus", "Coma Berenices", "Cassiopeia", "Perseus", "C Carinae", "Alpha Reticuli (CAP)", "Chi Sagittarii",
             "Sirius", "Omicron Capricorni", "Beta Tucanae (CAP)", "Delta Antilae", "Theta Cancri", "Chi Draconis", "Sigam Aquilae (CAP)", "Iota Apodis", "Zeta Phoenicis",
             "Delta Boötis", "Gamma Delphini (CAP)", "Phi Piscium", "Tau Hydrae", "Adhara", "Iota Cancri (CAP)", "Deneb el Okab", "Lambda Arietis", "Cetus", "Mira (CAP)",
             "Crux", "Rho Capricorni", "Gamma Crateris", "Alpha Crucis (CAP)", "Norma", "Canes Venatici", "Draco", "Amália", "Eusébio", "Pessoa", "Cervantes", "Velazquez",
             "Gaudi", "Dali", "Goya", "Picasso", "Clubs", "Spades", "Hears", "Diamonds", "Turn", "River", "Portland", "Los Angeles", "Houston", "New York", "Las Vegas",
-            "Boston", "Boulder", "Washington", "Dallas", "New Orleans", "Miami", "Antares", "Atena", "Fenice", "Pegaso", "Cigno", "Shun", "Sirio", "Cronos" };
-
-        private struct PokerStarsPlayer
-        {
-            public int PlayerId { get; set; }
-
-            public string PlayerName { get; set; }
-        }
+            "Boston", "Boulder", "Washington", "Dallas", "New Orleans", "Miami", "Antares", "Atena", "Fenice", "Pegaso", "Cigno", "Shun", "Sirio", "Cronos" };     
     }
 }

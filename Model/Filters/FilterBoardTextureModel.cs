@@ -200,6 +200,7 @@ namespace Model.Filters
                 ResetRiverBoardTextureTo(filterToLoad.RiverBoardTextureCollection);
             }
         }
+
         #endregion
 
         #region Reset Filters

@@ -308,7 +308,7 @@ namespace DriveHUD.Application.Licensing
                 }
                 catch (Exception e)
                 {
-                    LogProvider.Log.Error(this, $"Could not delete license file at 'fileToDelete'", e);
+                    LogProvider.Log.Error(this, $"Could not delete license file at '{fileToDelete}'", e);
                     errorOccurred = true;
                 }
             }
@@ -337,6 +337,7 @@ namespace DriveHUD.Application.Licensing
 
             if (!errorOccurred)
             {
+                LogProvider.Log.Info($"License has been reset.");
                 return;
             }
 

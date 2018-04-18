@@ -22,4 +22,4 @@ River ($20584) 5:spade: 7:club: 2:club: 9:club: J:heart:
 
 BTN shows A:heart: 9:diamond:
 
-BTN wins $20584
+BTN wins $20352

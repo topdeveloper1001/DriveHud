@@ -1,0 +1,37 @@
+PokerStars Game #47143220327:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 1:00:52 ET
+Table 'Sagitta V' 6-max Seat #5 is the button
+Seat 1: vulgokrusty ($307.35 in chips) 
+Seat 2: Hero ($206 in chips) 
+Seat 3: pablostar ($334.75 in chips) 
+Seat 4: scriber98 ($37.40 in chips) 
+Seat 5: asseral ($238 in chips) 
+Seat 6: HeidiKlummm ($201 in chips) 
+HeidiKlummm: posts small blind $1
+vulgokrusty: posts big blind $2
+*** HOLE CARDS ***
+Hero: raises $4 to $6
+pablostar: folds 
+scriber98: calls $6
+asseral: folds 
+HeidiKlummm: folds 
+vulgokrusty: folds 
+*** FLOP *** [Ah 8c 2d]
+Hero: bets $8
+scriber98: raises $23.40 to $31.40 and is all-in
+Hero: calls $23.40
+*** TURN *** [Ah 8c 2d] [3s]
+*** RIVER *** [Ah 8c 2d 3s] [Jc]
+*** SHOW DOWN ***
+Hero: shows [7c Ac] (a pair of Aces)
+scriber98: shows [Qd Ad] (a pair of Aces - Queen kicker)
+scriber98 collected $74.80 from pot
+*** SUMMARY ***
+Total pot $77.80 | Rake $3 
+Board [Ah 8c 2d 3s Jc]
+Seat 1: vulgokrusty (big blind) folded before Flop
+Seat 2: Hero showed [7c Ac] and lost with a pair of Aces
+Seat 3: pablostar folded before Flop (didn't bet)
+Seat 4: scriber98 showed [Qd Ad] and won ($74.80) with a pair of Aces
+Seat 5: asseral (button) folded before Flop (didn't bet)
+Seat 6: HeidiKlummm (small blind) folded before Flop
+

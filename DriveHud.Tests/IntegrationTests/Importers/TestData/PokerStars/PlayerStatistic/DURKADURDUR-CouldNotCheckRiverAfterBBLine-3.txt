@@ -1,0 +1,37 @@
+PokerStars Game #47152650525:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:58:24 ET
+Table 'Onnie IV' 6-max Seat #1 is the button
+Seat 1: lobo54 ($516.45 in chips) 
+Seat 2: DURKADURDUR ($733.60 in chips) 
+Seat 3: welle85 ($248 in chips) 
+Seat 4: AceKanone ($213.50 in chips) 
+Seat 5: mad.afurable ($200 in chips) 
+Seat 6: blackduck11 ($237.55 in chips) 
+DURKADURDUR: posts small blind $1
+welle85: posts big blind $2
+*** HOLE CARDS ***
+AceKanone: folds 
+mad.afurable: folds 
+blackduck11: folds 
+lobo54: folds 
+DURKADURDUR: raises $4 to $6
+welle85: calls $4
+*** FLOP *** [8c 3d 4h]
+DURKADURDUR: bets $8
+welle85: calls $8
+*** TURN *** [8c 3d 4h] [5c]
+DURKADURDUR: bets $22
+welle85: raises $26 to $48
+DURKADURDUR: folds 
+Uncalled bet ($26) returned to welle85
+welle85 collected $69 from pot
+welle85: doesn't show hand 
+*** SUMMARY ***
+Total pot $72 | Rake $3 
+Board [8c 3d 4h 5c]
+Seat 1: lobo54 (button) folded before Flop (didn't bet)
+Seat 2: DURKADURDUR (small blind) folded on the Turn
+Seat 3: welle85 (big blind) collected ($69)
+Seat 4: AceKanone folded before Flop (didn't bet)
+Seat 5: mad.afurable folded before Flop (didn't bet)
+Seat 6: blackduck11 folded before Flop (didn't bet)
+

@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Entities;
+using Model.Hud;
 using System;
 using System.Collections.Generic;
 using System.Linq;

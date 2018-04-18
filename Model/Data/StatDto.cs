@@ -23,8 +23,8 @@ namespace Model.Data
 
         public StatDto(int? occurred, int? couldOccurred)
         {
-            Occurred = occurred.HasValue ? occurred.Value : 0;
-            CouldOccurred = couldOccurred.HasValue ? couldOccurred.Value : 0;
+            Occurred = occurred ?? 0;
+            CouldOccurred = couldOccurred ?? 0;
         }
 
         [ProtoMember(1)]

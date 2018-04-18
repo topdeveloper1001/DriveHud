@@ -30,7 +30,27 @@ namespace Model.AppStore
                 }
 
                 moduleName = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
+            }
+        }
+
+        private string windowIconSource;
+
+        public string WindowIconSource
+        {
+            get
+            {
+                return windowIconSource;
+            }
+            set
+            {
+                if (windowIconSource == value)
+                {
+                    return;
+                }
+
+                windowIconSource = value;
+                RaisePropertyChanged();
             }
         }
     }

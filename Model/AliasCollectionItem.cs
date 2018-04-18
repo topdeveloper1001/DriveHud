@@ -42,8 +42,8 @@ namespace Model
 
                 name = value;
 
-                OnPropertyChanged();
-                OnPropertyChanged(nameof(DecodedName));
+                RaisePropertyChanged();
+                RaisePropertyChanged(nameof(DecodedName));
             }
         }
 
@@ -85,6 +85,7 @@ namespace Model
                     PlayersInAlias
                     .Where(x => x.PokerSite.HasValue)
                     .Select(x => x.PokerSite.Value)
+                    .Distinct()
                     .ToArray() :
                     new EnumPokerSites[0];
             }
@@ -120,7 +121,7 @@ namespace Model
                 }
 
                 playersInAlias = value;
-                OnPropertyChanged(nameof(Description));
+                RaisePropertyChanged(nameof(Description));
             }
         }
 

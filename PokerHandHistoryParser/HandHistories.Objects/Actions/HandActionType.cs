@@ -43,6 +43,7 @@
         RABBIT,
         JACKPOTCONTRIBUTION,
         STREET,
-        UNKNOWN
+        UNKNOWN,
+        STRADDLE
     }
 }

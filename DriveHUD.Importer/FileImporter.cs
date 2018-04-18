@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Common.Log;
 using DriveHUD.Common;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Infrastructure.CustomServices;
@@ -21,11 +20,9 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Loggers;
-using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Base;
-using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Model;
@@ -58,19 +55,21 @@ namespace DriveHUD.Importers
 
         private FileInfo processingFile;
 
-        private readonly IImporterSessionCacheService importSessionCacheService;
         private readonly IDataService dataService;
+        private readonly IPlayerStatisticRepository playerStatisticRepository;
         private readonly IEventAggregator eventAggregator;
         private readonly IOpponentReportService opponentReportService;
         private readonly SingletonStorageModel storageModel;
+        private readonly IReportStatusService reportStatusService;
 
         public FileImporter()
         {
-            importSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
             storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
+            reportStatusService = ServiceLocator.Current.GetInstance<IReportStatusService>();
         }
 
         /// <summary>
@@ -216,18 +215,39 @@ namespace DriveHUD.Importers
 #if DEBUG
                 }
 #endif
+                UpdateReportStatus(parsingResult);
 
                 return parsingResult;
+            }
+            catch (DHLicenseNotSupportedException)
+            {
+                throw;
             }
             catch (Exception e)
             {
                 var logger = ServiceLocator.Current.GetInstance<IFileImporterLogger>();
                 logger.Log(text);
 
-                Console.WriteLine(text);
-
                 throw new DHInternalException(new NonLocalizableString("Could not import hand."), e);
             }
+        }
+
+        private void UpdateReportStatus(List<ParsingResult> parsingResult)
+        {
+            var result = parsingResult.FirstOrDefault();
+
+            if (result == null || result.Source == null || result.Source.GameDescription == null)
+            {
+                return;
+            }
+
+            if (result.Source.GameDescription.IsTournament)
+            {
+                reportStatusService.TournamentUpdated = true;
+                return;
+            }
+
+            reportStatusService.CashUpdated = true;
         }
 
         /// <summary>
@@ -311,7 +331,8 @@ namespace DriveHUD.Importers
                 Istourney = parsedHand.GameDescription.IsTournament,
                 PokergametypeId = (short)(parsedHand.GameDescription.GameType),
                 Smallblindincents = Utils.ConvertToCents(parsedHand.GameDescription.Limit.SmallBlind),
-                Tablesize = gameInfo != null ? (short)gameInfo.TableType : (short)parsedHand.GameDescription.SeatType.MaxPlayers
+                Tablesize = gameInfo != null ? (short)gameInfo.TableType : (short)parsedHand.GameDescription.SeatType.MaxPlayers,
+                TableType = (uint)parsedHand.GameDescription.TableType.Descriptions
             };
 
             var players = parsedHand.Players.Select(player => new Players
@@ -340,7 +361,7 @@ namespace DriveHUD.Importers
 
             if (!userSession.IsMatch(matchInfo))
             {
-                throw new DHBusinessException(new NonLocalizableString("License doesn't support hand."));
+                throw new DHLicenseNotSupportedException(new NonLocalizableString("License doesn't support hand."));
             }
 
             return parsingResult;
@@ -380,6 +401,14 @@ namespace DriveHUD.Importers
 
                             for (var i = 0; i < parsingResult.Count; i++)
                             {
+                                Stopwatch sw = null;
+
+                                if (!string.IsNullOrEmpty(importerSession))
+                                {
+                                    sw = new Stopwatch();
+                                    sw.Start();
+                                }
+
                                 var handHistory = parsingResult[i];
 
                                 // skip error hand
@@ -416,6 +445,12 @@ namespace DriveHUD.Importers
                                     progress.Report(new LocalizableString("Progress_StoppingImport"));
                                     break;
                                 }
+
+                                if (sw != null)
+                                {
+                                    sw.Stop();
+                                    handHistory.Duration = sw.ElapsedMilliseconds;
+                                }
                             }
 
                             ProcessTournaments(tournamentsData, parsingResult, session);
@@ -444,7 +479,10 @@ namespace DriveHUD.Importers
                 // join new players with existing
                 var handPlayers = existingPlayers.Where(e => handHistory.Players.Any(h => h.Playername == e.Playername && h.PokersiteId == e.PokersiteId)).ToArray();
 
-                var calculatedEquity = new Dictionary<string, Dictionary<Street, decimal>>();
+                var playerStatisticCreationInfo = new PlayerStatisticCreationInfo
+                {
+                    ParsingResult = handHistory
+                };
 
                 var processOpponentReport = false;
 
@@ -470,7 +508,9 @@ namespace DriveHUD.Importers
 
                     session.Update(existingPlayer);
 
-                    var playerStat = ProcessPlayerStatistic(handHistory, existingPlayer, importerSession, calculatedEquity);
+                    playerStatisticCreationInfo.Player = existingPlayer;
+
+                    var playerStat = ProcessPlayerStatistic(playerStatisticCreationInfo, importerSession);
 
                     if (playerStat != null)
                     {
@@ -615,13 +655,13 @@ namespace DriveHUD.Importers
         /// <param name="handHistory">Hand history</param>
         /// <param name="player">Player</param>
         /// <returns>Calculated player statistic</returns>
-        protected virtual Playerstatistic ProcessPlayerStatistic(ParsingResult handHistory, Players player, string session, Dictionary<string, Dictionary<Street, decimal>> calculatedEquity)
+        protected virtual Playerstatistic ProcessPlayerStatistic(PlayerStatisticCreationInfo playerStatisticCreationInfo, string session)
         {
             try
             {
                 var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
 
-                var playerStat = playerStatisticCalculator.CalculateStatistic(handHistory, player, calculatedEquity);
+                var playerStat = playerStatisticCalculator.CalculateStatistic(playerStatisticCreationInfo);
 
                 if (playerStat == null)
                 {
@@ -650,11 +690,11 @@ namespace DriveHUD.Importers
         {
             if (string.IsNullOrEmpty(session))
             {
-                Task.Run(() => dataService.Store(playerStat));
+                Task.Run(() => playerStatisticRepository.Store(playerStat));
                 return;
             }
 
-            dataService.Store(playerStat);
+            playerStatisticRepository.Store(playerStat);
         }
 
         /// <summary>
@@ -796,6 +836,7 @@ namespace DriveHUD.Importers
                 x.PokergametypeId == handhistory.GameType.PokergametypeId &&
                 x.Smallblindincents == handhistory.GameType.Smallblindincents &&
                 x.Tablesize == handhistory.GameType.Tablesize &&
+                x.TableType == handhistory.GameType.TableType &&
                 x.Istourney == handhistory.GameType.Istourney);
 
             if (existingGameType == null)

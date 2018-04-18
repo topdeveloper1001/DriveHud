@@ -983,6 +983,24 @@ namespace DriveHUD.Entities
         [ProtoMember(352)]
         public virtual int CouldBetFlopWhenCheckedToSRP { get; set; }
 
+        [ProtoMember(353)]
+        public virtual bool IsStraddle { get; set; }
+
+        [ProtoMember(354)]
+        public virtual uint TableTypeDescription { get; set; }
+
+        [ProtoMember(355)]
+        public virtual int CouldTurnBet { get; set; }
+
+        [ProtoMember(356)]
+        public virtual int CouldFlopBet { get; set; }
+
+        [ProtoMember(357)]
+        public virtual int FoldedFlop { get; set; }
+
+        [ProtoMember(358)]
+        public virtual int FacedBetOnFlop { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1486,6 +1504,20 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region Positional Limp
+
+        public virtual int LimpPossibleSB => IsSBPosition ? LimpPossible : 0;
+
+        public virtual int LimpPossibleEP => IsEPPosition ? LimpPossible : 0;
+
+        public virtual int LimpPossibleMP => IsMPPosition ? LimpPossible : 0;
+
+        public virtual int LimpPossibleCO => IsCOPosition ? LimpPossible : 0;
+
+        public virtual int LimpPossibleBN => IsBNPosition ? LimpPossible : 0;
+
+        #endregion
+
         #endregion
 
         public virtual decimal TotalPot { get; set; }
@@ -1751,6 +1783,12 @@ namespace DriveHUD.Entities
             DidRiverBet += a.DidRiverBet;
             CouldRiverBet += a.CouldRiverBet;
 
+            CouldTurnBet += a.CouldTurnBet;
+            CouldFlopBet += a.CouldFlopBet;
+
+            FoldedFlop += a.FoldedFlop;
+            FacedBetOnFlop += a.FacedBetOnFlop;
+
             IsRelativePosition = a.IsRelativePosition;
             IsRelative3BetPosition = a.IsRelative3BetPosition;
 
@@ -1958,6 +1996,7 @@ namespace DriveHUD.Entities
             Playerstatistic r = new Playerstatistic();
             r.GameNumber = b.GameNumber;
             r.PokersiteId = b.PokersiteId;
+            r.Time = b.Time;
             r.Pot = b.Pot;
             r.Numberofplayers = b.Numberofplayers;
             r.GametypeId = b.GametypeId;
@@ -2166,6 +2205,12 @@ namespace DriveHUD.Entities
             r.CouldBetRiverOnBXLine = a.CouldBetRiverOnBXLine + b.CouldBetRiverOnBXLine;
             r.DidRiverBet = a.DidRiverBet + b.DidRiverBet;
             r.CouldRiverBet = a.CouldRiverBet + b.CouldRiverBet;
+
+            r.CouldTurnBet = a.CouldTurnBet + b.CouldTurnBet;
+            r.CouldFlopBet = a.CouldFlopBet + b.CouldFlopBet;
+
+            r.FoldedFlop = a.FoldedFlop + b.FoldedFlop;
+            r.FacedBetOnFlop = a.FacedBetOnFlop + b.FacedBetOnFlop;
 
             r.IsRaisedLimpers = a.IsRaisedLimpers + b.IsRaisedLimpers;
             r.SawUnopenedPot = a.SawUnopenedPot + b.SawUnopenedPot;

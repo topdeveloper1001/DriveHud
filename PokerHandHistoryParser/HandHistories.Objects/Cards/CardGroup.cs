@@ -88,7 +88,12 @@ namespace HandHistories.Objects.Cards
 
         public override string ToString()
         {
-            return string.Join("", Cards.Select(c => c.CardStringValue));
+            return ToString(string.Empty);
+        }
+
+        public string ToString(string delimeter)
+        {
+            return string.Join(delimeter, Cards.Select(c => c.CardStringValue));
         }
 
         public override bool Equals(object obj)

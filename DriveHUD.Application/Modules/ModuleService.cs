@@ -29,12 +29,7 @@ namespace DriveHUD.Application.Modules
 
         public void InitializeModules([NotNull] IUnityContainer container)
         {
-            if (container == null)
-            {
-                throw new ArgumentNullException(nameof(container));
-            }
-
-            this.container = container;
+            this.container = container ?? throw new ArgumentNullException(nameof(container));
 
             LogProvider.Log.Info("Initializing modules.");
 

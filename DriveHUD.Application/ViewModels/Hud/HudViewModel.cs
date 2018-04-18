@@ -17,7 +17,6 @@ using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
-using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Common.Wpf.AttachedBehaviors;
 using DriveHUD.Entities;
 using HandHistories.Objects.Cards;
@@ -48,7 +47,7 @@ namespace DriveHUD.Application.ViewModels
     /// <summary>
     /// Represents view model of hud screen
     /// </summary>
-    public class HudViewModel : PopupViewModelBase
+    public class HudViewModel : PopupViewModelBase, IMainTabViewModel
     {
         private IHudLayoutsService HudLayoutsService => ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
@@ -75,6 +74,8 @@ namespace DriveHUD.Application.ViewModels
         }
 
         #region Properties
+
+        public EnumViewModelType ViewModelType => EnumViewModelType.HudViewModel;
 
         public InteractionRequest<PopupBaseNotification> NotificationRequest { get; private set; }
 
@@ -167,6 +168,42 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private string statFilter;
+
+        public string StatFilter
+        {
+            get
+            {
+                return statFilter;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref statFilter, value);
+                ApplyFilterToCollectionView();
+            }
+        }
+
+        private HashSet<Stat> statInfoCollectionDuplicates = new HashSet<Stat>();
+
+        private List<StatInfo> statInfoCollectionNotDuplicates = new List<StatInfo>();
+
+        private void ApplyFilterToCollectionView()
+        {
+            statInfoCollectionDuplicates.Clear();
+            statInfoCollectionNotDuplicates.Clear();
+            StatInfoCollectionView.SortDescriptions.Clear();
+            StatInfoCollectionView.GroupDescriptions.Clear();
+
+            if (string.IsNullOrEmpty(statFilter))
+            {
+                StatInfoCollectionView.GroupDescriptions.Add(new PropertyGroupDescription("StatInfoGroup.Name"));
+                StatInfoCollectionView.SortDescriptions.Add(new SortDescription("GroupName", ListSortDirection.Ascending));
+            }
+
+            StatInfoCollectionView.SortDescriptions.Add(new SortDescription("Caption", ListSortDirection.Ascending));
+            StatInfoCollectionView.Refresh();
+        }
+
         private ReactiveList<StatInfo> statInfoCollection;
 
         /// <summary>
@@ -198,7 +235,24 @@ namespace DriveHUD.Application.ViewModels
                         return false;
                     }
 
-                    return stat.IsListed && !stat.IsNotVisible;
+                    var filterCondition = true;
+
+                    if (!string.IsNullOrEmpty(statFilter))
+                    {
+                        filterCondition = stat.Caption.IndexOf(statFilter, StringComparison.OrdinalIgnoreCase) >= 0;
+
+                        if (!statInfoCollectionDuplicates.Contains(stat.Stat))
+                        {
+                            statInfoCollectionDuplicates.Add(stat.Stat);
+                            statInfoCollectionNotDuplicates.Add(stat);
+                        }
+                        else
+                        {
+                            filterCondition = filterCondition && statInfoCollectionNotDuplicates.Any(x => ReferenceEquals(x, stat));
+                        }
+                    }
+
+                    return stat.IsListed && !stat.IsNotVisible && filterCondition;
                 };
 
                 var statFiltering = collectionViewSource as ICollectionViewLiveShaping;
@@ -208,6 +262,8 @@ namespace DriveHUD.Application.ViewModels
                     statFiltering.LiveFilteringProperties.Add(nameof(StatInfo.IsNotVisible));
                     statFiltering.IsLiveFiltering = true;
                 }
+
+                statFiltering.IsLiveSorting = true;
 
                 StatInfoCollectionView = collectionViewSource;
             }
@@ -351,37 +407,37 @@ namespace DriveHUD.Application.ViewModels
 
         #region Commands
 
-        public ReactiveCommand<object> DataSaveCommand { get; private set; }
+        public ReactiveCommand DataSaveCommand { get; private set; }
 
-        public ReactiveCommand<object> DataDeleteCommand { get; private set; }
+        public ReactiveCommand DataDeleteCommand { get; private set; }
 
-        public ReactiveCommand<object> DataImportCommand { get; private set; }
+        public ReactiveCommand DataImportCommand { get; private set; }
 
-        public ReactiveCommand<object> DataExportCommand { get; private set; }
+        public ReactiveCommand DataExportCommand { get; private set; }
 
-        public ReactiveCommand<object> SpliterAddCommand { get; private set; }
+        public ReactiveCommand SpliterAddCommand { get; private set; }
 
-        public ReactiveCommand<object> SettingsStatInfoCommand { get; private set; }
+        public ReactiveCommand SettingsStatInfoCommand { get; private set; }
 
-        public ReactiveCommand<object> PlayerTypeStatsCommand { get; private set; }
+        public ReactiveCommand PlayerTypeStatsCommand { get; private set; }
 
-        public ReactiveCommand<object> BumperStickersCommand { get; private set; }
+        public ReactiveCommand BumperStickersCommand { get; private set; }
 
-        public ReactiveCommand<object> DesignerToolCommand { get; private set; }
+        public ReactiveCommand DesignerToolCommand { get; private set; }
 
-        public ReactiveCommand<object> SaveDesignCommand { get; private set; }
+        public ReactiveCommand SaveDesignCommand { get; private set; }
 
-        public ReactiveCommand<object> CancelDesignCommand { get; private set; }
+        public ReactiveCommand CancelDesignCommand { get; private set; }
 
         public ICommand AddToolCommand { get; private set; }
 
-        public ReactiveCommand<object> RemoveToolCommand { get; private set; }
+        public ReactiveCommand RemoveToolCommand { get; private set; }
 
-        public ReactiveCommand<object> StatClickCommand { get; private set; }
+        public ReactiveCommand StatClickCommand { get; private set; }
 
-        public ReactiveCommand<object> ToolClickCommand { get; private set; }
+        public ReactiveCommand ToolClickCommand { get; private set; }
 
-        public ReactiveCommand<object> DuplicateCommand { get; private set; }
+        public ReactiveCommand DuplicateCommand { get; private set; }
 
         #endregion
 
@@ -487,38 +543,17 @@ namespace DriveHUD.Application.ViewModels
 
             var canUseDataCommands = this.WhenAny(x => x.IsInDesignMode, x => !x.Value);
 
-            DataSaveCommand = ReactiveCommand.Create(canUseDataCommands);
-            DataSaveCommand.Subscribe(x => OpenDataSave());
-
-            DataDeleteCommand = ReactiveCommand.Create(canUseDataCommands);
-            DataDeleteCommand.Subscribe(x => DataDelete());
-
-            DataImportCommand = ReactiveCommand.Create(canUseDataCommands);
-            DataImportCommand.Subscribe(x => DataImport());
-
-            DataExportCommand = ReactiveCommand.Create(canUseDataCommands);
-            DataExportCommand.Subscribe(x => DataExport());
-
-            DuplicateCommand = ReactiveCommand.Create(canUseDataCommands);
-            DuplicateCommand.Subscribe(x => OpenDuplicate());
-
-            SpliterAddCommand = ReactiveCommand.Create();
-            SpliterAddCommand.Subscribe(x => SpliterAdd());
-
-            SettingsStatInfoCommand = ReactiveCommand.Create();
-            SettingsStatInfoCommand.Subscribe(x => OpenStatsSettings(x as StatInfo));
-
-            PlayerTypeStatsCommand = ReactiveCommand.Create();
-            PlayerTypeStatsCommand.Subscribe(x => OpenPlayerTypeStats(x as StatInfo));
-
-            BumperStickersCommand = ReactiveCommand.Create();
-            BumperStickersCommand.Subscribe(x => OpenBumperStickers(x as StatInfo));
-
-            DesignerToolCommand = ReactiveCommand.Create();
-            DesignerToolCommand.Subscribe(x => InitializeDesigner());
-
-            CancelDesignCommand = ReactiveCommand.Create();
-            CancelDesignCommand.Subscribe(x => CloseDesigner());
+            DataSaveCommand = ReactiveCommand.Create(() => OpenDataSave(), canUseDataCommands);
+            DataDeleteCommand = ReactiveCommand.Create(() => DataDelete(), canUseDataCommands);
+            DataImportCommand = ReactiveCommand.Create(() => DataImport(), canUseDataCommands);
+            DataExportCommand = ReactiveCommand.Create(() => DataExport(), canUseDataCommands);
+            DuplicateCommand = ReactiveCommand.Create(() => OpenDuplicate(), canUseDataCommands);
+            SpliterAddCommand = ReactiveCommand.Create(() => SpliterAdd());
+            SettingsStatInfoCommand = ReactiveCommand.Create<StatInfo>(x => OpenStatsSettings(x));
+            PlayerTypeStatsCommand = ReactiveCommand.Create<StatInfo>(x => OpenPlayerTypeStats(x));
+            BumperStickersCommand = ReactiveCommand.Create<StatInfo>(x => OpenBumperStickers(x));
+            DesignerToolCommand = ReactiveCommand.Create(() => InitializeDesigner());
+            CancelDesignCommand = ReactiveCommand.Create(() => CloseDesigner());
 
             AddToolCommand = new RelayCommand(x =>
             {
@@ -588,26 +623,12 @@ namespace DriveHUD.Application.ViewModels
                 return false;
             });
 
-            RemoveToolCommand = ReactiveCommand.Create();
-            RemoveToolCommand.Subscribe(x =>
-            {
-                var toolToRemove = x as HudBaseToolViewModel;
-
-                if (toolToRemove == null)
-                {
-                    return;
-                }
-
-                RemoveTool(toolToRemove);
-            });
+            RemoveToolCommand = ReactiveCommand.Create<HudBaseToolViewModel>(x => RemoveTool(x));
 
             var canUserStatClickCommand = this.WhenAny(x => x.IsInDesignMode, x => x.Value && DesignerHudElementViewModel != null);
 
-            StatClickCommand = ReactiveCommand.Create(canUserStatClickCommand);
-            StatClickCommand.Subscribe(x =>
+            StatClickCommand = ReactiveCommand.Create<StatInfo>(statInfo =>
             {
-                var statInfo = x as StatInfo;
-
                 if (statInfo == null)
                 {
                     return;
@@ -620,13 +641,10 @@ namespace DriveHUD.Application.ViewModels
                     .ToArray();
 
                 ShowTools(toolsToShow);
-            });
+            }, canUserStatClickCommand);
 
-            ToolClickCommand = ReactiveCommand.Create(canUserStatClickCommand);
-            ToolClickCommand.Subscribe(x =>
+            ToolClickCommand = ReactiveCommand.Create<HudBaseToolViewModel>(toolViewModel =>
             {
-                var toolViewModel = x as HudBaseToolViewModel;
-
                 if (toolViewModel == null)
                 {
                     return;
@@ -639,10 +657,9 @@ namespace DriveHUD.Application.ViewModels
                     .ToArray();
 
                 ShowTools(toolsToShow);
-            });
+            }, canUserStatClickCommand);
 
-            SaveDesignCommand = ReactiveCommand.Create();
-            SaveDesignCommand.Subscribe(x => SaveDesign());
+            SaveDesignCommand = ReactiveCommand.Create(() => SaveDesign());
         }
 
         /// <summary>
@@ -698,7 +715,7 @@ namespace DriveHUD.Application.ViewModels
 
             var cardRanges = Card.GetCardRanges();
 
-            previewHudElementViewModel.Tools.OfType<HudHeatMapViewModel>().ForEach(tool =>
+            void initializeHeatMapPreview(HudHeatMapViewModel tool)
             {
                 tool.BaseStat.CurrentValue = random.Next(0, 100);
 
@@ -710,7 +727,17 @@ namespace DriveHUD.Application.ViewModels
                 };
 
                 tool.HeatMap = heatMap;
-            });
+            }
+
+            previewHudElementViewModel.Tools
+                .OfType<HudHeatMapViewModel>()
+                .ForEach(tool => initializeHeatMapPreview(tool));
+
+            previewHudElementViewModel.Tools.OfType<HudGaugeIndicatorViewModel>()
+                .SelectMany(x => x.GroupedStats)
+                .SelectMany(x => x.Stats)
+                .Where(x => x.HeatMapViewModel != null)
+                .ForEach(x => initializeHeatMapPreview(x.HeatMapViewModel));
 
             previewHudElementViewModel.Seat = 1;
             previewHudElementViewModel.PlayerName = string.Format(HudDefaultSettings.TablePlayerNameFormat, previewHudElementViewModel.Seat);
@@ -811,6 +838,11 @@ namespace DriveHUD.Application.ViewModels
             if (statsCollection == null || (isInDesignMode && SelectedToolViewModel == null) || (SelectedToolViewModel != null && !(SelectedToolViewModel is IHudStatsToolViewModel)))
             {
                 return;
+            }
+
+            if (SelectedToolViewModel != null && SelectedToolViewModel is HudGaugeIndicatorViewModel)
+            {
+                statsCollection.ForEach(x => x.SetPopupDefaults());
             }
 
             var statTool = GetToolToModifyStats();
@@ -1307,6 +1339,11 @@ namespace DriveHUD.Application.ViewModels
             {
                 mergeItem.OldItem.Merge(mergeItem.NewItem);
 
+                if (SelectedToolViewModel != null && SelectedToolViewModel is HudGaugeIndicatorViewModel)
+                {
+                    mergeItem.OldItem.UpdateColor();
+                }
+
                 var previewStat = PreviewHudElementViewModel.ToolsStatInfoCollection.FirstOrDefault(x => x.Stat == mergeItem.NewItem.Stat);
                 previewStat?.Merge(mergeItem.NewItem);
                 previewStat?.UpdateColor();
@@ -1594,6 +1631,7 @@ namespace DriveHUD.Application.ViewModels
                 TableType = CurrentTableType,
                 ToolType = toolType,
                 Layout = CurrentLayout,
+                Tools = CurrentLayout.LayoutTools,
                 Source = source
             };
 
@@ -1608,21 +1646,17 @@ namespace DriveHUD.Application.ViewModels
 
             toolViewModel.IsSelected = true;
 
-            if (toolViewModel is IHudBaseStatToolViewModel)
+            if ((toolViewModel is IHudBaseStatToolViewModel hudBaseStatToolViewModel) &&
+                hudBaseStatToolViewModel.BaseStat != null)
             {
-                var hudBaseStatToolViewModel = toolViewModel as IHudBaseStatToolViewModel;
+                var statsToUpdate = DesignerHudElementViewModel.Tools
+                    .OfType<IHudStatsToolViewModel>()
+                    .Where(x => !(x is IHudBaseStatToolViewModel))
+                    .SelectMany(x => x.Stats)
+                    .Where(x => x.Stat == hudBaseStatToolViewModel.BaseStat.Stat)
+                    .ToArray();
 
-                if (hudBaseStatToolViewModel.BaseStat != null)
-                {
-                    var statsToUpdate = DesignerHudElementViewModel.Tools
-                        .OfType<IHudStatsToolViewModel>()
-                        .Where(x => !(x is IHudBaseStatToolViewModel))
-                        .SelectMany(x => x.Stats)
-                        .Where(x => x.Stat == hudBaseStatToolViewModel.BaseStat.Stat)
-                        .ToArray();
-
-                    statsToUpdate.ForEach(x => x.HasAttachedTools = true);
-                }
+                statsToUpdate.ForEach(x => x.HasAttachedTools = true);
             }
 
             InitializePreview();

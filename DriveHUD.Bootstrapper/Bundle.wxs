@@ -4,7 +4,7 @@
      xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
 
   <?ifndef ProductVersion?>
-  <?define ProductVersion = "1.4.3.2038" ?>
+  <?define ProductVersion = "1.4.4.2150" ?>
   <?endif ?>
 
   <?ifndef ProductName?>
@@ -45,16 +45,36 @@
 
     <!-- Determine what items are installed in the event of an upgrade-->
     <util:RegistrySearch Root="HKCU" Key="Software\$(var.Manufacturer)\$(var.ProductName)" Variable="ProductSHMInstalled" Result="exists" />
-    <!--<bal:Condition Message="Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.">
-      Not ProductSHMInstalled
-    </bal:Condition>-->
 
     <Variable Name="EXECUTABLE" bal:Overridable='yes' Value='"DriveHUD.Application.exe"'/>
     <Variable Name="RELATIVEEXECUTABLEPATH" bal:Overridable='yes' Value='"$(var.ProductName)"'/>
 
-
     <Chain DisableSystemRestore='yes'>
-      <PackageGroupRef Id="NetFx45Web"/>
+      <PackageGroupRef Id="NetFx461Web" />
+      <RollbackBoundary/>
+      <ExePackage
+         Id="VCRedistX86"
+         Name="Microsoft Visual C++ 2015 Redistributable Update 3"
+         Cache="no"
+         Compressed="yes"
+         PerMachine="yes"
+         Permanent="yes"
+         Vital="yes"
+         SourceFile="..\dependencies\vc_redist.x86.exe"
+         InstallCommand="/install /quiet /norestart">
+        <ExitCode Value="3010" Behavior="forceReboot"/>
+        <ExitCode Value="1638" Behavior="success"/>
+      </ExePackage>
+      <RollbackBoundary/>
+      <ExePackage
+         Id="WinPcap"
+         Name="WinPcap 4.1.3"
+         Compressed="yes"
+         SourceFile="..\dependencies\WinPcap.exe"
+         PerMachine="yes"
+         Permanent="yes"
+         Vital="yes"
+         InstallCommand="/S" />
       <RollbackBoundary/>
       <MsiPackage Id="DriveHUD" Compressed="yes" SourceFile="..\DriveHUD.Setup\bin\Release\DriveHUD.msi" Vital="yes">
         <MsiProperty Name="MANUFACTURERDIR" Value="[MANUFACTURERDIR]"/>
@@ -64,5 +84,4 @@
       </MsiPackage>
     </Chain>
   </Bundle>
-
 </Wix>

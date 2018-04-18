@@ -89,32 +89,22 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private void InitializeCommands(HudStatSettingsViewModelInfo viewModelInfo)
         {
-            SaveCommand = ReactiveCommand.Create();
-            SaveCommand.Subscribe(x =>
-            {
-                viewModelInfo.Save?.Invoke();
-            });
-
-            CancelCommand = ReactiveCommand.Create();
-            CancelCommand.Subscribe(x =>
-            {
-                viewModelInfo.Cancel?.Invoke();
-            });
-
-            SelectColorCommand = ReactiveCommand.Create();
-            SelectColorCommand.Subscribe(x => SelectColor(x as StatInfoOptionValueRange));
-
-            PickerSelectColorCommand = ReactiveCommand.Create();
-            PickerSelectColorCommand.Subscribe(x => IsColorPickerPopupOpened = false);
+            SaveCommand = ReactiveCommand.Create(() => viewModelInfo.Save?.Invoke());
+            CancelCommand = ReactiveCommand.Create(() => viewModelInfo.Cancel?.Invoke());
+            SelectColorCommand = ReactiveCommand.Create<StatInfoOptionValueRange>(x => SelectColor(x));
+            PickerSelectColorCommand = ReactiveCommand.Create(() => IsColorPickerPopupOpened = false);
+            ResetRangeColorsCommand = ReactiveCommand.Create(() => SelectedItem?.Initialize());
         }
 
-        public ReactiveCommand<object> SaveCommand { get; private set; }
+        public ReactiveCommand SaveCommand { get; private set; }
 
-        public ReactiveCommand<object> CancelCommand { get; private set; }
+        public ReactiveCommand CancelCommand { get; private set; }
 
-        public ReactiveCommand<object> SelectColorCommand { get; private set; }
+        public ReactiveCommand SelectColorCommand { get; private set; }
 
-        public ReactiveCommand<object> PickerSelectColorCommand { get; private set; }
+        public ReactiveCommand PickerSelectColorCommand { get; private set; }
+
+        public ReactiveCommand ResetRangeColorsCommand { get; private set; }
 
         private ObservableCollection<StatInfo> items;
 
@@ -166,7 +156,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return isColorPickerPopupOpened;
             }
-            private set
+            set
             {
                 this.RaiseAndSetIfChanged(ref isColorPickerPopupOpened, value);
             }
@@ -180,7 +170,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return selectedColor;
             }
-            private set
+            set
             {
                 this.RaiseAndSetIfChanged(ref selectedColor, value);
             }
@@ -281,6 +271,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             IsColorPickerPopupOpened = true;
             selectedStatInfoOptionValueRange = statInfoValueRange;
+            SelectedColor = statInfoValueRange.Color;
         }
 
         public class TableTypeFilterViewModel : ViewModelBase

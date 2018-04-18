@@ -1015,4 +1015,31 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_Opponents" xml:space="preserve">
     <value>Opponents</value>
   </data>
+  <data name="Common_ErrorView_CopyToClipboard" xml:space="preserve">
+    <value>Copy to clipboard</value>
+  </data>
+  <data name="Common_ErrorView_Error" xml:space="preserve">
+    <value>Sorry, something went wrong! Please contact support if this error happens again.</value>
+  </data>
+  <data name="Common_ErrorView_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common_ErrorView_StackTrace" xml:space="preserve">
+    <value>Stack trace:</value>
+  </data>
+  <data name="Common_FatalError" xml:space="preserve">
+    <value>Fatal error: DriveHUD will be closed</value>
+  </data>
+  <data name="Common_Population" xml:space="preserve">
+    <value>Population</value>
+  </data>
+  <data name="Common_HudStatSettings_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Common_HudLayout_HeatMapLabelTooltip" xml:space="preserve">
+    <value>Heat Map</value>
+  </data>
+  <data name="Common_Hud_SelectedStats" xml:space="preserve">
+    <value>Selected Stats</value>
+  </data>
 </root>

@@ -1,0 +1,45 @@
+#Game No : 596027662
+***** 888poker Hand History for Game 596027662 *****
+$50/$100 Blinds No Limit Holdem - *** 04 02 2017 20:09:08
+Tournament #96358761 Free - Table #1565 9 Max (Real Money)
+Seat 1 is the button
+Total number of players : 9
+Seat 1: ZiYangZi ( $850 )
+Seat 2: Pudding77777 ( $2,295 )
+Seat 3: Peon_84 ( $1,875 )
+Seat 4: denchik0712 ( $1,685 )
+Seat 5: estebanito ( $3,465 )
+Seat 6: oksa2879 ( $1,875 )
+Seat 7: szebasztian ( $1,825 )
+Seat 9: frmn1000 ( $1,825 )
+Seat 10: Victoriyaone ( $2,295 )
+denchik0712 posts ante [$20]
+frmn1000 posts ante [$20]
+Victoriyaone posts ante [$20]
+szebasztian posts ante [$20]
+ZiYangZi posts ante [$20]
+Pudding77777 posts ante [$20]
+Peon_84 posts ante [$20]
+estebanito posts ante [$20]
+oksa2879 posts ante [$20]
+Pudding77777 posts small blind [$50]
+Peon_84 posts big blind [$100]
+** Dealing down cards **
+Dealt to Peon_84 [ 5d, 7c ]
+denchik0712 calls [$100]
+estebanito folds
+oksa2879 folds
+szebasztian folds
+frmn1000 folds
+Victoriyaone folds
+ZiYangZi folds
+Pudding77777 raises [$2,225]
+Peon_84 folds
+denchik0712 calls [$1,565]
+** Dealing flop ** [ Jd, 4c, 9c ]
+** Dealing turn ** [ Ks ]
+** Dealing river ** [ 8c ]
+** Summary **
+Pudding77777 shows [ Kc, Js ]
+denchik0712 shows [ 3c, As ]
+Pudding77777 collected [ $3,610 ]

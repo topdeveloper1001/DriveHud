@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Annotations;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Reflection;
 using DriveHUD.Common.Resources;
@@ -74,6 +75,13 @@ namespace Model.Stats
                     v.PropertyChanged -= SettingsAppearanceValueRangeSelectedItem_PropertyChanged;
                 }
             }
+        }
+
+        public void SetPopupDefaults()
+        {
+            SettingsAppearanceFontSize = 12;
+            SettingsAppearanceFontBold_IsChecked = true;
+            SettingsAppearanceValueRangeCollection.ForEach(x => x.Color = HudDefaultSettings.StatInfoActiveColor);
         }
 
         #region Properties
@@ -868,13 +876,14 @@ namespace Model.Stats
         [NotifyPropertyChangedInvocator]
         private void SettingsAppearanceValueRangeSelectedItem_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == "Color" || e.PropertyName == "IsChecked")
+            if (e.PropertyName == nameof(StatInfoOptionValueRange.Color) ||
+                e.PropertyName == nameof(StatInfoOptionValueRange.IsChecked))
             {
-                ValueSetColor(this.CurrentValue);
+                ValueSetColor(CurrentValue);
             }
 
             // re-sort color ranges
-            if (e.PropertyName == ReflectionHelper.GetPath<StatInfoOptionValueRange>(o => o.Value))
+            if (e.PropertyName == nameof(StatInfoOptionValueRange.Value))
             {
                 var orderedItems = SettingsAppearanceValueRangeCollection.OrderBy(x => x.Value).ToArray();
 
