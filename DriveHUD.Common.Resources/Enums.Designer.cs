@@ -169,6 +169,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Revolution Gaming Network.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_Revolution {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_Revolution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Winning Poker Network.
         /// </summary>
         internal static string Enum_EnumPokerNetworks_WPN {
@@ -282,6 +291,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_EnumPokerSites_PokerStars {
             get {
                 return ResourceManager.GetString("Enum_EnumPokerSites_PokerStars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Revolution Gaming.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_Revolution {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_Revolution", resourceCulture);
             }
         }
         

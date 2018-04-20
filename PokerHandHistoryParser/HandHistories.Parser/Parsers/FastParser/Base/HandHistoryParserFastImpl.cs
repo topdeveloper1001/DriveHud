@@ -191,6 +191,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             {
                 handText = ClearHandHistory(handText);
 
+                if (string.IsNullOrEmpty(handText))
+                {
+                    return null;
+                }
+
                 string[] handLines = SplitHandsLines(handText);
 
                 // parse summary hand
@@ -223,8 +228,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 handHistory.Players = ParsePlayers(handLines);
                 handHistory.NumPlayersSeated = handHistory.Players.Count;
 
-                string heroName = ParseHeroName(handLines, handHistory.Players);
-                handHistory.Hero = handHistory.Players.FirstOrDefault(p => p.PlayerName == heroName);
+                var heroName = ParseHeroName(handLines, handHistory.Players);
+
+                if (!string.IsNullOrEmpty(heroName))
+                {
+                    handHistory.Hero = handHistory.Players.FirstOrDefault(p => p.PlayerName == heroName);
+                }
 
                 if (handHistory.Cancelled)
                 {
@@ -260,7 +269,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 if (RequiresAllInDetection)
                 {
-                    handHistory.HandActions = AllInActionHelper.IdentifyAllInActions(ParsePlayers(handLines), handHistory.HandActions);
+                    handHistory.HandActions = AllInActionHelper.IdentifyAllInActions(handHistory.Players, handHistory.HandActions);
                 }
 
                 if (RequiresAllInUpdates)
@@ -414,7 +423,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             return ParseGameDescriptor(lines);
         }
 
-        protected GameDescriptor ParseGameDescriptor(string[] handLines)
+        protected virtual GameDescriptor ParseGameDescriptor(string[] handLines)
         {
             return new GameDescriptor(ParsePokerFormat(handLines),
                                       SiteName,

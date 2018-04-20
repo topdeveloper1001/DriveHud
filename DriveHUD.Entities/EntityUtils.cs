@@ -50,7 +50,8 @@ namespace DriveHUD.Entities
                 [EnumPokerNetworks.WPN] = new[] { EnumPokerSites.AmericasCardroom, EnumPokerSites.BlackChipPoker, EnumPokerSites.TruePoker, EnumPokerSites.YaPoker, EnumPokerSites.WinningPokerNetwork },
                 [EnumPokerNetworks.Poker888] = new[] { EnumPokerSites.Poker888 },
                 [EnumPokerNetworks.IPoker] = new[] { EnumPokerSites.IPoker },
-                [EnumPokerNetworks.GGN] = new[] { EnumPokerSites.GGN }
+                [EnumPokerNetworks.GGN] = new[] { EnumPokerSites.GGN },
+                [EnumPokerNetworks.Revolution] = new[] { EnumPokerSites.Revolution },
             };
 
             return networksDictionary;

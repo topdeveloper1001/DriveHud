@@ -345,6 +345,8 @@
     <Compile Include="Events\PreImportedDataEvent.cs" />
     <Compile Include="Events\PreImportedDataEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Revolution\IRevolutionImporter.cs" />
+    <Compile Include="Revolution\RevolutionImporter.cs" />
     <Compile Include="SessionCacheData.cs" />
     <Compile Include="SessionCacheStatistic.cs" />
     <Compile Include="TournamentSettings.cs" />

@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -64,6 +65,40 @@ namespace DriveHUD.Common.Extensions
         public static string Reverse(this string input)
         {
             return new string(input.ToCharArray().Reverse().ToArray());
+        }
+
+        public static string TakeBetween(this string input, string start, string end, bool useStartLastIndex = false, bool userEndLastIndex = false)
+        {
+            try
+            {
+                var startIndex = useStartLastIndex ?
+                    input.LastIndexOf(start, StringComparison.Ordinal) :
+                    input.IndexOf(start, StringComparison.Ordinal);
+
+                if (startIndex < 0)
+                {
+                    return string.Empty;
+                }
+
+                startIndex += start.Length;
+
+                var endIndex = !string.IsNullOrEmpty(end) ?
+                    (userEndLastIndex ?
+                        input.LastIndexOf(end, StringComparison.Ordinal) :
+                        input.IndexOf(end, startIndex, StringComparison.Ordinal)) :
+                    input.Length;
+
+                if (endIndex <= startIndex)
+                {
+                    return string.Empty;
+                }
+
+                return input.Substring(startIndex, endIndex - startIndex).Trim();
+            }
+            catch
+            {
+                return string.Empty;
+            }
         }
     }
 }

@@ -1,0 +1,3325 @@
+﻿ï»¿Hand#5128FD7BB4000013 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- -1/-1/0 NL Hold'em -- 2018/04/20 - 22:00:06
+Dealer: Seat 1
+Seat 1: X7SEVEN7X (3 000 in chips) 
+Seat 2: AlexTh (3 000 in chips) 
+Seat 3: lastdate (3 000 in chips) 
+Seat 4: qbit61 (3 000 in chips) 
+Seat 7: Penguin_Jeff (3 000 in chips) 
+Seat 8: RichieBuck1 (3 000 in chips) 
+Seat 9: justpokerin (3 000 in chips) 
+Seat 10: mlanza (3 000 in chips) 
+AlexTh: posts small blind -1
+lastdate: posts big blind 20
+Dealt to AlexTh [Kd,Jc]
+qbit61: calls 20
+Penguin_Jeff: raises to 40
+RichieBuck1: calls 40
+justpokerin: folds
+mlanza: folds
+X7SEVEN7X: folds
+AlexTh: calls 30
+lastdate: calls 20
+qbit61: calls 20
+*** FLOP *** [Jd,6d,6s]
+AlexTh: bets 100
+lastdate: folds
+qbit61: folds
+Penguin_Jeff: calls 100
+RichieBuck1: calls 100
+*** TURN *** [8s]
+AlexTh: checks
+Penguin_Jeff: bets 250
+RichieBuck1: calls 250
+AlexTh: calls 250
+*** RIVER *** [Th]
+AlexTh: checks
+Penguin_Jeff: checks
+RichieBuck1: bets 120
+AlexTh: calls 120
+Penguin_Jeff: calls 120
+***SHOW DOWN***
+RichieBuck1: shows [5d 7d] (Pair of Sixes  )
+AlexTh: shows [Kd Jc] (Two Pairs Jacks and Sixes  )
+Penguin_Jeff: shows [Ts Js] (Two Pairs Jacks and Tens  )
+Penguin_Jeff wins 1 610 with Two Pairs Jacks and Tens   
+
+
+Hand#5128FD7BB4000069 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/10/20 NL Hold'em -- 2018/04/20 - 22:01:24
+Dealer: Seat 2
+Seat 1: X7SEVEN7X (3 000 in chips) 
+Seat 2: AlexTh (2 490 in chips) 
+Seat 3: lastdate (2 960 in chips) 
+Seat 4: qbit61 (2 960 in chips) 
+Seat 7: Penguin_Jeff (4 100 in chips) 
+Seat 8: RichieBuck1 (2 490 in chips) 
+Seat 9: justpokerin (3 000 in chips) 
+Seat 10: mlanza (3 000 in chips) 
+lastdate: posts small blind 10
+qbit61: posts big blind 20
+Dealt to AlexTh [6c,Kc]
+Penguin_Jeff: folds
+RichieBuck1: folds
+justpokerin: folds
+mlanza: folds
+X7SEVEN7X: is all in 3 000
+AlexTh: folds
+lastdate: folds
+qbit61: is all in 2 940
+X7SEVEN7X: returns uncalled bet 40
+X7SEVEN7X: shows [4h 4d]
+qbit61: shows [Qc 9c]
+*** FLOP *** [7d,6d,5h]
+*** TURN *** [2s]
+*** RIVER *** [2c]
+***SHOW DOWN***
+X7SEVEN7X wins 5 930 with Two Pairs Fours and deuces   
+
+
+Hand#5128FD7BB4000087 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/10/20 NL Hold'em -- 2018/04/20 - 22:01:56
+Dealer: Seat 3
+Seat 1: X7SEVEN7X (5 970 in chips) 
+Seat 2: AlexTh (2 490 in chips) 
+Seat 3: lastdate (2 950 in chips) 
+Seat 7: Penguin_Jeff (4 100 in chips) 
+Seat 8: RichieBuck1 (2 490 in chips) 
+Seat 9: justpokerin (3 000 in chips) 
+Seat 10: mlanza (3 000 in chips) 
+Penguin_Jeff: posts big blind 20
+Dealt to AlexTh [Td,Qc]
+RichieBuck1: calls 20
+justpokerin: folds
+mlanza: folds
+X7SEVEN7X: calls 20
+AlexTh: calls 20
+lastdate: calls 20
+Penguin_Jeff: checks
+*** FLOP *** [4s,Kh,2s]
+Penguin_Jeff: checks
+RichieBuck1: checks
+X7SEVEN7X: checks
+AlexTh: checks
+lastdate: checks
+*** TURN *** [9h]
+Penguin_Jeff: checks
+RichieBuck1: checks
+X7SEVEN7X: checks
+AlexTh: checks
+lastdate: checks
+*** RIVER *** [4d]
+Penguin_Jeff: checks
+RichieBuck1: bets 100
+X7SEVEN7X: folds
+AlexTh: folds
+lastdate: folds
+Penguin_Jeff: folds
+Penguin_Jeff: mucks
+RichieBuck1: returns uncalled bet 100
+***SHOW DOWN***
+RichieBuck1: mucks
+RichieBuck1 wins 100 
+
+
+Hand#5128FD7BB4000121 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/10/20 NL Hold'em -- 2018/04/20 - 22:02:54
+Dealer: Seat 4
+Seat 1: X7SEVEN7X (5 950 in chips) 
+Seat 2: AlexTh (2 470 in chips) 
+Seat 3: lastdate (2 930 in chips) 
+Seat 4: krzych (3 060 in chips) 
+Seat 7: Penguin_Jeff (4 080 in chips) 
+Seat 8: RichieBuck1 (2 570 in chips) 
+Seat 9: justpokerin (3 000 in chips) 
+Seat 10: mlanza (3 000 in chips) 
+Penguin_Jeff: posts small blind 10
+RichieBuck1: posts big blind 20
+Dealt to AlexTh [Ad,8c]
+justpokerin: folds
+mlanza: folds
+X7SEVEN7X: folds
+AlexTh: folds
+lastdate: folds
+krzych: calls 20
+Penguin_Jeff: raises to 40
+RichieBuck1: calls 20
+krzych: calls 20
+*** FLOP *** [As,6c,5d]
+Penguin_Jeff: checks
+RichieBuck1: checks
+krzych: checks
+*** TURN *** [4s]
+Penguin_Jeff: bets 80
+RichieBuck1: folds
+krzych: calls 80
+*** RIVER *** [Kc]
+Penguin_Jeff: checks
+krzych: checks
+***SHOW DOWN***
+Penguin_Jeff: shows [3h 3d] (Pair of Threes  )
+krzych: mucks
+Penguin_Jeff wins 280 with Pair of Threes   
+krzych: mucks [2c,7h] (HighCard) .
+
+
+Hand#5128FD7BB4000147 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/10/20 NL Hold'em -- 2018/04/20 - 22:03:47
+Dealer: Seat 7
+Seat 1: X7SEVEN7X (5 950 in chips) 
+Seat 2: AlexTh (2 470 in chips) 
+Seat 3: lastdate (2 930 in chips) 
+Seat 4: krzych (2 940 in chips) 
+Seat 7: Penguin_Jeff (4 240 in chips) 
+Seat 8: RichieBuck1 (2 530 in chips) 
+Seat 9: justpokerin (3 000 in chips) 
+Seat 10: mlanza (3 000 in chips) 
+RichieBuck1: posts small blind 10
+justpokerin: posts big blind 20
+Dealt to AlexTh [9s,As]
+mlanza: folds
+X7SEVEN7X: calls 20
+AlexTh: folds
+lastdate: folds
+krzych: calls 20
+Penguin_Jeff: folds
+RichieBuck1: calls 10
+justpokerin: raises to 40
+X7SEVEN7X: calls 20
+krzych: calls 20
+RichieBuck1: calls 20
+*** FLOP *** [Td,3c,2d]
+RichieBuck1: bets 20
+justpokerin: raises to 40
+X7SEVEN7X: folds
+krzych: calls 40
+RichieBuck1: calls 20
+*** TURN *** [Kd]
+RichieBuck1: checks
+justpokerin: bets 280
+krzych: folds
+RichieBuck1: folds
+justpokerin: returns uncalled bet 280
+***SHOW DOWN***
+justpokerin: mucks
+justpokerin wins 280 
+
+
+Hand#5128FD7BB4000181 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/10/20 NL Hold'em -- 2018/04/20 - 22:04:57
+Dealer: Seat 8
+Seat 1: X7SEVEN7X (5 910 in chips) 
+Seat 2: AlexTh (2 470 in chips) 
+Seat 3: lastdate (2 930 in chips) 
+Seat 4: krzych (2 860 in chips) 
+Seat 7: Penguin_Jeff (4 240 in chips) 
+Seat 8: RichieBuck1 (2 450 in chips) 
+Seat 9: justpokerin (3 200 in chips) 
+Seat 10: mlanza (3 000 in chips) 
+justpokerin: posts small blind 10
+mlanza: posts big blind 20
+Dealt to AlexTh [6d,2d]
+X7SEVEN7X: calls 20
+AlexTh: folds
+lastdate: folds
+krzych: calls 20
+Penguin_Jeff: folds
+RichieBuck1: folds
+justpokerin: calls 10
+mlanza: checks
+*** FLOP *** [Jh,2s,9c]
+justpokerin: checks
+mlanza: checks
+X7SEVEN7X: bets 20
+krzych: calls 20
+justpokerin: calls 20
+mlanza: folds
+*** TURN *** [8s]
+justpokerin: bets 20
+X7SEVEN7X: raises to 100
+krzych: calls 100
+justpokerin: calls 80
+*** RIVER *** [7d]
+justpokerin: checks
+X7SEVEN7X: is all in 5 770
+krzych: is all in 2 720
+justpokerin: folds
+X7SEVEN7X: returns uncalled bet 3 050
+X7SEVEN7X: shows [8c 7h]
+krzych: shows [Th 4d]
+***SHOW DOWN***
+krzych wins 5 880 with Straight Jack high 
+
+
+Hand#5128FD7BB4000217 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/10/20 NL Hold'em -- 2018/04/20 - 22:06:13
+Dealer: Seat 9
+Seat 1: X7SEVEN7X (3 050 in chips) 
+Seat 2: AlexTh (2 470 in chips) 
+Seat 3: lastdate (2 930 in chips) 
+Seat 4: krzych (5 880 in chips) 
+Seat 7: Penguin_Jeff (4 240 in chips) 
+Seat 8: RichieBuck1 (2 450 in chips) 
+Seat 9: justpokerin (3 060 in chips) 
+Seat 10: mlanza (2 980 in chips) 
+mlanza: posts small blind 10
+X7SEVEN7X: posts big blind 20
+Dealt to AlexTh [4d,9h]
+AlexTh: folds
+lastdate: calls 20
+krzych: folds
+Penguin_Jeff: calls 20
+RichieBuck1: folds
+justpokerin: calls 20
+mlanza: folds
+X7SEVEN7X: checks
+*** FLOP *** [5s,Qd,Kd]
+X7SEVEN7X: checks
+lastdate: bets 20
+Penguin_Jeff: calls 20
+justpokerin: folds
+X7SEVEN7X: raises to 40
+lastdate: raises to 60
+Penguin_Jeff: calls 40
+X7SEVEN7X: calls 20
+*** TURN *** [Tc]
+X7SEVEN7X: checks
+lastdate: bets 270
+Penguin_Jeff: calls 270
+X7SEVEN7X: folds
+*** RIVER *** [Ah]
+lastdate: bets 405
+Penguin_Jeff: calls 405
+***SHOW DOWN***
+lastdate: shows [Qh Kh] (Two Pairs Kings and Queens  )
+Penguin_Jeff: shows [Ad Th] (Two Pairs Aces and Tens  )
+Penguin_Jeff wins 1 620 with Two Pairs Aces and Tens   
+
+
+Hand#5128FD7BB4000255 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/10/20 NL Hold'em -- 2018/04/20 - 22:07:28
+Dealer: Seat 10
+Seat 1: X7SEVEN7X (2 970 in chips) 
+Seat 2: AlexTh (2 470 in chips) 
+Seat 3: lastdate (2 175 in chips) 
+Seat 4: krzych (5 880 in chips) 
+Seat 7: Penguin_Jeff (5 105 in chips) 
+Seat 8: RichieBuck1 (2 450 in chips) 
+Seat 9: justpokerin (3 040 in chips) 
+Seat 10: mlanza (2 970 in chips) 
+X7SEVEN7X: posts small blind 10
+AlexTh: posts big blind 20
+Dealt to AlexTh [5s,2c]
+lastdate: folds
+krzych: calls 20
+Penguin_Jeff: raises to 40
+RichieBuck1: raises to 240
+justpokerin: folds
+mlanza: folds
+X7SEVEN7X: is all in 2 960
+AlexTh: folds
+krzych: folds
+Penguin_Jeff: folds
+RichieBuck1: is all in 2 210
+X7SEVEN7X: returns uncalled bet 520
+X7SEVEN7X: shows [Ac Kh]
+RichieBuck1: shows [Jh Jd]
+*** FLOP *** [Ah,7d,6c]
+*** TURN *** [Js]
+*** RIVER *** [Ts]
+***SHOW DOWN***
+RichieBuck1 wins 4 980 with Three of a Kind Jacks   
+
+
+Hand#5128FD7BB4000285 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/10/20 NL Hold'em -- 2018/04/20 - 22:08:34
+Dealer: Seat 1
+Seat 1: X7SEVEN7X (520 in chips) 
+Seat 2: AlexTh (2 450 in chips) 
+Seat 3: lastdate (2 175 in chips) 
+Seat 4: krzych (5 860 in chips) 
+Seat 7: Penguin_Jeff (5 065 in chips) 
+Seat 8: RichieBuck1 (4 980 in chips) 
+Seat 9: justpokerin (3 040 in chips) 
+Seat 10: mlanza (2 970 in chips) 
+AlexTh: posts small blind 10
+lastdate: posts big blind 20
+Dealt to AlexTh [Ac,3d]
+krzych: folds
+Penguin_Jeff: folds
+RichieBuck1: folds
+justpokerin: calls 20
+mlanza: folds
+X7SEVEN7X: is all in 520
+AlexTh: folds
+lastdate: calls 500
+justpokerin: calls 500
+*** FLOP *** [2c,2h,Js]
+lastdate: checks
+justpokerin: checks
+*** TURN *** [6s]
+lastdate: checks
+justpokerin: checks
+*** RIVER *** [5c]
+lastdate: bets 20
+justpokerin: folds
+lastdate: returns uncalled bet 20
+X7SEVEN7X: shows [9d Qc]
+lastdate: shows [7c 7s]
+***SHOW DOWN***
+lastdate wins 1 570 with Two Pairs Sevens and deuces   
+
+
+Hand#5128FD7BB4000318 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/10/20 NL Hold'em -- 2018/04/20 - 22:09:31
+Dealer: Seat 2
+Seat 2: AlexTh (2 440 in chips) 
+Seat 3: lastdate (3 225 in chips) 
+Seat 4: krzych (5 860 in chips) 
+Seat 7: Penguin_Jeff (5 065 in chips) 
+Seat 8: RichieBuck1 (4 980 in chips) 
+Seat 9: justpokerin (2 520 in chips) 
+Seat 10: mlanza (2 970 in chips) 
+lastdate: posts small blind 10
+krzych: posts big blind 20
+Dealt to AlexTh [9c,Qs]
+Penguin_Jeff: folds
+RichieBuck1: calls 20
+justpokerin: is all in 2 520
+mlanza: folds
+AlexTh: folds
+lastdate: folds
+krzych: folds
+RichieBuck1: folds
+justpokerin: returns uncalled bet 2 500
+***SHOW DOWN***
+justpokerin: mucks
+justpokerin wins 70 
+
+
+Hand#5128FD7BB4000338 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/15/30 NL Hold'em -- 2018/04/20 - 22:10:05
+Dealer: Seat 3
+Seat 2: AlexTh (2 440 in chips) 
+Seat 3: lastdate (3 215 in chips) 
+Seat 4: krzych (5 840 in chips) 
+Seat 7: Penguin_Jeff (5 065 in chips) 
+Seat 8: RichieBuck1 (4 960 in chips) 
+Seat 9: justpokerin (2 570 in chips) 
+Seat 10: mlanza (2 970 in chips) 
+krzych: posts small blind 15
+Penguin_Jeff: posts big blind 30
+Dealt to AlexTh [5h,9d]
+RichieBuck1: folds
+justpokerin: folds
+mlanza: folds
+AlexTh: folds
+lastdate: folds
+krzych: calls 15
+Penguin_Jeff: checks
+*** FLOP *** [Qc,Jc,8h]
+krzych: bets 30
+Penguin_Jeff: calls 30
+*** TURN *** [5s]
+krzych: bets 30
+Penguin_Jeff: calls 30
+*** RIVER *** [7d]
+krzych: bets 30
+Penguin_Jeff: calls 30
+***SHOW DOWN***
+krzych: shows [2s Jh] (Pair of Jacks  )
+Penguin_Jeff: mucks
+krzych wins 240 with Pair of Jacks   
+Penguin_Jeff: mucks [8c,9s] (Pair) .
+
+
+Hand#5128FD7BB4000364 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/15/30 NL Hold'em -- 2018/04/20 - 22:10:55
+Dealer: Seat 4
+Seat 2: AlexTh (2 440 in chips) 
+Seat 3: lastdate (3 215 in chips) 
+Seat 4: krzych (5 960 in chips) 
+Seat 7: Penguin_Jeff (4 945 in chips) 
+Seat 8: RichieBuck1 (4 960 in chips) 
+Seat 9: justpokerin (2 570 in chips) 
+Seat 10: mlanza (2 970 in chips) 
+Penguin_Jeff: posts small blind 15
+RichieBuck1: posts big blind 30
+Dealt to AlexTh [9c,Th]
+justpokerin: calls 30
+mlanza: folds
+AlexTh: folds
+lastdate: calls 30
+krzych: folds
+Penguin_Jeff: calls 15
+RichieBuck1: checks
+*** FLOP *** [4h,4s,Qh]
+Penguin_Jeff: checks
+RichieBuck1: bets 30
+justpokerin: folds
+lastdate: folds
+Penguin_Jeff: calls 30
+*** TURN *** [Qc]
+Penguin_Jeff: checks
+RichieBuck1: bets 180
+Penguin_Jeff: folds
+RichieBuck1: returns uncalled bet 180
+***SHOW DOWN***
+RichieBuck1: mucks
+RichieBuck1 wins 180 
+
+
+Hand#5128FD7BB4000396 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/15/30 NL Hold'em -- 2018/04/20 - 22:11:54
+Dealer: Seat 7
+Seat 2: AlexTh (2 440 in chips) 
+Seat 3: lastdate (3 185 in chips) 
+Seat 4: krzych (5 960 in chips) 
+Seat 7: Penguin_Jeff (4 885 in chips) 
+Seat 8: RichieBuck1 (5 080 in chips) 
+Seat 9: justpokerin (2 540 in chips) 
+Seat 10: mlanza (2 970 in chips) 
+RichieBuck1: posts small blind 15
+justpokerin: posts big blind 30
+Dealt to AlexTh [7s,Kh]
+mlanza: folds
+AlexTh: folds
+lastdate: calls 30
+krzych: calls 30
+Penguin_Jeff: folds
+RichieBuck1: calls 15
+justpokerin: checks
+*** FLOP *** [9s,4s,6h]
+RichieBuck1: bets 120
+justpokerin: folds
+lastdate: calls 120
+krzych: calls 120
+*** TURN *** [5d]
+RichieBuck1: bets 240
+lastdate: calls 240
+krzych: calls 240
+*** RIVER *** [6s]
+RichieBuck1: bets 600
+lastdate: calls 600
+krzych: calls 600
+***SHOW DOWN***
+RichieBuck1: shows [Td 9h] (Two Pairs Nines and Sixes  )
+lastdate: shows [9c Jd] (Two Pairs Nines and Sixes  )
+krzych: shows [2s 5s] (Flush Nine high)
+krzych wins 3 000 with Flush Nine high 
+
+
+Hand#5128FD7BB4000424 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/15/30 NL Hold'em -- 2018/04/20 - 22:12:51
+Dealer: Seat 8
+Seat 1: GR8Ace (8 818 in chips) 
+Seat 2: AlexTh (2 440 in chips) 
+Seat 3: lastdate (2 195 in chips) 
+Seat 7: Penguin_Jeff (4 885 in chips) 
+Seat 8: RichieBuck1 (4 090 in chips) 
+Seat 9: justpokerin (2 510 in chips) 
+Seat 10: mlanza (2 970 in chips) 
+justpokerin: posts small blind 15
+mlanza: posts big blind 30
+Dealt to AlexTh [Tc,Ad]
+GR8Ace: calls 30
+AlexTh: calls 30
+lastdate: folds
+Penguin_Jeff: calls 30
+RichieBuck1: folds
+justpokerin: calls 15
+mlanza: checks
+*** FLOP *** [4h,Th,9c]
+justpokerin: checks
+mlanza: checks
+GR8Ace: checks
+AlexTh: bets 30
+Penguin_Jeff: raises to 60
+justpokerin: calls 60
+mlanza: folds
+GR8Ace: calls 60
+AlexTh: calls 30
+*** TURN *** [Ts]
+justpokerin: checks
+GR8Ace: checks
+AlexTh: bets 390
+Penguin_Jeff: calls 390
+justpokerin: folds
+GR8Ace: folds
+*** RIVER *** [Td]
+AlexTh: is all in 1 960
+Penguin_Jeff: calls 1 960
+AlexTh: shows [Tc Ad]
+Penguin_Jeff: shows [4s 4d]
+***SHOW DOWN***
+AlexTh wins 5 090 with Four of a Kind Tens   
+
+
+Hand#5128FD7BB4000477 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/15/30 NL Hold'em -- 2018/04/20 - 22:14:18
+Dealer: Seat 9
+Seat 1: GR8Ace (8 728 in chips) 
+Seat 2: AlexTh (5 090 in chips) 
+Seat 3: lastdate (2 195 in chips) 
+Seat 7: Penguin_Jeff (2 445 in chips) 
+Seat 8: RichieBuck1 (4 090 in chips) 
+Seat 9: justpokerin (2 420 in chips) 
+Seat 10: mlanza (2 940 in chips) 
+mlanza: posts small blind 15
+GR8Ace: posts big blind 30
+Dealt to AlexTh [6h,Qs]
+AlexTh: folds
+lastdate: folds
+Penguin_Jeff: raises to 105
+RichieBuck1: folds
+justpokerin: calls 105
+mlanza: folds
+GR8Ace: calls 75
+*** FLOP *** [4s,2s,9d]
+GR8Ace: checks
+Penguin_Jeff: bets 30
+justpokerin: folds
+GR8Ace: calls 30
+*** TURN *** [9c]
+GR8Ace: checks
+Penguin_Jeff: bets 195
+GR8Ace: folds
+Penguin_Jeff: returns uncalled bet 195
+***SHOW DOWN***
+Penguin_Jeff: mucks
+Penguin_Jeff wins 390 
+
+
+Hand#5128FD7BB4000507 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/15/30 NL Hold'em -- 2018/04/20 - 22:15:05
+Dealer: Seat 10
+Seat 1: GR8Ace (8 593 in chips) 
+Seat 2: AlexTh (5 090 in chips) 
+Seat 3: lastdate (2 195 in chips) 
+Seat 4: johnshome197 (5 270 in chips) 
+Seat 7: Penguin_Jeff (2 700 in chips) 
+Seat 8: RichieBuck1 (4 090 in chips) 
+Seat 9: justpokerin (2 315 in chips) 
+Seat 10: mlanza (2 925 in chips) 
+GR8Ace: posts small blind 15
+AlexTh: posts big blind 30
+Dealt to AlexTh [As,Ks]
+lastdate: calls 30
+johnshome197: calls 30
+Penguin_Jeff: folds
+RichieBuck1: folds
+justpokerin: calls 30
+mlanza: folds
+GR8Ace: calls 15
+AlexTh: checks
+*** FLOP *** [4s,Kh,7s]
+GR8Ace: checks
+AlexTh: bets 75
+lastdate: folds
+johnshome197: folds
+justpokerin: calls 75
+GR8Ace: folds
+*** TURN *** [2s]
+AlexTh: bets 300
+justpokerin: calls 300
+*** RIVER *** [Ah]
+AlexTh: is all in 4 685
+justpokerin: is all in 1 910
+AlexTh: returns uncalled bet 2 775
+AlexTh: shows [As Ks]
+justpokerin: shows [7c Ac]
+***SHOW DOWN***
+AlexTh wins 4 720 with Flush Ace high 
+
+
+Hand#5128FD7BB4000543 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/15/30 NL Hold'em -- 2018/04/20 - 22:16:09
+Dealer: Seat 1
+Seat 1: GR8Ace (8 563 in chips) 
+Seat 2: AlexTh (7 495 in chips) 
+Seat 3: lastdate (2 165 in chips) 
+Seat 4: johnshome197 (5 240 in chips) 
+Seat 7: Penguin_Jeff (2 700 in chips) 
+Seat 8: RichieBuck1 (4 090 in chips) 
+Seat 10: mlanza (2 925 in chips) 
+AlexTh: posts small blind 15
+lastdate: posts big blind 30
+Dealt to AlexTh [As,Ts]
+johnshome197: calls 30
+Penguin_Jeff: folds
+RichieBuck1: calls 30
+mlanza: folds
+GR8Ace: calls 30
+AlexTh: calls 15
+lastdate: checks
+*** FLOP *** [9d,9h,9s]
+AlexTh: checks
+lastdate: checks
+johnshome197: checks
+RichieBuck1: bets 30
+GR8Ace: folds
+AlexTh: calls 30
+lastdate: calls 30
+johnshome197: calls 30
+*** TURN *** [6d]
+AlexTh: checks
+lastdate: checks
+johnshome197: checks
+RichieBuck1: bets 30
+AlexTh: calls 30
+lastdate: calls 30
+johnshome197: folds
+*** RIVER *** [7d]
+AlexTh: checks
+lastdate: checks
+RichieBuck1: bets 90
+AlexTh: calls 90
+lastdate: calls 90
+***SHOW DOWN***
+RichieBuck1: shows [5c Qc] (Three of a Kind Nines  )
+AlexTh: shows [As Ts] (Three of a Kind Nines  )
+lastdate: shows [7h 7c] (Full House Nines full of Sevens)
+lastdate wins 630 with Full House Nines full of Sevens 
+
+
+Hand#5128FD7BB4000581 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/15/30 NL Hold'em -- 2018/04/20 - 22:17:34
+Dealer: Seat 2
+Seat 1: GR8Ace (8 533 in chips) 
+Seat 2: AlexTh (7 315 in chips) 
+Seat 3: lastdate (2 615 in chips) 
+Seat 4: johnshome197 (5 180 in chips) 
+Seat 7: Penguin_Jeff (2 700 in chips) 
+Seat 8: RichieBuck1 (3 910 in chips) 
+Seat 9: imionme (3 000 in chips) 
+Seat 10: mlanza (2 925 in chips) 
+lastdate: posts small blind 15
+johnshome197: posts big blind 30
+Dealt to AlexTh [8d,5s]
+Penguin_Jeff: folds
+RichieBuck1: calls 30
+imionme: calls 30
+mlanza: folds
+GR8Ace: calls 30
+AlexTh: folds
+lastdate: calls 15
+johnshome197: checks
+*** FLOP *** [Qd,Jc,Ac]
+lastdate: checks
+johnshome197: checks
+RichieBuck1: checks
+imionme: checks
+GR8Ace: checks
+*** TURN *** [2h]
+lastdate: checks
+johnshome197: checks
+RichieBuck1: checks
+imionme: bets 75
+GR8Ace: folds
+lastdate: folds
+johnshome197: folds
+RichieBuck1: calls 75
+*** RIVER *** [6s]
+RichieBuck1: checks
+imionme: bets 300
+RichieBuck1: folds
+imionme: returns uncalled bet 300
+***SHOW DOWN***
+imionme: mucks
+imionme wins 300 
+
+
+Hand#5128FD7BB4000633 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/15/30 NL Hold'em -- 2018/04/20 - 22:19:22
+Dealer: Seat 3
+Seat 1: GR8Ace (8 503 in chips) 
+Seat 2: AlexTh (7 315 in chips) 
+Seat 3: lastdate (2 585 in chips) 
+Seat 4: johnshome197 (5 150 in chips) 
+Seat 7: Penguin_Jeff (2 700 in chips) 
+Seat 8: RichieBuck1 (3 805 in chips) 
+Seat 9: imionme (3 195 in chips) 
+johnshome197: posts small blind 15
+Penguin_Jeff: posts big blind 30
+Dealt to AlexTh [7c,3d]
+RichieBuck1: folds
+imionme: folds
+GR8Ace: calls 30
+AlexTh: folds
+lastdate: calls 30
+johnshome197: calls 15
+Penguin_Jeff: checks
+*** FLOP *** [5c,2c,4c]
+johnshome197: bets 30
+Penguin_Jeff: folds
+GR8Ace: calls 30
+lastdate: folds
+*** TURN *** [8d]
+johnshome197: checks
+GR8Ace: bets 90
+johnshome197: calls 90
+*** RIVER *** [Kd]
+johnshome197: checks
+GR8Ace: checks
+***SHOW DOWN***
+GR8Ace: shows [Ad 4d] (Pair of Fours  )
+johnshome197: mucks
+GR8Ace wins 360 with Pair of Fours   
+johnshome197: mucks [Jh,2s] (Pair) .
+
+
+Hand#5128FD7BB4000672 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/25/50 NL Hold'em -- 2018/04/20 - 22:20:32
+Dealer: Seat 4
+Seat 1: GR8Ace (8 713 in chips) 
+Seat 2: AlexTh (7 315 in chips) 
+Seat 3: lastdate (2 555 in chips) 
+Seat 4: johnshome197 (5 000 in chips) 
+Seat 7: Penguin_Jeff (2 670 in chips) 
+Seat 8: RichieBuck1 (3 805 in chips) 
+Seat 9: imionme (3 195 in chips) 
+Seat 10: Swindler11 (3 000 in chips) 
+Penguin_Jeff: posts small blind 25
+RichieBuck1: posts big blind 50
+Dealt to AlexTh [5s,5d]
+imionme: calls 50
+Swindler11: calls 50
+GR8Ace: calls 50
+AlexTh: calls 50
+lastdate: folds
+johnshome197: folds
+Penguin_Jeff: raises to 100
+RichieBuck1: folds
+imionme: calls 50
+Swindler11: calls 50
+GR8Ace: calls 50
+AlexTh: calls 50
+*** FLOP *** [6c,9h,Tc]
+Penguin_Jeff: bets 275
+imionme: folds
+Swindler11: calls 275
+GR8Ace: calls 275
+AlexTh: folds
+*** TURN *** [Ks]
+Penguin_Jeff: checks
+Swindler11: bets 1 375
+GR8Ace: calls 1 375
+Penguin_Jeff: calls 1 375
+*** RIVER *** [6h]
+Penguin_Jeff: checks
+Swindler11: is all in 1 250
+GR8Ace: calls 1 250
+Penguin_Jeff: folds
+GR8Ace: shows [8c Td]
+Swindler11: shows [Kc Ad]
+***SHOW DOWN***
+Swindler11 wins 8 000 with Two Pairs Kings and Sixes   
+
+
+Hand#5128FD7BB4000716 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/25/50 NL Hold'em -- 2018/04/20 - 22:21:49
+Dealer: Seat 7
+Seat 1: GR8Ace (5 713 in chips) 
+Seat 2: AlexTh (7 215 in chips) 
+Seat 3: lastdate (2 555 in chips) 
+Seat 4: johnshome197 (5 000 in chips) 
+Seat 7: Penguin_Jeff (920 in chips) 
+Seat 8: RichieBuck1 (3 755 in chips) 
+Seat 9: imionme (3 095 in chips) 
+Seat 10: Swindler11 (8 000 in chips) 
+RichieBuck1: posts small blind 25
+imionme: posts big blind 50
+Dealt to AlexTh [5c,Ac]
+Swindler11: calls 50
+GR8Ace: is all in 5 713
+AlexTh: folds
+lastdate: is all in 2 555
+johnshome197: folds
+Penguin_Jeff: is all in 920
+RichieBuck1: folds
+imionme: is all in 3 045
+Swindler11: folds
+GR8Ace: returns uncalled bet 2 618
+GR8Ace: shows [As 7s]
+lastdate: shows [9d Th]
+Penguin_Jeff: shows [2c 2s]
+imionme: shows [Ks Kd]
+*** FLOP *** [Jh,2d,4s]
+*** TURN *** [Tc]
+*** RIVER *** [8c]
+johnshome197  chats: f u c k i n g i d i o t s
+***SHOW DOWN***
+imionme wins 1 080 with Pair of Kings   
+***SHOW DOWN***
+imionme wins 4 905 with Pair of Kings   
+***SHOW DOWN***
+Penguin_Jeff wins 3 755 with Three of a Kind deuces   
+
+
+Hand#5128FD7BB4000736 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/25/50 NL Hold'em -- 2018/04/20 - 22:22:25
+Dealer: Seat 8
+Seat 1: GR8Ace (2 618 in chips) 
+Seat 2: AlexTh (7 215 in chips) 
+Seat 4: johnshome197 (5 000 in chips) 
+Seat 7: Penguin_Jeff (3 755 in chips) 
+Seat 8: RichieBuck1 (3 730 in chips) 
+Seat 9: imionme (5 985 in chips) 
+Seat 10: Swindler11 (7 950 in chips) 
+imionme: posts small blind 25
+Swindler11: posts big blind 50
+Dealt to AlexTh [4h,2c]
+GR8Ace: is all in 2 618
+AlexTh: folds
+johnshome197: folds
+Penguin_Jeff: folds
+RichieBuck1: folds
+imionme: folds
+Swindler11: folds
+Swindler11: mucks
+GR8Ace: returns uncalled bet 2 568
+***SHOW DOWN***
+GR8Ace: shows [Qd 3c]
+GR8Ace wins 125 
+
+
+Hand#5128FD7BB4000748 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/25/50 NL Hold'em -- 2018/04/20 - 22:22:46
+Dealer: Seat 9
+Seat 1: GR8Ace (2 693 in chips) 
+Seat 2: AlexTh (7 215 in chips) 
+Seat 4: johnshome197 (5 000 in chips) 
+Seat 7: Penguin_Jeff (3 755 in chips) 
+Seat 8: RichieBuck1 (3 730 in chips) 
+Seat 9: imionme (5 960 in chips) 
+Seat 10: Swindler11 (7 900 in chips) 
+Swindler11: posts small blind 25
+GR8Ace: posts big blind 50
+Dealt to AlexTh [7s,7c]
+AlexTh: calls 50
+johnshome197: folds
+Penguin_Jeff: folds
+RichieBuck1: folds
+imionme: calls 50
+Swindler11: calls 25
+GR8Ace: is all in 2 643
+AlexTh: folds
+imionme: folds
+Swindler11: folds
+GR8Ace: returns uncalled bet 2 643
+***SHOW DOWN***
+GR8Ace: shows [7d 5d]
+GR8Ace wins 200 
+
+
+Hand#5128FD7BB4000766 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/25/50 NL Hold'em -- 2018/04/20 - 22:23:10
+Dealer: Seat 10
+Seat 1: GR8Ace (2 843 in chips) 
+Seat 2: AlexTh (7 165 in chips) 
+Seat 4: johnshome197 (5 000 in chips) 
+Seat 7: Penguin_Jeff (3 755 in chips) 
+Seat 8: RichieBuck1 (3 730 in chips) 
+Seat 9: imionme (5 910 in chips) 
+Seat 10: Swindler11 (7 850 in chips) 
+GR8Ace: posts small blind 25
+AlexTh: posts big blind 50
+Dealt to AlexTh [3h,Ah]
+johnshome197: calls 50
+Penguin_Jeff: folds
+RichieBuck1: calls 50
+imionme: folds
+Swindler11: folds
+GR8Ace: is all in 2 818
+AlexTh: folds
+johnshome197: calls 2 793
+RichieBuck1: folds
+GR8Ace: shows [6h Qs]
+johnshome197: shows [9c 9d]
+*** FLOP *** [Qh,9h,4h]
+*** TURN *** [4d]
+*** RIVER *** [Ac]
+***SHOW DOWN***
+johnshome197 wins 5 786 with Full House Nines full of Fours 
+
+
+Hand#5128FD7BB4000788 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/25/50 NL Hold'em -- 2018/04/20 - 22:23:55
+Dealer: Seat 1
+Seat 2: AlexTh (7 115 in chips) 
+Seat 3: Melissa91765 (2 245 in chips) 
+Seat 4: johnshome197 (7 943 in chips) 
+Seat 7: Penguin_Jeff (3 755 in chips) 
+Seat 8: RichieBuck1 (3 680 in chips) 
+Seat 9: imionme (5 910 in chips) 
+Seat 10: Swindler11 (7 850 in chips) 
+AlexTh: posts small blind 25
+Melissa91765: posts big blind 50
+Dealt to AlexTh [Qc,8h]
+johnshome197: calls 50
+Penguin_Jeff: folds
+RichieBuck1: folds
+imionme: calls 50
+Swindler11: calls 50
+AlexTh: folds
+Melissa91765: checks
+*** FLOP *** [3h,4d,2h]
+Melissa91765: checks
+johnshome197: bets 225
+imionme: folds
+Swindler11: calls 225
+Melissa91765: folds
+*** TURN *** [Td]
+johnshome197: bets 50
+Swindler11: raises to 438
+johnshome197: calls 388
+*** RIVER *** [8s]
+johnshome197: bets 776
+Swindler11: calls 776
+***SHOW DOWN***
+johnshome197: shows [Th Ts] (Three of a Kind Tens  )
+Swindler11: mucks
+johnshome197 wins 3 103 with Three of a Kind Tens   
+Swindler11: mucks [Tc,5s] (Pair) .
+
+
+Hand#5128FD7BB4000822 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/25/50 NL Hold'em -- 2018/04/20 - 22:25:00
+Dealer: Seat 2
+Seat 2: AlexTh (7 090 in chips) 
+Seat 3: Melissa91765 (2 195 in chips) 
+Seat 4: johnshome197 (9 557 in chips) 
+Seat 7: Penguin_Jeff (3 755 in chips) 
+Seat 8: RichieBuck1 (3 680 in chips) 
+Seat 9: imionme (5 860 in chips) 
+Seat 10: Swindler11 (6 361 in chips) 
+Melissa91765: posts small blind 25
+johnshome197: posts big blind 50
+Dealt to AlexTh [5c,5s]
+johnshome197  chats: thx
+Penguin_Jeff: folds
+Swindler11  chats: smart a ss
+RichieBuck1: raises to 400
+imionme: calls 400
+Swindler11: folds
+AlexTh: folds
+Melissa91765: folds
+johnshome197: folds
+*** FLOP *** [9h,6s,Jd]
+johnshome197  chats: donkey
+RichieBuck1: is all in 3 280
+imionme: calls 3 280
+RichieBuck1: shows [Kc Kh]
+imionme: shows [Qd Jh]
+*** TURN *** [As]
+*** RIVER *** [Tc]
+***SHOW DOWN***
+RichieBuck1 wins 7 435 with Pair of Kings   
+
+
+Swindler11  chats: suck this dopnkey
+Hand#5128FD7BB4000851 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/25/50 NL Hold'em -- 2018/04/20 - 22:25:57
+Dealer: Seat 3
+Seat 1: PACKERS 40 (2 910 in chips) 
+Seat 2: AlexTh (7 090 in chips) 
+Seat 3: Melissa91765 (2 170 in chips) 
+Seat 4: johnshome197 (9 507 in chips) 
+Seat 7: Penguin_Jeff (3 755 in chips) 
+Seat 8: RichieBuck1 (7 435 in chips) 
+Seat 9: imionme (2 180 in chips) 
+Seat 10: Swindler11 (6 361 in chips) 
+johnshome197: posts small blind 25
+Penguin_Jeff: posts big blind 50
+Dealt to AlexTh [Qc,5c]
+RichieBuck1: calls 50
+imionme: calls 50
+Swindler11: calls 50
+PACKERS 40: folds
+AlexTh: folds
+Melissa91765: raises to 100
+johnshome197: folds
+Penguin_Jeff: folds
+RichieBuck1: calls 50
+imionme: calls 50
+Swindler11: calls 50
+*** FLOP *** [6c,8c,9h]
+RichieBuck1: checks
+imionme: checks
+Swindler11: bets 238
+Melissa91765: calls 238
+RichieBuck1: folds
+imionme: calls 238
+*** TURN *** [Kd]
+imionme: checks
+Swindler11: bets 50
+Melissa91765: calls 50
+imionme: calls 50
+*** RIVER *** [4d]
+imionme: checks
+Swindler11: checks
+Melissa91765: is all in 1 782
+imionme: folds
+Swindler11: folds
+Melissa91765: returns uncalled bet 1 782
+***SHOW DOWN***
+Melissa91765: mucks
+Melissa91765 wins 1 339 
+
+
+Hand#5128FD7BB4000894 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/25/50 NL Hold'em -- 2018/04/20 - 22:27:21
+Dealer: Seat 4
+Seat 1: PACKERS 40 (2 910 in chips) 
+Seat 2: AlexTh (7 090 in chips) 
+Seat 3: Melissa91765 (3 121 in chips) 
+Seat 4: johnshome197 (9 482 in chips) 
+Seat 7: Penguin_Jeff (3 705 in chips) 
+Seat 8: RichieBuck1 (7 335 in chips) 
+Seat 9: imionme (1 792 in chips) 
+Seat 10: Swindler11 (5 973 in chips) 
+Penguin_Jeff: posts small blind 25
+RichieBuck1: posts big blind 50
+Dealt to AlexTh [7s,4d]
+imionme: folds
+Swindler11: calls 50
+PACKERS 40: folds
+AlexTh: folds
+Melissa91765: folds
+johnshome197: calls 50
+Penguin_Jeff: calls 25
+RichieBuck1: checks
+*** FLOP *** [7d,5h,Ts]
+Penguin_Jeff: checks
+RichieBuck1: checks
+Swindler11: checks
+johnshome197: checks
+*** TURN *** [5d]
+Penguin_Jeff: checks
+RichieBuck1: checks
+Swindler11: checks
+johnshome197: checks
+*** RIVER *** [As]
+Penguin_Jeff: checks
+RichieBuck1: checks
+Swindler11: checks
+johnshome197: checks
+***SHOW DOWN***
+Swindler11: shows [3c Kh] (Pair of Fives  )
+johnshome197: mucks
+Penguin_Jeff: mucks
+RichieBuck1: shows [9c Ks] (Pair of Fives  )
+RichieBuck1 wins 100 with Pair of Fives with Ace, King kickers 
+Swindler11 wins 100 with Pair of Fives with Ace, King kickers 
+Penguin_Jeff: mucks [3h,4h] (Pair) .
+johnshome197: mucks [Qd,9s] (Pair) .
+
+
+Hand#5128FD7BB4000929 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/25/50 NL Hold'em -- 2018/04/20 - 22:28:33
+Dealer: Seat 7
+Seat 1: PACKERS 40 (2 910 in chips) 
+Seat 2: AlexTh (7 090 in chips) 
+Seat 3: Melissa91765 (3 121 in chips) 
+Seat 4: johnshome197 (9 432 in chips) 
+Seat 7: Penguin_Jeff (3 655 in chips) 
+Seat 8: RichieBuck1 (7 385 in chips) 
+Seat 9: imionme (1 792 in chips) 
+Seat 10: Swindler11 (6 023 in chips) 
+RichieBuck1: posts small blind 25
+imionme: posts big blind 50
+Dealt to AlexTh [Ac,Js]
+Swindler11: calls 50
+PACKERS 40: folds
+AlexTh: calls 50
+Melissa91765: raises to 100
+johnshome197: calls 100
+Penguin_Jeff: folds
+RichieBuck1: folds
+imionme: calls 50
+Swindler11: calls 50
+AlexTh: calls 50
+*** FLOP *** [Qc,6c,7h]
+imionme: checks
+Swindler11: checks
+AlexTh: checks
+Melissa91765: bets 525
+johnshome197: folds
+imionme: folds
+Swindler11: folds
+AlexTh: folds
+Melissa91765: returns uncalled bet 525
+***SHOW DOWN***
+Melissa91765: mucks
+Melissa91765 wins 525 
+
+
+Hand#5128FD7BB4000956 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/25/50 NL Hold'em -- 2018/04/20 - 22:29:35
+Dealer: Seat 8
+Seat 1: PACKERS 40 (2 910 in chips) 
+Seat 2: AlexTh (6 990 in chips) 
+Seat 3: Melissa91765 (3 546 in chips) 
+Seat 4: johnshome197 (9 332 in chips) 
+Seat 7: Penguin_Jeff (3 655 in chips) 
+Seat 8: RichieBuck1 (7 360 in chips) 
+Seat 9: imionme (1 692 in chips) 
+Seat 10: Swindler11 (5 923 in chips) 
+imionme: posts small blind 25
+Swindler11: posts big blind 50
+Dealt to AlexTh [Ks,9s]
+PACKERS 40: folds
+AlexTh: folds
+Melissa91765: folds
+johnshome197: calls 50
+Penguin_Jeff: folds
+RichieBuck1: raises to 350
+imionme: folds
+Swindler11: calls 300
+johnshome197: folds
+*** FLOP *** [2c,3d,3h]
+Swindler11: checks
+RichieBuck1: bets 775
+Swindler11: folds
+Swindler11: mucks
+RichieBuck1: returns uncalled bet 775
+***SHOW DOWN***
+RichieBuck1: mucks
+RichieBuck1 wins 775 
+
+
+Hand#5128FD7BB4000979 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/50/100 NL Hold'em -- 2018/04/20 - 22:30:24
+Dealer: Seat 9
+Seat 1: PACKERS 40 (2 910 in chips) 
+Seat 2: AlexTh (6 990 in chips) 
+Seat 3: Melissa91765 (3 546 in chips) 
+Seat 4: johnshome197 (9 282 in chips) 
+Seat 7: Penguin_Jeff (3 655 in chips) 
+Seat 8: RichieBuck1 (7 785 in chips) 
+Seat 9: imionme (1 667 in chips) 
+Seat 10: Swindler11 (5 573 in chips) 
+Swindler11: posts small blind 50
+PACKERS 40: posts big blind 100
+Dealt to AlexTh [4d,4c]
+AlexTh: folds
+Melissa91765: raises to 200
+johnshome197: calls 200
+Penguin_Jeff: folds
+RichieBuck1: folds
+imionme: folds
+Swindler11: calls 150
+PACKERS 40: folds
+*** FLOP *** [7s,Ad,4h]
+Swindler11: checks
+Melissa91765: bets 350
+johnshome197: folds
+Swindler11: calls 350
+*** TURN *** [9s]
+Swindler11: checks
+Melissa91765: checks
+*** RIVER *** [8d]
+Swindler11: checks
+Melissa91765: bets 1 400
+Swindler11: calls 1 400
+***SHOW DOWN***
+Melissa91765: shows [8c 8h] (Three of a Kind Eights  )
+Swindler11: mucks
+Melissa91765 wins 4 200 with Three of a Kind Eights   
+Swindler11: mucks [Jc,Jh] (Pair) .
+
+
+Hand#5128FD7BB4001008 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/50/100 NL Hold'em -- 2018/04/20 - 22:31:24
+Dealer: Seat 10
+Seat 1: PACKERS 40 (2 810 in chips) 
+Seat 2: AlexTh (6 990 in chips) 
+Seat 3: Melissa91765 (5 796 in chips) 
+Seat 4: johnshome197 (9 082 in chips) 
+Seat 7: Penguin_Jeff (3 655 in chips) 
+Seat 8: RichieBuck1 (7 785 in chips) 
+Seat 9: imionme (1 667 in chips) 
+Seat 10: Swindler11 (3 623 in chips) 
+PACKERS 40: posts small blind 50
+AlexTh: posts big blind 100
+Dealt to AlexTh [6c,Jh]
+Melissa91765: folds
+johnshome197: calls 100
+Penguin_Jeff: folds
+RichieBuck1: folds
+imionme: folds
+Swindler11: is all in 3 623
+PACKERS 40: folds
+AlexTh: folds
+johnshome197: folds
+Swindler11: returns uncalled bet 3 523
+***SHOW DOWN***
+Swindler11: mucks
+Swindler11 wins 350 
+
+
+Hand#5128FD7BB4001017 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/50/100 NL Hold'em -- 2018/04/20 - 22:31:48
+Dealer: Seat 1
+Seat 1: PACKERS 40 (2 760 in chips) 
+Seat 2: AlexTh (6 890 in chips) 
+Seat 3: Melissa91765 (5 796 in chips) 
+Seat 4: johnshome197 (8 982 in chips) 
+Seat 7: Penguin_Jeff (3 655 in chips) 
+Seat 8: RichieBuck1 (7 785 in chips) 
+Seat 9: imionme (1 667 in chips) 
+Seat 10: Swindler11 (3 873 in chips) 
+AlexTh: posts small blind 50
+Melissa91765: posts big blind 100
+Dealt to AlexTh [3h,4s]
+johnshome197: calls 100
+Penguin_Jeff: folds
+RichieBuck1: folds
+imionme: raises to 450
+Swindler11: folds
+PACKERS 40: folds
+AlexTh: folds
+Melissa91765: folds
+johnshome197: calls 350
+*** FLOP *** [Js,6s,8c]
+johnshome197: checks
+imionme: bets 1 050
+johnshome197: calls 1 050
+*** TURN *** [7c]
+johnshome197: checks
+imionme: is all in 167
+johnshome197: calls 167
+johnshome197: shows [2s As]
+imionme: shows [Ac Ad]
+*** RIVER *** [3s]
+***SHOW DOWN***
+johnshome197 wins 3 484 with Flush Ace high 
+
+
+Hand#5128FD7BB4001042 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/50/100 NL Hold'em -- 2018/04/20 - 22:32:40
+Dealer: Seat 2
+Seat 1: PACKERS 40 (2 760 in chips) 
+Seat 2: AlexTh (6 840 in chips) 
+Seat 3: Melissa91765 (5 696 in chips) 
+Seat 4: johnshome197 (10 799 in chips) 
+Seat 7: Penguin_Jeff (3 655 in chips) 
+Seat 8: RichieBuck1 (7 785 in chips) 
+Seat 10: Swindler11 (3 873 in chips) 
+Melissa91765: posts small blind 50
+johnshome197: posts big blind 100
+Dealt to AlexTh [4d,5s]
+Penguin_Jeff: folds
+johnshome197  chats: thx
+RichieBuck1: calls 100
+Swindler11: calls 100
+PACKERS 40: folds
+AlexTh: folds
+Melissa91765: raises to 200
+johnshome197: calls 100
+RichieBuck1: calls 100
+Swindler11: calls 100
+*** FLOP *** [Th,5c,Jc]
+Melissa91765: checks
+johnshome197: checks
+RichieBuck1: checks
+Swindler11: checks
+*** TURN *** [9d]
+Melissa91765: checks
+johnshome197: bets 400
+RichieBuck1: folds
+Swindler11: calls 400
+Melissa91765: folds
+*** RIVER *** [Ac]
+johnshome197: bets 1 600
+Swindler11: folds
+Swindler11: mucks
+johnshome197: returns uncalled bet 1 600
+***SHOW DOWN***
+johnshome197: mucks
+johnshome197 wins 1 600 
+
+
+Hand#5128FD7BB4001077 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/50/100 NL Hold'em -- 2018/04/20 - 22:34:02
+Dealer: Seat 3
+Seat 1: PACKERS 40 (2 760 in chips) 
+Seat 2: AlexTh (6 840 in chips) 
+Seat 3: Melissa91765 (5 496 in chips) 
+Seat 4: johnshome197 (11 799 in chips) 
+Seat 7: Penguin_Jeff (3 655 in chips) 
+Seat 8: RichieBuck1 (7 585 in chips) 
+Seat 9: shakiil34 (5 172 in chips) 
+Seat 10: Swindler11 (3 273 in chips) 
+johnshome197: posts small blind 50
+Penguin_Jeff: posts big blind 100
+Dealt to AlexTh [4h,Kc]
+RichieBuck1: calls 100
+shakiil34: calls 100
+Swindler11: calls 100
+PACKERS 40: folds
+AlexTh: folds
+Melissa91765: calls 100
+johnshome197: calls 50
+Penguin_Jeff: checks
+*** FLOP *** [Td,4c,5h]
+johnshome197: bets 100
+Penguin_Jeff: folds
+RichieBuck1: folds
+shakiil34: folds
+Swindler11: calls 100
+Melissa91765: calls 100
+*** TURN *** [2s]
+johnshome197: bets 100
+Swindler11: calls 100
+Melissa91765: calls 100
+*** RIVER *** [3d]
+johnshome197: bets 100
+Swindler11: folds
+Melissa91765: folds
+johnshome197: returns uncalled bet 100
+***SHOW DOWN***
+johnshome197: mucks
+johnshome197 wins 1 200 
+
+
+Hand#5128FD7BB4001109 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- 0/50/100 NL Hold'em -- 2018/04/20 - 22:35:09
+Dealer: Seat 4
+Seat 1: PACKERS 40 (2 760 in chips) 
+Seat 2: AlexTh (6 840 in chips) 
+Seat 3: Melissa91765 (5 196 in chips) 
+Seat 4: johnshome197 (12 699 in chips) 
+Seat 7: Penguin_Jeff (3 555 in chips) 
+Seat 8: RichieBuck1 (7 485 in chips) 
+Seat 9: shakiil34 (5 072 in chips) 
+Seat 10: Swindler11 (2 973 in chips) 
+Penguin_Jeff: posts small blind 50
+RichieBuck1: posts big blind 100
+Dealt to AlexTh [5h,Qs]
+shakiil34: is all in 5 072
+Swindler11: is all in 2 973
+PACKERS 40: folds
+AlexTh: folds
+Melissa91765: folds
+johnshome197: folds
+Penguin_Jeff: folds
+RichieBuck1: calls 4 972
+RichieBuck1: shows [Kc Ah]
+shakiil34: shows [9s 6c]
+Swindler11: shows [As Js]
+*** FLOP *** [Ks,5d,2c]
+*** TURN *** [6d]
+*** RIVER *** [Th]
+***SHOW DOWN***
+RichieBuck1 wins 4 198 with Pair of Kings   
+***SHOW DOWN***
+RichieBuck1 wins 8 969 with Pair of Kings   
+
+
+Player left the table
+allinace21: folds
+NobleGlen: folds
+skarabeo: folds
+Boatman715: calls 100
+skromnjaga: folds
+Garbageman20: calls 100
+Gabi47: checks
+*** FLOP *** [8s,9c,Kd]
+Gabi47: checks
+Boatman715: bets 100
+Garbageman20: calls 100
+Gabi47: folds
+*** TURN *** [Qc]
+Boatman715: bets 100
+Garbageman20: calls 100
+*** RIVER *** [4s]
+Boatman715: checks
+Garbageman20: bets 462
+Boatman715: calls 462
+***SHOW DOWN***
+Garbageman20: shows [Jc 6h] (High card King  )
+Boatman715: shows [8d 7d] (Pair of Eights  )
+Boatman715 wins 1 624 with Pair of Eights   
+Hand#5128FD7BB4001144 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 10 -- 0/50/100 NL Hold'em -- 2018/04/20 - 22:36:29
+Dealer: Seat 2
+Seat 1: Garbageman20 (6 782 in chips) 
+Seat 2: AlexTh (6 840 in chips) 
+Seat 3: Gabi47 (4 315 in chips) 
+Seat 4: allinace21 (2 951 in chips) 
+Seat 7: NobleGlen (2 781 in chips) 
+Seat 8: skarabeo (2 730 in chips) 
+Seat 9: Boatman715 (3 344 in chips) 
+Seat 10: skromnjaga (5 358 in chips) 
+Gabi47: posts small blind 50
+allinace21: posts big blind 100
+Dealt to AlexTh [4h,6c]
+NobleGlen: folds
+skarabeo: folds
+Boatman715: calls 100
+skromnjaga: calls 100
+Garbageman20: calls 100
+AlexTh: folds
+Gabi47: calls 50
+allinace21: checks
+*** FLOP *** [5h,7d,4s]
+Gabi47: checks
+allinace21: checks
+Boatman715: bets 100
+skromnjaga: folds
+Garbageman20: raises to 200
+Gabi47: folds
+allinace21: folds
+Boatman715: raises to 300
+Garbageman20: calls 100
+*** TURN *** [7s]
+Boatman715: bets 550
+Garbageman20: raises to 1 100
+Boatman715: calls 550
+*** RIVER *** [Td]
+Boatman715: bets 100
+Garbageman20: raises to 3 600
+Boatman715: is all in 1 744
+Garbageman20: returns uncalled bet 1 756
+Garbageman20: shows [7h 9c]
+Boatman715: shows [4d 4c]
+***SHOW DOWN***
+Boatman715 wins 6 988 with Full House Fours full of Sevens 
+
+
+Hand#5128FD7BB4001176 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 10 -- 0/50/100 NL Hold'em -- 2018/04/20 - 22:37:49
+Dealer: Seat 3
+Seat 1: Garbageman20 (3 438 in chips) 
+Seat 2: AlexTh (6 840 in chips) 
+Seat 3: Gabi47 (4 215 in chips) 
+Seat 4: allinace21 (2 851 in chips) 
+Seat 7: NobleGlen (2 781 in chips) 
+Seat 8: skarabeo (2 730 in chips) 
+Seat 9: Boatman715 (6 988 in chips) 
+Seat 10: skromnjaga (5 258 in chips) 
+allinace21: posts small blind 50
+NobleGlen: posts big blind 100
+Dealt to AlexTh [9s,Kd]
+skarabeo: folds
+Boatman715: folds
+skromnjaga: calls 100
+Garbageman20: calls 100
+AlexTh: folds
+Gabi47: folds
+allinace21: calls 50
+NobleGlen: checks
+*** FLOP *** [5c,4d,9d]
+allinace21: checks
+NobleGlen: checks
+skromnjaga: bets 100
+Garbageman20: calls 100
+allinace21: calls 100
+NobleGlen: folds
+*** TURN *** [2c]
+allinace21: checks
+skromnjaga: bets 100
+Garbageman20: calls 100
+allinace21: folds
+*** RIVER *** [6h]
+skromnjaga: bets 900
+Garbageman20: folds
+Garbageman20: shows [2h Ac]
+skromnjaga: returns uncalled bet 900
+***SHOW DOWN***
+skromnjaga: mucks
+skromnjaga wins 900 
+
+
+Hand#5128FD7BB4001198 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 10 -- 0/50/100 NL Hold'em -- 2018/04/20 - 22:38:37
+Dealer: Seat 4
+Seat 1: Garbageman20 (3 138 in chips) 
+Seat 2: AlexTh (6 840 in chips) 
+Seat 3: Gabi47 (4 215 in chips) 
+Seat 4: allinace21 (2 651 in chips) 
+Seat 7: NobleGlen (2 681 in chips) 
+Seat 8: skarabeo (2 730 in chips) 
+Seat 9: Boatman715 (6 988 in chips) 
+Seat 10: skromnjaga (5 858 in chips) 
+NobleGlen: posts small blind 50
+skarabeo: posts big blind 100
+Dealt to AlexTh [Jh,6h]
+Boatman715: calls 100
+skromnjaga: calls 100
+Garbageman20: calls 100
+AlexTh: folds
+Gabi47: calls 100
+allinace21: folds
+NobleGlen: folds
+skarabeo: checks
+*** FLOP *** [3h,8d,2s]
+skarabeo: checks
+Boatman715: bets 100
+skromnjaga: calls 100
+Garbageman20: folds
+Gabi47: calls 100
+skarabeo: folds
+*** TURN *** [2c]
+Boatman715: bets 100
+skromnjaga: calls 100
+Gabi47: calls 100
+*** RIVER *** [Qh]
+Boatman715: bets 1 150
+skromnjaga: folds
+Gabi47: folds
+Gabi47: mucks
+Boatman715: returns uncalled bet 1 150
+***SHOW DOWN***
+Boatman715: mucks
+Boatman715 wins 1 150 
+
+
+Hand#5128FD7BB4001223 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 10 -- 0/50/100 NL Hold'em -- 2018/04/20 - 22:39:38
+Dealer: Seat 7
+Seat 1: Garbageman20 (3 038 in chips) 
+Seat 2: AlexTh (6 840 in chips) 
+Seat 3: Gabi47 (3 915 in chips) 
+Seat 4: allinace21 (2 651 in chips) 
+Seat 7: NobleGlen (2 631 in chips) 
+Seat 8: skarabeo (2 630 in chips) 
+Seat 9: Boatman715 (7 838 in chips) 
+Seat 10: skromnjaga (5 558 in chips) 
+skarabeo: posts small blind 50
+Boatman715: posts big blind 100
+Dealt to AlexTh [4d,2s]
+skromnjaga: folds
+Garbageman20: calls 100
+AlexTh: folds
+Gabi47: folds
+allinace21: folds
+NobleGlen: folds
+skarabeo: folds
+Boatman715: checks
+*** FLOP *** [7h,3d,7c]
+Boatman715: checks
+Garbageman20: bets 100
+Boatman715: calls 100
+*** TURN *** [8c]
+Boatman715: checks
+Garbageman20: bets 450
+Boatman715: folds
+Garbageman20: returns uncalled bet 450
+***SHOW DOWN***
+Garbageman20: mucks
+Garbageman20 wins 450 
+
+
+Hand#5128FD7BB4001244 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 10 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:40:30
+Dealer: Seat 8
+Seat 1: Garbageman20 (3 288 in chips) 
+Seat 2: AlexTh (6 840 in chips) 
+Seat 3: Gabi47 (3 915 in chips) 
+Seat 4: allinace21 (2 651 in chips) 
+Seat 7: NobleGlen (2 631 in chips) 
+Seat 8: skarabeo (2 580 in chips) 
+Seat 9: Boatman715 (7 638 in chips) 
+Seat 10: skromnjaga (5 558 in chips) 
+Boatman715: posts small blind 75
+skromnjaga: posts big blind 150
+Dealt to AlexTh [9s,7h]
+Garbageman20: is all in 3 288
+AlexTh: folds
+Gabi47: folds
+allinace21: folds
+NobleGlen: folds
+skarabeo: folds
+Boatman715: folds
+skromnjaga: folds
+Garbageman20: returns uncalled bet 3 138
+***SHOW DOWN***
+Garbageman20: shows [Kc Ah]
+Garbageman20 wins 375 
+
+
+Hand#5128FD7BB4001261 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 10 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:40:57
+Dealer: Seat 9
+Seat 1: Garbageman20 (3 513 in chips) 
+Seat 2: AlexTh (6 840 in chips) 
+Seat 3: Gabi47 (3 915 in chips) 
+Seat 4: allinace21 (2 651 in chips) 
+Seat 7: NobleGlen (2 631 in chips) 
+Seat 8: skarabeo (2 580 in chips) 
+Seat 9: Boatman715 (7 563 in chips) 
+Seat 10: skromnjaga (5 408 in chips) 
+skromnjaga: posts small blind 75
+Garbageman20: posts big blind 150
+Dealt to AlexTh [8c,Kh]
+AlexTh: folds
+Gabi47: calls 150
+allinace21: folds
+NobleGlen: folds
+skarabeo: folds
+Boatman715: calls 150
+skromnjaga: calls 75
+Garbageman20: checks
+*** FLOP *** [9c,8h,Kc]
+skromnjaga: checks
+Garbageman20: bets 150
+Gabi47: calls 150
+Boatman715: raises to 300
+skromnjaga: folds
+Garbageman20: calls 150
+Gabi47: calls 150
+*** TURN *** [Tc]
+Garbageman20: checks
+Gabi47: checks
+Boatman715: bets 150
+Garbageman20: calls 150
+Gabi47: folds
+*** RIVER *** [3d]
+Garbageman20: checks
+Boatman715: bets 150
+Garbageman20: calls 150
+***SHOW DOWN***
+Boatman715: shows [5d Kd] (Pair of Kings  )
+Garbageman20: mucks
+Boatman715 wins 2 100 with Pair of Kings   
+Garbageman20: mucks [6c,8d] (Pair) .
+
+
+Hand#5128FD7BB4001286 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 10 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:41:52
+Dealer: Seat 10
+Seat 1: Garbageman20 (2 763 in chips) 
+Seat 2: AlexTh (6 840 in chips) 
+Seat 3: Gabi47 (3 465 in chips) 
+Seat 4: allinace21 (2 651 in chips) 
+Seat 7: NobleGlen (2 631 in chips) 
+Seat 8: skarabeo (2 580 in chips) 
+Seat 9: Boatman715 (8 913 in chips) 
+Seat 10: skromnjaga (5 258 in chips) 
+Garbageman20: posts small blind 75
+AlexTh: posts big blind 150
+Dealt to AlexTh [6s,9d]
+Gabi47: folds
+allinace21: folds
+NobleGlen: folds
+skarabeo: folds
+Boatman715: raises to 300
+skromnjaga: folds
+Garbageman20: calls 225
+AlexTh: folds
+*** FLOP *** [Kh,5c,4h]
+Garbageman20: checks
+Boatman715: bets 150
+Garbageman20: folds
+Boatman715: returns uncalled bet 150
+***SHOW DOWN***
+Boatman715: mucks
+Boatman715 wins 750 
+
+
+Hand#5128FD7BB4001299 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 10 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:42:21
+Dealer: Seat 1
+Seat 1: Garbageman20 (2 463 in chips) 
+Seat 2: AlexTh (6 690 in chips) 
+Seat 3: Gabi47 (3 465 in chips) 
+Seat 4: allinace21 (2 651 in chips) 
+Seat 7: NobleGlen (2 631 in chips) 
+Seat 8: skarabeo (2 580 in chips) 
+Seat 9: Boatman715 (9 363 in chips) 
+Seat 10: skromnjaga (5 258 in chips) 
+AlexTh: posts small blind 75
+Gabi47: posts big blind 150
+Dealt to AlexTh [Qh,4c]
+allinace21: folds
+NobleGlen: folds
+skarabeo: folds
+Boatman715: calls 150
+skromnjaga: folds
+Garbageman20: is all in 2 463
+AlexTh: folds
+Gabi47: folds
+Boatman715: folds
+Garbageman20: returns uncalled bet 2 313
+***SHOW DOWN***
+Garbageman20: shows [Kd Ac]
+Garbageman20 wins 525 
+
+
+Hand#5128FD7BB4001307 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 10 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:42:45
+Dealer: Seat 2
+Seat 1: Garbageman20 (2 838 in chips) 
+Seat 2: AlexTh (6 615 in chips) 
+Seat 3: Gabi47 (3 315 in chips) 
+Seat 4: allinace21 (2 651 in chips) 
+Seat 7: NobleGlen (2 631 in chips) 
+Seat 8: skarabeo (2 580 in chips) 
+Seat 9: Boatman715 (9 213 in chips) 
+Seat 10: skromnjaga (5 258 in chips) 
+Gabi47: posts small blind 75
+allinace21: posts big blind 150
+Dealt to AlexTh [Td,3d]
+NobleGlen: folds
+skarabeo: folds
+Boatman715: calls 150
+skromnjaga: calls 150
+Garbageman20: calls 150
+AlexTh: folds
+Gabi47: folds
+allinace21: is all in 2 501
+Boatman715: calls 2 501
+skromnjaga: is all in 5 108
+Garbageman20: folds
+Boatman715: calls 2 607
+allinace21: shows [Kh Kc]
+Boatman715: shows [7c Ac]
+skromnjaga: shows [As Ad]
+*** FLOP *** [5s,9d,2h]
+*** TURN *** [Qc]
+*** RIVER *** [4d]
+***SHOW DOWN***
+skromnjaga wins 5 214 with Pair of Aces   
+***SHOW DOWN***
+skromnjaga wins 8 178 with Pair of Aces   
+
+
+Player left the table
+BISHUACES: folds
+ziggis101: folds
+dakota_472: checks
+*** FLOP *** [Tc,6h,Qc]
+dakota_472: checks
+Preacher777: bets 375
+dakota_472: folds
+Preacher777: returns uncalled bet 375
+***SHOW DOWN***
+Preacher777: mucks
+Preacher777 wins 375 
+Hand#5128FD7BB4001340 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:44:00
+Dealer: Seat 8
+Seat 1: jaryskurla (4 167 in chips) 
+Seat 2: AlexTh (6 615 in chips) 
+Seat 3: PIANOMIKE (10 878 in chips) 
+Seat 4: Preacher777 (6 153 in chips) 
+Seat 7: BISHUACES (14 696 in chips) 
+Seat 8: ziggis101 (4 736 in chips) 
+Seat 9: dakota_472 (21 086 in chips) 
+Seat 10: JJDIMES44 (2 605 in chips) 
+dakota_472: posts small blind 75
+JJDIMES44: posts big blind 150
+Dealt to AlexTh [Qd,3s]
+jaryskurla: folds
+AlexTh: folds
+PIANOMIKE: folds
+Preacher777: folds
+BISHUACES: folds
+ziggis101: folds
+dakota_472: raises to 300
+JJDIMES44: folds
+dakota_472: returns uncalled bet 150
+***SHOW DOWN***
+dakota_472: mucks
+dakota_472 wins 300 
+
+
+Hand#5128FD7BB4001348 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:44:29
+Dealer: Seat 9
+Seat 1: jaryskurla (4 167 in chips) 
+Seat 2: AlexTh (6 615 in chips) 
+Seat 3: PIANOMIKE (10 878 in chips) 
+Seat 4: Preacher777 (6 153 in chips) 
+Seat 7: BISHUACES (14 696 in chips) 
+Seat 8: ziggis101 (4 736 in chips) 
+Seat 9: dakota_472 (21 236 in chips) 
+Seat 10: JJDIMES44 (2 455 in chips) 
+JJDIMES44: posts small blind 75
+jaryskurla: posts big blind 150
+Dealt to AlexTh [Jd,Jh]
+AlexTh: raises to 300
+PIANOMIKE: folds
+Preacher777: folds
+BISHUACES: folds
+ziggis101: raises to 1 050
+dakota_472: folds
+JJDIMES44: folds
+jaryskurla: folds
+AlexTh: calls 750
+*** FLOP *** [Qc,6d,Ac]
+AlexTh: checks
+ziggis101: bets 1 550
+AlexTh: folds
+ziggis101: returns uncalled bet 1 550
+***SHOW DOWN***
+ziggis101: mucks
+ziggis101 wins 2 325 
+
+
+Hand#5128FD7BB4001367 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:45:06
+Dealer: Seat 10
+Seat 1: jaryskurla (4 017 in chips) 
+Seat 2: AlexTh (5 565 in chips) 
+Seat 3: PIANOMIKE (10 878 in chips) 
+Seat 4: Preacher777 (6 153 in chips) 
+Seat 7: BISHUACES (14 696 in chips) 
+Seat 8: ziggis101 (6 011 in chips) 
+Seat 9: dakota_472 (21 236 in chips) 
+Seat 10: JJDIMES44 (2 380 in chips) 
+jaryskurla: posts small blind 75
+AlexTh: posts big blind 150
+Dealt to AlexTh [Js,8d]
+PIANOMIKE: folds
+Preacher777: folds
+BISHUACES: calls 150
+ziggis101: folds
+dakota_472: folds
+JJDIMES44: folds
+jaryskurla: calls 75
+AlexTh: checks
+*** FLOP *** [8s,5d,As]
+jaryskurla: checks
+AlexTh: checks
+BISHUACES: bets 150
+jaryskurla: folds
+AlexTh: folds
+BISHUACES: returns uncalled bet 150
+***SHOW DOWN***
+BISHUACES: mucks
+BISHUACES wins 450 
+
+
+Hand#5128FD7BB4001381 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:45:40
+Dealer: Seat 1
+Seat 1: jaryskurla (3 867 in chips) 
+Seat 2: AlexTh (5 415 in chips) 
+Seat 3: PIANOMIKE (10 878 in chips) 
+Seat 4: Preacher777 (6 153 in chips) 
+Seat 7: BISHUACES (14 996 in chips) 
+Seat 8: ziggis101 (6 011 in chips) 
+Seat 9: dakota_472 (21 236 in chips) 
+Seat 10: JJDIMES44 (2 380 in chips) 
+AlexTh: posts small blind 75
+PIANOMIKE: posts big blind 150
+Dealt to AlexTh [Th,Tc]
+Preacher777: folds
+BISHUACES: calls 150
+ziggis101: folds
+dakota_472: raises to 600
+JJDIMES44: folds
+jaryskurla: folds
+AlexTh: folds
+PIANOMIKE: folds
+BISHUACES: folds
+dakota_472: returns uncalled bet 450
+***SHOW DOWN***
+dakota_472: mucks
+dakota_472 wins 525 
+
+
+Hand#5128FD7BB4001392 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:46:00
+Dealer: Seat 2
+Seat 1: jaryskurla (3 867 in chips) 
+Seat 2: AlexTh (5 340 in chips) 
+Seat 3: PIANOMIKE (10 728 in chips) 
+Seat 4: Preacher777 (6 153 in chips) 
+Seat 7: BISHUACES (14 846 in chips) 
+Seat 8: ziggis101 (6 011 in chips) 
+Seat 9: dakota_472 (21 611 in chips) 
+Seat 10: JJDIMES44 (2 380 in chips) 
+PIANOMIKE: posts small blind 75
+Preacher777: posts big blind 150
+Dealt to AlexTh [4s,8d]
+BISHUACES: raises to 300
+ziggis101: folds
+dakota_472: folds
+JJDIMES44: folds
+jaryskurla: folds
+AlexTh: folds
+PIANOMIKE: folds
+Preacher777: folds
+BISHUACES: returns uncalled bet 150
+***SHOW DOWN***
+BISHUACES: mucks
+BISHUACES wins 375 
+
+
+Hand#5128FD7BB4001400 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:46:20
+Dealer: Seat 3
+Seat 1: jaryskurla (3 867 in chips) 
+Seat 2: AlexTh (5 340 in chips) 
+Seat 3: PIANOMIKE (10 653 in chips) 
+Seat 4: Preacher777 (6 003 in chips) 
+Seat 7: BISHUACES (15 071 in chips) 
+Seat 8: ziggis101 (6 011 in chips) 
+Seat 9: dakota_472 (21 611 in chips) 
+Seat 10: JJDIMES44 (2 380 in chips) 
+Preacher777: posts small blind 75
+BISHUACES: posts big blind 150
+Dealt to AlexTh [4h,9d]
+ziggis101: folds
+dakota_472: raises to 420
+JJDIMES44: folds
+jaryskurla: calls 420
+AlexTh: folds
+PIANOMIKE: folds
+Preacher777: folds
+BISHUACES: calls 270
+*** FLOP *** [3h,Qd,9h]
+BISHUACES: checks
+dakota_472: checks
+jaryskurla: bets 150
+BISHUACES: raises to 450
+dakota_472: folds
+jaryskurla: calls 300
+*** TURN *** [Ac]
+BISHUACES: checks
+jaryskurla: checks
+*** RIVER *** [8h]
+BISHUACES: checks
+jaryskurla: checks
+***SHOW DOWN***
+BISHUACES: shows [Ks Qh] (Pair of Queens  )
+jaryskurla: mucks
+BISHUACES wins 2 235 with Pair of Queens   
+jaryskurla: mucks [Kd,Td] (HighCard) .
+
+
+Hand#5128FD7BB4001424 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:47:23
+Dealer: Seat 4
+Seat 1: jaryskurla (2 997 in chips) 
+Seat 2: AlexTh (5 340 in chips) 
+Seat 3: PIANOMIKE (10 653 in chips) 
+Seat 4: Preacher777 (5 928 in chips) 
+Seat 7: BISHUACES (16 436 in chips) 
+Seat 8: ziggis101 (6 011 in chips) 
+Seat 9: dakota_472 (21 191 in chips) 
+Seat 10: JJDIMES44 (2 380 in chips) 
+BISHUACES: posts small blind 75
+ziggis101: posts big blind 150
+Dealt to AlexTh [Ad,3h]
+dakota_472: folds
+JJDIMES44: folds
+jaryskurla: folds
+AlexTh: folds
+PIANOMIKE: calls 150
+Preacher777: calls 150
+BISHUACES: calls 75
+ziggis101: checks
+*** FLOP *** [Kc,4c,Jc]
+BISHUACES: checks
+ziggis101: checks
+PIANOMIKE: is all in 10 503
+Preacher777: is all in 5 778
+BISHUACES: folds
+ziggis101: folds
+PIANOMIKE: returns uncalled bet 4 725
+PIANOMIKE: shows [Js Jd]
+Preacher777: shows [8h Ac]
+*** TURN *** [4h]
+*** RIVER *** [2h]
+***SHOW DOWN***
+PIANOMIKE wins 12 156 with Full House Jacks full of Fours 
+
+
+Hand#5128FD7BB4001441 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:48:13
+Dealer: Seat 7
+Seat 1: jaryskurla (2 997 in chips) 
+Seat 2: AlexTh (5 340 in chips) 
+Seat 3: PIANOMIKE (16 881 in chips) 
+Seat 7: BISHUACES (16 286 in chips) 
+Seat 8: ziggis101 (5 861 in chips) 
+Seat 9: dakota_472 (21 191 in chips) 
+Seat 10: JJDIMES44 (2 380 in chips) 
+ziggis101: posts small blind 75
+dakota_472: posts big blind 150
+Dealt to AlexTh [Qs,9s]
+JJDIMES44: folds
+jaryskurla: folds
+AlexTh: folds
+PIANOMIKE: folds
+BISHUACES: raises to 300
+ziggis101: calls 225
+dakota_472: calls 150
+*** FLOP *** [3d,5s,7d]
+ziggis101: checks
+dakota_472: checks
+BISHUACES: bets 300
+ziggis101: calls 300
+dakota_472: folds
+*** TURN *** [8h]
+ziggis101: checks
+BISHUACES: checks
+*** RIVER *** [7c]
+ziggis101: checks
+BISHUACES: checks
+***SHOW DOWN***
+BISHUACES: shows [6c 5d] (Two Pairs Sevens and Fives  )
+ziggis101: shows [9d 8d] (Two Pairs Eights and Sevens  )
+ziggis101 wins 1 500 with Two Pairs Eights and Sevens   
+
+
+Hand#5128FD7BB4001458 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:48:53
+Dealer: Seat 8
+Seat 1: jaryskurla (2 997 in chips) 
+Seat 2: AlexTh (5 340 in chips) 
+Seat 3: PIANOMIKE (16 881 in chips) 
+Seat 7: BISHUACES (15 686 in chips) 
+Seat 8: ziggis101 (6 761 in chips) 
+Seat 9: dakota_472 (20 891 in chips) 
+Seat 10: JJDIMES44 (2 380 in chips) 
+dakota_472: posts small blind 75
+JJDIMES44: posts big blind 150
+Dealt to AlexTh [Qd,9s]
+jaryskurla: calls 150
+AlexTh: folds
+PIANOMIKE: folds
+BISHUACES: folds
+ziggis101: folds
+dakota_472: calls 75
+JJDIMES44: checks
+*** FLOP *** [7s,6s,As]
+dakota_472: checks
+JJDIMES44: checks
+jaryskurla: checks
+*** TURN *** [3c]
+dakota_472: bets 165
+JJDIMES44: folds
+jaryskurla: folds
+dakota_472: returns uncalled bet 165
+***SHOW DOWN***
+dakota_472: mucks
+dakota_472 wins 450 
+
+
+Hand#5128FD7BB4001469 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:49:20
+Dealer: Seat 9
+Seat 1: jaryskurla (2 847 in chips) 
+Seat 2: AlexTh (5 340 in chips) 
+Seat 3: PIANOMIKE (16 881 in chips) 
+Seat 7: BISHUACES (15 686 in chips) 
+Seat 8: ziggis101 (6 761 in chips) 
+Seat 9: dakota_472 (21 191 in chips) 
+Seat 10: JJDIMES44 (2 230 in chips) 
+JJDIMES44: posts small blind 75
+jaryskurla: posts big blind 150
+Dealt to AlexTh [9h,7s]
+AlexTh: folds
+PIANOMIKE: calls 150
+BISHUACES: folds
+ziggis101: raises to 500
+dakota_472: folds
+JJDIMES44: folds
+jaryskurla: calls 350
+PIANOMIKE: folds
+*** FLOP *** [As,4s,Tc]
+jaryskurla: checks
+ziggis101: bets 613
+jaryskurla: calls 613
+*** TURN *** [Qc]
+jaryskurla: checks
+ziggis101: checks
+*** RIVER *** [Th]
+jaryskurla: checks
+ziggis101: checks
+***SHOW DOWN***
+ziggis101: shows [Ac 5c] (Two Pairs Aces and Tens  )
+jaryskurla: mucks
+ziggis101 wins 2 451 with Two Pairs Aces and Tens   
+jaryskurla: mucks [Qh,Kc] (TwoPair) .
+
+
+Hand#5128FD7BB4001483 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/75/150 NL Hold'em -- 2018/04/20 - 22:50:00
+Dealer: Seat 10
+Seat 1: jaryskurla (1 734 in chips) 
+Seat 2: AlexTh (5 340 in chips) 
+Seat 3: PIANOMIKE (16 731 in chips) 
+Seat 7: BISHUACES (15 686 in chips) 
+Seat 8: ziggis101 (8 099 in chips) 
+Seat 9: dakota_472 (21 191 in chips) 
+Seat 10: JJDIMES44 (2 155 in chips) 
+jaryskurla: posts small blind 75
+AlexTh: posts big blind 150
+Dealt to AlexTh [Qc,7c]
+PIANOMIKE: folds
+BISHUACES: raises to 300
+ziggis101: calls 300
+dakota_472: folds
+JJDIMES44: folds
+jaryskurla: is all in 1 659
+AlexTh: folds
+BISHUACES: calls 1 434
+ziggis101: calls 1 434
+*** FLOP *** [Td,6c,Jd]
+BISHUACES: checks
+ziggis101: checks
+*** TURN *** [3h]
+BISHUACES: checks
+ziggis101: checks
+*** RIVER *** [6s]
+BISHUACES: checks
+ziggis101: checks
+***SHOW DOWN***
+jaryskurla: shows [Ac 5c] (Pair of Sixes  )
+BISHUACES: mucks
+ziggis101: mucks
+jaryskurla wins 5 352 with Pair of Sixes with Ace kicker 
+BISHUACES: mucks [Qh,Kh] (Pair) .
+ziggis101: mucks [Qs,Ks] (Pair) .
+
+
+Hand#5128FD7BB4001500 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/100/200 NL Hold'em -- 2018/04/20 - 22:50:46
+Dealer: Seat 1
+Seat 1: jaryskurla (5 352 in chips) 
+Seat 2: AlexTh (5 190 in chips) 
+Seat 3: PIANOMIKE (16 731 in chips) 
+Seat 7: BISHUACES (13 952 in chips) 
+Seat 8: ziggis101 (6 365 in chips) 
+Seat 9: dakota_472 (21 191 in chips) 
+Seat 10: JJDIMES44 (2 155 in chips) 
+AlexTh: posts small blind 100
+PIANOMIKE: posts big blind 200
+Dealt to AlexTh [2s,Ah]
+BISHUACES: folds
+ziggis101: calls 200
+dakota_472: folds
+JJDIMES44: folds
+jaryskurla: folds
+AlexTh: folds
+PIANOMIKE: checks
+*** FLOP *** [9h,7s,Jd]
+PIANOMIKE: checks
+ziggis101: checks
+*** TURN *** [3c]
+PIANOMIKE: checks
+ziggis101: checks
+*** RIVER *** [8c]
+PIANOMIKE: bets 500
+ziggis101: folds
+PIANOMIKE: returns uncalled bet 500
+***SHOW DOWN***
+PIANOMIKE: mucks
+PIANOMIKE wins 500 
+
+
+Hand#5128FD7BB4001510 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/100/200 NL Hold'em -- 2018/04/20 - 22:51:16
+Dealer: Seat 2
+Seat 1: jaryskurla (5 352 in chips) 
+Seat 2: AlexTh (5 090 in chips) 
+Seat 3: PIANOMIKE (17 031 in chips) 
+Seat 4: rosszcsont12 (13 558 in chips) 
+Seat 7: BISHUACES (13 952 in chips) 
+Seat 8: ziggis101 (6 165 in chips) 
+Seat 9: dakota_472 (21 191 in chips) 
+Seat 10: JJDIMES44 (2 155 in chips) 
+PIANOMIKE: posts small blind 100
+rosszcsont12: posts big blind 200
+Dealt to AlexTh [9c,Jd]
+BISHUACES: folds
+ziggis101: folds
+dakota_472: folds
+JJDIMES44: folds
+jaryskurla: raises to 400
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: calls 200
+*** FLOP *** [6h,3s,9d]
+rosszcsont12: checks
+jaryskurla: is all in 4 952
+rosszcsont12: calls 4 952
+jaryskurla: shows [Js Jc]
+rosszcsont12: shows [6c 3d]
+*** TURN *** [4d]
+*** RIVER *** [Ks]
+***SHOW DOWN***
+rosszcsont12 wins 10 804 with Two Pairs Sixes and Threes   
+
+
+Hand#5128FD7BB4001524 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/100/200 NL Hold'em -- 2018/04/20 - 22:51:50
+Dealer: Seat 3
+Seat 2: AlexTh (5 090 in chips) 
+Seat 3: PIANOMIKE (16 931 in chips) 
+Seat 4: rosszcsont12 (19 010 in chips) 
+Seat 7: BISHUACES (13 952 in chips) 
+Seat 8: ziggis101 (6 165 in chips) 
+Seat 9: dakota_472 (21 191 in chips) 
+Seat 10: JJDIMES44 (2 155 in chips) 
+rosszcsont12: posts small blind 100
+BISHUACES: posts big blind 200
+Dealt to AlexTh [3h,9h]
+ziggis101: folds
+dakota_472: folds
+JJDIMES44: folds
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: calls 100
+BISHUACES: checks
+*** FLOP *** [Kc,5d,3c]
+rosszcsont12: checks
+BISHUACES: bets 200
+rosszcsont12: folds
+BISHUACES: returns uncalled bet 200
+***SHOW DOWN***
+BISHUACES: mucks
+BISHUACES wins 400 
+
+
+Hand#5128FD7BB4001541 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/100/200 NL Hold'em -- 2018/04/20 - 22:52:43
+Dealer: Seat 4
+Seat 2: AlexTh (5 090 in chips) 
+Seat 3: PIANOMIKE (16 931 in chips) 
+Seat 4: rosszcsont12 (18 810 in chips) 
+Seat 7: BISHUACES (14 152 in chips) 
+Seat 8: ziggis101 (6 165 in chips) 
+Seat 9: dakota_472 (21 191 in chips) 
+Seat 10: JJDIMES44 (2 155 in chips) 
+BISHUACES: posts small blind 100
+ziggis101: posts big blind 200
+Dealt to AlexTh [Qc,7c]
+dakota_472: raises to 400
+JJDIMES44: folds
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: calls 400
+BISHUACES: calls 300
+ziggis101: folds
+*** FLOP *** [3c,5c,Jd]
+BISHUACES: checks
+dakota_472: checks
+rosszcsont12: bets 700
+BISHUACES: folds
+dakota_472: calls 700
+*** TURN *** [Ac]
+dakota_472: checks
+rosszcsont12: checks
+*** RIVER *** [2h]
+dakota_472: bets 1 625
+rosszcsont12: raises to 4 650
+dakota_472: folds
+rosszcsont12: returns uncalled bet 3 025
+***SHOW DOWN***
+rosszcsont12: mucks
+rosszcsont12 wins 6 050 
+
+
+Hand#5128FD7BB4001567 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/100/200 NL Hold'em -- 2018/04/20 - 22:53:51
+Dealer: Seat 7
+Seat 2: AlexTh (5 090 in chips) 
+Seat 3: PIANOMIKE (16 931 in chips) 
+Seat 4: rosszcsont12 (22 135 in chips) 
+Seat 7: BISHUACES (13 752 in chips) 
+Seat 8: ziggis101 (5 965 in chips) 
+Seat 9: dakota_472 (18 466 in chips) 
+Seat 10: JJDIMES44 (2 155 in chips) 
+ziggis101: posts small blind 100
+dakota_472: posts big blind 200
+Dealt to AlexTh [2d,5s]
+JJDIMES44: folds
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: folds
+BISHUACES: raises to 400
+ziggis101: folds
+dakota_472: calls 200
+*** FLOP *** [Jc,4s,8c]
+dakota_472: checks
+BISHUACES: bets 400
+dakota_472: folds
+BISHUACES: returns uncalled bet 400
+***SHOW DOWN***
+BISHUACES: mucks
+BISHUACES wins 900 
+
+
+Hand#5128FD7BB4001578 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/100/200 NL Hold'em -- 2018/04/20 - 22:54:27
+Dealer: Seat 8
+Seat 2: AlexTh (5 090 in chips) 
+Seat 3: PIANOMIKE (16 931 in chips) 
+Seat 4: rosszcsont12 (22 135 in chips) 
+Seat 7: BISHUACES (14 252 in chips) 
+Seat 8: ziggis101 (5 865 in chips) 
+Seat 9: dakota_472 (18 066 in chips) 
+Seat 10: JJDIMES44 (2 155 in chips) 
+dakota_472: posts small blind 100
+JJDIMES44: posts big blind 200
+Dealt to AlexTh [4h,Ts]
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: raises to 450
+BISHUACES: folds
+ziggis101: folds
+dakota_472: calls 350
+JJDIMES44: folds
+*** FLOP *** [2d,Ks,Jd]
+dakota_472: checks
+rosszcsont12: bets 734
+dakota_472: folds
+rosszcsont12: returns uncalled bet 734
+***SHOW DOWN***
+rosszcsont12: shows [Kc Jc]
+rosszcsont12 wins 1 100 
+
+
+Hand#5128FD7BB4001605 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/100/200 NL Hold'em -- 2018/04/20 - 23:00:51
+Dealer: Seat 9
+Seat 1: SATOURN (11 820 in chips) 
+Seat 2: AlexTh (5 090 in chips) 
+Seat 3: PIANOMIKE (16 931 in chips) 
+Seat 4: rosszcsont12 (22 785 in chips) 
+Seat 7: BISHUACES (14 252 in chips) 
+Seat 8: ziggis101 (5 865 in chips) 
+Seat 9: dakota_472 (17 616 in chips) 
+Seat 10: JJDIMES44 (1 955 in chips) 
+JJDIMES44: posts small blind 100
+SATOURN: posts big blind 200
+Dealt to AlexTh [Th,7c]
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: folds
+BISHUACES: folds
+ziggis101: folds
+dakota_472: raises to 400
+JJDIMES44: folds
+SATOURN: folds
+dakota_472: returns uncalled bet 200
+***SHOW DOWN***
+dakota_472: mucks
+dakota_472 wins 500 
+
+
+Hand#5128FD7BB4001617 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/100/200 NL Hold'em -- 2018/04/20 - 23:01:54
+Dealer: Seat 10
+Seat 1: SATOURN (11 620 in chips) 
+Seat 2: AlexTh (5 090 in chips) 
+Seat 3: PIANOMIKE (16 931 in chips) 
+Seat 4: rosszcsont12 (22 785 in chips) 
+Seat 7: BISHUACES (14 252 in chips) 
+Seat 8: ziggis101 (5 865 in chips) 
+Seat 9: dakota_472 (17 916 in chips) 
+Seat 10: JJDIMES44 (1 855 in chips) 
+SATOURN: posts small blind 100
+AlexTh: posts big blind 200
+Dealt to AlexTh [4c,6h]
+PIANOMIKE: folds
+rosszcsont12: folds
+BISHUACES: folds
+ziggis101: calls 200
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: checks
+*** FLOP *** [8c,7s,7d]
+AlexTh: checks
+ziggis101: checks
+*** TURN *** [Qd]
+AlexTh: checks
+ziggis101: checks
+*** RIVER *** [3h]
+AlexTh: checks
+ziggis101: checks
+***SHOW DOWN***
+ziggis101: shows [Kh Th] (Pair of Sevens  )
+AlexTh: mucks
+ziggis101 wins 500 with Pair of Sevens with King kicker 
+AlexTh: mucks [4c,6h] (Pair) .
+
+
+Hand#5128FD7BB4001637 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/100/200 NL Hold'em -- 2018/04/20 - 23:02:44
+Dealer: Seat 1
+Seat 1: SATOURN (11 520 in chips) 
+Seat 2: AlexTh (4 890 in chips) 
+Seat 3: PIANOMIKE (16 931 in chips) 
+Seat 4: rosszcsont12 (22 785 in chips) 
+Seat 7: BISHUACES (14 252 in chips) 
+Seat 8: ziggis101 (6 165 in chips) 
+Seat 9: dakota_472 (17 916 in chips) 
+Seat 10: JJDIMES44 (1 855 in chips) 
+AlexTh: posts small blind 100
+PIANOMIKE: posts big blind 200
+Dealt to AlexTh [4h,Th]
+rosszcsont12: folds
+BISHUACES: folds
+ziggis101: folds
+dakota_472: raises to 400
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: folds
+PIANOMIKE: folds
+dakota_472: returns uncalled bet 200
+***SHOW DOWN***
+dakota_472: mucks
+dakota_472 wins 500 
+
+
+Hand#5128FD7BB4001643 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 0/100/200 NL Hold'em -- 2018/04/20 - 23:03:17
+Dealer: Seat 2
+Seat 1: SATOURN (11 520 in chips) 
+Seat 2: AlexTh (4 790 in chips) 
+Seat 3: PIANOMIKE (16 731 in chips) 
+Seat 4: rosszcsont12 (22 785 in chips) 
+Seat 7: BISHUACES (14 252 in chips) 
+Seat 8: ziggis101 (6 165 in chips) 
+Seat 9: dakota_472 (18 216 in chips) 
+Seat 10: JJDIMES44 (1 855 in chips) 
+PIANOMIKE: posts small blind 100
+rosszcsont12: posts big blind 200
+Dealt to AlexTh [Jd,Th]
+BISHUACES: folds
+ziggis101: folds
+dakota_472: raises to 600
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: calls 600
+PIANOMIKE: folds
+rosszcsont12: calls 400
+*** FLOP *** [2d,5d,Qd]
+rosszcsont12: checks
+dakota_472: checks
+AlexTh: checks
+*** TURN *** [3d]
+rosszcsont12: checks
+dakota_472: checks
+AlexTh: checks
+*** RIVER *** [6h]
+rosszcsont12: bets 1 267
+dakota_472: raises to 2 825
+AlexTh: calls 2 825
+rosszcsont12: folds
+***SHOW DOWN***
+dakota_472: shows [Ac Kd] (Flush King high)
+AlexTh: mucks
+dakota_472 wins 8 817 with Flush King high 
+AlexTh: mucks [Jd,Th] (Flush) .
+
+
+Hand#5128FD7BB4001677 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:05:02
+Dealer: Seat 3
+Seat 1: SATOURN (11 520 in chips) 
+Seat 2: AlexTh (1 365 in chips) 
+Seat 3: PIANOMIKE (16 631 in chips) 
+Seat 4: rosszcsont12 (20 918 in chips) 
+Seat 7: BISHUACES (14 252 in chips) 
+Seat 8: ziggis101 (6 165 in chips) 
+Seat 9: dakota_472 (23 608 in chips) 
+Seat 10: JJDIMES44 (1 855 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+ziggis101: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+rosszcsont12: posts small blind 125
+BISHUACES: posts big blind 250
+Dealt to AlexTh [4s,7s]
+ziggis101: folds
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: folds
+rosszcsont12: mucks
+BISHUACES: returns uncalled bet 125
+***SHOW DOWN***
+BISHUACES: mucks
+BISHUACES wins 410 
+
+
+Hand#5128FD7BB4001688 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:05:31
+Dealer: Seat 4
+Seat 1: SATOURN (11 500 in chips) 
+Seat 2: AlexTh (1 345 in chips) 
+Seat 3: PIANOMIKE (16 611 in chips) 
+Seat 4: rosszcsont12 (20 773 in chips) 
+Seat 7: BISHUACES (14 517 in chips) 
+Seat 8: ziggis101 (6 145 in chips) 
+Seat 9: dakota_472 (23 588 in chips) 
+Seat 10: JJDIMES44 (1 835 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+ziggis101: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+BISHUACES: posts small blind 125
+ziggis101: posts big blind 250
+Dealt to AlexTh [8d,Qh]
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: folds
+BISHUACES: folds
+ziggis101: returns uncalled bet 125
+***SHOW DOWN***
+ziggis101: mucks
+ziggis101 wins 410 
+
+
+Hand#5128FD7BB4001695 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:06:02
+Dealer: Seat 7
+Seat 1: SATOURN (11 480 in chips) 
+Seat 2: AlexTh (1 325 in chips) 
+Seat 3: PIANOMIKE (16 591 in chips) 
+Seat 4: rosszcsont12 (20 753 in chips) 
+Seat 7: BISHUACES (14 372 in chips) 
+Seat 8: ziggis101 (6 410 in chips) 
+Seat 9: dakota_472 (23 568 in chips) 
+Seat 10: JJDIMES44 (1 815 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+ziggis101: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+ziggis101: posts small blind 125
+dakota_472: posts big blind 250
+Dealt to AlexTh [2s,5h]
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: folds
+BISHUACES: folds
+ziggis101: calls 125
+dakota_472: checks
+*** FLOP *** [5s,9s,8h]
+ziggis101: checks
+dakota_472: bets 500
+ziggis101: folds
+dakota_472: returns uncalled bet 500
+***SHOW DOWN***
+dakota_472: mucks
+dakota_472 wins 660 
+
+
+Hand#5128FD7BB4001709 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:06:39
+Dealer: Seat 8
+Seat 1: SATOURN (11 460 in chips) 
+Seat 2: AlexTh (1 305 in chips) 
+Seat 3: PIANOMIKE (16 571 in chips) 
+Seat 4: rosszcsont12 (20 733 in chips) 
+Seat 7: BISHUACES (14 352 in chips) 
+Seat 8: ziggis101 (6 140 in chips) 
+Seat 9: dakota_472 (23 958 in chips) 
+Seat 10: JJDIMES44 (1 795 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+ziggis101: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+dakota_472: posts small blind 125
+JJDIMES44: posts big blind 250
+Dealt to AlexTh [6c,Qh]
+SATOURN: folds
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: folds
+BISHUACES: folds
+ziggis101: folds
+dakota_472: raises to 500
+JJDIMES44: folds
+dakota_472: returns uncalled bet 250
+***SHOW DOWN***
+dakota_472: mucks
+dakota_472 wins 660 
+
+
+Hand#5128FD7BB4001714 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:07:02
+Dealer: Seat 9
+Seat 1: SATOURN (11 440 in chips) 
+Seat 2: AlexTh (1 285 in chips) 
+Seat 3: PIANOMIKE (16 551 in chips) 
+Seat 4: rosszcsont12 (20 713 in chips) 
+Seat 7: BISHUACES (14 332 in chips) 
+Seat 8: ziggis101 (6 120 in chips) 
+Seat 9: dakota_472 (24 348 in chips) 
+Seat 10: JJDIMES44 (1 525 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+ziggis101: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+JJDIMES44: posts small blind 125
+SATOURN: posts big blind 250
+Dealt to AlexTh [4c,5s]
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: calls 250
+BISHUACES: folds
+ziggis101: folds
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: checks
+*** FLOP *** [Tc,Kh,3c]
+SATOURN: checks
+rosszcsont12: bets 393
+SATOURN: folds
+rosszcsont12: returns uncalled bet 393
+***SHOW DOWN***
+rosszcsont12: mucks
+rosszcsont12 wins 785 
+
+
+Hand#5128FD7BB4001735 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:08:06
+Dealer: Seat 10
+Seat 1: SATOURN (11 170 in chips) 
+Seat 2: AlexTh (1 265 in chips) 
+Seat 3: PIANOMIKE (16 531 in chips) 
+Seat 4: rosszcsont12 (21 228 in chips) 
+Seat 7: BISHUACES (14 312 in chips) 
+Seat 8: ziggis101 (6 100 in chips) 
+Seat 9: dakota_472 (24 328 in chips) 
+Seat 10: JJDIMES44 (1 380 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+ziggis101: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+SATOURN: posts small blind 125
+AlexTh: posts big blind 250
+Dealt to AlexTh [Tc,Qd]
+PIANOMIKE: folds
+rosszcsont12: calls 250
+BISHUACES: folds
+ziggis101: calls 250
+dakota_472: calls 250
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: checks
+*** FLOP *** [6d,8d,Td]
+AlexTh: checks
+rosszcsont12: checks
+ziggis101: checks
+dakota_472: checks
+*** TURN *** [4c]
+AlexTh: checks
+rosszcsont12: bets 643
+ziggis101: folds
+dakota_472: folds
+AlexTh: is all in 995
+rosszcsont12: calls 352
+AlexTh: shows [Tc Qd]
+rosszcsont12: shows [Ah Jc]
+*** RIVER *** [Qs]
+***SHOW DOWN***
+AlexTh wins 3 275 with Two Pairs Queens and Tens   
+
+
+Hand#5128FD7BB4001753 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:09:25
+Dealer: Seat 1
+Seat 1: SATOURN (11 025 in chips) 
+Seat 2: AlexTh (3 275 in chips) 
+Seat 3: PIANOMIKE (16 511 in chips) 
+Seat 4: rosszcsont12 (19 963 in chips) 
+Seat 7: BISHUACES (14 292 in chips) 
+Seat 9: dakota_472 (24 058 in chips) 
+Seat 10: JJDIMES44 (1 360 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+AlexTh: posts small blind 125
+PIANOMIKE: posts big blind 250
+Dealt to AlexTh [Qc,4d]
+rosszcsont12: folds
+BISHUACES: folds
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: folds
+PIANOMIKE: returns uncalled bet 125
+***SHOW DOWN***
+PIANOMIKE: mucks
+PIANOMIKE wins 390 
+
+
+Hand#5128FD7BB4001764 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:10:06
+Dealer: Seat 2
+Seat 1: SATOURN (11 005 in chips) 
+Seat 2: AlexTh (3 130 in chips) 
+Seat 3: PIANOMIKE (16 756 in chips) 
+Seat 4: rosszcsont12 (19 943 in chips) 
+Seat 7: BISHUACES (14 272 in chips) 
+Seat 9: dakota_472 (24 038 in chips) 
+Seat 10: JJDIMES44 (1 340 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+PIANOMIKE: posts small blind 125
+rosszcsont12: posts big blind 250
+Dealt to AlexTh [2h,Tc]
+BISHUACES: folds
+dakota_472: raises to 500
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: folds
+dakota_472: returns uncalled bet 250
+***SHOW DOWN***
+dakota_472: mucks
+dakota_472 wins 765 
+
+
+Hand#5128FD7BB4001775 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:10:43
+Dealer: Seat 3
+Seat 1: SATOURN (10 985 in chips) 
+Seat 2: AlexTh (3 110 in chips) 
+Seat 3: PIANOMIKE (16 611 in chips) 
+Seat 4: rosszcsont12 (19 673 in chips) 
+Seat 7: BISHUACES (14 252 in chips) 
+Seat 8: Smurffs (1 875 in chips) 
+Seat 9: dakota_472 (24 533 in chips) 
+Seat 10: JJDIMES44 (1 320 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+Smurffs: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+rosszcsont12: posts small blind 125
+BISHUACES: posts big blind 250
+Dealt to AlexTh [6c,Qs]
+Smurffs: folds
+dakota_472: raises to 500
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: calls 375
+BISHUACES: folds
+*** FLOP *** [2h,Td,5d]
+rosszcsont12: bets 705
+dakota_472: raises to 2 820
+rosszcsont12: calls 2 115
+*** TURN *** [Jc]
+rosszcsont12: bets 3 525
+dakota_472: calls 3 525
+*** RIVER *** [Qc]
+rosszcsont12: is all in 12 808
+dakota_472: folds
+rosszcsont12: returns uncalled bet 12 808
+***SHOW DOWN***
+rosszcsont12: mucks
+rosszcsont12 wins 14 100 
+
+
+Hand#5128FD7BB4001792 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:11:34
+Dealer: Seat 4
+Seat 1: SATOURN (10 965 in chips) 
+Seat 2: AlexTh (3 090 in chips) 
+Seat 3: PIANOMIKE (16 591 in chips) 
+Seat 4: rosszcsont12 (26 908 in chips) 
+Seat 7: BISHUACES (13 982 in chips) 
+Seat 8: Smurffs (1 855 in chips) 
+Seat 9: dakota_472 (17 668 in chips) 
+Seat 10: JJDIMES44 (1 300 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+Smurffs: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+BISHUACES: posts small blind 125
+Smurffs: posts big blind 250
+Dealt to AlexTh [4d,Jc]
+dakota_472: raises to 500
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: folds
+BISHUACES: folds
+Smurffs: folds
+dakota_472: returns uncalled bet 250
+***SHOW DOWN***
+dakota_472: mucks
+dakota_472 wins 785 
+
+
+Hand#5128FD7BB4001796 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:11:47
+Dealer: Seat 7
+Seat 1: SATOURN (10 945 in chips) 
+Seat 2: AlexTh (3 070 in chips) 
+Seat 3: PIANOMIKE (16 571 in chips) 
+Seat 4: rosszcsont12 (26 888 in chips) 
+Seat 7: BISHUACES (13 837 in chips) 
+Seat 8: Smurffs (1 585 in chips) 
+Seat 9: dakota_472 (18 183 in chips) 
+Seat 10: JJDIMES44 (1 280 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+Smurffs: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+Smurffs: posts small blind 125
+dakota_472: posts big blind 250
+Dealt to AlexTh [5d,Jc]
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: calls 250
+BISHUACES: folds
+Smurffs: folds
+dakota_472: checks
+*** FLOP *** [7s,2d,7h]
+dakota_472: checks
+rosszcsont12: checks
+*** TURN *** [Qd]
+dakota_472: checks
+rosszcsont12: bets 524
+dakota_472: calls 524
+*** RIVER *** [Tc]
+dakota_472: checks
+rosszcsont12: bets 1 222
+dakota_472: folds
+rosszcsont12: returns uncalled bet 1 222
+***SHOW DOWN***
+rosszcsont12: mucks
+rosszcsont12 wins 1 833 
+
+
+Hand#5128FD7BB4001805 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:12:27
+Dealer: Seat 8
+Seat 1: SATOURN (10 925 in chips) 
+Seat 2: AlexTh (3 050 in chips) 
+Seat 3: PIANOMIKE (16 551 in chips) 
+Seat 4: rosszcsont12 (27 927 in chips) 
+Seat 7: BISHUACES (13 817 in chips) 
+Seat 8: Smurffs (1 440 in chips) 
+Seat 9: dakota_472 (17 389 in chips) 
+Seat 10: JJDIMES44 (1 260 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+Smurffs: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+dakota_472: posts small blind 125
+JJDIMES44: posts big blind 250
+Dealt to AlexTh [Th,Qs]
+SATOURN: folds
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: folds
+BISHUACES: folds
+Smurffs: folds
+dakota_472: raises to 500
+JJDIMES44: folds
+dakota_472: returns uncalled bet 250
+***SHOW DOWN***
+dakota_472: mucks
+dakota_472 wins 660 
+
+
+Hand#5128FD7BB4001812 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:12:51
+Dealer: Seat 9
+Seat 1: SATOURN (10 905 in chips) 
+Seat 2: AlexTh (3 030 in chips) 
+Seat 3: PIANOMIKE (16 531 in chips) 
+Seat 4: rosszcsont12 (27 907 in chips) 
+Seat 7: BISHUACES (13 797 in chips) 
+Seat 8: Smurffs (1 420 in chips) 
+Seat 9: dakota_472 (17 779 in chips) 
+Seat 10: JJDIMES44 (990 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+Smurffs: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+JJDIMES44: posts small blind 125
+SATOURN: posts big blind 250
+Dealt to AlexTh [9s,Qs]
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: folds
+BISHUACES: folds
+Smurffs: folds
+dakota_472: raises to 500
+JJDIMES44: folds
+SATOURN: folds
+dakota_472: returns uncalled bet 250
+***SHOW DOWN***
+dakota_472: mucks
+dakota_472 wins 785 
+
+
+Hand#5128FD7BB4001819 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:13:16
+Dealer: Seat 10
+Seat 1: SATOURN (10 635 in chips) 
+Seat 2: AlexTh (3 010 in chips) 
+Seat 3: PIANOMIKE (16 511 in chips) 
+Seat 4: rosszcsont12 (27 887 in chips) 
+Seat 7: BISHUACES (13 777 in chips) 
+Seat 8: Smurffs (1 400 in chips) 
+Seat 9: dakota_472 (18 294 in chips) 
+Seat 10: JJDIMES44 (845 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+Smurffs: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+SATOURN: posts small blind 125
+AlexTh: posts big blind 250
+Dealt to AlexTh [Td,Ah]
+PIANOMIKE: folds
+rosszcsont12: raises to 643
+BISHUACES: folds
+Smurffs: folds
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: calls 393
+*** FLOP *** [7d,8h,6c]
+AlexTh: checks
+rosszcsont12: is all in 27 224
+AlexTh: folds
+rosszcsont12: returns uncalled bet 27 224
+***SHOW DOWN***
+rosszcsont12: mucks
+rosszcsont12 wins 1 571 
+
+
+Hand#5128FD7BB4001830 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:13:53
+Dealer: Seat 1
+Seat 1: SATOURN (10 490 in chips) 
+Seat 2: AlexTh (2 347 in chips) 
+Seat 3: PIANOMIKE (16 491 in chips) 
+Seat 4: rosszcsont12 (28 795 in chips) 
+Seat 7: BISHUACES (13 757 in chips) 
+Seat 8: Smurffs (1 380 in chips) 
+Seat 9: dakota_472 (18 274 in chips) 
+Seat 10: JJDIMES44 (825 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+Smurffs: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+AlexTh: posts small blind 125
+PIANOMIKE: posts big blind 250
+Dealt to AlexTh [9s,As]
+rosszcsont12: folds
+BISHUACES: folds
+Smurffs: folds
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: folds
+PIANOMIKE: returns uncalled bet 125
+***SHOW DOWN***
+PIANOMIKE: mucks
+PIANOMIKE wins 410 
+
+
+Hand#5128FD7BB4001835 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 20/125/250 NL Hold'em -- 2018/04/20 - 23:14:10
+Dealer: Seat 2
+Seat 1: SATOURN (10 470 in chips) 
+Seat 2: AlexTh (2 202 in chips) 
+Seat 3: PIANOMIKE (16 756 in chips) 
+Seat 4: rosszcsont12 (28 775 in chips) 
+Seat 7: BISHUACES (13 737 in chips) 
+Seat 8: Smurffs (1 360 in chips) 
+Seat 9: dakota_472 (18 254 in chips) 
+Seat 10: JJDIMES44 (805 in chips) 
+SATOURN: posts ante of 20
+AlexTh: posts ante of 20
+PIANOMIKE: posts ante of 20
+rosszcsont12: posts ante of 20
+BISHUACES: posts ante of 20
+Smurffs: posts ante of 20
+dakota_472: posts ante of 20
+JJDIMES44: posts ante of 20
+PIANOMIKE: posts small blind 125
+rosszcsont12: posts big blind 250
+Dealt to AlexTh [Qh,Js]
+BISHUACES: folds
+Smurffs: folds
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: calls 250
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: raises to 643
+SATOURN: calls 393
+*** FLOP *** [2d,2s,3d]
+rosszcsont12: bets 786
+SATOURN: calls 786
+*** TURN *** [5d]
+rosszcsont12: bets 1 572
+SATOURN: calls 1 572
+*** RIVER *** [7h]
+rosszcsont12: checks
+SATOURN: checks
+***SHOW DOWN***
+rosszcsont12: shows [Jd Qd] (Flush Queen high)
+SATOURN: mucks
+rosszcsont12 wins 6 287 with Flush Queen high 
+SATOURN: mucks [6s,6h] (TwoPair) .
+
+
+Hand#5128FD7BB4001855 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 30/150/300 NL Hold'em -- 2018/04/20 - 23:15:14
+Dealer: Seat 3
+Seat 1: SATOURN (7 449 in chips) 
+Seat 2: AlexTh (2 182 in chips) 
+Seat 3: PIANOMIKE (16 611 in chips) 
+Seat 4: rosszcsont12 (32 041 in chips) 
+Seat 7: BISHUACES (13 717 in chips) 
+Seat 8: Smurffs (1 340 in chips) 
+Seat 9: dakota_472 (18 234 in chips) 
+Seat 10: JJDIMES44 (785 in chips) 
+SATOURN: posts ante of 30
+AlexTh: posts ante of 30
+PIANOMIKE: posts ante of 30
+rosszcsont12: posts ante of 30
+BISHUACES: posts ante of 30
+Smurffs: posts ante of 30
+dakota_472: posts ante of 30
+JJDIMES44: posts ante of 30
+rosszcsont12: posts small blind 150
+BISHUACES: posts big blind 300
+Dealt to AlexTh [As,7c]
+Smurffs: folds
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: calls 300
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: calls 150
+BISHUACES: checks
+*** FLOP *** [2c,Js,9h]
+rosszcsont12: checks
+BISHUACES: checks
+SATOURN: checks
+*** TURN *** [8h]
+rosszcsont12: checks
+BISHUACES: checks
+SATOURN: checks
+*** RIVER *** [9s]
+rosszcsont12: checks
+BISHUACES: checks
+SATOURN: checks
+***SHOW DOWN***
+SATOURN: shows [7d Ah] (Pair of Nines  )
+rosszcsont12: shows [8s 5s] (Two Pairs Nines and Eights  )
+BISHUACES: mucks
+rosszcsont12 wins 1 140 with Two Pairs Nines and Eights   
+BISHUACES: mucks [3c,4c] (Pair) .
+
+
+Hand#5128FD7BB4001868 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 30/150/300 NL Hold'em -- 2018/04/20 - 23:16:14
+Dealer: Seat 4
+Seat 1: SATOURN (7 119 in chips) 
+Seat 2: AlexTh (2 152 in chips) 
+Seat 3: PIANOMIKE (16 581 in chips) 
+Seat 4: rosszcsont12 (32 851 in chips) 
+Seat 7: BISHUACES (13 387 in chips) 
+Seat 8: Smurffs (1 310 in chips) 
+Seat 9: dakota_472 (18 204 in chips) 
+Seat 10: JJDIMES44 (755 in chips) 
+SATOURN: posts ante of 30
+AlexTh: posts ante of 30
+PIANOMIKE: posts ante of 30
+rosszcsont12: posts ante of 30
+BISHUACES: posts ante of 30
+Smurffs: posts ante of 30
+dakota_472: posts ante of 30
+JJDIMES44: posts ante of 30
+BISHUACES: posts small blind 150
+Smurffs: posts big blind 300
+Dealt to AlexTh [Jh,9d]
+dakota_472: raises to 600
+JJDIMES44: folds
+SATOURN: folds
+AlexTh: calls 600
+PIANOMIKE: folds
+rosszcsont12: folds
+BISHUACES: calls 450
+Smurffs: folds
+*** FLOP *** [8s,Kd,Ac]
+BISHUACES: checks
+dakota_472: bets 600
+AlexTh: calls 600
+BISHUACES: calls 600
+*** TURN *** [Qd]
+BISHUACES: checks
+dakota_472: checks
+AlexTh: checks
+*** RIVER *** [Jd]
+BISHUACES: bets 900
+dakota_472: calls 900
+AlexTh: folds
+***SHOW DOWN***
+BISHUACES: shows [As Js] (Two Pairs Aces and Jacks  )
+dakota_472: shows [8c Th] (Straight Ace high)
+dakota_472 wins 5 940 with Straight Ace high 
+
+
+Hand#5128FD7BB4001884 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 30/150/300 NL Hold'em -- 2018/04/20 - 23:17:26
+Dealer: Seat 7
+Seat 1: SATOURN (7 089 in chips) 
+Seat 2: AlexTh (922 in chips) 
+Seat 3: PIANOMIKE (16 551 in chips) 
+Seat 4: rosszcsont12 (32 821 in chips) 
+Seat 7: BISHUACES (11 257 in chips) 
+Seat 8: Smurffs (980 in chips) 
+Seat 9: dakota_472 (22 014 in chips) 
+Seat 10: JJDIMES44 (725 in chips) 
+SATOURN: posts ante of 30
+AlexTh: posts ante of 30
+PIANOMIKE: posts ante of 30
+rosszcsont12: posts ante of 30
+BISHUACES: posts ante of 30
+Smurffs: posts ante of 30
+dakota_472: posts ante of 30
+JJDIMES44: posts ante of 30
+Smurffs: posts small blind 150
+dakota_472: posts big blind 300
+Dealt to AlexTh [Td,Qs]
+JJDIMES44: folds
+SATOURN: raises to 600
+AlexTh: calls 600
+PIANOMIKE: folds
+rosszcsont12: calls 600
+BISHUACES: calls 600
+Smurffs: folds
+dakota_472: folds
+*** FLOP *** [3s,9c,8s]
+SATOURN: bets 3 090
+AlexTh: folds
+rosszcsont12: folds
+BISHUACES: folds
+BISHUACES: mucks
+SATOURN: returns uncalled bet 3 090
+***SHOW DOWN***
+SATOURN: mucks
+SATOURN wins 3 090 
+
+
+Hand#5128FD7BB4001901 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 30/150/300 NL Hold'em -- 2018/04/20 - 23:18:18
+Dealer: Seat 8
+Seat 1: SATOURN (9 549 in chips) 
+Seat 2: AlexTh (292 in chips) 
+Seat 3: PIANOMIKE (16 521 in chips) 
+Seat 4: rosszcsont12 (32 191 in chips) 
+Seat 7: BISHUACES (10 627 in chips) 
+Seat 8: Smurffs (800 in chips) 
+Seat 9: dakota_472 (21 684 in chips) 
+Seat 10: JJDIMES44 (695 in chips) 
+SATOURN: posts ante of 30
+AlexTh: posts ante of 30
+PIANOMIKE: posts ante of 30
+rosszcsont12: posts ante of 30
+BISHUACES: posts ante of 30
+Smurffs: posts ante of 30
+dakota_472: posts ante of 30
+JJDIMES44: posts ante of 30
+dakota_472: posts small blind 150
+JJDIMES44: posts big blind 300
+Dealt to AlexTh [4s,3d]
+SATOURN: calls 300
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: calls 300
+BISHUACES: folds
+Smurffs: folds
+dakota_472: calls 150
+JJDIMES44: checks
+*** FLOP *** [Qh,9d,Kh]
+dakota_472: checks
+JJDIMES44: checks
+SATOURN: checks
+rosszcsont12: bets 720
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: folds
+rosszcsont12: returns uncalled bet 720
+***SHOW DOWN***
+rosszcsont12: mucks
+rosszcsont12 wins 1 440 
+
+
+Hand#5128FD7BB4001910 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 30/150/300 NL Hold'em -- 2018/04/20 - 23:18:59
+Dealer: Seat 9
+Seat 1: SATOURN (9 219 in chips) 
+Seat 2: AlexTh (262 in chips) 
+Seat 3: PIANOMIKE (16 491 in chips) 
+Seat 4: rosszcsont12 (33 301 in chips) 
+Seat 7: BISHUACES (10 597 in chips) 
+Seat 8: Smurffs (770 in chips) 
+Seat 9: dakota_472 (21 354 in chips) 
+Seat 10: JJDIMES44 (365 in chips) 
+SATOURN: posts ante of 30
+AlexTh: posts ante of 30
+PIANOMIKE: posts ante of 30
+rosszcsont12: posts ante of 30
+BISHUACES: posts ante of 30
+Smurffs: posts ante of 30
+dakota_472: posts ante of 30
+JJDIMES44: posts ante of 30
+JJDIMES44: posts small blind 150
+SATOURN: posts big blind 300
+Dealt to AlexTh [Qd,5c]
+AlexTh: folds
+PIANOMIKE: folds
+rosszcsont12: folds
+BISHUACES: raises to 600
+Smurffs: folds
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: calls 300
+*** FLOP *** [9h,Kc,6s]
+SATOURN: checks
+BISHUACES: bets 900
+SATOURN: folds
+BISHUACES: returns uncalled bet 900
+***SHOW DOWN***
+BISHUACES: mucks
+BISHUACES wins 1 590 
+
+
+Hand#5128FD7BB4001922 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 30/150/300 NL Hold'em -- 2018/04/20 - 23:19:43
+Dealer: Seat 10
+Seat 1: SATOURN (8 589 in chips) 
+Seat 2: AlexTh (232 in chips) 
+Seat 3: PIANOMIKE (16 461 in chips) 
+Seat 4: rosszcsont12 (33 271 in chips) 
+Seat 7: BISHUACES (11 557 in chips) 
+Seat 8: Smurffs (740 in chips) 
+Seat 9: dakota_472 (21 324 in chips) 
+Seat 10: JJDIMES44 (185 in chips) 
+SATOURN: posts ante of 30
+AlexTh: posts ante of 30
+PIANOMIKE: posts ante of 30
+rosszcsont12: posts ante of 30
+BISHUACES: posts ante of 30
+Smurffs: posts ante of 30
+dakota_472: posts ante of 30
+JJDIMES44: posts ante of 30
+SATOURN: posts small blind 150
+AlexTh: posts big blind 202
+Dealt to AlexTh [8s,6d]
+PIANOMIKE: raises to 600
+rosszcsont12: folds
+BISHUACES: folds
+Smurffs: folds
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: folds
+PIANOMIKE: returns uncalled bet 398
+AlexTh: shows [8s 6d]
+PIANOMIKE: shows [Qc Ad]
+*** FLOP *** [4c,2h,Kc]
+*** TURN *** [4h]
+*** RIVER *** [3c]
+***SHOW DOWN***
+PIANOMIKE wins 794 with Pair of Fours with Ace kicker 
+AlexTh finished 93 out of 307 players.
+
+
+Dealer: Seat 1
+Dealer: Seat 2
+Dealer: Seat 3
+Dealer: Seat 4
+Dealer: Seat 7
+Dealer: Seat 8
+Dealer: Seat 9
+Dealer: Seat 1

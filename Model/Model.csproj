@@ -356,6 +356,7 @@
     <Compile Include="Site\ISiteValidationResult.cs" />
     <Compile Include="Site\Poker888Configuration.cs" />
     <Compile Include="Site\AmericasCardroomConfiguration.cs" />
+    <Compile Include="Site\RevolutionConfiguration.cs" />
     <Compile Include="Site\SiteValidationResult.cs" />
     <Compile Include="Site\SportsBettingConfiguration.cs" />
     <Compile Include="Site\TigerGamingConfiguration.cs" />

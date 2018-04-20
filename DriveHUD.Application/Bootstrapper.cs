@@ -261,6 +261,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
             Container.RegisterType<ISiteConfiguration, IPokerConfiguration>(EnumPokerSites.IPoker.ToString());
             Container.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
+            Container.RegisterType<ISiteConfiguration, RevolutionConfiguration>(EnumPokerSites.Revolution.ToString());
 
             // HUD designer 
             Container.RegisterType<IHudToolFactory, HudToolFactory>();
@@ -298,6 +299,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, PartyPokerSiteSettingTableConfigurator>(EnumPokerSites.PartyPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, IPokerSiteSettingTableConfigurator>(EnumPokerSites.IPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, GGNSiteSettingTableConfigurator>(EnumPokerSites.GGN.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, RevolutionSiteSettingTableConfigurator>(EnumPokerSites.Revolution.ToString());
 
             // Series providers
             Container.RegisterType<IGraphsProvider, GraphsProvider>();

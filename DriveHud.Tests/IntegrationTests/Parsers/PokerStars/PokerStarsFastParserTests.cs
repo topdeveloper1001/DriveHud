@@ -497,7 +497,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
             unityContainer.RegisterType<IEventAggregator, EventAggregator>();
 
             var dataService = Substitute.For<IDataService>();
-            unityContainer.RegisterInstance<IDataService>(dataService);
+            unityContainer.RegisterInstance(dataService);
 
             var locator = new UnityServiceLocator(unityContainer);
             ServiceLocator.SetLocatorProvider(() => locator);

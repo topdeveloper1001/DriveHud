@@ -1,0 +1,37 @@
+Hand#5126023113000128 - No Limit Hold'em 10/20 23113 -- 10/20 NL Hold'em -- 2018/04/18 - 15:53:48
+Dealer: Seat 8
+Seat 1: P&R-M-K,NH (2 114.75 in chips) 
+Seat 2: H0MMER (1 756 in chips) 
+Seat 3: AlexTh (900 in chips) 
+Seat 8: patti40 (652 in chips) 
+Seat 9: neverwin333 (72.25 in chips) 
+neverwin333: posts small blind 10
+P&R-M-K,NH: posts big blind 20
+AlexTh: posts big blind 20
+Dealt to AlexTh [4s,5s]
+H0MMER: raises to 40
+AlexTh: folds
+patti40: calls 40
+neverwin333: calls 30
+P&R-M-K,NH: calls 20
+*** FLOP *** [2c,6s,3h]
+neverwin333: checks
+P&R-M-K,NH: checks
+H0MMER: bets 90
+patti40: folds
+neverwin333: is all in 32.25
+P&R-M-K,NH: calls 90
+*** TURN *** [6d]
+P&R-M-K,NH: checks
+H0MMER: bets 392.25
+P&R-M-K,NH: folds
+H0MMER: returns uncalled bet 392.25
+H0MMER: shows [3s Ac]
+neverwin333: shows [6h 7s]
+H0MMER  chats: so slow
+*** RIVER *** [9c]
+***SHOW DOWN***
+H0MMER wins 109.73 with Two Pairs Sixes and Threes   
+***SHOW DOWN***
+neverwin333 wins 262.92 with Three of a Kind Sixes   
+H0MMER  chats: gh
