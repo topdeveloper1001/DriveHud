@@ -313,20 +313,20 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"Hands/Tournament157.txt", GameType.NoLimitHoldem, "138340269", "Flyweight. $150 Gtd KO", 0.55, 0, TournamentSpeed.Regular, 157, 0)]
         [TestCase(TestDataFolder + @"Hands/Tournament211.txt", GameType.NoLimitHoldem, "138340262", "Flyweight. $400 Gtd KO", 1.1, 0, TournamentSpeed.Regular, 211, 0)]
         [TestCase(TestDataFolder + @"Hands/Tournament2.txt", GameType.NoLimitHoldem, "143085353", "Turbo", 1.1, 0, TournamentSpeed.Turbo, 2, 2.61)]
-        [TestCase(TestDataFolder + @"Tournaments/$0.25 Sit & Go 3-Handed (159743601) Table #1.txt", GameType.NoLimitHoldem, "159743600", "$0.25 Sit & Go 3-Handed", 0.25, 0, TournamentSpeed.Turbo, 1, 1)]
+        [TestCase(TestDataFolder + @"Tournaments/$0.25 Sit & Go 3-Handed (159743601) Table #1.txt", GameType.NoLimitHoldem, "159743600", "$0.25 Sit & Go 3-Handed", 0.25, 0, TournamentSpeed.Regular, 1, 1)]
         public void ParseTournamentSummaryTest(string handHistoryFile, GameType gameType, string tournamentId, string tournamentName, decimal tournamentBuyIn, decimal tournamentRake, TournamentSpeed speed, int finishPosition, decimal wonAmount)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
 
             Assert.IsTrue(handHistory.GameDescription.IsTournament);
-            Assert.AreEqual(handHistory.GameDescription.Tournament.TournamentId, tournamentId);
-            Assert.AreEqual(handHistory.GameDescription.Tournament.TournamentName, tournamentName);
-            Assert.AreEqual(handHistory.GameDescription.GameType, gameType);
-            Assert.AreEqual(handHistory.GameDescription.Tournament.Speed, speed);
-            Assert.AreEqual(handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue, tournamentBuyIn);
-            Assert.AreEqual(handHistory.GameDescription.Tournament.BuyIn.Rake, tournamentRake);
-            Assert.AreEqual(handHistory.GameDescription.Tournament.FinishPosition, finishPosition);
-            Assert.AreEqual(handHistory.GameDescription.Tournament.Winning, wonAmount);
+            Assert.AreEqual(tournamentId, handHistory.GameDescription.Tournament.TournamentId, "Tournament id must match.");
+            Assert.AreEqual(tournamentName, handHistory.GameDescription.Tournament.TournamentName, "TournamentName must match.");
+            Assert.AreEqual(gameType, handHistory.GameDescription.GameType, "GameType must match.");
+            Assert.AreEqual(speed, handHistory.GameDescription.Tournament.Speed, "Speed must match.");
+            Assert.AreEqual(tournamentBuyIn, handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue, "PrizePoolValue must match.");
+            Assert.AreEqual(tournamentRake, handHistory.GameDescription.Tournament.BuyIn.Rake, "Rake must match.");
+            Assert.AreEqual(finishPosition, handHistory.GameDescription.Tournament.FinishPosition, "FinishPosition must match.");
+            Assert.AreEqual(wonAmount, handHistory.GameDescription.Tournament.Winning, "Winning must match.");
         }
 
         [Test]
