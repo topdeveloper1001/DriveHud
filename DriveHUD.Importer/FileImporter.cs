@@ -1140,9 +1140,20 @@ namespace DriveHUD.Importers
                     }
                 }
 
+                if (siteNetwork == EnumPokerNetworks.Revolution)
+                {
+                    // only 1 winner
+                    if (tournamentName.IndexOf("KAMIKAZE", StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        return totalPrize != 0 && finishPosition == 1 ? Utils.ConvertToCents(totalPrize) : 0;
+                    }
+                }
+
                 var prizePool = buyinInCents * totalPlayers;
 
-                var prizeRatesDictionary = TournamentSettings.GetWinningsMultiplier((EnumPokerSites)siteId, sttType == STTTypes.Beginner);
+                var prizeRatesDictionary = TournamentSettings.GetWinningsMultiplier((EnumPokerSites)siteId,
+                    sttType == STTTypes.Beginner,
+                    tournamentName.IndexOf("BOUNTY", StringComparison.OrdinalIgnoreCase) >= 0);
 
                 if (prizeRatesDictionary == null || !prizeRatesDictionary.ContainsKey(totalPlayers))
                 {

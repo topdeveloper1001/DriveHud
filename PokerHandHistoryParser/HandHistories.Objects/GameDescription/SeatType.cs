@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
 namespace HandHistories.Objects.GameDescription
@@ -65,14 +64,14 @@ namespace HandHistories.Objects.GameDescription
             }
         }
 
-        public bool isEmpty
+        public bool IsUnknown
         {
             get
             {
-                return seatType == SeatTypeEnum.Unknown;
+                return seatType == SeatTypeEnum.Unknown || seatType == SeatTypeEnum.All;
             }
         }
-        
+
         [XmlAttribute]
         public int MaxPlayers
         {
@@ -82,6 +81,7 @@ namespace HandHistories.Objects.GameDescription
                 {
                     throw new ArgumentException("MaxPlayers All does not represent a SeatType");
                 }
+
                 return (int)seatType;
             }
             set

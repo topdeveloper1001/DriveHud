@@ -1,0 +1,996 @@
+﻿ï»¿Hand#5127FD7A47000009 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 4 -- 0/10/20 NL Hold'em -- 2018/04/19 - 08:30:03
+Dealer: Seat 1
+Seat 1: Trinininja69 (1 500 in chips) 
+Seat 2: almostperf1 (1 500 in chips) 
+Seat 3: rogumu (1 500 in chips) 
+Seat 4: AlexTh (1 500 in chips) 
+Seat 7: MoTheThird (1 500 in chips) 
+Seat 8: BenLebria (1 500 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+almostperf1: posts small blind 10
+rogumu: posts big blind 20
+Dealt to AlexTh [9d,4c]
+AlexTh: folds
+MoTheThird: raises to 40
+BenLebria: folds
+dankpot: folds
+BroomBroom: folds
+Trinininja69: folds
+almostperf1: calls 30
+rogumu: folds
+*** FLOP *** [6d,6c,Ah]
+almostperf1: checks
+MoTheThird: checks
+*** TURN *** [5s]
+almostperf1: checks
+MoTheThird: bets 40
+almostperf1: folds
+MoTheThird: returns uncalled bet 40
+***SHOW DOWN***
+MoTheThird: mucks
+MoTheThird wins 100 
+
+
+Hand#5127FD7A47000023 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 4 -- 0/10/20 NL Hold'em -- 2018/04/19 - 08:30:45
+Dealer: Seat 2
+Seat 1: Trinininja69 (1 500 in chips) 
+Seat 2: almostperf1 (1 460 in chips) 
+Seat 3: rogumu (1 480 in chips) 
+Seat 4: AlexTh (1 500 in chips) 
+Seat 7: MoTheThird (1 560 in chips) 
+Seat 8: BenLebria (1 500 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+rogumu: posts small blind 10
+AlexTh: posts big blind 20
+Dealt to AlexTh [5h,5c]
+MoTheThird: calls 20
+BenLebria: is all in 1 500
+dankpot: folds
+BroomBroom: folds
+Trinininja69: folds
+almostperf1: folds
+rogumu: folds
+AlexTh: folds
+MoTheThird: folds
+BenLebria: returns uncalled bet 1 480
+***SHOW DOWN***
+BenLebria: mucks
+BenLebria wins 70 
+
+
+Dealer: Seat 0
+Seat 1: Trinininja69 (1 500 in chips) 
+Seat 2: almostperf1 (1 460 in chips) 
+Seat 3: rogumu (1 470 in chips) 
+Seat 4: AlexTh (1 480 in chips) 
+Seat 7: MoTheThird (1 540 in chips) 
+Seat 8: BenLebria (1 550 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+Player left the table
+Dealer: Seat 0
+Seat 1: Trinininja69 (1 500 in chips) 
+Seat 2: almostperf1 (1 460 in chips) 
+Seat 3: gillsi1 (1 500 in chips) 
+Seat 4: AlexTh (1 480 in chips) 
+Seat 7: MoTheThird (1 540 in chips) 
+Seat 8: BenLebria (1 550 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+Dealer: Seat 0
+Seat 1: Trinininja69 (1 500 in chips) 
+Seat 2: almostperf1 (1 460 in chips) 
+Seat 3: gillsi1 (1 500 in chips) 
+Seat 4: AlexTh (1 480 in chips) 
+Seat 7: MoTheThird (1 540 in chips) 
+Seat 8: BenLebria (1 550 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+Dealer: Seat 0
+Seat 1: Trinininja69 (1 500 in chips) 
+Seat 2: almostperf1 (1 460 in chips) 
+Seat 3: gillsi1 (1 500 in chips) 
+Seat 4: AlexTh (1 480 in chips) 
+Seat 7: MoTheThird (1 540 in chips) 
+Seat 8: BenLebria (1 550 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+Dealer: Seat 0
+Seat 1: Trinininja69 (1 500 in chips) 
+Seat 2: almostperf1 (1 460 in chips) 
+Seat 3: gillsi1 (1 500 in chips) 
+Seat 4: AlexTh (1 480 in chips) 
+Seat 7: MoTheThird (1 540 in chips) 
+Seat 8: BenLebria (1 550 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+Dealer: Seat 0
+Seat 1: Trinininja69 (1 500 in chips) 
+Seat 2: almostperf1 (1 460 in chips) 
+Seat 3: gillsi1 (1 500 in chips) 
+Seat 4: AlexTh (1 480 in chips) 
+Seat 7: MoTheThird (1 540 in chips) 
+Seat 8: BenLebria (1 550 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+Dealer: Seat 0
+Seat 1: Trinininja69 (1 500 in chips) 
+Seat 2: almostperf1 (1 460 in chips) 
+Seat 3: gillsi1 (1 500 in chips) 
+Seat 4: AlexTh (1 480 in chips) 
+Seat 7: MoTheThird (1 540 in chips) 
+Seat 8: BenLebria (1 550 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+Hand#5127FD7A47000031 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- -1/-1/0 NL Hold'em -- 2018/04/19 - 08:31:10
+Dealer: Seat 1
+Seat 1: Trinininja69 (1 500 in chips) 
+Seat 2: almostperf1 (1 460 in chips) 
+Seat 3: gillsi1 (1 500 in chips) 
+Seat 4: AlexTh (1 480 in chips) 
+Seat 7: MoTheThird (1 540 in chips) 
+Seat 8: BenLebria (1 550 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+almostperf1: posts small blind 10
+gillsi1: posts big blind 20
+Dealt to AlexTh [2c,As]
+AlexTh: folds
+MoTheThird: folds
+BenLebria: folds
+dankpot: folds
+BroomBroom: folds
+Trinininja69: folds
+almostperf1: calls 10
+gillsi1: checks
+*** FLOP *** [Qh,Jc,Qd]
+almostperf1: checks
+gillsi1: checks
+*** TURN *** [Ts]
+almostperf1: checks
+gillsi1: checks
+*** RIVER *** [Qs]
+almostperf1: bets 20
+gillsi1: folds
+almostperf1: returns uncalled bet 20
+***SHOW DOWN***
+almostperf1: mucks
+almostperf1 wins 40 
+
+
+Hand#5127FD7A47000041 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/10/20 NL Hold'em -- 2018/04/19 - 08:31:56
+Dealer: Seat 2
+Seat 2: almostperf1 (1 480 in chips) 
+Seat 3: gillsi1 (1 480 in chips) 
+Seat 4: AlexTh (1 480 in chips) 
+Seat 7: MoTheThird (1 540 in chips) 
+Seat 8: BenLebria (1 550 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+gillsi1: posts small blind 10
+AlexTh: posts big blind 20
+Dealt to AlexTh [7d,4h]
+MoTheThird: raises to 40
+BenLebria: calls 40
+dankpot: folds
+BroomBroom: folds
+almostperf1: folds
+gillsi1: folds
+AlexTh: folds
+*** FLOP *** [Qd,Kd,9c]
+MoTheThird: bets 60
+BenLebria: raises to 177
+MoTheThird: calls 117
+*** TURN *** [5h]
+MoTheThird: bets 160
+BenLebria: raises to 522
+MoTheThird: calls 362
+*** RIVER *** [Jc]
+MoTheThird: bets 320
+BenLebria: is all in 811
+MoTheThird: is all in 481
+BenLebria: returns uncalled bet 10
+MoTheThird: shows [9s Ts]
+BenLebria: shows [Ad 6c]
+***SHOW DOWN***
+MoTheThird wins 3 110 with Straight King high 
+
+
+Hand#5127FD7A47000066 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/10/20 NL Hold'em -- 2018/04/19 - 08:33:22
+Dealer: Seat 3
+Seat 1: Swindler11 (1 500 in chips) 
+Seat 2: almostperf1 (1 480 in chips) 
+Seat 3: gillsi1 (1 470 in chips) 
+Seat 4: AlexTh (1 460 in chips) 
+Seat 7: MoTheThird (3 110 in chips) 
+Seat 8: BenLebria (10 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+AlexTh: posts small blind 10
+MoTheThird: posts big blind 20
+Dealt to AlexTh [9c,Jc]
+BenLebria: is all in 10
+dankpot: folds
+BroomBroom: folds
+Swindler11: calls 20
+almostperf1: folds
+gillsi1: folds
+AlexTh: calls 10
+MoTheThird: checks
+*** FLOP *** [3d,Kd,9d]
+AlexTh: bets 20
+MoTheThird: folds
+Swindler11: calls 20
+*** TURN *** [3h]
+AlexTh: checks
+Swindler11: bets 20
+AlexTh: calls 20
+*** RIVER *** [Qd]
+AlexTh: checks
+Swindler11: bets 150
+AlexTh: folds
+Swindler11: returns uncalled bet 150
+Swindler11: shows [Ad 4s]
+BenLebria: shows [Qs 7h]
+***SHOW DOWN***
+Swindler11 wins 110 with Flush Ace high 
+***SHOW DOWN***
+Swindler11 wins 40 with Flush Ace high 
+
+
+Hand#5127FD7A47000078 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/10/20 NL Hold'em -- 2018/04/19 - 08:34:23
+Dealer: Seat 4
+Seat 1: Swindler11 (1 590 in chips) 
+Seat 2: almostperf1 (1 480 in chips) 
+Seat 3: gillsi1 (1 470 in chips) 
+Seat 4: AlexTh (1 400 in chips) 
+Seat 7: MoTheThird (3 090 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+MoTheThird: posts small blind 10
+dankpot: posts big blind 20
+Dealt to AlexTh [Ah,Qh]
+BroomBroom: calls 20
+Swindler11: calls 20
+almostperf1: folds
+gillsi1: folds
+AlexTh: raises to 80
+MoTheThird: folds
+dankpot: folds
+BroomBroom: calls 60
+Swindler11: calls 60
+*** FLOP *** [3d,8h,6c]
+BroomBroom: bets 20
+Swindler11: raises to 40
+AlexTh: calls 40
+BroomBroom: calls 20
+*** TURN *** [2d]
+BroomBroom: bets 20
+Swindler11: calls 20
+AlexTh: calls 20
+*** RIVER *** [9d]
+BroomBroom: bets 20
+Swindler11: calls 20
+AlexTh: calls 20
+***SHOW DOWN***
+BroomBroom: shows [Qd Ks] (High card King  )
+Swindler11: shows [6h Qs] (Pair of Sixes  )
+AlexTh: mucks
+Swindler11 wins 510 with Pair of Sixes   
+AlexTh: mucks [Ah,Qh] (HighCard) .
+
+
+Hand#5127FD7A47000091 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/10/20 NL Hold'em -- 2018/04/19 - 08:35:29
+Dealer: Seat 7
+Seat 1: Swindler11 (1 940 in chips) 
+Seat 2: almostperf1 (1 480 in chips) 
+Seat 3: gillsi1 (1 470 in chips) 
+Seat 4: AlexTh (1 240 in chips) 
+Seat 7: MoTheThird (3 080 in chips) 
+Seat 8: IAmDonkey2 (2 810 in chips) 
+Seat 9: dankpot (1 480 in chips) 
+Seat 10: BroomBroom (1 340 in chips) 
+dankpot: posts small blind 10
+BroomBroom: posts big blind 20
+Dealt to AlexTh [Ah,3c]
+Swindler11: calls 20
+almostperf1: is all in 1 480
+gillsi1: folds
+AlexTh: folds
+MoTheThird: folds
+dankpot: folds
+BroomBroom: folds
+Swindler11: calls 1 460
+Swindler11: shows [6c 6h]
+almostperf1: shows [Kc Qc]
+*** FLOP *** [4h,Js,As]
+*** TURN *** [7c]
+*** RIVER *** [9h]
+***SHOW DOWN***
+Swindler11 wins 2 990 with Pair of Sixes   
+
+
+Hand#5127FD7A47000103 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/10/20 NL Hold'em -- 2018/04/19 - 08:35:58
+Dealer: Seat 9
+Seat 1: Swindler11 (3 450 in chips) 
+Seat 3: gillsi1 (1 470 in chips) 
+Seat 4: AlexTh (1 240 in chips) 
+Seat 7: MoTheThird (3 080 in chips) 
+Seat 8: IAmDonkey2 (2 810 in chips) 
+Seat 9: dankpot (1 470 in chips) 
+Seat 10: BroomBroom (1 320 in chips) 
+BroomBroom: posts small blind 10
+Swindler11: posts big blind 20
+Dealt to AlexTh [2d,Tc]
+gillsi1: calls 20
+AlexTh: folds
+MoTheThird: folds
+IAmDonkey2: folds
+dankpot: folds
+BroomBroom: calls 10
+Swindler11: checks
+*** FLOP *** [5s,4h,3d]
+BroomBroom: bets 20
+Swindler11: calls 20
+gillsi1: folds
+*** TURN *** [6s]
+BroomBroom: bets 100
+Swindler11: calls 100
+*** RIVER *** [4c]
+BroomBroom: is all in 1 180
+Swindler11: calls 1 180
+Swindler11: shows [5d 5h]
+BroomBroom: shows [7c Kh]
+***SHOW DOWN***
+Swindler11 wins 2 660 with Full House Fives full of Fours 
+
+
+Hand#5127FD7A47000120 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/10/20 NL Hold'em -- 2018/04/19 - 08:37:06
+Dealer: Seat 10
+Seat 1: Swindler11 (4 790 in chips) 
+Seat 3: gillsi1 (1 450 in chips) 
+Seat 4: AlexTh (1 240 in chips) 
+Seat 7: MoTheThird (3 080 in chips) 
+Seat 8: IAmDonkey2 (2 810 in chips) 
+Seat 9: dankpot (1 470 in chips) 
+Swindler11: posts small blind 10
+gillsi1: posts big blind 20
+Dealt to AlexTh [Tc,3d]
+AlexTh: folds
+MoTheThird: raises to 40
+IAmDonkey2: calls 40
+dankpot: folds
+Swindler11: calls 30
+gillsi1: calls 20
+*** FLOP *** [4h,Qd,6c]
+Swindler11: bets 20
+gillsi1: calls 20
+MoTheThird: folds
+IAmDonkey2: calls 20
+*** TURN *** [As]
+Swindler11: bets 60
+gillsi1: folds
+IAmDonkey2: calls 60
+*** RIVER *** [Th]
+Swindler11: bets 180
+IAmDonkey2: folds
+Swindler11: returns uncalled bet 180
+***SHOW DOWN***
+Swindler11: mucks
+Swindler11 wins 340 
+
+
+Hand#5127FD7A47000134 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/10/20 NL Hold'em -- 2018/04/19 - 08:38:07
+Dealer: Seat 1
+Seat 1: Swindler11 (5 010 in chips) 
+Seat 2: drifter72 (1 500 in chips) 
+Seat 3: gillsi1 (1 390 in chips) 
+Seat 4: AlexTh (1 240 in chips) 
+Seat 7: MoTheThird (3 040 in chips) 
+Seat 8: IAmDonkey2 (2 690 in chips) 
+Seat 9: dankpot (1 470 in chips) 
+Seat 10: archangel333 (1 500 in chips) 
+gillsi1: posts small blind 10
+AlexTh: posts big blind 20
+Dealt to AlexTh [Tc,Ac]
+MoTheThird: folds
+IAmDonkey2: raises to 50
+dankpot: folds
+archangel333: folds
+Swindler11: calls 50
+gillsi1: folds
+AlexTh: calls 30
+*** FLOP *** [5h,Jh,7s]
+AlexTh: checks
+IAmDonkey2: bets 200
+Swindler11: calls 200
+AlexTh: folds
+*** TURN *** [Ks]
+IAmDonkey2: bets 125
+Swindler11: calls 125
+*** RIVER *** [2s]
+IAmDonkey2: bets 125
+Swindler11: raises to 592
+IAmDonkey2: calls 467
+***SHOW DOWN***
+Swindler11: shows [Qc 5c] (Pair of Fives  )
+IAmDonkey2: shows [Jd 8d] (Pair of Jacks  )
+IAmDonkey2 wins 1 994 with Pair of Jacks   
+
+
+Hand#5127FD7A47000150 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/10/20 NL Hold'em -- 2018/04/19 - 08:39:15
+Dealer: Seat 3
+Seat 1: Swindler11 (4 043 in chips) 
+Seat 2: drifter72 (1 500 in chips) 
+Seat 3: gillsi1 (1 380 in chips) 
+Seat 4: AlexTh (1 190 in chips) 
+Seat 7: MoTheThird (3 040 in chips) 
+Seat 8: IAmDonkey2 (3 717 in chips) 
+Seat 9: dankpot (1 470 in chips) 
+Seat 10: archangel333 (1 500 in chips) 
+AlexTh: posts small blind 10
+MoTheThird: posts big blind 20
+Dealt to AlexTh [5h,8d]
+IAmDonkey2: calls 20
+dankpot: folds
+archangel333: raises to 40
+Swindler11: calls 40
+drifter72: folds
+gillsi1: raises to 60
+AlexTh: folds
+MoTheThird: calls 40
+IAmDonkey2: calls 40
+archangel333: calls 20
+Swindler11: calls 20
+*** FLOP *** [Kd,Qd,6d]
+MoTheThird: checks
+IAmDonkey2: checks
+archangel333: bets 310
+Swindler11: folds
+gillsi1: folds
+MoTheThird: folds
+IAmDonkey2: folds
+archangel333: returns uncalled bet 310
+***SHOW DOWN***
+archangel333: mucks
+archangel333 wins 310 
+
+
+Hand#5127FD7A47000170 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/15/30 NL Hold'em -- 2018/04/19 - 08:40:44
+Dealer: Seat 4
+Seat 1: Swindler11 (3 983 in chips) 
+Seat 2: drifter72 (1 500 in chips) 
+Seat 3: gillsi1 (1 320 in chips) 
+Seat 4: AlexTh (1 180 in chips) 
+Seat 7: MoTheThird (2 980 in chips) 
+Seat 8: IAmDonkey2 (3 657 in chips) 
+Seat 9: dankpot (1 470 in chips) 
+Seat 10: archangel333 (1 750 in chips) 
+MoTheThird: posts small blind 15
+IAmDonkey2: posts big blind 30
+Dealt to AlexTh [4s,Th]
+dankpot: folds
+archangel333: raises to 60
+Swindler11: calls 60
+drifter72: folds
+gillsi1: calls 60
+AlexTh: folds
+MoTheThird: folds
+IAmDonkey2: calls 30
+*** FLOP *** [3c,9s,Ah]
+IAmDonkey2: checks
+archangel333: bets 255
+Swindler11: folds
+gillsi1: folds
+IAmDonkey2: folds
+archangel333: returns uncalled bet 255
+***SHOW DOWN***
+archangel333: mucks
+archangel333 wins 255 
+
+
+Hand#5127FD7A47000183 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/15/30 NL Hold'em -- 2018/04/19 - 08:41:37
+Dealer: Seat 7
+Seat 1: Swindler11 (3 923 in chips) 
+Seat 2: drifter72 (1 500 in chips) 
+Seat 3: gillsi1 (1 260 in chips) 
+Seat 4: AlexTh (1 180 in chips) 
+Seat 7: MoTheThird (2 965 in chips) 
+Seat 8: IAmDonkey2 (3 597 in chips) 
+Seat 9: dankpot (1 470 in chips) 
+Seat 10: archangel333 (1 945 in chips) 
+IAmDonkey2: posts small blind 15
+dankpot: posts big blind 30
+Dealt to AlexTh [5c,9c]
+archangel333: calls 30
+Swindler11: calls 30
+drifter72: folds
+gillsi1: folds
+AlexTh: folds
+MoTheThird: folds
+IAmDonkey2: folds
+dankpot: checks
+*** FLOP *** [7c,Ks,2c]
+dankpot: checks
+archangel333: bets 30
+Swindler11: folds
+dankpot: folds
+archangel333: returns uncalled bet 30
+***SHOW DOWN***
+archangel333: mucks
+archangel333 wins 105 
+
+
+Hand#5127FD7A47000198 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/15/30 NL Hold'em -- 2018/04/19 - 08:42:36
+Dealer: Seat 8
+Seat 1: Swindler11 (3 893 in chips) 
+Seat 2: drifter72 (1 500 in chips) 
+Seat 3: gillsi1 (1 260 in chips) 
+Seat 4: AlexTh (1 180 in chips) 
+Seat 7: MoTheThird (2 965 in chips) 
+Seat 8: IAmDonkey2 (3 582 in chips) 
+Seat 9: dankpot (1 440 in chips) 
+Seat 10: archangel333 (2 020 in chips) 
+dankpot: posts small blind 15
+archangel333: posts big blind 30
+Dealt to AlexTh [6h,5c]
+Swindler11: calls 30
+drifter72: calls 30
+gillsi1: calls 30
+AlexTh: folds
+MoTheThird: folds
+IAmDonkey2: raises to 120
+dankpot: folds
+archangel333: calls 90
+Swindler11: calls 90
+drifter72: calls 90
+gillsi1: calls 90
+*** FLOP *** [9d,Jd,8h]
+archangel333: checks
+Swindler11: bets 307
+drifter72: calls 307
+gillsi1: folds
+IAmDonkey2: calls 307
+archangel333: calls 307
+*** TURN *** [2s]
+archangel333: bets 30
+Swindler11: raises to 966
+drifter72: folds
+IAmDonkey2: folds
+archangel333: folds
+archangel333: mucks
+Swindler11: returns uncalled bet 936
+***SHOW DOWN***
+Swindler11: mucks
+Swindler11 wins 1 903 
+
+
+Hand#5127FD7A47000223 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/15/30 NL Hold'em -- 2018/04/19 - 08:44:09
+Dealer: Seat 9
+Seat 1: Swindler11 (5 339 in chips) 
+Seat 2: drifter72 (1 073 in chips) 
+Seat 3: gillsi1 (1 140 in chips) 
+Seat 4: AlexTh (1 180 in chips) 
+Seat 7: MoTheThird (2 965 in chips) 
+Seat 8: IAmDonkey2 (3 155 in chips) 
+Seat 9: dankpot (1 425 in chips) 
+Seat 10: archangel333 (1 563 in chips) 
+archangel333: posts small blind 15
+Swindler11: posts big blind 30
+Dealt to AlexTh [Tc,Th]
+drifter72: folds
+gillsi1: folds
+AlexTh: raises to 60
+MoTheThird: folds
+IAmDonkey2: folds
+dankpot: folds
+archangel333: calls 45
+Swindler11: calls 30
+*** FLOP *** [8c,Kc,4h]
+archangel333: checks
+Swindler11: checks
+AlexTh: bets 90
+archangel333: folds
+Swindler11: folds
+AlexTh: returns uncalled bet 90
+***SHOW DOWN***
+AlexTh: mucks
+AlexTh wins 180 
+
+
+Hand#5127FD7A47000236 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/15/30 NL Hold'em -- 2018/04/19 - 08:45:04
+Dealer: Seat 10
+Seat 1: Swindler11 (5 279 in chips) 
+Seat 2: drifter72 (1 073 in chips) 
+Seat 3: gillsi1 (1 140 in chips) 
+Seat 4: AlexTh (1 300 in chips) 
+Seat 7: MoTheThird (2 965 in chips) 
+Seat 8: IAmDonkey2 (3 155 in chips) 
+Seat 9: dankpot (1 425 in chips) 
+Seat 10: archangel333 (1 503 in chips) 
+Swindler11: posts small blind 15
+drifter72: posts big blind 30
+Dealt to AlexTh [3c,5c]
+gillsi1: calls 30
+AlexTh: folds
+MoTheThird: raises to 90
+IAmDonkey2: folds
+dankpot: calls 90
+archangel333: calls 90
+Swindler11: calls 75
+drifter72: calls 60
+gillsi1: calls 60
+*** FLOP *** [6s,8s,As]
+Swindler11: checks
+drifter72: checks
+gillsi1: checks
+MoTheThird: checks
+dankpot: checks
+archangel333: is all in 1 413
+Swindler11: folds
+drifter72: folds
+gillsi1: folds
+MoTheThird: folds
+dankpot: folds
+dankpot: mucks
+archangel333: returns uncalled bet 1 413
+***SHOW DOWN***
+archangel333: mucks
+archangel333 wins 540 
+
+
+Hand#5127FD7A47000255 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/15/30 NL Hold'em -- 2018/04/19 - 08:46:12
+Dealer: Seat 1
+Seat 1: Swindler11 (5 189 in chips) 
+Seat 2: drifter72 (983 in chips) 
+Seat 3: gillsi1 (1 050 in chips) 
+Seat 4: AlexTh (1 300 in chips) 
+Seat 7: MoTheThird (2 875 in chips) 
+Seat 8: IAmDonkey2 (3 155 in chips) 
+Seat 9: dankpot (1 335 in chips) 
+Seat 10: archangel333 (1 953 in chips) 
+drifter72: posts small blind 15
+gillsi1: posts big blind 30
+Dealt to AlexTh [4c,2c]
+AlexTh: folds
+MoTheThird: folds
+IAmDonkey2: raises to 75
+dankpot: folds
+archangel333: calls 75
+Swindler11: calls 75
+drifter72: calls 60
+gillsi1: calls 45
+*** FLOP *** [Ac,3d,5h]
+drifter72: checks
+gillsi1: bets 250
+IAmDonkey2: raises to 500
+archangel333: folds
+Swindler11: folds
+drifter72: folds
+gillsi1: raises to 750
+IAmDonkey2: raises to 1 000
+gillsi1: is all in 225
+IAmDonkey2: returns uncalled bet 25
+gillsi1: shows [5c As]
+IAmDonkey2: shows [Ad 8d]
+*** TURN *** [4s]
+*** RIVER *** [9c]
+***SHOW DOWN***
+gillsi1 wins 2 325 with Two Pairs Aces and Fives   
+
+
+Hand#5127FD7A47000287 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/15/30 NL Hold'em -- 2018/04/19 - 08:48:16
+Dealer: Seat 2
+Seat 1: Swindler11 (5 114 in chips) 
+Seat 2: drifter72 (908 in chips) 
+Seat 3: gillsi1 (2 325 in chips) 
+Seat 4: AlexTh (1 300 in chips) 
+Seat 7: MoTheThird (2 875 in chips) 
+Seat 8: IAmDonkey2 (2 105 in chips) 
+Seat 9: dankpot (1 335 in chips) 
+Seat 10: archangel333 (1 878 in chips) 
+gillsi1: posts small blind 15
+AlexTh: posts big blind 30
+Dealt to AlexTh [4s,3c]
+MoTheThird: raises to 120
+IAmDonkey2: folds
+dankpot: folds
+archangel333: folds
+Swindler11: calls 120
+drifter72: calls 120
+gillsi1: folds
+AlexTh: folds
+*** FLOP *** [7d,8d,3s]
+MoTheThird: bets 210
+Swindler11: calls 210
+drifter72: calls 210
+*** TURN *** [9c]
+MoTheThird: bets 570
+Swindler11: calls 570
+drifter72: folds
+*** RIVER *** [4c]
+MoTheThird: bets 1 088
+Swindler11: folds
+MoTheThird: returns uncalled bet 1 088
+***SHOW DOWN***
+MoTheThird: mucks
+MoTheThird wins 2 175 
+
+
+Hand#5127FD7A47000306 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/15/30 NL Hold'em -- 2018/04/19 - 08:49:47
+Dealer: Seat 3
+Seat 1: Swindler11 (4 214 in chips) 
+Seat 2: drifter72 (578 in chips) 
+Seat 3: gillsi1 (2 310 in chips) 
+Seat 4: AlexTh (1 270 in chips) 
+Seat 7: MoTheThird (4 150 in chips) 
+Seat 9: dankpot (1 335 in chips) 
+Seat 10: archangel333 (1 878 in chips) 
+AlexTh: posts small blind 15
+MoTheThird: posts big blind 30
+Dealt to AlexTh [6s,8h]
+dankpot: raises to 60
+archangel333: folds
+Swindler11: folds
+drifter72: calls 60
+gillsi1: folds
+AlexTh: folds
+MoTheThird: folds
+*** FLOP *** [9d,5c,Ts]
+dankpot: checks
+drifter72: checks
+*** TURN *** [8c]
+dankpot: checks
+drifter72: is all in 518
+dankpot: folds
+drifter72: returns uncalled bet 518
+***SHOW DOWN***
+drifter72: mucks
+drifter72 wins 165 
+
+
+Hand#5127FD7A47000319 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/25/50 NL Hold'em -- 2018/04/19 - 08:50:55
+Dealer: Seat 4
+Seat 1: Swindler11 (4 214 in chips) 
+Seat 2: drifter72 (683 in chips) 
+Seat 3: gillsi1 (2 310 in chips) 
+Seat 4: AlexTh (1 255 in chips) 
+Seat 8: PORKER555 (1 500 in chips) 
+Seat 9: dankpot (1 275 in chips) 
+Seat 10: archangel333 (1 878 in chips) 
+PORKER555: posts big blind 50
+Dealt to AlexTh [3d,7h]
+dankpot: folds
+archangel333: folds
+Swindler11: folds
+drifter72: calls 50
+gillsi1: folds
+AlexTh: folds
+PORKER555: checks
+*** FLOP *** [5h,8d,8h]
+PORKER555: checks
+drifter72: checks
+*** TURN *** [Jh]
+PORKER555: checks
+drifter72: checks
+*** RIVER *** [6c]
+PORKER555: bets 50
+drifter72: raises to 100
+PORKER555: calls 50
+***SHOW DOWN***
+drifter72: shows [9d 7d] (Straight Nine high)
+PORKER555: mucks
+drifter72 wins 300 with Straight Nine high 
+PORKER555: mucks [Qd,6s] (TwoPair) .
+
+
+Hand#5127FD7A47000331 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/25/50 NL Hold'em -- 2018/04/19 - 08:51:35
+Dealer: Seat 7
+Seat 1: Swindler11 (4 214 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: gillsi1 (2 310 in chips) 
+Seat 4: AlexTh (1 255 in chips) 
+Seat 7: keda777 (1 706 in chips) 
+Seat 8: PORKER555 (1 350 in chips) 
+Seat 9: dankpot (1 275 in chips) 
+Seat 10: archangel333 (1 878 in chips) 
+PORKER555: posts small blind 25
+dankpot: posts big blind 50
+Dealt to AlexTh [Td,6c]
+archangel333: folds
+Swindler11: folds
+drifter72: folds
+gillsi1: calls 50
+AlexTh: folds
+keda777: raises to 100
+PORKER555: calls 75
+dankpot: calls 50
+gillsi1: calls 50
+*** FLOP *** [3s,3d,3c]
+PORKER555: checks
+dankpot: checks
+gillsi1: checks
+keda777: checks
+*** TURN *** [9d]
+PORKER555: checks
+dankpot: checks
+gillsi1: checks
+keda777: checks
+*** RIVER *** [2c]
+PORKER555: checks
+dankpot: bets 200
+gillsi1: folds
+keda777: calls 200
+PORKER555: folds
+***SHOW DOWN***
+dankpot: shows [Kc 9h] (Full House Threes full of Nines)
+keda777: mucks
+dankpot wins 800 with Full House Threes full of Nines 
+keda777: mucks [Kh,Ac] (ThreeOfAKind) .
+
+
+Hand#5127FD7A47000349 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 16 -- 0/25/50 NL Hold'em -- 2018/04/19 - 08:52:38
+Dealer: Seat 8
+Seat 1: Swindler11 (4 214 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: gillsi1 (2 210 in chips) 
+Seat 4: AlexTh (1 255 in chips) 
+Seat 7: keda777 (1 406 in chips) 
+Seat 8: PORKER555 (1 250 in chips) 
+Seat 9: dankpot (1 775 in chips) 
+Seat 10: archangel333 (1 878 in chips) 
+dankpot: posts small blind 25
+archangel333: posts big blind 50
+Dealt to AlexTh [Kh,Tc]
+Swindler11: calls 50
+drifter72: folds
+gillsi1: raises to 138
+AlexTh: calls 138
+keda777: calls 138
+PORKER555: calls 138
+dankpot: calls 113
+archangel333: calls 88
+Swindler11: calls 88
+*** FLOP *** [7d,2c,Jc]
+dankpot: checks
+archangel333: checks
+Swindler11: bets 250
+gillsi1: folds
+AlexTh: folds
+keda777: calls 250
+PORKER555: calls 250
+dankpot: folds
+archangel333: calls 250
+*** TURN *** [4h]
+archangel333: checks
+Swindler11: checks
+keda777: checks
+PORKER555: checks
+*** RIVER *** [Qc]
+archangel333: checks
+Swindler11: bets 300
+keda777: is all in 1 018
+PORKER555: folds
+archangel333: folds
+Swindler11: calls 718
+Swindler11: shows [Qs 5s]
+keda777: shows [6s Ad]
+***SHOW DOWN***
+Swindler11 wins 4 002 with Pair of Queens   
+
+
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: gillsi1 (2 072 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 8: PORKER555 (862 in chips) 
+Seat 9: dankpot (1 637 in chips) 
+Seat 10: archangel333 (1 490 in chips) 
+Player left the table
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+Hand#5127FD7A47000373 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 32 -- -1/25.0000/50.0000 NL Hold'em -- 2018/04/19 - 08:54:35
+Dealer: Seat 1
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+drifter72: posts small blind 25
+demolition: posts big blind 50
+Dealt to AlexTh [9c,Ts]
+AlexTh: calls 50
+PORKER555: calls 50
+dankpot: calls 50
+archangel333: folds
+gillsi1: calls 50
+Swindler11: calls 50
+drifter72: calls 25
+demolition: checks
+*** FLOP *** [Ac,Td,4c]
+drifter72: checks
+demolition: checks
+AlexTh: bets 50
+PORKER555: folds
+dankpot: calls 50
+gillsi1: folds
+Swindler11: raises to 275
+drifter72: folds
+demolition: folds
+AlexTh: calls 225
+dankpot: folds
+*** TURN *** [As]
+AlexTh: checks
+Swindler11: bets 300
+AlexTh: calls 300
+*** RIVER *** [3s]
+AlexTh: checks
+Swindler11: bets 500
+AlexTh: is all in 492
+Swindler11: returns uncalled bet 8
+Swindler11: shows [8c Ah]
+AlexTh: shows [9c Ts]
+***SHOW DOWN***
+Swindler11 wins 2 534 with Three of a Kind Aces   
+AlexTh finished 114 out of 209 players.
+
+
+Player left the table

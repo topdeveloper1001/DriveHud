@@ -1,0 +1,279 @@
+﻿ï»¿Hand#5126023113000127 - No Limit Hold'em 10/20 23113 -- 10/20 NL Hold'em -- 2018/04/18 - 15:53:10
+Dealer: Seat 2
+Seat 1: P&R-M-K,NH (2 134.75 in chips) 
+Seat 2: H0MMER (1 756 in chips) 
+Seat 3: AlexTh (900 in chips) 
+Seat 8: patti40 (615 in chips) 
+Seat 9: neverwin333 (92.25 in chips) 
+patti40: posts small blind 10
+neverwin333: posts big blind 20
+P&R-M-K,NH: calls 20
+H0MMER: folds
+patti40: calls 10
+neverwin333: checks
+*** FLOP *** [7d,7c,5s]
+patti40: checks
+neverwin333: checks
+P&R-M-K,NH: checks
+*** TURN *** [Td]
+patti40: checks
+neverwin333: checks
+P&R-M-K,NH: checks
+*** RIVER *** [9s]
+patti40: bets 20
+neverwin333: folds
+P&R-M-K,NH: folds
+P&R-M-K,NH: mucks
+patti40: returns uncalled bet 20
+***SHOW DOWN***
+patti40: mucks
+patti40 wins 57 
+
+
+Hand#5126023113000128 - No Limit Hold'em 10/20 23113 -- 10/20 NL Hold'em -- 2018/04/18 - 15:53:48
+Dealer: Seat 8
+Seat 1: P&R-M-K,NH (2 114.75 in chips) 
+Seat 2: H0MMER (1 756 in chips) 
+Seat 3: AlexTh (900 in chips) 
+Seat 8: patti40 (652 in chips) 
+Seat 9: neverwin333 (72.25 in chips) 
+neverwin333: posts small blind 10
+P&R-M-K,NH: posts big blind 20
+AlexTh: posts big blind 20
+Dealt to AlexTh [4s,5s]
+H0MMER: raises to 40
+AlexTh: folds
+patti40: calls 40
+neverwin333: calls 30
+P&R-M-K,NH: calls 20
+*** FLOP *** [2c,6s,3h]
+neverwin333: checks
+P&R-M-K,NH: checks
+H0MMER: bets 90
+patti40: folds
+neverwin333: is all in 32.25
+P&R-M-K,NH: calls 90
+*** TURN *** [6d]
+P&R-M-K,NH: checks
+H0MMER: bets 392.25
+P&R-M-K,NH: folds
+H0MMER: returns uncalled bet 392.25
+H0MMER: shows [3s Ac]
+neverwin333: shows [6h 7s]
+H0MMER  chats: so slow
+*** RIVER *** [9c]
+***SHOW DOWN***
+H0MMER wins 109.73 with Two Pairs Sixes and Threes   
+***SHOW DOWN***
+neverwin333 wins 262.92 with Three of a Kind Sixes   
+H0MMER  chats: gh
+
+
+Hand#5126023113000129 - No Limit Hold'em 10/20 23113 -- 10/20 NL Hold'em -- 2018/04/18 - 15:55:18
+Dealer: Seat 9
+Seat 2: H0MMER (1 735.73 in chips) 
+Seat 3: AlexTh (880 in chips) 
+Seat 8: patti40 (612 in chips) 
+Seat 9: neverwin333 (1 462.92 in chips) 
+H0MMER: posts big blind 20
+Dealt to AlexTh [7c,4d]
+AlexTh: folds
+patti40: calls 20
+neverwin333: folds
+H0MMER: checks
+*** FLOP *** [Th,Ts,7d]
+H0MMER: checks
+patti40: bets 20
+H0MMER: folds
+patti40: returns uncalled bet 20
+***SHOW DOWN***
+patti40: mucks
+patti40 wins 38 
+
+
+Hand#5126023113000130 - No Limit Hold'em 10/20 23113 -- 10/20 NL Hold'em -- 2018/04/18 - 15:55:42
+Dealer: Seat 1
+Seat 2: H0MMER (1 715.73 in chips) 
+Seat 3: AlexTh (880 in chips) 
+Seat 8: patti40 (630 in chips) 
+Seat 9: neverwin333 (1 462.92 in chips) 
+H0MMER: posts small blind 10
+AlexTh: posts big blind 20
+Dealt to AlexTh [9h,8c]
+patti40: folds
+neverwin333: calls 20
+H0MMER: raises to 80
+AlexTh: folds
+neverwin333: folds
+H0MMER: returns uncalled bet 60
+***SHOW DOWN***
+H0MMER: mucks
+H0MMER wins 60 
+
+
+Hand#5126023113000131 - No Limit Hold'em 10/20 23113 -- 10/20 NL Hold'em -- 2018/04/18 - 15:56:03
+Dealer: Seat 2
+Seat 2: H0MMER (1 755.73 in chips) 
+Seat 3: AlexTh (860 in chips) 
+Seat 8: patti40 (630 in chips) 
+Seat 9: neverwin333 (1 442.92 in chips) 
+AlexTh: posts small blind 10
+patti40: posts big blind 20
+Dealt to AlexTh [6c,2d]
+neverwin333: calls 20
+H0MMER  chats: pk is so slow
+H0MMER: folds
+AlexTh: folds
+patti40: checks
+*** FLOP *** [Ad,Th,2c]
+patti40: checks
+neverwin333: checks
+*** TURN *** [5s]
+patti40: checks
+neverwin333: checks
+*** RIVER *** [Kc]
+patti40: bets 20
+neverwin333: folds
+patti40: returns uncalled bet 20
+***SHOW DOWN***
+patti40: mucks
+patti40 wins 47.50 
+
+
+Hand#5126023113000132 - No Limit Hold'em 10/20 23113 -- 10/20 NL Hold'em -- 2018/04/18 - 15:56:42
+Dealer: Seat 3
+Seat 2: H0MMER (1 755.73 in chips) 
+Seat 3: AlexTh (850 in chips) 
+Seat 8: patti40 (657.50 in chips) 
+Seat 9: neverwin333 (1 422.92 in chips) 
+patti40: posts small blind 10
+neverwin333: posts big blind 20
+Dealt to AlexTh [Qc,8h]
+H0MMER: folds
+AlexTh: calls 20
+patti40: folds
+neverwin333: checks
+*** FLOP *** [Kh,7s,6h]
+neverwin333: checks
+AlexTh: checks
+*** TURN *** [3c]
+neverwin333: checks
+AlexTh: checks
+*** RIVER *** [9s]
+neverwin333: checks
+AlexTh: checks
+***SHOW DOWN***
+AlexTh: shows [Qc 8h] (High card King  )
+neverwin333: mucks
+AlexTh wins 47.50 with High card King with Queen kicker 
+neverwin333: mucks [2c,8d] (HighCard) .
+
+
+Hand#5126023113000133 - No Limit Hold'em 10/20 23113 -- 10/20 NL Hold'em -- 2018/04/18 - 15:57:08
+Dealer: Seat 8
+Seat 2: H0MMER (1 755.73 in chips) 
+Seat 3: AlexTh (877.50 in chips) 
+Seat 8: patti40 (647.50 in chips) 
+Seat 9: neverwin333 (1 402.92 in chips) 
+neverwin333: posts small blind 10
+H0MMER: posts big blind 20
+Dealt to AlexTh [5c,Qd]
+AlexTh: folds
+patti40: folds
+neverwin333: calls 10
+H0MMER: raises to 60
+neverwin333: calls 40
+*** FLOP *** [8c,9h,3h]
+neverwin333: checks
+H0MMER: bets 60
+neverwin333: calls 60
+*** TURN *** [6d]
+neverwin333: checks
+H0MMER: bets 240
+neverwin333: folds
+H0MMER: returns uncalled bet 240
+***SHOW DOWN***
+H0MMER: mucks
+H0MMER wins 228 
+
+
+Hand#5126023113000134 - No Limit Hold'em 10/20 23113 -- 10/20 NL Hold'em -- 2018/04/18 - 15:57:45
+Dealer: Seat 9
+Seat 2: H0MMER (1 863.73 in chips) 
+Seat 3: AlexTh (877.50 in chips) 
+Seat 8: patti40 (647.50 in chips) 
+Seat 9: neverwin333 (1 282.92 in chips) 
+H0MMER: posts small blind 10
+AlexTh: posts big blind 20
+Dealt to AlexTh [6h,Kd]
+patti40: folds
+neverwin333: calls 20
+H0MMER: calls 10
+AlexTh: checks
+*** FLOP *** [5s,Ts,5d]
+H0MMER: checks
+AlexTh: checks
+neverwin333: checks
+*** TURN *** [As]
+H0MMER  chats: 2 cards not like your reading the player. Not a novel
+H0MMER: checks
+AlexTh: checks
+neverwin333: checks
+*** RIVER *** [3d]
+H0MMER: checks
+AlexTh: checks
+neverwin333: checks
+***SHOW DOWN***
+neverwin333: shows [8c 3c] (Two Pairs Fives and Threes  )
+H0MMER: mucks
+AlexTh: mucks
+neverwin333 wins 57 with Two Pairs Fives and Threes   
+AlexTh: mucks [6h,Kd] (Pair) .
+H0MMER: mucks [7c,6c] (Pair) .
+
+
+Hand#5126023113000135 - No Limit Hold'em 10/20 23113 -- 10/20 NL Hold'em -- 2018/04/18 - 15:58:34
+Dealer: Seat 2
+Seat 2: H0MMER (1 843.73 in chips) 
+Seat 3: AlexTh (857.50 in chips) 
+Seat 8: patti40 (647.50 in chips) 
+Seat 9: neverwin333 (1 319.92 in chips) 
+AlexTh: posts small blind 10
+patti40: posts big blind 20
+Dealt to AlexTh [7c,3d]
+neverwin333: folds
+H0MMER: folds
+AlexTh: folds
+***SHOW DOWN***
+patti40: mucks
+patti40 wins 30 
+
+
+Hand#5126023113000136 - No Limit Hold'em 10/20 23113 -- 10/20 NL Hold'em -- 2018/04/18 - 15:58:47
+Dealer: Seat 3
+Seat 2: H0MMER (1 843.73 in chips) 
+Seat 3: AlexTh (847.50 in chips) 
+Seat 8: patti40 (657.50 in chips) 
+Seat 9: neverwin333 (1 319.92 in chips) 
+patti40: posts small blind 10
+neverwin333: posts big blind 20
+Dealt to AlexTh [5s,9h]
+H0MMER  chats: raise fold or stay
+H0MMER: raises to 40
+AlexTh: folds
+patti40: folds
+neverwin333: calls 20
+*** FLOP *** [Kd,Kh,Ac]
+neverwin333: checks
+H0MMER: checks
+*** TURN *** [4s]
+neverwin333: checks
+H0MMER: bets 20
+neverwin333: folds
+H0MMER: returns uncalled bet 20
+***SHOW DOWN***
+H0MMER: mucks
+H0MMER wins 85.50 
+Player left the table
+
+

@@ -704,6 +704,20 @@
   <ItemGroup>
     <Resource Include="images\icons\heatmap-small-2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\SiteLogos\revolution_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\settings\rev-10max.png" />
+    <Resource Include="images\settings\rev-2max.png" />
+    <Resource Include="images\settings\rev-3max.png" />
+    <Resource Include="images\settings\rev-4max.png" />
+    <Resource Include="images\settings\rev-5max.png" />
+    <Resource Include="images\settings\rev-6max.png" />
+    <Resource Include="images\settings\rev-7max.png" />
+    <Resource Include="images\settings\rev-8max.png" />
+    <Resource Include="images\settings\rev-9max.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>

@@ -52,6 +52,32 @@ namespace DriveHUD.Importers
             { 10, new decimal[] { 0.5m, 0.3m, 0.2m } },
         };
 
+        private static readonly Dictionary<int, decimal[]> RevolutionSnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>()
+        {
+            { 2, new decimal[] { 1m } },
+            { 3, new decimal[] { 1m } },
+            { 4, new decimal[] { 0.65m, 0.35m } },
+            { 5, new decimal[] { 0.65m, 0.35m } },
+            { 6, new decimal[] { 0.65m, 0.35m } },
+            { 7, new decimal[] { 0.5m, 0.3m, 0.2m } },
+            { 8, new decimal[] { 0.5m, 0.3m, 0.2m } },
+            { 9, new decimal[] { 0.5m, 0.3m, 0.2m } },
+            { 10, new decimal[] { 0.5m, 0.3m, 0.2m } },
+        };
+
+        private static readonly Dictionary<int, decimal[]> RevolutionBountySnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>()
+        {
+            { 2, new decimal[] { 1m } },
+            { 3, new decimal[] { 1m } },
+            { 4, new decimal[] { 0.3m, 0.2m } },
+            { 5, new decimal[] { 0.3m, 0.2m } },
+            { 6, new decimal[] { 0.3m, 0.2m } },
+            { 7, new decimal[] { 0.25m, 0.15m, 0.1m } },
+            { 8, new decimal[] { 0.25m, 0.15m, 0.1m } },
+            { 9, new decimal[] { 0.25m, 0.15m, 0.1m } },
+            { 10, new decimal[] { 0.25m, 0.15m, 0.1m } },
+        };
+
         private static readonly Dictionary<int, decimal[]> WinningPokerNetworkSnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>()
         {
             { 2, new decimal[] { 1m } },
@@ -69,7 +95,7 @@ namespace DriveHUD.Importers
         /// Get prize pool multiplier for tournament
         /// </summary>
         /// <returns>Dictionary where key is number of players in SnG and value is array of ordered prize rates starting from the 1st place</returns>
-        public static Dictionary<int, decimal[]> GetWinningsMultiplier(EnumPokerSites pokerSite, bool isBeginner = false)
+        public static Dictionary<int, decimal[]> GetWinningsMultiplier(EnumPokerSites pokerSite, bool isBeginner = false, bool isBounty = false)
         {
             switch (pokerSite)
             {
@@ -91,6 +117,8 @@ namespace DriveHUD.Importers
                 case EnumPokerSites.TruePoker:
                 case EnumPokerSites.YaPoker:
                     return WinningPokerNetworkSnGWinningsMultiplierDictionary;
+                case EnumPokerSites.Revolution:
+                    return isBounty ? RevolutionBountySnGWinningsMultiplierDictionary : RevolutionSnGWinningsMultiplierDictionary;
                 default:
                     break;
             }

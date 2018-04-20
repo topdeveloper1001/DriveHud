@@ -61,6 +61,12 @@ namespace HandHistories.Parser.Utils.Extensions
                 return true;
             }
 
+            if (handText.Contains("Hand#"))
+            {
+                siteName = EnumPokerSites.Revolution;
+                return true;
+            }
+
             if (handText.StartsWith("***** Cassava Tournament Summary *****", StringComparison.InvariantCultureIgnoreCase))
             {
                 siteName = EnumPokerSites.Poker888;

@@ -38,10 +38,10 @@ namespace HandHistories.Objects.GameDescription
         public decimal TotalPrize { get; set; }
 
         [XmlElement]
-        public short FinishPosition { get; set; }
+        public int FinishPosition { get; set; }
 
         [XmlElement]
-        public short TotalPlayers { get; set; }
+        public int TotalPlayers { get; set; }
 
         [XmlElement]
         public DateTime StartDate { get; set; }

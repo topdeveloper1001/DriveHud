@@ -1,0 +1,44 @@
+ï»¿Hand#5128FD7BB4000013 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 19 -- -1/-1/0 NL Hold'em -- 2018/04/20 - 22:00:06
+Dealer: Seat 1
+Seat 1: X7SEVEN7X (3 000 in chips) 
+Seat 2: AlexTh (3 000 in chips) 
+Seat 3: lastdate (3 000 in chips) 
+Seat 4: qbit61 (3 000 in chips) 
+Seat 7: Penguin_Jeff (3 000 in chips) 
+Seat 8: RichieBuck1 (3 000 in chips) 
+Seat 9: justpokerin (3 000 in chips) 
+Seat 10: mlanza (3 000 in chips) 
+AlexTh: posts small blind -1
+lastdate: posts big blind 20
+Dealt to AlexTh [Kd,Jc]
+qbit61: calls 20
+Penguin_Jeff: raises to 40
+RichieBuck1: calls 40
+justpokerin: folds
+mlanza: folds
+X7SEVEN7X: folds
+AlexTh: calls 30
+lastdate: calls 20
+qbit61: calls 20
+*** FLOP *** [Jd,6d,6s]
+AlexTh: bets 100
+lastdate: folds
+qbit61: folds
+Penguin_Jeff: calls 100
+RichieBuck1: calls 100
+*** TURN *** [8s]
+AlexTh: checks
+Penguin_Jeff: bets 250
+RichieBuck1: calls 250
+AlexTh: calls 250
+*** RIVER *** [Th]
+AlexTh: checks
+Penguin_Jeff: checks
+RichieBuck1: bets 120
+AlexTh: calls 120
+Penguin_Jeff: calls 120
+***SHOW DOWN***
+RichieBuck1: shows [5d 7d] (Pair of Sixes  )
+AlexTh: shows [Kd Jc] (Two Pairs Jacks and Sixes  )
+Penguin_Jeff: shows [Ts Js] (Two Pairs Jacks and Tens  )
+Penguin_Jeff wins 1 610 with Two Pairs Jacks and Tens   

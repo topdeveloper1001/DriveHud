@@ -28,18 +28,18 @@ namespace HandHistories.Parser.Utils.FastParsing
     {
         public static TournamentSpeed ParseTournamentSpeed(string input)
         {
-            if (input.IndexOf("Super Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
+            if (input.IndexOf("Super Turbo", StringComparison.InvariantCultureIgnoreCase) >= 0)
             {
                 return TournamentSpeed.SuperTurbo;
             }
 
-            if (input.IndexOf("Hyper Turbo", StringComparison.InvariantCultureIgnoreCase) > 0 ||
-                  input.IndexOf("Hyper-Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
+            if (input.IndexOf("Hyper Turbo", StringComparison.InvariantCultureIgnoreCase) >= 0 ||
+                  input.IndexOf("Hyper-Turbo", StringComparison.InvariantCultureIgnoreCase) >= 0)
             {
                 return TournamentSpeed.HyperTurbo;
             }
 
-            if (input.IndexOf("Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
+            if (input.IndexOf("Turbo", StringComparison.InvariantCultureIgnoreCase) >= 0)
             {
                 return TournamentSpeed.Turbo;
             }
@@ -316,6 +316,6 @@ namespace HandHistories.Parser.Utils.FastParsing
             var indexOfLastStreetAction = handHistory.HandActions.IndexOf(lastStreeAction);
 
             handHistory.HandActions.Insert(indexOfLastStreetAction + 1, uncalledBet);
-        }
+        }        
     }
 }

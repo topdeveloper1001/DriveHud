@@ -1,0 +1,110 @@
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: gillsi1 (2 072 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 8: PORKER555 (862 in chips) 
+Seat 9: dankpot (1 637 in chips) 
+Seat 10: archangel333 (1 490 in chips) 
+Player left the table
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+Dealer: Seat 0
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+Hand#5127FD7A47000373 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 32 -- -1/25.0000/50.0000 NL Hold'em -- 2018/04/19 - 08:54:35
+Dealer: Seat 1
+Seat 1: Swindler11 (6 810 in chips) 
+Seat 2: drifter72 (833 in chips) 
+Seat 3: demolition (1 500 in chips) 
+Seat 4: AlexTh (1 117 in chips) 
+Seat 7: PORKER555 (862 in chips) 
+Seat 8: dankpot (1 637 in chips) 
+Seat 9: archangel333 (1 490 in chips) 
+Seat 10: gillsi1 (2 072 in chips) 
+drifter72: posts small blind 25
+demolition: posts big blind 50
+Dealt to AlexTh [9c,Ts]
+AlexTh: calls 50
+PORKER555: calls 50
+dankpot: calls 50
+archangel333: folds
+gillsi1: calls 50
+Swindler11: calls 50
+drifter72: calls 25
+demolition: checks
+*** FLOP *** [Ac,Td,4c]
+drifter72: checks
+demolition: checks
+AlexTh: bets 50
+PORKER555: folds
+dankpot: calls 50
+gillsi1: folds
+Swindler11: raises to 275
+drifter72: folds
+demolition: folds
+AlexTh: calls 225
+dankpot: folds
+*** TURN *** [As]
+AlexTh: checks
+Swindler11: bets 300
+AlexTh: calls 300
+*** RIVER *** [3s]
+AlexTh: checks
+Swindler11: bets 500
+AlexTh: is all in 492
+Swindler11: returns uncalled bet 8
+Swindler11: shows [8c Ah]
+AlexTh: shows [9c Ts]
+***SHOW DOWN***
+Swindler11 wins 2 534 with Three of a Kind Aces   
+AlexTh finished 114 out of 209 players.

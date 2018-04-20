@@ -1,12 +1,7 @@
 ﻿using DriveHUD.Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Data;
 using System.Globalization;
-using System.Windows;
+using System.Windows.Data;
 
 namespace DriveHUD.Common.Wpf.Converters
 {
@@ -46,6 +41,8 @@ namespace DriveHUD.Common.Wpf.Converters
                         return "YP";
                     case EnumPokerSites.PartyPoker:
                         return "PP";
+                    case EnumPokerSites.Revolution:
+                        return "REV";
                     default:
                         break;
                 }
