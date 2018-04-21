@@ -1140,7 +1140,7 @@ namespace DriveHUD.Importers
                     }
                 }
 
-                if (siteNetwork == EnumPokerNetworks.Revolution)
+                if (siteNetwork == EnumPokerNetworks.Horizon)
                 {
                     // only 1 winner
                     if (tournamentName.IndexOf("KAMIKAZE", StringComparison.OrdinalIgnoreCase) >= 0)

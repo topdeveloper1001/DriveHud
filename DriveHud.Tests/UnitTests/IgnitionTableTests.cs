@@ -68,7 +68,7 @@ namespace DriveHud.Tests.UnitTests
             unityContainer.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
             unityContainer.RegisterType<ISiteConfiguration, IPokerConfiguration>(EnumPokerSites.IPoker.ToString());
             unityContainer.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
-            unityContainer.RegisterType<ISiteConfiguration, RevolutionConfiguration>(EnumPokerSites.Revolution.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, HorizonConfiguration>(EnumPokerSites.Horizon.ToString());
             unityContainer.RegisterType<ISiteConfigurationService, SiteConfigurationService>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<IFileImporter, FileImporterStub>(new ContainerControlledLifetimeManager());
 

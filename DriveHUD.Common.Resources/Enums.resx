@@ -995,10 +995,10 @@
   <data name="Enum_Stat_TurnBet" xml:space="preserve">
     <value>Turn Bet%</value>
   </data>
-  <data name="Enum_EnumPokerSites_Revolution" xml:space="preserve">
-    <value>Revolution Gaming</value>
+  <data name="Enum_EnumPokerSites_Horizon" xml:space="preserve">
+    <value>Horizon Poker</value>
   </data>
-  <data name="Enum_EnumPokerNetworks_Revolution" xml:space="preserve">
-    <value>Revolution Gaming Network</value>
+  <data name="Enum_EnumPokerNetworks_Horizon" xml:space="preserve">
+    <value>Horizon Poker Network</value>
   </data>
 </root>

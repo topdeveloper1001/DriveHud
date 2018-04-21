@@ -22,7 +22,7 @@ namespace DriveHUD.Entities
         PartyPoker,
         IPoker,
         GGN,
-        Revolution,
+        Horizon,
         Unknown
     }
 }

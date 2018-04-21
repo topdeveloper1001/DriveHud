@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="RevolutionSiteSettingTableConfigurator.cs" company="Ace Poker Solutions">
+// <copyright file="HorizonSiteSettingTableConfigurator.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 namespace DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators
 {
-    internal class RevolutionSiteSettingTableConfigurator : BaseSiteSettingTableConfigurator
+    internal class HorizonSiteSettingTableConfigurator : BaseSiteSettingTableConfigurator
     {
         private const string BackgroundTableImage = "/DriveHUD.Common.Resources;component/images/settings/rev-{0}max.png";
 

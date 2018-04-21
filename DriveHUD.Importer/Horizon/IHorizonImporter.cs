@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="RevolutionHudPanelService.cs" company="Ace Poker Solutions">
+// <copyright file="IHorizonImporter.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,20 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-
-namespace DriveHUD.Application.ViewModels.Hud
+namespace DriveHUD.Importers.Horizon
 {
-    internal class RevolutionHudPanelService : HudPanelService
+    internal interface IHorizonImporter : IAutoImporter
     {
-        /// <summary>
-        /// Get initial table size 
-        /// </summary>
-        /// <returns>Return dimensions of initial table, Item1 - Width, Item - Height</returns>
-        public override Tuple<double, double> GetInitialTableSize()
-        {
-            return new Tuple<double, double>(800, 625);
-
-        }
     }
 }

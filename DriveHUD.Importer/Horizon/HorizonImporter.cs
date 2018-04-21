@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="RevolutionImporter.cs" company="Ace Poker Solutions">
+// <copyright file="HorizonImporter.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -21,15 +21,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DriveHUD.Importers.Revolution
+namespace DriveHUD.Importers.Horizon
 {
-    internal class RevolutionImporter : FileBasedImporter, IRevolutionImporter
+    internal class HorizonImporter : FileBasedImporter, IHorizonImporter
     {
         protected override string HandHistoryFilter => "*.txt";
 
         protected override string ProcessName => "PokerClient";
 
-        protected override EnumPokerSites Site => EnumPokerSites.Revolution;
+        protected override EnumPokerSites Site => EnumPokerSites.Horizon;
 
         protected override bool InternalMatch(string title, ParsingResult parsingResult)
         {

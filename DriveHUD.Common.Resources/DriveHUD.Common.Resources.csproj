@@ -705,7 +705,7 @@
     <Resource Include="images\icons\heatmap-small-2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\SiteLogos\revolution_logo.png" />
+    <Resource Include="images\SiteLogos\horizon_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\settings\rev-10max.png" />

@@ -52,7 +52,7 @@ namespace DriveHUD.Importers
             { 10, new decimal[] { 0.5m, 0.3m, 0.2m } },
         };
 
-        private static readonly Dictionary<int, decimal[]> RevolutionSnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>()
+        private static readonly Dictionary<int, decimal[]> HorizonSnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>()
         {
             { 2, new decimal[] { 1m } },
             { 3, new decimal[] { 1m } },
@@ -65,7 +65,7 @@ namespace DriveHUD.Importers
             { 10, new decimal[] { 0.5m, 0.3m, 0.2m } },
         };
 
-        private static readonly Dictionary<int, decimal[]> RevolutionBountySnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>()
+        private static readonly Dictionary<int, decimal[]> HorizonBountySnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>()
         {
             { 2, new decimal[] { 1m } },
             { 3, new decimal[] { 1m } },
@@ -117,8 +117,8 @@ namespace DriveHUD.Importers
                 case EnumPokerSites.TruePoker:
                 case EnumPokerSites.YaPoker:
                     return WinningPokerNetworkSnGWinningsMultiplierDictionary;
-                case EnumPokerSites.Revolution:
-                    return isBounty ? RevolutionBountySnGWinningsMultiplierDictionary : RevolutionSnGWinningsMultiplierDictionary;
+                case EnumPokerSites.Horizon:
+                    return isBounty ? HorizonBountySnGWinningsMultiplierDictionary : HorizonSnGWinningsMultiplierDictionary;
                 default:
                     break;
             }

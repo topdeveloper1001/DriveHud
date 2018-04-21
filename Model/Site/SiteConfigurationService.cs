@@ -51,7 +51,7 @@ namespace Model.Site
                 EnumPokerSites.TruePoker,
                 EnumPokerSites.YaPoker,
                 EnumPokerSites.PartyPoker,
-                EnumPokerSites.Revolution                
+                EnumPokerSites.Horizon                
             };
 
             foreach (EnumPokerSites site in sites)
