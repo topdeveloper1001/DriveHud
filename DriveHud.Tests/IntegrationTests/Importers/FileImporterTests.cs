@@ -73,7 +73,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             unityContainer.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
             unityContainer.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
             unityContainer.RegisterType<ISiteConfiguration, IPokerConfiguration>(EnumPokerSites.IPoker.ToString());
-            unityContainer.RegisterType<ISiteConfiguration, RevolutionConfiguration>(EnumPokerSites.Revolution.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, HorizonConfiguration>(EnumPokerSites.Horizon.ToString());
             unityContainer.RegisterType<ISiteConfigurationService, SiteConfigurationService>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
         }
@@ -332,8 +332,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             Tuple.Create(@"PokerStars\HH20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),
             Tuple.Create(@"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),
             Tuple.Create(@"WinningPokerNetwork\20170507_20170511_Sng2HH.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),
-            Tuple.Create(@"Revolution\HH20180420 The Colosseum - $100 GTD T16612276.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),
-            Tuple.Create(@"Revolution\HH20180420 Hyper Turbo NLH 3-max - $0.25 T16612340.txt", EnumPokerSites.Unknown, (IFileTestImporter)null)            
+            Tuple.Create(@"Horizon\HH20180420 The Colosseum - $100 GTD T16612276.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),
+            Tuple.Create(@"Horizon\HH20180420 Hyper Turbo NLH 3-max - $0.25 T16612340.txt", EnumPokerSites.Unknown, (IFileTestImporter)null)            
         };
 
         private class TestDataSet

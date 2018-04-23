@@ -63,7 +63,7 @@ namespace HandHistories.Parser.Utils.Extensions
 
             if (handText.Contains("Hand#"))
             {
-                siteName = EnumPokerSites.Revolution;
+                siteName = EnumPokerSites.Horizon;
                 return true;
             }
 

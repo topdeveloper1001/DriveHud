@@ -229,7 +229,7 @@
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 8 Max - Real Money.txt" />
     <Compile Include="IntegrationTests\Parsers\PartyPoker\PartyPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
-    <Compile Include="IntegrationTests\Parsers\Revolution\RevolutionFastParserTests.cs" />
+    <Compile Include="IntegrationTests\Parsers\Horizon\HorizonFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\TowerTorneos\TowerTorneosFastParserTest.cs" />
     <Compile Include="IntegrationTests\Parsers\WinningPokerNetwork\WinningPokerNetworkFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\WSPO\WSPONetFastParserTest.cs" />
@@ -1329,10 +1329,10 @@
   <ItemGroup>
     <Folder Include="IntegrationTests\Importers\TestData\" />
     <Folder Include="IntegrationTests\Migrations\TestData\" />
+    <Folder Include="IntegrationTests\Parsers\Horizon\TestData\" />
     <Folder Include="IntegrationTests\Parsers\IPoker\TestData\" />
     <Folder Include="IntegrationTests\Parsers\Pacific\TestData\" />
     <Folder Include="IntegrationTests\Parsers\PokerStars\TestData\" />
-    <Folder Include="IntegrationTests\Parsers\Revolution\TestData\" />
     <Folder Include="IntegrationTests\Parsers\TowerTorneos\TestData\" />
     <Folder Include="IntegrationTests\Parsers\WSPO\TestData\" />
   </ItemGroup>

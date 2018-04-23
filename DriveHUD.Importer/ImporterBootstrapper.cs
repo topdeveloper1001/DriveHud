@@ -20,7 +20,7 @@ using DriveHUD.Importers.Pacific888;
 using DriveHUD.Importers.PartyPoker;
 using DriveHUD.Importers.PokerMaster;
 using DriveHUD.Importers.PokerStars;
-using DriveHUD.Importers.Revolution;
+using DriveHUD.Importers.Horizon;
 using DriveHUD.Importers.WinningPokerNetwork;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
@@ -81,7 +81,7 @@ namespace DriveHUD.Importers
             container.RegisterType<ITableWindowProvider, TableWindowProvider>();
             container.RegisterType<IPacketManager, PacketManager>();
             container.RegisterType<IPMImporter, PMImporter>();
-            container.RegisterType<IRevolutionImporter, RevolutionImporter>();
+            container.RegisterType<IHorizonImporter, HorizonImporter>();
             container.RegisterType<IPokerEvaluator, HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
             container.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.Omaha.ToString());
             container.RegisterType<IPokerEvaluator, OmahaHiLoEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
@@ -119,7 +119,7 @@ namespace DriveHUD.Importers
             importerService.Register<IIPokerImporter>();
             importerService.Register<IExternalImporter>();
             importerService.Register<IPMImporter>();
-            importerService.Register<IRevolutionImporter>();
+            importerService.Register<IHorizonImporter>();
         }
     }
 }

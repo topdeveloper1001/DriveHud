@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="RevolutionConfiguration.cs" company="Ace Poker Solutions">
+// <copyright file="HorizonConfiguration.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -20,10 +20,8 @@ using System.Linq;
 
 namespace Model.Site
 {
-    public class RevolutionConfiguration : BaseSiteConfiguration, ISiteConfiguration
-    {
-        private readonly string[] registryKeys = new[] { "Intertops Poker" };
-
+    public class HorizonConfiguration : BaseSiteConfiguration, ISiteConfiguration
+    {        
         private readonly string[] possibleFolders = new[]
         {
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CPN"),
@@ -37,7 +35,7 @@ namespace Model.Site
             "Hand Histories"
         };
 
-        public RevolutionConfiguration()
+        public HorizonConfiguration()
         {
             prefferedSeat = new Dictionary<int, int>();
 
@@ -59,7 +57,7 @@ namespace Model.Site
         {
             get
             {
-                return EnumPokerSites.Revolution;
+                return EnumPokerSites.Horizon;
             }
         }
 
@@ -102,7 +100,7 @@ namespace Model.Site
         {
             get
             {
-                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/revolution_logo.png";
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/Horizon_logo.png";
             }
         }
 

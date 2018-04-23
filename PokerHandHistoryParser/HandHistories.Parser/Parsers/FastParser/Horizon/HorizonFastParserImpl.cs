@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="RevolutionFastParserImpl.cs" company="Ace Poker Solutions">
+// <copyright file="HorizonFastParserImpl.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -29,17 +29,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HandHistories.Parser.Parsers.FastParser.Revolution
+namespace HandHistories.Parser.Parsers.FastParser.Horizon
 {
     /// <summary>
-    /// Implements parser for Revolution Gaming Network (InterTops Poker, Juicy Stakes, BetUS.com, BrucePoker, ChocolatePoker, ColtPoker) 
+    /// Implements parser for Horizon Gaming Network (InterTops Poker, Juicy Stakes, BetUS.com, BrucePoker, ChocolatePoker, ColtPoker) 
     /// </summary>
-    internal class RevolutionFastParserImpl : HandHistoryParserFastImpl
+    internal class HorizonFastParserImpl : HandHistoryParserFastImpl
     {
         // until DH doesn't support different currencies we will use USD as default
         private const Currency DefaultCurrency = Currency.USD;
 
-        public override EnumPokerSites SiteName => EnumPokerSites.Revolution;
+        public override EnumPokerSites SiteName => EnumPokerSites.Horizon;
 
         public override bool RequiresSeatTypeAdjustment => true;
 
@@ -958,7 +958,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Revolution
             return handText.Substring(startIndex); ;
         }
 
-        #region Internal revolution specific methods
+        #region Internal Horizon specific methods
 
         /// <summary>
         /// Checks if HH is tournament HH

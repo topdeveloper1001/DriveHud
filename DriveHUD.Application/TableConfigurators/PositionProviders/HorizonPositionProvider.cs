@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="RevolutionPositionProvider.cs" company="Ace Poker Solutions">
+// <copyright file="HorizonPositionProvider.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -14,9 +14,9 @@ using System.Collections.Generic;
 
 namespace DriveHUD.Application.TableConfigurators.PositionProviders
 {
-    public class RevolutionPositionProvider : IPositionProvider
+    public class HorizonPositionProvider : IPositionProvider
     {
-        public RevolutionPositionProvider()
+        public HorizonPositionProvider()
         {
             Positions = new Dictionary<int, int[,]>
             {
@@ -70,14 +70,14 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
                     9,
                     new int[,]
                     {
-                        { 490, 101 }, { 640, 198 }, { 651, 337 }, { 511, 422 }, { 336, 422 }, { 169, 422 }, { 29, 337 }, { 32, 198 }, { 184, 101 }
+                        { 490, 101 }, { 640, 198 }, { 645, 337 }, { 511, 422 }, { 336, 422 }, { 169, 422 }, { 40, 337 }, { 40, 198 }, { 184, 101 }
                     }
                 },
                 {
                     10,
                     new int[,]
                     {
-                        { 490, 40 }, { 633, 136 }, { 633, 244 }, { 490, 363 }, { 311, 363 }, { 132, 363 }, { 6, 244 }, { 6, 136 }, { 132, 40 }, { 311, 40 }
+                        { 474, 100 }, { 630, 139 }, { 657, 291 }, { 573, 418 }, { 415, 422 }, { 258, 422 }, { 101, 418 }, { 17, 291 }, { 49, 139 }, { 206, 100 }
                     }
                 }
             };          

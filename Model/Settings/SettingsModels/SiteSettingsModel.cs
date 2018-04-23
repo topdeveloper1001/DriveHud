@@ -55,7 +55,7 @@ namespace Model.Settings
                 EnumPokerSites.YaPoker,
                 EnumPokerSites.PartyPoker,
                 EnumPokerSites.IPoker,
-                EnumPokerSites.Revolution
+                EnumPokerSites.Horizon
             };
 
             SitesModelList = sites.Select(x => new SiteModel

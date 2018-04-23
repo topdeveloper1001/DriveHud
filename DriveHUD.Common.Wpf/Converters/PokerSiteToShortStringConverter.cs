@@ -41,7 +41,7 @@ namespace DriveHUD.Common.Wpf.Converters
                         return "YP";
                     case EnumPokerSites.PartyPoker:
                         return "PP";
-                    case EnumPokerSites.Revolution:
+                    case EnumPokerSites.Horizon:
                         return "REV";
                     default:
                         break;

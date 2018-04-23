@@ -55,7 +55,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.TigerGaming, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TigerGaming) },
                 { EnumPokerSites.TruePoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TruePoker) },
                 { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) },
-                { EnumPokerSites.Revolution, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Revolution) }
+                { EnumPokerSites.Horizon, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Horizon) }
             };
 
             SelectedSiteViewModel = new SiteViewModel();

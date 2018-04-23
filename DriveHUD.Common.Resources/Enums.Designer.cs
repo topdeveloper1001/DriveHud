@@ -124,6 +124,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Horizon Poker Network.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_Horizon {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_Horizon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ignition/Bodog Network.
         /// </summary>
         internal static string Enum_EnumPokerNetworks_Ignition {
@@ -165,15 +174,6 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_EnumPokerNetworks_PokerStars {
             get {
                 return ResourceManager.GetString("Enum_EnumPokerNetworks_PokerStars", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Revolution Gaming Network.
-        /// </summary>
-        internal static string Enum_EnumPokerNetworks_Revolution {
-            get {
-                return ResourceManager.GetString("Enum_EnumPokerNetworks_Revolution", resourceCulture);
             }
         }
         
@@ -241,6 +241,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Horizon Poker.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_Horizon {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_Horizon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ignition/Bodog.
         /// </summary>
         internal static string Enum_EnumPokerSites_Ignition {
@@ -291,15 +300,6 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_EnumPokerSites_PokerStars {
             get {
                 return ResourceManager.GetString("Enum_EnumPokerSites_PokerStars", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Revolution Gaming.
-        /// </summary>
-        internal static string Enum_EnumPokerSites_Revolution {
-            get {
-                return ResourceManager.GetString("Enum_EnumPokerSites_Revolution", resourceCulture);
             }
         }
         
