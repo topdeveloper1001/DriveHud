@@ -39,6 +39,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("ACR-SnG2.txt", EnumPokerSites.WinningPokerNetwork)]
         [TestCase("GGN-6-max-cash.xml", EnumPokerSites.GGN)]
         [TestCase("Horizon.txt", EnumPokerSites.Horizon)]
+        [TestCase("Winamax.txt", EnumPokerSites.Winamax)]
         public void GetFullHandHistoryParserReturnsExpectedParser(string fileName, EnumPokerSites expectedSite)
         {
             var file = Path.Combine(testFolder, fileName);

@@ -1,0 +1,2214 @@
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 4 - HandId: #997600321653964807-24-1524500261 - Holdem no limit (30/125/250) - 2018/04/23 16:17:41 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #2 is the button
+Seat 1: FL25 (49030)
+Seat 2: missterben (168806)
+Seat 3: One-day (84872)
+Seat 4: billyboy7 (44280)
+Seat 5: Briselames (48700)
+Seat 6: Papayot (49135)
+Seat 7: Peon84 (50000)
+Seat 8: skull666 (97324)
+*** ANTE/BLINDS ***
+One-day posts ante 30
+billyboy7 posts ante 30
+FL25 posts ante 30
+missterben posts ante 30
+Briselames posts ante 30
+Papayot posts ante 30
+Peon84 posts ante 30
+skull666 posts ante 30
+One-day posts small blind 125
+billyboy7 posts big blind 250
+Dealt to Peon84 [Ac 6h]
+*** PRE-FLOP *** 
+Briselames calls 250
+Papayot folds
+Peon84 folds
+skull666 calls 250
+FL25 folds
+missterben raises 1365 to 1615
+One-day calls 1490
+billyboy7 calls 1365
+Briselames calls 1365
+skull666 calls 1365
+*** FLOP *** [6c Jc Js]
+One-day bets 250
+billyboy7 calls 250
+Briselames calls 250
+skull666 calls 250
+missterben raises 6377 to 6627
+One-day calls 6377
+billyboy7 folds
+Briselames calls 6377
+skull666 calls 6377
+*** TURN *** [6c Jc Js][Qc]
+One-day checks
+Briselames bets 40428 and is all-in
+skull666 calls 40428
+missterben folds
+One-day raises 36172 to 76600 and is all-in
+skull666 calls 36172
+*** RIVER *** [6c Jc Js Qc][4s]
+*** SHOW DOWN ***
+Briselames shows [Ts Qd] (Two pairs : Queens and Jacks)
+skull666 shows [4c 5c] (Flush Queen high)
+One-day shows [Qh Qs] (Full of Queens and Jacks)
+One-day collected 228701 from pot
+*** SUMMARY ***
+Total pot 228701 | No rake
+Board: [6c Jc Js Qc 4s]
+Seat 3: One-day (small blind) showed [Qh Qs] and won 228701 with Full of Queens and Jacks
+Seat 5: Briselames showed [Ts Qd] and lost with Two pairs : Queens and Jacks
+Seat 8: skull666 showed [4c 5c] and lost with Flush Queen high
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 4 - HandId: #997600321653964807-25-1524500391 - Holdem no limit (30/125/250) - 2018/04/23 16:19:51 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #3 is the button
+Seat 1: FL25 (49000)
+Seat 2: missterben (160534)
+Seat 3: One-day (228701)
+Seat 4: billyboy7 (42385)
+Seat 6: Papayot (49105)
+Seat 7: Peon84 (49970)
+Seat 8: skull666 (12452)
+*** ANTE/BLINDS ***
+billyboy7 posts ante 30
+Papayot posts ante 30
+FL25 posts ante 30
+missterben posts ante 30
+One-day posts ante 30
+Peon84 posts ante 30
+skull666 posts ante 30
+billyboy7 posts small blind 125
+Papayot posts big blind 250
+Dealt to Peon84 [Kd 5s]
+*** PRE-FLOP *** 
+Peon84 folds
+skull666 folds
+FL25 folds
+missterben raises 160254 to 160504 and is all-in
+One-day folds
+billyboy7 folds
+Papayot folds
+missterben collected 161089 from pot
+*** SUMMARY ***
+Total pot 161089 | No rake
+Seat 2: missterben won 161089
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 4 - HandId: #997600321653964807-26-1524500446 - Holdem no limit (30/125/250) - 2018/04/23 16:20:46 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #4 is the button
+Seat 1: FL25 (48970)
+Seat 2: missterben (161089)
+Seat 3: One-day (228671)
+Seat 4: billyboy7 (42230)
+Seat 6: Papayot (48825)
+Seat 7: Peon84 (49940)
+Seat 8: skull666 (12422)
+*** ANTE/BLINDS ***
+Papayot posts ante 30
+Peon84 posts ante 30
+FL25 posts ante 30
+missterben posts ante 30
+One-day posts ante 30
+billyboy7 posts ante 30
+skull666 posts ante 30
+Papayot posts small blind 125
+Peon84 posts big blind 250
+Dealt to Peon84 [Jc Jh]
+*** PRE-FLOP *** 
+skull666 raises 12142 to 12392 and is all-in
+FL25 folds
+missterben raises 12142 to 24534
+One-day folds
+billyboy7 folds
+Papayot folds
+Peon84 folds
+*** FLOP *** [3h 2d 6s]
+*** TURN *** [3h 2d 6s][4s]
+*** RIVER *** [3h 2d 6s 4s][9h]
+*** SHOW DOWN ***
+missterben shows [Ad Jd] (High card : Ace)
+skull666 shows [3s 3d] (Trips of 3)
+skull666 collected 25369 from main pot
+missterben collected 12142 from side pot 1
+*** SUMMARY ***
+Total pot 37511 | No rake
+Board: [3h 2d 6s 4s 9h]
+Seat 2: missterben showed [Ad Jd] and won 12142 with High card : Ace
+Seat 8: skull666 showed [3s 3d] and won 25369 with Trips of 3
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 4 - HandId: #997600321653964807-27-1524500471 - Holdem no limit (30/125/250) - 2018/04/23 16:21:11 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #6 is the button
+Seat 1: FL25 (48940)
+Seat 2: missterben (148667)
+Seat 3: One-day (228641)
+Seat 4: billyboy7 (42200)
+Seat 6: Papayot (48670)
+Seat 7: Peon84 (49660)
+Seat 8: skull666 (25369)
+*** ANTE/BLINDS ***
+Peon84 posts ante 30
+skull666 posts ante 30
+FL25 posts ante 30
+missterben posts ante 30
+One-day posts ante 30
+billyboy7 posts ante 30
+Papayot posts ante 30
+Peon84 posts small blind 125
+skull666 posts big blind 250
+Dealt to Peon84 [Ah Qh]
+*** PRE-FLOP *** 
+FL25 folds
+missterben folds
+One-day calls 250
+billyboy7 calls 250
+Papayot folds
+Peon84 raises 500 to 750
+skull666 raises 3000 to 3750
+One-day calls 3500
+billyboy7 folds
+Peon84 calls 3000
+*** FLOP *** [8s 7d 4s]
+Peon84 checks
+skull666 bets 21589 and is all-in
+One-day calls 21589
+Peon84 folds
+*** TURN *** [8s 7d 4s][2d]
+*** RIVER *** [8s 7d 4s 2d][7h]
+*** SHOW DOWN ***
+skull666 shows [Ad 9h] (One pair : 7)
+One-day shows [4c As] (Two pairs : 7 and 4)
+One-day collected 54888 from pot
+*** SUMMARY ***
+Total pot 54888 | No rake
+Board: [8s 7d 4s 2d 7h]
+Seat 3: One-day showed [4c As] and won 54888 with Two pairs : 7 and 4
+Seat 8: skull666 (big blind) showed [Ad 9h] and lost with One pair : 7
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 4 - HandId: #997600321653964807-28-1524500511 - Holdem no limit (30/125/250) - 2018/04/23 16:21:51 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #7 is the button
+Seat 1: FL25 (48910)
+Seat 2: missterben (148637)
+Seat 3: One-day (258160)
+Seat 4: billyboy7 (41920)
+Seat 5: Call-hymn-he (50000)
+Seat 6: Papayot (48640)
+Seat 7: Peon84 (45880)
+*** ANTE/BLINDS ***
+FL25 posts ante 30
+missterben posts ante 30
+One-day posts ante 30
+billyboy7 posts ante 30
+Call-hymn-he posts ante 30
+Papayot posts ante 30
+Peon84 posts ante 30
+FL25 posts big blind 250
+Dealt to Peon84 [7d 9c]
+*** PRE-FLOP *** 
+missterben folds
+One-day folds
+billyboy7 calls 250
+Call-hymn-he calls 250
+Papayot folds
+Peon84 folds
+FL25 folds
+*** FLOP *** [5d As Qh]
+billyboy7 checks
+Call-hymn-he checks
+*** TURN *** [5d As Qh][Ad]
+billyboy7 checks
+Call-hymn-he bets 250
+billyboy7 calls 250
+*** RIVER *** [5d As Qh Ad][6c]
+billyboy7 checks
+Call-hymn-he bets 250
+billyboy7 calls 250
+*** SHOW DOWN ***
+Call-hymn-he shows [4d 6d] (Two pairs : Aces and 6)
+billyboy7 shows [Qd 2d] (Two pairs : Aces and Queens)
+billyboy7 collected 1960 from pot
+*** SUMMARY ***
+Total pot 1960 | No rake
+Board: [5d As Qh Ad 6c]
+Seat 4: billyboy7 showed [Qd 2d] and won 1960 with Two pairs : Aces and Queens
+Seat 5: Call-hymn-he showed [4d 6d] and lost with Two pairs : Aces and 6
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 4 - HandId: #997600321653964807-29-1524500545 - Holdem no limit (30/125/250) - 2018/04/23 16:22:25 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #8 is the button
+Seat 1: FL25 (48630)
+Seat 2: missterben (148607)
+Seat 3: One-day (258130)
+Seat 4: billyboy7 (43100)
+Seat 5: Call-hymn-he (49220)
+Seat 6: Papayot (48610)
+Seat 7: Peon84 (45850)
+*** ANTE/BLINDS ***
+FL25 posts ante 30
+missterben posts ante 30
+One-day posts ante 30
+billyboy7 posts ante 30
+Call-hymn-he posts ante 30
+Papayot posts ante 30
+Peon84 posts ante 30
+FL25 posts small blind 125
+missterben posts big blind 250
+Dealt to Peon84 [Ks 4c]
+*** PRE-FLOP *** 
+One-day calls 250
+billyboy7 calls 250
+Call-hymn-he calls 250
+Papayot folds
+Peon84 folds
+FL25 folds
+missterben raises 10496 to 10746
+One-day folds
+billyboy7 folds
+Call-hymn-he calls 10496
+*** FLOP *** [3c Ac 3h]
+missterben checks
+Call-hymn-he bets 38444 and is all-in
+missterben folds
+Call-hymn-he collected 60771 from pot
+*** SUMMARY ***
+Total pot 60771 | No rake
+Board: [3c Ac 3h]
+Seat 5: Call-hymn-he won 60771
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 4 - HandId: #997600321653964807-30-1524500579 - Holdem no limit (30/125/250) - 2018/04/23 16:22:59 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #1 is the button
+Seat 1: FL25 (48475)
+Seat 2: missterben (137831)
+Seat 3: One-day (257850)
+Seat 4: billyboy7 (42820)
+Seat 5: Call-hymn-he (60771)
+Seat 6: Papayot (48580)
+Seat 7: Peon84 (45820)
+*** ANTE/BLINDS ***
+missterben posts ante 30
+One-day posts ante 30
+FL25 posts ante 30
+billyboy7 posts ante 30
+Call-hymn-he posts ante 30
+Papayot posts ante 30
+Peon84 posts ante 30
+missterben posts small blind 125
+One-day posts big blind 250
+Dealt to Peon84 [Kc Ad]
+*** PRE-FLOP *** 
+billyboy7 calls 250
+Call-hymn-he calls 250
+Papayot folds
+Peon84 raises 750 to 1000
+FL25 folds
+missterben raises 2960 to 3960
+One-day calls 3710
+billyboy7 folds
+Call-hymn-he folds
+Peon84 calls 2960
+*** FLOP *** [7c 8c 3s]
+missterben checks
+One-day bets 8393
+Peon84 calls 8393
+missterben raises 8393 to 16786
+One-day calls 8393
+Peon84 calls 8393
+*** TURN *** [7c 8c 3s][4s]
+missterben bets 117055 and is all-in
+One-day calls 117055
+Peon84 folds
+*** RIVER *** [7c 8c 3s 4s][Jd]
+*** SHOW DOWN ***
+One-day shows [Qs Qh] (One pair : Queens)
+missterben shows [8d 7h] (Two pairs : 8 and 7)
+missterben collected 297058 from pot
+*** SUMMARY ***
+Total pot 297058 | No rake
+Board: [7c 8c 3s 4s Jd]
+Seat 2: missterben (small blind) showed [8d 7h] and won 297058 with Two pairs : 8 and 7
+Seat 3: One-day (big blind) showed [Qs Qh] and lost with One pair : Queens
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 5 - HandId: #997600321653964807-31-1524500637 - Holdem no limit (40/150/300) - 2018/04/23 16:23:57 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #2 is the button
+Seat 1: FL25 (48445)
+Seat 2: missterben (297058)
+Seat 3: One-day (120019)
+Seat 4: billyboy7 (42540)
+Seat 6: Papayot (48550)
+Seat 7: Peon84 (25044)
+Seat 8: khalilou2009 (50000)
+*** ANTE/BLINDS ***
+One-day posts ante 40
+billyboy7 posts ante 40
+FL25 posts ante 40
+missterben posts ante 40
+Papayot posts ante 40
+Peon84 posts ante 40
+khalilou2009 posts ante 40
+One-day posts small blind 150
+billyboy7 posts big blind 300
+Dealt to Peon84 [Kc 3c]
+*** PRE-FLOP *** 
+Papayot folds
+Peon84 folds
+khalilou2009 folds
+FL25 folds
+missterben calls 300
+One-day calls 150
+billyboy7 checks
+*** FLOP *** [5c 8h 5h]
+One-day checks
+billyboy7 checks
+missterben checks
+*** TURN *** [5c 8h 5h][Tc]
+One-day bets 885
+billyboy7 calls 885
+missterben folds
+*** RIVER *** [5c 8h 5h Tc][Th]
+One-day bets 2213
+billyboy7 calls 2213
+*** SHOW DOWN ***
+billyboy7 shows [Qd Qs] (Two pairs : Queens and Tens)
+One-day shows [5d 6c] (Full of 5 and Tens)
+One-day collected 7376 from pot
+*** SUMMARY ***
+Total pot 7376 | No rake
+Board: [5c 8h 5h Tc Th]
+Seat 3: One-day (small blind) showed [5d 6c] and won 7376 with Full of 5 and Tens
+Seat 4: billyboy7 (big blind) showed [Qd Qs] and lost with Two pairs : Queens and Tens
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 5 - HandId: #997600321653964807-32-1524500678 - Holdem no limit (40/150/300) - 2018/04/23 16:24:38 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #3 is the button
+Seat 1: FL25 (48405)
+Seat 2: missterben (296718)
+Seat 3: One-day (123957)
+Seat 4: billyboy7 (39102)
+Seat 5: tetalain83 (50000)
+Seat 6: Papayot (48510)
+Seat 7: Peon84 (25004)
+Seat 8: khalilou2009 (49960)
+*** ANTE/BLINDS ***
+billyboy7 posts ante 40
+tetalain83 posts ante 40
+FL25 posts ante 40
+missterben posts ante 40
+One-day posts ante 40
+Papayot posts ante 40
+Peon84 posts ante 40
+khalilou2009 posts ante 40
+billyboy7 posts small blind 150
+tetalain83 posts big blind 300
+Dealt to Peon84 [Js Qd]
+*** PRE-FLOP *** 
+Papayot folds
+Peon84 calls 300
+khalilou2009 calls 300
+FL25 folds
+missterben calls 300
+One-day calls 300
+billyboy7 calls 150
+tetalain83 checks
+*** FLOP *** [Ah 6c 3c]
+billyboy7 bets 300
+tetalain83 folds
+Peon84 calls 300
+khalilou2009 calls 300
+missterben folds
+One-day calls 300
+*** TURN *** [Ah 6c 3c][8d]
+billyboy7 checks
+Peon84 checks
+khalilou2009 bets 1660
+One-day calls 1660
+billyboy7 folds
+Peon84 folds
+*** RIVER *** [Ah 6c 3c 8d][Jh]
+khalilou2009 checks
+One-day bets 300
+khalilou2009 calls 300
+*** SHOW DOWN ***
+khalilou2009 shows [9c 8c] (One pair : 8)
+One-day shows [3s 8s] (Two pairs : 8 and 3)
+One-day collected 7240 from pot
+*** SUMMARY ***
+Total pot 7240 | No rake
+Board: [Ah 6c 3c 8d Jh]
+Seat 3: One-day (button) showed [3s 8s] and won 7240 with Two pairs : 8 and 3
+Seat 8: khalilou2009 showed [9c 8c] and lost with One pair : 8
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 5 - HandId: #997600321653964807-33-1524500724 - Holdem no limit (40/150/300) - 2018/04/23 16:25:24 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #4 is the button
+Seat 1: FL25 (48365)
+Seat 2: missterben (296378)
+Seat 3: One-day (128597)
+Seat 4: billyboy7 (38462)
+Seat 5: tetalain83 (49660)
+Seat 6: Papayot (48470)
+Seat 7: Peon84 (24364)
+Seat 8: khalilou2009 (47360)
+*** ANTE/BLINDS ***
+tetalain83 posts ante 40
+Papayot posts ante 40
+FL25 posts ante 40
+missterben posts ante 40
+One-day posts ante 40
+billyboy7 posts ante 40
+Peon84 posts ante 40
+khalilou2009 posts ante 40
+tetalain83 posts small blind 150
+Papayot posts big blind 300
+Dealt to Peon84 [Ad Ts]
+*** PRE-FLOP *** 
+Peon84 calls 300
+khalilou2009 calls 300
+FL25 folds
+missterben folds
+One-day calls 300
+billyboy7 folds
+tetalain83 raises 49320 to 49620 and is all-in
+Papayot folds
+Peon84 folds
+khalilou2009 calls 47020 and is all-in
+One-day folds
+*** FLOP *** [Kd 9d 4d]
+*** TURN *** [Kd 9d 4d][5s]
+*** RIVER *** [Kd 9d 4d 5s][6c]
+*** SHOW DOWN ***
+tetalain83 shows [Jh 2h] (High card : King)
+khalilou2009 shows [Jc Qc] (High card : King)
+khalilou2009 collected 95860 from main pot
+tetalain83 collected 2300 from side pot 1
+*** SUMMARY ***
+Total pot 98160 | No rake
+Board: [Kd 9d 4d 5s 6c]
+Seat 5: tetalain83 (small blind) showed [Jh 2h] and won 2300 with High card : King
+Seat 8: khalilou2009 showed [Jc Qc] and won 95860 with High card : King
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 5 - HandId: #997600321653964807-34-1524500786 - Holdem no limit (40/150/300) - 2018/04/23 16:26:26 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #5 is the button
+Seat 1: FL25 (48325)
+Seat 2: missterben (296338)
+Seat 3: One-day (128257)
+Seat 4: billyboy7 (38422)
+Seat 5: tetalain83 (2300)
+Seat 6: Papayot (48130)
+Seat 7: Peon84 (24024)
+Seat 8: khalilou2009 (95860)
+*** ANTE/BLINDS ***
+Papayot posts ante 40
+Peon84 posts ante 40
+FL25 posts ante 40
+missterben posts ante 40
+One-day posts ante 40
+billyboy7 posts ante 40
+tetalain83 posts ante 40
+khalilou2009 posts ante 40
+Papayot posts small blind 150
+Peon84 posts big blind 300
+Dealt to Peon84 [5s 3d]
+*** PRE-FLOP *** 
+khalilou2009 folds
+FL25 folds
+missterben raises 1070 to 1370
+One-day folds
+billyboy7 folds
+tetalain83 calls 1370
+Papayot folds
+Peon84 folds
+*** FLOP *** [Jd 5d 6h]
+missterben checks
+tetalain83 checks
+*** TURN *** [Jd 5d 6h][6c]
+missterben bets 300
+tetalain83 raises 590 to 890 and is all-in
+missterben calls 590
+*** RIVER *** [Jd 5d 6h 6c][Jc]
+*** SHOW DOWN ***
+tetalain83 shows [4h 9s] (Two pairs : Jacks and 6)
+missterben shows [8h Ks] (Two pairs : Jacks and 6)
+missterben collected 5290 from pot
+*** SUMMARY ***
+Total pot 5290 | No rake
+Board: [Jd 5d 6h 6c Jc]
+Seat 2: missterben showed [8h Ks] and won 5290 with Two pairs : Jacks and 6
+Seat 5: tetalain83 (button) showed [4h 9s] and lost with Two pairs : Jacks and 6
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 5 - HandId: #997600321653964807-35-1524500827 - Holdem no limit (40/150/300) - 2018/04/23 16:27:07 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #6 is the button
+Seat 1: FL25 (48285)
+Seat 2: missterben (299328)
+Seat 3: One-day (128217)
+Seat 4: billyboy7 (38382)
+Seat 6: Papayot (47940)
+Seat 7: Peon84 (23684)
+Seat 8: khalilou2009 (95820)
+*** ANTE/BLINDS ***
+Peon84 posts ante 40
+khalilou2009 posts ante 40
+FL25 posts ante 40
+missterben posts ante 40
+One-day posts ante 40
+billyboy7 posts ante 40
+Papayot posts ante 40
+Peon84 posts small blind 150
+khalilou2009 posts big blind 300
+Dealt to Peon84 [7s 7c]
+*** PRE-FLOP *** 
+FL25 folds
+missterben calls 300
+One-day calls 300
+billyboy7 calls 300
+Papayot folds
+Peon84 calls 150
+khalilou2009 checks
+*** FLOP *** [3s Td 4d]
+Peon84 checks
+khalilou2009 bets 1780
+missterben calls 1780
+One-day folds
+billyboy7 calls 1780
+Peon84 calls 1780
+*** TURN *** [3s Td 4d][4h]
+Peon84 checks
+khalilou2009 checks
+missterben checks
+billyboy7 checks
+*** RIVER *** [3s Td 4d 4h][8d]
+Peon84 checks
+khalilou2009 bets 300
+missterben raises 42011 to 42311
+billyboy7 calls 36262 and is all-in
+Peon84 folds
+khalilou2009 folds
+*** SHOW DOWN ***
+missterben shows [4s Jc] (Trips of 4)
+billyboy7 shows [2d 5d] (Flush Ten high)
+billyboy7 collected 81724 from main pot
+missterben collected 6049 from side pot 1
+*** SUMMARY ***
+Total pot 87773 | No rake
+Board: [3s Td 4d 4h 8d]
+Seat 2: missterben showed [4s Jc] and won 6049 with Trips of 4
+Seat 4: billyboy7 showed [2d 5d] and won 81724 with Flush Ten high
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 5 - HandId: #997600321653964807-36-1524500874 - Holdem no limit (40/150/300) - 2018/04/23 16:27:54 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #7 is the button
+Seat 1: FL25 (48245)
+Seat 3: One-day (127877)
+Seat 4: billyboy7 (81724)
+Seat 5: Rnd0mPignOuf (50000)
+Seat 6: Papayot (47900)
+Seat 7: Peon84 (21564)
+Seat 8: khalilou2009 (93400)
+*** ANTE/BLINDS ***
+khalilou2009 posts ante 40
+FL25 posts ante 40
+One-day posts ante 40
+billyboy7 posts ante 40
+Rnd0mPignOuf posts ante 40
+Papayot posts ante 40
+Peon84 posts ante 40
+khalilou2009 posts small blind 150
+FL25 posts big blind 300
+Dealt to Peon84 [9c 6h]
+*** PRE-FLOP *** 
+One-day calls 300
+billyboy7 folds
+Rnd0mPignOuf folds
+Papayot folds
+Peon84 folds
+khalilou2009 calls 150
+FL25 folds
+*** FLOP *** [5c 5s 2s]
+khalilou2009 checks
+One-day bets 787
+khalilou2009 calls 787
+*** TURN *** [5c 5s 2s][Js]
+khalilou2009 checks
+One-day bets 1836
+khalilou2009 calls 1836
+*** RIVER *** [5c 5s 2s Js][2c]
+khalilou2009 checks
+One-day bets 4284
+khalilou2009 calls 4284
+*** SHOW DOWN ***
+khalilou2009 shows [7c Ks] (Two pairs : 5 and 2)
+One-day shows [5h Ad] (Full of 5 and 2)
+One-day collected 14994 from pot
+*** SUMMARY ***
+Total pot 14994 | No rake
+Board: [5c 5s 2s Js 2c]
+Seat 3: One-day showed [5h Ad] and won 14994 with Full of 5 and 2
+Seat 8: khalilou2009 (small blind) showed [7c Ks] and lost with Two pairs : 5 and 2
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 5 - HandId: #997600321653964807-37-1524500978 - Holdem no limit (40/150/300) - 2018/04/23 16:29:38 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #8 is the button
+Seat 1: FL25 (47905)
+Seat 2: titonpapo (50000)
+Seat 4: billyboy7 (81684)
+Seat 5: Rnd0mPignOuf (49960)
+Seat 6: Papayot (47860)
+Seat 7: Peon84 (21524)
+Seat 8: khalilou2009 (86153)
+*** ANTE/BLINDS ***
+FL25 posts ante 40
+titonpapo posts ante 40
+billyboy7 posts ante 40
+Rnd0mPignOuf posts ante 40
+Papayot posts ante 40
+Peon84 posts ante 40
+khalilou2009 posts ante 40
+FL25 posts small blind 150
+titonpapo posts big blind 300
+Dealt to Peon84 [5s 6c]
+*** PRE-FLOP *** 
+billyboy7 folds
+Rnd0mPignOuf folds
+Papayot folds
+Peon84 folds
+khalilou2009 calls 300
+FL25 folds
+titonpapo raises 49660 to 49960 and is all-in
+khalilou2009 calls 49660
+*** FLOP *** [8d As Jd]
+*** TURN *** [8d As Jd][5c]
+*** RIVER *** [8d As Jd 5c][Tc]
+*** SHOW DOWN ***
+titonpapo shows [2d 2h] (One pair : 2)
+khalilou2009 shows [8h Jh] (Two pairs : Jacks and 8)
+khalilou2009 collected 100350 from pot
+*** SUMMARY ***
+Total pot 100350 | No rake
+Board: [8d As Jd 5c Tc]
+Seat 2: titonpapo (big blind) showed [2d 2h] and lost with One pair : 2
+Seat 8: khalilou2009 (button) showed [8h Jh] and won 100350 with Two pairs : Jacks and 8
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 5 - HandId: #997600321653964807-38-1524501000 - Holdem no limit (40/150/300) - 2018/04/23 16:30:00 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #1 is the button
+Seat 1: FL25 (47715)
+Seat 4: billyboy7 (81644)
+Seat 5: Rnd0mPignOuf (49920)
+Seat 6: Papayot (47820)
+Seat 7: Peon84 (21484)
+Seat 8: khalilou2009 (136503)
+*** ANTE/BLINDS ***
+billyboy7 posts ante 40
+FL25 posts ante 40
+Rnd0mPignOuf posts ante 40
+Papayot posts ante 40
+Peon84 posts ante 40
+khalilou2009 posts ante 40
+billyboy7 posts big blind 300
+Dealt to Peon84 [Ah 5c]
+*** PRE-FLOP *** 
+Rnd0mPignOuf folds
+Papayot folds
+Peon84 calls 300
+khalilou2009 calls 300
+FL25 folds
+billyboy7 checks
+*** FLOP *** [8d Qs Th]
+billyboy7 checks
+Peon84 checks
+khalilou2009 checks
+*** TURN *** [8d Qs Th][Jc]
+billyboy7 checks
+Peon84 checks
+khalilou2009 checks
+*** RIVER *** [8d Qs Th Jc][6h]
+billyboy7 checks
+Peon84 checks
+khalilou2009 checks
+*** SHOW DOWN ***
+Peon84 shows [Ah 5c] (High card : Ace)
+khalilou2009 shows [3d 5d] (High card : Queen)
+billyboy7 shows [3h 3s] (One pair : 3)
+billyboy7 collected 1140 from pot
+*** SUMMARY ***
+Total pot 1140 | No rake
+Board: [8d Qs Th Jc 6h]
+Seat 4: billyboy7 (big blind) showed [3h 3s] and won 1140 with One pair : 3
+Seat 7: Peon84 showed [Ah 5c] and lost with High card : Ace
+Seat 8: khalilou2009 showed [3d 5d] and lost with High card : Queen
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 6 - HandId: #997600321653964807-39-1524501067 - Holdem no limit (50/200/400) - 2018/04/23 16:31:07 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #2 is the button
+Seat 1: FL25 (47675)
+Seat 2: lapiaz39 (50000)
+Seat 3: royale-force (85720)
+Seat 4: billyboy7 (82444)
+Seat 6: Papayot (47780)
+Seat 7: Peon84 (21144)
+Seat 8: khalilou2009 (136163)
+*** ANTE/BLINDS ***
+billyboy7 posts ante 50
+Papayot posts ante 50
+FL25 posts ante 50
+Peon84 posts ante 50
+khalilou2009 posts ante 50
+billyboy7 posts small blind 200
+Papayot posts big blind 400
+Dealt to Peon84 [3h 8s]
+*** PRE-FLOP *** 
+Peon84 calls 400
+khalilou2009 calls 400
+FL25 folds
+billyboy7 calls 200
+Papayot folds
+*** FLOP *** [Jd 6s Td]
+billyboy7 bets 400
+Peon84 folds
+khalilou2009 calls 400
+*** TURN *** [Jd 6s Td][Kh]
+billyboy7 bets 400
+khalilou2009 calls 400
+*** RIVER *** [Jd 6s Td Kh][Jc]
+billyboy7 bets 3450
+khalilou2009 folds
+billyboy7 collected 6900 from pot
+*** SUMMARY ***
+Total pot 6900 | No rake
+Board: [Jd 6s Td Kh Jc]
+Seat 4: billyboy7 (small blind) won 6900
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 6 - HandId: #997600321653964807-40-1524501117 - Holdem no limit (50/200/400) - 2018/04/23 16:31:57 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #4 is the button
+Seat 1: FL25 (47625)
+Seat 2: lapiaz39 (50000)
+Seat 3: royale-force (85720)
+Seat 4: billyboy7 (84644)
+Seat 6: Papayot (47330)
+Seat 7: Peon84 (20694)
+Seat 8: khalilou2009 (134913)
+*** ANTE/BLINDS ***
+Papayot posts ante 50
+Peon84 posts ante 50
+FL25 posts ante 50
+lapiaz39 posts ante 50
+royale-force posts ante 50
+billyboy7 posts ante 50
+khalilou2009 posts ante 50
+Papayot posts small blind 200
+Peon84 posts big blind 400
+Dealt to Peon84 [Jh 6c]
+*** PRE-FLOP *** 
+khalilou2009 calls 400
+FL25 folds
+lapiaz39 folds
+royale-force raises 27228 to 27628
+billyboy7 folds
+Papayot folds
+Peon84 folds
+khalilou2009 folds
+royale-force collected 28978 from pot
+*** SUMMARY ***
+Total pot 28978 | No rake
+Seat 3: royale-force won 28978
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 6 - HandId: #997600321653964807-41-1524501137 - Holdem no limit (50/200/400) - 2018/04/23 16:32:17 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #6 is the button
+Seat 1: FL25 (47575)
+Seat 2: lapiaz39 (49950)
+Seat 3: royale-force (87020)
+Seat 4: billyboy7 (84594)
+Seat 6: Papayot (47080)
+Seat 7: Peon84 (20244)
+Seat 8: khalilou2009 (134463)
+*** ANTE/BLINDS ***
+Peon84 posts ante 50
+khalilou2009 posts ante 50
+FL25 posts ante 50
+lapiaz39 posts ante 50
+royale-force posts ante 50
+billyboy7 posts ante 50
+Papayot posts ante 50
+Peon84 posts small blind 200
+khalilou2009 posts big blind 400
+Dealt to Peon84 [2s 3d]
+*** PRE-FLOP *** 
+FL25 folds
+lapiaz39 calls 400
+royale-force raises 400 to 800
+billyboy7 folds
+Papayot folds
+Peon84 folds
+khalilou2009 calls 400
+lapiaz39 calls 400
+*** FLOP *** [Js 3c Jd]
+khalilou2009 checks
+lapiaz39 checks
+royale-force checks
+*** TURN *** [Js 3c Jd][5d]
+khalilou2009 checks
+lapiaz39 checks
+royale-force bets 400
+khalilou2009 calls 400
+lapiaz39 folds
+*** RIVER *** [Js 3c Jd 5d][Kd]
+khalilou2009 bets 400
+royale-force raises 85370 to 85770 and is all-in
+khalilou2009 folds
+royale-force collected 89920 from pot
+*** SUMMARY ***
+Total pot 89920 | No rake
+Board: [Js 3c Jd 5d Kd]
+Seat 3: royale-force won 89920
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 6 - HandId: #997600321653964807-42-1524501185 - Holdem no limit (50/200/400) - 2018/04/23 16:33:05 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #7 is the button
+Seat 1: FL25 (47525)
+Seat 2: lapiaz39 (49100)
+Seat 3: royale-force (89920)
+Seat 4: billyboy7 (84544)
+Seat 6: Papayot (47030)
+Seat 7: Peon84 (19994)
+Seat 8: khalilou2009 (132813)
+*** ANTE/BLINDS ***
+khalilou2009 posts ante 50
+FL25 posts ante 50
+lapiaz39 posts ante 50
+royale-force posts ante 50
+billyboy7 posts ante 50
+Papayot posts ante 50
+Peon84 posts ante 50
+khalilou2009 posts small blind 200
+FL25 posts big blind 400
+Dealt to Peon84 [Jd 7h]
+*** PRE-FLOP *** 
+lapiaz39 folds
+royale-force raises 400 to 800
+billyboy7 folds
+Papayot folds
+Peon84 folds
+khalilou2009 calls 600
+FL25 folds
+*** FLOP *** [3d 6h 7d]
+khalilou2009 checks
+royale-force bets 89070 and is all-in
+khalilou2009 calls 89070
+*** TURN *** [3d 6h 7d][Kc]
+*** RIVER *** [3d 6h 7d Kc][5h]
+*** SHOW DOWN ***
+khalilou2009 shows [8h Jc] (High card : King)
+royale-force shows [Ts Td] (One pair : Tens)
+royale-force collected 180490 from pot
+*** SUMMARY ***
+Total pot 180490 | No rake
+Board: [3d 6h 7d Kc 5h]
+Seat 3: royale-force showed [Ts Td] and won 180490 with One pair : Tens
+Seat 8: khalilou2009 (small blind) showed [8h Jc] and lost with High card : King
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 6 - HandId: #997600321653964807-43-1524501222 - Holdem no limit (50/200/400) - 2018/04/23 16:33:42 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #8 is the button
+Seat 1: FL25 (47075)
+Seat 2: lapiaz39 (49050)
+Seat 4: billyboy7 (84494)
+Seat 5: Coqhardy (50000)
+Seat 6: Papayot (46980)
+Seat 7: Peon84 (19944)
+Seat 8: khalilou2009 (42893)
+*** ANTE/BLINDS ***
+FL25 posts ante 50
+lapiaz39 posts ante 50
+billyboy7 posts ante 50
+Coqhardy posts ante 50
+Papayot posts ante 50
+Peon84 posts ante 50
+khalilou2009 posts ante 50
+FL25 posts small blind 200
+lapiaz39 posts big blind 400
+Dealt to Peon84 [5s 8c]
+*** PRE-FLOP *** 
+billyboy7 calls 400
+Coqhardy calls 400
+Papayot folds
+Peon84 folds
+khalilou2009 calls 400
+FL25 folds
+lapiaz39 checks
+*** FLOP *** [9d 7h 8s]
+lapiaz39 bets 400
+billyboy7 calls 400
+Coqhardy calls 400
+khalilou2009 calls 400
+*** TURN *** [9d 7h 8s][Qh]
+lapiaz39 checks
+billyboy7 checks
+Coqhardy checks
+khalilou2009 checks
+*** RIVER *** [9d 7h 8s Qh][6c]
+lapiaz39 checks
+billyboy7 checks
+Coqhardy checks
+khalilou2009 bets 42043 and is all-in
+lapiaz39 folds
+billyboy7 folds
+Coqhardy folds
+khalilou2009 collected 45793 from pot
+*** SUMMARY ***
+Total pot 45793 | No rake
+Board: [9d 7h 8s Qh 6c]
+Seat 8: khalilou2009 (button) won 45793
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 6 - HandId: #997600321653964807-44-1524501358 - Holdem no limit (50/200/400) - 2018/04/23 16:35:58 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #1 is the button
+Seat 1: FL25 (46825)
+Seat 2: lapiaz39 (48200)
+Seat 3: ludorion (50000)
+Seat 4: billyboy7 (83644)
+Seat 5: Coqhardy (49150)
+Seat 6: Papayot (46930)
+Seat 7: Peon84 (19894)
+Seat 8: khalilou2009 (45793)
+*** ANTE/BLINDS ***
+lapiaz39 posts ante 50
+ludorion posts ante 50
+FL25 posts ante 50
+billyboy7 posts ante 50
+Coqhardy posts ante 50
+Papayot posts ante 50
+Peon84 posts ante 50
+khalilou2009 posts ante 50
+lapiaz39 posts small blind 200
+ludorion posts big blind 400
+Dealt to Peon84 [Ac 6h]
+*** PRE-FLOP *** 
+billyboy7 calls 400
+Coqhardy folds
+Papayot folds
+Peon84 calls 400
+khalilou2009 calls 400
+FL25 folds
+lapiaz39 raises 47750 to 48150 and is all-in
+ludorion folds
+billyboy7 folds
+Peon84 calls 19444 and is all-in
+khalilou2009 folds
+*** FLOP *** [7d Qd Jh]
+*** TURN *** [7d Qd Jh][3c]
+*** RIVER *** [7d Qd Jh 3c][Ad]
+*** SHOW DOWN ***
+lapiaz39 shows [Ks Kh] (One pair : Kings)
+Peon84 shows [Ac 6h] (One pair : Aces)
+Peon84 collected 41288 from main pot
+lapiaz39 collected 28306 from side pot 1
+*** SUMMARY ***
+Total pot 69594 | No rake
+Board: [7d Qd Jh 3c Ad]
+Seat 2: lapiaz39 (small blind) showed [Ks Kh] and won 28306 with One pair : Kings
+Seat 7: Peon84 showed [Ac 6h] and won 41288 with One pair : Aces
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 6 - HandId: #997600321653964807-45-1524501388 - Holdem no limit (50/200/400) - 2018/04/23 16:36:28 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #2 is the button
+Seat 1: FL25 (46775)
+Seat 2: lapiaz39 (28306)
+Seat 3: ludorion (49550)
+Seat 4: billyboy7 (83194)
+Seat 5: Coqhardy (49100)
+Seat 6: Papayot (46880)
+Seat 7: Peon84 (41288)
+Seat 8: khalilou2009 (45343)
+*** ANTE/BLINDS ***
+ludorion posts ante 50
+billyboy7 posts ante 50
+FL25 posts ante 50
+lapiaz39 posts ante 50
+Coqhardy posts ante 50
+Papayot posts ante 50
+Peon84 posts ante 50
+khalilou2009 posts ante 50
+ludorion posts small blind 200
+billyboy7 posts big blind 400
+Dealt to Peon84 [Jh Ac]
+*** PRE-FLOP *** 
+Coqhardy folds
+Papayot folds
+Peon84 raises 1200 to 1600
+khalilou2009 calls 1600
+FL25 folds
+lapiaz39 raises 26656 to 28256 and is all-in
+ludorion raises 21244 to 49500 and is all-in
+billyboy7 folds
+Peon84 calls 39638 and is all-in
+khalilou2009 calls 43693 and is all-in
+*** FLOP *** [Tc 6d Th]
+*** TURN *** [Tc 6d Th][4c]
+*** RIVER *** [Tc 6d Th 4c][Td]
+*** SHOW DOWN ***
+khalilou2009 shows [5d Ks] (Trips of Tens)
+lapiaz39 shows [9s Ts] (Quads of Tens)
+ludorion shows [Kd Jd] (Trips of Tens)
+Peon84 shows [Jh Ac] (Trips of Tens)
+Peon84 collected 38946 from side pot 1
+ludorion collected 12317 from side pot 2
+lapiaz39 collected 113824 from main pot
+*** SUMMARY ***
+Total pot 165087 | No rake
+Board: [Tc 6d Th 4c Td]
+Seat 2: lapiaz39 (button) showed [9s Ts] and won 113824 with Quads of Tens
+Seat 3: ludorion (small blind) showed [Kd Jd] and won 12317 with Trips of Tens
+Seat 7: Peon84 showed [Jh Ac] and won 38946 with Trips of Tens
+Seat 8: khalilou2009 showed [5d Ks] and lost with Trips of Tens
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 6 - HandId: #997600321653964807-46-1524501427 - Holdem no limit (50/200/400) - 2018/04/23 16:37:07 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #3 is the button
+Seat 1: FL25 (46725)
+Seat 2: lapiaz39 (113824)
+Seat 3: ludorion (12317)
+Seat 4: billyboy7 (82744)
+Seat 5: Coqhardy (49050)
+Seat 6: Papayot (46830)
+Seat 7: Peon84 (38946)
+*** ANTE/BLINDS ***
+billyboy7 posts ante 50
+Coqhardy posts ante 50
+FL25 posts ante 50
+lapiaz39 posts ante 50
+ludorion posts ante 50
+Papayot posts ante 50
+Peon84 posts ante 50
+billyboy7 posts small blind 200
+Coqhardy posts big blind 400
+Dealt to Peon84 [3s Js]
+*** PRE-FLOP *** 
+Papayot folds
+Peon84 folds
+FL25 folds
+lapiaz39 raises 113374 to 113774 and is all-in
+ludorion calls 12267 and is all-in
+billyboy7 folds
+Coqhardy folds
+*** FLOP *** [Ac Jd Qd]
+*** TURN *** [Ac Jd Qd][7c]
+*** RIVER *** [Ac Jd Qd 7c][2s]
+*** SHOW DOWN ***
+lapiaz39 shows [8h Kh] (High card : Ace)
+ludorion shows [Qc Qh] (Trips of Queens)
+ludorion collected 25484 from main pot
+lapiaz39 collected 101507 from side pot 1
+*** SUMMARY ***
+Total pot 126991 | No rake
+Board: [Ac Jd Qd 7c 2s]
+Seat 2: lapiaz39 showed [8h Kh] and won 101507 with High card : Ace
+Seat 3: ludorion (button) showed [Qc Qh] and won 25484 with Trips of Queens
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 6 - HandId: #997600321653964807-47-1524501451 - Holdem no limit (50/200/400) - 2018/04/23 16:37:31 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #4 is the button
+Seat 1: FL25 (46675)
+Seat 2: lapiaz39 (101507)
+Seat 3: ludorion (25484)
+Seat 4: billyboy7 (82494)
+Seat 5: Coqhardy (48600)
+Seat 6: Papayot (46780)
+Seat 7: Peon84 (38896)
+Seat 8: aymeric68 (50000)
+*** ANTE/BLINDS ***
+Coqhardy posts ante 50
+Papayot posts ante 50
+FL25 posts ante 50
+lapiaz39 posts ante 50
+ludorion posts ante 50
+billyboy7 posts ante 50
+Peon84 posts ante 50
+aymeric68 posts ante 50
+Coqhardy posts small blind 200
+Papayot posts big blind 400
+Dealt to Peon84 [7h As]
+*** PRE-FLOP *** 
+Peon84 folds
+aymeric68 raises 49550 to 49950 and is all-in
+FL25 folds
+lapiaz39 folds
+ludorion folds
+billyboy7 folds
+Coqhardy folds
+Papayot folds
+aymeric68 collected 50950 from pot
+*** SUMMARY ***
+Total pot 50950 | No rake
+Seat 8: aymeric68 won 50950
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 6 - HandId: #997600321653964807-48-1524501467 - Holdem no limit (50/200/400) - 2018/04/23 16:37:47 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #5 is the button
+Seat 1: FL25 (46625)
+Seat 2: lapiaz39 (101457)
+Seat 3: ludorion (25434)
+Seat 4: billyboy7 (82444)
+Seat 5: Coqhardy (48350)
+Seat 6: Papayot (46330)
+Seat 7: Peon84 (38846)
+Seat 8: aymeric68 (50950)
+*** ANTE/BLINDS ***
+Papayot posts ante 50
+Peon84 posts ante 50
+FL25 posts ante 50
+lapiaz39 posts ante 50
+ludorion posts ante 50
+billyboy7 posts ante 50
+Coqhardy posts ante 50
+aymeric68 posts ante 50
+Papayot posts small blind 200
+Peon84 posts big blind 400
+Dealt to Peon84 [Qs Th]
+*** PRE-FLOP *** 
+aymeric68 folds
+FL25 folds
+lapiaz39 folds
+ludorion folds
+billyboy7 folds
+Coqhardy folds
+Papayot folds
+Peon84 collected 1000 from pot
+*** SUMMARY ***
+Total pot 1000 | No rake
+Seat 7: Peon84 (big blind) won 1000
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 6 - HandId: #997600321653964807-49-1524501495 - Holdem no limit (50/200/400) - 2018/04/23 16:38:15 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #6 is the button
+Seat 1: FL25 (46575)
+Seat 2: lapiaz39 (101407)
+Seat 3: ludorion (25384)
+Seat 4: billyboy7 (82394)
+Seat 5: Coqhardy (48300)
+Seat 6: Papayot (46080)
+Seat 7: Peon84 (39396)
+Seat 8: aymeric68 (50900)
+*** ANTE/BLINDS ***
+Peon84 posts ante 50
+aymeric68 posts ante 50
+FL25 posts ante 50
+lapiaz39 posts ante 50
+ludorion posts ante 50
+billyboy7 posts ante 50
+Coqhardy posts ante 50
+Papayot posts ante 50
+Peon84 posts small blind 200
+aymeric68 posts big blind 400
+Dealt to Peon84 [3s 7d]
+*** PRE-FLOP *** 
+FL25 folds
+lapiaz39 folds
+ludorion folds
+billyboy7 folds
+Coqhardy folds
+Papayot folds
+Peon84 folds
+aymeric68 collected 1000 from pot
+*** SUMMARY ***
+Total pot 1000 | No rake
+Seat 8: aymeric68 (big blind) won 1000
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 6 - HandId: #997600321653964807-50-1524501507 - Holdem no limit (50/200/400) - 2018/04/23 16:38:27 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #7 is the button
+Seat 1: FL25 (46525)
+Seat 2: lapiaz39 (101357)
+Seat 3: ludorion (25334)
+Seat 4: billyboy7 (82344)
+Seat 5: Coqhardy (48250)
+Seat 6: Papayot (46030)
+Seat 7: Peon84 (39146)
+Seat 8: aymeric68 (51450)
+*** ANTE/BLINDS ***
+aymeric68 posts ante 50
+FL25 posts ante 50
+lapiaz39 posts ante 50
+ludorion posts ante 50
+billyboy7 posts ante 50
+Coqhardy posts ante 50
+Papayot posts ante 50
+Peon84 posts ante 50
+aymeric68 posts small blind 200
+FL25 posts big blind 400
+Dealt to Peon84 [7h 4h]
+*** PRE-FLOP *** 
+lapiaz39 folds
+ludorion raises 24884 to 25284 and is all-in
+billyboy7 folds
+Coqhardy folds
+Papayot folds
+Peon84 folds
+aymeric68 raises 26116 to 51400 and is all-in
+FL25 folds
+*** FLOP *** [Kd 5c 4d]
+*** TURN *** [Kd 5c 4d][6s]
+*** RIVER *** [Kd 5c 4d 6s][9h]
+*** SHOW DOWN ***
+ludorion shows [Qh Jh] (High card : King)
+aymeric68 shows [8s Ac] (High card : Ace)
+aymeric68 collected 77484 from pot
+*** SUMMARY ***
+Total pot 77484 | No rake
+Board: [Kd 5c 4d 6s 9h]
+Seat 3: ludorion showed [Qh Jh] and lost with High card : King
+Seat 8: aymeric68 (small blind) showed [8s Ac] and won 77484 with High card : Ace
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-51-1524501545 - Holdem no limit (60/250/500) - 2018/04/23 16:39:05 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #8 is the button
+Seat 1: FL25 (46075)
+Seat 2: lapiaz39 (101307)
+Seat 4: billyboy7 (82294)
+Seat 5: Coqhardy (48200)
+Seat 6: Papayot (45980)
+Seat 7: Peon84 (39096)
+Seat 8: aymeric68 (77484)
+*** ANTE/BLINDS ***
+FL25 posts ante 60
+lapiaz39 posts ante 60
+billyboy7 posts ante 60
+Coqhardy posts ante 60
+Papayot posts ante 60
+Peon84 posts ante 60
+aymeric68 posts ante 60
+FL25 posts small blind 250
+lapiaz39 posts big blind 500
+Dealt to Peon84 [6h Qd]
+*** PRE-FLOP *** 
+billyboy7 folds
+Coqhardy folds
+Papayot folds
+Peon84 folds
+aymeric68 folds
+FL25 folds
+lapiaz39 collected 1170 from pot
+*** SUMMARY ***
+Total pot 1170 | No rake
+Seat 2: lapiaz39 (big blind) won 1170
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-52-1524501563 - Holdem no limit (60/250/500) - 2018/04/23 16:39:23 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #1 is the button
+Seat 1: FL25 (45765)
+Seat 2: lapiaz39 (101917)
+Seat 4: billyboy7 (82234)
+Seat 5: Coqhardy (48140)
+Seat 6: Papayot (45920)
+Seat 7: Peon84 (39036)
+Seat 8: aymeric68 (77424)
+*** ANTE/BLINDS ***
+lapiaz39 posts ante 60
+billyboy7 posts ante 60
+FL25 posts ante 60
+Coqhardy posts ante 60
+Papayot posts ante 60
+Peon84 posts ante 60
+aymeric68 posts ante 60
+lapiaz39 posts small blind 250
+billyboy7 posts big blind 500
+Dealt to Peon84 [Td Qs]
+*** PRE-FLOP *** 
+Coqhardy calls 500
+Papayot folds
+Peon84 folds
+aymeric68 calls 500
+FL25 folds
+lapiaz39 folds
+billyboy7 checks
+*** FLOP *** [Kh 6s Th]
+billyboy7 checks
+Coqhardy checks
+aymeric68 bets 2170
+billyboy7 folds
+Coqhardy folds
+aymeric68 collected 4340 from pot
+*** SUMMARY ***
+Total pot 4340 | No rake
+Board: [Kh 6s Th]
+Seat 8: aymeric68 won 4340
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-53-1524501603 - Holdem no limit (60/250/500) - 2018/04/23 16:40:03 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #2 is the button
+Seat 1: FL25 (45705)
+Seat 2: lapiaz39 (101607)
+Seat 3: PatCoast (50000)
+Seat 4: billyboy7 (81674)
+Seat 5: Coqhardy (47580)
+Seat 6: Papayot (45860)
+Seat 7: Peon84 (38976)
+Seat 8: aymeric68 (79034)
+*** ANTE/BLINDS ***
+billyboy7 posts ante 60
+Coqhardy posts ante 60
+FL25 posts ante 60
+lapiaz39 posts ante 60
+Papayot posts ante 60
+Peon84 posts ante 60
+aymeric68 posts ante 60
+billyboy7 posts small blind 250
+Coqhardy posts big blind 500
+Dealt to Peon84 [6h Jh]
+*** PRE-FLOP *** 
+Papayot folds
+Peon84 folds
+aymeric68 calls 500
+FL25 folds
+lapiaz39 folds
+billyboy7 folds
+Coqhardy checks
+*** FLOP *** [5c 5d Qc]
+Coqhardy checks
+aymeric68 bets 1670
+Coqhardy raises 5010 to 6680
+aymeric68 calls 5010
+*** TURN *** [5c 5d Qc][9s]
+Coqhardy checks
+aymeric68 bets 15030
+Coqhardy folds
+aymeric68 collected 30060 from pot
+*** SUMMARY ***
+Total pot 30060 | No rake
+Board: [5c 5d Qc 9s]
+Seat 8: aymeric68 won 30060
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-54-1524501658 - Holdem no limit (60/250/500) - 2018/04/23 16:40:58 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #4 is the button
+Seat 1: FL25 (45645)
+Seat 2: lapiaz39 (101547)
+Seat 3: PatCoast (50000)
+Seat 4: billyboy7 (81364)
+Seat 5: Coqhardy (40340)
+Seat 6: Papayot (45800)
+Seat 7: Peon84 (38916)
+Seat 8: aymeric68 (86824)
+*** ANTE/BLINDS ***
+Coqhardy posts ante 60
+Papayot posts ante 60
+FL25 posts ante 60
+lapiaz39 posts ante 60
+PatCoast posts ante 60
+billyboy7 posts ante 60
+Peon84 posts ante 60
+aymeric68 posts ante 60
+Coqhardy posts small blind 250
+Papayot posts big blind 500
+Dealt to Peon84 [Tc Kc]
+*** PRE-FLOP *** 
+Peon84 folds
+aymeric68 folds
+FL25 folds
+lapiaz39 folds
+PatCoast calls 500
+billyboy7 folds
+Coqhardy calls 250
+Papayot folds
+*** FLOP *** [Ad 4h 7d]
+Coqhardy checks
+PatCoast bets 49440 and is all-in
+Coqhardy folds
+PatCoast collected 51420 from pot
+*** SUMMARY ***
+Total pot 51420 | No rake
+Board: [Ad 4h 7d]
+Seat 3: PatCoast won 51420
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-55-1524501692 - Holdem no limit (60/250/500) - 2018/04/23 16:41:32 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #5 is the button
+Seat 1: FL25 (45585)
+Seat 2: lapiaz39 (101487)
+Seat 3: PatCoast (51420)
+Seat 4: billyboy7 (81304)
+Seat 5: Coqhardy (39780)
+Seat 6: Papayot (45240)
+Seat 7: Peon84 (38856)
+Seat 8: aymeric68 (86764)
+*** ANTE/BLINDS ***
+Papayot posts ante 60
+Peon84 posts ante 60
+FL25 posts ante 60
+lapiaz39 posts ante 60
+PatCoast posts ante 60
+billyboy7 posts ante 60
+Coqhardy posts ante 60
+aymeric68 posts ante 60
+Papayot posts small blind 250
+Peon84 posts big blind 500
+Dealt to Peon84 [Kd Js]
+*** PRE-FLOP *** 
+aymeric68 calls 500
+FL25 folds
+lapiaz39 folds
+PatCoast calls 500
+billyboy7 folds
+Coqhardy folds
+Papayot folds
+Peon84 folds
+*** FLOP *** [Jc 2h 4d]
+aymeric68 checks
+PatCoast checks
+*** TURN *** [Jc 2h 4d][9h]
+aymeric68 checks
+PatCoast checks
+*** RIVER *** [Jc 2h 4d 9h][6h]
+aymeric68 bets 2230
+PatCoast folds
+aymeric68 collected 4460 from pot
+*** SUMMARY ***
+Total pot 4460 | No rake
+Board: [Jc 2h 4d 9h 6h]
+Seat 8: aymeric68 won 4460
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-56-1524501727 - Holdem no limit (60/250/500) - 2018/04/23 16:42:07 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #6 is the button
+Seat 1: FL25 (45525)
+Seat 2: lapiaz39 (101427)
+Seat 3: PatCoast (50860)
+Seat 4: billyboy7 (81244)
+Seat 5: Coqhardy (39720)
+Seat 6: Papayot (44930)
+Seat 7: Peon84 (38296)
+Seat 8: aymeric68 (88434)
+*** ANTE/BLINDS ***
+Peon84 posts ante 60
+aymeric68 posts ante 60
+FL25 posts ante 60
+lapiaz39 posts ante 60
+PatCoast posts ante 60
+billyboy7 posts ante 60
+Coqhardy posts ante 60
+Papayot posts ante 60
+Peon84 posts small blind 250
+aymeric68 posts big blind 500
+Dealt to Peon84 [Jd 8d]
+*** PRE-FLOP *** 
+FL25 folds
+lapiaz39 folds
+PatCoast folds
+billyboy7 folds
+Coqhardy folds
+Papayot folds
+Peon84 folds
+aymeric68 collected 1230 from pot
+*** SUMMARY ***
+Total pot 1230 | No rake
+Seat 8: aymeric68 (big blind) won 1230
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-57-1524501744 - Holdem no limit (60/250/500) - 2018/04/23 16:42:24 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #7 is the button
+Seat 1: FL25 (45465)
+Seat 2: lapiaz39 (101367)
+Seat 3: PatCoast (50800)
+Seat 4: billyboy7 (81184)
+Seat 5: Coqhardy (39660)
+Seat 6: Papayot (44870)
+Seat 7: Peon84 (37986)
+Seat 8: aymeric68 (89104)
+*** ANTE/BLINDS ***
+aymeric68 posts ante 60
+FL25 posts ante 60
+lapiaz39 posts ante 60
+PatCoast posts ante 60
+billyboy7 posts ante 60
+Coqhardy posts ante 60
+Papayot posts ante 60
+Peon84 posts ante 60
+aymeric68 posts small blind 250
+FL25 posts big blind 500
+Dealt to Peon84 [9c Jd]
+*** PRE-FLOP *** 
+lapiaz39 folds
+PatCoast calls 500
+billyboy7 calls 500
+Coqhardy calls 500
+Papayot folds
+Peon84 folds
+aymeric68 raises 2980 to 3480
+FL25 folds
+PatCoast calls 2980
+billyboy7 folds
+Coqhardy calls 2980
+*** FLOP *** [As Kh Ad]
+aymeric68 bets 11920
+PatCoast folds
+Coqhardy calls 11920
+*** TURN *** [As Kh Ad][Qs]
+aymeric68 bets 35760
+Coqhardy calls 24200 and is all-in
+*** RIVER *** [As Kh Ad Qs][9d]
+*** SHOW DOWN ***
+Coqhardy shows [7s Ks] (Two pairs : Aces and Kings)
+aymeric68 shows [Jc 8h] (One pair : Aces)
+aymeric68 collected 11560 from side pot 1
+Coqhardy collected 84160 from main pot
+*** SUMMARY ***
+Total pot 95720 | No rake
+Board: [As Kh Ad Qs 9d]
+Seat 5: Coqhardy showed [7s Ks] and won 84160 with Two pairs : Aces and Kings
+Seat 8: aymeric68 (small blind) showed [Jc 8h] and won 11560 with One pair : Aces
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-58-1524501834 - Holdem no limit (60/250/500) - 2018/04/23 16:43:54 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #8 is the button
+Seat 1: FL25 (44905)
+Seat 2: lapiaz39 (101307)
+Seat 3: PatCoast (47260)
+Seat 4: billyboy7 (80624)
+Seat 5: Coqhardy (84160)
+Seat 6: Papayot (44810)
+Seat 7: Peon84 (37926)
+Seat 8: aymeric68 (49444)
+*** ANTE/BLINDS ***
+FL25 posts ante 60
+lapiaz39 posts ante 60
+PatCoast posts ante 60
+billyboy7 posts ante 60
+Coqhardy posts ante 60
+Papayot posts ante 60
+Peon84 posts ante 60
+aymeric68 posts ante 60
+FL25 posts small blind 250
+lapiaz39 posts big blind 500
+Dealt to Peon84 [8c 2h]
+*** PRE-FLOP *** 
+PatCoast folds
+billyboy7 calls 500
+Coqhardy calls 500
+Papayot folds
+Peon84 folds
+aymeric68 calls 500
+FL25 folds
+lapiaz39 folds
+*** FLOP *** [As Jd 3h]
+billyboy7 bets 500
+Coqhardy folds
+aymeric68 calls 500
+*** TURN *** [As Jd 3h][6c]
+billyboy7 bets 500
+aymeric68 calls 500
+*** RIVER *** [As Jd 3h 6c][Qh]
+billyboy7 checks
+aymeric68 checks
+*** SHOW DOWN ***
+aymeric68 shows [Kc 2c] (High card : Ace)
+billyboy7 shows [Td Ac] (One pair : Aces)
+billyboy7 collected 4730 from pot
+*** SUMMARY ***
+Total pot 4730 | No rake
+Board: [As Jd 3h 6c Qh]
+Seat 4: billyboy7 showed [Td Ac] and won 4730 with One pair : Aces
+Seat 8: aymeric68 (button) showed [Kc 2c] and lost with High card : Ace
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-59-1524501871 - Holdem no limit (60/250/500) - 2018/04/23 16:44:31 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #1 is the button
+Seat 1: FL25 (44595)
+Seat 2: lapiaz39 (100747)
+Seat 3: PatCoast (47200)
+Seat 4: billyboy7 (83794)
+Seat 5: Coqhardy (83600)
+Seat 6: Papayot (44750)
+Seat 7: Peon84 (37866)
+Seat 8: aymeric68 (47884)
+*** ANTE/BLINDS ***
+lapiaz39 posts ante 60
+PatCoast posts ante 60
+FL25 posts ante 60
+billyboy7 posts ante 60
+Coqhardy posts ante 60
+Papayot posts ante 60
+Peon84 posts ante 60
+aymeric68 posts ante 60
+lapiaz39 posts small blind 250
+PatCoast posts big blind 500
+Dealt to Peon84 [4s 6h]
+*** PRE-FLOP *** 
+billyboy7 calls 500
+Coqhardy folds
+Papayot folds
+Peon84 folds
+aymeric68 folds
+FL25 folds
+lapiaz39 folds
+PatCoast checks
+*** FLOP *** [5c 7s Qs]
+PatCoast bets 46640 and is all-in
+billyboy7 folds
+PatCoast collected 48370 from pot
+*** SUMMARY ***
+Total pot 48370 | No rake
+Board: [5c 7s Qs]
+Seat 3: PatCoast (big blind) won 48370
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-60-1524501903 - Holdem no limit (60/250/500) - 2018/04/23 16:45:03 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #2 is the button
+Seat 1: FL25 (44535)
+Seat 2: lapiaz39 (100437)
+Seat 3: PatCoast (48370)
+Seat 4: billyboy7 (83234)
+Seat 5: Coqhardy (83540)
+Seat 6: Papayot (44690)
+Seat 7: Peon84 (37806)
+Seat 8: aymeric68 (47824)
+*** ANTE/BLINDS ***
+PatCoast posts ante 60
+billyboy7 posts ante 60
+FL25 posts ante 60
+lapiaz39 posts ante 60
+Coqhardy posts ante 60
+Papayot posts ante 60
+Peon84 posts ante 60
+aymeric68 posts ante 60
+PatCoast posts small blind 250
+billyboy7 posts big blind 500
+Dealt to Peon84 [Th Td]
+*** PRE-FLOP *** 
+Coqhardy calls 500
+Papayot folds
+Peon84 folds
+aymeric68 folds
+FL25 folds
+lapiaz39 folds
+PatCoast calls 250
+billyboy7 checks
+*** FLOP *** [Qd Jc 9c]
+PatCoast checks
+billyboy7 checks
+Coqhardy bets 1980
+PatCoast calls 1980
+billyboy7 folds
+*** TURN *** [Qd Jc 9c][6s]
+PatCoast checks
+Coqhardy bets 5940
+PatCoast folds
+Coqhardy collected 11880 from pot
+*** SUMMARY ***
+Total pot 11880 | No rake
+Board: [Qd Jc 9c 6s]
+Seat 5: Coqhardy won 11880
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-61-1524501961 - Holdem no limit (60/250/500) - 2018/04/23 16:46:01 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #3 is the button
+Seat 1: FL25 (44475)
+Seat 2: lapiaz39 (100377)
+Seat 3: PatCoast (45830)
+Seat 4: billyboy7 (82674)
+Seat 5: Coqhardy (86940)
+Seat 6: Papayot (44630)
+Seat 7: Peon84 (37746)
+Seat 8: aymeric68 (47764)
+*** ANTE/BLINDS ***
+billyboy7 posts ante 60
+Coqhardy posts ante 60
+FL25 posts ante 60
+lapiaz39 posts ante 60
+PatCoast posts ante 60
+Papayot posts ante 60
+Peon84 posts ante 60
+aymeric68 posts ante 60
+billyboy7 posts small blind 250
+Coqhardy posts big blind 500
+Dealt to Peon84 [Ah Jc]
+*** PRE-FLOP *** 
+Papayot folds
+Peon84 folds
+aymeric68 raises 1730 to 2230
+FL25 folds
+lapiaz39 folds
+PatCoast raises 43540 to 45770 and is all-in
+billyboy7 folds
+Coqhardy folds
+aymeric68 calls 43540
+*** FLOP *** [As 9c 5h]
+*** TURN *** [As 9c 5h][7s]
+*** RIVER *** [As 9c 5h 7s][3h]
+*** SHOW DOWN ***
+PatCoast shows [Qd Ks] (High card : Ace)
+aymeric68 shows [9h Kh] (One pair : 9)
+aymeric68 collected 92770 from pot
+*** SUMMARY ***
+Total pot 92770 | No rake
+Board: [As 9c 5h 7s 3h]
+Seat 3: PatCoast (button) showed [Qd Ks] and lost with High card : Ace
+Seat 8: aymeric68 showed [9h Kh] and won 92770 with One pair : 9
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-62-1524501986 - Holdem no limit (60/250/500) - 2018/04/23 16:46:26 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #4 is the button
+Seat 1: FL25 (44415)
+Seat 2: lapiaz39 (100317)
+Seat 4: billyboy7 (82364)
+Seat 5: Coqhardy (86380)
+Seat 6: Papayot (44570)
+Seat 7: Peon84 (37686)
+Seat 8: aymeric68 (94704)
+*** ANTE/BLINDS ***
+Coqhardy posts ante 60
+Papayot posts ante 60
+FL25 posts ante 60
+lapiaz39 posts ante 60
+billyboy7 posts ante 60
+Peon84 posts ante 60
+aymeric68 posts ante 60
+Coqhardy posts small blind 250
+Papayot posts big blind 500
+Dealt to Peon84 [Jc 5h]
+*** PRE-FLOP *** 
+Peon84 folds
+aymeric68 folds
+FL25 folds
+lapiaz39 folds
+billyboy7 folds
+Coqhardy calls 250
+Papayot folds
+Coqhardy collected 1420 from pot
+*** SUMMARY ***
+Total pot 1420 | No rake
+Seat 5: Coqhardy (small blind) won 1420
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-63-1524501997 - Holdem no limit (60/250/500) - 2018/04/23 16:46:37 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #5 is the button
+Seat 1: FL25 (44355)
+Seat 2: lapiaz39 (100257)
+Seat 4: billyboy7 (82304)
+Seat 5: Coqhardy (87240)
+Seat 6: Papayot (44010)
+Seat 7: Peon84 (37626)
+Seat 8: aymeric68 (94644)
+*** ANTE/BLINDS ***
+Papayot posts ante 60
+Peon84 posts ante 60
+FL25 posts ante 60
+lapiaz39 posts ante 60
+billyboy7 posts ante 60
+Coqhardy posts ante 60
+aymeric68 posts ante 60
+Papayot posts small blind 250
+Peon84 posts big blind 500
+Dealt to Peon84 [Qs 4h]
+*** PRE-FLOP *** 
+aymeric68 calls 500
+FL25 folds
+lapiaz39 folds
+billyboy7 folds
+Coqhardy folds
+Papayot folds
+Peon84 folds
+aymeric68 collected 1670 from pot
+*** SUMMARY ***
+Total pot 1670 | No rake
+Seat 8: aymeric68 won 1670
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 7 - HandId: #997600321653964807-64-1524502016 - Holdem no limit (60/250/500) - 2018/04/23 16:46:56 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #6 is the button
+Seat 1: FL25 (44295)
+Seat 2: lapiaz39 (100197)
+Seat 4: billyboy7 (82244)
+Seat 5: Coqhardy (87180)
+Seat 6: Papayot (43700)
+Seat 7: Peon84 (37066)
+Seat 8: aymeric68 (95754)
+*** ANTE/BLINDS ***
+Peon84 posts ante 60
+aymeric68 posts ante 60
+FL25 posts ante 60
+lapiaz39 posts ante 60
+billyboy7 posts ante 60
+Coqhardy posts ante 60
+Papayot posts ante 60
+Peon84 posts small blind 250
+aymeric68 posts big blind 500
+Dealt to Peon84 [2c 8s]
+*** PRE-FLOP *** 
+FL25 folds
+lapiaz39 folds
+billyboy7 folds
+Coqhardy calls 500
+Papayot folds
+Peon84 folds
+aymeric68 checks
+*** FLOP *** [6h Tc 6c]
+aymeric68 checks
+Coqhardy bets 1670
+aymeric68 folds
+Coqhardy collected 3340 from pot
+*** SUMMARY ***
+Total pot 3340 | No rake
+Board: [6h Tc 6c]
+Seat 5: Coqhardy won 3340
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 8 - HandId: #997600321653964807-65-1524502047 - Holdem no limit (80/300/600) - 2018/04/23 16:47:27 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #7 is the button
+Seat 1: FL25 (44235)
+Seat 2: lapiaz39 (100137)
+Seat 4: billyboy7 (82184)
+Seat 5: Coqhardy (88290)
+Seat 6: Papayot (43640)
+Seat 7: Peon84 (36756)
+Seat 8: aymeric68 (95194)
+*** ANTE/BLINDS ***
+aymeric68 posts ante 80
+FL25 posts ante 80
+lapiaz39 posts ante 80
+billyboy7 posts ante 80
+Coqhardy posts ante 80
+Papayot posts ante 80
+Peon84 posts ante 80
+aymeric68 posts small blind 300
+FL25 posts big blind 600
+Dealt to Peon84 [9d 7d]
+*** PRE-FLOP *** 
+lapiaz39 folds
+billyboy7 calls 600
+Coqhardy calls 600
+Papayot folds
+Peon84 folds
+aymeric68 calls 300
+FL25 folds
+*** FLOP *** [4s 7s Qs]
+aymeric68 checks
+billyboy7 bets 600
+Coqhardy folds
+aymeric68 folds
+billyboy7 collected 3560 from pot
+*** SUMMARY ***
+Total pot 3560 | No rake
+Board: [4s 7s Qs]
+Seat 4: billyboy7 won 3560
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 8 - HandId: #997600321653964807-66-1524502104 - Holdem no limit (80/300/600) - 2018/04/23 16:48:24 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #8 is the button
+Seat 1: FL25 (43555)
+Seat 2: lapiaz39 (100057)
+Seat 4: billyboy7 (84464)
+Seat 5: Coqhardy (87610)
+Seat 6: Papayot (43560)
+Seat 7: Peon84 (36676)
+Seat 8: aymeric68 (94514)
+*** ANTE/BLINDS ***
+FL25 posts ante 80
+lapiaz39 posts ante 80
+billyboy7 posts ante 80
+Coqhardy posts ante 80
+Papayot posts ante 80
+Peon84 posts ante 80
+aymeric68 posts ante 80
+FL25 posts small blind 300
+lapiaz39 posts big blind 600
+Dealt to Peon84 [7d Ad]
+*** PRE-FLOP *** 
+billyboy7 folds
+Coqhardy calls 600
+Papayot folds
+Peon84 folds
+aymeric68 calls 600
+FL25 folds
+lapiaz39 folds
+*** FLOP *** [9d Qs 3c]
+Coqhardy checks
+aymeric68 checks
+*** TURN *** [9d Qs 3c][7h]
+Coqhardy checks
+aymeric68 checks
+*** RIVER *** [9d Qs 3c 7h][4d]
+Coqhardy checks
+aymeric68 bets 2660
+Coqhardy folds
+aymeric68 collected 5320 from pot
+*** SUMMARY ***
+Total pot 5320 | No rake
+Board: [9d Qs 3c 7h 4d]
+Seat 8: aymeric68 (button) won 5320
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 8 - HandId: #997600321653964807-67-1524502209 - Holdem no limit (80/300/600) - 2018/04/23 16:50:09 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #1 is the button
+Seat 1: FL25 (43175)
+Seat 2: lapiaz39 (99377)
+Seat 4: billyboy7 (84384)
+Seat 5: Coqhardy (86930)
+Seat 6: Papayot (43480)
+Seat 7: Peon84 (36596)
+Seat 8: aymeric68 (96494)
+*** ANTE/BLINDS ***
+lapiaz39 posts ante 80
+billyboy7 posts ante 80
+FL25 posts ante 80
+Coqhardy posts ante 80
+Papayot posts ante 80
+Peon84 posts ante 80
+aymeric68 posts ante 80
+lapiaz39 posts small blind 300
+billyboy7 posts big blind 600
+Dealt to Peon84 [As Tc]
+*** PRE-FLOP *** 
+Coqhardy calls 600
+Papayot folds
+Peon84 folds
+aymeric68 calls 600
+FL25 folds
+lapiaz39 folds
+billyboy7 checks
+*** FLOP *** [3s 4c 5d]
+billyboy7 checks
+Coqhardy checks
+aymeric68 bets 2660
+billyboy7 folds
+Coqhardy folds
+aymeric68 collected 5320 from pot
+*** SUMMARY ***
+Total pot 5320 | No rake
+Board: [3s 4c 5d]
+Seat 8: aymeric68 won 5320
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 8 - HandId: #997600321653964807-68-1524502269 - Holdem no limit (80/300/600) - 2018/04/23 16:51:09 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #2 is the button
+Seat 1: FL25 (43095)
+Seat 2: lapiaz39 (98997)
+Seat 3: Hajr07 (50000)
+Seat 4: billyboy7 (83704)
+Seat 5: Coqhardy (86250)
+Seat 6: Papayot (43400)
+Seat 7: Peon84 (36516)
+Seat 8: aymeric68 (98474)
+*** ANTE/BLINDS ***
+billyboy7 posts ante 80
+Coqhardy posts ante 80
+FL25 posts ante 80
+lapiaz39 posts ante 80
+Papayot posts ante 80
+Peon84 posts ante 80
+aymeric68 posts ante 80
+billyboy7 posts small blind 300
+Coqhardy posts big blind 600
+Dealt to Peon84 [3h 5d]
+*** PRE-FLOP *** 
+Papayot folds
+Peon84 folds
+aymeric68 calls 600
+FL25 folds
+lapiaz39 folds
+billyboy7 folds
+Coqhardy checks
+*** FLOP *** [Ac 6c 5s]
+Coqhardy checks
+aymeric68 checks
+*** TURN *** [Ac 6c 5s][5c]
+Coqhardy checks
+aymeric68 bets 2060
+Coqhardy folds
+aymeric68 collected 4120 from pot
+*** SUMMARY ***
+Total pot 4120 | No rake
+Board: [Ac 6c 5s 5c]
+Seat 8: aymeric68 won 4120
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 8 - HandId: #997600321653964807-69-1524502331 - Holdem no limit (80/300/600) - 2018/04/23 16:52:11 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #4 is the button
+Seat 1: FL25 (43015)
+Seat 2: lapiaz39 (98917)
+Seat 3: Hajr07 (50000)
+Seat 4: billyboy7 (83324)
+Seat 5: Coqhardy (85570)
+Seat 6: Papayot (43320)
+Seat 7: Peon84 (36436)
+Seat 8: aymeric68 (99854)
+*** ANTE/BLINDS ***
+Coqhardy posts ante 80
+Papayot posts ante 80
+FL25 posts ante 80
+lapiaz39 posts ante 80
+Hajr07 posts ante 80
+billyboy7 posts ante 80
+Peon84 posts ante 80
+aymeric68 posts ante 80
+Coqhardy posts small blind 300
+Papayot posts big blind 600
+Dealt to Peon84 [Tc Jc]
+*** PRE-FLOP *** 
+Peon84 calls 600
+aymeric68 folds
+FL25 folds
+lapiaz39 folds
+Hajr07 raises 600 to 1200
+billyboy7 folds
+Coqhardy folds
+Papayot folds
+Peon84 calls 600
+*** FLOP *** [9c Ad 7c]
+Peon84 checks
+Hajr07 bets 48720 and is all-in
+Peon84 calls 35156 and is all-in
+*** TURN *** [9c Ad 7c][9d]
+*** RIVER *** [9c Ad 7c 9d][8h]
+*** SHOW DOWN ***
+Hajr07 shows [3s 5d] (One pair : 9)
+Peon84 shows [Tc Jc] (Straight Jack high)
+Peon84 collected 74252 from main pot
+Hajr07 collected 13564 from side pot 1
+*** SUMMARY ***
+Total pot 87816 | No rake
+Board: [9c Ad 7c 9d 8h]
+Seat 3: Hajr07 showed [3s 5d] and won 13564 with One pair : 9
+Seat 7: Peon84 showed [Tc Jc] and won 74252 with Straight Jack high
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 8 - HandId: #997600321653964807-70-1524502380 - Holdem no limit (80/300/600) - 2018/04/23 16:53:00 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #5 is the button
+Seat 1: FL25 (42935)
+Seat 2: lapiaz39 (98837)
+Seat 3: Hajr07 (13564)
+Seat 4: billyboy7 (83244)
+Seat 5: Coqhardy (85190)
+Seat 6: Papayot (42640)
+Seat 7: Peon84 (74252)
+Seat 8: aymeric68 (99774)
+*** ANTE/BLINDS ***
+Papayot posts ante 80
+Peon84 posts ante 80
+FL25 posts ante 80
+lapiaz39 posts ante 80
+Hajr07 posts ante 80
+billyboy7 posts ante 80
+Coqhardy posts ante 80
+aymeric68 posts ante 80
+Papayot posts small blind 300
+Peon84 posts big blind 600
+Dealt to Peon84 [Ad 3h]
+*** PRE-FLOP *** 
+aymeric68 folds
+FL25 folds
+lapiaz39 folds
+Hajr07 raises 12884 to 13484 and is all-in
+billyboy7 folds
+Coqhardy folds
+Papayot folds
+Peon84 folds
+Hajr07 collected 15024 from pot
+*** SUMMARY ***
+Total pot 15024 | No rake
+Seat 3: Hajr07 won 15024
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 8 - HandId: #997600321653964807-71-1524502404 - Holdem no limit (80/300/600) - 2018/04/23 16:53:24 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #6 is the button
+Seat 1: FL25 (42855)
+Seat 2: lapiaz39 (98757)
+Seat 3: Hajr07 (15024)
+Seat 4: billyboy7 (83164)
+Seat 5: Coqhardy (85110)
+Seat 6: Papayot (42260)
+Seat 7: Peon84 (73572)
+Seat 8: aymeric68 (99694)
+*** ANTE/BLINDS ***
+Peon84 posts ante 80
+aymeric68 posts ante 80
+FL25 posts ante 80
+lapiaz39 posts ante 80
+Hajr07 posts ante 80
+billyboy7 posts ante 80
+Coqhardy posts ante 80
+Papayot posts ante 80
+Peon84 posts small blind 300
+aymeric68 posts big blind 600
+Dealt to Peon84 [8h 6h]
+*** PRE-FLOP *** 
+FL25 folds
+lapiaz39 folds
+Hajr07 raises 14344 to 14944 and is all-in
+billyboy7 folds
+Coqhardy calls 14944
+Papayot folds
+Peon84 folds
+aymeric68 folds
+*** FLOP *** [7c 4c 4s]
+*** TURN *** [7c 4c 4s][Kh]
+*** RIVER *** [7c 4c 4s Kh][Ac]
+*** SHOW DOWN ***
+Coqhardy shows [Qd Kd] (Two pairs : Kings and 4)
+Hajr07 shows [As Jh] (Two pairs : Aces and 4)
+Hajr07 collected 31428 from pot
+*** SUMMARY ***
+Total pot 31428 | No rake
+Board: [7c 4c 4s Kh Ac]
+Seat 3: Hajr07 showed [As Jh] and won 31428 with Two pairs : Aces and 4
+Seat 5: Coqhardy showed [Qd Kd] and lost with Two pairs : Kings and 4
+
+
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 8 - HandId: #997600321653964807-72-1524502450 - Holdem no limit (80/300/600) - 2018/04/23 16:54:10 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #7 is the button
+Seat 1: FL25 (42775)
+Seat 3: Hajr07 (31428)
+Seat 4: billyboy7 (83084)
+Seat 5: Coqhardy (70086)
+Seat 6: Papayot (42180)
+Seat 7: Peon84 (73192)
+Seat 8: aymeric68 (99014)
+*** ANTE/BLINDS ***
+aymeric68 posts ante 80
+FL25 posts ante 80
+Hajr07 posts ante 80
+billyboy7 posts ante 80
+Coqhardy posts ante 80
+Papayot posts ante 80
+Peon84 posts ante 80
+aymeric68 posts small blind 300
+FL25 posts big blind 600
+Dealt to Peon84 [Qs Ah]
+*** PRE-FLOP *** 
+Hajr07 raises 8442 to 9042
+billyboy7 folds
+Coqhardy calls 9042
+Papayot folds
+Peon84 calls 9042
+aymeric68 raises 37328 to 46370
+FL25 folds
+Hajr07 calls 22306 and is all-in
+Coqhardy raises 23636 to 70006 and is all-in
+Peon84 calls 60964
+aymeric68 calls 23636
+*** FLOP *** [5s 6h 9c]
+aymeric68 bets 6000
+Peon84 calls 3106 and is all-in
+*** TURN *** [5s 6h 9c][5h]
+*** RIVER *** [5s 6h 9c 5h][7d]
+*** SHOW DOWN ***
+Hajr07 shows [Qc 7s] (Two pairs : 7 and 5)
+Coqhardy shows [Tc Td] (Two pairs : Tens and 5)
+Peon84 shows [Qs Ah] (One pair : 5)
+aymeric68 shows [9h 9s] (Full of 9 and 5)
+aymeric68 collected 251632 from pot
+*** SUMMARY ***
+Total pot 251632 | No rake
+Board: [5s 6h 9c 5h 7d]
+Seat 3: Hajr07 showed [Qc 7s] and lost with Two pairs : 7 and 5
+Seat 5: Coqhardy showed [Tc Td] and lost with Two pairs : Tens and 5
+Seat 7: Peon84 (button) showed [Qs Ah] and lost with One pair : 5
+Seat 8: aymeric68 (small blind) showed [9h 9s] and won 251632 with Full of 9 and 5
+
+

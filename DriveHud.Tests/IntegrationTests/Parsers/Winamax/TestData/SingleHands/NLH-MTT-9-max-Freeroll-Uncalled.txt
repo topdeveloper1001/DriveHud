@@ -1,0 +1,32 @@
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 8 - HandId: #998130204654174210-88-1524546532 - Holdem no limit (20/80/160) - 2018/04/24 05:08:52 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #8 is the button
+Seat 1: DEBSON-DEB (23599)
+Seat 2: Peon84 (1700)
+Seat 4: f.gwada (12549)
+Seat 5: backintown92 (2520)
+Seat 6: taktiktak (17081)
+Seat 7: NOLOVISTO (598)
+Seat 8: volvo02 (588)
+*** ANTE/BLINDS ***
+DEBSON-DEB posts ante 20
+Peon84 posts ante 20
+f.gwada posts ante 20
+backintown92 posts ante 20
+taktiktak posts ante 20
+NOLOVISTO posts ante 20
+volvo02 posts ante 20
+DEBSON-DEB posts small blind 80
+Peon84 posts big blind 160
+Dealt to Peon84 [3h Ac]
+*** PRE-FLOP *** 
+f.gwada folds
+backintown92 folds
+taktiktak folds
+NOLOVISTO folds
+volvo02 folds
+DEBSON-DEB raises 460 to 620
+Peon84 folds
+DEBSON-DEB collected 920 from pot
+*** SUMMARY ***
+Total pot 920 | No rake
+Seat 1: DEBSON-DEB (small blind) won 920

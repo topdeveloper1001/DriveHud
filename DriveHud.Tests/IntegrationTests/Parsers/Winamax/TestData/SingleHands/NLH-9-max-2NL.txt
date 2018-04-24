@@ -1,0 +1,66 @@
+Winamax Poker - CashGame - HandId: #11127564-36-1524498758 - Holdem no limit (0.01/0.02) - 2018/04/23 15:52:38 UTC
+Table: 'Leeds 02' 9-max (play money) Seat #2 is the button
+Seat 1: Tony.W (1.44)
+Seat 2: Skaann (9.07)
+Seat 3: StevenRex (2)
+Seat 4: aniktamama (13.59)
+Seat 5: LATINO66 (2)
+Seat 6: qilby (2)
+Seat 7: rambo38 (7.87)
+Seat 8: amarushakur5 (2)
+Seat 9: Peon84 (1.98)
+*** ANTE/BLINDS ***
+StevenRex posts small blind 0.01
+aniktamama posts big blind 0.02
+Dealt to Peon84 [Js 8s]
+*** PRE-FLOP *** 
+LATINO66 calls 0.02
+qilby calls 0.02
+rambo38 folds
+amarushakur5 calls 0.02
+Peon84 calls 0.02
+Tony.W calls 0.02
+Skaann calls 0.02
+StevenRex calls 0.01
+aniktamama checks
+*** FLOP *** [8d 7s 6s]
+StevenRex checks
+aniktamama checks
+LATINO66 checks
+qilby checks
+amarushakur5 checks
+Peon84 bets 0.08
+Tony.W calls 0.08
+Skaann raises 0.08 to 0.16
+StevenRex folds
+aniktamama calls 0.16
+LATINO66 folds
+qilby calls 0.16
+amarushakur5 folds
+Peon84 calls 0.08
+Tony.W calls 0.08
+*** TURN *** [8d 7s 6s][6d]
+aniktamama checks
+qilby checks
+Peon84 checks
+Tony.W checks
+Skaann bets 0.96
+aniktamama calls 0.96
+qilby calls 0.96
+Peon84 folds
+Tony.W folds
+*** RIVER *** [8d 7s 6s 6d][Ad]
+aniktamama checks
+qilby checks
+Skaann checks
+*** SHOW DOWN ***
+aniktamama shows [9h 3d] (One pair : 6)
+qilby shows [Kd 9s] (One pair : 6)
+Skaann shows [8c 3c] (Two pairs : 8 and 6)
+Skaann collected 3.59 from pot
+*** SUMMARY ***
+Total pot 3.59 | Rake 0.25
+Board: [8d 7s 6s 6d Ad]
+Seat 2: Skaann (button) showed [8c 3c] and won 3.59 with Two pairs : 8 and 6
+Seat 4: aniktamama (big blind) showed [9h 3d] and lost with One pair : 6
+Seat 6: qilby showed [Kd 9s] and lost with One pair : 6
