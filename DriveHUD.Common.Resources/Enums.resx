@@ -1001,4 +1001,10 @@
   <data name="Enum_EnumPokerNetworks_Horizon" xml:space="preserve">
     <value>Horizon Poker Network</value>
   </data>
+  <data name="Enum_EnumPokerNetworks_Winamax" xml:space="preserve">
+    <value>Winamax</value>
+  </data>
+  <data name="Enum_EnumPokerSites_Winamax" xml:space="preserve">
+    <value>Winamax</value>
+  </data>
 </root>

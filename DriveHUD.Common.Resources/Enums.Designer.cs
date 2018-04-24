@@ -178,6 +178,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Winamax.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_Winamax {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_Winamax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Winning Poker Network.
         /// </summary>
         internal static string Enum_EnumPokerNetworks_WPN {
@@ -336,6 +345,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_EnumPokerSites_TruePoker {
             get {
                 return ResourceManager.GetString("Enum_EnumPokerSites_TruePoker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Winamax.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_Winamax {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_Winamax", resourceCulture);
             }
         }
         

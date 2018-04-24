@@ -11,7 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
-using DriveHUD.Importers.Horizon;
+using DriveHUD.Importers.Winamax;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
@@ -373,7 +373,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
             Assert.That(actions.Length, Is.EqualTo(numberOfActions));
         }
 
-       // [TestCase(@"..\..\IntegrationTests\Parsers\Horizon\TestData\SingleHands\NLH-MTT-8-max-Freeroll.txt", "Tournament: 16612276 Buy-In Freeroll : Table 19 - No Limit Holdem - 75/150", true)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll.txt", "Freeroll(232395298)#001 / 80-160 (ante 20) NL Holdem / Buy-in: 0", true)]
         public void ParsedHistoryMatchedWindowTitleTest(string handHistoryFile, string title, bool match)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -419,7 +419,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
             ServiceLocator.SetLocatorProvider(() => locator);
         }
 
-        private class WinamaxImporterStub : HorizonImporter
+        private class WinamaxImporterStub : WinamaxImporter
         {
             public new bool Match(string title, ParsingResult parsingResult)
             {

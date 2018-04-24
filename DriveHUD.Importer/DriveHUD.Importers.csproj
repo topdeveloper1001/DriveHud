@@ -351,6 +351,8 @@
     <Compile Include="SessionCacheStatistic.cs" />
     <Compile Include="TournamentSettings.cs" />
     <Compile Include="TournamentsResolver.cs" />
+    <Compile Include="Winamax\IWinamaxImporter.cs" />
+    <Compile Include="Winamax\WinamaxImporter.cs" />
     <Compile Include="WinningPokerNetwork\AmericasCardroomImporter.cs" />
     <Compile Include="WinningPokerNetwork\BlackChipPokerImporter.cs" />
     <Compile Include="WinningPokerNetwork\IAmericasCardroomImporter.cs" />

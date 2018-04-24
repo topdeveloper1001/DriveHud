@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
@@ -24,7 +23,6 @@ using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Input;
@@ -55,7 +53,8 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.TigerGaming, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TigerGaming) },
                 { EnumPokerSites.TruePoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TruePoker) },
                 { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) },
-                { EnumPokerSites.Horizon, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Horizon) }
+                { EnumPokerSites.Horizon, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Horizon) },
+                { EnumPokerSites.Winamax, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Winamax) }
             };
 
             SelectedSiteViewModel = new SiteViewModel();
@@ -467,7 +466,7 @@ namespace DriveHUD.Application.ViewModels.Settings
 
         public void RaisePropertyChanged()
         {
-            OnPropertyChanged(nameof(SelectedSeatModel));
+            RaisePropertyChanged(nameof(SelectedSeatModel));
         }
     }
 }

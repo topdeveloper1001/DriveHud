@@ -51,7 +51,8 @@ namespace Model.Site
                 EnumPokerSites.TruePoker,
                 EnumPokerSites.YaPoker,
                 EnumPokerSites.PartyPoker,
-                EnumPokerSites.Horizon                
+                EnumPokerSites.Horizon,
+                EnumPokerSites.Winamax
             };
 
             foreach (EnumPokerSites site in sites)
@@ -97,49 +98,7 @@ namespace Model.Site
 
             return validationResults;
         }
-
-        /// <summary>
-        /// Get site configuration
-        /// </summary>
-        /// <param name="site">Site name</param>
-        /// <returns>Site configuration</returns>
-        public ISiteConfiguration Get(string site)
-        {
-            switch (site)
-            {
-                case "Bovada":
-                case "Ignition":
-                    return Get(EnumPokerSites.Ignition);
-                case "BetOnline":
-                    return Get(EnumPokerSites.BetOnline);
-                case "TigerGaming":
-                    return Get(EnumPokerSites.TigerGaming);
-                case "SportsBetting":
-                    return Get(EnumPokerSites.SportsBetting);
-                case "PokerStars":
-                    return Get(EnumPokerSites.PokerStars);
-                case "Poker888":
-                    return Get(EnumPokerSites.Poker888);
-                case "AmericasCardroom":
-                    return Get(EnumPokerSites.AmericasCardroom);
-                case "BlackChipPoker":
-                    return Get(EnumPokerSites.BlackChipPoker);
-                case "TruePoker":
-                    return Get(EnumPokerSites.TruePoker);
-                case "YaPoker":
-                    return Get(EnumPokerSites.YaPoker);
-                case "PartyPoker":
-                    return Get(EnumPokerSites.PartyPoker);
-                case "IPoker":
-                    return Get(EnumPokerSites.IPoker);
-                case "GGN":
-                    return Get(EnumPokerSites.GGN);
-                default:
-                    throw new DHInternalException(new NonLocalizableString("Not supported site [{0}]", site));
-
-            }
-        }
-
+        
         /// <summary>
         /// Get site configuration
         /// </summary>
