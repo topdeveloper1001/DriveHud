@@ -10,20 +10,34 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
+using System.Windows;
+using DriveHUD.Application.Views;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     internal class WinamaxHudPanelService : HudPanelService
     {
-        /// <summary>
-        /// Get initial table size 
-        /// </summary>
-        /// <returns>Return dimensions of initial table, Item1 - Width, Item - Height</returns>
-        public override Tuple<double, double> GetInitialTableSize()
-        {
-            return new Tuple<double, double>(716, 540);
+        private static readonly Point initialTableSize = new Point(716, 540);
 
+        /// <summary>
+        /// Gets the initial(default) size of the table 
+        /// </summary>
+        public override Point InitialTableSize
+        {
+            get
+            {
+                return initialTableSize;
+            }
+        }
+
+        /// <summary>
+        /// Calculates x-scale for the specified Winamax windowk
+        /// </summary>
+        /// <param name="window"></param>
+        /// <returns></returns>
+        public override double GetScaleX(HudWindow window)
+        {
+            return base.GetScaleY(window);
         }
     }
 }

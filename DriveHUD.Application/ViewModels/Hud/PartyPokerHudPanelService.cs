@@ -1,5 +1,16 @@
-﻿using DriveHUD.Entities;
-using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="HudPanelService.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Entities;
 using System.Collections.Generic;
 using System.Windows;
 
@@ -7,6 +18,19 @@ namespace DriveHUD.Application.ViewModels.Hud
 {
     internal class PartyPokerHudPanelService : HudPanelService
     {
+        private static readonly Point initialTableSize = new Point(800, 566);
+
+        /// <summary>
+        /// Gets the initial(default) size of the table 
+        /// </summary>
+        public override Point InitialTableSize
+        {
+            get
+            {
+                return initialTableSize;
+            }
+        }
+
         private readonly Dictionary<int, int[,]> plainPositionsShifts = new Dictionary<int, int[,]>
         {
             { 2, new int[,] { { -5, -40 }, { -8, -38}  } },
@@ -17,15 +41,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             { 9, new int[,] { { -79, -49 }, { -52, -83 }, { -8, -112 }, { 29, -76}, { -6, -23 }, { -41, -76 }, { -12, -112 }, { 31, -83 }, { 66, -49 } } },
             { 10, new int[,] { { -32, -40 }, { -21, -37 }, { -26, -53 }, { -12, -43}, { -29, -46 }, { -11, -46 }, { 5, -43 }, { 13, -53 }, { -13, -37 }, { -8, -40 } } }
        };
-
-        /// <summary>
-        /// Get initial table size 
-        /// </summary>
-        /// <returns>Return dimensions of initial table, Item1 - Width, Item - Height</returns>
-        public override Tuple<double, double> GetInitialTableSize()
-        {
-            return new Tuple<double, double>(800, 566);
-        }
 
         public override Point GetPositionShift(EnumTableType tableType, int seat)
         {
