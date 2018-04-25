@@ -17,6 +17,7 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers;
+using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.FastParser.Horizon;
 using HandHistories.Parser.Parsers.FastParser.Winamax;
 using Microsoft.Practices.ServiceLocation;
@@ -63,7 +64,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
 
             var handHistoryFiles = testDataDirectoryInfo.GetFiles("*.txt", SearchOption.AllDirectories);
 
-            var parser = new HorizonFastParserImpl();
+            var parser = CreateParser();
 
             var succeded = 0;
             var total = 0;
@@ -100,6 +101,17 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
             Assert.AreEqual(total, succeded);
 
             Debug.WriteLine("Processed hands: {0}/{1}", succeded, total);
+        }
+
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\MultipleHands\20180423_Leeds 02_play_holdem_no-limit.txt", 6)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\MultipleHands\20180424_Leeds 03_play_holdem_no-limit.txt", 3)]
+        public void SplitUpMultipleHandsTests(string handHistoryFile, int handNumbers)
+        {
+            var handHistory = File.ReadAllText(handHistoryFile);
+            var parser = CreateParser();
+            var hands = parser.SplitUpMultipleHands(handHistory).ToArray();
+
+            Assert.That(hands.Length, Is.EqualTo(handNumbers), "Hands numbers doesn't match expected.");
         }
 
         [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", 127564361524498758)]
@@ -311,7 +323,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.Hero.Win, Is.EqualTo(win));
         }
-        
+
         [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "Leeds 02")]
         [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll.txt", "Freeroll(232395298)#002")]
         [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-8-max-DeepStack.txt", "MONSTER STACK(232271925)#006")]
@@ -320,7 +332,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.TableName, Is.EqualTo(tableName));
         }
-        
+
         [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", 9)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll.txt", 7)]
         public void PlayersCountIsParsedTest(string handHistoryFile, int playersCount)
@@ -337,7 +349,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
             Assert.That(handHistory.DealerButtonPosition, Is.EqualTo(dealerButtonPosition));
         }
 
-        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "2018/04/23 15:52:38")]        
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "2018/04/23 15:52:38")]
         public void DateOfHandUtcIsParsedTest(string handHistoryFile, string dateOfHand)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -394,7 +406,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
 
         private HandHistory ParseHandHistory(string handHistoryFile)
         {
-            var parser = new WinamaxFastParserImpl();
+            var parser = CreateParser();
 
             var handHistoryText = File.ReadAllText(handHistoryFile);
 
@@ -405,6 +417,11 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
             var handHistory = parser.ParseFullHandHistory(hand, true);
 
             return handHistory;
+        }
+
+        private IHandHistoryParser CreateParser()
+        {
+            return new WinamaxFastParserImpl();
         }
 
         private void ConfigureContainer()

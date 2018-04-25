@@ -19,6 +19,7 @@ using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
+using HandHistories.Parser.Utils.Extensions;
 using HandHistories.Parser.Utils.FastParsing;
 using System;
 using System.Collections.Generic;
@@ -876,6 +877,23 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                 tournament);
 
             return handHistory;
+        }        
+
+        /// <summary>
+        /// Split multiple hands into array or single hands
+        /// </summary>
+        /// <param name="rawHandHistories"></param>
+        /// <returns></returns>
+        public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
+        {
+            if (IsSummaryHand(new[] { rawHandHistories }))
+            {
+                return new[] { rawHandHistories };
+            }
+
+            rawHandHistories = rawHandHistories.Replace("\r", string.Empty);
+
+            return rawHandHistories.LazyStringSplit("\n\n").Where(s => string.IsNullOrWhiteSpace(s) == false && s.Equals("\r\n") == false);
         }
 
         /// <summary>
