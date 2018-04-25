@@ -10,20 +10,23 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
+using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     internal class HorizonHudPanelService : HudPanelService
     {
-        /// <summary>
-        /// Get initial table size 
-        /// </summary>
-        /// <returns>Return dimensions of initial table, Item1 - Width, Item - Height</returns>
-        public override Tuple<double, double> GetInitialTableSize()
-        {
-            return new Tuple<double, double>(800, 625);
+        private static readonly Point initialTableSize = new Point(800, 625);
 
+        /// <summary>
+        /// Gets the initial(default) size of the table 
+        /// </summary>
+        public override Point InitialTableSize
+        {
+            get
+            {
+                return initialTableSize;
+            }
         }
     }
 }

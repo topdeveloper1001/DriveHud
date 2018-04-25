@@ -75,6 +75,7 @@
     <Compile Include="Parsers\FastParser\PartyPoker\PartyPokerFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Horizon\HorizonFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\Winamax\WinamaxFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Winning\WinningPokerNetworkFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Winning\WinningPokerSnG2FastParserImpl.cs" />
     <Compile Include="Parsers\ParsingResult.cs" />

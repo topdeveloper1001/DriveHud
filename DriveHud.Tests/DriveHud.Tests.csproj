@@ -231,6 +231,7 @@
     <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Horizon\HorizonFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\TowerTorneos\TowerTorneosFastParserTest.cs" />
+    <Compile Include="IntegrationTests\Parsers\Winamax\WinamaxFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\WinningPokerNetwork\WinningPokerNetworkFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\WSPO\WSPONetFastParserTest.cs" />
     <Compile Include="PMTests\HandBuilderTests.cs" />
@@ -692,6 +693,9 @@
     </Content>
     <Content Include="UnitTests\TestData\SNG-4-max-relocate.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Winamax.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\WindfallHand-3max-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -1334,6 +1338,7 @@
     <Folder Include="IntegrationTests\Parsers\Pacific\TestData\" />
     <Folder Include="IntegrationTests\Parsers\PokerStars\TestData\" />
     <Folder Include="IntegrationTests\Parsers\TowerTorneos\TestData\" />
+    <Folder Include="IntegrationTests\Parsers\Winamax\TestData\" />
     <Folder Include="IntegrationTests\Parsers\WSPO\TestData\" />
   </ItemGroup>
   <Choose>

@@ -57,7 +57,7 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
                     {
                         { 565, 101 }, { 656, 312 }, { 461, 422 }, { 211, 422 }, { 17, 312 }, { 110, 101 }
                     }
-                },
+                },                
                 {
                     //
                     8,

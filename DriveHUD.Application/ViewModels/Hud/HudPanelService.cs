@@ -15,12 +15,12 @@ using DriveHUD.Application.ViewModels.Popups;
 using DriveHUD.Application.Views;
 using DriveHUD.Application.Views.Popups;
 using DriveHUD.Common;
+using DriveHUD.Common.Resources;
+using DriveHUD.Entities;
 using System;
 using System.Windows;
 using System.Windows.Data;
 using Telerik.Windows.Controls;
-using DriveHUD.Entities;
-using DriveHUD.Common.Resources;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -29,6 +29,19 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// </summary>
     internal class HudPanelService : IHudPanelService
     {
+        private static readonly Point initialTableSize = new Point(811, 677);
+
+        /// <summary>
+        /// Gets the initial(default) size of the table 
+        /// </summary>
+        public virtual Point InitialTableSize
+        {
+            get
+            {
+                return initialTableSize;
+            }
+        }
+
         /// <summary>
         /// Calculates hudElement position in window
         /// </summary>
@@ -189,16 +202,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             return factory;
         }
 
-
-        /// <summary>
-        /// Get initial table size 
-        /// </summary>
-        /// <returns>Return dimensions of initial table, Item1 - Width, Item - Height</returns>
-        public virtual Tuple<double, double> GetInitialTableSize()
-        {
-            return new Tuple<double, double>(811, 677);
-        }
-
         public virtual Tuple<double, double> GetInitialTrackConditionMeterPosition()
         {
             return new Tuple<double, double>(150, -30);
@@ -255,9 +258,35 @@ namespace DriveHUD.Application.ViewModels.Hud
             RadContextMenu.SetContextMenu(hudTool, contextMenu);
         }
 
+        /// <summary>
+        /// Gets the shift for the specified table type and seat
+        /// </summary>
+        /// <param name="tableType"></param>
+        /// <param name="seat"></param>
+        /// <returns></returns>
         public virtual Point GetPositionShift(EnumTableType tableType, int seat)
         {
             return new Point(0, 0);
+        }
+
+        /// <summary>
+        /// Calculates x-scale for the specified window
+        /// </summary>
+        /// <param name="window">Window to calculate x-scale</param>
+        /// <returns>X-scale</returns>
+        public virtual double GetScaleX(HudWindow window)
+        {
+            return window.Width / InitialTableSize.X;
+        }
+
+        /// <summary>
+        /// Calculates y-scale for the specified window
+        /// </summary>
+        /// <param name="window">Window to calculate y-scale</param>
+        /// <returns>Y-scale</returns>
+        public virtual double GetScaleY(HudWindow window)
+        {
+            return window.Height / InitialTableSize.Y;
         }
     }
 }

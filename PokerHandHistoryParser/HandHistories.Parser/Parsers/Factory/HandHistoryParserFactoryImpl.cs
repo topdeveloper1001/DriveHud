@@ -23,6 +23,7 @@ using HandHistories.Parser.Parsers.FastParser.Horizon;
 using HandHistories.Parser.Parsers.FastParser.Winning;
 using HandHistories.Parser.Utils.Extensions;
 using System;
+using HandHistories.Parser.Parsers.FastParser.Winamax;
 
 namespace HandHistories.Parser.Parsers.Factory
 {
@@ -84,6 +85,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new CommonHandHistoryParser(EnumPokerSites.PokerMaster);
                 case EnumPokerSites.Horizon:
                     return new HorizonFastParserImpl();
+                case EnumPokerSites.Winamax:
+                    return new WinamaxFastParserImpl();
                 default:
                     throw new NotImplementedException("GetFullHandHistoryParser: No parser for " + siteName);
             }

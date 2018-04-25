@@ -366,6 +366,7 @@
     <Compile Include="Site\ISiteConfigurationService.cs" />
     <Compile Include="Site\PokerStarsConfiguration.cs" />
     <Compile Include="Site\SiteConfigurationService.cs" />
+    <Compile Include="Site\WinamaxConfiguration.cs" />
     <Compile Include="Solvers\EquityData.cs" />
     <Compile Include="Solvers\EquitySolver.cs" />
     <Compile Include="Solvers\HandWinners.cs" />

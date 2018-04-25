@@ -1,0 +1,46 @@
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 8 - HandId: #998130204654174211-55-1524546279 - Holdem no limit (20/80/160) - 2018/04/24 05:04:39 UTC
+Table: 'Freeroll(232395298)#002' 8-max (play money) Seat #6 is the button
+Seat 1: CARDRICH (118)
+Seat 2: UTOPIAAAA (2460)
+Seat 3: nisa (1628)
+Seat 4: BAR1327 (1641)
+Seat 5: Peon84 (2700)
+Seat 6: KINDERBIS (40561)
+Seat 7: eric4535 (6827)
+*** ANTE/BLINDS ***
+eric4535 posts ante 20
+CARDRICH posts ante 20
+UTOPIAAAA posts ante 20
+nisa posts ante 20
+BAR1327 posts ante 20
+Peon84 posts ante 20
+KINDERBIS posts ante 20
+eric4535 posts small blind 80
+CARDRICH posts big blind 98 and is all-in
+Dealt to Peon84 [6s 5h]
+*** PRE-FLOP *** 
+UTOPIAAAA calls 160
+nisa folds
+BAR1327 folds
+Peon84 folds
+KINDERBIS folds
+eric4535 calls 80
+*** FLOP *** [4d 6h Kc]
+eric4535 checks
+UTOPIAAAA checks
+*** TURN *** [4d 6h Kc][3d]
+eric4535 checks
+UTOPIAAAA checks
+*** RIVER *** [4d 6h Kc 3d][Ad]
+eric4535 bets 160
+UTOPIAAAA folds
+*** SHOW DOWN ***
+CARDRICH shows [4h Kh] (Two pairs : Kings and 4)
+eric4535 shows [Qc Ah] (One pair : Aces)
+eric4535 collected 284 from side pot 1
+CARDRICH collected 434 from main pot
+*** SUMMARY ***
+Total pot 718 | No rake
+Board: [4d 6h Kc 3d Ad]
+Seat 1: CARDRICH (big blind) showed [4h Kh] and won 434 with Two pairs : Kings and 4
+Seat 7: eric4535 (small blind) showed [Qc Ah] and won 284 with One pair : Aces
