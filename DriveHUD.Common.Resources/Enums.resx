@@ -1007,4 +1007,7 @@
   <data name="Enum_EnumPokerSites_Winamax" xml:space="preserve">
     <value>Winamax</value>
   </data>
+  <data name="Enum_EnumTableType_Seven" xml:space="preserve">
+    <value>7-max</value>
+  </data>
 </root>

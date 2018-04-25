@@ -592,6 +592,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 7-max.
+        /// </summary>
+        internal static string Enum_EnumTableType_Seven {
+            get {
+                return ResourceManager.GetString("Enum_EnumTableType_Seven", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 6-max.
         /// </summary>
         internal static string Enum_EnumTableType_Six {
