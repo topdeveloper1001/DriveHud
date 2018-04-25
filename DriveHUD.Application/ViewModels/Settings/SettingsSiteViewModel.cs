@@ -108,12 +108,21 @@ namespace DriveHUD.Application.ViewModels.Settings
             }
         }
 
+        public bool IsTableTypeSelectorVisible
+        {
+            get
+            {
+                return tableTypeDictionary != null && tableTypeDictionary.Count > 1;
+            }
+        }
+
         public Dictionary<EnumTableType, string> TableTypeDictionary
         {
             get { return tableTypeDictionary; }
             set
             {
                 SetProperty(ref tableTypeDictionary, value);
+                RaisePropertyChanged(nameof(IsTableTypeSelectorVisible));
             }
         }
 
@@ -189,7 +198,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 if (SettingsModel != null && SettingsModel.IsProcessedDataLocationEnabled != value)
                 {
                     SettingsModel.IsProcessedDataLocationEnabled = value;
-                    OnPropertyChanged(nameof(IsCustomProcessedDataLocationEnabled));
+                    RaisePropertyChanged(nameof(IsCustomProcessedDataLocationEnabled));
                 }
             }
         }
@@ -206,7 +215,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 if (SettingsModel != null && SettingsModel.ProcessedDataLocation != value)
                 {
                     SettingsModel.ProcessedDataLocation = value;
-                    OnPropertyChanged(nameof(CustomProcessedDataLocation));
+                    RaisePropertyChanged(nameof(CustomProcessedDataLocation));
                 }
             }
         }
