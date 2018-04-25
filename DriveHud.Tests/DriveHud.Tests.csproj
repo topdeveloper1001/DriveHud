@@ -631,6 +631,9 @@
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Omaha.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Result-RaiseTo.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Straddle.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -641,6 +644,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Omaha.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Source-RaiseTo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Straddle.xml">

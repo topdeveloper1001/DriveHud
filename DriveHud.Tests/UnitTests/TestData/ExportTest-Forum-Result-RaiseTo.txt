@@ -1,0 +1,27 @@
+﻿Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software
+
+NL Holdem $0.50(BB)
+CO ($43.95)
+BTN ($58.44)
+[color=red]HERO[/color] ($52.47)
+[color=red]BB[/color] ($51.4)
+UTG ($53.25)
+MP ($53.13)
+HJ ($52.74)
+
+Dealt to Hero 3:spade: K:spade:
+
+UTG Folds, MP Folds, HJ Folds, CO Folds, BTN Folds, [color=red]HERO Raises To $1.5 (Rem. Stack: 50.97)[/color], [color=red]BB Calls $1 (Rem. Stack: 49.9)[/color]
+
+Flop ($3.00) Q:diamond: 6:club: T:spade:
+HERO Checks, BB Checks
+
+Turn ($3.00) Q:diamond: 6:club: T:spade: K:club:
+HERO Checks, [color=red]BB Bets $1.5 (Rem. Stack: 48.4)[/color], [color=red]HERO Calls $1.5 (Rem. Stack: 49.47)[/color]
+
+River ($6.00) Q:diamond: 6:club: T:spade: K:club: Q:spade:
+HERO Checks, [color=red]BB Bets $6 (Rem. Stack: 42.4)[/color], [color=red]HERO Calls $6 (Rem. Stack: 43.47)[/color]
+
+BB shows 8:diamond: J:diamond:
+
+HERO wins $17.1

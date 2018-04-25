@@ -17,6 +17,7 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;
+using Model;
 using Model.Enums;
 using Model.Extensions;
 using Model.Importer;
@@ -55,7 +56,7 @@ namespace DriveHUD.Common.Ifrastructure
             [8] = new Dictionary<EnumPosition, string>
             {
                 [EnumPosition.UTG_1] = "UTG",
-                [EnumPosition.UTG_2] = "MP",
+                [EnumPosition.UTG_2] = "EP",
                 [EnumPosition.MP1] = "MP",
                 [EnumPosition.MP2] = "HJ"
             },
@@ -479,23 +480,41 @@ namespace DriveHUD.Common.Ifrastructure
 
         private static Tuple<string, decimal> GetActionString(string heroName, IEnumerable<HandAction> actions, HandHistory currentHandHistory, bool isPreflop = false)
         {
-            decimal pot = 0;
-            string resultString = string.Empty;
+            var pot = 0m;
+            var resultString = string.Empty;
+            var putInThisStreet = new Dictionary<string, decimal>();
+            var currentStreet = Street.Null;
 
             foreach (var action in actions)
             {
+                if (currentStreet != action.Street)
+                {
+                    putInThisStreet.Clear();
+                    currentStreet = action.Street;
+                }
+
+                if (!putInThisStreet.ContainsKey(action.PlayerName))
+                {
+                    putInThisStreet.Add(action.PlayerName, action.Amount);
+                }
+                else
+                {
+                    putInThisStreet[action.PlayerName] += action.Amount;
+                }
+
                 if (action.IsBlinds || action.HandActionType == HandActionType.UNCALLED_BET)
                 {
                     continue;
                 }
 
                 pot += Math.Abs(action.Amount);
-                bool allIn = action.IsAllInAction;
+
                 var actionPlayer = currentHandHistory.Players.First(x => x.PlayerName == action.PlayerName);
-                string name = !string.IsNullOrWhiteSpace(heroName) && actionPlayer.PlayerName == heroName ? "HERO" : GetPositionName(actionPlayer.PlayerName, currentHandHistory);
-                string playerActionString = GetPlayersActionString(action, GetRemainingStack(action.PlayerName, action, currentHandHistory));
-                string composedString = String.Format("{0} {1}", name, playerActionString);
-                bool isInHand = !IsFolded(actionPlayer.PlayerName, actions) && action.HandActionType != HandActionType.CHECK;
+                var name = !string.IsNullOrWhiteSpace(heroName) && actionPlayer.PlayerName == heroName ? "HERO" : GetPositionName(actionPlayer.PlayerName, currentHandHistory);
+                var playerActionString = GetPlayersActionString(action, GetRemainingStack(action.PlayerName, action, currentHandHistory), putInThisStreet[action.PlayerName]);
+                var composedString = String.Format("{0} {1}", name, playerActionString);
+                var isInHand = !IsFolded(actionPlayer.PlayerName, actions) && action.HandActionType != HandActionType.CHECK;
+
                 resultString += SurroundWithColorIfInHand(composedString, isInHand) + ", ";
             }
 
@@ -504,30 +523,48 @@ namespace DriveHUD.Common.Ifrastructure
 
         private static Tuple<string, decimal> GetPlainActionString(string heroName, IEnumerable<HandAction> actions, HandHistory currentHandHistory, bool isPreflop = false)
         {
-            decimal pot = 0;
-            string resultString = string.Empty;
+            var pot = 0m;
+            var resultString = string.Empty;
+            var putInThisStreet = new Dictionary<string, decimal>();
+            var currentStreet = Street.Null;
 
             foreach (var action in actions)
             {
+                if (currentStreet != action.Street)
+                {
+                    putInThisStreet.Clear();
+                    currentStreet = action.Street;
+                }
+
+                if (!putInThisStreet.ContainsKey(action.PlayerName))
+                {
+                    putInThisStreet.Add(action.PlayerName, action.Amount);
+                }
+                else
+                {
+                    putInThisStreet[action.PlayerName] += action.Amount;
+                }
+
                 if (action.IsBlinds || action.HandActionType == HandActionType.UNCALLED_BET)
                 {
                     continue;
                 }
 
                 pot += Math.Abs(action.Amount);
-                bool allIn = action.IsAllInAction;
+
                 var actionPlayer = currentHandHistory.Players.First(x => x.PlayerName == action.PlayerName);
-                string name = !string.IsNullOrWhiteSpace(heroName) && actionPlayer.PlayerName == heroName ? "HERO" : GetPositionName(actionPlayer.PlayerName, currentHandHistory);
-                string playerActionString = GetPlayersActionString(action, GetRemainingStack(action.PlayerName, action, currentHandHistory));
-                string composedString = String.Format("{0} {1}", name, playerActionString);
-                bool isInHand = !IsFolded(actionPlayer.PlayerName, actions) && action.HandActionType != HandActionType.CHECK;
+                var name = !string.IsNullOrWhiteSpace(heroName) && actionPlayer.PlayerName == heroName ? "HERO" : GetPositionName(actionPlayer.PlayerName, currentHandHistory);
+                var playerActionString = GetPlayersActionString(action, GetRemainingStack(action.PlayerName, action, currentHandHistory), putInThisStreet[action.PlayerName]);
+                var composedString = String.Format("{0} {1}", name, playerActionString);
+                var isInHand = !IsFolded(actionPlayer.PlayerName, actions) && action.HandActionType != HandActionType.CHECK;
+
                 resultString += composedString + ", ";
             }
 
             return new Tuple<string, decimal>(resultString.Trim().Trim(','), pot);
         }
 
-        private static string GetPlayersActionString(HandAction action, decimal remainingStack, bool isPreflop = false)
+        private static string GetPlayersActionString(HandAction action, decimal remainingStack, decimal putInThisStreet, bool isPreflop = false)
         {
             string resultString = string.Empty;
 
@@ -563,16 +600,18 @@ namespace DriveHUD.Common.Ifrastructure
 
             if (isPreflop)
             {
-                resultString = String.Format("{0} $({1})", resultString, Math.Abs(action.Amount));
+                resultString = String.Format("{0} $({1:0.##})", resultString, Math.Abs(action.Amount));
             }
             else
             {
-                resultString = String.Format("{0} ${1}", resultString, Math.Abs(action.Amount));
+                resultString = String.Format("{0} ${1:0.##}", resultString, action.IsRaise() ? Math.Abs(putInThisStreet) : Math.Abs(action.Amount));
             }
+
             if (action.IsAllInAction || action.IsAllIn)
             {
                 resultString = String.Format("{0} (allin)", resultString);
             }
+
             if (action.IsAggressiveAction || action.IsCall)
             {
                 resultString = String.Format("{0} (Rem. Stack: {1})", resultString, remainingStack);
