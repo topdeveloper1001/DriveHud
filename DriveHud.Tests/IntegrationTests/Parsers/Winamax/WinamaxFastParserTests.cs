@@ -385,7 +385,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
             Assert.That(actions.Length, Is.EqualTo(numberOfActions));
         }
 
-        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll.txt", "Freeroll(232395298)#001 / 80-160 (ante 20) NL Holdem / Buy-in: 0", true)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll.txt", "Freeroll(232395298)#002 / 80-160 (ante 20) NL Holdem / Buy-in: 0", true)]
         public void ParsedHistoryMatchedWindowTitleTest(string handHistoryFile, string title, bool match)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
