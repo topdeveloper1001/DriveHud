@@ -34,6 +34,23 @@
                     Stretch="Uniform" />
             </DataTemplate>
 
+            <Style
+                x:Key="HeaderValueStyle"
+                TargetType="{x:Type TextBlock}">
+                <Setter
+                    Property="FontSize"
+                    Value="14" />
+                <Setter
+                    Property="VerticalAlignment"
+                    Value="Center" />
+                <Setter
+                    Property="Foreground"
+                    Value="#FFFFFF" />
+                <Setter
+                    Property="Margin"
+                    Value="3,0,0,0" />
+            </Style>
+
         </ResourceDictionary>
 
     </UserControl.Resources>
@@ -76,107 +93,102 @@
                             Grid.Column="0"
                             Orientation="Horizontal">
                             <TextBlock
-                                Text="Total Hands : "
+                                Text="{ResX Key=Common_DashboardView_TotalHands}"
                                 FontSize="14"
                                 VerticalAlignment="Center" />
                             <TextBlock
-                                FontSize="14"
-                                VerticalAlignment="Center"
-                                Foreground="White"
+                                Style="{StaticResource HeaderValueStyle}"
                                 Text="{Binding IndicatorCollection.TotalHands}" />
                         </StackPanel>
                         <StackPanel
                             Grid.Column="1"
                             Orientation="Horizontal">
                             <TextBlock
-                                Text="Money Won : "
+                                Text="{ResX Key=Common_DashboardView_MoneyWon}"
                                 FontSize="14"
                                 VerticalAlignment="Center" />
                             <TextBlock
-                                FontSize="14"
-                                VerticalAlignment="Center"
-                                Foreground="White"
+                                Style="{StaticResource HeaderValueStyle}"
                                 Text="{Binding IndicatorCollection.NetWon}" />
                         </StackPanel>
                         <StackPanel
                             Grid.Column="2"
                             Orientation="Horizontal">
                             <TextBlock
-                                Text="bb/100 : "
+                                Text="{ResX Key=Common_DashboardView_BB100}"
                                 FontSize="14"
                                 VerticalAlignment="Center" />
                             <TextBlock
-                                FontSize="14"
-                                VerticalAlignment="Center"
-                                Foreground="White"
+                                Style="{StaticResource HeaderValueStyle}"
                                 Text="{Binding IndicatorCollection.BB}" />
                         </StackPanel>
                     </Grid>
                     <WrapPanel
                         Orientation="Horizontal"
+                        HorizontalAlignment="Center"
                         Grid.Row="1">
                         <WrapPanel.Resources>
                             <Style
                                 TargetType="{x:Type gaugeExample:CustomeGauge}">
                                 <Setter
                                     Property="Margin"
-                                    Value="15 20 0 0" />
+                                    Value="12 20 0 0" />
                             </Style>
                         </WrapPanel.Resources>
 
                         <gaugeExample:CustomeGauge
                             Height="140"
                             Width="140"
-                            Caption="VPIP"
+                            Caption="{ResX Key=Common_DashboardView_VPIP}"
                             ThemeColor="#376cbb"
                             GlowColor="#4a7fc3"
                             Value="{Binding Path=IndicatorCollection.VPIP, Mode=OneWay}" />
                         <gaugeExample:CustomeGauge
                             Height="140"
                             Width="140"
-                            Caption="PFR"
+                            Caption="{ResX Key=Common_DashboardView_PFR}"
                             ThemeColor="#2ecc71"
                             GlowColor="#39d88c"
                             Value="{Binding Path=IndicatorCollection.PFR, Mode=OneWay}" />
                         <gaugeExample:CustomeGauge
                             Height="140"
                             Width="140"
-                            Caption="3-Bet%"
+                            Caption="{ResX Key=Common_DashboardView_3Bet}"
                             ThemeColor="#9b59b6"
                             GlowColor="#d58fde"
                             Value="{Binding Path=IndicatorCollection.ThreeBet, Mode=OneWay}" />
                         <gaugeExample:CustomeGauge
                             Height="140"
                             Width="140"
-                            Caption="AF"
+                            Caption="{ResX Key=Common_DashboardView_AF}"
                             ThemeColor="#1abc9c"
                             GlowColor="#26c8b1"
                             Value="{Binding Path=IndicatorCollection.Agg, Mode=OneWay}" />
                         <gaugeExample:CustomeGauge
                             Height="140"
                             Width="140"
-                            Caption="AGG%"
+                            Caption="{ResX Key=Common_DashboardView_AGG}"
                             ThemeColor="#3498db"
                             GlowColor="#41b0e4"
                             Value="{Binding Path=IndicatorCollection.AggPr, Mode=OneWay}" />
                         <gaugeExample:CustomeGauge
                             Height="140"
                             Width="140"
-                            Caption="WTSD"
+                            Caption="{ResX Key=Common_DashboardView_WTSD}"
                             ThemeColor="#f1c40f"
                             GlowColor="#f3de16"
                             Value="{Binding Path=IndicatorCollection.WTSD, Mode=OneWay}" />
                         <gaugeExample:CustomeGauge
                             Height="140"
                             Width="140"
-                            Caption="W$SD"
+                            Caption="{ResX Key=Common_DashboardView_WSSD}"
                             ThemeColor="#e74c3c"
                             GlowColor="#d75d4a"
                             Value="{Binding Path=IndicatorCollection.WSSD, Mode=OneWay}" />
                         <gaugeExample:CustomeGauge
                             Height="140"
                             Width="140"
-                            Caption="W$WSF"
+                            Caption="{ResX Key=Common_DashboardView_WSWSF}"
                             ThemeColor="#E75BE1"
                             GlowColor="#e972e6"
                             Value="{Binding Path=IndicatorCollection.WSWSF, Mode=OneWay}" />

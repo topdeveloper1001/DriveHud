@@ -243,9 +243,7 @@ namespace DriveHUD.HUD
 
             windowItem.Window.Dispatcher.Invoke(() =>
             {
-                RECT rect;
-
-                WinApi.GetWindowRect(windowItem.Handle, out rect);
+                WinApi.GetWindowRect(windowItem.Handle, out RECT rect);
 
                 SizeF dpi = Utils.GetCurrentDpi();
 

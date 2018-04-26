@@ -52,6 +52,7 @@ namespace DriveHUD.Entities
                 [EnumPokerNetworks.IPoker] = new[] { EnumPokerSites.IPoker },
                 [EnumPokerNetworks.GGN] = new[] { EnumPokerSites.GGN },
                 [EnumPokerNetworks.Horizon] = new[] { EnumPokerSites.Horizon },
+                [EnumPokerNetworks.Winamax] = new[] { EnumPokerSites.Winamax },
             };
 
             return networksDictionary;

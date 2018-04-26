@@ -67,6 +67,12 @@ namespace HandHistories.Parser.Utils.Extensions
                 return true;
             }
 
+            if (handText.Contains("Winamax Poker"))
+            {
+                siteName = EnumPokerSites.Winamax;
+                return true;
+            }
+
             if (handText.StartsWith("***** Cassava Tournament Summary *****", StringComparison.InvariantCultureIgnoreCase))
             {
                 siteName = EnumPokerSites.Poker888;

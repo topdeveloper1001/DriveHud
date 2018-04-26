@@ -71,8 +71,8 @@ namespace DriveHUD.Common.Wpf.Interactivity
 
         public void CloseAllWindows()
         {
-            foreach (var window in windows.Values)
-            {                
+            foreach (var window in windows.Values.ToArray())
+            {
                 window?.Close();
             }
         }

@@ -231,6 +231,7 @@
     <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Horizon\HorizonFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\TowerTorneos\TowerTorneosFastParserTest.cs" />
+    <Compile Include="IntegrationTests\Parsers\Winamax\WinamaxFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\WinningPokerNetwork\WinningPokerNetworkFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\WSPO\WSPONetFastParserTest.cs" />
     <Compile Include="PMTests\HandBuilderTests.cs" />
@@ -630,6 +631,9 @@
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Omaha.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Result-RaiseTo.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Straddle.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -640,6 +644,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Omaha.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Source-RaiseTo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Straddle.xml">
@@ -692,6 +699,9 @@
     </Content>
     <Content Include="UnitTests\TestData\SNG-4-max-relocate.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\Winamax.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\WindfallHand-3max-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -1334,6 +1344,7 @@
     <Folder Include="IntegrationTests\Parsers\Pacific\TestData\" />
     <Folder Include="IntegrationTests\Parsers\PokerStars\TestData\" />
     <Folder Include="IntegrationTests\Parsers\TowerTorneos\TestData\" />
+    <Folder Include="IntegrationTests\Parsers\Winamax\TestData\" />
     <Folder Include="IntegrationTests\Parsers\WSPO\TestData\" />
   </ItemGroup>
   <Choose>

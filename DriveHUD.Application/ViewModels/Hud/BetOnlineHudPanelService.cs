@@ -22,6 +22,19 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// </summary>
     internal class BetOnlineHudPanelService : HudPanelService
     {
+        private static readonly Point initialTableSize = new Point(816, 631);
+
+        /// <summary>
+        /// Gets the initial(default) size of the table 
+        /// </summary>
+        public override Point InitialTableSize
+        {
+            get
+            {
+                return initialTableSize;
+            }
+        }
+
         private readonly Dictionary<int, int[,]> plainPositionsShifts = new Dictionary<int, int[,]>
         {
             { 2, new int[,] { { -2, -9 }, { -2, 26}  } },
@@ -32,15 +45,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             { 9, new int[,] { { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 } } },
             { 10, new int[,] { { 0, -36 }, { 0, -28 }, { 9, 1 }, { -2, 1}, { -18, 1 }, { -22, -28 }, { -22, -36 }, { 18, -24 }, { -2, -24 }, { -27, -24 } } }
         };
-
-        /// <summary>
-        /// Get initial table size 
-        /// </summary>
-        /// <returns>Return dimensions of initial table, Item1 - Width, Item - Height</returns>
-        public override Tuple<double, double> GetInitialTableSize()
-        {
-            return new Tuple<double, double>(816, 631);
-        }
 
         public override Point GetPositionShift(EnumTableType tableType, int seat)
         {

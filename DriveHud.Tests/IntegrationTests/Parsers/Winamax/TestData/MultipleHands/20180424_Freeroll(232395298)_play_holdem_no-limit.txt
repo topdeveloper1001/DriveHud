@@ -1,0 +1,804 @@
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 8 - HandId: #998130204654174211-52-1524546186 - Holdem no limit (20/80/160) - 2018/04/24 05:03:06 UTC
+Table: 'Freeroll(232395298)#002' 8-max (play money) Seat #3 is the button
+Seat 1: CARDRICH (178)
+Seat 2: UTOPIAAAA (3000)
+Seat 3: nisa (1688)
+Seat 4: BAR1327 (1781)
+Seat 5: Peon84 (3000)
+Seat 6: KINDERBIS (40861)
+Seat 7: eric4535 (5947)
+Seat 8: full-deux (3345)
+*** ANTE/BLINDS ***
+BAR1327 posts ante 20
+Peon84 posts ante 20
+CARDRICH posts ante 20
+UTOPIAAAA posts ante 20
+nisa posts ante 20
+KINDERBIS posts ante 20
+eric4535 posts ante 20
+full-deux posts ante 20
+BAR1327 posts small blind 80
+Peon84 posts big blind 160
+Dealt to Peon84 [Jc 3h]
+*** PRE-FLOP *** 
+KINDERBIS folds
+eric4535 calls 160
+full-deux calls 160
+CARDRICH folds
+UTOPIAAAA folds
+nisa folds
+BAR1327 folds
+Peon84 checks
+*** FLOP *** [2h 6d Tc]
+Peon84 checks
+eric4535 checks
+full-deux bets 3165 and is all-in
+Peon84 folds
+eric4535 folds
+full-deux collected 3885 from pot
+*** SUMMARY ***
+Total pot 3885 | No rake
+Board: [2h 6d Tc]
+Seat 8: full-deux won 3885
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 8 - HandId: #998130204654174211-53-1524546228 - Holdem no limit (20/80/160) - 2018/04/24 05:03:48 UTC
+Table: 'Freeroll(232395298)#002' 8-max (play money) Seat #4 is the button
+Seat 1: CARDRICH (158)
+Seat 2: UTOPIAAAA (2980)
+Seat 3: nisa (1668)
+Seat 4: BAR1327 (1681)
+Seat 5: Peon84 (2820)
+Seat 6: KINDERBIS (40841)
+Seat 7: eric4535 (5767)
+Seat 8: full-deux (3885)
+*** ANTE/BLINDS ***
+Peon84 posts ante 20
+KINDERBIS posts ante 20
+CARDRICH posts ante 20
+UTOPIAAAA posts ante 20
+nisa posts ante 20
+BAR1327 posts ante 20
+eric4535 posts ante 20
+full-deux posts ante 20
+Peon84 posts small blind 80
+KINDERBIS posts big blind 160
+Dealt to Peon84 [7c 3h]
+*** PRE-FLOP *** 
+eric4535 calls 160
+full-deux folds
+CARDRICH folds
+UTOPIAAAA calls 160
+nisa folds
+BAR1327 folds
+Peon84 folds
+KINDERBIS folds
+*** FLOP *** [9s Ah Kc]
+eric4535 checks
+UTOPIAAAA checks
+*** TURN *** [9s Ah Kc][Td]
+eric4535 bets 160
+UTOPIAAAA calls 160
+*** RIVER *** [9s Ah Kc Td][9c]
+eric4535 bets 160
+UTOPIAAAA calls 160
+*** SHOW DOWN ***
+UTOPIAAAA shows [Jc Tc] (Two pairs : Tens and 9)
+eric4535 shows [Ad Js] (Two pairs : Aces and 9)
+eric4535 collected 1360 from pot
+*** SUMMARY ***
+Total pot 1360 | No rake
+Board: [9s Ah Kc Td 9c]
+Seat 2: UTOPIAAAA showed [Jc Tc] and lost with Two pairs : Tens and 9
+Seat 7: eric4535 showed [Ad Js] and won 1360 with Two pairs : Aces and 9
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 8 - HandId: #998130204654174211-54-1524546268 - Holdem no limit (20/80/160) - 2018/04/24 05:04:28 UTC
+Table: 'Freeroll(232395298)#002' 8-max (play money) Seat #5 is the button
+Seat 1: CARDRICH (138)
+Seat 2: UTOPIAAAA (2480)
+Seat 3: nisa (1648)
+Seat 4: BAR1327 (1661)
+Seat 5: Peon84 (2720)
+Seat 6: KINDERBIS (40661)
+Seat 7: eric4535 (6627)
+*** ANTE/BLINDS ***
+KINDERBIS posts ante 20
+eric4535 posts ante 20
+CARDRICH posts ante 20
+UTOPIAAAA posts ante 20
+nisa posts ante 20
+BAR1327 posts ante 20
+Peon84 posts ante 20
+KINDERBIS posts small blind 80
+eric4535 posts big blind 160
+Dealt to Peon84 [9h Jh]
+*** PRE-FLOP *** 
+CARDRICH folds
+UTOPIAAAA folds
+nisa folds
+BAR1327 folds
+Peon84 folds
+KINDERBIS folds
+eric4535 collected 380 from pot
+*** SUMMARY ***
+Total pot 380 | No rake
+Seat 7: eric4535 (big blind) won 380
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 8 - HandId: #998130204654174211-55-1524546279 - Holdem no limit (20/80/160) - 2018/04/24 05:04:39 UTC
+Table: 'Freeroll(232395298)#002' 8-max (play money) Seat #6 is the button
+Seat 1: CARDRICH (118)
+Seat 2: UTOPIAAAA (2460)
+Seat 3: nisa (1628)
+Seat 4: BAR1327 (1641)
+Seat 5: Peon84 (2700)
+Seat 6: KINDERBIS (40561)
+Seat 7: eric4535 (6827)
+*** ANTE/BLINDS ***
+eric4535 posts ante 20
+CARDRICH posts ante 20
+UTOPIAAAA posts ante 20
+nisa posts ante 20
+BAR1327 posts ante 20
+Peon84 posts ante 20
+KINDERBIS posts ante 20
+eric4535 posts small blind 80
+CARDRICH posts big blind 98 and is all-in
+Dealt to Peon84 [6s 5h]
+*** PRE-FLOP *** 
+UTOPIAAAA calls 160
+nisa folds
+BAR1327 folds
+Peon84 folds
+KINDERBIS folds
+eric4535 calls 80
+*** FLOP *** [4d 6h Kc]
+eric4535 checks
+UTOPIAAAA checks
+*** TURN *** [4d 6h Kc][3d]
+eric4535 checks
+UTOPIAAAA checks
+*** RIVER *** [4d 6h Kc 3d][Ad]
+eric4535 bets 160
+UTOPIAAAA folds
+*** SHOW DOWN ***
+CARDRICH shows [4h Kh] (Two pairs : Kings and 4)
+eric4535 shows [Qc Ah] (One pair : Aces)
+eric4535 collected 284 from side pot 1
+CARDRICH collected 434 from main pot
+*** SUMMARY ***
+Total pot 718 | No rake
+Board: [4d 6h Kc 3d Ad]
+Seat 1: CARDRICH (big blind) showed [4h Kh] and won 434 with Two pairs : Kings and 4
+Seat 7: eric4535 (small blind) showed [Qc Ah] and won 284 with One pair : Aces
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 8 - HandId: #998130204654174211-56-1524546317 - Holdem no limit (20/80/160) - 2018/04/24 05:05:17 UTC
+Table: 'Freeroll(232395298)#002' 8-max (play money) Seat #7 is the button
+Seat 1: CARDRICH (434)
+Seat 2: UTOPIAAAA (2280)
+Seat 3: nisa (1608)
+Seat 4: BAR1327 (1621)
+Seat 5: Peon84 (2680)
+Seat 6: KINDERBIS (40541)
+Seat 7: eric4535 (6771)
+Seat 8: kingaston (3000)
+*** ANTE/BLINDS ***
+CARDRICH posts ante 20
+UTOPIAAAA posts ante 20
+nisa posts ante 20
+BAR1327 posts ante 20
+Peon84 posts ante 20
+KINDERBIS posts ante 20
+eric4535 posts ante 20
+CARDRICH posts small blind 80
+UTOPIAAAA posts big blind 160
+Dealt to Peon84 [Jd 7c]
+*** PRE-FLOP *** 
+nisa folds
+BAR1327 folds
+Peon84 folds
+KINDERBIS folds
+eric4535 calls 160
+CARDRICH folds
+UTOPIAAAA checks
+*** FLOP *** [3d 5h 5c]
+UTOPIAAAA checks
+eric4535 checks
+*** TURN *** [3d 5h 5c][Kc]
+UTOPIAAAA checks
+eric4535 checks
+*** RIVER *** [3d 5h 5c Kc][6h]
+UTOPIAAAA checks
+eric4535 checks
+*** SHOW DOWN ***
+UTOPIAAAA shows [9c 4s] (One pair : 5)
+eric4535 shows [7h 7d] (Two pairs : 7 and 5)
+eric4535 collected 540 from pot
+*** SUMMARY ***
+Total pot 540 | No rake
+Board: [3d 5h 5c Kc 6h]
+Seat 2: UTOPIAAAA (big blind) showed [9c 4s] and lost with One pair : 5
+Seat 7: eric4535 (button) showed [7h 7d] and won 540 with Two pairs : 7 and 5
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 8 - HandId: #998130204654174211-57-1524546355 - Holdem no limit (20/80/160) - 2018/04/24 05:05:55 UTC
+Table: 'Freeroll(232395298)#002' 8-max (play money) Seat #1 is the button
+Seat 1: CARDRICH (334)
+Seat 2: UTOPIAAAA (2100)
+Seat 4: BAR1327 (1601)
+Seat 5: Peon84 (2660)
+Seat 6: KINDERBIS (40521)
+Seat 7: eric4535 (7131)
+Seat 8: kingaston (3000)
+*** ANTE/BLINDS ***
+UTOPIAAAA posts ante 20
+BAR1327 posts ante 20
+CARDRICH posts ante 20
+Peon84 posts ante 20
+KINDERBIS posts ante 20
+eric4535 posts ante 20
+kingaston posts ante 20
+UTOPIAAAA posts small blind 80
+BAR1327 posts big blind 160
+Dealt to Peon84 [6s 3s]
+*** PRE-FLOP *** 
+Peon84 folds
+KINDERBIS folds
+eric4535 calls 160
+kingaston calls 160
+CARDRICH folds
+UTOPIAAAA folds
+BAR1327 folds
+*** FLOP *** [4c 3h Jc]
+eric4535 checks
+kingaston checks
+*** TURN *** [4c 3h Jc][Jd]
+eric4535 checks
+kingaston checks
+*** RIVER *** [4c 3h Jc Jd][Qh]
+eric4535 checks
+kingaston checks
+*** SHOW DOWN ***
+kingaston shows [8d 6h] (One pair : Jacks)
+eric4535 shows [5h 5s] (Two pairs : Jacks and 5)
+eric4535 collected 700 from pot
+*** SUMMARY ***
+Total pot 700 | No rake
+Board: [4c 3h Jc Jd Qh]
+Seat 7: eric4535 showed [5h 5s] and won 700 with Two pairs : Jacks and 5
+Seat 8: kingaston showed [8d 6h] and lost with One pair : Jacks
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 8 - HandId: #998130204654174210-85-1524546417 - Holdem no limit (20/80/160) - 2018/04/24 05:06:57 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #4 is the button
+Seat 1: DEBSON-DEB (22079)
+Seat 2: Peon84 (2640)
+Seat 3: rayon2soleiI (798)
+Seat 4: f.gwada (12229)
+Seat 5: backintown92 (2740)
+Seat 7: NOLOVISTO (898)
+Seat 8: volvo02 (888)
+*** ANTE/BLINDS ***
+backintown92 posts ante 20
+NOLOVISTO posts ante 20
+DEBSON-DEB posts ante 20
+Peon84 posts ante 20
+rayon2soleiI posts ante 20
+f.gwada posts ante 20
+volvo02 posts ante 20
+backintown92 posts small blind 80
+NOLOVISTO posts big blind 160
+Dealt to Peon84 [7d Jd]
+*** PRE-FLOP *** 
+volvo02 folds
+DEBSON-DEB calls 160
+Peon84 calls 160
+rayon2soleiI folds
+f.gwada folds
+backintown92 calls 80
+NOLOVISTO folds
+*** FLOP *** [5s 5d 3c]
+backintown92 checks
+DEBSON-DEB checks
+Peon84 checks
+*** TURN *** [5s 5d 3c][4c]
+backintown92 checks
+DEBSON-DEB checks
+Peon84 checks
+*** RIVER *** [5s 5d 3c 4c][2d]
+backintown92 checks
+DEBSON-DEB bets 780
+Peon84 folds
+backintown92 folds
+DEBSON-DEB collected 1560 from pot
+*** SUMMARY ***
+Total pot 1560 | No rake
+Board: [5s 5d 3c 4c 2d]
+Seat 1: DEBSON-DEB won 1560
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 8 - HandId: #998130204654174210-86-1524546472 - Holdem no limit (20/80/160) - 2018/04/24 05:07:52 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #5 is the button
+Seat 1: DEBSON-DEB (22679)
+Seat 2: Peon84 (2460)
+Seat 3: rayon2soleiI (778)
+Seat 4: f.gwada (12209)
+Seat 5: backintown92 (2560)
+Seat 6: taktiktak (17101)
+Seat 7: NOLOVISTO (718)
+Seat 8: volvo02 (868)
+*** ANTE/BLINDS ***
+NOLOVISTO posts ante 20
+volvo02 posts ante 20
+DEBSON-DEB posts ante 20
+Peon84 posts ante 20
+rayon2soleiI posts ante 20
+f.gwada posts ante 20
+backintown92 posts ante 20
+NOLOVISTO posts small blind 80
+volvo02 posts big blind 160
+Dealt to Peon84 [Jh 7c]
+*** PRE-FLOP *** 
+DEBSON-DEB folds
+Peon84 folds
+rayon2soleiI folds
+f.gwada calls 160
+backintown92 folds
+NOLOVISTO folds
+volvo02 folds
+f.gwada collected 540 from pot
+*** SUMMARY ***
+Total pot 540 | No rake
+Seat 4: f.gwada won 540
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 8 - HandId: #998130204654174210-87-1524546493 - Holdem no limit (20/80/160) - 2018/04/24 05:08:13 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #7 is the button
+Seat 1: DEBSON-DEB (22659)
+Seat 2: Peon84 (2440)
+Seat 3: rayon2soleiI (758)
+Seat 4: f.gwada (12569)
+Seat 5: backintown92 (2540)
+Seat 6: taktiktak (17101)
+Seat 7: NOLOVISTO (618)
+Seat 8: volvo02 (688)
+*** ANTE/BLINDS ***
+volvo02 posts ante 20
+DEBSON-DEB posts ante 20
+Peon84 posts ante 20
+rayon2soleiI posts ante 20
+f.gwada posts ante 20
+backintown92 posts ante 20
+taktiktak posts ante 20
+NOLOVISTO posts ante 20
+volvo02 posts small blind 80
+DEBSON-DEB posts big blind 160
+Dealt to Peon84 [5h 5s]
+*** PRE-FLOP *** 
+Peon84 calls 160
+rayon2soleiI folds
+f.gwada folds
+backintown92 folds
+taktiktak folds
+NOLOVISTO folds
+volvo02 folds
+DEBSON-DEB checks
+*** FLOP *** [8h Qc 3d]
+DEBSON-DEB checks
+Peon84 checks
+*** TURN *** [8h Qc 3d][4c]
+DEBSON-DEB bets 560
+Peon84 calls 560
+*** RIVER *** [8h Qc 3d 4c][Td]
+DEBSON-DEB bets 1680
+Peon84 folds
+DEBSON-DEB collected 3360 from pot
+*** SUMMARY ***
+Total pot 3360 | No rake
+Board: [8h Qc 3d 4c Td]
+Seat 1: DEBSON-DEB (big blind) won 3360
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 8 - HandId: #998130204654174210-88-1524546532 - Holdem no limit (20/80/160) - 2018/04/24 05:08:52 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #8 is the button
+Seat 1: DEBSON-DEB (23599)
+Seat 2: Peon84 (1700)
+Seat 4: f.gwada (12549)
+Seat 5: backintown92 (2520)
+Seat 6: taktiktak (17081)
+Seat 7: NOLOVISTO (598)
+Seat 8: volvo02 (588)
+*** ANTE/BLINDS ***
+DEBSON-DEB posts ante 20
+Peon84 posts ante 20
+f.gwada posts ante 20
+backintown92 posts ante 20
+taktiktak posts ante 20
+NOLOVISTO posts ante 20
+volvo02 posts ante 20
+DEBSON-DEB posts small blind 80
+Peon84 posts big blind 160
+Dealt to Peon84 [3h Ac]
+*** PRE-FLOP *** 
+f.gwada folds
+backintown92 folds
+taktiktak folds
+NOLOVISTO folds
+volvo02 folds
+DEBSON-DEB raises 460 to 620
+Peon84 folds
+DEBSON-DEB collected 920 from pot
+*** SUMMARY ***
+Total pot 920 | No rake
+Seat 1: DEBSON-DEB (small blind) won 920
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 9 - HandId: #998130204654174210-89-1524546555 - Holdem no limit (25/100/200) - 2018/04/24 05:09:15 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #1 is the button
+Seat 1: DEBSON-DEB (23879)
+Seat 2: Peon84 (1520)
+Seat 3: rayon2soleiI (738)
+Seat 4: f.gwada (12529)
+Seat 5: backintown92 (2500)
+Seat 6: taktiktak (17061)
+Seat 7: NOLOVISTO (578)
+Seat 8: volvo02 (568)
+*** ANTE/BLINDS ***
+Peon84 posts ante 25
+rayon2soleiI posts ante 25
+DEBSON-DEB posts ante 25
+f.gwada posts ante 25
+backintown92 posts ante 25
+taktiktak posts ante 25
+NOLOVISTO posts ante 25
+volvo02 posts ante 25
+Peon84 posts small blind 100
+rayon2soleiI posts big blind 200
+Dealt to Peon84 [Jc 4h]
+*** PRE-FLOP *** 
+f.gwada folds
+backintown92 calls 200
+taktiktak folds
+NOLOVISTO folds
+volvo02 folds
+DEBSON-DEB folds
+Peon84 calls 100
+rayon2soleiI folds
+*** FLOP *** [Kd 9c 9s]
+Peon84 checks
+backintown92 checks
+*** TURN *** [Kd 9c 9s][As]
+Peon84 checks
+backintown92 checks
+*** RIVER *** [Kd 9c 9s As][9d]
+Peon84 checks
+backintown92 checks
+*** SHOW DOWN ***
+Peon84 shows [Jc 4h] (Trips of 9)
+backintown92 shows [Jd Ad] (Full of 9 and Aces)
+backintown92 collected 800 from pot
+*** SUMMARY ***
+Total pot 800 | No rake
+Board: [Kd 9c 9s As 9d]
+Seat 2: Peon84 (small blind) showed [Jc 4h] and lost with Trips of 9
+Seat 5: backintown92 showed [Jd Ad] and won 800 with Full of 9 and Aces
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 9 - HandId: #998130204654174210-90-1524546599 - Holdem no limit (25/100/200) - 2018/04/24 05:09:59 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #2 is the button
+Seat 1: DEBSON-DEB (23854)
+Seat 2: Peon84 (1295)
+Seat 3: rayon2soleiI (513)
+Seat 4: f.gwada (12504)
+Seat 5: backintown92 (3075)
+Seat 6: taktiktak (17036)
+Seat 7: NOLOVISTO (553)
+Seat 8: volvo02 (543)
+*** ANTE/BLINDS ***
+rayon2soleiI posts ante 25
+f.gwada posts ante 25
+DEBSON-DEB posts ante 25
+Peon84 posts ante 25
+backintown92 posts ante 25
+taktiktak posts ante 25
+NOLOVISTO posts ante 25
+volvo02 posts ante 25
+rayon2soleiI posts small blind 100
+f.gwada posts big blind 200
+Dealt to Peon84 [Jh Th]
+*** PRE-FLOP *** 
+backintown92 calls 200
+taktiktak folds
+NOLOVISTO folds
+volvo02 folds
+DEBSON-DEB calls 200
+Peon84 calls 200
+rayon2soleiI folds
+f.gwada checks
+*** FLOP *** [4s 3h 7d]
+f.gwada checks
+backintown92 checks
+DEBSON-DEB checks
+Peon84 checks
+*** TURN *** [4s 3h 7d][8s]
+f.gwada checks
+backintown92 checks
+DEBSON-DEB checks
+Peon84 checks
+*** RIVER *** [4s 3h 7d 8s][Kh]
+f.gwada bets 733
+backintown92 folds
+DEBSON-DEB calls 733
+Peon84 folds
+*** SHOW DOWN ***
+DEBSON-DEB shows [Jc Kd] (One pair : Kings)
+f.gwada shows [Kc 4d] (Two pairs : Kings and 4)
+f.gwada collected 2566 from pot
+*** SUMMARY ***
+Total pot 2566 | No rake
+Board: [4s 3h 7d 8s Kh]
+Seat 1: DEBSON-DEB showed [Jc Kd] and lost with One pair : Kings
+Seat 4: f.gwada (big blind) showed [Kc 4d] and won 2566 with Two pairs : Kings and 4
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 9 - HandId: #998130204654174210-91-1524546658 - Holdem no limit (25/100/200) - 2018/04/24 05:10:58 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #3 is the button
+Seat 1: DEBSON-DEB (22896)
+Seat 2: Peon84 (1070)
+Seat 3: rayon2soleiI (388)
+Seat 4: f.gwada (14112)
+Seat 5: backintown92 (2850)
+Seat 6: taktiktak (17011)
+Seat 7: NOLOVISTO (528)
+Seat 8: volvo02 (518)
+*** ANTE/BLINDS ***
+f.gwada posts ante 25
+backintown92 posts ante 25
+DEBSON-DEB posts ante 25
+Peon84 posts ante 25
+rayon2soleiI posts ante 25
+taktiktak posts ante 25
+NOLOVISTO posts ante 25
+volvo02 posts ante 25
+f.gwada posts small blind 100
+backintown92 posts big blind 200
+Dealt to Peon84 [7c Qc]
+*** PRE-FLOP *** 
+taktiktak folds
+NOLOVISTO folds
+volvo02 folds
+DEBSON-DEB calls 200
+Peon84 folds
+rayon2soleiI folds
+f.gwada calls 100
+backintown92 checks
+*** FLOP *** [Jh 8c Td]
+f.gwada bets 400
+backintown92 folds
+DEBSON-DEB folds
+f.gwada collected 1200 from pot
+*** SUMMARY ***
+Total pot 1200 | No rake
+Board: [Jh 8c Td]
+Seat 4: f.gwada (small blind) won 1200
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 9 - HandId: #998130204654174210-92-1524546698 - Holdem no limit (25/100/200) - 2018/04/24 05:11:38 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #4 is the button
+Seat 1: DEBSON-DEB (22671)
+Seat 2: Peon84 (1045)
+Seat 3: rayon2soleiI (363)
+Seat 4: f.gwada (14687)
+Seat 5: backintown92 (2625)
+Seat 6: taktiktak (16986)
+Seat 7: NOLOVISTO (503)
+Seat 8: volvo02 (493)
+*** ANTE/BLINDS ***
+backintown92 posts ante 25
+taktiktak posts ante 25
+DEBSON-DEB posts ante 25
+Peon84 posts ante 25
+rayon2soleiI posts ante 25
+f.gwada posts ante 25
+NOLOVISTO posts ante 25
+volvo02 posts ante 25
+backintown92 posts small blind 100
+taktiktak posts big blind 200
+Dealt to Peon84 [5d As]
+*** PRE-FLOP *** 
+NOLOVISTO folds
+volvo02 folds
+DEBSON-DEB calls 200
+Peon84 folds
+rayon2soleiI folds
+f.gwada folds
+backintown92 folds
+taktiktak folds
+DEBSON-DEB collected 700 from pot
+*** SUMMARY ***
+Total pot 700 | No rake
+Seat 1: DEBSON-DEB won 700
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 9 - HandId: #998130204654174210-93-1524546831 - Holdem no limit (25/100/200) - 2018/04/24 05:13:51 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #5 is the button
+Seat 1: DEBSON-DEB (23146)
+Seat 2: Peon84 (1020)
+Seat 3: rayon2soleiI (338)
+Seat 4: f.gwada (14662)
+Seat 5: backintown92 (2500)
+Seat 6: taktiktak (16761)
+Seat 7: NOLOVISTO (478)
+Seat 8: volvo02 (468)
+*** ANTE/BLINDS ***
+taktiktak posts ante 25
+NOLOVISTO posts ante 25
+DEBSON-DEB posts ante 25
+Peon84 posts ante 25
+rayon2soleiI posts ante 25
+f.gwada posts ante 25
+backintown92 posts ante 25
+volvo02 posts ante 25
+taktiktak posts small blind 100
+NOLOVISTO posts big blind 200
+Dealt to Peon84 [Ks Jd]
+*** PRE-FLOP *** 
+volvo02 folds
+DEBSON-DEB calls 200
+Peon84 calls 200
+rayon2soleiI folds
+f.gwada folds
+backintown92 folds
+taktiktak folds
+NOLOVISTO folds
+*** FLOP *** [6h 3s 4d]
+DEBSON-DEB checks
+Peon84 checks
+*** TURN *** [6h 3s 4d][6c]
+DEBSON-DEB bets 900
+Peon84 folds
+DEBSON-DEB collected 1800 from pot
+*** SUMMARY ***
+Total pot 1800 | No rake
+Board: [6h 3s 4d 6c]
+Seat 1: DEBSON-DEB won 1800
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 9 - HandId: #998130204654174210-94-1524546860 - Holdem no limit (25/100/200) - 2018/04/24 05:14:20 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #6 is the button
+Seat 1: DEBSON-DEB (23821)
+Seat 2: Peon84 (795)
+Seat 3: rayon2soleiI (313)
+Seat 4: f.gwada (14637)
+Seat 5: backintown92 (2475)
+Seat 6: taktiktak (16636)
+Seat 7: NOLOVISTO (253)
+Seat 8: volvo02 (443)
+*** ANTE/BLINDS ***
+NOLOVISTO posts ante 25
+volvo02 posts ante 25
+DEBSON-DEB posts ante 25
+Peon84 posts ante 25
+rayon2soleiI posts ante 25
+f.gwada posts ante 25
+backintown92 posts ante 25
+taktiktak posts ante 25
+NOLOVISTO posts small blind 100
+volvo02 posts big blind 200
+Dealt to Peon84 [8h 7h]
+*** PRE-FLOP *** 
+DEBSON-DEB calls 200
+Peon84 calls 200
+rayon2soleiI folds
+f.gwada folds
+backintown92 folds
+taktiktak folds
+NOLOVISTO folds
+volvo02 folds
+*** FLOP *** [2c 5h 6d]
+DEBSON-DEB bets 900
+Peon84 folds
+DEBSON-DEB collected 1800 from pot
+*** SUMMARY ***
+Total pot 1800 | No rake
+Board: [2c 5h 6d]
+Seat 1: DEBSON-DEB won 1800
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 9 - HandId: #998130204654174210-95-1524546893 - Holdem no limit (25/100/200) - 2018/04/24 05:14:53 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #7 is the button
+Seat 1: DEBSON-DEB (24496)
+Seat 2: Peon84 (570)
+Seat 3: rayon2soleiI (288)
+Seat 4: f.gwada (14612)
+Seat 5: backintown92 (2450)
+Seat 6: taktiktak (16611)
+Seat 7: NOLOVISTO (128)
+Seat 8: volvo02 (218)
+*** ANTE/BLINDS ***
+volvo02 posts ante 25
+DEBSON-DEB posts ante 25
+Peon84 posts ante 25
+rayon2soleiI posts ante 25
+f.gwada posts ante 25
+backintown92 posts ante 25
+taktiktak posts ante 25
+NOLOVISTO posts ante 25
+volvo02 posts small blind 100
+DEBSON-DEB posts big blind 200
+Dealt to Peon84 [Kd 9c]
+*** PRE-FLOP *** 
+Peon84 calls 200
+rayon2soleiI folds
+f.gwada folds
+backintown92 folds
+taktiktak folds
+NOLOVISTO folds
+volvo02 folds
+DEBSON-DEB checks
+*** FLOP *** [6c Qc 8h]
+DEBSON-DEB checks
+Peon84 checks
+*** TURN *** [6c Qc 8h][Ah]
+DEBSON-DEB checks
+Peon84 bets 200
+DEBSON-DEB calls 200
+*** RIVER *** [6c Qc 8h Ah][8s]
+DEBSON-DEB checks
+Peon84 checks
+*** SHOW DOWN ***
+Peon84 shows [Kd 9c] (One pair : 8)
+DEBSON-DEB shows [2s 2d] (Two pairs : 8 and 2)
+DEBSON-DEB collected 1100 from pot
+*** SUMMARY ***
+Total pot 1100 | No rake
+Board: [6c Qc 8h Ah 8s]
+Seat 1: DEBSON-DEB (big blind) showed [2s 2d] and won 1100 with Two pairs : 8 and 2
+Seat 2: Peon84 showed [Kd 9c] and lost with One pair : 8
+
+
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 10 - HandId: #998130204654174210-96-1524546956 - Holdem no limit (30/125/250) - 2018/04/24 05:15:56 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #8 is the button
+Seat 1: DEBSON-DEB (25171)
+Seat 2: Peon84 (145)
+Seat 3: rayon2soleiI (263)
+Seat 4: f.gwada (14587)
+Seat 5: backintown92 (2425)
+Seat 6: taktiktak (16586)
+Seat 7: NOLOVISTO (103)
+Seat 8: volvo02 (93)
+*** ANTE/BLINDS ***
+DEBSON-DEB posts ante 30
+Peon84 posts ante 30
+rayon2soleiI posts ante 30
+f.gwada posts ante 30
+backintown92 posts ante 30
+taktiktak posts ante 30
+NOLOVISTO posts ante 30
+volvo02 posts ante 30
+DEBSON-DEB posts small blind 125
+Peon84 posts big blind 115 and is all-in
+Dealt to Peon84 [5s 9s]
+*** PRE-FLOP *** 
+rayon2soleiI folds
+f.gwada folds
+backintown92 folds
+taktiktak folds
+NOLOVISTO folds
+volvo02 folds
+*** FLOP *** [Jd 7d Kh]
+*** TURN *** [Jd 7d Kh][Jc]
+*** RIVER *** [Jd 7d Kh Jc][9d]
+*** SHOW DOWN ***
+Peon84 shows [5s 9s] (Two pairs : Jacks and 9)
+DEBSON-DEB shows [Td Th] (Two pairs : Jacks and Tens)
+DEBSON-DEB collected 480 from pot
+*** SUMMARY ***
+Total pot 480 | No rake
+Board: [Jd 7d Kh Jc 9d]
+Seat 1: DEBSON-DEB (small blind) showed [Td Th] and won 480 with Two pairs : Jacks and Tens
+Seat 2: Peon84 (big blind) showed [5s 9s] and lost with Two pairs : Jacks and 9
+
+

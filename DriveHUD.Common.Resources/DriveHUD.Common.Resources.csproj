@@ -718,6 +718,9 @@
     <Resource Include="images\settings\rev-8max.png" />
     <Resource Include="images\settings\rev-9max.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH 7-max.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>

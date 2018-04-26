@@ -27,6 +27,7 @@ using Microsoft.Practices.Unity;
 using Model.Enums;
 using Model.Solvers;
 using System;
+using DriveHUD.Importers.Winamax;
 
 namespace DriveHUD.Importers
 {
@@ -82,6 +83,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IPacketManager, PacketManager>();
             container.RegisterType<IPMImporter, PMImporter>();
             container.RegisterType<IHorizonImporter, HorizonImporter>();
+            container.RegisterType<IWinamaxImporter, WinamaxImporter>();
             container.RegisterType<IPokerEvaluator, HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
             container.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.Omaha.ToString());
             container.RegisterType<IPokerEvaluator, OmahaHiLoEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
@@ -120,6 +122,7 @@ namespace DriveHUD.Importers
             importerService.Register<IExternalImporter>();
             importerService.Register<IPMImporter>();
             importerService.Register<IHorizonImporter>();
+            importerService.Register<IWinamaxImporter>();
         }
     }
 }

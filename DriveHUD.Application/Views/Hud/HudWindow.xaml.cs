@@ -58,18 +58,14 @@ namespace DriveHUD.Application.Views
 
         public HudLayout Layout { get; set; }
 
-        public double BaseWidth { get; set; }
-
-        public double BaseHeight { get; set; }
-
         public double ScaleX
         {
-            get { return Width / BaseWidth; }
+            get { return hudPanelService?.GetScaleX(this) ?? 0; }
         }
 
         public double ScaleY
         {
-            get { return Height / BaseHeight; }
+            get { return hudPanelService?.GetScaleX(this) ?? 0; }
         }
 
         public void Initialize(HudLayout layout, IntPtr hWnd)
@@ -116,7 +112,7 @@ namespace DriveHUD.Application.Views
                 {
                     trackerConditionsMeterPositionOffset = new Point(hudTrackConditionsViewModel.OffsetX, hudTrackConditionsViewModel.OffsetY);
                 }
-               
+
                 dgCanvas.Children.Remove(panel);
             }
 
@@ -167,14 +163,6 @@ namespace DriveHUD.Application.Views
 
         public void Refresh()
         {
-            if (BaseHeight == 0 || BaseWidth == 0)
-            {
-                var initialSizes = hudPanelService.GetInitialTableSize();
-
-                BaseWidth = initialSizes.Item1;
-                BaseHeight = initialSizes.Item2;
-            }
-
             dgCanvas.XFraction = ScaleX;
             dgCanvas.YFraction = ScaleY;
 

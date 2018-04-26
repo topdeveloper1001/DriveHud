@@ -11,7 +11,7 @@ HJ ($100)
 
 Dealt to Hero 4:club: A:club:
 
-UTG Folds, MP Folds, HJ Folds, CO Checks, [color=red]HERO Raises To $4 (Rem. Stack: 95.5)[/color], [color=red]SB Raises To $15.0 (Rem. Stack: 86.86)[/color], BB Folds, CO Folds, [color=red]HERO Calls $11.5 (Rem. Stack: 84.0)[/color]
+UTG Folds, MP Folds, HJ Folds, CO Checks, [color=red]HERO Raises To $4 (Rem. Stack: 95.5)[/color], [color=red]SB Raises To $15.5 (Rem. Stack: 86.86)[/color], BB Folds, CO Folds, [color=red]HERO Calls $11.5 (Rem. Stack: 84.0)[/color]
 
 Flop ($33.0) 4:heart: A:spade: K:heart:
 SB Bets $19.25 (Rem. Stack: 67.61), [color=red]HERO Raises To $84 (allin) (Rem. Stack: 0.0)[/color], SB Folds

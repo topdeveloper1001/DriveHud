@@ -294,7 +294,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 HandAction anteAction = handHistory.HandActions.FirstOrDefault(a => a.HandActionType == HandActionType.ANTE);
 
-                if (anteAction != null)
+                if (!handHistory.GameDescription.Limit.IsAnteTable && anteAction != null)
                 {
                     handHistory.GameDescription.Limit.IsAnteTable = true;
                     handHistory.GameDescription.Limit.Ante = Math.Abs(anteAction.Amount);

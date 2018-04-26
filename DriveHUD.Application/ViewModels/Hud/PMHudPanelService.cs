@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="PMHudPanelService.cs" company="Ace Poker Solutions">
-// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -11,18 +11,23 @@
 //----------------------------------------------------------------------
 
 using System;
+using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     internal class PMHudPanelService : HudPanelService
     {
+        private static readonly Point initialTableSize = new Point(560, 1021);
+
         /// <summary>
-        /// Get initial table size 
+        /// Gets the initial(default) size of the table 
         /// </summary>
-        /// <returns>Return dimensions of initial table, Item1 - Width, Item - Height</returns>
-        public override Tuple<double, double> GetInitialTableSize()
+        public override Point InitialTableSize
         {
-            return new Tuple<double, double>(560, 1021);
+            get
+            {
+                return initialTableSize;
+            }
         }
 
         public override Tuple<double, double> GetInitialTrackConditionMeterPosition()

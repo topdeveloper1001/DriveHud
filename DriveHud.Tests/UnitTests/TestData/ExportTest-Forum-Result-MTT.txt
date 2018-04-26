@@ -10,7 +10,7 @@ UTG ($5218)
 
 Dealt to Hero Q:heart: 9:heart:
 
-UTG Folds, HJ Folds, CO Folds, [color=red]BTN Raises To $1231 (Rem. Stack: 8902)[/color], SB Folds, [color=red]HERO Calls $731 (Rem. Stack: 8670)[/color]
+UTG Folds, HJ Folds, CO Folds, [color=red]BTN Raises To $1281 (Rem. Stack: 8902)[/color], SB Folds, [color=red]HERO Calls $731 (Rem. Stack: 8670)[/color]
 
 Flop ($3012) 5:spade: 7:club: 2:club:
 HERO Checks, BTN Checks

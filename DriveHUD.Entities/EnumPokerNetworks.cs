@@ -23,6 +23,7 @@ namespace DriveHUD.Entities
         IPoker,
         GGN,
         Horizon,
+        Winamax,
         Unknown
     }
 }

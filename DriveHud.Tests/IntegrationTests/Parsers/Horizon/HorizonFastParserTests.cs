@@ -37,16 +37,6 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Horizon
     [TestFixture]
     class HorizonFastParserTests
     {
-        // temp notes:
-        // add fixed limit tables
-        // add seat type tables (sng with 6-max, 9-max etc.)
-        // Tournament: 16611911 (FD7A47) Buy-In Freeroll : Table 4 - No Limit Holdem - 10/20
-        // GameNumber: 5127FD7A47000373 = 5127 (day since start) + table id + incremental number
-        // rebuys 
-        // adds on
-        // side pots
-        // bounty
-
         private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\Horizon\TestData";
 
         [OneTimeSetUp]
@@ -143,7 +133,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Horizon
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.GameDescription.Limit.Ante, Is.EqualTo(ante));
-        }     
+        }
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Horizon\TestData\SingleHands\NLH-9-max-1.txt", 20)]

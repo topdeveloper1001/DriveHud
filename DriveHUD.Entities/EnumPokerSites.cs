@@ -54,6 +54,8 @@ namespace DriveHUD.Entities
         [EnumMember]
         PokerMaster = 17,
         [EnumMember]
-        Horizon = 18
+        Horizon = 18,
+        [EnumMember]
+        Winamax = 19
     }
 }

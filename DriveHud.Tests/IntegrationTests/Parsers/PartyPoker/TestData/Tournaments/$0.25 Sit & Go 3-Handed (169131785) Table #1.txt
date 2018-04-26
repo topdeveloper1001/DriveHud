@@ -1,0 +1,728 @@
+Game #17189434508 starts.
+
+#Game No : 17189434508 
+***** Hand History for Game 17189434508 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:24:26 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 1: Dmitriy060184 ( 500 )
+Seat 2: Peon84 ( 500 )
+Seat 3: elecgine ( 500 )
+Trny: 169131785 Level: 1 
+Blinds(10/20)
+elecgine posts small blind [10].
+Dmitriy060184 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Ad Qd ]
+Peon84 raises [60]
+elecgine folds
+Dmitriy060184 folds
+Peon84 does not show cards.
+Peon84 wins 90 chips
+Game #17189435612 starts.
+
+#Game No : 17189435612 
+***** Hand History for Game 17189435612 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:24:37 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 3/3 
+Seat 1: Dmitriy060184 ( 480 )
+Seat 2: Peon84 ( 530 )
+Seat 3: elecgine ( 490 )
+Trny: 169131785 Level: 1 
+Blinds(10/20)
+Dmitriy060184 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  6d 6s ]
+elecgine calls [20]
+Dmitriy060184 calls [10]
+Peon84 raises [20]
+elecgine folds
+Dmitriy060184 calls [20]
+** Dealing Flop ** [ 3d, 5s, 7h ]
+Dmitriy060184 bets [20]
+Peon84 calls [20]
+** Dealing Turn ** [ 7d ]
+Dmitriy060184 bets [20]
+Peon84 raises [40]
+Dmitriy060184 calls [20]
+** Dealing River ** [ 5c ]
+Dmitriy060184 checks
+Peon84 bets [100]
+Dmitriy060184 folds
+Peon84 does not show cards.
+Peon84 wins 320 chips
+Game #17189439038 starts.
+
+#Game No : 17189439038 
+***** Hand History for Game 17189439038 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:25:23 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 1: Dmitriy060184 ( 380 )
+Seat 2: Peon84 ( 650 )
+Seat 3: elecgine ( 470 )
+Trny: 169131785 Level: 1 
+Blinds(10/20)
+Peon84 posts small blind [10].
+elecgine posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  2s 3d ]
+Dmitriy060184 folds
+Peon84 calls [10]
+elecgine checks
+** Dealing Flop ** [ Jh, 7h, Kc ]
+Peon84 checks
+elecgine checks
+** Dealing Turn ** [ 6s ]
+Peon84 checks
+elecgine bets [20]
+Peon84 folds
+elecgine does not show cards.
+elecgine wins 60 chips
+Game #17189442653 starts.
+
+#Game No : 17189442653 
+***** Hand History for Game 17189442653 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:26:05 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 1: Dmitriy060184 ( 380 )
+Seat 2: Peon84 ( 630 )
+Seat 3: elecgine ( 490 )
+Trny: 169131785 Level: 1 
+Blinds(10/20)
+elecgine posts small blind [10].
+Dmitriy060184 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  4c Jh ]
+Peon84 folds
+elecgine calls [10]
+Dmitriy060184 checks
+** Dealing Flop ** [ 3d, 5s, Tc ]
+elecgine checks
+Dmitriy060184 bets [20]
+elecgine raises [40]
+Dmitriy060184 calls [20]
+** Dealing Turn ** [ 3s ]
+elecgine bets [120]
+Dmitriy060184 folds
+elecgine does not show cards.
+elecgine wins 240 chips
+Game #17189444970 starts.
+
+#Game No : 17189444970 
+***** Hand History for Game 17189444970 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:26:30 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 3/3 
+Seat 1: Dmitriy060184 ( 320 )
+Seat 2: Peon84 ( 630 )
+Seat 3: elecgine ( 550 )
+Trny: 169131785 Level: 1 
+Blinds(10/20)
+Dmitriy060184 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  3s 6s ]
+elecgine calls [20]
+Dmitriy060184 calls [10]
+Peon84 checks
+** Dealing Flop ** [ Ad, Kc, Jd ]
+Dmitriy060184 checks
+Peon84 checks
+elecgine checks
+** Dealing Turn ** [ 4h ]
+Dmitriy060184 bets [20]
+Peon84 folds
+elecgine calls [20]
+** Dealing River ** [ 7h ]
+Dmitriy060184 checks
+elecgine checks
+Dmitriy060184 shows [ 4c, 5h ]a pair of Fours.
+elecgine doesn't show [ 8d, Qd ]high card Ace.
+Dmitriy060184 wins 100 chips from the main pot with a pair of Fours.
+Game #17189446639 starts.
+
+#Game No : 17189446639 
+***** Hand History for Game 17189446639 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:26:54 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 1: Dmitriy060184 ( 380 )
+Seat 2: Peon84 ( 610 )
+Seat 3: elecgine ( 510 )
+Trny: 169131785 Level: 1 
+Blinds(10/20)
+Peon84 posts small blind [10].
+elecgine posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Js Ad ]
+Dmitriy060184 folds
+Peon84 raises [30]
+elecgine folds
+Peon84 does not show cards.
+Peon84 wins 60 chips
+Game #17189447481 starts.
+
+#Game No : 17189447481 
+***** Hand History for Game 17189447481 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:27:05 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 1: Dmitriy060184 ( 380 )
+Seat 2: Peon84 ( 630 )
+Seat 3: elecgine ( 490 )
+Trny: 169131785 Level: 1 
+Blinds(10/20)
+elecgine posts small blind [10].
+Dmitriy060184 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  9h 9d ]
+Peon84 raises [40]
+elecgine calls [30]
+Dmitriy060184 is all-In  [360]
+Peon84 folds
+elecgine calls [340]
+** Dealing Flop ** [ Tc, 3h, 7c ]
+** Dealing Turn ** [ 8d ]
+** Dealing River ** [ Kh ]
+elecgine shows [ 4c, 8c ]a pair of Eights.
+Dmitriy060184 shows [ As, Jd ]high card Ace.
+elecgine wins 800 chips from the main pot with a pair of Eights.
+Player Dmitriy060184 finished in 3.
+Game #17189449369 starts.
+
+#Game No : 17189449369 
+***** Hand History for Game 17189449369 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:27:24 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 590 )
+Seat 3: elecgine ( 910 )
+Trny: 169131785 Level: 1 
+Blinds(10/20)
+elecgine posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Ts 6s ]
+elecgine calls [10]
+Peon84 checks
+** Dealing Flop ** [ 9h, Qd, 9c ]
+Peon84 checks
+elecgine checks
+** Dealing Turn ** [ 8d ]
+Peon84 checks
+elecgine checks
+** Dealing River ** [ 5c ]
+Peon84 checks
+elecgine checks
+Peon84 shows [ Ts, 6s ]a pair of Nines.
+elecgine shows [ Ac, Jh ]a pair of Nines with Ace kicker.
+elecgine wins 40 chips from the main pot with a pair of Nines with Ace kicker.
+Game #17189451011 starts.
+
+#Game No : 17189451011 
+***** Hand History for Game 17189451011 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:27:46 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 570 )
+Seat 3: elecgine ( 930 )
+Trny: 169131785 Level: 2 
+Blinds(15/30)
+Peon84 posts small blind [15].
+elecgine posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  Ts Ah ]
+Peon84 raises [45]
+elecgine calls [30]
+** Dealing Flop ** [ Td, Jd, 3d ]
+elecgine bets [30]
+Peon84 calls [30]
+** Dealing Turn ** [ Ac ]
+elecgine bets [90]
+Peon84 calls [90]
+** Dealing River ** [ Tc ]
+elecgine bets [30]
+Peon84 is all-In  [390]
+elecgine folds
+Peon84 does not show cards.
+Peon84 wins 780 chips
+Game #17189453829 starts.
+
+#Game No : 17189453829 
+***** Hand History for Game 17189453829 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:28:17 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 780 )
+Seat 3: elecgine ( 720 )
+Trny: 169131785 Level: 2 
+Blinds(15/30)
+elecgine posts small blind [15].
+Peon84 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  2h Qc ]
+elecgine calls [15]
+Peon84 checks
+** Dealing Flop ** [ 7c, 2c, 8h ]
+Peon84 bets [30]
+elecgine folds
+Peon84 does not show cards.
+Peon84 wins 90 chips
+Game #17189455092 starts.
+
+#Game No : 17189455092 
+***** Hand History for Game 17189455092 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:28:34 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 810 )
+Seat 3: elecgine ( 690 )
+Trny: 169131785 Level: 2 
+Blinds(15/30)
+Peon84 posts small blind [15].
+elecgine posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  5s 6c ]
+Peon84 calls [15]
+elecgine checks
+** Dealing Flop ** [ 4c, Ah, 2d ]
+elecgine checks
+Peon84 bets [30]
+elecgine calls [30]
+** Dealing Turn ** [ Qd ]
+elecgine checks
+Peon84 checks
+** Dealing River ** [ 8s ]
+elecgine bets [90]
+Peon84 folds
+elecgine does not show cards.
+elecgine wins 210 chips
+Game #17189457579 starts.
+
+#Game No : 17189457579 
+***** Hand History for Game 17189457579 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:29:02 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 750 )
+Seat 3: elecgine ( 750 )
+Trny: 169131785 Level: 2 
+Blinds(15/30)
+elecgine posts small blind [15].
+Peon84 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  Tc 5d ]
+elecgine calls [15]
+Peon84 checks
+** Dealing Flop ** [ Js, Ad, 7d ]
+Peon84 checks
+elecgine bets [30]
+Peon84 folds
+elecgine does not show cards.
+elecgine wins 90 chips
+Game #17189458524 starts.
+
+#Game No : 17189458524 
+***** Hand History for Game 17189458524 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:29:15 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 720 )
+Seat 3: elecgine ( 780 )
+Trny: 169131785 Level: 2 
+Blinds(15/30)
+Peon84 posts small blind [15].
+elecgine posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  Jh Tc ]
+Peon84 raises [45]
+elecgine calls [30]
+** Dealing Flop ** [ 5h, 6h, 7h ]
+elecgine checks
+Peon84 checks
+** Dealing Turn ** [ Qh ]
+elecgine checks
+Peon84 bets [30]
+elecgine folds
+Peon84 does not show cards.
+Peon84 wins 150 chips
+Game #17189459926 starts.
+
+#Game No : 17189459926 
+***** Hand History for Game 17189459926 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:29:34 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 780 )
+Seat 3: elecgine ( 720 )
+Trny: 169131785 Level: 2 
+Blinds(15/30)
+elecgine posts small blind [15].
+Peon84 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  Kd 7c ]
+elecgine calls [15]
+Peon84 checks
+** Dealing Flop ** [ 4s, 3d, 2h ]
+Peon84 checks
+elecgine bets [30]
+Peon84 folds
+elecgine does not show cards.
+elecgine wins 90 chips
+Game #17189460943 starts.
+
+#Game No : 17189460943 
+***** Hand History for Game 17189460943 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:29:49 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 750 )
+Seat 3: elecgine ( 750 )
+Trny: 169131785 Level: 2 
+Blinds(15/30)
+Peon84 posts small blind [15].
+elecgine posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  7c 9s ]
+Peon84 calls [15]
+elecgine checks
+** Dealing Flop ** [ Th, 9h, 2d ]
+elecgine checks
+Peon84 bets [30]
+elecgine folds
+Peon84 does not show cards.
+Peon84 wins 90 chips
+Game #17189462461 starts.
+
+#Game No : 17189462461 
+***** Hand History for Game 17189462461 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:30:03 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 780 )
+Seat 3: elecgine ( 720 )
+Trny: 169131785 Level: 2 
+Blinds(15/30)
+elecgine posts small blind [15].
+Peon84 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  4s 2d ]
+elecgine calls [15]
+Peon84 checks
+** Dealing Flop ** [ Ad, 2h, Jh ]
+Peon84 checks
+elecgine checks
+** Dealing Turn ** [ 3d ]
+Peon84 checks
+elecgine checks
+** Dealing River ** [ 4c ]
+Peon84 bets [60]
+elecgine folds
+Peon84 does not show cards.
+Peon84 wins 120 chips
+Game #17189464039 starts.
+
+#Game No : 17189464039 
+***** Hand History for Game 17189464039 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:30:25 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 810 )
+Seat 3: elecgine ( 690 )
+Trny: 169131785 Level: 2 
+Blinds(15/30)
+Peon84 posts small blind [15].
+elecgine posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  Qh 9h ]
+Peon84 calls [15]
+elecgine checks
+** Dealing Flop ** [ Tc, 9c, 6c ]
+elecgine bets [30]
+Peon84 calls [30]
+** Dealing Turn ** [ 5s ]
+elecgine bets [60]
+Peon84 calls [60]
+** Dealing River ** [ Js ]
+elecgine bets [240]
+Peon84 folds
+elecgine does not show cards.
+elecgine wins 480 chips
+Game #17189466286 starts.
+
+#Game No : 17189466286 
+***** Hand History for Game 17189466286 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:30:49 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 690 )
+Seat 3: elecgine ( 810 )
+Trny: 169131785 Level: 3 
+Blinds(20/40)
+elecgine posts small blind [20].
+Peon84 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  Tc 4c ]
+elecgine folds
+Peon84 does not show cards.
+Peon84 wins 60 chips
+Game #17189466657 starts.
+
+#Game No : 17189466657 
+***** Hand History for Game 17189466657 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:30:54 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 710 )
+Seat 3: elecgine ( 790 )
+Trny: 169131785 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+elecgine posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  Jc 8c ]
+Peon84 calls [20]
+elecgine checks
+** Dealing Flop ** [ Jd, Kd, 5h ]
+elecgine checks
+Peon84 bets [80]
+elecgine calls [80]
+** Dealing Turn ** [ 6h ]
+elecgine checks
+Peon84 bets [120]
+elecgine folds
+Peon84 does not show cards.
+Peon84 wins 360 chips
+Game #17189468369 starts.
+
+#Game No : 17189468369 
+***** Hand History for Game 17189468369 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:31:18 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 830 )
+Seat 3: elecgine ( 670 )
+Trny: 169131785 Level: 3 
+Blinds(20/40)
+elecgine posts small blind [20].
+Peon84 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  2s 2c ]
+elecgine calls [20]
+Peon84 checks
+** Dealing Flop ** [ 7c, Kc, Js ]
+Peon84 checks
+elecgine bets [40]
+Peon84 calls [40]
+** Dealing Turn ** [ 5d ]
+Peon84 checks
+elecgine bets [40]
+Peon84 calls [40]
+** Dealing River ** [ 3d ]
+Peon84 checks
+elecgine bets [40]
+Peon84 calls [40]
+elecgine shows [ Jd, Ac ]a pair of Jacks.
+Peon84 doesn't show [ 2s, 2c ]a pair of Twos.
+elecgine wins 320 chips from the main pot with a pair of Jacks.
+Game #17189470831 starts.
+
+#Game No : 17189470831 
+***** Hand History for Game 17189470831 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:31:46 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 670 )
+Seat 3: elecgine ( 830 )
+Trny: 169131785 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+elecgine posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  9h 2h ]
+Peon84 folds
+elecgine does not show cards.
+elecgine wins 60 chips
+Game #17189471315 starts.
+
+#Game No : 17189471315 
+***** Hand History for Game 17189471315 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:31:52 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 650 )
+Seat 3: elecgine ( 850 )
+Trny: 169131785 Level: 3 
+Blinds(20/40)
+elecgine posts small blind [20].
+Peon84 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  9s 6d ]
+elecgine folds
+Peon84 does not show cards.
+Peon84 wins 60 chips
+Game #17189471686 starts.
+
+#Game No : 17189471686 
+***** Hand History for Game 17189471686 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:31:58 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 670 )
+Seat 3: elecgine ( 830 )
+Trny: 169131785 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+elecgine posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  7h 9h ]
+Peon84 calls [20]
+elecgine checks
+** Dealing Flop ** [ Qs, 7c, 8h ]
+elecgine checks
+Peon84 bets [40]
+elecgine folds
+Peon84 does not show cards.
+Peon84 wins 120 chips
+Game #17189472823 starts.
+
+#Game No : 17189472823 
+***** Hand History for Game 17189472823 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:32:13 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 710 )
+Seat 3: elecgine ( 790 )
+Trny: 169131785 Level: 3 
+Blinds(20/40)
+elecgine posts small blind [20].
+Peon84 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  9h Jc ]
+elecgine raises [60]
+Peon84 calls [40]
+** Dealing Flop ** [ 8s, 4h, Qd ]
+Peon84 checks
+elecgine bets [40]
+Peon84 calls [40]
+** Dealing Turn ** [ 2c ]
+Peon84 checks
+elecgine bets [120]
+Peon84 calls [120]
+** Dealing River ** [ Qs ]
+Peon84 checks
+elecgine checks
+Peon84 shows [ 9h, Jc ]a pair of Queens.
+elecgine shows [ Th, Js ]a pair of Queens with Ten kicker.
+elecgine wins 480 chips from the main pot with a pair of Queens with Ten kicker.
+Game #17189475275 starts.
+
+#Game No : 17189475275 
+***** Hand History for Game 17189475275 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:32:42 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 470 )
+Seat 3: elecgine ( 1,030 )
+Trny: 169131785 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+elecgine posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  Ks 5s ]
+Peon84 calls [20]
+elecgine checks
+** Dealing Flop ** [ 3d, Jh, Th ]
+elecgine checks
+Peon84 checks
+** Dealing Turn ** [ 9c ]
+elecgine checks
+Peon84 checks
+** Dealing River ** [ 2h ]
+elecgine is all-In  [990]
+Peon84 folds
+elecgine does not show cards.
+elecgine wins 1,070 chips
+Game #17189477105 starts.
+
+#Game No : 17189477105 
+***** Hand History for Game 17189477105 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:33:07 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 430 )
+Seat 3: elecgine ( 1,070 )
+Trny: 169131785 Level: 3 
+Blinds(20/40)
+elecgine posts small blind [20].
+Peon84 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  As 6c ]
+elecgine folds
+Peon84 does not show cards.
+Peon84 wins 60 chips
+Game #17189477438 starts.
+
+#Game No : 17189477438 
+***** Hand History for Game 17189477438 *****
+NL Texas Hold'em $0.25 USD Buy-in  - Friday, April 13, 23:33:12 MSK 2018
+Table $0.25 Sit & Go 3-Handed (169131785) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 2: Peon84 ( 450 )
+Seat 3: elecgine ( 1,050 )
+Trny: 169131785 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+elecgine posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  5h 8c ]
+Peon84 calls [20]
+elecgine checks
+** Dealing Flop ** [ 7s, Ac, 5s ]
+elecgine checks
+Peon84 bets [40]
+elecgine calls [40]
+** Dealing Turn ** [ Ah ]
+elecgine bets [40]
+Peon84 calls [40]
+** Dealing River ** [ 3c ]
+elecgine bets [240]
+Peon84 is all-In  [330]
+elecgine calls [90]
+elecgine shows [ Ad, 2h ]three of a kind, Aces.
+Peon84 shows [ 5h, 8c ]two pairs, Aces and Fives.
+elecgine wins 900 chips from the main pot with three of a kind, Aces.
+Congratulations to player elecgine for winning tournament $0.25 Sit & Go 3-Handed
+Player Peon84 finished in 2.
+Player elecgine finished in 1 place and received $0.50 USD 

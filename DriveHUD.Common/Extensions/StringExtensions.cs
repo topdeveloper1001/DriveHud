@@ -100,5 +100,10 @@ namespace DriveHUD.Common.Extensions
                 return string.Empty;
             }
         }
+
+        public static bool ContainsIgnoreCase(this string input, string value)
+        {
+            return input.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0;
+        }
     }
 }

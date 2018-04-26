@@ -1241,7 +1241,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.CouldRiverBet, fileName, pokerSite, playerName, expected);
         }
 
-        [TestCase(@"Hero-CouldRiverBet-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]       
+        [TestCase(@"Hero-CouldTurnBet-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CouldTurnBet-2.txt", EnumPokerSites.Winamax, "Hero", 1)]
         public void CouldTurnBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.CouldTurnBet, fileName, pokerSite, playerName, expected);

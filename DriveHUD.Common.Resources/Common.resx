@@ -1042,4 +1042,37 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_Hud_SelectedStats" xml:space="preserve">
     <value>Selected Stats</value>
   </data>
+  <data name="Common_DashboardView_3Bet" xml:space="preserve">
+    <value>3-Bet%</value>
+  </data>
+  <data name="Common_DashboardView_AF" xml:space="preserve">
+    <value>AF</value>
+  </data>
+  <data name="Common_DashboardView_AGG" xml:space="preserve">
+    <value>AGG%</value>
+  </data>
+  <data name="Common_DashboardView_BB100" xml:space="preserve">
+    <value>bb/100 :</value>
+  </data>
+  <data name="Common_DashboardView_MoneyWon" xml:space="preserve">
+    <value>Money Won :</value>
+  </data>
+  <data name="Common_DashboardView_PFR" xml:space="preserve">
+    <value>PFR</value>
+  </data>
+  <data name="Common_DashboardView_TotalHands" xml:space="preserve">
+    <value>Total Hands :</value>
+  </data>
+  <data name="Common_DashboardView_VPIP" xml:space="preserve">
+    <value>VPIP</value>
+  </data>
+  <data name="Common_DashboardView_WSSD" xml:space="preserve">
+    <value>W$SD</value>
+  </data>
+  <data name="Common_DashboardView_WSWSF" xml:space="preserve">
+    <value>W$WSF</value>
+  </data>
+  <data name="Common_DashboardView_WTSD" xml:space="preserve">
+    <value>WTSD</value>
+  </data>
 </root>
