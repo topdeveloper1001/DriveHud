@@ -583,6 +583,105 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 3-Bet%.
+        /// </summary>
+        internal static string Common_DashboardView_3Bet {
+            get {
+                return ResourceManager.GetString("Common_DashboardView_3Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AF.
+        /// </summary>
+        internal static string Common_DashboardView_AF {
+            get {
+                return ResourceManager.GetString("Common_DashboardView_AF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AGG%.
+        /// </summary>
+        internal static string Common_DashboardView_AGG {
+            get {
+                return ResourceManager.GetString("Common_DashboardView_AGG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bb/100 :.
+        /// </summary>
+        internal static string Common_DashboardView_BB100 {
+            get {
+                return ResourceManager.GetString("Common_DashboardView_BB100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Money Won :.
+        /// </summary>
+        internal static string Common_DashboardView_MoneyWon {
+            get {
+                return ResourceManager.GetString("Common_DashboardView_MoneyWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR.
+        /// </summary>
+        internal static string Common_DashboardView_PFR {
+            get {
+                return ResourceManager.GetString("Common_DashboardView_PFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Hands :.
+        /// </summary>
+        internal static string Common_DashboardView_TotalHands {
+            get {
+                return ResourceManager.GetString("Common_DashboardView_TotalHands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VPIP.
+        /// </summary>
+        internal static string Common_DashboardView_VPIP {
+            get {
+                return ResourceManager.GetString("Common_DashboardView_VPIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to W$SD.
+        /// </summary>
+        internal static string Common_DashboardView_WSSD {
+            get {
+                return ResourceManager.GetString("Common_DashboardView_WSSD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to W$WSF.
+        /// </summary>
+        internal static string Common_DashboardView_WSWSF {
+            get {
+                return ResourceManager.GetString("Common_DashboardView_WSWSF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD.
+        /// </summary>
+        internal static string Common_DashboardView_WTSD {
+            get {
+                return ResourceManager.GetString("Common_DashboardView_WTSD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Data was exported and copied to your clipboard. 
         ///Use CTRL+V to paste your exported data..
         /// </summary>
