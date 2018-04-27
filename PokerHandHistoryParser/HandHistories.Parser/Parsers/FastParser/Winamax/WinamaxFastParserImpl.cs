@@ -877,7 +877,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                 tournament);
 
             return handHistory;
-        }        
+        }
 
         /// <summary>
         /// Split multiple hands into array or single hands
@@ -956,6 +956,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
         {
             if (isAllIn)
             {
+                if (actionType == HandActionType.ANTE ||
+                    actionType == HandActionType.SMALL_BLIND ||
+                    actionType == HandActionType.BIG_BLIND ||
+                    actionType == HandActionType.POSTS)
+                {
+                    return new HandAction(playerName, actionType, amount, street, true, actionNumber);
+                }
+
                 return new AllInAction(playerName, amount, street, actionType == HandActionType.BET || actionType == HandActionType.RAISE, actionType, actionNumber);
             }
 

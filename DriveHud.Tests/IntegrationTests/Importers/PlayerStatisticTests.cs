@@ -157,6 +157,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-CO-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", "CO")]
         [TestCase(@"DURKADURDUR-EP-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", "EP")]
         [TestCase(@"DURKADURDUR-SB-Position.txt", EnumPokerSites.PokerStars, "DURKADURDUR", "BTN")]
+        [TestCase(@"AsX4-SB-Position.txt", EnumPokerSites.Winamax, "as x 4", "SB")]
         public void PositionsAreImported(string fileName, EnumPokerSites pokerSite, string playerName, string expectedPosition)
         {
             AssertThatStatIsCalculated(x => x.PositionString, fileName, pokerSite, playerName, expectedPosition);
