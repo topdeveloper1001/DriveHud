@@ -77,6 +77,14 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             var layoutsDirectory = GetLayoutsDirectory();
             var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
+
+#if DEBUG
+            if (HudLayoutMappings.Mappings.Count < 2)
+            {
+                LogProvider.Log.Error(this, "Layouts mappings were cleared!.");
+            }
+#endif 
+
             SaveLayoutMappings(mappingsFilePath, HudLayoutMappings);
         }
 

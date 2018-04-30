@@ -32,6 +32,11 @@
             <local:PokerStarsEmulatorSettings />
         </DataTemplate>
 
+        <DataTemplate
+            DataType="{x:Type local:PartyPokerEmulator}">
+            <local:PokerStarsEmulatorSettings />
+        </DataTemplate>
+
     </Window.Resources>
     <Border
         Background="#EEEEEE"

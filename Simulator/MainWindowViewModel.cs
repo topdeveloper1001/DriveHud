@@ -92,7 +92,8 @@ namespace Simulator
             emulators = new ObservableCollection<IPokerEmulator>
             {
                 new PokerStarsEmulator(),
-                new BetOnlineEmulator()
+                new BetOnlineEmulator(),
+                new PartyPokerEmulator()
             };
         }
 

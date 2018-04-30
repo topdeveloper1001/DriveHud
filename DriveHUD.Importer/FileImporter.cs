@@ -331,7 +331,7 @@ namespace DriveHUD.Importers
                 Istourney = parsedHand.GameDescription.IsTournament,
                 PokergametypeId = (short)(parsedHand.GameDescription.GameType),
                 Smallblindincents = Utils.ConvertToCents(parsedHand.GameDescription.Limit.SmallBlind),
-                Tablesize = gameInfo != null ? (short)gameInfo.TableType : (short)parsedHand.GameDescription.SeatType.MaxPlayers,
+                Tablesize = gameInfo != null && (short)gameInfo.TableType != 0 ? (short)gameInfo.TableType : (short)parsedHand.GameDescription.SeatType.MaxPlayers,
                 TableType = (uint)parsedHand.GameDescription.TableType.Descriptions
             };
 
