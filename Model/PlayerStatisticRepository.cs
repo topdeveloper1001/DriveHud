@@ -13,6 +13,7 @@
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
+using Model.Data;
 using NHibernate.Linq;
 using ProtoBuf;
 using System;
@@ -184,6 +185,93 @@ namespace Model
             }
 
             return new List<Playerstatistic>();
+        }
+
+        public virtual IDictionary<string, T> GetPlayersIndicators<T>(string[] playerNames, short? pokersiteId)
+            where T : Indicators
+        {
+            try
+            {
+                Players[] players;
+
+                // get players ids
+                using (var session = ModelEntities.OpenStatelessSession())
+                {
+                    players = session.Query<Players>()
+                        .Where(x => playerNames.Contains(x.Playername) && x.PokersiteId == pokersiteId)
+                        .ToArray();
+                }
+
+                var playersStatFiles = (from player in players
+                                        from file in GetPlayerFiles(player.PlayerId)
+                                        select new PlayerStatFile { Player = player, File = file }).ToArray();
+
+                rwLock.EnterReadLock();
+
+                try
+                {
+                    var maxThreads = Environment.ProcessorCount + 1;
+
+                    var runningTasks = new List<Task>();
+
+                    var fileQueue = GetPlayerStatFileQueue(playersStatFiles);
+
+                    var playersIndicators = (from playersStatFile in playersStatFiles
+                                             group playersStatFile by playersStatFile.Player.Playername into grouped
+                                             where grouped.Any()
+                                             let indicators = Activator.CreateInstance<T>()
+                                             select new { grouped.Key, Indicators = indicators }).ToDictionary(x => x.Key, x => x.Indicators);
+
+
+                    while (fileQueue.Count > 0)
+                    {
+                        while (runningTasks.Count < maxThreads && fileQueue.Count > 0)
+                        {
+                            var playerStatFile = fileQueue.Dequeue();
+
+                            runningTasks.Add(Task.Run(() =>
+                            {
+                                RestoreBackupFile(playerStatFile.File);
+
+                                using (var sr = new StreamReaderWrapper(playerStatFile.File))
+                                {
+                                    string line = null;
+
+                                    while (sr != null && ((line = sr.ReadLine()) != null))
+                                    {
+                                        if (!TryParsePlayerStatistic(line, playerStatFile.File, out Playerstatistic stat) || stat == null)
+                                        {
+                                            continue;
+                                        }
+
+                                        var indicators = playersIndicators[playerStatFile.Player.Playername];
+
+                                        indicators.AddStatistic(stat);
+                                    }
+                                }
+                            }));
+                        }
+
+                        var completedTask = Task.WhenAny(runningTasks).Result;
+
+                        runningTasks.Remove(completedTask);
+                    }
+
+                    Task.WhenAll(runningTasks).Wait();
+
+                    return playersIndicators;
+                }
+                finally
+                {
+                    rwLock.ExitReadLock();
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not build indicators for {string.Join(", ", playerNames)} [{pokersiteId}]", e);
+            }
+
+            return null;
         }
 
         public virtual string[] GetPlayerFiles(int playerId)
@@ -657,6 +745,37 @@ namespace Model
             }
         }
 
+        /// <summary>
+        /// Gets <see cref="Queue{PlayerStatFile}"/> of <see cref="PlayerStatFile"/> in special order to increase the efficiency of multi-threading
+        /// </summary>
+        /// <param name="playersStatFiles"></param>
+        /// <returns></returns>
+        private Queue<PlayerStatFile> GetPlayerStatFileQueue(PlayerStatFile[] playersStatFiles)
+        {
+            var orderedPlayerStatFile = new List<PlayerStatFile>();
+
+            var groupedPlayerStatFiles = playersStatFiles
+                .GroupBy(x => x.Player.Playername, x => x)
+                .Select(x => new
+                {
+                    x.Key,
+                    PlayerStatFiles = new Queue<PlayerStatFile>(x)
+                }).ToArray();
+
+            while (groupedPlayerStatFiles.Any(x => x.PlayerStatFiles.Count > 0))
+            {
+                foreach (var groupedPlayerStatFile in groupedPlayerStatFiles)
+                {
+                    if (groupedPlayerStatFile.PlayerStatFiles.Count > 0)
+                    {
+                        orderedPlayerStatFile.Add(groupedPlayerStatFile.PlayerStatFiles.Dequeue());
+                    }
+                }
+            }
+
+            return new Queue<PlayerStatFile>(orderedPlayerStatFile);
+        }
+
         #endregion
 
         #region Helpers
@@ -686,6 +805,13 @@ namespace Model
             {
                 streamReader?.Dispose();
             }
+        }
+
+        private class PlayerStatFile
+        {
+            public Players Player { get; set; }
+
+            public string File { get; set; }
         }
 
         #endregion

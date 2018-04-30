@@ -16,8 +16,10 @@ using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
+using HandHistories.Objects.Players;
 using Microsoft.Practices.ServiceLocation;
 using Model;
+using Model.Data;
 using Model.Enums;
 using Model.Extensions;
 using Model.Importer;
@@ -129,7 +131,7 @@ namespace DriveHUD.Common.Ifrastructure
                     LogProvider.Log.Info("ConvertHHToForumFormat: Cannot find handHistory");
                     return string.Empty;
                 }
-
+            
                 HandHistories.Objects.Players.Player heroPlayer = null;
                 StringBuilder res = new StringBuilder();
                 var title = $"{ConvertGameType(currentHandHistory)} ${currentHandHistory.GameDescription.Limit.BigBlind}(BB)";
@@ -648,6 +650,7 @@ namespace DriveHUD.Common.Ifrastructure
 
             return resultString.Trim();
         }
+
         #endregion
     }
 }
