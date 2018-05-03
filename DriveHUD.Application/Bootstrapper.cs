@@ -100,7 +100,7 @@ namespace DriveHUD.Application
             sqliteBootstrapper.InitializeDatabase();
 
             ImporterBootstrapper.ConfigureImporterService();
-             
+
             ShowMainWindow();
         }
 
@@ -120,12 +120,22 @@ namespace DriveHUD.Application
                 else
                 {
                     mainWindowViewModel = new MainWindowViewModel();
-                    ((RadWindow)Shell).DataContext = mainWindowViewModel;
-                    ((RadWindow)Shell).IsTopmost = true;
-                    ((RadWindow)Shell).Show();
-                    ((RadWindow)Shell).IsTopmost = false;
+
+                    var mainRadWindow = (RadWindow)Shell;
+
+                    mainRadWindow.DataContext = mainWindowViewModel;
+                    mainRadWindow.IsTopmost = true;
+                    mainRadWindow.Show();
+                    mainRadWindow.IsTopmost = false;
 
                     App.SplashScreen.CloseSplashScreen();
+
+                    var mainWindow = mainRadWindow.ParentOfType<Window>();
+
+                    if (mainWindow != null && App.Current.MainWindow != mainWindow)
+                    {
+                        App.Current.MainWindow = mainWindow;
+                    }
 
                     if (App.IsUpdateAvailable)
                     {
@@ -247,7 +257,7 @@ namespace DriveHUD.Application
             // Migration
             Container.RegisterType<IMigrationService, SQLiteMigrationService>(DatabaseType.SQLite.ToString());
             Container.RegisterType<IMigrationService, PostgresMigrationService>(DatabaseType.PostgreSQL.ToString());
-        
+
             // Sites configurations
             Container.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Ignition.ToString());
             Container.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.BetOnline.ToString());
