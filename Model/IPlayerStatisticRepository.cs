@@ -30,7 +30,7 @@ namespace Model
 
         IEnumerable<Playerstatistic> GetPlayerStatistic(string playerName, short? pokersiteId);
 
-        IDictionary<string, T> GetPlayersIndicators<T>(string[] playerNames, short? pokersiteId) where T : Indicators;
+        IDictionary<string, T> GetPlayersIndicators<T>(string[] playerNames, short? pokersiteId) where T : Indicators, IThreadSafeIndicators;
 
         void Store(IEnumerable<Playerstatistic> statistic);
 

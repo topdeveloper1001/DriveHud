@@ -189,7 +189,7 @@ namespace Model
         }
 
         public virtual IDictionary<string, T> GetPlayersIndicators<T>(string[] playerNames, short? pokersiteId)
-            where T : Indicators
+            where T : Indicators, IThreadSafeIndicators
         {
             try
             {

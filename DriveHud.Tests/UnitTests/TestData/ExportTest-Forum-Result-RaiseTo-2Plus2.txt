@@ -1,0 +1,30 @@
+﻿Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software
+
+[U][B]NL Holdem $0.50(BB)[/B][/U]
+CO ($43.95) [VPIP: 31.2% | PFR: 23.3% | AGG: 23.5% | 3-Bet: 9% | Hands: 223000]
+BTN ($58.44) [VPIP: 41.2% | PFR: 13.3% | AGG: 33.5% | 3-Bet: 3% | Hands: 123000]
+[color=blue][B]HERO ($52.47)[/B][/color] [B][VPIP: 24.6% | PFR: 15.9% | AGG: 28.5% | 3-Bet: 7.5% | Hands: 455000][/B]
+[color=blue][B]BB ($51.4)[/B][/color] [B][VPIP: 52.6% | PFR: 10.9% | AGG: 45.2% | 3-Bet: 1.5% | Hands: 5500][/B]
+UTG ($53.25) [VPIP: 4.6% | PFR: 3.9% | AGG: 15% | 3-Bet: 0% | Hands: 100]
+MP ($53.13) [VPIP: 19% | PFR: 9.9% | AGG: 18.3% | 3-Bet: 0.6% | Hands: 4170]
+HJ ($52.74) [VPIP: 32% | PFR: 12% | AGG: 15.5% | 3-Bet: 1% | Hands: 5000]
+
+[B]Dealt to Hero:[/B] 3:spade: K:spade:
+
+[I]UTG Folds[/I], [I]MP Folds[/I], [I]HJ Folds[/I], [I]CO Folds[/I], [I]BTN Folds[/I], [color=red]HERO Raises To $1.5[/color], [color=red]BB Calls $1[/color]
+
+[I][B]Hero SPR on Flop: [16.63 effective][/B][/I]
+[B]Flop ($3.00):[/B] Q:diamond: 6:club: T:spade:
+HERO Checks, BB Checks
+
+[B]Turn ($3.00):[/B] Q:diamond: 6:club: T:spade: K:club:
+HERO Checks, [color=red]BB Bets $1.5 (Rem. Stack: 48.4)[/color], [color=red]HERO Calls $1.5 (Rem. Stack: 49.47)[/color]
+
+[B]River ($6.00):[/B] Q:diamond: 6:club: T:spade: K:club: Q:spade:
+HERO Checks, [color=red]BB Bets $6 (Rem. Stack: 42.4)[/color], [color=red]HERO Calls $6 (Rem. Stack: 43.47)[/color]
+
+[spoil]
+BB shows: 8:diamond: J:diamond:
+
+HERO wins: $17.1
+[/spoil]

@@ -165,6 +165,7 @@
     <Compile Include="Data\HudIndicators.cs" />
     <Compile Include="Data\HudLightIndicators.cs" />
     <Compile Include="Data\Indicators.cs" />
+    <Compile Include="Data\IThreadSafeIndicators.cs" />
     <Compile Include="Data\LightIndicators.cs" />
     <Compile Include="Data\MRatioReportRecord.cs" />
     <Compile Include="Data\NoteBuilder.cs" />

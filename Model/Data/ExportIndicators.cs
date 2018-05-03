@@ -15,7 +15,7 @@ using System.Threading;
 
 namespace Model.Data
 {
-    public class ExportIndicators : Indicators
+    public class ExportIndicators : Indicators, IThreadSafeIndicators
     {
         private int vpiphands;
 
@@ -24,6 +24,14 @@ namespace Model.Data
         private int numberOfWalks;
 
         private int pfrhands;
+
+        private int didThreeBet;
+
+        private int couldThreeBet;
+
+        private int totalbets;
+
+        private int totalpostflopstreetsplayed;
 
         public override decimal VPIP
         {
@@ -41,26 +49,46 @@ namespace Model.Data
             }
         }
 
+        public override decimal ThreeBet
+        {
+            get
+            {
+                return GetPercentage(didThreeBet, couldThreeBet);
+            }
+        }
+
+        public override decimal AggPr
+        {
+            get
+            {
+                return GetPercentage(totalbets, totalpostflopstreetsplayed);
+            }
+        }
+
         public override decimal TotalHands => totalHands;
 
         public override void AddStatistic(Playerstatistic statistic)
         {
-            if (statistic.Vpiphands > 0)
-            {
-                Interlocked.Increment(ref vpiphands);
-            }
+            AddStatValue(ref vpiphands, statistic.Vpiphands);
+            AddStatValue(ref pfrhands, statistic.Pfrhands);
+            AddStatValue(ref numberOfWalks, statistic.NumberOfWalks);
+            AddStatValue(ref totalHands, statistic.Totalhands);
+            AddStatValue(ref didThreeBet, statistic.Didthreebet);
+            AddStatValue(ref couldThreeBet, statistic.Couldthreebet);
+            AddStatValue(ref totalbets, statistic.Totalbets);
+            AddStatValue(ref totalpostflopstreetsplayed, statistic.Totalpostflopstreetsplayed);
+        }
 
-            if (statistic.Pfrhands > 0)
-            {
-                Interlocked.Increment(ref pfrhands);
-            }
+        private void AddStatValue(ref int statValue, int value)
+        {
+            int initialValue, computedValue;
 
-            if (statistic.NumberOfWalks > 0)
+            do
             {
-                Interlocked.Increment(ref numberOfWalks);
+                initialValue = statValue;
+                computedValue = statValue + value;
             }
-
-            Interlocked.Increment(ref totalHands);
+            while (initialValue != Interlocked.CompareExchange(ref statValue, computedValue, initialValue));
         }
     }
 }

@@ -1,25 +1,28 @@
 Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software
 
-NL Holdem $500(BB)
+[U][B]NL Holdem $500(BB)[/B][/U]
 HJ ($33748)
 CO ($27192)
-[color=red]BTN[/color] ($10183)
+[color=blue][B]BTN ($10183)[/B][/color]
 SB ($4415)
-[color=red]HERO[/color] ($9951)
+[color=blue][B]HERO ($9951)[/B][/color]
 UTG ($5218)
 
-Dealt to Hero Q:heart: 9:heart:
+[B]Dealt to Hero:[/B] Q:heart: 9:heart:
 
-UTG Folds, HJ Folds, CO Folds, [color=red]BTN Raises To $1281 (Rem. Stack: 8902)[/color], SB Folds, [color=red]HERO Calls $731 (Rem. Stack: 8670)[/color]
+[I]UTG Folds[/I], [I]HJ Folds[/I], [I]CO Folds[/I], [color=red]BTN Raises To $1281[/color], [I]SB Folds[/I], [color=red]HERO Calls $731[/color]
 
-Flop ($3012) 5:spade: 7:club: 2:club:
+[I][B]Hero SPR on Flop: [2.88 effective][/B][/I]
+[B]Flop ($3012):[/B] 5:spade: 7:club: 2:club:
 HERO Checks, BTN Checks
 
-Turn ($3012) 5:spade: 7:club: 2:club: 9:club:
+[B]Turn ($3012):[/B] 5:spade: 7:club: 2:club: 9:club:
 [color=red]HERO Bets $1100 (Rem. Stack: 7570)[/color], [color=red]BTN Raises To $8902 (allin) (Rem. Stack: 0)[/color], [color=red]HERO Calls $7570 (allin) (Rem. Stack: 0)[/color]
 
-River ($20584) 5:spade: 7:club: 2:club: 9:club: J:heart:
+[B]River ($20584):[/B] 5:spade: 7:club: 2:club: 9:club: J:heart:
 
-BTN shows A:heart: 9:diamond:
+[spoil]
+BTN shows: A:heart: 9:diamond:
 
-BTN wins $20352
+BTN wins: $20352
+[/spoil]

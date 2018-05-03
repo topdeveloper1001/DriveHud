@@ -18,7 +18,6 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
-using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Extensions;
 using Model.Importer;

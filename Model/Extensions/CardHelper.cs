@@ -135,18 +135,20 @@ namespace Model.Extensions
         /// <returns></returns>
         public static bool IsStreetAvailable(BoardCards boardCards, Street street)
         {
+            if (street == Street.Preflop)
+            {
+                return true;
+            }
+
             if (boardCards == null)
             {
                 return false;
             }
 
-
             var count = boardCards.Count();
 
             switch (street)
             {
-                case Street.Preflop:
-                    return true;
                 case Street.Flop:
                     return count > 2;
                 case Street.Turn:

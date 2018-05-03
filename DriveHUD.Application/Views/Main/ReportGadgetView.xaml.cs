@@ -120,9 +120,9 @@ namespace DriveHUD.Application.Views
 
             /* Export items */
             RadMenuItem exportHandItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ExportHandResourceString), false, null);
-            RadMenuItem twoPlustTwoItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.TwoPlustTwoResourceString), false, GeneralExportItem_Click);
-            RadMenuItem cardsChatItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.CardsChatResourceString), false, GeneralExportItem_Click);
-            RadMenuItem pokerStrategyItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.PokerStrategyString), false, GeneralExportItem_Click);
+            RadMenuItem twoPlustTwoItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.TwoPlustTwoResourceString), false, GeneralExportItem_Click, EnumExportType.TwoPlusTwo);
+            RadMenuItem cardsChatItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.CardsChatResourceString), false, GeneralExportItem_Click, EnumExportType.CardsChat);
+            RadMenuItem pokerStrategyItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.PokerStrategyString), false, GeneralExportItem_Click, EnumExportType.PokerStrategy);
             RadMenuItem icmizerHistoryItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ICMizerHandHistory), false,
                 RawExportItem_Click, extraAction: item =>
             {
@@ -247,11 +247,11 @@ namespace DriveHUD.Application.Views
                 string extension = "xls";
 
                 var dialog = new SaveFileDialog()
-                {                    
+                {
                     DefaultExt = extension,
                     Filter = String.Format("{1} files (.{0})|.{0}|All files (.)|.", extension, "Excel"),
                     FilterIndex = 1
-                };                
+                };
 
                 if (dialog.ShowDialog() == true)
                 {
@@ -407,12 +407,15 @@ namespace DriveHUD.Application.Views
 
         private void PlainExportItem_Click(object sender, RadRoutedEventArgs e)
         {
-            ExportItem(handHistory => ExportFunctions.ConvertHHToPlainText(handHistory));
+            ExportItem(handHistory => ExportFunctions.ConvertHHToForumFormat(handHistory, EnumExportType.PlainText));
         }
 
         private void GeneralExportItem_Click(object sender, RadRoutedEventArgs e)
         {
-            ExportItem(handHistory => ExportFunctions.ConvertHHToForumFormat(handHistory));
+            var menuItem = sender as RadMenuItem;
+            var exportType = menuItem?.Tag as EnumExportType? ?? EnumExportType.TwoPlusTwo;
+
+            ExportItem(handHistory => ExportFunctions.ConvertHHToForumFormat(handHistory, exportType));
         }
 
         private void RawExportItem_Click(object sender, RadRoutedEventArgs e)

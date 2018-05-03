@@ -511,6 +511,11 @@ namespace Model
                     return null;
                 }
 
+                if (result.GameDescription != null)
+                {
+                    result.GameDescription.Site = (EnumPokerSites)pokersiteId;
+                }
+
                 return result;
             }
         }

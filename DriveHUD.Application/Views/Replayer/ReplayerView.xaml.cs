@@ -1,33 +1,22 @@
 ﻿using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels.Replayer;
+using DriveHUD.Common.Ifrastructure;
+using DriveHUD.Common.Reflection;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
+using Model;
+using Model.Enums;
+using Model.Replayer;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Telerik.Windows;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Diagrams.Core;
-using System.ComponentModel;
-using DriveHUD.Common.Reflection;
-using DriveHUD.Entities;
-using DriveHUD.Common.Resources;
-using Model.Replayer;
-using DriveHUD.Common.Utils;
-using System.Collections.ObjectModel;
-using DriveHUD.Common.Log;
-using Model;
-using Telerik.Windows;
-using Model.Interfaces;
-using DriveHUD.Common.Ifrastructure;
 
 namespace DriveHUD.Application.Views.Replayer
 {
@@ -128,16 +117,17 @@ namespace DriveHUD.Application.Views.Replayer
 
         private void CloseCommandHandler(object sender, ExecutedRoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void GeneralExportItem_Click(object sender, Telerik.Windows.RadRoutedEventArgs e)
         {
             if (ViewModel?.CurrentGame != null)
             {
-                Clipboard.SetText(ViewModel.CurrentGame.FullHandHistoryText);
-                String hh = ExportFunctions.ConvertHHToForumFormat(ViewModel.CurrentGame);
-                Clipboard.SetText(hh);
+                var menuItem = sender as RadMenuItem;
+                var exportType = menuItem?.Tag as EnumExportType? ?? EnumExportType.TwoPlusTwo;
+
+                Clipboard.SetText(ExportFunctions.ConvertHHToForumFormat(ViewModel.CurrentGame, exportType));
                 ViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
             }
         }
@@ -155,9 +145,7 @@ namespace DriveHUD.Application.Views.Replayer
         {
             if (ViewModel?.CurrentGame != null)
             {
-                Clipboard.SetText(ViewModel.CurrentGame.FullHandHistoryText);
-                String hh = ExportFunctions.ConvertHHToPlainText(ViewModel.CurrentGame);
-                Clipboard.SetText(hh);
+                Clipboard.SetText(ExportFunctions.ConvertHHToForumFormat(ViewModel.CurrentGame, Model.Enums.EnumExportType.PlainText));
                 ViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
             }
         }
