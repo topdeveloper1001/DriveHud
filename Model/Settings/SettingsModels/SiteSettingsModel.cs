@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="SiteSettingsModel.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -54,7 +54,9 @@ namespace Model.Settings
                 EnumPokerSites.TruePoker,
                 EnumPokerSites.YaPoker,
                 EnumPokerSites.PartyPoker,
-                EnumPokerSites.IPoker
+                EnumPokerSites.IPoker,
+                EnumPokerSites.Horizon,
+                EnumPokerSites.Winamax
             };
 
             SitesModelList = sites.Select(x => new SiteModel
@@ -66,13 +68,15 @@ namespace Model.Settings
 
         public override object Clone()
         {
-            var model = new SiteSettingsModel();
-            model.IsProcessedDataLocationEnabled = this.IsProcessedDataLocationEnabled;
-            model.ProcessedDataLocation = this.ProcessedDataLocation;
+            var model = new SiteSettingsModel
+            {
+                IsProcessedDataLocationEnabled = IsProcessedDataLocationEnabled,
+                ProcessedDataLocation = ProcessedDataLocation
+            };
 
             for (int i = 0; i < model.SitesModelList.Count(); i++)
             {
-                var siteModel = this.SitesModelList.FirstOrDefault(x => x.PokerSite == model.SitesModelList[i].PokerSite);
+                var siteModel = SitesModelList.FirstOrDefault(x => x.PokerSite == model.SitesModelList[i].PokerSite);
 
                 if (siteModel != null)
                 {
@@ -133,7 +137,7 @@ namespace Model.Settings
 
         [XmlAttribute]
         public string HeroName { get; set; }
-     
+
         public override object Clone()
         {
             var model = (SiteModel)MemberwiseClone();

@@ -1,0 +1,245 @@
+﻿ï»¿Hand#5128FD7BF4000001 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/15/30 NL Hold'em -- 2018/04/20 - 21:15:34
+Dealer: Seat 2
+Seat 2: 7poker11 (500 in chips) 
+Seat 5: AlexTh (500 in chips) 
+Seat 9: 59chevy2 (500 in chips) 
+AlexTh: posts small blind 15
+59chevy2: posts big blind 30
+Dealt to AlexTh [6h,4s]
+7poker11: folds
+AlexTh: folds
+59chevy2: returns uncalled bet 15
+***SHOW DOWN***
+59chevy2: mucks
+59chevy2 wins 30 
+
+
+Hand#5128FD7BF4000002 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/15/30 NL Hold'em -- 2018/04/20 - 21:15:52
+Dealer: Seat 5
+Seat 2: 7poker11 (500 in chips) 
+Seat 5: AlexTh (485 in chips) 
+Seat 9: 59chevy2 (515 in chips) 
+59chevy2: posts small blind 15
+7poker11: posts big blind 30
+Dealt to AlexTh [5d,Kh]
+AlexTh: folds
+59chevy2: calls 15
+7poker11: checks
+*** FLOP *** [2c,9s,Ah]
+59chevy2: checks
+7poker11: checks
+*** TURN *** [7d]
+59chevy2: checks
+7poker11: checks
+*** RIVER *** [Js]
+59chevy2: checks
+7poker11: bets 30
+59chevy2: calls 30
+***SHOW DOWN***
+7poker11: shows [5h 3d] (High card Ace  )
+59chevy2: shows [Jc 4d] (Pair of Jacks  )
+59chevy2 wins 120 with Pair of Jacks   
+
+
+Hand#5128FD7BF4000003 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/15/30 NL Hold'em -- 2018/04/20 - 21:16:44
+Dealer: Seat 9
+Seat 2: 7poker11 (440 in chips) 
+Seat 5: AlexTh (485 in chips) 
+Seat 9: 59chevy2 (575 in chips) 
+7poker11: posts small blind 15
+AlexTh: posts big blind 30
+Dealt to AlexTh [7h,3c]
+59chevy2: folds
+7poker11: folds
+7poker11: mucks
+AlexTh: returns uncalled bet 15
+***SHOW DOWN***
+AlexTh: mucks
+AlexTh wins 30 
+
+
+Hand#5128FD7BF4000004 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/15/30 NL Hold'em -- 2018/04/20 - 21:16:56
+Dealer: Seat 2
+Seat 2: 7poker11 (425 in chips) 
+Seat 5: AlexTh (500 in chips) 
+Seat 9: 59chevy2 (575 in chips) 
+AlexTh: posts small blind 15
+59chevy2: posts big blind 30
+Dealt to AlexTh [5d,7c]
+7poker11: folds
+AlexTh: folds
+59chevy2: returns uncalled bet 15
+***SHOW DOWN***
+59chevy2: mucks
+59chevy2 wins 30 
+
+
+Hand#5128FD7BF4000005 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/15/30 NL Hold'em -- 2018/04/20 - 21:17:13
+Dealer: Seat 5
+Seat 2: 7poker11 (425 in chips) 
+Seat 5: AlexTh (485 in chips) 
+Seat 9: 59chevy2 (590 in chips) 
+59chevy2: posts small blind 15
+7poker11: posts big blind 30
+Dealt to AlexTh [Ks,2s]
+AlexTh: folds
+59chevy2: calls 15
+7poker11: checks
+*** FLOP *** [3c,Jd,3s]
+59chevy2: checks
+7poker11: checks
+*** TURN *** [5c]
+59chevy2: checks
+7poker11: checks
+*** RIVER *** [8s]
+59chevy2: checks
+7poker11: bets 60
+59chevy2: calls 60
+***SHOW DOWN***
+7poker11: shows [Ah Qs] (Pair of Threes  )
+59chevy2: shows [5d 6h] (Two Pairs Fives and Threes  )
+59chevy2 wins 180 with Two Pairs Fives and Threes   
+
+
+Hand#5128FD7BF4000006 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/20/40 NL Hold'em -- 2018/04/20 - 21:17:55
+Dealer: Seat 9
+Seat 2: 7poker11 (335 in chips) 
+Seat 5: AlexTh (485 in chips) 
+Seat 9: 59chevy2 (680 in chips) 
+7poker11: posts small blind 20
+AlexTh: posts big blind 40
+Dealt to AlexTh [Kc,7s]
+59chevy2: folds
+7poker11: is all in 315
+AlexTh: folds
+7poker11: returns uncalled bet 295
+***SHOW DOWN***
+7poker11: mucks
+7poker11 wins 80 
+
+
+Hand#5128FD7BF4000007 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/20/40 NL Hold'em -- 2018/04/20 - 21:18:17
+Dealer: Seat 2
+Seat 2: 7poker11 (375 in chips) 
+Seat 5: AlexTh (445 in chips) 
+Seat 9: 59chevy2 (680 in chips) 
+AlexTh: posts small blind 20
+59chevy2: posts big blind 40
+Dealt to AlexTh [7s,7d]
+7poker11: calls 40
+AlexTh: calls 20
+59chevy2: checks
+*** FLOP *** [Ts,2d,7c]
+AlexTh: bets 60
+59chevy2: calls 60
+7poker11: calls 60
+*** TURN *** [Jd]
+AlexTh: is all in 345
+59chevy2: calls 345
+7poker11: is all in 275
+7poker11: shows [8h 9s]
+AlexTh: shows [7s 7d]
+59chevy2: shows [Qs Td]
+*** RIVER *** [2c]
+***SHOW DOWN***
+AlexTh wins 140 with Full House Sevens full of deuces 
+***SHOW DOWN***
+AlexTh wins 1 125 with Full House Sevens full of deuces 
+
+
+Hand#5128FD7BF4000008 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/20/40 NL Hold'em -- 2018/04/20 - 21:18:54
+Dealer: Seat 9
+Seat 5: AlexTh (1 265 in chips) 
+Seat 9: 59chevy2 (235 in chips) 
+59chevy2: posts small blind 20
+AlexTh: posts big blind 40
+Dealt to AlexTh [Ac,8h]
+59chevy2: folds
+59chevy2: mucks
+AlexTh: returns uncalled bet 20
+***SHOW DOWN***
+AlexTh: mucks
+AlexTh wins 40 
+
+
+Hand#5128FD7BF4000009 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/20/40 NL Hold'em -- 2018/04/20 - 21:19:23
+Dealer: Seat 5
+Seat 5: AlexTh (1 285 in chips) 
+Seat 9: 59chevy2 (215 in chips) 
+AlexTh: posts small blind 20
+59chevy2: posts big blind 40
+Dealt to AlexTh [8d,3s]
+AlexTh: folds
+59chevy2: returns uncalled bet 20
+***SHOW DOWN***
+59chevy2: mucks
+59chevy2 wins 40 
+
+
+Hand#5128FD7BF4000010 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/25/50 NL Hold'em -- 2018/04/20 - 21:19:34
+Dealer: Seat 9
+Seat 5: AlexTh (1 265 in chips) 
+Seat 9: 59chevy2 (235 in chips) 
+59chevy2: posts small blind 25
+AlexTh: posts big blind 50
+Dealt to AlexTh [8s,2s]
+59chevy2: is all in 210
+AlexTh: folds
+59chevy2: returns uncalled bet 185
+***SHOW DOWN***
+59chevy2: mucks
+59chevy2 wins 100 
+
+
+Hand#5128FD7BF4000011 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/25/50 NL Hold'em -- 2018/04/20 - 21:19:47
+Dealer: Seat 5
+Seat 5: AlexTh (1 215 in chips) 
+Seat 9: 59chevy2 (285 in chips) 
+AlexTh: posts small blind 25
+59chevy2: posts big blind 50
+Dealt to AlexTh [7c,6d]
+AlexTh: folds
+59chevy2: returns uncalled bet 25
+***SHOW DOWN***
+59chevy2: mucks
+59chevy2 wins 50 
+
+
+Hand#5128FD7BF4000012 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/25/50 NL Hold'em -- 2018/04/20 - 21:19:56
+Dealer: Seat 9
+Seat 5: AlexTh (1 190 in chips) 
+Seat 9: 59chevy2 (310 in chips) 
+59chevy2: posts small blind 25
+AlexTh: posts big blind 50
+Dealt to AlexTh [8d,Jc]
+59chevy2: folds
+AlexTh: returns uncalled bet 25
+***SHOW DOWN***
+AlexTh: mucks
+AlexTh wins 50 
+
+
+Hand#5128FD7BF4000013 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/25/50 NL Hold'em -- 2018/04/20 - 21:20:05
+Dealer: Seat 5
+Seat 5: AlexTh (1 215 in chips) 
+Seat 9: 59chevy2 (285 in chips) 
+AlexTh: posts small blind 25
+59chevy2: posts big blind 50
+Dealt to AlexTh [9c,9d]
+AlexTh: raises to 100
+59chevy2: calls 50
+*** FLOP *** [2h,Kh,7d]
+59chevy2: checks
+AlexTh: bets 200
+59chevy2: is all in 185
+AlexTh: returns uncalled bet 15
+AlexTh: shows [9c 9d]
+59chevy2: shows [5c Ad]
+*** TURN *** [4h]
+*** RIVER *** [Jc]
+***SHOW DOWN***
+AlexTh wins 570 with Pair of Nines   
+
+
+AlexTh finished 1 out of 3 players.
+Player left the table

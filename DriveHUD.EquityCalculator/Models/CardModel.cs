@@ -65,5 +65,4 @@ namespace DriveHUD.EquityCalculator.Models
             return string.Concat(this.Rank.ToRankString(), this.Suit.ToSuitString());
         }
     }
-
 }

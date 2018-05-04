@@ -124,6 +124,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Horizon Poker Network.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_Horizon {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_Horizon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ignition/Bodog Network.
         /// </summary>
         internal static string Enum_EnumPokerNetworks_Ignition {
@@ -165,6 +174,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_EnumPokerNetworks_PokerStars {
             get {
                 return ResourceManager.GetString("Enum_EnumPokerNetworks_PokerStars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Winamax.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_Winamax {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_Winamax", resourceCulture);
             }
         }
         
@@ -228,6 +246,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_EnumPokerSites_GGN {
             get {
                 return ResourceManager.GetString("Enum_EnumPokerSites_GGN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Horizon Poker.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_Horizon {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_Horizon", resourceCulture);
             }
         }
         
@@ -318,6 +345,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_EnumPokerSites_TruePoker {
             get {
                 return ResourceManager.GetString("Enum_EnumPokerSites_TruePoker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Winamax.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_Winamax {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_Winamax", resourceCulture);
             }
         }
         
@@ -552,6 +588,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_EnumTableType_Nine {
             get {
                 return ResourceManager.GetString("Enum_EnumTableType_Nine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7-max.
+        /// </summary>
+        internal static string Enum_EnumTableType_Seven {
+            get {
+                return ResourceManager.GetString("Enum_EnumTableType_Seven", resourceCulture);
             }
         }
         

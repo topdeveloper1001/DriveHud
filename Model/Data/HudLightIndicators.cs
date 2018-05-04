@@ -769,7 +769,7 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = TurnBet,
-                    Occurred = Source.DidTurnBet,
+                    Occurred = didTurnBet,
                     CouldOccurred = Source.CouldTurnBet
                 };
             }
@@ -782,7 +782,7 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FlopBet,
-                    Occurred = Source.DidFlopBet,
+                    Occurred = didFlopBet,
                     CouldOccurred = Source.CouldFlopBet
                 };
             }

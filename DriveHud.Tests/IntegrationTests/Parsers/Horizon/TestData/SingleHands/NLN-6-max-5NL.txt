@@ -1,0 +1,39 @@
+﻿﻿ï»¿Hand#5128021934000412 - $ Rome (6-max) 21934 -- $0.02/$0.04 NL Hold'em -- 2018/04/20 - 20:06:02
+Dealer: Seat 2
+Seat 1: NUVOLA60 ($1.88 in chips) 
+Seat 2: smile5622 ($3.57 in chips) 
+Seat 3: Gabi47 ($2.14 in chips) 
+Seat 8: AlexTh ($1.80 in chips) 
+Seat 9: miata54 ($3.97 in chips) 
+Seat 10: Jelena2712 ($4.41 in chips) 
+Gabi47: posts small blind $0.02
+AlexTh: posts big blind $0.04
+Dealt to AlexTh [Qh,Qc]
+miata54: folds
+Jelena2712: folds
+NUVOLA60: calls $0.04
+smile5622: folds
+Gabi47: calls $0.02
+AlexTh: raises to $0.08
+NUVOLA60: calls $0.04
+Gabi47: calls $0.04
+*** FLOP *** [4s,6d,Qd]
+Gabi47: checks
+AlexTh: bets $0.08
+NUVOLA60: calls $0.08
+Gabi47: calls $0.08
+*** TURN *** [5h]
+Gabi47: checks
+AlexTh: bets $0.24
+NUVOLA60: calls $0.24
+Gabi47: folds
+*** RIVER *** [Jd]
+AlexTh: is all in $1.40
+NUVOLA60: folds
+NUVOLA60: mucks
+AlexTh: returns uncalled bet $1.40
+***SHOW DOWN***
+AlexTh: mucks
+AlexTh wins $0.90 
+
+

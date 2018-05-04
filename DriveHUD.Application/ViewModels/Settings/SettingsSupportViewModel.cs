@@ -1,23 +1,15 @@
-﻿using Model.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Model.Settings;
-using System.Windows.Input;
-using DriveHUD.Common.Infrastructure.Base;
-using DriveHUD.Common.Utils;
-using System.Diagnostics;
-using Prism.Commands;
-using DriveHUD.Common.Resources;
-using System.Net.Mail;
-using System.Windows;
-using System.IO;
+﻿using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Log;
-using Model;
-using Prism.Interactivity.InteractionRequest;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
 using DriveHUD.Common.Wpf.Actions;
+using Model;
+using Model.Settings;
+using Prism.Commands;
+using Prism.Interactivity.InteractionRequest;
+using System;
+using System.Diagnostics;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Settings
 {

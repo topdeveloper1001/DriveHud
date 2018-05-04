@@ -1,0 +1,37 @@
+Hand#5128FD7BB4001922 - The Colosseum - $100 GTD T16612276 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 23 -- 30/150/300 NL Hold'em -- 2018/04/20 - 23:19:43
+Dealer: Seat 10
+Seat 1: SATOURN (8 589 in chips) 
+Seat 2: AlexTh (232 in chips) 
+Seat 3: PIANOMIKE (16 461 in chips) 
+Seat 4: rosszcsont12 (33 271 in chips) 
+Seat 7: BISHUACES (11 557 in chips) 
+Seat 8: Smurffs (740 in chips) 
+Seat 9: dakota_472 (21 324 in chips) 
+Seat 10: JJDIMES44 (185 in chips) 
+SATOURN: posts ante of 30
+AlexTh: posts ante of 30
+PIANOMIKE: posts ante of 30
+rosszcsont12: posts ante of 30
+BISHUACES: posts ante of 30
+Smurffs: posts ante of 30
+dakota_472: posts ante of 30
+JJDIMES44: posts ante of 30
+SATOURN: posts small blind 150
+AlexTh: posts big blind 202
+Dealt to AlexTh [8s,6d]
+PIANOMIKE: raises to 600
+rosszcsont12: folds
+BISHUACES: folds
+Smurffs: folds
+dakota_472: folds
+JJDIMES44: folds
+SATOURN: folds
+PIANOMIKE: returns uncalled bet 398
+AlexTh: shows [8s 6d]
+PIANOMIKE: shows [Qc Ad]
+*** FLOP *** [4c,2h,Kc]
+*** TURN *** [4h]
+*** RIVER *** [3c]
+***SHOW DOWN***
+PIANOMIKE wins 794 with Pair of Fours with Ace kicker 
+AlexTh finished 93 out of 307 players.

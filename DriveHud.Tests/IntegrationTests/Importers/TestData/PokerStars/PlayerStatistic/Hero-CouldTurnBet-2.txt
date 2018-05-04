@@ -1,0 +1,45 @@
+Winamax Poker - CashGame - HandId: #11134167-410-1524679797 - Holdem no limit (0.01/0.02) - 2018/04/25 18:09:57 UTC
+Table: 'Leeds' 9-max (play money) Seat #7 is the button
+Seat 1: Mordecaii7 (1.95)
+Seat 2: amorcer (11.51)
+Seat 3: oldenil (2.23)
+Seat 4: FedSolo (2)
+Seat 5: passac34 (2.39)
+Seat 6: Peon84 (0)
+Seat 7: sista flow (1.94)
+Seat 8: sao 83430 (3.45)
+Seat 9: Hero (1.18)
+*** ANTE/BLINDS ***
+Hero posts big blind 0.02
+*** PRE-FLOP ***
+Mordecaii7 folds
+amorcer calls 0.02
+passac34 calls 0.02
+sista flow calls 0.02
+Hero checks
+*** FLOP *** [2h As Th]
+Hero checks
+amorcer checks
+passac34 checks
+sista flow checks
+*** TURN *** [2h As Th][4d]
+Hero checks
+amorcer checks
+passac34 bets 0.02
+sista flow calls 0.02
+Hero folds
+amorcer calls 0.02
+*** RIVER *** [2h As Th 4d][8h]
+amorcer checks
+passac34 bets 0.21
+sista flow folds
+amorcer calls 0.21
+*** SHOW DOWN ***
+amorcer shows [Ac 5s] (One pair : Aces)
+passac34 shows [8d Ad] (Two pairs : Aces and 8)
+passac34 collected 0.52 from pot
+*** SUMMARY ***
+Total pot 0.52 | Rake 0.04
+Board: [2h As Th 4d 8h]
+Seat 2: amorcer showed [Ac 5s] and lost with One pair : Aces
+Seat 5: passac34 showed [8d Ad] and won 0.52 with Two pairs : Aces and 8

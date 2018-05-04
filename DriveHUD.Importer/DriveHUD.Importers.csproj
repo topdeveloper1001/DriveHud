@@ -345,10 +345,14 @@
     <Compile Include="Events\PreImportedDataEvent.cs" />
     <Compile Include="Events\PreImportedDataEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Horizon\IHorizonImporter.cs" />
+    <Compile Include="Horizon\HorizonImporter.cs" />
     <Compile Include="SessionCacheData.cs" />
     <Compile Include="SessionCacheStatistic.cs" />
     <Compile Include="TournamentSettings.cs" />
     <Compile Include="TournamentsResolver.cs" />
+    <Compile Include="Winamax\IWinamaxImporter.cs" />
+    <Compile Include="Winamax\WinamaxImporter.cs" />
     <Compile Include="WinningPokerNetwork\AmericasCardroomImporter.cs" />
     <Compile Include="WinningPokerNetwork\BlackChipPokerImporter.cs" />
     <Compile Include="WinningPokerNetwork\IAmericasCardroomImporter.cs" />

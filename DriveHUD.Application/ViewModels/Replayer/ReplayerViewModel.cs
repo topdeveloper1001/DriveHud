@@ -658,6 +658,11 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             handNoteView.ShowDialog();
 
+            if (viewModel.HandNoteEntity == null)
+            {
+                return;
+            }
+
             CurrentHand.Statistic.HandNote = viewModel.HandNoteEntity;
 
             ServiceLocator.Current.GetInstance<IEventAggregator>()

@@ -574,12 +574,14 @@ namespace Model.Importer
             if (tournamentName.IndexOf("Double-Up", StringComparison.OrdinalIgnoreCase) >= 0 ||
                 tournamentName.IndexOf("1-Up", StringComparison.OrdinalIgnoreCase) >= 0 ||
                 tournamentName.IndexOf("One-Up", StringComparison.OrdinalIgnoreCase) >= 0 ||
-                tournamentName.IndexOf("Double Or Nothing", StringComparison.OrdinalIgnoreCase) >= 0)
+                tournamentName.IndexOf("Double Or Nothing", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                tournamentName.IndexOf("DoubleUp", StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 return STTTypes.DoubleUp;
             }
 
-            if (tournamentName.IndexOf("Triple-Up", StringComparison.OrdinalIgnoreCase) >= 0)
+            if (tournamentName.IndexOf("Triple-Up", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                tournamentName.IndexOf("TripleUp", StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 return STTTypes.TripleUp;
             }

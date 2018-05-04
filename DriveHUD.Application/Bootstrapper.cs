@@ -43,8 +43,6 @@ using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using Model;
-using Model.Enums;
-using Model.Filters;
 using Model.Interfaces;
 using Model.Settings;
 using Model.Site;
@@ -100,7 +98,7 @@ namespace DriveHUD.Application
             sqliteBootstrapper.InitializeDatabase();
 
             ImporterBootstrapper.ConfigureImporterService();
-             
+
             ShowMainWindow();
         }
 
@@ -120,12 +118,22 @@ namespace DriveHUD.Application
                 else
                 {
                     mainWindowViewModel = new MainWindowViewModel();
-                    ((RadWindow)Shell).DataContext = mainWindowViewModel;
-                    ((RadWindow)Shell).IsTopmost = true;
-                    ((RadWindow)Shell).Show();
-                    ((RadWindow)Shell).IsTopmost = false;
+
+                    var mainRadWindow = (RadWindow)Shell;
+
+                    mainRadWindow.DataContext = mainWindowViewModel;
+                    mainRadWindow.IsTopmost = true;
+                    mainRadWindow.Show();
+                    mainRadWindow.IsTopmost = false;
 
                     App.SplashScreen.CloseSplashScreen();
+
+                    var mainWindow = mainRadWindow.ParentOfType<Window>();
+
+                    if (mainWindow != null && App.Current.MainWindow != mainWindow)
+                    {
+                        App.Current.MainWindow = mainWindow;
+                    }
 
                     if (App.IsUpdateAvailable)
                     {
@@ -247,7 +255,7 @@ namespace DriveHUD.Application
             // Migration
             Container.RegisterType<IMigrationService, SQLiteMigrationService>(DatabaseType.SQLite.ToString());
             Container.RegisterType<IMigrationService, PostgresMigrationService>(DatabaseType.PostgreSQL.ToString());
-        
+
             // Sites configurations
             Container.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Ignition.ToString());
             Container.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.BetOnline.ToString());
@@ -261,6 +269,8 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, YaPokerConfiguration>(EnumPokerSites.YaPoker.ToString());
             Container.RegisterType<ISiteConfiguration, IPokerConfiguration>(EnumPokerSites.IPoker.ToString());
             Container.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
+            Container.RegisterType<ISiteConfiguration, HorizonConfiguration>(EnumPokerSites.Horizon.ToString());
+            Container.RegisterType<ISiteConfiguration, WinamaxConfiguration>(EnumPokerSites.Winamax.ToString());
 
             // HUD designer 
             Container.RegisterType<IHudToolFactory, HudToolFactory>();
@@ -298,6 +308,8 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, PartyPokerSiteSettingTableConfigurator>(EnumPokerSites.PartyPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, IPokerSiteSettingTableConfigurator>(EnumPokerSites.IPoker.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, GGNSiteSettingTableConfigurator>(EnumPokerSites.GGN.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, HorizonSiteSettingTableConfigurator>(EnumPokerSites.Horizon.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, WinamaxSiteSettingTableConfigurator>(EnumPokerSites.Winamax.ToString());
 
             // Series providers
             Container.RegisterType<IGraphsProvider, GraphsProvider>();

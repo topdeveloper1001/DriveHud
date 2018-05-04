@@ -34,18 +34,8 @@ namespace DriveHUD.Application.ViewModels
 
         public SiteSetupViewModel(ISiteValidationResult validationResult, SiteModel siteModel)
         {
-            if (validationResult == null)
-            {
-                throw new ArgumentNullException(nameof(validationResult));
-            }
-
-            if (siteModel == null)
-            {
-                throw new ArgumentNullException(nameof(siteModel));
-            }
-
-            this.validationResult = validationResult;
-            this.siteModel = siteModel;
+            this.validationResult = validationResult ?? throw new ArgumentNullException(nameof(validationResult));
+            this.siteModel = siteModel ?? throw new ArgumentNullException(nameof(siteModel));
 
             siteConfiguration = ServiceLocator.Current.GetInstance<ISiteConfigurationService>().Get(validationResult.PokerSite);
 

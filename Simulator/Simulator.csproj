@@ -97,6 +97,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BetOnlineEmulator.cs" />
+    <Compile Include="IgnitionEmulator.cs" />
+    <Compile Include="PartyPokerEmulator.cs" />
     <Compile Include="Utils.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

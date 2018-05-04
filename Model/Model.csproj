@@ -159,11 +159,13 @@
     <Compile Include="ConditionalBet.cs" />
     <Compile Include="CustomModulesNames.cs" />
     <Compile Include="Data\DashboardIndicators.cs" />
+    <Compile Include="Data\ExportIndicators.cs" />
     <Compile Include="Data\HeatMapDto.cs" />
     <Compile Include="Data\HoleCardsReportRecord.cs" />
     <Compile Include="Data\HudIndicators.cs" />
     <Compile Include="Data\HudLightIndicators.cs" />
     <Compile Include="Data\Indicators.cs" />
+    <Compile Include="Data\IThreadSafeIndicators.cs" />
     <Compile Include="Data\LightIndicators.cs" />
     <Compile Include="Data\MRatioReportRecord.cs" />
     <Compile Include="Data\NoteBuilder.cs" />
@@ -356,6 +358,7 @@
     <Compile Include="Site\ISiteValidationResult.cs" />
     <Compile Include="Site\Poker888Configuration.cs" />
     <Compile Include="Site\AmericasCardroomConfiguration.cs" />
+    <Compile Include="Site\HorizonConfiguration.cs" />
     <Compile Include="Site\SiteValidationResult.cs" />
     <Compile Include="Site\SportsBettingConfiguration.cs" />
     <Compile Include="Site\TigerGamingConfiguration.cs" />
@@ -365,6 +368,7 @@
     <Compile Include="Site\ISiteConfigurationService.cs" />
     <Compile Include="Site\PokerStarsConfiguration.cs" />
     <Compile Include="Site\SiteConfigurationService.cs" />
+    <Compile Include="Site\WinamaxConfiguration.cs" />
     <Compile Include="Solvers\EquityData.cs" />
     <Compile Include="Solvers\EquitySolver.cs" />
     <Compile Include="Solvers\HandWinners.cs" />

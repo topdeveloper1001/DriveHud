@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="EnumPokerSites.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -52,6 +52,10 @@ namespace DriveHUD.Entities
         [EnumMember]
         GGN = 16,
         [EnumMember]
-        PokerMaster = 17
+        PokerMaster = 17,
+        [EnumMember]
+        Horizon = 18,
+        [EnumMember]
+        Winamax = 19
     }
 }

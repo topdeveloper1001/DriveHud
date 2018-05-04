@@ -1,0 +1,14 @@
+﻿ï»¿Hand#5128FD7BF4000001 - Hyper Turbo NLH 3-max - $0.25 T16612340 -- TICKETCASH -- $0.22 + $0.03 -- 3 Max -- Table 1 -- 0/15/30 NL Hold'em -- 2018/04/20 - 21:15:34
+Dealer: Seat 2
+Seat 2: 7poker11 (500 in chips) 
+Seat 5: AlexTh (500 in chips) 
+Seat 9: 59chevy2 (500 in chips) 
+AlexTh: posts small blind 15
+59chevy2: posts big blind 30
+Dealt to AlexTh [6h,4s]
+7poker11: folds
+AlexTh: folds
+59chevy2: returns uncalled bet 15
+***SHOW DOWN***
+59chevy2: mucks
+59chevy2 wins 30

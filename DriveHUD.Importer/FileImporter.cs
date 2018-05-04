@@ -331,7 +331,7 @@ namespace DriveHUD.Importers
                 Istourney = parsedHand.GameDescription.IsTournament,
                 PokergametypeId = (short)(parsedHand.GameDescription.GameType),
                 Smallblindincents = Utils.ConvertToCents(parsedHand.GameDescription.Limit.SmallBlind),
-                Tablesize = gameInfo != null ? (short)gameInfo.TableType : (short)parsedHand.GameDescription.SeatType.MaxPlayers,
+                Tablesize = gameInfo != null && (short)gameInfo.TableType != 0 ? (short)gameInfo.TableType : (short)parsedHand.GameDescription.SeatType.MaxPlayers,
                 TableType = (uint)parsedHand.GameDescription.TableType.Descriptions
             };
 
@@ -1140,9 +1140,20 @@ namespace DriveHUD.Importers
                     }
                 }
 
+                if (siteNetwork == EnumPokerNetworks.Horizon)
+                {
+                    // only 1 winner
+                    if (tournamentName.IndexOf("KAMIKAZE", StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        return totalPrize != 0 && finishPosition == 1 ? Utils.ConvertToCents(totalPrize) : 0;
+                    }
+                }
+
                 var prizePool = buyinInCents * totalPlayers;
 
-                var prizeRatesDictionary = TournamentSettings.GetWinningsMultiplier((EnumPokerSites)siteId, sttType == STTTypes.Beginner);
+                var prizeRatesDictionary = TournamentSettings.GetWinningsMultiplier((EnumPokerSites)siteId,
+                    sttType == STTTypes.Beginner,
+                    tournamentName.IndexOf("BOUNTY", StringComparison.OrdinalIgnoreCase) >= 0);
 
                 if (prizeRatesDictionary == null || !prizeRatesDictionary.ContainsKey(totalPlayers))
                 {

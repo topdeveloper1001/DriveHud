@@ -1,19 +1,16 @@
-﻿using System;
+﻿using DriveHUD.Common.Linq;
+using DriveHUD.Common.Wpf.Mvvm;
+using DriveHUD.Entities;
+using ReactiveUI;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
-using DriveHUD.Common.Wpf.Mvvm;
-using DriveHUD.Entities;
-using ReactiveUI;
-using DriveHUD.Common.Linq;
-using System.Windows.Threading;
-using System.Windows;
 using System.Windows.Interop;
 
 namespace Simulator

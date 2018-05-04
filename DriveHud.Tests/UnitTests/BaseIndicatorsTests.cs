@@ -34,8 +34,14 @@ namespace DriveHud.Tests.UnitTests
 
             container.RegisterType<ISettingsService, SettingsServiceStub>();
 
+            ConfigureUnityContainer(container);
+
             UnityServiceLocator locator = new UnityServiceLocator(container);
             ServiceLocator.SetLocatorProvider(() => locator);
+        }
+
+        protected virtual void ConfigureUnityContainer(IUnityContainer container)
+        {
         }
 
         protected class SettingsServiceStub : ISettingsService

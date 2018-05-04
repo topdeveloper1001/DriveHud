@@ -1,21 +1,17 @@
-﻿using DriveHUD.Common.Log;
+﻿using DriveHUD.Common.Ifrastructure;
 using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.EquityCalculator.Models;
-using HandHistories.Objects.Actions;
 using HandHistories.Objects.Hand;
 using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using DriveHUD.Common.Ifrastructure;
-using DriveHUD.Common.Resources;
-using DriveHUD.Common.Wpf.Actions;
 
 namespace DriveHUD.EquityCalculator.ViewModels
 {
@@ -280,36 +276,37 @@ namespace DriveHUD.EquityCalculator.ViewModels
         #endregion
 
         #region ICommand implementation
+
         private void ExportHH(object obj)
         {
-            String hh = ExportFunctions.ConvertHHToForumFormat(CurrentHandHistory);
+            var hh = ExportFunctions.ConvertHHToForumFormat(CurrentHandHistory, Model.Enums.EnumExportType.TwoPlusTwo);
             Clipboard.SetText(hh);
             RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Export");
-            this.FinishInteraction();
+            FinishInteraction();
         }
 
         private void ExportBoth(object obj)
         {
-            String hh = ExportFunctions.ConvertHHToForumFormat(CurrentHandHistory);
+            var hh = ExportFunctions.ConvertHHToForumFormat(CurrentHandHistory, Model.Enums.EnumExportType.TwoPlusTwo);
 
-            String EquityData = ExportFunctions.GetEquityDataToExport(GetBoardStringFormatted(), GetEquityStringFormatted(this.PlayersList));
-            String result = hh + Environment.NewLine + Environment.NewLine + EquityData;
+            var EquityData = ExportFunctions.GetEquityDataToExport(GetBoardStringFormatted(), GetEquityStringFormatted(this.PlayersList));
+            var result = hh + Environment.NewLine + Environment.NewLine + EquityData;
             Clipboard.SetText(result);
             RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Export");
-            this.FinishInteraction();
+            FinishInteraction();
         }
 
         private void ExportEC(object obj)
         {
-            String EquityData = ExportFunctions.GetEquityDataToExport(GetBoardStringFormatted(), GetEquityStringFormatted(this.PlayersList));
+            var EquityData = ExportFunctions.GetEquityDataToExport(GetBoardStringFormatted(), GetEquityStringFormatted(this.PlayersList));
             Clipboard.SetText(EquityData);
             RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Export");
-            this.FinishInteraction();
+            FinishInteraction();
         }
 
         private void RaiseNotification(string content, string title)
         {
-            this.NotificationRequest.Raise(
+            NotificationRequest.Raise(
                     new PopupActionNotification
                     {
                         Content = content,
@@ -320,9 +317,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         private void Close(object obj)
         {
-            this.FinishInteraction();
+            FinishInteraction();
         }
-
 
         #endregion
     }

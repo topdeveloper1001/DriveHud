@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="ExportFunctions.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -17,6 +17,8 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;
+using Model;
+using Model.Data;
 using Model.Enums;
 using Model.Extensions;
 using Model.Importer;
@@ -31,6 +33,8 @@ namespace DriveHUD.Common.Ifrastructure
 {
     public static class ExportFunctions
     {
+        private const string HeroName = "HERO";
+
         private static Dictionary<int, Dictionary<EnumPosition, string>> positionTable = new Dictionary<int, Dictionary<EnumPosition, string>>
         {
             // 5-handed table
@@ -55,7 +59,7 @@ namespace DriveHUD.Common.Ifrastructure
             [8] = new Dictionary<EnumPosition, string>
             {
                 [EnumPosition.UTG_1] = "UTG",
-                [EnumPosition.UTG_2] = "MP",
+                [EnumPosition.UTG_2] = "EP",
                 [EnumPosition.MP1] = "MP",
                 [EnumPosition.MP2] = "HJ"
             },
@@ -95,10 +99,8 @@ namespace DriveHUD.Common.Ifrastructure
                     case EnumExportType.TwoPlusTwo:
                     case EnumExportType.CardsChat:
                     case EnumExportType.PokerStrategy:
-                        resultString = ConvertHHToForumFormat(handHistory);
-                        break;
                     case EnumExportType.PlainText:
-                        resultString = ConvertHHToPlainText(handHistory);
+                        resultString = ConvertHHToForumFormat(handHistory, exportType);
                         break;
                     case EnumExportType.Raw:
                     default:
@@ -119,254 +121,153 @@ namespace DriveHUD.Common.Ifrastructure
             return resultString;
         }
 
-        public static string ConvertHHToForumFormat(HandHistory currentHandHistory)
+        public static string ConvertHHToForumFormat(HandHistory handHistory, EnumExportType exportType, bool withStats = true)
         {
+            if (handHistory == null || handHistory.GameDescription == null)
+            {
+                LogProvider.Log.Error(typeof(ExportFunctions), $"{nameof(ConvertHHToForumFormat)}: Could not export empty hand.");
+                return string.Empty;
+            }
+
+            var result = new StringBuilder();
+
             try
             {
-                if (currentHandHistory == null)
+                IDictionary<string, ExportIndicators> playerIndicators = null;
+                var playersNames = new Dictionary<string, string>();
+
+                if (withStats)
                 {
-                    LogProvider.Log.Info("ConvertHHToForumFormat: Cannot find handHistory");
-                    return string.Empty;
+                    var playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
+                    var playerNames = handHistory.Players.Select(x => x.PlayerName).ToArray();
+
+                    playerIndicators = playerStatisticRepository.GetPlayersIndicators<ExportIndicators>(playerNames, (short)handHistory.GameDescription.Site);
                 }
 
-                HandHistories.Objects.Players.Player heroPlayer = null;
-                StringBuilder res = new StringBuilder();
-                var title = $"{ConvertGameType(currentHandHistory)} ${currentHandHistory.GameDescription.Limit.BigBlind}(BB)";
-                res.AppendLine("Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software");
-                res.Append(Environment.NewLine);
-                res.AppendLine(title);
+                result.AppendLine("Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software");
+                result.AppendLine();
+                result.AppendLine($"[U][B]{ConvertGameType(handHistory)} ${handHistory.GameDescription.Limit.BigBlind}(BB)[/B][/U]");
 
-                if (currentHandHistory.Hero != null)
+                // players
+                foreach (var player in handHistory.Players)
                 {
-                    heroPlayer = currentHandHistory.Hero;
-                }
+                    var playerName = handHistory.Hero != null && handHistory.Hero == player ?
+                        HeroName :
+                        GetPositionName(player.PlayerName, handHistory);
 
-                //SHOW PLAYERS POSITIONS + STARTING STACK
-                foreach (var player in currentHandHistory.Players)
-                {
-                    String playerName;
-                    if (heroPlayer != null && player == heroPlayer)
-                        playerName = "HERO";
-                    else
-                        playerName = GetPositionName(player.PlayerName, currentHandHistory);
-                    res.AppendLine(String.Format("{0} (${1})",
-                                SurroundWithColorIfInHand(playerName, currentHandHistory.HandActions.Any(x => x.Street == Street.Flop && x.PlayerName == player.PlayerName)),
-                                player.StartingStack));
-                }
-                res.AppendLine("");
-
-                //CARDS DEALT TO HERO
-                var heroCards = (heroPlayer != null) && heroPlayer.hasHoleCards ? string.Join(" ", heroPlayer.HoleCards.Select(x => ConvertCardToForumFormat(x.ToString()))) : string.Empty;
-                res.AppendLine($"Dealt to Hero {heroCards}");
-                res.AppendLine("");
-
-                decimal pot = currentHandHistory.HandActions.Where(x => x.IsBlinds).Sum(x => Math.Abs(x.Amount));
-                Tuple<string, decimal> actionStringResult = GetActionString(heroPlayer?.PlayerName, currentHandHistory.PreFlop, currentHandHistory, true);
-                res.AppendLine(actionStringResult.Item1);
-                res.AppendLine();
-                pot += actionStringResult.Item2;
-
-                if (currentHandHistory.Flop.Any())
-                {
-                    res.AppendLine(GetStreetString(Street.Flop, pot, currentHandHistory));
-                    actionStringResult = GetActionString(heroPlayer?.PlayerName, currentHandHistory.Flop, currentHandHistory);
-                    res.AppendLine(actionStringResult.Item1);
-                    res.AppendLine();
-                    pot += actionStringResult.Item2;
-                }
-                else if (CardHelper.IsStreetAvailable(currentHandHistory.CommunityCards.ToString(), Street.Flop))
-                {
-                    res.AppendLine(GetStreetString(Street.Flop, pot, currentHandHistory));
-                    res.AppendLine();
-                }
-
-                if (currentHandHistory.Turn.Any())
-                {
-                    res.AppendLine(GetStreetString(Street.Turn, pot, currentHandHistory));
-                    actionStringResult = GetActionString(heroPlayer?.PlayerName, currentHandHistory.Turn, currentHandHistory);
-                    res.AppendLine(actionStringResult.Item1);
-                    res.AppendLine();
-                    pot += actionStringResult.Item2;
-                }
-                else if (CardHelper.IsStreetAvailable(currentHandHistory.CommunityCards.ToString(), Street.Turn))
-                {
-                    res.AppendLine(GetStreetString(Street.Turn, pot, currentHandHistory));
-                    res.AppendLine();
-                }
-
-                if (currentHandHistory.River.Any())
-                {
-                    res.AppendLine(GetStreetString(Street.River, pot, currentHandHistory));
-                    actionStringResult = GetActionString(heroPlayer?.PlayerName, currentHandHistory.River, currentHandHistory);
-                    res.AppendLine(actionStringResult.Item1);
-                    res.AppendLine();
-                    pot += actionStringResult.Item2;
-                }
-                else if (CardHelper.IsStreetAvailable(currentHandHistory.CommunityCards.ToString(), Street.River))
-                {
-                    res.AppendLine(GetStreetString(Street.River, pot, currentHandHistory));
-                    res.AppendLine();
-                }
-
-                //PLAYER SHOWED CARDS
-                foreach (var player in currentHandHistory.Players)
-                {
-                    if (player != null && player.hasHoleCards && player != heroPlayer)
+                    if (!playersNames.ContainsKey(player.PlayerName))
                     {
-                        var playerCards = string.Join(" ", player.HoleCards.Select(x => ConvertCardToForumFormat(x.ToString())));
-                        var positionName = GetPositionName(player.PlayerName, currentHandHistory);
-                        res.AppendLine($"{positionName} shows {playerCards}");
-                        res.Append(Environment.NewLine);
+                        playersNames.Add(player.PlayerName, playerName);
+                    }
+
+                    var isInPot = handHistory.HandActions.Any(x => x.Street == Street.Flop && x.PlayerName == player.PlayerName);
+
+                    var beginFormatTag = string.Empty;
+                    var endFormatTag = string.Empty;
+
+                    if (isInPot)
+                    {
+                        beginFormatTag = "[color=blue][B]";
+                        endFormatTag = "[/B][/color]";
+                    }
+
+                    result.Append($"{beginFormatTag}{playerName} (${player.StartingStack}){endFormatTag}");
+
+                    if (playerIndicators != null && playerIndicators.ContainsKey(player.PlayerName))
+                    {
+                        var indicator = playerIndicators[player.PlayerName];
+
+                        if (isInPot)
+                        {
+                            beginFormatTag = "[B]";
+                            endFormatTag = "[/B]";
+                        }
+
+                        result.Append($" {beginFormatTag}[VPIP: {indicator.VPIP:0.#}% | PFR: {indicator.PFR:0.#}% | AGG: {indicator.AggPr:0.#}% | 3-Bet: {indicator.ThreeBet:0.#}% | Hands: {indicator.TotalHands}]{endFormatTag}");
+                    }
+
+                    result.Append(Environment.NewLine);
+                }
+
+                result.AppendLine();
+
+                // dealt to 
+                if (handHistory.Hero != null && handHistory.Hero.hasHoleCards)
+                {
+                    result.AppendLine($"[B]Dealt to Hero:[/B] {string.Join(" ", handHistory.Hero.HoleCards.Select(x => ConvertCardToForumFormat(x.ToString())))}");
+                    result.AppendLine();
+                }
+
+                var pot = handHistory.HandActions.Where(x => x.IsBlinds).Sum(x => Math.Abs(x.Amount));
+
+                // street headers and hand actions
+                result.AppendLine(BuildActionLine(handHistory.PreFlop, handHistory, playersNames, ref pot));
+
+                foreach (var street in new[] { Street.Flop, Street.Turn, Street.River })
+                {
+                    if (CardHelper.IsStreetAvailable(handHistory.CommunityCards, street))
+                    {
+                        result.AppendLine();
+
+                        // if hero presented then build spr line
+                        if (street == Street.Flop && handHistory.Hero != null && handHistory.Flop.Any(x => x.PlayerName == handHistory.Hero.PlayerName))
+                        {
+                            result.AppendLine(BuildSPROnFlopLine(handHistory, pot));
+                        }
+
+                        result.AppendLine(GetStreetString(street, pot, handHistory));
+
+                        var streetActions = handHistory.HandActions.Where(x => x.Street == street);
+
+                        if (streetActions.Any())
+                        {
+                            result.AppendLine(BuildActionLine(streetActions, handHistory, playersNames, ref pot));
+                        }
                     }
                 }
 
-                //WINNERS
-                foreach (var winAction in currentHandHistory.WinningActions)
+                result.AppendLine();
+
+                var spoilTag = exportType == EnumExportType.CardsChat ? "SPOILER" : "spoil";
+
+                result.AppendLine($"[{spoilTag}]");
+
+                var doAppendLine = false;
+
+                // show cards
+                foreach (var player in handHistory.Players.Where(x => x.hasHoleCards && x != handHistory.Hero))
                 {
-                    String playerName;
-                    HandHistories.Objects.Players.Player player = currentHandHistory.Players.First(x => x.PlayerName == winAction.PlayerName);
-                    if (heroPlayer != null && player == heroPlayer)
+                    if (!doAppendLine)
                     {
-                        playerName = "HERO";
+                        doAppendLine = true;
                     }
-                    else
-                    {
-                        playerName = GetPositionName(player.PlayerName, currentHandHistory);
-                    }
-                    res.AppendLine(playerName + " wins $" + winAction.Amount);
+
+                    result.AppendLine($"{playersNames[player.PlayerName]} shows: {string.Join(" ", player.HoleCards.Select(x => ConvertCardToForumFormat(x.CardStringValue)))}");
                 }
 
-                return res.ToString();
+                if (doAppendLine)
+                {
+                    result.AppendLine();
+                }
+
+                // winners
+                foreach (var winAction in handHistory.WinningActions)
+                {
+                    result.AppendLine($"{playersNames[winAction.PlayerName]} wins: ${winAction.Amount}");
+                }
+
+                result.AppendLine($"[/{spoilTag}]");
             }
-            catch (Exception exc)
+            catch (Exception e)
             {
-                LogProvider.Log.Error("ExportFunctions", String.Format("HandID: {0}", currentHandHistory.HandId), exc);
+                LogProvider.Log.Error(typeof(ExportFunctions), $"Could not export hand {handHistory.HandId} {handHistory.GameDescription.Site} in {exportType} format with stats = {withStats}", e);
             }
-            return "";
-        }
 
-        public static string ConvertHHToPlainText(HandHistory currentHandHistory)
-        {
-            try
-            {
-                if (currentHandHistory == null)
-                {
-                    LogProvider.Log.Info("ConvertHHToPlainText: Cannot find handHistory");
-                    return string.Empty;
-                }
+            var handHistoryText = result.ToString().Trim();
 
-                HandHistories.Objects.Players.Player heroPlayer = null;
-                var res = new StringBuilder();
-                var title = $"{ConvertGameType(currentHandHistory)} ${currentHandHistory.GameDescription.Limit.BigBlind}(BB)";
-                res.AppendLine("Hand History driven straight to this forum by DriveHUD - http://drivehud.com");
-                res.Append(Environment.NewLine);
-                res.AppendLine(title);
-
-                if (currentHandHistory.Hero != null)
-                {
-                    heroPlayer = currentHandHistory.Hero;
-                }
-
-                //SHOW PLAYERS POSITIONS + STARTING STACK
-                foreach (var player in currentHandHistory.Players)
-                {
-                    String playerName;
-                    if (heroPlayer != null && player == heroPlayer)
-                        playerName = "HERO";
-                    else
-                        playerName = GetPositionName(player.PlayerName, currentHandHistory);
-                    res.AppendLine($"{playerName} (${player.StartingStack})");
-                }
-                res.AppendLine("");
-
-                //CARDS DEALT TO HERO
-                var heroCards = (heroPlayer != null) && heroPlayer.hasHoleCards ? string.Join(" ", heroPlayer.HoleCards.Select(x => x.ToString())) : string.Empty;
-                res.AppendLine($"Dealt to Hero {heroCards}");
-                res.AppendLine("");
-
-                decimal pot = currentHandHistory.HandActions.Where(x => x.IsBlinds).Sum(x => Math.Abs(x.Amount));
-                Tuple<string, decimal> actionStringResult = GetPlainActionString(heroPlayer?.PlayerName, currentHandHistory.PreFlop, currentHandHistory, true);
-                res.AppendLine(actionStringResult.Item1);
-                res.AppendLine();
-                pot += actionStringResult.Item2;
-
-                if (currentHandHistory.Flop.Any())
-                {
-                    res.AppendLine(GetPlainStreetString(Street.Flop, pot, currentHandHistory));
-                    actionStringResult = GetPlainActionString(heroPlayer?.PlayerName, currentHandHistory.Flop, currentHandHistory);
-                    res.AppendLine(actionStringResult.Item1);
-                    res.AppendLine();
-                    pot += actionStringResult.Item2;
-                }
-                else if (CardHelper.IsStreetAvailable(currentHandHistory.CommunityCards.ToString(), Street.Flop))
-                {
-                    res.AppendLine(GetPlainStreetString(Street.Flop, pot, currentHandHistory));
-                    res.AppendLine();
-                }
-
-                if (currentHandHistory.Turn.Any())
-                {
-                    res.AppendLine(GetPlainStreetString(Street.Turn, pot, currentHandHistory));
-                    actionStringResult = GetPlainActionString(heroPlayer?.PlayerName, currentHandHistory.Turn, currentHandHistory);
-                    res.AppendLine(actionStringResult.Item1);
-                    res.AppendLine();
-                    pot += actionStringResult.Item2;
-                }
-                else if (CardHelper.IsStreetAvailable(currentHandHistory.CommunityCards.ToString(), Street.Turn))
-                {
-                    res.AppendLine(GetPlainStreetString(Street.Turn, pot, currentHandHistory));
-                    res.AppendLine();
-                }
-
-                if (currentHandHistory.River.Any())
-                {
-                    res.AppendLine(GetPlainStreetString(Street.River, pot, currentHandHistory));
-                    actionStringResult = GetPlainActionString(heroPlayer?.PlayerName, currentHandHistory.River, currentHandHistory);
-                    res.AppendLine(actionStringResult.Item1);
-                    res.AppendLine();
-                    pot += actionStringResult.Item2;
-                }
-                else if (CardHelper.IsStreetAvailable(currentHandHistory.CommunityCards.ToString(), Street.River))
-                {
-                    res.AppendLine(GetPlainStreetString(Street.River, pot, currentHandHistory));
-                    res.AppendLine();
-                }
-
-                //PLAYER SHOWED CARDS
-                foreach (var player in currentHandHistory.Players)
-                {
-                    if (player != null && player.hasHoleCards && player != heroPlayer)
-                    {
-                        var playerCards = string.Join(" ", player.HoleCards.Select(x => x.ToString()));
-                        var positionName = GetPositionName(player.PlayerName, currentHandHistory);
-                        res.AppendLine($"{positionName} shows {playerCards}");
-                        res.Append(Environment.NewLine);
-                    }
-                }
-
-                //WINNERS
-                foreach (var winAction in currentHandHistory.WinningActions)
-                {
-                    String playerName;
-                    HandHistories.Objects.Players.Player player = currentHandHistory.Players.First(x => x.PlayerName == winAction.PlayerName);
-                    if (heroPlayer != null && player == heroPlayer)
-                    {
-                        playerName = "HERO";
-                    }
-                    else
-                    {
-                        playerName = GetPositionName(player.PlayerName, currentHandHistory);
-                    }
-                    res.AppendLine(playerName + " wins $" + winAction.Amount);
-                }
-
-                return res.ToString();
-            }
-            catch (Exception exc)
-            {
-                LogProvider.Log.Error("ExportFunctions", String.Format("HandID: {0}", currentHandHistory.HandId), exc);
-            }
-            return "";
+            return exportType == EnumExportType.PlainText ?
+                ConvertToPlainText(handHistoryText) :
+                handHistoryText;
         }
 
         private static string ConvertGameType(HandHistory handHistory)
@@ -397,10 +298,14 @@ namespace DriveHUD.Common.Ifrastructure
             }
         }
 
-        private static String SurroundWithColorIfInHand(string player, bool isInHand)
+        private static String SurroundWithTag(string input, bool condition, string beginTag, string endTag = null)
         {
-            if (isInHand) return "[color=red]" + player + "[/color]";
-            return player;
+            if (condition)
+            {
+                return $"[{beginTag}]{input}[/{endTag ?? beginTag}]";
+            }
+
+            return input;
         }
 
         public static string GetEquityDataToExport(string boardCards, IEnumerable<string> playersEquityStrings)
@@ -474,62 +379,85 @@ namespace DriveHUD.Common.Ifrastructure
 
         private static bool IsFolded(string playerName, IEnumerable<HandAction> actions)
         {
-            return actions.Any(x => x.PlayerName == playerName && x.HandActionType == HandActionType.FOLD);
+            return actions.Any(x => x.PlayerName == playerName && x.IsFold);
         }
 
-        private static Tuple<string, decimal> GetActionString(string heroName, IEnumerable<HandAction> actions, HandHistory currentHandHistory, bool isPreflop = false)
+        private static string BuildSPROnFlopLine(HandHistory handHistory, decimal pot)
         {
-            decimal pot = 0;
-            string resultString = string.Empty;
+            var spr = 0m;
+
+            var playersFoldedOnPreflop = handHistory.PreFlop.Where(x => x.IsFold).Select(x => x.PlayerName).ToArray();
+
+            var smallestEffStackPLayer = handHistory.Players
+                .Where(x => !playersFoldedOnPreflop.Contains(x.PlayerName))
+                .OrderBy(x => x.StartingStack)
+                .FirstOrDefault();
+
+            if (smallestEffStackPLayer != null)
+            {
+                var playerPutInPreflop = Math.Abs(handHistory.PreFlop.Where(x => x.PlayerName == smallestEffStackPLayer.PlayerName).Sum(x => x.Amount));
+
+                spr = pot != 0 ? (smallestEffStackPLayer.StartingStack - playerPutInPreflop) / pot : 0;
+            }
+
+            return $"[I][B]Hero SPR on Flop: [{spr:0.##} effective][/B][/I]";
+        }
+
+        private static string BuildActionLine(IEnumerable<HandAction> actions, HandHistory handHistory, Dictionary<string, string> playersNames, ref decimal pot)
+        {
+            var result = new StringBuilder();
+
+            var putInThisStreet = new Dictionary<string, decimal>();
+
+            var currentStreet = Street.Null;
 
             foreach (var action in actions)
             {
+                if (currentStreet != action.Street)
+                {
+                    putInThisStreet.Clear();
+                    currentStreet = action.Street;
+                }
+
+                if (!putInThisStreet.ContainsKey(action.PlayerName))
+                {
+                    putInThisStreet.Add(action.PlayerName, action.Amount);
+                }
+                else
+                {
+                    putInThisStreet[action.PlayerName] += action.Amount;
+                }
+
                 if (action.IsBlinds || action.HandActionType == HandActionType.UNCALLED_BET)
                 {
                     continue;
                 }
 
                 pot += Math.Abs(action.Amount);
-                bool allIn = action.IsAllInAction;
-                var actionPlayer = currentHandHistory.Players.First(x => x.PlayerName == action.PlayerName);
-                string name = !string.IsNullOrWhiteSpace(heroName) && actionPlayer.PlayerName == heroName ? "HERO" : GetPositionName(actionPlayer.PlayerName, currentHandHistory);
-                string playerActionString = GetPlayersActionString(action, GetRemainingStack(action.PlayerName, action, currentHandHistory));
-                string composedString = String.Format("{0} {1}", name, playerActionString);
-                bool isInHand = !IsFolded(actionPlayer.PlayerName, actions) && action.HandActionType != HandActionType.CHECK;
-                resultString += SurroundWithColorIfInHand(composedString, isInHand) + ", ";
-            }
 
-            return new Tuple<string, decimal>(resultString.Trim().Trim(','), pot);
-        }
-
-        private static Tuple<string, decimal> GetPlainActionString(string heroName, IEnumerable<HandAction> actions, HandHistory currentHandHistory, bool isPreflop = false)
-        {
-            decimal pot = 0;
-            string resultString = string.Empty;
-
-            foreach (var action in actions)
-            {
-                if (action.IsBlinds || action.HandActionType == HandActionType.UNCALLED_BET)
+                if (!playersNames.TryGetValue(action.PlayerName, out string playerName))
                 {
-                    continue;
+                    playerName = GetPositionName(action.PlayerName, handHistory);
                 }
 
-                pot += Math.Abs(action.Amount);
-                bool allIn = action.IsAllInAction;
-                var actionPlayer = currentHandHistory.Players.First(x => x.PlayerName == action.PlayerName);
-                string name = !string.IsNullOrWhiteSpace(heroName) && actionPlayer.PlayerName == heroName ? "HERO" : GetPositionName(actionPlayer.PlayerName, currentHandHistory);
-                string playerActionString = GetPlayersActionString(action, GetRemainingStack(action.PlayerName, action, currentHandHistory));
-                string composedString = String.Format("{0} {1}", name, playerActionString);
-                bool isInHand = !IsFolded(actionPlayer.PlayerName, actions) && action.HandActionType != HandActionType.CHECK;
-                resultString += composedString + ", ";
+                var playerActionString = GetPlayersActionString(action, putInThisStreet[action.PlayerName]);
+
+                var remainingStackString = action.Street != Street.Preflop && (action.IsAggressiveAction || action.IsCall) && !action.IsAllIn && !action.IsAllInAction ?
+                     $" (Rem. Stack: {GetRemainingStack(action.PlayerName, action, handHistory)})" :
+                     string.Empty;
+
+                var isFolded = IsFolded(action.PlayerName, actions);
+                var isInHand = !isFolded && !action.IsCheck;
+
+                result.Append($"{SurroundWithTag($"{SurroundWithTag($"{playerName} {playerActionString}", isInHand, "color=red", "color")}{remainingStackString}", isFolded, "I")}, ");
             }
 
-            return new Tuple<string, decimal>(resultString.Trim().Trim(','), pot);
+            return result.ToString().Trim(',', ' ');
         }
 
-        private static string GetPlayersActionString(HandAction action, decimal remainingStack, bool isPreflop = false)
+        private static string GetPlayersActionString(HandAction action, decimal putInThisStreet)
         {
-            string resultString = string.Empty;
+            var resultString = string.Empty;
 
             var handActionType = action is AllInAction allInAction ?
                 allInAction.SourceActionType :
@@ -544,9 +472,9 @@ namespace DriveHUD.Common.Ifrastructure
                     resultString = "BB";
                     break;
                 case HandActionType.FOLD:
-                    return resultString = "Folds";
+                    return "Folds";
                 case HandActionType.CHECK:
-                    return resultString = "Checks";
+                    return "Checks";
                 case HandActionType.CALL:
                     resultString = "Calls";
                     break;
@@ -561,21 +489,14 @@ namespace DriveHUD.Common.Ifrastructure
                     break;
             }
 
-            if (isPreflop)
-            {
-                resultString = String.Format("{0} $({1})", resultString, Math.Abs(action.Amount));
-            }
-            else
-            {
-                resultString = String.Format("{0} ${1}", resultString, Math.Abs(action.Amount));
-            }
+            var amount = action.IsRaise() ? Math.Abs(putInThisStreet) : Math.Abs(action.Amount);
+            var amountString = amount % 1 == 0 ? amount.ToString("F0") : amount.ToString("F2");
+
+            resultString = $"{resultString} ${amountString}";
+
             if (action.IsAllInAction || action.IsAllIn)
             {
-                resultString = String.Format("{0} (allin)", resultString);
-            }
-            if (action.IsAggressiveAction || action.IsCall)
-            {
-                resultString = String.Format("{0} (Rem. Stack: {1})", resultString, remainingStack);
+                return $"{resultString} (allin)";
             }
 
             return resultString;
@@ -590,25 +511,34 @@ namespace DriveHUD.Common.Ifrastructure
 
         private static string GetStreetString(Street street, decimal pot, HandHistory currentHandHistory)
         {
-            string resultString = String.Format("{0} (${1}) ", street, pot);
-            foreach (var card in currentHandHistory.CommunityCards.GetBoardOnStreet(street))
-            {
-                resultString += ConvertCardToForumFormat(card.CardStringValue) + " ";
-            }
+            var cards = string.Join(" ",
+                currentHandHistory.CommunityCards.GetBoardOnStreet(street).Select(x => ConvertCardToForumFormat(x.CardStringValue)).ToArray());
+
+            var resultString = $"[B]{street} (${pot}):[/B] {cards}";
 
             return resultString.Trim();
         }
 
-        private static string GetPlainStreetString(Street street, decimal pot, HandHistory currentHandHistory)
+        private static string ConvertToPlainText(string handHistory)
         {
-            string resultString = String.Format("{0} (${1}) ", street, pot);
-            foreach (var card in currentHandHistory.CommunityCards.GetBoardOnStreet(street))
-            {
-                resultString += card.CardStringValue + " ";
-            }
-
-            return resultString.Trim();
+            return handHistory
+                .Replace("[U]", string.Empty)
+                .Replace("[/U]", string.Empty)
+                .Replace("[B]", string.Empty)
+                .Replace("[/B]", string.Empty)
+                .Replace("[I]", string.Empty)
+                .Replace("[/I]", string.Empty)
+                .Replace("[color=red]", string.Empty)
+                .Replace("[color=blue]", string.Empty)
+                .Replace("[/color]", string.Empty)
+                .Replace("[url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software", "Poker Tracking Software - http://drivehud.com")
+                .Replace("[/url]", string.Empty)
+                .Replace($"[spoil]{Environment.NewLine}", string.Empty)
+                .Replace($"{Environment.NewLine}[/spoil]", string.Empty)
+                .Replace($"[SPOILER]{Environment.NewLine}", string.Empty)
+                .Replace($"{Environment.NewLine}[/SPOILER]", string.Empty);
         }
+
         #endregion
     }
 }

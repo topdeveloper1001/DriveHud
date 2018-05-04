@@ -1,0 +1,58 @@
+Winamax Poker - Tournament "MONSTER STACK" buyIn: 4.50 + 0.50 level: 5 - HandId: #997600321653964807-32-1524500678 - Holdem no limit (40/150/300) - 2018/04/23 16:24:38 UTC
+Table: 'MONSTER STACK(232271925)#006' 8-max (play money) Seat #3 is the button
+Seat 1: FL25 (48405)
+Seat 2: missterben (296718)
+Seat 3: One-day (123957)
+Seat 4: billyboy7 (39102)
+Seat 5: tetalain83 (50000)
+Seat 6: Papayot (48510)
+Seat 7: Peon84 (25004)
+Seat 8: khalilou2009 (49960)
+*** ANTE/BLINDS ***
+billyboy7 posts ante 40
+tetalain83 posts ante 40
+FL25 posts ante 40
+missterben posts ante 40
+One-day posts ante 40
+Papayot posts ante 40
+Peon84 posts ante 40
+khalilou2009 posts ante 40
+billyboy7 posts small blind 150
+tetalain83 posts big blind 300
+Dealt to Peon84 [Js Qd]
+*** PRE-FLOP *** 
+Papayot folds
+Peon84 calls 300
+khalilou2009 calls 300
+FL25 folds
+missterben calls 300
+One-day calls 300
+billyboy7 calls 150
+tetalain83 checks
+*** FLOP *** [Ah 6c 3c]
+billyboy7 bets 300
+tetalain83 folds
+Peon84 calls 300
+khalilou2009 calls 300
+missterben folds
+One-day calls 300
+*** TURN *** [Ah 6c 3c][8d]
+billyboy7 checks
+Peon84 checks
+khalilou2009 bets 1660
+One-day calls 1660
+billyboy7 folds
+Peon84 folds
+*** RIVER *** [Ah 6c 3c 8d][Jh]
+khalilou2009 checks
+One-day bets 300
+khalilou2009 calls 300
+*** SHOW DOWN ***
+khalilou2009 shows [9c 8c] (One pair : 8)
+One-day shows [3s 8s] (Two pairs : 8 and 3)
+One-day collected 7240 from pot
+*** SUMMARY ***
+Total pot 7240 | No rake
+Board: [Ah 6c 3c 8d Jh]
+Seat 3: One-day (button) showed [3s 8s] and won 7240 with Two pairs : 8 and 3
+Seat 8: khalilou2009 showed [9c 8c] and lost with One pair : 8

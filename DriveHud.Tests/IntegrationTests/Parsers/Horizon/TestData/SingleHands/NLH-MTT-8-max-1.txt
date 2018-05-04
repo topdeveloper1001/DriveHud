@@ -1,0 +1,26 @@
+Hand#5127FD7A47000023 - $25 Daily Workhorse T16611911 -- FREEROLL -- $0 + $0 -- 8 Max -- Table 4 -- 0/10/20 NL Hold'em -- 2018/04/19 - 08:30:45
+Dealer: Seat 2
+Seat 1: Trinininja69 (1 500 in chips) 
+Seat 2: almostperf1 (1 460 in chips) 
+Seat 3: rogumu (1 480 in chips) 
+Seat 4: AlexTh (1 500 in chips) 
+Seat 7: MoTheThird (1 560 in chips) 
+Seat 8: BenLebria (1 500 in chips) 
+Seat 9: dankpot (1 500 in chips) 
+Seat 10: BroomBroom (1 500 in chips) 
+rogumu: posts small blind 10
+AlexTh: posts big blind 20
+Dealt to AlexTh [5h,5c]
+MoTheThird: calls 20
+BenLebria: is all in 1 500
+dankpot: folds
+BroomBroom: folds
+Trinininja69: folds
+almostperf1: folds
+rogumu: folds
+AlexTh: folds
+MoTheThird: folds
+BenLebria: returns uncalled bet 1 480
+***SHOW DOWN***
+BenLebria: mucks
+BenLebria wins 70 

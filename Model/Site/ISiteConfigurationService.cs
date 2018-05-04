@@ -29,14 +29,7 @@ namespace Model.Site
         /// <summary>
         /// Checks the Poker Sites Validity
         /// </summary>
-        IEnumerable<ISiteValidationResult> ValidateSiteConfigurations();
-
-        /// <summary>
-        /// Get site configuration
-        /// </summary>
-        /// <param name="site">Site name</param>
-        /// <returns>Site configuration</returns>
-        ISiteConfiguration Get(string site);
+        IEnumerable<ISiteValidationResult> ValidateSiteConfigurations();    
 
         /// <summary>
         /// Get site configuration

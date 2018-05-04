@@ -59,10 +59,18 @@ namespace DriveHUD.Application.ViewModels.Hud
         IntPtr GetWindowHandle(IntPtr handle);
 
         /// <summary>
-        /// Get initial table size 
+        /// Calculates x-scale for the specified window
         /// </summary>
-        /// <returns>Return dimensions of initial table, Item1 - Width, Item - Height</returns>
-        Tuple<double, double> GetInitialTableSize();
+        /// <param name="window">Window to calculate x-scale</param>
+        /// <returns>X-scale</returns>
+        double GetScaleX(HudWindow window);
+
+        // <summary>
+        /// Calculates y-scale for the specified window
+        /// </summary>
+        /// <param name="window">Window to calculate y-scale</param>
+        /// <returns>Y-scale</returns>
+        double GetScaleY(HudWindow window);
 
         /// <summary>
         /// Get initial track condition meter positions

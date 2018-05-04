@@ -20,6 +20,7 @@ namespace DriveHUD.Entities
         Five = 5,
         Six = 6,        
         Eight = 8,
+        Seven = 7,
         Nine = 9,
         Ten = 10
     }

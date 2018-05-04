@@ -1,0 +1,41 @@
+Winamax Poker - Tournament "Freeroll" buyIn: 0 + 0 level: 10 - HandId: #998130204654174210-96-1524546956 - Holdem no limit (30/125/250) - 2018/04/24 05:15:56 UTC
+Table: 'Freeroll(232395298)#001' 8-max (play money) Seat #8 is the button
+Seat 1: DEBSON-DEB (25171)
+Seat 2: Peon84 (145)
+Seat 3: rayon2soleiI (263)
+Seat 4: f.gwada (14587)
+Seat 5: backintown92 (2425)
+Seat 6: taktiktak (16586)
+Seat 7: NOLOVISTO (103)
+Seat 8: volvo02 (93)
+*** ANTE/BLINDS ***
+DEBSON-DEB posts ante 30
+Peon84 posts ante 30
+rayon2soleiI posts ante 30
+f.gwada posts ante 30
+backintown92 posts ante 30
+taktiktak posts ante 30
+NOLOVISTO posts ante 30
+volvo02 posts ante 30
+DEBSON-DEB posts small blind 125
+Peon84 posts big blind 115 and is all-in
+Dealt to Peon84 [5s 9s]
+*** PRE-FLOP *** 
+rayon2soleiI folds
+f.gwada folds
+backintown92 folds
+taktiktak folds
+NOLOVISTO folds
+volvo02 folds
+*** FLOP *** [Jd 7d Kh]
+*** TURN *** [Jd 7d Kh][Jc]
+*** RIVER *** [Jd 7d Kh Jc][9d]
+*** SHOW DOWN ***
+Peon84 shows [5s 9s] (Two pairs : Jacks and 9)
+DEBSON-DEB shows [Td Th] (Two pairs : Jacks and Tens)
+DEBSON-DEB collected 480 from pot
+*** SUMMARY ***
+Total pot 480 | No rake
+Board: [Jd 7d Kh Jc 9d]
+Seat 1: DEBSON-DEB (small blind) showed [Td Th] and won 480 with Two pairs : Jacks and Tens
+Seat 2: Peon84 (big blind) showed [5s 9s] and lost with Two pairs : Jacks and 9

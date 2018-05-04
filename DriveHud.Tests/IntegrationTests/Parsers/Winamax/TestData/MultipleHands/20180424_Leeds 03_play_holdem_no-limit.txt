@@ -1,0 +1,116 @@
+Winamax Poker - CashGame - HandId: #11131128-109-1524594598 - Holdem no limit (0.01/0.02) - 2018/04/24 18:29:58 UTC
+Table: 'Leeds 03' 9-max (play money) Seat #3 is the button
+Seat 1: raise.500 (1.63)
+Seat 2: Nacnac66yx (9.38)
+Seat 3: OukhtyKK (1.96)
+Seat 4: Kachanii (5.47)
+Seat 5: romy 12 (1.87)
+Seat 6: Colbert21 (1.95)
+Seat 7: _tutur42470_ (1.30)
+Seat 8: rambo38 (5.21)
+Seat 9: Peon84 (0)
+*** ANTE/BLINDS ***
+Kachanii posts small blind 0.01
+romy 12 posts big blind 0.02
+*** PRE-FLOP *** 
+Colbert21 folds
+_tutur42470_ raises 0.18 to 0.20
+rambo38 folds
+raise.500 calls 0.20
+Kachanii folds
+romy 12 folds
+*** FLOP *** [7d 5d Tc]
+_tutur42470_ bets 0.10
+raise.500 calls 0.10
+*** TURN *** [7d 5d Tc][8d]
+_tutur42470_ checks
+raise.500 checks
+*** RIVER *** [7d 5d Tc 8d][Kh]
+_tutur42470_ checks
+raise.500 checks
+*** SHOW DOWN ***
+_tutur42470_ shows [Qh 5c] (One pair : 5)
+raise.500 shows [Jh 8h] (One pair : 8)
+raise.500 collected 0.59 from pot
+*** SUMMARY ***
+Total pot 0.59 | Rake 0.04
+Board: [7d 5d Tc 8d Kh]
+Seat 1: raise.500 showed [Jh 8h] and won 0.59 with One pair : 8
+Seat 7: _tutur42470_ showed [Qh 5c] and lost with One pair : 5
+
+
+Winamax Poker - CashGame - HandId: #11131128-110-1524594686 - Holdem no limit (0.01/0.02) - 2018/04/24 18:31:26 UTC
+Table: 'Leeds 03' 9-max (play money) Seat #4 is the button
+Seat 1: raise.500 (1.92)
+Seat 3: OukhtyKK (1.96)
+Seat 4: Kachanii (5.46)
+Seat 5: romy 12 (1.85)
+Seat 6: Colbert21 (1.95)
+Seat 7: _tutur42470_ (1)
+Seat 9: Peon84 (2)
+*** ANTE/BLINDS ***
+romy 12 posts small blind 0.01
+Colbert21 posts big blind 0.02
+Peon84 posts big blind 0.02 out of position
+Dealt to Peon84 [Kc 6h]
+*** PRE-FLOP *** 
+_tutur42470_ raises 0.23 to 0.25
+Peon84 folds
+raise.500 raises 0.55 to 0.80
+Kachanii folds
+romy 12 folds
+Colbert21 folds
+_tutur42470_ raises 0.20 to 1 and is all-in
+raise.500 calls 0.20
+*** FLOP *** [2h 9h Qc]
+*** TURN *** [2h 9h Qc][9d]
+*** RIVER *** [2h 9h Qc 9d][Td]
+*** SHOW DOWN ***
+raise.500 shows [7h Ad] (One pair : 9)
+_tutur42470_ shows [Qh 8h] (Two pairs : Queens and 9)
+_tutur42470_ collected 1.92 from pot
+*** SUMMARY ***
+Total pot 1.92 | Rake 0.13
+Board: [2h 9h Qc 9d Td]
+Seat 1: raise.500 showed [7h Ad] and lost with One pair : 9
+Seat 7: _tutur42470_ showed [Qh 8h] and won 1.92 with Two pairs : Queens and 9
+
+
+Winamax Poker - CashGame - HandId: #11131128-111-1524594718 - Holdem no limit (0.01/0.02) - 2018/04/24 18:31:58 UTC
+Table: 'Leeds 03' 9-max (play money) Seat #5 is the button
+Seat 1: raise.500 (0.92)
+Seat 2: TomTom98765 (2)
+Seat 3: OukhtyKK (1.96)
+Seat 4: Kachanii (5.46)
+Seat 5: romy 12 (1.84)
+Seat 6: Colbert21 (1.93)
+Seat 7: _tutur42470_ (1.92)
+Seat 9: Peon84 (1.98)
+*** ANTE/BLINDS ***
+Colbert21 posts small blind 0.01
+_tutur42470_ posts big blind 0.02
+TomTom98765 posts big blind 0.02 out of position
+Dealt to Peon84 [Jc 6d]
+*** PRE-FLOP *** 
+Peon84 folds
+raise.500 raises 0.90 to 0.92 and is all-in
+TomTom98765 raises 1.08 to 2 and is all-in
+Kachanii folds
+romy 12 folds
+Colbert21 folds
+_tutur42470_ folds
+*** FLOP *** [Qd Qh 7c]
+*** TURN *** [Qd Qh 7c][3s]
+*** RIVER *** [Qd Qh 7c 3s][Ah]
+*** SHOW DOWN ***
+raise.500 shows [Kh Kc] (Two pairs : Kings and Queens)
+TomTom98765 shows [6c 8s] (One pair : Queens)
+TomTom98765 collected 1.08 from side pot 1
+raise.500 collected 1.75 from main pot
+*** SUMMARY ***
+Total pot 2.83 | Rake 0.12
+Board: [Qd Qh 7c 3s Ah]
+Seat 1: raise.500 showed [Kh Kc] and won 1.75 with Two pairs : Kings and Queens
+Seat 2: TomTom98765 showed [6c 8s] and won 1.08 with One pair : Queens
+
+

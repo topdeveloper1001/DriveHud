@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Common.Utils
 {
@@ -16,6 +13,8 @@ namespace DriveHUD.Common.Utils
     /// <typeparam name="T"></typeparam>
     public class RangeObservableCollection<T> : ObservableCollection<T>
     {
+        private const string IndexerName = "Item[]";
+
         public RangeObservableCollection()
             : base()
         {
@@ -30,68 +29,30 @@ namespace DriveHUD.Common.Utils
             : base(list)
         {
         }
-
-        public void AddRange(IEnumerable<T> collection)
+     
+        public virtual void Reset(IEnumerable<T> collection)
         {
             if (collection == null)
-                throw new ArgumentNullException("collection");
+            {
+                throw new ArgumentException(nameof(collection));
+            }
 
-            if (collection.Count() == 0)
-                return;
+            int count = Count;
 
-            foreach (var item in collection)
+            Items.Clear();
+
+            foreach (T item in collection)
             {
                 Items.Add(item);
             }
 
-            this.OnPropertyChanged(new PropertyChangedEventArgs("Count"));
-            this.OnPropertyChanged(new PropertyChangedEventArgs("Item[]"));
-            this.OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
-        }
-
-        public virtual void RemoveRange(IEnumerable<T> collection)
-        {
-            if (collection == null)
-                throw new ArgumentNullException("collection");
-
-            bool removed = false;
-            foreach (T item in collection)
+            if (Count != count)
             {
-                if (this.Items.Remove(item))
-                    removed = true;
+                OnPropertyChanged(new PropertyChangedEventArgs(nameof(Count)));
             }
 
-            if (removed)
-            {
-                this.OnPropertyChanged(new PropertyChangedEventArgs("Count"));
-                this.OnPropertyChanged(new PropertyChangedEventArgs("Item[]"));
-                this.OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
-            }
-        }
-
-        public virtual void Reset(T item)
-        {
-            this.Reset(new List<T>() { item });
-        }
-
-        public virtual void Reset(IEnumerable<T> collection)
-        {
-            if (collection == null)
-                throw new ArgumentException("collection");
-
-            int count = this.Count;
-
-            this.Items.Clear();
-
-            foreach (T item in collection)
-            {
-                this.Items.Add(item);
-            }
-
-            if (this.Count != count)
-                this.OnPropertyChanged(new PropertyChangedEventArgs("Count"));
-            this.OnPropertyChanged(new PropertyChangedEventArgs("Item[]"));
-            this.OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+            OnPropertyChanged(new PropertyChangedEventArgs(IndexerName));
+            OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
         }
     }
 }
