@@ -14,10 +14,10 @@ BTN ($12.61)
 
 [I][B]Hero SPR on Flop: [7.31 effective][/B][/I]
 [B]Flop ($1.27):[/B] 3:diamond: 3:club: Q:diamond:
-[color=red]UTG Bets $1.27 (Rem. Stack: 8.02)[/color], [color=red]HERO Calls $1.27 (Rem. Stack: 14.85)[/color]
+[color=red]UTG Bets $1.27[/color] (Rem. Stack: 8.02), [color=red]HERO Calls $1.27[/color] (Rem. Stack: 14.85)
 
 [B]Turn ($3.81):[/B] 3:diamond: 3:club: Q:diamond: 4:club:
-[color=red]UTG Bets $8.02 (allin) (Rem. Stack: 0.00)[/color], [color=red]HERO Calls $8.02 (Rem. Stack: 6.83)[/color]
+[color=red]UTG Bets $8.02 (allin)[/color], [color=red]HERO Calls $8.02[/color] (Rem. Stack: 6.83)
 
 [B]River ($19.85):[/B] 3:diamond: 3:club: Q:diamond: 4:club: Q:club:
 

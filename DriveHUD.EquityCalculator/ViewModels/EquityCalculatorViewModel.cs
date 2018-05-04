@@ -272,6 +272,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         }
 
         #region LoadData members
+
         private void LoadData(RequestEquityCalculatorEventArgs obj)
         {
             try

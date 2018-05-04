@@ -331,7 +331,14 @@ namespace DriveHud.Tests.UnitTests
              EnumExportType.TwoPlusTwo,
              EnumPokerSites.WinningPokerNetwork,
              null
-          );
+            );
+            yield return new TestCaseData(
+             "ExportTest-Forum-Source-Cash.xml",
+             "ExportTest-Forum-Result-Cash.txt",
+             EnumExportType.TwoPlusTwo,
+             EnumPokerSites.BetOnline,
+             null
+            );
         }
 
         public abstract class TestIndicatorsAbstract : ExportIndicators

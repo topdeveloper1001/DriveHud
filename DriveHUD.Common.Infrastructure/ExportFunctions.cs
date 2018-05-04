@@ -298,19 +298,14 @@ namespace DriveHUD.Common.Ifrastructure
             }
         }
 
-        private static String SurroundWithColorIfInHand(string player, bool isInHand, bool isFolded = false)
+        private static String SurroundWithTag(string input, bool condition, string beginTag, string endTag = null)
         {
-            if (isFolded)
+            if (condition)
             {
-                return $"[I]{player}[/I]";
+                return $"[{beginTag}]{input}[/{endTag ?? beginTag}]";
             }
 
-            if (isInHand)
-            {
-                return $"[color=red]{player}[/color]";
-            }
-
-            return player;
+            return input;
         }
 
         public static string GetEquityDataToExport(string boardCards, IEnumerable<string> playersEquityStrings)
@@ -445,20 +440,22 @@ namespace DriveHUD.Common.Ifrastructure
                     playerName = GetPositionName(action.PlayerName, handHistory);
                 }
 
-                var playerActionString = GetPlayersActionString(action,
-                    GetRemainingStack(action.PlayerName, action, handHistory),
-                    putInThisStreet[action.PlayerName]);
+                var playerActionString = GetPlayersActionString(action, putInThisStreet[action.PlayerName]);
+
+                var remainingStackString = action.Street != Street.Preflop && (action.IsAggressiveAction || action.IsCall) && !action.IsAllIn && !action.IsAllInAction ?
+                     $" (Rem. Stack: {GetRemainingStack(action.PlayerName, action, handHistory)})" :
+                     string.Empty;
 
                 var isFolded = IsFolded(action.PlayerName, actions);
                 var isInHand = !isFolded && !action.IsCheck;
 
-                result.Append($"{SurroundWithColorIfInHand($"{playerName} {playerActionString}", isInHand, isFolded)}, ");
+                result.Append($"{SurroundWithTag($"{SurroundWithTag($"{playerName} {playerActionString}", isInHand, "color=red", "color")}{remainingStackString}", isFolded, "I")}, ");
             }
 
             return result.ToString().Trim(',', ' ');
         }
 
-        private static string GetPlayersActionString(HandAction action, decimal remainingStack, decimal putInThisStreet)
+        private static string GetPlayersActionString(HandAction action, decimal putInThisStreet)
         {
             var resultString = string.Empty;
 
@@ -492,16 +489,14 @@ namespace DriveHUD.Common.Ifrastructure
                     break;
             }
 
-            resultString = $"{resultString} ${(action.IsRaise() ? Math.Abs(putInThisStreet) : Math.Abs(action.Amount)):0.##}";
+            var amount = action.IsRaise() ? Math.Abs(putInThisStreet) : Math.Abs(action.Amount);
+            var amountString = amount % 1 == 0 ? amount.ToString("F0") : amount.ToString("F2");
+
+            resultString = $"{resultString} ${amountString}";
 
             if (action.IsAllInAction || action.IsAllIn)
             {
-                resultString = $"{resultString} (allin)";
-            }
-
-            if (action.Street != Street.Preflop && (action.IsAggressiveAction || action.IsCall))
-            {
-                resultString = $"{resultString} (Rem. Stack: {remainingStack})";
+                return $"{resultString} (allin)";
             }
 
             return resultString;

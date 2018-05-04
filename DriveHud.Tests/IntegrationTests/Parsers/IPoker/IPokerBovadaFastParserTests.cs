@@ -37,6 +37,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-sb-allin-uncalled-bet.xml", "Hero", -6320, HandActionType.ALL_IN, HandActionType.RAISE, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\BOL-NHL-6-max-25NL-AllIn-Call.xml", "ChiTownMCA", -15.8, HandActionType.ALL_IN, HandActionType.CALL, Street.River, 1)]
         public void AllInActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType,
             HandActionType sourceHandActionType, Street street, int numberOfActions)
         {
@@ -56,6 +57,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-sb-allin-uncalled-bet.xml", "P6_391468UT", -15, HandActionType.SMALL_BLIND, true, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-sb-allin-uncalled-bet.xml", "Hero", 6120, HandActionType.UNCALLED_BET, false, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-sb-allin-uncalled-bet.xml", "Hero", 370, HandActionType.WINS, false, Street.Summary, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\BOL-NHL-6-max-25NL-AllIn-Call.xml", "punisher1127", 0, HandActionType.WINS, false, Street.Summary, 0)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType,
           bool isAllIn, Street street, int numberOfActions)
         {

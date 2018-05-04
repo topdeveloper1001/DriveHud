@@ -796,10 +796,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 case 5:
                     actionType = HandActionType.BET;
                     break;
-                case 6://Both are all-ins but don't know the difference between them
-                    return new AllInAction(actionPlayerName, value, street, false, HandActionType.CALL, actionNumber);
+                case 6:
                 case 7:
-                    return new AllInAction(actionPlayerName, value, street, false, HandActionType.BET, actionNumber);
+                    return new AllInAction(actionPlayerName, value, street, false, actionNumber);
                 case 8: //Case 8 is when a player sits out at the beginning of a hand 
                 case 9: //Case 9 is when a blind isn't posted - can be treated as sitting out
                     actionType = HandActionType.SITTING_OUT;

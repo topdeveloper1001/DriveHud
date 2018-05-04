@@ -17,7 +17,7 @@ UTG ($5218)
 HERO Checks, BTN Checks
 
 [B]Turn ($3012):[/B] 5:spade: 7:club: 2:club: 9:club:
-[color=red]HERO Bets $1100 (Rem. Stack: 7570)[/color], [color=red]BTN Raises To $8902 (allin) (Rem. Stack: 0)[/color], [color=red]HERO Calls $7570 (allin) (Rem. Stack: 0)[/color]
+[color=red]HERO Bets $1100[/color] (Rem. Stack: 7570), [color=red]BTN Raises To $8902 (allin)[/color], [color=red]HERO Calls $7570 (allin)[/color]
 
 [B]River ($20584):[/B] 5:spade: 7:club: 2:club: 9:club: J:heart:
 

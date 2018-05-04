@@ -625,6 +625,9 @@
     <Content Include="UnitTests\TestData\EquitySolverData\Peon84-ExpectedValue-1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Cash.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-CashWithPost.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -640,14 +643,14 @@
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-RaiseTo-2Plus2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\ExportTest-Forum-Result-RaiseTo.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Straddle.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Zone.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Cash.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Source-CashWithPost.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

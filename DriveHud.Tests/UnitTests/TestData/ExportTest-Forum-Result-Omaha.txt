@@ -15,10 +15,10 @@ MP ($2500)
 [I]UTG Folds[/I], [color=red]EP Calls $40[/color], [I]MP Folds[/I], [I]HJ Folds[/I], [I]CO Folds[/I], [I]HERO Folds[/I], [color=red]SB Raises To $80[/color], [color=red]BB Calls $40[/color], [color=red]EP Raises To $120[/color], [color=red]SB Calls $40[/color], [color=red]BB Calls $40[/color]
 
 [B]Flop ($360):[/B] A:heart: 8:spade: 8:club:
-SB Checks, [color=red]BB Bets $200 (Rem. Stack: 7215)[/color], [color=red]EP Calls $200 (Rem. Stack: 2240)[/color], [color=red]SB Calls $200 (Rem. Stack: 2470)[/color]
+SB Checks, [color=red]BB Bets $200[/color] (Rem. Stack: 7215), [color=red]EP Calls $200[/color] (Rem. Stack: 2240), [color=red]SB Calls $200[/color] (Rem. Stack: 2470)
 
 [B]Turn ($960):[/B] A:heart: 8:spade: 8:club: 2:diamond:
-SB Checks, [color=red]BB Bets $620 (Rem. Stack: 6595)[/color], [color=red]EP Calls $620 (Rem. Stack: 1620)[/color], [color=red]SB Raises To $2470 (allin) (Rem. Stack: 0)[/color], [color=red]BB Raises To $7215 (allin) (Rem. Stack: 0)[/color], [color=red]EP Calls $1620 (allin) (Rem. Stack: 0)[/color]
+SB Checks, [color=red]BB Bets $620[/color] (Rem. Stack: 6595), [color=red]EP Calls $620[/color] (Rem. Stack: 1620), [color=red]SB Raises To $2470 (allin)[/color], [color=red]BB Raises To $7215 (allin)[/color], [color=red]EP Calls $1620 (allin)[/color]
 
 [B]River ($12885):[/B] A:heart: 8:spade: 8:club: 2:diamond: 9:club:
 

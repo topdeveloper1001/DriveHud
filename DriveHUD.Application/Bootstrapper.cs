@@ -43,8 +43,6 @@ using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using Model;
-using Model.Enums;
-using Model.Filters;
 using Model.Interfaces;
 using Model.Settings;
 using Model.Site;
