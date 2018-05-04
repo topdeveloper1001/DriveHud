@@ -373,6 +373,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
 
             List<CardModel> boardCardsList = new List<CardModel>();
+
             int length = numberOfCards < CurrentGame.CommunityCards.Count() ?
                             numberOfCards :
                             CurrentGame.CommunityCards.Count();
@@ -385,23 +386,37 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     Suit = new RangeCardSuit().StringToSuit(CurrentGame.CommunityCards.ElementAt(i).Suit)
                 });
             }
+
             Board.SetCollection(boardCardsList);
         }
 
         private string CalculateStrongestOpponent(HandHistories.Objects.Hand.HandHistory CurrentGame, HandHistories.Objects.Cards.Street CurrentStreet)
         {
-            IEnumerable<RangeSelectorItemViewModel> oponnentHands = new List<RangeSelectorItemViewModel>();
-            var opponentName = string.Empty;
-            MainAnalyzer.GetStrongestOpponent(CurrentGame, CurrentStreet, out opponentName, out oponnentHands);
-            if (AutoGenerateHandRanges)
+            try
             {
-                if (!string.IsNullOrEmpty(opponentName) && PlayersList.Any(x => x.PlayerName == opponentName))
+                IEnumerable<RangeSelectorItemViewModel> oponnentHands = new List<RangeSelectorItemViewModel>();
+
+                var opponentName = string.Empty;
+
+                MainAnalyzer.GetStrongestOpponent(CurrentGame, CurrentStreet, out opponentName, out oponnentHands);
+
+                if (AutoGenerateHandRanges)
                 {
-                    var player = PlayersList.First(x => x.PlayerName == opponentName);
-                    player.SetRanges(oponnentHands);
+                    if (!string.IsNullOrEmpty(opponentName) && PlayersList.Any(x => x.PlayerName == opponentName))
+                    {
+                        var player = PlayersList.FirstOrDefault(x => x.PlayerName == opponentName);
+                        player?.SetRanges(oponnentHands);
+                    }
                 }
+
+                return opponentName;
             }
-            return opponentName;
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not determine the strongest opponent", ex);
+            }
+
+            return string.Empty;
         }
         #endregion
 
@@ -476,6 +491,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private void ShowStreetCards(object obj)
         {
             _currentSreet = (HandHistories.Objects.Cards.Street)obj;
+
             switch (_currentSreet)
             {
                 case HandHistories.Objects.Cards.Street.Preflop:
