@@ -17,6 +17,7 @@ using DriveHUD.Common.WinApi;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
@@ -168,29 +169,68 @@ namespace DriveHUD.Importers
                     return false;
                 }
 
+                LogProvider.Log.Info($"Found the suitable process {x.ProcessName}, main window = [{x.MainWindowHandle}] [{Identifier}]");
+
                 if (!string.IsNullOrEmpty(WindowClassName))
                 {
                     var sb = new StringBuilder(256);
 
-                    if (WinApi.GetClassName(x.MainWindowHandle, sb, sb.Capacity) != 0)
+                    if (!IsAssociatedWindow(x.MainWindowHandle))
                     {
-                        var windowTitle = WinApi.GetWindowText(x.MainWindowHandle);
-                        var windowClassName = sb.ToString();
+                        LogProvider.Log.Info($"The process {x.ProcessName} has no main window. Checking all associated windows [{Identifier}]");
 
-                        if (windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase))
+                        var wasFound = false;
+
+                        foreach (ProcessThread thread in x.Threads)
                         {
-                            LogProvider.Log.Info($"Found the process with main window = [{windowTitle}, {windowClassName}] [{Identifier}]");
-                            return true;
-                        }
-                    }
+                            WinApi.EnumThreadWindows(thread.Id, (hWnd, lParam) =>
+                            {
+                                if (IsAssociatedWindow(hWnd))
+                                {
+                                    wasFound = true;
+                                    return false;
+                                }
 
-                    return false;
+                                return true;
+                            }, IntPtr.Zero);
+                        }
+
+                        return wasFound;
+                    }
                 }
 
                 return true;
             });
 
             return pokerClientProcess;
+        }
+
+        /// <summary>
+        /// Determines whenever the specified window is associated with the current catcher
+        /// </summary>
+        /// <param name="hWnd">Window to check</param>
+        /// <returns>True if window satisfies conditiond; otherwise - false</returns>
+        protected virtual bool IsAssociatedWindow(IntPtr hWnd)
+        {
+            var sb = new StringBuilder(256);
+
+            if (hWnd == IntPtr.Zero || WinApi.GetClassName(hWnd, sb, sb.Capacity) == 0)
+            {
+                return false;
+            }
+
+            var windowTitle = WinApi.GetWindowText(hWnd);
+            var windowClassName = sb.ToString();
+
+            LogProvider.Log.Info($"Check if the window [{windowTitle},{windowClassName}] of process matches {WindowClassName} [{Identifier}]");
+
+            if (windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase))
+            {
+                LogProvider.Log.Info($"Found the process with window = [{windowTitle}, {windowClassName}] [{Identifier}]");
+                return true;
+            }
+
+            return false;
         }
 
         /// <summary>
