@@ -294,6 +294,11 @@ namespace HandHistories.Parser.Utils.FastParsing
                     {
                         handHistory.Players[playerPutMaxInPot.Key].Win -= diffBetweenPots;
                     }
+
+                    if (winAction.Amount == 0)
+                    {
+                        handHistory.HandActions.Remove(winAction);
+                    }
                 }
             }
 
@@ -316,6 +321,6 @@ namespace HandHistories.Parser.Utils.FastParsing
             var indexOfLastStreetAction = handHistory.HandActions.IndexOf(lastStreeAction);
 
             handHistory.HandActions.Insert(indexOfLastStreetAction + 1, uncalledBet);
-        }        
+        }
     }
 }

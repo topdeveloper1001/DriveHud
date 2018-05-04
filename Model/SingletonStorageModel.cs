@@ -93,26 +93,34 @@ namespace Model
             switch (e.Action)
             {
                 case NotifyCollectionChangedAction.Add:
-                    var newItems = e.NewItems?.Cast<Playerstatistic>().ToList();
+                case NotifyCollectionChangedAction.Remove:
+                    var newItems = e.NewItems?.OfType<Playerstatistic>().ToList();
+                    var oldItems = e.OldItems?.OfType<Playerstatistic>().ToList();
 
-                    var cashItems = newItems.Where(x => !x.IsTourney).AsQueryable().Where(CashFilterPredicate).ToList();
-                    var tournamentItems = newItems.Where(x => x.IsTourney).AsQueryable().Where(TournamentFilterPredicate).ToList();
+                    var newCashItems = newItems?.Where(x => !x.IsTourney).AsQueryable().Where(CashFilterPredicate).ToList();
+                    var newTournamentItems = newItems?.Where(x => x.IsTourney).AsQueryable().Where(TournamentFilterPredicate).ToList();
 
-                    if (cashItems != null && cashItems.Any())
+                    if (newCashItems != null && newCashItems.Any())
                     {
-                        FilteredCashPlayerStatistic.AddRange(cashItems);
+                        FilteredCashPlayerStatistic.AddRange(newCashItems);
                     }
 
-                    if (tournamentItems != null && tournamentItems.Any())
+                    if (newTournamentItems != null && newTournamentItems.Any())
                     {
-                        FilteredTournamentPlayerStatistic.AddRange(tournamentItems);
+                        FilteredTournamentPlayerStatistic.AddRange(newTournamentItems);
+                    }
+
+                    if (oldItems != null)
+                    {
+                        var oldCashItems = oldItems.Where(x => !x.IsTourney).AsQueryable().Where(CashFilterPredicate).ToList();
+                        var oldTournamentItems = oldItems.Where(x => x.IsTourney).AsQueryable().Where(TournamentFilterPredicate).ToList();
+
+                        FilteredCashPlayerStatistic.RemoveRange(oldCashItems);
+                        FilteredTournamentPlayerStatistic.RemoveRange(oldTournamentItems);
                     }
 
                     break;
                 case NotifyCollectionChangedAction.Reset:
-                    UpdateFilteredStatistics();
-                    break;
-                case NotifyCollectionChangedAction.Remove:
                 case NotifyCollectionChangedAction.Replace:
                 case NotifyCollectionChangedAction.Move:
                 default:

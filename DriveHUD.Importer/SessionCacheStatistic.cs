@@ -37,6 +37,19 @@ namespace DriveHUD.Importers
             var clonePlayerData = new HudIndicators();
             clonePlayerData.AddIndicator(PlayerData);
 
+            // clone heat map
+            foreach (var heatMapKeyValue in clonePlayerData.HeatMaps)
+            {
+                if (!PlayerData.HeatMaps.ContainsKey(heatMapKeyValue.Key))
+                {
+                    continue;
+                }
+
+                var heatMapDto = PlayerData.HeatMaps[heatMapKeyValue.Key];
+
+                heatMapKeyValue.Value.OccuredByCardRange = new Dictionary<string, int>(heatMapDto.OccuredByCardRange);
+            }
+
             var clone = new SessionCacheStatistic
             {
                 IsHero = IsHero,

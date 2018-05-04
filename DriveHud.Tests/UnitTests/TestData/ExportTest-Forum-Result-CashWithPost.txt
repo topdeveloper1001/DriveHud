@@ -1,19 +1,22 @@
 Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software
 
-NL Holdem $1(BB)
+[U][B]NL Holdem $1(BB)[/B][/U]
 CO ($100)
-[color=red]HERO[/color] ($99.5)
-[color=red]SB[/color] ($102.36)
+[color=blue][B]HERO ($99.5)[/B][/color]
+[color=blue][B]SB ($102.36)[/B][/color]
 BB ($100.18)
 UTG ($64.64)
 MP ($103)
 HJ ($100)
 
-Dealt to Hero 4:club: A:club:
+[B]Dealt to Hero:[/B] 4:club: A:club:
 
-UTG Folds, MP Folds, HJ Folds, CO Checks, [color=red]HERO Raises To $4 (Rem. Stack: 95.5)[/color], [color=red]SB Raises To $15.5 (Rem. Stack: 86.86)[/color], BB Folds, CO Folds, [color=red]HERO Calls $11.5 (Rem. Stack: 84.0)[/color]
+[I]UTG Folds[/I], [I]MP Folds[/I], [I]HJ Folds[/I], [I]CO Checks[/I], [color=red]HERO Raises To $4[/color], [color=red]SB Raises To $15.50[/color], [I]BB Folds[/I], [I]CO Folds[/I], [color=red]HERO Calls $11.50[/color]
 
-Flop ($33.0) 4:heart: A:spade: K:heart:
-SB Bets $19.25 (Rem. Stack: 67.61), [color=red]HERO Raises To $84 (allin) (Rem. Stack: 0.0)[/color], SB Folds
+[I][B]Hero SPR on Flop: [2.55 effective][/B][/I]
+[B]Flop ($33.0):[/B] 4:heart: A:spade: K:heart:
+[I]SB Bets $19.25 (Rem. Stack: 67.61)[/I], [color=red]HERO Raises To $84 (allin)[/color], [I]SB Folds[/I]
 
-HERO wins $67.93
+[spoil]
+HERO wins: $67.93
+[/spoil]

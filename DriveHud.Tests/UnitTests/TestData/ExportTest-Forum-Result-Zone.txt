@@ -1,25 +1,28 @@
 Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software
 
-NL Holdem $0.10(BB)
+[U][B]NL Holdem $0.10(BB)[/B][/U]
 SB ($9.41)
 BB ($12.51)
-[color=red]UTG[/color] ($9.85)
-[color=red]HERO[/color] ($16.68)
+[color=blue][B]UTG ($9.85)[/B][/color]
+[color=blue][B]HERO ($16.68)[/B][/color]
 CO ($9.12)
 BTN ($12.61)
 
-Dealt to Hero T:diamond: T:club:
+[B]Dealt to Hero:[/B] T:diamond: T:club:
 
-[color=red]UTG Raises To $0.56 (Rem. Stack: 9.29)[/color], [color=red]HERO Calls $0.56 (Rem. Stack: 16.12)[/color], CO Folds, BTN Folds, SB Folds, BB Folds
+[color=red]UTG Raises To $0.56[/color], [color=red]HERO Calls $0.56[/color], [I]CO Folds[/I], [I]BTN Folds[/I], [I]SB Folds[/I], [I]BB Folds[/I]
 
-Flop ($1.27) 3:diamond: 3:club: Q:diamond:
-[color=red]UTG Bets $1.27 (Rem. Stack: 8.02)[/color], [color=red]HERO Calls $1.27 (Rem. Stack: 14.85)[/color]
+[I][B]Hero SPR on Flop: [7.31 effective][/B][/I]
+[B]Flop ($1.27):[/B] 3:diamond: 3:club: Q:diamond:
+[color=red]UTG Bets $1.27[/color] (Rem. Stack: 8.02), [color=red]HERO Calls $1.27[/color] (Rem. Stack: 14.85)
 
-Turn ($3.81) 3:diamond: 3:club: Q:diamond: 4:club:
-[color=red]UTG Bets $8.02 (allin) (Rem. Stack: 0.00)[/color], [color=red]HERO Calls $8.02 (Rem. Stack: 6.83)[/color]
+[B]Turn ($3.81):[/B] 3:diamond: 3:club: Q:diamond: 4:club:
+[color=red]UTG Bets $8.02 (allin)[/color], [color=red]HERO Calls $8.02[/color] (Rem. Stack: 6.83)
 
-River ($19.85) 3:diamond: 3:club: Q:diamond: 4:club: Q:club:
+[B]River ($19.85):[/B] 3:diamond: 3:club: Q:diamond: 4:club: Q:club:
 
-UTG shows J:diamond: 9:heart:
+[spoil]
+UTG shows: J:diamond: 9:heart:
 
-HERO wins $18.86
+HERO wins: $18.86
+[/spoil]

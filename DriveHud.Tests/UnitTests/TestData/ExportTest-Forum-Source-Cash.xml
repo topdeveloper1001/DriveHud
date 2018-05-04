@@ -1,0 +1,70 @@
+<session sessioncode="601703116598">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.1/$0.25</gametype>
+		<tablename>NL Hold’em: $0.10/$0.25 - 6 Seater #3675</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2018-03-15 09:59:58</startdate>
+		<currency>USD</currency>
+		<nickname>ChiTownMCA</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>0</buyin>
+		<totalbuyin>0</totalbuyin>
+		<win>0</win>
+		<maxplayers>6</maxplayers>
+	</general>
+	<game gamecode="283216019">
+		<general>
+			<startdate>2018-03-15 09:59:58</startdate>
+			<players>
+				<player seat="3" name="tscheids" chips="15.96" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="4" name="ChiTownMCA" chips="25" dealer="0" win="48.95" bet="25" rebuy="0" addon="0" />
+				<player seat="5" name="ClientEastw00d" chips="58.65" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="6" name="Sunny80" chips="68.93" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="1" name="punisher1127" chips="39.31" dealer="0" win="14.31" bet="39.31" rebuy="0" addon="0" />
+				<player seat="2" name="pommydad" chips="58.66" dealer="0" win="0" bet="0.95" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="punisher1127" type="1" sum="0.1" cards="" />
+			<action no="2" player="pommydad" type="2" sum="0.25" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="ChiTownMCA">DA HA</cards>
+			<cards type="Pocket" player="Sunny80">X X</cards>
+			<cards type="Pocket" player="punisher1127">H8 DQ</cards>
+			<cards type="Pocket" player="pommydad">X X</cards>
+			<action no="3" player="ChiTownMCA" type="23" sum="0.7" cards="" />
+			<action no="4" player="Sunny80" type="0" sum="0" cards="" />
+			<action no="5" player="punisher1127" type="3" sum="0.6" cards="" />
+			<action no="6" player="pommydad" type="3" sum="0.45" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D3 H4 C8</cards>
+			<action no="7" player="punisher1127" type="5" sum="0.25" cards="" />
+			<action no="8" player="pommydad" type="3" sum="0.25" cards="" />
+			<action no="9" player="ChiTownMCA" type="23" sum="2.25" cards="" />
+			<action no="10" player="punisher1127" type="3" sum="2" cards="" />
+			<action no="11" player="pommydad" type="0" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D4</cards>
+			<action no="12" player="punisher1127" type="4" sum="0" cards="" />
+			<action no="13" player="ChiTownMCA" type="5" sum="6.25" cards="" />
+			<action no="14" player="punisher1127" type="3" sum="6.25" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">CQ</cards>
+			<action no="15" player="punisher1127" type="5" sum="30.11" cards="" />
+			<action no="16" player="ChiTownMCA" type="3" sum="15.8" cards="" />
+		</round>
+	</game>
+</session>

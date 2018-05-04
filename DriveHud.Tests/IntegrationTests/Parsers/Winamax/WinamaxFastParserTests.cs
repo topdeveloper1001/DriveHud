@@ -367,20 +367,20 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
             Assert.That(handHistory.HandActions.Count(x => x.HandActionType == handActionType), Is.EqualTo(numberOfActions));
         }
 
-        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "StevenRex", -0.01, HandActionType.SMALL_BLIND, Street.Preflop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "aniktamama", -0.02, HandActionType.BIG_BLIND, Street.Preflop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "LATINO66", -0.02, HandActionType.CALL, Street.Preflop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "Skaann", -0.16, HandActionType.RAISE, Street.Flop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "Skaann", 3.59, HandActionType.WINS, Street.Summary, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll.txt", "CARDRICH", -20, HandActionType.ANTE, Street.Preflop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll.txt", "CARDRICH", -98, HandActionType.ALL_IN, Street.Preflop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll-Uncalled.txt", "DEBSON-DEB", -520, HandActionType.RAISE, Street.Preflop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll-Uncalled.txt", "DEBSON-DEB", 440, HandActionType.UNCALLED_BET, Street.Preflop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll-Uncalled.txt", "DEBSON-DEB", 480, HandActionType.WINS, Street.Summary, 1)]
-        public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "StevenRex", -0.01, HandActionType.SMALL_BLIND, Street.Preflop, false, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "aniktamama", -0.02, HandActionType.BIG_BLIND, Street.Preflop, false, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "LATINO66", -0.02, HandActionType.CALL, Street.Preflop, false, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "Skaann", -0.16, HandActionType.RAISE, Street.Flop, false, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-9-max-2NL.txt", "Skaann", 3.59, HandActionType.WINS, Street.Summary, false, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll.txt", "CARDRICH", -20, HandActionType.ANTE, Street.Preflop, false, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll.txt", "CARDRICH", -98, HandActionType.BIG_BLIND, Street.Preflop, true, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll-Uncalled.txt", "DEBSON-DEB", -520, HandActionType.RAISE, Street.Preflop, false, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll-Uncalled.txt", "DEBSON-DEB", 440, HandActionType.UNCALLED_BET, Street.Preflop, false, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Winamax\TestData\SingleHands\NLH-MTT-9-max-Freeroll-Uncalled.txt", "DEBSON-DEB", 480, HandActionType.WINS, Street.Summary, false, 1)]
+        public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, bool isAllIn, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
-            var actions = handHistory.HandActions.Where(x => x.Street == street && x.PlayerName.Equals(playerName) && x.HandActionType == handActionType && x.Amount == amount).ToArray();
+            var actions = handHistory.HandActions.Where(x => x.Street == street && x.PlayerName.Equals(playerName) && x.HandActionType == handActionType && x.Amount == amount && x.IsAllIn == isAllIn).ToArray();
 
             Assert.That(actions.Length, Is.EqualTo(numberOfActions));
         }

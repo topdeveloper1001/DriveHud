@@ -931,6 +931,11 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void OpenDataSave()
         {
+            if (CurrentLayout == null)
+            {
+                return;
+            }
+
             var hudSelectLayoutViewModelInfo = new HudSelectLayoutViewModelInfo
             {
                 LayoutName = CurrentLayout.Name,

@@ -1,0 +1,48 @@
+Winamax Poker - Tournament "Hold'em" buyIn: 4.50 + 0.50 level: 8 - HandId: #998632136007221249-56-1524663777 - Holdem no limit (20/80/160) - 2018/04/25 13:42:57 UTC
+Table: 'Hold'em(232512163)#000' 8-max (play money) Seat #8 is the button
+Seat 1: as x 4 (50)
+Seat 2: inelio (11507)
+Seat 4: MANEM (15619)
+Seat 5: reseul (8167)
+Seat 6: Peon84 (6082)
+Seat 7: lapiaz39 (5058)
+Seat 8: MR-BREWER (7281)
+*** ANTE/BLINDS ***
+as x 4 posts ante 20
+inelio posts ante 20
+MANEM posts ante 20
+reseul posts ante 20
+Peon84 posts ante 20
+lapiaz39 posts ante 20
+MR-BREWER posts ante 20
+as x 4 posts small blind 30 and is all-in
+inelio posts big blind 160
+Dealt to Peon84 [8s Qd]
+*** PRE-FLOP ***
+MANEM calls 160
+reseul folds
+Peon84 folds
+lapiaz39 folds
+MR-BREWER folds
+inelio checks
+*** FLOP *** [Td 2c 9c]
+inelio bets 160
+MANEM calls 160
+*** TURN *** [Td 2c 9c][7d]
+inelio bets 160
+MANEM calls 160
+*** RIVER *** [Td 2c 9c 7d][Ts]
+inelio bets 160
+MANEM raises 1450 to 1610
+inelio calls 1450
+*** SHOW DOWN ***
+as x 4 shows [Ah Js] (One pair : Tens)
+inelio shows [7c 3c] (Two pairs : Tens and 7)
+MANEM shows [9h 8c] (Two pairs : Tens and 9)
+MANEM collected 4350 from pot
+*** SUMMARY ***
+Total pot 4350 | No rake
+Board: [Td 2c 9c 7d Ts]
+Seat 1: as x 4 (small blind) showed [Ah Js] and lost with One pair : Tens
+Seat 2: inelio (big blind) showed [7c 3c] and lost with Two pairs : Tens and 7
+Seat 4: MANEM showed [9h 8c] and won 4350 with Two pairs : Tens and 9

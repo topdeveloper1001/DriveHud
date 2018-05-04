@@ -11,13 +11,13 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
-using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Extensions;
 using Model.Importer;
@@ -438,8 +438,6 @@ namespace Model
             stat.Calledthreebetpreflop = threeBet.Called ? 1 : 0;
             stat.Raisedthreebetpreflop = threeBet.Raised ? 1 : 0;
 
-
-
             stat.Totalhands = 1;
             stat.Totalcalls = call;
             stat.Totalbets = bet + raises;
@@ -504,6 +502,7 @@ namespace Model
             stat.FlopContinuationBetMonotonePotMade = flopCBet.Made && isMonotonePreflop ? 1 : 0;
             stat.FlopContinuationBetRagPotPossible = flopCBet.Possible && isRagPreflop ? 1 : 0;
             stat.FlopContinuationBetRagPotMade = flopCBet.Made && isRagPreflop ? 1 : 0;
+            stat.FlopCBetSuccess = flopCBet.Made && won && !wasTurn ? 1 : 0;
 
             if (pfrRaisers == 2)
             {
@@ -654,6 +653,7 @@ namespace Model
             stat.DidBluffedRiver = playedRiver && isBluffRiver ? 1 : 0;
 
             stat.DidCheckFlop = isCheckedFlop ? 1 : 0;
+            stat.DidCheckTurn = isCheckedTurn ? 1 : 0;
 
             stat.LimpPossible = limp.Possible ? 1 : 0;
             stat.LimpMade = limp.Made ? 1 : 0;
@@ -843,6 +843,9 @@ namespace Model
                 var playerActionOnRiverBet = GetPlayerActionOnBet(parsedHand.River, player, true, true);
                 var facedBetOnRiver = playerActionOnRiverBet != null;
 
+                stat.FacedBetOnRiver = facedBetOnRiver ? 1 : 0;
+                stat.RiverVsBetFold = facedBetOnRiver && playerActionOnRiverBet.IsFold ? 1 : 0;
+
                 if (playerHandActions.RiverAny(x => x.IsCheck))
                 {
                     stat.CheckedThenFacedBetOnRiver = facedBetOnRiver ? 1 : 0;
@@ -854,6 +857,8 @@ namespace Model
                 {
                     stat.RiverCallSizeOnFacingBet = Math.Abs(playerActionOnRiverBet.Amount);
 
+                    stat.TotalCallAmountOnRiver = Utils.ConvertToCents(Math.Abs(playerHandActions.RiverWhere(x => x.IsCall()).Sum(x => x.Amount)));
+
                     if (won)
                     {
                         var wonOnFacingBet = Math.Abs(parsedHand.HandActions.TakeWhile(x => x != playerActionOnRiverBet).Sum(x => x.Amount));
@@ -863,6 +868,11 @@ namespace Model
                             .TakeWhile(x => x.HandActionType == HandActionType.UNCALLED_BET).Sum(x => x.Amount);
 
                         stat.RiverWonOnFacingBet = wonOnFacingBet - uncalledBets;
+
+                        var rake = Utils.ConvertToCents(Math.Abs(parsedHand.HandActions.Sum(x => x.Amount)));
+
+                        stat.TotalWonAmountOnRiverCall = stat.Totalamountwonincents + rake +
+                            Utils.ConvertToCents(Math.Abs(playerHandActions.Where(x => x.Amount < 0).Sum(x => x.Amount))) - stat.TotalCallAmountOnRiver;
                     }
                 }
             }

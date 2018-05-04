@@ -1,24 +1,27 @@
 Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software
 
-NL Holdem $2(BB)
-[color=red]HERO[/color] ($100)
+[U][B]NL Holdem $2(BB)[/B][/U]
+[color=blue][B]HERO ($100)[/B][/color]
 SB ($100)
 BB ($100)
-[color=red]STRDL[/color] ($100)
+[color=blue][B]STRDL ($100)[/B][/color]
 
-Dealt to Hero K:diamond: 9:heart:
+[B]Dealt to Hero:[/B] K:diamond: 9:heart:
 
-[color=red]HERO Calls $4 (Rem. Stack: 96)[/color], SB Folds, BB Folds, STRDL Checks
+[color=red]HERO Calls $4[/color], [I]SB Folds[/I], [I]BB Folds[/I], STRDL Checks
 
-Flop ($11) 7:spade: Q:club: 7:heart:
+[I][B]Hero SPR on Flop: [8.73 effective][/B][/I]
+[B]Flop ($11):[/B] 7:spade: Q:club: 7:heart:
 STRDL Checks, HERO Checks
 
-Turn ($11) 7:spade: Q:club: 7:heart: 4:heart:
+[B]Turn ($11):[/B] 7:spade: Q:club: 7:heart: 4:heart:
 STRDL Checks, HERO Checks
 
-River ($11) 7:spade: Q:club: 7:heart: 4:heart: K:spade:
+[B]River ($11):[/B] 7:spade: Q:club: 7:heart: 4:heart: K:spade:
 STRDL Checks, HERO Checks
 
-STRDL shows A:heart: 5:heart:
+[spoil]
+STRDL shows: A:heart: 5:heart:
 
-HERO wins $11
+HERO wins: $11
+[/spoil]

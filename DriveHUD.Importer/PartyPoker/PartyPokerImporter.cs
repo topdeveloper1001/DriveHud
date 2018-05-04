@@ -1,20 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PartyPokerImporter.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
+using DriveHUD.Importers.Helpers;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
-using HandHistories.Parser.Utils.FastParsing;
-using Model.Settings;
-using DriveHUD.Importers.Helpers;
 using Microsoft.Practices.ServiceLocation;
-using DriveHUD.Common.Log;
-using DriveHUD.Common.Utils;
-using DriveHUD.Common.Linq;
+using Model.Settings;
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace DriveHUD.Importers.PartyPoker
 {
@@ -162,62 +171,76 @@ namespace DriveHUD.Importers.PartyPoker
 
         private void UpdatePlayerName(ParsingResult parsingResult, GameInfo gameInfo)
         {
-            if (parsingResult == null || parsingResult.Source == null || gameInfo == null || parsingResult.GameType == null || parsingResult.GameType.Istourney)
+            if (parsingResult == null || parsingResult.Source == null || gameInfo == null ||
+                parsingResult.GameType == null || parsingResult.GameType.Istourney || parsingResult.Source.GameDescription == null)
             {
                 return;
             }
 
-            var playersToUpdate = parsingResult.Source.Players.Where(x => x.PlayerName != parsingResult.Source.Hero?.PlayerName);
-            if (!playersToUpdate.All(x => x.PlayerName == $"Player{x.SeatNumber}"))
+            try
             {
-                return;
-            }
+                var tableSize = parsingResult.Source.GameDescription.SeatType.MaxPlayers;
 
-            if (!_playerNamesDictionary.ContainsKey(parsingResult.Source.TableName))
-            {
-                _playerNamesDictionary.Add(parsingResult.Source.TableName, new string[parsingResult.GameType.Tablesize]);
-            }
+                var playersToUpdate = parsingResult.Source.Players.Where(x => x.PlayerName != parsingResult.Source.Hero?.PlayerName);
 
-            var dictEntry = _playerNamesDictionary[parsingResult.Source.TableName];
-
-            for (int i = 0; i < parsingResult.GameType.Tablesize; i++)
-            {
-                if (i > dictEntry.Length)
+                if (!playersToUpdate.All(x => x.PlayerName == $"Player{x.SeatNumber}"))
                 {
-                    break;
+                    return;
                 }
 
-                var player = playersToUpdate.FirstOrDefault(x => x.SeatNumber == i + 1);
-                if (player == null)
+                if (!_playerNamesDictionary.ContainsKey(parsingResult.Source.TableName))
                 {
-                    dictEntry[i] = null;
-                    continue;
+                    _playerNamesDictionary.Add(parsingResult.Source.TableName, new string[tableSize]);
                 }
 
-                var currentName = dictEntry[i];
-                if (string.IsNullOrWhiteSpace(currentName))
-                {
-                    currentName = Utils.GenerateRandomPlayerName(player.SeatNumber);
-                    dictEntry[player.SeatNumber - 1] = currentName;
-                }
+                var dictEntry = _playerNamesDictionary[parsingResult.Source.TableName];
 
-                var originalPlayerName = $"Player{player.SeatNumber}";
-
-                foreach (var action in parsingResult.Source.HandActions)
+                for (int i = 0; i < tableSize; i++)
                 {
-                    if (action.PlayerName == originalPlayerName)
+                    if (i >= dictEntry.Length)
                     {
-                        action.PlayerName = currentName;
+                        break;
                     }
-                }
 
-                var dbPlayer = parsingResult.Players.FirstOrDefault(x => x.Playername == originalPlayerName);
-                if (dbPlayer != null)
-                {
-                    dbPlayer.Playername = currentName;
-                }
+                    var player = playersToUpdate.FirstOrDefault(x => x.SeatNumber == i + 1);
 
-                player.PlayerName = currentName;
+                    if (player == null)
+                    {
+                        dictEntry[i] = null;
+                        continue;
+                    }
+
+                    var currentName = dictEntry[i];
+
+                    if (string.IsNullOrWhiteSpace(currentName))
+                    {
+                        currentName = Utils.GenerateRandomPlayerName(player.SeatNumber);
+                        dictEntry[player.SeatNumber - 1] = currentName;
+                    }
+
+                    var originalPlayerName = $"Player{player.SeatNumber}";
+
+                    foreach (var action in parsingResult.Source.HandActions)
+                    {
+                        if (action.PlayerName == originalPlayerName)
+                        {
+                            action.PlayerName = currentName;
+                        }
+                    }
+
+                    var dbPlayer = parsingResult.Players.FirstOrDefault(x => x.Playername == originalPlayerName);
+
+                    if (dbPlayer != null)
+                    {
+                        dbPlayer.Playername = currentName;
+                    }
+
+                    player.PlayerName = currentName;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not update player names. [{SiteString}]", e);
             }
         }
     }

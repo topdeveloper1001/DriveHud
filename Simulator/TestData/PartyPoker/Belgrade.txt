@@ -1,0 +1,191 @@
+Game #17248434404 starts.
+
+#Game No : 17248434404 
+***** Hand History for Game 17248434404 *****
+$0.01/$0.02 USD NL Texas Hold'em - Monday, April 30, 15:59:58 MSK 2018
+Table Belgrade (Real Money)
+Seat 5 is the button
+Total number of players : 6/9 
+Seat 7: Peon84 ( $2 USD )
+Seat 1: Player1 ( $1.44 USD )
+Seat 2: Player2 ( $2 USD )
+Seat 5: Player5 ( $1.76 USD )
+Seat 6: Player6 ( $1.96 USD )
+Seat 9: Player9 ( $2.48 USD )
+Player6 posts small blind [$0.01 USD].
+Peon84 posts big blind [$0.02 USD].
+** Dealing down cards **
+Dealt to Peon84 [  Kd 2c ]
+Player9 folds
+Player1 calls [$0.02 USD]
+Player5 folds
+Player6 folds
+Peon84 checks
+** Dealing Flop ** [ 3c, 4d, Js ]
+Peon84 checks
+Player1 checks
+** Dealing Turn ** [ 8c ]
+Peon84 checks
+Player1 checks
+** Dealing River ** [ Ks ]
+Player3 has joined the table.
+Player8 has joined the table.
+Peon84 bets [$0.02 USD]
+Player1 calls [$0.02 USD]
+Peon84 shows [ Kd, 2c ]a pair of Kings.
+Player1 doesn't show [ 9s, 9d ]a pair of Nines.
+Peon84 wins $0.09 USD from the main pot with a pair of Kings.
+Game #17248435797 starts.
+
+#Game No : 17248435797 
+***** Hand History for Game 17248435797 *****
+$0.01/$0.02 USD NL Texas Hold'em - Monday, April 30, 16:00:40 MSK 2018
+Table Belgrade (Real Money)
+Seat 6 is the button
+Total number of players : 8/9 
+Seat 5: Player5 ( $1.76 USD )
+Seat 3: Player3 ( $1 USD )
+Seat 7: Peon84 ( $2.05 USD )
+Seat 2: Player2 ( $2 USD )
+Seat 8: Player8 ( $2 USD )
+Seat 1: Player1 ( $1.40 USD )
+Seat 6: Player6 ( $1.95 USD )
+Seat 9: Player9 ( $2.48 USD )
+Peon84 posts small blind [$0.01 USD].
+Player8 posts big blind [$0.02 USD].
+** Dealing down cards **
+Dealt to Peon84 [  6s Ts ]
+Player9 folds
+Player1 folds
+Player4 has joined the table.
+Player5 calls [$0.02 USD]
+Player6 folds
+Peon84 folds
+Player8 checks
+** Dealing Flop ** [ 9d, Ks, 5c ]
+Player8 checks
+Player5 checks
+** Dealing Turn ** [ 3d ]
+Player8 checks
+Player5 bets [$0.02 USD]
+Player8 calls [$0.02 USD]
+** Dealing River ** [ Td ]
+Player8 checks
+Player5 bets [$0.09 USD]
+Player8 folds
+Player5 does not show cards.
+Player5 wins $0.18 USD
+Game #17248438794 starts.
+
+#Game No : 17248438794 
+***** Hand History for Game 17248438794 *****
+$0.01/$0.02 USD NL Texas Hold'em - Monday, April 30, 16:01:50 MSK 2018
+Table Belgrade (Real Money)
+Seat 7 is the button
+Total number of players : 9/9 
+Seat 5: Player5 ( $1.81 USD )
+Seat 3: Player3 ( $1 USD )
+Seat 7: Peon84 ( $2.04 USD )
+Seat 2: Player2 ( $2 USD )
+Seat 8: Player8 ( $1.96 USD )
+Seat 1: Player1 ( $1.40 USD )
+Seat 6: Player6 ( $1.95 USD )
+Seat 4: Player4 ( $1 USD )
+Seat 9: Player9 ( $2.48 USD )
+Player8 posts small blind [$0.01 USD].
+Player9 posts big blind [$0.02 USD].
+** Dealing down cards **
+Dealt to Peon84 [  3h Td ]
+Player1 folds
+Player5 calls [$0.02 USD]
+Player2 has left the table.
+Player6 folds
+Peon84 folds
+Player8 folds
+Player9 checks
+** Dealing Flop ** [ 3d, 4d, Kc ]
+Player9 checks
+Player5 checks
+** Dealing Turn ** [ Jh ]
+Player9 checks
+Player5 checks
+** Dealing River ** [ Qd ]
+Player9 checks
+Player5 checks
+Player9 shows [ 3s, Ts ]a pair of Threes.
+Player5 doesn't show [ 7d, 5s ]high card King.
+Player9 wins $0.05 USD from the main pot with a pair of Threes.
+Game #17248441259 starts.
+
+#Game No : 17248441259 
+***** Hand History for Game 17248441259 *****
+$0.01/$0.02 USD NL Texas Hold'em - Monday, April 30, 16:02:51 MSK 2018
+Table Belgrade (Real Money)
+Seat 8 is the button
+Total number of players : 8/9 
+Seat 5: Player5 ( $1.79 USD )
+Seat 3: Player3 ( $1 USD )
+Seat 7: Peon84 ( $2.04 USD )
+Seat 8: Player8 ( $1.95 USD )
+Seat 1: Player1 ( $1.40 USD )
+Seat 6: Player6 ( $1.95 USD )
+Seat 4: Player4 ( $1 USD )
+Seat 9: Player9 ( $2.51 USD )
+Player9 posts small blind [$0.01 USD].
+Player1 posts big blind [$0.02 USD].
+** Dealing down cards **
+Dealt to Peon84 [  2c 2d ]
+Player5 folds
+Player6 folds
+Peon84 folds
+Player8 raises [$0.06 USD]
+Player9 folds
+Player1 folds
+Player8 does not show cards.
+Player8 wins $0.09 USD
+Game #17248443108 starts.
+
+#Game No : 17248443108 
+***** Hand History for Game 17248443108 *****
+$0.01/$0.02 USD NL Texas Hold'em - Monday, April 30, 16:03:20 MSK 2018
+Table Belgrade (Real Money)
+Seat 9 is the button
+Total number of players : 8/9 
+Seat 5: Player5 ( $1.79 USD )
+Seat 3: Player3 ( $1 USD )
+Seat 7: Peon84 ( $2.04 USD )
+Seat 8: Player8 ( $1.98 USD )
+Seat 1: Player1 ( $1.38 USD )
+Seat 6: Player6 ( $1.95 USD )
+Seat 4: Player4 ( $1 USD )
+Seat 9: Player9 ( $2.50 USD )
+Player1 posts small blind [$0.01 USD].
+Player3 posts big blind [$0.02 USD].
+** Dealing down cards **
+Dealt to Peon84 [  6d Ah ]
+Player5 calls [$0.02 USD]
+Player6 folds
+Peon84 folds
+Player8 folds
+Player9 folds
+Player1 will be using their time bank for this hand.
+Player1 calls [$0.01 USD]
+Player3 folds
+** Dealing Flop ** [ 2c, 3s, Tc ]
+Player1 checks
+Player5 checks
+** Dealing Turn ** [ 3h ]
+Player1 checks
+Player5 checks
+** Dealing River ** [ Jh ]
+Player1 checks
+Player5 checks
+Player1 shows [ Jd, 8s ]two pairs, Jacks and Threes.
+Player5 doesn't show [ 6s, 4s ]a pair of Threes.
+Player1 wins $0.06 USD from the main pot with two pairs, Jacks and Threes.
+
+Game #17248445918 starts.
+#Game No : 17248445918 
+Table Closed
+The hand history for this hand number is not available here.Please use Instant Hand History in the "Game Rules & Options"  menu to have this hand history delivered to the email address you have registered with us.
+

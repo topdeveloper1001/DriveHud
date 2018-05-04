@@ -102,7 +102,7 @@ namespace HandHistories.Parser.Utils
             {
                 if (action is AllInAction)
                 {
-                    HandActionType actionType = GetAllInActionType(action.PlayerName, action.Amount, action.Street, identifiedActions);
+                    var actionType = GetAllInActionType(action.PlayerName, action.Amount, action.Street, identifiedActions);
 
                     identifiedActions.Add(new AllInAction(action.PlayerName,
                         action.Amount,
@@ -133,31 +133,35 @@ namespace HandHistories.Parser.Utils
             {
                 var streetActions = actions.Street(street);
 
-                if (street != Street.Preflop && streetActions.FirstOrDefault(p => p.HandActionType == HandActionType.BET) == null)
+                if (street != Street.Preflop && 
+                    streetActions.FirstOrDefault(p => p.HandActionType == HandActionType.BET || 
+                        (p is AllInAction allInAction) && allInAction.SourceActionType == HandActionType.BET) == null)
                 {
                     return HandActionType.BET;
                 }
 
-                Dictionary<string, decimal> PutInPot = new Dictionary<string, decimal>();
+                var putInPot = new Dictionary<string, decimal>();
 
                 foreach (var action in streetActions)
                 {
-                    if (!PutInPot.ContainsKey(action.PlayerName))
+                    if (!putInPot.ContainsKey(action.PlayerName))
                     {
-                        PutInPot.Add(action.PlayerName, action.Amount);
+                        putInPot.Add(action.PlayerName, action.Amount);
                     }
                     else
                     {
-                        PutInPot[action.PlayerName] += action.Amount;
+                        putInPot[action.PlayerName] += action.Amount;
                     }
                 }
 
                 var contributed = Math.Abs(amount);
-                if (PutInPot.ContainsKey(playerName))
+
+                if (putInPot.ContainsKey(playerName))
                 {
-                    contributed += Math.Abs(PutInPot[playerName]);
+                    contributed += Math.Abs(putInPot[playerName]);
                 }
-                if (contributed <= Math.Abs(PutInPot.Min(p => p.Value)))
+
+                if (contributed <= Math.Abs(putInPot.Min(p => p.Value)))
                 {
                     return HandActionType.CALL;
                 }
@@ -167,8 +171,7 @@ namespace HandHistories.Parser.Utils
                 }
             }
             catch
-            {
-                System.Diagnostics.Debug.WriteLine("error");
+            {                
                 return HandActionType.BET;
             }
         }

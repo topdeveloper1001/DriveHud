@@ -92,7 +92,9 @@ namespace Simulator
             emulators = new ObservableCollection<IPokerEmulator>
             {
                 new PokerStarsEmulator(),
-                new BetOnlineEmulator()
+                new BetOnlineEmulator(),
+                new PartyPokerEmulator(),
+                new IgnitionEmulator()
             };
         }
 
@@ -113,7 +115,7 @@ namespace Simulator
         }
 
         #endregion
-        
+
         private async void SendHand()
         {
             var endpointAddress = "net.pipe://localhost/DriveHUD/Importer/ImportHandHistory";

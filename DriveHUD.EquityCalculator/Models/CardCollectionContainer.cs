@@ -15,6 +15,7 @@ namespace DriveHUD.EquityCalculator.Models
         #endregion
 
         #region Properties
+
         public IEnumerable<CardModel> Cards
         {
             get
@@ -90,8 +91,6 @@ namespace DriveHUD.EquityCalculator.Models
                 list.Add(new CardModel(RangeCardRank.None, RangeCardSuit.None));
             }
             return list;
-        }
-
-        
+        }        
     }
 }

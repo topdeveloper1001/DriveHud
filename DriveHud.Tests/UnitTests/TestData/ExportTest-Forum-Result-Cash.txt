@@ -1,0 +1,27 @@
+﻿Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software
+
+[U][B]NL Holdem $0.25(BB)[/B][/U]
+[color=blue][B]SB ($39.31)[/B][/color]
+[color=blue][B]BB ($58.66)[/B][/color]
+[color=blue][B]HERO ($25)[/B][/color]
+BTN ($68.93)
+
+[B]Dealt to Hero:[/B] A:diamond: A:heart:
+
+[color=red]HERO Raises To $0.70[/color], [I]BTN Folds[/I], [color=red]SB Calls $0.60[/color], [color=red]BB Calls $0.45[/color]
+
+[I][B]Hero SPR on Flop: [11.57 effective][/B][/I]
+[B]Flop ($2.10):[/B] 3:diamond: 4:heart: 8:club:
+[color=red]SB Bets $0.25[/color] (Rem. Stack: 38.36), [I]BB Calls $0.25 (Rem. Stack: 57.71)[/I], [color=red]HERO Raises To $2.25[/color] (Rem. Stack: 22.05), [color=red]SB Calls $2[/color] (Rem. Stack: 36.36), [I]BB Folds[/I]
+
+[B]Turn ($6.85):[/B] 3:diamond: 4:heart: 8:club: 4:diamond:
+SB Checks, [color=red]HERO Bets $6.25[/color] (Rem. Stack: 15.80), [color=red]SB Calls $6.25[/color] (Rem. Stack: 30.11)
+
+[B]River ($19.35):[/B] 3:diamond: 4:heart: 8:club: 4:diamond: Q:club:
+[color=red]SB Bets $30.11 (allin)[/color], [color=red]HERO Calls $15.80 (allin)[/color]
+
+[spoil]
+SB shows: 8:heart: Q:diamond:
+
+HERO wins: $48.95
+[/spoil]

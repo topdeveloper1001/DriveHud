@@ -1001,6 +1001,24 @@ namespace DriveHUD.Entities
         [ProtoMember(358)]
         public virtual int FacedBetOnFlop { get; set; }
 
+        [ProtoMember(359)]
+        public virtual int FacedBetOnRiver { get; set; }
+
+        [ProtoMember(360)]
+        public virtual int RiverVsBetFold { get; set; }
+
+        [ProtoMember(361)]
+        public virtual int FlopCBetSuccess { get; set; }
+
+        [ProtoMember(362)]
+        public virtual int DidCheckTurn { get; set; }
+
+        [ProtoMember(363)]
+        public virtual int TotalCallAmountOnRiver { get; set; }
+
+        [ProtoMember(364)]
+        public virtual int TotalWonAmountOnRiverCall { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1989,6 +2007,13 @@ namespace DriveHUD.Entities
 
             BetFlopWhenCheckedToSRP += a.BetFlopWhenCheckedToSRP;
             CouldBetFlopWhenCheckedToSRP += a.CouldBetFlopWhenCheckedToSRP;
+
+            FacedBetOnRiver += FacedBetOnRiver;
+            RiverVsBetFold += RiverVsBetFold;
+            FlopCBetSuccess += FlopCBetSuccess;
+            DidCheckTurn += DidCheckTurn;
+            TotalCallAmountOnRiver += TotalCallAmountOnRiver;
+            TotalWonAmountOnRiverCall += TotalWonAmountOnRiverCall;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -2410,6 +2435,13 @@ namespace DriveHUD.Entities
 
             r.BetFlopWhenCheckedToSRP = a.BetFlopWhenCheckedToSRP + b.BetFlopWhenCheckedToSRP;
             r.CouldBetFlopWhenCheckedToSRP = a.CouldBetFlopWhenCheckedToSRP + b.CouldBetFlopWhenCheckedToSRP;
+
+            r.FacedBetOnRiver = a.FacedBetOnRiver + b.FacedBetOnRiver;
+            r.RiverVsBetFold = a.RiverVsBetFold + b.RiverVsBetFold;
+            r.FlopCBetSuccess = a.FlopCBetSuccess + b.FlopCBetSuccess;
+            r.DidCheckTurn = a.DidCheckTurn + b.DidCheckTurn;
+            r.TotalCallAmountOnRiver = a.TotalCallAmountOnRiver + b.TotalCallAmountOnRiver;
+            r.TotalWonAmountOnRiverCall = a.TotalWonAmountOnRiverCall + b.TotalWonAmountOnRiverCall;
 
             return r;
         }
