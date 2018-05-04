@@ -496,7 +496,7 @@ namespace Model.Importer
                 case HandActionType.WINS_SIDE_POT:
                 case HandActionType.WINS_THE_LOW:
                 case HandActionType.WINS_TOURNAMENT:
-                    return "Wins";
+                    return "Wins";              
             }
 
             return null;
