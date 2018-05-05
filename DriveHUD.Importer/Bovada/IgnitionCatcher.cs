@@ -36,7 +36,21 @@ namespace DriveHUD.Importers.Bovada
         /// <summary>
         /// Class of window in which dll will be injected
         /// </summary>
-        private const string windowClassName = "Chrome_WidgetWin_1";
+        private const string windowClassName = "Chrome_WidgetWin";
+
+        /// <summary>
+        /// Pattern to check title
+        /// </summary>
+        private static readonly string[] titleMatchPatterns = new[]
+        {
+            "Ignition Casino",
+            "Bodog.eu",
+            "Bovada.lv",
+            "- Poker Lobby",
+            "- 扑克大厅",
+            "- Lobby de Poker",
+            "- Lobby do Poker"
+        };
 
         #region PokerCatcher members
 
@@ -78,6 +92,13 @@ namespace DriveHUD.Importers.Bovada
             {
                 return new[] { ImporterIdentifier.Ignition, ImporterIdentifier.IgnitionInfo };
             }
+        }
+
+        protected override bool IsWindowMatch(string windowTitle, string windowClassName)
+        {
+            return windowClassName.IndexOf(WindowClassName, StringComparison.OrdinalIgnoreCase) >= 0 &&
+                !string.IsNullOrEmpty(windowTitle) &&
+                titleMatchPatterns.Any(titlePattern => windowTitle.IndexOf(titlePattern, StringComparison.OrdinalIgnoreCase) >= 0);
         }
 
         protected override bool IsEnabled()
