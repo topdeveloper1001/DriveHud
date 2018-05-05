@@ -46,6 +46,7 @@ namespace DriveHUD.Importers.Bovada
             "Ignition Casino",
             "Bodog.eu",
             "Bovada.lv",
+            "Bodog",
             "- Poker Lobby",
             "- 扑克大厅",
             "- Lobby de Poker",
