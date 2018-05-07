@@ -222,15 +222,26 @@ namespace DriveHUD.Importers
             var windowTitle = WinApi.GetWindowText(hWnd);
             var windowClassName = sb.ToString();
 
-            LogProvider.Log.Info($"Check if the window [{windowTitle},{windowClassName}] of process matches {WindowClassName} [{Identifier}]");
+            LogProvider.Log.Info($"Check if the window [{windowTitle}, {windowClassName}] of process matches {WindowClassName} [{Identifier}]");
 
-            if (windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase))
+            if (IsWindowMatch(windowTitle, windowClassName))
             {
                 LogProvider.Log.Info($"Found the process with window = [{windowTitle}, {windowClassName}] [{Identifier}]");
                 return true;
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Checks whenever window matches conditions
+        /// </summary>
+        /// <param name="windowTitle"></param>
+        /// <param name="windowClassName"></param>
+        /// <returns></returns>
+        protected virtual bool IsWindowMatch(string windowTitle, string windowClassName)
+        {
+            return windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase);
         }
 
         /// <summary>

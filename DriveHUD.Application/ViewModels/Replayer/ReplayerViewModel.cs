@@ -100,10 +100,9 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void Update()
         {
-
-
             TableStateList.Clear();
             SetPlayersDefaults();
+
             TotalPotChipsContainer = new ReplayerChipsContainer();
             CommunityCards = new List<ReplayerCardViewModel>();
 
@@ -111,6 +110,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             {
                 return;
             }
+
             SetCommunityCards(CurrentGame.CommunityCards);
 
             decimal anteAmount = Math.Abs(CurrentGame.HandActions.Where(x => x.HandActionType == HandActionType.ANTE).Sum(x => x.Amount));
@@ -127,8 +127,10 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 ReplayerTableState state = new ReplayerTableState();
 
                 ReplayerTableState lastAction = TableStateList.LastOrDefault();
+
                 if (lastAction != null && lastAction.CurrentStreet != action.Street && action.Street >= Street.Flop && action.Street <= Street.River)
-                {                //if we are inside this "if" we create an extra state between two actions
+                {                
+                    // if we are inside this "if" we create an extra state between two actions
                     totalPotValue = currentPotValue;
                     state.TotalPotValue = totalPotValue;
                     state.CurrentPotValue = currentPotValue;
@@ -136,11 +138,12 @@ namespace DriveHUD.Application.ViewModels.Replayer
                     state.IsStreetChangedAction = true;
                     state.ActivePlayer = new ReplayerPlayerViewModel();
                     state.CurrentStreet = action.Street;
-                    TableStateList.Add(state);  //added new state between actions like flop/river
+                    TableStateList.Add(state);  // added new state between actions like flop/river
                     state.CurrentAction = action;
 
                     state = new ReplayerTableState();
                 }
+
                 state.CurrentAction = action;
                 state.ActionAmount = action.Amount;
                 state.CurrentStreet = action.Street;
@@ -185,8 +188,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private static bool IsSkipAction(HandAction action)
         {
             return action.HandActionType == HandActionType.SHOW
-                || action.HandActionType == HandActionType.SHOWS_FOR_LOW
-                || action.HandActionType == HandActionType.UNCALLED_BET
+                || action.HandActionType == HandActionType.SHOWS_FOR_LOW              
                 || action.HandActionType == HandActionType.UNKNOWN;
         }
 
@@ -231,6 +233,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 PlayersCollection[i].Bank = player.StartingStack;
 
                 var anteAction = CurrentGame.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.ANTE && x.PlayerName == player.PlayerName);
+
                 if (anteAction != null)
                 {
                     PlayersCollection[i].Bank -= Math.Abs(anteAction.Amount);

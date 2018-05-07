@@ -25,13 +25,13 @@ namespace DriveHUD.Application.ViewModels.Replayer
             if (IsWinAction(action))
             {
                 ActivePlayer.IsWin = true;
-                ActivePlayer.ActiveAmount = Math.Abs(action.Amount);
-                ActivePlayer.Bank += Math.Abs(action.Amount);
+                ActivePlayer.ActiveAmount = action.Amount;
+                ActivePlayer.Bank += action.Amount;
             }
             else
             {
-                ActivePlayer.ActiveAmount += Math.Abs(action.Amount);
-                ActivePlayer.Bank -= Math.Abs(action.Amount);
+                ActivePlayer.ActiveAmount -= action.Amount;
+                ActivePlayer.Bank += action.Amount;
             }
 
             if (action.HandActionType == HandActionType.FOLD)
