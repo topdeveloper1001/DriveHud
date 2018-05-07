@@ -1,26 +1,35 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
-using DriveHUD.EquityCalculator.Models;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System;
-using System.Collections.Generic;
-using System.Windows.Input;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PreflopSelectorViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
+using Model.Enums;
+using Model.LocalCalculator;
+using Model.Notifications;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
-using System.Diagnostics;
-using DriveHUD.Common.Linq;
-using System.Text;
-using Model.LocalCalculator;
-using DriveHUD.ViewModels;
-using Model.Enums;
-using Model.Notifications;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows.Input;
 
 namespace DriveHUD.EquityCalculator.ViewModels
 {
     public class PreflopSelectorViewModel : BaseViewModel, IInteractionRequestAware
     {
         #region Fields
+
         private CardSelectorNotification _notification;
         private RangeSelectorItemViewModel _selectedItem = new RangeSelectorItemViewModel();
         private ObservableCollection<RangeSelectorItemViewModel> _preflopSelectorItems = new ObservableCollection<RangeSelectorItemViewModel>();
@@ -30,9 +39,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private bool _isSliderManualMove = true;
         private double _selectedPercentage = 0;
         private PreflopRange _preflopRange = new PreflopRange();
+
         #endregion
 
         #region Properties
+
         public InteractionRequest<PreDefinedRangesNotifcation> PreDefinedRangesRequest { get; private set; }
 
         public INotification Notification
@@ -68,7 +79,6 @@ namespace DriveHUD.EquityCalculator.ViewModels
         public Action FinishInteraction
         {
             get;
-
             set;
         }
 
@@ -78,19 +88,21 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 return _preflopSelectorItems;
             }
-
             set
             {
-                _preflopSelectorItems = value;
+                SetProperty(ref _preflopSelectorItems, value);
             }
         }
 
         public List<RangeSelectorItemViewModel> TemporaryPreflopSelectorItems
         {
-            get { return _temporaryPreflopSelectorItems; }
+            get
+            {
+                return _temporaryPreflopSelectorItems;
+            }
             set
             {
-                _temporaryPreflopSelectorItems = value;
+                SetProperty(ref _temporaryPreflopSelectorItems, value);
             }
         }
 
@@ -108,6 +120,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     _selectedItem.IsMainInSequence = false;
                     _selectedItem.HandUpdate();
                 }
+
                 SetProperty(ref _selectedItem, value);
             }
         }
@@ -151,6 +164,26 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             get { return _selectedPercentage; }
             set { SetProperty(ref _selectedPercentage, value); }
+        }
+
+        private EquitySelectionMode? equitySelectionMode;
+
+        public EquitySelectionMode? EquitySelectionMode
+        {
+            get
+            {
+                return equitySelectionMode;
+            }
+            set
+            {
+                if (value.HasValue && value.Value == equitySelectionMode)
+                {
+                    EquitySelectionMode = null;
+                    return;
+                }
+
+                SetProperty(ref equitySelectionMode, value);
+            }
         }
 
         #endregion
@@ -201,9 +234,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private void InitPreflopSelectorItems()
         {
             var rankValues = Enum.GetValues(typeof(RangeCardRank)).Cast<RangeCardRank>().Where(x => x != RangeCardRank.None).Reverse();
+
             for (int i = 0; i < rankValues.Count(); i++)
             {
                 bool startS = false;
+
                 for (int j = 0; j < rankValues.Count(); j++)
                 {
                     RangeCardRank card1 = i < j ? rankValues.ElementAt(i) : rankValues.ElementAt(j);
@@ -275,8 +310,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 model.IsSelected = !model.IsSelected;
                 if (SelectedItem != null && SelectedItem.IsMainInSequence)
                 {
-                    if (this.TemporaryPreflopSelectorItems != null
-                        && this.TemporaryPreflopSelectorItems.Count() > 0)
+                    if (TemporaryPreflopSelectorItems != null
+                        && TemporaryPreflopSelectorItems.Count() > 0)
                     {
                         foreach (var item in this.TemporaryPreflopSelectorItems)
                         {
@@ -404,19 +439,19 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 int firstCardIndex = length - (int)item.FisrtCard - 1;
                 int secondCardIndex = length - (int)item.SecondCard - 1;
 
-                this.TemporaryPreflopSelectorItems = new List<RangeSelectorItemViewModel>();
+                TemporaryPreflopSelectorItems = new List<RangeSelectorItemViewModel>();
 
                 for (int i = 0; i < length; i++)
                 {
                     if (item.ItemType.Equals(RangeSelectorItemType.Suited))
                     {
-                        this.TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * length + secondCardIndex));
-                        this.TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(firstCardIndex * length + i));
+                        TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * length + secondCardIndex));
+                        TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(firstCardIndex * length + i));
                     }
                     else
                     {
-                        this.TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * length + firstCardIndex));
-                        this.TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(secondCardIndex * length + i));
+                        TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * length + firstCardIndex));
+                        TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(secondCardIndex * length + i));
                     }
                 }
 
@@ -426,8 +461,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     x.HandUpdateAndRefresh();
                 });
 
-                this.SelectedItem = item;
-                this.SelectedItem.IsMainInSequence = true;
+                SelectedItem = item;
+                SelectedItem.IsMainInSequence = true;
                 HandSuitsViewModel.SetAllVisible(this.SelectedItem.HandSuitsModelList);
                 SuitsForCaption = string.Join(",", this.TemporaryPreflopSelectorItems.Select(x => x.Caption));
             }
@@ -442,7 +477,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 int length = GetRanksLength();
                 int firstCardIndex = length - (int)item.FisrtCard - 1;
 
-                this.TemporaryPreflopSelectorItems = new List<RangeSelectorItemViewModel>();
+                TemporaryPreflopSelectorItems = new List<RangeSelectorItemViewModel>();
 
                 int i = item.ItemType.Equals(RangeSelectorItemType.Pair) ? 0 : firstCardIndex + 1;
 
@@ -451,23 +486,23 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     switch (item.ItemType)
                     {
                         case RangeSelectorItemType.Suited:
-                            this.TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(firstCardIndex * length + i));
+                            TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(firstCardIndex * length + i));
                             break;
                         case RangeSelectorItemType.OffSuited:
-                            this.TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * length + firstCardIndex));
+                            TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * length + firstCardIndex));
                             break;
                         case RangeSelectorItemType.Pair:
-                            this.TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * length + i));
+                            TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * length + i));
                             break;
                     }
-                    if (this.TemporaryPreflopSelectorItems.LastOrDefault() != null)
+                    if (TemporaryPreflopSelectorItems.LastOrDefault() != null)
                     {
-                        if (this.TemporaryPreflopSelectorItems.LastOrDefault() == item)
+                        if (TemporaryPreflopSelectorItems.LastOrDefault() == item)
                             break;
                     }
                 }
 
-                this.TemporaryPreflopSelectorItems.ForEach(x =>
+                TemporaryPreflopSelectorItems.ForEach(x =>
                 {
                     x.IsSelected = true;
                     x.HandUpdateAndRefresh();
@@ -508,8 +543,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 SelectedItem = new RangeSelectorItemViewModel();
             }
 
-            this._notification.CardsContainer.Ranges = new List<RangeSelectorItemViewModel>(PreflopSelectorItems.Where(x => x.IsSelected));
-            this.FinishInteraction();
+            _notification.CardsContainer.Ranges = new List<RangeSelectorItemViewModel>(PreflopSelectorItems.Where(x => x.IsSelected));
+            FinishInteraction();
         }
 
         #endregion

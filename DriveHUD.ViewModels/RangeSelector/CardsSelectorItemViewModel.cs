@@ -4,9 +4,6 @@ using Model.Notifications;
 using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DriveHUD.ViewModels
@@ -14,6 +11,7 @@ namespace DriveHUD.ViewModels
     public class RangeSelectorItemViewModel : BaseViewModel
     {
         #region  Fields
+
         private RangeCardRank _fisrtCard = RangeCardRank.None;
         private RangeCardRank _secondCard = RangeCardRank.None;
         private RangeSelectorItemType _itemType;
@@ -22,9 +20,11 @@ namespace DriveHUD.ViewModels
         private bool _isMainInSequence = false;
         private int _likelihoodPercent = (int)Likelihood.None;
         private IEnumerable<HandSuitsViewModel> _handSuitsModelList = HandSuitsViewModel.GetHandSuitsList();
+
         #endregion
 
         #region Properties
+
         public InteractionRequest<CustomLikelihoodNotification> CustomLikelihoodRequest { get; private set; }
 
         public string Caption
@@ -44,7 +44,6 @@ namespace DriveHUD.ViewModels
             {
                 return _isSelected;
             }
-
             set
             {
                 if (value != _isSelected)
@@ -58,6 +57,7 @@ namespace DriveHUD.ViewModels
                         LikelihoodPercent = (int)Likelihood.None;
                     }
                 }
+
                 SetProperty(ref _isSelected, value);
             }
         }
@@ -68,7 +68,6 @@ namespace DriveHUD.ViewModels
             {
                 return _likelihoodPercent;
             }
-
             set
             {
                 SetProperty(ref _likelihoodPercent, value);
@@ -81,7 +80,6 @@ namespace DriveHUD.ViewModels
             {
                 return _itemType;
             }
-
             set
             {
                 _itemType = value;
@@ -94,7 +92,6 @@ namespace DriveHUD.ViewModels
             {
                 return _fisrtCard;
             }
-
             set
             {
                 _fisrtCard = value;
@@ -134,7 +131,9 @@ namespace DriveHUD.ViewModels
         #endregion
 
         #region ICommand
+
         public ICommand SelectLikelihoodCommand { get; set; }
+
         #endregion
 
         public RangeSelectorItemViewModel() : this(RangeCardRank.None, RangeCardRank.None)
@@ -149,9 +148,9 @@ namespace DriveHUD.ViewModels
 
         public RangeSelectorItemViewModel(RangeCardRank firstCard, RangeCardRank secondCard, RangeSelectorItemType itemType)
         {
-            this.FisrtCard = firstCard;
-            this.SecondCard = secondCard;
-            this.ItemType = itemType;
+            FisrtCard = firstCard;
+            SecondCard = secondCard;
+            ItemType = itemType;
 
             Init();
         }
@@ -160,7 +159,7 @@ namespace DriveHUD.ViewModels
         {
             SelectLikelihoodCommand = new RelayCommand(SelectLikelihood);
 
-            this.CustomLikelihoodRequest = new InteractionRequest<CustomLikelihoodNotification>();
+            CustomLikelihoodRequest = new InteractionRequest<CustomLikelihoodNotification>();
         }
 
         public void HandUpdate()
@@ -199,13 +198,16 @@ namespace DriveHUD.ViewModels
         {
             if (!string.IsNullOrEmpty(s) && s.Length >= 2)
             {
-                RangeSelectorItemViewModel model = new RangeSelectorItemViewModel(new RangeCardRank().StringToRank(s[0].ToString()), new RangeCardRank().StringToRank(s[1].ToString()));
+                var model = new RangeSelectorItemViewModel(new RangeCardRank().StringToRank(s[0].ToString()), new RangeCardRank().StringToRank(s[1].ToString()));
+
                 if (s.Length == 3)
                 {
                     model.ItemType = new RangeSelectorItemType().StringToRangeItemType(s[2].ToString());
                 }
+
                 return model;
             }
+
             return null;
         }
 
@@ -214,10 +216,12 @@ namespace DriveHUD.ViewModels
             if (obj is RangeSelectorItemViewModel)
             {
                 var o = obj as RangeSelectorItemViewModel;
+
                 return o.FisrtCard == this.FisrtCard
                     && o.SecondCard == this.SecondCard
                     && o.ItemType == this.ItemType;
             }
+
             return false;
         }
 
@@ -227,6 +231,7 @@ namespace DriveHUD.ViewModels
         }
 
         #region ICommand implementation
+
         private void SelectLikelihood(object obj)
         {
             if (obj != null)
@@ -258,6 +263,7 @@ namespace DriveHUD.ViewModels
 
             }
         }
+
         #endregion
     }
 }
