@@ -737,11 +737,56 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bluff: {0} ({1:P0}).
+        /// </summary>
+        internal static string Common_EquityCalculator_BluffCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_BluffCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call: {0} ({1:P0}).
+        /// </summary>
+        internal static string Common_EquityCalculator_CallCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_CallCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Combos: {0}.
         /// </summary>
         internal static string Common_EquityCalculator_Combos {
             get {
                 return ResourceManager.GetString("Common_EquityCalculator_Combos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold or Check: {0} ({1:P0}).
+        /// </summary>
+        internal static string Common_EquityCalculator_FoldCheckCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_FoldCheckCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Combos: {0}.
+        /// </summary>
+        internal static string Common_EquityCalculator_TotalCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_TotalCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value Bet: {0} ({1:P0}).
+        /// </summary>
+        internal static string Common_EquityCalculator_ValueBetCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_ValueBetCombos", resourceCulture);
             }
         }
         

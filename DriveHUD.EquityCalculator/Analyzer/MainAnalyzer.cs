@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.ViewModels;
+using DriveHUD.EquityCalculator.ViewModels;
 using Model.Enums;
 using System;
 using System.Collections;
@@ -23,10 +23,10 @@ namespace DriveHUD.EquityCalculator.Analyzer
     {
         private static bool init = true;
 
-        internal static void GetStrongestOpponent(HandHistories.Objects.Hand.HandHistory currentHandHistory, HandHistories.Objects.Cards.Street currentStreet, out string strongestOpponentName, out IEnumerable<RangeSelectorItemViewModel> strongestOpponentHands)
+        internal static void GetStrongestOpponent(HandHistories.Objects.Hand.HandHistory currentHandHistory, HandHistories.Objects.Cards.Street currentStreet, out string strongestOpponentName, out IEnumerable<EquityRangeSelectorItemViewModel> strongestOpponentHands)
         {
             strongestOpponentName = null;
-            strongestOpponentHands = new List<RangeSelectorItemViewModel>();
+            strongestOpponentHands = new List<EquityRangeSelectorItemViewModel>();
 
             if (init)
             {
@@ -35,6 +35,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 Card.Init();
                 init = false;
             }
+
             HandAnalyzer handAnalyzer = new HandAnalyzer();
             HandHistory handHistory = new HandHistory();
             handHistory.ConverToEquityCalculatorFormat(currentHandHistory, currentStreet);
@@ -42,11 +43,13 @@ namespace DriveHUD.EquityCalculator.Analyzer
             Hashtable hand_range = handAnalyzer.PreflopAnalysis(handHistory);
 
             Hashtable hand_collective = new Hashtable();
+
             foreach (String key in hand_range.Keys)
             {
                 hand_collective.Add(key, new hand_distribution());
                 (hand_collective[key] as hand_distribution).hand_range = (float)Convert.ToDouble(hand_range[key]);
             }
+
             hand_collective = handAnalyzer.PostflopAnalysis(handHistory, 1, hand_collective); // Flop
             hand_collective = handAnalyzer.PostflopAnalysis(handHistory, 2, hand_collective);	// Turn
             hand_collective = handAnalyzer.PostflopAnalysis(handHistory, 3, hand_collective);	// River
@@ -55,20 +58,20 @@ namespace DriveHUD.EquityCalculator.Analyzer
             strongestOpponentName = handAnalyzer.StrongestOpponentName;
         }
 
-        private static IEnumerable<RangeSelectorItemViewModel> GroupHands(List<String> ungroupedHands)
+        private static IEnumerable<EquityRangeSelectorItemViewModel> GroupHands(List<String> ungroupedHands)
         {
             List<String> cards = new List<String>(new String[] { "A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2" });
+
             //CHANGE 6s7h to 76o
-            List<RangeSelectorItemViewModel> list = new List<RangeSelectorItemViewModel>();
+            var list = new List<EquityRangeSelectorItemViewModel>();
+
             foreach (String hand in ungroupedHands)
             {
-                String card1 = cards.IndexOf(hand[0].ToString()) < cards.IndexOf(hand[2].ToString()) ? hand[0].ToString() : hand[2].ToString();
-                String card2 = cards.IndexOf(hand[0].ToString()) < cards.IndexOf(hand[2].ToString()) ? hand[2].ToString() : hand[0].ToString();
-                String suit = hand[0].Equals(hand[2]) ? "" : hand[1].Equals(hand[3]) ? "s" : "o";
+                var card1 = cards.IndexOf(hand[0].ToString()) < cards.IndexOf(hand[2].ToString()) ? hand[0].ToString() : hand[2].ToString();
+                var card2 = cards.IndexOf(hand[0].ToString()) < cards.IndexOf(hand[2].ToString()) ? hand[2].ToString() : hand[0].ToString();
+                var suit = hand[0].Equals(hand[2]) ? "" : hand[1].Equals(hand[3]) ? "s" : "o";
 
-
-
-                list.Add(new RangeSelectorItemViewModel()
+                list.Add(new EquityRangeSelectorItemViewModel()
                 {
                     ItemLikelihood = Likelihood.Definitely,
                     LikelihoodPercent = (int)(Likelihood.Definitely),
@@ -77,14 +80,11 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     ItemType = new RangeSelectorItemType().StringToRangeItemType(suit),
                     IsSelected = true
                 });
-
-                
             }
+
             list.ForEach(x => x.HandUpdateAndRefresh());
 
             return list.Distinct();
         }
-
-
     }
 }

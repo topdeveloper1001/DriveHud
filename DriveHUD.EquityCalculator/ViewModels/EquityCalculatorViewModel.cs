@@ -349,9 +349,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             PlayersList.Clear();
             var players = CurrentGame.Players;
+
             for (int i = 0; i < players.Count(); i++)
             {
                 List<CardModel> list = new List<CardModel>();
+
                 if (players.ElementAt(i).hasHoleCards)
                 {
                     foreach (var card in players.ElementAt(i).HoleCards)
@@ -363,6 +365,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                         });
                     }
                 }
+
                 if (i > PlayersList.Count() - 1)
                 {
                     PlayersList.Add(new PlayerModel());
@@ -406,7 +409,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             try
             {
-                IEnumerable<RangeSelectorItemViewModel> oponnentHands = new List<RangeSelectorItemViewModel>();
+                IEnumerable<EquityRangeSelectorItemViewModel> oponnentHands = new List<EquityRangeSelectorItemViewModel>();
 
                 var opponentName = string.Empty;
 
@@ -430,9 +433,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
             return string.Empty;
         }
+
         #endregion
 
         #region Popups
+
         private void RaiseCardSelectorView(ICardCollectionContainer container, CardSelectorType selectorType)
         {
             IsCalculateEquityError = false;

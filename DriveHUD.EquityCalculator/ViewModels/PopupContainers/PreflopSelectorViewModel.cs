@@ -62,7 +62,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
                     if (_notification.CardsContainer.Ranges != null)
                     {
-                        foreach (var item in _notification.CardsContainer.Ranges)
+                        foreach (EquityRangeSelectorItemViewModel item in _notification.CardsContainer.Ranges)
                         {
                             var current = PreflopSelectorItems.FirstOrDefault(x => x.Caption == item.Caption);
 
@@ -72,10 +72,14 @@ namespace DriveHUD.EquityCalculator.ViewModels
                                 current.HandSuitsModelList = new List<HandSuitsViewModel>(item.HandSuitsModelList);
                                 current.ItemLikelihood = item.ItemLikelihood;
                                 current.LikelihoodPercent = item.LikelihoodPercent;
+                                current.EquitySelectionMode = item.EquitySelectionMode;
+                                current.Combos = item.Combos;
                             }
                         }
                     }
                 }
+
+                InitializePreflopSelectorItemsTracking();
             }
         }
 
@@ -357,13 +361,19 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     }
                 }
             }
+        }
 
+        private void InitializePreflopSelectorItemsTracking()
+        {
             PreflopSelectorItems.ChangeTrackingEnabled = true;
             PreflopSelectorItems.ItemChanged.Subscribe(x =>
             {
                 if (x.PropertyName == nameof(RangeSelectorItemViewModel.IsSelected))
                 {
                     x.Sender.EquitySelectionMode = x.Sender.IsSelected ? EquitySelectionMode : null;
+                }
+                else if (x.PropertyName == nameof(EquityRangeSelectorItemViewModel.EquitySelectionMode))
+                {
                     CalculateRangeItemCombox(x.Sender);
                     CombosRaisePropertyChanged();
                 }

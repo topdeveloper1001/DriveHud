@@ -1,4 +1,5 @@
 ﻿using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.EquityCalculator.ViewModels;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
@@ -27,6 +28,7 @@ namespace DriveHUD.EquityCalculator.Models
         #endregion
 
         #region Properties
+
         public override int ContainerSize
         {
             get
@@ -55,7 +57,7 @@ namespace DriveHUD.EquityCalculator.Models
             }
             set
             {
-                playerCards = value;
+                SetProperty(ref playerCards, value);
             }
         }
 
@@ -79,7 +81,7 @@ namespace DriveHUD.EquityCalculator.Models
             }
             set
             {
-                tiePrct = value;
+                SetProperty(ref tiePrct, value);
             }
         }
 
@@ -89,12 +91,152 @@ namespace DriveHUD.EquityCalculator.Models
             {
                 return winPrct;
             }
-
             set
             {
-                winPrct = value;
+                SetProperty(ref winPrct, value);
             }
         }
+
+        private int totalCombos;
+
+        public int TotalCombos
+        {
+            get
+            {
+                return totalCombos;
+            }
+            set
+            {
+                SetProperty(ref totalCombos, value);
+            }
+        }
+
+        private bool isTotalCombosVisible = true;
+
+        public bool IsTotalCombosVisible
+        {
+            get
+            {
+                return isTotalCombosVisible;
+            }
+            private set
+            {
+                SetProperty(ref isTotalCombosVisible, value);
+            }
+        }
+
+        private int foldCheckCombos;
+
+        public int FoldCheckCombos
+        {
+            get
+            {
+                return foldCheckCombos;
+            }
+            set
+            {
+                SetProperty(ref foldCheckCombos, value);
+            }
+        }
+
+        private decimal foldCheckPercentage;
+
+        public decimal FoldCheckPercentage
+        {
+            get
+            {
+                return foldCheckPercentage;
+            }
+            set
+            {
+                SetProperty(ref foldCheckPercentage, value);
+            }
+        }
+
+        private int callCombos;
+
+        public int CallCombos
+        {
+            get
+            {
+                return callCombos;
+            }
+            set
+            {
+                SetProperty(ref callCombos, value);
+            }
+        }
+
+        private decimal callPercentage;
+
+        public decimal CallPercentage
+        {
+            get
+            {
+                return callPercentage;
+            }
+            set
+            {
+                SetProperty(ref callPercentage, value);
+            }
+        }
+
+        private int bluffCombos;
+
+        public int BluffCombos
+        {
+            get
+            {
+                return bluffCombos;
+            }
+            set
+            {
+                SetProperty(ref bluffCombos, value);
+            }
+        }
+
+        private decimal bluffPercentage;
+
+        public decimal BluffPercentage
+        {
+            get
+            {
+                return bluffPercentage;
+            }
+            set
+            {
+                SetProperty(ref bluffPercentage, value);
+            }
+        }
+
+        private int valueBetCombos;
+
+        public int ValueBetCombos
+        {
+            get
+            {
+                return valueBetCombos;
+            }
+            set
+            {
+                SetProperty(ref valueBetCombos, value);
+            }
+        }
+
+        private decimal valueBetPercentage;
+
+        public decimal ValueBetPercentage
+        {
+            get
+            {
+                return valueBetPercentage;
+            }
+            set
+            {
+                SetProperty(ref valueBetPercentage, value);
+            }
+        }
+
         #endregion
 
         #region ICommand
@@ -151,6 +293,8 @@ namespace DriveHUD.EquityCalculator.Models
             {
                 PlayerCards.Add(hand);
             }
+
+            UpdateEquityData();
         }
 
         public List<String> GetPlayersHand()
@@ -225,6 +369,59 @@ namespace DriveHUD.EquityCalculator.Models
             }
 
             return new List<string>();
+        }
+
+        private void UpdateEquityData()
+        {
+            var ranges = Ranges?.OfType<EquityRangeSelectorItemViewModel>().ToArray();
+
+            var totalCombos = 0;
+            var foldCheckCombos = 0;
+            var callCombos = 0;
+            var bluffCombos = 0;
+            var valueBetCombos = 0;
+
+            foreach (var range in ranges)
+            {
+                switch (range.EquitySelectionMode)
+                {
+                    case EquitySelectionMode.FoldCheck:
+                        foldCheckCombos += range.Combos;
+                        break;
+                    case EquitySelectionMode.Call:
+                        callCombos += range.Combos;
+                        break;
+                    case EquitySelectionMode.Bluff:
+                        bluffCombos += range.Combos;
+                        break;
+                    case EquitySelectionMode.ValueBet:
+                        valueBetCombos += range.Combos;
+                        break;
+                }
+
+                totalCombos += range.Combos;
+            }
+
+            TotalCombos = totalCombos;
+            FoldCheckCombos = foldCheckCombos;
+            CallCombos = callCombos;
+            BluffCombos = bluffCombos;
+            ValueBetCombos = valueBetCombos;
+
+            IsTotalCombosVisible = FoldCheckCombos == CallCombos &&
+                CallCombos == BluffCombos && BluffCombos == ValueBetCombos && ValueBetCombos == 0;
+
+            FoldCheckPercentage = GetEquityRangePercentage(foldCheckCombos, totalCombos);
+            CallPercentage = GetEquityRangePercentage(callCombos, totalCombos);
+            BluffPercentage = GetEquityRangePercentage(bluffCombos, totalCombos);
+            ValueBetPercentage = GetEquityRangePercentage(valueBetCombos, totalCombos);
+        }
+
+        private decimal GetEquityRangePercentage(int value, int total)
+        {
+            return value == total || total == 0 ?
+                (decimal)value / 1326 :
+                (decimal)value / total;
         }
 
         #region ICommand Implementation

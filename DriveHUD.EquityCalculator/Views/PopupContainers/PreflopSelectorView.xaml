@@ -87,34 +87,6 @@
             <converter:BoolToVisibilityConverterHiddenByDef
                 x:Key="BoolToVisibilityHidden" />
 
-            <!--#region Range colors -->
-
-            <SolidColorBrush
-                x:Key="RangeBackground"
-                Color="#2A2D31" />
-
-            <SolidColorBrush
-                x:Key="SelectedRangeBackground"
-                Color="#33519B" />
-
-            <SolidColorBrush
-                x:Key="FoldCheckRangeBackground"
-                Color="#B19BD9" />
-
-            <SolidColorBrush
-                x:Key="CallRangeBackground"
-                Color="#B0D4A0" />
-
-            <SolidColorBrush
-                x:Key="BluffRangeBackground"
-                Color="#FCAC75" />
-
-            <SolidColorBrush
-                x:Key="ValueBetRangeBackground"
-                Color="#2602FF" />
-
-            <!--#endregion Range colors -->
-
             <ControlTemplate
                 x:Key="MenuItemTemplate"
                 TargetType="telerik:RadMenuItem">
