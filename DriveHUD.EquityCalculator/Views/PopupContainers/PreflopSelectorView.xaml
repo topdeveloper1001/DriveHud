@@ -81,10 +81,39 @@
                 <ResourceDictionary
                     Source="/DriveHUD.Common.Resources;component/Cards.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
             <converter:StaticResourceConverter
                 x:Key="StaticResourceConverter" />
             <converter:BoolToVisibilityConverterHiddenByDef
                 x:Key="BoolToVisibilityHidden" />
+
+            <!--#region Range colors -->
+
+            <SolidColorBrush
+                x:Key="RangeBackground"
+                Color="#2A2D31" />
+
+            <SolidColorBrush
+                x:Key="SelectedRangeBackground"
+                Color="#33519B" />
+
+            <SolidColorBrush
+                x:Key="FoldCheckRangeBackground"
+                Color="#B19BD9" />
+
+            <SolidColorBrush
+                x:Key="CallRangeBackground"
+                Color="#B0D4A0" />
+
+            <SolidColorBrush
+                x:Key="BluffRangeBackground"
+                Color="#FCAC75" />
+
+            <SolidColorBrush
+                x:Key="ValueBetRangeBackground"
+                Color="#2602FF" />
+
+            <!--#endregion Range colors -->
 
             <ControlTemplate
                 x:Key="MenuItemTemplate"
@@ -474,15 +503,78 @@
                                         TargetType="Grid">
                                         <Setter
                                             Property="Background"
-                                            Value="#2a2d31" />
+                                            Value="{StaticResource RangeBackground}" />
                                         <Style.Triggers>
-                                            <DataTrigger
-                                                Binding="{Binding IsSelected}"
-                                                Value="True">
+                                            <!-- Selected w/o EQ -->
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition
+                                                        Binding="{Binding IsSelected}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding EquitySelectionMode}"
+                                                        Value="{x:Null}" />
+                                                </MultiDataTrigger.Conditions>
                                                 <Setter
                                                     Property="Background"
-                                                    Value="#33519B" />
-                                            </DataTrigger>
+                                                    Value="{StaticResource SelectedRangeBackground}" />
+                                            </MultiDataTrigger>
+                                            <!-- Selected /w EQ fold or check -->
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition
+                                                        Binding="{Binding IsSelected}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding EquitySelectionMode}"
+                                                        Value="{x:Static vm:EquitySelectionMode.FoldCheck}" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter
+                                                    Property="Background"
+                                                    Value="{StaticResource FoldCheckRangeBackground}" />
+                                            </MultiDataTrigger>
+                                            <!-- Selected /w EQ call -->
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition
+                                                        Binding="{Binding IsSelected}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding EquitySelectionMode}"
+                                                        Value="{x:Static vm:EquitySelectionMode.Call}" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter
+                                                    Property="Background"
+                                                    Value="{StaticResource CallRangeBackground}" />
+                                            </MultiDataTrigger>
+                                            <!-- Selected /w EQ bluff -->
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition
+                                                        Binding="{Binding IsSelected}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding EquitySelectionMode}"
+                                                        Value="{x:Static vm:EquitySelectionMode.Bluff}" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter
+                                                    Property="Background"
+                                                    Value="{StaticResource BluffRangeBackground}" />
+                                            </MultiDataTrigger>
+                                            <!-- Selected /w EQ value bet -->
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition
+                                                        Binding="{Binding IsSelected}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding EquitySelectionMode}"
+                                                        Value="{x:Static vm:EquitySelectionMode.ValueBet}" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter
+                                                    Property="Background"
+                                                    Value="{StaticResource ValueBetRangeBackground}" />
+                                            </MultiDataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </Grid.Style>
@@ -499,7 +591,6 @@
                                         Gesture="Alt+LeftClick"
                                         Command="{Binding RelativeSource={RelativeSource AncestorType=ItemsControl}, Path=DataContext.OnAltClickCommand}"
                                         CommandParameter="{Binding}" />
-
                                 </Grid.InputBindings>
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger
@@ -528,6 +619,15 @@
                                     Text="{Binding Caption}"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
+                                    Style="{StaticResource TextBlockSelectedStyle}" />
+
+                                <TextBlock
+                                    Text="{Binding Combos}"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Top"
+                                    FontSize="9"
+                                    Margin="0,-1,2,0"
+                                    Visibility="{Binding EquitySelectionMode, Converter={dh:NullToVisibilityConverter}}"
                                     Style="{StaticResource TextBlockSelectedStyle}" />
 
                                 <StackPanel
@@ -629,6 +729,17 @@
 
                 <!-- DriveHUD-EQ -->
                 <Grid>
+                    <Grid.Resources>
+
+                        <Style
+                            TargetType="{x:Type TextBlock}"
+                            BasedOn="{StaticResource {x:Type TextBlock}}">
+                            <Setter
+                                Property="Foreground"
+                                Value="#FFFFFF" />
+                        </Style>
+
+                    </Grid.Resources>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition
                             Width="110" />
@@ -654,7 +765,6 @@
                         Margin="0,5,0,10"
                         FontSize="16"
                         FontWeight="SemiBold"
-                        Foreground="White"
                         Text="DrivehudEQ" />
 
                     <RadioButton
@@ -688,6 +798,94 @@
                         Style="{StaticResource RadioButtonStyle}"
                         IsChecked="{Binding EquitySelectionMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:EquitySelectionMode.ValueBet}}"
                         Content="Value Bet / Raise" />
+
+                    <StackPanel
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        HorizontalAlignment="Center">
+
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <ResX
+                                    Key="Common_EquityCalculator_Combos">
+                                    <ResXParam
+                                        Path="FoldCheckCombos" />
+                                </ResX>
+
+                            </TextBlock.Text>
+                        </TextBlock>
+
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            Text="{Binding FoldCheckPercentage, StringFormat=P1}" />
+
+                    </StackPanel>
+
+                    <StackPanel
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        HorizontalAlignment="Center">
+
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <ResX
+                                    Key="Common_EquityCalculator_Combos">
+                                    <ResXParam
+                                        Path="CallCombos" />
+                                </ResX>
+
+                            </TextBlock.Text>
+                        </TextBlock>
+
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            Text="{Binding CallPercentage, StringFormat=P1}" />
+
+                    </StackPanel>
+
+                    <StackPanel
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        HorizontalAlignment="Center">
+
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <ResX
+                                    Key="Common_EquityCalculator_Combos">
+                                    <ResXParam
+                                        Path="BluffCombos" />
+                                </ResX>
+
+                            </TextBlock.Text>
+                        </TextBlock>
+
+                        <TextBlock                            
+                            HorizontalAlignment="Center"
+                            Text="{Binding BluffPercentage, StringFormat=P1}" />
+
+                    </StackPanel>
+
+                    <StackPanel
+                        Grid.Column="3"
+                        Grid.Row="2"
+                        HorizontalAlignment="Center">
+
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <ResX
+                                    Key="Common_EquityCalculator_Combos">
+                                    <ResXParam
+                                        Path="ValueBetCombos" />
+                                </ResX>
+
+                            </TextBlock.Text>
+                        </TextBlock>
+
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            Text="{Binding ValueBetPercentage, StringFormat=P1}" />
+
+                    </StackPanel>
 
                 </Grid>
 

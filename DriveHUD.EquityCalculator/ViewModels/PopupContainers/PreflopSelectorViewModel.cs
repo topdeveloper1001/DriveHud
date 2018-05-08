@@ -32,9 +32,10 @@ namespace DriveHUD.EquityCalculator.ViewModels
         #region Fields
 
         private static readonly int RanksLength = Enum.GetValues(typeof(RangeCardRank)).Cast<RangeCardRank>().Where(x => x != RangeCardRank.None).Count();
+        private const int totalCombos = 1326;
 
         private CardSelectorNotification _notification;
-        private RangeSelectorItemViewModel _selectedItem = new RangeSelectorItemViewModel();
+        private EquityRangeSelectorItemViewModel _selectedItem = new EquityRangeSelectorItemViewModel();
         private ReactiveList<EquityRangeSelectorItemViewModel> _preflopSelectorItems = new ReactiveList<EquityRangeSelectorItemViewModel>();
         private List<RangeSelectorItemViewModel> _temporaryPreflopSelectorItems = new List<RangeSelectorItemViewModel>();
         private string _suitsForCaption = string.Empty;
@@ -109,7 +110,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         }
 
 
-        public RangeSelectorItemViewModel SelectedItem
+        public EquityRangeSelectorItemViewModel SelectedItem
         {
             get
             {
@@ -124,6 +125,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 }
 
                 SetProperty(ref _selectedItem, value);
+
+                RefreshSuits();
             }
         }
 
@@ -188,22 +191,108 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        public int FoldCheckCombos
+        {
+            get
+            {
+                return PreflopSelectorItems
+                    .Where(x => x.EquitySelectionMode == ViewModels.EquitySelectionMode.FoldCheck)
+                    .Sum(x => x.Combos);
+            }
+        }
+
+        public decimal FoldCheckPercentage
+        {
+            get
+            {
+                return GetSpecificRangePercentage(ViewModels.EquitySelectionMode.FoldCheck);
+            }
+        }
+
+        public int CallCombos
+        {
+            get
+            {
+                return PreflopSelectorItems
+                   .Where(x => x.EquitySelectionMode == ViewModels.EquitySelectionMode.Call)
+                   .Sum(x => x.Combos);
+            }
+        }
+
+        public decimal CallPercentage
+        {
+            get
+            {
+                return GetSpecificRangePercentage(ViewModels.EquitySelectionMode.Call);
+            }
+        }
+
+        public int BluffCombos
+        {
+            get
+            {
+                return PreflopSelectorItems
+                   .Where(x => x.EquitySelectionMode == ViewModels.EquitySelectionMode.Bluff)
+                   .Sum(x => x.Combos);
+            }
+        }
+
+        public decimal BluffPercentage
+        {
+            get
+            {
+                return GetSpecificRangePercentage(ViewModels.EquitySelectionMode.Bluff);
+            }
+        }
+
+        public int ValueBetCombos
+        {
+            get
+            {
+                return PreflopSelectorItems
+                   .Where(x => x.EquitySelectionMode == ViewModels.EquitySelectionMode.ValueBet)
+                   .Sum(x => x.Combos);
+            }
+        }
+
+        public decimal ValueBetPercentage
+        {
+            get
+            {
+                return GetSpecificRangePercentage(ViewModels.EquitySelectionMode.ValueBet);
+            }
+        }
+
         #endregion
 
         #region ICommand
+
         public ICommand ShowCardsViewCommands { get; set; }
+
         public ICommand OnMouseDownCommand { get; set; }
+
         public ICommand OnDoubleClickCommand { get; set; }
+
         public ICommand OnCtrlClickCommand { get; set; }
+
         public ICommand OnAltClickCommand { get; set; }
+
         public ICommand OnMouseEnterCommand { get; set; }
+
         public ICommand ResetCommand { get; set; }
+
         public ICommand SaveCommand { get; set; }
+
         public ICommand ShowPredefinedRangesViewCommand { get; set; }
+
         public ICommand SelectAllPairsCommand { get; set; }
+
         public ICommand SelectSuitedCommand { get; set; }
+
         public ICommand SelectOffSuitedCommand { get; set; }
+
         public ICommand OnSelectSuitCommand { get; set; }
+
         #endregion
 
         public PreflopSelectorViewModel()
@@ -274,16 +363,23 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 if (x.PropertyName == nameof(RangeSelectorItemViewModel.IsSelected))
                 {
-                    if (x.Sender.IsSelected)
-                    {
-                        x.Sender.EquitySelectionMode = EquitySelectionMode;
-                    }
-                    else
-                    {
-                        x.Sender.EquitySelectionMode = null;
-                    }
+                    x.Sender.EquitySelectionMode = x.Sender.IsSelected ? EquitySelectionMode : null;
+                    CalculateRangeItemCombox(x.Sender);
+                    CombosRaisePropertyChanged();
                 }
             });
+        }
+
+        private void CombosRaisePropertyChanged()
+        {
+            RaisePropertyChanged(nameof(FoldCheckCombos));
+            RaisePropertyChanged(nameof(CallCombos));
+            RaisePropertyChanged(nameof(BluffCombos));
+            RaisePropertyChanged(nameof(ValueBetCombos));
+            RaisePropertyChanged(nameof(FoldCheckPercentage));
+            RaisePropertyChanged(nameof(CallPercentage));
+            RaisePropertyChanged(nameof(BluffPercentage));
+            RaisePropertyChanged(nameof(ValueBetPercentage));
         }
 
         private void RefreshSuits()
@@ -315,35 +411,36 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         private void OnSelectSuit(object obj)
         {
-            if (obj is HandSuitsViewModel)
+            if (!(obj is HandSuitsViewModel model))
             {
-                var model = obj as HandSuitsViewModel;
+                return;
+            }
 
-                if (!model.IsVisible)
-                {
-                    return;
-                }
+            if (!model.IsVisible)
+            {
+                return;
+            }
 
-                model.IsSelected = !model.IsSelected;
-                if (SelectedItem != null && SelectedItem.IsMainInSequence)
+            model.IsSelected = !model.IsSelected;
+
+            if (SelectedItem != null && SelectedItem.IsMainInSequence &&
+                TemporaryPreflopSelectorItems != null && TemporaryPreflopSelectorItems.Count() > 0)
+            {
+                foreach (var item in this.TemporaryPreflopSelectorItems)
                 {
-                    if (TemporaryPreflopSelectorItems != null
-                        && TemporaryPreflopSelectorItems.Count() > 0)
+                    if (item.HandSuitsModelList.Any(x => x.HandSuit == model.HandSuit))
                     {
-                        foreach (var item in this.TemporaryPreflopSelectorItems)
-                        {
-                            if (item.HandSuitsModelList.Any(x => x.HandSuit == model.HandSuit))
-                            {
-                                item.HandSuitsModelList
-                                    .FirstOrDefault(x => x.HandSuit == model.HandSuit)
-                                    .IsSelected = model.IsSelected;
-                            }
-                        }
+                        item.HandSuitsModelList
+                            .FirstOrDefault(x => x.HandSuit == model.HandSuit)
+                            .IsSelected = model.IsSelected;
                     }
                 }
-
-                UpdateSlider();
             }
+
+            CalculateRangeItemCombox(SelectedItem);
+            CombosRaisePropertyChanged();
+
+            UpdateSlider();
         }
 
         private void ShowCardsView(object obj)
@@ -363,8 +460,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 PreflopSelectorItems.ElementAt(i * RanksLength + i - 1).HandUpdateAndRefresh();
             }
 
-            SelectedItem = new RangeSelectorItemViewModel();
-            RefreshSuits();
+            SelectedItem = new EquityRangeSelectorItemViewModel();
         }
 
         private void SelectedSuited(object obj)
@@ -375,8 +471,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 PreflopSelectorItems.ElementAt(i * RanksLength + i + 1).HandUpdateAndRefresh();
             }
 
-            SelectedItem = new RangeSelectorItemViewModel();
-            RefreshSuits();
+            SelectedItem = new EquityRangeSelectorItemViewModel();
         }
 
         private void SeleactAllPairs(object obj)
@@ -387,9 +482,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 PreflopSelectorItems.ElementAt(i * RanksLength + i).HandUpdateAndRefresh();
             }
 
-            SelectedItem = new RangeSelectorItemViewModel();
-
-            RefreshSuits();
+            SelectedItem = new EquityRangeSelectorItemViewModel();
         }
 
         private void ShowPredefinedRangesView(object obj)
@@ -415,131 +508,132 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         private void OnMouseDown(object obj)
         {
-            if (obj is RangeSelectorItemViewModel)
+            if (!(obj is EquityRangeSelectorItemViewModel item))
             {
-                var item = obj as RangeSelectorItemViewModel;
-
-                SelectedItem = item;
-
-                if (!item.IsSelected)
-                {
-                    item.IsSelected = true;
-                    RefreshSuits();
-                }
-                else
-                {
-                    SelectedItem.HandRefreshVisibilityCheck();
-                }
-
-                UpdateSlider();
+                return;
             }
+
+            SelectedItem = item;
+
+            if (!item.IsSelected)
+            {
+                item.IsSelected = true;
+            }
+            else
+            {
+                item.EquitySelectionMode = EquitySelectionMode;
+                SelectedItem.HandRefreshVisibilityCheck();
+            }
+
+            UpdateSlider();
         }
 
         private void OnDoubleClick(object obj)
         {
-            if (obj is RangeSelectorItemViewModel)
+            if (!(obj is EquityRangeSelectorItemViewModel item))
             {
-                var item = obj as RangeSelectorItemViewModel;
-                item.IsSelected = false;
-                SelectedItem = new RangeSelectorItemViewModel();
-                RefreshSuits();
-                UpdateSlider();
+                return;
             }
+
+            item.IsSelected = false;
+            SelectedItem = new EquityRangeSelectorItemViewModel();
+            UpdateSlider();
         }
 
         private void OnCtrlClick(object obj)
         {
-            if (obj is RangeSelectorItemViewModel)
+            if (!(obj is EquityRangeSelectorItemViewModel item))
             {
-                var item = obj as RangeSelectorItemViewModel;
-
-                int firstCardIndex = RanksLength - (int)item.FisrtCard - 1;
-                int secondCardIndex = RanksLength - (int)item.SecondCard - 1;
-
-                TemporaryPreflopSelectorItems = new List<RangeSelectorItemViewModel>();
-
-                for (int i = 0; i < RanksLength; i++)
-                {
-                    if (item.ItemType.Equals(RangeSelectorItemType.Suited))
-                    {
-                        TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * RanksLength + secondCardIndex));
-                        TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(firstCardIndex * RanksLength + i));
-                    }
-                    else
-                    {
-                        TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * RanksLength + firstCardIndex));
-                        TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(secondCardIndex * RanksLength + i));
-                    }
-                }
-
-                TemporaryPreflopSelectorItems.ForEach(x =>
-                {
-                    x.IsSelected = true;
-                    x.HandUpdateAndRefresh();
-                });
-
-                SelectedItem = item;
-                SelectedItem.IsMainInSequence = true;
-                HandSuitsViewModel.SetAllVisible(this.SelectedItem.HandSuitsModelList);
-                SuitsForCaption = string.Join(",", this.TemporaryPreflopSelectorItems.Select(x => x.Caption));
+                return;
             }
+
+            int firstCardIndex = RanksLength - (int)item.FisrtCard - 1;
+            int secondCardIndex = RanksLength - (int)item.SecondCard - 1;
+
+            TemporaryPreflopSelectorItems = new List<RangeSelectorItemViewModel>();
+
+            for (int i = 0; i < RanksLength; i++)
+            {
+                if (item.ItemType.Equals(RangeSelectorItemType.Suited))
+                {
+                    TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * RanksLength + secondCardIndex));
+                    TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(firstCardIndex * RanksLength + i));
+                }
+                else
+                {
+                    TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * RanksLength + firstCardIndex));
+                    TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(secondCardIndex * RanksLength + i));
+                }
+            }
+
+            TemporaryPreflopSelectorItems.ForEach(x =>
+            {
+                x.IsSelected = true;
+                x.HandUpdateAndRefresh();
+            });
+
+            SelectedItem = item;
+            SelectedItem.IsMainInSequence = true;
+            HandSuitsViewModel.SetAllVisible(this.SelectedItem.HandSuitsModelList);
+            SuitsForCaption = string.Join(",", this.TemporaryPreflopSelectorItems.Select(x => x.Caption));
         }
 
         private void OnAltClick(object obj)
         {
-            if (obj is RangeSelectorItemViewModel)
+            if (!(obj is EquityRangeSelectorItemViewModel item))
             {
-                var item = obj as RangeSelectorItemViewModel;
-
-                int firstCardIndex = RanksLength - (int)item.FisrtCard - 1;
-
-                TemporaryPreflopSelectorItems = new List<RangeSelectorItemViewModel>();
-
-                int i = item.ItemType.Equals(RangeSelectorItemType.Pair) ? 0 : firstCardIndex + 1;
-
-                for (; i < RanksLength; i++)
-                {
-                    switch (item.ItemType)
-                    {
-                        case RangeSelectorItemType.Suited:
-                            TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(firstCardIndex * RanksLength + i));
-                            break;
-                        case RangeSelectorItemType.OffSuited:
-                            TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * RanksLength + firstCardIndex));
-                            break;
-                        case RangeSelectorItemType.Pair:
-                            TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * RanksLength + i));
-                            break;
-                    }
-                    if (TemporaryPreflopSelectorItems.LastOrDefault() != null)
-                    {
-                        if (TemporaryPreflopSelectorItems.LastOrDefault() == item)
-                            break;
-                    }
-                }
-
-                TemporaryPreflopSelectorItems.ForEach(x =>
-                {
-                    x.IsSelected = true;
-                    x.HandUpdateAndRefresh();
-                });
-
-                SelectedItem = item;
-                SelectedItem.IsMainInSequence = true;
-                SuitsForCaption = string.Join(",", this.TemporaryPreflopSelectorItems.Select(x => x.Caption));
+                return;
             }
+
+            int firstCardIndex = RanksLength - (int)item.FisrtCard - 1;
+
+            TemporaryPreflopSelectorItems = new List<RangeSelectorItemViewModel>();
+
+            int i = item.ItemType.Equals(RangeSelectorItemType.Pair) ? 0 : firstCardIndex + 1;
+
+            for (; i < RanksLength; i++)
+            {
+                switch (item.ItemType)
+                {
+                    case RangeSelectorItemType.Suited:
+                        TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(firstCardIndex * RanksLength + i));
+                        break;
+                    case RangeSelectorItemType.OffSuited:
+                        TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * RanksLength + firstCardIndex));
+                        break;
+                    case RangeSelectorItemType.Pair:
+                        TemporaryPreflopSelectorItems.Add(PreflopSelectorItems.ElementAt(i * RanksLength + i));
+                        break;
+                }
+                if (TemporaryPreflopSelectorItems.LastOrDefault() != null)
+                {
+                    if (TemporaryPreflopSelectorItems.LastOrDefault() == item)
+                        break;
+                }
+            }
+
+            TemporaryPreflopSelectorItems.ForEach(x =>
+            {
+                x.IsSelected = true;
+                x.HandUpdateAndRefresh();
+            });
+
+            SelectedItem = item;
+            SelectedItem.IsMainInSequence = true;
+            SuitsForCaption = string.Join(",", this.TemporaryPreflopSelectorItems.Select(x => x.Caption));
         }
 
         private void OnMouseEnter(object obj)
         {
             /* mouse down is handled in the backend of the page */
-            if (obj is RangeSelectorItemViewModel)
+            if (!(obj is RangeSelectorItemViewModel item))
             {
-                var item = obj as RangeSelectorItemViewModel;
-                item.IsSelected = true;
-                item.HandUpdateAndRefresh();
-                UpdateSlider();
+                return;
             }
+
+            item.IsSelected = true;
+            item.HandUpdateAndRefresh();
+            UpdateSlider();
         }
 
         private void Reset(object obj)
@@ -549,8 +643,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 item.IsSelected = false;
             }
 
-            SelectedItem = new RangeSelectorItemViewModel();
-            RefreshSuits();
+            SelectedItem = new EquityRangeSelectorItemViewModel();
         }
 
         private void Save(object obj)
@@ -558,11 +651,31 @@ namespace DriveHUD.EquityCalculator.ViewModels
             if (SelectedItem.IsMainInSequence)
             {
                 //update suites
-                SelectedItem = new RangeSelectorItemViewModel();
+                SelectedItem = new EquityRangeSelectorItemViewModel();
             }
 
             _notification.CardsContainer.Ranges = new List<RangeSelectorItemViewModel>(PreflopSelectorItems.Where(x => x.IsSelected));
             FinishInteraction();
+        }
+
+        private void CalculateRangeItemCombox(EquityRangeSelectorItemViewModel item)
+        {
+            item.Combos = item.HandSuitsModelList.Count(x => x.IsSelected && x.IsVisible);
+        }
+
+        private decimal GetSpecificRangePercentage(EquitySelectionMode equitySelectionMode)
+        {
+            var totalCombos = PreflopSelectorItems
+                    .Where(x => x.EquitySelectionMode.HasValue)
+                    .Sum(x => x.Combos);
+
+            var rangeCombos = PreflopSelectorItems
+                .Where(x => x.EquitySelectionMode == equitySelectionMode)
+                .Sum(x => x.Combos);
+
+            return rangeCombos == totalCombos || totalCombos == 0 ?
+                (decimal)rangeCombos / 1326 :
+                (decimal)rangeCombos / totalCombos;
         }
 
         #endregion

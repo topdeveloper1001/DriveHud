@@ -1075,4 +1075,7 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_DashboardView_WTSD" xml:space="preserve">
     <value>WTSD</value>
   </data>
+  <data name="Common_EquityCalculator_Combos" xml:space="preserve">
+    <value>Combos: {0}</value>
+  </data>
 </root>

@@ -61,6 +61,6 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
-        #endregion
+        #endregion     
     }
 }

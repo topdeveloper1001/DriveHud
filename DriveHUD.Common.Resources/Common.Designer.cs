@@ -737,6 +737,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Combos: {0}.
+        /// </summary>
+        internal static string Common_EquityCalculator_Combos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_Combos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy to clipboard.
         /// </summary>
         internal static string Common_ErrorView_CopyToClipboard {
