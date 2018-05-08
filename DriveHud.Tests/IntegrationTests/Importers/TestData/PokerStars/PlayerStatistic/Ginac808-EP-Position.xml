@@ -1,0 +1,66 @@
+<session sessioncode="417419820403">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.1/$0.25</gametype>
+		<tablename>NL Hold’em: $0.10/$0.25 - 6 Seater #10977</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-08-26 03:43:06</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>0</buyin>
+		<totalbuyin>0</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="194552212">
+		<general>
+			<startdate>2017-08-26 03:43:06</startdate>
+			<players>
+				<player seat="1" name="ginac808" chips="25.35" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="2" name="takeiteasyman" chips="25.7" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="3" name="alan mo" chips="33.91" dealer="0" win="1.02" bet="0.6" rebuy="0" addon="0" />
+				<player seat="4" name="RiverPorn" chips="25" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="NetKaizen" chips="12.6" dealer="0" win="0" bet="0.1" rebuy="0" addon="0" />
+				<player seat="6" name="Pafalpa" chips="59.54" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NetKaizen" type="1" sum="0.1" cards="" />
+			<action no="2" player="Pafalpa" type="2" sum="0.25" cards="" />
+			<action no="3" player="alan mo" type="2" sum="0.25" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="ginac808">X X</cards>
+			<cards type="Pocket" player="takeiteasyman">X X</cards>
+			<cards type="Pocket" player="alan mo">X X</cards>
+			<cards type="Pocket" player="RiverPorn">X X</cards>
+			<cards type="Pocket" player="NetKaizen">X X</cards>
+			<cards type="Pocket" player="Pafalpa">X X</cards>
+			<action no="4" player="ginac808" type="0" sum="0" cards="" />
+			<action no="5" player="takeiteasyman" type="0" sum="0" cards="" />
+			<action no="6" player="alan mo" type="4" sum="0" cards="" />
+			<action no="7" player="RiverPorn" type="0" sum="0" cards="" />
+			<action no="8" player="NetKaizen" type="0" sum="0" cards="" />
+			<action no="9" player="Pafalpa" type="4" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D9 S9 DK</cards>
+			<action no="10" player="Pafalpa" type="4" sum="0" cards="" />
+			<action no="11" player="alan mo" type="4" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">HJ</cards>
+			<action no="12" player="Pafalpa" type="4" sum="0" cards="" />
+			<action no="13" player="alan mo" type="5" sum="0.35" cards="" />
+			<action no="14" player="Pafalpa" type="0" sum="0" cards="" />
+		</round>
+	</game>
+</session>

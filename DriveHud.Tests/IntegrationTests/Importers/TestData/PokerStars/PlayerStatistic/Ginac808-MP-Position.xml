@@ -1,0 +1,59 @@
+<session sessioncode="26297720807">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.1/$0.25</gametype>
+		<tablename>NL Hold’em: $0.10/$0.25 - 6 Seater #8407</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2017-07-21 02:19:54</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>0</buyin>
+		<totalbuyin>0</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="175864006">
+		<general>
+			<startdate>2017-07-21 02:19:54</startdate>
+			<players>
+				<player seat="1" name="ginac808" chips="24.9" dealer="0" win="3.06" bet="1.92" rebuy="0" addon="0" />
+				<player seat="2" name="Bohn" chips="25" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
+				<player seat="3" name="Kerpopple" chips="21" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="4" name="SSC-Ry" chips="47.39" dealer="0" win="0" bet="0.1" rebuy="0" addon="0" />
+				<player seat="5" name="lavanya" chips="40.63" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="6" name="RaulMarin" chips="32.57" dealer="0" win="0" bet="0.9" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="SSC-Ry" type="1" sum="0.1" cards="" />
+			<action no="2" player="RaulMarin" type="2" sum="0.25" cards="" />
+			<action no="3" player="Bohn" type="2" sum="0.25" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="ginac808">X X</cards>
+			<cards type="Pocket" player="Bohn">X X</cards>
+			<cards type="Pocket" player="Kerpopple">X X</cards>
+			<cards type="Pocket" player="SSC-Ry">X X</cards>
+			<cards type="Pocket" player="RaulMarin">X X</cards>
+			<action no="4" player="ginac808" type="23" sum="0.9" cards="" />
+			<action no="5" player="Bohn" type="0" sum="0" cards="" />
+			<action no="6" player="Kerpopple" type="0" sum="0" cards="" />
+			<action no="7" player="SSC-Ry" type="0" sum="0" cards="" />
+			<action no="8" player="RaulMarin" type="3" sum="0.65" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S9 CQ S6</cards>
+			<action no="9" player="RaulMarin" type="4" sum="0" cards="" />
+			<action no="10" player="ginac808" type="5" sum="1.02" cards="" />
+			<action no="11" player="RaulMarin" type="0" sum="0" cards="" />
+		</round>
+	</game>
+</session>
