@@ -40,19 +40,19 @@ namespace DriveHUD.EquityCalculator.Models
 
         public CardModel()
         {
-            this.Rank = RangeCardRank.None;
-            this.Suit = RangeCardSuit.None;
+            Rank = RangeCardRank.None;
+            Suit = RangeCardSuit.None;
         }
 
         public CardModel(RangeCardRank rank, RangeCardSuit suit)
         {
-            this.SetCard(rank, suit);
+            SetCard(rank, suit);
         }
 
         public void SetCard(RangeCardRank rank, RangeCardSuit suit)
         {
-            this.Rank = rank;
-            this.Suit = suit;
+            Rank = rank;
+            Suit = suit;
         }
 
         public bool Validate()
@@ -62,7 +62,7 @@ namespace DriveHUD.EquityCalculator.Models
 
         public override string ToString()
         {
-            return string.Concat(this.Rank.ToRankString(), this.Suit.ToSuitString());
+            return string.Concat(Rank.ToRankString(), Suit.ToSuitString());
         }
     }
 }

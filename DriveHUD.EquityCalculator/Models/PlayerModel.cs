@@ -371,7 +371,7 @@ namespace DriveHUD.EquityCalculator.Models
             return new List<string>();
         }
 
-        private void UpdateEquityData()
+        public void UpdateEquityData()
         {
             var ranges = Ranges?.OfType<EquityRangeSelectorItemViewModel>().ToArray();
 

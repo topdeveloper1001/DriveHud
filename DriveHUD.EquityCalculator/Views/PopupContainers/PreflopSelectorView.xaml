@@ -429,6 +429,410 @@
                 </Style.Triggers>
             </Style>
 
+            <Style
+                x:Key="FoldCheckRadioButtonStyle"
+                TargetType="{x:Type RadioButton}"
+                BasedOn="{StaticResource RadioButtonStyle}">
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type RadioButton}">
+                            <Border
+                                x:Name="Border"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="0"
+                                CornerRadius="1"
+                                Padding="{TemplateBinding Padding}"
+                                TextBlock.Foreground="{TemplateBinding Foreground}">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup
+                                        x:Name="CommonStates">
+                                        <VisualStateGroup.Transitions>
+                                            <VisualTransition
+                                                GeneratedDuration="0:0:0.5" />
+                                            <VisualTransition
+                                                GeneratedDuration="0"
+                                                To="Pressed" />
+                                        </VisualStateGroup.Transitions>
+                                        <VisualState
+                                            x:Name="Normal" />
+                                        <VisualState
+                                            x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(Border.Background).Color">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource FoldCheckButtonMouseOverColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimation
+                                                    To="{StaticResource RangeButtonCheckedForegroundColor}"
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Checked">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource FoldCheckRangeColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimation
+                                                    To="{StaticResource RangeButtonCheckedForegroundColor}"
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Pressed">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource FoldCheckRangeColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimation
+                                                    To="{StaticResource RangeButtonCheckedForegroundColor}"
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Disabled">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource RangeButtonDisabledColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <ContentPresenter
+                                    Margin="2"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    RecognizesAccessKey="True" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
+                x:Key="CallRadioButtonStyle"
+                TargetType="{x:Type RadioButton}"
+                BasedOn="{StaticResource RadioButtonStyle}">
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type RadioButton}">
+                            <Border
+                                x:Name="Border"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="0"
+                                CornerRadius="1"
+                                Padding="{TemplateBinding Padding}"
+                                TextBlock.Foreground="{TemplateBinding Foreground}">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup
+                                        x:Name="CommonStates">
+                                        <VisualStateGroup.Transitions>
+                                            <VisualTransition
+                                                GeneratedDuration="0:0:0.5" />
+                                            <VisualTransition
+                                                GeneratedDuration="0"
+                                                To="Pressed" />
+                                        </VisualStateGroup.Transitions>
+                                        <VisualState
+                                            x:Name="Normal" />
+                                        <VisualState
+                                            x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(Border.Background).Color">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource CallButtonMouseOverColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimation
+                                                    To="{StaticResource RangeButtonCheckedForegroundColor}"
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Checked">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource CallRangeColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimation
+                                                    To="{StaticResource RangeButtonCheckedForegroundColor}"
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Pressed">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource CallRangeColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimation
+                                                    To="{StaticResource RangeButtonCheckedForegroundColor}"
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Disabled">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource RangeButtonDisabledColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <ContentPresenter
+                                    Margin="2"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    RecognizesAccessKey="True" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
+                x:Key="BluffRadioButtonStyle"
+                TargetType="{x:Type RadioButton}"
+                BasedOn="{StaticResource RadioButtonStyle}">
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type RadioButton}">
+                            <Border
+                                x:Name="Border"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="0"
+                                CornerRadius="1"
+                                Padding="{TemplateBinding Padding}"
+                                TextBlock.Foreground="{TemplateBinding Foreground}">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup
+                                        x:Name="CommonStates">
+                                        <VisualStateGroup.Transitions>
+                                            <VisualTransition
+                                                GeneratedDuration="0:0:0.5" />
+                                            <VisualTransition
+                                                GeneratedDuration="0"
+                                                To="Pressed" />
+                                        </VisualStateGroup.Transitions>
+                                        <VisualState
+                                            x:Name="Normal" />
+                                        <VisualState
+                                            x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(Border.Background).Color">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource BluffButtonMouseOverColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimation
+                                                    To="{StaticResource RangeButtonCheckedForegroundColor}"
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Checked">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource BluffRangeColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimation
+                                                    To="{StaticResource RangeButtonCheckedForegroundColor}"
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Pressed">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource BluffRangeColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimation
+                                                    To="{StaticResource RangeButtonCheckedForegroundColor}"
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Disabled">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource RangeButtonDisabledColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <ContentPresenter
+                                    Margin="2"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    RecognizesAccessKey="True" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
+                x:Key="ValueBetRadioButtonStyle"
+                TargetType="{x:Type RadioButton}"
+                BasedOn="{StaticResource RadioButtonStyle}">
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type RadioButton}">
+                            <Border
+                                x:Name="Border"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="0"
+                                CornerRadius="1"
+                                Padding="{TemplateBinding Padding}"
+                                TextBlock.Foreground="{TemplateBinding Foreground}">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup
+                                        x:Name="CommonStates">
+                                        <VisualStateGroup.Transitions>
+                                            <VisualTransition
+                                                GeneratedDuration="0:0:0.5" />
+                                            <VisualTransition
+                                                GeneratedDuration="0"
+                                                To="Pressed" />
+                                        </VisualStateGroup.Transitions>
+                                        <VisualState
+                                            x:Name="Normal" />
+                                        <VisualState
+                                            x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(Border.Background).Color">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource ValueBetButtonMouseOverColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimation
+                                                    To="{StaticResource RangeButtonCheckedForegroundColor}"
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Checked">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource ValueBetRangeColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimation
+                                                    To="{StaticResource RangeButtonCheckedForegroundColor}"
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Pressed">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource ValueBetRangeColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimation
+                                                    To="{StaticResource RangeButtonCheckedForegroundColor}"
+                                                    Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Disabled">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetProperty="(Border.Background).Color"
+                                                    Storyboard.TargetName="Border">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource RangeButtonDisabledColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <ContentPresenter
+                                    Margin="2"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    RecognizesAccessKey="True" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -700,7 +1104,8 @@
                 </Grid>
 
                 <!-- DriveHUD-EQ -->
-                <Grid>
+                <Grid
+                    HorizontalAlignment="Center">
                     <Grid.Resources>
 
                         <Style
@@ -721,8 +1126,6 @@
                             Width="110" />
                         <ColumnDefinition
                             Width="110" />
-                        <ColumnDefinition
-                            Width="*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition />
@@ -737,58 +1140,59 @@
                         Margin="0,5,0,10"
                         FontSize="16"
                         FontWeight="SemiBold"
-                        Text="DrivehudEQ" />
+                        Text="{ResX Key=Common_EquityCalculator_DrivehudEQ}" />
 
                     <RadioButton
                         Grid.Column="0"
                         Grid.Row="1"
                         Width="100"
-                        Style="{StaticResource RadioButtonStyle}"
+                        Style="{StaticResource FoldCheckRadioButtonStyle}"
                         IsChecked="{Binding EquitySelectionMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:EquitySelectionMode.FoldCheck}}"
-                        Content="Fold or Check" />
+                        Content="{ResX Key=Common_EquityCalculator_FoldOrCheck}" />
 
                     <RadioButton
                         Grid.Column="1"
                         Grid.Row="1"
                         Width="100"
-                        Style="{StaticResource RadioButtonStyle}"
+                        Style="{StaticResource CallRadioButtonStyle}"
                         IsChecked="{Binding EquitySelectionMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:EquitySelectionMode.Call}}"
-                        Content="Call" />
+                        Content="{ResX Key=Common_EquityCalculator_Call}" />
 
                     <RadioButton
                         Grid.Column="2"
                         Grid.Row="1"
                         Width="100"
-                        Style="{StaticResource RadioButtonStyle}"
+                        Style="{StaticResource BluffRadioButtonStyle}"
                         IsChecked="{Binding EquitySelectionMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:EquitySelectionMode.Bluff}}"
-                        Content="Bluff" />
+                        Content="{ResX Key=Common_EquityCalculator_Bluff}" />
 
                     <RadioButton
                         Grid.Column="3"
                         Grid.Row="1"
                         Width="100"
-                        Style="{StaticResource RadioButtonStyle}"
+                        Style="{StaticResource ValueBetRadioButtonStyle}"
                         IsChecked="{Binding EquitySelectionMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:EquitySelectionMode.ValueBet}}"
-                        Content="Value Bet / Raise" />
+                        Content="{ResX Key=Common_EquityCalculator_ValueBet}" />
 
                     <StackPanel
                         Grid.Column="0"
                         Grid.Row="2"
                         HorizontalAlignment="Center">
 
-                        <TextBlock>
+                        <TextBlock
+                            Foreground="{StaticResource FoldCheckRangeBackground}">
                             <TextBlock.Text>
                                 <ResX
                                     Key="Common_EquityCalculator_Combos">
                                     <ResXParam
                                         Path="FoldCheckCombos" />
                                 </ResX>
-
                             </TextBlock.Text>
                         </TextBlock>
 
                         <TextBlock
                             HorizontalAlignment="Center"
+                            Foreground="{StaticResource FoldCheckRangeBackground}"
                             Text="{Binding FoldCheckPercentage, StringFormat=P1}" />
 
                     </StackPanel>
@@ -798,18 +1202,19 @@
                         Grid.Row="2"
                         HorizontalAlignment="Center">
 
-                        <TextBlock>
+                        <TextBlock
+                            Foreground="{StaticResource CallRangeBackground}">
                             <TextBlock.Text>
                                 <ResX
                                     Key="Common_EquityCalculator_Combos">
                                     <ResXParam
                                         Path="CallCombos" />
                                 </ResX>
-
                             </TextBlock.Text>
                         </TextBlock>
 
                         <TextBlock
+                            Foreground="{StaticResource CallRangeBackground}"
                             HorizontalAlignment="Center"
                             Text="{Binding CallPercentage, StringFormat=P1}" />
 
@@ -820,18 +1225,19 @@
                         Grid.Row="2"
                         HorizontalAlignment="Center">
 
-                        <TextBlock>
+                        <TextBlock
+                            Foreground="{StaticResource BluffRangeBackground}">
                             <TextBlock.Text>
                                 <ResX
                                     Key="Common_EquityCalculator_Combos">
                                     <ResXParam
                                         Path="BluffCombos" />
                                 </ResX>
-
                             </TextBlock.Text>
                         </TextBlock>
 
-                        <TextBlock                            
+                        <TextBlock
+                            Foreground="{StaticResource BluffRangeBackground}"
                             HorizontalAlignment="Center"
                             Text="{Binding BluffPercentage, StringFormat=P1}" />
 
@@ -842,18 +1248,19 @@
                         Grid.Row="2"
                         HorizontalAlignment="Center">
 
-                        <TextBlock>
+                        <TextBlock
+                            Foreground="{StaticResource ValueBetRangeBackground}">
                             <TextBlock.Text>
                                 <ResX
                                     Key="Common_EquityCalculator_Combos">
                                     <ResXParam
                                         Path="ValueBetCombos" />
                                 </ResX>
-
                             </TextBlock.Text>
                         </TextBlock>
 
                         <TextBlock
+                            Foreground="{StaticResource ValueBetRangeBackground}"
                             HorizontalAlignment="Center"
                             Text="{Binding ValueBetPercentage, StringFormat=P1}" />
 

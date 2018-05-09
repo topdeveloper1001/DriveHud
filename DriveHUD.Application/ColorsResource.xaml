@@ -505,21 +505,51 @@
         x:Key="SelectedRangeBackground"
         Color="#33519B" />
 
+    <Color
+        x:Key="RangeButtonCheckedForegroundColor">#FFFFFF</Color>
+
+    <Color
+        x:Key="RangeButtonDisabledColor">#FFAEA5A5</Color>
+
+    <Color
+        x:Key="FoldCheckRangeColor">#B19BD9</Color>
+
+    <Color
+        x:Key="FoldCheckButtonMouseOverColor">#C5B3E6</Color>
+
     <SolidColorBrush
         x:Key="FoldCheckRangeBackground"
-        Color="#B19BD9" />
+        Color="{StaticResource FoldCheckRangeColor}" />
+
+    <Color
+        x:Key="CallRangeColor">#8CC174</Color>
+
+    <Color
+        x:Key="CallButtonMouseOverColor">#A6D094</Color>
 
     <SolidColorBrush
         x:Key="CallRangeBackground"
-        Color="#B0D4A0" />
+        Color="{StaticResource CallRangeColor}" />
+    
+    <Color
+        x:Key="BluffRangeColor">#FCAC75</Color>
+
+    <Color
+        x:Key="BluffButtonMouseOverColor">#FDCAA7</Color>
 
     <SolidColorBrush
         x:Key="BluffRangeBackground"
-        Color="#FCAC75" />
+        Color="{StaticResource BluffRangeColor}" />
+    
+    <Color
+        x:Key="ValueBetRangeColor">#0098DB</Color>
+
+    <Color
+        x:Key="ValueBetButtonMouseOverColor">#43B8EC</Color>
 
     <SolidColorBrush
         x:Key="ValueBetRangeBackground"
-        Color="#0098DB" />
+        Color="{StaticResource ValueBetRangeColor}" />
 
     <!--#endregion Range colors -->
 

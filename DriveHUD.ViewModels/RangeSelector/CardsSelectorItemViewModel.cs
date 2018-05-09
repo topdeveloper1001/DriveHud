@@ -162,9 +162,9 @@ namespace DriveHUD.ViewModels
             CustomLikelihoodRequest = new InteractionRequest<CustomLikelihoodNotification>();
         }
 
-        public void HandUpdate()
+        public virtual void HandUpdate()
         {
-            switch (this.ItemType)
+            switch (ItemType)
             {
                 case RangeSelectorItemType.Suited:
                     HandSuitsViewModel.SetSuitedSuitsVisible(HandSuitsModelList);
@@ -188,7 +188,7 @@ namespace DriveHUD.ViewModels
             HandSuitsViewModel.RefreshCheckedState(HandSuitsModelList, true);
         }
 
-        public void HandUpdateAndRefresh()
+        public virtual void HandUpdateAndRefresh()
         {
             HandUpdate();
             HandRefresh();

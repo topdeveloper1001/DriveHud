@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Linq;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
@@ -32,7 +33,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         #region Fields
 
         private static readonly int RanksLength = Enum.GetValues(typeof(RangeCardRank)).Cast<RangeCardRank>().Where(x => x != RangeCardRank.None).Count();
-        private const int totalCombos = 1326;
+        private const int TotalPossibleCombos = 1326;
 
         private CardSelectorNotification _notification;
         private EquityRangeSelectorItemViewModel _selectedItem = new EquityRangeSelectorItemViewModel();
@@ -73,13 +74,21 @@ namespace DriveHUD.EquityCalculator.ViewModels
                                 current.ItemLikelihood = item.ItemLikelihood;
                                 current.LikelihoodPercent = item.LikelihoodPercent;
                                 current.EquitySelectionMode = item.EquitySelectionMode;
-                                current.Combos = item.Combos;
                             }
                         }
                     }
                 }
 
                 InitializePreflopSelectorItemsTracking();
+              
+                UpdateSlider();
+
+                PreflopSelectorItems.ForEach(x =>
+                {
+                    x.UsedCards = _notification.BoardCards;                    
+                });
+
+                CombosRaisePropertyChanged();
             }
         }
 
@@ -374,7 +383,6 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 }
                 else if (x.PropertyName == nameof(EquityRangeSelectorItemViewModel.EquitySelectionMode))
                 {
-                    CalculateRangeItemCombox(x.Sender);
                     CombosRaisePropertyChanged();
                 }
             });
@@ -408,9 +416,10 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             _isSliderManualMove = false;
 
-            int i = PreflopSelectorItems.Where(x => x.IsSelected).Sum(model => model.HandSuitsModelList.Count(x => x.IsVisible && x.IsSelected));
+            var combos = PreflopSelectorItems.Sum(model => model.HandSuitsModelList.Count(x => x.IsVisible && x.IsSelected));
 
-            double prct = Math.Round((double)i * (double)100 / (double)1326, 1);
+            double prct = Math.Round((double)combos * 100 / TotalPossibleCombos, 1);
+
             SliderValue = (int)prct * 10;
             SelectedPercentage = prct;
 
@@ -436,7 +445,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             if (SelectedItem != null && SelectedItem.IsMainInSequence &&
                 TemporaryPreflopSelectorItems != null && TemporaryPreflopSelectorItems.Count() > 0)
             {
-                foreach (var item in this.TemporaryPreflopSelectorItems)
+                foreach (var item in TemporaryPreflopSelectorItems)
                 {
                     if (item.HandSuitsModelList.Any(x => x.HandSuit == model.HandSuit))
                     {
@@ -447,7 +456,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 }
             }
 
-            CalculateRangeItemCombox(SelectedItem);
+            SelectedItem.RefreshCombos();
             CombosRaisePropertyChanged();
 
             UpdateSlider();
@@ -584,8 +593,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
             SelectedItem = item;
             SelectedItem.IsMainInSequence = true;
-            HandSuitsViewModel.SetAllVisible(this.SelectedItem.HandSuitsModelList);
-            SuitsForCaption = string.Join(",", this.TemporaryPreflopSelectorItems.Select(x => x.Caption));
+            HandSuitsViewModel.SetAllVisible(SelectedItem.HandSuitsModelList);
+            SuitsForCaption = string.Join(",", TemporaryPreflopSelectorItems.Select(x => x.Caption));
         }
 
         private void OnAltClick(object obj)
@@ -668,11 +677,6 @@ namespace DriveHUD.EquityCalculator.ViewModels
             FinishInteraction();
         }
 
-        private void CalculateRangeItemCombox(EquityRangeSelectorItemViewModel item)
-        {
-            item.Combos = item.HandSuitsModelList.Count(x => x.IsSelected && x.IsVisible);
-        }
-
         private decimal GetSpecificRangePercentage(EquitySelectionMode equitySelectionMode)
         {
             var totalCombos = PreflopSelectorItems
@@ -684,7 +688,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 .Sum(x => x.Combos);
 
             return rangeCombos == totalCombos || totalCombos == 0 ?
-                (decimal)rangeCombos / 1326 :
+                (decimal)rangeCombos / TotalPossibleCombos :
                 (decimal)rangeCombos / totalCombos;
         }
 

@@ -1,10 +1,7 @@
 ﻿using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.ViewModels
 {
@@ -16,10 +13,12 @@ namespace DriveHUD.ViewModels
     public class HandSuitsViewModel : BaseViewModel
     {
         #region Fields
+
         private string _resourceKey = string.Empty;
         private bool _isVisible = false;
         private bool _isSelected = true;
         private HandSuitsEnum _handSuit;
+
         #endregion
 
         #region Properties

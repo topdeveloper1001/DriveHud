@@ -29,6 +29,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -38,6 +39,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
     public class EquityCalculatorViewModel : BaseViewModel
     {
         #region Fields
+
         private CancellationTokenSource cts;
         private HandHistories.Objects.Hand.HandHistory _currentHandHistory = new HandHistories.Objects.Hand.HandHistory();
         private HandHistories.Objects.Cards.Street _currentSreet;
@@ -55,9 +57,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private bool _isRiverVisible = false;
 
         private bool _autoGenerateHandRanges = true;
+
         #endregion
 
         #region Properties
+
         public InteractionRequest<CardSelectorNotification> CardSelectorRequest { get; private set; }
 
         public InteractionRequest<CalculateBluffNotification> CalculateBluffRequest { get; private set; }
@@ -66,12 +70,15 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         public BoardModel Board
         {
-            get { return _board; }
-            set
+            get
             {
-                SetProperty(ref _board, value);
-                ClearEquity();
+                return _board;
             }
+            //set
+            //{
+            //    SetProperty(ref _board, value);
+            //    ClearEquity();
+            //}
         }
 
         public ObservableCollection<PlayerModel> PlayersList
@@ -201,6 +208,22 @@ namespace DriveHUD.EquityCalculator.ViewModels
             ExportRequest = new InteractionRequest<ExportNotification>();
 
             InitPlayersList();
+
+            _board.PropertyChanged += (s, e) =>
+            {
+                if (e.PropertyName == nameof(BoardModel.Cards))
+                {
+                    // need to set new cards for each player model
+                    PlayersList?.ForEach(x =>
+                    {
+                        x.Ranges
+                         .OfType<EquityRangeSelectorItemViewModel>()
+                         .ForEach(r => r.UsedCards = _board.Cards);
+
+                        x.UpdateEquityData();
+                    });
+                }
+            };
 
             ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<RequestEquityCalculatorEvent>().Subscribe(LoadData);
             ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<EquityCalculatorRangeRemovedEvent>().Subscribe(RangeRemoved);
@@ -442,13 +465,14 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             IsCalculateEquityError = false;
 
-            this.CardSelectorRequest.Raise(
+            CardSelectorRequest.Raise(
                new CardSelectorNotification
                {
                    Title = string.Empty,
                    CardsContainer = container,
                    SelectorType = selectorType,
-                   UsedCards = GetProhibitedCardsFor(container)
+                   UsedCards = GetProhibitedCardsFor(container),
+                   BoardCards = Board.Cards.Where(x => x.Rank != RangeCardRank.None && x.Suit != RangeCardSuit.None).ToList()
                },
                returned =>
                {
@@ -462,6 +486,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                        {
                            container.SetRanges(returned.CardsContainer.Ranges);
                        }
+
                        ClearEquity();
                    }
                });
@@ -491,14 +516,17 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private List<CardModel> GetProhibitedCardsFor(ICardCollectionContainer container)
         {
             var usedCards = new List<CardModel>();
+
             foreach (var player in PlayersList.Where(x => x != container))
             {
                 usedCards.AddRange(player.Cards.Where(x => x.Rank != RangeCardRank.None && x.Suit != RangeCardSuit.None));
             }
+
             if (Board != container)
             {
                 usedCards.AddRange(Board.Cards.Where(x => x.Rank != RangeCardRank.None && x.Suit != RangeCardSuit.None));
             }
+
             return usedCards;
         }
         #endregion

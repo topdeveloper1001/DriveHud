@@ -737,11 +737,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bluff.
+        /// </summary>
+        internal static string Common_EquityCalculator_Bluff {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_Bluff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bluff: {0} ({1:P0}).
         /// </summary>
         internal static string Common_EquityCalculator_BluffCombos {
             get {
                 return ResourceManager.GetString("Common_EquityCalculator_BluffCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call.
+        /// </summary>
+        internal static string Common_EquityCalculator_Call {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_Call", resourceCulture);
             }
         }
         
@@ -764,6 +782,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DrivehudEQ.
+        /// </summary>
+        internal static string Common_EquityCalculator_DrivehudEQ {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_DrivehudEQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold or Check: {0} ({1:P0}).
         /// </summary>
         internal static string Common_EquityCalculator_FoldCheckCombos {
@@ -773,11 +800,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold or Check.
+        /// </summary>
+        internal static string Common_EquityCalculator_FoldOrCheck {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_FoldOrCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Total Combos: {0}.
         /// </summary>
         internal static string Common_EquityCalculator_TotalCombos {
             get {
                 return ResourceManager.GetString("Common_EquityCalculator_TotalCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value Bet / Raise.
+        /// </summary>
+        internal static string Common_EquityCalculator_ValueBet {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_ValueBet", resourceCulture);
             }
         }
         

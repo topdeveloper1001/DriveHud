@@ -1093,4 +1093,19 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_EquityCalculator_ValueBetCombos" xml:space="preserve">
     <value>Value Bet: {0} ({1:P0})</value>
   </data>
+  <data name="Common_EquityCalculator_Bluff" xml:space="preserve">
+    <value>Bluff</value>
+  </data>
+  <data name="Common_EquityCalculator_Call" xml:space="preserve">
+    <value>Call</value>
+  </data>
+  <data name="Common_EquityCalculator_DrivehudEQ" xml:space="preserve">
+    <value>DrivehudEQ</value>
+  </data>
+  <data name="Common_EquityCalculator_FoldOrCheck" xml:space="preserve">
+    <value>Fold or Check</value>
+  </data>
+  <data name="Common_EquityCalculator_ValueBet" xml:space="preserve">
+    <value>Value Bet / Raise</value>
+  </data>
 </root>
