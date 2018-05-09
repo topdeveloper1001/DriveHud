@@ -1,6 +1,7 @@
 ﻿using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.EquityCalculator.ViewModels;
 using DriveHUD.ViewModels;
+using HandHistories.Objects.Cards;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.Events;
@@ -415,6 +416,11 @@ namespace DriveHUD.EquityCalculator.Models
             CallPercentage = GetEquityRangePercentage(callCombos, totalCombos);
             BluffPercentage = GetEquityRangePercentage(bluffCombos, totalCombos);
             ValueBetPercentage = GetEquityRangePercentage(valueBetCombos, totalCombos);
+        }
+
+        public void CheckBluffToValueBetRatio(Street street)
+        {
+
         }
 
         private decimal GetEquityRangePercentage(int value, int total)
