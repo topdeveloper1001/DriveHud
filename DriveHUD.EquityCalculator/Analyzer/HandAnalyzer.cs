@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.EquityCalculator.Analyzer
 {
@@ -2058,6 +2055,29 @@ namespace DriveHUD.EquityCalculator.Analyzer
             //missed_bets_street[street].Add(missed_bets - missed_bets_before);
             return collective; // Return hashtable of the players' estimated hand percentiles, drawing ranges, and a matrix of remaining drawing hands
         }
+
+        //internal List<string> GetPlayerRange(HandHistory handHistory, string playerName)
+        //{
+        //    strongestOpponentIsPreflopRaiser = strongestOpponentPlayer == null ? false : PlayerIsPreflopRaiser(handHistory, strongestOpponentPlayer, false);
+        //    strongestOpponentDid3BetPreflop = strongestOpponentPlayer == null ? false : PlayerDid3BetPreflop(handHistory, strongestOpponentPlayer);
+        //    strongestOpponentDid4BetPreflop = strongestOpponentPlayer == null ? false : PlayerDid4BetPreflop(handHistory, strongestOpponentPlayer);
+        //    strongestOpponentCalled3BetPreflop = strongestOpponentPlayer == null ? false : PlayerCalled3BetPreflop(handHistory, strongestOpponentPlayer);
+        //    strongestOpponentCalled4BetPreflop = strongestOpponentPlayer == null ? false : PlayerCalled4BetPreflop(handHistory, strongestOpponentPlayer);
+        //    opponentNotStrongestPreflopRaiser = strongestOpponentPlayer == null ? null : PlayerCalledOpenRaisePreflop(handHistory, strongestOpponentPlayer);
+        //    strongestOpponentLimpedThenCall = strongestOpponentPlayer == null ? false : PlayerLimpedThenCalledPreflop(handHistory, strongestOpponentPlayer);
+
+        //    preflopIs3Bet = strongestOpponentDid3BetPreflop || strongestOpponentCalled3BetPreflop;
+        //    preflopIs4Bet = strongestOpponentDid4BetPreflop || strongestOpponentCalled4BetPreflop;
+
+        //    opponentHandRange = GetOpponentHandRange(handHistory, strongestOpponentPlayer,
+        //                            opponentNotStrongestPreflopRaiser,
+        //                            strongestOpponentDid3BetPreflop,
+        //                            strongestOpponentDid4BetPreflop,
+        //                            strongestOpponentIsPreflopRaiser,
+        //                            strongestOpponentCalled3BetPreflop,
+        //                            strongestOpponentCalled4BetPreflop,
+        //                            strongestOpponentLimpedThenCall);
+        //}
 
         PreAction decisionSummary(HandHistory handHistory, Action action)
         {
@@ -6475,7 +6495,6 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
             int nbStraightsPossibleOnTheFlop = 0, nbFlushsPossibleOnTheFlop = 0, nbFlushsPossibleOnTheTurn = 0, nbStraightsPossibleOnTheTurn = 0;
             if (isLastAction)
             {
-
                 strongestOpponentIsPreflopRaiser = strongestOpponentPlayer == null ? false : PlayerIsPreflopRaiser(handHistory, strongestOpponentPlayer, false);
                 strongestOpponentDid3BetPreflop = strongestOpponentPlayer == null ? false : PlayerDid3BetPreflop(handHistory, strongestOpponentPlayer);
                 strongestOpponentDid4BetPreflop = strongestOpponentPlayer == null ? false : PlayerDid4BetPreflop(handHistory, strongestOpponentPlayer);
@@ -6483,9 +6502,6 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
                 strongestOpponentCalled4BetPreflop = strongestOpponentPlayer == null ? false : PlayerCalled4BetPreflop(handHistory, strongestOpponentPlayer);
                 opponentNotStrongestPreflopRaiser = strongestOpponentPlayer == null ? null : PlayerCalledOpenRaisePreflop(handHistory, strongestOpponentPlayer);
                 strongestOpponentLimpedThenCall = strongestOpponentPlayer == null ? false : PlayerLimpedThenCalledPreflop(handHistory, strongestOpponentPlayer);
-
-
-
 
                 preflopIs3Bet = strongestOpponentDid3BetPreflop || strongestOpponentCalled3BetPreflop;
                 preflopIs4Bet = strongestOpponentDid4BetPreflop || strongestOpponentCalled4BetPreflop;
@@ -6510,8 +6526,6 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
 
                 simulations = handsToAddToRange.Count;
 
-
-
                 if (handHistory.PostflopActions[0].Count > 0)
                 {
                     int[] flushsStraightsPossibleOnTheFlop = GetNbFlushStraightsPossible(handHistory, 1);
@@ -6525,8 +6539,6 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
                     strongestOpponentBetOnTheFlop = PlayerBetOnStreet(handHistory, strongestOpponentPlayer, 1);
                     strongestOpponentBetOnTheTurn = PlayerBetOnStreet(handHistory, strongestOpponentPlayer, 2);
                     strongestOpponentBetOnTheRiver = PlayerBetOnStreet(handHistory, strongestOpponentPlayer, 3);
-
-
 
                     strongestOpponentCheckCalledOnTheFlop = PlayerCheckCalledOnStreet(handHistory, strongestOpponentPlayer, 1);
                     strongestOpponentCheckCalledOnTheTurn = PlayerCheckCalledOnStreet(handHistory, strongestOpponentPlayer, 2);
@@ -6544,8 +6556,11 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
                     if (strongestOpponentBetOnTheRiver) nbStreetsStrongestOpponentBetOn++;
                 }
             }
+            
             Hashtable handsAlreadyAnalyzed = new Hashtable();
+
             double drawBluffPrct = strongestOpponentCalled3BetPreflop || strongestOpponentDid3BetPreflop ? 0.5 : 0.75;
+
             for (long kloops = 0; kloops < simulations; kloops++)
             {
                 FastEvaluator.shuffle_deck(deck, skip); // Skip hero's hole cards since those are known (and board cards as needed)
@@ -9288,12 +9303,12 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
         }
 
 
-        List<String> GetHandsTo3BetWith()
+        static List<String> GetHandsTo3BetWith()
         {
             return new List<String>(new String[] { "77", "88", "99", "TT", "JJ", "QQ", "KK", "AA", "A2s", "A3s", "A4s", "A5s", "A6s", "A7s", "A8s", "A9s", "ATs", "AJs", "AQs", "AKs", "K7s", "K8s", "K9s", "KTs", "KJs", "KQs", "Q7s", "Q8s", "Q9s", "QTs", "QJs", "J8s", "J9s", "JTs", "T8s", "T9s", "97s", "98s", "86s", "87s", "76s", "A2o", "A3o", "A4o", "A5o", "A6o", "A7o", "A8o", "A9o", "ATo", "AJo", "AQo", "AKo", "K9o", "KTo", "KJo", "KQo", "QTo", "QJo", "JTo", "T8o", "T9o", "97o", "98o", "86o", "87o", "76o" });
         }
 
-        List<String> GetHandsTo4BetWith()
+        static List<String> GetHandsTo4BetWith()
         {
             return new List<String>(new String[] { "99", "TT", "JJ", "QQ", "KK", "AA", "A2s", "A3s", "A4s", "A5s", "A6s", "A7s", "A8s", "A9s", "ATs", "AJs", "AQs", "AKs", "K9s", "KTs", "KJs", "KQs", "QTs", "QJs", "A2o", "A3o", "A4o", "A5o", "A6o", "A7o", "A8o", "A9o", "ATo", "AJo", "AQo", "AKo", "KTo", "KJo", "KQo", "QTo", "QJo" });
         }
@@ -9342,7 +9357,7 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
             }
             return ungroupedHands;
         }
-        Hashtable GetHandsToOpenRaiseWith()
+        static Hashtable GetHandsToOpenRaiseWith()
         {
             Hashtable HandsToOpenRaiseWith = new Hashtable();
 
@@ -9473,21 +9488,21 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
             return false;
         }
 
-        List<String> GetHandsToCall4BetWith()
+        static List<String> GetHandsToCall4BetWith()
         {
             return new List<String>(new String[]{
                 "TT","JJ","QQ","KK","AA","AQs","AKs","AQo","AKo"
             });
         }
 
-        List<String> GetHandsToCall3BetWithIP()
+        static List<String> GetHandsToCall3BetWithIP()
         {
             return new List<String>(new String[]{
                 "66","77","88","99","TT","JJ","QQ","KK","AA","ATs","AJs","AQs","AKs","KJs","KQs","QJs","JTs","T9s","98s","87s","76s","AJo","AQo","AKo","KJo","KQo"
             });
         }
 
-        List<String> GetHandsToCall3BetWithOOP()
+        static List<String> GetHandsToCall3BetWithOOP()
         {
             return new List<String>(new String[]{
                 //88+, ATs+, KJs+, QJs, JTs, T9s, 98s, 87s, AJo+, KJo+, QJ
@@ -9496,7 +9511,7 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
         }
 
 
-        Hashtable GetHandsToCallWithWhenBlindsOpenRaised()
+        static Hashtable GetHandsToCallWithWhenBlindsOpenRaised()
         {
             Hashtable handsToCallWith = new Hashtable();
             //"UTG",  "EP",  "MP",  "MP",  "HJ",  "CO", "BTN",  "SB",  "BB"
@@ -9537,7 +9552,7 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
 
 
 
-        Hashtable GetHandsToCallWithWhenNonBlindsOpenRaised()
+        static Hashtable GetHandsToCallWithWhenNonBlindsOpenRaised()
         {
             Hashtable handsToCallWith = new Hashtable();
 
@@ -9566,7 +9581,7 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
             return handsToCallWith;
         }
 
-        List<String> GetHandsToLimpCallWith()
+        static List<String> GetHandsToLimpCallWith()
         {
             return new List<String>(new String[]{
                 "22","33","44","55","66","77","88","99",
@@ -9575,7 +9590,7 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
             });
         }
 
-        List<String> GetHandsCallUnraisedPotWith()
+        static List<String> GetHandsCallUnraisedPotWith()
         {
             return new List<String>(new String[]{
                 //88-22, ATs-A2s, KTs, QTs+, J8s+, T7s+, 96s+, 86s+, 75s+, 65s, 54s,
@@ -10159,7 +10174,7 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
         }
 
 
-        List<String> GetOpponentHandRange(HandHistory handHistory, Player player,
+        static List<String> GetOpponentHandRange(HandHistory handHistory, Player player,
             Player opponentPreflopRaiser,
             bool playerDid3BetPreflop,
             bool playerDid4BetPreflop,
@@ -10245,9 +10260,7 @@ heroCards[0].Equals(handHistory.CommunityCards[1][4]))
                     }
                 }
             }
-            else
-            {
-            }
+
             return new List<String>();
         }
 

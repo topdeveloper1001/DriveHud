@@ -1,4 +1,5 @@
 ﻿using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.EquityCalculator.Analyzer;
 using DriveHUD.EquityCalculator.ViewModels;
 using DriveHUD.ViewModels;
 using HandHistories.Objects.Cards;
@@ -418,9 +419,45 @@ namespace DriveHUD.EquityCalculator.Models
             ValueBetPercentage = GetEquityRangePercentage(valueBetCombos, totalCombos);
         }
 
+        private string bluffToValueRatioWarning;
+
+        public string BluffToValueRatioWarning
+        {
+            get
+            {
+                return bluffToValueRatioWarning;
+            }
+            private set
+            {
+                SetProperty(ref bluffToValueRatioWarning, value);
+            }
+        }
+
         public void CheckBluffToValueBetRatio(Street street)
         {
+            if (BluffToValueRatioCalculator.CheckRatio(BluffCombos, ValueBetCombos, street, out int[] increaseBluffBy, out int[] increaseValueBy))
+            {
+                BluffToValueRatioWarning = string.Empty;
+                return;
+            }
 
+            if (BluffCombos == 0)
+            {
+                BluffToValueRatioWarning = $"General Bluff to Value ratio on the ({street}) is not met, and it’s recommended you increase Bluff range.";
+                return;
+            }
+
+            if (ValueBetCombos == 0)
+            {
+                BluffToValueRatioWarning = $"General Bluff to Value ratio on the ({street}) is not met, and it’s recommended you increase Value range.";
+                return;
+            }
+
+            var rangeText = increaseBluffBy[0] > 0 ? "Bluff" : "Value";
+            var increaseBy = increaseBluffBy[0] > 0 ? increaseBluffBy : increaseValueBy;
+            var increaseByText = string.Join("-", increaseBy.Distinct().OrderBy(x => x).ToArray());
+
+            BluffToValueRatioWarning = $"Generally recommended bluff to value ranges on the {street}) are {BluffToValueRatioCalculator.RecommendedRange[street]}. It's recommended you increase your {rangeText} range by {increaseByText}%.";
         }
 
         private decimal GetEquityRangePercentage(int value, int total)

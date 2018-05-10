@@ -53,10 +53,12 @@ namespace DriveHUD.EquityCalculator.Analyzer
             hand_collective = handAnalyzer.PostflopAnalysis(handHistory, 1, hand_collective); // Flop
             hand_collective = handAnalyzer.PostflopAnalysis(handHistory, 2, hand_collective);	// Turn
             hand_collective = handAnalyzer.PostflopAnalysis(handHistory, 3, hand_collective);	// River
-
+            
             strongestOpponentHands = GroupHands(handAnalyzer.StrongestOpponentHands);
             strongestOpponentName = handAnalyzer.StrongestOpponentName;
         }
+
+        
 
         private static IEnumerable<EquityRangeSelectorItemViewModel> GroupHands(List<String> ungroupedHands)
         {

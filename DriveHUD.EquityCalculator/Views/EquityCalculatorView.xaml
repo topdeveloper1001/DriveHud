@@ -127,6 +127,12 @@
     </UserControl.Resources>
 
     <Grid>
+        <Grid.InputBindings>
+            <KeyBinding
+                Key="R"
+                Modifiers="Ctrl"
+                Command="{Binding SetAutoRangeForHeroCommand}" />
+        </Grid.InputBindings>
         <Grid.ColumnDefinitions>
             <ColumnDefinition
                 Width="Auto" />
@@ -154,7 +160,7 @@
                     Width="90"
                     Height="30" />
             </DockPanel>
-            
+
             <Separator />
 
             <ItemsControl

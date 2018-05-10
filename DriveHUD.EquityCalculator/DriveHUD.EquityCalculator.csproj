@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analyzer\Action.cs" />
+    <Compile Include="Analyzer\BluffToValueRatioCalculator.cs" />
     <Compile Include="Analyzer\Card.cs" />
     <Compile Include="Analyzer\Combination.cs" />
     <Compile Include="Analyzer\FastEvaluator.cs" />
