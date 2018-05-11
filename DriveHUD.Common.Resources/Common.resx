@@ -1088,7 +1088,7 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
     <value>Call: {0} ({1:P0})</value>
   </data>
   <data name="Common_EquityCalculator_FoldCheckCombos" xml:space="preserve">
-    <value>Fold or Check: {0} ({1:P0})</value>
+    <value>Check or Fold: {0} ({1:P0})</value>
   </data>
   <data name="Common_EquityCalculator_ValueBetCombos" xml:space="preserve">
     <value>Value Bet: {0} ({1:P0})</value>
@@ -1103,9 +1103,21 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
     <value>DrivehudEQ</value>
   </data>
   <data name="Common_EquityCalculator_FoldOrCheck" xml:space="preserve">
-    <value>Fold or Check</value>
+    <value>Check or Fold</value>
   </data>
   <data name="Common_EquityCalculator_ValueBet" xml:space="preserve">
     <value>Value Bet / Raise</value>
+  </data>
+  <data name="Common_EquityCalculator_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Common_EquityCalculator_WarningMessageNoBluffCombos" xml:space="preserve">
+    <value>Generally recommended bluff to value ranges on the {0} are {1}. It's recommended you increase your Bluff range.</value>
+  </data>
+  <data name="Common_EquityCalculator_WarningMessageNoValueCombos" xml:space="preserve">
+    <value>Generally recommended bluff to value ranges on the {0} are {1}. It's recommended you increase your Value range.</value>
+  </data>
+  <data name="Common_EquityCalculator_WarningMessageWithRange" xml:space="preserve">
+    <value>Generally recommended bluff to value ranges on the {0} are {1}. It's recommended you increase your {2} range by {3}%.</value>
   </data>
 </root>

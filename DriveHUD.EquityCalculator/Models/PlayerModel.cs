@@ -1,4 +1,5 @@
 ﻿using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Resources;
 using DriveHUD.EquityCalculator.Analyzer;
 using DriveHUD.EquityCalculator.ViewModels;
 using DriveHUD.ViewModels;
@@ -443,21 +444,29 @@ namespace DriveHUD.EquityCalculator.Models
 
             if (BluffCombos == 0)
             {
-                BluffToValueRatioWarning = $"General Bluff to Value ratio on the ({street}) is not met, and it’s recommended you increase Bluff range.";
+                BluffToValueRatioWarning = string.Format(CommonResourceManager.Instance.GetResourceString("Common_EquityCalculator_WarningMessageNoBluffCombos"),
+                    street, BluffToValueRatioCalculator.RecommendedRange[street]);
+
                 return;
             }
 
             if (ValueBetCombos == 0)
             {
-                BluffToValueRatioWarning = $"General Bluff to Value ratio on the ({street}) is not met, and it’s recommended you increase Value range.";
+                BluffToValueRatioWarning = string.Format(CommonResourceManager.Instance.GetResourceString("Common_EquityCalculator_WarningMessageNoValueCombos"),
+                  street, BluffToValueRatioCalculator.RecommendedRange[street]);
+
                 return;
             }
 
-            var rangeText = increaseBluffBy[0] > 0 ? "Bluff" : "Value";
+            var rangeText = increaseBluffBy[0] > 0 ?
+                CommonResourceManager.Instance.GetResourceString("Common_EquityCalculator_Bluff") :
+                CommonResourceManager.Instance.GetResourceString("Common_EquityCalculator_Value");
+
             var increaseBy = increaseBluffBy[0] > 0 ? increaseBluffBy : increaseValueBy;
             var increaseByText = string.Join("-", increaseBy.Distinct().OrderBy(x => x).ToArray());
 
-            BluffToValueRatioWarning = $"Generally recommended bluff to value ranges on the {street}) are {BluffToValueRatioCalculator.RecommendedRange[street]}. It's recommended you increase your {rangeText} range by {increaseByText}%.";
+            BluffToValueRatioWarning = string.Format(CommonResourceManager.Instance.GetResourceString("Common_EquityCalculator_WarningMessageWithRange"),
+                street, BluffToValueRatioCalculator.RecommendedRange[street], rangeText, increaseByText);
         }
 
         private decimal GetEquityRangePercentage(int value, int total)

@@ -791,7 +791,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold or Check: {0} ({1:P0}).
+        ///   Looks up a localized string similar to Check or Fold: {0} ({1:P0}).
         /// </summary>
         internal static string Common_EquityCalculator_FoldCheckCombos {
             get {
@@ -800,7 +800,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fold or Check.
+        ///   Looks up a localized string similar to Check or Fold.
         /// </summary>
         internal static string Common_EquityCalculator_FoldOrCheck {
             get {
@@ -814,6 +814,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_EquityCalculator_TotalCombos {
             get {
                 return ResourceManager.GetString("Common_EquityCalculator_TotalCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string Common_EquityCalculator_Value {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_Value", resourceCulture);
             }
         }
         
@@ -832,6 +841,33 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_EquityCalculator_ValueBetCombos {
             get {
                 return ResourceManager.GetString("Common_EquityCalculator_ValueBetCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generally recommended bluff to value ranges on the {0} are {1}. It&apos;s recommended you increase your Bluff range..
+        /// </summary>
+        internal static string Common_EquityCalculator_WarningMessageNoBluffCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_WarningMessageNoBluffCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generally recommended bluff to value ranges on the {0} are {1}. It&apos;s recommended you increase your Value range..
+        /// </summary>
+        internal static string Common_EquityCalculator_WarningMessageNoValueCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_WarningMessageNoValueCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generally recommended bluff to value ranges on the {0} are {1}. It&apos;s recommended you increase your {2} range by {3}%..
+        /// </summary>
+        internal static string Common_EquityCalculator_WarningMessageWithRange {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_WarningMessageWithRange", resourceCulture);
             }
         }
         

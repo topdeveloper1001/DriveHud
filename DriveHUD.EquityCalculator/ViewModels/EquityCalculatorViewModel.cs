@@ -158,6 +158,18 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        public Street CurrentStreet
+        {
+            get
+            {
+                return _currentStreet;
+            }
+            set
+            {
+                SetProperty(ref _currentStreet, value);
+            }
+        }
+
         public bool AutoGenerateHandRanges
         {
             get { return _autoGenerateHandRanges; }
@@ -252,7 +264,31 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         private void SetAutoRangeForHero(object obj)
         {
-            Console.WriteLine("Set auto range for hero");
+            if (_currentHandHistory == null || _currentHandHistory.Hero == null)
+            {
+                return;
+            }
+
+            try
+            {
+                IEnumerable<EquityRangeSelectorItemViewModel> heroAutoHands = new List<EquityRangeSelectorItemViewModel>();
+
+                var heroName = string.Empty;
+
+                MainAnalyzer.GetHeroRange(_currentHandHistory, _currentStreet, out heroName, out heroAutoHands);
+
+                if (heroAutoHands.Any())
+                {
+                    heroAutoHands.ForEach(r => r.UsedCards = _board.Cards);
+
+                    var hero = PlayersList.FirstOrDefault(x => x.PlayerName == _currentHandHistory.Hero.PlayerName);
+                    hero?.SetRanges(heroAutoHands);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not build auto range for hero", e);
+            }
         }
 
         private void InitPlayersList()
@@ -343,6 +379,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 if (obj.IsEmptyRequest)
                 {
                     _currentHandHistory = null;
+                    IsPreflopVisible = IsFlopVisible = IsTurnVisible = IsRiverVisible = false;
+                    CurrentStreet = Street.Null;
                     InitPlayersList();
                     return;
                 }
@@ -379,19 +417,19 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         private void SetStreetVisibility(HandHistories.Objects.Hand.HandHistory CurrentGame)
         {
-            IsPreflopVisible = CurrentGame.PreFlop != null && CurrentGame.PreFlop.Any();
-            IsFlopVisible = CurrentGame.Flop != null && CurrentGame.Flop.Any();
-            IsTurnVisible = CurrentGame.Turn != null && CurrentGame.Turn.Any();
-            IsRiverVisible = CurrentGame.River != null && CurrentGame.River.Any();
+            IsPreflopVisible = CurrentGame != null && CurrentGame.PreFlop != null && CurrentGame.PreFlop.Any();
+            IsFlopVisible = CurrentGame != null && CurrentGame.Flop != null && CurrentGame.Flop.Any();
+            IsTurnVisible = CurrentGame != null && CurrentGame.Turn != null && CurrentGame.Turn.Any();
+            IsRiverVisible = CurrentGame != null && CurrentGame.River != null && CurrentGame.River.Any();
 
             if (IsRiverVisible)
-                _currentStreet = Street.River;
+                CurrentStreet = Street.River;
             else if (IsTurnVisible)
-                _currentStreet = Street.Turn;
+                CurrentStreet = Street.Turn;
             else if (IsFlopVisible)
-                _currentStreet = Street.Flop;
+                CurrentStreet = Street.Flop;
             else if (IsPreflopVisible)
-                _currentStreet = Street.Preflop;
+                CurrentStreet = Street.Preflop;
         }
 
         private void LoadPlayersData(HandHistories.Objects.Hand.HandHistory CurrentGame)
@@ -467,8 +505,12 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
                 if (AutoGenerateHandRanges)
                 {
-                    if (!string.IsNullOrEmpty(opponentName) && PlayersList.Any(x => x.PlayerName == opponentName))
+                    if (!string.IsNullOrEmpty(opponentName) &&
+                        oponnentHands.Any() &&
+                        PlayersList.Any(x => x.PlayerName == opponentName && x.Cards.All(c => !c.Validate())))
                     {
+                        oponnentHands.ForEach(r => r.UsedCards = _board.Cards);
+
                         var player = PlayersList.FirstOrDefault(x => x.PlayerName == opponentName);
                         player?.SetRanges(oponnentHands);
                     }
@@ -563,9 +605,9 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         private void ShowStreetCards(object obj)
         {
-            _currentStreet = (Street)obj;
+            CurrentStreet = (Street)obj;
 
-            switch (_currentStreet)
+            switch (CurrentStreet)
             {
                 case Street.Preflop:
                     LoadBoardData(_currentHandHistory, 0);
@@ -594,6 +636,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
             Board.Reset();
             ClearEquity();
+
             IsCalculateEquityError = false;
         }
 
