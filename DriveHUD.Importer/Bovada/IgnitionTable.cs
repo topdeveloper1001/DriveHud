@@ -29,7 +29,7 @@ namespace DriveHUD.Importers.Bovada
     {
         private IImporterService importerService;
         private IIgnitionWindowCache ignitionWindowCache;
-        private const string WindowClassName = "Chrome_WidgetWin_1";
+        private const string WindowClassName = "Chrome_WidgetWin";
 
         public IgnitionTable(IEventAggregator eventAggregator) : base(eventAggregator)
         {
@@ -317,7 +317,7 @@ namespace DriveHUD.Importers.Bovada
         private bool IsWindowMatch(string title, string className)
         {
             if (string.IsNullOrWhiteSpace(className) ||
-                !className.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase))
+                className.IndexOf(WindowClassName, StringComparison.OrdinalIgnoreCase) < 0)
             {
                 return false;
             }
