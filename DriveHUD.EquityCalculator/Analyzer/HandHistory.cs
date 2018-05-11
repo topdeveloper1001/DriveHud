@@ -937,7 +937,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 }
             }
 
-            foreach (var action in history.HandActions.Where(x=> (int)x.Street <= (int)currentStreet))
+            foreach (var action in history.HandActions.Where(x => (int)x.Street <= (int)currentStreet))
             {
 
                 String plr = "";
@@ -1060,7 +1060,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 if (action.Street == HandHistories.Objects.Cards.Street.River && street != 3)
                 {
                     street = 3;
-                    CommunityCards[street] = history.CommunityCards.GetBoardOnStreet(HandHistories.Objects.Cards.Street.River).ToString();
+                    CommunityCards[street] = history.CommunityCards.GetBoardOnStreet(HandHistories.Objects.Cards.Street.River).Last().ToString();
                     PotSizeByStreet[street] = pot;
 
                     List<string> keys = new List<string>();
@@ -1304,7 +1304,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     attacker = plr;      // The bettor is the new attacker
                     attacker_risk = act.Amount /*- action.this_street_commitment[plr]*/; // Notice! XML format contains only the amount added (which mathematically makes a lot of sense), not the more typical "raise" or "raise to" amount that is shown by poker rooms and raw hand histories
                 }
-                else if (action.HandActionType == HandHistories.Objects.Actions.HandActionType.RETURNED)// Update the pot size, but don't store as an action
+                else if (action.HandActionType == HandHistories.Objects.Actions.HandActionType.UNCALLED_BET)// Update the pot size, but don't store as an action
                 {
                     Action act = new Action();
                     act.Street = street;
@@ -1313,14 +1313,10 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     var curAmout = action.Amount < 0 ? action.Amount * -1 : action.Amount;
                     act.Amount = (int)Math.Round(curAmout * 100);
                     this_commit[plr] = (int)this_commit[plr] - (int)act.Amount;
-                    pot -= act.Amount;
-
-                    /*if (street == 0) PreflopActions.Add(action);
-                    else PostflopActions[street].Add(action);*/
+                    pot -= act.Amount;                 
                 }
                 else if (action.HandActionType == HandHistories.Objects.Actions.HandActionType.SHOW)
-                {
-                   // (Players[plr] as Player).Cards = xnDetailLine.Attributes["Cards"].Value;
+                {                    
                     (Players[plr] as Player).Showdown = true;
                 }
                 else if (action.HandActionType == HandHistories.Objects.Actions.HandActionType.WINS)
@@ -1330,10 +1326,11 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     (Players[plr] as Player).Wins = (int)Math.Round(curAmout * 100);
                 }
             }
+
             #endregion
 
-
             List<String> playersNotInPreflop = new List<String>();
+
             foreach (String playerName in this.Players.Keys)
             {
                 bool playerInHand = false;
@@ -1350,12 +1347,10 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     playersNotInPreflop.Add(playerName);
                 }
             }
-            foreach (String playerName in playersNotInPreflop)
-            {
-                //this.Players.Remove(playerName);
-            }
+
             // Update the position numbers for the players (should find a better way to do this than by looping)
             int pos_id = 0;
+
             for (int i = (Players[BBName] as Player).SeatNumber + 1; i <= MaxSeats; i++)
             {
                 foreach (String key in Players.Keys)
@@ -1368,6 +1363,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     }
                 }
             }
+
             for (int i = 1; i <= (Players[BBName] as Player).SeatNumber; i++)
             {
                 foreach (String key in Players.Keys)
@@ -1386,6 +1382,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
             //}
 
             List<String> comCardsArr = new List<String>();
+
             if (CommunityCards[1] != null)
             {
                 comCardsArr.Add(CommunityCards[1].Substring(0, 2));
@@ -1396,6 +1393,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
             {
                 comCardsArr.Add(null);
             }
+
             comCardsArr.Add(CommunityCards[2]);
             comCardsArr.Add(CommunityCards[3]);
 

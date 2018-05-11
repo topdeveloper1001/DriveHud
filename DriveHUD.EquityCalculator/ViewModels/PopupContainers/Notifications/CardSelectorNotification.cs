@@ -66,6 +66,20 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        private IEnumerable<CardModel> boardCards;
+
+        internal IEnumerable<CardModel> BoardCards
+        {
+            get
+            {
+                return boardCards;
+            }
+            set
+            {
+                boardCards = value;
+            }
+        }
+
         internal CardSelectorReturnType ReturnType
         {
             get
