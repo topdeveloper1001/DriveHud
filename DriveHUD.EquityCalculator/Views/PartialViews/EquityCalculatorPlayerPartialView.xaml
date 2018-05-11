@@ -216,7 +216,7 @@
 
                         <TextBlock
                             FontSize="11"
-                            Foreground="Red"
+                            Foreground="#db5050"
                             TextWrapping="Wrap"
                             Text="{Binding BluffToValueRatioWarning}"
                             Visibility="{Binding BluffToValueRatioWarning, Converter={dh:NullOrEmptyToVisibilityConverter}}" />
