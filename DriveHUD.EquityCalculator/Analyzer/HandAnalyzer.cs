@@ -116,6 +116,9 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     else (collective[key] as hand_distribution).hand_range = 1.0f;
                 }
             }
+            else if (street == 0)
+            {               
+            }
             else // Flop->Turn, or Turn->River
             {
                 // Calculate previous street's hand percentiles
@@ -173,7 +176,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 return;
             }
 
-            equitySimulation2(handHistory, handHistory.PostflopActions[street].FirstOrDefault(), collective, PostflopEquitySims, street, true, playerName);
+            equitySimulation2(handHistory, action, collective, PostflopEquitySims, street, true, playerName);
         }
 
         internal Hashtable PostflopAnalysis(HandHistory handHistory, int street, Hashtable collective_range)
@@ -8991,11 +8994,12 @@ namespace DriveHUD.EquityCalculator.Analyzer
         //GHADY
         internal static bool BoardIsCoordinated(HandHistory handHistory, int valToCompare, int street, bool withHeroCards)
         {
-            String heroCards = (handHistory.Players[handHistory.HeroName] as Player).Cards;
+            var heroCards = (handHistory.Players[handHistory.HeroName] as Player).Cards;
+
             int nCard1 = withHeroCards ? Jacob.TranslateCard(heroCards[0], heroCards[1]) : -1;
             int nCard2 = withHeroCards ? Jacob.TranslateCard(heroCards[2], heroCards[3]) : -1;
 
-            String comCards = handHistory.CommunityCards[1] + handHistory.CommunityCards[2] + handHistory.CommunityCards[3];
+            var comCards = handHistory.CommunityCards[1] + handHistory.CommunityCards[2] + handHistory.CommunityCards[3];
 
             int nComCard1 = comCards.Length < 2 ? 0 : Jacob.TranslateCard1(comCards[0], comCards[1]);
             int nwComCard1 = comCards.Length < 2 ? -1 : Jacob.TranslateCard(comCards[0], comCards[1]);
@@ -9012,12 +9016,12 @@ namespace DriveHUD.EquityCalculator.Analyzer
             int nComCard5 = street < 3 ? 0 : comCards.Length < 10 ? 0 : Jacob.TranslateCard1(comCards[8], comCards[9]);
             int nwComCard5 = street < 3 ? -1 : comCards.Length < 10 ? -1 : Jacob.TranslateCard(comCards[8], comCards[9]);
 
-
             boardinfo info = new boardinfo();
+
             int weight = Jacob.AnalyzeBoard(nCard1, nCard2, nwComCard1, nwComCard2, nwComCard3, nwComCard4, nwComCard5, info);
             int boardCoordination = Jacob.GetBoardCoordination(nComCard1, nComCard2, nComCard3, nComCard4, nComCard5, weight);
-            if (weight > valToCompare * 2) return true;
-            return 3 * weight / boardCoordination > valToCompare;
+
+            return (weight > valToCompare * 2) || (3 * weight / boardCoordination > valToCompare);
         }
 
         internal static bool PlayerFoldedOnPreflop(HandHistory handHistory, String playerName)
@@ -9450,23 +9454,29 @@ namespace DriveHUD.EquityCalculator.Analyzer
         }
 
 
-        List<String> UngroupHands(List<String> groupedHands, HandHistory handHistory)
+        internal List<string> UngroupHands(List<String> groupedHands, HandHistory handHistory, bool ignoreHeroCards = false)
         {
-            String[] suits = new String[] { "c", "s", "h", "d" };
-            List<String> ungroupedHands = new List<String>();
-            foreach (String groupedHand in groupedHands)
+            var suits = new string[] { "c", "s", "h", "d" };
+
+            var ungroupedHands = new List<string>();
+
+            foreach (var groupedHand in groupedHands)
             {
-                List<String> handsToTry = new List<String>();
+                var handsToTry = new List<string>();
+
                 if (groupedHand.EndsWith("s"))
                 {
-                    foreach (String suit in suits)
-                        handsToTry.Add(groupedHand[0].ToString() + suit + groupedHand[1].ToString() + suit);
-                }
-                else
-                {
-                    foreach (String suit1 in suits)
+                    foreach (var suit in suits)
                     {
-                        foreach (String suit2 in suits)
+                        handsToTry.Add(groupedHand[0].ToString() + suit + groupedHand[1].ToString() + suit);
+                    }
+                }
+                else if (groupedHand.EndsWith("o"))
+                {
+                    // TT TcTs TcTh Tc Td TsTc
+                    foreach (var suit1 in suits)
+                    {
+                        foreach (var suit2 in suits)
                         {
                             if (!suit1.Equals(suit2))
                             {
@@ -9475,24 +9485,57 @@ namespace DriveHUD.EquityCalculator.Analyzer
                         }
                     }
                 }
-
-                foreach (String handToTry in handsToTry)
+                else
                 {
-                    String card1 = handToTry.Substring(0, 2);
-                    String card2 = handToTry.Substring(2, 2);
+                    for (var i = 0; i < suits.Length; i++)
+                    {
+                        var suit1 = suits[i];
 
-                    String comCards = "";
-                    if (handHistory.CommunityCards[1] != null) comCards += handHistory.CommunityCards[1];
-                    if (handHistory.CommunityCards[2] != null) comCards += handHistory.CommunityCards[2];
-                    if (handHistory.CommunityCards[3] != null) comCards += handHistory.CommunityCards[3];
-                    comCards += (handHistory.Players[handHistory.HeroName] as Player).Cards;
+                        for (var j = i + 1; j < suits.Length; j++)
+                        {
+                            var suit2 = suits[j];
+                            handsToTry.Add(groupedHand[0].ToString() + suit1 + groupedHand[1].ToString() + suit2);
+                        }
+                    }
+                }
+
+                foreach (var handToTry in handsToTry)
+                {
+                    var card1 = handToTry.Substring(0, 2);
+                    var card2 = handToTry.Substring(2, 2);
+
+                    var comCards = string.Empty;
+
+                    if (handHistory.CommunityCards[1] != null)
+                    {
+                        comCards += handHistory.CommunityCards[1];
+                    }
+
+                    if (handHistory.CommunityCards[2] != null)
+                    {
+                        comCards += handHistory.CommunityCards[2];
+                    }
+
+                    if (handHistory.CommunityCards[3] != null)
+                    {
+                        comCards += handHistory.CommunityCards[3];
+                    }
+
+                    if (!ignoreHeroCards)
+                    {
+                        comCards += (handHistory.Players[handHistory.HeroName] as Player).Cards;
+                    }
 
                     if (!comCards.Contains(card1) && !comCards.Contains(card2))
+                    {
                         ungroupedHands.Add(card1 + card2);
+                    }
                 }
             }
+
             return ungroupedHands;
         }
+
         static Hashtable GetHandsToOpenRaiseWith()
         {
             Hashtable HandsToOpenRaiseWith = new Hashtable();
@@ -9538,6 +9581,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
         bool PlayerDid3BetPreflop(HandHistory handHistory, Player player)
         {
             int nbRaises = 0;
+
             foreach (Action preflopAction in handHistory.PreflopActions)
             {
                 if (preflopAction.SAction.Equals("Raises"))
@@ -9553,6 +9597,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
         bool PlayerDid4BetPreflop(HandHistory handHistory, Player player)
         {
             int nbRaises = 0;
+
             foreach (Action preflopAction in handHistory.PreflopActions)
             {
                 if (preflopAction.SAction.Equals("Raises"))
@@ -9565,11 +9610,10 @@ namespace DriveHUD.EquityCalculator.Analyzer
             return false;
         }
 
-
-
         Player PlayerCalledOpenRaisePreflop(HandHistory handHistory, Player player)
         {
             Player preflopRaiser = null;
+
             if (!PlayerIsPreflopRaiser(handHistory, player, false))
             {
                 foreach (Action action in handHistory.PreflopActions)
@@ -9583,6 +9627,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     }
                 }
             }
+
             return null;
         }
 
@@ -10010,10 +10055,12 @@ namespace DriveHUD.EquityCalculator.Analyzer
         bool HandIsTopPairOrBetter(HandHistory handHistory, String oppCard1, String oppCard2, int street, bool betterThanTopPair, bool betterThanMiddlePair, out String topCard, bool orOverPair, bool onlyStraightOrFlush)
         {
             topCard = null;
+
             if (orOverPair && oppCard1[0].Equals(oppCard2[0]) && Card.AllCardsList.IndexOf(oppCard1[0].ToString()) >= Card.AllCardsList.IndexOf("J"))
             {
                 return true;
             }
+
             String boardCard1 = handHistory.CommunityCards[1].Substring(0, 2);
             String boardCard2 = handHistory.CommunityCards[1].Substring(2, 2);
             String boardCard3 = handHistory.CommunityCards[1].Substring(4, 2);
@@ -10021,16 +10068,18 @@ namespace DriveHUD.EquityCalculator.Analyzer
             String boardCard5 = street >= 3 ? handHistory.CommunityCards[3] : null;
             boardinfo boardInfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, oppCard1, oppCard2);
 
-
             //GET TOP CARD
             List<String> boardCards = new List<string>();
             boardCards.Add(boardCard1);
             boardCards.Add(boardCard2);
             boardCards.Add(boardCard3);
+
             if (boardCard4 != null)
                 boardCards.Add(boardCard4);
+
             if (boardCard5 != null)
                 boardCards.Add(boardCard5);
+
             foreach (String boardCard in boardCards)
             {
                 if (topCard != null && boardCard[0] == topCard[0])

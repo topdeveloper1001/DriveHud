@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.EquityCalculator.Analyzer
 {
     internal class Jacob
     {
-
         internal static int TranslateCard(char rank, char suit)
         {
             int value;
@@ -1644,9 +1640,11 @@ namespace DriveHUD.EquityCalculator.Analyzer
         internal static int GetBoardCoordination(int nComCard1, int nComCard2, int nComCard3, int nComCard4, int nComCard5, int weight)
         {
             int res = 0;
+
             List<int> nComCards = new List<int>(new int[] { nComCard1, nComCard2, nComCard3, nComCard4, nComCard5 });
 
             int firstEmptyIndex = 5;
+
             for (int i = 0; i < 5; i++)
             {
                 if (nComCards[i] == 0)
@@ -1655,29 +1653,38 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     break;
                 }
             }
+
             int n = nComCard2 % 13;
+
             for (int i = 0; i < firstEmptyIndex; i++)
             {
                 int minDiff = 900000;
+
                 for (int j = 0; j < firstEmptyIndex; j++)
                 {
-                    if (i == j) continue;
+                    if (i == j)
+                    {
+                        continue;
+                    }
+
                     if (Math.Abs(nComCards[i] % 13 - nComCards[j] % 13) < minDiff)
+                    {
                         minDiff = Math.Abs(nComCards[i] % 13 - nComCards[j] % 13) * (nComCards[i] / 13 == nComCards[j] / 13 ? 1 : 3);
+                    }
                 }
+
                 res += minDiff;
             }
 
+            if (res == 0)
+            {
+                res = 1;
+            }
 
-
-            if (res == 0) res = 1;
             return 3 * weight / res;
         }
-
-
-
-
     }
+
     internal class boardinfo
     {
         internal postflophand madehand;

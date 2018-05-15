@@ -243,7 +243,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             _board.PropertyChanged += (s, e) =>
             {
                 if (e.PropertyName == nameof(BoardModel.Cards))
-                {
+                {                  
                     // need to set new cards for each player model
                     PlayersList?.ForEach(x =>
                     {
@@ -282,7 +282,12 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     heroAutoHands.ForEach(r => r.UsedCards = _board.Cards);
 
                     var hero = PlayersList.FirstOrDefault(x => x.PlayerName == _currentHandHistory.Hero.PlayerName);
-                    hero?.SetRanges(heroAutoHands);
+
+                    if (hero != null)
+                    {
+                        BluffToValueRatioCalculator.AdjustPlayerRange(heroAutoHands, CurrentStreet, _currentHandHistory);
+                        hero.SetRanges(heroAutoHands);
+                    }
                 }
             }
             catch (Exception e)

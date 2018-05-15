@@ -68,7 +68,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
             strongestOpponentName = handAnalyzer.StrongestOpponentName;
         }
 
-        internal static void GetHeroRange(HandHistories.Objects.Hand.HandHistory currentHandHistory, HandHistories.Objects.Cards.Street currentStreet, out string strongestOpponentName, out IEnumerable<EquityRangeSelectorItemViewModel> strongestOpponentHands)
+        internal static void GetHeroRange(HandHistories.Objects.Hand.HandHistory currentHandHistory, HandHistories.Objects.Cards.Street currentStreet, 
+            out string strongestOpponentName, out IEnumerable<EquityRangeSelectorItemViewModel> strongestOpponentHands)
         {
             strongestOpponentName = null;
             strongestOpponentHands = new List<EquityRangeSelectorItemViewModel>();
@@ -84,7 +85,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 HandHistory.Init();
                 Card.Init();
                 init = false;
-            }
+            }            
 
             var handAnalyzer = new HandAnalyzer();
 
@@ -109,6 +110,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
             var street = currentStreet == HandHistories.Objects.Cards.Street.Flop ? 1 :
                               currentStreet == HandHistories.Objects.Cards.Street.Turn ? 2 :
                                currentStreet == HandHistories.Objects.Cards.Street.River ? 3 : 0;
+            
 
             handAnalyzer.BuildPlayerRange(handHistory, street, hand_collective, currentHandHistory.Hero.PlayerName);
 
