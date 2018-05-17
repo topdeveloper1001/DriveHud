@@ -39,6 +39,14 @@ namespace DriveHUD.Importers
         /// <param name="session">Active session</param>
         /// <param name="player">Player which stats has to be retrieved</param>
         /// <returns>Player stats</returns>
+        SessionCacheStatistic GetPlayerStats(string session, PlayerCollectionItem player, out bool exists);
+
+        /// <summary>
+        /// Get player stats from cache
+        /// </summary>
+        /// <param name="session">Active session</param>
+        /// <param name="player">Player which stats has to be retrieved</param>
+        /// <returns>Player stats</returns>
         SessionCacheStatistic GetPlayerStats(string session, PlayerCollectionItem player);
 
         /// <summary>

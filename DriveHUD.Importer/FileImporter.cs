@@ -346,7 +346,8 @@ namespace DriveHUD.Importers
                 HandHistory = handHistory,
                 Players = players,
                 GameType = gameType,
-                Source = parsedHand
+                Source = parsedHand,
+                FileName = gameInfo.FileName
             };
 
             var matchInfo = new GameMatchInfo
