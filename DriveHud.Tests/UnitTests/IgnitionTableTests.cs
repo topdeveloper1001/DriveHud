@@ -126,6 +126,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("ign-zone-2018-03-18-3.log", "ign-info.log", "ign-zone-2018-03-18-3.xml")]
         [TestCase("ign-zone-2018-03-18-4.log", "ign-info.log", "ign-zone-2018-03-18-4.xml")]
         [TestCase("ign-omaha-cash-2018-04-07.log", "ign-info.log", "ign-omaha-cash-2018-04-07.xml")]
+        [TestCase("ign-jp-2018-05-19.log", "ign-info.log", "ign-jp-2018-05-19.xml")]
         public void HandsAreImported(string testData, string infoTestData, string expectedFile)
         {
             // initialize info manager with test data
@@ -159,7 +160,7 @@ namespace DriveHud.Tests.UnitTests
             var expectedXml = ObfuscateXml(File.ReadAllText(GetTestDataFilePath(expectedFile)));
 
             Assert.That(actualXml, Is.EqualTo(expectedXml), "Xml must be equal to expected.");
-        }   
+        }
 
         private void InitializeInfoDataManager(string fileName)
         {
