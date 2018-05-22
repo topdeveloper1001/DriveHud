@@ -414,6 +414,8 @@
     <Compile Include="Services\LogCleaner.cs" />
     <Compile Include="Services\PokerStarsDetectorService.cs" />
     <Compile Include="Services\TreatAsService.cs" />
+    <Compile Include="Services\WindowPositionsInfo.cs" />
+    <Compile Include="Services\WindowPositionsService.cs" />
     <Compile Include="SingleInstance.cs" />
     <Compile Include="SplashScreen\ISplashScreen.cs" />
     <Compile Include="SplashScreen\NotificationViewModel.cs" />

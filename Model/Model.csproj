@@ -334,6 +334,7 @@
     <Compile Include="Settings\DatabaseSettingsProviders\PT4DatabaseSettingsProvider.cs" />
     <Compile Include="Settings\SettingsModels\CurrencySettingsModel.cs" />
     <Compile Include="Settings\SettingsModels\DatabaseSettingsModel.cs" />
+    <Compile Include="Settings\SettingsModels\DisplaySettings.cs" />
     <Compile Include="Settings\SettingsModels\GeneralSettingsModel.cs" />
     <Compile Include="Settings\ISettingsService.cs" />
     <Compile Include="Settings\ISettingsBase.cs" />

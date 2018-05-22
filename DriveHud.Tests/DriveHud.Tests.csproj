@@ -249,6 +249,7 @@
     <Compile Include="UnitTests\CardHelperTests.cs" />
     <Compile Include="UnitTests\EquitySolverTests.cs" />
     <Compile Include="UnitTests\ExternalImporterUtilsTests.cs" />
+    <Compile Include="UnitTests\HandAnalyzerTests.cs" />
     <Compile Include="UnitTests\Helpers\IgnitionInfoDataManagerStub.cs" />
     <Compile Include="UnitTests\Helpers\IgnitionTestsHelper.cs" />
     <Compile Include="UnitTests\IgnitionInfoDataManagerTests.cs" />
@@ -670,6 +671,9 @@
     <Content Include="UnitTests\TestData\Ignition\ign-cash-2017-11-22.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-jp-2018-05-19.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\Ignition\ign-mtt-2017-12-26.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -775,6 +779,9 @@
     <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-10.0.0.81.3511.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\Ignition\ign-jp-2018-05-19.log">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="UnitTests\TestData\Ignition\ign-omaha-cash-2018-04-07.log">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -807,6 +814,10 @@
     <ProjectReference Include="..\DriveHUD.EquityCalculator.Base\DriveHUD.EquityCalculator.Base.csproj">
       <Project>{18f3327c-ee94-478a-80b8-a89bda614c65}</Project>
       <Name>DriveHUD.EquityCalculator.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.EquityCalculator\DriveHUD.EquityCalculator.csproj">
+      <Project>{efa4cfd3-8e01-494b-a274-f2092c922ef7}</Project>
+      <Name>DriveHUD.EquityCalculator</Name>
     </ProjectReference>
     <ProjectReference Include="..\DriveHUD.Importer\DriveHUD.Importers.csproj">
       <Project>{67ee116c-c86b-46aa-964a-f80cae372a8b}</Project>

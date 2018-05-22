@@ -51,6 +51,7 @@ using ProtoBuf.Meta;
 using System;
 using System.Linq;
 using System.Windows;
+using System.Windows.Forms;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application
@@ -117,11 +118,25 @@ namespace DriveHUD.Application
                 }
                 else
                 {
+                    var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+                    var settingsModel = settingsService.GetSettings();
+
                     mainWindowViewModel = new MainWindowViewModel();
 
                     var mainRadWindow = (RadWindow)Shell;
 
                     mainRadWindow.DataContext = mainWindowViewModel;
+
+                    var positionsInfo = new WindowPositionsInfo
+                    {
+                        Width = mainWindowViewModel.WindowMinWidth,
+                        Height = mainWindowViewModel.AppStartupHeight,
+                        DisplaySettings = settingsModel?.GeneralSettings?.DisplaySettings,
+                        StartupLocation = WindowStartupLocation.Manual
+                    };
+
+                    WindowPositionsService.SetPosition(mainRadWindow, positionsInfo);
+
                     mainRadWindow.IsTopmost = true;
                     mainRadWindow.Show();
                     mainRadWindow.IsTopmost = false;
@@ -162,9 +177,6 @@ namespace DriveHUD.Application
                     mainWindowViewModel.IsUpgradable = licenseService.IsUpgradable;
 
                     mainWindowViewModel.IsActive = true;
-
-                    var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
-                    var settingsModel = settingsService.GetSettings();
 
                     if (settingsModel != null && settingsModel.GeneralSettings != null)
                     {
