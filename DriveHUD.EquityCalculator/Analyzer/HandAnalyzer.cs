@@ -2083,7 +2083,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             //missed_bets_street[street].Add(missed_bets - missed_bets_before);
             return collective; // Return hashtable of the players' estimated hand percentiles, drawing ranges, and a matrix of remaining drawing hands
-        }      
+        }
 
         PreAction decisionSummary(HandHistory handHistory, Action action)
         {
@@ -9390,44 +9390,67 @@ namespace DriveHUD.EquityCalculator.Analyzer
             return ungroupedHands;
         }
 
-        static Hashtable GetHandsToOpenRaiseWith()
+        static Dictionary<string, IEnumerable<string>> GetHandsToOpenRaiseWith()
         {
-            Hashtable HandsToOpenRaiseWith = new Hashtable();
-
-            HandsToOpenRaiseWith.Add("UTG", new List<String>(
-                new String[]{
-                "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","KTs","KJs","KQs","QTs","QJs","J9s","JTs","T8s","T9s","97s","98s","86s","87s","76s","65s","54s","43s","A9o","ATo","AJo","AQo","AKo","KTo","KJo","KQo","QTo","QJo","JTo","T9o","97o","98o","87o","76o","65o"
-                }));
-
-            HandsToOpenRaiseWith.Add("EP", new List<String>(
-                new String[]{
-                "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","KTs","KJs","KQs","QTs","QJs","J9s","JTs","T8s","T9s","97s","98s","86s","87s","76s","65s","54s","43s","A9o","ATo","AJo","AQo","AKo","KTo","KJo","KQo","QTo","QJo","JTo","T9o","97o","98o","87o","76o","65o"
-                }));
-
-            HandsToOpenRaiseWith.Add("MP", new List<String>(
-                new String[]{
-                "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","KTs","KJs","KQs","QTs","QJs","J9s","JTs","T8s","T9s","97s","98s","86s","87s","75s","76s","65s","54s","43s","A8o","A9o","ATo","AJo","AQo","AKo","KTo","KJo","KQo","QTo","QJo","J9o","JTo","T8o","T9o","97o","98o","86o","87o","75o","76o","64o","65o","54"
-                }));
-
-            HandsToOpenRaiseWith.Add("HJ", new List<String>(
-                new String[]{
-                "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","KTs","KJs","KQs","QTs","QJs","J9s","JTs","T8s","T9s","97s","98s","86s","87s","75s","76s","65s","54s","43s","A8o","A9o","ATo","AJo","AQo","AKo","KTo","KJo","KQo","QTo","QJo","J9o","JTo","T8o","T9o","97o","98o","86o","87o","75o","76o","64o","65o","54"
-                }));
-
-            HandsToOpenRaiseWith.Add("CO", new List<String>(
-                new String[]{
-                "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","K9s","KTs","KJs","KQs","Q9s","QTs","QJs","J9s","JTs","T8s","T9s","97s","98s","86s","87s","75s","76s","65s","54s","43s","A2o","A3o","A4o","A5o","A6o","A7o","A8o","A9o","ATo","AJo","AQo","AKo","K9o","KTo","KJo","KQo","QTo","QJo","J9o","JTo","T8o","T9o","97o","98o","86o","87o","75o","76o","64o","65o","54o"
-                }));
-
-            HandsToOpenRaiseWith.Add("BTN", new List<String>(
-                new String[]{
-                    "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","K2s","K3s","K4s","K5s","K6s","K7s","K8s","K9s","KTs","KJs","KQs","Q6s","Q7s","Q8s","Q9s","QTs","QJs","J6s","J7s","J8s","J9s","JTs","T6s","T7s","T8s","T9s","96s","97s","98s","85s","86s","87s","75s","76s","64s","65s","53s","54s","43s","A2o","A3o","A4o","A5o","A6o","A7o","A8o","A9o","ATo","AJo","AQo","AKo","K2o","K3o","K4o","K5o","K6o","K7o","K8o","K9o","KTo","KJo","KQo","Q8o","Q9o","QTo","QJo","J7o","J8o","J9o","JTo","T7o","T8o","T9o","96o","97o","98o","85o","86o","87o","75o","76o","64o","65o","54"
-                }));
-
-            HandsToOpenRaiseWith.Add("SB", new List<String>(
-                new String[]{
-                    "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","K6s","K7s","K8s","K9s","KTs","KJs","KQs","Q7s","Q8s","Q9s","QTs","QJs","J7s","J8s","J9s","JTs","T7s","T8s","T9s","96s","97s","98s","85s","86s","87s","75s","76s","64s","65s","54s","43s","A2o","A3o","A4o","A5o","A6o","A7o","A8o","A9o","ATo","AJo","AQo","AKo","K9o","KTo","KJo","KQo","QTo","QJo","J8o","J9o","JTo","T7o","T8o","T9o","96o","97o","98o","85o","86o","87o","75o","76o","64o","65o","54o"
-                }));
+            var HandsToOpenRaiseWith = new Dictionary<string, IEnumerable<string>>
+            {
+                {
+                    "UTG",
+                     new[]
+                     {
+                         "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","KTs","KJs","KQs","QTs","QJs","J9s","JTs","T8s","T9s","97s","98s","86s","87s","76s","65s","54s","43s","A9o","ATo","AJo","AQo","AKo","KTo","KJo","KQo","QTo","QJo","JTo","T9o","97o","98o","87o","76o","65o"
+                     }
+                },
+                {
+                    "EP",
+                     new[]
+                     {
+                          "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","KTs","KJs","KQs","QTs","QJs","J9s","JTs","T8s","T9s","97s","98s","86s","87s","76s","65s","54s","43s","A9o","ATo","AJo","AQo","AKo","KTo","KJo","KQo","QTo","QJo","JTo","T9o","97o","98o","87o","76o","65o"
+                     }
+                },
+                {
+                    "MP",
+                     new[]
+                     {
+                          "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","KTs","KJs","KQs","QTs","QJs","J9s","JTs","T8s","T9s","97s","98s","86s","87s","75s","76s","65s","54s","43s","A8o","A9o","ATo","AJo","AQo","AKo","KTo","KJo","KQo","QTo","QJo","J9o","JTo","T8o","T9o","97o","98o","86o","87o","75o","76o","64o","65o","54"
+                     }
+                },
+                {
+                    "HJ",
+                     new[]
+                     {
+                          "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","KTs","KJs","KQs","QTs","QJs","J9s","JTs","T8s","T9s","97s","98s","86s","87s","75s","76s","65s","54s","43s","A8o","A9o","ATo","AJo","AQo","AKo","KTo","KJo","KQo","QTo","QJo","J9o","JTo","T8o","T9o","97o","98o","86o","87o","75o","76o","64o","65o","54"
+                     }
+                },
+                {
+                    "CO",
+                     new[]
+                     {
+                          "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","K9s","KTs","KJs","KQs","Q9s","QTs","QJs","J9s","JTs","T8s","T9s","97s","98s","86s","87s","75s","76s","65s","54s","43s","A2o","A3o","A4o","A5o","A6o","A7o","A8o","A9o","ATo","AJo","AQo","AKo","K9o","KTo","KJo","KQo","QTo","QJo","J9o","JTo","T8o","T9o","97o","98o","86o","87o","75o","76o","64o","65o","54o"
+                     }
+                },
+                {
+                    "BTN",
+                     new[]
+                     {
+                          "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","K2s","K3s","K4s","K5s","K6s","K7s","K8s","K9s","KTs","KJs","KQs","Q6s","Q7s","Q8s","Q9s","QTs","QJs","J6s","J7s","J8s","J9s","JTs","T6s","T7s","T8s","T9s","96s","97s","98s","85s","86s","87s","75s","76s","64s","65s","53s","54s","43s","A2o","A3o","A4o","A5o","A6o","A7o","A8o","A9o","ATo","AJo","AQo","AKo","K2o","K3o","K4o","K5o","K6o","K7o","K8o","K9o","KTo","KJo","KQo","Q8o","Q9o","QTo","QJo","J7o","J8o","J9o","JTo","T7o","T8o","T9o","96o","97o","98o","85o","86o","87o","75o","76o","64o","65o","54"
+                     }
+                },
+                {
+                    "SB",
+                     new[]
+                     {
+                          "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA","A2s","A3s","A4s","A5s","A6s","A7s","A8s","A9s","ATs","AJs","AQs","AKs","K6s","K7s","K8s","K9s","KTs","KJs","KQs","Q7s","Q8s","Q9s","QTs","QJs","J7s","J8s","J9s","JTs","T7s","T8s","T9s","96s","97s","98s","85s","86s","87s","75s","76s","64s","65s","54s","43s","A2o","A3o","A4o","A5o","A6o","A7o","A8o","A9o","ATo","AJo","AQo","AKo","K9o","KTo","KJo","KQo","QTo","QJo","J8o","J9o","JTo","T7o","T8o","T9o","96o","97o","98o","85o","86o","87o","75o","76o","64o","65o","54o"
+                     }
+                },
+                {
+                    "BB",
+                     new[]
+                     {
+                          "55", "66", "77", "88", "99", "TT", "JJ", "QQ", "KK", "AA", "A4s", "A5s", "A9s", "ATs", "AJs", "AQs", "AKs", "KTs", "KJs", "KQs", "QTs", "QJs", "J9s", "JTs", "T9s", "98s", "87s", "76s", "A5o", "A9o", "ATo", "AJo", "AQo", "AKo", "KTo", "KJo", "KQo", "QTo", "QJo", "JTo"
+                     }
+                },
+            };
 
             return HandsToOpenRaiseWith;
         }
@@ -9488,38 +9511,36 @@ namespace DriveHUD.EquityCalculator.Analyzer
         bool PlayerCalled4BetPreflop(HandHistory handHistory, Player player)
         {
             int nbRaises = 0;
-            //if (!PlayerIsPreflopRaiser(handHistory, player, false))
-            {
-                foreach (Action action in handHistory.PreflopActions)
-                {
-                    if (action.SAction.Equals("Raises"))
-                        nbRaises++;
 
-                    if (nbRaises == 3 && action.PlayerName == player.PlayerName && action.SAction.Equals("Calls"))
-                    {
-                        return true;
-                    }
+            foreach (Action action in handHistory.PreflopActions)
+            {
+                if (action.SAction.Equals("Raises"))
+                    nbRaises++;
+
+                if (nbRaises == 3 && action.PlayerName == player.PlayerName && action.SAction.Equals("Calls"))
+                {
+                    return true;
                 }
             }
+
             return false;
         }
 
         bool PlayerCalled3BetPreflop(HandHistory handHistory, Player player)
         {
             int nbRaises = 0;
-            //if (!PlayerIsPreflopRaiser(handHistory, player, false))
-            {
-                foreach (Action action in handHistory.PreflopActions)
-                {
-                    if (action.SAction.Equals("Raises"))
-                        nbRaises++;
 
-                    if (nbRaises == 2 && action.PlayerName == player.PlayerName && action.SAction.Equals("Calls"))
-                    {
-                        return true;
-                    }
+            foreach (Action action in handHistory.PreflopActions)
+            {
+                if (action.SAction.Equals("Raises"))
+                    nbRaises++;
+
+                if (nbRaises == 2 && action.PlayerName == player.PlayerName && action.SAction.Equals("Calls"))
+                {
+                    return true;
                 }
             }
+
             return false;
         }
 
@@ -9643,20 +9664,31 @@ namespace DriveHUD.EquityCalculator.Analyzer
         bool PlayerLimpedThenCalledPreflop(HandHistory handHistory, Player player)
         {
             bool playerLimped = false, potRaised = false;
-            foreach (Action preflopAction in handHistory.PreflopActions)
+
+            foreach (var preflopAction in handHistory.PreflopActions)
             {
                 if (preflopAction.SAction.Equals("Raises"))
                 {
-                    if (!playerLimped) return false;
+                    if (!playerLimped)
+                    {
+                        return false;
+                    }
+
                     potRaised = true;
                 }
-
                 else if (preflopAction.SAction.Equals("Calls") && preflopAction.PlayerName.Equals(player.PlayerName))
                 {
-                    if (!potRaised) playerLimped = true;
-                    else if (playerLimped) return true;
+                    if (!potRaised)
+                    {
+                        playerLimped = true;
+                    }
+                    else if (playerLimped)
+                    {
+                        return true;
+                    }
                 }
             }
+
             return false;
         }
 
@@ -10227,39 +10259,39 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             String playerPosition = GameRules.position_names[handHistory.Players.Count, player.Position];
 
-            //CALLED 4Bet RANGES
+            // CALLED 4Bet RANGES
             if (playerCalled4BetPreflop)
             {
                 List<String> handsToCall4BetWith = GetHandsToCall4BetWith();
                 return handsToCall4BetWith;
             }
-            //4Bet RANGES
+            // 4Bet RANGES
             else if (playerDid4BetPreflop)
             {
                 List<String> handsTo4BetWith = GetHandsTo4BetWith();
                 return handsTo4BetWith;
             }
-            //CALLED 3Bet RANGES
+            // CALLED 3Bet RANGES
             else if (playerCalled3BetPreflop)
             {
                 bool IP = playerPosition.Equals("SB") || playerPosition.Equals("BB");
                 List<String> handsToCall3BetWith = IP ? GetHandsToCall3BetWithIP() : GetHandsToCall3BetWithOOP();
                 return handsToCall3BetWith;
             }
-            //3Bet Ranges
+            // 3Bet Ranges
             else if (playerDid3BetPreflop)
             {
                 List<String> handsTo3BetWith = GetHandsTo3BetWith();
                 return handsTo3BetWith;
             }
-
-            //OPEN RAISING RANGES
+            // OPEN RAISING RANGES
             else if (playerIsPreflopRaiser)
             {
-                Hashtable handsToOpenRaiseWithPos = GetHandsToOpenRaiseWith();
+                var handsToOpenRaiseWithPos = GetHandsToOpenRaiseWith();
+
                 if (handsToOpenRaiseWithPos.ContainsKey(playerPosition))
                 {
-                    List<String> handsToOpenRaiseWith = handsToOpenRaiseWithPos[playerPosition] as List<String>;
+                    var handsToOpenRaiseWith = handsToOpenRaiseWithPos[playerPosition].ToList();
                     return handsToOpenRaiseWith;
                 }
             }
@@ -10273,7 +10305,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 List<String> handsToCallUnraisedPotWith = GetHandsCallUnraisedPotWith();
                 return handsToCallUnraisedPotWith;
             }
-            //CALLED OPEN RAISE
+            // CALLED OPEN RAISE
             else if (opponentPreflopRaiser != null)
             {
                 String opponentPreflopRaiserPosition = GameRules.position_names[handHistory.Players.Count, opponentPreflopRaiser.Position];
@@ -10378,16 +10410,19 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 if (!handsTo3BetWith.Contains(groupedHand1) && !handsTo3BetWith.Contains(groupedHand2))
                     shouldRemove = true;
             }
-
             //OPEN RAISING RANGES
             else if (playerIsPreflopRaiser)
             {
-                Hashtable handsToOpenRaiseWithPos = GetHandsToOpenRaiseWith();
+                var handsToOpenRaiseWithPos = GetHandsToOpenRaiseWith();
+
                 if (handsToOpenRaiseWithPos.ContainsKey(playerPosition))
                 {
-                    List<String> handsToOpenRaiseWith = handsToOpenRaiseWithPos[playerPosition] as List<String>;
+                    var handsToOpenRaiseWith = handsToOpenRaiseWithPos[playerPosition].ToList();
+
                     if (!handsToOpenRaiseWith.Contains(groupedHand1) && !handsToOpenRaiseWith.Contains(groupedHand2))
+                    {
                         shouldRemove = true;
+                    }
                 }
             }
             else if (playerLimpedThenCalledPreflop)

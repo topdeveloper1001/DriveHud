@@ -15,9 +15,7 @@ using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using Microsoft.Practices.ServiceLocation;
-using Model.Settings;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
@@ -172,9 +170,7 @@ namespace DriveHUD.Importers
                 LogProvider.Log.Info($"Found the suitable process {x.ProcessName}, main window = [{x.MainWindowHandle}] [{Identifier}]");
 
                 if (!string.IsNullOrEmpty(WindowClassName))
-                {
-                    var sb = new StringBuilder(256);
-
+                {                    
                     if (!IsAssociatedWindow(x.MainWindowHandle))
                     {
                         LogProvider.Log.Info($"The process {x.ProcessName} has no main window. Checking all associated windows [{Identifier}]");
