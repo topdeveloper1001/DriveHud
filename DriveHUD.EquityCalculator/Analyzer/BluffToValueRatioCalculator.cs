@@ -14,7 +14,6 @@ using DriveHUD.Common.Linq;
 using DriveHUD.EquityCalculator.ViewModels;
 using HandHistories.Objects.Cards;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -24,20 +23,48 @@ namespace DriveHUD.EquityCalculator.Analyzer
     {
         private const double allowedDeviation = 0.05;
 
-        private static readonly Dictionary<Street, double[]> PredefinedRatio = new Dictionary<Street, double[]>
+        private static readonly Dictionary<PotType, Dictionary<Street, double[]>> PredefinedRatio = new Dictionary<PotType, Dictionary<Street, double[]>>
         {
-            [Street.Flop] = new[] { 1.6, 2.0 },
-            [Street.Turn] = new[] { 1.0, 1.0 },
-            [Street.River] = new[] { 0.5, 0.5 },
+            [PotType.HU] = new Dictionary<Street, double[]>
+            {
+                [Street.Flop] = new[] { 1.6, 2.0 },
+                [Street.Turn] = new[] { 1.0, 1.0 },
+                [Street.River] = new[] { 0.5, 0.5 }
+            },
+            [PotType.MW] = new Dictionary<Street, double[]>
+            {
+                [Street.Flop] = new[] { 0.8, 1 },
+                [Street.Turn] = new[] { 0.5, 0.5 },
+                [Street.River] = new[] { 0.25, 0.25 }
+            }
         };
 
-        public static bool CheckRatio(int bluffCombos, int valueCombos, Street street, out int[] increaseBluffBy, out int[] increaseValueBy)
+        private static readonly Dictionary<PotType, Dictionary<Street, string>> RecommendedRange = new Dictionary<PotType, Dictionary<Street, string>>()
+        {
+            [PotType.HU] = new Dictionary<Street, string>
+            {
+                [Street.Flop] = "1.6-2:1",
+                [Street.Turn] = "1:1",
+                [Street.River] = "1:2"
+            },
+            [PotType.MW] = new Dictionary<Street, string>
+            {
+                [Street.Flop] = "0.8-1:1",
+                [Street.Turn] = "1:2",
+                [Street.River] = "1:4"
+            },
+        };
+
+        public static bool CheckRatio(int opponentsCount, int bluffCombos, int valueCombos,
+            Street street, out int[] increaseBluffBy, out int[] increaseValueBy)
         {
             increaseBluffBy = new[] { 0, 0 };
             increaseValueBy = new[] { 0, 0 };
 
+            var potType = GetPotType(opponentsCount);
+
             if ((bluffCombos == 0 && valueCombos == 0) ||
-                !PredefinedRatio.TryGetValue(street, out double[] expectedRatio))
+                !PredefinedRatio[potType].TryGetValue(street, out double[] expectedRatio))
             {
                 return true;
             }
@@ -65,7 +92,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
         }
 
         public static void AdjustPlayerRange(IEnumerable<EquityRangeSelectorItemViewModel> ranges, Street street,
-            HandHistories.Objects.Hand.HandHistory currentHandHistory)
+            HandHistories.Objects.Hand.HandHistory currentHandHistory, int opponentsCount)
         {
             // Preflop
             if (street == Street.Preflop)
@@ -82,6 +109,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
             {
                 return;
             }
+         
+            var potType = GetPotType(opponentsCount);
 
             var ungroupedHands = (from range in ranges
                                   let ungrouped = handAnalyzer.UngroupHands(new List<string> { range.Caption }, handHistory).Distinct()
@@ -101,19 +130,45 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                     var boardInfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, card1, card2);
 
+                    var fCard1 = HandHistory.fastCard(card1[0], card1[1]);
+                    var fCard2 = HandHistory.fastCard(card2[0], card2[1]);
+                    var fCard3 = HandHistory.fastCard(boardCard1[0], boardCard1[1]);
+                    var fCard4 = HandHistory.fastCard(boardCard2[0], boardCard2[1]);
+                    var fCard5 = HandHistory.fastCard(boardCard3[0], boardCard3[1]);
+
+                    var weight = 0;
+
+                    if (boardCard5 != null)
+                    {
+                        var fCard6 = HandHistory.fastCard(boardCard4[0], boardCard4[1]);
+                        var fCard7 = HandHistory.fastCard(boardCard5[0], boardCard5[1]);
+
+                        weight = FastEvaluator.eval_7hand(new[] { fCard1, fCard2, fCard3, fCard4, fCard5, fCard6, fCard7 });
+                    }
+                    else if (boardCard4 != null)
+                    {
+                        var fCard6 = HandHistory.fastCard(boardCard4[0], boardCard4[1]);
+                        weight = FastEvaluator.eval_6hand(new[] { fCard1, fCard2, fCard3, fCard4, fCard5, fCard6 });
+                    }
+                    else
+                    {
+                        weight = FastEvaluator.eval_5hand(new[] { fCard1, fCard2, fCard3, fCard4, fCard5 });
+                    }
+
                     if (boardInfo.holesused > 0)
                     {
                         if (ungroupedHand.BestHand > boardInfo.madehand)
                         {
                             ungroupedHand.BestHand = boardInfo.madehand;
-                            ungroupedHand.Weight = boardInfo.weight;
+                            ungroupedHand.Weight = weight;
                             ungroupedHand.IsMiddlePair = IsMiddlePair(card1, card2,
                                 boardCard1, boardCard2, boardCard3, boardInfo);
                             ungroupedHand.IsWeakKicker = IsWeakKicker(boardInfo);
                             ungroupedHand.IsTopPair = IsTopPair(card1, card2, boardInfo, $"{handHistory.CommunityCards[1]}{boardCard4}{boardCard5}");
                         }
-
-                        Console.WriteLine($"{ungroupedHand.Range.Caption} - {hand}: {boardInfo.madehand}; weight: {boardInfo.weight}");
+#if DEBUG
+                        Console.WriteLine($"{ungroupedHand.Range.Caption} - {hand}: {boardInfo.madehand}; weight: {weight}");
+#endif
                     }
                 }
 
@@ -125,15 +180,14 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             MarkMiddlePairsToCall(ungroupedHands);
             MarkTopPairsToCall(ungroupedHands);
-            MarkValueBluff(ungroupedHands, street);
+            MarkValueBluff(potType, ungroupedHands, street);
         }
 
-        public static readonly Dictionary<Street, string> RecommendedRange = new Dictionary<Street, string>()
+        public static string GetRecommendedRange(int opponentsCount, Street street)
         {
-            [Street.Flop] = "1.6-2:1",
-            [Street.Turn] = "1:1",
-            [Street.River] = "1:2",
-        };
+            var potType = GetPotType(opponentsCount);
+            return RecommendedRange[potType][street];
+        }
 
         private static bool IsMiddlePair(string card1, string card2, string boardCard1, string boardCard2, string boardCard3, boardinfo boardInfo)
         {
@@ -173,7 +227,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
         private static void MarkMiddlePairsToCall(RangeGroup[] rangeGroup)
         {
-            var middlePairs = rangeGroup.Where(x => x.IsMiddlePair).OrderBy(x => x.Weight).ToArray();
+            var middlePairs = rangeGroup.Where(x => x.IsMiddlePair).OrderByDescending(x => x.Weight).ToArray();
 
             // 3/4 mark to call
             var rangesToMarkLength = (int)Math.Round(3d * middlePairs.Length / 4);
@@ -186,9 +240,9 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
         private static void MarkTopPairsToCall(RangeGroup[] rangeGroup)
         {
-            var topPairs = rangeGroup.Where(x => x.IsTopPair && x.IsWeakKicker).OrderBy(x => x.Weight).ToArray();
+            var topPairs = rangeGroup.Where(x => x.IsTopPair && x.IsWeakKicker).OrderByDescending(x => x.Weight).ToArray();
 
-            // 3/4 mark to call
+            // 1/4 mark to call
             var rangesToMarkLength = (int)Math.Round(topPairs.Length / 4d);
 
             if (rangesToMarkLength > 0)
@@ -197,27 +251,28 @@ namespace DriveHUD.EquityCalculator.Analyzer
             }
         }
 
-        private static void MarkValueBluff(RangeGroup[] rangeGroup, Street street)
+        private static void MarkValueBluff(PotType potType, RangeGroup[] rangeGroup, Street street)
         {
-            if (!PredefinedRatio.ContainsKey(street))
+            if (!PredefinedRatio[potType].ContainsKey(street))
             {
                 return;
             }
 
             var ranges = rangeGroup.Where(x => !x.Range.EquitySelectionMode.HasValue)
-                .OrderBy(x => x.Weight)
+                .OrderByDescending(x => x.Weight)
                 .ToArray();
 
-            var bluffToValueRatio = PredefinedRatio[street][1];
+            var bluffToValueRatio = (PredefinedRatio[potType][street][0] + PredefinedRatio[potType][street][1]) / 2;
 
             var totalCombos = ranges.Sum(x => x.Range.Combos);
-            var bluffCombos = totalCombos / (1 + bluffToValueRatio);
+            var bluffCombos = bluffToValueRatio * totalCombos / (1 + bluffToValueRatio);
 
             var currentCombos = 0;
 
             foreach (var range in ranges)
             {
-                if (currentCombos < bluffCombos)
+                if (currentCombos < bluffCombos &&
+                    (currentCombos + range.Range.Combos - bluffCombos < bluffCombos - currentCombos))
                 {
                     range.Range.EquitySelectionMode = EquitySelectionMode.Bluff;
                     currentCombos += range.Range.Combos;
@@ -226,6 +281,16 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                 range.Range.EquitySelectionMode = EquitySelectionMode.ValueBet;
             }
+        }
+
+        private static PotType GetPotType(int opponentsCount)
+        {
+            if (opponentsCount > 1)
+            {
+                return PotType.MW;
+            }
+
+            return PotType.HU;
         }
 
         private class RangeGroup
@@ -243,6 +308,19 @@ namespace DriveHUD.EquityCalculator.Analyzer
             public bool IsTopPair { get; set; }
 
             public int Weight { get; set; }
+
+#if DEBUG
+            public override string ToString()
+            {
+                return $"{Range.Caption}, Weight={Weight}, BestHand={BestHand}";
+            }
+#endif
+        }
+
+        private enum PotType
+        {
+            HU,
+            MW
         }
     }
 }

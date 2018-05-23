@@ -1641,7 +1641,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
         {
             int res = 0;
 
-            List<int> nComCards = new List<int>(new int[] { nComCard1, nComCard2, nComCard3, nComCard4, nComCard5 });
+            var nComCards = new List<int> { nComCard1, nComCard2, nComCard3, nComCard4, nComCard5 };
 
             int firstEmptyIndex = 5;
 
@@ -1653,8 +1653,6 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     break;
                 }
             }
-
-            int n = nComCard2 % 13;
 
             for (int i = 0; i < firstEmptyIndex; i++)
             {

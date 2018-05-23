@@ -273,14 +273,7 @@ namespace DriveHUD.EquityCalculator.Models
             base.SetRanges(null);
             base.SetCollection(model);
 
-            PlayerCards.Clear();
-
-            var hands = CardHelper.GetHandsFormatted(GetPlayersHand());
-
-            foreach (var hand in hands)
-            {
-                PlayerCards.Add(hand);
-            }
+            UpdatePlayerCardsData();
         }
 
         public override void SetRanges(IEnumerable<RangeSelectorItemViewModel> model)
@@ -288,16 +281,7 @@ namespace DriveHUD.EquityCalculator.Models
             base.SetCollection(null);
             base.SetRanges(model);
 
-            PlayerCards.Clear();
-
-            var hands = CardHelper.GetHandsFormatted(GetPlayersHand());
-
-            foreach (var hand in hands)
-            {
-                PlayerCards.Add(hand);
-            }
-
-            UpdateEquityData();
+            UpdatePlayerCardsData();
         }
 
         public List<String> GetPlayersHand()
@@ -384,25 +368,33 @@ namespace DriveHUD.EquityCalculator.Models
             var bluffCombos = 0;
             var valueBetCombos = 0;
 
-            foreach (var range in ranges)
+            if (ranges.Length != 0)
             {
-                switch (range.EquitySelectionMode)
+                foreach (var range in ranges)
                 {
-                    case EquitySelectionMode.FoldCheck:
-                        foldCheckCombos += range.Combos;
-                        break;
-                    case EquitySelectionMode.Call:
-                        callCombos += range.Combos;
-                        break;
-                    case EquitySelectionMode.Bluff:
-                        bluffCombos += range.Combos;
-                        break;
-                    case EquitySelectionMode.ValueBet:
-                        valueBetCombos += range.Combos;
-                        break;
-                }
+                    switch (range.EquitySelectionMode)
+                    {
+                        case EquitySelectionMode.FoldCheck:
+                            foldCheckCombos += range.Combos;
+                            break;
+                        case EquitySelectionMode.Call:
+                            callCombos += range.Combos;
+                            break;
+                        case EquitySelectionMode.Bluff:
+                            bluffCombos += range.Combos;
+                            break;
+                        case EquitySelectionMode.ValueBet:
+                            valueBetCombos += range.Combos;
+                            break;
+                    }
 
-                totalCombos += range.Combos;
+                    totalCombos += range.Combos;
+                }
+            }
+            // known cards are equal to 1 combo
+            else if (Cards.All(x => x.Validate()))
+            {
+                totalCombos = 1;
             }
 
             TotalCombos = totalCombos;
@@ -434,9 +426,9 @@ namespace DriveHUD.EquityCalculator.Models
             }
         }
 
-        public void CheckBluffToValueBetRatio(Street street)
+        public void CheckBluffToValueBetRatio(int opponentsCount, Street street)
         {
-            if (BluffToValueRatioCalculator.CheckRatio(BluffCombos, ValueBetCombos, street, out int[] increaseBluffBy, out int[] increaseValueBy))
+            if (BluffToValueRatioCalculator.CheckRatio(opponentsCount, BluffCombos, ValueBetCombos, street, out int[] increaseBluffBy, out int[] increaseValueBy))
             {
                 BluffToValueRatioWarning = string.Empty;
                 return;
@@ -445,7 +437,7 @@ namespace DriveHUD.EquityCalculator.Models
             if (BluffCombos == 0)
             {
                 BluffToValueRatioWarning = string.Format(CommonResourceManager.Instance.GetResourceString("Common_EquityCalculator_WarningMessageNoBluffCombos"),
-                    street, BluffToValueRatioCalculator.RecommendedRange[street]);
+                    street, BluffToValueRatioCalculator.GetRecommendedRange(opponentsCount, street));
 
                 return;
             }
@@ -453,7 +445,7 @@ namespace DriveHUD.EquityCalculator.Models
             if (ValueBetCombos == 0)
             {
                 BluffToValueRatioWarning = string.Format(CommonResourceManager.Instance.GetResourceString("Common_EquityCalculator_WarningMessageNoValueCombos"),
-                  street, BluffToValueRatioCalculator.RecommendedRange[street]);
+                  street, BluffToValueRatioCalculator.GetRecommendedRange(opponentsCount, street));
 
                 return;
             }
@@ -466,7 +458,7 @@ namespace DriveHUD.EquityCalculator.Models
             var increaseByText = string.Join("-", increaseBy.Distinct().OrderBy(x => x).ToArray());
 
             BluffToValueRatioWarning = string.Format(CommonResourceManager.Instance.GetResourceString("Common_EquityCalculator_WarningMessageWithRange"),
-                street, BluffToValueRatioCalculator.RecommendedRange[street], rangeText, increaseByText);
+                street, BluffToValueRatioCalculator.GetRecommendedRange(opponentsCount, street), rangeText, increaseByText);
         }
 
         private decimal GetEquityRangePercentage(int value, int total)
@@ -474,6 +466,20 @@ namespace DriveHUD.EquityCalculator.Models
             return value == total || total == 0 ?
                 (decimal)value / 1326 :
                 (decimal)value / total;
+        }
+
+        private void UpdatePlayerCardsData()
+        {
+            PlayerCards.Clear();
+
+            var hands = CardHelper.GetHandsFormatted(GetPlayersHand());
+
+            foreach (var hand in hands)
+            {
+                PlayerCards.Add(hand);
+            }
+
+            UpdateEquityData();
         }
 
         #region ICommand Implementation

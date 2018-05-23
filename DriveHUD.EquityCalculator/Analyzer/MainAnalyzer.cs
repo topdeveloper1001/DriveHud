@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.EquityCalculator.ViewModels;
+using HandHistories.Objects.Cards;
 using Model.Enums;
 using System;
 using System.Collections;
@@ -68,15 +69,11 @@ namespace DriveHUD.EquityCalculator.Analyzer
             strongestOpponentName = handAnalyzer.StrongestOpponentName;
         }
 
-        internal static void GetHeroRange(HandHistories.Objects.Hand.HandHistory currentHandHistory, HandHistories.Objects.Cards.Street currentStreet, 
-            out string strongestOpponentName, out IEnumerable<EquityRangeSelectorItemViewModel> strongestOpponentHands)
+        internal static IEnumerable<EquityRangeSelectorItemViewModel> GetHeroRange(HandHistories.Objects.Hand.HandHistory currentHandHistory, HandHistories.Objects.Cards.Street currentStreet)
         {
-            strongestOpponentName = null;
-            strongestOpponentHands = new List<EquityRangeSelectorItemViewModel>();
-
             if (currentHandHistory.Hero == null)
             {
-                return;
+                return null;
             }
 
             if (init)
@@ -85,37 +82,17 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 HandHistory.Init();
                 Card.Init();
                 init = false;
-            }            
+            }
 
             var handAnalyzer = new HandAnalyzer();
 
             var handHistory = new HandHistory();
+
             handHistory.ConverToEquityCalculatorFormat(currentHandHistory, currentStreet);
 
-            // analyze preflop ranges
-            var hand_range = handAnalyzer.PreflopAnalysis(handHistory);
+            var heroRange = handAnalyzer.BuildPlayerRange(handHistory, currentHandHistory.Hero.PlayerName);
 
-            var hand_collective = new Hashtable();
-
-            foreach (string key in hand_range.Keys)
-            {
-                var hand_distribution = new hand_distribution
-                {
-                    hand_range = (float)Convert.ToDouble(hand_range[key])
-                };
-
-                hand_collective.Add(key, hand_distribution);
-            }
-
-            var street = currentStreet == HandHistories.Objects.Cards.Street.Flop ? 1 :
-                              currentStreet == HandHistories.Objects.Cards.Street.Turn ? 2 :
-                               currentStreet == HandHistories.Objects.Cards.Street.River ? 3 : 0;
-            
-
-            handAnalyzer.BuildPlayerRange(handHistory, street, hand_collective, currentHandHistory.Hero.PlayerName);
-
-            strongestOpponentHands = GroupHands(handAnalyzer.StrongestOpponentHands);
-            strongestOpponentName = handAnalyzer.StrongestOpponentName;
+            return GroupHands(heroRange);
         }
 
         private static IEnumerable<EquityRangeSelectorItemViewModel> GroupHands(List<String> ungroupedHands)

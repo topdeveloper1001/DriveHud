@@ -34,149 +34,36 @@ namespace DriveHUD.EquityCalculator.Analyzer
             return false;
         }
 
-        internal void BuildPlayerRange(HandHistory handHistory, int street, Hashtable collective_range, string playerName)
+        internal List<string> BuildPlayerRange(HandHistory handHistory, string playerName)
         {
-            Hashtable collective = new Hashtable();
-            Hashtable hand_weight = new Hashtable();
-
-            foreach (String key in handHistory.Players.Keys)
+            if (!(handHistory.Players[playerName] is Player player))
             {
-                var hand_distribution = new hand_distribution();
-
-                collective.Add(key, hand_distribution);
-
-                hand_weight.Add(key, 0);
-
-                for (int i = 0; i < 52; i++)
-                {
-                    for (int j = 0; j < 52; j++)
-                    {
-                        hand_distribution.draw_matrix[i, j] = (collective_range[key] as hand_distribution).draw_matrix[i, j];
-                    }
-                }
+                return new List<string>();
             }
 
-            float[,] hand_percentile = new float[52, 52]; // Store current hand percentiles
+            var isPreflopRaiser = PlayerIsPreflopRaiser(handHistory, player, false);
+            var did3BetPreflop = PlayerDid3BetPreflop(handHistory, player);
+            var did4BetPreflop = PlayerDid4BetPreflop(handHistory, player);
+            var called3BetPreflop = PlayerCalled3BetPreflop(handHistory, player);
+            var called4BetPreflop = PlayerCalled4BetPreflop(handHistory, player);
+            var opponentPreflopRaiser = PlayerCalledOpenRaisePreflop(handHistory, player);
+            var limpedThenCall = PlayerLimpedThenCalledPreflop(handHistory, player);
 
-            if (street == 1) // Preflop->Flop
-            {
-                // Update hand rankings based on the flop dealt
-                handHistory.update_absolute_percentiles(street);
+            var preflopIs3Bet = did3BetPreflop || called3BetPreflop;
+            var preflopIs4Bet = did4BetPreflop || called4BetPreflop;
 
-                // Loop though all starting hands
-                for (int i = 1; i < 52; i++)
-                {
-                    for (int j = 0; j < i; j++)
-                    {
-                        String hand_group;
+            var handRange = GetOpponentHandRange(handHistory, player,
+                                    opponentPreflopRaiser,
+                                    did3BetPreflop,
+                                    did4BetPreflop,
+                                    isPreflopRaiser,
+                                    called3BetPreflop,
+                                    called4BetPreflop,
+                                    limpedThenCall);
 
-                        if (i / 13 == j / 13) hand_group = handHistory.preflop_group(Card.AllCards[i % 13].ToString() + "s" + Card.AllCards[j % 13].ToString() + "s"); // Suited
-                        else hand_group = handHistory.preflop_group(Card.AllCards[i % 13].ToString() + "h" + Card.AllCards[j % 13].ToString() + "c"); // Offsuit
+            var ungroupedHandRange = UngroupHands(handRange, handHistory);
 
-                        float jam_percentile = (float)Convert.ToDouble(HandHistory.jam_percentile[hand_group]);
-                        float deep_percentile = (float)Convert.ToDouble(HandHistory.deepstack_percentile[hand_group]);
-                        float short_percentile = (float)Convert.ToDouble(HandHistory.shortstack_percentile[hand_group]);
-
-                        // Update players' hand ranges based on how strong each starting hand is on the given board (use all 3 preflop hand rankings to make the cutoffs smoother)
-                        String hand_str = Card.CardName[i].ToString() + Card.CardSuit[i].ToString() + Card.CardName[j].ToString() + Card.CardSuit[j].ToString();
-                        float hand_pct = (float)Convert.ToDouble(handHistory.absolute_percentile[hand_str]);
-                        hand_percentile[i, j] = hand_percentile[j, i] = hand_pct;
-
-                        foreach (String key in handHistory.Players.Keys)
-                        {
-                            (collective[key] as hand_distribution).draw_matrix[i, j] = 0.0f;
-
-                            if (jam_percentile <= (collective_range[key] as hand_distribution).hand_range)
-                            {
-                                (collective[key] as hand_distribution).hand_range += hand_pct;
-                                hand_weight[key] = Convert.ToDouble(hand_weight[key]) + 1.0f;
-                                (collective[key] as hand_distribution).draw_matrix[i, j] += 1 / 3.0f;
-                            }
-                            if (deep_percentile <= (collective_range[key] as hand_distribution).hand_range)
-                            {
-                                (collective[key] as hand_distribution).hand_range += hand_pct;
-                                hand_weight[key] = Convert.ToDouble(hand_weight[key]) + 1.0f;
-                                (collective[key] as hand_distribution).draw_matrix[i, j] += 1 / 3.0f;
-                            }
-                            if (short_percentile <= (collective_range[key] as hand_distribution).hand_range)
-                            {
-                                (collective[key] as hand_distribution).hand_range += hand_pct;
-                                hand_weight[key] = Convert.ToDouble(hand_weight[key]) + 1.0f;
-                                (collective[key] as hand_distribution).draw_matrix[i, j] += 1 / 3.0f;
-                            }
-                            (collective[key] as hand_distribution).draw_matrix[j, i] = (collective[key] as hand_distribution).draw_matrix[i, j];
-                        }
-                    }
-                }
-
-                foreach (String key in handHistory.Players.Keys)
-                {
-                    (collective[key] as hand_distribution).hand_range *= 2;
-                    if (Convert.ToDouble(hand_weight[key]) > 0) (collective[key] as hand_distribution).hand_range /= (float)Convert.ToDouble(hand_weight[key]);
-                    else (collective[key] as hand_distribution).hand_range = 1.0f;
-                }
-            }
-            else if (street == 0)
-            {               
-            }
-            else // Flop->Turn, or Turn->River
-            {
-                // Calculate previous street's hand percentiles
-                float[,] last_percentile = new float[52, 52];
-                handHistory.update_absolute_percentiles(street - 1);
-                for (int i = 1; i < 52; i++)
-                {
-                    for (int j = 0; j < i; j++)
-                    {
-                        String hand_str = Card.CardName[i].ToString() + Card.CardSuit[i].ToString() + Card.CardName[j].ToString() + Card.CardSuit[j].ToString();
-                        last_percentile[i, j] = (float)Convert.ToDouble(handHistory.absolute_percentile[hand_str]);
-                    }
-                }
-
-                // Update hand rankings based on the new card dealt
-                handHistory.update_absolute_percentiles(street);
-
-                // Loop though all starting hands
-                for (int i = 1; i < 52; i++)
-                {
-                    for (int j = 0; j < i; j++)
-                    {
-                        // Update players' hand ranges based on the new card
-                        String hand_str = Card.CardName[i].ToString() + Card.CardSuit[i].ToString() + Card.CardName[j].ToString() + Card.CardSuit[j].ToString();
-                        float hand_pct = (float)Convert.ToDouble(handHistory.absolute_percentile[hand_str]);
-
-                        foreach (String key in handHistory.Players.Keys)
-                        {
-                            if (last_percentile[i, j] <= (collective_range[key] as hand_distribution).hand_range) // Made hands
-                            {
-                                (collective[key] as hand_distribution).hand_range += hand_pct;
-                                hand_weight[key] = Convert.ToDouble(hand_weight[key]) + 1.0f;
-                            }
-                            else // Drawing hands
-                            {
-                                (collective[key] as hand_distribution).hand_range += (collective[key] as hand_distribution).draw_matrix[i, j] * hand_pct;
-                                hand_weight[key] = Convert.ToDouble(hand_weight[key]) + (collective[key] as hand_distribution).draw_matrix[i, j] * 1.0f;
-                            }
-                        }
-                        hand_percentile[i, j] = hand_percentile[j, i] = hand_pct;
-                    }
-                }
-                foreach (String key in handHistory.Players.Keys)
-                {
-                    (collective[key] as hand_distribution).hand_range *= 2;
-                    if (Convert.ToDouble(hand_weight[key]) > 0) (collective[key] as hand_distribution).hand_range /= (float)Convert.ToDouble(hand_weight[key]);
-                    else (collective[key] as hand_distribution).hand_range = 1.0f;
-                }
-            }
-
-            var action = street == 0 ? handHistory.PreflopActions.FirstOrDefault() : handHistory.PostflopActions[street].FirstOrDefault();
-
-            if (action == null)
-            {
-                return;
-            }
-
-            equitySimulation2(handHistory, action, collective, PostflopEquitySims, street, true, playerName);
+            return ungroupedHandRange;
         }
 
         internal Hashtable PostflopAnalysis(HandHistory handHistory, int street, Hashtable collective_range)
@@ -2196,30 +2083,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             //missed_bets_street[street].Add(missed_bets - missed_bets_before);
             return collective; // Return hashtable of the players' estimated hand percentiles, drawing ranges, and a matrix of remaining drawing hands
-        }
-
-        //internal List<string> GetPlayerRange(HandHistory handHistory, string playerName)
-        //{
-        //    strongestOpponentIsPreflopRaiser = strongestOpponentPlayer == null ? false : PlayerIsPreflopRaiser(handHistory, strongestOpponentPlayer, false);
-        //    strongestOpponentDid3BetPreflop = strongestOpponentPlayer == null ? false : PlayerDid3BetPreflop(handHistory, strongestOpponentPlayer);
-        //    strongestOpponentDid4BetPreflop = strongestOpponentPlayer == null ? false : PlayerDid4BetPreflop(handHistory, strongestOpponentPlayer);
-        //    strongestOpponentCalled3BetPreflop = strongestOpponentPlayer == null ? false : PlayerCalled3BetPreflop(handHistory, strongestOpponentPlayer);
-        //    strongestOpponentCalled4BetPreflop = strongestOpponentPlayer == null ? false : PlayerCalled4BetPreflop(handHistory, strongestOpponentPlayer);
-        //    opponentNotStrongestPreflopRaiser = strongestOpponentPlayer == null ? null : PlayerCalledOpenRaisePreflop(handHistory, strongestOpponentPlayer);
-        //    strongestOpponentLimpedThenCall = strongestOpponentPlayer == null ? false : PlayerLimpedThenCalledPreflop(handHistory, strongestOpponentPlayer);
-
-        //    preflopIs3Bet = strongestOpponentDid3BetPreflop || strongestOpponentCalled3BetPreflop;
-        //    preflopIs4Bet = strongestOpponentDid4BetPreflop || strongestOpponentCalled4BetPreflop;
-
-        //    opponentHandRange = GetOpponentHandRange(handHistory, strongestOpponentPlayer,
-        //                            opponentNotStrongestPreflopRaiser,
-        //                            strongestOpponentDid3BetPreflop,
-        //                            strongestOpponentDid4BetPreflop,
-        //                            strongestOpponentIsPreflopRaiser,
-        //                            strongestOpponentCalled3BetPreflop,
-        //                            strongestOpponentCalled4BetPreflop,
-        //                            strongestOpponentLimpedThenCall);
-        //}
+        }      
 
         PreAction decisionSummary(HandHistory handHistory, Action action)
         {
@@ -4190,15 +4054,10 @@ namespace DriveHUD.EquityCalculator.Analyzer
                             //float ev_raise = all_fold_p * basics.Pot + (1 - all_fold_p) * (ev_conditional.postflop_equity_all * (basics.Pot + temp_bet - basics.To_call) - (1 - ev_conditional.postflop_equity_all) * temp_bet);
                             float ev_call = 0, ev_raise = 0;
 
-
-
-
-                            //
-
-
                             // Heat Map Calculation (not exact, but approximate)
                             float[,] raise_heat = new float[13, 13];
                             float[,] call_heat = new float[13, 13];
+
                             for (int hole_i = 0; hole_i < 169; hole_i++)
                             {
                                 int hole_x = hole_i / 13;
@@ -6419,7 +6278,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
             return "";
         }
 
-        pot_equity equitySimulation2(HandHistory handHistory, Action action, Hashtable collective_range, long simulations, int street, bool calculateAPDEquity, string opponentName = null)
+        pot_equity equitySimulation2(HandHistory handHistory, Action action, Hashtable collective_range, long simulations, int street, bool calculateAPDEquity)
         {
             StrongestOpponentHands = new List<String>();
             //return new pot_equity();
@@ -6428,21 +6287,18 @@ namespace DriveHUD.EquityCalculator.Analyzer
             int[] deck = new int[52];
             FastEvaluator.init_deck(deck);
 
-            // Move player's hole cards to the beginning of the deck
-            if (opponentName == null)
+            // Move player's hole cards to the beginning of the deck          
+            for (int i = 0; i < 2; i++)
             {
-                for (int i = 0; i < 2; i++)
-                {
-                    int temp_suit = 0;
-                    if ((handHistory.Players[action.PlayerName] as Player).Cards[2 * i + 1] == 's') temp_suit = (int)GameRules.suit.SPADE;
-                    else if ((handHistory.Players[action.PlayerName] as Player).Cards[2 * i + 1] == 'h') temp_suit = (int)GameRules.suit.HEART;
-                    else if ((handHistory.Players[action.PlayerName] as Player).Cards[2 * i + 1] == 'd') temp_suit = (int)GameRules.suit.DIAMOND;
-                    else if ((handHistory.Players[action.PlayerName] as Player).Cards[2 * i + 1] == 'c') temp_suit = (int)GameRules.suit.CLUB;
-                    int temp_location = FastEvaluator.find_card((int)Card.CardValues[(handHistory.Players[action.PlayerName] as Player).Cards[2 * i].ToString()], temp_suit, deck);
-                    int temp_value = deck[temp_location];
-                    deck[temp_location] = deck[i];
-                    deck[i] = temp_value;
-                }
+                int temp_suit = 0;
+                if ((handHistory.Players[action.PlayerName] as Player).Cards[2 * i + 1] == 's') temp_suit = (int)GameRules.suit.SPADE;
+                else if ((handHistory.Players[action.PlayerName] as Player).Cards[2 * i + 1] == 'h') temp_suit = (int)GameRules.suit.HEART;
+                else if ((handHistory.Players[action.PlayerName] as Player).Cards[2 * i + 1] == 'd') temp_suit = (int)GameRules.suit.DIAMOND;
+                else if ((handHistory.Players[action.PlayerName] as Player).Cards[2 * i + 1] == 'c') temp_suit = (int)GameRules.suit.CLUB;
+                int temp_location = FastEvaluator.find_card((int)Card.CardValues[(handHistory.Players[action.PlayerName] as Player).Cards[2 * i].ToString()], temp_suit, deck);
+                int temp_value = deck[temp_location];
+                deck[temp_location] = deck[i];
+                deck[i] = temp_value;
             }
 
             // Move any board cards in the beginning of the deck as well
@@ -6474,127 +6330,115 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             foreach (String key in action.ThisStreetCommitment.Keys)
             {
-                if (opponentName == null)
+
+                if (!(bool)action.InHand[key]) continue; // Skip players already folded
+                if (key == action.PlayerName) continue; // Skip hero
+
+                float collective_hand_range = (collective_range[key] as hand_distribution).hand_range;
+
+                if ((collective_range[key] as hand_distribution).hand_range <= 1) // If opponent's hand range is stronger than random hand, don't count the weakest possible hands
                 {
-                    if (!(bool)action.InHand[key]) continue; // Skip players already folded
-                    if (key == action.PlayerName) continue; // Skip hero
-
-                    float collective_hand_range = (collective_range[key] as hand_distribution).hand_range;
-
-                    if ((collective_range[key] as hand_distribution).hand_range <= 1) // If opponent's hand range is stronger than random hand, don't count the weakest possible hands
+                    if (street == 0) // Preflop
                     {
-                        if (street == 0) // Preflop
+                        for (int i = 1; i < 13; i++)
                         {
-                            for (int i = 1; i < 13; i++)
+                            if ((float)HandHistory.deepstack_percentile[Card.AllCards[i] + Card.AllCards[i]] <= collective_hand_range) deep_weight[villain_counter, i, i] = true;
+                            if ((float)HandHistory.shortstack_percentile[Card.AllCards[i] + Card.AllCards[i]] <= collective_hand_range) short_weight[villain_counter, i, i] = true;
+                            for (int j = 0; j < i; j++)
                             {
-                                if ((float)HandHistory.deepstack_percentile[Card.AllCards[i] + Card.AllCards[i]] <= collective_hand_range) deep_weight[villain_counter, i, i] = true;
-                                if ((float)HandHistory.shortstack_percentile[Card.AllCards[i] + Card.AllCards[i]] <= collective_hand_range) short_weight[villain_counter, i, i] = true;
-                                for (int j = 0; j < i; j++)
-                                {
-                                    if ((float)HandHistory.deepstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "s"] <= collective_hand_range) deep_weight[villain_counter, i, j] = true;
-                                    if ((float)HandHistory.deepstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "o"] <= collective_hand_range) deep_weight[villain_counter, j, i] = true;
-                                    if ((float)HandHistory.shortstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "s"] <= collective_hand_range) short_weight[villain_counter, i, j] = true;
-                                    if ((float)HandHistory.shortstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "o"] <= collective_hand_range) short_weight[villain_counter, j, i] = true;
-                                }
+                                if ((float)HandHistory.deepstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "s"] <= collective_hand_range) deep_weight[villain_counter, i, j] = true;
+                                if ((float)HandHistory.deepstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "o"] <= collective_hand_range) deep_weight[villain_counter, j, i] = true;
+                                if ((float)HandHistory.shortstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "s"] <= collective_hand_range) short_weight[villain_counter, i, j] = true;
+                                if ((float)HandHistory.shortstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "o"] <= collective_hand_range) short_weight[villain_counter, j, i] = true;
                             }
                         }
-                        else // Post-flop
+                    }
+                    else // Post-flop
+                    {
+                        String playerCards = (handHistory.Players[handHistory.HeroName] as Player).Cards;
+                        bool heroHasMadeHand = false;
+                        if ((float)handHistory.absolute_percentile[playerCards] <= collective_hand_range) // Made hands
                         {
-                            String playerCards = (handHistory.Players[handHistory.HeroName] as Player).Cards;
-                            bool heroHasMadeHand = false;
-                            if ((float)handHistory.absolute_percentile[playerCards] <= collective_hand_range) // Made hands
+                            heroHasMadeHand = true;
+                        }
+                        result.MadeHands = heroHasMadeHand;
+                        for (int i = 1; i < 52; i++)
+                        {
+                            for (int j = 0; j < i; j++)
                             {
-                                heroHasMadeHand = true;
-                            }
-                            result.MadeHands = heroHasMadeHand;
-                            for (int i = 1; i < 52; i++)
-                            {
-                                for (int j = 0; j < i; j++)
+                                String card_str = Card.CardName[i].ToString() + Card.CardSuit[i].ToString() + Card.CardName[j].ToString() + Card.CardSuit[j].ToString();
+                                if ((float)handHistory.absolute_percentile[card_str] <= collective_hand_range) // Made hands
                                 {
-                                    String card_str = Card.CardName[i].ToString() + Card.CardSuit[i].ToString() + Card.CardName[j].ToString() + Card.CardSuit[j].ToString();
-                                    if ((float)handHistory.absolute_percentile[card_str] <= collective_hand_range) // Made hands
-                                    {
-                                        postflop_weight[villain_counter, i, j] = 1.0f;
-                                        postflop_weight[villain_counter, j, i] = 1.0f;
-                                    }
-                                    else // Drawing hands
-                                    {
-                                        postflop_weight[villain_counter, i, j] = (collective_range[key] as hand_distribution).draw_matrix[i, j];
-                                        postflop_weight[villain_counter, j, i] = (collective_range[key] as hand_distribution).draw_matrix[j, i];
-                                    }
+                                    postflop_weight[villain_counter, i, j] = 1.0f;
+                                    postflop_weight[villain_counter, j, i] = 1.0f;
+                                }
+                                else // Drawing hands
+                                {
+                                    postflop_weight[villain_counter, i, j] = (collective_range[key] as hand_distribution).draw_matrix[i, j];
+                                    postflop_weight[villain_counter, j, i] = (collective_range[key] as hand_distribution).draw_matrix[j, i];
                                 }
                             }
                         }
                     }
-                    else // If opponent's hand range is weaker than random hand, don't count the strongest possible hands
-                    {
-                        if (street == 0) // Preflop
-                        {
-                            for (int i = 1; i < 13; i++)
-                            {
-                                if ((float)HandHistory.deepstack_percentile[Card.AllCards[i] + Card.AllCards[i]] >= 1 - 1.0f / collective_hand_range) deep_weight[villain_counter, i, i] = true;
-                                if ((float)HandHistory.shortstack_percentile[Card.AllCards[i] + Card.AllCards[i]] >= 1 - 1.0f / collective_hand_range) short_weight[villain_counter, i, i] = true;
-                                for (int j = 0; j < i; j++)
-                                {
-                                    if ((float)HandHistory.deepstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "s"] >= 1 - 1.0f / collective_hand_range) deep_weight[villain_counter, i, j] = true;
-                                    if ((float)HandHistory.deepstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "o"] >= 1 - 1.0f / collective_hand_range) deep_weight[villain_counter, j, i] = true;
-                                    if ((float)HandHistory.shortstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "s"] >= 1 - 1.0f / collective_hand_range) short_weight[villain_counter, i, j] = true;
-                                    if ((float)HandHistory.shortstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "o"] >= 1 - 1.0f / collective_hand_range) short_weight[villain_counter, j, i] = true;
-                                }
-                            }
-                        }
-                        else // Post-flop
-                        {
-                            String playerCards = (handHistory.Players[handHistory.HeroName] as Player).Cards;
-                            bool heroHasMadeHand = false;
-                            if ((float)handHistory.absolute_percentile[playerCards] >= 1 - 1.0f / collective_hand_range)
-                            {
-                                heroHasMadeHand = true;
-                            }
-                            result.MadeHands = heroHasMadeHand;
-                            for (int i = 1; i < 52; i++)
-                            {
-                                for (int j = 0; j < i; j++)
-                                {
-                                    String card_str = Card.CardName[i].ToString() + Card.CardSuit[i].ToString() + Card.CardName[j].ToString() + Card.CardSuit[j].ToString();
-                                    if ((float)handHistory.absolute_percentile[card_str] >= 1 - 1.0f / collective_hand_range) // Made hands
-                                    {
-                                        postflop_weight[villain_counter, i, j] = 1.0f;
-                                        postflop_weight[villain_counter, j, i] = 1.0f;
-                                    }
-                                    else // Drawing hands
-                                    {
-                                        postflop_weight[villain_counter, i, j] = (collective_range[key] as hand_distribution).draw_matrix[i, j];
-                                        postflop_weight[villain_counter, j, i] = (collective_range[key] as hand_distribution).draw_matrix[j, i];
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    if (collective_hand_range < strongest_range || strongest_range < 0)
-                    {
-                        strongest_villain = villain_counter;
-                        strongest_range = collective_hand_range;
-                        result.strongest_man = key;
-                    }
-                    else if (strongest_range == collective_hand_range) result.strongest_man = ""; // Don't show the name if the strongest opponent is not unique
                 }
-                else if (opponentName == key)
+                else // If opponent's hand range is weaker than random hand, don't count the strongest possible hands
+                {
+                    if (street == 0) // Preflop
+                    {
+                        for (int i = 1; i < 13; i++)
+                        {
+                            if ((float)HandHistory.deepstack_percentile[Card.AllCards[i] + Card.AllCards[i]] >= 1 - 1.0f / collective_hand_range) deep_weight[villain_counter, i, i] = true;
+                            if ((float)HandHistory.shortstack_percentile[Card.AllCards[i] + Card.AllCards[i]] >= 1 - 1.0f / collective_hand_range) short_weight[villain_counter, i, i] = true;
+                            for (int j = 0; j < i; j++)
+                            {
+                                if ((float)HandHistory.deepstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "s"] >= 1 - 1.0f / collective_hand_range) deep_weight[villain_counter, i, j] = true;
+                                if ((float)HandHistory.deepstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "o"] >= 1 - 1.0f / collective_hand_range) deep_weight[villain_counter, j, i] = true;
+                                if ((float)HandHistory.shortstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "s"] >= 1 - 1.0f / collective_hand_range) short_weight[villain_counter, i, j] = true;
+                                if ((float)HandHistory.shortstack_percentile[Card.AllCards[i] + Card.AllCards[j] + "o"] >= 1 - 1.0f / collective_hand_range) short_weight[villain_counter, j, i] = true;
+                            }
+                        }
+                    }
+                    else // Post-flop
+                    {
+                        String playerCards = (handHistory.Players[handHistory.HeroName] as Player).Cards;
+                        bool heroHasMadeHand = false;
+                        if ((float)handHistory.absolute_percentile[playerCards] >= 1 - 1.0f / collective_hand_range)
+                        {
+                            heroHasMadeHand = true;
+                        }
+                        result.MadeHands = heroHasMadeHand;
+                        for (int i = 1; i < 52; i++)
+                        {
+                            for (int j = 0; j < i; j++)
+                            {
+                                String card_str = Card.CardName[i].ToString() + Card.CardSuit[i].ToString() + Card.CardName[j].ToString() + Card.CardSuit[j].ToString();
+                                if ((float)handHistory.absolute_percentile[card_str] >= 1 - 1.0f / collective_hand_range) // Made hands
+                                {
+                                    postflop_weight[villain_counter, i, j] = 1.0f;
+                                    postflop_weight[villain_counter, j, i] = 1.0f;
+                                }
+                                else // Drawing hands
+                                {
+                                    postflop_weight[villain_counter, i, j] = (collective_range[key] as hand_distribution).draw_matrix[i, j];
+                                    postflop_weight[villain_counter, j, i] = (collective_range[key] as hand_distribution).draw_matrix[j, i];
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (collective_hand_range < strongest_range || strongest_range < 0)
                 {
                     strongest_villain = villain_counter;
+                    strongest_range = collective_hand_range;
                     result.strongest_man = key;
                 }
+                else if (strongest_range == collective_hand_range) result.strongest_man = ""; // Don't show the name if the strongest opponent is not unique
 
                 villain_counter++;
             }
 
-            int skip = board_cards.Length / 2; // How many cards in the deck are known (hero's hole cards, and board cards as needed)
-
-            if (opponentName == null)
-            {
-                skip += 2;
-            }
+            int skip = 2 + board_cards.Length / 2; // How many cards in the deck are known (hero's hole cards, and board cards as needed)           
 
             long wins_all = 0, deep_trials_all = 0, short_trials_all = 0, deep_wins_all = 0, short_wins_all = 0, postflop_trials_all = 0, postflop_wins_all = 0, suckout_trials_all = 0, suckout_wins_all = 0;
             long wins_hup = 0, deep_trials_hup = 0, short_trials_hup = 0, deep_wins_hup = 0, short_wins_hup = 0, postflop_trials_hup = 0, postflop_wins_hup = 0;
@@ -6607,9 +6451,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 strongestOpponentPlayer = allOpponents[0];
             }
 
-
             StrongestOpponentName = strongestOpponentPlayer.PlayerName;
-
 
             bool isLastAction = true;// IsLastActionInHand(handHistory, action) && calculateAPDEquity;
 
@@ -6659,8 +6501,12 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 {
                     handsToTryBluffingWith = UngroupHands(GetHandsToOpenRaiseWith()["CO"] as List<String>, handHistory);
                     handsToAddToRange.AddRange(handsToTryBluffingWith);
+                    handsToAddToRange = handsToAddToRange.Distinct().ToList();
                 }
-                else handsToTryBluffingWith.AddRange(handsToAddToRange);
+                else
+                {
+                    handsToTryBluffingWith.AddRange(handsToAddToRange);
+                }
 
                 simulations = handsToAddToRange.Count;
 
@@ -6699,11 +6545,20 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             double drawBluffPrct = strongestOpponentCalled3BetPreflop || strongestOpponentDid3BetPreflop ? 0.5 : 0.75;
 
+            //void print_deck(int[] deck_to_print)
+            //{
+            //    System.Diagnostics.Debug.WriteLine(string.Join(", ", deck_to_print.Select(d => GetCardByNumber(d, deck_to_print)).ToArray()));
+            //}
+
+            //print_deck(deck);
+
             for (long kloops = 0; kloops < simulations; kloops++)
             {
                 FastEvaluator.shuffle_deck(deck, skip); // Skip hero's hole cards since those are known (and board cards as needed)
                 List<int> simsDeck = new List<int>(deck);
                 simsDecks.Add(simsDeck.ToArray());
+
+                //print_deck(deck);
 
                 //START TEST
                 int[] hand_hero = new int[] { deck[0], deck[1], deck[2], deck[3], deck[4], deck[5], deck[6] };
@@ -6901,11 +6756,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
                                         }
                                     }
 
-                                    if (groupedHand1.Equals("AJo"))
-                                    {
-                                    }
-
                                     #region FLOP CUSTOM EQUITY
+
                                     //FLOP
                                     if (canTryBluffingWithHandOnTheFlop && canMakeDrawWithHand(handHistory, oppCard1, oppCard2, 1))
                                     {
@@ -7001,25 +6853,29 @@ namespace DriveHUD.EquityCalculator.Analyzer
                                             }
                                         }
                                     }
-                                    else //OPPONENT RAISED, CALLED, BET
+                                    // OPPONENT RAISED, CALLED, BET
+                                    else
                                     {
-                                        //if opponent is the pre-flop aggressor... meaning they raised, re-raised... they were the person with the last aggressive action
-                                        //[1:25:27 AM] John Anhalt: and they bet the flop, hero calls
-                                        //[1:25:47 AM] John Anhalt: then they CAN have turned draws or pairs in their range
+                                        // if opponent is the pre-flop aggressor... meaning they raised, re-raised... they were the person with the last aggressive action
+                                        // [1:25:27 AM] John Anhalt: and they bet the flop, hero calls
+                                        // [1:25:47 AM] John Anhalt: then they CAN have turned draws or pairs in their range
                                         bool strongestPlayerIsPreflopAggressorAndBetCallScenarioOnTheFlop = (PlayerIsPreflopAggressor(handHistory, strongestOpponentPlayer) && BetCallScenarioOnStreet(handHistory, 1, strongestOpponentPlayer, true, true));
+
                                         if (strongestPlayerIsPreflopAggressorAndBetCallScenarioOnTheFlop)
                                         {
                                             drawBluffPrct = 0.25;
                                         }
-                                        else drawBluffPrct = 0.5;
+                                        else
+                                        {
+                                            drawBluffPrct = 0.5;
+                                        }
 
-
-                                        //on paired flops, with no draws... we need to add all pairs 22-AA + AJo+/AJs+ to opponents calling range (if they call a bet on the flop)
-                                        List<String> handsToCallWithOnPairedFlopsWithNoDraws = new List<String>(new String[]{
+                                        // on paired flops, with no draws... we need to add all pairs 22-AA + AJo+/AJs+ to opponents calling range (if they call a bet on the flop)
+                                        var handsToCallWithOnPairedFlopsWithNoDraws = new List<string> {
                                                 "22","33","44","55","66","77","88","99","TT","JJ","QQ","KK","AA",
                                                 "AJo","AQo","AKo",
                                                 "AJs","AQs","AKs"
-                                            });
+                                            };
 
                                         topCard = null;
 
@@ -7038,21 +6894,19 @@ namespace DriveHUD.EquityCalculator.Analyzer
                                         //[1:14:57 AM] John Anhalt: this is IF there was a bet and call, or raise on the flop
                                         //[1:15:03 AM] John Anhalt: anything except for check/check
 
-                                        //50% DRAWS
+                                        // 50% DRAWS
                                         else if (canTryBluffingWithHandOnTheFlop && canMakeDrawWithHand(handHistory, oppCard1, oppCard2, 1))
                                         {
                                             if (!bluffHands.ContainsKey(oppCard1 + oppCard2))
                                             {
                                                 bluffHands.Add(oppCard1 + oppCard2, 1);
                                             }
-                                        }//SMALL PAIRS
+                                        }
+                                        // SMALL PAIRS
                                         else if (oppCard1[0].Equals(oppCard2[0]) &&
-                                            (
-                                            (GetMiddleCardOnStreet(handHistory, 1) != null && Card.AllCardsList.IndexOf(oppCard1[0].ToString()) >= Card.AllCardsList.IndexOf(GetMiddleCardOnStreet(handHistory, 1)[0].ToString()))
-                                            ||
-                                            (GetBottomCardOnStreet(handHistory, 1) != null && oppCard1[0].Equals(GetBottomCardOnStreet(handHistory, 1)[0]))
-                                            )
-                                           )
+                                            (GetMiddleCardOnStreet(handHistory, 1) != null &&
+                                                Card.AllCardsList.IndexOf(oppCard1[0].ToString()) >= Card.AllCardsList.IndexOf(GetMiddleCardOnStreet(handHistory, 1)[0].ToString()) ||
+                                            (GetBottomCardOnStreet(handHistory, 1) != null && oppCard1[0].Equals(GetBottomCardOnStreet(handHistory, 1)[0]))))
                                         {
 
                                         }

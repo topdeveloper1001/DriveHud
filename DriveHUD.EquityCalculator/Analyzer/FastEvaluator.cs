@@ -1554,15 +1554,15 @@ namespace DriveHUD.EquityCalculator.Analyzer
         {
             //Console.WriteLine(c1.ToString() + " " + c2.ToString() + " " + c3.ToString() + " " + c4.ToString() + " " + c5.ToString());
             int q = (c1 | c2 | c3 | c4 | c5) >> 16;
-            if (q == 115 && c1 == 139523)
-            {
-
-            }
+            
             short s;
+
             if ((c1 & c2 & c3 & c4 & c5 & 0xf000) == (c5 & 0xf000))
                 return flushes[q]; // check for flushes and straight flushes
+
             if ((s = unique5[q]) != 0)
                 return s;          // check for straights and high card hands
+
             return hash_values[find_fast((uint)((c1 & 0xff) * (c2 & 0xff) * (c3 & 0xff) * (c4 & 0xff) * (c5 & 0xff)))];
         }
 

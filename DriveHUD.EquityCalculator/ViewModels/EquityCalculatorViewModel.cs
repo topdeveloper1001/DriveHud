@@ -243,7 +243,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             _board.PropertyChanged += (s, e) =>
             {
                 if (e.PropertyName == nameof(BoardModel.Cards))
-                {                  
+                {
                     // need to set new cards for each player model
                     PlayersList?.ForEach(x =>
                     {
@@ -253,7 +253,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
                         x.UpdateEquityData();
 
-                        x.CheckBluffToValueBetRatio(SelectedStreet);
+                        x.CheckBluffToValueBetRatio(CountOpponents(), SelectedStreet);
                     });
                 }
             };
@@ -271,13 +271,9 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
             try
             {
-                IEnumerable<EquityRangeSelectorItemViewModel> heroAutoHands = new List<EquityRangeSelectorItemViewModel>();
+                var heroAutoHands = MainAnalyzer.GetHeroRange(_currentHandHistory, _currentStreet);
 
-                var heroName = string.Empty;
-
-                MainAnalyzer.GetHeroRange(_currentHandHistory, _currentStreet, out heroName, out heroAutoHands);
-
-                if (heroAutoHands.Any())
+                if (heroAutoHands != null && heroAutoHands.Any())
                 {
                     heroAutoHands.ForEach(r => r.UsedCards = _board.Cards);
 
@@ -285,8 +281,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
                     if (hero != null)
                     {
-                        BluffToValueRatioCalculator.AdjustPlayerRange(heroAutoHands, CurrentStreet, _currentHandHistory);
+                        var opponentsCount = CountOpponents();
+
+                        BluffToValueRatioCalculator.AdjustPlayerRange(heroAutoHands, CurrentStreet, _currentHandHistory, opponentsCount);
                         hero.SetRanges(heroAutoHands);
+                        hero.CheckBluffToValueBetRatio(opponentsCount, SelectedStreet);
                     }
                 }
             }
@@ -324,6 +323,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 player.EquityValue = 0.0;
             }
+
             IsCalculateEquityError = false;
             IsCanExport = false;
         }
@@ -443,13 +443,13 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
             var players = CurrentGame.Players;
 
-            for (int i = 0; i < players.Count(); i++)
+            for (int i = 0; i < players.Count; i++)
             {
-                List<CardModel> list = new List<CardModel>();
+                var list = new List<CardModel>();
 
-                if (players.ElementAt(i).hasHoleCards)
+                if (players[i].hasHoleCards)
                 {
-                    foreach (var card in players.ElementAt(i).HoleCards)
+                    foreach (var card in players[i].HoleCards)
                     {
                         list.Add(new CardModel()
                         {
@@ -459,14 +459,14 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     }
                 }
 
-                if (i > PlayersList.Count() - 1)
+                if (i > PlayersList.Count - 1)
                 {
                     PlayersList.Add(new PlayerModel());
                 }
 
-                var currentPlayer = PlayersList.ElementAt(i);
+                var currentPlayer = PlayersList[i];
                 currentPlayer.SetCollection(list);
-                currentPlayer.PlayerName = players.ElementAt(i).PlayerName;
+                currentPlayer.PlayerName = players[i].PlayerName;
             }
         }
 
@@ -531,6 +531,22 @@ namespace DriveHUD.EquityCalculator.ViewModels
             return string.Empty;
         }
 
+        private int CountOpponents()
+        {
+            if (_currentHandHistory == null)
+            {
+                return PlayersList.Count - 1;
+            }
+
+            var opponentsCount = _currentHandHistory.HandActions
+                .Where(x => x.HandActionType != HandActionType.FOLD && x.PlayerName != _currentHandHistory.Hero?.PlayerName)
+                .Select(x => x.PlayerName)
+                .Distinct()
+                .Count() - 1;
+
+            return opponentsCount;
+        }
+
         #endregion
 
         #region Popups
@@ -559,7 +575,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                        else if (returned.ReturnType.Equals(CardSelectorReturnType.Range))
                        {
                            container.SetRanges(returned.CardsContainer.Ranges);
-                           (container as PlayerModel)?.CheckBluffToValueBetRatio(SelectedStreet);
+                           (container as PlayerModel)?.CheckBluffToValueBetRatio(CountOpponents(), SelectedStreet);
                        }
 
                        ClearEquity();
