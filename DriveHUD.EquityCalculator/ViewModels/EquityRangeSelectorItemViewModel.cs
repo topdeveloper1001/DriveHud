@@ -121,7 +121,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             else if (ItemType == RangeSelectorItemType.Suited)
             {
                 var rank1 = FisrtCard.ToRankString();
-                var rank2 = FisrtCard.ToRankString();
+                var rank2 = SecondCard.ToRankString();
 
                 for (var i = 0; i < suits.Length; i++)
                 {
@@ -138,7 +138,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             else if (ItemType == RangeSelectorItemType.OffSuited)
             {
                 var rank1 = FisrtCard.ToRankString();
-                var rank2 = FisrtCard.ToRankString();
+                var rank2 = SecondCard.ToRankString();
 
                 for (var i = 0; i < suits.Length; i++)
                 {

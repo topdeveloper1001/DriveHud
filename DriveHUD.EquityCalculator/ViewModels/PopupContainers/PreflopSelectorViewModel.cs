@@ -43,6 +43,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private bool _isSliderManualMove = true;
         private double _selectedPercentage = 0;
         private PreflopRange _preflopRange = new PreflopRange();
+        private EquityCalculatorViewModel source;
 
         #endregion
 
@@ -59,6 +60,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 {
                     _notification = value as CardSelectorNotification;
                     _notification.ReturnType = CardSelectorReturnType.Range;
+                    source = _notification.Source as EquityCalculatorViewModel;
 
                     if (_notification.CardsContainer.Ranges != null)
                     {
@@ -79,12 +81,12 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 }
 
                 InitializePreflopSelectorItemsTracking();
-              
+
                 UpdateSlider();
 
                 PreflopSelectorItems.ForEach(x =>
                 {
-                    x.UsedCards = _notification.BoardCards;                    
+                    x.UsedCards = _notification.BoardCards;
                 });
 
                 CombosRaisePropertyChanged();
@@ -305,6 +307,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         public ICommand OnSelectSuitCommand { get; set; }
 
+        public ICommand AutoRangeCommand { get; set; }
+
         #endregion
 
         public PreflopSelectorViewModel()
@@ -327,11 +331,47 @@ namespace DriveHUD.EquityCalculator.ViewModels
             SelectSuitedCommand = new RelayCommand(SelectedSuited);
             SelectOffSuitedCommand = new RelayCommand(SelectOffSuited);
             OnSelectSuitCommand = new RelayCommand(OnSelectSuit);
+            AutoRangeCommand = new RelayCommand(OnAutoRange);
 
             _preflopRange.Init();
             PreDefinedRangesRequest = new InteractionRequest<PreDefinedRangesNotifcation>();
 
             InitializePreflopSelectorItems();
+        }
+
+        private void OnAutoRange(object obj)
+        {
+            if (source == null)
+            {
+                return;
+            }
+
+            var heroAutoRange = source.GetHeroAutoRange();
+
+            var mergeResult = (from range in PreflopSelectorItems
+                               join heroRange in heroAutoRange on range.Caption equals heroRange.Caption
+                               select new { Existing = range, Auto = heroRange }).ToArray();
+
+            PreflopSelectorItems.ChangeTrackingEnabled = false;
+
+            PreflopSelectorItems.ForEach(x =>
+            {
+                x.IsSelected = false;
+                x.EquitySelectionMode = null;
+            });
+
+            foreach (var mergeItem in mergeResult)
+            {
+                mergeItem.Existing.IsSelected = true;
+                mergeItem.Existing.HandSuitsModelList = new List<HandSuitsViewModel>(mergeItem.Auto.HandSuitsModelList);
+                mergeItem.Existing.EquitySelectionMode = mergeItem.Auto.EquitySelectionMode;
+                mergeItem.Existing.HandUpdate();
+            }
+
+            PreflopSelectorItems.ChangeTrackingEnabled = true;
+
+            UpdateSlider();
+            CombosRaisePropertyChanged();
         }
 
         private void InitializePreflopSelectorItems()

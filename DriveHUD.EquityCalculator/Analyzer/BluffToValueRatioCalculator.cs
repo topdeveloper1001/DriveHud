@@ -14,6 +14,7 @@ using DriveHUD.Common.Linq;
 using DriveHUD.EquityCalculator.ViewModels;
 using HandHistories.Objects.Cards;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -94,13 +95,13 @@ namespace DriveHUD.EquityCalculator.Analyzer
         public static void AdjustPlayerRange(IEnumerable<EquityRangeSelectorItemViewModel> ranges, Street street,
             HandHistories.Objects.Hand.HandHistory currentHandHistory, int opponentsCount)
         {
-            // Preflop
-            if (street == Street.Preflop)
+            // supports only flop/turn/river
+            if (street != Street.Flop &&
+                street != Street.Turn &&
+                street != Street.River)
             {
                 return;
             }
-
-            var handAnalyzer = new HandAnalyzer();
 
             var handHistory = new HandHistory();
             handHistory.ConverToEquityCalculatorFormat(currentHandHistory, street);
@@ -109,78 +110,135 @@ namespace DriveHUD.EquityCalculator.Analyzer
             {
                 return;
             }
-         
+
             var potType = GetPotType(opponentsCount);
 
-            var ungroupedHands = (from range in ranges
-                                  let ungrouped = handAnalyzer.UngroupHands(new List<string> { range.Caption }, handHistory).Distinct()
-                                  select new RangeGroup { Range = range, Ungrouped = ungrouped, BestHand = postflophand.kNoPair }).ToArray();
+            var rangeItems = (from range in ranges
+                              let cards = (from hand in HandAnalyzer.UngroupHands(new List<string> { range.Caption }, handHistory, true).Distinct()
+                                           select new RangeItemCard
+                                           {
+                                               Caption = hand
+                                           }).ToArray()
+                              select new RangeItem
+                              {
+                                  Range = range,
+                                  Cards = cards,
+                                  BestHand = postflophand.kNoPair
+                              }).ToArray();
 
-            foreach (var ungroupedHand in ungroupedHands)
+            // flop cards
+            var boardCard1 = handHistory.CommunityCards[1].Substring(0, 2);
+            var boardCard2 = handHistory.CommunityCards[1].Substring(2, 2);
+            var boardCard3 = handHistory.CommunityCards[1].Substring(4, 2);
+            var boardCard4 = street >= Street.Turn && handHistory.CommunityCards[2] != null ?
+                handHistory.CommunityCards[2].Substring(0, 2) : null;
+            var boardCard5 = street == Street.River && handHistory.CommunityCards[3] != null ?
+                handHistory.CommunityCards[3].Substring(0, 2) : null;
+
+            // flop cards in binary format
+            var fBoardCard1 = HandHistory.fastCard(boardCard1[0], boardCard1[1]);
+            var fBoardCard2 = HandHistory.fastCard(boardCard2[0], boardCard2[1]);
+            var fBoardCard3 = HandHistory.fastCard(boardCard3[0], boardCard3[1]);
+            var fBoardCard4 = boardCard4 != null ? HandHistory.fastCard(boardCard4[0], boardCard4[1]) : 0;
+            var fBoardCard5 = boardCard5 != null ? HandHistory.fastCard(boardCard5[0], boardCard5[1]) : 0;
+
+            var boardCards = new[] { fBoardCard1, fBoardCard2, fBoardCard3, fBoardCard4, fBoardCard5 };
+
+            // iterate over all possible combinations to get equity of each range
+            foreach (var rangeItem in rangeItems)
             {
-                foreach (var hand in ungroupedHand.Ungrouped)
+                foreach (var holeCards in rangeItem.Cards)
                 {
-                    var card1 = hand.Substring(0, 2);
-                    var card2 = hand.Substring(2, 2);
-                    var boardCard1 = handHistory.CommunityCards[1].Substring(0, 2);
-                    var boardCard2 = handHistory.CommunityCards[1].Substring(2, 2);
-                    var boardCard3 = handHistory.CommunityCards[1].Substring(4, 2);
-                    var boardCard4 = street >= Street.Flop ? handHistory.CommunityCards[2] : null;
-                    var boardCard5 = street >= Street.Turn ? handHistory.CommunityCards[3] : null;
+                    var holeCard1 = holeCards.Caption.Substring(0, 2);
+                    var holeCard2 = holeCards.Caption.Substring(2, 2);
 
-                    var boardInfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, card1, card2);
+                    var fHoleCard1 = HandHistory.fastCard(holeCard1[0], holeCard1[1]);
+                    var fHoleCard2 = HandHistory.fastCard(holeCard2[0], holeCard2[1]);
 
-                    var fCard1 = HandHistory.fastCard(card1[0], card1[1]);
-                    var fCard2 = HandHistory.fastCard(card2[0], card2[1]);
-                    var fCard3 = HandHistory.fastCard(boardCard1[0], boardCard1[1]);
-                    var fCard4 = HandHistory.fastCard(boardCard2[0], boardCard2[1]);
-                    var fCard5 = HandHistory.fastCard(boardCard3[0], boardCard3[1]);
+                    var usedCards = boardCards.Concat(new[] { fHoleCard1, fHoleCard2 }).ToArray();
 
-                    var weight = 0;
+                    var turnCardIterations = boardCard4 == null ? 52 : 1;
 
-                    if (boardCard5 != null)
+                    for (var i = 0; i < turnCardIterations; i++)
                     {
-                        var fCard6 = HandHistory.fastCard(boardCard4[0], boardCard4[1]);
-                        var fCard7 = HandHistory.fastCard(boardCard5[0], boardCard5[1]);
-
-                        weight = FastEvaluator.eval_7hand(new[] { fCard1, fCard2, fCard3, fCard4, fCard5, fCard6, fCard7 });
-                    }
-                    else if (boardCard4 != null)
-                    {
-                        var fCard6 = HandHistory.fastCard(boardCard4[0], boardCard4[1]);
-                        weight = FastEvaluator.eval_6hand(new[] { fCard1, fCard2, fCard3, fCard4, fCard5, fCard6 });
-                    }
-                    else
-                    {
-                        weight = FastEvaluator.eval_5hand(new[] { fCard1, fCard2, fCard3, fCard4, fCard5 });
-                    }
-
-                    if (boardInfo.holesused > 0)
-                    {
-                        if (ungroupedHand.BestHand > boardInfo.madehand)
+                        if (boardCard4 == null)
                         {
-                            ungroupedHand.BestHand = boardInfo.madehand;
-                            ungroupedHand.Weight = weight;
-                            ungroupedHand.IsMiddlePair = IsMiddlePair(card1, card2,
-                                boardCard1, boardCard2, boardCard3, boardInfo);
-                            ungroupedHand.IsWeakKicker = IsWeakKicker(boardInfo);
-                            ungroupedHand.IsTopPair = IsTopPair(card1, card2, boardInfo, $"{handHistory.CommunityCards[1]}{boardCard4}{boardCard5}");
-                        }
-#if DEBUG
-                        Console.WriteLine($"{ungroupedHand.Range.Caption} - {hand}: {boardInfo.madehand}; weight: {weight}");
-#endif
-                    }
-                }
+                            fBoardCard4 = HandHistory.fastCard(Card.CardName[i], Card.CardSuit[i]);
 
-                if (ungroupedHand.BestHand == postflophand.kNoPair)
-                {
-                    ungroupedHand.Range.EquitySelectionMode = EquitySelectionMode.FoldCheck;
+                            if (usedCards.Contains(fBoardCard4))
+                            {
+                                continue;
+                            }
+                        }
+
+                        var riverIterationsStartIndex = boardCard4 == null ? i + 1 : 0;
+                        var riverCardIterations = boardCard5 == null ? 52 : 1;
+
+                        for (var j = riverIterationsStartIndex; j < riverCardIterations; j++)
+                        {
+                            if (boardCard5 == null)
+                            {
+                                fBoardCard5 = HandHistory.fastCard(Card.CardName[j], Card.CardSuit[j]);
+
+                                if (usedCards.Contains(fBoardCard5))
+                                {
+                                    continue;
+                                }
+                            }
+
+                            var hand = new[] { fBoardCard1, fBoardCard2, fBoardCard3, fBoardCard4, fBoardCard5, fHoleCard1, fHoleCard2 };
+                            var weight = FastEvaluator.eval_7hand(hand);
+
+                            holeCards.Weights.Add(weight);
+
+                            var boardInfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, holeCard1, holeCard2);
+
+                            if (boardInfo.holesused > 0 && rangeItem.BestHand > boardInfo.madehand)
+                            {
+                                if (boardInfo.madehand == postflophand.kPair)
+                                {
+                                    var pairType = GetPairType(holeCard1, holeCard2, boardInfo, $"{handHistory.CommunityCards[1]}{boardCard4}{boardCard5}");
+
+                                    rangeItem.IsMiddlePair = pairType == PairType.Middle;
+                                    rangeItem.IsBottomPair = pairType == PairType.Bottom;
+                                    rangeItem.IsTopPair = pairType == PairType.Top;
+                                    rangeItem.IsWeakKicker = boardInfo.kicker <= Card.AllCardsList.IndexOf("T");
+                                    rangeItem.IsGoodKicker = !rangeItem.IsWeakKicker && boardInfo.kicker <= Card.AllCardsList.IndexOf("J");
+                                    rangeItem.IsTopKicker = boardInfo.kicker >= Card.AllCardsList.IndexOf("Q");
+                                }
+
+                                rangeItem.IsConnectedToBoard = boardInfo.madehand == postflophand.kPair && boardInfo.holesused == 1 ||
+                                    boardInfo.madehand != postflophand.kPair;
+
+                                rangeItem.BestHand = boardInfo.madehand;
+                            }
+                        }
+                    }
                 }
             }
+        
+            Array.Sort(rangeItems, new RangeItemComparer());
 
-            MarkMiddlePairsToCall(ungroupedHands);
-            MarkTopPairsToCall(ungroupedHands);
-            MarkValueBluff(potType, ungroupedHands, street);
+            // set weights
+            for (var i = 0; i < rangeItems.Length; i++)
+            {
+                rangeItems[i].Weight = i;
+            }
+
+            // assign groups            
+            MarkTopPairsAndHigherToValueBet(rangeItems);
+            MarkPocketMiddlePairs(rangeItems);
+            MarkPocketBottomPairs(rangeItems);
+
+            MarkConnectedTopPairs(rangeItems);
+            MarkConnectedMiddlePairs(rangeItems);
+            MarkConnectedBottomPairs(rangeItems);
+
+            MarkBluffs(potType, rangeItems, street);
+
+            rangeItems
+                .Where(x => !x.Range.EquitySelectionMode.HasValue)
+                .ForEach(x => x.Range.EquitySelectionMode = x.BestHand == postflophand.kPair ? EquitySelectionMode.Call : EquitySelectionMode.FoldCheck);
         }
 
         public static string GetRecommendedRange(int opponentsCount, Street street)
@@ -189,69 +247,138 @@ namespace DriveHUD.EquityCalculator.Analyzer
             return RecommendedRange[potType][street];
         }
 
-        private static bool IsMiddlePair(string card1, string card2, string boardCard1, string boardCard2, string boardCard3, boardinfo boardInfo)
-        {
-            if (boardInfo.holesused != 1 || boardInfo.madehand != postflophand.kPair)
-            {
-                return false;
-            }
-
-            var orderedBoardCards = (new[] { boardCard1, boardCard2, boardCard3 })
-                .OrderBy(x => Card.AllCardsList.IndexOf(x.Substring(0, 1)))
-                .ToArray();
-
-            return orderedBoardCards[1][0] == card1[0] || orderedBoardCards[1][0] == card2[0];
-        }
-
-        private static bool IsTopPair(string card1, string card2, boardinfo boardInfo, string boardCards)
+        private static PairType GetPairType(string card1, string card2, boardinfo boardInfo, string boardCards)
         {
             if (boardInfo.madehand != postflophand.kPair)
             {
-                return false;
+                return PairType.None;
             }
 
-            var pairRank = boardCards.Contains(card1) ? card1.Substring(0, 1) : card2.Substring(0, 1);
+            var pairRank = boardCards.Contains(card1[0]) ? card1.Substring(0, 1) : card2.Substring(0, 1);
 
-            return Card.AllCardsList.IndexOf(pairRank) >= Card.AllCardsList.IndexOf("J");
-        }
-
-        private static bool IsWeakKicker(boardinfo boardInfo)
-        {
-            if (boardInfo.madehand != postflophand.kPair)
+            if (Card.AllCardsList.IndexOf(pairRank) >= Card.AllCardsList.IndexOf("J"))
             {
-                return false;
+                return PairType.Top;
+            }
+            else if (Card.AllCardsList.IndexOf(pairRank) >= Card.AllCardsList.IndexOf("8"))
+            {
+                return PairType.Middle;
             }
 
-            return boardInfo.kicker <= Card.AllCardsList.IndexOf("T");
+            return PairType.Bottom;
         }
 
-        private static void MarkMiddlePairsToCall(RangeGroup[] rangeGroup)
+        private static void MarkTopPairsAndHigherToValueBet(RangeItem[] rangeGroup)
         {
-            var middlePairs = rangeGroup.Where(x => x.IsMiddlePair).OrderByDescending(x => x.Weight).ToArray();
+            rangeGroup
+                .Where(x => x.BestHand < postflophand.kPair ||
+                    x.BestHand == postflophand.kPair && x.IsTopPair && !x.IsConnectedToBoard)
+                .ForEach(x => x.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+        }
+
+        private static void MarkPocketMiddlePairs(RangeItem[] rangeGroup)
+        {
+            var middlePairs = rangeGroup.Where(x => x.IsMiddlePair && !x.IsConnectedToBoard).OrderBy(x => x.Weight).ToArray();
 
             // 3/4 mark to call
-            var rangesToMarkLength = (int)Math.Round(3d * middlePairs.Length / 4);
+            var rangesToMarkLength = (int)Math.Round(0.75 * middlePairs.Length);
 
             if (rangesToMarkLength > 0)
             {
                 middlePairs.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
+                middlePairs.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
             }
         }
 
-        private static void MarkTopPairsToCall(RangeGroup[] rangeGroup)
+        private static void MarkPocketBottomPairs(RangeItem[] rangeGroup)
         {
-            var topPairs = rangeGroup.Where(x => x.IsTopPair && x.IsWeakKicker).OrderByDescending(x => x.Weight).ToArray();
+            var middlePairs = rangeGroup.Where(x => x.IsBottomPair && !x.IsConnectedToBoard).OrderByDescending(x => x.Weight).ToArray();
 
-            // 1/4 mark to call
-            var rangesToMarkLength = (int)Math.Round(topPairs.Length / 4d);
+            // 1/4 mark to vb
+            var rangesToMarkLength = (int)Math.Round(0.25 * middlePairs.Length);
 
             if (rangesToMarkLength > 0)
             {
-                topPairs.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
+                middlePairs.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
             }
         }
 
-        private static void MarkValueBluff(PotType potType, RangeGroup[] rangeGroup, Street street)
+        private static void MarkConnectedTopPairs(RangeItem[] rangeGroup)
+        {
+            var topPairsGoodKicker = rangeGroup
+                .Where(x => x.IsTopPair && x.IsConnectedToBoard && (x.IsTopKicker || x.IsGoodKicker))
+                .OrderBy(x => x.Weight)
+                .ToArray();
+
+            // 1/2 of TPGK+ mark to call
+            var rangesToMarkAsCallLength = (int)Math.Round(0.5 * topPairsGoodKicker.Length);
+
+            if (rangesToMarkAsCallLength > 0)
+            {
+                topPairsGoodKicker.Take(rangesToMarkAsCallLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
+                topPairsGoodKicker.Skip(rangesToMarkAsCallLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+            }
+
+            var topPairsWeakKicker = rangeGroup
+               .Where(x => x.IsTopPair && x.IsConnectedToBoard && x.IsWeakKicker)
+               .OrderBy(x => x.Weight)
+               .ToArray();
+
+            // 3/4 of TPWK- mark to call
+            rangesToMarkAsCallLength = (int)Math.Round(0.75 * topPairsGoodKicker.Length);
+
+            if (rangesToMarkAsCallLength > 0)
+            {
+                topPairsWeakKicker.Take(rangesToMarkAsCallLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
+                topPairsWeakKicker.Skip(rangesToMarkAsCallLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+            }
+        }
+
+        private static void MarkConnectedMiddlePairs(RangeItem[] rangeGroup)
+        {
+            var middlePairs = rangeGroup.Where(x => x.IsMiddlePair && x.IsConnectedToBoard).OrderBy(x => x.Weight).ToArray();
+
+            // 1/2 mark to call
+            var rangesToMarkLength = (int)Math.Round(0.5 * middlePairs.Length);
+
+            if (rangesToMarkLength > 0)
+            {
+                middlePairs.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
+                middlePairs.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+            }
+        }
+
+        private static void MarkConnectedBottomPairs(RangeItem[] rangeGroup)
+        {
+            var bottomPairsTopKicker = rangeGroup
+                .Where(x => x.IsBottomPair && x.IsConnectedToBoard && x.IsTopKicker)
+                .OrderBy(x => x.Weight)
+                .ToArray();
+
+            // 3/4 of BPTK+ mark to call
+            var rangesToMarkLength = (int)Math.Round(0.75 * bottomPairsTopKicker.Length);
+
+            if (rangesToMarkLength > 0)
+            {
+                bottomPairsTopKicker.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
+                bottomPairsTopKicker.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+            }
+
+            var bottomPairsNoTopKicker = rangeGroup
+                .Where(x => x.IsBottomPair && x.IsConnectedToBoard && !x.IsTopKicker)
+                .OrderBy(x => x.Weight)
+                .ToArray();
+
+            rangesToMarkLength = (int)Math.Round(0.5 * bottomPairsNoTopKicker.Length);
+
+            if (rangesToMarkLength > 0)
+            {
+                bottomPairsNoTopKicker.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.FoldCheck);
+                bottomPairsNoTopKicker.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
+            }
+        }
+
+        private static void MarkBluffs(PotType potType, RangeItem[] rangeGroup, Street street)
         {
             if (!PredefinedRatio[potType].ContainsKey(street))
             {
@@ -264,8 +391,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             var bluffToValueRatio = (PredefinedRatio[potType][street][0] + PredefinedRatio[potType][street][1]) / 2;
 
-            var totalCombos = ranges.Sum(x => x.Range.Combos);
-            var bluffCombos = bluffToValueRatio * totalCombos / (1 + bluffToValueRatio);
+            var valueBetCombos = rangeGroup.Where(x => x.Range.EquitySelectionMode == EquitySelectionMode.ValueBet).Sum(x => x.Range.Combos);
+            var bluffCombos = bluffToValueRatio * valueBetCombos;
 
             var currentCombos = 0;
 
@@ -279,7 +406,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     continue;
                 }
 
-                range.Range.EquitySelectionMode = EquitySelectionMode.ValueBet;
+                break;
             }
         }
 
@@ -293,28 +420,108 @@ namespace DriveHUD.EquityCalculator.Analyzer
             return PotType.HU;
         }
 
-        private class RangeGroup
+        #region Private helpers
+
+        private class RangeItem
         {
             public EquityRangeSelectorItemViewModel Range { get; set; }
 
-            public IEnumerable<string> Ungrouped { get; set; }
+            public RangeItemCard[] Cards { get; set; }
 
             public postflophand BestHand { get; set; } = postflophand.kNoPair;
 
             public bool IsMiddlePair { get; set; }
 
+            public bool IsTopKicker { get; set; }
+
+            public bool IsGoodKicker { get; set; }
+
             public bool IsWeakKicker { get; set; }
 
             public bool IsTopPair { get; set; }
+
+            public bool IsBottomPair { get; set; }
+
+            public bool IsConnectedToBoard { get; set; }
 
             public int Weight { get; set; }
 
 #if DEBUG
             public override string ToString()
             {
-                return $"{Range.Caption}, Weight={Weight}, BestHand={BestHand}";
+                return $"{Range.Caption}, Weight={Weight}, BestHand={BestHand}; Equity={Range.EquitySelectionMode}; IsTop={IsTopPair}; IsMiddle={IsMiddlePair}; IsBottom={IsBottomPair}; IsConnected={IsConnectedToBoard}";
             }
 #endif
+        }
+
+        private class RangeItemCard
+        {
+            public string Caption { get; set; }
+
+            public List<int> Weights { get; set; } = new List<int>();
+
+#if DEBUG
+            public override string ToString()
+            {
+                return $"Caption: {Caption}";
+            }
+#endif
+        }
+
+        /// <summary>
+        /// Comparer to compare equities of the specified range items
+        /// </summary>
+        private class RangeItemComparer : IComparer
+        {
+            public int Compare(RangeItem x1, RangeItem x2)
+            {
+                if (x1 == null)
+                {
+                    throw new ArgumentNullException(nameof(x1));
+                }
+
+                if (x2 == null)
+                {
+                    throw new ArgumentNullException(nameof(x2));
+                }
+
+                var wins1 = 0;
+                var wins2 = 0;
+
+                for (var i = 0; i < x1.Cards.Length; i++)
+                {
+                    var cards1 = x1.Cards[i];
+
+                    for (var j = 0; j < x2.Cards.Length; j++)
+                    {
+                        var cards2 = x2.Cards[j];
+
+                        if (cards1.Weights.Count != cards2.Weights.Count)
+                        {
+                            throw new InvalidOperationException("The list of weights of cards of range items to compare must be the same length.");
+                        }
+
+                        for (var k = 0; k < cards1.Weights.Count; k++)
+                        {
+                            if (cards1.Weights[k] < cards2.Weights[k])
+                            {
+                                wins1++;
+                            }
+                            else if (cards1.Weights[k] > cards2.Weights[k])
+                            {
+                                wins2++;
+                            }
+                        }
+                    }
+                }
+
+                return wins1.CompareTo(wins2);
+            }
+
+            public int Compare(object x, object y)
+            {
+                return Compare(x as RangeItem, y as RangeItem);
+            }
         }
 
         private enum PotType
@@ -322,5 +529,15 @@ namespace DriveHUD.EquityCalculator.Analyzer
             HU,
             MW
         }
+
+        private enum PairType
+        {
+            None,
+            Bottom,
+            Middle,
+            Top
+        }
+
+        #endregion
     }
 }

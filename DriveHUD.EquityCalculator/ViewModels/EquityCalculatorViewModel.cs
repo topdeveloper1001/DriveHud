@@ -269,6 +269,24 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 return;
             }
 
+            var heroAutoHands = GetHeroAutoRange();
+
+            if (heroAutoHands != null)
+            {
+                var hero = PlayersList.FirstOrDefault(x => x.PlayerName == _currentHandHistory.Hero.PlayerName);
+
+                if (hero != null)
+                {
+                    var opponentsCount = CountOpponents();
+
+                    hero.SetRanges(heroAutoHands);
+                    hero.CheckBluffToValueBetRatio(opponentsCount, SelectedStreet);
+                }
+            }
+        }
+
+        internal IEnumerable<EquityRangeSelectorItemViewModel> GetHeroAutoRange()
+        {
             try
             {
                 var heroAutoHands = MainAnalyzer.GetHeroRange(_currentHandHistory, _currentStreet);
@@ -277,22 +295,18 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 {
                     heroAutoHands.ForEach(r => r.UsedCards = _board.Cards);
 
-                    var hero = PlayersList.FirstOrDefault(x => x.PlayerName == _currentHandHistory.Hero.PlayerName);
+                    var opponentsCount = CountOpponents();
 
-                    if (hero != null)
-                    {
-                        var opponentsCount = CountOpponents();
-
-                        BluffToValueRatioCalculator.AdjustPlayerRange(heroAutoHands, CurrentStreet, _currentHandHistory, opponentsCount);
-                        hero.SetRanges(heroAutoHands);
-                        hero.CheckBluffToValueBetRatio(opponentsCount, SelectedStreet);
-                    }
+                    BluffToValueRatioCalculator.AdjustPlayerRange(heroAutoHands, CurrentStreet, _currentHandHistory, opponentsCount);
+                    return heroAutoHands;
                 }
             }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, "Could not build auto range for hero", e);
             }
+
+            return null;
         }
 
         private void InitPlayersList()
@@ -539,7 +553,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
 
             var opponentsCount = _currentHandHistory.HandActions
-                .Where(x => x.HandActionType != HandActionType.FOLD && x.PlayerName != _currentHandHistory.Hero?.PlayerName)
+                .Where(x => x.HandActionType != HandActionType.FOLD && x.PlayerName != _currentHandHistory.Hero?.PlayerName && x.Street >= Street.Flop)
                 .Select(x => x.PlayerName)
                 .Distinct()
                 .Count() - 1;
@@ -558,6 +572,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             CardSelectorRequest.Raise(
                new CardSelectorNotification
                {
+                   Source = this,
                    Title = string.Empty,
                    CardsContainer = container,
                    SelectorType = selectorType,

@@ -9308,7 +9308,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
         }
 
 
-        internal List<string> UngroupHands(List<String> groupedHands, HandHistory handHistory, bool ignoreHeroCards = false)
+        internal static List<string> UngroupHands(List<String> groupedHands, HandHistory handHistory, bool ignoreHeroCards = false)
         {
             var suits = new string[] { "c", "s", "h", "d" };
 

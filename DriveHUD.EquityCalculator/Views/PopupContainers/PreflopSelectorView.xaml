@@ -1126,6 +1126,8 @@
                             Width="110" />
                         <ColumnDefinition
                             Width="110" />
+                        <ColumnDefinition
+                            Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition />
@@ -1173,6 +1175,14 @@
                         Style="{StaticResource ValueBetRadioButtonStyle}"
                         IsChecked="{Binding EquitySelectionMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:EquitySelectionMode.ValueBet}}"
                         Content="{ResX Key=Common_EquityCalculator_ValueBet}" />
+
+                    <Button
+                        Margin="20,0,0,0"
+                        Grid.Column="4"
+                        Grid.Row="1"
+                        Width="100"
+                        Command="{Binding AutoRangeCommand}"
+                        Content="{ResX Key=Common_EquityCalculator_AutoRange}" />
 
                     <StackPanel
                         Grid.Column="0"
