@@ -1120,4 +1120,7 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_EquityCalculator_WarningMessageWithRange" xml:space="preserve">
     <value>Generally recommended bluff to value ranges on the {0} are {1}. It's recommended you increase your {2} range by {3}%.</value>
   </data>
+  <data name="Common_EquityCalculator_AutoRange" xml:space="preserve">
+    <value>Auto Range</value>
+  </data>
 </root>

@@ -737,6 +737,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Auto Range.
+        /// </summary>
+        internal static string Common_EquityCalculator_AutoRange {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_AutoRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bluff.
         /// </summary>
         internal static string Common_EquityCalculator_Bluff {
