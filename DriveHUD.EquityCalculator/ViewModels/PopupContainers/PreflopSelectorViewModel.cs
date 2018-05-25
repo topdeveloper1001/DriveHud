@@ -348,6 +348,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
             var heroAutoRange = source.GetHeroAutoRange();
 
+            if (heroAutoRange == null)
+            {
+                return;
+            }
+
             var mergeResult = (from range in PreflopSelectorItems
                                join heroRange in heroAutoRange on range.Caption equals heroRange.Caption
                                select new { Existing = range, Auto = heroRange }).ToArray();
