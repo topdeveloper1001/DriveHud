@@ -833,14 +833,18 @@ namespace DriveHUD.Importers.BetOnline
             var actionText = actionNode.Name.LocalName;
 
             // remember cards
-            if (actionText.Equals("Show"))
+            if (actionText.Equals("Show") || (actionText.Equals("Muck") && actionNode.HasElements))
             {
                 var cardsText = string.Join(" ", element.Descendants("Card").Select(x => x.Value).ToArray());
-                var cards = cardsConverter.Convert(cardsText);
 
-                if (!showCards.ContainsKey(seat))
+                if (!string.IsNullOrEmpty(cardsText))
                 {
-                    showCards.Add(seat, cards);
+                    var cards = cardsConverter.Convert(cardsText);
+
+                    if (!showCards.ContainsKey(seat))
+                    {
+                        showCards.Add(seat, cards);
+                    }
                 }
             }
 

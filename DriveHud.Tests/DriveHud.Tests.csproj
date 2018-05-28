@@ -584,6 +584,13 @@
     <Content Include="PMTests\TestData\Packets\SCLoginBody.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\BOL-Cash-Holdem-mucked-cards-ipoker.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="UnitTests\TestData\BOL-Cash-Holdem-mucked-cards.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\EquitySolverData\AllIn-on-BB-Hero-raised.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

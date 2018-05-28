@@ -45,12 +45,12 @@
       <action no="3" player="Graykenny" type="2" sum="0.5" cards="" />
     </round>
     <round no="1">
-      <cards type="Pocket" player="Graykenny">X X X X</cards>
+      <cards type="Pocket" player="Graykenny">H3 D6 C2 HJ</cards>
       <cards type="Pocket" player="LQuattro">X X X X</cards>
       <cards type="Pocket" player="MAGICRVR">X X X X</cards>
       <cards type="Pocket" player="cheveuxdor">X X X X</cards>
       <cards type="Pocket" player="kolizino">X X X X</cards>
-      <cards type="Pocket" player="tex1234">X X X X</cards>
+      <cards type="Pocket" player="tex1234">S7 SQ D4 H2</cards>
       <cards type="Pocket" player="DancinSam">X X X X</cards>
       <cards type="Pocket" player="Ibluffunot">X X X X</cards>
       <cards type="Pocket" player="trucker9">S2 S4 DK HA</cards>

@@ -67,7 +67,6 @@ namespace DriveHud.Tests
             configurationService.Initialize();
         }
 
-        [Test]
         [TestCase("CashHand-10-max-potsize-error", "CashHand-10-max-potsize-error-ipoker", "")]
         [TestCase("CashHand-10-max", "CashHand-10-max-ipoker", "")]
         [TestCase("CashHand-2-max", "CashHand-2-max-ipoker", "")]
@@ -80,6 +79,7 @@ namespace DriveHud.Tests
         [TestCase("SNG-4-max-relocate", "SNG-4-max-relocate-ipoker-pivot-2", "<RelocationData me=\"2\" pivot=\"2\" hand=\"6344162\" />")]
         [TestCase("SNG-4-max-relocate", "SNG-4-max-relocate-ipoker-pivot-1", "<RelocationData me=\"2\" pivot=\"1\" hand=\"6344162\" />")]
         [TestCase("SNG-4-max-no-relocate", "SNG-4-max-no-relocate-ipoker", "")]
+        [TestCase("BOL-Cash-Holdem-mucked-cards", "BOL-Cash-Holdem-mucked-cards-ipoker", "")]
         public void TestConverter(string sourceXmlFile, string expectedXmlFile, string rellocation)
         {
             var source = File.ReadAllText(GetTestDataFilePath(sourceXmlFile));
