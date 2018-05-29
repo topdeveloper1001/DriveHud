@@ -48,6 +48,7 @@ namespace Model.Data
                                   let countText = count > 1 ? $" ({count})" : string.Empty
                                   select $"{noteText}{cardRangeText}{countText}")
                                   .OrderBy(x => GetStreetOrderNumber(x))
+                                  .ThenBy(x => x)
                                   .ToArray();
 
             var autoNoteText = string.Join(Environment.NewLine, autoNotesLines);
