@@ -119,14 +119,14 @@ namespace DriveHUD.EquityCalculator.Analyzer
             }
             Jacob.AnalyzeBoard(holecard[0], holecard[1], boardcard[0], boardcard[1], boardcard[2], boardcard[3], boardcard[4], info);
 
-            if (info.madehand == postflophand.kNoPair)
+            if (info.madehand == PostFlopHand.kNoPair)
             {
                 bool flush = false;
                 foreach (char suit in suitOcc.Keys)
                 {
                     if ((int)suitOcc[suit] == 5)
                     {
-                        info.madehand = postflophand.kFlush;
+                        info.madehand = PostFlopHand.kFlush;
                         break;
                     }
                 }
@@ -184,14 +184,14 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             Jacob.AnalyzeBoard(holecard[0], holecard[1], boardcard[0], boardcard[1], boardcard[2], boardcard[3], boardcard[4], info);
 
-            if (info.madehand == postflophand.kNoPair)
+            if (info.madehand == PostFlopHand.kNoPair)
             {
                 bool flush = false;
                 foreach (char suit in suitOcc.Keys)
                 {
                     if ((int)suitOcc[suit] == 5)
                     {
-                        info.madehand = postflophand.kFlush;
+                        info.madehand = PostFlopHand.kFlush;
                         break;
                     }
                 }
@@ -247,14 +247,14 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             Jacob.AnalyzeBoard(holecard[0], holecard[1], boardcard[0], boardcard[1], boardcard[2], boardcard[3], boardcard[4], info);
 
-            if (info.madehand == postflophand.kNoPair)
+            if (info.madehand == PostFlopHand.kNoPair)
             {
                 bool flush = false;
                 foreach (char suit in suitOcc.Keys)
                 {
                     if ((int)suitOcc[suit] == 5)
                     {
-                        info.madehand = postflophand.kFlush;
+                        info.madehand = PostFlopHand.kFlush;
                         break;
                     }
                 }
@@ -314,14 +314,14 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             Jacob.AnalyzeBoard(holecard[0], holecard[1], boardcard[0], boardcard[1], boardcard[2], boardcard[3], boardcard[4], info);
 
-            if (info.madehand == postflophand.kNoPair)
+            if (info.madehand == PostFlopHand.kNoPair)
             {
                 bool flush = false;
                 foreach (char suit in suitOcc.Keys)
                 {
                     if ((int)suitOcc[suit] == 5)
                     {
-                        info.madehand = postflophand.kFlush;
+                        info.madehand = PostFlopHand.kFlush;
                         break;
                     }
                 }
@@ -353,16 +353,16 @@ namespace DriveHUD.EquityCalculator.Analyzer
             {
                 case 10:
                 case 9:
-                    info.madehand = postflophand.kStraightFlush;
+                    info.madehand = PostFlopHand.kStraightFlush;
                     break;
                 case 8:
-                    info.madehand = postflophand.k4ofKind;
+                    info.madehand = PostFlopHand.k4ofKind;
                     break;
                 case 7:
-                    info.madehand = postflophand.kFullHouse;
+                    info.madehand = PostFlopHand.kFullHouse;
                     break;
                 case 6:
-                    info.madehand = postflophand.kFlush;
+                    info.madehand = PostFlopHand.kFlush;
                     if (info.holesused > 0)
                     {
                         int maxvalue = 0;
@@ -398,19 +398,19 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                     break;
                 case 5:
-                    info.madehand = postflophand.kStraight;
+                    info.madehand = PostFlopHand.kStraight;
                     break;
                 case 4:
-                    info.madehand = postflophand.k3ofKind;
+                    info.madehand = PostFlopHand.k3ofKind;
                     break;
                 case 3:
-                    info.madehand = postflophand.k2Pair;
+                    info.madehand = PostFlopHand.k2Pair;
                     break;
                 case 2:
-                    info.madehand = postflophand.kPair;
+                    info.madehand = PostFlopHand.kPair;
                     break;
                 case 1:
-                    info.madehand = postflophand.kNoPair;
+                    info.madehand = PostFlopHand.kNoPair;
                     break;
             }
 
@@ -1685,7 +1685,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
     internal class boardinfo
     {
-        internal postflophand madehand;
+        internal PostFlopHand madehand;
         internal int weight;
         internal int holesused;
         internal int type;

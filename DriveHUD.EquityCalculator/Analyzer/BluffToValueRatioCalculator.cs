@@ -123,7 +123,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                               {
                                   Range = range,
                                   Cards = cards,
-                                  BestHand = postflophand.kNoPair
+                                  BestHand = PostFlopHand.kNoPair
                               }).ToArray();
 
             // flop cards
@@ -195,7 +195,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                             if (boardInfo.holesused > 0 && rangeItem.BestHand > boardInfo.madehand)
                             {
-                                if (boardInfo.madehand == postflophand.kPair)
+                                if (boardInfo.madehand == PostFlopHand.kPair)
                                 {
                                     var pairType = GetPairType(holeCard1, holeCard2, boardInfo, $"{handHistory.CommunityCards[1]}{boardCard4}{boardCard5}");
 
@@ -207,8 +207,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
                                     rangeItem.IsTopKicker = boardInfo.kicker >= Card.AllCardsList.IndexOf("Q");
                                 }
 
-                                rangeItem.IsConnectedToBoard = boardInfo.madehand == postflophand.kPair && boardInfo.holesused == 1 ||
-                                    boardInfo.madehand != postflophand.kPair;
+                                rangeItem.IsConnectedToBoard = boardInfo.madehand == PostFlopHand.kPair && boardInfo.holesused == 1 ||
+                                    boardInfo.madehand != PostFlopHand.kPair;
 
                                 rangeItem.BestHand = boardInfo.madehand;
                             }
@@ -238,7 +238,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             rangeItems
                 .Where(x => !x.Range.EquitySelectionMode.HasValue)
-                .ForEach(x => x.Range.EquitySelectionMode = x.BestHand == postflophand.kPair ? EquitySelectionMode.Call : EquitySelectionMode.FoldCheck);
+                .ForEach(x => x.Range.EquitySelectionMode = x.BestHand == PostFlopHand.kPair ? EquitySelectionMode.Call : EquitySelectionMode.FoldCheck);
         }
 
         public static string GetRecommendedRange(int opponentsCount, Street street)
@@ -247,9 +247,9 @@ namespace DriveHUD.EquityCalculator.Analyzer
             return RecommendedRange[potType][street];
         }
 
-        private static PairType GetPairType(string card1, string card2, boardinfo boardInfo, string boardCards)
+        internal static PairType GetPairType(string card1, string card2, boardinfo boardInfo, string boardCards)
         {
-            if (boardInfo.madehand != postflophand.kPair)
+            if (boardInfo.madehand != PostFlopHand.kPair)
             {
                 return PairType.None;
             }
@@ -271,8 +271,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
         private static void MarkTopPairsAndHigherToValueBet(RangeItem[] rangeGroup)
         {
             rangeGroup
-                .Where(x => x.BestHand < postflophand.kPair ||
-                    x.BestHand == postflophand.kPair && x.IsTopPair && !x.IsConnectedToBoard)
+                .Where(x => x.BestHand < PostFlopHand.kPair ||
+                    x.BestHand == PostFlopHand.kPair && x.IsTopPair && !x.IsConnectedToBoard)
                 .ForEach(x => x.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
         }
 
@@ -428,7 +428,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             public RangeItemCard[] Cards { get; set; }
 
-            public postflophand BestHand { get; set; } = postflophand.kNoPair;
+            public PostFlopHand BestHand { get; set; } = PostFlopHand.kNoPair;
 
             public bool IsMiddlePair { get; set; }
 
@@ -528,15 +528,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
         {
             HU,
             MW
-        }
-
-        private enum PairType
-        {
-            None,
-            Bottom,
-            Middle,
-            Top
-        }
+        }        
 
         #endregion
     }

@@ -140,6 +140,7 @@
     <Compile Include="AttachedBehaviors\RadGridViewMultiSelectBehavior.cs" />
     <Compile Include="Controls\CardImageControl.cs" />
     <Compile Include="Controls\ComboBoxEx.cs" />
+    <Compile Include="Controls\ImageButton.cs" />
     <Compile Include="Controls\NonTopmostPopup.cs" />
     <Compile Include="Controls\ProgressBarEx.cs" />
     <Compile Include="Controls\ToggleSwitch.cs" />

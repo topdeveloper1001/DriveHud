@@ -352,7 +352,6 @@
     <Compile Include="Controls\HudToolBar.xaml.cs">
       <DependentUpon>HudToolBar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ImageButton.cs" />
     <Compile Include="Controls\TrackConditionsMeterView.xaml.cs">
       <DependentUpon>TrackConditionsMeterView.xaml</DependentUpon>
     </Compile>

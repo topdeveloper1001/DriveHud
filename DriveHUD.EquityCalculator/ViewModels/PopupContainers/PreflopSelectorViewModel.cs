@@ -12,6 +12,7 @@
 
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
+using DriveHUD.EquityCalculator.Analyzer;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
@@ -19,6 +20,7 @@ using Model.LocalCalculator;
 using Model.Notifications;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
+using Prism.Mvvm;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -93,7 +95,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
-        public Action FinishInteraction
+        public System.Action FinishInteraction
         {
             get;
             set;
@@ -173,6 +175,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     }
 
                     SelectedPercentage = value / 10.0;
+
+                    RefreshHandsStatistic();
                 }
 
                 SetProperty(ref _sliderValue, value);
@@ -277,6 +281,34 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        private ReactiveList<HandsStatisticViewModel> handStatistics;
+
+        public ReactiveList<HandsStatisticViewModel> HandStatistics
+        {
+            get
+            {
+                return handStatistics;
+            }
+            private set
+            {
+                SetProperty(ref handStatistics, value);
+            }
+        }
+
+        private bool isHelpVisible;
+
+        public bool IsHelpVisible
+        {
+            get
+            {
+                return isHelpVisible;
+            }
+            set
+            {
+                SetProperty(ref isHelpVisible, value);
+            }
+        }
+
         #endregion
 
         #region ICommand
@@ -309,6 +341,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         public ICommand AutoRangeCommand { get; set; }
 
+        public ICommand HelpCommand { get; set; }
+
         #endregion
 
         public PreflopSelectorViewModel()
@@ -332,9 +366,13 @@ namespace DriveHUD.EquityCalculator.ViewModels
             SelectOffSuitedCommand = new RelayCommand(SelectOffSuited);
             OnSelectSuitCommand = new RelayCommand(OnSelectSuit);
             AutoRangeCommand = new RelayCommand(OnAutoRange);
+            HelpCommand = new RelayCommand(() => IsHelpVisible = !IsHelpVisible);
 
             _preflopRange.Init();
             PreDefinedRangesRequest = new InteractionRequest<PreDefinedRangesNotifcation>();
+
+            HandStatistics = new ReactiveList<HandsStatisticViewModel>(
+                Enum.GetValues(typeof(MadeHandType)).OfType<MadeHandType>().Select(x => new HandsStatisticViewModel(x)));
 
             InitializePreflopSelectorItems();
         }
@@ -456,6 +494,30 @@ namespace DriveHUD.EquityCalculator.ViewModels
             SelectedItem.HandUpdateAndRefresh();
         }
 
+        private void RefreshHandsStatistic()
+        {
+            var rangeItems = PreflopSelectorItems.Where(x => x.IsSelected).ToArray();
+
+            var totalCombos = rangeItems.Sum(x => x.Combos);
+            var ranges = rangeItems.Select(x => x.Caption).ToList();
+
+            var combosByHandType = source.GetCombosByHandType(ranges);
+
+            foreach (var handStatistic in HandStatistics)
+            {
+                if (combosByHandType.ContainsKey(handStatistic.HandType))
+                {
+                    handStatistic.Combos = combosByHandType[handStatistic.HandType];
+                }
+                else
+                {
+                    handStatistic.Combos = 0;
+                }
+            }
+
+            HandStatistics.ForEach(x => x.TotalCombos = totalCombos);
+        }
+
         private void UpdateSlider()
         {
             _isSliderManualMove = false;
@@ -468,6 +530,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
             SelectedPercentage = prct;
 
             _isSliderManualMove = true;
+
+            RefreshHandsStatistic();
         }
 
         #region ICommand implementation
@@ -707,6 +771,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
 
             SelectedItem = new EquityRangeSelectorItemViewModel();
+
+            UpdateSlider();
         }
 
         private void Save(object obj)
@@ -717,7 +783,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 SelectedItem = new EquityRangeSelectorItemViewModel();
             }
 
-            _notification.CardsContainer.Ranges = new List<RangeSelectorItemViewModel>(PreflopSelectorItems.Where(x => x.IsSelected));
+            _notification.CardsContainer.Ranges = new List<EquityRangeSelectorItemViewModel>(PreflopSelectorItems.Where(x => x.IsSelected));
             FinishInteraction();
         }
 
@@ -737,5 +803,69 @@ namespace DriveHUD.EquityCalculator.ViewModels
         }
 
         #endregion
+    }
+
+    public class HandsStatisticViewModel : BindableBase
+    {
+        public HandsStatisticViewModel(MadeHandType handType)
+        {
+            this.handType = handType;
+        }
+
+        private MadeHandType handType;
+
+        public MadeHandType HandType
+        {
+            get
+            {
+                return handType;
+            }
+        }
+
+        private int combos;
+
+        public int Combos
+        {
+            get
+            {
+                return combos;
+            }
+            set
+            {
+                SetProperty(ref combos, value);
+                RaisePropertyChanged(nameof(IsVisible));
+            }
+        }
+
+        private int totalCombos;
+
+        public int TotalCombos
+        {
+            get
+            {
+                return totalCombos;
+            }
+            set
+            {
+                SetProperty(ref totalCombos, value);
+                RaisePropertyChanged(nameof(Percentage));
+            }
+        }
+
+        public double Percentage
+        {
+            get
+            {
+                return totalCombos != 0 ? combos / (double)totalCombos : 0;
+            }
+        }
+
+        public bool IsVisible
+        {
+            get
+            {
+                return combos != 0;
+            }
+        }
     }
 }

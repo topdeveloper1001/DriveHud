@@ -14,7 +14,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace DriveHUD.Application.Controls
+namespace DriveHUD.Common.Wpf.Controls
 {
     public class ImageButton : Button
     {

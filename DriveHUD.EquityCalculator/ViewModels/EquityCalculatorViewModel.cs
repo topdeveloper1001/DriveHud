@@ -309,6 +309,24 @@ namespace DriveHUD.EquityCalculator.ViewModels
             return null;
         }
 
+        internal Dictionary<MadeHandType, int> GetCombosByHandType(IEnumerable<string> range)
+        {
+            try
+            {
+                var boardCards = GetBoardText();
+
+                var combosByHandType = MainAnalyzer.GetCombosByHandType(range, boardCards);
+
+                return combosByHandType;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not get combos by hand type.", e);
+            }
+
+            return new Dictionary<MadeHandType, int>();
+        }
+
         private void InitPlayersList()
         {
             if (PlayersList == null)
@@ -351,7 +369,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             try
             {
                 LogProvider.Log.Info("Equity calculation started");
-                var boardString = Board.ToString().Replace("x", "").Replace("X", "");
+                var boardString = GetBoardText();
                 result = await HoldemEquityCalculator.CalculateEquityAsync(PlayersList.Select(x => string.Join(",", x.GetPlayersHand(true))), boardString, cts.Token);
             }
             catch (OperationCanceledException)
@@ -738,6 +756,12 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 RaiseCalculateBluffNotification(selectedPlayer);
             }
         }
+
+        private string GetBoardText()
+        {
+            return Board?.ToString().Replace("x", string.Empty).Replace("X", string.Empty);
+        }
+
         #endregion
     }
 }

@@ -862,6 +862,123 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Flush.
+        /// </summary>
+        internal static string Enum_MadeHandType_Flush {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_Flush", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flush draw.
+        /// </summary>
+        internal static string Enum_MadeHandType_FlushDraw {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_FlushDraw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4 of kind.
+        /// </summary>
+        internal static string Enum_MadeHandType_FourOfKind {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_FourOfKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full house.
+        /// </summary>
+        internal static string Enum_MadeHandType_FullHouse {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_FullHouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Middle pair.
+        /// </summary>
+        internal static string Enum_MadeHandType_MiddlePair {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_MiddlePair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No made hand.
+        /// </summary>
+        internal static string Enum_MadeHandType_NoPair {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_NoPair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Straight.
+        /// </summary>
+        internal static string Enum_MadeHandType_Straight {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_Straight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Straight draw.
+        /// </summary>
+        internal static string Enum_MadeHandType_StraightDraw {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_StraightDraw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Straight flush.
+        /// </summary>
+        internal static string Enum_MadeHandType_StraightFlush {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_StraightFlush", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3 of kind.
+        /// </summary>
+        internal static string Enum_MadeHandType_ThreeOfKind {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_ThreeOfKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top pair.
+        /// </summary>
+        internal static string Enum_MadeHandType_TopPair {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_TopPair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2 pairs.
+        /// </summary>
+        internal static string Enum_MadeHandType_TwoPairs {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_TwoPairs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bottom pair.
+        /// </summary>
+        internal static string Enum_MadeHandType_WeakPair {
+            get {
+                return ResourceManager.GetString("Enum_MadeHandType_WeakPair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BTN.
         /// </summary>
         internal static string Enum_PredefinedRange_BTN {

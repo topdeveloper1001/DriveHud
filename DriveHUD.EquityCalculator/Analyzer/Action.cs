@@ -112,7 +112,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
     };
 
 
-    internal enum postflophand
+    public enum PostFlopHand
     {
         kStraightFlush,
         k4ofKind,
@@ -124,5 +124,4 @@ namespace DriveHUD.EquityCalculator.Analyzer
         kPair,
         kNoPair
     };
-
 }

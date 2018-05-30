@@ -783,7 +783,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                             if (street == 1 || street == 2 || street == 3)
                             {
                                 boardinfo boardInfo = Jacob.AnalyzeHand(handHistory, street, true);
-                                if (boardInfo.madehand == postflophand.kNoPair)
+                                if (boardInfo.madehand == PostFlopHand.kNoPair)
                                 {
                                     if (temp_advice.custom_advice != null && temp_advice.custom_advice.Equals("bet"))
                                     {
@@ -818,7 +818,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                                 if (street == 1)
                                 {
                                     boardinfo boardInfo = Jacob.AnalyzeHand(handHistory, street, true);
-                                    if (boardInfo.madehand == postflophand.kNoPair)
+                                    if (boardInfo.madehand == PostFlopHand.kNoPair)
                                     {
                                         if (boardInfo.drawtype == 0)
                                         {
@@ -851,7 +851,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                                 {
                                     //#1918359371 - JhKh : Rule - If hero does not have at least one pair using his hole cards (in this case KJ), then do not value bet on the river unless hero has an ace in his hand (his whole cards might be AK instead). 
                                     boardinfo boardInfo = Jacob.AnalyzeHand(handHistory, street, true);
-                                    if (boardInfo.madehand == postflophand.kNoPair
+                                    if (boardInfo.madehand == PostFlopHand.kNoPair
 
                                         && !heroPlayer.Cards[0].Equals('A')
                                         && !heroPlayer.Cards[1].Equals('A')
@@ -2634,7 +2634,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                                     hasThreeOfAKind = true;
                             }
 
-                            if (allBoardInfo.madehand == postflophand.kNoPair || (hasSmallPairs && !hasThreeOfAKind))
+                            if (allBoardInfo.madehand == PostFlopHand.kNoPair || (hasSmallPairs && !hasThreeOfAKind))
                             {
                                 bool minimumRaise = false;
                                 if (!PotIsReraisedPreflop(handHistory, out minimumRaise))
@@ -2648,7 +2648,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                     //If hand is heads-up, and board is paired, AND no one bet the flop, then Hero bet's 60% of the pot on the turn if first to act OR opponent has checked to hero.
                     //this is an example hand of it: #1918307834 - Ks8c
-                    if (HeadsUp(handHistory, action) != null && PlayerIsFirstToActOrIsCheckedToPostFlop(handHistory, action) && (boardInfo.madehand == postflophand.kPair || boardInfo.madehand == postflophand.k2Pair || boardInfo.madehand == postflophand.k3ofKind || boardInfo.madehand == postflophand.k4ofKind))
+                    if (HeadsUp(handHistory, action) != null && PlayerIsFirstToActOrIsCheckedToPostFlop(handHistory, action) && (boardInfo.madehand == PostFlopHand.kPair || boardInfo.madehand == PostFlopHand.k2Pair || boardInfo.madehand == PostFlopHand.k3ofKind || boardInfo.madehand == PostFlopHand.k4ofKind))
                     {
                         multPot = 0.6;
                         Debug("If hand is heads-up, and board is paired, AND no one bet the flop, then Hero bet's 60% of the pot on the turn if first to act OR opponent has checked to hero.");
@@ -2662,7 +2662,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     if (!sPosition.Equals("SB") && !sPosition.Equals("BB"))
                     {
                         bool opponentBetPotOrLess = false;
-                        if (allBoardInfo.madehand == postflophand.kFlush || allBoardInfo.madehand == postflophand.kStraightFlush || allBoardInfo.madehand == postflophand.kStraight)
+                        if (allBoardInfo.madehand == PostFlopHand.kFlush || allBoardInfo.madehand == PostFlopHand.kStraightFlush || allBoardInfo.madehand == PostFlopHand.kStraight)
                         {
                             foreach (Action postflopAction in GetAllPostflopActionsOnStreetBefore(handHistory, action))
                             {
@@ -2688,7 +2688,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                     if (!saveBet)
                     {
-                        if (boardInfo.madehand == postflophand.kPair || boardInfo.madehand == postflophand.k2Pair || boardInfo.madehand == postflophand.k3ofKind || boardInfo.madehand == postflophand.k4ofKind)
+                        if (boardInfo.madehand == PostFlopHand.kPair || boardInfo.madehand == PostFlopHand.k2Pair || boardInfo.madehand == PostFlopHand.k3ofKind || boardInfo.madehand == PostFlopHand.k4ofKind)
                         {
                             multPot = (double)2 / (double)3;
                             saveBet = true;
@@ -2724,7 +2724,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                             }
 
                             bool madePairs = false;
-                            if (allBoardInfo.madehand == postflophand.kPair || allBoardInfo.madehand == postflophand.k2Pair || allBoardInfo.madehand == postflophand.k3ofKind || allBoardInfo.madehand == postflophand.k4ofKind)
+                            if (allBoardInfo.madehand == PostFlopHand.kPair || allBoardInfo.madehand == PostFlopHand.k2Pair || allBoardInfo.madehand == PostFlopHand.k3ofKind || allBoardInfo.madehand == PostFlopHand.k4ofKind)
                             {
                                 madePairs = true;
                             }
@@ -2786,7 +2786,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                         {
                             if (GetActivePlayersNB(handHistory, action) - 1 <= 2)
                             {
-                                if (allBoardInfo.madehand == postflophand.kFlush || allBoardInfo.madehand == postflophand.kStraightFlush || PlayerHasOESD(handHistory, handHistory.HeroName, action.Street))
+                                if (allBoardInfo.madehand == PostFlopHand.kFlush || allBoardInfo.madehand == PostFlopHand.kStraightFlush || PlayerHasOESD(handHistory, handHistory.HeroName, action.Street))
                                 {
                                     advancedAdvices.Add("This is generally a profitable semi-bluffing situation with your draw. Increase your EV in this hand by betting 2/3rds of the pot. The combination of your current equity, and fold equity in this hand makes it a profitable play.");
                                     saveBet = true;
@@ -2816,7 +2816,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     //#214828675 - KsKh
                     if (PotIsReraisedPostflopBeforeAction(handHistory, action, true) //3Bet
                         && (handHistory.CommunityCards[1][0].Equals('A') || handHistory.CommunityCards[1][2].Equals('A') || handHistory.CommunityCards[1][4].Equals('A')
-                        && boardInfo.madehand == postflophand.kNoPair))
+                        && boardInfo.madehand == PostFlopHand.kNoPair))
                     {
                         List<Player> opponents = GetPlayersInHand(handHistory, action, false);
                         bool allOpponentHaveLowAgg = true;
@@ -3261,7 +3261,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                         //#70521719 - JsAd
                         if (!HeroHasOverPair(handHistory, action.Street) && (PlayerHas4ToAStraight(handHistory, 3, false) || PlayerHas4ToAFlush(handHistory, 3, false)))
                         {
-                            if (allBoardInfo.madehand != postflophand.kFlush && allBoardInfo.madehand != postflophand.kStraight && allBoardInfo.madehand != postflophand.kStraightFlush)
+                            if (allBoardInfo.madehand != PostFlopHand.kFlush && allBoardInfo.madehand != PostFlopHand.kStraight && allBoardInfo.madehand != PostFlopHand.kStraightFlush)
                             {
                                 Debug("if hand is top 16% or higher (16-100) AND there is 4 to a straight on the board OR 4 to a flush (and hero doesn't have a flush or straight), then check, UNLESS Hero has a pocket pair that is an overpair to the board.");
                                 if (handRange >= 16) post_advice.custom_advice = "check";
@@ -3576,7 +3576,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                         //if HERO flops trips... this means if hero has 3 of a kind on the flop using only ONE of heros' hole cards
                         //then X the raising and calling range by 2
                         //#1918343816 - 5h4c
-                        if (allBoardInfo.madehand == postflophand.k3ofKind
+                        if (allBoardInfo.madehand == PostFlopHand.k3ofKind
                             && !heroCards[0].Equals(heroCards[2])
                             )
                         {
@@ -6837,7 +6837,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                                                 handHistory.CommunityCards[1][1] != handHistory.CommunityCards[1][5] &&
                                                 handHistory.CommunityCards[1][3] != handHistory.CommunityCards[1][5])
                                                 && nbStraightsPossibleOnTheFlop < 16) &&
-                                                (boardInfo = Jacob.AnalyzeHandCustomHoleCards(handHistory, 1, true, oppCard1, oppCard2)).madehand == postflophand.k3ofKind
+                                                (boardInfo = Jacob.AnalyzeHandCustomHoleCards(handHistory, 1, true, oppCard1, oppCard2)).madehand == PostFlopHand.k3ofKind
                                                 && boardInfo.holesused > 0)
                                             {
                                                 removeHand = false;
@@ -7005,7 +7005,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                                                 //2 PAIRS
                                                 boardinfo allBoardInfoOnTheFlop = Jacob.AnalyzeHand(handHistory, 1, oppCard1, oppCard2);
-                                                if (allBoardInfoOnTheFlop.madehand == postflophand.k2Pair)
+                                                if (allBoardInfoOnTheFlop.madehand == PostFlopHand.k2Pair)
                                                 {
                                                     dontRemoveHand = true;
                                                 }
@@ -7013,10 +7013,10 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                                                 boardinfo boardInfoOnTheFlop = Jacob.AnalyzeHand(handHistory, 1, false);
                                                 boardinfo boardInfoOnTheTurn = Jacob.AnalyzeHand(handHistory, 2, false);
-                                                if (boardInfoOnTheFlop.madehand == postflophand.kNoPair && boardInfoOnTheTurn.madehand == postflophand.kPair)
+                                                if (boardInfoOnTheFlop.madehand == PostFlopHand.kNoPair && boardInfoOnTheTurn.madehand == PostFlopHand.kPair)
                                                 {
                                                     boardinfo allBoardInfoOnTheTurn = Jacob.AnalyzeHand(handHistory, 2, oppCard1, oppCard2);
-                                                    if (allBoardInfoOnTheTurn.madehand == postflophand.kFullHouse || allBoardInfoOnTheTurn.madehand == postflophand.k4ofKind)
+                                                    if (allBoardInfoOnTheTurn.madehand == PostFlopHand.kFullHouse || allBoardInfoOnTheTurn.madehand == PostFlopHand.k4ofKind)
                                                     {
                                                         dontRemoveHand = true;
                                                     }
@@ -7167,7 +7167,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                                                     boardinfo boardInfo;
                                                     if (nbStraightsPossibleOnTheTurn > 16 && nbFlushsPossibleOnTheTurn > 16
                                                         && (nbStraightsPossibleOnTheTurn > nbStraightsPossibleOnTheFlop || nbFlushsPossibleOnTheTurn > nbFlushsPossibleOnTheFlop)
-                                                        && (boardInfo = Jacob.AnalyzeHandCustomHoleCards(handHistory, 2, true, oppCard1, oppCard2)).madehand == postflophand.k3ofKind
+                                                        && (boardInfo = Jacob.AnalyzeHandCustomHoleCards(handHistory, 2, true, oppCard1, oppCard2)).madehand == PostFlopHand.k3ofKind
                                                         && boardInfo.holesused > 0)
                                                     {
                                                         removeHand = true;
@@ -8475,47 +8475,47 @@ namespace DriveHUD.EquityCalculator.Analyzer
             // Outs to a full house (requires a straight or flush threat on the board required)
             if (info.samesuitcards >= 3 || info.ifmadestraights)
             { // If possible straight or flush on board
-                if (info.madehand == postflophand.k3ofKind)
+                if (info.madehand == PostFlopHand.k3ofKind)
                 {
                     if (street == 1) outs_full = 7;  // Flop:  7 outs to a full house (or quads), both with set and with trips
                     else if (street == 2) outs_full = 10; // Turn: 10 outs to a full house (or quads), both with set and with trips
                 }
-                else if (info.madehand == postflophand.k2Pair)
+                else if (info.madehand == PostFlopHand.k2Pair)
                 { // 2-Pair
                     outs_full = 4; // 4 outs to full house, same with hitting both unpaired hole cards, hitting one pair and paired board, or pocket pair on paired board
                 }
             }
 
             // Outs to a flush and a straight
-            if (info.madehand != postflophand.kStraightFlush && info.madehand != postflophand.k4ofKind && info.madehand != postflophand.kFullHouse && info.madehand != postflophand.kFlush && info.samesuitcards < 4)
+            if (info.madehand != PostFlopHand.kStraightFlush && info.madehand != PostFlopHand.k4ofKind && info.madehand != PostFlopHand.kFullHouse && info.madehand != PostFlopHand.kFlush && info.samesuitcards < 4)
             {
                 if ((info.ifstraightflushdraw && info.drawtype != 2) || // Open Ended Straight-Flush Draw
                     (info.ifflushdraw && info.drawflushcardsmissing == 1 && info.ifstraightdraw && info.drawtype != 2)) // OESD+Flush-draw (15 outs total)
                 {
                     outs_flush = 9; // 9 flush-outs
-                    if (info.madehand != postflophand.kStraight && info.samesuitcards < 3) outs_straight = 6; // 6 straight-outs since flush-outs are already counted for (and don't count straight-outs if 3-flush on board already)
+                    if (info.madehand != PostFlopHand.kStraight && info.samesuitcards < 3) outs_straight = 6; // 6 straight-outs since flush-outs are already counted for (and don't count straight-outs if 3-flush on board already)
                 }
                 else if ((info.ifstraightflushdraw && info.drawtype == 2) || // Gut-Shot Straight-Flush Draw
                          (info.ifflushdraw && info.drawflushcardsmissing == 1 && info.ifstraightdraw && info.drawtype == 2)) // Gutshot+Flush-draw (12 outs total)
                 {
                     outs_flush = 9; // 9 flush-outs
-                    if (info.madehand != postflophand.kStraight && info.samesuitcards < 3) outs_straight = 3; // 3 straight-outs since flush-outs are already counted for (and don't count straight-outs if 3-flush on board already)
+                    if (info.madehand != PostFlopHand.kStraight && info.samesuitcards < 3) outs_straight = 3; // 3 straight-outs since flush-outs are already counted for (and don't count straight-outs if 3-flush on board already)
                 }
                 else // No straight-flush draws, or straight + flush combo-draws
                 {
                     if (info.ifflushdraw && info.drawflushcardsmissing == 1) outs_flush = 9; // Flush Draw, 9 outs
-                    else if (info.ifstraightdraw && info.drawtype != 2 && info.madehand != postflophand.kStraight && info.samesuitcards < 3) outs_straight = 8; // OESD, 8 outs (and don't count straight-outs if 3-flush on board already)
-                    else if (info.ifstraightdraw && info.drawtype == 2 && info.madehand != postflophand.kStraight && info.samesuitcards < 3) outs_straight = 4; // Gut-Shot, 4 outs (and don't count straight-outs if 3-flush on board already)
+                    else if (info.ifstraightdraw && info.drawtype != 2 && info.madehand != PostFlopHand.kStraight && info.samesuitcards < 3) outs_straight = 8; // OESD, 8 outs (and don't count straight-outs if 3-flush on board already)
+                    else if (info.ifstraightdraw && info.drawtype == 2 && info.madehand != PostFlopHand.kStraight && info.samesuitcards < 3) outs_straight = 4; // Gut-Shot, 4 outs (and don't count straight-outs if 3-flush on board already)
                 }
             }
 
             // Outs to a set, trips, 2-pair or overpair
-            if (info.madehand == postflophand.kPair)
+            if (info.madehand == PostFlopHand.kPair)
             { // Pair
                 if (info.holesused == 2) outs_overpair = 2; // Pocket pair, 2 outs to a set
                 else if (info.holesused == 1) outs_overpair = 5; // Flopped a pair, 5 outs to trips or a 2-pair
             }
-            else if (info.madehand == postflophand.kNoPair)
+            else if (info.madehand == PostFlopHand.kNoPair)
             {
                 if (info.boardhigher1 == 0 && info.boardhigher2 == 0) outs_overpair = 6; // 2 overcards, 6 outs to an overpair
                 else if (info.boardhigher1 == 0 || info.boardhigher2 == 0) outs_overpair = 3; // 1 overcard,  3 outs to an overpair
@@ -8614,7 +8614,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
         static bool IsTablePaired(HandHistory handHistory, int street)
         {
             boardinfo boardInfo = Jacob.AnalyzeHand(handHistory, street, false);
-            return boardInfo.madehand == postflophand.kPair || boardInfo.madehand == postflophand.k2Pair || boardInfo.madehand == postflophand.k3ofKind || boardInfo.madehand == postflophand.k4ofKind;
+            return boardInfo.madehand == PostFlopHand.kPair || boardInfo.madehand == PostFlopHand.k2Pair || boardInfo.madehand == PostFlopHand.k3ofKind || boardInfo.madehand == PostFlopHand.k4ofKind;
         }
         static internal bool HeroRaisedLimperPreflop(HandHistory handHistory)
         {
@@ -9307,22 +9307,35 @@ namespace DriveHUD.EquityCalculator.Analyzer
             return new List<String>(new String[] { "99", "TT", "JJ", "QQ", "KK", "AA", "A2s", "A3s", "A4s", "A5s", "A6s", "A7s", "A8s", "A9s", "ATs", "AJs", "AQs", "AKs", "K9s", "KTs", "KJs", "KQs", "QTs", "QJs", "A2o", "A3o", "A4o", "A5o", "A6o", "A7o", "A8o", "A9o", "ATo", "AJo", "AQo", "AKo", "KTo", "KJo", "KQo", "QTo", "QJo" });
         }
 
-
-        internal static List<string> UngroupHands(List<String> groupedHands, HandHistory handHistory, bool ignoreHeroCards = false)
+        internal static List<string> UngroupHands(IEnumerable<string> groupedHands, string boardCards, IEnumerable<string> holeCards)
         {
             var suits = new string[] { "c", "s", "h", "d" };
 
             var ungroupedHands = new List<string>();
 
+            bool validateCard(string card)
+            {
+                return !boardCards.Contains(card) && (holeCards == null || holeCards.All(x => !x.Contains(card)));
+            }
+
+            void AddCards(string card1, string card2)
+            {
+                if (validateCard(card1) && validateCard(card2))
+                {
+                    ungroupedHands.Add(card1 + card2);
+                }
+            }
+
             foreach (var groupedHand in groupedHands)
             {
-                var handsToTry = new List<string>();
-
                 if (groupedHand.EndsWith("s"))
                 {
                     foreach (var suit in suits)
                     {
-                        handsToTry.Add(groupedHand[0].ToString() + suit + groupedHand[1].ToString() + suit);
+                        var card1 = groupedHand[0].ToString() + suit;
+                        var card2 = groupedHand[1].ToString() + suit;
+
+                        AddCards(card1, card2);
                     }
                 }
                 else if (groupedHand.EndsWith("o"))
@@ -9334,7 +9347,10 @@ namespace DriveHUD.EquityCalculator.Analyzer
                         {
                             if (!suit1.Equals(suit2))
                             {
-                                handsToTry.Add(groupedHand[0].ToString() + suit1 + groupedHand[1].ToString() + suit2);
+                                var card1 = groupedHand[0].ToString() + suit1;
+                                var card2 = groupedHand[1].ToString() + suit2;
+
+                                AddCards(card1, card2);
                             }
                         }
                     }
@@ -9348,46 +9364,47 @@ namespace DriveHUD.EquityCalculator.Analyzer
                         for (var j = i + 1; j < suits.Length; j++)
                         {
                             var suit2 = suits[j];
-                            handsToTry.Add(groupedHand[0].ToString() + suit1 + groupedHand[1].ToString() + suit2);
+
+                            var card1 = groupedHand[0].ToString() + suit1;
+                            var card2 = groupedHand[1].ToString() + suit2;
+
+                            AddCards(card1, card2);
                         }
-                    }
-                }
-
-                foreach (var handToTry in handsToTry)
-                {
-                    var card1 = handToTry.Substring(0, 2);
-                    var card2 = handToTry.Substring(2, 2);
-
-                    var comCards = string.Empty;
-
-                    if (handHistory.CommunityCards[1] != null)
-                    {
-                        comCards += handHistory.CommunityCards[1];
-                    }
-
-                    if (handHistory.CommunityCards[2] != null)
-                    {
-                        comCards += handHistory.CommunityCards[2];
-                    }
-
-                    if (handHistory.CommunityCards[3] != null)
-                    {
-                        comCards += handHistory.CommunityCards[3];
-                    }
-
-                    if (!ignoreHeroCards)
-                    {
-                        comCards += (handHistory.Players[handHistory.HeroName] as Player).Cards;
-                    }
-
-                    if (!comCards.Contains(card1) && !comCards.Contains(card2))
-                    {
-                        ungroupedHands.Add(card1 + card2);
                     }
                 }
             }
 
             return ungroupedHands;
+        }
+
+        internal static List<string> UngroupHands(List<String> groupedHands, HandHistory handHistory, bool ignoreHeroCards = false)
+        {
+            var boardCards = string.Empty;
+
+            if (handHistory.CommunityCards[1] != null)
+            {
+                boardCards += handHistory.CommunityCards[1];
+            }
+
+            if (handHistory.CommunityCards[2] != null)
+            {
+                boardCards += handHistory.CommunityCards[2];
+            }
+
+            if (handHistory.CommunityCards[3] != null)
+            {
+                boardCards += handHistory.CommunityCards[3];
+            }
+
+            var holeCards = new List<string>();
+
+            if (!ignoreHeroCards &&
+                     handHistory.Players != null && handHistory.Players.ContainsKey(handHistory.HeroName))
+            {
+                holeCards.Add((handHistory.Players[handHistory.HeroName] as Player).Cards);
+            }
+
+            return UngroupHands(groupedHands, boardCards, holeCards);
         }
 
         static Dictionary<string, IEnumerable<string>> GetHandsToOpenRaiseWith()
@@ -9775,7 +9792,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
             String boardCard5 = street >= 3 ? handHistory.CommunityCards[3] : null;
             boardinfo boardInfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, oppCard1, oppCard2);
 
-            if (boardInfo.madehand == postflophand.kPair)
+            if (boardInfo.madehand == PostFlopHand.kPair)
             {
                 List<String> allCards = new List<String>();
                 if (handHistory.CommunityCards[1] != null)
@@ -9815,13 +9832,13 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 }
             }
 
-            if ((boardInfo.madehand == postflophand.k2Pair)
-                || boardInfo.madehand == postflophand.k3ofKind
-                || boardInfo.madehand == postflophand.k4ofKind
-                || boardInfo.madehand == postflophand.kFlush
-                || boardInfo.madehand == postflophand.kFullHouse
-                || boardInfo.madehand == postflophand.kStraight
-                || boardInfo.madehand == postflophand.kStraightFlush) return true; //TOP PAIR OR BETTER
+            if ((boardInfo.madehand == PostFlopHand.k2Pair)
+                || boardInfo.madehand == PostFlopHand.k3ofKind
+                || boardInfo.madehand == PostFlopHand.k4ofKind
+                || boardInfo.madehand == PostFlopHand.kFlush
+                || boardInfo.madehand == PostFlopHand.kFullHouse
+                || boardInfo.madehand == PostFlopHand.kStraight
+                || boardInfo.madehand == PostFlopHand.kStraightFlush) return true; //TOP PAIR OR BETTER
 
             if (boardInfo.drawflushcardsmissing == 1 && boardInfo.drawflushholesused > 0) return true;
 
@@ -9859,7 +9876,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                             if (card1.Equals(card2)) continue;
 
                             boardinfo boardInfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, card1, card2);
-                            if ((boardInfo.madehand == postflophand.kStraight || boardInfo.madehand == postflophand.kStraightFlush) && boardInfo.holesused > 0)
+                            if ((boardInfo.madehand == PostFlopHand.kStraight || boardInfo.madehand == PostFlopHand.kStraightFlush) && boardInfo.holesused > 0)
                             {
                                 if (!cardsUsedForStraight.ContainsKey(card1 + card2) && !cardsUsedForStraight.ContainsKey(card2 + card1))
                                 {
@@ -9867,7 +9884,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                                     nbStraights++;
                                 }
                             }
-                            else if (boardInfo.madehand == postflophand.kFlush)
+                            else if (boardInfo.madehand == PostFlopHand.kFlush)
                             {
                                 if (!cardsUsedForFlush.ContainsKey(card1 + card2) && !cardsUsedForFlush.ContainsKey(card2 + card1))
                                 {
@@ -9895,7 +9912,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             boardinfo boardInfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, oppCard1, oppCard2);
 
-            if (boardInfo.madehand == postflophand.kPair && boardInfo.holesused > 0)
+            if (boardInfo.madehand == PostFlopHand.kPair && boardInfo.holesused > 0)
             {
                 return board.Contains(oppCard1[0].ToString()) ? oppCard1 : oppCard2;
             }
@@ -9913,7 +9930,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             boardinfo boardInfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, oppCard1, oppCard2);
 
-            if ((boardInfo.madehand == postflophand.kStraight || boardInfo.madehand == postflophand.kStraightFlush) && boardInfo.holesused > 0)
+            if ((boardInfo.madehand == PostFlopHand.kStraight || boardInfo.madehand == PostFlopHand.kStraightFlush) && boardInfo.holesused > 0)
             {
                 return true;
             }
@@ -9931,7 +9948,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             boardinfo boardInfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, oppCard1, oppCard2);
 
-            if (boardInfo.ifflushdraw && boardInfo.drawflushcardsmissing == 1 && boardInfo.drawflushholesused > 0 && boardInfo.madehand != postflophand.kFlush && boardInfo.madehand != postflophand.kStraightFlush)
+            if (boardInfo.ifflushdraw && boardInfo.drawflushcardsmissing == 1 && boardInfo.drawflushholesused > 0 && boardInfo.madehand != PostFlopHand.kFlush && boardInfo.madehand != PostFlopHand.kStraightFlush)
             {
                 return oppCard1[0].Equals('A') || oppCard2[0].Equals('A');
             }
@@ -9980,7 +9997,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
             }
             //
 
-            if (!betterThanTopPair && !onlyStraightOrFlush && (boardInfo.madehand == postflophand.kPair || (boardInfo.madehand == postflophand.k2Pair && oppCard1[0].Equals(oppCard2[0]))) && boardInfo.holesused > 0)
+            if (!betterThanTopPair && !onlyStraightOrFlush && (boardInfo.madehand == PostFlopHand.kPair || (boardInfo.madehand == PostFlopHand.k2Pair && oppCard1[0].Equals(oppCard2[0]))) && boardInfo.holesused > 0)
             {
                 List<String> allCardsOnTheBoard = new List<String>();
                 if (handHistory.CommunityCards[1] != null)
@@ -10032,19 +10049,19 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (onlyStraightOrFlush)
             {
-                if ((boardInfo.madehand == postflophand.kFlush
-                   || boardInfo.madehand == postflophand.kStraight
-                   || boardInfo.madehand == postflophand.kStraightFlush) && boardInfo.holesused > 0)
+                if ((boardInfo.madehand == PostFlopHand.kFlush
+                   || boardInfo.madehand == PostFlopHand.kStraight
+                   || boardInfo.madehand == PostFlopHand.kStraightFlush) && boardInfo.holesused > 0)
                     return true; //STRAIGHT OR FLUSH
                 else return false;
             }
-            if (((boardInfo.madehand == postflophand.k2Pair && oppCard1[0] != oppCard2[0])
-                || boardInfo.madehand == postflophand.k3ofKind
-                || boardInfo.madehand == postflophand.k4ofKind
-                || boardInfo.madehand == postflophand.kFlush
-                || boardInfo.madehand == postflophand.kFullHouse
-                || boardInfo.madehand == postflophand.kStraight
-                || boardInfo.madehand == postflophand.kStraightFlush) && boardInfo.holesused > 0)
+            if (((boardInfo.madehand == PostFlopHand.k2Pair && oppCard1[0] != oppCard2[0])
+                || boardInfo.madehand == PostFlopHand.k3ofKind
+                || boardInfo.madehand == PostFlopHand.k4ofKind
+                || boardInfo.madehand == PostFlopHand.kFlush
+                || boardInfo.madehand == PostFlopHand.kFullHouse
+                || boardInfo.madehand == PostFlopHand.kStraight
+                || boardInfo.madehand == PostFlopHand.kStraightFlush) && boardInfo.holesused > 0)
                 return true; //TOP PAIR OR BETTER
 
             return false;
@@ -10105,8 +10122,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
             String boardCard5 = street >= 3 ? handHistory.CommunityCards[3] : null;
 
             boardinfo boardinfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, oppCard1, oppCard2);
-            if ((boardinfo.ifflushdraw && boardinfo.drawflushcardsmissing == 1 && boardinfo.drawflushholesused > 0 && boardinfo.madehand != postflophand.kFlush && boardinfo.madehand != postflophand.kStraightFlush)
-                || (boardinfo.ifstraightdraw && boardinfo.drawstraightholesused > 0 && boardinfo.madehand != postflophand.kStraight && boardinfo.madehand != postflophand.kStraightFlush))
+            if ((boardinfo.ifflushdraw && boardinfo.drawflushcardsmissing == 1 && boardinfo.drawflushholesused > 0 && boardinfo.madehand != PostFlopHand.kFlush && boardinfo.madehand != PostFlopHand.kStraightFlush)
+                || (boardinfo.ifstraightdraw && boardinfo.drawstraightholesused > 0 && boardinfo.madehand != PostFlopHand.kStraight && boardinfo.madehand != PostFlopHand.kStraightFlush))
             {
                 return true;
             }
