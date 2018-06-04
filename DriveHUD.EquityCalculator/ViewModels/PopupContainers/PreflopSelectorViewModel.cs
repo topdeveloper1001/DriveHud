@@ -83,13 +83,13 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 }
 
                 InitializePreflopSelectorItemsTracking();
-
-                UpdateSlider();
-
+               
                 PreflopSelectorItems.ForEach(x =>
                 {
                     x.UsedCards = _notification.BoardCards;
                 });
+
+                UpdateSlider();
 
                 CombosRaisePropertyChanged();
             }
