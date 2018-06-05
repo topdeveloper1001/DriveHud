@@ -177,7 +177,6 @@ namespace DriveHUD.Importers.PokerMaster
                 try
                 {
                     device.Open(DeviceMode.Normal);
-                    device.Filter = PMImporterHelper.TrafficFilter;
 
                     var captureDevice = new CaptureDevice(device)
                     {
@@ -259,6 +258,11 @@ namespace DriveHUD.Importers.PokerMaster
             var tcpPacket = packet.Extract<TcpPacket>();
             var ipPacket = packet.Extract<IpPacket>();
 
+            if (tcpPacket == null || ipPacket == null || tcpPacket.SourcePort != PMImporterHelper.PortFilter)
+            {
+                return;
+            }
+
             var payloadData = tcpPacket.PayloadData;
 
             if (payloadData == null || payloadData.Length == 0)
@@ -273,10 +277,10 @@ namespace DriveHUD.Importers.PokerMaster
                 Destination = new IPEndPoint(ipPacket.DestinationAddress, tcpPacket.DestinationPort),
                 CreatedTimeStamp = rawCapture.Timeval.Date,
                 SequenceNumber = tcpPacket.SequenceNumber
-            };     
+            };
 
             packetBuffer.Add(capturedPacket);
-        }      
+        }
 
         /// <summary>
         /// Processes packets in the buffer
@@ -311,7 +315,7 @@ namespace DriveHUD.Importers.PokerMaster
                     if (!packetManager.TryParse(capturedPacket, out Package package) || !IsAllowedPackage(package))
                     {
                         continue;
-                    }               
+                    }                 
 
                     if (package.Cmd == PackageCommand.Cmd_SCLoginRsp)
                     {

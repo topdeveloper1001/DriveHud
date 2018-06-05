@@ -84,7 +84,14 @@ namespace DriveHUD.Importers
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Hand(s) has not been imported. [{SiteString}]", e);
+                if (!string.IsNullOrEmpty(gameInfo.FullFileName))
+                {
+                    LogProvider.Log.Error(this, $"Hand(s) from '{gameInfo.FullFileName}' has not been imported. [{SiteString}]", e);
+                }
+                else
+                {
+                    LogProvider.Log.Error(this, $"Hand(s) has not been imported. [{SiteString}]", e);
+                }
             }
 
             if (parsingResult == null)

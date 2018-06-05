@@ -17,12 +17,13 @@ using System.Linq;
 namespace DriveHUD.Importers.PokerMaster
 {
     internal class PMImporterHelper
-    {
-        public static string TrafficFilter
+    {        
+        public static int PortFilter
         {
             get
+
             {
-                return "ip and tcp and port 9188";
+                return 9188;
             }
         }
 
