@@ -297,7 +297,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
                     var opponentsCount = CountOpponents();
 
-                    BluffToValueRatioCalculator.AdjustPlayerRange(heroAutoHands, CurrentStreet, _currentHandHistory, opponentsCount);
+                    BluffToValueRatioCalculator.AdjustPlayerRange(heroAutoHands, CurrentStreet, _currentHandHistory, GetBoardText(), opponentsCount);
                     return heroAutoHands;
                 }
             }

@@ -93,7 +93,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
         }
 
         public static void AdjustPlayerRange(IEnumerable<EquityRangeSelectorItemViewModel> ranges, Street street,
-            HandHistories.Objects.Hand.HandHistory currentHandHistory, int opponentsCount)
+            HandHistories.Objects.Hand.HandHistory currentHandHistory, string board, int opponentsCount)
         {
             // supports only flop/turn/river
             if (street != Street.Flop &&
@@ -105,6 +105,23 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             var handHistory = new HandHistory();
             handHistory.ConverToEquityCalculatorFormat(currentHandHistory, street);
+
+            if (!string.IsNullOrEmpty(board) && street >= Street.Flop)
+            {
+                var customBoardCards = BoardCards.FromCards(board);
+
+                handHistory.CommunityCards[1] = string.Join(string.Empty, customBoardCards.GetBoardOnStreet(Street.Flop));
+
+                if (street >= Street.Turn)
+                {
+                    handHistory.CommunityCards[2] = customBoardCards.GetBoardOnStreet(Street.Turn).Last().ToString();
+
+                    if (street >= Street.River)
+                    {
+                        handHistory.CommunityCards[3] = customBoardCards.GetBoardOnStreet(Street.River).Last().ToString();
+                    }
+                }
+            }
 
             if (!handHistory.Players.ContainsKey(handHistory.HeroName))
             {
@@ -195,9 +212,11 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                             if (boardInfo.holesused > 0 && rangeItem.BestHand > boardInfo.madehand)
                             {
-                                if (boardInfo.madehand == PostFlopHand.kPair)
+                                if (boardInfo.madehand == PostFlopHand.kPair || boardInfo.madehand == PostFlopHand.k2Pair)
                                 {
-                                    var pairType = GetPairType(holeCard1, holeCard2, boardInfo, $"{handHistory.CommunityCards[1]}{boardCard4}{boardCard5}");
+                                    var pairType = boardInfo.madehand == PostFlopHand.k2Pair ?
+                                        GetPairType(holeCard1, holeCard2, new boardinfo { madehand = PostFlopHand.kPair }, RemovePairFromBoard(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5)) :
+                                        GetPairType(holeCard1, holeCard2, boardInfo, $"{handHistory.CommunityCards[1]}{boardCard4}{boardCard5}");
 
                                     rangeItem.IsMiddlePair = pairType == PairType.Middle;
                                     rangeItem.IsBottomPair = pairType == PairType.Bottom;
@@ -216,7 +235,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     }
                 }
             }
-        
+
             Array.Sort(rangeItems, new RangeItemComparer());
 
             // set weights
@@ -361,8 +380,9 @@ namespace DriveHUD.EquityCalculator.Analyzer
             if (rangesToMarkLength > 0)
             {
                 bottomPairsTopKicker.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
-                bottomPairsTopKicker.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
             }
+
+            bottomPairsTopKicker.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
 
             var bottomPairsNoTopKicker = rangeGroup
                 .Where(x => x.IsBottomPair && x.IsConnectedToBoard && !x.IsTopKicker)
@@ -374,8 +394,9 @@ namespace DriveHUD.EquityCalculator.Analyzer
             if (rangesToMarkLength > 0)
             {
                 bottomPairsNoTopKicker.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.FoldCheck);
-                bottomPairsNoTopKicker.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
             }
+
+            bottomPairsNoTopKicker.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
         }
 
         private static void MarkBluffs(PotType potType, RangeItem[] rangeGroup, Street street)
@@ -418,6 +439,32 @@ namespace DriveHUD.EquityCalculator.Analyzer
             }
 
             return PotType.HU;
+        }
+
+        private static string RemovePairFromBoard(params string[] boardCards)
+        {
+            if (boardCards == null || boardCards.Length == 0)
+            {
+                return string.Empty;
+            }
+
+            var boardCardsList = boardCards.Where(x => !string.IsNullOrEmpty(x)).ToList();
+
+            for (var i = 0; i < boardCardsList.Count; i++)
+            {
+                for (var j = i + 1; j < boardCardsList.Count; j++)
+                {
+                    if (boardCards[i][0] == boardCards[j][0])
+                    {
+                        boardCardsList.Remove(boardCards[i]);
+                        boardCardsList.Remove(boardCards[j]);
+
+                        return string.Join(string.Empty, boardCardsList.ToArray());
+                    }
+                }
+            }
+
+            return string.Join(string.Empty, boardCardsList.ToArray());
         }
 
         #region Private helpers
@@ -528,7 +575,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
         {
             HU,
             MW
-        }        
+        }
 
         #endregion
     }

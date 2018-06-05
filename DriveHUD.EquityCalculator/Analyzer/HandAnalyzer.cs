@@ -61,7 +61,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                                     called4BetPreflop,
                                     limpedThenCall);
 
-            var ungroupedHandRange = UngroupHands(handRange, handHistory);
+            var ungroupedHandRange = UngroupHands(handRange, handHistory, true);
 
             return ungroupedHandRange;
         }

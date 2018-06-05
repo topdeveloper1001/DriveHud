@@ -12,7 +12,6 @@
 
 using DriveHUD.Importers.PokerMaster.Model;
 using System;
-using System.Linq;
 
 namespace DriveHUD.Importers.PokerMaster
 {
@@ -21,7 +20,6 @@ namespace DriveHUD.Importers.PokerMaster
         public static int PortFilter
         {
             get
-
             {
                 return 9188;
             }
