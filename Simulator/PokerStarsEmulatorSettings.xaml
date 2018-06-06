@@ -5,6 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Simulator"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="300">
@@ -24,11 +25,12 @@
 
         <TextBlock
             FontWeight="Bold"
-            Text="Poker Stars emulator settings:" />
+            Text="{Binding Name, StringFormat={}{0} settings:}" />
 
         <StackPanel
             Margin="0,5,0,0"
             Grid.Row="1"
+            Visibility="{Binding IsPrimitiveEmulation, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}"
             Orientation="Horizontal">
             <TextBlock
                 VerticalAlignment="Center"
@@ -63,6 +65,57 @@
                 Height="22"
                 Width="70"
                 Command="{Binding BrowseCommand}" />
+
+        </StackPanel>
+
+        <StackPanel
+            Margin="0,10,0,0"
+            Grid.Row="4">
+
+            <CheckBox
+                IsChecked="{Binding IsPrimitiveEmulation}"
+                Content="Primitive (only 1 table will be run)" />
+
+            <TextBlock
+                Visibility="{Binding IsPrimitiveEmulation, Converter={dh:BoolToVisibilityConverter}}"
+                Margin="0,3,0,0"
+                VerticalAlignment="Center"
+                Text="Window title:" />
+
+            <TextBox
+                Visibility="{Binding IsPrimitiveEmulation, Converter={dh:BoolToVisibilityConverter}}"
+                Margin="0,3,0,0"
+                HorizontalAlignment="Left"
+                VerticalContentAlignment="Center"
+                Height="22"
+                Width="250"
+                Text="{Binding WindowTitle, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock
+                Visibility="{Binding IsPrimitiveEmulation, Converter={dh:BoolToVisibilityConverter}}"
+                Margin="0,3,0,0"
+                VerticalAlignment="Center"
+                Text="Destination folder:" />
+
+            <StackPanel
+                Visibility="{Binding IsPrimitiveEmulation, Converter={dh:BoolToVisibilityConverter}}"
+                Margin="0,3,0,0"               
+                Orientation="Horizontal">
+
+                <TextBox
+                    VerticalContentAlignment="Center"
+                    Width="250"
+                    Height="22"
+                    Text="{Binding Destination, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Button
+                    Margin="3,0,0,0"
+                    Content="Browse..."
+                    Height="22"
+                    Width="70"
+                    Command="{Binding DestinationBrowseCommand}" />
+
+            </StackPanel>
 
         </StackPanel>
 

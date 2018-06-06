@@ -67,7 +67,7 @@ namespace Simulator
             {
                 this.RaiseAndSetIfChanged(ref isRunning, value);
             }
-        }
+        }     
 
         #endregion
 
@@ -94,7 +94,8 @@ namespace Simulator
                 new PokerStarsEmulator(),
                 new BetOnlineEmulator(),
                 new PartyPokerEmulator(),
-                new IgnitionEmulator()
+                new IgnitionEmulator(),
+                new WPNEmulator()
             };
         }
 
@@ -104,7 +105,7 @@ namespace Simulator
 
             IsRunning = true;
 
-            await SelectedEmulator.Run(cancellationTokenSource.Token);
+            await SelectedEmulator.Run(cancellationTokenSource);
 
             IsRunning = false;
         }

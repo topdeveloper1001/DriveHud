@@ -247,16 +247,16 @@ namespace DriveHUD.Importers
 
             switch (parsingResult.Source.GameDescription.GameType)
             {
-                case HandHistories.Objects.GameDescription.GameType.CapPotLimitOmaha:
-                case HandHistories.Objects.GameDescription.GameType.FiveCardPotLimitOmaha:
-                case HandHistories.Objects.GameDescription.GameType.FixedLimitOmaha:
-                case HandHistories.Objects.GameDescription.GameType.NoLimitOmaha:
-                case HandHistories.Objects.GameDescription.GameType.PotLimitOmaha:
+                case GameType.CapPotLimitOmaha:
+                case GameType.FiveCardPotLimitOmaha:
+                case GameType.FixedLimitOmaha:
+                case GameType.NoLimitOmaha:
+                case GameType.PotLimitOmaha:
                     return Bovada.GameType.Omaha;
-                case HandHistories.Objects.GameDescription.GameType.FiveCardPotLimitOmahaHiLo:
-                case HandHistories.Objects.GameDescription.GameType.PotLimitOmahaHiLo:
-                case HandHistories.Objects.GameDescription.GameType.NoLimitOmahaHiLo:
-                case HandHistories.Objects.GameDescription.GameType.FixedLimitOmahaHiLo:
+                case GameType.FiveCardPotLimitOmahaHiLo:
+                case GameType.PotLimitOmahaHiLo:
+                case GameType.NoLimitOmahaHiLo:
+                case GameType.FixedLimitOmahaHiLo:
                     return Bovada.GameType.OmahaHiLo;
                 default:
                     return Bovada.GameType.Holdem;

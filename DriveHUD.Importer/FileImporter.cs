@@ -183,7 +183,7 @@ namespace DriveHUD.Importers
             // get suitable parser for specified hh
             if (gameInfo != null && gameInfo.PokerSite != EnumPokerSites.Unknown)
             {
-                handHistoryParser = handHistoryParserFactory.GetFullHandHistoryParser(gameInfo.PokerSite);
+                handHistoryParser = handHistoryParserFactory.GetFullHandHistoryParser(gameInfo.PokerSite, text);
             }
             else
             {

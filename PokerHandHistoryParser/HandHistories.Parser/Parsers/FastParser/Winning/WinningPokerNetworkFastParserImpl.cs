@@ -113,6 +113,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             {
                 return true;
             }
+
             return false;
         }
         

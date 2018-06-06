@@ -208,7 +208,7 @@ namespace DriveHUD.Importers
                                 FullFileName = cf.Key
                             };
 
-                            LogProvider.Log.Info($"Found '{cf.Key}' file. [{SiteString}]");
+                            LogProvider.Log.Info(this, $"Found '{cf.Key}' file. [{SiteString}]");
 
                             cf.Value.GameInfo = gameInfo;
                         }

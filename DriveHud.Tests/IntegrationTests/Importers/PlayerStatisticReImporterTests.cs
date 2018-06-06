@@ -335,6 +335,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.FlopBet, Is.EqualTo(expected.FlopBet), nameof(HudLightIndicators.FlopBet));
                 Assert.That(actual.RiverCBet, Is.EqualTo(expected.RiverCBet), nameof(HudLightIndicators.RiverCBet));
                 Assert.That(actual.FoldFlop, Is.EqualTo(expected.FoldFlop), nameof(HudLightIndicators.FoldFlop));
+
                 // add new stats here            
             });
         }
