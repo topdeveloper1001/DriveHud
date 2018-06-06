@@ -1,0 +1,41 @@
+Game Hand #12909919 - Tournament #8034884 - Holdem(No Limit) - Level 8 (150.00/300.00)- 2017/05/08 09:09:04 UTC
+Table '1' 9-max Seat #4 is the button
+Seat 2: Villain1 (2410.00)
+Seat 4: Peon_84 (2203.00)
+Seat 6: Villain2 (2101.00)
+Seat 7: Villain3 (180.00) is sitting out
+Seat 9: Villain4 (6606.00)
+Villain1 posts ante 25.00
+Peon_84 posts ante 25.00
+Villain2 posts ante 25.00
+Villain3 posts ante 25.00
+Villain4 posts ante 25.00
+Villain2 posts the small blind 150.00
+Villain3 posts the big blind 155.00 and is all-in
+*** HOLE CARDS ***
+Main pot 125.00
+Dealt to Peon_84 [5d 9d]
+Villain4 folds
+Villain1 folds
+Peon_84 folds
+Villain2 calls 5.00
+*** FLOP *** [Qh 9s 9c]
+Main pot 435.00
+*** TURN *** [Qh 9s 9c] [8h]
+Main pot 435.00
+*** RIVER *** [Qh 9s 9c 8h] [Qs]
+Main pot 435.00
+*** SHOW DOWN ***
+Main pot 435.00
+Villain2 shows [4s Ks] (two pair, Queens and Nines [Qs Qh 9s 9c Ks])
+Villain3 shows [Kc 4c] (two pair, Queens and Nines [Qs Qh 9s 9c Kc])
+Villain2 collected 217.00 from main pot
+Villain3 collected 218.00 from main pot
+*** SUMMARY ***
+Total pot 435.00 | Rake 0.00
+Board [Qh 9s 9c 8h Qs]
+Seat 2: Villain1 folded on the Pre-Flop and did not bet
+Seat 4: Peon_84 (button) folded on the Pre-Flop
+Seat 6: Villain2 (small blind) showed [4s Ks] and won 217.00 with two pair, Queens and Nines [Qs Qh 9s 9c Ks]
+Seat 7: Villain3 (big blind) showed [Kc 4c] and won 218.00 with two pair, Queens and Nines [Qs Qh 9s 9c Kc]
+Seat 9: Villain4 folded on the Pre-Flop and did not bet

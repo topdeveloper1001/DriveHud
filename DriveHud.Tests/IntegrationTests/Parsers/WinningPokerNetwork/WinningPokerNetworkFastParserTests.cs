@@ -293,6 +293,10 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2.txt", "Villain2", -20, HandActionType.BIG_BLIND, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\ACR-SnG2-WithBets.txt", "Villain9", -300, HandActionType.BET, Street.Turn, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO8-AllIn-UncalledBet.txt", "Granny_Annie", 2696, HandActionType.UNCALLED_BET, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Jackpot-2.txt", "Peon_84", 840, HandActionType.WINS, Street.Summary, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Jackpot-2.txt", "atm money man", -120, HandActionType.CALL, Street.Flop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Sng2-Wins.txt", "Villain6", 217, HandActionType.WINS, Street.Summary, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Sng2-Wins.txt", "Villain7", 218, HandActionType.WINS, Street.Summary, 1)]        
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

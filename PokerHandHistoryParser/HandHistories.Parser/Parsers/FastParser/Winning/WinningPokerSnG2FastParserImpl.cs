@@ -552,13 +552,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
             actionIndex = ParseBlindActions(handLines, ref handActions, actionIndex);
 
-            Street currentStreet;
-
-            actionIndex = ParseGameActions(handLines, ref handActions, actionIndex, out currentStreet);
+            actionIndex = ParseGameActions(handLines, ref handActions, actionIndex, out Street currentStreet);
 
             if (currentStreet == Street.Showdown)
             {
                 ParseShowDown(handLines, ref handActions, actionIndex, gameType);
+                ParseSummary(handLines, ref handActions, actionIndex, gameType);
             }
 
             return handActions;
@@ -1242,6 +1241,74 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             return new HandAction(playerName, actionType, Street.Showdown);
         }
 
+        /// <summary>
+        /// Parses summary to complete hand 
+        /// </summary>        
+        private void ParseSummary(string[] handLines, ref List<HandAction> handActions, int actionIndex, GameType gameType)
+        {
+            for (int i = handLines.Length - 1; i > 0; i--)
+            {
+                var line = handLines[i];
+
+                if (line.StartsWith("*** SUMMARY"))
+                {
+                    return;
+                }
+
+                var wonIndex = line.IndexOf(" and won ", StringComparison.OrdinalIgnoreCase);
+
+                if (wonIndex > 0)
+                {
+                    var wonEndIndex = line.IndexOf(' ', wonIndex + 9);
+
+                    string wonText;
+
+                    if (wonEndIndex < 0)
+                    {
+                        wonText = line.Substring(wonIndex + 9);
+                    }
+                    else
+                    {
+                        wonText = line.Substring(wonIndex + 9, wonEndIndex - wonIndex - 9);
+                    }
+
+                    if (ParserUtils.TryParseMoney(wonText, out decimal won))
+                    {
+                        // get player name
+                        var nameStartIndex = line.IndexOf(':') + 2;
+
+                        // Seat 2: Peon_84 (button)
+                        // Seat 2: Peon_84 (big blind)
+                        // Seat 2: Peon_84 (small blind)
+                        var nameEndIndex = line.LastIndexOf(" (");
+
+                        if (nameEndIndex < 0)
+                        {
+                            nameEndIndex = line.LastIndexOf(" showed [");
+
+                            if (nameEndIndex < 0)
+                            {
+                                nameEndIndex = line.LastIndexOf(" did not show");
+
+                                if (nameEndIndex < 0)
+                                {
+                                    continue;
+                                }
+                            }
+                        }
+
+                        var playerName = line.Substring(nameStartIndex, nameEndIndex - nameStartIndex);
+
+                        if (!handActions.Any(x => x.IsWinningsAction && x.PlayerName == playerName))
+                        {
+                            var winningAction = new WinningsAction(playerName, HandActionType.WINS, won, 0);
+                            handActions.Add(winningAction);
+                        }
+                    }
+                }
+            }
+        }
+
         protected override void ParseExtraHandInformation(string[] handLines, HandHistorySummary handHistorySummary)
         {
             var handHistory = handHistorySummary as HandHistory;
@@ -1251,8 +1318,20 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 return;
             };
 
-            var players = handHistory.Players
-                .Where(x => (handHistory.Hero == null) || x.SeatNumber != handHistory.Hero.SeatNumber)
+            AdjustVillainPlayers(handHistory);
+        }
+
+        private void AdjustVillainPlayers(HandHistory handHistory)
+        {
+            var nonHeroPlayers = handHistory.Players
+                .Where(x => (handHistory.Hero == null) || x.SeatNumber != handHistory.Hero.SeatNumber).ToArray();
+
+            if (nonHeroPlayers.Any(x => !x.PlayerName.StartsWith("Villain")))
+            {
+                return;
+            }
+
+            var players = nonHeroPlayers
                 .Select(x => new { OldPlayerName = x.PlayerName, NewPlayerName = $"Villain{x.SeatNumber}" })
                 .ToDictionary(x => x.OldPlayerName, x => x.NewPlayerName);
 
