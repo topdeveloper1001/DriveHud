@@ -58,6 +58,9 @@ namespace Model.Settings
         [DataMember]
         public DisplaySettings DisplaySettings { get; set; }
 
+        [DataMember]
+        public bool RememberScreenPosition { get; set; }
+
         public GeneralSettingsModel()
         {
             SetDefaults();

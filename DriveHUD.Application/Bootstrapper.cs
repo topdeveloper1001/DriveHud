@@ -127,15 +127,19 @@ namespace DriveHUD.Application
 
                     mainRadWindow.DataContext = mainWindowViewModel;
 
-                    var positionsInfo = new WindowPositionsInfo
+                    if (settingsModel != null && settingsModel.GeneralSettings != null &&
+                        settingsModel.GeneralSettings.RememberScreenPosition)
                     {
-                        Width = mainWindowViewModel.WindowMinWidth,
-                        Height = mainWindowViewModel.AppStartupHeight,
-                        DisplaySettings = settingsModel?.GeneralSettings?.DisplaySettings,
-                        StartupLocation = WindowStartupLocation.Manual
-                    };
+                        var positionsInfo = new WindowPositionsInfo
+                        {
+                            Width = mainWindowViewModel.WindowMinWidth,
+                            Height = mainWindowViewModel.AppStartupHeight,
+                            DisplaySettings = settingsModel?.GeneralSettings?.DisplaySettings,
+                            StartupLocation = WindowStartupLocation.Manual
+                        };
 
-                    WindowPositionsService.SetPosition(mainRadWindow, positionsInfo);
+                        WindowPositionsService.SetPosition(mainRadWindow, positionsInfo);
+                    }
 
                     mainRadWindow.IsTopmost = true;
                     mainRadWindow.Show();
