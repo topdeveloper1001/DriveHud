@@ -787,6 +787,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
 
             _notification.CardsContainer.Ranges = new List<EquityRangeSelectorItemViewModel>(PreflopSelectorItems.Where(x => x.IsSelected));
+            _notification.Confirmed = true;
+
             FinishInteraction();
         }
 

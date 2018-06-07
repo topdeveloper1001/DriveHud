@@ -599,7 +599,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                },
                returned =>
                {
-                   if (returned != null)
+                   if (returned != null && returned.Confirmed)
                    {
                        if (returned.ReturnType.Equals(CardSelectorReturnType.Cards))
                        {
