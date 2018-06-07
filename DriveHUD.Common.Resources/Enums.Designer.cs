@@ -844,7 +844,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Not Very Likely - 40%.
+        ///   Looks up a localized string similar to Sometimes - 50%.
         /// </summary>
         internal static string Enum_Likelihood_NotVeryLikely {
             get {
@@ -853,7 +853,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rarely - 10%.
+        ///   Looks up a localized string similar to Rarely - 25%.
         /// </summary>
         internal static string Enum_Likelihood_Rarely {
             get {

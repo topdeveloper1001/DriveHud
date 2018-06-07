@@ -35,8 +35,8 @@ namespace Model.Enums
     {
         Definitely = 100,
         Likely = 75,
-        NotVeryLikely = 40,
-        Rarely = 10,
+        NotVeryLikely = 50,
+        Rarely = 25,
         Custom,
         None = -1
     }

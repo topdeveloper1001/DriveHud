@@ -234,33 +234,35 @@ namespace DriveHUD.ViewModels
 
         private void SelectLikelihood(object obj)
         {
-            if (obj != null)
+            if (obj == null)
             {
-                this.ItemLikelihood = (Likelihood)Enum.Parse(typeof(Likelihood), obj.ToString());
-                switch (this.ItemLikelihood)
-                {
-                    case Likelihood.Definitely:
-                    case Likelihood.Likely:
-                    case Likelihood.NotVeryLikely:
-                    case Likelihood.Rarely:
-                        this.LikelihoodPercent = (int)(this.ItemLikelihood);
-                        break;
-                    case Likelihood.Custom:
-                        this.CustomLikelihoodRequest.Raise(
-                            new CustomLikelihoodNotification() { Title = "Custom Likelihood" },
-                            returned =>
-                            {
-                                if (returned != null)
-                                {
-                                    if (returned.Likelihood >= 0)
-                                    {
-                                        LikelihoodPercent = returned.Likelihood;
-                                    }
-                                }
-                            });
-                        break;
-                }
+                return;
+            }
 
+            ItemLikelihood = (Likelihood)Enum.Parse(typeof(Likelihood), obj.ToString());
+
+            switch (ItemLikelihood)
+            {
+                case Likelihood.Definitely:
+                case Likelihood.Likely:
+                case Likelihood.NotVeryLikely:
+                case Likelihood.Rarely:
+                    LikelihoodPercent = (int)(ItemLikelihood);
+                    break;
+                case Likelihood.Custom:
+                    CustomLikelihoodRequest.Raise(
+                        new CustomLikelihoodNotification() { Title = "Custom Likelihood" },
+                        returned =>
+                        {
+                            if (returned != null)
+                            {
+                                if (returned.Likelihood >= 0)
+                                {
+                                    LikelihoodPercent = returned.Likelihood;
+                                }
+                            }
+                        });
+                    break;
             }
         }
 

@@ -226,11 +226,11 @@
     <comment>Equity calculator preflop popup likelihood</comment>
   </data>
   <data name="Enum_Likelihood_NotVeryLikely" xml:space="preserve">
-    <value>Not Very Likely - 40%</value>
+    <value>Sometimes - 50%</value>
     <comment>Equity calculator preflop popup likelihood</comment>
   </data>
   <data name="Enum_Likelihood_Rarely" xml:space="preserve">
-    <value>Rarely - 10%</value>
+    <value>Rarely - 25%</value>
     <comment>Equity calculator preflop popup likelihood</comment>
   </data>
   <data name="Enum_PredefinedRange_BTN" xml:space="preserve">

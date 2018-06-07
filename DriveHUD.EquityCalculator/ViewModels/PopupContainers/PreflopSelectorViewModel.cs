@@ -83,7 +83,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 }
 
                 InitializePreflopSelectorItemsTracking();
-               
+
                 PreflopSelectorItems.ForEach(x =>
                 {
                     x.UsedCards = _notification.BoardCards;
@@ -315,7 +315,9 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         public ICommand ShowCardsViewCommands { get; set; }
 
-        public ICommand OnMouseDownCommand { get; set; }
+        public ICommand OnMouseLeftDownCommand { get; set; }
+
+        public ICommand OnMouseRightDownCommand { get; set; }
 
         public ICommand OnDoubleClickCommand { get; set; }
 
@@ -353,7 +355,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private void Initialize()
         {
             ShowCardsViewCommands = new RelayCommand(ShowCardsView);
-            OnMouseDownCommand = new RelayCommand(OnMouseDown);
+            OnMouseLeftDownCommand = new RelayCommand(x => OnMouseDown(x));
+            OnMouseRightDownCommand = new RelayCommand(x => OnMouseDown(x, true));
             OnDoubleClickCommand = new RelayCommand(OnDoubleClick);
             OnCtrlClickCommand = new RelayCommand(OnCtrlClick);
             OnAltClickCommand = new RelayCommand(OnAltClick);
@@ -633,7 +636,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 });
         }
 
-        private void OnMouseDown(object obj)
+        private void OnMouseDown(object obj, bool isRight = false)
         {
             if (!(obj is EquityRangeSelectorItemViewModel item))
             {
@@ -646,7 +649,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 item.IsSelected = true;
             }
-            else
+            else if (!isRight)
             {
                 item.EquitySelectionMode = EquitySelectionMode;
                 SelectedItem.HandRefreshVisibilityCheck();
