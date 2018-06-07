@@ -50,7 +50,7 @@ namespace DriveHUD.Application.Services
 
             if (positionInfo.DisplaySettings != null)
             {
-                window.WindowState = positionInfo.DisplaySettings.Maximized ? 
+                window.WindowState = positionInfo.DisplaySettings.Maximized ?
                     WindowState.Maximized :
                     WindowState.Normal;
             }
@@ -101,32 +101,34 @@ namespace DriveHUD.Application.Services
                 // get screen
                 var screen = Screen.AllScreens
                     .FirstOrDefault(x => positionsInfo.DisplaySettings.Left >= x.Bounds.Left &&
-                        positionsInfo.DisplaySettings.Left <= x.Bounds.Right);
+                        positionsInfo.DisplaySettings.Left <= x.Bounds.Right &&
+                        positionsInfo.DisplaySettings.Top >= x.Bounds.Top &&
+                        positionsInfo.DisplaySettings.Top <= x.Bounds.Bottom);
 
                 if (screen != null)
                 {
                     if (positionsInfo.StartupLocation == WindowStartupLocation.CenterScreen)
                     {
-                        if (positionsInfo.Width <= screen.WorkingArea.Width)
+                        if (positionsInfo.Width <= screen.Bounds.Width)
                         {
-                            left = screen.WorkingArea.Left + (screen.WorkingArea.Width - positionsInfo.Width) / 2;
+                            left = screen.Bounds.Left + (screen.Bounds.Width - positionsInfo.Width) / 2;
                             width = positionsInfo.Width;
                         }
                         else
                         {
-                            left = screen.WorkingArea.Left;
-                            width = screen.WorkingArea.Width;
+                            left = screen.Bounds.Left;
+                            width = screen.Bounds.Width;
                         }
 
-                        if (positionsInfo.Height <= screen.WorkingArea.Height)
+                        if (positionsInfo.Height <= screen.Bounds.Height)
                         {
-                            top = screen.WorkingArea.Top + (screen.WorkingArea.Height - positionsInfo.Height) / 2;
+                            top = screen.Bounds.Top + (screen.Bounds.Height - positionsInfo.Height) / 2;
                             height = positionsInfo.Height;
                         }
                         else
                         {
-                            top = screen.WorkingArea.Top;
-                            height = screen.WorkingArea.Height;
+                            top = screen.Bounds.Top;
+                            height = screen.Bounds.Height;
                         }
                     }
                     else
@@ -182,6 +184,10 @@ namespace DriveHUD.Application.Services
                                 {
                                     height = height - shiftTop;
                                 }
+                            }
+                            else
+                            {
+                                top = top - shiftTop;
                             }
                         }
                     }

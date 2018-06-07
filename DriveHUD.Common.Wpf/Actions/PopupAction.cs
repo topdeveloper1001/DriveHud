@@ -16,12 +16,14 @@ using DriveHUD.Common.Wpf.Interactivity;
 using Microsoft.Practices.ServiceLocation;
 using Prism.Interactivity.InteractionRequest;
 using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Interactivity;
 
 namespace DriveHUD.Common.Wpf.Actions
-{    
+{
     public abstract class PopupAction<T> : TriggerAction<FrameworkElement> where T : ContentControl
     {
         /// <summary>
@@ -189,8 +191,26 @@ namespace DriveHUD.Common.Wpf.Actions
                         var view = AssociatedObject;
                         var position = view.PointToScreen(new Point(0, 0));
 
+                        // if popup position is outside of screen need to show it at the center of screen                                              
                         var top = position.Y + ((view.ActualHeight - wrapperWindow.ActualHeight) / 2);
                         var left = position.X + ((view.ActualWidth - wrapperWindow.ActualWidth) / 2);
+
+                        var screen = Screen.AllScreens
+                          .FirstOrDefault(x => left >= x.Bounds.Left &&
+                              left <= x.Bounds.Right &&
+                              top >= x.Bounds.Top &&
+                              top <= x.Bounds.Bottom);
+
+                        if (screen == null)
+                        {
+                            screen = Screen.AllScreens.FirstOrDefault(x => x.Primary) ?? Screen.AllScreens.FirstOrDefault();
+
+                            if (screen != null)
+                            {
+                                top = screen.Bounds.Top + ((screen.Bounds.Height - wrapperWindow.ActualHeight) / 2);
+                                left = screen.Bounds.Left + ((screen.Bounds.Width - wrapperWindow.ActualWidth) / 2);
+                            }
+                        }
 
                         SetWindowPosition(wrapperWindow, left, top);
                     }
