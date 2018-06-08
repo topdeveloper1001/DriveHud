@@ -24,9 +24,9 @@ namespace DriveHUD.Application.Services
     /// </summary>
     internal class LogCleaner
     {
-        private const int maxSizeLogBackups = 10;
+        private const int maxSizeLogBackups = 8;
 
-        private static readonly string[] logsPatterns = new string[] { "drivehud*", "hud*", "NHibernate*", "ign-games*", "bol-games*", "playerxray*" };
+        private static readonly string[] logsPatterns = new string[] { "drivehud*", "hud*", "NHibernate*", "ign-games*", "bol-games*", "playerxray*", "pmcatcher*" };
 
         /// <summary>
         /// Clear folder with logs
