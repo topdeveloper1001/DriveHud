@@ -779,7 +779,7 @@ namespace DriveHUD.Importers.PokerMaster
             { 9, 1 }
         };
 
-        protected override PlayerList GetPlayerList(HandHistory handHistory)
+        protected override PlayerList GetPlayerList(HandHistory handHistory, GameInfo gameInfo)
         {
             var playerList = handHistory.Players;
 

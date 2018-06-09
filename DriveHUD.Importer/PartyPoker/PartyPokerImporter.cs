@@ -82,7 +82,7 @@ namespace DriveHUD.Importers.PartyPoker
             return title.Contains(parsingResult.Source.TableName);
         }
 
-        protected override PlayerList GetPlayerList(HandHistory handHistory)
+        protected override PlayerList GetPlayerList(HandHistory handHistory, GameInfo gameInfo)
         {
             var playerList = handHistory.Players;
 

@@ -119,9 +119,7 @@ namespace DriveHUD.Importers
                 }
 
                 LogProvider.Log.Info(this, string.Format("Hand {0} has been imported in {2}ms. [{1}]", result.HandHistory.Gamenumber, SiteString, result.Duration));
-
-                var playerList = GetPlayerList(result.Source);
-
+             
                 if (gameInfo.WindowHandle == 0 || !WinApi.IsWindow(new IntPtr(gameInfo.WindowHandle)))
                 {
                     gameInfo.WindowHandle = FindWindow(result).ToInt32();
@@ -131,6 +129,8 @@ namespace DriveHUD.Importers
                 gameInfo.GameType = ParseGameType(result);
                 gameInfo.TableType = ParseTableType(result, gameInfo);
                 gameInfo.GameNumber = result.HandHistory.Gamenumber;
+
+                var playerList = GetPlayerList(result.Source, gameInfo);
 
                 var dataImportedArgs = new DataImportedEventArgs(playerList, gameInfo, result.Source?.Hero, result.HandHistory.Gamenumber);
 
@@ -274,7 +274,7 @@ namespace DriveHUD.Importers
             return tableType;
         }
 
-        protected virtual PlayerList GetPlayerList(HandHistory handHistory)
+        protected virtual PlayerList GetPlayerList(HandHistory handHistory, GameInfo gameInfo)
         {
             return handHistory.Players;
         }

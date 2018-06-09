@@ -122,11 +122,13 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             return dbImporter.Import(handHistory, progress, gameInfo);
         }
 
-        protected override PlayerList GetPlayerList(HandHistory handHistory)
+        protected override PlayerList GetPlayerList(HandHistory handHistory, GameInfo gameInfo)
         {
             var playerList = handHistory.Players;
 
-            var maxPlayers = handHistory.GameDescription.SeatType.MaxPlayers;
+            var maxPlayers = (int)gameInfo.TableType > handHistory.GameDescription.SeatType.MaxPlayers ?
+                (int)gameInfo.TableType :
+                handHistory.GameDescription.SeatType.MaxPlayers;
 
             var heroSeat = handHistory.Hero != null ? handHistory.Hero.SeatNumber : 0;
 

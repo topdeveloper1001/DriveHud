@@ -716,7 +716,8 @@ namespace DriveHUD.Importers
                 Filename = processingFile != null ? processingFile.FullName : string.Empty,
                 Tourneynumber = parsedHand.GameDescription.Tournament.TournamentId,
                 Rakeincents = Utils.ConvertToCents(parsedHand.GameDescription.Tournament.BuyIn.Rake),
-                Tourneysize = parsedHand.GameDescription.Tournament.TotalPlayers,
+                Tourneysize = (int)gameInfo.TableType > parsedHand.GameDescription.Tournament.TotalPlayers ?
+                     (int)gameInfo.TableType : parsedHand.GameDescription.Tournament.TotalPlayers,
                 Tourneytagscsv = string.Empty,
                 SiteId = parsingResult.HandHistory.PokersiteId,
                 SpeedtypeId = gameInfo.TournamentSpeed.HasValue ? (short)gameInfo.TournamentSpeed.Value : (short)parsedHand.GameDescription.Tournament.Speed,
