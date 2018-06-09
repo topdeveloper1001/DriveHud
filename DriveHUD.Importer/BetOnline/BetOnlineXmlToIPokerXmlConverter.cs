@@ -882,6 +882,11 @@ namespace DriveHUD.Importers.BetOnline
                 sum = decimal.Parse(actionNode.Attribute("amount").Value, NumberStyles.Currency, CultureInfo.InvariantCulture);
             }
 
+            if (actionNode.Attribute("dead") != null)
+            {
+                sum += decimal.Parse(actionNode.Attribute("dead").Value, NumberStyles.Currency, CultureInfo.InvariantCulture);
+            }
+
             var action = new Builders.iPoker.Action
             {
                 No = actionNo++,
