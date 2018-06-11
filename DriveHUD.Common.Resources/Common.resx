@@ -1123,4 +1123,7 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_EquityCalculator_AutoRange" xml:space="preserve">
     <value>Auto Range</value>
   </data>
+  <data name="Common_TableSize" xml:space="preserve">
+    <value>Table size</value>
+  </data>
 </root>

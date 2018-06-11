@@ -2899,6 +2899,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Table size.
+        /// </summary>
+        internal static string Common_TableSize {
+            get {
+                return ResourceManager.GetString("Common_TableSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tournaments.
         /// </summary>
         internal static string Common_Tournaments {
