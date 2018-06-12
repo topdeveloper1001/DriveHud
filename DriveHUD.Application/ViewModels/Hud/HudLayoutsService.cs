@@ -42,7 +42,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     {
         protected string LayoutFileExtension;
         protected string MappingsFileName;
-        private readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Cash", "Vertical_1", "Horizontal" };
+        private readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Cash", "Vertical_1", "Horizontal", "Winamax", "PokerStars" };
 
         private static ReaderWriterLockSlim locker = new ReaderWriterLockSlim();
         private readonly IEventAggregator eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
@@ -825,6 +825,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                 HudLayoutMappings = LoadLayoutMappings(mappingsFilePath);
 
+                var predefinedMappings = GetPredefinedMappings();
+
                 foreach (EnumTableType tableType in Enum.GetValues(typeof(EnumTableType)))
                 {
                     foreach (var predefinedPostfix in PredefinedLayoutPostfixes)
@@ -843,13 +845,32 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                         if (existingMapping == null)
                         {
-                            HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                            var predefinedMapping = predefinedMappings.Mappings.FirstOrDefault(x => x.TableType == tableType &&
+                                                    x.Name == defaultLayoutInfo.Name);
+
+                            if (predefinedMapping != null)
                             {
-                                TableType = tableType,
-                                Name = defaultLayoutInfo.Name,
-                                IsDefault = defaultLayoutInfo.IsDefault,
-                                FileName = Path.GetFileName(fileName)
-                            });
+                                HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                                {
+                                    TableType = tableType,
+                                    Name = predefinedMapping.Name,
+                                    IsDefault = predefinedMapping.IsDefault,
+                                    FileName = Path.GetFileName(fileName),
+                                    PokerSite = predefinedMapping.PokerSite,
+                                    GameType = predefinedMapping.GameType,
+                                    IsSelected = predefinedMapping.IsSelected
+                                });
+                            }
+                            else
+                            {
+                                HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                                {
+                                    TableType = tableType,
+                                    Name = defaultLayoutInfo.Name,
+                                    IsDefault = defaultLayoutInfo.IsDefault,
+                                    FileName = Path.GetFileName(fileName)
+                                });
+                            }
                         }
                         else
                         {
@@ -1039,6 +1060,40 @@ namespace DriveHUD.Application.ViewModels.Hud
                 using (var stream = resourcesAssembly.GetManifestResourceStream(resourceName))
                 {
                     return LoadLayoutFromStream(stream);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not load predefined layout", e);
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Gets the predefined mappings
+        /// </summary>
+        /// <returns></returns>
+        private HudLayoutMappings GetPredefinedMappings()
+        {
+            var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
+
+            try
+            {
+                var resourceName = $"DriveHUD.Common.Resources.Layouts.Mappings.xml";
+
+                using (var stream = resourcesAssembly.GetManifestResourceStream(resourceName))
+                {
+                    try
+                    {
+                        var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
+                        var hudLayoutMappings = xmlSerializer.Deserialize(stream) as HudLayoutMappings;
+                        return hudLayoutMappings;
+                    }
+                    catch (Exception e)
+                    {
+                        LogProvider.Log.Error(this, "Layout could not be loaded.", e);
+                    }
                 }
             }
             catch (Exception e)
