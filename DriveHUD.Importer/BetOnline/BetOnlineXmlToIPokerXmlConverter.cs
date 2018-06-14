@@ -101,6 +101,10 @@ namespace DriveHUD.Importers.BetOnline
 
                 HandNumber = gameState.Attribute("hand").Value;
 
+                isTournament = tableDetails != null &&
+                    tableDetails.Attribute("type") != null &&
+                    tableDetails.Attribute("type").Value.Equals("TOURNAMENT_TABLE", StringComparison.InvariantCultureIgnoreCase);
+
                 if (!IsFullHand())
                 {
                     var tableName = isTournament ? GetTournamentTableName() : GetTableName();
@@ -108,8 +112,6 @@ namespace DriveHUD.Importers.BetOnline
                     LogProvider.Log.Info(this, string.Format("Hand {0} from '{1}' has been skipped, because it isn't full. [{2}]", HandNumber, tableName, Identifier));
                     return;
                 }
-
-                isTournament = tableDetails.Attribute("type").Value.Equals("TOURNAMENT_TABLE", StringComparison.InvariantCultureIgnoreCase);
 
                 IsInitialized = true;
             }
