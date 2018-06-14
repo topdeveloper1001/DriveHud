@@ -26,23 +26,33 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Concurrent;
+using System.Threading;
 
 namespace DriveHUD.Importers
 {
     internal abstract class FileBasedImporter : GenericImporter
     {
-        protected Dictionary<string, CapturedFile> capturedFiles;
-        protected HashSet<string> filesToSkip;
-        protected IDataService dataService;
+        protected readonly ManualResetEvent importingResetEvent = new ManualResetEvent(false);
+
+        protected readonly ConcurrentDictionary<string, CapturedFile> actualCapturedFiles;
+        protected readonly ConcurrentDictionary<string, CapturedFile> notActualCapturedFiles;
+
+        private readonly HashSet<string> filesToSkip;
+
+        protected readonly IDataService dataService;
 
         protected const int ReadingTimeout = 3000;
+
+        protected const int ActualFileLifeTime = 1200;
 
         protected static readonly object dbLocker = new object();
 
         public FileBasedImporter()
         {
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
-            capturedFiles = new Dictionary<string, CapturedFile>();
+            actualCapturedFiles = new ConcurrentDictionary<string, CapturedFile>();
+            notActualCapturedFiles = new ConcurrentDictionary<string, CapturedFile>();
             filesToSkip = new HashSet<string>();
         }
 
@@ -55,6 +65,11 @@ namespace DriveHUD.Importers
         // Import data from PS HH
         protected override void DoImport()
         {
+            importingResetEvent.Reset();
+
+            var isActualTaskRunning = false;
+            var isNotActualTaskRunning = false;
+
             while (!cancellationTokenSource.IsCancellationRequested)
             {
                 try
@@ -64,7 +79,8 @@ namespace DriveHUD.Importers
 
                     if (siteSettings != null && !siteSettings.Enabled)
                     {
-                        break;
+                        Stop();
+                        continue;
                     }
 
                     var handHistoryFolders = GetHandHistoryFolders(siteSettings);
@@ -74,8 +90,10 @@ namespace DriveHUD.Importers
                     // detect all *.txt files in directories
                     var handHistoryFiles = handHistoryFolders.Where(x => x.Exists).SelectMany(x => x.GetFiles(HandHistoryFilter, SearchOption.AllDirectories)).ToArray();
 
+                    var capturedFiles = actualCapturedFiles.Select(x => x.Value).Concat(notActualCapturedFiles.Select(x => x.Value)).ToArray();
+
                     var newlyDetectedHandHistories = (from handHistoryFile in handHistoryFiles
-                                                      join capturedFile in capturedFiles.Keys on handHistoryFile.FullName equals capturedFile into capturedFileGrouped
+                                                      join capturedFile in capturedFiles on handHistoryFile.FullName equals capturedFile.ImportedFile.FileName into capturedFileGrouped
                                                       from item in capturedFileGrouped.DefaultIfEmpty()
                                                       where item == null && !filesToSkip.Contains(handHistoryFile.FullName)
                                                       select handHistoryFile).ToArray();
@@ -125,7 +143,8 @@ namespace DriveHUD.Importers
                             break;
                         }
 
-                        if (!capturedFiles.ContainsKey(hh.FullName))
+                        if (!actualCapturedFiles.ContainsKey(hh.FullName) &&
+                            !notActualCapturedFiles.ContainsKey(hh.FullName))
                         {
                             var fs = File.Open(hh.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                             fs.Seek(0, SeekOrigin.Begin);
@@ -155,123 +174,40 @@ namespace DriveHUD.Importers
                                 }
                             };
 
-                            capturedFiles.Add(hh.FullName, capturedFile);
-                        }
-                    }
+                            var lastWriteTime = File.GetLastWriteTimeUtc(hh.FullName);
 
-                    // try to parse file
-                    foreach (var cf in capturedFiles)
-                    {
-                        if (cancellationTokenSource.IsCancellationRequested)
-                        {
-                            break;
-                        }
-
-                        var fs = cf.Value.FileStream;
-
-                        var handText = GetHandTextFromStream(fs, cf.Value.Encoding, cf.Key);
-
-                        if (string.IsNullOrEmpty(handText))
-                        {
-                            continue;
-                        }
-
-                        // update size and last write time
-                        cf.Value.ImportedFile.FileSize = fs.Length;
-                        cf.Value.ImportedFile.LastWriteTime = File.GetLastWriteTimeUtc(cf.Value.ImportedFile.FileName);
-                        cf.Value.WasModified = true;
-
-                        // if file could not be parsed, mark it as invalid to prevent further processing 
-                        if (cf.Value.GameInfo == null)
-                        {
-                            EnumPokerSites siteName;
-
-                            if (!TryGetPokerSiteName(handText, out siteName) && !filesToSkip.Contains(cf.Key))
+                            if (lastWriteTime > DateTime.UtcNow.AddSeconds(-ActualFileLifeTime))
                             {
-                                filesToSkip.Add(cf.Key);
-                                fs.Close();
-
-                                LogProvider.Log.Warn($"Cannot find parser for hand: {handText}");
-                                LogProvider.Log.Warn(string.Format("File '{0}' has bad format. Skipped.", cf.Key));
-
-                                continue;
+                                actualCapturedFiles.TryAdd(hh.FullName, capturedFile);
                             }
-
-                            var fileName = Path.GetFileNameWithoutExtension(cf.Key);
-
-                            var gameInfo = new GameInfo
+                            else
                             {
-                                PokerSite = siteName,
-                                Session = cf.Value.Session,
-                                TournamentSpeed = ParserUtils.ParseNullableTournamentSpeed(fileName, null),
-                                FileName = fileName,
-                                FullFileName = cf.Key
-                            };
-
-                            LogProvider.Log.Info(this, $"Found '{cf.Key}' file. [{SiteString}]");
-
-                            cf.Value.GameInfo = gameInfo;
-                        }
-
-                        ProcessHand(handText, cf.Value.GameInfo);
-                    }
-
-                    // update files info
-                    // check if file was modified since last check
-                    var modifiedCapturedFiles = capturedFiles.Values.Where(x => x.WasModified).ToArray();
-
-                    if (modifiedCapturedFiles.Length > 0)
-                    {
-                        using (var session = ModelEntities.OpenSession())
-                        {
-                            var capturedImportedFileNames = modifiedCapturedFiles.Select(x => x.ImportedFile.FileName).ToArray();
-
-                            var existingImportedFiles = dataService.GetImportedFiles(capturedImportedFileNames, session);
-
-                            var capturedFilesWithExisting = (from capturedFile in modifiedCapturedFiles
-                                                             join existingImportedFile in existingImportedFiles on capturedFile.ImportedFile.FileName
-                                                                equals existingImportedFile.FileName into gj
-                                                             from existingImportedFile in gj.DefaultIfEmpty()
-                                                             select new { CapturedFile = capturedFile, ExistingImportedFile = existingImportedFile }).ToArray();
-
-                            lock (dbLocker)
-                            {
-                                using (var transaction = session.BeginTransaction())
-                                {
-                                    capturedFilesWithExisting.ForEach(x =>
-                                    {
-                                        if (x.ExistingImportedFile != null)
-                                        {
-                                            x.ExistingImportedFile.FileSize = x.CapturedFile.ImportedFile.FileSize;
-                                            x.ExistingImportedFile.LastWriteTime = x.CapturedFile.ImportedFile.LastWriteTime;
-
-                                            x.CapturedFile.ImportedFile = x.ExistingImportedFile;
-                                        }
-
-                                        session.Save(x.CapturedFile.ImportedFile);
-
-                                        x.CapturedFile.WasModified = false;
-                                    });
-
-                                    transaction.Commit();
-                                }
+                                notActualCapturedFiles.TryAdd(hh.FullName, capturedFile);
                             }
                         }
                     }
 
-                    // remove invalid files from captured
-                    filesToSkip.ForEach(fileToSkip =>
+                    if (!isActualTaskRunning)
                     {
-                        if (capturedFiles.ContainsKey(fileToSkip))
-                        {
-                            capturedFiles[fileToSkip].FileStream?.Close();
-                            capturedFiles.Remove(fileToSkip);
-                        }
-                    });
+                        ImportCapturedFiles(actualCapturedFiles, true);
+                        isActualTaskRunning = true;
+                    }
+
+                    if (!isNotActualTaskRunning)
+                    {
+                        ImportCapturedFiles(notActualCapturedFiles, false);
+                        isNotActualTaskRunning = true;
+                    }
 
                     if (!cancellationTokenSource.IsCancellationRequested)
                     {
-                        Task.Delay(ReadingTimeout).Wait();
+                        try
+                        {
+                            Task.Delay(ReadingTimeout).Wait(cancellationTokenSource.Token);
+                        }
+                        catch (OperationCanceledException)
+                        {
+                        }
                     }
                 }
                 catch (Exception e)
@@ -285,6 +221,177 @@ namespace DriveHUD.Importers
             RaiseProcessStopped();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="capturedFiles"></param>
+        protected virtual void ImportCapturedFiles(ConcurrentDictionary<string, CapturedFile> capturedFiles, bool isHighestPriority)
+        {
+            if (cancellationTokenSource.IsCancellationRequested)
+            {
+                return;
+            }
+
+            Task.Run(() =>
+            {
+                while (!cancellationTokenSource.IsCancellationRequested)
+                {
+                    foreach (var capturedFile in capturedFiles)
+                    {
+                        if (!isHighestPriority)
+                        {
+                            importingResetEvent.WaitOne();
+                        }
+                        else
+                        {
+                            importingResetEvent.Reset();
+                        }
+
+                        if (cancellationTokenSource.IsCancellationRequested)
+                        {
+                            if (isHighestPriority)
+                            {
+                                importingResetEvent.Set();
+                            }
+
+                            return;
+                        }
+
+                        ProcessCapturedFile(capturedFile.Key, capturedFile.Value);
+
+                        if (!capturedFile.Value.WasModified)
+                        {
+                            continue;
+                        }
+
+                        // modify captured file
+                        using (var session = ModelEntities.OpenSession())
+                        {
+                            lock (dbLocker)
+                            {
+                                try
+                                {
+                                    using (var transaction = session.BeginTransaction())
+                                    {
+                                        var existingImportedFile = dataService.GetImportedFiles(new[] { capturedFile.Key }, session).FirstOrDefault();
+
+                                        if (existingImportedFile != null)
+                                        {
+                                            existingImportedFile.FileSize = capturedFile.Value.ImportedFile.FileSize;
+                                            existingImportedFile.LastWriteTime = capturedFile.Value.ImportedFile.LastWriteTime;
+                                            capturedFile.Value.ImportedFile = existingImportedFile;
+                                        }
+
+                                        session.Save(capturedFile.Value.ImportedFile);
+
+                                        capturedFile.Value.WasModified = false;
+
+                                        transaction.Commit();
+                                    }
+                                }
+                                // ignore errors if transaction is locked too long
+                                catch
+                                {
+                                }
+                            }
+                        }
+                    }
+
+                    // remove invalid files from the list of files
+                    filesToSkip.ForEach(fileToSkip =>
+                    {
+                        if (!capturedFiles.ContainsKey(fileToSkip))
+                        {
+                            return;
+                        }
+
+                        if (capturedFiles.TryRemove(fileToSkip, out CapturedFile removedCapturedFile))
+                        {
+                            removedCapturedFile?.FileStream?.Close();
+                        }
+                    });
+
+                    try
+                    {
+                        if (isHighestPriority)
+                        {
+                            importingResetEvent.Set();
+                        }
+
+                        Task.Delay(ReadingTimeout).Wait(cancellationTokenSource.Token);
+                    }
+                    catch (OperationCanceledException)
+                    {
+                    }
+                }
+
+                if (isHighestPriority)
+                {
+                    importingResetEvent.Set();
+                }
+            });
+        }
+
+        protected virtual void ProcessCapturedFile(string file, CapturedFile capturedFile)
+        {
+            try
+            {
+                var fs = capturedFile.FileStream;
+
+                var handText = GetHandTextFromStream(fs, capturedFile.Encoding, file);
+
+                if (string.IsNullOrEmpty(handText))
+                {
+                    return;
+                }
+
+                // update size and last write time
+                capturedFile.ImportedFile.FileSize = fs.Length;
+                capturedFile.ImportedFile.LastWriteTime = File.GetLastWriteTimeUtc(capturedFile.ImportedFile.FileName);
+                capturedFile.WasModified = true;
+
+                // if file could not be parsed, mark it as invalid to prevent further processing 
+                if (capturedFile.GameInfo == null)
+                {
+                    if (!TryGetPokerSiteName(handText, out EnumPokerSites siteName) && !filesToSkip.Contains(file))
+                    {
+                        lock (filesToSkip)
+                        {
+                            filesToSkip.Add(file);
+                        }
+
+                        fs.Close();
+
+                        LogProvider.Log.Warn($"Cannot find parser for hand: {handText}");
+                        LogProvider.Log.Warn(string.Format("File '{0}' has bad format. Skipped.", file));
+
+                        return;
+                    }
+
+                    var fileName = Path.GetFileNameWithoutExtension(file);
+
+                    var gameInfo = new GameInfo
+                    {
+                        PokerSite = siteName,
+                        Session = capturedFile.Session,
+                        TournamentSpeed = ParserUtils.ParseNullableTournamentSpeed(fileName, null),
+                        FileName = fileName,
+                        FullFileName = file
+                    };
+
+                    LogProvider.Log.Info(this, $"Found '{file}' file. [{SiteString}]");
+
+                    capturedFile.GameInfo = gameInfo;
+                }
+
+                ProcessHand(handText, capturedFile.GameInfo);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not process file {file}. [{SiteString}]", e);
+            }
+        }
+
         protected virtual bool TryGetPokerSiteName(string handText, out EnumPokerSites siteName)
         {
             return EnumPokerSitesExtension.TryParse(handText, out siteName);
@@ -292,22 +399,30 @@ namespace DriveHUD.Importers
 
         protected virtual string GetHandTextFromStream(Stream fs, Encoding encoding, string fileName)
         {
-            if (fs.Position > fs.Length)
+            try
             {
-                fs.Seek(0, SeekOrigin.End);
-                return string.Empty;
-            }
-        
-            var data = new byte[fs.Length - fs.Position];
+                if (fs.Position > fs.Length)
+                {
+                    fs.Seek(0, SeekOrigin.End);
+                    return string.Empty;
+                }
 
-            if (data.Length == 0)
+                var data = new byte[fs.Length - fs.Position];
+
+                if (data.Length == 0)
+                {
+                    return string.Empty;
+                }
+
+                fs.Read(data, 0, data.Length);
+
+                return encoding.GetString(data);
+            }
+            catch (ObjectDisposedException)
             {
-                return string.Empty;
             }
 
-            fs.Read(data, 0, data.Length);
-
-            return encoding.GetString(data);
+            return string.Empty;
         }
 
         // Get directories with hand histories
@@ -337,9 +452,11 @@ namespace DriveHUD.Importers
             var dateFolder = DateTime.Now.ToString("yyyy-MM");
             var moveLocation = Path.Combine(settings.SiteSettings.ProcessedDataLocation, siteFolder, dateFolder);
 
+            var capturedFiles = actualCapturedFiles.Values.Concat(notActualCapturedFiles.Values);
+
             foreach (var capturedFile in capturedFiles)
             {
-                capturedFile.Value.FileStream.Close();
+                capturedFile.FileStream.Close();
 
                 if (isMove)
                 {
@@ -350,16 +467,17 @@ namespace DriveHUD.Importers
                             Directory.CreateDirectory(moveLocation);
                         }
 
-                        File.Move(capturedFile.Key, Path.Combine(moveLocation, new FileInfo(capturedFile.Key).Name));
+                        File.Move(capturedFile.ImportedFile.FileName, Path.Combine(moveLocation, Path.GetFileNameWithoutExtension(capturedFile.ImportedFile.FileName)));
                     }
                     catch (Exception ex)
                     {
-                        LogProvider.Log.Warn(string.Format("File {0} could not be moved: {1}. [{2}]", capturedFile.Key, ex.Message, SiteString));
+                        LogProvider.Log.Warn(string.Format("File {0} could not be moved: {1}. [{2}]", capturedFile.ImportedFile.FileName, ex.Message, SiteString));
                     }
                 }
             }
 
-            capturedFiles.Clear();
+            actualCapturedFiles.Clear();
+            notActualCapturedFiles.Clear();
         }
 
         protected virtual string GetSessionForFile(string fileName)

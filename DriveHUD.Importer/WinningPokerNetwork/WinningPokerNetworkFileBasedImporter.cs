@@ -59,13 +59,15 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             //HH20161125 T6748379-G37397187.txt, where T6748379 is tournament number
             var tournamentNumber = GetTournamentNumberFromFile(fileName);
 
+            var capturedFiles = actualCapturedFiles.Values.Concat(notActualCapturedFiles.Values);
+
             if (!string.IsNullOrEmpty(tournamentNumber))
             {
-                var session = capturedFiles.Keys.FirstOrDefault(x => x.Contains(tournamentNumber));
+                var capturedFile = capturedFiles.FirstOrDefault(x => x.ImportedFile.FileName.Contains(tournamentNumber));
 
-                if (!string.IsNullOrWhiteSpace(session))
+                if (capturedFile != null)
                 {
-                    return capturedFiles[session].Session;
+                    return capturedFile.Session;
                 }
             }
 
@@ -174,7 +176,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
             var wpnFormat = WPNFormat.V1;
 
-            using (var streamReader = new StreamReader(fs, encoding, false, 1024, true))
+            using (var streamReader = new StreamReader(fs, encoding, false, 4096, true))
             {
                 var tempStringBuilder = new StringBuilder();
 
@@ -209,7 +211,9 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
         protected override bool InternalMatch(string title, ParsingResult parsingResult)
         {
-            if (parsingResult.Source.FullHandHistoryText.StartsWith(HandV2Prefix, StringComparison.OrdinalIgnoreCase))
+            if (parsingResult != null && parsingResult.Source != null &&
+                parsingResult.Source.FullHandHistoryText != null &&
+                parsingResult.Source.FullHandHistoryText.StartsWith(HandV2Prefix, StringComparison.OrdinalIgnoreCase))
             {
                 return InternalMatchV2(title, parsingResult);
             }
@@ -241,12 +245,8 @@ namespace DriveHUD.Importers.WinningPokerNetwork
         protected virtual bool InternalMatchV2(string title, ParsingResult parsingResult)
         {
             // $2 Jackpot Holdem No Limit Hold'em - 10/20 (8952347)
-            if (parsingResult.Source.GameDescription.IsTournament)
-            {
-                return title.Contains($" ({parsingResult.Source.GameDescription.Tournament.TournamentId})");
-            }
-
-            return false;
+            return parsingResult.GameType != null && parsingResult.GameType.Istourney &&
+                parsingResult.HandHistory != null && title.Contains($" ({parsingResult.HandHistory.Tourneynumber})");
         }
 
         protected override EnumTableType ParseTableType(ParsingResult parsingResult, GameInfo gameInfo)
@@ -368,7 +368,8 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 {
                     Source = new HandHistory
                     {
-                        TableName = tableName
+                        TableName = tableName,
+                        FullHandHistoryText = handHistory
                     }
                 };
 

@@ -130,13 +130,15 @@ namespace DriveHUD.Importers.PartyPoker
             //$1.10 Sat Tickets - Centroll. 20 Gtd (141689215) Table #21.txt
             var tournamentNumber = GetTournamentNumberFromFile(fileName);
 
+            var capturedFiles = actualCapturedFiles.Values.Concat(notActualCapturedFiles.Values);
+
             if (!string.IsNullOrEmpty(tournamentNumber))
             {
-                var session = capturedFiles.Keys.FirstOrDefault(x => x.Contains(tournamentNumber));
+                var capturedFile = capturedFiles.FirstOrDefault(x => x.ImportedFile.FileName.Contains(tournamentNumber));
 
-                if (!string.IsNullOrWhiteSpace(session))
+                if (capturedFile != null)
                 {
-                    return capturedFiles[session].Session;
+                    return capturedFile.Session;
                 }
             }
 
