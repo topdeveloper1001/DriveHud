@@ -10,9 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
+using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace DriveHUD.Importers.PokerStars
@@ -85,6 +91,54 @@ namespace DriveHUD.Importers.PokerStars
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Check if dll can be injected
+        /// </summary>
+        /// <returns></returns>
+        protected override bool CanInject()
+        {
+            try
+            {
+                var canInject = false;
+
+                foreach (ProcessThread thread in pokerClientProcess.Threads)
+                {
+                    WinApi.EnumThreadWindows(thread.Id, (hWnd, lParam) =>
+                    {
+                        var title = WinApi.GetWindowText(hWnd);
+
+                        if (!string.IsNullOrEmpty(title) &&
+                            ZoomUtils.ParseGameFormatFromTitle(title) == GameFormat.Zoom)
+                        {
+                            canInject = true;
+                            return false;
+                        }
+
+                        return true;
+                    }, IntPtr.Zero);
+                }
+
+                return canInject;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not check if dll could be injected. [{Identifier}]", e);
+                return false;
+            }
+        }
+
+        protected override void DoPostInjectJob()
+        {
+            if (!CanInject() && isInjected)
+            {
+                EjectDll();
+
+                // remove old pipe handle to re-create pipe server
+                var pipeManager = ServiceLocator.Current.GetInstance<IPipeManager>();
+                PipeIdentifiers.ForEach(x => pipeManager.RemoveHandle(x));
+            }
         }
 
         #endregion

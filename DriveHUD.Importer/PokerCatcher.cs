@@ -170,7 +170,7 @@ namespace DriveHUD.Importers
                 LogProvider.Log.Info($"Found the suitable process {x.ProcessName}, main window = [{x.MainWindowHandle}] [{Identifier}]");
 
                 if (!string.IsNullOrEmpty(WindowClassName))
-                {                    
+                {
                     if (!IsAssociatedWindow(x.MainWindowHandle))
                     {
                         LogProvider.Log.Info($"The process {x.ProcessName} has no main window. Checking all associated windows [{Identifier}]");
@@ -299,7 +299,7 @@ namespace DriveHUD.Importers
                     LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" [{1}] has been found. [{2}]", ProcessName, pokerClientProcess.Id, Identifier));
                 }
 
-                if (!isInjected && failedAttempts < AllowedFailedAttempts)
+                if (!isInjected && failedAttempts < AllowedFailedAttempts && CanInject())
                 {
                     try
                     {
@@ -323,6 +323,8 @@ namespace DriveHUD.Importers
                     AbortCatching();
                     return;
                 }
+
+                DoPostInjectJob();
 
                 try
                 {
@@ -353,24 +355,21 @@ namespace DriveHUD.Importers
         /// </summary>
         protected void AbortCatching()
         {
-            if (pokerClientProcess != null && !pokerClientProcess.HasExited)
-            {
-                if (injectedProcessModule != null)
-                {
-                    try
-                    {
-                        EjectDll(injectedProcessModule.BaseAddress);
-                    }
-                    catch (Exception e)
-                    {
-                        LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Ejecting of processes \"{0}\" failed. [{1}]", ProcessName, Identifier), e);
-                    }
-                }
-
-                handle = IntPtr.Zero;
-            }
-
+            EjectDll();
             RaiseProcessStopped();
+        }
+
+        /// <summary>
+        /// Check if dll can be injected into the process
+        /// </summary>
+        /// <returns></returns>
+        protected virtual bool CanInject()
+        {
+            return true;
+        }
+
+        protected virtual void DoPostInjectJob()
+        {
         }
 
         #region Dll injection
@@ -514,6 +513,33 @@ namespace DriveHUD.Importers
                 Marshal.FreeHGlobal(pLibFullPathUnmanaged);
                 WinApi.CloseHandle(hThread);
                 WinApi.VirtualFreeEx(pokerClientProcess.Handle, pLibRemote, 0, AllocationType.Release);
+            }
+        }
+
+        protected virtual void EjectDll()
+        {
+            try
+            {
+                if (pokerClientProcess != null && !pokerClientProcess.HasExited)
+                {
+                    if (injectedProcessModule != null)
+                    {
+                        try
+                        {
+                            EjectDll(injectedProcessModule.BaseAddress);
+                        }
+                        catch (Exception e)
+                        {
+                            LogProvider.Log.Error(this, $"Ejecting of processes \"{ProcessName}\" failed. [{Identifier}]", e);
+                        }
+                    }
+
+                    handle = IntPtr.Zero;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not eject dll from the process {ProcessName}. [{Identifier}]", e);
             }
         }
 

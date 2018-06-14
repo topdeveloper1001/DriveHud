@@ -82,7 +82,6 @@ namespace DriveHUD.Importers.PokerStars
                         player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, maxPlayers);
                     }
                 }
-
             }
 
             return playerList;

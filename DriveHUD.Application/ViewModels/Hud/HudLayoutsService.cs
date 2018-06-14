@@ -42,7 +42,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     {
         protected string LayoutFileExtension;
         protected string MappingsFileName;
-        private readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Cash", "Vertical_1", "Horizontal", "Winamax", "PokerStars" };
+        private readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Cash", "Vertical_1", "Horizontal", "Winamax" };
 
         private static ReaderWriterLockSlim locker = new ReaderWriterLockSlim();
         private readonly IEventAggregator eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();

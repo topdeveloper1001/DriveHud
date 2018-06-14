@@ -469,7 +469,6 @@ namespace DriveHUD.Importers
                     }
 
                     parsingResult.ForEach(p => p.WasImported = true);
-
                 }
             }
             catch (Exception e)

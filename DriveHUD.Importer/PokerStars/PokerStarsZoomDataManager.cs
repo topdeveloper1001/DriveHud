@@ -120,7 +120,7 @@ namespace DriveHUD.Importers.PokerStars
                         PlayerId = playerNamePlayerIdMap.ContainsKey(x.Player) ? playerNamePlayerIdMap[x.Player] : 0
                     }));
 
-                var gameFormat = ParseGameFormatFromTitle(catcherDataObject.Title);
+                var gameFormat = ZoomUtils.ParseGameFormatFromTitle(catcherDataObject.Title);
 
                 if (gameFormat.HasValue)
                 {
@@ -377,34 +377,6 @@ namespace DriveHUD.Importers.PokerStars
             return heroName;
         }
 
-        private static GameFormat? ParseGameFormatFromTitle(string title)
-        {
-            var tableEndStartIndex = title.IndexOf("#", StringComparison.OrdinalIgnoreCase) - 1;
-
-            if (tableEndStartIndex <= 0)
-            {
-                tableEndStartIndex = title.IndexOf("-", StringComparison.OrdinalIgnoreCase) - 1;
-
-                if (tableEndStartIndex <= 0)
-                {
-                    return null;
-                }
-            }
-
-            var tableName = title.Substring(0, tableEndStartIndex);
-
-            if (ZoomTables.Contains(tableName))
-            {
-                return GameFormat.Zoom;
-            }
-            else if (!title.Contains("Tournament"))
-            {
-                return GameFormat.Cash;
-            }
-
-            return null;
-        }
-
         private static short ParsePokergametypeIdFromTitle(string title)
         {
             HandHistories.Objects.GameDescription.GameType gameType;
@@ -436,14 +408,5 @@ namespace DriveHUD.Importers.PokerStars
 
             return (short)gameType;
         }
-
-        private static readonly string[] ZoomTables = new[] { "McNaught", "Borrelllly", "Halley", "Lovejoy", "Hyakutake", "Donati", "Lynx", "Hartley", "Aludra", "Devanssay",
-            "Eulalia", "Nansen", "Amundsen", "Whirlpool", "Hydra", "Thyestes", "Arp", "Baade", "Aquarius Dwarf", "Serpens Caput", "Triangulum", "Gotha", "Aenaa", "Diotima",
-            "Lambda Velorum", "Humason", "Centaurus", "Dorado", "Lupus", "Coma Berenices", "Cassiopeia", "Perseus", "C Carinae", "Alpha Reticuli (CAP)", "Chi Sagittarii",
-            "Sirius", "Omicron Capricorni", "Beta Tucanae (CAP)", "Delta Antilae", "Theta Cancri", "Chi Draconis", "Sigam Aquilae (CAP)", "Iota Apodis", "Zeta Phoenicis",
-            "Delta Boötis", "Gamma Delphini (CAP)", "Phi Piscium", "Tau Hydrae", "Adhara", "Iota Cancri (CAP)", "Deneb el Okab", "Lambda Arietis", "Cetus", "Mira (CAP)",
-            "Crux", "Rho Capricorni", "Gamma Crateris", "Alpha Crucis (CAP)", "Norma", "Canes Venatici", "Draco", "Amália", "Eusébio", "Pessoa", "Cervantes", "Velazquez",
-            "Gaudi", "Dali", "Goya", "Picasso", "Clubs", "Spades", "Hears", "Diamonds", "Turn", "River", "Portland", "Los Angeles", "Houston", "New York", "Las Vegas",
-            "Boston", "Boulder", "Washington", "Dallas", "New Orleans", "Miami", "Antares", "Atena", "Fenice", "Pegaso", "Cigno", "Shun", "Sirio", "Cronos" };
     }
 }
