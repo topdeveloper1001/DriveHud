@@ -194,6 +194,14 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        public HandHistories.Objects.Hand.HandHistory CurrentHandHistory
+        {
+            get
+            {
+                return _currentHandHistory;
+            }
+        }
+
         #endregion
 
         #region ICommand

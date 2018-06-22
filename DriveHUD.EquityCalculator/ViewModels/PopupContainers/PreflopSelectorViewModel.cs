@@ -15,6 +15,7 @@ using DriveHUD.Common.Linq;
 using DriveHUD.EquityCalculator.Analyzer;
 using DriveHUD.EquityCalculator.Models;
 using DriveHUD.ViewModels;
+using DriveHUD.ViewModels.Replayer;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.LocalCalculator;
@@ -93,6 +94,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 UpdateSlider();
 
                 CombosRaisePropertyChanged();
+                RaisePropertyChanged(nameof(IsReplayHandVisible));
             }
         }
 
@@ -310,6 +312,15 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        public bool IsReplayHandVisible
+        {
+            get
+            {
+                return _notification != null && source != null &&
+                    source.CurrentHandHistory != null && source.CurrentHandHistory.HandId != 0;
+            }
+        }
+
         #endregion
 
         #region ICommand
@@ -346,6 +357,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         public ICommand HelpCommand { get; set; }
 
+        public ICommand ReplayCommand { get; set; }
+
         #endregion
 
         public PreflopSelectorViewModel()
@@ -371,6 +384,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             OnSelectSuitCommand = new RelayCommand(OnSelectSuit);
             AutoRangeCommand = new RelayCommand(OnAutoRange);
             HelpCommand = new RelayCommand(() => IsHelpVisible = !IsHelpVisible);
+            ReplayCommand = new RelayCommand(() => ReplayHand());
 
             _preflopRange.Init();
             PreDefinedRangesRequest = new InteractionRequest<PreDefinedRangesNotifcation>();
@@ -419,6 +433,17 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
             UpdateSlider();
             CombosRaisePropertyChanged();
+        }
+
+        private void ReplayHand()
+        {
+            if (!IsReplayHandVisible || !(_notification.CardsContainer is PlayerModel playerModel))
+            {
+                return;
+            }
+
+            ServiceLocator.Current.GetInstance<IReplayerService>()
+              .ReplayHand(playerModel.PlayerName, source.CurrentHandHistory.HandId, (short)source.CurrentHandHistory.GameDescription.Site, true);
         }
 
         private void InitializePreflopSelectorItems()

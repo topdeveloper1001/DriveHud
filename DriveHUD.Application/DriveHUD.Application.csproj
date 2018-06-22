@@ -603,7 +603,6 @@
     <Compile Include="ViewModels\Popups\PlayerNoteViewModel.cs" />
     <Compile Include="ViewModels\Registration\LicenseInfoViewModel.cs" />
     <Compile Include="ViewModels\Registration\RegistrationViewModel.cs" />
-    <Compile Include="ViewModels\Replayer\IReplayerService.cs" />
     <Compile Include="ViewModels\Replayer\ReplayerService.cs" />
     <Compile Include="ViewModels\Settings\ISettingsViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsBonusesAddEditViewModel.cs" />
