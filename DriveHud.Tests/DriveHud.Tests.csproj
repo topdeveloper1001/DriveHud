@@ -209,6 +209,7 @@
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerBovadaFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
+    <Compile Include="Utils\AssertionUtils.cs" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 3 max - Play Money.txt" />
@@ -250,6 +251,7 @@
     <Compile Include="UnitTests\EquitySolverTests.cs" />
     <Compile Include="UnitTests\ExternalImporterUtilsTests.cs" />
     <Compile Include="UnitTests\HandAnalyzerTests.cs" />
+    <Compile Include="UnitTests\HandHistoryTests.cs" />
     <Compile Include="UnitTests\Helpers\IgnitionInfoDataManagerStub.cs" />
     <Compile Include="UnitTests\Helpers\IgnitionTestsHelper.cs" />
     <Compile Include="UnitTests\IgnitionInfoDataManagerTests.cs" />
@@ -679,6 +681,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Zone.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\HandHistoryCloneSample.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\Ignition\ign-cash-2017-11-22.xml">

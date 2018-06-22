@@ -1089,7 +1089,7 @@
                     </ItemsControl.ItemTemplate>
                     <telerik:RadContextMenu.ContextMenu>
                         <telerik:RadContextMenu
-                            Name="radContextMenu"                            
+                            Name="radContextMenu"
                             ItemContainerStyle="{StaticResource GridMenuItemStyle}">
                             <telerik:RadMenuItem
                                 Header="{ResX Enum_Likelihood_Definitely}"
@@ -1590,6 +1590,7 @@
                     Command="{Binding ResetCommand}"
                     Content="{ResX Common_Reset}"
                     Margin="15"
+                    Height="27"
                     Width="75" />
             </StackPanel>
 

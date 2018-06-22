@@ -13,6 +13,7 @@
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Utils;
 using DriveHUD.EquityCalculator.Analyzer;
 using DriveHUD.EquityCalculator.Base.Calculations;
 using DriveHUD.EquityCalculator.Models;
@@ -269,7 +270,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 return;
             }
 
-            var heroAutoHands = GetHeroAutoRange();
+            var heroAutoHands = GetHeroAutoRange(_currentHandHistory.Hero.PlayerName);
 
             if (heroAutoHands != null)
             {
@@ -285,11 +286,15 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
-        internal IEnumerable<EquityRangeSelectorItemViewModel> GetHeroAutoRange()
+        internal IEnumerable<EquityRangeSelectorItemViewModel> GetHeroAutoRange(string heroName)
         {
             try
             {
-                var heroAutoHands = MainAnalyzer.GetHeroRange(_currentHandHistory, _currentStreet);
+                var handHistory = _currentHandHistory.DeepClone();
+
+                handHistory.Hero = handHistory.Players.FirstOrDefault(x => x.PlayerName == heroName);
+
+                var heroAutoHands = MainAnalyzer.GetHeroRange(handHistory, _currentStreet);
 
                 if (heroAutoHands != null && heroAutoHands.Any())
                 {
@@ -297,7 +302,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
                     var opponentsCount = CountOpponents();
 
-                    BluffToValueRatioCalculator.AdjustPlayerRange(heroAutoHands, CurrentStreet, _currentHandHistory, GetBoardText(), opponentsCount);
+                    BluffToValueRatioCalculator.AdjustPlayerRange(heroAutoHands, _currentStreet, handHistory, GetBoardText(), opponentsCount);
                     return heroAutoHands;
                 }
             }

@@ -13,6 +13,7 @@
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.EquityCalculator.Analyzer;
+using DriveHUD.EquityCalculator.Models;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
@@ -382,12 +383,12 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         private void OnAutoRange(object obj)
         {
-            if (source == null)
+            if (source == null || !(_notification.CardsContainer is PlayerModel playerModel))
             {
                 return;
             }
 
-            var heroAutoRange = source.GetHeroAutoRange();
+            var heroAutoRange = source.GetHeroAutoRange(playerModel.PlayerName);
 
             if (heroAutoRange == null)
             {

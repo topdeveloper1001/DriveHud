@@ -47,6 +47,12 @@
                             Property="SizeToContent"
                             Value="True" />
                         <Setter
+                            Property="HideMaximizeButton"
+                            Value="True" />
+                        <Setter
+                            Property="ResizeMode"
+                            Value="NoResize" />
+                        <Setter
                             Property="WindowStartupLocation"
                             Value="CenterScreen" />
                     </Style>
