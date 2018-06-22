@@ -421,6 +421,7 @@ namespace DriveHUD.Importers
                             if (handHistory.IsSummary)
                             {
                                 InsertSummaryHand(session, handHistory, gameInfo);
+                                transaction.Commit();
                                 continue;
                             }
 
