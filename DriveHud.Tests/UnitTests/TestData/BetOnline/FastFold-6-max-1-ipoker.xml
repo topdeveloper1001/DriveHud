@@ -1,0 +1,52 @@
+﻿<session sessioncode="653183925516">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.05/$0.1</gametype>
+    <tablename>[Fast Fold NLHE $0.05 / $0.10]</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2018-06-26 17:30:23</startdate>
+    <currency>USD</currency>
+    <nickname>Peon84</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <place>0</place>
+    <buyin>0</buyin>
+    <totalbuyin>0</totalbuyin>
+    <win>0</win>
+    <maxplayers>6</maxplayers>
+    <pokersite>BetOnline</pokersite>
+  </general>
+  <game gamecode="314324522">
+    <general>
+      <startdate>2018-06-26 17:30:23</startdate>
+      <players>
+        <player seat="5" name="XaMB" chips="11.54" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="6" name="Golyba" chips="10.19" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="1" name="lucki24" chips="11.9" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+        <player seat="2" name="alfi" chips="18.54" dealer="0" win="0" bet="0.1" rebuy="0" addon="0" />
+        <player seat="3" name="dampfwalze123" chips="10.78" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="4" name="Peon84" chips="5.31" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="lucki24" type="1" sum="0.05" cards="" />
+      <action no="2" player="alfi" type="2" sum="0.1" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="XaMB">X X</cards>
+      <cards type="Pocket" player="Golyba">X X</cards>
+      <cards type="Pocket" player="lucki24">X X</cards>
+      <cards type="Pocket" player="alfi">X X</cards>
+      <cards type="Pocket" player="dampfwalze123">X X</cards>
+      <cards type="Pocket" player="Peon84">SK S4</cards>
+      <action no="3" player="dampfwalze123" type="0" sum="0" cards="" />
+      <action no="4" player="Peon84" type="0" sum="0" cards="" />
+    </round>
+  </game>
+</session>

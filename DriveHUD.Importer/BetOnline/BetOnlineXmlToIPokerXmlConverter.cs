@@ -32,6 +32,7 @@ namespace DriveHUD.Importers.BetOnline
     internal class BetOnlineXmlToIPokerXmlConverter : IBetOnlineXmlConverter
     {
         private XElement tableDetails;
+        private XElement tableNode;
         private XElement gameState;
         private XElement changes;
         private XElement relocationData;
@@ -43,6 +44,7 @@ namespace DriveHUD.Importers.BetOnline
         private Dictionary<int, decimal> uncalledBets;
 
         private bool isTournament;
+        private bool isFastFold;
 
         private readonly ICardsConverter cardsConverter;
         private readonly ISiteConfiguration configuration;
@@ -105,6 +107,16 @@ namespace DriveHUD.Importers.BetOnline
                     tableDetails.Attribute("type") != null &&
                     tableDetails.Attribute("type").Value.Equals("TOURNAMENT_TABLE", StringComparison.InvariantCultureIgnoreCase);
 
+                tableNode = isTournament ?
+                                tableDetails.GetFirstElement("TournamentTable") :
+                                tableDetails.GetFirstElement("SingleTable");
+
+                if (!isTournament)
+                {
+                    var boostPokerAttr = tableNode.Attribute("boostPoker");
+                    isFastFold = boostPokerAttr != null && boostPokerAttr.Value.Equals("true", StringComparison.OrdinalIgnoreCase);
+                }
+
                 if (!IsFullHand())
                 {
                     var tableName = isTournament ? GetTournamentTableName() : GetTableName();
@@ -145,7 +157,7 @@ namespace DriveHUD.Importers.BetOnline
             {
                 gameInfo = new GameInfo
                 {
-                    PokerSite = EnumPokerSites.BetOnline
+                    PokerSite = EnumPokerSites.BetOnline                    
                 };
 
                 sessionCode = BuildSessionCode();
@@ -233,6 +245,12 @@ namespace DriveHUD.Importers.BetOnline
                 playersOnTable[actions.Seat].Bet = bet;
             }
 
+            // adjust actions for ff
+            if (isFastFold)
+            {
+                AdjustFastFoldActions(game);
+            }
+
             // in case of 4-max table
             if (maxPlayers == 4)
             {
@@ -284,15 +302,21 @@ namespace DriveHUD.Importers.BetOnline
 
             foreach (XElement element in changes.Nodes())
             {
-                if (element.Name.LocalName.Equals("NewHand"))
+                if (element.Name.LocalName.Equals("NewHand", StringComparison.OrdinalIgnoreCase))
                 {
                     hasNewHand = true;
                 }
 
-                if (element.Name.LocalName.Equals("EndHand"))
+                if (element.Name.LocalName.Equals("EndHand", StringComparison.OrdinalIgnoreCase) ||
+                    element.Name.LocalName.Equals("Winners", StringComparison.OrdinalIgnoreCase))
                 {
                     hasEndHand = true;
                 }
+            }
+
+            if (hasNewHand && !hasEndHand)
+            {
+                return isFastFold;
             }
 
             return hasNewHand && hasEndHand;
@@ -321,9 +345,7 @@ namespace DriveHUD.Importers.BetOnline
 
             var identifierCleaned = sessionIdentifier.Replace("-", string.Empty);
 
-            long sessionCode;
-
-            if (long.TryParse(identifierCleaned, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out sessionCode))
+            if (long.TryParse(identifierCleaned, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out long sessionCode))
             {
                 return sessionCode.ToString();
             }
@@ -344,9 +366,8 @@ namespace DriveHUD.Importers.BetOnline
 
             var handNumber = games[0].GameCode;
 
-            EnumPokerSites site;
 
-            var windowHandle = tableService.GetWindowHandle(handNumber, out site);
+            var windowHandle = tableService.GetWindowHandle(handNumber, out EnumPokerSites site);
 
             if (string.IsNullOrEmpty(sessionCode))
             {
@@ -400,18 +421,14 @@ namespace DriveHUD.Importers.BetOnline
             {
                 var tournamentName = GetTournamentName();
 
-                var tournamentTableNode = tableDetails.Descendants("TournamentTable").First();
-
-                if (tournamentTableNode.Attribute("buyIn") != null && tournamentTableNode.Attribute("fee") != null)
+                if (tableNode.Attribute("buyIn") != null && tableNode.Attribute("fee") != null)
                 {
-                    var feeText = tournamentTableNode.Attribute("fee").Value;
-                    var buyInValue = tournamentTableNode.Attribute("buyIn").Value;
+                    var feeText = tableNode.Attribute("fee").Value;
+                    var buyInValue = tableNode.Attribute("buyIn").Value;
 
-                    decimal buyInNumber = 0m;
-                    decimal.TryParse(buyInValue, NumberStyles.Currency, CultureInfo.InvariantCulture, out buyInNumber);
+                    decimal.TryParse(buyInValue, NumberStyles.Currency, CultureInfo.InvariantCulture, out decimal buyInNumber);
 
-                    decimal fee = 0m;
-                    decimal.TryParse(feeText, NumberStyles.Currency, CultureInfo.InvariantCulture, out fee);
+                    decimal.TryParse(feeText, NumberStyles.Currency, CultureInfo.InvariantCulture, out decimal fee);
 
                     var prizeFee = buyInNumber - fee;
 
@@ -429,10 +446,8 @@ namespace DriveHUD.Importers.BetOnline
                         var fee = tournamentInfo.Attribute("fee") != null ? tournamentInfo.Attribute("fee").Value : PokerConfiguration.DefaultBuyIn;
                         var buyInValue = tournamentInfo.Attribute("buyIn") != null ? tournamentInfo.Attribute("buyIn").Value : PokerConfiguration.DefaultBuyIn;
 
-                        decimal buyInNumber = 0m;
-
                         // only numbers could be here
-                        if (!decimal.TryParse(buyInValue, NumberStyles.Currency, CultureInfo.InvariantCulture, out buyInNumber))
+                        if (!decimal.TryParse(buyInValue, NumberStyles.Currency, CultureInfo.InvariantCulture, out decimal buyInNumber))
                         {
                             buyInValue = PokerConfiguration.DefaultBuyIn;
                         }
@@ -463,9 +478,7 @@ namespace DriveHUD.Importers.BetOnline
         /// <returns>Game hand history object</returns>
         private Game BuildGame()
         {
-            ulong handNumber;
-
-            if (!ulong.TryParse(gameState.Attribute("hand").Value, out handNumber))
+            if (!ulong.TryParse(gameState.Attribute("hand").Value, out ulong handNumber))
             {
                 throw new InvalidOperationException(string.Format("Hand number {0} could not be parsed. [{1}]", gameState.Attribute("hand").Value, Identifier));
             }
@@ -488,9 +501,8 @@ namespace DriveHUD.Importers.BetOnline
         {
             var startDateText = gameState.Attribute("serverTime").Value;
 
-            long startDateInUnixFormat;
 
-            if (!long.TryParse(startDateText, out startDateInUnixFormat))
+            if (!long.TryParse(startDateText, out long startDateInUnixFormat))
             {
                 throw new InvalidOperationException(string.Format("Hand time {0} could not be parsed. [{1}]", startDateText, Identifier));
             }
@@ -682,7 +694,7 @@ namespace DriveHUD.Importers.BetOnline
         /// <returns>Table name</returns>
         private string GetTournamentName()
         {
-            return isTournament ? tableDetails.Descendants("TournamentTable").First().Attribute("tournamentName").Value : null;
+            return isTournament ? tableNode.Attribute("tournamentName").Value : null;
         }
 
         /// <summary>
@@ -701,10 +713,6 @@ namespace DriveHUD.Importers.BetOnline
         /// <returns>Game type in iPoker format</returns>
         private string BuildGameType()
         {
-            var tableNode = isTournament ?
-                                tableDetails.Descendants("TournamentTable").First() :
-                                tableDetails.Descendants("SingleTable").First();
-
             var gameType = GetGameType(tableNode.Attribute("game").Value);
 
             var gameLimit = GetGameLimit(tableNode.Attribute("limit").Value);
@@ -784,7 +792,7 @@ namespace DriveHUD.Importers.BetOnline
                 return GameFormat.Cash;
             }
 
-            var tournamentType = tableDetails.GetFirstElement("TournamentTable").Attribute("type").Value;
+            var tournamentType = tableNode.Attribute("type").Value;
 
             if (tournamentType.Equals("SITANDGO_TOURNAMENT", StringComparison.InvariantCultureIgnoreCase) ||
                 tournamentType.Equals("WINDFALL_TOURNAMENT", StringComparison.InvariantCultureIgnoreCase))
@@ -985,6 +993,44 @@ namespace DriveHUD.Importers.BetOnline
                     }
                 }
             }
+        }
+
+        private void AdjustFastFoldActions(Game game)
+        {
+            var hero = game.General.Players.FirstOrDefault(x => x.IsHero);
+
+            // if winner tag exists when hand was full
+            // if hero bet equals his chips, then hero went allin and he couldn't fold
+            if (hero == null || changes.HasElement("Winners") || hero.Bet == hero.Chips)
+            {
+                return;
+            }
+
+            uncalledBets.TryGetValue(hero.Seat, out decimal heroUncalledBet);
+
+            if (heroUncalledBet != 0)
+            {
+                return;
+            }
+
+            var heroShouldFold = game.General.Players.Any(x => hero.Bet < x.Bet);
+
+            if (!heroShouldFold ||
+                game.Rounds.SelectMany(x => x.Actions).Any(x => x.Player == hero.Name && x.Type == ActionType.Fold))
+            {
+                return;
+            }
+
+            var lastRound = game.Rounds.Last();
+
+            var foldAction = new Builders.iPoker.Action
+            {
+                Player = hero.Name,
+                Type = ActionType.Fold,
+                No = actionNo++
+            };
+
+            lastRound.Actions.Add(foldAction);
         }
 
         private void RelocateSeats(List<Player> players, int maxPlayers)

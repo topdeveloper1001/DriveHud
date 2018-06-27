@@ -586,17 +586,20 @@
     <Content Include="PMTests\TestData\Packets\SCLoginBody.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\BOL-Cash-Holdem-mucked-cards-ipoker.xml">
+    <Content Include="UnitTests\TestData\BetOnline\BOL-Cash-Holdem-mucked-cards-ipoker.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="UnitTests\TestData\BOL-Cash-Holdem-mucked-cards.xml">
+    <Content Include="UnitTests\TestData\BetOnline\BOL-Cash-Holdem-mucked-cards.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\CashHand-6-max-deadblind-ipoker.xml">
+    <Content Include="UnitTests\TestData\BetOnline\CashHand-6-max-deadblind-ipoker.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\CashHand-6-max-deadblind.xml">
+    <Content Include="UnitTests\TestData\BetOnline\CashHand-6-max-deadblind.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\BetOnline\FastFold-6-max-2-ipoker.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\EquitySolverData\AllIn-on-BB-Hero-raised.xml">
@@ -683,6 +686,17 @@
     <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Zone.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\BetOnline\FastFold-6-max-1-ipoker.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="UnitTests\TestData\BetOnline\FastFold-6-max-1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="UnitTests\TestData\BetOnline\FastFold-6-max-2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\HandHistoryCloneSample.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -716,31 +730,31 @@
     <Content Include="UnitTests\TestData\Revolution.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\SNG-4-max-no-relocate-ipoker.xml">
+    <Content Include="UnitTests\TestData\BetOnline\SNG-4-max-no-relocate-ipoker.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\SNG-4-max-no-relocate.xml">
+    <Content Include="UnitTests\TestData\BetOnline\SNG-4-max-no-relocate.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\SNG-4-max-relocate-ipoker-pivot-1.xml">
+    <Content Include="UnitTests\TestData\BetOnline\SNG-4-max-relocate-ipoker-pivot-1.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\SNG-4-max-relocate-ipoker-pivot-2.xml">
+    <Content Include="UnitTests\TestData\BetOnline\SNG-4-max-relocate-ipoker-pivot-2.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\SNG-4-max-relocate-ipoker-std.xml">
+    <Content Include="UnitTests\TestData\BetOnline\SNG-4-max-relocate-ipoker-std.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\SNG-4-max-relocate.xml">
+    <Content Include="UnitTests\TestData\BetOnline\SNG-4-max-relocate.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\Winamax.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\WindfallHand-3max-ipoker.xml">
+    <Content Include="UnitTests\TestData\BetOnline\WindfallHand-3max-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\WindfallHand-3max.xml">
+    <Content Include="UnitTests\TestData\BetOnline\WindfallHand-3max.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\01-Gamestart.json">
@@ -1289,34 +1303,34 @@
     <Content Include="UnitTests\TestData\ACR-SnG2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\CashHand-10-max-ipoker.xml">
+    <Content Include="UnitTests\TestData\BetOnline\CashHand-10-max-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\CashHand-10-max-potsize-error-ipoker.xml">
+    <Content Include="UnitTests\TestData\BetOnline\CashHand-10-max-potsize-error-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\CashHand-10-max-potsize-error.xml">
+    <Content Include="UnitTests\TestData\BetOnline\CashHand-10-max-potsize-error.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\CashHand-10-max-relocate-ipoker.xml">
+    <Content Include="UnitTests\TestData\BetOnline\CashHand-10-max-relocate-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\CashHand-10-max-relocate.xml">
+    <Content Include="UnitTests\TestData\BetOnline\CashHand-10-max-relocate.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\CashHand-10-max.xml">
+    <Content Include="UnitTests\TestData\BetOnline\CashHand-10-max.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\CashHand-2-max-ipoker.xml">
+    <Content Include="UnitTests\TestData\BetOnline\CashHand-2-max-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\CashHand-2-max.xml">
+    <Content Include="UnitTests\TestData\BetOnline\CashHand-2-max.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\CashOmaha-10-max-big-rake-error-ipoker.xml">
+    <Content Include="UnitTests\TestData\BetOnline\CashOmaha-10-max-big-rake-error-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\CashOmaha-10-max-big-rake-error.xml">
+    <Content Include="UnitTests\TestData\BetOnline\CashOmaha-10-max-big-rake-error.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-MTT.txt">
@@ -1352,10 +1366,10 @@
     <Content Include="UnitTests\TestData\iPoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\MTT-Holdem-10-max-invalid-relocation-ipoker.xml">
+    <Content Include="UnitTests\TestData\BetOnline\MTT-Holdem-10-max-invalid-relocation-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\MTT-Holdem-10-max-invalid-relocation.xml">
+    <Content Include="UnitTests\TestData\BetOnline\MTT-Holdem-10-max-invalid-relocation.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\PokerStarsBadHeader.txt">
@@ -1370,10 +1384,10 @@
     <Content Include="UnitTests\TestData\PokerStarsSummary.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\SnGHand-8-max-ipoker.xml">
+    <Content Include="UnitTests\TestData\BetOnline\SnGHand-8-max-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UnitTests\TestData\SnGHand-8-max.xml">
+    <Content Include="UnitTests\TestData\BetOnline\SnGHand-8-max.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -187,6 +187,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to HUD doesn&apos;t support Fast Fold mode, but your hands will be imported..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_NotSupportedFastFold {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_NotSupportedFastFold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
         /// </summary>
         internal static string Notifications_HudLayout_PreLoadingText_PM {
