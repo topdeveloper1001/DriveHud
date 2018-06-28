@@ -175,16 +175,9 @@ namespace DriveHUD.Importers
                     {
                         if (!IsAssociatedWindow(x.MainWindowHandle))
                         {
-                            var wasFound = false;
+                            LogProvider.Log.Info($"The process {x.ProcessName} [{x.Id}] has no main window. Checking all associated windows [{Identifier}]");
 
-                            if (x.Threads.Count > 0)
-                            {
-                                LogProvider.Log.Info($"The process {x.ProcessName} [{x.Id}] has no main window. Checking all associated windows [{Identifier}]");
-                            }
-                            else
-                            {
-                                LogProvider.Log.Info($"The process {x.ProcessName} [{x.Id}] has no main window and no threads. [{Identifier}]");
-                            }
+                            var wasFound = false;
 
                             foreach (ProcessThread thread in x.Threads)
                             {
