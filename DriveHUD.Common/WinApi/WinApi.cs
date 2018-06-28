@@ -291,6 +291,18 @@ namespace DriveHUD.Common.WinApi
             ref StartupInfo lpStartupInfo,
             out ProcessInformation lpProcessInformation);
 
+        /// <summary>
+        /// Retrieves information about the specified process. This function is available in Windows 2000 and Windows XP, but it may be altered or unavailable in subsequent versions.
+        /// </summary>
+        /// <param name="hProcess"></param>
+        /// <param name="pic"></param>
+        /// <param name="pbi"></param>
+        /// <param name="cb"></param>
+        /// <param name="pSize"></param>
+        /// <returns></returns>
+        [DllImport("NTDLL.DLL", SetLastError = true)]
+        public static extern int NtQueryInformationProcess(IntPtr hProcess, int processInformationClass, ref ProcessBasicInformation pbi, int processInformationLength, out int pSize);
+
         #endregion
 
         #region Security
