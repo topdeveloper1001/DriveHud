@@ -187,7 +187,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to HUD doesn&apos;t support Fast Fold mode, but your hands will be imported..
+        ///   Looks up a localized string similar to Hud isn&apos;t supported in fast fold mode, but hands will be imported..
         /// </summary>
         internal static string Notifications_HudLayout_PreLoadingText_NotSupportedFastFold {
             get {

@@ -184,6 +184,11 @@ namespace DriveHUD.Importers.Bovada
             // skip not JSON data 
             if (!dataText.Contains("{") || !dataText.Contains("}") || dataText.Contains("|"))
             {
+                if (dataText.StartsWith("error", StringComparison.OrdinalIgnoreCase))
+                {
+                    LogProvider.Log.Error(this, $"Catcher data has errors: {dataText}");
+                }
+
                 return null;
             }
 
