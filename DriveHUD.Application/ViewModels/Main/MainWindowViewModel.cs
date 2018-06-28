@@ -871,7 +871,11 @@ namespace DriveHUD.Application.ViewModels
                     VPIP = getDevisionResult(trackConditionsMeterData.VPIP, players.Count),
                     ThreeBet = getDevisionResult(trackConditionsMeterData.ThreeBet, players.Count),
                     TableType = gameInfo.TableType,
-                    BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind)
+                    BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind),
+                    Position = activeLayout.TrackMeterPositions?
+                        .FirstOrDefault(x => x.GameType == gameInfo.EnumGameType && x.PokerSite == gameInfo.PokerSite)?
+                        .HudPositions?.FirstOrDefault()?
+                        .Position
                 };
 
                 ht.HudTrackConditionsMeter = trackConditionsInfo;
@@ -1627,7 +1631,7 @@ namespace DriveHUD.Application.ViewModels
                 if (sender is RadWindow mainWindow)
                 {
                     var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
-                    var settingsModel = settingsService.GetSettings();                    
+                    var settingsModel = settingsService.GetSettings();
 
                     var displaySettings = settingsModel.GeneralSettings.DisplaySettings;
 

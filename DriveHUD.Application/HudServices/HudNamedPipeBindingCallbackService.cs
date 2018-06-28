@@ -49,6 +49,33 @@ namespace DriveHUD.Application.HudServices
                     return;
                 }
 
+                if (existingHudLayout.TrackMeterPositions == null)
+                {
+                    existingHudLayout.TrackMeterPositions = new List<HudPositionsInfo>();
+                }
+
+                var trackMeterPosition = existingHudLayout.TrackMeterPositions
+                    .FirstOrDefault(x => x.GameType == hudLayoutContract.GameType && x.PokerSite == hudLayoutContract.PokerSite);
+
+                if (trackMeterPosition == null)
+                {
+                    trackMeterPosition = new HudPositionsInfo
+                    {
+                        GameType = hudLayoutContract.GameType,
+                        PokerSite = hudLayoutContract.PokerSite
+                    };
+
+                    existingHudLayout.TrackMeterPositions.Add(trackMeterPosition);
+                }
+
+                trackMeterPosition.HudPositions.Clear();
+
+                trackMeterPosition.HudPositions.Add(new HudPositionInfo
+                {
+                    Position = new System.Windows.Point(hudLayoutContract.TrackMeterPosition.X, 
+                        hudLayoutContract.TrackMeterPosition.Y)
+                });
+
                 HudPositionsInfo existingHudPositions = null;
 
                 var tools = existingHudLayout.LayoutTools.OfType<HudLayoutNonPopupTool>().ToArray();

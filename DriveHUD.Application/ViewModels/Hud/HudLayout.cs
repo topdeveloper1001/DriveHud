@@ -37,8 +37,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         [ProtoMember(2)]
         public List<PlayerHudContent> ListHUDPlayer { get; set; }
-
-        // to remove
+        
         [XmlIgnore, ProtoMember(3)]
         public HudTrackConditionsViewModelInfo HudTrackConditionsMeter { get; set; }
 

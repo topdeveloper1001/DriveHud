@@ -80,8 +80,7 @@ namespace DriveHUD.Importers.BetOnline
                 var partialXml = Decrypt(encryptedXml);
 
                 if (logger != null && isLoggingEnabled)
-                {
-                    Console.WriteLine(partialXml);
+                {                   
                     logger.Log(partialXml);
                 }
 
@@ -288,9 +287,7 @@ namespace DriveHUD.Importers.BetOnline
             if (xml.StartsWith("<TableDetails", StringComparison.OrdinalIgnoreCase) && buffer.Count > 0)
             {
                 buffer.Clear();
-                buffer.Add(xml);
-
-                Console.WriteLine("Table details added");
+                buffer.Add(xml);                
 
                 if (isLoggingEnabled)
                 {
@@ -318,9 +315,7 @@ namespace DriveHUD.Importers.BetOnline
                 return false;
             }
 
-            buffer.Add(xml);
-
-            Console.WriteLine($"'{xml.Substring(0, 30)}...' details added");
+            buffer.Add(xml);            
 
             if (buffer.Count == 3)
             {

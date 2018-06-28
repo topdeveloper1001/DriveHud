@@ -71,6 +71,9 @@ namespace DriveHUD.HUD.Service
 
         [DataMember(Name = "HudPositions")]
         public List<HudPositionContract> HudPositions { get; set; }
+
+        [DataMember(Name = "TrackMeterPosition")]
+        public Point TrackMeterPosition { get; set; }
     }
 
     [DataContract]
@@ -83,6 +86,6 @@ namespace DriveHUD.HUD.Service
         public int SeatNumber { get; set; }
 
         [DataMember(Name = "Position")]
-        public Point Position { get; set; }    
+        public Point Position { get; set; }
     }
 }

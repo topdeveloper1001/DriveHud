@@ -12,6 +12,7 @@
 
 using DriveHUD.Entities;
 using ProtoBuf;
+using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -32,5 +33,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         [ProtoMember(5)]
         public int BuyInNL { get; set; }
+
+        [ProtoMember(6)]
+        public Point? Position { get; set; }
     }
 }
