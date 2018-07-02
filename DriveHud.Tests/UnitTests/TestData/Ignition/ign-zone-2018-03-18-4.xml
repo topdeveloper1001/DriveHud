@@ -19,6 +19,7 @@
     <buyin>$0+$0</buyin>
     <totalbuyin>$0</totalbuyin>
     <win>0</win>
+    <maxplayers>9</maxplayers>
     <pokersite>Ignition</pokersite>
   </general>
   <game gamecode="3581482334">

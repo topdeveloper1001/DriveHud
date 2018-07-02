@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HandHistory>
+  <TableDetails type="SINGLE_TABLE" id="98-26ccd72e" name="NL Hold’em: $0.05/$0.10 - 6 Seater" share-type="LOCAL">
+    <SingleTable mode="USD" pocket="CASH" game="TEXAS_HOLDEM" limit="NO_LIMIT">
+      <Parameters actionTimeout="12000" initialTimeBank="10000" additionalTimeBank="1000" disconnectionProtection="1" stakes-low="0.05" stakes-high="0.1" />
+      <Seats number="6" />
+    </SingleTable>
+    <PROTOCOL_FEATURES>
+      <PROTOCOL_FEATURE name="buy_in_preferences" />
+      <PROTOCOL_FEATURE name="client_waiting_list" />
+      <PROTOCOL_FEATURE name="contest_instant_prize_v2" />
+      <PROTOCOL_FEATURE name="contest_jackpots" />
+      <PROTOCOL_FEATURE name="contests" />
+      <PROTOCOL_FEATURE name="cp_exchange" />
+      <PROTOCOL_FEATURE name="currency_exchange_rates" />
+      <PROTOCOL_FEATURE name="fast_blinds" />
+      <PROTOCOL_FEATURE name="locked_bonuses" />
+      <PROTOCOL_FEATURE name="may_wait_for_bb" />
+      <PROTOCOL_FEATURE name="multi_bbj" />
+      <PROTOCOL_FEATURE name="tags_v2" />
+    </PROTOCOL_FEATURES>
+  </TableDetails>
+  <GameState hand="308559726" serverTime="1528327530618" mucked="0">
+    <Seats number="6" dealer="5" winners="false">
+      <Seat id="0">
+        <PlayerInfo nickname="IMNOTFISH99" avatar="1-25b" level="3" uuid="d7634dcf-bed1-43a5-9aef-e1b598e90f86" rank="43220.01">
+          <PlayerNotes mark="0">
+            <![CDATA[7 Tables 22/19/80/54]]>
+          </PlayerNotes>
+          <Location city="Kemerovo" countryId="643" network="tg" />
+          <Chips stack-size="19.1" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="1">
+        <PlayerInfo nickname="Contraari2323" level="2" uuid="8449a0f8-7237-48d4-9529-6261f947387e" rank="3661.48">
+          <Location city="Aventura" countryId="840" network="bol" />
+          <Chips stack-size="10.05" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="2">
+        <PlayerInfo nickname="Yagomooca777" level="0" uuid="40c2e43e-0223-4a6f-a660-6f724a13a568" rank="86.8">
+          <Location city="SAO PAULO" countryId="76" network="bol" />
+          <Chips stack-size="10" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="3" available="true" />
+      <Seat id="4" timedOut="true">
+        <PlayerInfo nickname="jotta15" avatar="1-272" level="1" uuid="410f217a-77c7-484d-a965-a0c870d131a6" rank="4372.83">
+          <PlayerNotes mark="2">
+            <![CDATA[39/21/49/76   FTCB 3B Pot 87%   4 Tables]]>
+          </PlayerNotes>
+          <Location city="Coimbra" countryId="620" network="bol" />
+          <Chips stack-size="13.35" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="5">
+        <PlayerInfo nickname="ARM12AH" avatar="1-260" uuid="ddb9783a-ef91-4a5a-b33e-bb33abedcbb0" rank="1357.17">
+          <Location city="TARRAGONA" countryId="724" network="tg" />
+          <Chips stack-size="5.74" />
+        </PlayerInfo>
+      </Seat>
+    </Seats>
+  </GameState>
+  <Changes>
+    <NewHand dealer="5" number="308559726" startTime="1528327530742" change_time="1528327530" />
+    <ActiveSeats change_time="1528327530">
+      <Seat id="0" />
+      <Seat id="1" />
+      <Seat id="2" />
+      <Seat id="4" />
+      <Seat id="5" />
+    </ActiveSeats>
+    <PlayerAction seat="0" change_time="1528327530">
+      <PostSmallBlind amount="0.05" />
+    </PlayerAction>
+    <PlayerAction seat="1" change_time="1528327530">
+      <PostBigBlind amount="0.10" />
+    </PlayerAction>
+    <PlayerAction seat="4" change_time="1528327530">
+      <PostBigBlind amount="0.10" dead="0.05" />
+    </PlayerAction>
+    <PotsChange change_time="1528327530">
+      <Pot change="0.05" seat="4" pot="0" />
+    </PotsChange>
+    <DealingCards change_time="1528327530">
+      <Seat id="0">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="1">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="2">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="4">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="5">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+    </DealingCards>
+    <ActiveChange timeBank="13411" elapsed="0" seat="2" time="12000" startTime="1528327530743" change_time="1528327530" />
+    <PlayerAction seat="2" change_time="1528327536">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="12677" elapsed="0" seat="4" time="12000" startTime="1528327537043" change_time="1528327536" />
+    <PlayerAction seat="4" change_time="1528327537">
+      <Check />
+    </PlayerAction>
+    <ActiveChange timeBank="14000" elapsed="0" seat="5" time="12000" startTime="1528327537821" change_time="1528327537" />
+    <PlayerAction seat="5" change_time="1528327539">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="29000" elapsed="0" seat="0" time="12000" startTime="1528327539510" change_time="1528327539" />
+    <NewWaitingPlayer me="false" id="1" change_time="1528327540">
+      <PlayerInfo casino-bonus="false" poker-bonus="false" remote-casino-bonus="false" remote-club-bonus="false" uuid="dcc2d899-e4a8-4308-a4cd-e3b688a0b3d9" preferred-wallet="USD" nickname="maslata" rank="2871.84" level="0">
+        <Location countryId="643" network="tg" city="Vetluga" />
+      </PlayerInfo>
+    </NewWaitingPlayer>
+    <NewWaitingPlayer me="false" id="1" change_time="1528327540" />
+    <NewPlayer me="false" seat="3" available="false" change_time="1528327540">
+      <PlayerInfo casino-bonus="false" poker-bonus="false" remote-casino-bonus="false" remote-club-bonus="false" uuid="dcc2d899-e4a8-4308-a4cd-e3b688a0b3d9" preferred-wallet="USD" nickname="maslata" rank="2871.84" level="0">
+        <Location countryId="643" network="tg" city="Vetluga" />
+      </PlayerInfo>
+    </NewPlayer>
+    <PlayerAction seat="0" change_time="1528327543">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="16000" elapsed="0" seat="1" time="12000" startTime="1528327544393" change_time="1528327543" />
+    <ChipsRebuy amount="10" seat="3" change_time="1528327545" />
+    <PlayerAction seat="1" change_time="1528327551">
+      <Raise amount="0.35" />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="12677" elapsed="0" seat="4" time="12000" startTime="1528327551875" change_time="1528327551" />
+    <PlayerAction seat="4" change_time="1528327553">
+      <Fold />
+    </PlayerAction>
+    <PlayerAction seat="1" change_time="1528327553">
+      <UncalledBet amount="0.35" />
+    </PlayerAction>
+    <PotsChange change_time="1528327553">
+      <Pot change="0.05" seat="0" pot="0" />
+      <Pot change="0.10" seat="1" pot="0" />
+      <Pot change="0.10" seat="4" pot="0" />
+    </PotsChange>
+    <ActiveChange elapsed="0" seat="1" time="5000" startTime="1528327554829" change_time="1528327554" />
+    <PlayerAction seat="1" change_time="1528327554">
+      <Muck />
+    </PlayerAction>
+    <Winners change_time="1528327554">
+      <Winner amount="0.30" seat="1" pot="0" />
+    </Winners>
+    <EndHand change_time="1528327557" />
+  </Changes>
+</HandHistory>

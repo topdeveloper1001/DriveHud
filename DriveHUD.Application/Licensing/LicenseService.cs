@@ -440,6 +440,10 @@ namespace DriveHUD.Application.Licensing
             {
                 using (var server = new DeployLXLicensingServer())
                 {
+#if DEBUG
+                    server.Timeout = 5000;
+#endif
+
                     var expiryDates = server.GetExpiryDate(serialHashes);
                     return expiryDates;
                 }

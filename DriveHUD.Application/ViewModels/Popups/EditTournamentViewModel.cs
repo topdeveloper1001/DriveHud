@@ -49,14 +49,15 @@ namespace DriveHUD.Application.ViewModels
             WonAmount = TournamentEntity.Winningsincents / 100m;
             Rebuy = TournamentEntity.Rebuyamountincents / 100m;
             Rake = TournamentEntity.Rakeincents / 100m;
+            TableSize = TournamentEntity.Tablesize;
 
             TournamentSpeedSelectedItem = (TournamentSpeed)TournamentEntity.SpeedtypeId;
             GameTypeSelectedItem = (GameType)TournamentEntity.PokergametypeId;
 
-            TournamentsTags tourneyType;
-            Enum.TryParse(TournamentEntity.Tourneytagscsv, out tourneyType);
-
-            TournamentTypeSelectedItem = tourneyType;
+            if (Enum.TryParse(TournamentEntity.Tourneytagscsv, out TournamentsTags tourneyType))
+            {
+                TournamentTypeSelectedItem = tourneyType;
+            }
         }
 
         private void UpdateEntity()
@@ -73,7 +74,8 @@ namespace DriveHUD.Application.ViewModels
             TournamentEntity.Rakeincents = (int)(Rake * 100m);
             TournamentEntity.SpeedtypeId = (short)TournamentSpeedSelectedItem;
             TournamentEntity.PokergametypeId = (short)GameTypeSelectedItem;
-            TournamentEntity.Tourneytagscsv = TournamentTypeSelectedItem.ToString(); ;
+            TournamentEntity.Tourneytagscsv = TournamentTypeSelectedItem.ToString();
+            TournamentEntity.Tablesize = TableSize;
 
             _dataService.Store(TournamentEntity);
         }
@@ -113,6 +115,7 @@ namespace DriveHUD.Application.ViewModels
         #endregion
 
         #region Properties
+
         private IDataService _dataService;
 
         private IEnumerable<TournamentSpeed> _tournamentSpeedItems;
@@ -125,6 +128,7 @@ namespace DriveHUD.Application.ViewModels
         private decimal _wonAmout;
         private decimal _rebuy;
         private decimal _rake;
+        private short _tableSize;
         private TournamentSpeed _tournamentSpeedSelectedItem;
         private GameType _gameTypeSelecetdItem;
         private TournamentsTags _tournamentTypeSelectedItem;
@@ -219,6 +223,27 @@ namespace DriveHUD.Application.ViewModels
         {
             get { return _tournamentEntity; }
             set { _tournamentEntity = value; }
+        }
+
+        public short TableSize
+        {
+            get
+            {
+                return _tableSize;
+            }
+            set
+            {
+                if (value < 2)
+                {
+                    value = 2;
+                }
+                else if (value > 11)
+                {
+                    value = 10;
+                }
+
+                SetProperty(ref _tableSize, value);
+            }
         }
 
         public Action CloseAction;

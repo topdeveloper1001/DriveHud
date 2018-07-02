@@ -55,6 +55,12 @@ namespace Model.Settings
         [DataMember]
         public bool IsOpponentReportCacheSaved { get; set; }
 
+        [DataMember]
+        public DisplaySettings DisplaySettings { get; set; }
+
+        [DataMember]
+        public bool RememberScreenPosition { get; set; }
+
         public GeneralSettingsModel()
         {
             SetDefaults();

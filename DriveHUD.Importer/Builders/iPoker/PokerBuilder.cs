@@ -575,7 +575,8 @@ namespace DriveHUD.Importers.Builders.iPoker
                 Nickname = configuration.HeroName,
                 BuyIn = GetBuyIn(),
                 Currency = Currency.USD,
-                TotalBuyIn = GetTotalBuyIn()
+                TotalBuyIn = GetTotalBuyIn(),
+                MaxPlayers = handModel.TableType
             };
 
             if (handModel.CashOrTournament == CashOrTournament.Tournament)

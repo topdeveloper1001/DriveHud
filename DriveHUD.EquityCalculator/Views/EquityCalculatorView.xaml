@@ -2,21 +2,20 @@
     x:Class="DriveHUD.EquityCalculator.Views.EquityCalculatorView"
     x:Name="EquityCalculator"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
-    mc:Ignorable="d"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-    xmlns:v="clr-namespace:DriveHUD.EquityCalculator.Views"
-    xmlns:vm="clr-namespace:DriveHUD.EquityCalculator.ViewModels"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:prism="http://www.codeplex.com/prism"
-    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-    xmlns:ia="http://schemas.microsoft.com/expression/2010/interactions"
     xmlns:popup="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
     xmlns:control="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
     xmlns:converter="clr-namespace:DriveHUD.Common.Wpf.Converters;assembly=DriveHUD.Common.Wpf"
+    xmlns:vm="clr-namespace:DriveHUD.EquityCalculator.ViewModels"
+    xmlns:v="clr-namespace:DriveHUD.EquityCalculator.Views"
     xmlns:streetEnum="clr-namespace:HandHistories.Objects.Cards;assembly=HandHistories.Objects"
+    mc:Ignorable="d"
     d:DesignHeight="1000"
     d:DesignWidth="1000">
 
@@ -47,6 +46,12 @@
                         <Setter
                             Property="SizeToContent"
                             Value="True" />
+                        <Setter
+                            Property="HideMaximizeButton"
+                            Value="True" />
+                        <Setter
+                            Property="ResizeMode"
+                            Value="NoResize" />
                         <Setter
                             Property="WindowStartupLocation"
                             Value="CenterScreen" />
@@ -128,6 +133,12 @@
     </UserControl.Resources>
 
     <Grid>
+        <Grid.InputBindings>
+            <KeyBinding
+                Key="R"
+                Modifiers="Ctrl"
+                Command="{Binding SetAutoRangeForHeroCommand}" />
+        </Grid.InputBindings>
         <Grid.ColumnDefinitions>
             <ColumnDefinition
                 Width="Auto" />
@@ -153,10 +164,9 @@
                     Command="{Binding ClearCommand}"
                     Content="{ResX Common_Clear}"
                     Width="90"
-                    Height="30"
-                    d:LayoutOverrides="TopPosition, BottomPosition" />
-
+                    Height="30" />
             </DockPanel>
+
             <Separator />
 
             <ItemsControl
@@ -258,6 +268,7 @@
                     Command="{Binding ShowStreetCardsCommand}"
                     CommandParameter="{x:Static streetEnum:Street.Preflop}"
                     IsEnabled="{Binding IsCalculationRunning, Converter={StaticResource BoolNotConverter}}"
+                    IsChecked="{Binding CurrentStreet, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static streetEnum:Street.Preflop}}"
                     Visibility="{Binding IsPreflopVisible, Converter={dh:BoolToVisibilityConverter}}"
                     Content="{ResX Common_Preflop}"
                     Height="30"
@@ -269,6 +280,7 @@
                     Command="{Binding ShowStreetCardsCommand}"
                     CommandParameter="{x:Static streetEnum:Street.Flop}"
                     IsEnabled="{Binding IsCalculationRunning, Converter={StaticResource BoolNotConverter}}"
+                    IsChecked="{Binding CurrentStreet, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static streetEnum:Street.Flop}}"
                     Visibility="{Binding IsFlopVisible, Converter={dh:BoolToVisibilityConverter}}"
                     Content="{ResX Common_Flop}"
                     Height="30"
@@ -280,6 +292,7 @@
                     Command="{Binding ShowStreetCardsCommand}"
                     CommandParameter="{x:Static streetEnum:Street.Turn}"
                     IsEnabled="{Binding IsCalculationRunning, Converter={StaticResource BoolNotConverter}}"
+                    IsChecked="{Binding CurrentStreet, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static streetEnum:Street.Turn}}"
                     Visibility="{Binding IsTurnVisible, Converter={dh:BoolToVisibilityConverter}}"
                     Content="{ResX Common_Turn}"
                     Height="30"
@@ -291,6 +304,7 @@
                     Command="{Binding ShowStreetCardsCommand}"
                     CommandParameter="{x:Static streetEnum:Street.River}"
                     IsEnabled="{Binding IsCalculationRunning, Converter={StaticResource BoolNotConverter}}"
+                    IsChecked="{Binding CurrentStreet, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static streetEnum:Street.River}}"
                     Visibility="{Binding IsRiverVisible, Converter={dh:BoolToVisibilityConverter}}"
                     Content="{ResX Common_River}"
                     Height="30"

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<HudLayoutMappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Mappings>  
+    <HudLayoutMapping>
+      <TableType>Six</TableType>
+      <GameType>CashHoldem</GameType>
+      <PokerSite>PokerStars</PokerSite>
+      <HudViewType>Horizontal</HudViewType>
+      <Name>DH: 6-max PokerStars</Name>
+      <FileName>PokerStars Cash.xml</FileName>
+      <IsSelected>true</IsSelected>
+      <IsDefault>false</IsDefault>
+    </HudLayoutMapping>
+    <HudLayoutMapping>
+      <TableType>Five</TableType>
+      <GameType>CashHoldem</GameType>
+      <PokerSite>Winamax</PokerSite>
+      <HudViewType>Horizontal</HudViewType>
+      <Name>DH: 5-max WinaMaX</Name>
+      <FileName>Winamax 5-max HUD.xml</FileName>
+      <IsSelected>true</IsSelected>
+      <IsDefault>false</IsDefault>
+    </HudLayoutMapping>
+  </Mappings>
+</HudLayoutMappings>

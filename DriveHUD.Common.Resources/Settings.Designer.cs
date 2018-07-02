@@ -412,6 +412,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remember position on the screen.
+        /// </summary>
+        internal static string Settings_RememberScreenPosition {
+            get {
+                return ResourceManager.GetString("Settings_RememberScreenPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Renew License.
         /// </summary>
         internal static string Settings_RenewLicense {

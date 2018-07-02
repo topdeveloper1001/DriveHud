@@ -20,13 +20,29 @@ namespace DriveHUD.EquityCalculator.ViewModels
     public class CardSelectorNotification : Confirmation
     {
         #region Fields
+
         private ICardCollectionContainer _cardsContainer;
         private CardSelectorType _selectorType = CardSelectorType.BoardSelector;
         private IEnumerable<CardModel> _usedCards;
         private CardSelectorReturnType _returnType = CardSelectorReturnType.Cards;
+        private object source;
+
         #endregion
 
         #region Properties
+
+        internal object Source
+        {
+            get
+            {
+                return source;
+            }
+            set
+            {
+                source = value;
+            }
+        }
+
         internal ICardCollectionContainer CardsContainer
         {
             get
@@ -63,6 +79,20 @@ namespace DriveHUD.EquityCalculator.ViewModels
             set
             {
                 _usedCards = value;
+            }
+        }
+
+        private IEnumerable<CardModel> boardCards;
+
+        internal IEnumerable<CardModel> BoardCards
+        {
+            get
+            {
+                return boardCards;
+            }
+            set
+            {
+                boardCards = value;
             }
         }
 

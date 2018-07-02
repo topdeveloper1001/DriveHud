@@ -42,6 +42,7 @@ namespace Model.Data
             evDiff = statistic.EVDiff;
             handTag = statistic.HandTag;
             playerName = statistic.PlayerName;
+            pokerGameTypeId = statistic.PokergametypeId;
         }
 
         [ProtoMember(1)]
@@ -266,6 +267,21 @@ namespace Model.Data
             private set
             {
                 SetProperty(ref playerName, value);
+            }
+        }
+
+        [ProtoMember(16)]
+        private int pokerGameTypeId;
+
+        public int PokerGameTypeId
+        {
+            get
+            {
+                return pokerGameTypeId;
+            }
+            private set
+            {
+                SetProperty(ref pokerGameTypeId, value);
             }
         }
     }

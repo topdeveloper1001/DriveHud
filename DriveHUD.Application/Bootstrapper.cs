@@ -39,6 +39,7 @@ using DriveHUD.Common.Wpf.Interactivity;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
+using DriveHUD.ViewModels.Replayer;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
@@ -51,6 +52,7 @@ using ProtoBuf.Meta;
 using System;
 using System.Linq;
 using System.Windows;
+using System.Windows.Forms;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application
@@ -117,11 +119,29 @@ namespace DriveHUD.Application
                 }
                 else
                 {
+                    var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+                    var settingsModel = settingsService.GetSettings();
+
                     mainWindowViewModel = new MainWindowViewModel();
 
                     var mainRadWindow = (RadWindow)Shell;
 
                     mainRadWindow.DataContext = mainWindowViewModel;
+
+                    if (settingsModel != null && settingsModel.GeneralSettings != null &&
+                        settingsModel.GeneralSettings.RememberScreenPosition)
+                    {
+                        var positionsInfo = new WindowPositionsInfo
+                        {
+                            Width = mainWindowViewModel.WindowMinWidth,
+                            Height = mainWindowViewModel.AppStartupHeight,
+                            DisplaySettings = settingsModel?.GeneralSettings?.DisplaySettings,
+                            StartupLocation = WindowStartupLocation.Manual
+                        };
+
+                        WindowPositionsService.SetPosition(mainRadWindow, positionsInfo);
+                    }
+
                     mainRadWindow.IsTopmost = true;
                     mainRadWindow.Show();
                     mainRadWindow.IsTopmost = false;
@@ -162,9 +182,6 @@ namespace DriveHUD.Application
                     mainWindowViewModel.IsUpgradable = licenseService.IsUpgradable;
 
                     mainWindowViewModel.IsActive = true;
-
-                    var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
-                    var settingsModel = settingsService.GetSettings();
 
                     if (settingsModel != null && settingsModel.GeneralSettings != null)
                     {

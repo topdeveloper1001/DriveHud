@@ -221,16 +221,14 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 HandsCount = itemsCounter;
             }
 
+            App.Current.Dispatcher.Invoke(() => chartCollection.ForEach(x => x.ItemsCollection.Clear()));
+
             if (chartSeriesItems.Count > 0)
             {
                 chartSeriesItems.Keys.ForEach(charSerie =>
                 {
                     charSerie.ItemsCollection = new ObservableCollection<ChartSeriesItem>(chartSeriesItems[charSerie]);
                 });
-            }
-            else
-            {
-                App.Current.Dispatcher.Invoke(() => chartCollection.ForEach(x => x.ItemsCollection.Clear()));
             }
         }
 

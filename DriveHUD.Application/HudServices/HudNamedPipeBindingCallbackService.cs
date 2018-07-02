@@ -17,6 +17,7 @@ using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using DriveHUD.HUD.Service;
+using DriveHUD.ViewModels.Replayer;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Interfaces;
@@ -47,6 +48,33 @@ namespace DriveHUD.Application.HudServices
                     LogProvider.Log.Info(this, $"Could not find layout {hudLayoutContract.LayoutName}");
                     return;
                 }
+
+                if (existingHudLayout.TrackMeterPositions == null)
+                {
+                    existingHudLayout.TrackMeterPositions = new List<HudPositionsInfo>();
+                }
+
+                var trackMeterPosition = existingHudLayout.TrackMeterPositions
+                    .FirstOrDefault(x => x.GameType == hudLayoutContract.GameType && x.PokerSite == hudLayoutContract.PokerSite);
+
+                if (trackMeterPosition == null)
+                {
+                    trackMeterPosition = new HudPositionsInfo
+                    {
+                        GameType = hudLayoutContract.GameType,
+                        PokerSite = hudLayoutContract.PokerSite
+                    };
+
+                    existingHudLayout.TrackMeterPositions.Add(trackMeterPosition);
+                }
+
+                trackMeterPosition.HudPositions.Clear();
+
+                trackMeterPosition.HudPositions.Add(new HudPositionInfo
+                {
+                    Position = new System.Windows.Point(hudLayoutContract.TrackMeterPosition.X, 
+                        hudLayoutContract.TrackMeterPosition.Y)
+                });
 
                 HudPositionsInfo existingHudPositions = null;
 

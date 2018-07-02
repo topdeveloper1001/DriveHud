@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.EquityCalculator.Analyzer
 {
     internal class Jacob
     {
-
         internal static int TranslateCard(char rank, char suit)
         {
             int value;
@@ -123,14 +119,14 @@ namespace DriveHUD.EquityCalculator.Analyzer
             }
             Jacob.AnalyzeBoard(holecard[0], holecard[1], boardcard[0], boardcard[1], boardcard[2], boardcard[3], boardcard[4], info);
 
-            if (info.madehand == postflophand.kNoPair)
+            if (info.madehand == PostFlopHand.kNoPair)
             {
                 bool flush = false;
                 foreach (char suit in suitOcc.Keys)
                 {
                     if ((int)suitOcc[suit] == 5)
                     {
-                        info.madehand = postflophand.kFlush;
+                        info.madehand = PostFlopHand.kFlush;
                         break;
                     }
                 }
@@ -188,14 +184,14 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             Jacob.AnalyzeBoard(holecard[0], holecard[1], boardcard[0], boardcard[1], boardcard[2], boardcard[3], boardcard[4], info);
 
-            if (info.madehand == postflophand.kNoPair)
+            if (info.madehand == PostFlopHand.kNoPair)
             {
                 bool flush = false;
                 foreach (char suit in suitOcc.Keys)
                 {
                     if ((int)suitOcc[suit] == 5)
                     {
-                        info.madehand = postflophand.kFlush;
+                        info.madehand = PostFlopHand.kFlush;
                         break;
                     }
                 }
@@ -251,14 +247,14 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             Jacob.AnalyzeBoard(holecard[0], holecard[1], boardcard[0], boardcard[1], boardcard[2], boardcard[3], boardcard[4], info);
 
-            if (info.madehand == postflophand.kNoPair)
+            if (info.madehand == PostFlopHand.kNoPair)
             {
                 bool flush = false;
                 foreach (char suit in suitOcc.Keys)
                 {
                     if ((int)suitOcc[suit] == 5)
                     {
-                        info.madehand = postflophand.kFlush;
+                        info.madehand = PostFlopHand.kFlush;
                         break;
                     }
                 }
@@ -318,14 +314,14 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             Jacob.AnalyzeBoard(holecard[0], holecard[1], boardcard[0], boardcard[1], boardcard[2], boardcard[3], boardcard[4], info);
 
-            if (info.madehand == postflophand.kNoPair)
+            if (info.madehand == PostFlopHand.kNoPair)
             {
                 bool flush = false;
                 foreach (char suit in suitOcc.Keys)
                 {
                     if ((int)suitOcc[suit] == 5)
                     {
-                        info.madehand = postflophand.kFlush;
+                        info.madehand = PostFlopHand.kFlush;
                         break;
                     }
                 }
@@ -357,16 +353,16 @@ namespace DriveHUD.EquityCalculator.Analyzer
             {
                 case 10:
                 case 9:
-                    info.madehand = postflophand.kStraightFlush;
+                    info.madehand = PostFlopHand.kStraightFlush;
                     break;
                 case 8:
-                    info.madehand = postflophand.k4ofKind;
+                    info.madehand = PostFlopHand.k4ofKind;
                     break;
                 case 7:
-                    info.madehand = postflophand.kFullHouse;
+                    info.madehand = PostFlopHand.kFullHouse;
                     break;
                 case 6:
-                    info.madehand = postflophand.kFlush;
+                    info.madehand = PostFlopHand.kFlush;
                     if (info.holesused > 0)
                     {
                         int maxvalue = 0;
@@ -402,19 +398,19 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                     break;
                 case 5:
-                    info.madehand = postflophand.kStraight;
+                    info.madehand = PostFlopHand.kStraight;
                     break;
                 case 4:
-                    info.madehand = postflophand.k3ofKind;
+                    info.madehand = PostFlopHand.k3ofKind;
                     break;
                 case 3:
-                    info.madehand = postflophand.k2Pair;
+                    info.madehand = PostFlopHand.k2Pair;
                     break;
                 case 2:
-                    info.madehand = postflophand.kPair;
+                    info.madehand = PostFlopHand.kPair;
                     break;
                 case 1:
-                    info.madehand = postflophand.kNoPair;
+                    info.madehand = PostFlopHand.kNoPair;
                     break;
             }
 
@@ -1644,9 +1640,11 @@ namespace DriveHUD.EquityCalculator.Analyzer
         internal static int GetBoardCoordination(int nComCard1, int nComCard2, int nComCard3, int nComCard4, int nComCard5, int weight)
         {
             int res = 0;
-            List<int> nComCards = new List<int>(new int[] { nComCard1, nComCard2, nComCard3, nComCard4, nComCard5 });
+
+            var nComCards = new List<int> { nComCard1, nComCard2, nComCard3, nComCard4, nComCard5 };
 
             int firstEmptyIndex = 5;
+
             for (int i = 0; i < 5; i++)
             {
                 if (nComCards[i] == 0)
@@ -1655,32 +1653,39 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     break;
                 }
             }
-            int n = nComCard2 % 13;
+
             for (int i = 0; i < firstEmptyIndex; i++)
             {
                 int minDiff = 900000;
+
                 for (int j = 0; j < firstEmptyIndex; j++)
                 {
-                    if (i == j) continue;
+                    if (i == j)
+                    {
+                        continue;
+                    }
+
                     if (Math.Abs(nComCards[i] % 13 - nComCards[j] % 13) < minDiff)
+                    {
                         minDiff = Math.Abs(nComCards[i] % 13 - nComCards[j] % 13) * (nComCards[i] / 13 == nComCards[j] / 13 ? 1 : 3);
+                    }
                 }
+
                 res += minDiff;
             }
 
+            if (res == 0)
+            {
+                res = 1;
+            }
 
-
-            if (res == 0) res = 1;
             return 3 * weight / res;
         }
-
-
-
-
     }
+
     internal class boardinfo
     {
-        internal postflophand madehand;
+        internal PostFlopHand madehand;
         internal int weight;
         internal int holesused;
         internal int type;

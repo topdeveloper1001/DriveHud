@@ -737,6 +737,150 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Auto Range.
+        /// </summary>
+        internal static string Common_EquityCalculator_AutoRange {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_AutoRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bluff.
+        /// </summary>
+        internal static string Common_EquityCalculator_Bluff {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_Bluff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bluff: {0} ({1:P0}).
+        /// </summary>
+        internal static string Common_EquityCalculator_BluffCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_BluffCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call.
+        /// </summary>
+        internal static string Common_EquityCalculator_Call {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_Call", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call: {0} ({1:P0}).
+        /// </summary>
+        internal static string Common_EquityCalculator_CallCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_CallCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combos: {0}.
+        /// </summary>
+        internal static string Common_EquityCalculator_Combos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_Combos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DrivehudEQ.
+        /// </summary>
+        internal static string Common_EquityCalculator_DrivehudEQ {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_DrivehudEQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check or Fold: {0} ({1:P0}).
+        /// </summary>
+        internal static string Common_EquityCalculator_FoldCheckCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_FoldCheckCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check or Fold.
+        /// </summary>
+        internal static string Common_EquityCalculator_FoldOrCheck {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_FoldOrCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Combos: {0}.
+        /// </summary>
+        internal static string Common_EquityCalculator_TotalCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_TotalCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string Common_EquityCalculator_Value {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value Bet / Raise.
+        /// </summary>
+        internal static string Common_EquityCalculator_ValueBet {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_ValueBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value Bet: {0} ({1:P0}).
+        /// </summary>
+        internal static string Common_EquityCalculator_ValueBetCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_ValueBetCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generally recommended bluff to value ranges on the {0} are {1}. It&apos;s recommended you increase your Bluff range..
+        /// </summary>
+        internal static string Common_EquityCalculator_WarningMessageNoBluffCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_WarningMessageNoBluffCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generally recommended bluff to value ranges on the {0} are {1}. It&apos;s recommended you increase your Value range..
+        /// </summary>
+        internal static string Common_EquityCalculator_WarningMessageNoValueCombos {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_WarningMessageNoValueCombos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generally recommended bluff to value ranges on the {0} are {1}. It&apos;s recommended you increase your {2} range by {3}%..
+        /// </summary>
+        internal static string Common_EquityCalculator_WarningMessageWithRange {
+            get {
+                return ResourceManager.GetString("Common_EquityCalculator_WarningMessageWithRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy to clipboard.
         /// </summary>
         internal static string Common_ErrorView_CopyToClipboard {
@@ -2751,6 +2895,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_TableFullRing {
             get {
                 return ResourceManager.GetString("Common_TableFullRing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table size.
+        /// </summary>
+        internal static string Common_TableSize {
+            get {
+                return ResourceManager.GetString("Common_TableSize", resourceCulture);
             }
         }
         

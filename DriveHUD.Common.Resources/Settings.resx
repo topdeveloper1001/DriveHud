@@ -234,6 +234,9 @@
   <data name="Settings_RecoverTitle" xml:space="preserve">
     <value>Recover players statistics from backup (Import must be stopped, before executing. Click the STOP button on the HUD tab)</value>
   </data>
+  <data name="Settings_RememberScreenPosition" xml:space="preserve">
+    <value>Remember position on the screen</value>
+  </data>
   <data name="Settings_RenewLicense" xml:space="preserve">
     <value>Renew License</value>
   </data>

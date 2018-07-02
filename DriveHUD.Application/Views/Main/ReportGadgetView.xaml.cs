@@ -13,13 +13,14 @@
 using DriveHUD.Application.Controls;
 using DriveHUD.Application.ReportsLayout;
 using DriveHUD.Application.ViewModels;
-using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Common.Ifrastructure;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Reflection;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Converters;
 using DriveHUD.Entities;
+using DriveHUD.ViewModels.Replayer;
+using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Win32;
@@ -115,8 +116,25 @@ namespace DriveHUD.Application.Views
             /* Calculate equity item */
             RadMenuItem calculateEquityItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.CalculateEquityResourceString), false,
                 EquityCalcMenuItem_Click);
+
             Binding equityEnabledBinding = new Binding(nameof(ReportGadgetViewModel.IsEquityCalculatorEnabled)) { Source = this.reportGadgetViewModel };
             calculateEquityItem.SetBinding(RadMenuItem.IsEnabledProperty, equityEnabledBinding);
+
+            handsGridContextMenu.Opening += (s, e) =>
+            {
+                var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
+
+                if (item != null && item.DataContext != null &&
+                    item.DataContext is ReportHandViewModel hand &&
+                        (GameTypeUtils.CompareGameType((GameType)hand.PokerGameTypeId, GameType.NoLimitOmaha) ||
+                            GameTypeUtils.CompareGameType((GameType)hand.PokerGameTypeId, GameType.NoLimitOmahaHiLo)))
+                {
+                    calculateEquityItem.Visibility = Visibility.Collapsed;
+                    return;
+                }
+
+                calculateEquityItem.Visibility = Visibility.Visible;
+            };
 
             /* Export items */
             RadMenuItem exportHandItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ExportHandResourceString), false, null);

@@ -536,7 +536,11 @@ namespace DriveHUD.Common.Ifrastructure
                 .Replace($"[spoil]{Environment.NewLine}", string.Empty)
                 .Replace($"{Environment.NewLine}[/spoil]", string.Empty)
                 .Replace($"[SPOILER]{Environment.NewLine}", string.Empty)
-                .Replace($"{Environment.NewLine}[/SPOILER]", string.Empty);
+                .Replace($"{Environment.NewLine}[/SPOILER]", string.Empty)
+                .Replace($":diamond:", "d")
+                .Replace($":spade:", "s")
+                .Replace($":club:", "c")
+                .Replace($":heart:", "h");
         }
 
         #endregion

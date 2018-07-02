@@ -1,0 +1,144 @@
+﻿<HandHistory>
+  <TableDetails type="SINGLE_TABLE" id="98-14cbbd0c" name="[Fast Fold NLHE $0.05 / $0.10]" share-type="LOCAL">
+    <SingleTable mode="USD" pocket="CASH" entryId="9c-aa2c9ec" game="TEXAS_HOLDEM" limit="NO_LIMIT" boostPoker="true">
+      <Parameters actionTimeout="12000" initialTimeBank="10000" additionalTimeBank="1000" stakes-low="0.05" stakes-high="0.1" />
+      <Seats number="6" />
+    </SingleTable>
+    <PROTOCOL_FEATURES>
+      <PROTOCOL_FEATURE name="buy_in_preferences" />
+      <PROTOCOL_FEATURE name="client_waiting_list" />
+      <PROTOCOL_FEATURE name="contest_instant_prize_v2" />
+      <PROTOCOL_FEATURE name="contest_jackpots" />
+      <PROTOCOL_FEATURE name="contests" />
+      <PROTOCOL_FEATURE name="cp_exchange" />
+      <PROTOCOL_FEATURE name="currency_exchange_rates" />
+      <PROTOCOL_FEATURE name="fast_blinds" />
+      <PROTOCOL_FEATURE name="locked_bonuses" />
+      <PROTOCOL_FEATURE name="may_wait_for_bb" />
+      <PROTOCOL_FEATURE name="multi_bbj" />
+      <PROTOCOL_FEATURE name="tags_v2" />
+    </PROTOCOL_FEATURES>
+  </TableDetails>
+  <GameState hand="314324522" serverTime="1530034223802" mucked="0">
+    <Seats number="6" me="5" dealer="1" mayWaitForBB="false" winners="false">
+      <Seat id="0">
+        <PlayerInfo nickname="XaMB" avatar="1-25f" level="3" uuid="6abbdbd7-7633-42e2-87b0-842ddb65a809" rank="110929.23">
+          <Location city="Kharkov" countryId="804" network="tg" />
+          <Chips stack-size="11.54" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="1">
+        <PlayerInfo nickname="Golyba" level="0" uuid="8bdc039f-d157-4be7-afb0-9b30e59289a6" rank="94.74">
+          <Location city="Moscow" countryId="643" network="tg" />
+          <Chips stack-size="10.19" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="2">
+        <PlayerInfo nickname="lucki24" level="2" uuid="14a4ac51-2487-484e-aae9-33b27b916164" rank="3982.38">
+          <Location city="fishkill" countryId="840" network="bol" />
+          <Chips stack-size="11.9" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="3">
+        <PlayerInfo nickname="alfi" avatar="1-25d" uuid="ece5648c-6a26-4d25-88d6-00c68d57c32e" rank="75775.91">
+          <Location city="moscow;" countryId="643" network="tg" />
+          <Chips stack-size="18.54" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="4">
+        <PlayerInfo nickname="dampfwalze123" avatar="1-25f" uuid="082faa42-f1db-4c12-8639-4a1ee7919066" rank="1329.93">
+          <Location city="nünchritz" countryId="276" network="bol" />
+          <Chips stack-size="10.78" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="5">
+        <PlayerInfo nickname="Peon84" avatar="1-270" level="0" uuid="a83cc327-9140-4523-a161-71eb0b4aa28e" rank="10.81">
+          <Location city="Moscow" countryId="643" network="bol" />
+          <Chips stack-size="5.31" />
+        </PlayerInfo>
+      </Seat>
+    </Seats>
+    <SessionStatistics buyIn="4" bets="1.48" wins="2.79" sessionStartTime="1530034070650">
+      <Hands total="4" won="1" raked="2" />
+      <Showdown total="0" won="0" />
+      <Allin total="0" won="0" />
+      <Round number="0" folds="2" won="0" />
+      <Round number="1" folds="1" won="1" />
+      <Round number="2" folds="0" won="0" />
+      <Round number="3" folds="0" won="0" />
+    </SessionStatistics>
+  </GameState>
+  <Changes>
+    <NewHand dealer="1" number="314324522" startTime="1530034223801" change_time="1530034223" />
+    <ActiveSeats change_time="1530034223">
+      <Seat id="0" />
+      <Seat id="1" />
+      <Seat id="2" />
+      <Seat id="3" />
+      <Seat id="4" />
+      <Seat id="5" />
+    </ActiveSeats>
+    <PlayerAction seat="2" change_time="1530034223">
+      <PostSmallBlind amount="0.05" />
+    </PlayerAction>
+    <PlayerAction seat="3" change_time="1530034223">
+      <PostBigBlind amount="0.10" />
+    </PlayerAction>
+    <DealingCards change_time="1530034223">
+      <Seat id="2">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="3">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="4">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="5">
+        <Cards>
+          <Card id="0">Ks</Card>
+          <Card id="1">4s</Card>
+        </Cards>
+      </Seat>
+      <Seat id="0">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="1">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+    </DealingCards>
+    <ActiveChange timeBank="11000" seat="4" elapsed="0" time="12000" startTime="1530034223801" change_time="1530034223">
+      <Actions>
+        <Fold />
+        <Call amount="0.10" />
+        <Raise max="5.31" min="0.20" />
+      </Actions>
+    </ActiveChange>
+    <PlayerAction seat="4" change_time="1530034226">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="10000" seat="5" elapsed="0" time="12000" startTime="1530034226580" change_time="1530034226">
+      <Actions>
+        <Fold />
+        <Call amount="0.10" />
+        <Raise max="5.31" min="0.20" />
+      </Actions>
+    </ActiveChange>
+    <EndHand change_time="1530034236" />
+  </Changes>
+</HandHistory>

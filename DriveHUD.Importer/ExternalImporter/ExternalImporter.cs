@@ -182,7 +182,7 @@ namespace DriveHUD.Importers.ExternalImporter
             }
         }
 
-        protected override PlayerList GetPlayerList(HandHistory handHistory)
+        protected override PlayerList GetPlayerList(HandHistory handHistory, GameInfo gameInfo)
         {
             var playerList = handHistory.Players;
 

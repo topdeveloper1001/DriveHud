@@ -1,45 +1,166 @@
-﻿<UserControl x:Class="DriveHUD.EquityCalculator.Views.EquityCalculatorPlayerPartialView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:controls="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
-             xmlns:converters="clr-namespace:DriveHUD.Common.Wpf.Converters;assembly=DriveHUD.Common.Wpf"
-             mc:Ignorable="d" >
+﻿<UserControl
+    x:Class="DriveHUD.EquityCalculator.Views.EquityCalculatorPlayerPartialView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:controls="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
+    mc:Ignorable="d">
     <UserControl.Resources>
-        <converters:BoolNotConverter x:Key="BoolNotConverter"/>
+
+        <Style
+            x:Key="EquityDataTextBlockStyle"
+            TargetType="{x:Type TextBlock}">
+            <Setter
+                Property="Foreground"
+                Value="#FFFFFF" />
+            <Setter
+                Property="FontSize"
+                Value="11" />
+        </Style>
+
     </UserControl.Resources>
     <StackPanel>
-        <ItemsControl ItemsSource="{Binding PlayersList}"  IsEnabled="{Binding IsCalculationRunning, Converter={StaticResource BoolNotConverter}}" >
+        <ItemsControl
+            ItemsSource="{Binding PlayersList}"
+            IsEnabled="{Binding IsCalculationRunning, Converter={dh:BoolNotConverter}}">
 
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <UniformGrid Columns="2" />
+                    <UniformGrid
+                        Columns="2" />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
 
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Margin="20">
+                    <StackPanel
+                        Margin="20">
+
+                        <!--#region DrivehudEQ area -->
+
+                        <StackPanel
+                            Margin="0,0,5,0"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+
+                            <TextBlock
+                                Style="{StaticResource EquityDataTextBlockStyle}"
+                                Foreground="{StaticResource FoldCheckRangeBackground}"
+                                Visibility="{Binding IsTotalCombosVisible, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}">
+                                <TextBlock.Text>
+                                    <ResX
+                                        Key="Common_EquityCalculator_FoldCheckCombos">
+                                        <ResXParam
+                                            Path="FoldCheckCombos" />
+                                        <ResXParam
+                                            Path="FoldCheckPercentage" />
+                                    </ResX>
+
+                                </TextBlock.Text>
+                            </TextBlock>
+
+                            <TextBlock
+                                Margin="5,0,0,0"
+                                Style="{StaticResource EquityDataTextBlockStyle}"
+                                Foreground="{StaticResource CallRangeBackground}"
+                                Visibility="{Binding IsTotalCombosVisible, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}">
+                                <TextBlock.Text>
+                                    <ResX
+                                        Key="Common_EquityCalculator_CallCombos">
+                                        <ResXParam
+                                            Path="CallCombos" />
+                                        <ResXParam
+                                            Path="CallPercentage" />
+                                    </ResX>
+
+                                </TextBlock.Text>
+                            </TextBlock>
+
+                            <TextBlock
+                                Margin="5,0,0,0"
+                                Style="{StaticResource EquityDataTextBlockStyle}"
+                                Foreground="{StaticResource BluffRangeBackground}"
+                                Visibility="{Binding IsTotalCombosVisible, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}">
+                                <TextBlock.Text>
+                                    <ResX
+                                        Key="Common_EquityCalculator_BluffCombos">
+                                        <ResXParam
+                                            Path="BluffCombos" />
+                                        <ResXParam
+                                            Path="BluffPercentage" />
+                                    </ResX>
+
+                                </TextBlock.Text>
+                            </TextBlock>
+
+                            <TextBlock
+                                Margin="5,0,0,0"
+                                Foreground="{StaticResource ValueBetRangeBackground}"
+                                Style="{StaticResource EquityDataTextBlockStyle}"
+                                Visibility="{Binding IsTotalCombosVisible, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}">
+                                <TextBlock.Text>
+                                    <ResX
+                                        Key="Common_EquityCalculator_ValueBetCombos">
+                                        <ResXParam
+                                            Path="ValueBetCombos" />
+                                        <ResXParam
+                                            Path="ValueBetPercentage" />
+                                    </ResX>
+
+                                </TextBlock.Text>
+                            </TextBlock>
+
+                            <TextBlock
+                                Margin="5,0,0,0"
+                                Style="{StaticResource EquityDataTextBlockStyle}"
+                                Visibility="{Binding IsTotalCombosVisible, Converter={dh:BoolToVisibilityConverter}}">
+                                <TextBlock.Text>
+                                    <ResX
+                                        Key="Common_EquityCalculator_TotalCombos">
+                                        <ResXParam
+                                            Path="TotalCombos" />
+                                    </ResX>
+
+                                </TextBlock.Text>
+                            </TextBlock>
+
+                        </StackPanel>
+
+                        <!--#endregion -->
+
                         <Grid>
-                            <TextBlock  Text="{Binding PlayerName}" Style="{StaticResource Title_H1}" d:LayoutOverrides="Height, TopMargin, BottomMargin"/>
-                            <WrapPanel HorizontalAlignment="Right">
-                                <Button Content="{ResX Common_Range}"
-                                        Height="30"
-                                        Command="{Binding DataContext.RangeCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}" 
-                                        CommandParameter="{Binding}"
-                                        Margin="5" Width="65"/>
-                                <Button Content="{ResX Common_CalculateBluffPercent}" 
-                                        Height="30"
-                                        Width="120"
-                                        Command="{Binding DataContext.CalculateBluffCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}" 
-                                        CommandParameter="{Binding}"
-                                        Margin="5">
+                            <TextBlock
+                                Text="{Binding PlayerName}"
+                                Style="{StaticResource Title_H1}" />
+                            <WrapPanel
+                                HorizontalAlignment="Right">
+                                <Button
+                                    Content="{ResX Common_Range}"
+                                    Height="30"
+                                    Command="{Binding DataContext.RangeCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                    CommandParameter="{Binding}"
+                                    Margin="5"
+                                    Width="65" />
+                                <Button
+                                    Content="{ResX Common_CalculateBluffPercent}"
+                                    Height="30"
+                                    Width="120"
+                                    Command="{Binding DataContext.CalculateBluffCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                    CommandParameter="{Binding}"
+                                    Margin="5">
                                     <Button.Style>
-                                        <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                                        <Style
+                                            TargetType="Button"
+                                            BasedOn="{StaticResource {x:Type Button}}">
                                             <Style.Triggers>
-                                                <DataTrigger Binding="{Binding ElementName=EquityProgressBar, Path=Value}" Value="0">
-                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                <DataTrigger
+                                                    Binding="{Binding ElementName=EquityProgressBar, Path=Value}"
+                                                    Value="0">
+                                                    <Setter
+                                                        Property="Visibility"
+                                                        Value="Collapsed" />
                                                 </DataTrigger>
                                             </Style.Triggers>
                                         </Style>
@@ -47,9 +168,11 @@
                                 </Button>
                             </WrapPanel>
                         </Grid>
-                        
-                        <ScrollViewer Height="100">
-                            <ItemsControl ItemsSource="{Binding PlayerCards}" >
+
+                        <ScrollViewer
+                            Height="100">
+                            <ItemsControl
+                                ItemsSource="{Binding PlayerCards}">
 
                                 <ItemsControl.ItemsPanel>
                                     <ItemsPanelTemplate>
@@ -58,15 +181,28 @@
                                 </ItemsControl.ItemsPanel>
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
-                                        <TextBlock Margin="2" Style="{StaticResource TextBlockStyle}">
-                                            <TextBlock Text="{Binding}" />
+                                        <TextBlock
+                                            Margin="2"
+                                            Style="{StaticResource TextBlockStyle}">
+                                            <TextBlock
+                                                Text="{Binding}" />
                                             <Button
                                                 Margin="-30 -20 -8 0"
                                                 Command="{Binding DataContext.RemoveRangeCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
-                                CommandParameter="{Binding}">
+                                                CommandParameter="{Binding}">
                                             <Button.Template>
-                                                <ControlTemplate TargetType="{x:Type Button}">
-                                                    <Path Data="M0,0 L1,1 M0,1 L1,0" Margin="5" Cursor="Hand" HorizontalAlignment="Right" Width="8" Height="8" Stretch="Fill" Stroke="#7D7F84" StrokeThickness="2">
+                                                <ControlTemplate
+                                                        TargetType="{x:Type Button}">
+                                                    <Path
+                                                            Data="M0,0 L1,1 M0,1 L1,0"
+                                                            Margin="5"
+                                                            Cursor="Hand"
+                                                            HorizontalAlignment="Right"
+                                                            Width="8"
+                                                            Height="8"
+                                                            Stretch="Fill"
+                                                            Stroke="#7D7F84"
+                                                            StrokeThickness="2">
                                                     </Path>
                                                 </ControlTemplate>
                                             </Button.Template>
@@ -78,22 +214,38 @@
                             </ItemsControl>
                         </ScrollViewer>
 
-                        <controls:ProgressBarEx Minimum="0" Maximum="100" Height="20" 
-                                                x:Name="EquityProgressBar"
-                                                Value="{Binding EquityValue}" 
-                                                Text="{Binding RelativeSource={RelativeSource Self}, Path=Value, StringFormat={}{0:0.##}%}">
+                        <TextBlock
+                            FontSize="11"
+                            Foreground="#db5050"
+                            TextWrapping="Wrap"
+                            Text="{Binding BluffToValueRatioWarning}"
+                            Visibility="{Binding BluffToValueRatioWarning, Converter={dh:NullOrEmptyToVisibilityConverter}}" />
+
+                        <controls:ProgressBarEx
+                            Minimum="0"
+                            Maximum="100"
+                            Height="20"
+                            x:Name="EquityProgressBar"
+                            Value="{Binding EquityValue}"
+                            Text="{Binding RelativeSource={RelativeSource Self}, Path=Value, StringFormat={}{0:0.##}%}">
                             <controls:ProgressBarEx.Style>
-                                <Style  TargetType="controls:ProgressBarEx" BasedOn="{StaticResource ProgressBarExStyle1}">
+                                <Style
+                                    TargetType="controls:ProgressBarEx"
+                                    BasedOn="{StaticResource ProgressBarExStyle1}">
                                     <Style.Triggers>
-                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Value}" Value="0">
-                                            <Setter Property="Visibility" Value="Hidden" />
+                                        <DataTrigger
+                                            Binding="{Binding RelativeSource={RelativeSource Self}, Path=Value}"
+                                            Value="0">
+                                            <Setter
+                                                Property="Visibility"
+                                                Value="Hidden" />
                                         </DataTrigger>
                                     </Style.Triggers>
                                 </Style>
                             </controls:ProgressBarEx.Style>
                         </controls:ProgressBarEx>
 
-                        <Separator/>
+                        <Separator />
 
                     </StackPanel>
                 </DataTemplate>

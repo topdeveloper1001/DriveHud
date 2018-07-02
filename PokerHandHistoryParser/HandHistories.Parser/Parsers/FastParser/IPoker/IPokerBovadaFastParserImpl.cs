@@ -47,7 +47,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 return true;
             }
-        }     
+        }
 
         protected override List<HandAction> OrderHandActions(List<HandAction> handActions, PlayerList players, HandHistory handHistory)
         {
@@ -269,7 +269,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         protected virtual bool IsFastFold(string tableName)
         {
-            return tableName != null && tableName.Contains("Zone Poker");
+            return tableName != null && (tableName.Contains("Zone Poker") || tableName.Contains("Fast Fold"));
         }
     }
 }

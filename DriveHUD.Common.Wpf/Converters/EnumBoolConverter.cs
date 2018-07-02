@@ -28,7 +28,7 @@ namespace DriveHUD.Common.Wpf.Converters
         {
             if (value == null || parameter == null)
             {
-                return DependencyProperty.UnsetValue;
+                return false;
             }
 
             if (value.GetType() == parameter.GetType())
@@ -40,7 +40,7 @@ namespace DriveHUD.Common.Wpf.Converters
 
             if (string.IsNullOrEmpty(strParameter))
             {
-                return DependencyProperty.UnsetValue;
+                return false;
             }
 
             if (!Enum.IsDefined(value.GetType(), strParameter))
@@ -56,7 +56,7 @@ namespace DriveHUD.Common.Wpf.Converters
             {
             }
 
-            return DependencyProperty.UnsetValue;
+            return false;
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

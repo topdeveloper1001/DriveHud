@@ -1,0 +1,382 @@
+<HandHistory>
+  <TableDetails type="SINGLE_TABLE" id="98-1fbdca7e" name="Lima" share-type="LOCAL">
+    <SingleTable mode="PLAYMONEY" pocket="CASH" game="TEXAS_HOLDEM" limit="NO_LIMIT">
+      <Parameters actionTimeout="30000" initialTimeBank="60000" additionalTimeBank="10000" stakes-low="10" stakes-high="20" />
+      <Seats number="10" />
+    </SingleTable>
+    <PROTOCOL_FEATURES>
+      <PROTOCOL_FEATURE name="buy_in_preferences" />
+      <PROTOCOL_FEATURE name="client_waiting_list" />
+      <PROTOCOL_FEATURE name="contest_instant_prize_v2" />
+      <PROTOCOL_FEATURE name="contest_jackpots" />
+      <PROTOCOL_FEATURE name="contests" />
+      <PROTOCOL_FEATURE name="cp_exchange" />
+      <PROTOCOL_FEATURE name="currency_exchange_rates" />
+      <PROTOCOL_FEATURE name="fast_blinds" />
+      <PROTOCOL_FEATURE name="locked_bonuses" />
+      <PROTOCOL_FEATURE name="may_wait_for_bb" />
+      <PROTOCOL_FEATURE name="multi_bbj" />
+      <PROTOCOL_FEATURE name="tags_v2" />
+    </PROTOCOL_FEATURES>
+  </TableDetails>
+  <GameState hand="6786155" serverTime="1527519586717" mucked="0">
+    <Seats number="10" me="5" dealer="7" mayWaitForBB="false" winners="false">
+      <Seat id="0">
+        <PlayerInfo nickname="poorvet" avatar="1-25f" level="0" uuid="64a07234-96b5-4a06-8320-fcc6b61fdc58" rank="75.73">
+          <Location city="sumner" countryId="840" network="tg" />
+          <Chips stack-size="2935.12" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="1">
+        <PlayerInfo nickname="jardito" avatar="17-20f94c8" level="0" uuid="861a44d1-5296-466e-a249-8fd0905bcb4a" rank="0">
+          <Location city="Sunland" countryId="840" network="tg" />
+          <Chips stack-size="1534" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="2">
+        <PlayerInfo nickname="freshair55" level="0" uuid="0fc00ffa-f1e1-4f98-904b-ff73471eb2d9" rank="0">
+          <Location city="Huntington" countryId="840" network="bol" />
+          <Chips stack-size="1427" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="3">
+        <PlayerInfo nickname="ACEFACED.ORG" avatar="1-25d" level="0" uuid="9f3925b9-02f9-4a78-9e91-e78db9c384e6" rank="0">
+          <Location city="Coulterville" countryId="840" network="bol" />
+          <Chips stack-size="1000" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="4">
+        <PlayerInfo nickname="gravy" uuid="53903fec-b614-4079-b4d7-1d80d60ee80f" rank="2395.63">
+          <Location city="Milwaukee" countryId="840" network="bol" />
+          <Chips stack-size="3112" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="5">
+        <PlayerInfo nickname="Peon_184" level="0" uuid="62f5f526-8b7c-4cfe-870c-a48e97d48165" rank="0">
+          <Location city="Nizhny Novgorod" countryId="643" network="sb" />
+          <Chips stack-size="1278.5" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="6">
+        <PlayerInfo nickname="cowboy325" avatar="1-264" level="0" uuid="c6f7de3f-3dd6-49e6-a096-a7226ca7628c" rank="1467.69">
+          <Location city="garland" countryId="840" network="bol" />
+          <Chips stack-size="1555.5" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="7">
+        <PlayerInfo nickname="herbigbear" avatar="1-25c" level="0" uuid="0d9e3112-8858-4df3-96f9-4140f9da5883" rank="0">
+          <Location city="pasadena" countryId="124" network="tg" />
+          <Chips stack-size="1605.74" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="8">
+        <PlayerInfo nickname="bikerguy63" avatar="84-22936c9" level="0" uuid="e366ab9e-68b0-4d2b-ae2f-f0f0706395af" rank="0">
+          <Location city="NORTON SHORES" countryId="840" network="bol" />
+          <Chips stack-size="763.89" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="9">
+        <PlayerInfo nickname="elhat55" level="0" uuid="d6bc57a5-e336-497c-b8f5-ec38c2099951" rank="27.11">
+          <Location city="Gallatin" countryId="840" network="bol" />
+          <Chips stack-size="1345" />
+        </PlayerInfo>
+      </Seat>
+    </Seats>
+    <SessionStatistics buyIn="670.75" bets="700.75" wins="1308.5" sessionStartTime="1527518728405">
+      <Hands total="11" won="1" raked="5" />
+      <Showdown total="1" won="1" />
+      <Allin total="1" won="1" />
+      <Round number="0" folds="9" won="0" />
+      <Round number="1" folds="0" won="0" />
+      <Round number="2" folds="1" won="0" />
+      <Round number="3" folds="0" won="1" />
+    </SessionStatistics>
+  </GameState>
+  <Changes>
+    <NewHand dealer="7" number="6786155" startTime="1527519586691" change_time="1527519586" />
+    <ActiveSeats change_time="1527519586">
+      <Seat id="0" />
+      <Seat id="1" />
+      <Seat id="2" />
+      <Seat id="3" />
+      <Seat id="4" />
+      <Seat id="5" />
+      <Seat id="6" />
+      <Seat id="7" />
+      <Seat id="8" />
+      <Seat id="9" />
+    </ActiveSeats>
+    <PlayerAction seat="8" change_time="1527519586">
+      <PostSmallBlind amount="10" />
+    </PlayerAction>
+    <PlayerAction seat="9" change_time="1527519586">
+      <PostBigBlind amount="20" />
+    </PlayerAction>
+    <DealingCards change_time="1527519586">
+      <Seat id="8">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="9">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="0">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="1">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="2">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="3">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="4">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="5">
+        <Cards>
+          <Card id="0">6s</Card>
+          <Card id="1">2d</Card>
+        </Cards>
+      </Seat>
+      <Seat id="6">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="7">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+    </DealingCards>
+    <ActiveChange timeBank="70000" elapsed="1" seat="0" time="30000" startTime="1527519586691" change_time="1527519586">
+      <Actions>
+        <Fold />
+        <Call amount="20" />
+        <Raise max="1278.50" min="40" />
+      </Actions>
+    </ActiveChange>
+    <PlayerAction seat="0" change_time="1527519590">
+      <Call amount="20" />
+    </PlayerAction>
+    <ActiveChange timeBank="90000" elapsed="0" seat="1" time="30000" startTime="1527519590628" change_time="1527519590">
+      <Actions>
+        <Fold />
+        <Call amount="20" />
+        <Raise max="1278.50" min="40" />
+      </Actions>
+    </ActiveChange>
+    <PlayerAction seat="1" change_time="1527519590">
+      <Call amount="20" />
+    </PlayerAction>
+    <ActiveChange timeBank="60000" elapsed="0" seat="2" time="30000" startTime="1527519591010" change_time="1527519590">
+      <Actions>
+        <Fold />
+        <Call amount="20" />
+        <Raise max="1278.50" min="40" />
+      </Actions>
+    </ActiveChange>
+    <PlayerAction seat="2" change_time="1527519590">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="80000" elapsed="0" seat="3" time="30000" startTime="1527519591196" change_time="1527519590">
+      <Actions>
+        <Fold />
+        <Call amount="20" />
+        <Raise max="1278.50" min="40" />
+      </Actions>
+    </ActiveChange>
+    <PlayerAction seat="3" change_time="1527519593">
+      <Raise amount="1000" />
+    </PlayerAction>
+    <ActiveChange timeBank="80000" elapsed="0" seat="4" time="30000" startTime="1527519593574" change_time="1527519593">
+      <Actions>
+        <Fold />
+        <Call amount="1000" />
+        <Raise max="1278.50" min="1278.50" />
+      </Actions>
+    </ActiveChange>
+    <PlayerAction seat="4" change_time="1527519605">
+      <Call amount="1000" />
+    </PlayerAction>
+    <ActiveChange timeBank="70000" elapsed="0" seat="5" time="30000" startTime="1527519605901" change_time="1527519605">
+      <Actions>
+        <Fold />
+        <Call amount="1000" />
+        <Raise max="1278.50" min="1278.50" />
+      </Actions>
+    </ActiveChange>
+    <PlayerAction seat="5" change_time="1527519606">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="90000" elapsed="0" seat="6" time="30000" startTime="1527519606975" change_time="1527519606" />
+    <PlayerAction seat="6" change_time="1527519607">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="60000" elapsed="0" seat="7" time="30000" startTime="1527519607496" change_time="1527519607" />
+    <PlayerAction seat="7" change_time="1527519607">
+      <Call amount="1000" />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="80000" elapsed="0" seat="8" time="30000" startTime="1527519608050" change_time="1527519607" />
+    <PlayerAction seat="8" change_time="1527519608">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="90000" elapsed="0" seat="9" time="30000" startTime="1527519608722" change_time="1527519608" />
+    <NewWaitingPlayer me="false" id="1" change_time="1527519624">
+      <PlayerInfo casino-bonus="false" poker-bonus="false" remote-casino-bonus="false" remote-club-bonus="false" uuid="d7f1763e-4208-476e-8cd6-71699394ea84" preferred-wallet="USD" nickname="Willwarin" rank="0" avatar="1-25e">
+        <Location countryId="124" network="tg" city="Toronto" />
+      </PlayerInfo>
+    </NewWaitingPlayer>
+    <ChatMessage seat="2" network="bol" sender="freshair55" level="PLAYER" change_time="1527519624">LETSGAMBLE</ChatMessage>
+    <PlayerAction seat="9" change_time="1527519629">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="70000" elapsed="0" seat="0" time="30000" startTime="1527519630488" change_time="1527519629" />
+    <PlayerAction seat="0" change_time="1527519634">
+      <Call amount="980" />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="90000" elapsed="0" seat="1" time="30000" startTime="1527519634493" change_time="1527519634" />
+    <PlayerAction seat="1" change_time="1527519637">
+      <Fold />
+    </PlayerAction>
+    <PotsChange change_time="1527519637">
+      <Pot change="1000" seat="0" pot="0" />
+      <Pot change="20" seat="1" pot="0" />
+      <Pot change="1000" seat="3" pot="0" />
+      <Pot change="1000" seat="4" pot="0" />
+      <Pot change="1000" seat="7" pot="0" />
+      <Pot change="10" seat="8" pot="0" />
+      <Pot change="20" seat="9" pot="0" />
+    </PotsChange>
+    <RakeChange change_time="1527519637">
+      <Rake change="3" pot="0" />
+    </RakeChange>
+    <DealingFlop change_time="1527519638">
+      <Cards>
+        <Card id="0">4c</Card>
+        <Card id="1">4d</Card>
+        <Card id="2">8c</Card>
+      </Cards>
+    </DealingFlop>
+    <ActiveChange autoTimeBank="true" timeBank="70000" elapsed="0" seat="0" time="30000" startTime="1527519638152" change_time="1527519638" />
+    <PlayerAction seat="0" change_time="1527519641">
+      <Check />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="80000" elapsed="0" seat="4" time="30000" startTime="1527519641420" change_time="1527519641" />
+    <PlayerAction seat="4" change_time="1527519642">
+      <Check />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="60000" elapsed="0" seat="7" time="30000" startTime="1527519643772" change_time="1527519642" />
+    <PlayerAction seat="7" change_time="1527519645">
+      <Check />
+    </PlayerAction>
+    <DealingTurn change_time="1527519646">
+      <Cards>
+        <Card id="3">Th</Card>
+      </Cards>
+    </DealingTurn>
+    <ActiveChange autoTimeBank="true" timeBank="70000" elapsed="1" seat="0" time="30000" startTime="1527519646732" change_time="1527519646" />
+    <PlayerAction seat="0" change_time="1527519649">
+      <Check />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="80000" elapsed="0" seat="4" time="30000" startTime="1527519650059" change_time="1527519649" />
+    <PlayerAction seat="4" change_time="1527519651">
+      <Check />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="60000" elapsed="0" seat="7" time="30000" startTime="1527519651829" change_time="1527519651" />
+    <PlayerAction seat="7" change_time="1527519654">
+      <Check />
+    </PlayerAction>
+    <DealingRiver change_time="1527519655">
+      <Cards>
+        <Card id="4">5s</Card>
+      </Cards>
+    </DealingRiver>
+    <ActiveChange autoTimeBank="true" timeBank="70000" elapsed="0" seat="0" time="30000" startTime="1527519655762" change_time="1527519655" />
+    <PlayerAction seat="0" change_time="1527519658">
+      <Check />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="80000" elapsed="0" seat="4" time="30000" startTime="1527519658999" change_time="1527519658" />
+    <ChatMessage seat="2" network="bol" sender="freshair55" level="PLAYER" change_time="1527519666">LETS GAMBLE</ChatMessage>
+    <PlayerAction seat="4" change_time="1527519667">
+      <Check />
+    </PlayerAction>
+    <ActiveChange autoTimeBank="true" timeBank="60000" elapsed="0" seat="7" time="30000" startTime="1527519667357" change_time="1527519667" />
+    <PlayerAction seat="7" change_time="1527519667">
+      <Check />
+    </PlayerAction>
+    <PlayerAction seat="3" change_time="1527519668">
+      <Show combination="a pair of, Fours">
+        <Cards>
+          <Card id="0">6c</Card>
+          <Card id="1">Ac</Card>
+        </Cards>
+      </Show>
+    </PlayerAction>
+    <CombinationChange seat="3" strength="a pair of, Fours" change_time="1527519668" />
+    <ActiveChange elapsed="0" seat="4" time="5000" startTime="1527519668922" change_time="1527519668" />
+    <PlayerAction seat="4" change_time="1527519668">
+      <Muck>
+        <Cards>
+          <Card id="0">Qh</Card>
+          <Card id="1">3h</Card>
+        </Cards>
+      </Muck>
+    </PlayerAction>
+    <ActiveChange elapsed="0" seat="7" time="5000" startTime="1527519669293" change_time="1527519668" />
+    <PlayerAction seat="7" change_time="1527519669">
+      <Muck>
+        <Cards>
+          <Card id="0">Qs</Card>
+          <Card id="1">Jd</Card>
+        </Cards>
+      </Muck>
+    </PlayerAction>
+    <ActiveChange elapsed="0" seat="0" time="5000" startTime="1527519669869" change_time="1527519669" />
+    <PlayerAction seat="0" change_time="1527519669">
+      <Muck>
+        <Cards>
+          <Card id="0">3d</Card>
+          <Card id="1">Kd</Card>
+        </Cards>
+      </Muck>
+    </PlayerAction>
+    <Winners change_time="1527519669">
+      <Winner amount="4047" combination="a pair of, Fours with Ace kicker" seat="3" pot="0">
+        <Cards>
+          <Card id="0">4c</Card>
+          <Card id="1">4d</Card>
+          <Card id="2">Ac</Card>
+          <Card id="3">Th</Card>
+          <Card id="4">8c</Card>
+        </Cards>
+      </Winner>
+    </Winners>
+    <EndHand change_time="1527519673" />
+  </Changes>
+</HandHistory>

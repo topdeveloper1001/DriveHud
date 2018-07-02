@@ -33,7 +33,7 @@
                     <ColumnDefinition
                         Width="*" />
                 </Grid.ColumnDefinitions>
-                <Grid
+                <Grid                    
                     Grid.Column="0">
                     <StackPanel
                         Orientation="Vertical"
@@ -90,11 +90,9 @@
                             Width="70" />
                     </WrapPanel>
                 </Grid>
-
-
             </Grid>
             <Separator />
-            <WrapPanel
+            <WrapPanel                
                 Orientation="Horizontal"
                 Grid.Column="0"
                 Grid.Row="1">

@@ -42,7 +42,7 @@ namespace HandHistories.Parser.Utils.Extensions
                 return true;
             }
 
-            if (handText.StartsWith("#Game No", StringComparison.InvariantCultureIgnoreCase))
+            if (handText.StartsWith("#Game No", StringComparison.OrdinalIgnoreCase))
             {
                 if (handText.IndexOf("***** H", 0, 50) > -1)
                 {
@@ -54,8 +54,8 @@ namespace HandHistories.Parser.Utils.Extensions
                 return true;
             }
 
-            if (handText.StartsWith("***** Hand History", StringComparison.InvariantCultureIgnoreCase)
-                || handText.StartsWith("Game #", StringComparison.InvariantCultureIgnoreCase))
+            if (handText.StartsWith("***** Hand History", StringComparison.OrdinalIgnoreCase)
+                || handText.StartsWith("Game #", StringComparison.OrdinalIgnoreCase))
             {
                 siteName = EnumPokerSites.PartyPoker;
                 return true;
@@ -73,15 +73,15 @@ namespace HandHistories.Parser.Utils.Extensions
                 return true;
             }
 
-            if (handText.StartsWith("***** Cassava Tournament Summary *****", StringComparison.InvariantCultureIgnoreCase))
+            if (handText.StartsWith("***** Cassava Tournament Summary *****", StringComparison.OrdinalIgnoreCase))
             {
                 siteName = EnumPokerSites.Poker888;
                 return true;
             }
 
-            if (handText.StartsWith("Game started", StringComparison.InvariantCultureIgnoreCase) ||
-                handText.StartsWith("<Game Information>", StringComparison.InvariantCultureIgnoreCase) ||
-                handText.StartsWith("Game Hand", StringComparison.InvariantCultureIgnoreCase))
+            if (handText.StartsWith("Game started", StringComparison.OrdinalIgnoreCase) ||
+                handText.StartsWith("<Game Information>", StringComparison.OrdinalIgnoreCase) ||
+                handText.StartsWith("Game Hand", StringComparison.OrdinalIgnoreCase))
             {
                 siteName = EnumPokerSites.WinningPokerNetwork;
                 return true;

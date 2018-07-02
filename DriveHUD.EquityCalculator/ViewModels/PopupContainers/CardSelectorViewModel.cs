@@ -6,7 +6,6 @@ using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 
@@ -143,11 +142,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 if (value is CardSelectorNotification)
                 {
-                    this._notification = value as CardSelectorNotification;
-                    this.SelectorType = this._notification.SelectorType;
-                    this.UsedCards = new List<CardModel>(this._notification.UsedCards);
+                    _notification = value as CardSelectorNotification;
+                    SelectorType = this._notification.SelectorType;
+                    UsedCards = new List<CardModel>(this._notification.UsedCards);
                     SetSelectedCards();
-                    this.OnPropertyChanged(() => this.Notification);
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -295,7 +294,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 return;
             }
             this._notification.ReturnType = CardSelectorReturnType.Cards;
-            switch(SelectorType)
+            switch (SelectorType)
             {
                 case CardSelectorType.BoardSelector:
                     this._notification.CardsContainer = new BoardModel(_selectedCards.Select(x => new CardModel(x.Rank, x.Suit)).ToList());

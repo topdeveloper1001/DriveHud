@@ -83,8 +83,10 @@ namespace DriveHUD.Importers
         /// <param name="session">Active session</param>
         /// <param name="player">Specified player</param>
         /// <returns>Player stats</returns>
-        public SessionCacheStatistic GetPlayerStats(string session, PlayerCollectionItem player)
+        public SessionCacheStatistic GetPlayerStats(string session, PlayerCollectionItem player, out bool exists)
         {
+            exists = false;
+
             if (!isStarted)
             {
                 return new SessionCacheStatistic();
@@ -96,6 +98,7 @@ namespace DriveHUD.Importers
             {
                 if (cachedData.ContainsKey(session) && cachedData[session].StatisticByPlayer.ContainsKey(player))
                 {
+                    exists = true;
                     return cachedData[session].StatisticByPlayer[player];
                 }
 
@@ -105,6 +108,17 @@ namespace DriveHUD.Importers
             {
                 cacheLock.ExitReadLock();
             }
+        }
+
+        /// <summary>
+        /// Get player stats
+        /// </summary>
+        /// <param name="session">Active session</param>
+        /// <param name="player">Specified player</param>
+        /// <returns>Player stats</returns>
+        public SessionCacheStatistic GetPlayerStats(string session, PlayerCollectionItem player)
+        {
+            return GetPlayerStats(session, player, out bool exists);
         }
 
         /// <summary>

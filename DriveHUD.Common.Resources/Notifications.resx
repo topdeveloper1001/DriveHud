@@ -159,6 +159,9 @@
   <data name="Notifications_HudLayout_PreLoadingText_NoLicense" xml:space="preserve">
     <value>HUD can't be loaded. DH License doesn't support this table.</value>
   </data>
+  <data name="Notifications_HudLayout_PreLoadingText_NotSupportedFastFold" xml:space="preserve">
+    <value>Hud isn't supported in fast fold mode, but hands will be imported.</value>
+  </data>
   <data name="Notifications_HudLayout_PreLoadingText_PM" xml:space="preserve">
     <value>One full hand must be played before HUD appears. Please wait.</value>
   </data>

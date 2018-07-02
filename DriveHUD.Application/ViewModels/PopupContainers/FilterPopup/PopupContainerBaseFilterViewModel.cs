@@ -159,7 +159,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
                         continue;
                     }
 
-                    var loadedModel = loadedList.FirstOrDefault(x => x.Id == model.Id);
+                    var loadedModel = loadedList.FirstOrDefault(x => x.GetType() == model.GetType());
 
                     if (loadedModel == null)
                     {

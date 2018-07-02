@@ -13,6 +13,6 @@ namespace Simulator
 
         bool CanRun { get; }
 
-        Task Run(CancellationToken cancellationToken);
+        Task Run(CancellationTokenSource cancellationToken);
     }
 }

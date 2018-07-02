@@ -10,8 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
+using DriveHUD.Common.WinApi;
+using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Management;
+using System.Runtime.InteropServices;
 
 namespace DriveHUD.Common.Extensions
 {
@@ -64,6 +69,47 @@ namespace DriveHUD.Common.Extensions
             }
 
             return cmdLine;
+        }
+
+        /// <summary>
+        /// Gets the parent process of the current process.
+        /// </summary>
+        /// <returns>An instance of the Process class.</returns>
+        public static Process GetParentProcess(this Process process)
+        {
+            if (process == null)
+            {
+                throw new ArgumentNullException(nameof(process));
+            }
+
+            return GetParentProcess(process.Handle);
+        }
+
+        /// <summary>
+        /// Gets the parent process of a specified process.
+        /// </summary>
+        /// <param name="handle">The process handle.</param>
+        /// <returns>An instance of the Process class.</returns>
+        public static Process GetParentProcess(IntPtr handle)
+        {
+            var pbi = new ProcessBasicInformation();
+
+            var status = WinApi.WinApi.NtQueryInformationProcess(handle, 0, ref pbi, pbi.Size, out int returnLength);
+
+            if (status != 0)
+            {                
+                throw new Win32Exception(status);
+            }
+
+            try
+            {
+                return Process.GetProcessById(pbi.InheritedFromUniqueProcessId.ToInt32());
+            }
+            catch (ArgumentException)
+            {
+                // not found
+                return null;
+            }
         }
     }
 }

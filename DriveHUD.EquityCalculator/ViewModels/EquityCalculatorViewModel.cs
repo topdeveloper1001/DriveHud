@@ -1,11 +1,24 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
+﻿//-----------------------------------------------------------------------
+// <copyright file="EquityCalculatorViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Utils;
 using DriveHUD.EquityCalculator.Analyzer;
 using DriveHUD.EquityCalculator.Base.Calculations;
 using DriveHUD.EquityCalculator.Models;
-using DriveHUD.ViewModels;
 using HandHistories.Objects.Actions;
+using HandHistories.Objects.Cards;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.Events;
@@ -17,6 +30,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -26,9 +40,10 @@ namespace DriveHUD.EquityCalculator.ViewModels
     public class EquityCalculatorViewModel : BaseViewModel
     {
         #region Fields
+
         private CancellationTokenSource cts;
         private HandHistories.Objects.Hand.HandHistory _currentHandHistory = new HandHistories.Objects.Hand.HandHistory();
-        private HandHistories.Objects.Cards.Street _currentSreet;
+        private Street _currentStreet;
 
         private readonly int _playersCount = 4;
         private BoardModel _board = new BoardModel();
@@ -43,9 +58,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private bool _isRiverVisible = false;
 
         private bool _autoGenerateHandRanges = true;
+
         #endregion
 
         #region Properties
+
         public InteractionRequest<CardSelectorNotification> CardSelectorRequest { get; private set; }
 
         public InteractionRequest<CalculateBluffNotification> CalculateBluffRequest { get; private set; }
@@ -54,11 +71,9 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         public BoardModel Board
         {
-            get { return _board; }
-            set
+            get
             {
-                SetProperty(ref _board, value);
-                ClearEquity();
+                return _board;
             }
         }
 
@@ -144,6 +159,18 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        public Street CurrentStreet
+        {
+            get
+            {
+                return _currentStreet;
+            }
+            set
+            {
+                SetProperty(ref _currentStreet, value);
+            }
+        }
+
         public bool AutoGenerateHandRanges
         {
             get { return _autoGenerateHandRanges; }
@@ -153,18 +180,49 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        public Street SelectedStreet
+        {
+            get
+            {
+                var boardCardsCount = Board.Cards?.Count(c => c.Validate()) ?? 0;
+
+                var street = boardCardsCount == 3 ? Street.Flop :
+                    boardCardsCount == 4 ? Street.Turn :
+                    boardCardsCount == 5 ? Street.River : Street.Preflop;
+
+                return street;
+            }
+        }
+
+        public HandHistories.Objects.Hand.HandHistory CurrentHandHistory
+        {
+            get
+            {
+                return _currentHandHistory;
+            }
+        }
+
         #endregion
 
         #region ICommand
 
-        public ICommand SelectCommand { get; set; }
-        public ICommand ClearCommand { get; set; }
-        public ICommand CalculateEquityCommand { get; set; }
-        public ICommand ExportDataCommand { get; set; }
-        public ICommand ResetAllCommand { get; set; }
-        public ICommand RangeCommand { get; set; }
-        public ICommand CalculateBluffCommand { get; set; }
-        public ICommand ShowStreetCardsCommand { get; set; }
+        public ICommand SelectCommand { get; private set; }
+
+        public ICommand ClearCommand { get; private set; }
+
+        public ICommand CalculateEquityCommand { get; private set; }
+
+        public ICommand ExportDataCommand { get; private set; }
+
+        public ICommand ResetAllCommand { get; private set; }
+
+        public ICommand RangeCommand { get; private set; }
+
+        public ICommand CalculateBluffCommand { get; private set; }
+
+        public ICommand ShowStreetCardsCommand { get; private set; }
+
+        public ICommand SetAutoRangeForHeroCommand { get; private set; }
 
         #endregion
 
@@ -177,12 +235,13 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             SelectCommand = new RelayCommand(SelectBoardRange);
             ClearCommand = new RelayCommand(Clear);
-            CalculateEquityCommand = new RelayCommand((Action<object>)this.CalculateEquity);
+            CalculateEquityCommand = new RelayCommand((Action<object>)CalculateEquity);
             ExportDataCommand = new RelayCommand(ExportData);
             ResetAllCommand = new RelayCommand(ResetAll);
             RangeCommand = new RelayCommand(SelectPlayerRange);
             CalculateBluffCommand = new RelayCommand(CalculateBluff);
             ShowStreetCardsCommand = new RelayCommand(ShowStreetCards);
+            SetAutoRangeForHeroCommand = new RelayCommand(SetAutoRangeForHero);
 
             CardSelectorRequest = new InteractionRequest<CardSelectorNotification>();
             CalculateBluffRequest = new InteractionRequest<CalculateBluffNotification>();
@@ -190,8 +249,95 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
             InitPlayersList();
 
+            _board.PropertyChanged += (s, e) =>
+            {
+                if (e.PropertyName == nameof(BoardModel.Cards))
+                {
+                    // need to set new cards for each player model
+                    PlayersList?.ForEach(x =>
+                    {
+                        x.Ranges
+                         .OfType<EquityRangeSelectorItemViewModel>()
+                         .ForEach(r => r.UsedCards = _board.Cards);
+
+                        x.UpdateEquityData();
+
+                        x.CheckBluffToValueBetRatio(CountOpponents(), SelectedStreet);
+                    });
+                }
+            };
+
             ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<RequestEquityCalculatorEvent>().Subscribe(LoadData);
             ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<EquityCalculatorRangeRemovedEvent>().Subscribe(RangeRemoved);
+        }
+
+        private void SetAutoRangeForHero(object obj)
+        {
+            if (_currentHandHistory == null || _currentHandHistory.Hero == null)
+            {
+                return;
+            }
+
+            var heroAutoHands = GetHeroAutoRange(_currentHandHistory.Hero.PlayerName);
+
+            if (heroAutoHands != null)
+            {
+                var hero = PlayersList.FirstOrDefault(x => x.PlayerName == _currentHandHistory.Hero.PlayerName);
+
+                if (hero != null)
+                {
+                    var opponentsCount = CountOpponents();
+
+                    hero.SetRanges(heroAutoHands);
+                    hero.CheckBluffToValueBetRatio(opponentsCount, SelectedStreet);
+                }
+            }
+        }
+
+        internal IEnumerable<EquityRangeSelectorItemViewModel> GetHeroAutoRange(string heroName)
+        {
+            try
+            {
+                var handHistory = _currentHandHistory.DeepClone();
+
+                handHistory.Hero = handHistory.Players.FirstOrDefault(x => x.PlayerName == heroName);
+
+                var heroAutoHands = MainAnalyzer.GetHeroRange(handHistory, _currentStreet);
+
+                if (heroAutoHands != null && heroAutoHands.Any())
+                {
+                    heroAutoHands.ForEach(r => r.UsedCards = _board.Cards);
+
+                    var opponentsCount = CountOpponents();
+
+                    BluffToValueRatioCalculator.AdjustPlayerRange(heroAutoHands, _currentStreet, handHistory, GetBoardText(), opponentsCount);
+                    return heroAutoHands;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not build auto range for hero", e);
+            }
+
+            return null;
+        }
+
+        internal Dictionary<MadeHandType, int> GetCombosByHandType(IEnumerable<string> range)
+        {
+            try
+            {
+                var boardCards = GetBoardText();
+
+                var combosByHandType = MainAnalyzer.GetCombosByHandType(range, boardCards);
+
+                return combosByHandType;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not get combos by hand type.", e);
+            }
+
+            return new Dictionary<MadeHandType, int>();
         }
 
         private void InitPlayersList()
@@ -222,6 +368,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 player.EquityValue = 0.0;
             }
+
             IsCalculateEquityError = false;
             IsCanExport = false;
         }
@@ -235,7 +382,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             try
             {
                 LogProvider.Log.Info("Equity calculation started");
-                var boardString = Board.ToString().Replace("x", "").Replace("X", "");
+                var boardString = GetBoardText();
                 result = await HoldemEquityCalculator.CalculateEquityAsync(PlayersList.Select(x => string.Join(",", x.GetPlayersHand(true))), boardString, cts.Token);
             }
             catch (OperationCanceledException)
@@ -282,6 +429,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 if (obj.IsEmptyRequest)
                 {
                     _currentHandHistory = null;
+                    IsPreflopVisible = IsFlopVisible = IsTurnVisible = IsRiverVisible = false;
+                    CurrentStreet = Street.Null;
                     InitPlayersList();
                     return;
                 }
@@ -297,7 +446,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 LoadBoardData(_currentHandHistory, _currentHandHistory.CommunityCards.Count());
                 LoadPlayersData(_currentHandHistory);
 
-                var strongestOpponent = CalculateStrongestOpponent(_currentHandHistory, _currentSreet);
+                var strongestOpponent = CalculateStrongestOpponent(_currentHandHistory, _currentStreet);
 
                 PlayersList.RemoveAll(x =>
                        _currentHandHistory
@@ -318,31 +467,34 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         private void SetStreetVisibility(HandHistories.Objects.Hand.HandHistory CurrentGame)
         {
-            IsPreflopVisible = CurrentGame.PreFlop != null && CurrentGame.PreFlop.Any();
-            IsFlopVisible = CurrentGame.Flop != null && CurrentGame.Flop.Any();
-            IsTurnVisible = CurrentGame.Turn != null && CurrentGame.Turn.Any();
-            IsRiverVisible = CurrentGame.River != null && CurrentGame.River.Any();
+            IsPreflopVisible = CurrentGame != null && CurrentGame.PreFlop != null && CurrentGame.PreFlop.Any();
+            IsFlopVisible = CurrentGame != null && CurrentGame.Flop != null && CurrentGame.Flop.Any();
+            IsTurnVisible = CurrentGame != null && CurrentGame.Turn != null && CurrentGame.Turn.Any();
+            IsRiverVisible = CurrentGame != null && CurrentGame.River != null && CurrentGame.River.Any();
 
             if (IsRiverVisible)
-                _currentSreet = HandHistories.Objects.Cards.Street.River;
+                CurrentStreet = Street.River;
             else if (IsTurnVisible)
-                _currentSreet = HandHistories.Objects.Cards.Street.Turn;
+                CurrentStreet = Street.Turn;
             else if (IsFlopVisible)
-                _currentSreet = HandHistories.Objects.Cards.Street.Flop;
+                CurrentStreet = Street.Flop;
             else if (IsPreflopVisible)
-                _currentSreet = HandHistories.Objects.Cards.Street.Preflop;
+                CurrentStreet = Street.Preflop;
         }
 
         private void LoadPlayersData(HandHistories.Objects.Hand.HandHistory CurrentGame)
         {
             PlayersList.Clear();
+
             var players = CurrentGame.Players;
-            for (int i = 0; i < players.Count(); i++)
+
+            for (int i = 0; i < players.Count; i++)
             {
-                List<CardModel> list = new List<CardModel>();
-                if (players.ElementAt(i).hasHoleCards)
+                var list = new List<CardModel>();
+
+                if (players[i].hasHoleCards)
                 {
-                    foreach (var card in players.ElementAt(i).HoleCards)
+                    foreach (var card in players[i].HoleCards)
                     {
                         list.Add(new CardModel()
                         {
@@ -351,14 +503,15 @@ namespace DriveHUD.EquityCalculator.ViewModels
                         });
                     }
                 }
-                if (i > PlayersList.Count() - 1)
+
+                if (i > PlayersList.Count - 1)
                 {
                     PlayersList.Add(new PlayerModel());
                 }
 
-                var currentPlayer = PlayersList.ElementAt(i);
+                var currentPlayer = PlayersList[i];
                 currentPlayer.SetCollection(list);
-                currentPlayer.PlayerName = players.ElementAt(i).PlayerName;
+                currentPlayer.PlayerName = players[i].PlayerName;
             }
         }
 
@@ -373,6 +526,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
 
             List<CardModel> boardCardsList = new List<CardModel>();
+
             int length = numberOfCards < CurrentGame.CommunityCards.Count() ?
                             numberOfCards :
                             CurrentGame.CommunityCards.Count();
@@ -385,42 +539,80 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     Suit = new RangeCardSuit().StringToSuit(CurrentGame.CommunityCards.ElementAt(i).Suit)
                 });
             }
+
             Board.SetCollection(boardCardsList);
         }
 
-        private string CalculateStrongestOpponent(HandHistories.Objects.Hand.HandHistory CurrentGame, HandHistories.Objects.Cards.Street CurrentStreet)
+        private string CalculateStrongestOpponent(HandHistories.Objects.Hand.HandHistory CurrentGame, Street CurrentStreet)
         {
-            IEnumerable<RangeSelectorItemViewModel> oponnentHands = new List<RangeSelectorItemViewModel>();
-            var opponentName = string.Empty;
-            MainAnalyzer.GetStrongestOpponent(CurrentGame, CurrentStreet, out opponentName, out oponnentHands);
-            if (AutoGenerateHandRanges)
+            try
             {
-                if (!string.IsNullOrEmpty(opponentName) && PlayersList.Any(x => x.PlayerName == opponentName))
+                IEnumerable<EquityRangeSelectorItemViewModel> oponnentHands = new List<EquityRangeSelectorItemViewModel>();
+
+                var opponentName = string.Empty;
+
+                MainAnalyzer.GetStrongestOpponent(CurrentGame, CurrentStreet, out opponentName, out oponnentHands);
+
+                if (AutoGenerateHandRanges)
                 {
-                    var player = PlayersList.First(x => x.PlayerName == opponentName);
-                    player.SetRanges(oponnentHands);
+                    if (!string.IsNullOrEmpty(opponentName) &&
+                        oponnentHands.Any() &&
+                        PlayersList.Any(x => x.PlayerName == opponentName && x.Cards.All(c => !c.Validate())))
+                    {
+                        oponnentHands.ForEach(r => r.UsedCards = _board.Cards);
+
+                        var player = PlayersList.FirstOrDefault(x => x.PlayerName == opponentName);
+                        player?.SetRanges(oponnentHands);
+                    }
                 }
+
+                return opponentName;
             }
-            return opponentName;
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not determine the strongest opponent", ex);
+            }
+
+            return string.Empty;
         }
+
+        private int CountOpponents()
+        {
+            if (_currentHandHistory == null)
+            {
+                return PlayersList.Count - 1;
+            }
+
+            var opponentsCount = _currentHandHistory.HandActions
+                .Where(x => x.HandActionType != HandActionType.FOLD && x.PlayerName != _currentHandHistory.Hero?.PlayerName && x.Street >= Street.Flop)
+                .Select(x => x.PlayerName)
+                .Distinct()
+                .Count() - 1;
+
+            return opponentsCount;
+        }
+
         #endregion
 
         #region Popups
+
         private void RaiseCardSelectorView(ICardCollectionContainer container, CardSelectorType selectorType)
         {
             IsCalculateEquityError = false;
 
-            this.CardSelectorRequest.Raise(
+            CardSelectorRequest.Raise(
                new CardSelectorNotification
                {
+                   Source = this,
                    Title = string.Empty,
                    CardsContainer = container,
                    SelectorType = selectorType,
-                   UsedCards = GetProhibitedCardsFor(container)
+                   UsedCards = GetProhibitedCardsFor(container),
+                   BoardCards = Board.Cards.Where(x => x.Rank != RangeCardRank.None && x.Suit != RangeCardSuit.None).ToList()
                },
                returned =>
                {
-                   if (returned != null)
+                   if (returned != null && returned.Confirmed)
                    {
                        if (returned.ReturnType.Equals(CardSelectorReturnType.Cards))
                        {
@@ -429,7 +621,9 @@ namespace DriveHUD.EquityCalculator.ViewModels
                        else if (returned.ReturnType.Equals(CardSelectorReturnType.Range))
                        {
                            container.SetRanges(returned.CardsContainer.Ranges);
+                           (container as PlayerModel)?.CheckBluffToValueBetRatio(CountOpponents(), SelectedStreet);
                        }
+
                        ClearEquity();
                    }
                });
@@ -437,7 +631,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         private void RaiseCalculateBluffNotification(PlayerModel playerModel)
         {
-            this.CalculateBluffRequest.Raise(new CalculateBluffNotification
+            CalculateBluffRequest.Raise(new CalculateBluffNotification
             {
                 Title = string.Empty,
                 EquityValue = playerModel.EquityValue,
@@ -447,26 +641,29 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         private void RaiseExportDataNotification()
         {
-            this.ExportRequest.Raise(new ExportNotification()
+            ExportRequest.Raise(new ExportNotification()
             {
                 Title = string.Empty,
                 CurrentHandHistory = _currentHandHistory,
-                PlayersList = this.PlayersList.Where(x => x.PlayerCards.Count > 0),
-                BoardCards = this.Board.Cards
+                PlayersList = PlayersList.Where(x => x.PlayerCards.Count > 0),
+                BoardCards = Board.Cards
             });
         }
 
         private List<CardModel> GetProhibitedCardsFor(ICardCollectionContainer container)
         {
             var usedCards = new List<CardModel>();
+
             foreach (var player in PlayersList.Where(x => x != container))
             {
                 usedCards.AddRange(player.Cards.Where(x => x.Rank != RangeCardRank.None && x.Suit != RangeCardSuit.None));
             }
+
             if (Board != container)
             {
                 usedCards.AddRange(Board.Cards.Where(x => x.Rank != RangeCardRank.None && x.Suit != RangeCardSuit.None));
             }
+
             return usedCards;
         }
         #endregion
@@ -475,24 +672,25 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         private void ShowStreetCards(object obj)
         {
-            _currentSreet = (HandHistories.Objects.Cards.Street)obj;
-            switch (_currentSreet)
+            CurrentStreet = (Street)obj;
+
+            switch (CurrentStreet)
             {
-                case HandHistories.Objects.Cards.Street.Preflop:
+                case Street.Preflop:
                     LoadBoardData(_currentHandHistory, 0);
                     break;
-                case HandHistories.Objects.Cards.Street.Flop:
+                case Street.Flop:
                     LoadBoardData(_currentHandHistory, 3);
                     break;
-                case HandHistories.Objects.Cards.Street.Turn:
+                case Street.Turn:
                     LoadBoardData(_currentHandHistory, 4);
                     break;
-                case HandHistories.Objects.Cards.Street.River:
+                case Street.River:
                     LoadBoardData(_currentHandHistory, 5);
                     break;
             }
 
-            CalculateStrongestOpponent(_currentHandHistory, _currentSreet);
+            CalculateStrongestOpponent(_currentHandHistory, _currentStreet);
             ClearEquity();
         }
 
@@ -502,8 +700,10 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 player.Reset();
             }
+
             Board.Reset();
             ClearEquity();
+
             IsCalculateEquityError = false;
         }
 
@@ -536,6 +736,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 IsCalculateEquityError = true;
                 return;
             }
+
             IsCalculateEquityError = false;
 
             await CalculateEquity();
@@ -568,6 +769,12 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 RaiseCalculateBluffNotification(selectedPlayer);
             }
         }
+
+        private string GetBoardText()
+        {
+            return Board?.ToString().Replace("x", string.Empty).Replace("X", string.Empty);
+        }
+
         #endregion
     }
 }

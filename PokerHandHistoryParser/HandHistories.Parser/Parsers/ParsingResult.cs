@@ -68,5 +68,10 @@ namespace HandHistories.Parser.Parsers
                 return Source != null && Source.GameDescription != null && Source.GameDescription.IsTournament && Source.GameDescription.Tournament.IsSummary;
             }
         }
+
+        /// <summary>
+        ///  Name of imported file
+        /// </summary>
+        public string FileName { get; set; }
     }
 }

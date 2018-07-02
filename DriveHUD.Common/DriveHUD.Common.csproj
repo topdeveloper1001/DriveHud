@@ -80,7 +80,7 @@
     <Compile Include="Exceptions\IOwnLogPoliticsException.cs" />
     <Compile Include="Exceptions\ITypeSpecifiedException.cs" />
     <Compile Include="Exceptions\LocalizableException.cs" />
-    <Compile Include="Exceptions\ProcessExtensions.cs" />
+    <Compile Include="Extensions\ProcessExtensions.cs" />
     <Compile Include="Extensions\ConcurrentCollectionExtensions.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\ReaderWriterLockSlimExtensions.cs" />
@@ -155,6 +155,7 @@
     <Compile Include="WinApi\PipeNative.cs" />
     <Compile Include="WinApi\PipeOpenMode.cs" />
     <Compile Include="WinApi\ProcessAccesFlags.cs" />
+    <Compile Include="WinApi\ProcessBasicInformation.cs" />
     <Compile Include="WinApi\ProcessCreationFlags.cs" />
     <Compile Include="WinApi\ProcessInformation.cs" />
     <Compile Include="WinApi\RectType.cs" />

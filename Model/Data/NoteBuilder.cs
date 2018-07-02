@@ -48,6 +48,7 @@ namespace Model.Data
                                   let countText = count > 1 ? $" ({count})" : string.Empty
                                   select $"{noteText}{cardRangeText}{countText}")
                                   .OrderBy(x => GetStreetOrderNumber(x))
+                                  .ThenBy(x => x)
                                   .ToArray();
 
             var autoNoteText = string.Join(Environment.NewLine, autoNotesLines);
@@ -122,6 +123,21 @@ namespace Model.Data
                 default:
                     return 4;
             }
+        }
+
+        private static IEnumerable<string> GroupHands(List<String> ungroupedHands)
+        {
+            var cards = new List<string> { "A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2" };
+
+            var groupedHands = (from hand in ungroupedHands
+                                let card1 = cards.IndexOf(hand[0].ToString()) < cards.IndexOf(hand[2].ToString()) ? hand[0].ToString() : hand[2].ToString()
+                                let card2 = cards.IndexOf(hand[0].ToString()) < cards.IndexOf(hand[2].ToString()) ? hand[2].ToString() : hand[0].ToString()
+                                let suit = hand[0].Equals(hand[2]) ? string.Empty : hand[1].Equals(hand[3]) ? "s" : "o"
+                                group hand by new { card1, card2, suit } into grouped
+                                select $"{grouped.Key.card1}{grouped.Key.card2}{grouped.Key.suit}"
+                                ).ToList();
+
+            return groupedHands.Distinct();
         }
     }
 }

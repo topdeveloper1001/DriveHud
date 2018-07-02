@@ -9,20 +9,20 @@ UTG ($53.25) [VPIP: 4.6% | PFR: 3.9% | AGG: 15% | 3-Bet: 0% | Hands: 100]
 MP ($53.13) [VPIP: 19% | PFR: 9.9% | AGG: 18.3% | 3-Bet: 0.6% | Hands: 4170]
 HJ ($52.74) [VPIP: 32% | PFR: 12% | AGG: 15.5% | 3-Bet: 1% | Hands: 5000]
 
-Dealt to Hero: 3:spade: K:spade:
+Dealt to Hero: 3s Ks
 
 UTG Folds, MP Folds, HJ Folds, CO Folds, BTN Folds, HERO Raises To $1.50, BB Calls $1
 
 Hero SPR on Flop: [16.63 effective]
-Flop ($3.00): Q:diamond: 6:club: T:spade:
+Flop ($3.00): Qd 6c Ts
 HERO Checks, BB Checks
 
-Turn ($3.00): Q:diamond: 6:club: T:spade: K:club:
+Turn ($3.00): Qd 6c Ts Kc
 HERO Checks, BB Bets $1.50 (Rem. Stack: 48.4), HERO Calls $1.50 (Rem. Stack: 49.47)
 
-River ($6.00): Q:diamond: 6:club: T:spade: K:club: Q:spade:
+River ($6.00): Qd 6c Ts Kc Qs
 HERO Checks, BB Bets $6 (Rem. Stack: 42.4), HERO Calls $6 (Rem. Stack: 43.47)
 
-BB shows: 8:diamond: J:diamond:
+BB shows: 8d Jd
 
 HERO wins: $17.1

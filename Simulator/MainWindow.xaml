@@ -9,6 +9,7 @@
     Title="DriveHUD Poker Client Emulator"
     Height="350"
     Width="525"
+    WindowStartupLocation="Manual"
     Icon="drivehud.ico">
     <Window.Resources>
 

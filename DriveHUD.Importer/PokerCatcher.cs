@@ -15,7 +15,6 @@ using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using Microsoft.Practices.ServiceLocation;
-using Model.Settings;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -163,34 +162,86 @@ namespace DriveHUD.Importers
 
             var pokerClientProcess = processes.FirstOrDefault(x =>
             {
-                if (!x.ProcessName.Equals(ProcessName, StringComparison.OrdinalIgnoreCase))
+                try
                 {
-                    return false;
-                }
-
-                if (!string.IsNullOrEmpty(WindowClassName))
-                {
-                    var sb = new StringBuilder(256);
-
-                    if (WinApi.GetClassName(x.MainWindowHandle, sb, sb.Capacity) != 0)
+                    if (!IsProcessMatch(x))
                     {
-                        var windowTitle = WinApi.GetWindowText(x.MainWindowHandle);
-                        var windowClassName = sb.ToString();
+                        return false;
+                    }
 
-                        if (windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase))
+                    LogProvider.Log.Info($"Found the suitable process {x.ProcessName} [{x.Id}], main window = [{x.MainWindowHandle}] [{Identifier}]");
+
+                    if (!string.IsNullOrEmpty(WindowClassName))
+                    {
+                        if (!IsAssociatedWindow(x.MainWindowHandle))
                         {
-                            LogProvider.Log.Info($"Found the process with main window = [{windowTitle}, {windowClassName}] [{Identifier}]");
-                            return true;
+                            LogProvider.Log.Info($"The process {x.ProcessName} [{x.Id}] has no main window. Checking all associated windows [{Identifier}]");
+
+                            var wasFound = false;
+
+                            foreach (ProcessThread thread in x.Threads)
+                            {
+                                WinApi.EnumThreadWindows(thread.Id, (hWnd, lParam) =>
+                                {
+                                    if (IsAssociatedWindow(hWnd))
+                                    {
+                                        wasFound = true;
+                                        return false;
+                                    }
+
+                                    return true;
+                                }, IntPtr.Zero);
+                            }
+
+                            return wasFound;
                         }
                     }
 
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Could not check if process matched conditions.", e);
                     return false;
                 }
-
-                return true;
             });
 
             return pokerClientProcess;
+        }
+
+        /// <summary>
+        /// Determines whenever the specified window is associated with the current catcher
+        /// </summary>
+        /// <param name="hWnd">Window to check</param>
+        /// <returns>True if window satisfies conditiond; otherwise - false</returns>
+        protected virtual bool IsAssociatedWindow(IntPtr hWnd)
+        {
+            var sb = new StringBuilder(256);
+
+            if (hWnd == IntPtr.Zero || WinApi.GetClassName(hWnd, sb, sb.Capacity) == 0)
+            {
+                return false;
+            }
+
+            var windowTitle = WinApi.GetWindowText(hWnd);
+            var windowClassName = sb.ToString();
+
+            var match = IsWindowMatch(windowTitle, windowClassName);
+
+            LogProvider.Log.Info($"Check if the window [{hWnd}, {windowTitle}, {windowClassName}] of process matches: {match} [{Identifier}]");
+
+            return match;
+        }
+
+        /// <summary>
+        /// Checks whenever window matches conditions
+        /// </summary>
+        /// <param name="windowTitle"></param>
+        /// <param name="windowClassName"></param>
+        /// <returns></returns>
+        protected virtual bool IsWindowMatch(string windowTitle, string windowClassName)
+        {
+            return windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase);
         }
 
         /// <summary>
@@ -252,7 +303,7 @@ namespace DriveHUD.Importers
                     LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" [{1}] has been found. [{2}]", ProcessName, pokerClientProcess.Id, Identifier));
                 }
 
-                if (!isInjected && failedAttempts < AllowedFailedAttempts)
+                if (!isInjected && failedAttempts < AllowedFailedAttempts && CanInject())
                 {
                     try
                     {
@@ -260,7 +311,7 @@ namespace DriveHUD.Importers
                     }
                     catch (Exception e)
                     {
-                        LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Injecting of processes \"{0}\" failed. [{1}]", ProcessName, Identifier), e);
+                        LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Injecting into the process \"{0}\" failed. [{1}]", ProcessName, Identifier), e);
 
                         failedAttempts++;
 
@@ -276,6 +327,8 @@ namespace DriveHUD.Importers
                     AbortCatching();
                     return;
                 }
+
+                DoPostInjectJob();
 
                 try
                 {
@@ -306,24 +359,31 @@ namespace DriveHUD.Importers
         /// </summary>
         protected void AbortCatching()
         {
-            if (pokerClientProcess != null && !pokerClientProcess.HasExited)
-            {
-                if (injectedProcessModule != null)
-                {
-                    try
-                    {
-                        EjectDll(injectedProcessModule.BaseAddress);
-                    }
-                    catch (Exception e)
-                    {
-                        LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Ejecting of processes \"{0}\" failed. [{1}]", ProcessName, Identifier), e);
-                    }
-                }
-
-                handle = IntPtr.Zero;
-            }
-
+            EjectDll();
             RaiseProcessStopped();
+        }
+
+        /// <summary>
+        /// Check if dll can be injected into the process
+        /// </summary>
+        /// <returns></returns>
+        protected virtual bool CanInject()
+        {
+            return true;
+        }
+
+        protected virtual void DoPostInjectJob()
+        {
+        }
+
+        /// <summary>
+        /// Indicates whether the specified process matches conditions of the current catcher
+        /// </summary>
+        /// <param name="process">Process to check</param>
+        /// <returns>True if process matches; otherwise - false</returns>
+        protected virtual bool IsProcessMatch(Process process)
+        {
+            return process.ProcessName.Equals(ProcessName, StringComparison.OrdinalIgnoreCase);
         }
 
         #region Dll injection
@@ -470,9 +530,36 @@ namespace DriveHUD.Importers
             }
         }
 
+        protected virtual void EjectDll()
+        {
+            try
+            {
+                if (pokerClientProcess != null && !pokerClientProcess.HasExited)
+                {
+                    if (injectedProcessModule != null)
+                    {
+                        try
+                        {
+                            EjectDll(injectedProcessModule.BaseAddress);
+                        }
+                        catch (Exception e)
+                        {
+                            LogProvider.Log.Error(this, $"Ejecting from the process \"{ProcessName}\" [{pokerClientProcess.Id}] failed. [{Identifier}]", e);
+                        }
+                    }
+
+                    handle = IntPtr.Zero;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not eject dll from the process {ProcessName}. [{Identifier}]", e);
+            }
+        }
+
         protected virtual void EjectDll(IntPtr injectedProcessAddress)
         {
-            LogProvider.Log.Log(this, string.Format(CultureInfo.InvariantCulture, "Ejecting from process \"{0}\". [{1}]", ProcessName, Identifier), LogMessageType.Info);
+            LogProvider.Log.Info(this, $"Ejecting from the process \"{ProcessName}\" [{pokerClientProcess.Id}]. [{Identifier}]");
 
             IntPtr hThread = IntPtr.Zero;
 
