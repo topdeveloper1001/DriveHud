@@ -430,6 +430,44 @@
             </Style>
 
             <Style
+                x:Key="SimpleImageButtonStyle"
+                TargetType="{x:Type Button}">
+                <Setter
+                    Property="Cursor"
+                    Value="Hand" />
+                <Setter
+                    Property="SnapsToDevicePixels"
+                    Value="true" />
+                <Setter
+                    Property="OverridesDefaultStyle"
+                    Value="true" />
+                <Setter
+                    Property="BorderThickness"
+                    Value="0" />
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type Button}">
+                            <Border
+                                x:Name="Border"
+                                TextBlock.Foreground="{TemplateBinding Foreground}"
+                                Padding="{TemplateBinding Padding}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter
+                                    Margin="{TemplateBinding Padding}"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    RecognizesAccessKey="True" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
                 x:Key="FoldCheckRadioButtonStyle"
                 TargetType="{x:Type RadioButton}"
                 BasedOn="{StaticResource RadioButtonStyle}">
@@ -837,7 +875,7 @@
     </UserControl.Resources>
 
     <ScrollViewer
-        Margin="20 10">
+        Margin="20,10,5,10">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
@@ -976,9 +1014,15 @@
                                             CommandParameter="{Binding}" />
                                     </i:EventTrigger>
                                     <i:EventTrigger
-                                        EventName="MouseDown">
+                                        EventName="MouseLeftButtonDown">
                                         <i:InvokeCommandAction
-                                            Command="{Binding RelativeSource={RelativeSource AncestorType=ItemsControl}, Path=DataContext.OnMouseDownCommand}"
+                                            Command="{Binding RelativeSource={RelativeSource AncestorType=ItemsControl}, Path=DataContext.OnMouseLeftDownCommand}"
+                                            CommandParameter="{Binding}" />
+                                    </i:EventTrigger>
+                                    <i:EventTrigger
+                                        EventName="MouseRightButtonDown">
+                                        <i:InvokeCommandAction
+                                            Command="{Binding RelativeSource={RelativeSource AncestorType=ItemsControl}, Path=DataContext.OnMouseRightDownCommand}"
                                             CommandParameter="{Binding}" />
                                     </i:EventTrigger>
                                 </i:Interaction.Triggers>
@@ -1126,6 +1170,8 @@
                             Width="110" />
                         <ColumnDefinition
                             Width="110" />
+                        <ColumnDefinition
+                            Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition />
@@ -1173,6 +1219,14 @@
                         Style="{StaticResource ValueBetRadioButtonStyle}"
                         IsChecked="{Binding EquitySelectionMode, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static vm:EquitySelectionMode.ValueBet}}"
                         Content="{ResX Key=Common_EquityCalculator_ValueBet}" />
+
+                    <Button
+                        Margin="20,0,0,0"
+                        Grid.Column="4"
+                        Grid.Row="1"
+                        Width="100"
+                        Command="{Binding AutoRangeCommand}"
+                        Content="{ResX Key=Common_EquityCalculator_AutoRange}" />
 
                     <StackPanel
                         Grid.Column="0"
@@ -1275,6 +1329,7 @@
                 Margin="10 0"
                 Grid.Row="0"
                 Orientation="Vertical">
+                <!-- Cards/Preflop button -->
                 <StackPanel
                     Orientation="Horizontal"
                     HorizontalAlignment="Center">
@@ -1289,10 +1344,20 @@
                         Style="{StaticResource ButtonStyle}"
                         Margin="10"
                         Width="70" />
+                    <Button
+                        Style="{StaticResource SimpleImageButtonStyle}"
+                        Command="{Binding HelpCommand}">
+                        <Image
+                            Source="pack://application:,,,/DriveHUD.Common.Resources;component/images/HelpButton.png"
+                            Width="18"
+                            Height="18" />
+                    </Button>
                 </StackPanel>
 
-
-                <Grid>
+                <!-- Help text -->
+                <Grid
+                    Margin="0,0,0,5"
+                    Visibility="{Binding IsHelpVisible, Converter={dh:BoolToVisibilityConverter}}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition
                             Width="Auto" />
@@ -1357,48 +1422,87 @@
                         TextWrapping="Wrap" />
                 </Grid>
 
+                <!-- Hands statistic -->
+                <Grid
+                    Margin="0,0,0,5"
+                    Grid.IsSharedSizeScope="True">
+                    <ItemsControl
+                        ItemsSource="{Binding HandStatistics}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid
+                                    Visibility="{Binding IsVisible, Converter={dh:BoolToVisibilityConverter}}"
+                                    Height="19">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition
+                                            SharedSizeGroup="HandTypeGroup"
+                                            Width="Auto" />
+                                        <ColumnDefinition
+                                            SharedSizeGroup="ProgressGroup"
+                                            Width="100" />
+                                        <ColumnDefinition
+                                            SharedSizeGroup="PercentGroup"
+                                            Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock
+                                        Grid.Column="0"
+                                        Margin="0,0,3,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding HandType, Converter={dh:EnumToLocalizedStringConverter}}" />
+                                    <dh:ProgressBarEx
+                                        Grid.Column="1"
+                                        Height="17"
+                                        Style="{StaticResource ProgressBarExStyle1}"
+                                        Value="{Binding Combos}"
+                                        Maximum="{Binding TotalCombos}" />
+                                    <TextBlock
+                                        Grid.Column="2"
+                                        Margin="5,0,0,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding Percentage, StringFormat=P1}" />
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Grid>
 
-                <StackPanel
-                    HorizontalAlignment="Center">
+                <!-- Predefined range -->
+                <UniformGrid
+                    Columns="2"
+                    Rows="2">
                     <Button
                         Content="{ResX Common_Ranges_Predef}"
                         Command="{Binding ShowPredefinedRangesViewCommand}"
-                        Height="30"
-                        Width="180"
-                        Margin="5" />
+                        Height="25"
+                        Margin="0,5,3,0" />
                     <Button
                         Content="{ResX Common_Ranges_All}"
                         Command="{Binding SelectAllPairsCommand}"
-                        Height="30"
-                        Width="180"
-                        Margin="5" />
+                        Height="25"
+                        Margin="0,5,0,0" />
                     <Button
                         Content="{ResX Common_Ranges_Suited}"
                         Command="{Binding SelectSuitedCommand}"
-                        Height="30"
-                        Width="180"
-                        Margin="5" />
+                        Height="25"
+                        Margin="0,3,3,5" />
                     <Button
                         Content="{ResX Common_Ranges_OffSuited}"
                         Command="{Binding SelectOffSuitedCommand}"
-                        Height="30"
-                        Width="180"
-                        Margin="5" />
-                </StackPanel>
+                        Height="25"
+                        Margin="0,3,0,5" />
+                </UniformGrid>
 
+                <!-- Suits -->
                 <DockPanel
-                    Height="50">
-                    <DockPanel
-                        DockPanel.Dock="Bottom">
-                        <TextBlock
-                            Text="{ResX Common_Ranges_SuitsFor}" />
-                        <TextBlock
-                            Text="{Binding SuitsForCaption}"
-                            TextTrimming="WordEllipsis"
-                            TextWrapping="Wrap" />
-                        <TextBlock
-                            Text=":" />
-                    </DockPanel>
+                    DockPanel.Dock="Bottom">
+                    <TextBlock
+                        Text="{ResX Common_Ranges_SuitsFor}" />
+                    <TextBlock
+                        Text="{Binding SuitsForCaption}"
+                        TextTrimming="WordEllipsis"
+                        TextWrapping="Wrap" />
+                    <TextBlock
+                        Text=":" />
                 </DockPanel>
 
                 <ItemsControl
@@ -1486,7 +1590,15 @@
                     Command="{Binding ResetCommand}"
                     Content="{ResX Common_Reset}"
                     Margin="15"
+                    Height="27"
                     Width="75" />
+                <Button
+                    Command="{Binding ReplayCommand}"
+                    Visibility="{Binding IsReplayHandVisible, Converter={dh:BoolToVisibilityConverter}}"
+                    Content="{ResX Common_ReplayHand}"
+                    Margin="15"
+                    Height="27"
+                    Width="105" />
             </StackPanel>
 
         </Grid>

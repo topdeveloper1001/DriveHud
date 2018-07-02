@@ -16,6 +16,7 @@ using DriveHUD.Common.Progress;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Helpers;
+using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
@@ -36,7 +37,8 @@ namespace DriveHUD.Importers.WinningPokerNetwork
     {
         private const string PhhFileExtension = ".phh";
         private const string GameStartedSearchPattern = "Game started at:";
-        private const string HandEndedPattern = "Game ended at: ";
+        private const string HandEndedPatternV1 = "Game ended at: ";
+        private const string HandV2Prefix = "Game Hand #";
 
         protected override string HandHistoryFilter
         {
@@ -57,13 +59,15 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             //HH20161125 T6748379-G37397187.txt, where T6748379 is tournament number
             var tournamentNumber = GetTournamentNumberFromFile(fileName);
 
+            var capturedFiles = actualCapturedFiles.Values.Concat(notActualCapturedFiles.Values);
+
             if (!string.IsNullOrEmpty(tournamentNumber))
             {
-                var session = capturedFiles.Keys.FirstOrDefault(x => x.Contains(tournamentNumber));
+                var capturedFile = capturedFiles.FirstOrDefault(x => x.ImportedFile.FileName.Contains(tournamentNumber));
 
-                if (!string.IsNullOrWhiteSpace(session))
+                if (capturedFile != null)
                 {
-                    return capturedFiles[session].Session;
+                    return capturedFile.Session;
                 }
             }
 
@@ -105,6 +109,13 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             return true;
         }
 
+        protected override void ProcessHand(string handHistory, GameInfo gameInfo)
+        {
+            gameInfo.UpdateAction = UpdateGameInfo;
+
+            base.ProcessHand(handHistory, gameInfo);
+        }
+
         protected override IEnumerable<ParsingResult> ImportHand(string handHistory, GameInfo gameInfo, IFileImporter dbImporter, DHProgress progress)
         {
             // client window contains some additional information about the game, so add it to the HH if possible            
@@ -113,11 +124,13 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             return dbImporter.Import(handHistory, progress, gameInfo);
         }
 
-        protected override PlayerList GetPlayerList(HandHistory handHistory)
+        protected override PlayerList GetPlayerList(HandHistory handHistory, GameInfo gameInfo)
         {
             var playerList = handHistory.Players;
 
-            var maxPlayers = handHistory.GameDescription.SeatType.MaxPlayers;
+            var maxPlayers = (int)gameInfo.TableType > handHistory.GameDescription.SeatType.MaxPlayers ?
+                (int)gameInfo.TableType :
+                handHistory.GameDescription.SeatType.MaxPlayers;
 
             var heroSeat = handHistory.Hero != null ? handHistory.Hero.SeatNumber : 0;
 
@@ -145,7 +158,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
         protected override string GetHandTextFromStream(Stream fs, Encoding encoding, string fileName)
         {
-            // possible for WPN, since they remove partial data if table was closed before hand had been finished
+            // possible for WPN, since they remove partial data if table was closed before hand had been finished            
             if (fs.Position > fs.Length)
             {
                 fs.Seek(0, SeekOrigin.End);
@@ -157,20 +170,28 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 return string.Empty;
             }
 
-            StringBuilder builder = new StringBuilder();
+            var builder = new StringBuilder();
 
             long lastHandEndedPosition = fs.Position;
 
-            using (var streamReader = new StreamReader(fs, encoding, false, 1024, true))
+            var wpnFormat = WPNFormat.V1;
+
+            using (var streamReader = new StreamReader(fs, encoding, false, 4096, true))
             {
-                StringBuilder tempStringBuilder = new StringBuilder();
+                var tempStringBuilder = new StringBuilder();
 
                 while (!streamReader.EndOfStream)
                 {
                     var line = streamReader.ReadLine();
                     tempStringBuilder.AppendLine(line);
 
-                    if (line.StartsWith(HandEndedPattern))
+                    if (line.StartsWith(HandV2Prefix, StringComparison.OrdinalIgnoreCase))
+                    {
+                        wpnFormat = WPNFormat.V2;
+                    }
+
+                    if ((wpnFormat == WPNFormat.V1 && line.StartsWith(HandEndedPatternV1)) ||
+                        (wpnFormat == WPNFormat.V2 && line == string.Empty))
                     {
                         lastHandEndedPosition = streamReader.GetPosition();
 
@@ -190,6 +211,13 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
         protected override bool InternalMatch(string title, ParsingResult parsingResult)
         {
+            if (parsingResult != null && parsingResult.Source != null &&
+                parsingResult.Source.FullHandHistoryText != null &&
+                parsingResult.Source.FullHandHistoryText.StartsWith(HandV2Prefix, StringComparison.OrdinalIgnoreCase))
+            {
+                return InternalMatchV2(title, parsingResult);
+            }
+
             var tableName = parsingResult.Source.TableName;
 
             if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(tableName))
@@ -213,7 +241,14 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
             return isTitleMatch;
         }
-     
+
+        protected virtual bool InternalMatchV2(string title, ParsingResult parsingResult)
+        {
+            // $2 Jackpot Holdem No Limit Hold'em - 10/20 (8952347)
+            return parsingResult.GameType != null && parsingResult.GameType.Istourney &&
+                parsingResult.HandHistory != null && title.Contains($" ({parsingResult.HandHistory.Tourneynumber})");
+        }
+
         protected override EnumTableType ParseTableType(ParsingResult parsingResult, GameInfo gameInfo)
         {
             EnumTableType tableType;
@@ -333,7 +368,8 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 {
                     Source = new HandHistory
                     {
-                        TableName = tableName
+                        TableName = tableName,
+                        FullHandHistoryText = handHistory
                     }
                 };
 
@@ -356,6 +392,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 if (window != IntPtr.Zero)
                 {
                     windowTitleText = WinApi.GetWindowText(window);
+                    gameInfo.WindowHandle = window.ToInt32();
                 }
             }
 
@@ -509,6 +546,48 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             }
 
             return 0m;
+        }
+
+        private void UpdateGameInfo(IEnumerable<ParsingResult> parsingResults, GameInfo gameInfo)
+        {
+            var parsingResult = parsingResults?.FirstOrDefault();
+
+            if (parsingResult == null || parsingResult.Source == null || gameInfo == null)
+            {
+                return;
+            }
+
+            var window = gameInfo.WindowHandle == 0 ? FindWindow(parsingResult) : new IntPtr(gameInfo.WindowHandle);
+
+            if (window == IntPtr.Zero)
+            {
+                return;
+            }
+
+            // set pointer to found window to prevent another search
+            if (gameInfo.WindowHandle == 0)
+            {
+                gameInfo.WindowHandle = window.ToInt32();
+            }
+
+            var title = WinApi.GetWindowText(window);
+
+            var jackpotIndex = title.IndexOf(" Jackpot");
+
+            // process only jackpot tables
+            if (jackpotIndex < 0 || !ParserUtils.TryParseMoney(title.Substring(0, jackpotIndex).Trim(), out decimal buyin) ||
+                parsingResult.Source.GameDescription == null || !parsingResult.Source.GameDescription.IsTournament)
+            {
+                return;
+            }
+
+            parsingResult.Source.GameDescription.Tournament.BuyIn = Buyin.FromBuyinRake(buyin, 0, Currency.USD);
+        }
+
+        private enum WPNFormat
+        {
+            V1,
+            V2
         }
     }
 }

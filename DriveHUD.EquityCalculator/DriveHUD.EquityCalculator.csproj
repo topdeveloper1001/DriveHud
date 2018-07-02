@@ -113,6 +113,8 @@
     <Compile Include="Analyzer\HandHistory.cs" />
     <Compile Include="Analyzer\HandStreetResult.cs" />
     <Compile Include="Analyzer\Jacob.cs" />
+    <Compile Include="Analyzer\MadeHandType.cs" />
+    <Compile Include="Analyzer\PairType.cs" />
     <Compile Include="Analyzer\Player.cs" />
     <Compile Include="Analyzer\Settings.cs" />
     <Compile Include="Analyzer\Stats.cs" />

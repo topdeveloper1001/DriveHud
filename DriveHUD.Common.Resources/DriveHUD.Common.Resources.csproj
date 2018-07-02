@@ -721,6 +721,16 @@
   <ItemGroup>
     <EmbeddedResource Include="Layouts\DH 7-max.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\HelpButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH 6-max PokerStars.xml" />
+    <EmbeddedResource Include="Layouts\DH 5-max Winamax.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\Mappings.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>

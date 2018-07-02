@@ -13,6 +13,7 @@
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Utils;
 using DriveHUD.EquityCalculator.Analyzer;
 using DriveHUD.EquityCalculator.Base.Calculations;
 using DriveHUD.EquityCalculator.Models;
@@ -193,6 +194,14 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        public HandHistories.Objects.Hand.HandHistory CurrentHandHistory
+        {
+            get
+            {
+                return _currentHandHistory;
+            }
+        }
+
         #endregion
 
         #region ICommand
@@ -253,7 +262,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
                         x.UpdateEquityData();
 
-                        x.CheckBluffToValueBetRatio(SelectedStreet);
+                        x.CheckBluffToValueBetRatio(CountOpponents(), SelectedStreet);
                     });
                 }
             };
@@ -269,26 +278,66 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 return;
             }
 
+            var heroAutoHands = GetHeroAutoRange(_currentHandHistory.Hero.PlayerName);
+
+            if (heroAutoHands != null)
+            {
+                var hero = PlayersList.FirstOrDefault(x => x.PlayerName == _currentHandHistory.Hero.PlayerName);
+
+                if (hero != null)
+                {
+                    var opponentsCount = CountOpponents();
+
+                    hero.SetRanges(heroAutoHands);
+                    hero.CheckBluffToValueBetRatio(opponentsCount, SelectedStreet);
+                }
+            }
+        }
+
+        internal IEnumerable<EquityRangeSelectorItemViewModel> GetHeroAutoRange(string heroName)
+        {
             try
             {
-                IEnumerable<EquityRangeSelectorItemViewModel> heroAutoHands = new List<EquityRangeSelectorItemViewModel>();
+                var handHistory = _currentHandHistory.DeepClone();
 
-                var heroName = string.Empty;
+                handHistory.Hero = handHistory.Players.FirstOrDefault(x => x.PlayerName == heroName);
 
-                MainAnalyzer.GetHeroRange(_currentHandHistory, _currentStreet, out heroName, out heroAutoHands);
+                var heroAutoHands = MainAnalyzer.GetHeroRange(handHistory, _currentStreet);
 
-                if (heroAutoHands.Any())
+                if (heroAutoHands != null && heroAutoHands.Any())
                 {
                     heroAutoHands.ForEach(r => r.UsedCards = _board.Cards);
 
-                    var hero = PlayersList.FirstOrDefault(x => x.PlayerName == _currentHandHistory.Hero.PlayerName);
-                    hero?.SetRanges(heroAutoHands);
+                    var opponentsCount = CountOpponents();
+
+                    BluffToValueRatioCalculator.AdjustPlayerRange(heroAutoHands, _currentStreet, handHistory, GetBoardText(), opponentsCount);
+                    return heroAutoHands;
                 }
             }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, "Could not build auto range for hero", e);
             }
+
+            return null;
+        }
+
+        internal Dictionary<MadeHandType, int> GetCombosByHandType(IEnumerable<string> range)
+        {
+            try
+            {
+                var boardCards = GetBoardText();
+
+                var combosByHandType = MainAnalyzer.GetCombosByHandType(range, boardCards);
+
+                return combosByHandType;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Could not get combos by hand type.", e);
+            }
+
+            return new Dictionary<MadeHandType, int>();
         }
 
         private void InitPlayersList()
@@ -319,6 +368,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 player.EquityValue = 0.0;
             }
+
             IsCalculateEquityError = false;
             IsCanExport = false;
         }
@@ -332,7 +382,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             try
             {
                 LogProvider.Log.Info("Equity calculation started");
-                var boardString = Board.ToString().Replace("x", "").Replace("X", "");
+                var boardString = GetBoardText();
                 result = await HoldemEquityCalculator.CalculateEquityAsync(PlayersList.Select(x => string.Join(",", x.GetPlayersHand(true))), boardString, cts.Token);
             }
             catch (OperationCanceledException)
@@ -438,13 +488,13 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
             var players = CurrentGame.Players;
 
-            for (int i = 0; i < players.Count(); i++)
+            for (int i = 0; i < players.Count; i++)
             {
-                List<CardModel> list = new List<CardModel>();
+                var list = new List<CardModel>();
 
-                if (players.ElementAt(i).hasHoleCards)
+                if (players[i].hasHoleCards)
                 {
-                    foreach (var card in players.ElementAt(i).HoleCards)
+                    foreach (var card in players[i].HoleCards)
                     {
                         list.Add(new CardModel()
                         {
@@ -454,14 +504,14 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     }
                 }
 
-                if (i > PlayersList.Count() - 1)
+                if (i > PlayersList.Count - 1)
                 {
                     PlayersList.Add(new PlayerModel());
                 }
 
-                var currentPlayer = PlayersList.ElementAt(i);
+                var currentPlayer = PlayersList[i];
                 currentPlayer.SetCollection(list);
-                currentPlayer.PlayerName = players.ElementAt(i).PlayerName;
+                currentPlayer.PlayerName = players[i].PlayerName;
             }
         }
 
@@ -526,6 +576,22 @@ namespace DriveHUD.EquityCalculator.ViewModels
             return string.Empty;
         }
 
+        private int CountOpponents()
+        {
+            if (_currentHandHistory == null)
+            {
+                return PlayersList.Count - 1;
+            }
+
+            var opponentsCount = _currentHandHistory.HandActions
+                .Where(x => x.HandActionType != HandActionType.FOLD && x.PlayerName != _currentHandHistory.Hero?.PlayerName && x.Street >= Street.Flop)
+                .Select(x => x.PlayerName)
+                .Distinct()
+                .Count() - 1;
+
+            return opponentsCount;
+        }
+
         #endregion
 
         #region Popups
@@ -537,6 +603,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             CardSelectorRequest.Raise(
                new CardSelectorNotification
                {
+                   Source = this,
                    Title = string.Empty,
                    CardsContainer = container,
                    SelectorType = selectorType,
@@ -545,7 +612,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                },
                returned =>
                {
-                   if (returned != null)
+                   if (returned != null && returned.Confirmed)
                    {
                        if (returned.ReturnType.Equals(CardSelectorReturnType.Cards))
                        {
@@ -554,7 +621,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                        else if (returned.ReturnType.Equals(CardSelectorReturnType.Range))
                        {
                            container.SetRanges(returned.CardsContainer.Ranges);
-                           (container as PlayerModel)?.CheckBluffToValueBetRatio(SelectedStreet);
+                           (container as PlayerModel)?.CheckBluffToValueBetRatio(CountOpponents(), SelectedStreet);
                        }
 
                        ClearEquity();
@@ -702,6 +769,12 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 RaiseCalculateBluffNotification(selectedPlayer);
             }
         }
+
+        private string GetBoardText()
+        {
+            return Board?.ToString().Replace("x", string.Empty).Replace("X", string.Empty);
+        }
+
         #endregion
     }
 }

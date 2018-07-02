@@ -227,7 +227,6 @@ namespace DriveHUD.Application.ViewModels
 
         internal void Load()
         {
-
             var player = StorageModel.PlayerSelectedItem;
 
             List<Playerstatistic> statistics = new List<Playerstatistic>();
@@ -872,7 +871,11 @@ namespace DriveHUD.Application.ViewModels
                     VPIP = getDevisionResult(trackConditionsMeterData.VPIP, players.Count),
                     ThreeBet = getDevisionResult(trackConditionsMeterData.ThreeBet, players.Count),
                     TableType = gameInfo.TableType,
-                    BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind)
+                    BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind),
+                    Position = activeLayout.TrackMeterPositions?
+                        .FirstOrDefault(x => x.GameType == gameInfo.EnumGameType && x.PokerSite == gameInfo.PokerSite)?
+                        .HudPositions?.FirstOrDefault()?
+                        .Position
                 };
 
                 ht.HudTrackConditionsMeter = trackConditionsInfo;
@@ -1624,6 +1627,28 @@ namespace DriveHUD.Application.ViewModels
 
                 var windowController = ServiceLocator.Current.GetInstance<IWindowController>();
                 windowController.CloseAllWindows();
+
+                if (sender is RadWindow mainWindow)
+                {
+                    var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+                    var settingsModel = settingsService.GetSettings();
+
+                    var displaySettings = settingsModel.GeneralSettings.DisplaySettings;
+
+                    if (displaySettings == null)
+                    {
+                        displaySettings = new DisplaySettings();
+                        settingsModel.GeneralSettings.DisplaySettings = displaySettings;
+                    }
+
+                    displaySettings.Left = mainWindow.Left;
+                    displaySettings.Top = mainWindow.Top;
+                    displaySettings.Width = mainWindow.ActualWidth;
+                    displaySettings.Height = mainWindow.ActualHeight;
+                    displaySettings.Maximized = mainWindow.WindowState == WindowState.Maximized;
+
+                    settingsService.SaveSettings(settingsModel);
+                }
             }
             catch (Exception ex)
             {

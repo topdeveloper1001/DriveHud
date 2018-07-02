@@ -2,6 +2,7 @@
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
+using DriveHUD.ViewModels.Replayer;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Interfaces;

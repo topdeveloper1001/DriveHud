@@ -112,6 +112,12 @@ namespace Model
                     return "PM";
                 case EnumPokerSites.GGN:
                     return "GG";
+                case EnumPokerSites.SportsBetting:
+                    return "SB";
+                case EnumPokerSites.TigerGaming:
+                    return "TG";
+                case EnumPokerSites.Winamax:
+                    return "WMX";                    
                 default:
                     break;
             }

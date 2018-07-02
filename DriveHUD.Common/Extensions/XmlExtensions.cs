@@ -31,6 +31,7 @@ namespace DriveHUD.Common.Extensions
             {
                 throw new InvalidOperationException(string.Format("Element {0} could not be found", name));
             }
+
             return element;
         }
 
@@ -38,6 +39,11 @@ namespace DriveHUD.Common.Extensions
         {
             var element = xElement.Descendants(name).FirstOrDefault();
             return element;
+        }
+
+        public static bool HasElement(this XElement xElement, string name)
+        {
+            return xElement.Descendants(name).FirstOrDefault() != null;
         }
     }
 }

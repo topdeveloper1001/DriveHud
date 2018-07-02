@@ -226,11 +226,11 @@
     <comment>Equity calculator preflop popup likelihood</comment>
   </data>
   <data name="Enum_Likelihood_NotVeryLikely" xml:space="preserve">
-    <value>Not Very Likely - 40%</value>
+    <value>Sometimes - 50%</value>
     <comment>Equity calculator preflop popup likelihood</comment>
   </data>
   <data name="Enum_Likelihood_Rarely" xml:space="preserve">
-    <value>Rarely - 10%</value>
+    <value>Rarely - 25%</value>
     <comment>Equity calculator preflop popup likelihood</comment>
   </data>
   <data name="Enum_PredefinedRange_BTN" xml:space="preserve">
@@ -1009,5 +1009,44 @@
   </data>
   <data name="Enum_EnumTableType_Seven" xml:space="preserve">
     <value>7-max</value>
+  </data>
+  <data name="Enum_MadeHandType_Flush" xml:space="preserve">
+    <value>Flush</value>
+  </data>
+  <data name="Enum_MadeHandType_FourOfKind" xml:space="preserve">
+    <value>4 of kind</value>
+  </data>
+  <data name="Enum_MadeHandType_FullHouse" xml:space="preserve">
+    <value>Full house</value>
+  </data>
+  <data name="Enum_MadeHandType_MiddlePair" xml:space="preserve">
+    <value>Middle pair</value>
+  </data>
+  <data name="Enum_MadeHandType_NoPair" xml:space="preserve">
+    <value>No made hand</value>
+  </data>
+  <data name="Enum_MadeHandType_Straight" xml:space="preserve">
+    <value>Straight</value>
+  </data>
+  <data name="Enum_MadeHandType_StraightFlush" xml:space="preserve">
+    <value>Straight flush</value>
+  </data>
+  <data name="Enum_MadeHandType_ThreeOfKind" xml:space="preserve">
+    <value>3 of kind</value>
+  </data>
+  <data name="Enum_MadeHandType_TopPair" xml:space="preserve">
+    <value>Top pair</value>
+  </data>
+  <data name="Enum_MadeHandType_TwoPairs" xml:space="preserve">
+    <value>2 pairs</value>
+  </data>
+  <data name="Enum_MadeHandType_WeakPair" xml:space="preserve">
+    <value>Bottom pair</value>
+  </data>
+  <data name="Enum_MadeHandType_FlushDraw" xml:space="preserve">
+    <value>Flush draw</value>
+  </data>
+  <data name="Enum_MadeHandType_StraightDraw" xml:space="preserve">
+    <value>Straight draw</value>
   </data>
 </root>

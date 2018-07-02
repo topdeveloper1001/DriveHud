@@ -84,7 +84,14 @@ namespace DriveHUD.Importers
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Hand(s) has not been imported. [{SiteString}]", e);
+                if (!string.IsNullOrEmpty(gameInfo.FullFileName))
+                {
+                    LogProvider.Log.Error(this, $"Hand(s) from '{gameInfo.FullFileName}' has not been imported. [{SiteString}]", e);
+                }
+                else
+                {
+                    LogProvider.Log.Error(this, $"Hand(s) has not been imported. [{SiteString}]", e);
+                }
             }
 
             if (parsingResult == null)
@@ -112,9 +119,7 @@ namespace DriveHUD.Importers
                 }
 
                 LogProvider.Log.Info(this, string.Format("Hand {0} has been imported in {2}ms. [{1}]", result.HandHistory.Gamenumber, SiteString, result.Duration));
-
-                var playerList = GetPlayerList(result.Source);
-
+             
                 if (gameInfo.WindowHandle == 0 || !WinApi.IsWindow(new IntPtr(gameInfo.WindowHandle)))
                 {
                     gameInfo.WindowHandle = FindWindow(result).ToInt32();
@@ -124,6 +129,8 @@ namespace DriveHUD.Importers
                 gameInfo.GameType = ParseGameType(result);
                 gameInfo.TableType = ParseTableType(result, gameInfo);
                 gameInfo.GameNumber = result.HandHistory.Gamenumber;
+
+                var playerList = GetPlayerList(result.Source, gameInfo);
 
                 var dataImportedArgs = new DataImportedEventArgs(playerList, gameInfo, result.Source?.Hero, result.HandHistory.Gamenumber);
 
@@ -240,16 +247,16 @@ namespace DriveHUD.Importers
 
             switch (parsingResult.Source.GameDescription.GameType)
             {
-                case HandHistories.Objects.GameDescription.GameType.CapPotLimitOmaha:
-                case HandHistories.Objects.GameDescription.GameType.FiveCardPotLimitOmaha:
-                case HandHistories.Objects.GameDescription.GameType.FixedLimitOmaha:
-                case HandHistories.Objects.GameDescription.GameType.NoLimitOmaha:
-                case HandHistories.Objects.GameDescription.GameType.PotLimitOmaha:
+                case GameType.CapPotLimitOmaha:
+                case GameType.FiveCardPotLimitOmaha:
+                case GameType.FixedLimitOmaha:
+                case GameType.NoLimitOmaha:
+                case GameType.PotLimitOmaha:
                     return Bovada.GameType.Omaha;
-                case HandHistories.Objects.GameDescription.GameType.FiveCardPotLimitOmahaHiLo:
-                case HandHistories.Objects.GameDescription.GameType.PotLimitOmahaHiLo:
-                case HandHistories.Objects.GameDescription.GameType.NoLimitOmahaHiLo:
-                case HandHistories.Objects.GameDescription.GameType.FixedLimitOmahaHiLo:
+                case GameType.FiveCardPotLimitOmahaHiLo:
+                case GameType.PotLimitOmahaHiLo:
+                case GameType.NoLimitOmahaHiLo:
+                case GameType.FixedLimitOmahaHiLo:
                     return Bovada.GameType.OmahaHiLo;
                 default:
                     return Bovada.GameType.Holdem;
@@ -267,7 +274,7 @@ namespace DriveHUD.Importers
             return tableType;
         }
 
-        protected virtual PlayerList GetPlayerList(HandHistory handHistory)
+        protected virtual PlayerList GetPlayerList(HandHistory handHistory, GameInfo gameInfo)
         {
             return handHistory.Players;
         }

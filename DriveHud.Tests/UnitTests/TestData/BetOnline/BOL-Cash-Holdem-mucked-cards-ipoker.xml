@@ -1,0 +1,88 @@
+﻿<session sessioncode="653367560830">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $10/$20</gametype>
+    <tablename>Lima</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2018-05-28 14:59:46</startdate>
+    <currency>USD</currency>
+    <nickname>Peon_184</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <place>0</place>
+    <buyin>0</buyin>
+    <totalbuyin>0</totalbuyin>
+    <win>0</win>
+    <maxplayers>10</maxplayers>
+    <pokersite>BetOnline</pokersite>
+  </general>
+  <game gamecode="6786155">
+    <general>
+      <startdate>2018-05-28 14:59:46</startdate>
+      <players>
+        <player seat="1" name="poorvet" chips="2935.12" dealer="0" win="0" bet="1000" rebuy="0" addon="0" />
+        <player seat="2" name="jardito" chips="1534" dealer="0" win="0" bet="20" rebuy="0" addon="0" />
+        <player seat="3" name="freshair55" chips="1427" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="4" name="ACEFACED.ORG" chips="1000" dealer="0" win="4047" bet="1000" rebuy="0" addon="0" />
+        <player seat="5" name="gravy" chips="3112" dealer="0" win="0" bet="1000" rebuy="0" addon="0" />
+        <player seat="6" name="Peon_184" chips="1278.5" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="7" name="cowboy325" chips="1555.5" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="8" name="herbigbear" chips="1605.74" dealer="1" win="0" bet="1000" rebuy="0" addon="0" />
+        <player seat="9" name="bikerguy63" chips="763.89" dealer="0" win="0" bet="10" rebuy="0" addon="0" />
+        <player seat="10" name="elhat55" chips="1345" dealer="0" win="0" bet="20" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="bikerguy63" type="1" sum="10" cards="" />
+      <action no="2" player="elhat55" type="2" sum="20" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="poorvet">D3 DK</cards>
+      <cards type="Pocket" player="jardito">X X</cards>
+      <cards type="Pocket" player="freshair55">X X</cards>
+      <cards type="Pocket" player="ACEFACED.ORG">C6 CA</cards>
+      <cards type="Pocket" player="gravy">HQ H3</cards>
+      <cards type="Pocket" player="Peon_184">S6 D2</cards>
+      <cards type="Pocket" player="cowboy325">X X</cards>
+      <cards type="Pocket" player="herbigbear">SQ DJ</cards>
+      <cards type="Pocket" player="bikerguy63">X X</cards>
+      <cards type="Pocket" player="elhat55">X X</cards>
+      <action no="3" player="poorvet" type="3" sum="20" cards="" />
+      <action no="4" player="jardito" type="3" sum="20" cards="" />
+      <action no="5" player="freshair55" type="0" sum="0" cards="" />
+      <action no="6" player="ACEFACED.ORG" type="23" sum="1000" cards="" />
+      <action no="7" player="gravy" type="3" sum="1000" cards="" />
+      <action no="8" player="Peon_184" type="0" sum="0" cards="" />
+      <action no="9" player="cowboy325" type="0" sum="0" cards="" />
+      <action no="10" player="herbigbear" type="3" sum="1000" cards="" />
+      <action no="11" player="bikerguy63" type="0" sum="0" cards="" />
+      <action no="12" player="elhat55" type="0" sum="0" cards="" />
+      <action no="13" player="poorvet" type="3" sum="980" cards="" />
+      <action no="14" player="jardito" type="0" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">C4 D4 C8</cards>
+      <action no="15" player="poorvet" type="4" sum="0" cards="" />
+      <action no="16" player="gravy" type="4" sum="0" cards="" />
+      <action no="17" player="herbigbear" type="4" sum="0" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">H10</cards>
+      <action no="18" player="poorvet" type="4" sum="0" cards="" />
+      <action no="19" player="gravy" type="4" sum="0" cards="" />
+      <action no="20" player="herbigbear" type="4" sum="0" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">S5</cards>
+      <action no="21" player="poorvet" type="4" sum="0" cards="" />
+      <action no="22" player="gravy" type="4" sum="0" cards="" />
+      <action no="23" player="herbigbear" type="4" sum="0" cards="" />
+    </round>
+  </game>
+</session>

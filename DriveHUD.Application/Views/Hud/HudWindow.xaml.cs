@@ -221,10 +221,10 @@ namespace DriveHUD.Application.Views
 
             dgCanvas.Children.Add(trackConditionView);
 
-            UpdateTrackConditionMeterPosition(trackConditionView);
+            UpdateTrackConditionMeterPosition(trackConditionViewModelInfo, trackConditionView);
         }
 
-        private void UpdateTrackConditionMeterPosition(FrameworkElement trackConditionView)
+        private void UpdateTrackConditionMeterPosition(HudTrackConditionsViewModelInfo trackConditionViewModelInfo, FrameworkElement trackConditionView)
         {
             if (trackerConditionsMeterPosition != null)
             {
@@ -233,7 +233,16 @@ namespace DriveHUD.Application.Views
             }
             else
             {
-                var positions = hudPanelService.GetInitialTrackConditionMeterPosition();
+                Tuple<double, double> positions;
+
+                if (trackConditionViewModelInfo.Position.HasValue)
+                {
+                    positions = new Tuple<double, double>(trackConditionViewModelInfo.Position.Value.X, trackConditionViewModelInfo.Position.Value.Y);
+                }
+                else
+                {
+                    positions = hudPanelService.GetInitialTrackConditionMeterPosition();
+                }
 
                 Canvas.SetLeft(trackConditionView, positions.Item1);
                 Canvas.SetTop(trackConditionView, positions.Item2);
@@ -262,13 +271,20 @@ namespace DriveHUD.Application.Views
                     return;
                 }
 
+                var trackMeterPositionX = trackerConditionsMeterPositionOffset.X != 0 ? trackerConditionsMeterPositionOffset.X :
+                    (trackerConditionsMeterPosition.HasValue ? trackerConditionsMeterPosition.Value.X : 0);
+
+                var trackMeterPositionY = trackerConditionsMeterPositionOffset.Y != 0 ? trackerConditionsMeterPositionOffset.Y :
+                    (trackerConditionsMeterPosition.HasValue ? trackerConditionsMeterPosition.Value.Y : 0);
+
                 var hudLayoutContract = new HudLayoutContract
                 {
                     LayoutName = Layout.LayoutName,
                     GameType = Layout.GameType,
                     PokerSite = Layout.PokerSite,
                     TableType = Layout.TableType,
-                    HudPositions = new List<HudPositionContract>()
+                    HudPositions = new List<HudPositionContract>(),
+                    TrackMeterPosition = new Point(trackMeterPositionX, trackMeterPositionY)
                 };
 
                 // clone is needed

@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="SettingsGeneralViewModel.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -17,7 +17,6 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.ViewModels.Settings
 {
@@ -67,7 +66,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 if (SettingsModel != null && SettingsModel.IsAdvancedLoggingEnabled != value)
                 {
                     SettingsModel.IsAdvancedLoggingEnabled = value;
-                    OnPropertyChanged(nameof(IsTurnOnAdvancedLogging));
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -80,7 +79,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 if (SettingsModel != null && SettingsModel.IsSaveFiltersOnExit != value)
                 {
                     SettingsModel.IsSaveFiltersOnExit = value;
-                    OnPropertyChanged(nameof(IsSaveFiltersOnExit));
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -93,7 +92,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 if (SettingsModel != null && SettingsModel.IsApplyFiltersToTournamentsAndCashGames != value)
                 {
                     SettingsModel.IsApplyFiltersToTournamentsAndCashGames = value;
-                    OnPropertyChanged(nameof(IsApplyFiltersToTournamentsAndCashGames));
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -106,7 +105,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 if (SettingsModel != null && SettingsModel.IsAutomaticallyDownloadUpdates != value)
                 {
                     SettingsModel.IsAutomaticallyDownloadUpdates = value;
-                    OnPropertyChanged(nameof(IsAutomaticallyDownloadUpdates));
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -119,7 +118,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 if (SettingsModel != null && SettingsModel.RunSiteDetection != value)
                 {
                     SettingsModel.RunSiteDetection = value;
-                    OnPropertyChanged(nameof(RunSiteDetection));
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -132,7 +131,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 if (SettingsModel != null && SettingsModel.IsAPIEnabled != value)
                 {
                     SettingsModel.IsAPIEnabled = value;
-                    OnPropertyChanged(nameof(IsAPIEnabled));
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -145,7 +144,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 if (SettingsModel != null && SettingsModel.TimeZoneOffset != value)
                 {
                     SettingsModel.TimeZoneOffset = value;
-                    OnPropertyChanged(nameof(TimeZoneOffset));
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -158,7 +157,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 if (SettingsModel != null && SettingsModel.StartDayOfWeek != value)
                 {
                     SettingsModel.StartDayOfWeek = value;
-                    OnPropertyChanged(nameof(StartDayOfWeek));
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -208,6 +207,22 @@ namespace DriveHUD.Application.ViewModels.Settings
             set
             {
                 SetProperty(ref _popupModel, value);
+            }
+        }
+
+        public bool RememberScreenPosition
+        {
+            get
+            {
+                return SettingsModel?.RememberScreenPosition ?? false;
+            }
+            set
+            {
+                if (SettingsModel != null && SettingsModel.RememberScreenPosition != value)
+                {
+                    SettingsModel.RememberScreenPosition = value;
+                    RaisePropertyChanged();
+                }
             }
         }
 

@@ -731,13 +731,19 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 default: return -1;
             }
 
-            return FastEvaluator.primes[rank_value] | (rank_value << 8) | suit_value | (1 << (16 + rank_value));
+            var c1 = FastEvaluator.primes[rank_value];
+            var c2 = (rank_value << 8);
+            var c3 = suit_value;
+            var c4 = (1 << (16 + rank_value));
+     
+            return c1 | c2 | c3 | c4;
         }
 
         internal void update_absolute_percentiles(int street)
         {
             // Update absolute hand value table based on the new board
             int[] hand = new int[7];
+
             if (street >= 1)
             {
                 if (CommunityCards[1] != null)
@@ -747,11 +753,13 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     hand[4] = fastCard(CommunityCards[1][4], CommunityCards[1][5]);
                 }
             }
+
             if (street >= 2)
             {
                 if (CommunityCards[2] != null)
                     hand[5] = fastCard(CommunityCards[2][0], CommunityCards[2][1]);
             }
+
             if (street >= 3)
             {
                 if (CommunityCards[3] != null)
@@ -760,16 +768,13 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             // Enumrate all possible hole cards and find the absolute hand rankings (ignoring draws)
             int valid_combos = 0;
+
             for (int i = 1, k = 0; i < 52; i++)
             {
                 hand[0] = fastCard(Card.CardName[i], Card.CardSuit[i]); // Hole 1
 
                 for (int j = 0; j < i; j++, k++)
                 {
-                    if (i == 11 && j == 6)
-                    {
-
-                    }
                     hand[1] = fastCard(Card.CardName[j], Card.CardSuit[j]); // Hole 2
 
                     abs_rank[k].card1 = i;
@@ -778,7 +783,11 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                     // Check if these hole cards are possible on the given board
                     if (hand[0] == hand[2] || hand[0] == hand[3] || hand[0] == hand[4] ||
-                        hand[1] == hand[2] || hand[1] == hand[3] || hand[1] == hand[4]) continue; // Not a possible holding on this board (flop)
+                        hand[1] == hand[2] || hand[1] == hand[3] || hand[1] == hand[4])
+                    {
+                        continue; // Not a possible holding on this board (flop)
+                    }
+
                     if (street == 1) // Flop
                     {
                         abs_rank[k].value = FastEvaluator.eval_5hand(hand);
@@ -793,27 +802,35 @@ namespace DriveHUD.EquityCalculator.Analyzer
                         if (hand[0] == hand[5] || hand[1] == hand[5] || hand[0] == hand[6] || hand[1] == hand[6]) continue; // Not a possible holding on this board (turn+river)
                         abs_rank[k].value = FastEvaluator.eval_7hand(hand);
                     }
-                    else return; // Invalid street
+                    else
+                    {
+                        return; // Invalid street
+                    }
 
                     valid_combos++;
                 }
             }
+
             // Sort the hands by the absolute hand rankings (ignoring draws)
             //sort(abs_rank, abs_rank + 1326); //ATT!
             for (int i = 0; i < abs_rank.Length - 1; i++)
             {
                 int minIndex = i;
+
                 for (int j = i + 1; j < abs_rank.Length; j++)
                 {
                     if (abs_rank[j].value < abs_rank[minIndex].value) minIndex = j;
                 }
+
                 abs_value tmp = abs_rank[i];
                 abs_rank[i] = abs_rank[minIndex];
                 abs_rank[minIndex] = tmp;
             }
-            //
+          
             int combo = 0, last_valid = -1;
+
             float last_percentile = 0;
+
             for (int i = 0; i < 1326; i++) // 52*51/2 = 1326
             {
                 String hand_str1 = Card.CardName[abs_rank[i].card1].ToString() + Card.CardSuit[abs_rank[i].card1].ToString() + Card.CardName[abs_rank[i].card2].ToString() + Card.CardSuit[abs_rank[i].card2].ToString();
@@ -821,11 +838,22 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                 // Default percentile to 100% (nut-low) -> left only for hands that are not possible on the given board
                 if (!absolute_percentile.ContainsKey(hand_str1))
+                {
                     absolute_percentile.Add(hand_str1, 1.0f);//?
-                else absolute_percentile[hand_str1] = 1.0f;
+                }
+                else
+                {
+                    absolute_percentile[hand_str1] = 1.0f;
+                }
+
                 if (!absolute_percentile.ContainsKey(hand_str2))
+                {
                     absolute_percentile.Add(hand_str2, 1.0f);
-                else absolute_percentile[hand_str2] = 1.0f;
+                }
+                else
+                {
+                    absolute_percentile[hand_str2] = 1.0f;
+                }
 
                 if (abs_rank[i].value < 9999)
                 {
@@ -1313,10 +1341,10 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     var curAmout = action.Amount < 0 ? action.Amount * -1 : action.Amount;
                     act.Amount = (int)Math.Round(curAmout * 100);
                     this_commit[plr] = (int)this_commit[plr] - (int)act.Amount;
-                    pot -= act.Amount;                 
+                    pot -= act.Amount;
                 }
                 else if (action.HandActionType == HandHistories.Objects.Actions.HandActionType.SHOW)
-                {                    
+                {
                     (Players[plr] as Player).Showdown = true;
                 }
                 else if (action.HandActionType == HandHistories.Objects.Actions.HandActionType.WINS)

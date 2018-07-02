@@ -24,5 +24,7 @@ namespace DriveHUD.Importers.PokerStars
         public short Size { get; set; }
 
         public PlayerDataObject[] Players { get; set; }
+
+        public string TableName { get; set; }
     }
 }

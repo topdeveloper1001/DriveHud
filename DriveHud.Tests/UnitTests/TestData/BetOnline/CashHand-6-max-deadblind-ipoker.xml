@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<session sessioncode="653485987630">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.05/$0.1</gametype>
+    <tablename>NL Hold’em: $0.05/$0.10 - 6 Seater</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2018-06-06 23:25:30</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <place>0</place>
+    <buyin>0</buyin>
+    <totalbuyin>0</totalbuyin>
+    <win>0</win>
+    <maxplayers>6</maxplayers>
+    <pokersite>BetOnline</pokersite>
+  </general>
+  <game gamecode="308559726">
+    <general>
+      <startdate>2018-06-06 23:25:30</startdate>
+      <players>
+        <player seat="1" name="IMNOTFISH99" chips="19.1" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+        <player seat="2" name="Contraari2323" chips="10.05" dealer="0" win="0.65" bet="0.45" rebuy="0" addon="0" />
+        <player seat="3" name="Yagomooca777" chips="10" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="5" name="jotta15" chips="13.35" dealer="0" win="0" bet="0.15" rebuy="0" addon="0" />
+        <player seat="6" name="ARM12AH" chips="5.74" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="IMNOTFISH99" type="1" sum="0.05" cards="" />
+      <action no="2" player="Contraari2323" type="2" sum="0.1" cards="" />
+      <action no="3" player="jotta15" type="2" sum="0.15" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="IMNOTFISH99">X X</cards>
+      <cards type="Pocket" player="Contraari2323">X X</cards>
+      <cards type="Pocket" player="Yagomooca777">X X</cards>
+      <cards type="Pocket" player="jotta15">X X</cards>
+      <cards type="Pocket" player="ARM12AH">X X</cards>
+      <action no="4" player="Yagomooca777" type="0" sum="0" cards="" />
+      <action no="5" player="jotta15" type="4" sum="0" cards="" />
+      <action no="6" player="ARM12AH" type="0" sum="0" cards="" />
+      <action no="7" player="IMNOTFISH99" type="0" sum="0" cards="" />
+      <action no="8" player="Contraari2323" type="23" sum="0.45" cards="" />
+      <action no="9" player="jotta15" type="0" sum="0" cards="" />
+    </round>
+  </game>
+</session>

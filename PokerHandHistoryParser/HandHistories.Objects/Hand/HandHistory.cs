@@ -1,10 +1,22 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
+﻿//-----------------------------------------------------------------------
+// <copyright file="HandHistory.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Players;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Hand
@@ -87,7 +99,7 @@ namespace HandHistories.Objects.Hand
         [XmlArray]
         [XmlArrayItem(ElementName = "Player")]
         public PlayerList Players { get; set; }
-        
+
         private Player hero;
 
         [XmlIgnore]
@@ -145,6 +157,6 @@ namespace HandHistories.Objects.Hand
         public override string ToString()
         {
             return string.Format("[{0}] {1}", HandId, GameDescription.ToString());
-        }
+        }       
     }
 }

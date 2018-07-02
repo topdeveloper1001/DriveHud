@@ -58,7 +58,7 @@ namespace DriveHUD.Importers.PokerStars
             base.ProcessHand(handHistory, gameInfo);
         }
 
-        protected override PlayerList GetPlayerList(HandHistory handHistory)
+        protected override PlayerList GetPlayerList(HandHistory handHistory, GameInfo gameInfo)
         {
             var playerList = handHistory.Players;
 
@@ -82,7 +82,6 @@ namespace DriveHUD.Importers.PokerStars
                         player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, maxPlayers);
                     }
                 }
-
             }
 
             return playerList;
@@ -107,7 +106,22 @@ namespace DriveHUD.Importers.PokerStars
                 return title.Contains(tournamentTitle);
             }
 
-            return title.Contains(parsingResult.Source.TableName);
+            var tableName = parsingResult.Source.TableName;
+
+            // check if there is more than 1 opened table
+            if (!string.IsNullOrWhiteSpace(parsingResult.FileName))
+            {
+                var tableNameIndex = parsingResult.FileName.IndexOf($"{tableName} #", StringComparison.OrdinalIgnoreCase);
+
+                if (tableNameIndex >= 0)
+                {
+                    //HH20180514 Halley #2 - $0.01-$0.02 - USD No Limit Hold'em.txt
+                    var tableNameEndIndex = parsingResult.FileName.IndexOf(" ", tableNameIndex + tableName.Length + 2);
+                    tableName = parsingResult.FileName.Substring(tableNameIndex, tableNameEndIndex - tableNameIndex).Trim();
+                }
+            }
+
+            return title.Contains(tableName);
         }
 
         protected override void PublishImportedResults(DataImportedEventArgs args)
@@ -124,6 +138,7 @@ namespace DriveHUD.Importers.PokerStars
         private void UpdateGameInfo(IEnumerable<ParsingResult> parsingResults, GameInfo gameInfo)
         {
             var parsingResult = parsingResults?.FirstOrDefault();
+
             if (parsingResult == null || parsingResult.Source == null || gameInfo == null)
             {
                 return;

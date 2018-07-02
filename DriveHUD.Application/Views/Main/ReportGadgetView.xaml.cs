@@ -13,13 +13,13 @@
 using DriveHUD.Application.Controls;
 using DriveHUD.Application.ReportsLayout;
 using DriveHUD.Application.ViewModels;
-using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Common.Ifrastructure;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Reflection;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Converters;
 using DriveHUD.Entities;
+using DriveHUD.ViewModels.Replayer;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;

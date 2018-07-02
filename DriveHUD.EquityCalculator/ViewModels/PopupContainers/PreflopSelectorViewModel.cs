@@ -12,13 +12,17 @@
 
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
+using DriveHUD.EquityCalculator.Analyzer;
+using DriveHUD.EquityCalculator.Models;
 using DriveHUD.ViewModels;
+using DriveHUD.ViewModels.Replayer;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.LocalCalculator;
 using Model.Notifications;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
+using Prism.Mvvm;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -43,6 +47,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private bool _isSliderManualMove = true;
         private double _selectedPercentage = 0;
         private PreflopRange _preflopRange = new PreflopRange();
+        private EquityCalculatorViewModel source;
 
         #endregion
 
@@ -59,6 +64,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 {
                     _notification = value as CardSelectorNotification;
                     _notification.ReturnType = CardSelectorReturnType.Range;
+                    source = _notification.Source as EquityCalculatorViewModel;
 
                     if (_notification.CardsContainer.Ranges != null)
                     {
@@ -79,19 +85,20 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 }
 
                 InitializePreflopSelectorItemsTracking();
-              
-                UpdateSlider();
 
                 PreflopSelectorItems.ForEach(x =>
                 {
-                    x.UsedCards = _notification.BoardCards;                    
+                    x.UsedCards = _notification.BoardCards;
                 });
 
+                UpdateSlider();
+
                 CombosRaisePropertyChanged();
+                RaisePropertyChanged(nameof(IsReplayHandVisible));
             }
         }
 
-        public Action FinishInteraction
+        public System.Action FinishInteraction
         {
             get;
             set;
@@ -171,6 +178,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     }
 
                     SelectedPercentage = value / 10.0;
+
+                    RefreshHandsStatistic();
                 }
 
                 SetProperty(ref _sliderValue, value);
@@ -275,13 +284,52 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        private ReactiveList<HandsStatisticViewModel> handStatistics;
+
+        public ReactiveList<HandsStatisticViewModel> HandStatistics
+        {
+            get
+            {
+                return handStatistics;
+            }
+            private set
+            {
+                SetProperty(ref handStatistics, value);
+            }
+        }
+
+        private bool isHelpVisible;
+
+        public bool IsHelpVisible
+        {
+            get
+            {
+                return isHelpVisible;
+            }
+            set
+            {
+                SetProperty(ref isHelpVisible, value);
+            }
+        }
+
+        public bool IsReplayHandVisible
+        {
+            get
+            {
+                return _notification != null && source != null &&
+                    source.CurrentHandHistory != null && source.CurrentHandHistory.HandId != 0;
+            }
+        }
+
         #endregion
 
         #region ICommand
 
         public ICommand ShowCardsViewCommands { get; set; }
 
-        public ICommand OnMouseDownCommand { get; set; }
+        public ICommand OnMouseLeftDownCommand { get; set; }
+
+        public ICommand OnMouseRightDownCommand { get; set; }
 
         public ICommand OnDoubleClickCommand { get; set; }
 
@@ -305,6 +353,12 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         public ICommand OnSelectSuitCommand { get; set; }
 
+        public ICommand AutoRangeCommand { get; set; }
+
+        public ICommand HelpCommand { get; set; }
+
+        public ICommand ReplayCommand { get; set; }
+
         #endregion
 
         public PreflopSelectorViewModel()
@@ -315,7 +369,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private void Initialize()
         {
             ShowCardsViewCommands = new RelayCommand(ShowCardsView);
-            OnMouseDownCommand = new RelayCommand(OnMouseDown);
+            OnMouseLeftDownCommand = new RelayCommand(x => OnMouseDown(x));
+            OnMouseRightDownCommand = new RelayCommand(x => OnMouseDown(x, true));
             OnDoubleClickCommand = new RelayCommand(OnDoubleClick);
             OnCtrlClickCommand = new RelayCommand(OnCtrlClick);
             OnAltClickCommand = new RelayCommand(OnAltClick);
@@ -327,11 +382,68 @@ namespace DriveHUD.EquityCalculator.ViewModels
             SelectSuitedCommand = new RelayCommand(SelectedSuited);
             SelectOffSuitedCommand = new RelayCommand(SelectOffSuited);
             OnSelectSuitCommand = new RelayCommand(OnSelectSuit);
+            AutoRangeCommand = new RelayCommand(OnAutoRange);
+            HelpCommand = new RelayCommand(() => IsHelpVisible = !IsHelpVisible);
+            ReplayCommand = new RelayCommand(() => ReplayHand());
 
             _preflopRange.Init();
             PreDefinedRangesRequest = new InteractionRequest<PreDefinedRangesNotifcation>();
 
+            HandStatistics = new ReactiveList<HandsStatisticViewModel>(
+                Enum.GetValues(typeof(MadeHandType)).OfType<MadeHandType>().Select(x => new HandsStatisticViewModel(x)));
+
             InitializePreflopSelectorItems();
+        }
+
+        private void OnAutoRange(object obj)
+        {
+            if (source == null || !(_notification.CardsContainer is PlayerModel playerModel))
+            {
+                return;
+            }
+
+            var heroAutoRange = source.GetHeroAutoRange(playerModel.PlayerName);
+
+            if (heroAutoRange == null)
+            {
+                return;
+            }
+
+            var mergeResult = (from range in PreflopSelectorItems
+                               join heroRange in heroAutoRange on range.Caption equals heroRange.Caption
+                               select new { Existing = range, Auto = heroRange }).ToArray();
+
+            PreflopSelectorItems.ChangeTrackingEnabled = false;
+
+            PreflopSelectorItems.ForEach(x =>
+            {
+                x.IsSelected = false;
+                x.EquitySelectionMode = null;
+            });
+
+            foreach (var mergeItem in mergeResult)
+            {
+                mergeItem.Existing.IsSelected = true;
+                mergeItem.Existing.HandSuitsModelList = new List<HandSuitsViewModel>(mergeItem.Auto.HandSuitsModelList);
+                mergeItem.Existing.EquitySelectionMode = mergeItem.Auto.EquitySelectionMode;
+                mergeItem.Existing.HandUpdate();
+            }
+
+            PreflopSelectorItems.ChangeTrackingEnabled = true;
+
+            UpdateSlider();
+            CombosRaisePropertyChanged();
+        }
+
+        private void ReplayHand()
+        {
+            if (!IsReplayHandVisible || !(_notification.CardsContainer is PlayerModel playerModel))
+            {
+                return;
+            }
+
+            ServiceLocator.Current.GetInstance<IReplayerService>()
+              .ReplayHand(playerModel.PlayerName, source.CurrentHandHistory.HandId, (short)source.CurrentHandHistory.GameDescription.Site, true);
         }
 
         private void InitializePreflopSelectorItems()
@@ -411,6 +523,30 @@ namespace DriveHUD.EquityCalculator.ViewModels
             SelectedItem.HandUpdateAndRefresh();
         }
 
+        private void RefreshHandsStatistic()
+        {
+            var rangeItems = PreflopSelectorItems.Where(x => x.IsSelected).ToArray();
+
+            var totalCombos = rangeItems.Sum(x => x.Combos);
+            var ranges = rangeItems.Select(x => x.Caption).ToList();
+
+            var combosByHandType = source.GetCombosByHandType(ranges);
+
+            foreach (var handStatistic in HandStatistics)
+            {
+                if (combosByHandType.ContainsKey(handStatistic.HandType))
+                {
+                    handStatistic.Combos = combosByHandType[handStatistic.HandType];
+                }
+                else
+                {
+                    handStatistic.Combos = 0;
+                }
+            }
+
+            HandStatistics.ForEach(x => x.TotalCombos = totalCombos);
+        }
+
         private void UpdateSlider()
         {
             _isSliderManualMove = false;
@@ -423,6 +559,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
             SelectedPercentage = prct;
 
             _isSliderManualMove = true;
+
+            RefreshHandsStatistic();
         }
 
         #region ICommand implementation
@@ -524,7 +662,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 });
         }
 
-        private void OnMouseDown(object obj)
+        private void OnMouseDown(object obj, bool isRight = false)
         {
             if (!(obj is EquityRangeSelectorItemViewModel item))
             {
@@ -537,7 +675,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 item.IsSelected = true;
             }
-            else
+            else if (!isRight)
             {
                 item.EquitySelectionMode = EquitySelectionMode;
                 SelectedItem.HandRefreshVisibilityCheck();
@@ -662,6 +800,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
 
             SelectedItem = new EquityRangeSelectorItemViewModel();
+
+            UpdateSlider();
         }
 
         private void Save(object obj)
@@ -672,7 +812,9 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 SelectedItem = new EquityRangeSelectorItemViewModel();
             }
 
-            _notification.CardsContainer.Ranges = new List<RangeSelectorItemViewModel>(PreflopSelectorItems.Where(x => x.IsSelected));
+            _notification.CardsContainer.Ranges = new List<EquityRangeSelectorItemViewModel>(PreflopSelectorItems.Where(x => x.IsSelected));
+            _notification.Confirmed = true;
+
             FinishInteraction();
         }
 
@@ -692,5 +834,69 @@ namespace DriveHUD.EquityCalculator.ViewModels
         }
 
         #endregion
+    }
+
+    public class HandsStatisticViewModel : BindableBase
+    {
+        public HandsStatisticViewModel(MadeHandType handType)
+        {
+            this.handType = handType;
+        }
+
+        private MadeHandType handType;
+
+        public MadeHandType HandType
+        {
+            get
+            {
+                return handType;
+            }
+        }
+
+        private int combos;
+
+        public int Combos
+        {
+            get
+            {
+                return combos;
+            }
+            set
+            {
+                SetProperty(ref combos, value);
+                RaisePropertyChanged(nameof(IsVisible));
+            }
+        }
+
+        private int totalCombos;
+
+        public int TotalCombos
+        {
+            get
+            {
+                return totalCombos;
+            }
+            set
+            {
+                SetProperty(ref totalCombos, value);
+                RaisePropertyChanged(nameof(Percentage));
+            }
+        }
+
+        public double Percentage
+        {
+            get
+            {
+                return totalCombos != 0 ? combos / (double)totalCombos : 0;
+            }
+        }
+
+        public bool IsVisible
+        {
+            get
+            {
+                return combos != 0;
+            }
+        }
     }
 }

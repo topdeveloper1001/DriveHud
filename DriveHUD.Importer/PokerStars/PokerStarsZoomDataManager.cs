@@ -38,8 +38,8 @@ namespace DriveHUD.Importers.PokerStars
     internal class PokerStarsZoomDataManager : IPokerStarsZoomDataManager
     {
         private readonly IEventAggregator eventAggregator;
-        private IImporterSessionCacheService importerSessionCacheService;     
-                 
+        private IImporterSessionCacheService importerSessionCacheService;
+
         private readonly Dictionary<int, PokerStarsZoomCacheData> cachedData = new Dictionary<int, PokerStarsZoomCacheData>();
 
         public PokerStarsZoomDataManager(IEventAggregator eventAggregator)
@@ -49,8 +49,8 @@ namespace DriveHUD.Importers.PokerStars
 
         public void Initialize(PokerClientDataManagerInfo dataManagerInfo)
         {
-            Check.ArgumentNotNull(() => dataManagerInfo);                              
-            importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();            
+            Check.ArgumentNotNull(() => dataManagerInfo);
+            importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
         }
 
         public void ProcessData(byte[] data)
@@ -111,13 +111,16 @@ namespace DriveHUD.Importers.PokerStars
                     TableType = (EnumTableType)catcherDataObject.Size
                 };
 
+                // Initialize cache
+                gameInfo.ResetPlayersCacheInfo();
+
                 var players = new PlayerList(catcherDataObject.Players.Select(x =>
                     new Player(x.Player, 0, x.Seat)
                     {
                         PlayerId = playerNamePlayerIdMap.ContainsKey(x.Player) ? playerNamePlayerIdMap[x.Player] : 0
                     }));
 
-                var gameFormat = ParseGameFormatFromTitle(catcherDataObject.Title);
+                var gameFormat = ZoomUtils.ParseGameFormatFromTitle(catcherDataObject.Title);
 
                 if (gameFormat.HasValue)
                 {
@@ -136,7 +139,7 @@ namespace DriveHUD.Importers.PokerStars
 
                 cachedObject.IsProcessed = true;
 #if DEBUG
-                Console.WriteLine($@"Data has been send to {catcherDataObject.Title}, {catcherDataObject.Handle}, {catcherDataObject.Size}-max, {string.Join(", ", players.Select(x => $"{x.PlayerName}[{x.PlayerId}]").ToArray())}");
+                Console.WriteLine($@"Data has been send to {catcherDataObject.Title}, {catcherDataObject.Handle}, {catcherDataObject.TableName} {catcherDataObject.Size}-max, {string.Join(", ", players.Select(x => $"{x.PlayerName}[{x.PlayerId}]").ToArray())}");
 #endif
             }
             catch (Exception ex)
@@ -263,9 +266,12 @@ namespace DriveHUD.Importers.PokerStars
                     continue;
                 }
 
+                var isHero = false;
+
                 if (player.PlayerName.Equals(heroName))
                 {
                     heroPlayer = player;
+                    isHero = true;
                 }
 
                 var playerCollectionItem = new PlayerCollectionItem
@@ -275,13 +281,33 @@ namespace DriveHUD.Importers.PokerStars
                     PokerSite = EnumPokerSites.PokerStars
                 };
 
-                var playerCacheStatistic = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerCollectionItem);
+                var playerCacheStatistic = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerCollectionItem, out bool exists);
 
-                if (playerCacheStatistic.IsHero)
+                if (exists && playerCacheStatistic.IsHero)
                 {
                     heroPlayer = player;
                     gameInfo.GameFormat = playerCacheStatistic.GameFormat;
                     break;
+                }
+                else if (!exists && gameInfo.GameFormat == GameFormat.Zoom)
+                {
+                    var playerCacheInfo = new PlayerStatsSessionCacheInfo
+                    {
+                        Session = gameInfo.Session,
+                        GameFormat = gameInfo.GameFormat,
+                        Player = playerCollectionItem,
+                        IsHero = isHero,
+                        Stats = new Playerstatistic
+                        {
+                            SessionCode = gameInfo.Session,
+                            PokergametypeId = ParsePokergametypeIdFromTitle(catcherDataObject.Title)
+                        }
+                    };
+
+                    if (playerCacheInfo.Stats.PokergametypeId != 0)
+                    {
+                        gameInfo.AddToPlayersCacheInfo(playerCacheInfo);
+                    }
                 }
             }
 
@@ -351,41 +377,36 @@ namespace DriveHUD.Importers.PokerStars
             return heroName;
         }
 
-        private static GameFormat? ParseGameFormatFromTitle(string title)
+        private static short ParsePokergametypeIdFromTitle(string title)
         {
-            var tableEndStartIndex = title.IndexOf("#", StringComparison.OrdinalIgnoreCase) - 1;
+            HandHistories.Objects.GameDescription.GameType gameType;
 
-            if (tableEndStartIndex <= 0)
+            if (title.ContainsIgnoreCase("No Limit Hold'em"))
             {
-                tableEndStartIndex = title.IndexOf("-", StringComparison.OrdinalIgnoreCase) - 1;
-
-                if (tableEndStartIndex <= 0)
-                {
-                    return null;
-                }
+                gameType = HandHistories.Objects.GameDescription.GameType.NoLimitHoldem;
+            }
+            else if (title.ContainsIgnoreCase("No Limit Omaha Hi/Lo"))
+            {
+                gameType = HandHistories.Objects.GameDescription.GameType.NoLimitOmahaHiLo;
+            }
+            else if (title.ContainsIgnoreCase("Pot Limit Omaha"))
+            {
+                gameType = HandHistories.Objects.GameDescription.GameType.PotLimitOmaha;
+            }
+            else if (title.ContainsIgnoreCase("Pot Limit Omaha Hi/Lo"))
+            {
+                gameType = HandHistories.Objects.GameDescription.GameType.PotLimitOmahaHiLo;
+            }
+            else if (title.ContainsIgnoreCase("Limit Hold'em"))
+            {
+                gameType = HandHistories.Objects.GameDescription.GameType.FixedLimitHoldem;
+            }
+            else
+            {
+                return 0;
             }
 
-            var tableName = title.Substring(0, tableEndStartIndex);
-
-            if (ZoomTables.Contains(tableName))
-            {
-                return GameFormat.Zoom;
-            }
-            else if (!title.Contains("Tournament"))
-            {
-                return GameFormat.Cash;
-            }
-
-            return null;
+            return (short)gameType;
         }
-
-        private static readonly string[] ZoomTables = new[] { "McNaught", "Borrelllly", "Halley", "Lovejoy", "Hyakutake", "Donati", "Lynx", "Hartley", "Aludra", "Devanssay",
-            "Eulalia", "Nansen", "Amundsen", "Whirlpool", "Hydra", "Thyestes", "Arp", "Baade", "Aquarius Dwarf", "Serpens Caput", "Triangulum", "Gotha", "Aenaa", "Diotima",
-            "Lambda Velorum", "Humason", "Centaurus", "Dorado", "Lupus", "Coma Berenices", "Cassiopeia", "Perseus", "C Carinae", "Alpha Reticuli (CAP)", "Chi Sagittarii",
-            "Sirius", "Omicron Capricorni", "Beta Tucanae (CAP)", "Delta Antilae", "Theta Cancri", "Chi Draconis", "Sigam Aquilae (CAP)", "Iota Apodis", "Zeta Phoenicis",
-            "Delta Boötis", "Gamma Delphini (CAP)", "Phi Piscium", "Tau Hydrae", "Adhara", "Iota Cancri (CAP)", "Deneb el Okab", "Lambda Arietis", "Cetus", "Mira (CAP)",
-            "Crux", "Rho Capricorni", "Gamma Crateris", "Alpha Crucis (CAP)", "Norma", "Canes Venatici", "Draco", "Amália", "Eusébio", "Pessoa", "Cervantes", "Velazquez",
-            "Gaudi", "Dali", "Goya", "Picasso", "Clubs", "Spades", "Hears", "Diamonds", "Turn", "River", "Portland", "Los Angeles", "Houston", "New York", "Las Vegas",
-            "Boston", "Boulder", "Washington", "Dallas", "New Orleans", "Miami", "Antares", "Atena", "Fenice", "Pegaso", "Cigno", "Shun", "Sirio", "Cronos" };     
     }
 }

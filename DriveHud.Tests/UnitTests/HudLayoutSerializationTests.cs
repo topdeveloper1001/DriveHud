@@ -107,6 +107,18 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(actualPosition.Seat, Is.EqualTo(actualPosition.Seat));
             Assert.That(actualPosition.Height, Is.EqualTo(actualPosition.Height));
             Assert.That(hudLayoutActual.Filter, Is.EqualTo(hudLayoutExpected.Filter));
+
+            Assert.That(hudLayoutActual.TrackMeterPositions.Count, Is.EqualTo(hudLayoutExpected.TrackMeterPositions.Count));
+
+            for (var i = 0; i < hudLayoutActual.TrackMeterPositions.Count; i++)
+            {
+                var actualTrackMeter = hudLayoutActual.TrackMeterPositions[i];
+                var expectedTrackMeter = hudLayoutExpected.TrackMeterPositions[i];
+
+                Assert.That(actualTrackMeter.GameType, Is.EqualTo(expectedTrackMeter.GameType));
+                Assert.That(actualTrackMeter.PokerSite, Is.EqualTo(expectedTrackMeter.PokerSite));
+                Assert.That(actualTrackMeter.HudPositions.Count, Is.EqualTo(expectedTrackMeter.HudPositions.Count));
+            }
         }
 
         /// <summary>
@@ -727,6 +739,21 @@ namespace DriveHud.Tests.UnitTests
                 {
                     DataFreshness = 30,
                     TableTypes = new[] { (int)EnumTableType.HU, (int)EnumTableType.Six }
+                },
+                TrackMeterPositions = new List<HudPositionsInfo>
+                {
+                    new HudPositionsInfo
+                    {
+                         GameType = EnumGameType.MTTHoldem,
+                         PokerSite = EnumPokerSites.Bodog,
+                         HudPositions = new List<HudPositionInfo>
+                         {
+                            new HudPositionInfo
+                            {
+                                 Position = new System.Windows.Point(1,15)
+                            }
+                         }
+                    }
                 }
             };
 

@@ -13,6 +13,8 @@
 using DriveHUD.Common;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
+using DriveHUD.Common.Resources;
+using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
@@ -78,7 +80,7 @@ namespace DriveHUD.Importers.BetOnline
                 var partialXml = Decrypt(encryptedXml);
 
                 if (logger != null && isLoggingEnabled)
-                {
+                {                   
                     logger.Log(partialXml);
                 }
 
@@ -196,8 +198,17 @@ namespace DriveHUD.Importers.BetOnline
 
                 LogProvider.Log.Info(this, string.Format("Hand {0} has been imported in {2}ms. [{1}]", result.HandHistory.Gamenumber, Identifier, result.Duration));
 
-                var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, convertedResult.GameInfo, result.Source.Hero, result.Source.HandId);
+                if (result.Source.GameDescription.TableTypeDescriptors.Contains(TableTypeDescription.FastFold))
+                {
+                    var preImportedArgs = new PreImportedDataEventArgs(convertedResult.GameInfo,
+                        CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_PreLoadingText_NotSupportedFastFold"));
 
+                    eventAggregator.GetEvent<PreImportedDataEvent>().Publish(preImportedArgs);
+
+                    return;
+                }
+
+                var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, convertedResult.GameInfo, result.Source.Hero, result.Source.HandId);
                 eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
             }
         }
@@ -276,7 +287,7 @@ namespace DriveHUD.Importers.BetOnline
             if (xml.StartsWith("<TableDetails", StringComparison.OrdinalIgnoreCase) && buffer.Count > 0)
             {
                 buffer.Clear();
-                buffer.Add(xml);
+                buffer.Add(xml);                
 
                 if (isLoggingEnabled)
                 {
@@ -304,7 +315,7 @@ namespace DriveHUD.Importers.BetOnline
                 return false;
             }
 
-            buffer.Add(xml);
+            buffer.Add(xml);            
 
             if (buffer.Count == 3)
             {

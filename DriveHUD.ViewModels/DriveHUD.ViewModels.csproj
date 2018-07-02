@@ -141,6 +141,7 @@
     <Compile Include="ChipsInfo.cs" />
     <Compile Include="ColorHelper.cs" />
     <Compile Include="EnumerationExtension.cs" />
+    <Compile Include="Replayer\IReplayerService.cs" />
     <Compile Include="RangeSelector\HandSuitsViewModel.cs" />
     <Compile Include="RangeSelector\CardsSelectorItemViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

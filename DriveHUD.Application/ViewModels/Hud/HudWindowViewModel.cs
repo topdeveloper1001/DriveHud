@@ -247,8 +247,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                         SelectedLayout = LayoutsCollection.FirstOrDefault(x => x == layout.LayoutName);
                     }
 
-                    OnPropertyChanged(nameof(PreLoadMode));
-                    OnPropertyChanged(nameof(PreLoadText));
+                    RaisePropertyChanged(nameof(PreLoadMode));
+                    RaisePropertyChanged(nameof(PreLoadText));
                 }
             }
         }

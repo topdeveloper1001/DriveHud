@@ -1,0 +1,35 @@
+Game Hand #33356469 - Tournament #8954503 - Holdem(No Limit) - Level 3 (20.00/40.00)- 2018/06/06 20:07:26 UTC
+Table '1' 3-max Seat #2 is the button
+Seat 1: aloalobrasilbrasil (310.00)
+Seat 2: Peon_84 (545.00)
+Seat 3: atm money man (645.00)
+atm money man posts the small blind 20.00
+aloalobrasilbrasil posts the big blind 40.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [As 3c]
+Peon_84 raises 80.00 to 80.00
+atm money man calls 60.00
+aloalobrasilbrasil folds
+*** FLOP *** [5h Ac Jc]
+Main pot 200.00
+atm money man checks
+Peon_84 bets 120.00
+atm money man calls 120.00
+*** TURN *** [5h Ac Jc] [9h]
+Main pot 440.00
+atm money man checks
+Peon_84 bets 200.00
+atm money man calls 200.00
+*** RIVER *** [5h Ac Jc 9h] [3d]
+Main pot 840.00
+atm money man checks
+Peon_84 bets 145.00 and is all-in
+atm money man folds
+Uncalled bet (145.00) returned to Peon_84
+Peon_84 does not show
+*** SUMMARY ***
+Total pot 840.00 | Rake 0.00
+Board [5h Ac Jc 9h 3d]
+Seat 1: aloalobrasilbrasil (big blind) folded on the Pre-Flop
+Seat 2: Peon_84 did not show and won 840.00
+Seat 3: atm money man (small blind) folded on the River

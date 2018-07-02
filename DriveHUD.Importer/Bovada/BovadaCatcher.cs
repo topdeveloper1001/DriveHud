@@ -10,9 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
+using System;
+using System.Diagnostics;
 using System.Linq;
 
 namespace DriveHUD.Importers.Bovada
@@ -90,6 +94,17 @@ namespace DriveHUD.Importers.Bovada
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Indicates whether the specified process matches conditions of the current catcher
+        /// </summary>
+        /// <param name="process">Process to check</param>
+        /// <returns>True if process matches; otherwise - false</returns>
+        protected override bool IsProcessMatch(Process process)
+        {
+            return process.ProcessName.Equals(ProcessName, StringComparison.OrdinalIgnoreCase) &&
+                process.GetParentProcess() == null;
         }
 
         #endregion

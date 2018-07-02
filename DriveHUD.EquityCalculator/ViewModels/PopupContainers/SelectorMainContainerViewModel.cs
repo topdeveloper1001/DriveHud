@@ -102,9 +102,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 var v = _notification as CardSelectorNotification;
 
-                if ((v.SelectorType != CardSelectorType.BoardSelector)
-                    && ((v.CardsContainer.Ranges != null && v.CardsContainer.Ranges.Any())
-                    || v.CardsContainer.Cards.All(x => x.Rank == RangeCardRank.None && x.Suit == RangeCardSuit.None)))
+                if (v.SelectorType != CardSelectorType.BoardSelector)
                 {
                     SelectedView = new PreflopSelectorView();
                 }

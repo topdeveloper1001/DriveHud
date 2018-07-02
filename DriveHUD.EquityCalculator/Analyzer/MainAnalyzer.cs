@@ -68,14 +68,11 @@ namespace DriveHUD.EquityCalculator.Analyzer
             strongestOpponentName = handAnalyzer.StrongestOpponentName;
         }
 
-        internal static void GetHeroRange(HandHistories.Objects.Hand.HandHistory currentHandHistory, HandHistories.Objects.Cards.Street currentStreet, out string strongestOpponentName, out IEnumerable<EquityRangeSelectorItemViewModel> strongestOpponentHands)
+        internal static IEnumerable<EquityRangeSelectorItemViewModel> GetHeroRange(HandHistories.Objects.Hand.HandHistory currentHandHistory, HandHistories.Objects.Cards.Street currentStreet)
         {
-            strongestOpponentName = null;
-            strongestOpponentHands = new List<EquityRangeSelectorItemViewModel>();
-
             if (currentHandHistory.Hero == null)
             {
-                return;
+                return null;
             }
 
             if (init)
@@ -89,31 +86,131 @@ namespace DriveHUD.EquityCalculator.Analyzer
             var handAnalyzer = new HandAnalyzer();
 
             var handHistory = new HandHistory();
+
             handHistory.ConverToEquityCalculatorFormat(currentHandHistory, currentStreet);
 
-            // analyze preflop ranges
-            var hand_range = handAnalyzer.PreflopAnalysis(handHistory);
+            var heroRange = handAnalyzer.BuildPlayerRange(handHistory, currentHandHistory.Hero.PlayerName);
 
-            var hand_collective = new Hashtable();
+            return GroupHands(heroRange);
+        }
 
-            foreach (string key in hand_range.Keys)
+        internal static Dictionary<MadeHandType, int> GetCombosByHandType(IEnumerable<string> range, string boardCards)
+        {
+            var result = new Dictionary<MadeHandType, int>();
+
+            void AddResult(MadeHandType handType)
             {
-                var hand_distribution = new hand_distribution
+                if (!result.ContainsKey(handType))
                 {
-                    hand_range = (float)Convert.ToDouble(hand_range[key])
-                };
+                    result.Add(handType, 1);
+                    return;
+                }
 
-                hand_collective.Add(key, hand_distribution);
+                result[handType]++;
             }
 
-            var street = currentStreet == HandHistories.Objects.Cards.Street.Flop ? 1 :
-                              currentStreet == HandHistories.Objects.Cards.Street.Turn ? 2 :
-                               currentStreet == HandHistories.Objects.Cards.Street.River ? 3 : 0;
+            var ungroupedHands = HandAnalyzer.UngroupHands(range, boardCards, null);
 
-            handAnalyzer.BuildPlayerRange(handHistory, street, hand_collective, currentHandHistory.Hero.PlayerName);
+            var boardCard1 = boardCards.Substring(0, 2);
+            var boardCard2 = boardCards.Substring(2, 2);
+            var boardCard3 = boardCards.Substring(4, 2);
+            var boardCard4 = boardCards.Length >= 8 ? boardCards.Substring(6, 2) : null;
+            var boardCard5 = boardCards.Length >= 10 ? boardCards.Substring(8, 2) : null;
 
-            strongestOpponentHands = GroupHands(handAnalyzer.StrongestOpponentHands);
-            strongestOpponentName = handAnalyzer.StrongestOpponentName;
+            // flop cards in binary format
+            var fBoardCard1 = HandHistory.fastCard(boardCard1[0], boardCard1[1]);
+            var fBoardCard2 = HandHistory.fastCard(boardCard2[0], boardCard2[1]);
+            var fBoardCard3 = HandHistory.fastCard(boardCard3[0], boardCard3[1]);
+            var fBoardCard4 = boardCard4 != null ? HandHistory.fastCard(boardCard4[0], boardCard4[1]) : 0;
+            var fBoardCard5 = boardCard5 != null ? HandHistory.fastCard(boardCard5[0], boardCard5[1]) : 0;
+
+            var board = new[] { fBoardCard1, fBoardCard2, fBoardCard3, fBoardCard4, fBoardCard5 };
+
+            foreach (var holeCards in ungroupedHands)
+            {
+                var holeCard1 = holeCards.Substring(0, 2);
+                var holeCard2 = holeCards.Substring(2, 2);
+
+                var fHoleCard1 = HandHistory.fastCard(holeCard1[0], holeCard1[1]);
+                var fHoleCard2 = HandHistory.fastCard(holeCard2[0], holeCard2[1]);
+
+                if (board.Any(x => x == fHoleCard1 || x == fHoleCard2))
+                {
+                    continue;
+                }
+
+                var boardInfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, holeCard1, holeCard2);
+
+                var handType = GetHandType(holeCard1, holeCard2, boardInfo, boardCards);
+
+                if (handType == MadeHandType.NoPair)
+                {
+                    var added = false;
+
+                    if (boardInfo.ifflushdraw)
+                    {
+                        AddResult(MadeHandType.FlushDraw);
+                        added = true;
+                    }
+
+                    if (boardInfo.ifstraightdraw)
+                    {
+                        AddResult(MadeHandType.StraightDraw);
+                        added = true;
+                    }
+
+                    if (added)
+                    {
+                        continue;
+                    }
+                }
+
+                AddResult(handType);
+            }
+
+            return result;
+        }
+
+        private static MadeHandType GetHandType(string card1, string card2, boardinfo boardInfo, string boardCards)
+        {
+            if (boardInfo.holesused == 0)
+            {
+                return MadeHandType.NoPair;
+            }
+
+            switch (boardInfo.madehand)
+            {
+                case PostFlopHand.kPair:
+                    var pairType = BluffToValueRatioCalculator.GetPairType(card1, card2, boardInfo, boardCards);
+
+                    switch (pairType)
+                    {
+                        case PairType.Bottom:
+                            return MadeHandType.WeakPair;
+                        case PairType.Middle:
+                            return MadeHandType.MiddlePair;
+                        case PairType.Top:
+                            return MadeHandType.TopPair;
+                        default:
+                            return MadeHandType.NoPair;
+                    }
+                case PostFlopHand.k2Pair:
+                    return MadeHandType.TwoPairs;
+                case PostFlopHand.k3ofKind:
+                    return MadeHandType.ThreeOfKind;
+                case PostFlopHand.k4ofKind:
+                    return MadeHandType.FourOfKind;
+                case PostFlopHand.kFlush:
+                    return MadeHandType.Flush;
+                case PostFlopHand.kFullHouse:
+                    return MadeHandType.FullHouse;
+                case PostFlopHand.kStraight:
+                    return MadeHandType.Straight;
+                case PostFlopHand.kStraightFlush:
+                    return MadeHandType.StraightFlush;
+                default:
+                    return MadeHandType.NoPair;
+            }
         }
 
         private static IEnumerable<EquityRangeSelectorItemViewModel> GroupHands(List<String> ungroupedHands)

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,6 +33,16 @@ namespace Simulator
                     HandHistoryLocation = fbDialog.SelectedPath;
                 }
             });
+
+            DestinationBrowseCommand = ReactiveCommand.Create(() =>
+            {
+                var fbDialog = new FolderBrowserDialog();
+
+                if (fbDialog.ShowDialog() == DialogResult.OK)
+                {
+                    Destination = fbDialog.SelectedPath;
+                }
+            });
         }
 
         protected virtual string HandHistoryFilter { get => "*.txt"; }
@@ -54,7 +65,8 @@ namespace Simulator
         {
             get
             {
-                return tablesToEmulate > 0 && Directory.Exists(HandHistoryLocation);
+                return Directory.Exists(HandHistoryLocation) && ((!IsPrimitiveEmulation && tablesToEmulate > 0) ||
+                    (IsPrimitiveEmulation && !string.IsNullOrEmpty(WindowTitle) && Directory.Exists(Destination)));
             }
         }
 
@@ -88,13 +100,70 @@ namespace Simulator
             }
         }
 
+        private bool isPrimitiveEmulation;
+
+        public bool IsPrimitiveEmulation
+        {
+            get
+            {
+                return isPrimitiveEmulation;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isPrimitiveEmulation, value);
+                this.RaisePropertyChanged(nameof(CanRun));
+            }
+        }
+
+        private string windowTitle;
+
+        public string WindowTitle
+        {
+            get
+            {
+                return windowTitle;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref windowTitle, value);
+                this.RaisePropertyChanged(nameof(CanRun));
+            }
+        }
+
+        private string destination;
+
+        public string Destination
+        {
+            get
+            {
+                return destination;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref destination, value);
+                this.RaisePropertyChanged(nameof(CanRun));
+            }
+        }
+
         #region Commands
 
         public ICommand BrowseCommand { get; private set; }
 
+        public ICommand DestinationBrowseCommand { get; private set; }
+
         #endregion
 
-        public Task Run(CancellationToken cancellationToken)
+        public Task Run(CancellationTokenSource cancellationToken)
+        {
+            if (IsPrimitiveEmulation)
+            {
+                return EmulatePrimitiveImporter(cancellationToken);
+            }
+
+            return EmulateGenericImporter(cancellationToken);
+        }
+
+        private Task EmulateGenericImporter(CancellationTokenSource cancellationToken)
         {
             var files = Directory.GetFiles(HandHistoryLocation, HandHistoryFilter)
                 .ToList()
@@ -116,7 +185,77 @@ namespace Simulator
             return Task.WhenAll(emulationTasks);
         }
 
-        private Task EmulateTable(string tableTitle, IEnumerable<string> files, CancellationToken cancellationToken)
+        private Task EmulatePrimitiveImporter(CancellationTokenSource cancellationToken)
+        {
+            var file = Directory.GetFiles(HandHistoryLocation, HandHistoryFilter).FirstOrDefault();
+
+            if (file == null)
+            {
+                return Task.CompletedTask;
+            }
+
+            return Task.Run(() =>
+            {
+                Window window = null;
+                int windowHandle = 0;
+
+                bool windowClosed = false;
+
+                App.Current.Dispatcher.Invoke(() =>
+                {
+                    window = Utils.CreateTableWindow(WindowTitle, 808, 585);
+
+                    window.Closed += (s, e) =>
+                    {
+                        windowClosed = true;
+                        cancellationToken.Cancel();
+                    };
+
+                    windowHandle = new WindowInteropHelper(window).Handle.ToInt32();
+                });
+
+                var fileContent = File.ReadAllText(file);
+
+                var destinationFile = Path.Combine(Destination, Path.GetFileName(file));
+
+                using (var fs = new StreamWriter(destinationFile, false, Encoding.Unicode))
+                {
+                    var hands = Utils.SplitUpMultipleHands(fileContent);
+
+                    foreach (var hand in hands)
+                    {
+                        if (cancellationToken.IsCancellationRequested || windowClosed)
+                        {
+                            break;
+                        }
+
+                        fs.Write(hand);
+                        fs.WriteLine();
+                        fs.WriteLine();
+                        fs.Flush();
+
+                        try
+                        {
+                            Task.Delay(delayBetweenHands).Wait(cancellationToken.Token);
+                        }
+                        catch
+                        {
+                        }
+                    }
+                }
+
+                App.Current.Dispatcher.Invoke(() =>
+                {
+                    if (!windowClosed)
+                    {
+                        window.Close();
+                    }
+                });
+
+            });
+        }
+
+        private Task EmulateTable(string tableTitle, IEnumerable<string> files, CancellationTokenSource cancellationToken)
         {
             return Task.Run(() =>
             {
@@ -128,7 +267,13 @@ namespace Simulator
                 App.Current.Dispatcher.Invoke(() =>
                 {
                     window = Utils.CreateTableWindow(tableTitle, 808, 585);
-                    window.Closed += (s, e) => windowClosed = true;
+
+                    window.Closed += (s, e) =>
+                    {
+                        windowClosed = true;
+                        cancellationToken.Cancel();
+                    };
+
                     windowHandle = new WindowInteropHelper(window).Handle.ToInt32();
                 });
 
@@ -170,7 +315,7 @@ namespace Simulator
 
                         try
                         {
-                            Task.Delay(delayBetweenHands).Wait(cancellationToken);
+                            Task.Delay(delayBetweenHands).Wait(cancellationToken.Token);
                         }
                         catch
                         {
@@ -182,7 +327,7 @@ namespace Simulator
                 {
                     try
                     {
-                        Task.Delay(delayBetweenHands).Wait(cancellationToken);
+                        Task.Delay(delayBetweenHands).Wait(cancellationToken.Token);
                     }
                     catch
                     {
