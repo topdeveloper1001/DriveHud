@@ -339,6 +339,13 @@ namespace DriveHud.Tests.UnitTests
              EnumPokerSites.BetOnline,
              null
             );
+            yield return new TestCaseData(
+            "ExportTest-Forum-Source-Many-MP.xml",
+            "ExportTest-Forum-Result-Many-MP.txt",
+            EnumExportType.TwoPlusTwo,
+            EnumPokerSites.Ignition,
+            null
+           );
         }
 
         public abstract class TestIndicatorsAbstract : ExportIndicators
