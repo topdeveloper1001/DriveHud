@@ -1,0 +1,30 @@
+﻿Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software
+
+[U][B]NL Holdem $0.50(BB)[/B][/U]
+CO ($5.83)
+BTN ($41.75)
+SB ($68.97)
+BB ($26.4)
+UTG ($44.68)
+EP ($56.2)
+[color=blue][B]MP1 ($31.68)[/B][/color]
+[color=blue][B]MP2 ($108.25)[/B][/color]
+[color=blue][B]HERO ($50)[/B][/color]
+
+[B]Dealt to Hero:[/B] 4:diamond: A:diamond:
+
+[I]UTG Folds[/I], [I]EP Folds[/I], [color=red]MP1 Raises To $2[/color], [color=red]MP2 Calls $2[/color], [color=red]HERO Calls $2[/color], [I]CO Folds[/I], [I]BTN Folds[/I], [I]SB Folds[/I], [I]BB Folds[/I]
+
+[I][B]Hero SPR on Flop: [4.4 effective][/B][/I]
+[B]Flop ($6.75):[/B] 5:diamond: 4:club: 4:spade:
+[color=red]MP1 Bets $3.37[/color] (Rem. Stack: 26.31), [color=red]MP2 Calls $3.37[/color] (Rem. Stack: 102.88), [color=red]HERO Calls $3.37[/color] (Rem. Stack: 44.63)
+
+[B]Turn ($16.86):[/B] 5:diamond: 4:club: 4:spade: 3:club:
+[color=red]MP1 Bets $3[/color] (Rem. Stack: 23.31), [color=red]MP2 Raises To $7.50[/color] (Rem. Stack: 95.38), [color=red]HERO Calls $7.50[/color] (Rem. Stack: 37.13), [color=red]MP1 Calls $4.50[/color] (Rem. Stack: 18.81)
+
+[B]River ($39.36):[/B] 5:diamond: 4:club: 4:spade: 3:club: K:club:
+[I]MP1 Checks[/I], [color=red]MP2 Bets $19.68[/color] (Rem. Stack: 75.70), [I]HERO Folds[/I], [I]MP1 Folds[/I]
+
+[spoil]
+MP2 wins: $37.40
+[/spoil]
