@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="SessionCacheData.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -12,6 +12,7 @@
 
 using DriveHUD.Entities;
 using Model;
+using Model.Data;
 using System;
 using System.Collections.Generic;
 
@@ -24,14 +25,14 @@ namespace DriveHUD.Importers
     {
         private readonly Dictionary<PlayerCollectionItem, SessionCacheStatistic> statisticByPlayer;
         private readonly Dictionary<PlayerCollectionItem, Playerstatistic> lastHandStatisticByPlayer;
-        private readonly Dictionary<PlayerCollectionItem, Dictionary<string, Playerstatistic>> stickersStatisticByPlayer;
+        private readonly Dictionary<PlayerCollectionItem, Dictionary<string, HudLightIndicators>> stickersStatisticByPlayer;
         private readonly Dictionary<PlayerCollectionItem, string> playerLayoutMap;
 
         public SessionCacheData()
         {
             statisticByPlayer = new Dictionary<PlayerCollectionItem, SessionCacheStatistic>();
             lastHandStatisticByPlayer = new Dictionary<PlayerCollectionItem, Playerstatistic>();
-            stickersStatisticByPlayer = new Dictionary<PlayerCollectionItem, Dictionary<string, Playerstatistic>>();
+            stickersStatisticByPlayer = new Dictionary<PlayerCollectionItem, Dictionary<string, HudLightIndicators>>();
             playerLayoutMap = new Dictionary<PlayerCollectionItem, string>();
             LastModified = DateTime.Now;
         }
@@ -52,7 +53,7 @@ namespace DriveHUD.Importers
             }
         }
 
-        public Dictionary<PlayerCollectionItem, Dictionary<string, Playerstatistic>> StickersStatisticByPlayer
+        public Dictionary<PlayerCollectionItem, Dictionary<string, HudLightIndicators>> StickersStatisticByPlayer
         {
             get
             {

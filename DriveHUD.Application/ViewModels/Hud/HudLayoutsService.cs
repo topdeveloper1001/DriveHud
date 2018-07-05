@@ -470,7 +470,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                                        {
                                            HudElement = grouped.Key,
                                            MatchRatios = grouped.Where(x => x.IsInRange).OrderBy(x => x.Ratio).ToList(),
-                                           ExtraMatchRatios = grouped.OrderBy(x => x.ExtraRatio).ToList()
+                                           ExtraMatchRatios = grouped.Where(x => x.ExtraRatio != 0).OrderBy(x => x.ExtraRatio).ToList()
                                        }).ToList();
 
             var proccesedElements = new HashSet<int>();
@@ -534,7 +534,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <summary>
         /// Sets stickers for hud elements based on stats and bumper sticker settings
         /// </summary>
-        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics, HudLayoutInfoV2 layout)
+        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, HudLightIndicators> stickersStatistics, HudLayoutInfoV2 layout)
         {
             hudElement.Stickers = new ObservableCollection<HudBumperStickerType>();
 
@@ -545,22 +545,14 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             foreach (var sticker in layout.HudBumperStickerTypes.Where(x => x.EnableBumperSticker))
             {
-                if (!stickersStatistics.ContainsKey(sticker.Name))
+                if (!stickersStatistics.TryGetValue(sticker.Name, out HudLightIndicators statistics) ||
+                    statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0 ||
+                    !IsInRange(hudElement, sticker.Stats, statistics))
                 {
                     continue;
                 }
 
-                var statistics = new HudLightIndicators(new[] { stickersStatistics[sticker.Name] });
-
-                if (statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0)
-                {
-                    continue;
-                }
-
-                if (IsInRange(hudElement, sticker.Stats, statistics))
-                {
-                    hudElement.Stickers.Add(sticker);
-                }
+                hudElement.Stickers.Add(sticker);
             }
         }
 
