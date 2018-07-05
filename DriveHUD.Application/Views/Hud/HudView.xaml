@@ -1304,7 +1304,8 @@
 
         <dh:NonTopmostPopup
             IsOpen="{Binding IsPopupOpened}"
-            AllowsTransparency="True"
+            AllowsTransparency="True"   
+            AlwaysNonTopmost="True"            
             Placement="Center">
 
             <Grid>

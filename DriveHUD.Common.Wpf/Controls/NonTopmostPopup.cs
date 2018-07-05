@@ -60,6 +60,20 @@ namespace DriveHUD.Common.Wpf.Controls
         }
 
         /// <summary>
+        /// IgnoreDisableTopmost dependency property
+        /// </summary>
+        public static readonly DependencyProperty AlwaysNonTopmostProperty = DependencyProperty.Register("AlwaysNonTopmost", typeof(bool), typeof(NonTopmostPopup), new FrameworkPropertyMetadata(false, OnIsTopmostChanged));
+
+        /// <summary>
+        /// Get/Set IgnoreDisableTopmost
+        /// </summary>
+        public bool AlwaysNonTopmost
+        {
+            get { return (bool)GetValue(AlwaysNonTopmostProperty); }
+            set { SetValue(AlwaysNonTopmostProperty, value); }
+        }
+
+        /// <summary>
         /// ctor
         /// </summary>
         public NonTopmostPopup()
@@ -83,7 +97,9 @@ namespace DriveHUD.Common.Wpf.Controls
             _parentWindow = Window.GetWindow(this);
 
             if (_parentWindow == null)
+            {
                 return;
+            }
 
             _parentWindow.Activated += OnParentWindowActivated;
             _parentWindow.Deactivated += OnParentWindowDeactivated;
@@ -92,7 +108,10 @@ namespace DriveHUD.Common.Wpf.Controls
         private void OnPopupUnloaded(object sender, RoutedEventArgs e)
         {
             if (_parentWindow == null)
+            {
                 return;
+            }
+
             _parentWindow.Activated -= OnParentWindowActivated;
             _parentWindow.Deactivated -= OnParentWindowDeactivated;
         }
@@ -138,8 +157,12 @@ namespace DriveHUD.Common.Wpf.Controls
 
         private void SetTopmostState(bool isTop)
         {
+            if (AlwaysNonTopmost)
+            {
+                isTop = false;
+            }
             // Don’t apply state if it’s the same as incoming state
-            if (_appliedTopMost.HasValue && _appliedTopMost == isTop || (DisableTopMost && !IgnoreDisableTopmost))
+            else if (_appliedTopMost.HasValue && _appliedTopMost == isTop || (DisableTopMost && !IgnoreDisableTopmost))
             {
                 return;
             }
