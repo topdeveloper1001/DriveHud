@@ -132,6 +132,34 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
         }
 
+        private double viewWidth;
+
+        public double ViewWidth
+        {
+            get
+            {
+                return viewWidth;
+            }
+            protected set
+            {
+                this.RaiseAndSetIfChanged(ref viewWidth, value);
+            }
+        }
+
+        private double viewHeight;
+
+        public double ViewHeight
+        {
+            get
+            {
+                return viewHeight;
+            }
+            protected set
+            {
+                this.RaiseAndSetIfChanged(ref viewHeight, value);
+            }
+        }
+
         #endregion
 
         #region IAppStoreViewModel implementation

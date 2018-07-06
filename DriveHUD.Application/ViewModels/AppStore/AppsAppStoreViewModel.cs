@@ -63,6 +63,8 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
                 ViewName = appStoreModule.ModuleName;
                 ViewIconSource = appStoreModule.WindowIconSource;
+                ViewWidth = appStoreModule.WindowWidth;
+                ViewHeight = appStoreModule.WindowHeight;
                 ViewRequest?.Raise(moduleViewRequest);
             }
             catch (Exception e)

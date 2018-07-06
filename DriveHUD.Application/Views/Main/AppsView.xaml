@@ -60,7 +60,9 @@
                 SingleOnly="True"
                 StartupLocation="CenterScreen"
                 IconSource="{Binding AppStoreViewModel.ViewIconSource}"
-                ViewName="{Binding AppStoreViewModel.ViewName}">
+                ViewName="{Binding AppStoreViewModel.ViewName}"
+                Width="{Binding AppStoreViewModel.ViewWidth}"
+                Height="{Binding AppStoreViewModel.ViewHeight}">
                 <infra:ShowWindowViewAction.WindowStyle>
                     <Style
                         TargetType="{x:Type Window}">
@@ -70,9 +72,6 @@
                         <Setter
                             Property="Background"
                             Value="{StaticResource BackgroundBrush1}" />
-                        <Setter
-                            Property="SizeToContent"
-                            Value="WidthAndHeight" />
                         <Setter
                             Property="ResizeMode"
                             Value="CanResize" />

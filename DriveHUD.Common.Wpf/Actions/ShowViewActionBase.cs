@@ -68,6 +68,20 @@ namespace DriveHUD.Common.Wpf.Actions
                 typeof(ShowViewActionBase<T>),
                 new PropertyMetadata(null));
 
+        // Width of the window
+        public static readonly DependencyProperty WidthProperty =
+            DependencyProperty.Register("Width",
+                typeof(double),
+                typeof(ShowViewActionBase<T>),
+                new PropertyMetadata(null));
+
+        // Width of the window
+        public static readonly DependencyProperty HeightProperty =
+            DependencyProperty.Register("Height",
+                typeof(double),
+                typeof(ShowViewActionBase<T>),
+                new PropertyMetadata(null));
+
         /// <summary>
         /// Gets or sets the name of view of the content of the window
         /// </summary>
@@ -122,6 +136,24 @@ namespace DriveHUD.Common.Wpf.Actions
             set;
         }
 
+        /// <summary>
+        ///  Gets or sets the width of window
+        /// </summary>
+        public double Width
+        {
+            get { return (double)GetValue(WidthProperty); }
+            set { SetValue(WidthProperty, value); }
+        }
+
+        /// <summary>
+        ///  Gets or sets the width of window
+        /// </summary>
+        public double Height
+        {
+            get { return (double)GetValue(HeightProperty); }
+            set { SetValue(HeightProperty, value); }
+        }
+
         #endregion
 
         #region Trigger action infrastructure
@@ -148,9 +180,8 @@ namespace DriveHUD.Common.Wpf.Actions
             if (SingleOnly)
             {
                 var windowController = ServiceLocator.Current.GetInstance<IWindowController>();
-                var existingWindow = windowController.GetWindow(ViewName) as T;
 
-                if (existingWindow != null)
+                if (windowController.GetWindow(ViewName) is T existingWindow)
                 {
                     Activate(existingWindow);
                     return;
@@ -165,6 +196,18 @@ namespace DriveHUD.Common.Wpf.Actions
             }
 
             var window = CreateWindow(args.Context);
+
+            if (Width != 0)
+            {
+                window.MinWidth = Width;
+                window.Width = Width;
+            }
+
+            if (Height != 0)
+            {
+                window.MinHeight = Height;
+                window.Height = Height;
+            }
 
             if (WindowStyle != null)
             {
