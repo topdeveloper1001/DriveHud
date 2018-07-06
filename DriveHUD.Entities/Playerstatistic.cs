@@ -1204,7 +1204,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Facingflopcontinuationbet == 1 && Didthreebet == 1 ? 1 : 0;
+                return Facingturncontinuationbet == 1 && Didthreebet == 1 ? 1 : 0;
             }
         }
 
