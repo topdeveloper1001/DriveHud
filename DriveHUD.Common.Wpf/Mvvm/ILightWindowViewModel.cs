@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPMCatcherViewModel.cs" company="Ace Poker Solutions">
+// <copyright file="ILightWindowViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,11 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Wpf.Mvvm;
+using System;
 
-namespace DriveHUD.PMCatcher
+namespace DriveHUD.Common.Wpf.Mvvm
 {
-    public interface IPMCatcherViewModel : ILightWindowViewModel
+    public interface ILightWindowViewModel : IInitializedViewModel, ICloseableViewModel, IConfigurableViewModel, IDisposable
     {
     }
 }

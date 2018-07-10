@@ -31,6 +31,7 @@ using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Application.Views;
 using DriveHUD.Application.Views.Graphs;
+using DriveHUD.Application.Views.Hud;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
 using DriveHUD.Common.Utils;
@@ -213,8 +214,8 @@ namespace DriveHUD.Application
                             LogProvider.Log.Error(this, "Site validation failed.", ex);
                         }
                     }
-
-                    mainWindowViewModel.StartHudCommand.Execute(null);
+#warning disable
+                //    mainWindowViewModel.StartHudCommand.Execute(null);
                 }
             }
             catch (Exception e)
@@ -343,9 +344,11 @@ namespace DriveHUD.Application
 
             // Register views containers
             Container.RegisterType<IViewModelContainer, CashGraphPopupView>(RegionViewNames.CashGraphPopupView);
+            Container.RegisterType<IViewModelContainer, HudUploadToStoreView>(RegionViewNames.HudUploadToStoreView);
 
             // Register view models
             Container.RegisterType<ICashGraphPopupViewModel, CashGraphPopupViewModel>();
+            Container.RegisterType<IHudUploadToStoreViewModel, HudUploadToStoreViewModel>();
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

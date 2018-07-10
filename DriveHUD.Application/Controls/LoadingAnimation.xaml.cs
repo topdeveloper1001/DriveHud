@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPMCatcherViewModel.cs" company="Ace Poker Solutions">
-// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="LoadingAnimation.xaml.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,11 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Wpf.Mvvm;
+using System.Windows.Controls;
 
-namespace DriveHUD.PMCatcher
+namespace DriveHUD.Application.Controls
 {
-    public interface IPMCatcherViewModel : ILightWindowViewModel
+    /// <summary>
+    /// Interaction logic for LoadingAnimation.xaml
+    /// </summary>
+    public partial class LoadingAnimation : UserControl
     {
+        public LoadingAnimation()
+        {
+            InitializeComponent();
+        }
     }
 }

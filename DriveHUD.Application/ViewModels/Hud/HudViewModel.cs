@@ -63,6 +63,7 @@ namespace DriveHUD.Application.ViewModels
         public HudViewModel()
         {
             NotificationRequest = new InteractionRequest<PopupBaseNotification>();
+            OpenHudUploadToStoreRequest = new InteractionRequest<INotification>();
 
             InitializeStatInfoCollection();
             InitializeStatInfoCollectionObserved();
@@ -78,6 +79,8 @@ namespace DriveHUD.Application.ViewModels
         public EnumViewModelType ViewModelType => EnumViewModelType.HudViewModel;
 
         public InteractionRequest<PopupBaseNotification> NotificationRequest { get; private set; }
+
+        public InteractionRequest<INotification> OpenHudUploadToStoreRequest { get; private set; }
 
         private bool currentLayoutIsSwitching;
 
@@ -439,6 +442,8 @@ namespace DriveHUD.Application.ViewModels
 
         public ReactiveCommand DuplicateCommand { get; private set; }
 
+        public ReactiveCommand OpenHudUploadToStoreCommand { get; private set; }
+
         #endregion
 
         #region Infrastructure
@@ -554,6 +559,14 @@ namespace DriveHUD.Application.ViewModels
             BumperStickersCommand = ReactiveCommand.Create<StatInfo>(x => OpenBumperStickers(x));
             DesignerToolCommand = ReactiveCommand.Create(() => InitializeDesigner());
             CancelDesignCommand = ReactiveCommand.Create(() => CloseDesigner());
+
+            OpenHudUploadToStoreCommand = ReactiveCommand.Create(() =>
+            {
+                var viewModelInfo = new HudUploadToStoreViewModelInfo();
+                var requestInfo = new HudUploadToStoreRequestInfo(viewModelInfo);
+
+                OpenHudUploadToStoreRequest.Raise(requestInfo);
+            });
 
             AddToolCommand = new RelayCommand(x =>
             {

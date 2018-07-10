@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPMCatcherViewModel.cs" company="Ace Poker Solutions">
-// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="HudStoreBaseRequest.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,11 +10,17 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Wpf.Mvvm;
-
-namespace DriveHUD.PMCatcher
+namespace Model.AppStore.HudStore
 {
-    public interface IPMCatcherViewModel : ILightWindowViewModel
-    {
+    /// <summary>
+    /// Json + upload hud (binary)
+    /// </summary>
+    public class HudStoreBaseRequest
+    {        
+        public string Data { get; set; }
+
+        public string Random { get; set; }
+
+        public string ProtectedRandom { get; set; }
     }
 }

@@ -14,7 +14,7 @@ using System;
 
 namespace DriveHUD.Common.Wpf.Mvvm
 {
-    public abstract class PopupWindowViewModel : WindowViewModelBase, IPopupWindowViewModel
+    public abstract class LightWindowViewModel : WindowViewModelBase, ILightWindowViewModel
     {
         public event EventHandler Initialized;
 

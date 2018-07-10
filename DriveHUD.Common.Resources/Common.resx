@@ -1126,4 +1126,10 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_TableSize" xml:space="preserve">
     <value>Table size</value>
   </data>
+  <data name="Common_HudUploadToStorePopup_Title" xml:space="preserve">
+    <value>Upload HUD to the store</value>
+  </data>
+  <data name="Common_Hud_UploadToStore" xml:space="preserve">
+    <value>Upload to store</value>
+  </data>
 </root>

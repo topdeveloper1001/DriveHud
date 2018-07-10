@@ -1223,6 +1223,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Upload to store.
+        /// </summary>
+        internal static string Common_Hud_UploadToStore {
+            get {
+                return ResourceManager.GetString("Common_Hud_UploadToStore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string Common_HudLayout_Cancel {
@@ -1778,6 +1787,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudTrackConditions_TrackConditions {
             get {
                 return ResourceManager.GetString("Common_HudTrackConditions_TrackConditions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upload HUD to the store.
+        /// </summary>
+        internal static string Common_HudUploadToStorePopup_Title {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStorePopup_Title", resourceCulture);
             }
         }
         

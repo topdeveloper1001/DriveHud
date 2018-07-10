@@ -1,0 +1,243 @@
+﻿<UserControl
+    x:Class="DriveHUD.Application.Views.Hud.HudUploadToStoreView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:ctl="clr-namespace:DriveHUD.Application.Controls"
+    xmlns:local="clr-namespace:DriveHUD.Application.Views.Hud"
+    mc:Ignorable="d"
+    Background="{StaticResource BackgroundBrush1}"
+    d:DesignHeight="600"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="/DriveHUD.Application;Component/ControlStyles/AppStoreResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <SolidColorBrush
+                x:Key="ActiveTextForeground"
+                Color="#ffffff" />
+
+            <Style
+                x:Key="TextBlockStyle"
+                TargetType="{x:Type TextBlock}">
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ActiveTextForeground}" />
+                <Setter
+                    Property="FontFamily"
+                    Value="/DriveHUD.Application;component/Fonts/#Open Sans" />
+                <Setter
+                    Property="FontSize"
+                    Value="12px" />
+                <Setter
+                    Property="VerticalAlignment"
+                    Value="Center" />
+            </Style>
+
+            <Style
+                x:Key="TextBoxStyle"
+                TargetType="{x:Type TextBox}"
+                BasedOn="{StaticResource {x:Type TextBox}}">
+                <Setter
+                    Property="BorderThickness"
+                    Value="0" />
+                <Setter
+                    Property="FontSize"
+                    Value="12px" />
+                <Setter
+                    Property="Height"
+                    Value="25" />
+                <Setter
+                    Property="Background"
+                    Value="{StaticResource BackgroundBrush3}" />
+                <Setter
+                    Property="HorizontalAlignment"
+                    Value="Left" />
+                <Setter
+                    Property="VerticalAlignment"
+                    Value="Center" />
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type TextBox}">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="2"
+                                Padding="2,0,0,0"
+                                BorderBrush="{TemplateBinding BorderBrush}">
+                                <ScrollViewer
+                                    x:Name="PART_ContentHost"
+                                    VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
+                x:Key="ButtonStyle"
+                TargetType="{x:Type Button}"
+                BasedOn="{StaticResource {x:Type Button}}">
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ActiveTextForeground}" />
+                <Setter
+                    Property="Width"
+                    Value="100" />
+            </Style>
+
+            <ControlTemplate
+                x:Key="ValidationTemplate">
+                <DockPanel>
+                    <Image
+                        Margin="5,0,0,0"
+                        DockPanel.Dock="Right"
+                        VerticalAlignment="Center"
+                        Width="20"
+                        Height="17"
+                        Source="pack://application:,,,/DriveHUD.Common.Resources;component/images/validation_error.png">
+                        <Image.ToolTip>
+                            <ItemsControl
+                                ItemsSource="{Binding}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock
+                                            Text="{Binding ErrorContent}" />
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Image.ToolTip>
+                    </Image>
+                    <AdornedElementPlaceholder
+                        DockPanel.Dock="Left" />
+                </DockPanel>
+            </ControlTemplate>
+
+            <ControlTemplate
+                x:Key="ValidationLoadingIcon">
+                <DockPanel>
+                    <Border
+                        BorderThickness="0"
+                        Background="Transparent"
+                        Margin="5,0,0,0"
+                        DockPanel.Dock="Right"
+                        VerticalAlignment="Center"
+                        ToolTip="Validating...">
+                        <ctl:LoadingAnimation />
+                    </Border>
+                    <dh:ValidationAdornedElementPlaceholder
+                        DockPanel.Dock="Left" />
+                </DockPanel>
+            </ControlTemplate>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid
+        Margin="10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="Auto" />
+            <ColumnDefinition
+                Width="15" />
+            <ColumnDefinition
+                Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="30" />
+            <RowDefinition
+                Height="30" />
+            <RowDefinition
+                Height="30" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="30" />
+        </Grid.RowDefinitions>
+
+        <!-- Name -->
+        <TextBlock
+            Grid.Column="0"
+            Grid.Row="0"
+            Style="{StaticResource TextBlockStyle}"
+            Text="Name" />
+
+        <TextBox
+            Grid.Column="2"
+            Grid.Row="0"
+            Width="300"
+            dh:Validation.AsyncValidation="True"
+            dh:Validation.ValidationTemplate="{StaticResource ValidationLoadingIcon}"
+            Style="{StaticResource TextBoxStyle}"
+            Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+            MaxLength="50"
+            Text="{Binding Name}" />
+
+        <!-- Description -->
+        <TextBlock
+            Grid.Column="0"
+            Grid.Row="1"
+            Style="{StaticResource TextBlockStyle}"
+            Text="Description" />
+
+        <TextBox
+            Grid.Column="2"
+            Grid.Row="1"
+            Width="300"
+            dh:Validation.AsyncValidation="True"
+            dh:Validation.ValidationTemplate="{StaticResource ValidationLoadingIcon}"
+            Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+            Style="{StaticResource TextBoxStyle}"
+            MaxLength="50"
+            Text="{Binding Description}" />
+
+        <!-- Cost -->
+        <TextBlock
+            Grid.Column="0"
+            Grid.Row="2"
+            VerticalAlignment="Center"
+            Style="{StaticResource TextBlockStyle}"
+            Text="Cost" />
+
+        <TextBox
+            Grid.Column="2"
+            Grid.Row="2"
+            Width="50"
+            Style="{StaticResource TextBoxStyle}"
+            Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+            Text="{Binding Cost}" />
+
+        <!-- Buttons -->
+        <StackPanel
+            Grid.ColumnSpan="3"
+            Grid.Row="4"
+            Orientation="Horizontal"
+            HorizontalAlignment="Right">
+            <Button
+                Content="Sumbit"
+                Style="{StaticResource ButtonStyle}"
+                Command="{Binding SubmitCommand, ValidatesOnNotifyDataErrors=False}" />
+            <Button
+                Content="Reset"
+                Margin="5,0,0,0"
+                Style="{StaticResource ButtonStyle}"
+                Command="{Binding ResetCommand, ValidatesOnNotifyDataErrors=False}" />
+            <Button
+                Content="Cancel"
+                Margin="5,0,0,0"
+                Style="{StaticResource ButtonStyle}"
+                Command="{Binding CancelCommand, ValidatesOnNotifyDataErrors=False}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

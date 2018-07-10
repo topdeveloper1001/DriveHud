@@ -272,6 +272,9 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Bootstrappers\ISQLiteBootstrapper.cs" />
     <Compile Include="Bootstrappers\SQLiteBootstrapper.cs" />
+    <Compile Include="Controls\Block.xaml.cs">
+      <DependentUpon>Block.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BraceletControl.xaml.cs">
       <DependentUpon>BraceletControl.xaml</DependentUpon>
     </Compile>
@@ -351,6 +354,9 @@
     </Compile>
     <Compile Include="Controls\HudToolBar.xaml.cs">
       <DependentUpon>HudToolBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation.xaml.cs">
+      <DependentUpon>LoadingAnimation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\TrackConditionsMeterView.xaml.cs">
       <DependentUpon>TrackConditionsMeterView.xaml</DependentUpon>
@@ -542,8 +548,12 @@
     <Compile Include="ViewModels\Hud\HudPreviewBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudStatsDesignerBehavior.cs" />
+    <Compile Include="ViewModels\Hud\HudUploadToStoreRequestInfo.cs" />
+    <Compile Include="ViewModels\Hud\HudUploadToStoreViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudUploadToStoreViewModelInfo.cs" />
     <Compile Include="ViewModels\Hud\IHudBaseToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\IHudLayoutsService.cs" />
+    <Compile Include="ViewModels\Hud\IHudUploadToStoreViewModel.cs" />
     <Compile Include="ViewModels\Hud\IPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PartyPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PMHudPanelService.cs" />
@@ -640,6 +650,9 @@
     <Compile Include="Views\Hud\HudSaveFirstTimeNotificationView.xaml.cs">
       <DependentUpon>HudSaveFirstTimeNotificationView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Hud\HudUploadToStoreView.xaml.cs">
+      <DependentUpon>HudUploadToStoreView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Main\AppsView.xaml.cs">
       <DependentUpon>AppsView.xaml</DependentUpon>
     </Compile>
@@ -692,7 +705,6 @@
     </Compile>
     <Compile Include="Controls\RadGridViewSettings.cs" />
     <Compile Include="Controls\RadListBoxDragDropBehavior.cs" />
-    <Compile Include="Common\StaticClasses.cs" />
     <Compile Include="ControlTemplateSelectors\ReplayerTemplateSelector.cs" />
     <Compile Include="ControlTemplateSelectors\HudPanelTemplateSelector.cs" />
     <Compile Include="CustomeGauge.xaml.cs">
@@ -911,6 +923,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\Block.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\BraceletControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -1067,6 +1083,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\LoadingAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\TrackConditionsMeterView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -1109,6 +1129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Hud\HudSaveFirstTimeNotificationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Hud\HudUploadToStoreView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

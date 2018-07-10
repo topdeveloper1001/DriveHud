@@ -140,12 +140,15 @@
     <Compile Include="AttachedBehaviors\LowHighResolutionBehavior.cs" />
     <Compile Include="AttachedBehaviors\MouseDragPopupBehavior.cs" />
     <Compile Include="AttachedBehaviors\RadGridViewMultiSelectBehavior.cs" />
+    <Compile Include="AttachedBehaviors\Validation.cs" />
+    <Compile Include="AttachedBehaviors\ValidationLoadingAdorner.cs" />
     <Compile Include="Controls\CardImageControl.cs" />
     <Compile Include="Controls\ComboBoxEx.cs" />
     <Compile Include="Controls\ImageButton.cs" />
     <Compile Include="Controls\NonTopmostPopup.cs" />
     <Compile Include="Controls\ProgressBarEx.cs" />
     <Compile Include="Controls\ToggleSwitch.cs" />
+    <Compile Include="Controls\ValidationAdornedElementPlaceholder.cs" />
     <Compile Include="Converters\BackgroundToForegroundColorConverter.cs" />
     <Compile Include="Converters\BarSeriesToPaletteColorConverter.cs" />
     <Compile Include="Converters\BoolNotConverter.cs" />
@@ -216,11 +219,14 @@
     <Compile Include="Mvvm\IInitializedViewModel.cs" />
     <Compile Include="Mvvm\IModuleEntryViewModel.cs" />
     <Compile Include="Mvvm\IOperationViewModel.cs" />
-    <Compile Include="Mvvm\IPopupWindowViewModel.cs" />
+    <Compile Include="Mvvm\ILightWindowViewModel.cs" />
+    <Compile Include="Mvvm\IValidationAsync.cs" />
+    <Compile Include="Mvvm\IWindowViewModel.cs" />
     <Compile Include="Mvvm\OperationViewModel.cs" />
-    <Compile Include="Mvvm\PopupWindowViewModel.cs" />
+    <Compile Include="Mvvm\LightWindowViewModel.cs" />
     <Compile Include="Mvvm\ViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModelContainerHelper.cs" />
+    <Compile Include="Mvvm\WindowViewModel.cs" />
     <Compile Include="Mvvm\WindowViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -244,6 +250,9 @@
     <Compile Include="ResX\ResXKeyProviderExtension.cs" />
     <Compile Include="ResX\ResXParam.cs" />
     <Compile Include="ResX\ResXParamBase.cs" />
+    <Compile Include="Validation\DelegateRule.cs" />
+    <Compile Include="Validation\Rule.cs" />
+    <Compile Include="Validation\RuleCollection.cs" />
     <Compile Include="WpfAnimatedGif\AnimationCache.cs" />
     <Compile Include="WpfAnimatedGif\Decoding\GifApplicationExtension.cs" />
     <Compile Include="WpfAnimatedGif\Decoding\GifBlock.cs" />

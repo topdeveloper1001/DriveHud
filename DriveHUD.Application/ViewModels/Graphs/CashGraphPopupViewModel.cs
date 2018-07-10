@@ -22,7 +22,7 @@ using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Graphs
 {
-    public class CashGraphPopupViewModel : PopupWindowViewModel, ICashGraphPopupViewModel
+    public class CashGraphPopupViewModel : LightWindowViewModel, ICashGraphPopupViewModel
     {
         private Dictionary<SerieType, IEnumerable<GraphSerie>> seriesDictionary;
 
