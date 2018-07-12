@@ -63,16 +63,20 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         public override GeneralTransform GetDesiredTransform(GeneralTransform transform)
         {
             if (ReferenceElement == null)
+            {
                 return transform;
+            }
 
             GeneralTransformGroup group = new GeneralTransformGroup();
             group.Children.Add(transform);
 
-            GeneralTransform t = this.TransformToDescendant(ReferenceElement);
+            GeneralTransform t = TransformToDescendant(ReferenceElement);
+
             if (t != null)
             {
                 group.Children.Add(t);
             }
+
             return group;
         }
 
@@ -117,9 +121,9 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
                 ReferenceElement.InvalidateMeasure();
             }
 
-            (child).Measure(new Size(Double.PositiveInfinity, Double.PositiveInfinity));
+            child.Measure(new Size(Double.PositiveInfinity, Double.PositiveInfinity));
 
-            return (child).DesiredSize;
+            return child.DesiredSize;
         }
 
         /// <summary>
@@ -139,8 +143,6 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
 
             return finalSize;
         }
-
-
 
         private const double DBL_EPSILON = 2.2204460492503131e-016;
 

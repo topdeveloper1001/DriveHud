@@ -224,6 +224,7 @@
     <Compile Include="Mvvm\IWindowViewModel.cs" />
     <Compile Include="Mvvm\OperationViewModel.cs" />
     <Compile Include="Mvvm\LightWindowViewModel.cs" />
+    <Compile Include="Mvvm\SelectableItemViewModel.cs" />
     <Compile Include="Mvvm\ViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModelContainerHelper.cs" />
     <Compile Include="Mvvm\WindowViewModel.cs" />

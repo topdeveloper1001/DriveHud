@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IValidationAsync.cs" company="Ace Poker Solutions">
+// <copyright file="SelectableItemViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,19 +10,39 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using System.ComponentModel;
+using ReactiveUI;
 
 namespace DriveHUD.Common.Wpf.Mvvm
 {
-    public interface IValidationAsync
+    public class SelectableItemViewModel<T> : ViewModelBase
     {
-        bool IsValidating { get; }
+        private readonly T item;
 
-        bool GetPropertValidating(string propertyName);
+        public SelectableItemViewModel(T item)
+        {
+            this.item = item;
+        }
 
-        event EventHandler<DataErrorsChangedEventArgs> PropertyValidating;
+        public T Item
+        {
+            get
+            {
+                return item;
+            }
+        }
 
-        event EventHandler<DataErrorsChangedEventArgs> PropertyValidated;
+        private bool isSelected;
+
+        public bool IsSelected
+        {
+            get
+            {
+                return isSelected;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isSelected, value);
+            }
+        }
     }
 }

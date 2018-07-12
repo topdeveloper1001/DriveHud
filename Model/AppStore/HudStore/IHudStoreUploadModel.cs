@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IValidationAsync.cs" company="Ace Poker Solutions">
+// <copyright file="IHudStoreUploadModel.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,19 +10,27 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using System.ComponentModel;
+using Model.AppStore.HudStore.Model;
+using System.Collections.Generic;
 
-namespace DriveHUD.Common.Wpf.Mvvm
+namespace Model.AppStore.HudStore
 {
-    public interface IValidationAsync
+    public interface IHudStoreUploadModel
     {
-        bool IsValidating { get; }
+        IEnumerable<GameVariant> GameVariants { get; }
 
-        bool GetPropertValidating(string propertyName);
+        IList<GameVariant> SelectedGameVariants { get; }
 
-        event EventHandler<DataErrorsChangedEventArgs> PropertyValidating;
+        IEnumerable<GameType> GameTypes { get; }
 
-        event EventHandler<DataErrorsChangedEventArgs> PropertyValidated;
+        IList<GameType> SelectedGameTypes { get; }
+
+        IEnumerable<TableType> TableTypes { get; }
+
+        IList<TableType> SelectedTableTypes { get; }
+
+        void Load();
+
+        void Upload();
     }
 }

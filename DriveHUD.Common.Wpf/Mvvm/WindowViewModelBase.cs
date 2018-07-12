@@ -45,6 +45,7 @@ namespace DriveHUD.Common.Wpf.Mvvm
                     operationInfo = new OperationViewModel();
                     ConfigureOperationViewModel(operationInfo);
                 }
+
                 return operationInfo;
             }
         }

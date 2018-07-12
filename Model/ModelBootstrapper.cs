@@ -12,6 +12,7 @@
 
 using Microsoft.Practices.Unity;
 using Model.AppStore;
+using Model.AppStore.HudStore;
 using Model.Enums;
 using Model.Filters;
 using Model.Hud;
@@ -49,6 +50,8 @@ namespace Model
             container.RegisterType<IPopulationReportService, PopulationReportService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IHudPlayerTypeService, HudPlayerTypeService>();
             container.RegisterType<IEquitySolver, EquitySolver>();
+            container.RegisterType<IHudStoreUploadModel, HudStoreUploadModel>();
+            container.RegisterType<IHudStoreWebService, HudStoreWebService>();
         }
     }
 }

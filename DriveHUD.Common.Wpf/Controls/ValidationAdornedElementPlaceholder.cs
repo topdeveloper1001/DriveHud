@@ -110,7 +110,6 @@ namespace DriveHUD.Common.Wpf.Controls
             {
                 return child;
             }
-
             set
             {
                 UIElement old = child;
@@ -150,6 +149,7 @@ namespace DriveHUD.Common.Wpf.Controls
             {
                 throw new ArgumentOutOfRangeException("index");
             }
+
             return child;
         }
 

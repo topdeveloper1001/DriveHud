@@ -137,8 +137,13 @@
     <Compile Include="AppStore\AppStoreModule.cs" />
     <Compile Include="AppStore\AppStoreProductStorage.cs" />
     <Compile Include="AppStore\HudStore\HudStoreBaseRequest.cs" />
+    <Compile Include="AppStore\HudStore\HudStoreUploadModel.cs" />
     <Compile Include="AppStore\HudStore\HudStoreWebService.cs" />
+    <Compile Include="AppStore\HudStore\IHudStoreUploadModel.cs" />
     <Compile Include="AppStore\HudStore\IHudStoreWebService.cs" />
+    <Compile Include="AppStore\HudStore\Model\GameType.cs" />
+    <Compile Include="AppStore\HudStore\Model\GameVariant.cs" />
+    <Compile Include="AppStore\HudStore\Model\TableType.cs" />
     <Compile Include="AppStore\IAppsAppStoreModel.cs" />
     <Compile Include="AppStore\IAppsAppStoreRepository.cs" />
     <Compile Include="AppStore\ITrainingAppStoreModel.cs" />
@@ -422,9 +427,7 @@
       <Name>HandHistories.Parser</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AppStore\HudStore\Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

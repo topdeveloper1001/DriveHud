@@ -10,7 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Wpf.Events;
 using DriveHUD.Common.Wpf.Validation;
+using Microsoft.Practices.ServiceLocation;
+using ReactiveUI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,16 +23,15 @@ using System.Linq;
 using System.Reactive.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using ReactiveUI;
 
 namespace DriveHUD.Common.Wpf.Mvvm
 {
-    public abstract class WindowViewModel<T> : LightWindowViewModel, IWindowViewModel
-        where T : WindowViewModel<T>
+    public abstract class WindowViewModel<TViewModel, TModel> : LightWindowViewModel, IWindowViewModel
+        where TViewModel : WindowViewModel<TViewModel, TModel>
     {
         #region Fields
 
-        private static RuleCollection<T> rules = new RuleCollection<T>();
+        private static RuleCollection<TViewModel> rules = new RuleCollection<TViewModel>();
         private Dictionary<string, List<object>> errors;
         private HashSet<string> validatingProperies;
 
@@ -37,6 +39,8 @@ namespace DriveHUD.Common.Wpf.Mvvm
 
         public WindowViewModel() : base()
         {
+            Model = ServiceLocator.Current.GetInstance<TModel>();
+
             Changed.Subscribe(x =>
             {
                 if (x.PropertyName.Equals(nameof(HasErrors)) ||
@@ -126,6 +130,20 @@ namespace DriveHUD.Common.Wpf.Mvvm
             }
         }
 
+        private TModel model;
+
+        public TModel Model
+        {
+            get
+            {
+                return model;
+            }
+            protected set
+            {
+                this.RaiseAndSetIfChanged(ref model, value);
+            }
+        }
+
         #endregion
 
         #region Protected Properties
@@ -134,7 +152,7 @@ namespace DriveHUD.Common.Wpf.Mvvm
         /// Gets the rules which provide the errors.
         /// </summary>
         /// <value>The rules this instance must satisfy.</value>
-        protected static RuleCollection<T> Rules
+        protected static RuleCollection<TViewModel> Rules
         {
             get { return rules; }
         }
@@ -191,7 +209,12 @@ namespace DriveHUD.Common.Wpf.Mvvm
             return result;
         }
 
-        #endregion
+        public bool GetPropertValidating(string propertyName)
+        {
+            return validatingProperies != null && validatingProperies.Contains(propertyName);
+        }
+
+        #endregion        
 
         #region Protected Methods
 
@@ -243,9 +266,22 @@ namespace DriveHUD.Common.Wpf.Mvvm
             PropertyValidated?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
         }
 
-        protected override void OnInitialized()
+        protected virtual void Initialize()
         {
-            base.OnInitialized();
+            InitializeCommands();
+            OnInitialized();
+        }
+
+        protected ReactiveOperation InitializeModelAsync(Action initializeModel)
+        {
+            var operation = StartAsyncOperation(initializeModel, ModelInitialized);
+            return operation;
+        }
+
+        protected abstract void InitializeCommands();
+
+        protected virtual void ModelInitialized()
+        {
             ApplyRules();
         }
 
@@ -256,7 +292,7 @@ namespace DriveHUD.Common.Wpf.Mvvm
         /// <summary>
         /// Applies all rules to this instance.
         /// </summary>
-        private void ApplyRules()
+        protected void ApplyRules()
         {
             InitializeErrors();
 
@@ -270,7 +306,7 @@ namespace DriveHUD.Common.Wpf.Mvvm
         /// Applies the rules to this instance for the specified property.
         /// </summary>
         /// <param name="propertyName">Name of the property.</param>
-        private async void ApplyRules(string propertyName)
+        protected async void ApplyRules(string propertyName)
         {
             InitializeErrors();
 
@@ -288,8 +324,8 @@ namespace DriveHUD.Common.Wpf.Mvvm
             {
                 if (string.IsNullOrEmpty(propertyName) || rule.PropertyName.Equals(propertyName))
                 {
-                    var isValid = rule.IsAsync ? await rule.ApplyAsync((T)this) :
-                        rule.Apply((T)this);
+                    var isValid = rule.IsAsync ? await rule.ApplyAsync((TViewModel)this) :
+                        rule.Apply((TViewModel)this);
 
                     if (!isValid)
                     {

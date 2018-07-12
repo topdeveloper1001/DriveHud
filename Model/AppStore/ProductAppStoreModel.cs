@@ -42,13 +42,7 @@ namespace Model.AppStore
             }
             private set
             {
-                if (ReferenceEquals(items, value))
-                {
-                    return;
-                }
-
-                items = value;
-                OnPropertyChanged();
+                SetProperty(ref items, value);
             }
         }
 

@@ -10,15 +10,20 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
+using Model.AppStore.HudStore.Model;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model.AppStore.HudStore
 {
+    /// <summary>
+    /// Interface for hud store web service
+    /// </summary>
     public interface IHudStoreWebService
     {
+        IEnumerable<GameVariant> GetGameVariants();
+
+        IEnumerable<GameType> GetGameTypes();
+
+        IEnumerable<TableType> GetTableTypes();
     }
 }

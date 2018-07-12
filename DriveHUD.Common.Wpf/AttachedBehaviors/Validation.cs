@@ -67,7 +67,7 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
                 {
                     return;
                 }
-
+                
                 validationContext.PropertyValidating += (o, a) =>
                 {
                     ShowPropertyValidatingContent(element, a.PropertyName, true);
@@ -77,6 +77,14 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
                 {
                     ShowPropertyValidatingContent(element, a.PropertyName, false);
                 };
+
+                var propertyName = GetPropertyName(element);
+
+                if (!string.IsNullOrEmpty(propertyName) &&
+                    validationContext.GetPropertValidating(propertyName))
+                {
+                    ShowPropertyValidatingContent(element, propertyName, true);
+                }
             }
 
             element.DataContextChanged += handler;
@@ -129,6 +137,12 @@ namespace DriveHUD.Common.Wpf.AttachedBehaviors
         {
             var binding = BindingOperations.GetBinding(element, TextBox.TextProperty);
             return binding != null && binding.Path.Path.Equals(propertyName);
+        }
+
+        private static string GetPropertyName(FrameworkElement element)
+        {
+            var binding = BindingOperations.GetBinding(element, TextBox.TextProperty);
+            return binding?.Path.Path;
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IValidationAsync.cs" company="Ace Poker Solutions">
+// <copyright file="TableType.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,19 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using System.ComponentModel;
+using Prism.Mvvm;
 
-namespace DriveHUD.Common.Wpf.Mvvm
+namespace Model.AppStore.HudStore.Model
 {
-    public interface IValidationAsync
+    public class TableType : BindableBase
     {
-        bool IsValidating { get; }
+        public short Id { get; set; }
 
-        bool GetPropertValidating(string propertyName);
+        public string Name { get; set; }
 
-        event EventHandler<DataErrorsChangedEventArgs> PropertyValidating;
-
-        event EventHandler<DataErrorsChangedEventArgs> PropertyValidated;
+        public short MaxPlayers { get; set; }
     }
 }

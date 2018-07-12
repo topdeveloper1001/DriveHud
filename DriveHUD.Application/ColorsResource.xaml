@@ -58,6 +58,9 @@
     <Color
         x:Key="ControlPressedColor">#FF211AA9</Color>
 
+    <SolidColorBrush
+        x:Key="ControlLightBrush"
+        Color="{StaticResource ControlLightColor}" />
 
     <Color
         x:Key="GlyphColor">White</Color>
@@ -530,7 +533,7 @@
     <SolidColorBrush
         x:Key="CallRangeBackground"
         Color="{StaticResource CallRangeColor}" />
-    
+
     <Color
         x:Key="BluffRangeColor">#FCAC75</Color>
 
@@ -540,7 +543,7 @@
     <SolidColorBrush
         x:Key="BluffRangeBackground"
         Color="{StaticResource BluffRangeColor}" />
-    
+
     <Color
         x:Key="ValueBetRangeColor">#0098DB</Color>
 
