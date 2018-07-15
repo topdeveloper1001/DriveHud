@@ -23,7 +23,7 @@ using System.Reactive.Linq;
 
 namespace DriveHUD.Application.ViewModels
 {
-    public class AppsViewModel : WindowViewModelBase, IMainTabViewModel
+    public class AppsViewModel : WpfViewModel<AppsViewModel>, IMainTabViewModel
     {
         public AppsViewModel()
         {
@@ -133,7 +133,7 @@ namespace DriveHUD.Application.ViewModels
         public ReactiveCommand PreviousPageCommand { get; private set; }
 
         public ReactiveCommand SearchCommand { get; private set; }
-        
+
         #endregion
 
         #region Infrastructure

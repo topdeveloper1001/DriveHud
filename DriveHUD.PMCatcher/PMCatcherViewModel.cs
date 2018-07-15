@@ -29,7 +29,7 @@ using System.Reflection;
 
 namespace DriveHUD.PMCatcher
 {
-    public class PMCatcherViewModel : LightWindowViewModel, IPMCatcherViewModel
+    public class PMCatcherViewModel : WindowViewModelBase<PMCatcherViewModel>, IPMCatcherViewModel
     {
         private readonly IEventAggregator eventAggregator;
 

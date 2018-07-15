@@ -223,12 +223,13 @@
     <Compile Include="Mvvm\IValidationAsync.cs" />
     <Compile Include="Mvvm\IWindowViewModel.cs" />
     <Compile Include="Mvvm\OperationViewModel.cs" />
-    <Compile Include="Mvvm\LightWindowViewModel.cs" />
+    <Compile Include="Mvvm\WindowViewModelBase.cs" />
     <Compile Include="Mvvm\SelectableItemViewModel.cs" />
     <Compile Include="Mvvm\ViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModelContainerHelper.cs" />
     <Compile Include="Mvvm\WindowViewModel.cs" />
-    <Compile Include="Mvvm\WindowViewModelBase.cs" />
+    <Compile Include="Mvvm\WpfViewModel.cs" />
+    <Compile Include="Mvvm\WpfViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

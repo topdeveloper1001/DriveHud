@@ -57,7 +57,7 @@ namespace Model.AppStore.HudStore
             RandomDelay();
 
             return Enumerable
-                .Range(2, 8)
+                .Range(2, 9)
                 .Select((x, i) => new TableType
                 {
                     Id = (short)i,

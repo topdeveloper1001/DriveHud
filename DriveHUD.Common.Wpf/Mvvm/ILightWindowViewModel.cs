@@ -14,7 +14,7 @@ using System;
 
 namespace DriveHUD.Common.Wpf.Mvvm
 {
-    public interface ILightWindowViewModel : IInitializedViewModel, ICloseableViewModel, IConfigurableViewModel, IDisposable
+    public interface IWindowViewModelBase : IInitializedViewModel, ICloseableViewModel, IConfigurableViewModel, IDisposable
     {
     }
 }

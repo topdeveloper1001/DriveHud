@@ -14,7 +14,7 @@ using DriveHUD.Common.Wpf.Mvvm;
 
 namespace DriveHUD.Application.ViewModels.Graphs
 {
-    public interface ICashGraphPopupViewModel : ILightWindowViewModel
+    public interface ICashGraphPopupViewModel : IWindowViewModelBase
     {
     }
 }

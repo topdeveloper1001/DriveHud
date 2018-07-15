@@ -14,7 +14,7 @@ using DriveHUD.Common.Wpf.Mvvm;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
-    public interface IHudUploadToStoreViewModel : ILightWindowViewModel
+    public interface IHudUploadToStoreViewModel : IWindowViewModelBase
     {
     }
 }

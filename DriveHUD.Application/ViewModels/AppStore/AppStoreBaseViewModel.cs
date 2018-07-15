@@ -20,7 +20,7 @@ using System;
 
 namespace DriveHUD.Application.ViewModels.AppStore
 {
-    public abstract class AppStoreBaseViewModel<TModel> : WindowViewModelBase, IAppStoreViewModel
+    public abstract class AppStoreBaseViewModel<TModel> : WpfViewModel<AppStoreBaseViewModel<TModel>>, IAppStoreViewModel
         where TModel : IAppStoreModel
     {
         public event EventHandler Updated;

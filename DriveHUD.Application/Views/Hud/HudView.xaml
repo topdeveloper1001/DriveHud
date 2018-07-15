@@ -49,10 +49,16 @@
                             Value="True" />
                         <Setter
                             Property="Width"
-                            Value="600" />
+                            Value="900" />
+                        <Setter
+                            Property="MinWidth"
+                            Value="900" />
+                        <Setter
+                            Property="MinHeight"
+                            Value="800" />
                         <Setter
                             Property="Height"
-                            Value="400" />
+                            Value="800" />
                         <Setter
                             Property="IconTemplate"
                             Value="{StaticResource IconTemplate}" />

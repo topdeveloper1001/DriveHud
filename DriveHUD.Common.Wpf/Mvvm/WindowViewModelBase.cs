@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="WindowViewModelBase.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="IPopupWindowViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,91 +10,32 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Wpf.Events;
-using ReactiveUI;
 using System;
-using System.Reactive.Linq;
-using System.Windows.Threading;
 
 namespace DriveHUD.Common.Wpf.Mvvm
 {
-    public abstract class WindowViewModelBase : ViewModelBase
-    {      
-        private ReactiveOperation currentOperation;
+    public abstract class WindowViewModelBase<TViewModel> : WpfViewModel<TViewModel>, IWindowViewModelBase
+         where TViewModel : WindowViewModelBase<TViewModel>
+    {
+        public event EventHandler Initialized;
 
-        public ReactiveOperation CurrentOperation
+        protected virtual void OnInitialized()
         {
-            get
-            {
-                return currentOperation;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref currentOperation, value);
-            }
+            Initialized?.Invoke(this, EventArgs.Empty);
         }
 
-        private OperationViewModel operationInfo;
+        public event EventHandler Closed;
 
-        public IOperationViewModel OperationInfo
+        protected virtual void OnClosed()
         {
-            get
-            {
-                if (operationInfo == null)
-                {
-                    operationInfo = new OperationViewModel();
-                    ConfigureOperationViewModel(operationInfo);
-                }
-
-                return operationInfo;
-            }
+            Closed?.Invoke(this, EventArgs.Empty);
         }
 
-        protected virtual void ConfigureOperationViewModel(OperationViewModel operationViewModel)
+        public virtual bool OnClosing()
         {
-            operationViewModel.SetOperationBinding(this, vm => vm.CurrentOperation);
+            return true;
         }
 
-        protected ReactiveOperation StartAsyncOperation(Action action, Action callback)
-        {
-            var asyncOperation = new ReactiveOperation();
-
-            CurrentOperation = asyncOperation;
-
-            Observable
-                .Start(action)
-                .ObserveOnDispatcher(DispatcherPriority.ContextIdle)
-                .Subscribe(x => callback(), asyncOperation.CompleteFailed, asyncOperation.CompleteSuccess);
-
-            return asyncOperation;
-        }
-
-        protected ReactiveOperation StartAsyncOperation(Action action, Action<Exception> callback)
-        {
-            var asyncOperation = new ReactiveOperation();
-
-            CurrentOperation = asyncOperation;
-
-            Observable
-                .Start(action)
-                .ObserveOnDispatcher(DispatcherPriority.ContextIdle)
-                .Subscribe(x => callback(null), e => { callback(e); asyncOperation.CompleteFailed(null); }, asyncOperation.CompleteSuccess);
-
-            return asyncOperation;
-        }
-
-        protected ReactiveOperation StartAsyncOperation<T>(Func<T> func, Action<T> callback)
-        {
-            var asyncOperation = new ReactiveOperation();
-
-            CurrentOperation = asyncOperation;
-
-            Observable
-                .Start(func)
-                .ObserveOnDispatcher(DispatcherPriority.ContextIdle)
-                .Subscribe(callback, asyncOperation.CompleteFailed, asyncOperation.CompleteSuccess);
-
-            return asyncOperation;
-        }
+        public abstract void Configure(object viewModelInfo);
     }
 }

@@ -14,11 +14,11 @@ using DriveHUD.Common.Linq;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.Common.Wpf.Validation;
+using Microsoft.Win32;
 using Model.AppStore.HudStore;
 using Model.AppStore.HudStore.Model;
 using ReactiveUI;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -28,54 +28,82 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
-    public class HudUploadToStoreViewModel : WindowViewModel<HudUploadToStoreViewModel, IHudStoreUploadModel>, IHudUploadToStoreViewModel, INotifyDataErrorInfo
+    public class HudUploadToStoreViewModel : WindowViewModel<HudUploadToStoreViewModel,
+        IHudStoreUploadModel>, IHudUploadToStoreViewModel, INotifyDataErrorInfo
     {
+        private const int MaxImages = 8;
+
+        private CompositeDisposable selectableDataSubscription;
+
         static HudUploadToStoreViewModel()
         {
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
                 nameof(Name),
-                new NonLocalizableString("Name must be not empty"),
+                new LocalizableString("Common_HudUploadToStoreView_NameMustBeNotEmpty"),
                 x => !string.IsNullOrEmpty(x.Name)));
 
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
                 nameof(Name),
-                new NonLocalizableString("Name length must be greater than 10, but less than 50"),
+                new LocalizableString("Common_HudUploadToStoreView_NameMustBeLongerThan10"),
                 x => x.Name != null && x.Name.Length >= 10 && x.Name.Length <= 50));
 
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
                 nameof(Description),
-                new NonLocalizableString("Description must be not empty"),
+                new LocalizableString("Common_HudUploadToStoreView_DescriptionMustBeNotEmpty"),
                 x => { Task.Delay(2000).Wait(); return !string.IsNullOrEmpty(x.Description); }, true));
 
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
                 nameof(Cost),
-                new NonLocalizableString("Cost be must be 0 or positive number."),
+                new LocalizableString("Common_HudUploadToStoreView_CostMustBeNotNegative"),
                 x => x.Cost >= 0));
 
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
                 nameof(GameVariants),
-                new NonLocalizableString("At least one game variant must be selected"),
+                new LocalizableString("Common_HudUploadToStoreView_GameVariantMustBeSelected"),
                 x => x.GameVariants != null && x.GameVariants.Any(p => p.IsSelected)));
 
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
                 nameof(GameTypes),
-                new NonLocalizableString("At least one game type must be selected"),
+                new LocalizableString("Common_HudUploadToStoreView_GameTypeMustBeSelected"),
                 x => x.GameTypes != null && x.GameTypes.Any(p => p.IsSelected)));
 
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
                 nameof(TableTypes),
-                new NonLocalizableString("At least one table type must be selected"),
+                new LocalizableString("Common_HudUploadToStoreView_TableTypeMustBeSelected"),
                 x => x.TableTypes != null && x.TableTypes.Any(p => p.IsSelected)));
+
+            Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
+                nameof(Images),
+                new NonLocalizableString("At least one image must be specified"),
+                x => x.Images.Count != 0));
+        }
+
+        public HudUploadToStoreViewModel()
+        {
+            images = new ReactiveList<HudUploadToStoreImage>
+            {
+                ChangeTrackingEnabled = true
+            };
+
+            images.Changed.Subscribe(x => ApplyRules(nameof(Images)));
         }
 
         public override void Configure(object viewModelInfo)
         {
             InitializeModelAsync(() => Model.Load());
             Initialize();
+
+            images.Add(new HudUploadToStoreImage
+            {
+                Path = @"d:\hud-screenshot-1.png"
+            });
+            images.Add(new HudUploadToStoreImage
+            {
+                Path = @"d:\hud-screenshot-2.png"
+            });
         }
 
         #region Properties
-
         private string name;
 
         public string Name
@@ -160,6 +188,16 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        private readonly ReactiveList<HudUploadToStoreImage> images;
+
+        public ReactiveList<HudUploadToStoreImage> Images
+        {
+            get
+            {
+                return images;
+            }
+        }
+
         #endregion
 
         #region Command
@@ -170,6 +208,10 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public ReactiveCommand ResetCommand { get; private set; }
 
+        public ReactiveCommand AddImageCommand { get; private set; }
+
+        public ReactiveCommand RemoveImageCommand { get; private set; }
+
         #endregion
 
         #region Infrastructure
@@ -177,10 +219,16 @@ namespace DriveHUD.Application.ViewModels.Hud
         protected override void InitializeCommands()
         {
             var canSubmit = this.WhenAny(x => x.HasErrors, x => x.IsValidating, (x1, x2) => !HasErrors && !IsValidating);
-
             SubmitCommand = ReactiveCommand.Create(() => Upload(), canSubmit);
+
             CancelCommand = ReactiveCommand.Create(() => OnClosed());
             ResetCommand = ReactiveCommand.Create(() => Reset());
+
+            var canAddImage = images.Changed.Select(x => images.Count <= MaxImages).StartWith(true);
+            AddImageCommand = ReactiveCommand.Create(() => AddImage(), canAddImage);
+
+            var canRemoveImage = images.ItemChanged.Select(x => images.Any(p => p.IsSelected)).StartWith(false);
+            RemoveImageCommand = ReactiveCommand.Create(() => RemoveImage(), canRemoveImage);
         }
 
         protected override void ModelInitialized()
@@ -189,16 +237,19 @@ namespace DriveHUD.Application.ViewModels.Hud
             InitializeSelectableData();
         }
 
-        protected CompositeDisposable selectableDataSubscription = new CompositeDisposable();
-
         private void InitializeSelectableData()
         {
-            GameVariants = InitializeSelectableData(Model.GameVariants, () => new GameVariant { Name = "All" }, nameof(GameVariants));
-            GameTypes = InitializeSelectableData(Model.GameTypes, () => new GameType { Name = "All" }, nameof(GameTypes));
-            TableTypes = InitializeSelectableData(Model.TableTypes, () => new TableType { Name = "All" }, nameof(TableTypes));
+            selectableDataSubscription?.Dispose();
+            selectableDataSubscription = new CompositeDisposable();
+
+            var allItemName = CommonResourceManager.Instance.GetResourceString("Common_HudUploadToStoreView_All");
+
+            GameVariants = InitializeSelectableData(Model.GameVariants, () => new GameVariant { Name = allItemName }, nameof(GameVariants), true);
+            GameTypes = InitializeSelectableData(Model.GameTypes, () => new GameType { Name = allItemName }, nameof(GameTypes), true);
+            TableTypes = InitializeSelectableData(Model.TableTypes, () => new TableType { Name = allItemName }, nameof(TableTypes));
         }
 
-        private ReactiveList<SelectableItemViewModel<T>> InitializeSelectableData<T>(IEnumerable<T> source, Func<T> creator, string propertyName)
+        private ReactiveList<SelectableItemViewModel<T>> InitializeSelectableData<T>(IEnumerable<T> source, Func<T> creator, string propertyName, bool isAllSelected = false)
         {
             var allItem = new SelectableItemViewModel<T>(creator());
 
@@ -248,6 +299,11 @@ namespace DriveHUD.Application.ViewModels.Hud
                         ApplyRules(propertyName);
                     }));
 
+            if (isAllSelected)
+            {
+                allItem.IsSelected = true;
+            }
+
             return data;
         }
 
@@ -271,6 +327,90 @@ namespace DriveHUD.Application.ViewModels.Hud
             Name = string.Empty;
         }
 
+        private void AddImage()
+        {
+            var openFileDialog = new OpenFileDialog
+            {
+                Title = "Select an image for your HUD",
+                Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+            };
+
+            if (openFileDialog.ShowDialog() != true)
+            {
+                return;
+            }
+
+            var image = new HudUploadToStoreImage
+            {
+                Path = openFileDialog.FileName
+            };
+
+            images.Add(image);
+        }
+
+        private void RemoveImage()
+        {
+            var imagesToRemove = images.Where(x => x.IsSelected).ToArray();
+            imagesToRemove.ForEach(x => images.Remove(x));
+        }
+
         #endregion
+    }
+
+    public class HudUploadToStoreImage : WpfViewModelBase<HudUploadToStoreImage>
+    {
+        static HudUploadToStoreImage()
+        {
+            Rules.Add(new DelegateRule<HudUploadToStoreImage>(nameof(Caption),
+                new NonLocalizableString("Caption must be not empty"),
+                x => !string.IsNullOrEmpty(x.Caption)));
+        }
+
+        public HudUploadToStoreImage() : base()
+        {
+            ApplyRules();
+        }
+
+        private string caption;
+
+        public string Caption
+        {
+            get
+            {
+                return caption;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref caption, value);
+            }
+        }
+
+        private string path;
+
+        public string Path
+        {
+            get
+            {
+                return path;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref path, value);
+            }
+        }
+
+        private bool isSelected;
+
+        public bool IsSelected
+        {
+            get
+            {
+                return isSelected;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isSelected, value);
+            }
+        }
     }
 }

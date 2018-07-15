@@ -19,7 +19,7 @@ using System.Reactive.Disposables;
 namespace DriveHUD.Common.Wpf.Mvvm
 {
     /// <summary>
-    /// Base view model class inherited from ReactiveUI (do not delete, probably this one will replace BaseViewModel)
+    /// Base view model class inherited from ReactiveUI
     /// </summary>
     public abstract class ViewModelBase : ReactiveObject, IDisposable
     {

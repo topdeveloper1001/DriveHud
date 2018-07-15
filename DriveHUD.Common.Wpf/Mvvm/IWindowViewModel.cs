@@ -10,11 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.ComponentModel;
-
 namespace DriveHUD.Common.Wpf.Mvvm
 {
-    public interface IWindowViewModel : ILightWindowViewModel, INotifyDataErrorInfo, IValidationAsync
+    public interface IWindowViewModel<TModel> : IWindowViewModelBase
     {
+        TModel Model
+        {
+            get;
+        }
     }
 }

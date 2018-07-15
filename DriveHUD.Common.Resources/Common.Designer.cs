@@ -1800,6 +1800,78 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_All {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cost be must be 0 for free HUD or positive number for commerical HUD.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_CostMustBeNotNegative {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_CostMustBeNotNegative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description must be not empty.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_DescriptionMustBeNotEmpty {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_DescriptionMustBeNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At least one game type must be selected.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_GameTypeMustBeSelected {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_GameTypeMustBeSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At least one game variant must be selected.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_GameVariantMustBeSelected {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_GameVariantMustBeSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Length of name must be greater than 10, but less than 50.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_NameMustBeLongerThan10 {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_NameMustBeLongerThan10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name must be not empty.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_NameMustBeNotEmpty {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_NameMustBeNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At least one table type must be selected.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_TableTypeMustBeSelected {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_TableTypeMustBeSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Limped Pot.
         /// </summary>
         internal static string Common_LimpedPot {

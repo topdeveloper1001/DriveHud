@@ -1132,4 +1132,28 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_Hud_UploadToStore" xml:space="preserve">
     <value>Upload to store</value>
   </data>
+  <data name="Common_HudUploadToStoreView_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_CostMustBeNotNegative" xml:space="preserve">
+    <value>Cost be must be 0 for free HUD or positive number for commerical HUD</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_DescriptionMustBeNotEmpty" xml:space="preserve">
+    <value>Description must be not empty</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_GameTypeMustBeSelected" xml:space="preserve">
+    <value>At least one game type must be selected</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_GameVariantMustBeSelected" xml:space="preserve">
+    <value>At least one game variant must be selected</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_NameMustBeLongerThan10" xml:space="preserve">
+    <value>Length of name must be greater than 10, but less than 50</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_NameMustBeNotEmpty" xml:space="preserve">
+    <value>Name must be not empty</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_TableTypeMustBeSelected" xml:space="preserve">
+    <value>At least one table type must be selected</value>
+  </data>
 </root>
