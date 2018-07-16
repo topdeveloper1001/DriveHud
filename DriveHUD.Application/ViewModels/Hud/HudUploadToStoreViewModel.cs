@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.Common.Wpf.Validation;
@@ -25,6 +26,7 @@ using System.Linq;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -90,13 +92,19 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public override void Configure(object viewModelInfo)
         {
+            BusyStatus = HudUploadToStoreBusyStatus.Loading;
+
             InitializeModelAsync(() => Model.Load());
             Initialize();
 
-            images.Add(new HudUploadToStoreImage
+            for (var i = 0; i < 7; i++)
             {
-                Path = @"d:\hud-screenshot-1.png"
-            });
+                images.Add(new HudUploadToStoreImage
+                {
+                    Path = @"d:\hud-screenshot-1.png"
+                });
+            }
+
             images.Add(new HudUploadToStoreImage
             {
                 Path = @"d:\hud-screenshot-2.png"
@@ -104,6 +112,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         #region Properties
+
         private string name;
 
         public string Name
@@ -198,6 +207,20 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        private HudUploadToStoreBusyStatus busyStatus;
+
+        public HudUploadToStoreBusyStatus BusyStatus
+        {
+            get
+            {
+                return busyStatus;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref busyStatus, value);
+            }
+        }
+
         #endregion
 
         #region Command
@@ -218,7 +241,11 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         protected override void InitializeCommands()
         {
-            var canSubmit = this.WhenAny(x => x.HasErrors, x => x.IsValidating, (x1, x2) => !HasErrors && !IsValidating);
+            var canSubmit = Observable.CombineLatest(
+                this.WhenAny(x => x.HasErrors, x => x.IsValidating, (x1, x2) => !HasErrors && !IsValidating),
+                images.Changed.Select(x => true).Merge(images.ItemChanged.Select(x => true)).Select(x => images.All(p => !p.HasErrors && !p.IsValidating)),
+                (x1, x2) => x1 && x2);
+
             SubmitCommand = ReactiveCommand.Create(() => Upload(), canSubmit);
 
             CancelCommand = ReactiveCommand.Create(() => OnClosed());
@@ -307,8 +334,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             return data;
         }
 
+        // Uploads data to server
         private void Upload()
         {
+            BusyStatus = HudUploadToStoreBusyStatus.Submitting;
+
             StartAsyncOperation(() =>
             {
                 Task.Delay(3000).Wait();
@@ -322,9 +352,17 @@ namespace DriveHUD.Application.ViewModels.Hud
             () => { });
         }
 
+        /// <summary>
+        /// Resets form
+        /// </summary>
         private void Reset()
         {
             Name = string.Empty;
+            Description = string.Empty;
+            Cost = 0;
+            GameVariants.ForEach(x => x.IsSelected = false);
+            GameTypes.ForEach(x => x.IsSelected = false);
+            TableTypes.ForEach(x => x.IsSelected = false);
         }
 
         private void AddImage()
@@ -340,12 +378,32 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
+            if (!IsImage(openFileDialog.FileName))
+            {
+                return;
+            }
+
             var image = new HudUploadToStoreImage
             {
                 Path = openFileDialog.FileName
             };
 
             images.Add(image);
+        }
+
+        private static bool IsImage(string path)
+        {
+            try
+            {
+                var image = new BitmapImage(new Uri(path));
+                return true;
+            }
+            catch
+            {
+                LogProvider.Log.Error($"Couldn't add {path} as an image to the data for uploading to HUD store.");
+            }
+
+            return false;
         }
 
         private void RemoveImage()

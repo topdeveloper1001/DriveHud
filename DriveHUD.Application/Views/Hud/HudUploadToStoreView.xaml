@@ -260,200 +260,212 @@
 
     <telerik:RadBusyIndicator
         IsBusy="{Binding OperationInfo.IsBusy, FallbackValue=True}"
+        BusyContent="{Binding BusyStatus, Converter={dh:EnumToLocalizedStringConverter}}"
         Style="{DynamicResource AppStoreRadBusyIndicatorStyle}">
         <Grid
-            Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition
-                    Width="100" />
-                <ColumnDefinition
-                    Width="15" />
-                <ColumnDefinition
-                    Width="*" />
-            </Grid.ColumnDefinitions>
+            Margin="10,10,0,10">
             <Grid.RowDefinitions>
-                <RowDefinition
-                    Height="35" />
-                <RowDefinition
-                    Height="Auto"
-                    MinHeight="35" />
-                <RowDefinition
-                    Height="Auto"
-                    MinHeight="35" />
-                <RowDefinition
-                    Height="Auto"
-                    MinHeight="35" />
-                <RowDefinition
-                    Height="125" />
-                <RowDefinition
-                    Height="35" />
-                <RowDefinition
-                    Height="Auto"
-                    MinHeight="35" />
-                <RowDefinition
-                    Height="Auto" />
                 <RowDefinition
                     Height="*" />
                 <RowDefinition
-                    Height="30" />
+                    Height="40" />
             </Grid.RowDefinitions>
 
-            <!-- Name -->
-            <TextBlock
-                Grid.Column="0"
-                Grid.Row="0"
-                Style="{StaticResource TextBlockStyle}"
-                Text="Name" />
-
-            <TextBox
-                Grid.Column="2"
-                Grid.Row="0"
-                Width="400"
-                dh:Validation.AsyncValidation="True"
-                dh:Validation.ValidationTemplate="{StaticResource ValidationLoadingIcon}"
-                Style="{StaticResource TextBoxStyle}"
-                Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
-                MaxLength="50"
-                Text="{Binding Name}" />
-
-            <!-- Game Variants -->
-            <TextBlock
-                Grid.Column="0"
-                Grid.Row="1"
-                Style="{StaticResource TextBlockStyle}"
-                Text="Game Variants" />
-
-            <ItemsControl
-                Grid.Column="2"
-                Grid.Row="1"
-                Style="{StaticResource ItemsControlStyle}"
-                ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
-                Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
-                ItemsSource="{Binding GameVariants}" />
-
-            <!-- Game Types -->
-            <TextBlock
-                Grid.Column="0"
-                Grid.Row="2"
-                Style="{StaticResource TextBlockStyle}"
-                Text="Game Types" />
-
-            <ItemsControl
-                Grid.Column="2"
-                Grid.Row="2"
-                Style="{StaticResource ItemsControlStyle}"
-                ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
-                Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
-                ItemsSource="{Binding GameTypes}" />
-
-            <!-- Table types -->
-            <TextBlock
-                Grid.Column="0"
-                Grid.Row="3"
-                Style="{StaticResource TextBlockStyle}"
-                Text="Table Types" />
-
-            <ItemsControl
-                Grid.Column="2"
-                Grid.Row="3"
-                Style="{StaticResource ItemsControlStyle}"
-                ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
-                Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
-                ItemsSource="{Binding TableTypes}" />
-
-            <!-- Description -->
-            <TextBlock
-                Grid.Column="0"
-                Grid.Row="4"
-                Style="{StaticResource TextBlockStyle}"
-                Text="Description" />
-
-            <TextBox
-                Grid.Column="2"
-                Grid.Row="4"
-                Width="400"
-                Height="120"
-                dh:Validation.AsyncValidation="True"
-                dh:Validation.ValidationTemplate="{StaticResource ValidationLoadingIcon}"
-                Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
-                Style="{StaticResource TextBoxStyle}"
-                VerticalScrollBarVisibility="Auto"
+            <ScrollViewer
                 HorizontalScrollBarVisibility="Disabled"
-                AcceptsReturn="True"
-                AcceptsTab="True"
-                TextWrapping="Wrap"
-                SpellCheck.IsEnabled="True"
-                Padding="2"
-                VerticalContentAlignment="Bottom"
-                Text="{Binding Description}" />
+                VerticalScrollBarVisibility="Auto">
 
-            <!-- Cost -->
-            <TextBlock
-                Grid.Column="0"
-                Grid.Row="5"
-                VerticalAlignment="Center"
-                Style="{StaticResource TextBlockStyle}"
-                Text="Cost" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="100" />
+                        <ColumnDefinition
+                            Width="15" />
+                        <ColumnDefinition
+                            Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="35" />
+                        <RowDefinition
+                            Height="Auto"
+                            MinHeight="35" />
+                        <RowDefinition
+                            Height="Auto"
+                            MinHeight="35" />
+                        <RowDefinition
+                            Height="Auto"
+                            MinHeight="35" />
+                        <RowDefinition
+                            Height="125" />
+                        <RowDefinition
+                            Height="35" />
+                        <RowDefinition
+                            Height="Auto"
+                            MinHeight="35" />
+                        <RowDefinition
+                            Height="Auto" />
+                    </Grid.RowDefinitions>
 
-            <TextBox
-                Grid.Column="2"
-                Grid.Row="5"
-                Width="50"
-                Style="{StaticResource TextBoxStyle}"
-                Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
-                Text="{Binding Cost}" />
+                    <!-- Name -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="Name" />
 
-            <!-- Images -->
-            <TextBlock
-                Grid.Column="0"
-                Grid.Row="6"
-                VerticalAlignment="Center"
-                Style="{StaticResource TextBlockStyle}"
-                Text="Images" />
+                    <TextBox
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        Width="400"
+                        dh:Validation.AsyncValidation="True"
+                        dh:Validation.ValidationTemplate="{StaticResource ValidationLoadingIcon}"
+                        Style="{StaticResource TextBoxStyle}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        MaxLength="50"
+                        Text="{Binding Name}" />
 
-            <StackPanel
-                Grid.Column="2"
-                Grid.Row="6"
-                Orientation="Horizontal">
-                <Button
-                    Content="Add"
-                    Width="40"
-                    Height="25"
-                    Style="{StaticResource ButtonStyle}"
-                    Command="{Binding AddImageCommand, ValidatesOnNotifyDataErrors=False}" />
-                <Button
-                    Content="Remove"
-                    Width="60"
-                    Height="25"
-                    Margin="5,0,0,0"
-                    Style="{StaticResource ButtonStyle}"
-                    Command="{Binding RemoveImageCommand, ValidatesOnNotifyDataErrors=False}" />
-                <Label
-                    Tag="{Binding Images}"
-                    Visibility="Visible"
-                    Validation.ErrorTemplate="{StaticResource ValidationTemplate}" />
+                    <!-- Game Variants -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="Game Variants" />
 
-            </StackPanel>
+                    <ItemsControl
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Style="{StaticResource ItemsControlStyle}"
+                        ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        ItemsSource="{Binding GameVariants}" />
 
-            <ItemsControl
-                Grid.Column="2"
-                Grid.Row="7"
-                Margin="0,0,35,0"
-                HorizontalAlignment="Left"
-                ItemTemplate="{StaticResource HudImageTemplate}"
-                ItemsSource="{Binding Images, ValidatesOnNotifyDataErrors=False}">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel
-                            HorizontalAlignment="Left" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-            </ItemsControl>
+                    <!-- Game Types -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="Game Types" />
+
+                    <ItemsControl
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        Style="{StaticResource ItemsControlStyle}"
+                        ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        ItemsSource="{Binding GameTypes}" />
+
+                    <!-- Table types -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="Table Types" />
+
+                    <ItemsControl
+                        Grid.Column="2"
+                        Grid.Row="3"
+                        Style="{StaticResource ItemsControlStyle}"
+                        ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        ItemsSource="{Binding TableTypes}" />
+
+                    <!-- Description -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="Description" />
+
+                    <TextBox
+                        Grid.Column="2"
+                        Grid.Row="4"
+                        Width="400"
+                        Height="120"
+                        dh:Validation.AsyncValidation="True"
+                        dh:Validation.ValidationTemplate="{StaticResource ValidationLoadingIcon}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        Style="{StaticResource TextBoxStyle}"
+                        VerticalScrollBarVisibility="Auto"
+                        HorizontalScrollBarVisibility="Disabled"
+                        AcceptsReturn="True"
+                        AcceptsTab="True"
+                        TextWrapping="Wrap"
+                        SpellCheck.IsEnabled="True"
+                        Padding="2"
+                        VerticalContentAlignment="Bottom"
+                        Text="{Binding Description}" />
+
+                    <!-- Cost -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="Cost" />
+
+                    <TextBox
+                        Grid.Column="2"
+                        Grid.Row="5"
+                        Width="50"
+                        Style="{StaticResource TextBoxStyle}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        Text="{Binding Cost}" />
+
+                    <!-- Images -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="Images" />
+
+                    <StackPanel
+                        Grid.Column="2"
+                        Grid.Row="6"
+                        Orientation="Horizontal">
+                        <Button
+                            Content="Add"
+                            Width="40"
+                            Height="25"
+                            Style="{StaticResource ButtonStyle}"
+                            Command="{Binding AddImageCommand, ValidatesOnNotifyDataErrors=False}" />
+                        <Button
+                            Content="Remove"
+                            Width="60"
+                            Height="25"
+                            Margin="5,0,0,0"
+                            Style="{StaticResource ButtonStyle}"
+                            Command="{Binding RemoveImageCommand, ValidatesOnNotifyDataErrors=False}" />
+                        <Label
+                            Tag="{Binding Images}"
+                            Visibility="Visible"
+                            Validation.ErrorTemplate="{StaticResource ValidationTemplate}" />
+
+                    </StackPanel>
+
+                    <ItemsControl
+                        Grid.Column="2"
+                        Grid.Row="7"
+                        Margin="0,0,35,0"
+                        HorizontalAlignment="Left"
+                        ItemTemplate="{StaticResource HudImageTemplate}"
+                        ItemsSource="{Binding Images, ValidatesOnNotifyDataErrors=False}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel
+                                    HorizontalAlignment="Left" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Grid>
+
+            </ScrollViewer>
 
             <!-- Buttons -->
             <StackPanel
-                Grid.ColumnSpan="3"
-                Grid.Row="9"
+                Grid.Row="1"
+                Margin="0,10,10,0"
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
                 <Button
@@ -471,6 +483,7 @@
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding CancelCommand, ValidatesOnNotifyDataErrors=False}" />
             </StackPanel>
+
         </Grid>
     </telerik:RadBusyIndicator>
 </UserControl>

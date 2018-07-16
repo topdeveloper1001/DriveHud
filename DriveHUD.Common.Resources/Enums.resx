@@ -1049,4 +1049,10 @@
   <data name="Enum_MadeHandType_StraightDraw" xml:space="preserve">
     <value>Straight draw</value>
   </data>
+  <data name="Enum_HudUploadToStoreBusyStatus_Loading" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="Enum_HudUploadToStoreBusyStatus_Submitting" xml:space="preserve">
+    <value>Submitting</value>
+  </data>
 </root>

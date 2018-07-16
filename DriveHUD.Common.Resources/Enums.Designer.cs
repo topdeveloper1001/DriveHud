@@ -781,6 +781,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Loading.
+        /// </summary>
+        internal static string Enum_HudUploadToStoreBusyStatus_Loading {
+            get {
+                return ResourceManager.GetString("Enum_HudUploadToStoreBusyStatus_Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submitting.
+        /// </summary>
+        internal static string Enum_HudUploadToStoreBusyStatus_Submitting {
+            get {
+                return ResourceManager.GetString("Enum_HudUploadToStoreBusyStatus_Submitting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DriveHUD HORZ.
         /// </summary>
         internal static string Enum_HudViewType_Horizontal {
