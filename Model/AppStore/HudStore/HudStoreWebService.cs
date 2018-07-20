@@ -12,67 +12,152 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
+using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
 using Model.AppStore.HudStore.Model;
+using Model.AppStore.HudStore.ServiceResponses;
+using Newtonsoft.Json;
 
 namespace Model.AppStore.HudStore
 {
+    /// <summary>
+    /// Service to communicate with HUD store web service
+    /// </summary>
     public class HudStoreWebService : IHudStoreWebService
     {
         private const string requestKey = "";
 
-        public IEnumerable<GameType> GetGameTypes()
-        {
-            RandomDelay();
+        private static readonly string serverAddress;
 
-            return new List<GameType>
-            {
-                new GameType { Id = 1, Name = "Cash game"},
-                new GameType { Id = 2, Name = "S&G"},
-                new GameType { Id = 3, Name = "MTT"}
-            };
+        private static readonly HttpClient httpClient;
+
+        static HudStoreWebService()
+        {
+            serverAddress = CommonResourceManager.Instance.GetResourceString("Settings_HudStoreService");
+            httpClient = new HttpClient();
         }
 
-        public IEnumerable<GameVariant> GetGameVariants()
+        /// <summary>
+        /// Gets info for uploading form
+        /// </summary>
+        /// <returns><see cref="HudStoreData"/></returns>
+        /// <exception cref="DHInternalException" />
+        public HudStoreData GetUploadInfo()
         {
-            RandomDelay();
-
-            return new List<GameVariant>
+            try
             {
-                new GameVariant { Id = 1, Name = "No-limit Holdem"},
-                new GameVariant { Id = 2, Name = "Limit Holdem"},
-                new GameVariant { Id = 3, Name = "PLO"},
-                new GameVariant { Id = 4, Name = "No-limit Omaha"},
-                new GameVariant { Id = 5, Name = "Omaha Hi Limit"},
-                new GameVariant { Id = 6, Name = "PLO8"},
-                new GameVariant { Id = 7, Name = "Limit O8"},
-                new GameVariant { Id = 8, Name = "No-Limit O8"},
-            };
+                var hudStoreData = Get<HudStoreData>(HudStoreServiceNames.InfoService, HudStoreServiceCommands.Get);
+                return hudStoreData;
+            }
+            catch (Exception e)
+            {
+                throw new DHInternalException(new NonLocalizableString("Couldn't get upload info from the hud store web service."), e);
+            }
         }
 
-        public IEnumerable<TableType> GetTableTypes()
+        /// <summary>
+        /// Uploads data to the HUD store
+        /// </summary>
+        /// <param name="uploadInfo">Data to upload</param>
+        /// <exception cref="DHInternalException" />
+        public void Upload(HudStoreUploadInfo uploadInfo)
         {
-            RandomDelay();
+            if (uploadInfo == null)
+            {
+                throw new ArgumentNullException(nameof(uploadInfo));
+            }
 
-            return Enumerable
-                .Range(2, 9)
-                .Select((x, i) => new TableType
+            try
+            {
+                var multiPartContent = new MultipartFormDataContent();
+
+                for (var i = 0; i < uploadInfo.Images.Length; i++)
                 {
-                    Id = (short)i,
-                    Name = $"{x}-max",
-                    MaxPlayers = (short)x
-                })
-                .ToList();
+                    var imageInfo = uploadInfo.Images[i];
+
+                    if (!MediaTypeHeaderValue.TryParse(MimeMapping.GetMimeMapping(imageInfo.Path), out MediaTypeHeaderValue contentType))
+                    {
+                        throw new DHBusinessException(new LocalizableString("Error_HudStore_Upload_BadImageFormat", imageInfo.Path));
+                    }
+
+                    var streamContent = new StreamContent(File.OpenRead(imageInfo.Path));
+                    streamContent.Headers.ContentType = contentType;
+
+                    multiPartContent.Add(streamContent, $"images[]", Path.GetFileName(imageInfo.Path));
+                }
+
+                var jsonString = JsonConvert.SerializeObject(uploadInfo);
+
+                multiPartContent.Add(new StringContent(jsonString, Encoding.UTF8), "data");
+
+                var result = Post<bool>(HudStoreServiceNames.HudsService, HudStoreServiceCommands.Upload, multiPartContent);               
+            }
+            catch (Exception e)
+            {
+                throw new DHInternalException(new NonLocalizableString("Couldn't upload data to hud store web service."), e);
+            }
         }
 
-        private void RandomDelay()
+        private T Post<T>(string serviceName, string command, HttpContent content)
         {
-            var random = new Random();
-            var randomDelay = random.Next(200, 500);
+            try
+            {
+                var uri = new Uri(new Uri(serverAddress), $"{serviceName}/{command}");
 
-            Task.Delay(randomDelay).Wait();
+                var response = httpClient.PostAsync(uri, content).Result;
+
+                response.EnsureSuccessStatusCode();
+
+                var responseContent = response.Content.ReadAsStringAsync().Result;
+
+                var serviceResponse = JsonConvert.DeserializeObject<HudStoreServiceResponse<T>>(responseContent);
+
+                if (serviceResponse.Errors == null || serviceResponse.Errors.Length == 0)
+                {
+                    return serviceResponse.Result;
+                }               
+                
+
+            }
+            catch (Exception e)
+            {
+                throw new DHInternalException(new NonLocalizableString("Couldn't post data to hud store web service."), e);
+            }
+
+            return default(T);
+        }
+
+        private T Get<T>(string serviceName, string command) where T : class
+        {
+            try
+            {
+                var uri = new Uri(new Uri(serverAddress), $"{serviceName}/{command}");
+
+                var response = httpClient.GetAsync(uri).Result;
+                var responseContent = response.Content.ReadAsStringAsync().Result;
+
+                var serviceResponse = JsonConvert.DeserializeObject<HudStoreServiceResponse<T>>(responseContent);
+
+                if (serviceResponse.Errors == null || serviceResponse.Errors.Length == 0)
+                {
+                    return serviceResponse.Result;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new DHInternalException(new NonLocalizableString("Couldn't get data from hud store web service."), e);
+            }
+
+            return null;
         }
     }
 }

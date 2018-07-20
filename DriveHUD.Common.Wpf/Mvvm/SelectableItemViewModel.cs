@@ -44,5 +44,19 @@ namespace DriveHUD.Common.Wpf.Mvvm
                 this.RaiseAndSetIfChanged(ref isSelected, value);
             }
         }
+
+        private bool isAll;
+
+        public bool IsAll
+        {
+            get
+            {
+                return isAll;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isAll, value);
+            }
+        }
     }
 }

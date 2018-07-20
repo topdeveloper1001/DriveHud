@@ -1809,6 +1809,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to At least one image must be specified.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_AtLeastOneImageMustBeSpecified {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_AtLeastOneImageMustBeSpecified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caption must be not empty.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_CaptionMustBeNotEmpty {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_CaptionMustBeNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cost be must be 0 for free HUD or positive number for commerical HUD.
         /// </summary>
         internal static string Common_HudUploadToStoreView_CostMustBeNotNegative {
@@ -1845,6 +1863,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This name is already in use.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_NameIsAlreadyInUse {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_NameIsAlreadyInUse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Length of name must be greater than 10, but less than 50.
         /// </summary>
         internal static string Common_HudUploadToStoreView_NameMustBeLongerThan10 {
@@ -1863,11 +1890,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select an image for your HUD.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_SelectImageDialogTitle {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_SelectImageDialogTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to At least one table type must be selected.
         /// </summary>
         internal static string Common_HudUploadToStoreView_TableTypeMustBeSelected {
             get {
                 return ResourceManager.GetString("Common_HudUploadToStoreView_TableTypeMustBeSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uploading failed. Please try again or contact support. Error: {0}.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_UploadingFailed {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_UploadingFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your HUD has been successfully uploaded. Once verification is done it will be available in HUD store..
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_UploadingSucceed {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_UploadingSucceed", resourceCulture);
             }
         }
         

@@ -159,6 +159,9 @@
   <data name="Settings_GrabRates" xml:space="preserve">
     <value>Grab latest rates</value>
   </data>
+  <data name="Settings_HudStoreService" xml:space="preserve">
+    <value>http://192.168.1.33</value>
+  </data>
   <data name="Settings_IPokerHelpLink" xml:space="preserve">
     <value>http://drivehud.com/blog/manual/#document-24</value>
   </data>

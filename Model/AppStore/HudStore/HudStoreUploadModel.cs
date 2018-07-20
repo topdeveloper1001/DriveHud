@@ -117,6 +117,20 @@ namespace Model.AppStore.HudStore
             }
         }
 
+        private IEnumerable<string> layoutsNamesInUse;
+
+        public IEnumerable<string> LayoutsNamesInUse
+        {
+            get
+            {
+                return layoutsNamesInUse;
+            }
+            private set
+            {
+                SetProperty(ref layoutsNamesInUse, value);
+            }
+        }
+
         #endregion
 
         public void Load()
@@ -125,14 +139,17 @@ namespace Model.AppStore.HudStore
             SelectedGameVariants = new List<GameVariant>();
             SelectedTableTypes = new List<TableType>();
 
-            GameVariants = service.GetGameVariants().ToList();
-            GameTypes = service.GetGameTypes().ToList();
-            TableTypes = service.GetTableTypes().ToList();
+            var hudStoreData = service.GetUploadInfo();
+
+            GameVariants = hudStoreData.GameVariants.ToList();
+            GameTypes = hudStoreData.GameTypes.ToList();
+            TableTypes = hudStoreData.TableTypes.ToList();
+            LayoutsNamesInUse = hudStoreData.LayoutsNames.ToList();
         }
 
-        public void Upload()
+        public void Upload(HudStoreUploadInfo uploadInfo)
         {
-
+            service.Upload(uploadInfo);
         }
     }
 }

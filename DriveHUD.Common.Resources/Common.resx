@@ -1156,4 +1156,22 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_HudUploadToStoreView_TableTypeMustBeSelected" xml:space="preserve">
     <value>At least one table type must be selected</value>
   </data>
+  <data name="Common_HudUploadToStoreView_CaptionMustBeNotEmpty" xml:space="preserve">
+    <value>Caption must be not empty</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_AtLeastOneImageMustBeSpecified" xml:space="preserve">
+    <value>At least one image must be specified</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_SelectImageDialogTitle" xml:space="preserve">
+    <value>Select an image for your HUD</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_UploadingFailed" xml:space="preserve">
+    <value>Uploading failed. Please try again or contact support. Error: {0}</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_UploadingSucceed" xml:space="preserve">
+    <value>Your HUD has been successfully uploaded. Once verification is done it will be available in HUD store.</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_NameIsAlreadyInUse" xml:space="preserve">
+    <value>This name is already in use</value>
+  </data>
 </root>

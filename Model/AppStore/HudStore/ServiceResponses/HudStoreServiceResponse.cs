@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IHudStoreWebService.cs" company="Ace Poker Solutions">
+// <copyright file="InfoServiceResponse.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,17 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.AppStore.HudStore.ServiceResponses;
+using Newtonsoft.Json;
 
-namespace Model.AppStore.HudStore
+namespace Model.AppStore.HudStore.ServiceResponses
 {
-    /// <summary>
-    /// Interface for hud store web service
-    /// </summary>
-    public interface IHudStoreWebService
+    public class HudStoreServiceResponse<T>
     {
-        HudStoreData GetUploadInfo();
+        [JsonProperty("result")]
+        public T Result { get; set; }
 
-        void Upload(HudStoreUploadInfo uploadInfo);
+        [JsonProperty("error_codes")]
+        public string[] Errors { get; set; }
     }
 }

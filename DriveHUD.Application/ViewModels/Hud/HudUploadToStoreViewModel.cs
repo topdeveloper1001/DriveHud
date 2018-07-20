@@ -50,9 +50,14 @@ namespace DriveHUD.Application.ViewModels.Hud
                 x => x.Name != null && x.Name.Length >= 10 && x.Name.Length <= 50));
 
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
+               nameof(Name),
+               new LocalizableString("Common_HudUploadToStoreView_NameIsAlreadyInUse"),
+               x => string.IsNullOrEmpty(x.Name) || x.Model != null && x.Model.LayoutsNamesInUse != null && !x.Model.LayoutsNamesInUse.Contains(x.Name)));
+
+            Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
                 nameof(Description),
                 new LocalizableString("Common_HudUploadToStoreView_DescriptionMustBeNotEmpty"),
-                x => { Task.Delay(2000).Wait(); return !string.IsNullOrEmpty(x.Description); }, true));
+                x => !string.IsNullOrEmpty(x.Description)));
 
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
                 nameof(Cost),
@@ -76,7 +81,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
                 nameof(Images),
-                new NonLocalizableString("At least one image must be specified"),
+                new NonLocalizableString("Common_HudUploadToStoreView_AtLeastOneImageMustBeSpecified"),
                 x => x.Images.Count != 0));
         }
 
@@ -94,21 +99,30 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             BusyStatus = HudUploadToStoreBusyStatus.Loading;
 
+            IsSubmitButtonVisible = true;
+            IsResetButtonVisible = true;
+            IsCancelButtonVisible = true;
+
             InitializeModelAsync(() => Model.Load());
             Initialize();
 
-            for (var i = 0; i < 7; i++)
+            for (var i = 0; i < 1; i++)
             {
                 images.Add(new HudUploadToStoreImage
                 {
+                    Caption = "Caption 1",
                     Path = @"d:\hud-screenshot-1.png"
                 });
             }
 
             images.Add(new HudUploadToStoreImage
             {
+                Caption = "Caption 2",
                 Path = @"d:\hud-screenshot-2.png"
             });
+
+            Name = "Test layout for testing only";
+            Description = "Test layout for testing only";
         }
 
         #region Properties
@@ -221,6 +235,104 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        private string message;
+
+        public string Message
+        {
+            get
+            {
+                return message;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref message, value);
+            }
+        }
+
+        private bool isSubmitButtonVisible;
+
+        public bool IsSubmitButtonVisible
+        {
+            get
+            {
+                return isSubmitButtonVisible;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isSubmitButtonVisible, value);
+            }
+        }
+
+        private bool isResetButtonVisible;
+
+        public bool IsResetButtonVisible
+        {
+            get
+            {
+                return isResetButtonVisible;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isResetButtonVisible, value);
+            }
+        }
+
+        private bool isRetryButtonVisible;
+
+        public bool IsRetryButtonVisible
+        {
+            get
+            {
+                return isRetryButtonVisible;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isRetryButtonVisible, value);
+            }
+        }
+
+        private bool isBackButtonVisible;
+
+        public bool IsBackButtonVisible
+        {
+            get
+            {
+                return isBackButtonVisible;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isBackButtonVisible, value);
+            }
+        }
+
+        private bool isCancelButtonVisible;
+
+        public bool IsCancelButtonVisible
+        {
+            get
+            {
+                return isCancelButtonVisible;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isCancelButtonVisible, value);
+            }
+        }
+
+        private bool isCloseButtonVisible;
+
+        public bool IsCloseButtonVisible
+        {
+            get
+            {
+                return isCloseButtonVisible;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isCloseButtonVisible, value);
+            }
+        }
+
         #endregion
 
         #region Command
@@ -234,6 +346,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         public ReactiveCommand AddImageCommand { get; private set; }
 
         public ReactiveCommand RemoveImageCommand { get; private set; }
+
+        public ReactiveCommand BackCommand { get; private set; }
 
         #endregion
 
@@ -256,6 +370,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var canRemoveImage = images.ItemChanged.Select(x => images.Any(p => p.IsSelected)).StartWith(false);
             RemoveImageCommand = ReactiveCommand.Create(() => RemoveImage(), canRemoveImage);
+
+            BackCommand = ReactiveCommand.Create(() => Message = string.Empty);
         }
 
         protected override void ModelInitialized()
@@ -273,12 +389,12 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             GameVariants = InitializeSelectableData(Model.GameVariants, () => new GameVariant { Name = allItemName }, nameof(GameVariants), true);
             GameTypes = InitializeSelectableData(Model.GameTypes, () => new GameType { Name = allItemName }, nameof(GameTypes), true);
-            TableTypes = InitializeSelectableData(Model.TableTypes, () => new TableType { Name = allItemName }, nameof(TableTypes));
+            TableTypes = InitializeSelectableData(Model.TableTypes, () => new TableType { Name = allItemName }, nameof(TableTypes), true);
         }
 
         private ReactiveList<SelectableItemViewModel<T>> InitializeSelectableData<T>(IEnumerable<T> source, Func<T> creator, string propertyName, bool isAllSelected = false)
         {
-            var allItem = new SelectableItemViewModel<T>(creator());
+            var allItem = new SelectableItemViewModel<T>(creator()) { IsAll = true };
 
             var data = new ReactiveList<SelectableItemViewModel<T>>(source.Select(x => new SelectableItemViewModel<T>(x)))
             {
@@ -341,15 +457,53 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             StartAsyncOperation(() =>
             {
-                Task.Delay(3000).Wait();
+                var uploadInfo = new HudStoreUploadInfo
+                {
+                    Name = Name,
+                    Description = Description,
+                    GameVariants = GameVariants.Where(x => x.IsSelected && !x.IsAll).Select(x => x.Item).ToArray(),
+                    GameTypes = GameTypes.Where(x => x.IsSelected && !x.IsAll).Select(x => x.Item).ToArray(),
+                    TableTypes = TableTypes.Where(x => x.IsSelected && !x.IsAll).Select(x => x.Item).ToArray(),
+                    Cost = Cost,
+                    Images = Images.Select(x => new HudStoreUploadImageInfo
+                    {
+                        Caption = x.Caption,
+                        Path = x.Path
+                    }).ToArray()
+                };
 
-                // exception or just error ?
-                // e.g. timeout or some server error
-                // duplicate?
-                // show error form with Retry or Back button
-
+                Model.Upload(uploadInfo);
             },
-            () => { });
+            ex =>
+            {
+                if (true)
+                //   if (ex != null)
+                {
+                    if (ex != null)
+                        LogProvider.Log.Error(this, "Fail to upload HUD on the HUD store.", ex);
+
+
+                    IsSubmitButtonVisible = false;
+                    IsResetButtonVisible = false;
+                    IsRetryButtonVisible = true;
+                    IsBackButtonVisible = true;
+                    IsCancelButtonVisible = true;
+                    IsCloseButtonVisible = false;
+
+                    Message = LocalizableString.ToString("Common_HudUploadToStoreView_UploadingFailed", ex != null ? ex.Message : "No errors.");
+
+                    return;
+                }
+
+                IsSubmitButtonVisible = false;
+                IsResetButtonVisible = false;
+                IsRetryButtonVisible = false;
+                IsBackButtonVisible = false;
+                IsCancelButtonVisible = false;
+                IsCloseButtonVisible = true;
+
+                Message = CommonResourceManager.Instance.GetResourceString("Common_HudUploadToStoreView_UploadingSucceed");
+            });
         }
 
         /// <summary>
@@ -363,13 +517,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             GameVariants.ForEach(x => x.IsSelected = false);
             GameTypes.ForEach(x => x.IsSelected = false);
             TableTypes.ForEach(x => x.IsSelected = false);
+            Images.Clear();
         }
 
         private void AddImage()
         {
             var openFileDialog = new OpenFileDialog
             {
-                Title = "Select an image for your HUD",
+                Title = CommonResourceManager.Instance.GetResourceString("Common_HudUploadToStoreView_SelectImageDialogTitle"),
                 Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
             };
 
@@ -413,62 +568,5 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         #endregion
-    }
-
-    public class HudUploadToStoreImage : WpfViewModelBase<HudUploadToStoreImage>
-    {
-        static HudUploadToStoreImage()
-        {
-            Rules.Add(new DelegateRule<HudUploadToStoreImage>(nameof(Caption),
-                new NonLocalizableString("Caption must be not empty"),
-                x => !string.IsNullOrEmpty(x.Caption)));
-        }
-
-        public HudUploadToStoreImage() : base()
-        {
-            ApplyRules();
-        }
-
-        private string caption;
-
-        public string Caption
-        {
-            get
-            {
-                return caption;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref caption, value);
-            }
-        }
-
-        private string path;
-
-        public string Path
-        {
-            get
-            {
-                return path;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref path, value);
-            }
-        }
-
-        private bool isSelected;
-
-        public bool IsSelected
-        {
-            get
-            {
-                return isSelected;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref isSelected, value);
-            }
-        }
     }
 }

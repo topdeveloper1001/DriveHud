@@ -187,6 +187,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://192.168.1.33.
+        /// </summary>
+        internal static string Settings_HudStoreService {
+            get {
+                return ResourceManager.GetString("Settings_HudStoreService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-24.
         /// </summary>
         internal static string Settings_IPokerHelpLink {

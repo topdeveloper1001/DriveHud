@@ -271,7 +271,17 @@
                     Height="40" />
             </Grid.RowDefinitions>
 
+            <TextBlock
+                Style="{StaticResource TextBlockStyle}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                TextWrapping="Wrap"
+                Margin="10"
+                Visibility="{Binding Message, Converter={dh:NullOrEmptyToVisibilityConverter}}"
+                Text="{Binding Message}" />
+
             <ScrollViewer
+                Visibility="{Binding Message, Converter={dh:NullOrEmptyToVisibilityConverter}, ConverterParameter=1}"
                 HorizontalScrollBarVisibility="Disabled"
                 VerticalScrollBarVisibility="Auto">
 
@@ -402,15 +412,23 @@
                         Grid.Row="5"
                         VerticalAlignment="Center"
                         Style="{StaticResource TextBlockStyle}"
-                        Text="Cost" />
+                        Text="Cost of HUD" />
 
-                    <TextBox
+                    <StackPanel
                         Grid.Column="2"
                         Grid.Row="5"
-                        Width="50"
-                        Style="{StaticResource TextBoxStyle}"
-                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
-                        Text="{Binding Cost}" />
+                        Orientation="Horizontal">
+                        <TextBox
+                            Width="50"
+                            Style="{StaticResource TextBoxStyle}"
+                            Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                            Text="{Binding Cost}" />
+                        <TextBlock
+                            Margin="5,0,0,0"
+                            VerticalAlignment="Center"
+                            Style="{StaticResource TextBlockStyle}"
+                            Text="(enter 0 for free)" />
+                    </StackPanel>
 
                     <!-- Images -->
                     <TextBlock
@@ -470,16 +488,37 @@
                 HorizontalAlignment="Right">
                 <Button
                     Content="Sumbit"
+                    Visibility="{Binding IsSubmitButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding SubmitCommand, ValidatesOnNotifyDataErrors=False}" />
                 <Button
                     Content="Reset"
                     Margin="5,0,0,0"
+                    Visibility="{Binding IsResetButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding ResetCommand, ValidatesOnNotifyDataErrors=False}" />
                 <Button
+                    Content="Retry"
+                    Margin="5,0,0,0"
+                    Visibility="{Binding IsRetryButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding SubmitCommand, ValidatesOnNotifyDataErrors=False}" />
+                <Button
+                    Content="Back"
+                    Margin="5,0,0,0"
+                    Visibility="{Binding IsBackButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding BackCommand, ValidatesOnNotifyDataErrors=False}" />
+                <Button
                     Content="Cancel"
                     Margin="5,0,0,0"
+                    Visibility="{Binding IsCancelButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding CancelCommand, ValidatesOnNotifyDataErrors=False}" />
+                <Button
+                    Content="Close"
+                    Margin="5,0,0,0"
+                    Visibility="{Binding IsCloseButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding CancelCommand, ValidatesOnNotifyDataErrors=False}" />
             </StackPanel>

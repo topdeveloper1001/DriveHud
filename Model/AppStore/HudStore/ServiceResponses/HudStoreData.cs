@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IHudStoreUploadModel.cs" company="Ace Poker Solutions">
+// <copyright file="InfoServiceResponse.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,28 +11,23 @@
 //----------------------------------------------------------------------
 
 using Model.AppStore.HudStore.Model;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace Model.AppStore.HudStore
+namespace Model.AppStore.HudStore.ServiceResponses
 {
-    public interface IHudStoreUploadModel
+    public class HudStoreData
     {
-        IEnumerable<GameVariant> GameVariants { get; }
+        [JsonProperty("layouts_names")]
+        public IEnumerable<string> LayoutsNames { get; set; }
 
-        IList<GameVariant> SelectedGameVariants { get; }
+        [JsonProperty("game_variants")]
+        public IEnumerable<GameVariant> GameVariants { get; set; }
 
-        IEnumerable<GameType> GameTypes { get; }
+        [JsonProperty("game_types")]
+        public IEnumerable<GameType> GameTypes { get; set; }
 
-        IList<GameType> SelectedGameTypes { get; }
-
-        IEnumerable<TableType> TableTypes { get; }
-
-        IList<TableType> SelectedTableTypes { get; }
-
-        IEnumerable<string> LayoutsNamesInUse { get; }
-
-        void Load();
-
-        void Upload(HudStoreUploadInfo uploadInfo);
+        [JsonProperty("table_types")]
+        public IEnumerable<TableType> TableTypes { get; set; }
     }
 }
