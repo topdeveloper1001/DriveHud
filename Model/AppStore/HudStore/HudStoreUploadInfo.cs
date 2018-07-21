@@ -37,5 +37,8 @@ namespace Model.AppStore.HudStore
 
         [JsonProperty("images")]
         public HudStoreUploadImageInfo[] Images { get; set; }
+
+        [JsonProperty("serial")]
+        public string Serial { get; set; }
     }   
 }

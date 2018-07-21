@@ -10,11 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.Licensing;
+using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.Common.Wpf.Validation;
+using Microsoft.Practices.ServiceLocation;
 using Microsoft.Win32;
 using Model.AppStore.HudStore;
 using Model.AppStore.HudStore.Model;
@@ -457,6 +460,25 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             StartAsyncOperation(() =>
             {
+                var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
+
+                // trial can't be used to upload data
+                if (licenseService.IsTrial)
+                {
+                    throw new DHBusinessException(new NonLocalizableString("Trial license isn't eligible to upload HUD to the store."));
+                }
+
+                var registerdLicenses = licenseService.LicenseInfos.Where(x => x.IsRegistered).ToArray();
+
+                var license = registerdLicenses.FirstOrDefault(x => x.LicenseType == LicenseType.Combo) ??
+                    registerdLicenses.FirstOrDefault(x => x.LicenseType == LicenseType.Holdem) ??
+                    registerdLicenses.FirstOrDefault(x => x.LicenseType == LicenseType.Omaha);
+
+                if (license == null)
+                {
+                    throw new DHBusinessException(new NonLocalizableString("Couldn't find license to upload HUD to the store."));
+                }
+
                 var uploadInfo = new HudStoreUploadInfo
                 {
                     Name = Name,
@@ -469,7 +491,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                     {
                         Caption = x.Caption,
                         Path = x.Path
-                    }).ToArray()
+                    }).ToArray(),
+                    Serial = license.Serial
                 };
 
                 Model.Upload(uploadInfo);
@@ -477,7 +500,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             ex =>
             {
                 if (true)
-                //   if (ex != null)
+                // if (ex != null)
                 {
                     if (ex != null)
                         LogProvider.Log.Error(this, "Fail to upload HUD on the HUD store.", ex);

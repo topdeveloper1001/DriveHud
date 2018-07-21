@@ -23,6 +23,7 @@ using System.Web;
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Security;
 using Model.AppStore.HudStore.Model;
 using Model.AppStore.HudStore.ServiceResponses;
 using Newtonsoft.Json;
@@ -34,7 +35,7 @@ namespace Model.AppStore.HudStore
     /// </summary>
     public class HudStoreWebService : IHudStoreWebService
     {
-        private const string requestKey = "";
+        private const string encryptKey = "<RSAKeyValue><Modulus>t9FLl4PZ92qPz459kGw6dDM76tNNGFhNjZFnhbuk5oI/pEGx6idF/zbXBIh/4NuVnH1skKx1s1A1z7H/081k9H4ojB7lr1R7vdzzIndZFmj9Or3p84UgUqResuuTppwrkZZkyNzyJHUl9LvPsx2GhW3JXXXgX3lWuhPCaKPUreV70j3xvmL49pQChU66RG/l+UojT6KjWU/N1Gk8XU1hqpao377mA5UUcBq18co6uQ6yVJ67xeg4Zs/E8fdlq9vIVju7KWDZN1XShHPTm3X6b7KjePXl4/stbNPFK+rm9lElb6u4/ZcerIGppCTCIabtTko3RykCMjGDSIRhDJG3CQ==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
 
         private static readonly string serverAddress;
 
@@ -78,6 +79,8 @@ namespace Model.AppStore.HudStore
 
             try
             {
+                uploadInfo.Serial = SecurityUtils.EncryptStringRSA(uploadInfo.Serial, encryptKey);
+
                 var multiPartContent = new MultipartFormDataContent();
 
                 for (var i = 0; i < uploadInfo.Images.Length; i++)
@@ -99,7 +102,7 @@ namespace Model.AppStore.HudStore
 
                 multiPartContent.Add(new StringContent(jsonString, Encoding.UTF8), "data");
 
-                var result = Post<bool>(HudStoreServiceNames.HudsService, HudStoreServiceCommands.Upload, multiPartContent);               
+                Post<bool>(HudStoreServiceNames.HudsService, HudStoreServiceCommands.Upload, multiPartContent);
             }
             catch (Exception e)
             {
@@ -124,8 +127,8 @@ namespace Model.AppStore.HudStore
                 if (serviceResponse.Errors == null || serviceResponse.Errors.Length == 0)
                 {
                     return serviceResponse.Result;
-                }               
-                
+                }
+
 
             }
             catch (Exception e)
