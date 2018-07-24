@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Model.AppStore.HudStore.ServiceData;
 using Model.AppStore.HudStore.ServiceResponses;
 
 namespace Model.AppStore.HudStore
@@ -19,6 +20,8 @@ namespace Model.AppStore.HudStore
     /// </summary>
     public interface IHudStoreWebService
     {
+        HudStoreHudsData GetHuds(HudStoreGetHudsRequest request);
+
         HudStoreData GetUploadInfo();
 
         void Upload(HudStoreUploadInfo uploadInfo);

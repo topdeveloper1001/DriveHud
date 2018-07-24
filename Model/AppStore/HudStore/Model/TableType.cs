@@ -10,16 +10,20 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Newtonsoft.Json;
 using Prism.Mvvm;
 
 namespace Model.AppStore.HudStore.Model
 {
     public class TableType : BindableBase
     {
+        [JsonProperty("id")]
         public short Id { get; set; }
 
+        [JsonProperty("name")]
         public string Name { get; set; }
 
+        [JsonProperty("max_players")]
         public short MaxPlayers { get; set; }
     }
 }

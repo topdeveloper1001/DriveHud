@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="GameVariant.cs" company="Ace Poker Solutions">
-// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="HudStoreView.xaml.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,17 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Newtonsoft.Json;
-using Prism.Mvvm;
+using System.Windows.Controls;
 
-namespace Model.AppStore.HudStore.Model
+namespace DriveHUD.Application.Views.AppStore
 {
-    public class GameVariant : BindableBase
+    /// <summary>
+    /// Interaction logic for HudStoreView.xaml
+    /// </summary>
+    public partial class HudStoreView : UserControl
     {
-        [JsonProperty("id")]
-        public short Id { get; set; }
-
-        [JsonProperty("name")]
-        public string Name { get; set; }
+        public HudStoreView()
+        {
+            InitializeComponent();
+        }
     }
 }

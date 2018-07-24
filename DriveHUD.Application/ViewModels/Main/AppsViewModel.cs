@@ -225,6 +225,10 @@ namespace DriveHUD.Application.ViewModels
                     AppStoreViewModel = new AppsAppStoreViewModel();
                     break;
 
+                case AppStoreType.Huds:
+                    AppStoreViewModel = new HudStoreViewModel();
+                    break;
+
                 default:
                     AppStoreViewModel = new EmptyAppStoreViewModel();
                     break;
@@ -244,7 +248,7 @@ namespace DriveHUD.Application.ViewModels
         private void RefreshPages()
         {
             var pagesCount = AppStoreViewModel.ProductsPerPage != 0 ? (int)Math.Ceiling((decimal)AppStoreViewModel.ItemsCount / AppStoreViewModel.ProductsPerPage) : 0;
-
+         
             Pages.Clear();
 
             if (pagesCount > 0)

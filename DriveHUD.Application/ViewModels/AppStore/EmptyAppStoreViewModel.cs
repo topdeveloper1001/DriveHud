@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using Model.AppStore;
+using System;
 
 namespace DriveHUD.Application.ViewModels.AppStore
 {
@@ -20,27 +21,27 @@ namespace DriveHUD.Application.ViewModels.AppStore
     public class EmptyAppStoreViewModel : AppStoreViewModel<IProductAppStoreModel>
     {
         public override void Initialize()
-        {            
+        {
         }
 
         public override void Refresh(int pageNumber)
-        {            
+        {
         }
 
         public override void Search(string searchText)
-        {         
+        {
         }
 
-        protected override void ModelInitialized()
-        {         
+        protected override void ModelInitialized(Exception e)
+        {
         }
 
         protected override void OnAddToCart(object item)
-        {         
+        {
         }
 
         protected override void OnLearnMore(object item)
-        {         
+        {
         }
     }
 }

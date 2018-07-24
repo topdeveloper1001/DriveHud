@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Model.AppStore
 {
@@ -23,6 +23,6 @@ namespace Model.AppStore
         /// <summary>
         /// Items of the app store model
         /// </summary>
-        IList<TItem> Items { get; }      
+        ObservableCollection<TItem> Items { get; }      
     }
 }

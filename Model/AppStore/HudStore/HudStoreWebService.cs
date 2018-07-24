@@ -10,23 +10,20 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Security;
+using Model.AppStore.HudStore.ServiceData;
+using Model.AppStore.HudStore.ServiceResponses;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Threading.Tasks;
 using System.Web;
-using DriveHUD.Common.Exceptions;
-using DriveHUD.Common.Log;
-using DriveHUD.Common.Resources;
-using DriveHUD.Common.Security;
-using Model.AppStore.HudStore.Model;
-using Model.AppStore.HudStore.ServiceResponses;
-using Newtonsoft.Json;
 
 namespace Model.AppStore.HudStore
 {
@@ -45,6 +42,55 @@ namespace Model.AppStore.HudStore
         {
             serverAddress = CommonResourceManager.Instance.GetResourceString("Settings_HudStoreService");
             httpClient = new HttpClient();
+        }
+
+        /// <summary>
+        /// Gets available layouts
+        /// </summary>
+        /// <param name="page">Number of page</param>
+        /// <param name="limit">Amount of layouts to select</param>
+        /// <returns><see cref="HudStoreHudsData"/></returns>
+        public HudStoreHudsData GetHuds(HudStoreGetHudsRequest request)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(request.Serial))
+                {
+                    throw new DHBusinessException(new NonLocalizableString("Unknown serial number"));
+                }
+
+                request.Serial = SecurityUtils.EncryptStringRSA(request.Serial, encryptKey);
+
+                var jsonString = JsonConvert.SerializeObject(request);
+
+                var requestData = new Dictionary<string, string>
+                {
+                    ["data"] = jsonString
+                };
+
+                var formUrlEncodedContent = new FormUrlEncodedContent(requestData);
+
+                var serviceResponse = Post<HudStoreHudsData>(HudStoreServiceNames.HudsService, HudStoreServiceCommands.GetAll, formUrlEncodedContent);
+
+                if (serviceResponse != null && serviceResponse.Result != null &&
+                    (serviceResponse.Errors == null || serviceResponse.Errors.Length == 0))
+                {
+                    return serviceResponse.Result;
+                }
+
+                var errorMessage = ConvertErrors(serviceResponse?.Errors);
+
+                throw new DHBusinessException(new LocalizableString("Common_HudUploadToStoreView_UploadingFailedServiceReturnedErrors", errorMessage));
+
+            }
+            catch (DHBusinessException)
+            {
+                throw;
+            }
+            catch (Exception e)
+            {
+                throw new DHInternalException(new NonLocalizableString("Couldn't get huds from hud store web service."), e);
+            }
         }
 
         /// <summary>
@@ -102,7 +148,20 @@ namespace Model.AppStore.HudStore
 
                 multiPartContent.Add(new StringContent(jsonString, Encoding.UTF8), "data");
 
-                Post<bool>(HudStoreServiceNames.HudsService, HudStoreServiceCommands.Upload, multiPartContent);
+                var serviceResponse = Post<bool>(HudStoreServiceNames.HudsService, HudStoreServiceCommands.Upload, multiPartContent);
+
+                if (serviceResponse != null && serviceResponse.Result)
+                {
+                    return;
+                }
+
+                var errorMessage = ConvertErrors(serviceResponse?.Errors);
+
+                throw new DHBusinessException(new LocalizableString("Common_HudUploadToStoreView_UploadingFailedServiceReturnedErrors", errorMessage));
+            }
+            catch (DHBusinessException)
+            {
+                throw;
             }
             catch (Exception e)
             {
@@ -110,7 +169,7 @@ namespace Model.AppStore.HudStore
             }
         }
 
-        private T Post<T>(string serviceName, string command, HttpContent content)
+        private HudStoreServiceResponse<T> Post<T>(string serviceName, string command, HttpContent content)
         {
             try
             {
@@ -124,19 +183,12 @@ namespace Model.AppStore.HudStore
 
                 var serviceResponse = JsonConvert.DeserializeObject<HudStoreServiceResponse<T>>(responseContent);
 
-                if (serviceResponse.Errors == null || serviceResponse.Errors.Length == 0)
-                {
-                    return serviceResponse.Result;
-                }
-
-
+                return serviceResponse;
             }
             catch (Exception e)
             {
                 throw new DHInternalException(new NonLocalizableString("Couldn't post data to hud store web service."), e);
             }
-
-            return default(T);
         }
 
         private T Get<T>(string serviceName, string command) where T : class
@@ -161,6 +213,28 @@ namespace Model.AppStore.HudStore
             }
 
             return null;
+        }
+
+        private string ConvertErrors(string[] errors)
+        {
+            if (errors == null)
+            {
+                return string.Empty;
+            }
+
+            var errorsTexts = errors.Select<string, ILocalizableString>(x =>
+            {
+                if (!HudStoreWebServiceErrors.Codes.TryGetValue(x, out string error))
+                {
+                    return new NonLocalizableString(x);
+                }
+
+                return new LocalizableString(error);
+            }).ToArray();
+
+            var errorMessage = string.Join<ILocalizableString>(Environment.NewLine, errorsTexts);
+
+            return errorMessage;
         }
     }
 }

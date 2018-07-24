@@ -100,32 +100,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public override void Configure(object viewModelInfo)
         {
-            BusyStatus = HudUploadToStoreBusyStatus.Loading;
-
-            IsSubmitButtonVisible = true;
-            IsResetButtonVisible = true;
-            IsCancelButtonVisible = true;
-
             InitializeModelAsync(() => Model.Load());
-            Initialize();
-
-            for (var i = 0; i < 1; i++)
-            {
-                images.Add(new HudUploadToStoreImage
-                {
-                    Caption = "Caption 1",
-                    Path = @"d:\hud-screenshot-1.png"
-                });
-            }
-
-            images.Add(new HudUploadToStoreImage
-            {
-                Caption = "Caption 2",
-                Path = @"d:\hud-screenshot-2.png"
-            });
-
-            Name = "Test layout for testing only";
-            Description = "Test layout for testing only";
         }
 
         #region Properties
@@ -377,9 +352,41 @@ namespace DriveHUD.Application.ViewModels.Hud
             BackCommand = ReactiveCommand.Create(() => Message = string.Empty);
         }
 
-        protected override void ModelInitialized()
+        protected override void ModelInitialized(Exception ex)
         {
-            base.ModelInitialized();
+            Initialize();
+
+            if (ex != null)
+            {
+                LogProvider.Log.Error(this, "Could not initialize model.", ex);
+                Message = LocalizableString.ToString("Common_HudUploadToStoreView_ModelNotLoaded", ex.Message);
+                IsCloseButtonVisible = true;
+                return;
+            }
+
+            IsSubmitButtonVisible = true;
+            IsResetButtonVisible = true;
+            IsCancelButtonVisible = true;
+
+            for (var i = 0; i < 1; i++)
+            {
+                images.Add(new HudUploadToStoreImage
+                {
+                    Caption = "Caption 1",
+                    Path = @"d:\hud-screenshot-2.png"
+                });
+            }
+
+            images.Add(new HudUploadToStoreImage
+            {
+                Caption = "Caption 2",
+                Path = @"d:\hud-screenshot-2.png"
+            });
+
+            Name = "Test layout for testing only";
+            Description = "Test layout for testing only";
+
+            base.ModelInitialized(ex);
             InitializeSelectableData();
         }
 
@@ -462,17 +469,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
 
-                // trial can't be used to upload data
-                if (licenseService.IsTrial)
-                {
-                    throw new DHBusinessException(new NonLocalizableString("Trial license isn't eligible to upload HUD to the store."));
-                }
-
-                var registerdLicenses = licenseService.LicenseInfos.Where(x => x.IsRegistered).ToArray();
-
-                var license = registerdLicenses.FirstOrDefault(x => x.LicenseType == LicenseType.Combo) ??
-                    registerdLicenses.FirstOrDefault(x => x.LicenseType == LicenseType.Holdem) ??
-                    registerdLicenses.FirstOrDefault(x => x.LicenseType == LicenseType.Omaha);
+                var license = licenseService.GetHudStoreLicenseInfo(false);
 
                 if (license == null)
                 {
@@ -494,17 +491,14 @@ namespace DriveHUD.Application.ViewModels.Hud
                     }).ToArray(),
                     Serial = license.Serial
                 };
-
+            
                 Model.Upload(uploadInfo);
             },
             ex =>
             {
-                if (true)
-                // if (ex != null)
+                if (ex != null)
                 {
-                    if (ex != null)
-                        LogProvider.Log.Error(this, "Fail to upload HUD on the HUD store.", ex);
-
+                    LogProvider.Log.Error(this, "Failed to upload HUD on the HUD store.", ex);
 
                     IsSubmitButtonVisible = false;
                     IsResetButtonVisible = false;
@@ -513,7 +507,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     IsCancelButtonVisible = true;
                     IsCloseButtonVisible = false;
 
-                    Message = LocalizableString.ToString("Common_HudUploadToStoreView_UploadingFailed", ex != null ? ex.Message : "No errors.");
+                    Message = LocalizableString.ToString("Common_HudUploadToStoreView_UploadingFailed", ex.Message);
 
                     return;
                 }

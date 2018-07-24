@@ -482,7 +482,9 @@
     <Compile Include="ViewModels\AppStore\AppStorePageViewModel.cs" />
     <Compile Include="ViewModels\AppStore\AppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\EmptyAppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\HudStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\IAppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\IHudStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
@@ -639,6 +641,9 @@
     </Compile>
     <Compile Include="Views\AppStore\AppsAppStoreView.xaml.cs">
       <DependentUpon>AppsAppStoreView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppStore\HudStoreView.xaml.cs">
+      <DependentUpon>HudStoreView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
       <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
@@ -1115,6 +1120,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\AppStore\AppsAppStoreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppStore\HudStoreView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

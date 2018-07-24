@@ -53,7 +53,7 @@ namespace DriveHUD.Common.Wpf.Mvvm
 
         protected abstract void InitializeCommands();
 
-        protected virtual void ModelInitialized()
+        protected virtual void ModelInitialized(Exception e)
         {
             ApplyRules();
         }

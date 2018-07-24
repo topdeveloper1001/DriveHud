@@ -170,9 +170,8 @@ namespace DriveHUD.Application.ViewModels.AppStore
         }
 
         public virtual void Refresh(int pageNumber)
-        {
-            var start = ProductsPerPage * (pageNumber - 1);
-            Model.Refresh(start, ProductsPerPage);
+        {           
+            Model.Refresh(pageNumber, ProductsPerPage);
         }
 
         public virtual void Search(string searchText)
@@ -183,7 +182,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
         #endregion
 
-        protected virtual void ModelInitialized()
+        protected virtual void ModelInitialized(Exception ex)
         {
             OnUpdated();
         }

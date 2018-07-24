@@ -1863,6 +1863,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Could not get required data from web service. Please contact support or try later..
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_ModelNotLoaded {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_ModelNotLoaded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This name is already in use.
         /// </summary>
         internal static string Common_HudUploadToStoreView_NameIsAlreadyInUse {
@@ -1908,11 +1917,22 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uploading failed. Please try again or contact support. Error: {0}.
+        ///   Looks up a localized string similar to Uploading failed. Please try again or contact support. 
+        ///{0}.
         /// </summary>
         internal static string Common_HudUploadToStoreView_UploadingFailed {
             get {
                 return ResourceManager.GetString("Common_HudUploadToStoreView_UploadingFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service returned the following errors: 
+        ///{0}.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_UploadingFailedServiceReturnedErrors {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_UploadingFailedServiceReturnedErrors", resourceCulture);
             }
         }
         

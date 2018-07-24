@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="GameVariant.cs" company="Ace Poker Solutions">
+// <copyright file="HudStoreGetHudsResponse.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,17 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Model.AppStore.HudStore.Model;
 using Newtonsoft.Json;
-using Prism.Mvvm;
+using System.Collections.Generic;
 
-namespace Model.AppStore.HudStore.Model
+namespace Model.AppStore.HudStore.ServiceResponses
 {
-    public class GameVariant : BindableBase
+    public class HudStoreHudsData
     {
-        [JsonProperty("id")]
-        public short Id { get; set; }
+        [JsonProperty("items")]
+        public IEnumerable<HudStoreItem> Items { get; set; }
 
-        [JsonProperty("name")]
-        public string Name { get; set; }
+        [JsonProperty("items_count")]
+        public int ItemsCount { get; set; }
     }
 }

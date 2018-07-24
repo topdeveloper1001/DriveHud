@@ -16,6 +16,8 @@ namespace Model.AppStore.HudStore
     {
         public const string Get = "get";
 
+        public const string GetAll = "getall";
+
         public const string Upload = "upload";
     }
 }

@@ -52,6 +52,7 @@ namespace Model
             container.RegisterType<IEquitySolver, EquitySolver>();
             container.RegisterType<IHudStoreUploadModel, HudStoreUploadModel>();
             container.RegisterType<IHudStoreWebService, HudStoreWebService>();
+            container.RegisterType<IHudStoreModel, HudStoreModel>();
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="GameVariant.cs" company="Ace Poker Solutions">
+// <copyright file="IBaseAppStoreModel.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,17 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Newtonsoft.Json;
-using Prism.Mvvm;
-
-namespace Model.AppStore.HudStore.Model
+namespace Model.AppStore
 {
-    public class GameVariant : BindableBase
+    public interface IBaseAppStoreModel<T> : IAppStoreItemsModel<T>
     {
-        [JsonProperty("id")]
-        public short Id { get; set; }
-
-        [JsonProperty("name")]
-        public string Name { get; set; }
+        /// <summary>
+        /// Loads items to model
+        /// </summary>
+        void Load(object loadInfo);
     }
 }

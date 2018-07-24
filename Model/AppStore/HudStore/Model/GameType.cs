@@ -10,14 +10,17 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Newtonsoft.Json;
 using Prism.Mvvm;
 
 namespace Model.AppStore.HudStore.Model
 {
     public class GameType : BindableBase
     {
+        [JsonProperty("id")]
         public short Id { get; set; }
 
+        [JsonProperty("name")]
         public string Name { get; set; }
     }
 }
