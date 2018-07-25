@@ -10,15 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DriveHUD.Application.ViewModels.Layouts;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
     public class HudUploadToStoreViewModelInfo
     {
+        public HudLayoutInfoV2 Layout { get; set; }
     }
 }

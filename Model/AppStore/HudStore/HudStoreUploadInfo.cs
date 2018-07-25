@@ -40,5 +40,8 @@ namespace Model.AppStore.HudStore
 
         [JsonProperty("serial")]
         public string Serial { get; set; }
-    }   
+
+        [JsonIgnore]
+        public string HudLayout { get; set; }
+    }
 }

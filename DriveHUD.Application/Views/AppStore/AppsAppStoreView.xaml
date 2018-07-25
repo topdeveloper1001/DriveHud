@@ -20,12 +20,13 @@
         </ResourceDictionary>
 
     </UserControl.Resources>
-   
+
     <telerik:RadBusyIndicator
         IsBusy="{Binding OperationInfo.IsBusy}"
         Style="{DynamicResource AppStoreRadBusyIndicatorStyle}">
 
-        <Grid>
+        <Grid
+            Margin="47,48,0,0">
             <ItemsControl
                 ItemsSource="{Binding Model.Items}">
 

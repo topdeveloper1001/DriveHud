@@ -12,6 +12,7 @@
 
 using Model.AppStore.HudStore.ServiceData;
 using Model.AppStore.HudStore.ServiceResponses;
+using System.IO;
 
 namespace Model.AppStore.HudStore
 {
@@ -20,6 +21,8 @@ namespace Model.AppStore.HudStore
     /// </summary>
     public interface IHudStoreWebService
     {
+        Stream DownloadHud(HudStoreDownloadHudRequest request);
+
         HudStoreHudsData GetHuds(HudStoreGetHudsRequest request);
 
         HudStoreData GetUploadInfo();

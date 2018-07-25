@@ -1055,4 +1055,25 @@
   <data name="Enum_HudUploadToStoreBusyStatus_Submitting" xml:space="preserve">
     <value>Submitting</value>
   </data>
+  <data name="Enum_HudStoreFilter_Commercial" xml:space="preserve">
+    <value>Commercial Pro HUD's</value>
+  </data>
+  <data name="Enum_HudStoreFilter_Free" xml:space="preserve">
+    <value>Free HUD's</value>
+  </data>
+  <data name="Enum_HudStoreSorting_HoldemOnly" xml:space="preserve">
+    <value>Holdem Only HUD's</value>
+  </data>
+  <data name="Enum_HudStoreSorting_MostPopular" xml:space="preserve">
+    <value>Most Popular</value>
+  </data>
+  <data name="Enum_HudStoreSorting_Newest" xml:space="preserve">
+    <value>Newest HUDs</value>
+  </data>
+  <data name="Enum_HudStoreSorting_OmahaOnly" xml:space="preserve">
+    <value>Omaha Only HUD's</value>
+  </data>
+  <data name="Enum_HudStoreSorting_TournamentOnly" xml:space="preserve">
+    <value>Tournament Only HUD’s</value>
+  </data>
 </root>

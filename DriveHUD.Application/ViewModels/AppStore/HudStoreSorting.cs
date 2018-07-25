@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IHudStoreModel.cs" company="Ace Poker Solutions">
+// <copyright file="HudStoreSorting.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,15 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.AppStore.HudStore.Model;
-using System.IO;
-
-namespace Model.AppStore
+namespace DriveHUD.Application.ViewModels.AppStore
 {
-    public interface IHudStoreModel : IBaseAppStoreModel<HudStoreItem>
+    public enum HudStoreSorting
     {
-        void Refresh();
-
-        Stream DownloadLayout(int layoutId, string serial);
+        MostPopular = 0,
+        Newest = 1,
+        HoldemOnly = 2,
+        OmahaOnly = 3,
+        TournamentOnly = 4
     }
 }

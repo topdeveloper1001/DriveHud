@@ -781,6 +781,69 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Commercial Pro HUD&apos;s.
+        /// </summary>
+        internal static string Enum_HudStoreFilter_Commercial {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreFilter_Commercial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Free HUD&apos;s.
+        /// </summary>
+        internal static string Enum_HudStoreFilter_Free {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreFilter_Free", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Holdem Only HUD&apos;s.
+        /// </summary>
+        internal static string Enum_HudStoreSorting_HoldemOnly {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreSorting_HoldemOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Most Popular.
+        /// </summary>
+        internal static string Enum_HudStoreSorting_MostPopular {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreSorting_MostPopular", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Newest HUDs.
+        /// </summary>
+        internal static string Enum_HudStoreSorting_Newest {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreSorting_Newest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Omaha Only HUD&apos;s.
+        /// </summary>
+        internal static string Enum_HudStoreSorting_OmahaOnly {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreSorting_OmahaOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tournament Only HUD’s.
+        /// </summary>
+        internal static string Enum_HudStoreSorting_TournamentOnly {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreSorting_TournamentOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loading.
         /// </summary>
         internal static string Enum_HudUploadToStoreBusyStatus_Loading {

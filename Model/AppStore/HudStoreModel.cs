@@ -16,7 +16,7 @@ using Model.AppStore.HudStore.Model;
 using Model.AppStore.HudStore.ServiceData;
 using Model.AppStore.HudStore.ServiceResponses;
 using System.Collections.ObjectModel;
-using System.Linq;
+using System.IO;
 
 namespace Model.AppStore
 {
@@ -81,6 +81,24 @@ namespace Model.AppStore
             {
                 Items.AddRange(hudsData.Items);
             }
+        }
+
+        public Stream DownloadLayout(int layoutId, string serial)
+        {
+            if (string.IsNullOrEmpty(serial))
+            {
+                return null;
+            }
+
+            var request = new HudStoreDownloadHudRequest
+            {
+                Serial = serial,
+                LayoutId = layoutId
+            };
+
+            var downloadStream = service.DownloadHud(request);
+
+            return downloadStream;
         }
 
         /// <summary>

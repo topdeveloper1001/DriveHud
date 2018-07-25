@@ -562,7 +562,11 @@ namespace DriveHUD.Application.ViewModels
 
             OpenHudUploadToStoreCommand = ReactiveCommand.Create(() =>
             {
-                var viewModelInfo = new HudUploadToStoreViewModelInfo();
+                var viewModelInfo = new HudUploadToStoreViewModelInfo
+                {
+                    Layout = CurrentLayout.Clone()
+                };
+
                 var requestInfo = new HudUploadToStoreRequestInfo(viewModelInfo);
 
                 OpenHudUploadToStoreRequest.Raise(requestInfo);

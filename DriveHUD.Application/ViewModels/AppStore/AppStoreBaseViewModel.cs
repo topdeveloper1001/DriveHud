@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Common.Wpf.Events;
 using DriveHUD.Common.Wpf.Mvvm;
 using Microsoft.Practices.ServiceLocation;
@@ -28,6 +29,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
         public AppStoreBaseViewModel()
         {
             Model = ServiceLocator.Current.GetInstance<TModel>();
+            NotificationRequest = new InteractionRequest<PopupBaseNotification>();
         }
 
         #region Properties
@@ -104,6 +106,20 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
         }
 
+        private InteractionRequest<PopupBaseNotification> notificationRequest;
+
+        public InteractionRequest<PopupBaseNotification> NotificationRequest
+        {
+            get
+            {
+                return notificationRequest;
+            }
+            protected set
+            {
+                this.RaiseAndSetIfChanged(ref notificationRequest, value);
+            }
+        }
+
         private string viewName;
 
         public string ViewName
@@ -170,7 +186,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
         }
 
         public virtual void Refresh(int pageNumber)
-        {           
+        {
             Model.Refresh(pageNumber, ProductsPerPage);
         }
 

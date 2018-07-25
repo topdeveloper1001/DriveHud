@@ -152,6 +152,7 @@
     <Compile Include="AppStore\HudStore\Model\GameType.cs" />
     <Compile Include="AppStore\HudStore\Model\GameVariant.cs" />
     <Compile Include="AppStore\HudStore\Model\HudStoreItem.cs" />
+    <Compile Include="AppStore\HudStore\ServiceData\HudStoreDownloadHudRequest.cs" />
     <Compile Include="AppStore\HudStore\ServiceData\HudStoreGetHudsRequest.cs" />
     <Compile Include="AppStore\HudStore\ServiceData\HudStoreHudsData.cs" />
     <Compile Include="AppStore\HudStore\ServiceData\HudStoreServiceResponse.cs" />

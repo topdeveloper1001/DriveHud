@@ -19,6 +19,104 @@
                 <ResourceDictionary
                     Source="/DriveHUD.Application;Component/ControlStyles/AppStoreResources.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Color
+                x:Key="DropShadowColor">#000000</Color>
+
+            <SolidColorBrush
+                x:Key="DropShadowBrush"
+                Color="{StaticResource DropShadowColor}" />
+
+            <Color
+                x:Key="MouseOverImageSelectorFillColor">#d3dadf</Color>
+
+            <Color
+                x:Key="CheckedImageSelectorFillColor">#bdc3c7</Color>
+
+            <SolidColorBrush
+                x:Key="ImageSelectorStrokeBrush"
+                Color="{StaticResource CheckedImageSelectorFillColor}" />
+
+            <SolidColorBrush
+                x:Key="CloseButtonBackground"
+                Color="#191a1e" />
+
+            <SolidColorBrush
+                x:Key="InnerBackground"
+                Color="#191b1e" />
+
+            <SolidColorBrush
+                x:Key="PopupBorderBrush"
+                Color="#000000" />
+
+            <SolidColorBrush
+                x:Key="PopupHeaderBrush"
+                Color="#335199" />
+
+            <SolidColorBrush
+                x:Key="OuterBackground"
+                Color="#24292e" />
+
+            <Style
+                x:Key="ImageSelectorStyle"
+                TargetType="{x:Type RadioButton}">
+                <Setter
+                    Property="SnapsToDevicePixels"
+                    Value="true" />
+                <Setter
+                    Property="OverridesDefaultStyle"
+                    Value="true" />
+                <Setter
+                    Property="FocusVisualStyle"
+                    Value="{x:Null}" />
+                <Setter
+                    Property="Cursor"
+                    Value="Hand" />
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type RadioButton}">
+                            <BulletDecorator
+                                Background="Transparent">
+                                <BulletDecorator.Bullet>
+                                    <Ellipse
+                                        x:Name="CheckMark"
+                                        Width="7"
+                                        Height="7"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        Fill="Transparent"
+                                        StrokeThickness="1"
+                                        Stroke="{StaticResource ImageSelectorStrokeBrush}" />
+                                </BulletDecorator.Bullet>
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup
+                                        x:Name="CheckStates">
+                                        <VisualState
+                                            x:Name="Checked">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames
+                                                    Storyboard.TargetName="CheckMark"
+                                                    Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)">
+                                                    <EasingColorKeyFrame
+                                                        KeyTime="0"
+                                                        Value="{StaticResource MouseOverImageSelectorFillColor}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState
+                                            x:Name="Unchecked" />
+                                        <VisualState
+                                            x:Name="Indeterminate" />
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </BulletDecorator>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
         </ResourceDictionary>
 
     </UserControl.Resources>
@@ -27,43 +125,200 @@
         IsBusy="{Binding OperationInfo.IsBusy}"
         Style="{DynamicResource AppStoreRadBusyIndicatorStyle}">
 
-        <Grid>
+        <Grid
+            Margin="0,18,0,0"
+            VerticalAlignment="Top">
+
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="35" />
+                <RowDefinition
+                    Height="14" />
+                <RowDefinition
+                    Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel
+                Grid.Row="0"
+                Margin="47,0,0,0"
+                HorizontalAlignment="Left"
+                Orientation="Horizontal">
+
+                <dh:ComboBoxEx
+                    Width="193"
+                    Height="35"
+                    ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                    ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
+                    ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
+                    ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
+                    ItemsSource="{Binding Filter}"
+                    SelectedItem="{Binding SelectedFilter}">
+                    <dh:ComboBoxEx.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock
+                                Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}" />
+                        </DataTemplate>
+                    </dh:ComboBoxEx.ItemTemplate>
+                </dh:ComboBoxEx>
+
+                <dh:ComboBoxEx
+                    Margin="15,0,0,0"
+                    Width="193"
+                    Height="35"
+                    ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                    ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
+                    ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
+                    ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
+                    ItemsSource="{Binding Sorting}"
+                    SelectedItem="{Binding SelectedSorting}">
+                    <dh:ComboBoxEx.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock
+                                Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}" />
+                        </DataTemplate>
+                    </dh:ComboBoxEx.ItemTemplate>
+                </dh:ComboBoxEx>
+
+            </StackPanel>
+
             <ItemsControl
-                ItemsSource="{Binding Model.Items}">
+                Grid.Row="2"
+                Margin="30,0,0,0"
+                VerticalAlignment="Top"
+                ItemsSource="{Binding Items}">
 
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Grid
-                            Width="584">
-                            <Grid.RowDefinitions>
-                                <RowDefinition
-                                    Height="20" />
-                                <RowDefinition
-                                    Height="*" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition
-                                    Width="168" />
-                                <ColumnDefinition
-                                    Width="270" />
-                                <ColumnDefinition
-                                    Width="24" />
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                        
-                            <TextBlock
-                                Grid.Column="1"
-                                Grid.Row="0"
-                                Text="{Binding Name}"
-                                Style="{StaticResource ProductNameTextBlockStyle}" />
+                            Height="415"
+                            Margin="10"
+                            Width="265">
 
-                            <TextBlock
-                                Grid.Column="1"
-                                Grid.Row="1"
-                                Text="{Binding Description}"
-                                Style="{StaticResource DescriptionTextBlockStyle}"
-                                TextWrapping="Wrap" />
-                  
+                            <Border
+                                BorderThickness="1"
+                                BorderBrush="{StaticResource PopupBorderBrush}"
+                                Margin="7">
+
+                                <Border.Effect>
+                                    <DropShadowEffect
+                                        BlurRadius="15"
+                                        ShadowDepth="7"
+                                        Color="{DynamicResource DropShadowColor}" />
+                                </Border.Effect>
+
+                            </Border>
+
+                            <Grid
+                                Margin="4,0,0,0"
+                                Width="255"
+                                Background="{StaticResource OuterBackground}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="40" />
+                                    <RowDefinition
+                                        Height="135" />
+                                    <RowDefinition
+                                        Height="30" />
+                                    <RowDefinition
+                                        Height="145" />
+                                    <RowDefinition
+                                        Height="12" />
+                                    <RowDefinition
+                                        Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock
+                                    Grid.Row="0"
+                                    Text="{Binding Item.Name}"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Style="{StaticResource ProductNameTextBlockStyle}" />
+
+                                <Border
+                                    Grid.Row="1"
+                                    Margin="12,0,12,0"
+                                    Background="{StaticResource InnerBackground}">
+
+                                    <Button
+                                        Style="{StaticResource SimpleImageButtonStyle}"
+                                        Background="Transparent"
+                                        Command="{Binding DataContext.ExpandImageCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"
+                                        CommandParameter="{Binding }">
+                                        <Image
+                                            Source="{Binding SelectedImage.Source}" />
+                                    </Button>
+
+                                </Border>
+
+                                <!-- Buttons -->
+                                <ItemsControl
+                                    Grid.Row="2"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    ItemsSource="{Binding Images}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <RadioButton
+                                                GroupName="ImagesGroup"
+                                                Margin="2"
+                                                Style="{StaticResource ImageSelectorStyle}"
+                                                IsChecked="{Binding IsSelected}" />
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel
+                                                Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+
+                                <Border
+                                    Grid.Row="3"
+                                    Padding="1"
+                                    Margin="12,0,12,0"
+                                    Background="{StaticResource InnerBackground}">
+
+                                    <ScrollViewer
+                                        HorizontalScrollBarVisibility="Disabled"
+                                        Padding="4">
+                                        <TextBlock
+                                            Margin="0"
+                                            Grid.Row="1"
+                                            VerticalAlignment="Top"
+                                            Text="{Binding Item.Description}"
+                                            Style="{StaticResource DescriptionTextBlockStyle}"
+                                            TextBlock.TextAlignment="Justify"
+                                            TextWrapping="Wrap" />
+                                    </ScrollViewer>
+
+                                </Border>
+
+                                <Border
+                                    Grid.Row="5"
+                                    Background="#2a2f34">
+
+                                    <Grid
+                                        Margin="12,0,12,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition
+                                                Width="85" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Button
+                                            Grid.Column="1"
+                                            IsEnabled="{Binding IsImported, Converter={dh:BoolNotConverter}}"
+                                            Style="{StaticResource ButtonStyle}"
+                                            Content="Install"
+                                            Command="{Binding DataContext.InstallCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"
+                                            CommandParameter="{Binding }" />
+                                    </Grid>
+
+                                </Border>
+
+                            </Grid>
+
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
@@ -71,12 +326,89 @@
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <UniformGrid
+                            HorizontalAlignment="Left"
                             Columns="{Binding GridColumns}"
                             Rows="{Binding GridRows}" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
 
             </ItemsControl>
+
+            <dh:NonTopmostPopup
+                IsOpen="{Binding IsPopupOpened, Mode=OneWay}"
+                AllowsTransparency="True"
+                AlwaysNonTopmost="True"
+                Placement="Center">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="Auto" />
+                        <ColumnDefinition
+                            Width="40" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="40" />
+                        <RowDefinition
+                            Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Border
+                        Grid.Column="0"
+                        CornerRadius="4"
+                        Background="{StaticResource PopupHeaderBrush}"
+                        Height="10"
+                        VerticalAlignment="Top" />
+
+                    <Border
+                        Background="{StaticResource OuterBackground}"
+                        Margin="0,5,0,0">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource ProductNameTextBlockStyle}"
+                            Text="{Binding PopupImage.Caption}" />
+                    </Border>
+
+                    <Border
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Width="800"
+                        Height="600"
+                        BorderBrush="{StaticResource PopupBorderBrush}"
+                        BorderThickness="1,0,1,1"
+                        Background="{StaticResource OuterBackground}">
+                        <Image
+                            VerticalAlignment="Top"
+                            Source="{Binding PopupImage.Source}" />
+                    </Border>
+
+                    <Button
+                        Grid.Column="1"
+                        Grid.RowSpan="2"
+                        VerticalAlignment="Top"
+                        Margin="0,5,0,0"
+                        Width="40"
+                        Height="40"
+                        Command="{Binding ClosePopupCommand}"
+                        Background="{StaticResource CloseButtonBackground}">
+
+                        <Path
+                            SnapsToDevicePixels="True"
+                            ToolTip="Close"
+                            Width="11"
+                            Height="11"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Stretch="Fill"
+                            Fill="#FFFFFF"
+                            Data="F1 M 26.9166,22.1667L 37.9999,33.25L 49.0832,22.1668L 53.8332,26.9168L 42.7499,38L 53.8332,49.0834L 49.0833,53.8334L 37.9999,42.75L 26.9166,53.8334L 22.1666,49.0833L 33.25,38L 22.1667,26.9167L 26.9166,22.1667 Z " />
+
+                    </Button>
+
+                </Grid>
+
+            </dh:NonTopmostPopup>
         </Grid>
 
     </telerik:RadBusyIndicator>

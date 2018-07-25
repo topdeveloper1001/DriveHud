@@ -19,6 +19,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -80,7 +81,7 @@ namespace Model.AppStore.HudStore
 
                 var errorMessage = ConvertErrors(serviceResponse?.Errors);
 
-                throw new DHBusinessException(new LocalizableString("Common_HudUploadToStoreView_UploadingFailedServiceReturnedErrors", errorMessage));
+                throw new DHBusinessException(new LocalizableString("Common_HudWebService_GettingHudFailed", errorMessage));
 
             }
             catch (DHBusinessException)
@@ -90,6 +91,51 @@ namespace Model.AppStore.HudStore
             catch (Exception e)
             {
                 throw new DHInternalException(new NonLocalizableString("Couldn't get huds from hud store web service."), e);
+            }
+        }
+
+        public Stream DownloadHud(HudStoreDownloadHudRequest request)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(request.Serial))
+                {
+                    throw new DHBusinessException(new NonLocalizableString("Unknown serial number"));
+                }
+
+                request.Serial = SecurityUtils.EncryptStringRSA(request.Serial, encryptKey);
+
+                var jsonString = JsonConvert.SerializeObject(request);
+
+                var requestData = new Dictionary<string, string>
+                {
+                    ["data"] = jsonString
+                };
+
+                var formUrlEncodedContent = new FormUrlEncodedContent(requestData);
+
+                var serviceResponse = Post<string>(HudStoreServiceNames.HudsService, HudStoreServiceCommands.Get, formUrlEncodedContent);
+
+                if (serviceResponse != null && !string.IsNullOrEmpty(serviceResponse.Result))
+                {
+                    var downloadedData = Convert.FromBase64String(serviceResponse.Result);
+
+                    var memoryStream = new MemoryStream(downloadedData);
+
+                    return memoryStream;
+                }
+
+                var errorMessage = ConvertErrors(serviceResponse?.Errors);
+
+                throw new DHBusinessException(new LocalizableString("Common_HudWebService_DownloadingFailed", errorMessage));
+            }
+            catch (DHBusinessException)
+            {
+                throw;
+            }
+            catch (Exception e)
+            {
+                throw new DHInternalException(new NonLocalizableString("Couldn't download hud from hud store web service."), e);
             }
         }
 
@@ -129,20 +175,8 @@ namespace Model.AppStore.HudStore
 
                 var multiPartContent = new MultipartFormDataContent();
 
-                for (var i = 0; i < uploadInfo.Images.Length; i++)
-                {
-                    var imageInfo = uploadInfo.Images[i];
-
-                    if (!MediaTypeHeaderValue.TryParse(MimeMapping.GetMimeMapping(imageInfo.Path), out MediaTypeHeaderValue contentType))
-                    {
-                        throw new DHBusinessException(new LocalizableString("Error_HudStore_Upload_BadImageFormat", imageInfo.Path));
-                    }
-
-                    var streamContent = new StreamContent(File.OpenRead(imageInfo.Path));
-                    streamContent.Headers.ContentType = contentType;
-
-                    multiPartContent.Add(streamContent, $"images[]", Path.GetFileName(imageInfo.Path));
-                }
+                PrepareImagesContent(uploadInfo, multiPartContent);
+                PrepareLayoutContent(uploadInfo, multiPartContent);
 
                 var jsonString = JsonConvert.SerializeObject(uploadInfo);
 
@@ -157,7 +191,7 @@ namespace Model.AppStore.HudStore
 
                 var errorMessage = ConvertErrors(serviceResponse?.Errors);
 
-                throw new DHBusinessException(new LocalizableString("Common_HudUploadToStoreView_UploadingFailedServiceReturnedErrors", errorMessage));
+                throw new DHBusinessException(new LocalizableString("Common_HudWebService_UploadingFailed", errorMessage));
             }
             catch (DHBusinessException)
             {
@@ -169,11 +203,34 @@ namespace Model.AppStore.HudStore
             }
         }
 
+        private void PrepareImagesContent(HudStoreUploadInfo uploadInfo, MultipartFormDataContent multiPartContent)
+        {
+            for (var i = 0; i < uploadInfo.Images.Length; i++)
+            {
+                var imageInfo = uploadInfo.Images[i];
+
+                if (!MediaTypeHeaderValue.TryParse(MimeMapping.GetMimeMapping(imageInfo.Path), out MediaTypeHeaderValue contentType))
+                {
+                    throw new DHBusinessException(new LocalizableString("Error_HudStore_Upload_BadImageFormat", imageInfo.Path));
+                }
+
+                var streamContent = new StreamContent(File.OpenRead(imageInfo.Path));
+                streamContent.Headers.ContentType = contentType;
+
+                multiPartContent.Add(streamContent, $"images[]", Path.GetFileName(imageInfo.Path));
+            }
+        }
+
+        private void PrepareLayoutContent(HudStoreUploadInfo uploadInfo, MultipartFormDataContent multiPartContent)
+        {
+            multiPartContent.Add(new StringContent(uploadInfo.HudLayout, Encoding.UTF8), "layout");
+        }
+
         private HudStoreServiceResponse<T> Post<T>(string serviceName, string command, HttpContent content)
         {
             try
             {
-                var uri = new Uri(new Uri(serverAddress), $"{serviceName}/{command}");
+                var uri = new Uri($"{serverAddress}/{serviceName}/{command}");
 
                 var response = httpClient.PostAsync(uri, content).Result;
 
@@ -195,7 +252,7 @@ namespace Model.AppStore.HudStore
         {
             try
             {
-                var uri = new Uri(new Uri(serverAddress), $"{serviceName}/{command}");
+                var uri = new Uri($"{serverAddress}/{serviceName}/{command}");
 
                 var response = httpClient.GetAsync(uri).Result;
                 var responseContent = response.Content.ReadAsStringAsync().Result;

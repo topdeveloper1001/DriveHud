@@ -78,6 +78,19 @@ namespace DriveHUD.Application.ViewModels.Hud
         HudLayoutInfoV2 Import(string path);
 
         /// <summary>
+        /// Imports <see cref="HudLayoutInfoV2"/> layout from the specified stream
+        /// </summary>
+        /// <param name="stream">Stream</param>
+        HudLayoutInfoV2 Import(Stream stream);
+
+        /// <summary>
+        /// Imports <see cref="HudLayoutInfoV2"/> layout from the specified stream
+        /// </summary>
+        /// <param name="stream">Stream</param>
+        /// <param name="layoutId">Id of layout</param>
+        HudLayoutInfoV2 Import(Stream stream, int layoutId);
+
+        /// <summary>
         /// Exports <see cref="IEnumerable{HudPlayerType}"/> to the specified path
         /// </summary>
         /// <param name="path">Path to file</param>

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IHudStoreModel.cs" company="Ace Poker Solutions">
+// <copyright file="HudStoreDownloadHudRequest.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,15 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.AppStore.HudStore.Model;
-using System.IO;
+using Newtonsoft.Json;
 
-namespace Model.AppStore
+namespace Model.AppStore.HudStore.ServiceData
 {
-    public interface IHudStoreModel : IBaseAppStoreModel<HudStoreItem>
+    public class HudStoreDownloadHudRequest
     {
-        void Refresh();
+        [JsonProperty("serial")]
+        public string Serial { get; set; }
 
-        Stream DownloadLayout(int layoutId, string serial);
+        [JsonProperty("layout_id")]
+        public int LayoutId { get; set; }
     }
 }

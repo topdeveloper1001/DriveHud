@@ -482,6 +482,9 @@
     <Compile Include="ViewModels\AppStore\AppStorePageViewModel.cs" />
     <Compile Include="ViewModels\AppStore\AppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\EmptyAppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\HudStoreFilter.cs" />
+    <Compile Include="ViewModels\AppStore\HudStoreItemViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\HudStoreSorting.cs" />
     <Compile Include="ViewModels\AppStore\HudStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\IAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\IHudStoreViewModel.cs" />

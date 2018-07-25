@@ -17,6 +17,9 @@ namespace Model.AppStore.HudStore.Model
 {
     public class HudStoreItem : BindableBase
     {
+        [JsonProperty("id")]
+        public int LayoutId { get; set; }
+
         [JsonProperty("name")]
         public string Name { get; set; }
 
@@ -42,10 +45,10 @@ namespace Model.AppStore.HudStore.Model
         public HudStoreImageItem[] Images { get; set; }
 
         [JsonProperty("popularity")]
-        public int Popularity { get; set; }
+        public int Popularity { get; set; }              
     }
 
-    public class HudStoreImageItem
+    public class HudStoreImageItem : BindableBase
     {
         [JsonProperty("caption")]
         public string Caption { get; set; }

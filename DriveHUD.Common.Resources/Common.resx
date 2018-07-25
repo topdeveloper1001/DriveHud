@@ -1178,8 +1178,98 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_HudUploadToStoreView_ModelNotLoaded" xml:space="preserve">
     <value>Could not get required data from web service. Please contact support or try later.</value>
   </data>
-  <data name="Common_HudUploadToStoreView_UploadingFailedServiceReturnedErrors" xml:space="preserve">
+  <data name="Common_HudWebService_UploadingFailed" xml:space="preserve">
     <value>Service returned the following errors: 
 {0}</value>
+  </data>
+  <data name="Common_HudStoreViewModel_InstallingFailedContent" xml:space="preserve">
+    <value>Failed to install HUD. Please try again or contact support. 
+{0}</value>
+  </data>
+  <data name="Common_HudStoreViewModel_InstallingFailedInternalErrorContent" xml:space="preserve">
+    <value>Failed to install HUD. Internal error. Please try again or contact support.</value>
+  </data>
+  <data name="Common_HudStoreViewModel_InstallingFailedTitle" xml:space="preserve">
+    <value>Failed to install HUD</value>
+  </data>
+  <data name="Common_HudStoreViewModel_InstallingSucceededContent" xml:space="preserve">
+    <value>HUD has been successfully installed.</value>
+  </data>
+  <data name="Common_HudStoreViewModel_InstallingSucceededTitle" xml:space="preserve">
+    <value>Installing succeeded</value>
+  </data>
+  <data name="Common_HudStoreViewModel_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_CostFormatIsInvalid" xml:space="preserve">
+    <value>Cost format is invalid</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_DescriptionMustBeNotLongerThan1000" xml:space="preserve">
+    <value>Length of description must be less than 1000</value>
+  </data>
+  <data name="Common_HudWebService_BadRequest" xml:space="preserve">
+    <value>Bad request</value>
+  </data>
+  <data name="Common_HudWebService_CaptionMustBeSet" xml:space="preserve">
+    <value>Caption of images must be set</value>
+  </data>
+  <data name="Common_HudWebService_DbGeneralFailure" xml:space="preserve">
+    <value>DB general failure</value>
+  </data>
+  <data name="Common_HudWebService_DownloadingFailed" xml:space="preserve">
+    <value>Service returned the following errors: 
+{0}</value>
+  </data>
+  <data name="Common_HudWebService_GameTypesInsertFailed" xml:space="preserve">
+    <value>Game types could not be inserted</value>
+  </data>
+  <data name="Common_HudWebService_GameVariantsInsertFailed" xml:space="preserve">
+    <value>Game variants could not be inserted</value>
+  </data>
+  <data name="Common_HudWebService_GettingHudFailed" xml:space="preserve">
+    <value>Service returned the following errors: 
+{0}</value>
+  </data>
+  <data name="Common_HudWebService_HudInsertFailed" xml:space="preserve">
+    <value>Hud could not be inserted</value>
+  </data>
+  <data name="Common_HudWebService_ImageFileIsTooLarge" xml:space="preserve">
+    <value>One of image is too large</value>
+  </data>
+  <data name="Common_HudWebService_ImageFileMoveFailed" xml:space="preserve">
+    <value>Image file could not be moved</value>
+  </data>
+  <data name="Common_HudWebService_ImageFileMustBeImage" xml:space="preserve">
+    <value>Unsupported image format</value>
+  </data>
+  <data name="Common_HudWebService_ImageInsertFailed" xml:space="preserve">
+    <value>Images could not be inserted</value>
+  </data>
+  <data name="Common_HudWebService_ImagesFilesMustBeSet" xml:space="preserve">
+    <value>Image files must be set</value>
+  </data>
+  <data name="Common_HudWebService_ImagesMustBeSet" xml:space="preserve">
+    <value>Images must be set</value>
+  </data>
+  <data name="Common_HudWebService_ImagesMustMatchImagesFiles" xml:space="preserve">
+    <value>Mismatch in images data</value>
+  </data>
+  <data name="Common_HudWebService_InvalidData" xml:space="preserve">
+    <value>Invalid data</value>
+  </data>
+  <data name="Common_HudWebService_InvalidGameType" xml:space="preserve">
+    <value>Invalid game type</value>
+  </data>
+  <data name="Common_HudWebService_InvalidGameVariant" xml:space="preserve">
+    <value>Invalid game variant</value>
+  </data>
+  <data name="Common_HudWebService_InvalidTableType" xml:space="preserve">
+    <value>Invalid table type</value>
+  </data>
+  <data name="Common_HudWebService_TableTypesInsertFailed" xml:space="preserve">
+    <value>Table types could not be inserted</value>
+  </data>
+  <data name="Common_HudWebService_ValidationFailed" xml:space="preserve">
+    <value>Validation failed</value>
   </data>
 </root>

@@ -214,8 +214,8 @@ namespace DriveHUD.Application
                             LogProvider.Log.Error(this, "Site validation failed.", ex);
                         }
                     }
-#warning disable
-                //    mainWindowViewModel.StartHudCommand.Execute(null);
+
+                    mainWindowViewModel.StartHudCommand.Execute(null);
                 }
             }
             catch (Exception e)

@@ -9,6 +9,7 @@
     xmlns:prism="http://www.codeplex.com/prism"
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.AppStore"
     xmlns:view="clr-namespace:DriveHUD.Application.Views.AppStore"
+    xmlns:vp="clr-namespace:DriveHUD.Application.Views.PopupContainers"
     xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
     xmlns:ms="clr-namespace:Model.AppStore;assembly=Model"
     mc:Ignorable="d"
@@ -53,6 +54,16 @@
     </UserControl.Resources>
 
     <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger
+            SourceObject="{Binding AppStoreViewModel.NotificationRequest, Mode=OneWay}">
+            <infra:PopupTelerikWindowAction
+                IsModal="True"
+                WindowStyle="{StaticResource NotificationWindowStyle}">
+                <infra:PopupTelerikWindowAction.WindowContent>
+                    <vp:PopupContainerBaseNotificationView />
+                </infra:PopupTelerikWindowAction.WindowContent>
+            </infra:PopupTelerikWindowAction>
+        </prism:InteractionRequestTrigger>
         <prism:InteractionRequestTrigger
             SourceObject="{Binding AppStoreViewModel.ViewRequest, Mode=OneWay}">
             <infra:ShowWindowViewAction
@@ -102,19 +113,17 @@
 
         <!-- Main content -->
         <Grid
-            Grid.Row="0"
-            Margin="47,0,0,0">
+            Grid.Row="0">
 
             <Grid.RowDefinitions>
                 <RowDefinition
                     Height="32" />
                 <RowDefinition
-                    Height="48" />
-                <RowDefinition
                     Height="*" />
             </Grid.RowDefinitions>
 
             <Grid
+                Margin="47,0,0,0"
                 Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition
@@ -186,7 +195,7 @@
 
             <!-- Main content -->
             <ContentControl
-                Grid.Row="2"
+                Grid.Row="1"
                 Content="{Binding AppStoreViewModel}" />
 
         </Grid>
@@ -200,10 +209,10 @@
 
         <!-- Page control -->
         <Grid
-            Grid.Row="2"            
+            Grid.Row="2"
             Margin="0,5,0,0"
             VerticalAlignment="Top"
-            Width="690"
+            Width="712"
             Visibility="{Binding IsPagesVisible, Converter={dh:BoolToVisibilityConverter}}">
 
             <Grid.ColumnDefinitions>

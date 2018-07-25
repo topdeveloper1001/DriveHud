@@ -22,10 +22,11 @@
     </UserControl.Resources>
 
     <telerik:RadBusyIndicator
-        IsBusy="{Binding OperationInfo.IsBusy}"        
+        IsBusy="{Binding OperationInfo.IsBusy}"
         Style="{DynamicResource AppStoreRadBusyIndicatorStyle}">
 
-        <Grid>
+        <Grid
+            Margin="47,48,0,0">
             <ItemsControl
                 ItemsSource="{Binding Model.Items}">
 
@@ -62,7 +63,7 @@
                                     Width="144"
                                     VerticalAlignment="Top"
                                     HorizontalAlignment="Left"
-                                    MaxHeight="160"                                    
+                                    MaxHeight="160"
                                     ToolTip="{Binding ProductName}">
 
                                     <Image.Style>
@@ -149,6 +150,6 @@
 
             </ItemsControl>
         </Grid>
-        
+
     </telerik:RadBusyIndicator>
 </UserControl>

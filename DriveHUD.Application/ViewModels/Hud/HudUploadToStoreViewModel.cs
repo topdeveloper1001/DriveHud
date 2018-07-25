@@ -11,7 +11,9 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.Licensing;
+using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
@@ -40,6 +42,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private CompositeDisposable selectableDataSubscription;
 
+        private HudLayoutInfoV2 hudLayout;
+
         static HudUploadToStoreViewModel()
         {
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
@@ -61,6 +65,11 @@ namespace DriveHUD.Application.ViewModels.Hud
                 nameof(Description),
                 new LocalizableString("Common_HudUploadToStoreView_DescriptionMustBeNotEmpty"),
                 x => !string.IsNullOrEmpty(x.Description)));
+
+            Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
+                nameof(Description),
+                new LocalizableString("Common_HudUploadToStoreView_DescriptionMustBeNotLongerThan1000"),
+                x => !string.IsNullOrEmpty(x.Description) && x.Description.Length < 1001));
 
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
                 nameof(Cost),
@@ -100,6 +109,18 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public override void Configure(object viewModelInfo)
         {
+            if (!(viewModelInfo is HudUploadToStoreViewModelInfo hudUploadToStoreViewModelInfo))
+            {
+                throw new ArgumentException(nameof(viewModelInfo));
+            }
+
+            hudLayout = hudUploadToStoreViewModelInfo.Layout;
+
+            if (hudLayout == null)
+            {
+                throw new ArgumentException(nameof(hudLayout));
+            }
+
             InitializeModelAsync(() => Model.Load());
         }
 
@@ -368,23 +389,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             IsResetButtonVisible = true;
             IsCancelButtonVisible = true;
 
-            for (var i = 0; i < 1; i++)
-            {
-                images.Add(new HudUploadToStoreImage
-                {
-                    Caption = "Caption 1",
-                    Path = @"d:\hud-screenshot-2.png"
-                });
-            }
-
-            images.Add(new HudUploadToStoreImage
-            {
-                Caption = "Caption 2",
-                Path = @"d:\hud-screenshot-2.png"
-            });
-
-            Name = "Test layout for testing only";
-            Description = "Test layout for testing only";
+            Name = hudLayout.Name;
 
             base.ModelInitialized(ex);
             InitializeSelectableData();
@@ -399,7 +404,14 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             GameVariants = InitializeSelectableData(Model.GameVariants, () => new GameVariant { Name = allItemName }, nameof(GameVariants), true);
             GameTypes = InitializeSelectableData(Model.GameTypes, () => new GameType { Name = allItemName }, nameof(GameTypes), true);
-            TableTypes = InitializeSelectableData(Model.TableTypes, () => new TableType { Name = allItemName }, nameof(TableTypes), true);
+            TableTypes = InitializeSelectableData(Model.TableTypes, () => new TableType { Name = allItemName }, nameof(TableTypes), false);
+
+            var tableTypeToSelect = TableTypes.FirstOrDefault(x => x.Item.MaxPlayers == (int)hudLayout.TableType);
+
+            if (tableTypeToSelect != null)
+            {
+                tableTypeToSelect.IsSelected = true;
+            }
         }
 
         private ReactiveList<SelectableItemViewModel<T>> InitializeSelectableData<T>(IEnumerable<T> source, Func<T> creator, string propertyName, bool isAllSelected = false)
@@ -476,6 +488,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                     throw new DHBusinessException(new NonLocalizableString("Couldn't find license to upload HUD to the store."));
                 }
 
+                var serializedLayout = SerializationHelper.SerializeObject(hudLayout);
+
                 var uploadInfo = new HudStoreUploadInfo
                 {
                     Name = Name,
@@ -489,9 +503,10 @@ namespace DriveHUD.Application.ViewModels.Hud
                         Caption = x.Caption,
                         Path = x.Path
                     }).ToArray(),
-                    Serial = license.Serial
+                    Serial = license.Serial,
+                    HudLayout = serializedLayout
                 };
-            
+
                 Model.Upload(uploadInfo);
             },
             ex =>

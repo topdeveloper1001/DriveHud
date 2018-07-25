@@ -187,7 +187,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://192.168.1.33.
+        ///   Looks up a localized string similar to http://www.acepokerdrills.com/hud-store.
         /// </summary>
         internal static string Settings_HudStoreService {
             get {

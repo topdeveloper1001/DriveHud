@@ -331,29 +331,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     locker.ExitReadLock();
                 }
 
-                var layoutName = importedHudLayout.Name;
-                importedHudLayout.IsDefault = false;
-
-                var i = 1;
-
-                while (HudLayoutMappings.Mappings.Any(l => l.Name == importedHudLayout.Name))
-                {
-                    importedHudLayout.Name = $"{layoutName} ({i})";
-                    i++;
-                }
-
-                var fileName = InternalSave(importedHudLayout);
-
-                HudLayoutMappings.Mappings.Add(new HudLayoutMapping
-                {
-                    FileName = Path.GetFileName(fileName),
-                    Name = importedHudLayout.Name,
-                    TableType = importedHudLayout.TableType,
-                    IsSelected = false,
-                    IsDefault = false
-                });
-
-                SaveLayoutMappings();
+                Import(importedHudLayout);
 
                 return importedHudLayout;
             }
@@ -363,6 +341,84 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// Imports <see cref="HudLayoutInfoV2"/> layout from the specified stream
+        /// </summary>
+        /// <param name="stream">Stream</param>
+        public HudLayoutInfoV2 Import(Stream stream)
+        {
+            try
+            {
+                var importedHudLayout = LoadLayoutFromStream(stream);
+
+                Import(importedHudLayout);
+
+                return importedHudLayout;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Layout from stream has not been imported.", e);
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Imports <see cref="HudLayoutInfoV2"/> layout from the specified stream
+        /// </summary>
+        /// <param name="stream">Stream</param>
+        /// <param name="layoutId">Id of layout</param>
+        public HudLayoutInfoV2 Import(Stream stream, int layoutId)
+        {
+            try
+            {
+                var importedHudLayout = LoadLayoutFromStream(stream);
+                importedHudLayout.LayoutId = layoutId;
+
+                Import(importedHudLayout);
+
+                return importedHudLayout;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Layout from stream has not been imported.", e);
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Saves layout to internal dir and add to the mappings
+        /// </summary>
+        /// <param name="hudLayout">Layout to save</param>
+        private void Import(HudLayoutInfoV2 hudLayout)
+        {
+            var layoutName = hudLayout.Name;
+            hudLayout.IsDefault = false;
+
+            var i = 1;
+
+            while (HudLayoutMappings.Mappings.Any(l => l.Name == hudLayout.Name))
+            {
+                hudLayout.Name = $"{layoutName} ({i})";
+                i++;
+            }
+
+            var fileName = InternalSave(hudLayout);
+
+            HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+            {
+                FileName = Path.GetFileName(fileName),
+                Name = hudLayout.Name,
+                TableType = hudLayout.TableType,
+                IsSelected = false,
+                IsDefault = false,
+                LayoutId = hudLayout.LayoutId
+            });
+
+            SaveLayoutMappings();
         }
 
         /// <summary>
