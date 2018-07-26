@@ -781,7 +781,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Commercial Pro HUD&apos;s.
+        ///   Looks up a localized string similar to Commercial Pro HUDs.
         /// </summary>
         internal static string Enum_HudStoreFilter_Commercial {
             get {
@@ -790,7 +790,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Free HUD&apos;s.
+        ///   Looks up a localized string similar to Free HUDs.
         /// </summary>
         internal static string Enum_HudStoreFilter_Free {
             get {
@@ -799,7 +799,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Holdem Only HUD&apos;s.
+        ///   Looks up a localized string similar to Holdem Only HUDs.
         /// </summary>
         internal static string Enum_HudStoreSorting_HoldemOnly {
             get {
@@ -826,7 +826,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Omaha Only HUD&apos;s.
+        ///   Looks up a localized string similar to Omaha Only HUDs.
         /// </summary>
         internal static string Enum_HudStoreSorting_OmahaOnly {
             get {
@@ -835,7 +835,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tournament Only HUD’s.
+        ///   Looks up a localized string similar to Tournament Only HUDs.
         /// </summary>
         internal static string Enum_HudStoreSorting_TournamentOnly {
             get {

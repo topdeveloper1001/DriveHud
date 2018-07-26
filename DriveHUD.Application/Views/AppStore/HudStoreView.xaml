@@ -58,6 +58,44 @@
                 Color="#24292e" />
 
             <Style
+                x:Key="PopularityButton"
+                TargetType="{x:Type ToggleButton}">
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type ToggleButton}">
+                            <Path
+                                Name="starPath"
+                                Fill="Transparent"
+                                Stroke="#63686d"
+                                StrokeThickness="0.7"
+                                Data="M 0,6 L 5.5,5 L 8,0 L 10.5,5 L 16,6 L 12,9 L 13,15 L 8,12 L 3,15 L 4,9 Z">
+                            </Path>
+                            <ControlTemplate.Triggers>
+                                <Trigger
+                                    Property="IsChecked"
+                                    Value="True">
+                                    <Setter
+                                        TargetName="starPath"
+                                        Property="Fill"
+                                        Value="#bdc3c7" />
+                                    <Setter
+                                        TargetName="starPath"
+                                        Property="Stroke"
+                                        Value="#b5babf" />
+                                    <Setter
+                                        TargetName="starPath"
+                                        Property="StrokeThickness"
+                                        Value="0" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
                 x:Key="ImageSelectorStyle"
                 TargetType="{x:Type RadioButton}">
                 <Setter
@@ -305,6 +343,64 @@
                                             <ColumnDefinition
                                                 Width="85" />
                                         </Grid.ColumnDefinitions>
+
+                                        <!-- Popularity -->
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition
+                                                    Width="Auto" />
+                                                <ColumnDefinition
+                                                    Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition
+                                                    Height="*" />
+                                                <RowDefinition
+                                                    Height="*" />
+                                            </Grid.RowDefinitions>
+
+                                            <TextBlock
+                                                FontSize="13"
+                                                Foreground="#95979a"
+                                                Style="{StaticResource ProductNameTextBlockStyle}"
+                                                Text="Popularity" />
+
+                                            <StackPanel
+                                                Grid.Row="1"
+                                                VerticalAlignment="Top"
+                                                Orientation="Horizontal">
+                                                <ToggleButton
+                                                    Margin="0,0,5,0"
+                                                    Width="18"
+                                                    Style="{StaticResource PopularityButton}" />
+                                                <ToggleButton
+                                                    Margin="0,0,5,0"
+                                                    Width="18"
+                                                    Style="{StaticResource PopularityButton}" />
+                                                <ToggleButton
+                                                    Margin="0,0,5,0"
+                                                    Width="18"
+                                                    Style="{StaticResource PopularityButton}" />
+                                                <ToggleButton
+                                                    Margin="0,0,5,0"
+                                                    Width="18"
+                                                    Style="{StaticResource PopularityButton}" />
+                                                <ToggleButton
+                                                    Width="18"
+                                                    Style="{StaticResource PopularityButton}" />
+                                            </StackPanel>
+
+                                            <TextBlock
+                                                Grid.Row="1"
+                                                Grid.Column="1"
+                                                FontSize="13"
+                                                Margin="5,-1,0,0"
+                                                VerticalAlignment="Top"
+                                                Foreground="#95979a"
+                                                Style="{StaticResource ProductNameTextBlockStyle}"
+                                                Text="12" />
+
+                                        </Grid>
 
                                         <Button
                                             Grid.Column="1"

@@ -17,11 +17,13 @@ namespace Model.AppStore.HudStore
 {
     public static class HudStoreWebServiceErrors
     {
-        public static ReadOnlyDictionary<string, string> Codes = new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+        public readonly static ReadOnlyDictionary<string, string> Codes = new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
         {
             ["DbGeneralFailure"] = "Common_HudWebService_DbGeneralFailure",
             ["BadRequest"] = "Common_HudWebService_BadRequest",
             ["InvalidData"] = "Common_HudWebService_InvalidData",
+            ["ValidationFailed"] = "Common_HudWebService_ValidationFailed",
+
             ["NameMustBeNotEmpty"] = "Common_HudUploadToStoreView_NameMustBeNotEmpty",
             ["NameMustBeLongerThan10"] = "Common_HudUploadToStoreView_NameMustBeLongerThan10",
             ["NameIsAlreadyInUse"] = "Common_HudUploadToStoreView_NameIsAlreadyInUse",
@@ -40,13 +42,27 @@ namespace Model.AppStore.HudStore
             ["ImagesMustMatchImagesFiles"] = "Common_HudWebService_ImagesMustMatchImagesFiles",
             ["ImageFileMustBeImage"] = "Common_HudWebService_ImageFileMustBeImage",
             ["ImageFileIsTooLarge"] = "Common_HudWebService_ImageFileIsTooLarge",
+            ["ImageFileHeightOutOfRange"] = "Common_HudWebService_ImageFileHeightOutOfRange",
+            ["ImageFileWidthOutOfRange"] = "Common_HudWebService_ImageFileWidthOutOfRange",
+            ["MaxUploadsPerDayExceed"] = "Common_HudWebService_MaxUploadsPerDayExceed",
+            ["LayoutMustBeNotEmpty"] = "Common_HudWebService_LayoutMustBeNotEmpty",
+
             ["HudInsertFailed"] = "Common_HudWebService_HudInsertFailed",
             ["GameVariantsInsertFailed"] = "Common_HudWebService_GameVariantsInsertFailed",
             ["GameTypesInsertFailed"] = "Common_HudWebService_GameTypesInsertFailed",
             ["TableTypesInsertFailed"] = "Common_HudWebService_TableTypesInsertFailed",
             ["ImageInsertFailed"] = "Common_HudWebService_ImageInsertFailed",
             ["ImageFileMoveFailed"] = "Common_HudWebService_ImageFileMoveFailed",
-            ["ValidationFailed"] = "Common_HudWebService_ValidationFailed",
+            ["UserIsNotIdentified"] = "Common_HudWebService_UserIsNotIdentified",
+            ["InvalidSerial"] = "Common_HudWebService_InvalidSerial",
+            ["LayoutFileCreationFailed"] = "Common_HudWebService_LayoutFileCreationFailed",
+
+            ["LayoutNotFound"] = "Common_HudWebService_LayoutNotFound",
+            ["LayoutFileNotFound"] = "Common_HudWebService_LayoutFileNotFound",
+
+            ["FailedToInsertUser"] = "Common_HudWebService_FailedToInsertUser",
+            ["FailedToGetUser"] = "Common_HudWebService_FailedToGetUser",
+            ["FailedToGetHudName"] = "Common_HudWebService_FailedToGetHudName",
         });
     }
 }

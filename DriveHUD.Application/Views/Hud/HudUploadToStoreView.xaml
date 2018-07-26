@@ -65,7 +65,7 @@
                     Value="25" />
                 <Setter
                     Property="Background"
-                    Value="{StaticResource InputBackground}" />
+                    Value="{StaticResource BackgroundBrush3}" />
                 <Setter
                     Property="HorizontalAlignment"
                     Value="Left" />
@@ -203,7 +203,7 @@
                 <CheckBox
                     Margin="0,2,15,2"
                     BorderBrush="{StaticResource CheckboxBulletColor}"
-                    Background="{StaticResource InputBackground}"
+                    Background="{StaticResource BackgroundBrush3}"
                     Content="{Binding Item.Name}"
                     VerticalAlignment="Center"
                     IsChecked="{Binding IsSelected}" />

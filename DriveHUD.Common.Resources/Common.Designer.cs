@@ -2046,6 +2046,33 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to get hud name.
+        /// </summary>
+        internal static string Common_HudWebService_FailedToGetHudName {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_FailedToGetHudName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to get user.
+        /// </summary>
+        internal static string Common_HudWebService_FailedToGetUser {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_FailedToGetUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to insert user.
+        /// </summary>
+        internal static string Common_HudWebService_FailedToInsertUser {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_FailedToInsertUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Game types could not be inserted.
         /// </summary>
         internal static string Common_HudWebService_GameTypesInsertFailed {
@@ -2083,6 +2110,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The height of the image is out of range.
+        /// </summary>
+        internal static string Common_HudWebService_ImageFileHeightOutOfRange {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_ImageFileHeightOutOfRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to One of image is too large.
         /// </summary>
         internal static string Common_HudWebService_ImageFileIsTooLarge {
@@ -2106,6 +2142,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudWebService_ImageFileMustBeImage {
             get {
                 return ResourceManager.GetString("Common_HudWebService_ImageFileMustBeImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The width of the image is out of range.
+        /// </summary>
+        internal static string Common_HudWebService_ImageFileWidthOutOfRange {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_ImageFileWidthOutOfRange", resourceCulture);
             }
         }
         
@@ -2173,11 +2218,65 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid serial number.
+        /// </summary>
+        internal static string Common_HudWebService_InvalidSerial {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_InvalidSerial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid table type.
         /// </summary>
         internal static string Common_HudWebService_InvalidTableType {
             get {
                 return ResourceManager.GetString("Common_HudWebService_InvalidTableType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not create layout file.
+        /// </summary>
+        internal static string Common_HudWebService_LayoutFileCreationFailed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_LayoutFileCreationFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD file not found.
+        /// </summary>
+        internal static string Common_HudWebService_LayoutFileNotFound {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_LayoutFileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD data must be not empty.
+        /// </summary>
+        internal static string Common_HudWebService_LayoutMustBeNotEmpty {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_LayoutMustBeNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD not found.
+        /// </summary>
+        internal static string Common_HudWebService_LayoutNotFound {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_LayoutNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max uploads per day limit has been reached.
+        /// </summary>
+        internal static string Common_HudWebService_MaxUploadsPerDayExceed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_MaxUploadsPerDayExceed", resourceCulture);
             }
         }
         
@@ -2197,6 +2296,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudWebService_UploadingFailed {
             get {
                 return ResourceManager.GetString("Common_HudWebService_UploadingFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User has not been identified.
+        /// </summary>
+        internal static string Common_HudWebService_UserIsNotIdentified {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_UserIsNotIdentified", resourceCulture);
             }
         }
         
