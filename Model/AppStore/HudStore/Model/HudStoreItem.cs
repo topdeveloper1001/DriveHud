@@ -38,14 +38,23 @@ namespace Model.AppStore.HudStore.Model
         [JsonProperty("table_types")]
         public TableType[] TableTypes { get; set; }
 
-        [JsonProperty("is_newest")]
+        [JsonProperty("newest")]
         public bool IsNewest { get; set; }
+
+        [JsonProperty("commercial")]
+        public bool IsCommercial { get; set; }
+
+        [JsonProperty("purchased")]
+        public bool IsPurchased{ get; set; }
 
         [JsonProperty("images")]
         public HudStoreImageItem[] Images { get; set; }
 
         [JsonProperty("popularity")]
-        public int Popularity { get; set; }              
+        public int Popularity { get; set; }
+
+        [JsonProperty("downloads")]
+        public int Downloads { get; set; }
     }
 
     public class HudStoreImageItem : BindableBase

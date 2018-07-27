@@ -30,7 +30,6 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
-using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -370,7 +369,12 @@ namespace DriveHUD.Application.ViewModels.Hud
             var canRemoveImage = images.ItemChanged.Select(x => images.Any(p => p.IsSelected)).StartWith(false);
             RemoveImageCommand = ReactiveCommand.Create(() => RemoveImage(), canRemoveImage);
 
-            BackCommand = ReactiveCommand.Create(() => Message = string.Empty);
+            BackCommand = ReactiveCommand.Create(() =>
+            {
+                Message = string.Empty;
+                IsRetryButtonVisible = false;
+                IsSubmitButtonVisible = true;
+            });
         }
 
         protected override void ModelInitialized(Exception ex)
@@ -472,7 +476,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             return data;
         }
 
-        // Uploads data to server
         private void Upload()
         {
             BusyStatus = HudUploadToStoreBusyStatus.Submitting;

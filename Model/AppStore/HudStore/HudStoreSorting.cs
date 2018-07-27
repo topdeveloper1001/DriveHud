@@ -10,14 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Application.ViewModels.AppStore
+namespace Model.AppStore.HudStore
 {
     public enum HudStoreSorting
     {
-        MostPopular = 0,
-        Newest = 1,
-        HoldemOnly = 2,
-        OmahaOnly = 3,
-        TournamentOnly = 4
+        None = 0,
+        MostPopular = 1,
+        Newest = 2,
+        HoldemOnly = 3,
+        OmahaOnly = 4,
+        TournamentOnly = 5
     }
 }

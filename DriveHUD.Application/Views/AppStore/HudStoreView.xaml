@@ -9,6 +9,7 @@
     xmlns:wpfAnimatedGif="clr-namespace:DriveHUD.Common.Wpf.WpfAnimatedGif;assembly=DriveHUD.Common.Wpf"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:vp="clr-namespace:DriveHUD.Application.Views.AppStore"
+    xmlns:sys="clr-namespace:System.Globalization;assembly=mscorlib"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="300">
@@ -60,6 +61,12 @@
             <Style
                 x:Key="PopularityButton"
                 TargetType="{x:Type ToggleButton}">
+                <Setter
+                    Property="Width"
+                    Value="18" />
+                <Setter
+                    Property="IsEnabled"
+                    Value="False" />
                 <Setter
                     Property="Template">
                     <Setter.Value>
@@ -155,6 +162,39 @@
                 </Setter>
             </Style>
 
+            <Style
+                x:Key="BottomTextBlockStyle"
+                TargetType="{x:Type TextBlock}"
+                BasedOn="{StaticResource ProductNameTextBlockStyle}">
+                <Setter
+                    Property="FontSize"
+                    Value="13" />
+                <Setter
+                    Property="Foreground"
+                    Value="#95979a" />
+            </Style>
+
+            <Style
+                x:Key="ArrowButtonStyle"
+                TargetType="{x:Type Button}"
+                BasedOn="{StaticResource SimpleImageButtonStyle}">
+                <Setter
+                    Property="Opacity"
+                    Value="0.3" />
+                <Setter
+                    Property="Width"
+                    Value="60" />
+                <Style.Triggers>
+                    <Trigger
+                        Property="IsMouseOver"
+                        Value="true">
+                        <Setter
+                            Property="Opacity"
+                            Value="1" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
         </ResourceDictionary>
 
     </UserControl.Resources>
@@ -190,7 +230,7 @@
                     ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
                     ItemsSource="{Binding Filter}"
-                    SelectedItem="{Binding SelectedFilter}">
+                    SelectedItem="{Binding Model.SelectedFilter}">
                     <dh:ComboBoxEx.ItemTemplate>
                         <DataTemplate>
                             <TextBlock
@@ -208,7 +248,7 @@
                     ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
                     ItemsSource="{Binding Sorting}"
-                    SelectedItem="{Binding SelectedSorting}">
+                    SelectedItem="{Binding Model.SelectedSorting}">
                     <dh:ComboBoxEx.ItemTemplate>
                         <DataTemplate>
                             <TextBlock
@@ -360,9 +400,7 @@
                                             </Grid.RowDefinitions>
 
                                             <TextBlock
-                                                FontSize="13"
-                                                Foreground="#95979a"
-                                                Style="{StaticResource ProductNameTextBlockStyle}"
+                                                Style="{StaticResource BottomTextBlockStyle}"
                                                 Text="Popularity" />
 
                                             <StackPanel
@@ -371,44 +409,107 @@
                                                 Orientation="Horizontal">
                                                 <ToggleButton
                                                     Margin="0,0,5,0"
-                                                    Width="18"
+                                                    IsChecked="{Binding Item.Popularity, Converter={dh:PopularityToCheckedConverter}, ConverterParameter=1}"
                                                     Style="{StaticResource PopularityButton}" />
                                                 <ToggleButton
                                                     Margin="0,0,5,0"
-                                                    Width="18"
+                                                    IsChecked="{Binding Item.Popularity, Converter={dh:PopularityToCheckedConverter}, ConverterParameter=2}"
                                                     Style="{StaticResource PopularityButton}" />
                                                 <ToggleButton
                                                     Margin="0,0,5,0"
-                                                    Width="18"
+                                                    IsChecked="{Binding Item.Popularity, Converter={dh:PopularityToCheckedConverter}, ConverterParameter=3}"
                                                     Style="{StaticResource PopularityButton}" />
                                                 <ToggleButton
                                                     Margin="0,0,5,0"
-                                                    Width="18"
+                                                    IsChecked="{Binding Item.Popularity, Converter={dh:PopularityToCheckedConverter}, ConverterParameter=4}"
                                                     Style="{StaticResource PopularityButton}" />
                                                 <ToggleButton
-                                                    Width="18"
+                                                    IsChecked="{Binding Item.Popularity, Converter={dh:PopularityToCheckedConverter}, ConverterParameter=5}"
                                                     Style="{StaticResource PopularityButton}" />
                                             </StackPanel>
 
                                             <TextBlock
                                                 Grid.Row="1"
                                                 Grid.Column="1"
-                                                FontSize="13"
                                                 Margin="5,-1,0,0"
                                                 VerticalAlignment="Top"
-                                                Foreground="#95979a"
-                                                Style="{StaticResource ProductNameTextBlockStyle}"
-                                                Text="12" />
+                                                Style="{StaticResource BottomTextBlockStyle}"
+                                                Text="{Binding Item.Downloads}" />
 
                                         </Grid>
 
                                         <Button
                                             Grid.Column="1"
                                             IsEnabled="{Binding IsImported, Converter={dh:BoolNotConverter}}"
-                                            Style="{StaticResource ButtonStyle}"
-                                            Content="Install"
                                             Command="{Binding DataContext.InstallCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"
-                                            CommandParameter="{Binding }" />
+                                            CommandParameter="{Binding }">
+                                            <Button.Style>
+                                                <Style
+                                                    TargetType="{x:Type Button}"
+                                                    BasedOn="{StaticResource ButtonStyle}">
+                                                    <Style.Triggers>
+                                                        <MultiDataTrigger>
+                                                            <MultiDataTrigger.Conditions>
+                                                                <Condition
+                                                                    Binding="{Binding Item.IsCommercial}"
+                                                                    Value="True" />
+                                                                <Condition
+                                                                    Binding="{Binding IsImported}"
+                                                                    Value="False" />
+                                                                <Condition
+                                                                    Binding="{Binding Item.IsPurchased}"
+                                                                    Value="False" />
+                                                            </MultiDataTrigger.Conditions>
+                                                            <Setter
+                                                                Property="Content"
+                                                                Value="{Binding Item.Price}" />
+                                                            <Setter
+                                                                Property="ContentStringFormat"
+                                                                Value="${0:F2}" />
+                                                        </MultiDataTrigger>
+                                                        <MultiDataTrigger>
+                                                            <MultiDataTrigger.Conditions>
+                                                                <Condition
+                                                                    Binding="{Binding Item.IsCommercial}"
+                                                                    Value="True" />
+                                                                <Condition
+                                                                    Binding="{Binding IsImported}"
+                                                                    Value="False" />
+                                                                <Condition
+                                                                    Binding="{Binding Item.IsPurchased}"
+                                                                    Value="True" />
+                                                            </MultiDataTrigger.Conditions>
+                                                            <Setter
+                                                                Property="Content"
+                                                                Value="Install" />
+                                                        </MultiDataTrigger>
+                                                        <MultiDataTrigger>
+                                                            <MultiDataTrigger.Conditions>
+                                                                <Condition
+                                                                    Binding="{Binding Item.IsCommercial}"
+                                                                    Value="False" />
+                                                                <Condition
+                                                                    Binding="{Binding IsImported}"
+                                                                    Value="False" />
+                                                            </MultiDataTrigger.Conditions>
+                                                            <Setter
+                                                                Property="Content"
+                                                                Value="Install" />
+                                                        </MultiDataTrigger>
+                                                        <MultiDataTrigger>
+                                                            <MultiDataTrigger.Conditions>
+                                                                <Condition
+                                                                    Binding="{Binding IsImported}"
+                                                                    Value="True" />
+                                                            </MultiDataTrigger.Conditions>
+                                                            <Setter
+                                                                Property="Content"
+                                                                Value="Installed" />
+                                                        </MultiDataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Button.Style>
+                                        </Button>
                                     </Grid>
 
                                 </Border>
@@ -474,9 +575,29 @@
                         BorderBrush="{StaticResource PopupBorderBrush}"
                         BorderThickness="1,0,1,1"
                         Background="{StaticResource OuterBackground}">
-                        <Image
-                            VerticalAlignment="Top"
-                            Source="{Binding PopupImage.Source}" />
+                        <Grid>
+                            <Image
+                                VerticalAlignment="Top"
+                                Source="{Binding PopupImage.Source}" />
+                            <Button
+                                Style="{StaticResource ArrowButtonStyle}"
+                                Visibility="{Binding IsPreviousButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
+                                Command="{Binding PreviousImageCommand}"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left">
+                                <Image
+                                    Source="pack://application:,,,/DriveHUD.Common.Resources;component/images/icons/left-arrow-hud-store.png" />
+                            </Button>
+                            <Button
+                                Style="{StaticResource ArrowButtonStyle}"
+                                Visibility="{Binding IsNextButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
+                                Command="{Binding NextImageCommand}"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right">
+                                <Image
+                                    Source="pack://application:,,,/DriveHUD.Common.Resources;component/images/icons/right-arrow-hud-store.png" />
+                            </Button>
+                        </Grid>
                     </Border>
 
                     <Button

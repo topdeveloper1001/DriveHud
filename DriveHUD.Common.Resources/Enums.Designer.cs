@@ -781,6 +781,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All HUDs.
+        /// </summary>
+        internal static string Enum_HudStoreFilter_All {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreFilter_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Commercial Pro HUDs.
         /// </summary>
         internal static string Enum_HudStoreFilter_Commercial {
@@ -822,6 +831,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_HudStoreSorting_Newest {
             get {
                 return ResourceManager.GetString("Enum_HudStoreSorting_Newest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All HUDs.
+        /// </summary>
+        internal static string Enum_HudStoreSorting_None {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreSorting_None", resourceCulture);
             }
         }
         

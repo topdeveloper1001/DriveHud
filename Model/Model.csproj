@@ -140,8 +140,10 @@
     <Compile Include="AppStore\BaseAppStoreModel.cs" />
     <Compile Include="AppStore\HudStoreModel.cs" />
     <Compile Include="AppStore\HudStore\HudStoreBaseRequest.cs" />
+    <Compile Include="AppStore\HudStore\HudStoreFilter.cs" />
     <Compile Include="AppStore\HudStore\HudStoreServiceCommands.cs" />
     <Compile Include="AppStore\HudStore\HudStoreServiceNames.cs" />
+    <Compile Include="AppStore\HudStore\HudStoreSorting.cs" />
     <Compile Include="AppStore\HudStore\HudStoreUploadImageInfo.cs" />
     <Compile Include="AppStore\HudStore\HudStoreUploadInfo.cs" />
     <Compile Include="AppStore\HudStore\HudStoreUploadModel.cs" />

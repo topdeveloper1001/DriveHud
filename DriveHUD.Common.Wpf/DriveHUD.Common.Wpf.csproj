@@ -183,6 +183,7 @@
     <Compile Include="Converters\ParameterBooleanToBrushConverter.cs" />
     <Compile Include="Converters\PieDataPointToPaletteColorConverter.cs" />
     <Compile Include="Converters\PokerSiteToShortStringConverter.cs" />
+    <Compile Include="Converters\PopularityToCheckedConverter.cs" />
     <Compile Include="Converters\StaticResourceConverter.cs" />
     <Compile Include="Converters\StringIsEmptyToBoolConverter.cs" />
     <Compile Include="Converters\StringToImageSourceConverter.cs" />

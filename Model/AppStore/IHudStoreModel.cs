@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Model.AppStore.HudStore;
 using Model.AppStore.HudStore.Model;
 using System.IO;
 
@@ -20,5 +21,9 @@ namespace Model.AppStore
         void Refresh();
 
         Stream DownloadLayout(int layoutId, string serial);
+
+        HudStoreFilter SelectedFilter { get; set; }
+
+        HudStoreSorting SelectedSorting { get; set; }
     }
 }

@@ -10,11 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Application.ViewModels.AppStore
+namespace Model.AppStore.HudStore
 {
     public enum HudStoreFilter
     {
-        Free = 0,
-        Commercial = 1
+        All = 0,
+        Free = 1,
+        Commercial = 2
     }
 }

@@ -28,6 +28,8 @@ namespace Model.AppStore
 
         protected HudStoreHudsData hudsData;
 
+        protected string searchText;
+
         public HudStoreModel()
         {
             service = ServiceLocator.Current.GetInstance<IHudStoreWebService>();
@@ -42,6 +44,34 @@ namespace Model.AppStore
             get
             {
                 return itemsCount;
+            }
+        }
+
+        private HudStoreFilter selectedFilter;
+
+        public HudStoreFilter SelectedFilter
+        {
+            get
+            {
+                return selectedFilter;
+            }
+            set
+            {
+                SetProperty(ref selectedFilter, value);
+            }
+        }
+
+        private HudStoreSorting selectedSorting;
+
+        public HudStoreSorting SelectedSorting
+        {
+            get
+            {
+                return selectedSorting;
+            }
+            set
+            {
+                SetProperty(ref selectedSorting, value);
             }
         }
 
@@ -67,10 +97,14 @@ namespace Model.AppStore
             var request = new HudStoreGetHudsRequest
             {
                 Serial = serial,
-                Page = page - 1
+                Page = page - 1,
+                Filter = (int)SelectedFilter,
+                Sorting = (int)SelectedSorting,
+                Search = searchText
             };
 
             hudsData = service.GetHuds(request);
+            itemsCount = hudsData.ItemsCount;
         }
 
         public void Refresh()
@@ -106,6 +140,8 @@ namespace Model.AppStore
         /// </summary>
         public override void Search(string searchText)
         {
+            this.searchText = searchText;
+            Refresh(1, 4);
         }
 
         #endregion

@@ -16,9 +16,9 @@ using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
-using DriveHUD.Common.Wpf.Mvvm;
 using Microsoft.Practices.ServiceLocation;
 using Model.AppStore;
+using Model.AppStore.HudStore;
 using Model.AppStore.HudStore.Model;
 using Model.AppStore.HudStore.ServiceData;
 using ReactiveUI;
@@ -27,6 +27,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Reactive.Linq;
 
 namespace DriveHUD.Application.ViewModels.AppStore
 {
@@ -55,6 +56,13 @@ namespace DriveHUD.Application.ViewModels.AppStore
                 Serial = license?.Serial
             };
 
+            Model.ObservableForProperty(x => x.SelectedFilter).Select(x => true)
+                .Merge(Model.ObservableForProperty(x => x.SelectedSorting).Select(x => true))
+                .Subscribe(x =>
+                {
+                    StartAsyncOperation(() => Model.Refresh(1, ProductsPerPage), ex => OnUpdated());
+                });
+
             InitializeModelAsync(() =>
             {
                 Model.Load(loadInfo);
@@ -63,11 +71,12 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
         public override void Refresh(int pageNumber)
         {
-            StartAsyncOperation(() => base.Refresh(pageNumber), () =>
+            StartAsyncOperation(() => base.Refresh(pageNumber), ex =>
             {
                 Model.Refresh();
 
                 Items.Clear();
+
                 Model.Items.Select(x => new HudStoreItemViewModel(x)).ForEach(x => Items.Add(x));
 
                 var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
@@ -81,7 +90,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
                 Items.ForEach(item => item.IsImported = importedLayoutsIds.Contains(item.Item.LayoutId));
             });
         }
-
+    
         #region Properties
 
         private ReadOnlyObservableCollection<HudStoreFilter> filter;
@@ -94,20 +103,6 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
         }
 
-        private HudStoreFilter? selectedFilter;
-
-        public HudStoreFilter? SelectedFilter
-        {
-            get
-            {
-                return selectedFilter;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref selectedFilter, value);
-            }
-        }
-
         private ReadOnlyObservableCollection<HudStoreSorting> sorting;
 
         public ReadOnlyObservableCollection<HudStoreSorting> Sorting
@@ -115,20 +110,6 @@ namespace DriveHUD.Application.ViewModels.AppStore
             get
             {
                 return sorting;
-            }
-        }
-
-        private HudStoreSorting? selectedSorting;
-
-        public HudStoreSorting? SelectedSorting
-        {
-            get
-            {
-                return selectedSorting;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref selectedSorting, value);
             }
         }
 
@@ -156,17 +137,60 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
         }
 
-        private HudStoreImageItem popupImage;
+        private HudStoreItemViewModel popupItem;
+
+        public HudStoreItemViewModel PopupItem
+        {
+            get
+            {
+                return popupItem;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref popupItem, value);
+            }
+        }
 
         public HudStoreImageItem PopupImage
         {
             get
             {
-                return popupImage;
+                return PopupItem != null && PopupItem.Images != null &&
+                    PopupImageIndex < PopupItem.Images.Count ? PopupItem.Images[PopupImageIndex].Item : null;
+            }
+        }
+
+        private int popupImageIndex;
+
+        public int PopupImageIndex
+        {
+            get
+            {
+                return popupImageIndex;
             }
             private set
             {
-                this.RaiseAndSetIfChanged(ref popupImage, value);
+                this.RaiseAndSetIfChanged(ref popupImageIndex, value);
+                this.RaisePropertyChanged(nameof(IsPreviousButtonVisible));
+                this.RaisePropertyChanged(nameof(IsNextButtonVisible));
+                this.RaisePropertyChanged(nameof(PopupImage));
+            }
+        }
+
+        public bool IsPreviousButtonVisible
+        {
+            get
+            {
+                return popupImageIndex > 0;
+            }
+        }
+
+        public bool IsNextButtonVisible
+        {
+            get
+            {
+                return PopupItem != null && PopupItem.Images != null &&
+                    popupImageIndex < PopupItem.Images.Count - 1;
             }
         }
 
@@ -180,6 +204,10 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
         public ReactiveCommand ClosePopupCommand { get; private set; }
 
+        public ReactiveCommand PreviousImageCommand { get; private set; }
+
+        public ReactiveCommand NextImageCommand { get; private set; }
+
         #endregion
 
         protected override void InitializeCommands()
@@ -188,13 +216,30 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
             ExpandImageCommand = ReactiveCommand.Create<HudStoreItemViewModel>(x =>
             {
-                PopupImage = x.SelectedImage;
+                PopupItem = x;
+                PopupImageIndex = 0;
                 IsPopupOpened = true;
             });
 
             ClosePopupCommand = ReactiveCommand.Create<HudStoreItemViewModel>(x =>
             {
                 IsPopupOpened = false;
+            });
+
+            PreviousImageCommand = ReactiveCommand.Create(() =>
+            {
+                if (IsPreviousButtonVisible)
+                {
+                    PopupImageIndex--;
+                }
+            });
+
+            NextImageCommand = ReactiveCommand.Create(() =>
+            {
+                if (IsNextButtonVisible)
+                {
+                    PopupImageIndex++;
+                }
             });
         }
 

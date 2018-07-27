@@ -1076,4 +1076,10 @@
   <data name="Enum_HudStoreSorting_TournamentOnly" xml:space="preserve">
     <value>Tournament Only HUDs</value>
   </data>
+  <data name="Enum_HudStoreFilter_All" xml:space="preserve">
+    <value>All HUDs</value>
+  </data>
+  <data name="Enum_HudStoreSorting_None" xml:space="preserve">
+    <value>All HUDs</value>
+  </data>
 </root>

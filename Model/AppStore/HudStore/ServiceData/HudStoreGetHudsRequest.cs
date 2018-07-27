@@ -21,5 +21,14 @@ namespace Model.AppStore.HudStore.ServiceData
 
         [JsonProperty("page")]
         public int Page { get; set; }
+
+        [JsonProperty("filter")]
+        public int? Filter { get; set; }
+
+        [JsonProperty("sorting")]
+        public int? Sorting { get; set; }
+
+        [JsonProperty("search")]
+        public string Search { get; set; }
     }
 }

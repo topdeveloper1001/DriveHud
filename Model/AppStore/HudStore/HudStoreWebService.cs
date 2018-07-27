@@ -75,7 +75,7 @@ namespace Model.AppStore.HudStore
 
                 if (serviceResponse != null && serviceResponse.Result != null &&
                     (serviceResponse.Errors == null || serviceResponse.Errors.Length == 0))
-                {
+                {                    
                     return serviceResponse.Result;
                 }
 
