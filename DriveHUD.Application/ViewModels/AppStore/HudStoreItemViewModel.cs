@@ -21,6 +21,8 @@ namespace DriveHUD.Application.ViewModels.AppStore
 {
     public class HudStoreItemViewModel : ViewModelBase
     {
+        private const string separator = ", ";
+
         private readonly HudStoreItem hudStoreItem;
 
         public HudStoreItemViewModel(HudStoreItem hudStoreItem)
@@ -93,6 +95,30 @@ namespace DriveHUD.Application.ViewModels.AppStore
             set
             {
                 this.RaiseAndSetIfChanged(ref isImported, value);
+            }
+        }
+
+        public string GameVariants
+        {
+            get
+            {
+                return string.Join(separator, hudStoreItem.GameVariants.Select(x => x.Name));
+            }
+        }
+
+        public string GameTypes
+        {
+            get
+            {
+                return string.Join(separator, hudStoreItem.GameTypes.Select(x => x.Name));
+            }
+        }
+
+        public string TableTypes
+        {
+            get
+            {
+                return string.Join(separator, hudStoreItem.TableTypes.OrderBy(x => x.MaxPlayers).Select(x => x.Name));
             }
         }
     }

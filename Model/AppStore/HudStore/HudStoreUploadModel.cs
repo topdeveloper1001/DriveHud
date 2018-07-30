@@ -141,10 +141,10 @@ namespace Model.AppStore.HudStore
 
             var hudStoreData = service.GetUploadInfo();
 
-            GameVariants = hudStoreData.GameVariants?.ToList() ?? new List<GameVariant>();
-            GameTypes = hudStoreData.GameTypes?.ToList() ?? new List<GameType>();
-            TableTypes = hudStoreData.TableTypes?.ToList() ?? new List<TableType>();
-            LayoutsNamesInUse = hudStoreData.LayoutsNames?.ToList() ?? new List<string>();
+            GameVariants = hudStoreData?.GameVariants?.ToList() ?? new List<GameVariant>();
+            GameTypes = hudStoreData?.GameTypes?.ToList() ?? new List<GameType>();
+            TableTypes = hudStoreData?.TableTypes?.ToList() ?? new List<TableType>();
+            LayoutsNamesInUse = hudStoreData?.LayoutsNames?.ToList() ?? new List<string>();
         }
 
         public void Upload(HudStoreUploadInfo uploadInfo)

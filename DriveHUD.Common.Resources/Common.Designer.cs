@@ -1773,6 +1773,33 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game types: {0}.
+        /// </summary>
+        internal static string Common_HudStoreView_GameTypes {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_GameTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game variants: {0}.
+        /// </summary>
+        internal static string Common_HudStoreView_GameVariants {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_GameVariants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table types: {0}.
+        /// </summary>
+        internal static string Common_HudStoreView_TableTypes {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_TableTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to install HUD. Please try again or contact support. 
         ///{0}.
         /// </summary>
