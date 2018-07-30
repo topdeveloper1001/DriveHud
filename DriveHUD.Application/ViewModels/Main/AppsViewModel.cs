@@ -247,14 +247,15 @@ namespace DriveHUD.Application.ViewModels
 
         private void RefreshPages()
         {
-            var pagesCount = AppStoreViewModel.ProductsPerPage != 0 ? (int)Math.Ceiling((decimal)AppStoreViewModel.ItemsCount / AppStoreViewModel.ProductsPerPage) : 0;
-         
-            Pages.Clear();
+            var pagesCount = AppStoreViewModel.ProductsPerPage != 0 ? (int)Math.Ceiling((decimal)AppStoreViewModel.ItemsCount / AppStoreViewModel.ProductsPerPage) : 1;
 
-            if (pagesCount > 0)
+            if (pagesCount == 0)
             {
-                Pages.AddRange(Enumerable.Range(1, pagesCount).Select(x => new AppStorePageViewModel(x)));
+                pagesCount = 1;
             }
+
+            Pages.Clear();
+            Pages.AddRange(Enumerable.Range(1, pagesCount).Select(x => new AppStorePageViewModel(x)));
 
             CurrentPage = Pages.FirstOrDefault();
         }

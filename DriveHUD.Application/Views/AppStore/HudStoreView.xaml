@@ -283,7 +283,9 @@
                                 Background="{StaticResource OuterBackground}">
                                 <Grid.RowDefinitions>
                                     <RowDefinition
-                                        Height="40" />
+                                        Height="27" />
+                                    <RowDefinition
+                                        Height="25" />
                                     <RowDefinition
                                         Height="135" />
                                     <RowDefinition
@@ -306,8 +308,38 @@
                                     HorizontalAlignment="Center"
                                     Style="{StaticResource ProductNameTextBlockStyle}" />
 
+                                <TextBlock
+                                    Grid.Row="1"                                  
+                                    VerticalAlignment="Top"
+                                    HorizontalAlignment="Center">
+                                    <TextBlock.Style>
+                                        <Style
+                                            TargetType="{x:Type TextBlock}"
+                                            BasedOn="{StaticResource ProductNameTextBlockStyle}">
+                                            <Setter
+                                                Property="FontSize"
+                                                Value="13" />
+                                            <Style.Triggers>
+                                                <DataTrigger
+                                                    Binding="{Binding Item.IsCommercial}" Value="True">
+                                                    <Setter
+                                                        Property="Text"
+                                                        Value="{Binding Item.Price, StringFormat=Price: ${0:F2}}" />
+                                                </DataTrigger>
+                                                <DataTrigger
+                                                    Binding="{Binding Item.IsCommercial}"
+                                                    Value="False">
+                                                    <Setter
+                                                        Property="Text"
+                                                        Value="Price: FREE" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+
                                 <Border
-                                    Grid.Row="1"
+                                    Grid.Row="2"
                                     Margin="12,0,12,0"
                                     Background="{StaticResource InnerBackground}">
 
@@ -324,7 +356,7 @@
 
                                 <!-- Buttons -->
                                 <ItemsControl
-                                    Grid.Row="2"
+                                    Grid.Row="3"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
                                     ItemsSource="{Binding Images}">
@@ -346,7 +378,7 @@
                                 </ItemsControl>
 
                                 <Border
-                                    Grid.Row="3"
+                                    Grid.Row="4"
                                     Padding="1"
                                     Margin="12,0,12,0"
                                     Background="{StaticResource InnerBackground}">
@@ -368,7 +400,7 @@
 
                                 <StackPanel
                                     Margin="12,0,12,0"
-                                    Grid.Row="4"
+                                    Grid.Row="5"
                                     Orientation="Vertical">
                                     <TextBlock
                                         TextWrapping="Wrap"
@@ -406,7 +438,7 @@
                                 </StackPanel>
 
                                 <Border
-                                    Grid.Row="6"
+                                    Grid.Row="7"
                                     Background="#2a2f34">
 
                                     <Grid
@@ -495,10 +527,7 @@
                                                             </MultiDataTrigger.Conditions>
                                                             <Setter
                                                                 Property="Content"
-                                                                Value="{Binding Item.Price}" />
-                                                            <Setter
-                                                                Property="ContentStringFormat"
-                                                                Value="${0:F2}" />
+                                                                Value="Buy" />
                                                         </MultiDataTrigger>
                                                         <MultiDataTrigger>
                                                             <MultiDataTrigger.Conditions>

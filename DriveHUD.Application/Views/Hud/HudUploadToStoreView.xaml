@@ -298,16 +298,16 @@
                         <RowDefinition
                             Height="35" />
                         <RowDefinition
-                            Height="Auto"
-                            MinHeight="35" />
-                        <RowDefinition
-                            Height="Auto"
-                            MinHeight="35" />
-                        <RowDefinition
-                            Height="Auto"
-                            MinHeight="35" />
-                        <RowDefinition
                             Height="125" />
+                        <RowDefinition
+                            Height="Auto"
+                            MinHeight="35" />
+                        <RowDefinition
+                            Height="Auto"
+                            MinHeight="35" />
+                        <RowDefinition
+                            Height="Auto"
+                            MinHeight="35" />
                         <RowDefinition
                             Height="35" />
                         <RowDefinition
@@ -335,61 +335,16 @@
                         MaxLength="50"
                         Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
 
-                    <!-- Game Variants -->
-                    <TextBlock
-                        Grid.Column="0"
-                        Grid.Row="1"
-                        Style="{StaticResource TextBlockStyle}"
-                        Text="Game Variants" />
-
-                    <ItemsControl
-                        Grid.Column="2"
-                        Grid.Row="1"
-                        Style="{StaticResource ItemsControlStyle}"
-                        ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
-                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
-                        ItemsSource="{Binding GameVariants}" />
-
-                    <!-- Game Types -->
-                    <TextBlock
-                        Grid.Column="0"
-                        Grid.Row="2"
-                        Style="{StaticResource TextBlockStyle}"
-                        Text="Game Types" />
-
-                    <ItemsControl
-                        Grid.Column="2"
-                        Grid.Row="2"
-                        Style="{StaticResource ItemsControlStyle}"
-                        ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
-                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
-                        ItemsSource="{Binding GameTypes}" />
-
-                    <!-- Table types -->
-                    <TextBlock
-                        Grid.Column="0"
-                        Grid.Row="3"
-                        Style="{StaticResource TextBlockStyle}"
-                        Text="Table Types" />
-
-                    <ItemsControl
-                        Grid.Column="2"
-                        Grid.Row="3"
-                        Style="{StaticResource ItemsControlStyle}"
-                        ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
-                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
-                        ItemsSource="{Binding TableTypes}" />
-
                     <!-- Description -->
                     <TextBlock
                         Grid.Column="0"
-                        Grid.Row="4"
+                        Grid.Row="1"
                         Style="{StaticResource TextBlockStyle}"
                         Text="Description" />
 
                     <TextBox
                         Grid.Column="2"
-                        Grid.Row="4"
+                        Grid.Row="1"
                         Width="400"
                         Height="120"
                         dh:Validation.AsyncValidation="True"
@@ -404,7 +359,52 @@
                         SpellCheck.IsEnabled="True"
                         Padding="2"
                         VerticalContentAlignment="Bottom"
-                        Text="{Binding Description}" />
+                        Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <!-- Game Variants -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="Game Variants" />
+
+                    <ItemsControl
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        Style="{StaticResource ItemsControlStyle}"
+                        ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        ItemsSource="{Binding GameVariants}" />
+
+                    <!-- Game Types -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="Game Types" />
+
+                    <ItemsControl
+                        Grid.Column="2"
+                        Grid.Row="3"
+                        Style="{StaticResource ItemsControlStyle}"
+                        ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        ItemsSource="{Binding GameTypes}" />
+
+                    <!-- Table types -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="Table Types" />
+
+                    <ItemsControl
+                        Grid.Column="2"
+                        Grid.Row="4"
+                        Style="{StaticResource ItemsControlStyle}"
+                        ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        ItemsSource="{Binding TableTypes}" />
 
                     <!-- Cost -->
                     <TextBlock
