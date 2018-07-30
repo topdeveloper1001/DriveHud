@@ -146,7 +146,7 @@
                         <Run
                             Text="{Binding Label}" />
                         <Run
-                            Text="{Binding Caption}" />
+                            Text="{Binding CaptionPreview}" />
                     </TextBlock>
                 </ControlTemplate>
             </Setter.Value>

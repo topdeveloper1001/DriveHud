@@ -484,11 +484,12 @@ namespace DriveHUD.Application.ViewModels
                     {
                         x.InitializePositions();
 
-                        if (x is IHudStatsToolViewModel && x is IHudBaseStatToolViewModel)
+                        if (x is IHudStatsToolViewModel)
                         {
                             (x as IHudStatsToolViewModel).Stats.ForEach(s =>
                             {
                                 s.CurrentValue = random.Next(0, 100);
+                                s.CaptionPreview = string.Format(s.Format, s.CurrentValue);
 
                                 if (StatsProvider.StatsBases.ContainsKey(s.Stat) && StatsProvider.StatsBases[s.Stat].CreateStatDto != null)
                                 {
@@ -868,6 +869,14 @@ namespace DriveHUD.Application.ViewModels
             {
                 return;
             }
+
+            var random = new Random();
+
+            statsCollection.ForEach(s =>
+            {
+                s.CurrentValue = random.Next(0, 100);
+                s.CaptionPreview = string.Format(s.Format, s.CurrentValue);
+            });
 
             if (startingIndex > statTool.Stats.Count)
             {
@@ -1360,11 +1369,7 @@ namespace DriveHUD.Application.ViewModels
             foreach (var mergeItem in statInfoToMerge)
             {
                 mergeItem.OldItem.Merge(mergeItem.NewItem);
-
-                if (SelectedToolViewModel != null && SelectedToolViewModel is HudGaugeIndicatorViewModel)
-                {
-                    mergeItem.OldItem.UpdateColor();
-                }
+                mergeItem.OldItem.UpdateColor();
 
                 var previewStat = PreviewHudElementViewModel.ToolsStatInfoCollection.FirstOrDefault(x => x.Stat == mergeItem.NewItem.Stat);
                 previewStat?.Merge(mergeItem.NewItem);

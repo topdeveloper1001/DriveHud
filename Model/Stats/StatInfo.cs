@@ -147,6 +147,26 @@ namespace Model.Stats
             }
         }
 
+        private string captionPreview;
+
+        [XmlIgnore]
+        public string CaptionPreview
+        {
+            get
+            {
+                return IsCaptionHidden ? string.Empty :
+                        (string.IsNullOrWhiteSpace(captionPreview) ?
+                            CommonResourceManager.Instance.GetEnumResource(Stat) :
+                            captionPreview);
+            }
+            set
+            {
+                if (value == captionPreview) return;
+                captionPreview = value;
+                OnPropertyChanged();
+            }
+        }
+
         private bool isCaptionHidden;
 
         [ProtoMember(3)]

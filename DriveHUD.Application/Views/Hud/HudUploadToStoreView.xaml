@@ -420,6 +420,7 @@
                         Orientation="Horizontal">
                         <TextBox
                             Width="50"
+                            IsEnabled="False"
                             Style="{StaticResource TextBoxStyle}"
                             Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
                             Text="{Binding Cost}" />
