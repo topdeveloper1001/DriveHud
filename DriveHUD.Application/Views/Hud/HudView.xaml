@@ -415,7 +415,6 @@
         <Style
             x:Key="HudDesignerTextBlockStyle"
             TargetType="{x:Type TextBlock}">
-
             <Setter
                 Property="FontSize"
                 Value="17" />
@@ -815,6 +814,7 @@
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
                         Style="{StaticResource ControlButtonStyle}"
+                        Visibility="{Binding IsOpenHudUploadToStoreVisible, Converter={dh:BoolToVisibilityConverter}}"
                         Command="{Binding OpenHudUploadToStoreCommand}"
                         Content="{ResX Key=Common_Hud_UploadToStore}">
                     </Button>

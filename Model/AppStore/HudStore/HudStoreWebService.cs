@@ -75,7 +75,7 @@ namespace Model.AppStore.HudStore
 
                 if (serviceResponse != null && serviceResponse.Result != null &&
                     (serviceResponse.Errors == null || serviceResponse.Errors.Length == 0))
-                {                    
+                {
                     return serviceResponse.Result;
                 }
 
@@ -182,9 +182,9 @@ namespace Model.AppStore.HudStore
 
                 multiPartContent.Add(new StringContent(jsonString, Encoding.UTF8), "data");
 
-                var serviceResponse = Post<bool>(HudStoreServiceNames.HudsService, HudStoreServiceCommands.Upload, multiPartContent);
+                var serviceResponse = Post<bool?>(HudStoreServiceNames.HudsService, HudStoreServiceCommands.Upload, multiPartContent);
 
-                if (serviceResponse != null && serviceResponse.Result)
+                if (serviceResponse != null && serviceResponse.Result == true)
                 {
                     return;
                 }

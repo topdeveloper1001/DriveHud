@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.Licensing;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
@@ -24,9 +25,11 @@ using Microsoft.Practices.ServiceLocation;
 using Microsoft.Win32;
 using Model.Data;
 using Model.Enums;
+using Model.Events;
 using Model.Filters;
 using Model.Settings;
 using Model.Stats;
+using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
 using System;
@@ -57,11 +60,20 @@ namespace DriveHUD.Application.ViewModels
 
         private bool skipOnStatInfoObserveCollectionChanged = false;
 
+        private readonly ILicenseService licenseService;
+
+        private readonly IEventAggregator eventAggregator;
+
         /// <summary>
         /// Initializes a <see cref="HudViewModel"/> instance
         /// </summary>
         public HudViewModel()
         {
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            eventAggregator.GetEvent<LicenseUpdatedEvent>().Subscribe(x => this.RaisePropertyChanged(nameof(IsOpenHudUploadToStoreVisible)));
+
+            licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
+
             NotificationRequest = new InteractionRequest<PopupBaseNotification>();
             OpenHudUploadToStoreRequest = new InteractionRequest<INotification>();
 
@@ -403,6 +415,15 @@ namespace DriveHUD.Application.ViewModels
             get
             {
                 return SelectedToolViewModel != null && SelectedToolViewModel is HudGaugeIndicatorViewModel;
+            }
+        }
+
+
+        public bool IsOpenHudUploadToStoreVisible
+        {
+            get
+            {
+                return !licenseService.IsTrial;
             }
         }
 

@@ -3,6 +3,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <SolidColorBrush
+        x:Key="MainBackround"
+        Color="#1F2124" />
+    <SolidColorBrush
         x:Key="BackgroundBrush1"
         Color="#181a1d" />
     <SolidColorBrush

@@ -9,7 +9,7 @@
     xmlns:ctl="clr-namespace:DriveHUD.Application.Controls"
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
     mc:Ignorable="d"
-    Background="{StaticResource BackgroundBrush1}"
+    Background="{StaticResource MainBackround}"
     d:DesignHeight="600"
     d:DesignWidth="400">
 
@@ -32,6 +32,17 @@
             <SolidColorBrush
                 x:Key="CheckboxBulletColor"
                 Color="#5f8bea" />
+
+            <Color
+                x:Key="ShadowBorderColor">#000000</Color>
+
+            <SolidColorBrush
+                x:Key="ShadowBorderBrush"
+                Color="{StaticResource ShadowBorderColor}" />
+
+            <SolidColorBrush
+                x:Key="SelectionBlockBackground"
+                Color="#24292e" />
 
             <Style
                 x:Key="TextBlockStyle"
@@ -271,6 +282,7 @@
                     Height="40" />
             </Grid.RowDefinitions>
 
+            <!-- Message -->
             <TextBlock
                 Style="{StaticResource TextBlockStyle}"
                 HorizontalAlignment="Center"
@@ -280,8 +292,127 @@
                 Visibility="{Binding Message, Converter={dh:NullOrEmptyToVisibilityConverter}}"
                 Text="{Binding Message}" />
 
+            <!-- Layout selection -->
+            <Grid
+                Margin="10"
+                Width="465"
+                Visibility="{Binding IsLayoutSelectionVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+                <Border
+                    BorderThickness="1"
+                    BorderBrush="{StaticResource ShadowBorderBrush}"
+                    Margin="7">
+
+                    <Border.Effect>
+                        <DropShadowEffect
+                            BlurRadius="15"
+                            ShadowDepth="7"
+                            Color="{DynamicResource ShadowBorderColor}" />
+                    </Border.Effect>
+
+                </Border>
+
+                <Border
+                    Width="455"
+                    Height="130"
+                    Background="{StaticResource SelectionBlockBackground}">
+                    <Grid
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+                                Height="Auto" />
+                            <RowDefinition
+                                Height="10" />
+                            <RowDefinition
+                                Height="Auto" />
+                            <RowDefinition
+                                Height="10" />
+                            <RowDefinition
+                                Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="15" />
+                            <ColumnDefinition
+                                Width="Auto" />
+                            <ColumnDefinition
+                                Width="15" />
+                            <ColumnDefinition
+                                Width="Auto" />
+                            <ColumnDefinition
+                                Width="15" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock
+                            Grid.Column="1"
+                            Grid.ColumnSpan="3"
+                            Text="{ResX Key=Common_HudUploadToStoreView_SelectHudToUpload}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="13" />
+
+                        <TextBlock
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Text="{ResX Key=Common_Hud_TableLayout}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="13" />
+
+                        <dh:ComboBoxEx
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Height="35"
+                            PopupMaxWidth="255"
+                            Width="125"
+                            HorizontalAlignment="Center"
+                            ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                            ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
+                            ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
+                            ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
+                            ItemsSource="{Binding LayoutTableTypes}"
+                            SelectedValue="{Binding Path=CurrentLayoutTableType}">
+                            <dh:ComboBoxEx.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock
+                                        Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}" />
+                                </DataTemplate>
+                            </dh:ComboBoxEx.ItemTemplate>
+                        </dh:ComboBoxEx>
+
+                        <TextBlock
+                            Grid.Row="2"
+                            Grid.Column="3"
+                            HorizontalAlignment="Center"
+                            Text="{ResX Key=Common_Hud_HudName}"
+                            VerticalAlignment="Center"
+                            FontSize="13" />
+
+                        <dh:ComboBoxEx
+                            Grid.Column="3"
+                            Grid.Row="4"
+                            Height="35"
+                            PopupMaxWidth="255"
+                            Width="285"
+                            HorizontalAlignment="Center"
+                            ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                            ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
+                            ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
+                            ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
+                            ItemsSource="{Binding Layouts}"
+                            DisplayMemberPath="Name"
+                            SelectedValue="{Binding Path=CurrentLayout}">
+                        </dh:ComboBoxEx>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <!-- Upload form -->
             <ScrollViewer
-                Visibility="{Binding Message, Converter={dh:NullOrEmptyToVisibilityConverter}, ConverterParameter=1}"
+                Visibility="{Binding IsUploadFormVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
                 HorizontalScrollBarVisibility="Disabled"
                 VerticalScrollBarVisibility="Auto">
 
@@ -322,7 +453,7 @@
                         Grid.Column="0"
                         Grid.Row="0"
                         Style="{StaticResource TextBlockStyle}"
-                        Text="Name" />
+                        Text="{ResX Key=Common_HudUploadToStoreView_Name}" />
 
                     <TextBox
                         Grid.Column="2"
@@ -340,7 +471,7 @@
                         Grid.Column="0"
                         Grid.Row="1"
                         Style="{StaticResource TextBlockStyle}"
-                        Text="Description" />
+                        Text="{ResX Key=Common_HudUploadToStoreView_Description}" />
 
                     <TextBox
                         Grid.Column="2"
@@ -366,7 +497,7 @@
                         Grid.Column="0"
                         Grid.Row="2"
                         Style="{StaticResource TextBlockStyle}"
-                        Text="Game Variants" />
+                        Text="{ResX Key=Common_HudUploadToStoreView_GameVariants}" />
 
                     <ItemsControl
                         Grid.Column="2"
@@ -381,7 +512,7 @@
                         Grid.Column="0"
                         Grid.Row="3"
                         Style="{StaticResource TextBlockStyle}"
-                        Text="Game Types" />
+                        Text="{ResX Key=Common_HudUploadToStoreView_GameTypes}" />
 
                     <ItemsControl
                         Grid.Column="2"
@@ -396,7 +527,7 @@
                         Grid.Column="0"
                         Grid.Row="4"
                         Style="{StaticResource TextBlockStyle}"
-                        Text="Table Types" />
+                        Text="{ResX Key=Common_HudUploadToStoreView_TableTypes}" />
 
                     <ItemsControl
                         Grid.Column="2"
@@ -412,7 +543,7 @@
                         Grid.Row="5"
                         VerticalAlignment="Center"
                         Style="{StaticResource TextBlockStyle}"
-                        Text="Cost of HUD" />
+                        Text="{ResX Key=Common_HudUploadToStoreView_Cost}" />
 
                     <StackPanel
                         Grid.Column="2"
@@ -437,20 +568,20 @@
                         Grid.Row="6"
                         VerticalAlignment="Center"
                         Style="{StaticResource TextBlockStyle}"
-                        Text="Images" />
+                        Text="{ResX Key=Common_HudUploadToStoreView_Images}" />
 
                     <StackPanel
                         Grid.Column="2"
                         Grid.Row="6"
                         Orientation="Horizontal">
                         <Button
-                            Content="Add"
+                            Content="{ResX Key=Common_HudUploadToStoreView_Add}"
                             Width="40"
                             Height="25"
                             Style="{StaticResource ButtonStyle}"
                             Command="{Binding AddImageCommand, ValidatesOnNotifyDataErrors=False}" />
                         <Button
-                            Content="Remove"
+                            Content="{ResX Key=Common_HudUploadToStoreView_Remove}"
                             Width="60"
                             Height="25"
                             Margin="5,0,0,0"
@@ -488,38 +619,43 @@
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">
                 <Button
-                    Content="Sumbit"
-                    Visibility="{Binding IsSubmitButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
+                    Content="{ResX Key=Common_HudUploadToStoreView_Select}"
+                    Visibility="{Binding IsSelectLayoutButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding SelectLayoutCommand, ValidatesOnNotifyDataErrors=False}" />
+                <Button
+                    Content="{ResX Key=Common_HudUploadToStoreView_Submit}"
+                    Visibility="{Binding IsSubmitButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding SubmitCommand, ValidatesOnNotifyDataErrors=False}" />
                 <Button
-                    Content="Reset"
+                    Content="{ResX Key=Common_HudUploadToStoreView_Reset}"
                     Margin="5,0,0,0"
-                    Visibility="{Binding IsResetButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
+                    Visibility="{Binding IsResetButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding ResetCommand, ValidatesOnNotifyDataErrors=False}" />
                 <Button
-                    Content="Retry"
+                    Content="{ResX Key=Common_HudUploadToStoreView_Retry}"
                     Margin="5,0,0,0"
-                    Visibility="{Binding IsRetryButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
+                    Visibility="{Binding IsRetryButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding SubmitCommand, ValidatesOnNotifyDataErrors=False}" />
                 <Button
-                    Content="Back"
+                    Content="{ResX Key=Common_HudUploadToStoreView_Back}"
                     Margin="5,0,0,0"
-                    Visibility="{Binding IsBackButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
+                    Visibility="{Binding IsBackButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding BackCommand, ValidatesOnNotifyDataErrors=False}" />
                 <Button
-                    Content="Cancel"
+                    Content="{ResX Key=Common_HudUploadToStoreView_Cancel}"
                     Margin="5,0,0,0"
-                    Visibility="{Binding IsCancelButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
+                    Visibility="{Binding IsCancelButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding CancelCommand, ValidatesOnNotifyDataErrors=False}" />
                 <Button
-                    Content="Close"
+                    Content="{ResX Key=Common_HudUploadToStoreView_Close}"
                     Margin="5,0,0,0"
-                    Visibility="{Binding IsCloseButtonVisible, Converter={dh:BoolToVisibilityConverter}}"
+                    Visibility="{Binding IsCloseButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding CancelCommand, ValidatesOnNotifyDataErrors=False}" />
             </StackPanel>

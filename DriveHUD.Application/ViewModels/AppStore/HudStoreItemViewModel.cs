@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
 using Model.AppStore.HudStore.Model;
 using ReactiveUI;
@@ -121,5 +122,15 @@ namespace DriveHUD.Application.ViewModels.AppStore
                 return string.Join(separator, hudStoreItem.TableTypes.OrderBy(x => x.MaxPlayers).Select(x => x.Name));
             }
         }
+
+        public string PriceText
+        {
+            get
+            {
+                return Item.IsCommercial ?
+                    LocalizableString.ToString("Common_HudStoreView_Price", Item.Price) :
+                    LocalizableString.ToString("Common_HudStoreView_PriceFree");
+            }
+        }  
     }
 }

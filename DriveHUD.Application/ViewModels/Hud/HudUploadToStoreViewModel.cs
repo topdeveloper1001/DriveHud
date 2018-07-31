@@ -19,6 +19,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.Common.Wpf.Validation;
+using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Win32;
 using Model.AppStore.HudStore;
@@ -115,15 +116,12 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             hudLayout = hudUploadToStoreViewModelInfo.Layout;
 
-            if (hudLayout == null)
-            {
-                throw new ArgumentException(nameof(hudLayout));
-            }
-
             InitializeModelAsync(() => Model.Load());
         }
 
         #region Properties
+
+        private IHudLayoutsService HudLayoutsService => ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
         private string name;
 
@@ -244,6 +242,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             private set
             {
                 this.RaiseAndSetIfChanged(ref message, value);
+                this.RaisePropertyChanged(nameof(IsLayoutSelectionVisible));
+                this.RaisePropertyChanged(nameof(IsUploadFormVisible));
             }
         }
 
@@ -331,6 +331,94 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        private bool isSelectLayoutButtonVisible;
+
+        public bool IsSelectLayoutButtonVisible
+        {
+            get
+            {
+                return isSelectLayoutButtonVisible;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isSelectLayoutButtonVisible, value);
+            }
+        }
+
+        private EnumTableType currentLayoutTableType;
+
+        public EnumTableType CurrentLayoutTableType
+        {
+            get
+            {
+                return currentLayoutTableType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref currentLayoutTableType, value);
+                Layouts = new ReactiveList<HudLayoutInfoV2>(HudLayoutsService.GetAllLayouts(CurrentLayoutTableType));
+                CurrentLayout = Layouts.FirstOrDefault();
+            }
+        }
+
+        private ReactiveList<EnumTableType> layoutTableTypes;
+
+        public ReactiveList<EnumTableType> LayoutTableTypes
+        {
+            get
+            {
+                return layoutTableTypes;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref layoutTableTypes, value);
+            }
+        }
+
+        private ReactiveList<HudLayoutInfoV2> layouts;
+
+        public ReactiveList<HudLayoutInfoV2> Layouts
+        {
+            get
+            {
+                return layouts;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref layouts, value);
+            }
+        }
+
+        private HudLayoutInfoV2 currentLayout;
+
+        public HudLayoutInfoV2 CurrentLayout
+        {
+            get
+            {
+                return currentLayout;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref currentLayout, value);
+            }
+        }
+
+        public bool IsLayoutSelectionVisible
+        {
+            get
+            {
+                return string.IsNullOrEmpty(Message) && hudLayout == null;
+            }
+        }
+
+        public bool IsUploadFormVisible
+        {
+            get
+            {
+                return string.IsNullOrEmpty(Message) && !IsLayoutSelectionVisible;
+            }
+        }
+
         #endregion
 
         #region Command
@@ -346,6 +434,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         public ReactiveCommand RemoveImageCommand { get; private set; }
 
         public ReactiveCommand BackCommand { get; private set; }
+
+        public ReactiveCommand SelectLayoutCommand { get; private set; }
 
         #endregion
 
@@ -375,6 +465,26 @@ namespace DriveHUD.Application.ViewModels.Hud
                 IsRetryButtonVisible = false;
                 IsSubmitButtonVisible = true;
             });
+
+            var canSelect = this.WhenAny(x => x.CurrentLayout, x => x.Value != null);
+
+            SelectLayoutCommand = ReactiveCommand.Create(() =>
+            {
+                hudLayout = CurrentLayout;
+
+                IsSelectLayoutButtonVisible = false;
+                IsSubmitButtonVisible = true;
+                IsResetButtonVisible = true;
+
+                SelectDefaultTableType();
+
+                Name = hudLayout.Name;
+
+                ApplyRules();
+
+                this.RaisePropertyChanged(nameof(IsLayoutSelectionVisible));
+                this.RaisePropertyChanged(nameof(IsUploadFormVisible));
+            }, canSelect);
         }
 
         protected override void ModelInitialized(Exception ex)
@@ -389,11 +499,15 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
-            IsSubmitButtonVisible = true;
-            IsResetButtonVisible = true;
             IsCancelButtonVisible = true;
 
-            Name = hudLayout.Name;
+            if (hudLayout != null)
+            {
+                IsSubmitButtonVisible = true;
+                IsResetButtonVisible = true;
+            }
+
+            Name = hudLayout?.Name;
 
             base.ModelInitialized(ex);
             InitializeSelectableData();
@@ -410,6 +524,19 @@ namespace DriveHUD.Application.ViewModels.Hud
             GameTypes = InitializeSelectableData(Model.GameTypes, () => new GameType { Name = allItemName }, nameof(GameTypes), true);
             TableTypes = InitializeSelectableData(Model.TableTypes, () => new TableType { Name = allItemName }, nameof(TableTypes), false);
 
+            if (hudLayout == null)
+            {
+                IsSelectLayoutButtonVisible = true;
+                LayoutTableTypes = new ReactiveList<EnumTableType>(Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>());
+                CurrentLayoutTableType = LayoutTableTypes.FirstOrDefault();
+                return;
+            }
+
+            SelectDefaultTableType();
+        }
+
+        private void SelectDefaultTableType()
+        {
             var tableTypeToSelect = TableTypes.FirstOrDefault(x => x.Item.MaxPlayers == (int)hudLayout.TableType);
 
             if (tableTypeToSelect != null)

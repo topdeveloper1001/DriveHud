@@ -1282,10 +1282,10 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
     <value>Failed to insert user</value>
   </data>
   <data name="Common_HudWebService_ImageFileHeightOutOfRange" xml:space="preserve">
-    <value>The height of the image is out of range</value>
+    <value>The height of the image is out of range (600)</value>
   </data>
   <data name="Common_HudWebService_ImageFileWidthOutOfRange" xml:space="preserve">
-    <value>The width of the image is out of range</value>
+    <value>The width of the image is out of range (800)</value>
   </data>
   <data name="Common_HudWebService_InvalidSerial" xml:space="preserve">
     <value>Invalid serial number</value>
@@ -1316,5 +1316,74 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   </data>
   <data name="Common_HudStoreView_TableTypes" xml:space="preserve">
     <value>Table types: {0}</value>
+  </data>
+  <data name="Common_HudStoreView_Buy" xml:space="preserve">
+    <value>Buy</value>
+  </data>
+  <data name="Common_HudStoreView_Install" xml:space="preserve">
+    <value>Install</value>
+  </data>
+  <data name="Common_HudStoreView_Installed" xml:space="preserve">
+    <value>Installed</value>
+  </data>
+  <data name="Common_HudStoreView_Popularity" xml:space="preserve">
+    <value>Popularity</value>
+  </data>
+  <data name="Common_HudStoreView_Price" xml:space="preserve">
+    <value>Price: ${0:F2}</value>
+  </data>
+  <data name="Common_HudStoreView_PriceFree" xml:space="preserve">
+    <value>Price: FREE</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Cost" xml:space="preserve">
+    <value>Cost of HUD</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_GameTypes" xml:space="preserve">
+    <value>Game Types</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_GameVariants" xml:space="preserve">
+    <value>Game Variants</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Images" xml:space="preserve">
+    <value>Images</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_SelectHudToUpload" xml:space="preserve">
+    <value>Select HUD to upload</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_TableTypes" xml:space="preserve">
+    <value>Table Types</value>
   </data>
 </root>

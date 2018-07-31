@@ -1773,6 +1773,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Buy.
+        /// </summary>
+        internal static string Common_HudStoreView_Buy {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_Buy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Game types: {0}.
         /// </summary>
         internal static string Common_HudStoreView_GameTypes {
@@ -1787,6 +1796,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudStoreView_GameVariants {
             get {
                 return ResourceManager.GetString("Common_HudStoreView_GameVariants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Install.
+        /// </summary>
+        internal static string Common_HudStoreView_Install {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_Install", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installed.
+        /// </summary>
+        internal static string Common_HudStoreView_Installed {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_Installed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Popularity.
+        /// </summary>
+        internal static string Common_HudStoreView_Popularity {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_Popularity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price: ${0:F2}.
+        /// </summary>
+        internal static string Common_HudStoreView_Price {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price: FREE.
+        /// </summary>
+        internal static string Common_HudStoreView_PriceFree {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_PriceFree", resourceCulture);
             }
         }
         
@@ -1882,6 +1936,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Add {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         internal static string Common_HudUploadToStoreView_All {
@@ -1900,11 +1963,47 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Back.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Back {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Cancel {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Caption must be not empty.
         /// </summary>
         internal static string Common_HudUploadToStoreView_CaptionMustBeNotEmpty {
             get {
                 return ResourceManager.GetString("Common_HudUploadToStoreView_CaptionMustBeNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Close {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cost of HUD.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Cost {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Cost", resourceCulture);
             }
         }
         
@@ -1923,6 +2022,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudUploadToStoreView_CostMustBeNotNegative {
             get {
                 return ResourceManager.GetString("Common_HudUploadToStoreView_CostMustBeNotNegative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Description {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Description", resourceCulture);
             }
         }
         
@@ -1954,6 +2062,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game Types.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_GameTypes {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_GameTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to At least one game variant must be selected.
         /// </summary>
         internal static string Common_HudUploadToStoreView_GameVariantMustBeSelected {
@@ -1963,11 +2080,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game Variants.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_GameVariants {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_GameVariants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Images.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Images {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Images", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Could not get required data from web service. Please contact support or try later..
         /// </summary>
         internal static string Common_HudUploadToStoreView_ModelNotLoaded {
             get {
                 return ResourceManager.GetString("Common_HudUploadToStoreView_ModelNotLoaded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Name {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Name", resourceCulture);
             }
         }
         
@@ -1999,6 +2143,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Remove {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Reset {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retry.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Retry {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Retry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Select {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select HUD to upload.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_SelectHudToUpload {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_SelectHudToUpload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select an image for your HUD.
         /// </summary>
         internal static string Common_HudUploadToStoreView_SelectImageDialogTitle {
@@ -2008,11 +2197,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Submit.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Submit {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to At least one table type must be selected.
         /// </summary>
         internal static string Common_HudUploadToStoreView_TableTypeMustBeSelected {
             get {
                 return ResourceManager.GetString("Common_HudUploadToStoreView_TableTypeMustBeSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table Types.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_TableTypes {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_TableTypes", resourceCulture);
             }
         }
         
@@ -2137,7 +2344,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The height of the image is out of range.
+        ///   Looks up a localized string similar to The height of the image is out of range (600).
         /// </summary>
         internal static string Common_HudWebService_ImageFileHeightOutOfRange {
             get {
@@ -2173,7 +2380,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The width of the image is out of range.
+        ///   Looks up a localized string similar to The width of the image is out of range (800).
         /// </summary>
         internal static string Common_HudWebService_ImageFileWidthOutOfRange {
             get {

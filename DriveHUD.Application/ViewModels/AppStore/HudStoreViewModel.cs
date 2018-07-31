@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.Licensing;
 using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
@@ -21,6 +22,9 @@ using Model.AppStore;
 using Model.AppStore.HudStore;
 using Model.AppStore.HudStore.Model;
 using Model.AppStore.HudStore.ServiceData;
+using Model.Events;
+using Prism.Events;
+using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -33,6 +37,18 @@ namespace DriveHUD.Application.ViewModels.AppStore
 {
     public class HudStoreViewModel : AppStoreBaseViewModel<IHudStoreModel>, IHudStoreViewModel
     {
+        private readonly ILicenseService licenseService;
+
+        public HudStoreViewModel()
+        {
+            licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
+
+            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            eventAggregator.GetEvent<LicenseUpdatedEvent>().Subscribe(x => this.RaisePropertyChanged(nameof(IsOpenHudUploadToStoreVisible)));
+
+            OpenHudUploadToStoreRequest = new InteractionRequest<INotification>();
+        }
+
         public override void Initialize()
         {
             base.Initialize();
@@ -90,7 +106,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
                 Items.ForEach(item => item.IsImported = importedLayoutsIds.Contains(item.Item.LayoutId));
             });
         }
-    
+
         #region Properties
 
         private ReadOnlyObservableCollection<HudStoreFilter> filter;
@@ -194,6 +210,16 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
         }
 
+        public InteractionRequest<INotification> OpenHudUploadToStoreRequest { get; private set; }
+
+        public bool IsOpenHudUploadToStoreVisible
+        {
+            get
+            {
+                return !licenseService.IsTrial; ;
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -207,6 +233,8 @@ namespace DriveHUD.Application.ViewModels.AppStore
         public ReactiveCommand PreviousImageCommand { get; private set; }
 
         public ReactiveCommand NextImageCommand { get; private set; }
+
+        public ReactiveCommand OpenHudUploadToStoreCommand { get; private set; }
 
         #endregion
 
@@ -240,6 +268,15 @@ namespace DriveHUD.Application.ViewModels.AppStore
                 {
                     PopupImageIndex++;
                 }
+            });
+
+            OpenHudUploadToStoreCommand = ReactiveCommand.Create(() =>
+            {
+                var viewModelInfo = new HudUploadToStoreViewModelInfo();             
+
+                var requestInfo = new HudUploadToStoreRequestInfo(viewModelInfo);
+
+                OpenHudUploadToStoreRequest.Raise(requestInfo);
             });
         }
 
