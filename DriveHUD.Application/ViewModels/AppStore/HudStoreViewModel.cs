@@ -76,7 +76,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
                 .Merge(Model.ObservableForProperty(x => x.SelectedSorting).Select(x => true))
                 .Subscribe(x =>
                 {
-                    StartAsyncOperation(() => Model.Refresh(1, ProductsPerPage), ex => OnUpdated());
+                    StartAsyncOperation(() => Model.Refresh(0, ProductsPerPage), ex => OnUpdated());
                 });
 
             InitializeModelAsync(() =>

@@ -97,7 +97,7 @@ namespace Model.AppStore
             var request = new HudStoreGetHudsRequest
             {
                 Serial = serial,
-                Page = page - 1,
+                Page = page,
                 Filter = (int)SelectedFilter,
                 Sorting = (int)SelectedSorting,
                 Search = searchText
@@ -141,7 +141,7 @@ namespace Model.AppStore
         public override void Search(string searchText)
         {
             this.searchText = searchText;
-            Refresh(1, 4);
+            Refresh(0, 4);
         }
 
         #endregion
