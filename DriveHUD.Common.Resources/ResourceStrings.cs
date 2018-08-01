@@ -105,7 +105,9 @@ namespace DriveHUD.Common.Resources
             [EnumPokerSites.TruePoker] = "Settings_TruePokerHelpLink",
             [EnumPokerSites.WinningPokerNetwork] = "Settings_WinningPokerNetworkHelpLink",
             [EnumPokerSites.YaPoker] = "Settings_YaPokerHelpLink",
-            [EnumPokerSites.IPoker] = "Settings_IPokerHelpLink"
+            [EnumPokerSites.IPoker] = "Settings_IPokerHelpLink",
+            [EnumPokerSites.Horizon] = "Settings_HorizonHelpLink",
+            [EnumPokerSites.Winamax] = "Settings_WinamaxHelpLink",
         };
 
         #endregion
