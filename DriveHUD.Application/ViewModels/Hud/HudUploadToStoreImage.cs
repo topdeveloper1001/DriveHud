@@ -14,6 +14,7 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.Common.Wpf.Validation;
 using ReactiveUI;
+using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -24,6 +25,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             Rules.Add(new DelegateRule<HudUploadToStoreImage>(nameof(Caption),
                 new LocalizableString("Common_HudUploadToStoreView_CaptionMustBeNotEmpty"),
                 x => !string.IsNullOrEmpty(x.Caption)));
+
+            Rules.Add(new DelegateRule<HudUploadToStoreImage>(nameof(Path),
+                new LocalizableString("Common_HudUploadToStoreView_ImageWidthOutOfRange"),
+                x => x.ImageSize.Width <= 4000 && x.ImageSize.Width >= 100));
+
+            Rules.Add(new DelegateRule<HudUploadToStoreImage>(nameof(Path),
+                new LocalizableString("Common_HudUploadToStoreView_ImageHeightOutOfRange"),
+                x => x.ImageSize.Height <= 4000 && x.ImageSize.Height >= 100));
         }
 
         public HudUploadToStoreImage() : base()
@@ -70,6 +79,20 @@ namespace DriveHUD.Application.ViewModels.Hud
             set
             {
                 this.RaiseAndSetIfChanged(ref isSelected, value);
+            }
+        }
+
+        private Size imageSize;
+
+        public Size ImageSize
+        {
+            get
+            {
+                return imageSize;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref imageSize, value);
             }
         }
     }

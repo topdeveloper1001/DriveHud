@@ -31,6 +31,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
+using System.Windows;
 using System.Windows.Media.Imaging;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -93,7 +94,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             Rules.Add(new DelegateRule<HudUploadToStoreViewModel>(
                 nameof(Images),
-                new NonLocalizableString("Common_HudUploadToStoreView_AtLeastOneImageMustBeSpecified"),
+                new LocalizableString("Common_HudUploadToStoreView_AtLeastOneImageMustBeSpecified"),
                 x => x.Images.Count != 0));
         }
 
@@ -618,6 +619,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                     throw new DHBusinessException(new NonLocalizableString("Couldn't find license to upload HUD to the store."));
                 }
 
+                // update layout name in xml
+                hudLayout.Name = Name;
+
                 var serializedLayout = SerializationHelper.SerializeObject(hudLayout);
 
                 var uploadInfo = new HudStoreUploadInfo
@@ -687,7 +691,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             var openFileDialog = new OpenFileDialog
             {
                 Title = CommonResourceManager.Instance.GetResourceString("Common_HudUploadToStoreView_SelectImageDialogTitle"),
-                Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+                Filter = "Image files (*.jpg, *.jpeg, *.gif, *.png, *.bmp) | *.jpg; *.jpeg; *.gif; *.png; *.bmp"
             };
 
             if (openFileDialog.ShowDialog() != true)
@@ -695,32 +699,33 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
-            if (!IsImage(openFileDialog.FileName))
+            if (!TryGetImage(openFileDialog.FileName, out BitmapImage bitmapImage))
             {
+                LogProvider.Log.Error($"Couldn't add {openFileDialog.FileName} as an image to the data for uploading to HUD store.");
                 return;
             }
 
             var image = new HudUploadToStoreImage
-            {
+            {               
+                ImageSize = new Size(bitmapImage.Width, bitmapImage.Height),
                 Path = openFileDialog.FileName
             };
 
             images.Add(image);
         }
 
-        private static bool IsImage(string path)
+        private static bool TryGetImage(string path, out BitmapImage image)
         {
             try
             {
-                var image = new BitmapImage(new Uri(path));
+                image = new BitmapImage(new Uri(path));
                 return true;
             }
             catch
             {
-                LogProvider.Log.Error($"Couldn't add {path} as an image to the data for uploading to HUD store.");
+                image = null;
+                return false;
             }
-
-            return false;
         }
 
         private void RemoveImage()

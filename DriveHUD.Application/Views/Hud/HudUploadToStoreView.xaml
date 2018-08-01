@@ -147,9 +147,9 @@
                 <Grid>
                     <AdornedElementPlaceholder />
                     <Image
-                        Margin="0,0,5,0"
+                        Margin="0,4,5,0"
                         HorizontalAlignment="Right"
-                        VerticalAlignment="Center"
+                        VerticalAlignment="Top"
                         Width="20"
                         Height="17"
                         Source="pack://application:,,,/DriveHUD.Common.Resources;component/images/validation_error.png">
@@ -250,6 +250,7 @@
                             VerticalAlignment="Top"
                             HorizontalAlignment="Left"
                             Height="150"
+                            Validation.ErrorTemplate="{StaticResource InternalValidationTemplate}"
                             Source="{Binding Path}" />
 
                         <CheckBox

@@ -332,7 +332,8 @@
                                 Background="{StaticResource OuterBackground}">
                                 <Grid.RowDefinitions>
                                     <RowDefinition
-                                        Height="27" />
+                                        SharedSizeGroup="HudTitleGroup"
+                                        Height="Auto" />
                                     <RowDefinition
                                         Height="25" />
                                     <RowDefinition
@@ -354,7 +355,10 @@
                                     Grid.Row="0"
                                     Text="{Binding Item.Name}"
                                     VerticalAlignment="Center"
+                                    Margin="12,3,12,3"
+                                    TextWrapping="Wrap"
                                     HorizontalAlignment="Center"
+                                    TextAlignment="Center"
                                     Style="{StaticResource ProductNameTextBlockStyle}" />
 
                                 <TextBlock
