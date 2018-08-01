@@ -1282,10 +1282,10 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
     <value>Failed to insert user</value>
   </data>
   <data name="Common_HudWebService_ImageFileHeightOutOfRange" xml:space="preserve">
-    <value>The height of the image is out of range (600)</value>
+    <value>The height of the image is out of range (50-600)</value>
   </data>
   <data name="Common_HudWebService_ImageFileWidthOutOfRange" xml:space="preserve">
-    <value>The width of the image is out of range (800)</value>
+    <value>The width of the image is out of range (50-800)</value>
   </data>
   <data name="Common_HudWebService_InvalidSerial" xml:space="preserve">
     <value>Invalid serial number</value>
@@ -1385,5 +1385,11 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   </data>
   <data name="Common_HudUploadToStoreView_TableTypes" xml:space="preserve">
     <value>Table Types</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_ImageHeightOutOfRange" xml:space="preserve">
+    <value>The height of the image must be between 100 and 4000</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_ImageWidthOutOfRange" xml:space="preserve">
+    <value>The width of the image must be between 100 and 4000</value>
   </data>
 </root>

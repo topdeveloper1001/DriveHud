@@ -2089,11 +2089,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The height of the image must be between 100 and 4000.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_ImageHeightOutOfRange {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_ImageHeightOutOfRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Images.
         /// </summary>
         internal static string Common_HudUploadToStoreView_Images {
             get {
                 return ResourceManager.GetString("Common_HudUploadToStoreView_Images", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The width of the image must be between 100 and 4000.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_ImageWidthOutOfRange {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_ImageWidthOutOfRange", resourceCulture);
             }
         }
         
@@ -2344,7 +2362,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The height of the image is out of range (600).
+        ///   Looks up a localized string similar to The height of the image is out of range (50-600).
         /// </summary>
         internal static string Common_HudWebService_ImageFileHeightOutOfRange {
             get {
@@ -2380,7 +2398,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The width of the image is out of range (800).
+        ///   Looks up a localized string similar to The width of the image is out of range (50-800).
         /// </summary>
         internal static string Common_HudWebService_ImageFileWidthOutOfRange {
             get {

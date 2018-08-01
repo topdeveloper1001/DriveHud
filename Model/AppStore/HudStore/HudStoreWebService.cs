@@ -82,7 +82,6 @@ namespace Model.AppStore.HudStore
                 var errorMessage = ConvertErrors(serviceResponse?.Errors);
 
                 throw new DHBusinessException(new LocalizableString("Common_HudWebService_GettingHudFailed", errorMessage));
-
             }
             catch (DHBusinessException)
             {
