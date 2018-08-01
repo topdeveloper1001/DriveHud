@@ -47,6 +47,11 @@
             </DataTemplate>
 
             <DataTemplate
+                DataType="{x:Type vm:RakebackAppStoreViewModel}">
+                <view:RakebackAppStoreView />
+            </DataTemplate>
+
+            <DataTemplate
                 DataType="{x:Type vm:EmptyAppStoreViewModel}" />
 
         </ResourceDictionary>
@@ -158,6 +163,14 @@
                         Width="87"
                         Content="{ResX Key=Common_Shop_Huds}"
                         IsChecked="{Binding AppStoreType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:AppStoreType.Huds}}"
+                        Style="{StaticResource RadioButtonSimple}" />
+
+                    <RadioButton
+                        GroupName="ShopGroup"
+                        Height="32"
+                        Width="107"
+                        Content="{ResX Key=Common_Shop_Rakeback}"
+                        IsChecked="{Binding AppStoreType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:AppStoreType.Rakeback}}"
                         Style="{StaticResource RadioButtonSimple}" />
 
                     <RadioButton

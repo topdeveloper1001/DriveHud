@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ProductAppStoreModel.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="RakebackAppStoreModel.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -15,11 +15,11 @@ using System.Linq;
 
 namespace Model.AppStore
 {
-    internal class ProductAppStoreModel : BaseProductAppStoreModel<AppStoreProduct>, IProductAppStoreModel
+    internal class RakebackAppStoreModel: BaseProductAppStoreModel<AppStoreRakeback>, IRakebackAppStoreModel
     {
-        public ProductAppStoreModel()
+        public RakebackAppStoreModel()
         {
-            repository = ServiceLocator.Current.GetInstance<IProductAppStoreRepository>();
+            repository = ServiceLocator.Current.GetInstance<IRakebackAppStoreRepository>();
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace Model.AppStore
                 activeItems = allItems;
             }
 
-            activeItems = allItems.Where(x => x.ProductName.Contains(searchText) || x.ProductDescription.Contains(searchText)).ToList();
+            activeItems = allItems.Where(x => x.Network.Contains(searchText) || x.Description.Contains(searchText)).ToList();
         }
     }
 }

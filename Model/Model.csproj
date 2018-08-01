@@ -137,7 +137,10 @@
     <Compile Include="AppStore\AppsAppStoreRepository.cs" />
     <Compile Include="AppStore\AppStoreModule.cs" />
     <Compile Include="AppStore\AppStoreProductStorage.cs" />
+    <Compile Include="AppStore\AppStoreRakeback.cs" />
     <Compile Include="AppStore\BaseAppStoreModel.cs" />
+    <Compile Include="AppStore\BaseAppStoreRepository.cs" />
+    <Compile Include="AppStore\BaseProductAppStoreModel.cs" />
     <Compile Include="AppStore\HudStoreModel.cs" />
     <Compile Include="AppStore\HudStore\HudStoreBaseRequest.cs" />
     <Compile Include="AppStore\HudStore\HudStoreFilter.cs" />
@@ -164,9 +167,14 @@
     <Compile Include="AppStore\IAppsAppStoreModel.cs" />
     <Compile Include="AppStore\IAppsAppStoreRepository.cs" />
     <Compile Include="AppStore\IBaseAppStoreModel.cs" />
+    <Compile Include="AppStore\IBaseAppStoreRepository.cs" />
     <Compile Include="AppStore\IHudStoreModel.cs" />
+    <Compile Include="AppStore\IRakebackAppStoreModel.cs" />
+    <Compile Include="AppStore\IRakebackAppStoreRepository.cs" />
     <Compile Include="AppStore\ITrainingAppStoreModel.cs" />
     <Compile Include="AppStore\ITrainingAppStoreRepository.cs" />
+    <Compile Include="AppStore\RakebackAppStoreModel.cs" />
+    <Compile Include="AppStore\RakebackAppStoreRepository.cs" />
     <Compile Include="AppStore\TrainingAppStoreModel .cs" />
     <Compile Include="AppStore\TrainingAppStoreRepository.cs" />
     <Compile Include="BoardTextureAnalyzers\BoardTextureAnalyzer.cs" />

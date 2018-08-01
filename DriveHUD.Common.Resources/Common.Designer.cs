@@ -2822,6 +2822,60 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Instructions:.
+        /// </summary>
+        internal static string Common_RakebackAppStoreView_Instructions {
+            get {
+                return ResourceManager.GetString("Common_RakebackAppStoreView_Instructions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Network: {0}.
+        /// </summary>
+        internal static string Common_RakebackAppStoreView_Network {
+            get {
+                return ResourceManager.GetString("Common_RakebackAppStoreView_Network", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rakeback: {0}%.
+        /// </summary>
+        internal static string Common_RakebackAppStoreView_Rakeback {
+            get {
+                return ResourceManager.GetString("Common_RakebackAppStoreView_Rakeback", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SIGN-UP.
+        /// </summary>
+        internal static string Common_RakebackAppStoreView_SignUp {
+            get {
+                return ResourceManager.GetString("Common_RakebackAppStoreView_SignUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To signup for this rakeback deal, simply click on this link:.
+        /// </summary>
+        internal static string Common_RakebackAppStoreView_SignUpText1 {
+            get {
+                return ResourceManager.GetString("Common_RakebackAppStoreView_SignUpText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Then enter this code into the bonus code area during sign-up:.
+        /// </summary>
+        internal static string Common_RakebackAppStoreView_SignUpText2 {
+            get {
+                return ResourceManager.GetString("Common_RakebackAppStoreView_SignUpText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Range.
         /// </summary>
         internal static string Common_Range {
@@ -3449,6 +3503,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Shop_LearnMore {
             get {
                 return ResourceManager.GetString("Common_Shop_LearnMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rakeback.
+        /// </summary>
+        internal static string Common_Shop_Rakeback {
+            get {
+                return ResourceManager.GetString("Common_Shop_Rakeback", resourceCulture);
             }
         }
         

@@ -10,15 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace Model.AppStore
 {
     /// <summary>
     /// Repository for DriveHUD shop
     /// </summary>
-    public interface IProductAppStoreRepository
-    {        
-        IEnumerable<AppStoreProduct> GetAllProducts();
+    public interface IProductAppStoreRepository : IBaseAppStoreRepository<AppStoreProduct>
+    {               
     }
 }

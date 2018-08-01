@@ -1392,4 +1392,25 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_HudUploadToStoreView_ImageWidthOutOfRange" xml:space="preserve">
     <value>The width of the image must be between 100 and 4000</value>
   </data>
+  <data name="Common_RakebackAppStoreView_Instructions" xml:space="preserve">
+    <value>Instructions:</value>
+  </data>
+  <data name="Common_RakebackAppStoreView_Network" xml:space="preserve">
+    <value>Network: {0}</value>
+  </data>
+  <data name="Common_RakebackAppStoreView_Rakeback" xml:space="preserve">
+    <value>Rakeback: {0}%</value>
+  </data>
+  <data name="Common_RakebackAppStoreView_SignUp" xml:space="preserve">
+    <value>SIGN-UP</value>
+  </data>
+  <data name="Common_RakebackAppStoreView_SignUpText1" xml:space="preserve">
+    <value>To signup for this rakeback deal, simply click on this link:</value>
+  </data>
+  <data name="Common_RakebackAppStoreView_SignUpText2" xml:space="preserve">
+    <value>Then enter this code into the bonus code area during sign-up:</value>
+  </data>
+  <data name="Common_Shop_Rakeback" xml:space="preserve">
+    <value>Rakeback</value>
+  </data>
 </root>

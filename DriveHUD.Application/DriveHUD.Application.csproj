@@ -487,6 +487,7 @@
     <Compile Include="ViewModels\AppStore\IAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\IHudStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\RakebackAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Graphs\BarSeriesChartBehavior.cs" />
@@ -648,6 +649,9 @@
     </Compile>
     <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
       <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppStore\RakebackAppStoreView.xaml.cs">
+      <DependentUpon>RakebackAppStoreView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Graphs\CashGraphPopupView.xaml.cs">
       <DependentUpon>CashGraphPopupView.xaml</DependentUpon>
@@ -1129,6 +1133,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AppStore\ProductAppStoreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppStore\RakebackAppStoreView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -229,6 +229,10 @@ namespace DriveHUD.Application.ViewModels
                     AppStoreViewModel = new HudStoreViewModel();
                     break;
 
+                case AppStoreType.Rakeback:
+                    AppStoreViewModel = new RakebackAppStoreViewModel();
+                    break;
+
                 default:
                     AppStoreViewModel = new EmptyAppStoreViewModel();
                     break;

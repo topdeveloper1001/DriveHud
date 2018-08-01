@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="AppStoreProduct.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="AppStoreRakeback.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -16,78 +16,80 @@ using System;
 namespace Model.AppStore
 {
     /// <summary>
-    /// Model of product in shop
+    /// Model of rakeback in shop
     /// </summary>    
     [Serializable]
-    public class AppStoreProduct : BindableBase
+    public class AppStoreRakeback : BindableBase
     {
-        private string productName;
+        private int rakeback;
 
-        public string ProductName
+        public int Rakeback
         {
             get
             {
-                return productName;
+                return rakeback;
             }
             set
             {
-                SetProperty(ref productName, value);
+                SetProperty(ref rakeback, value);
             }
         }
 
-        private string productDescription;
+        private string network;
 
-        public string ProductDescription
+        public string Network
         {
             get
             {
-                return productDescription;
+                return network;
             }
             set
             {
-                SetProperty(ref productDescription, value);
+                SetProperty(ref network, value);
             }
         }
 
-        private string price;
 
-        public string Price
+        private string description;
+
+        public string Description
         {
             get
             {
-                return price;
+                return description;
             }
             set
             {
-                SetProperty(ref price, value);
+                SetProperty(ref description, value);
             }
         }
 
-        private string cartLink;
+        private string signUpCode;
 
-        public string CartLink
+        public string SignUpCode
         {
             get
             {
-                return cartLink;
+                return signUpCode;
             }
             set
             {
-                SetProperty(ref cartLink, value);
+                SetProperty(ref signUpCode, value);
             }
+
         }
 
-        private string learnMoreLink;
+        private string signUpLink;
 
-        public string LearnMoreLink
+        public string SignUpLink
         {
             get
             {
-                return learnMoreLink;
+                return signUpLink;
             }
             set
             {
-                SetProperty(ref learnMoreLink, value);
+                SetProperty(ref signUpLink, value);
             }
         }
 
@@ -105,17 +107,31 @@ namespace Model.AppStore
             }
         }
 
-        private bool isAnimatedGif;
+        private double imageWidth;
 
-        public bool IsAnimatedGif
+        public double ImageWidth
         {
             get
             {
-                return isAnimatedGif;
+                return imageWidth;
             }
             set
             {
-                SetProperty(ref isAnimatedGif, value);
+                SetProperty(ref imageWidth, value);
+            }
+        }
+
+        private double imageHeight;
+
+        public double ImageHeight
+        {
+            get
+            {
+                return imageHeight;
+            }
+            set
+            {
+                SetProperty(ref imageHeight, value);
             }
         }
     }

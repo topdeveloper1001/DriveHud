@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ProductAppStoreRepository.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="RakebackAppStoreRepository.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -12,15 +12,15 @@
 
 namespace Model.AppStore
 {
-    internal class ProductAppStoreRepository : BaseAppStoreRepository<AppStoreProduct>, IProductAppStoreRepository
+    internal class RakebackAppStoreRepository : BaseAppStoreRepository<AppStoreRakeback>, IRakebackAppStoreRepository
     {
-        public ProductAppStoreRepository()
+        public RakebackAppStoreRepository()
         {
             storeDataFolder = StringFormatter.GetAppStoreDataFolder();
-            storeLocalProductRepo = StringFormatter.GetAppStoreLocalProductRepo();
-            storeLocalTempProductRepo = StringFormatter.GetAppStoreLocalTempProductRepo();
-            storeRemoteProductRepo = StringFormatter.GetAppStoreRemoteProductRepo();
-            storeRemoteProductHash = StringFormatter.GetAppStoreRemoteProductHash();
+            storeLocalProductRepo = StringFormatter.GetAppStoreLocalRakebackRepo();
+            storeLocalTempProductRepo = StringFormatter.GetAppStoreLocalTempRakebackRepo();
+            storeRemoteProductRepo = StringFormatter.GetAppStoreRemoteRakebackRepo();
+            storeRemoteProductHash = StringFormatter.GetAppStoreRemoteRakebackHash();
         }
     }
 }

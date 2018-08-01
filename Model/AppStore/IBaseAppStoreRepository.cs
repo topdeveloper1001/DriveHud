@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="AppStoreProductStorage.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="IBaseAppStoreRepository.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,17 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
-using System.Xml.Serialization;
 
 namespace Model.AppStore
 {
-    [Serializable]
-    [XmlRoot(ElementName = "AppStoreProductStorage")]
-    public class AppStoreProductStorage<T>
-        where T : class
+    /// <summary>
+    /// Repository for DriveHUD generic shop
+    /// </summary>
+    public interface IBaseAppStoreRepository<T>
     {
-        public List<T> Products { get; set; }
+        IEnumerable<T> GetAllProducts();
     }
 }

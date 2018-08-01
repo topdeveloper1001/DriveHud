@@ -106,11 +106,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to rakeback.xml.
+        /// </summary>
+        internal static string SystemSettings_AppStoreLocalRakebackRepo {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreLocalRakebackRepo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to products.tmp.
         /// </summary>
         internal static string SystemSettings_AppStoreLocalTempProductRepo {
             get {
                 return ResourceManager.GetString("SystemSettings_AppStoreLocalTempProductRepo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rakeback.tmp.
+        /// </summary>
+        internal static string SystemSettings_AppStoreLocalTempRakebackRepo {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreLocalTempRakebackRepo", resourceCulture);
             }
         }
         
@@ -147,6 +165,24 @@ namespace DriveHUD.Common.Resources {
         internal static string SystemSettings_AppStoreRemoteProductRepo {
             get {
                 return ResourceManager.GetString("SystemSettings_AppStoreRemoteProductRepo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/appstore/rakeback.hash.
+        /// </summary>
+        internal static string SystemSettings_AppStoreRemoteRakebackHash {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreRemoteRakebackHash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/appstore/rakeback.xml.
+        /// </summary>
+        internal static string SystemSettings_AppStoreRemoteRakebackRepo {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppStoreRemoteRakebackRepo", resourceCulture);
             }
         }
         

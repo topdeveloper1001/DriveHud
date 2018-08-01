@@ -46,6 +46,8 @@ namespace Model
             container.RegisterType<ITrainingAppStoreModel, TrainingAppStoreModel>();
             container.RegisterType<IAppsAppStoreRepository, AppsAppStoreRepository>();
             container.RegisterType<IAppsAppStoreModel, AppsAppStoreModel>();
+            container.RegisterType<IRakebackAppStoreRepository, RakebackAppStoreRepository>();
+            container.RegisterType<IRakebackAppStoreModel, RakebackAppStoreModel>();
             container.RegisterType<IOpponentReportService, OpponentReportService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IPopulationReportService, PopulationReportService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IHudPlayerTypeService, HudPlayerTypeService>();

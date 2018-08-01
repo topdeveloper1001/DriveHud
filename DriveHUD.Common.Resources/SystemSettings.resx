@@ -230,4 +230,16 @@
   <data name="SystemSettings_ImporterPipeAddress" xml:space="preserve">
     <value>net.pipe://localhost/DriveHUD/Importer</value>
   </data>
+  <data name="SystemSettings_AppStoreLocalRakebackRepo" xml:space="preserve">
+    <value>rakeback.xml</value>
+  </data>
+  <data name="SystemSettings_AppStoreLocalTempRakebackRepo" xml:space="preserve">
+    <value>rakeback.tmp</value>
+  </data>
+  <data name="SystemSettings_AppStoreRemoteRakebackHash" xml:space="preserve">
+    <value>http://drivehud.com/appstore/rakeback.hash</value>
+  </data>
+  <data name="SystemSettings_AppStoreRemoteRakebackRepo" xml:space="preserve">
+    <value>http://drivehud.com/appstore/rakeback.xml</value>
+  </data>
 </root>
