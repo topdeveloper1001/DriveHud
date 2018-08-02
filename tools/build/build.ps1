@@ -36,7 +36,7 @@ param
 
     [string] $ObfuscatorExcludeFilter = 'vshost,DriveHUD.PlayerXRay.dll,XR*Reg.dll',
 
-    [string] $SigningIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll,CapPipedB.dll,CapPipedI.dll,CapPipedI2.dll,CapPipedIP.dll,bdec.dll,pokereval.dll',
+    [string] $SigningIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll,CapPipedB.dll,CapPipedI.dll,CapPipedI2.dll,CapPipedP.dll,bdec.dll,pokereval.dll',
     
     [string] $MsiName = 'DriveHUD.msi',
     
