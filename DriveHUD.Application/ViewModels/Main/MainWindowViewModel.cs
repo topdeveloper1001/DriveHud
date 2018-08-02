@@ -1145,6 +1145,8 @@ namespace DriveHUD.Application.ViewModels
             IsTrial = licenseService.IsTrial;
             IsUpgradable = licenseService.IsUpgradable;
             UpdateHeader();
+
+            eventAggregator.GetEvent<LicenseUpdatedEvent>().Publish(new LicenseUpdatedEventArgs());
         }
 
         private void Purchase()

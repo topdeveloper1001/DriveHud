@@ -12,11 +12,7 @@
 
 namespace Model.AppStore
 {
-    public interface IProductAppStoreModel : IAppStoreItemsModel<AppStoreProduct>
-    {
-        /// <summary>
-        /// Loads items to model
-        /// </summary>
-        void Load();
+    public interface IProductAppStoreModel : IBaseAppStoreModel<AppStoreProduct>
+    {     
     }
 }

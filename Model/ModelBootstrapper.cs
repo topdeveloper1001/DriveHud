@@ -12,6 +12,7 @@
 
 using Microsoft.Practices.Unity;
 using Model.AppStore;
+using Model.AppStore.HudStore;
 using Model.Enums;
 using Model.Filters;
 using Model.Hud;
@@ -45,10 +46,15 @@ namespace Model
             container.RegisterType<ITrainingAppStoreModel, TrainingAppStoreModel>();
             container.RegisterType<IAppsAppStoreRepository, AppsAppStoreRepository>();
             container.RegisterType<IAppsAppStoreModel, AppsAppStoreModel>();
+            container.RegisterType<IRakebackAppStoreRepository, RakebackAppStoreRepository>();
+            container.RegisterType<IRakebackAppStoreModel, RakebackAppStoreModel>();
             container.RegisterType<IOpponentReportService, OpponentReportService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IPopulationReportService, PopulationReportService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IHudPlayerTypeService, HudPlayerTypeService>();
             container.RegisterType<IEquitySolver, EquitySolver>();
+            container.RegisterType<IHudStoreUploadModel, HudStoreUploadModel>();
+            container.RegisterType<IHudStoreWebService, HudStoreWebService>();
+            container.RegisterType<IHudStoreModel, HudStoreModel>();
         }
     }
 }

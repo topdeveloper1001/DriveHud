@@ -84,5 +84,11 @@ namespace DriveHUD.Application.Licensing
         /// <param name="serial">Serial number</param>
         /// <returns>The type of the license</returns>
         LicenseType? GetTypeFromSerial(string serial);
+
+        /// <summary>
+        /// Provides license to send to hud store
+        /// </summary>
+        /// <returns>License</returns>
+        ILicenseInfo GetHudStoreLicenseInfo(bool isTrialAllowed);
     }
 }

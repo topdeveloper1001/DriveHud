@@ -42,5 +42,11 @@ namespace DriveHUD.Common.Resources
 
             return string.Format(message, ResourceMessageParams);
         }
+
+        public static string ToString(string resourceMessageKey, params object[] resourceMessageParams)
+        {
+            var localizableString = new LocalizableString(resourceMessageKey, resourceMessageParams);
+            return localizableString.ToString();
+        }
     }
 }

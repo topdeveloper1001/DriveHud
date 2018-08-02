@@ -47,6 +47,11 @@ namespace DriveHUD.Application.ViewModels.Layouts
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or sets the name of layout of the mapping
+        /// </summary>
+        public int LayoutId { get; set; }
+
+        /// <summary>
         /// Gets or sets the name of file of the layout of the mapping
         /// </summary>
         public string FileName { get; set; }

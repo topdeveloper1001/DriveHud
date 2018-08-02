@@ -15,7 +15,7 @@ using ReactiveUI;
 
 namespace DriveHUD.Application.ViewModels.Graphs
 {
-    public class GraphViewModel : WindowViewModelBase, IBaseGraphViewModel
+    public class GraphViewModel : WpfViewModel<GraphViewModel>, IBaseGraphViewModel
     {
         public GraphViewModel(IBaseGraphViewModel baseGraphViewModel)
         {

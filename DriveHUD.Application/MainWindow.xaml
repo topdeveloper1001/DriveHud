@@ -28,7 +28,7 @@
     navigation:RadWindowInteropHelper.ShowInTaskbar="True"
     WindowStartupLocation="CenterScreen"
     Foreground="#7D7F84"
-    Background="#1F2124"
+    Background="{StaticResource MainBackround}"
     FontFamily="./Fonts/#Open Sans"
     Height="{Binding Path=AppStartupHeight}"
     Header="{Binding Path=AppStartupHeader}"

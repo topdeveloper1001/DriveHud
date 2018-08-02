@@ -14,7 +14,7 @@ using DriveHUD.Common.Wpf.Mvvm;
 
 namespace DriveHUD.PMCatcher
 {
-    public interface IPMCatcherViewModel : IPopupWindowViewModel
+    public interface IPMCatcherViewModel : IWindowViewModelBase
     {
     }
 }

@@ -39,6 +39,7 @@
                         <!-- Stat #1 -->
                         <Border
                             DataContext="{Binding Stat1}"
+                            ToolTip="{Binding Caption}"
                             Style="{StaticResource StatFirstBorderStyle}"
                             dh:DragDrop.IsDragTarget="True"                            
                             dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
@@ -54,7 +55,7 @@
                                     Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
                                     
                                     <Run
-                                        Text="{Binding Caption}" />
+                                        Text="{Binding CaptionPreview}" />
                                     
                                 </Hyperlink>
                             </TextBlock>
@@ -64,6 +65,7 @@
                         <!-- Stat #2 -->
                         <Border
                             DataContext="{Binding Stat2}"
+                            ToolTip="{Binding Caption}"
                             Style="{StaticResource StatSecondBorderStyle}"
                             dh:DragDrop.IsDragTarget="True"                            
                             dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
@@ -79,7 +81,7 @@
                                     Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
                                     
                                     <Run
-                                        Text="{Binding Caption}" />
+                                        Text="{Binding CaptionPreview}" />
                                     
                                 </Hyperlink>
                             </TextBlock>
@@ -88,6 +90,7 @@
                         <!-- Stat #3 -->
                         <Border
                             DataContext="{Binding Stat3}"
+                            ToolTip="{Binding Caption}"
                             Style="{StaticResource StatThirdBorderStyle}"
                             dh:DragDrop.IsDragTarget="True"                            
                             dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
@@ -103,7 +106,7 @@
                                     Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
                                     
                                     <Run
-                                        Text="{Binding Caption}" />
+                                        Text="{Binding CaptionPreview}" />
                                     
                                 </Hyperlink>
                             </TextBlock>
@@ -112,6 +115,7 @@
                         <!-- Stat #4 -->
                         <Border
                             DataContext="{Binding Stat4}"
+                            ToolTip="{Binding Caption}"
                             Style="{StaticResource StatFourthBorderStyle}"
                             dh:DragDrop.IsDragTarget="True"                            
                             dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
@@ -127,7 +131,7 @@
                                     Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
                                     
                                     <Run
-                                        Text="{Binding Caption}" />
+                                        Text="{Binding CaptionPreview}" />
                                     
                                 </Hyperlink>
                             </TextBlock>
@@ -151,8 +155,9 @@
 
                             <Border
                                 DataContext="{Binding Stat1}"
+                                ToolTip="{Binding Caption}"
                                 Style="{StaticResource StatFirstVerticalBorderStyle}"
-                                dh:DragDrop.IsDragTarget="True"                                
+                                dh:DragDrop.IsDragTarget="True"                                     
                                 dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
                                 BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}"
                                 Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
@@ -166,7 +171,7 @@
                                         Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
                                     
                                         <Run
-                                            Text="{Binding Caption}" />
+                                            Text="{Binding CaptionPreview}" />
                                     
                                     </Hyperlink>
                                 </TextBlock>
@@ -174,6 +179,7 @@
 
                             <Border
                                 DataContext="{Binding Stat2}"
+                                ToolTip="{Binding Caption}"
                                 Style="{StaticResource StatSecondVerticalBorderStyle}"
                                 dh:DragDrop.IsDragTarget="True"                                
                                 dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
@@ -189,7 +195,7 @@
                                         Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
                                     
                                         <Run
-                                            Text="{Binding Caption}" />
+                                            Text="{Binding CaptionPreview}" />
                                     
                                     </Hyperlink>
                                 </TextBlock>
@@ -197,6 +203,7 @@
 
                             <Border
                                 DataContext="{Binding Stat3}"
+                                ToolTip="{Binding Caption}"
                                 Style="{StaticResource StatThirdVerticalBorderStyle}"
                                 dh:DragDrop.IsDragTarget="True"                                
                                 dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
@@ -212,7 +219,7 @@
                                         Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
                                     
                                         <Run
-                                            Text="{Binding Caption}" />
+                                            Text="{Binding CaptionPreview}" />
                                     
                                     </Hyperlink>
                                 </TextBlock>
@@ -220,6 +227,7 @@
 
                             <Border
                                 DataContext="{Binding Stat4}"
+                                ToolTip="{Binding Caption}"
                                 Style="{StaticResource StatFourthVerticalBorderStyle}"
                                 dh:DragDrop.IsDragTarget="True"                                
                                 dh:DragDrop.DragDropCommand="{Binding DataContext.AddToolCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=2}}"
@@ -235,7 +243,7 @@
                                         Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}, Mode=OneWay}">
                                     
                                         <Run
-                                            Text="{Binding Caption}" />
+                                            Text="{Binding CaptionPreview}" />
                                     
                                     </Hyperlink>
                                 </TextBlock>

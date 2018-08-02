@@ -115,6 +115,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Image {0} has bad format.
+        /// </summary>
+        internal static string Error_HudStore_Upload_BadImageFormat {
+            get {
+                return ResourceManager.GetString("Error_HudStore_Upload_BadImageFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General failure.
+        /// </summary>
+        internal static string Error_HudStore_Upload_GeneralFailure {
+            get {
+                return ResourceManager.GetString("Error_HudStore_Upload_GeneralFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DB Warning.
         /// </summary>
         internal static string Error_PG_MigrationWarning {

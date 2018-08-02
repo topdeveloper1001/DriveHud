@@ -24,7 +24,7 @@ param
 
     [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
     
-    [string] $Version = '1.4.5',
+    [string] $Version = '1.5.0',
 
     [string] $VersionIncludeFilter = '**',
 

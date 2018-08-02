@@ -1,16 +1,25 @@
-﻿using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PopupContainerBaseNotificationViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Common.Infrastructure.Base;
 using Prism.Interactivity.InteractionRequest;
+using Prism.Mvvm;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.PopupContainers
 {
-    public class PopupContainerBaseNotificationViewModel : BaseViewModel, IInteractionRequestAware
+    public class PopupContainerBaseNotificationViewModel : BindableBase, IInteractionRequestAware
     {
         public PopupContainerBaseNotificationViewModel()
         {
@@ -20,50 +29,73 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         #region Properties
 
-        private bool _isDisplayH1Text;
+        private bool isDisplayH1Text;
+
         public bool IsDisplayH1Text
         {
-            get { return _isDisplayH1Text; }
-            set { SetProperty(ref _isDisplayH1Text, value); }
+            get
+            {
+                return isDisplayH1Text;
+            }
+            set
+            {
+                SetProperty(ref isDisplayH1Text, value);
+            }
         }
 
-        private string _title;
+        private string title;
+
         public string Title
         {
-            get { return _title; }
+            get
+            {
+                return title;
+            }
             set
             {
-                SetProperty(ref _title, value);
+                SetProperty(ref title, value);
             }
         }
 
-        private string _content;
+        private string content;
+
         public string Content
         {
-            get { return _content; }
+            get
+            {
+                return content;
+            }
             set
             {
-                SetProperty(ref _content, value);
+                SetProperty(ref content, value);
             }
         }
 
-        private string _confirmButtonCaption;
+        private string confirmButtonCaption;
+
         public string ConfirmButtonCaption
         {
-            get { return _confirmButtonCaption; }
+            get
+            {
+                return confirmButtonCaption;
+            }
             set
             {
-                SetProperty(ref _confirmButtonCaption, value);
+                SetProperty(ref confirmButtonCaption, value);
             }
         }
 
-        private string _cancelButtonCaption;
+        private string cancelButtonCaption;
+
         public string CancelButtonCaption
         {
-            get { return _cancelButtonCaption; }
+            get
+            {
+                return cancelButtonCaption;
+            }
             set
             {
-                SetProperty(ref _cancelButtonCaption, value);
+                SetProperty(ref cancelButtonCaption, value);
             }
         }
 
@@ -72,17 +104,18 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         #region ICommand
 
         public ICommand ConfirmCommand { get; set; }
+
         public ICommand CancelCommand { get; set; }
 
         private void DoConfirm(object obj)
         {
-            _notification.Confirmed = true;
+            notification.Confirmed = true;
             FinishInteraction.Invoke();
         }
 
         private void DoCancel(object obj)
         {
-            _notification.Confirmed = false;
+            notification.Confirmed = false;
             FinishInteraction.Invoke();
         }
 
@@ -92,26 +125,27 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         public Action FinishInteraction { get; set; }
 
-        private PopupBaseNotification _notification;
+        private PopupBaseNotification notification;
+
         public INotification Notification
         {
             get
             {
-                return _notification;
+                return notification;
             }
 
             set
             {
-                _notification = value as PopupBaseNotification;
-                if(_notification != null)
-                {
-                  //  Title = _notification.Title;
-                    Content = _notification.Content.ToString();
-                    ConfirmButtonCaption = _notification.ConfirmButtonCaption;
-                    CancelButtonCaption = _notification.CancelButtonCaption;
-                    IsDisplayH1Text = _notification.IsDisplayH1Text;
+                notification = value as PopupBaseNotification;
 
-                    _notification.Confirmed = false;
+                if (notification != null)
+                {
+                    Content = notification.Content.ToString();
+                    ConfirmButtonCaption = notification.ConfirmButtonCaption;
+                    CancelButtonCaption = notification.CancelButtonCaption;
+                    IsDisplayH1Text = notification.IsDisplayH1Text;
+
+                    notification.Confirmed = false;
                 }
             }
         }

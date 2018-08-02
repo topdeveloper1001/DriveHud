@@ -25,7 +25,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
             InitializeModelAsync(() =>
             {
-                Model.Load();
+                Model.Load(null);
             });
         }         
 

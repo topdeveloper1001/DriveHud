@@ -178,6 +178,12 @@ namespace Model
             return Path.Combine(GetAppStoreDataFolder(), data);
         }
 
+        public static string GetAppStoreLocalRakebackRepo()
+        {
+            var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreLocalRakebackRepo);
+            return Path.Combine(GetAppStoreDataFolder(), data);
+        }
+
         public static string GetAppStoreLocalTempProductRepo()
         {
             var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreLocalTempProductRepo);
@@ -187,6 +193,12 @@ namespace Model
         public static string GetAppStoreLocalTempTrainingProductRepo()
         {
             var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreLocalTempTrainingProductRepo);
+            return Path.Combine(GetAppStoreDataFolder(), data);
+        }
+
+        public static string GetAppStoreLocalTempRakebackRepo()
+        {
+            var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreLocalTempRakebackRepo);
             return Path.Combine(GetAppStoreDataFolder(), data);
         }
 
@@ -202,6 +214,12 @@ namespace Model
             return data;
         }
 
+        public static string GetAppStoreRemoteRakebackRepo()
+        {
+            var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreRemoteRakebackRepo);
+            return data;
+        }
+
         public static string GetAppStoreRemoteProductHash()
         {
             var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreRemoteProductHash);
@@ -212,7 +230,13 @@ namespace Model
         {
             var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreRemoteTrainingProductHash);
             return data;
-        }     
+        }
+
+        public static string GetAppStoreRemoteRakebackHash()
+        {
+            var data = CommonResourceManager.Instance.GetResourceString(ResourceStrings.AppStoreRemoteRakebackHash);
+            return data;
+        }
 
         #endregion
     }

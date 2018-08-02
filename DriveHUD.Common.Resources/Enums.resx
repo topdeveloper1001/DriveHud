@@ -1049,4 +1049,37 @@
   <data name="Enum_MadeHandType_StraightDraw" xml:space="preserve">
     <value>Straight draw</value>
   </data>
+  <data name="Enum_HudUploadToStoreBusyStatus_Loading" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="Enum_HudUploadToStoreBusyStatus_Submitting" xml:space="preserve">
+    <value>Submitting</value>
+  </data>
+  <data name="Enum_HudStoreFilter_Commercial" xml:space="preserve">
+    <value>Commercial Pro HUDs</value>
+  </data>
+  <data name="Enum_HudStoreFilter_Free" xml:space="preserve">
+    <value>Free HUDs</value>
+  </data>
+  <data name="Enum_HudStoreSorting_HoldemOnly" xml:space="preserve">
+    <value>Holdem Only HUDs</value>
+  </data>
+  <data name="Enum_HudStoreSorting_MostPopular" xml:space="preserve">
+    <value>Most Popular</value>
+  </data>
+  <data name="Enum_HudStoreSorting_Newest" xml:space="preserve">
+    <value>Newest HUDs</value>
+  </data>
+  <data name="Enum_HudStoreSorting_OmahaOnly" xml:space="preserve">
+    <value>Omaha Only HUDs</value>
+  </data>
+  <data name="Enum_HudStoreSorting_TournamentOnly" xml:space="preserve">
+    <value>Tournament Only HUDs</value>
+  </data>
+  <data name="Enum_HudStoreFilter_All" xml:space="preserve">
+    <value>All HUDs</value>
+  </data>
+  <data name="Enum_HudStoreSorting_None" xml:space="preserve">
+    <value>All HUDs</value>
+  </data>
 </root>

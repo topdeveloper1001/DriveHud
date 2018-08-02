@@ -27,6 +27,12 @@ namespace DriveHUD.Application.ViewModels.Layouts
     public class HudLayoutInfoV2
     {
         /// <summary>
+        /// Gets or sets the id of the layout
+        /// </summary>
+        [XmlAttribute]
+        public int LayoutId { get; set; }
+
+        /// <summary>
         /// Gets or sets the name of the layout
         /// </summary>
         [XmlAttribute]

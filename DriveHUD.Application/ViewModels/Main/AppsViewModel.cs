@@ -23,7 +23,7 @@ using System.Reactive.Linq;
 
 namespace DriveHUD.Application.ViewModels
 {
-    public class AppsViewModel : WindowViewModelBase, IMainTabViewModel
+    public class AppsViewModel : WpfViewModel<AppsViewModel>, IMainTabViewModel
     {
         public AppsViewModel()
         {
@@ -133,7 +133,7 @@ namespace DriveHUD.Application.ViewModels
         public ReactiveCommand PreviousPageCommand { get; private set; }
 
         public ReactiveCommand SearchCommand { get; private set; }
-        
+
         #endregion
 
         #region Infrastructure
@@ -225,6 +225,14 @@ namespace DriveHUD.Application.ViewModels
                     AppStoreViewModel = new AppsAppStoreViewModel();
                     break;
 
+                case AppStoreType.Huds:
+                    AppStoreViewModel = new HudStoreViewModel();
+                    break;
+
+                case AppStoreType.Rakeback:
+                    AppStoreViewModel = new RakebackAppStoreViewModel();
+                    break;
+
                 default:
                     AppStoreViewModel = new EmptyAppStoreViewModel();
                     break;
@@ -243,14 +251,15 @@ namespace DriveHUD.Application.ViewModels
 
         private void RefreshPages()
         {
-            var pagesCount = AppStoreViewModel.ProductsPerPage != 0 ? (int)Math.Ceiling((decimal)AppStoreViewModel.ItemsCount / AppStoreViewModel.ProductsPerPage) : 0;
+            var pagesCount = AppStoreViewModel.ProductsPerPage != 0 ? (int)Math.Ceiling((decimal)AppStoreViewModel.ItemsCount / AppStoreViewModel.ProductsPerPage) : 1;
+
+            if (pagesCount == 0)
+            {
+                pagesCount = 1;
+            }
 
             Pages.Clear();
-
-            if (pagesCount > 0)
-            {
-                Pages.AddRange(Enumerable.Range(1, pagesCount).Select(x => new AppStorePageViewModel(x)));
-            }
+            Pages.AddRange(Enumerable.Range(1, pagesCount).Select(x => new AppStorePageViewModel(x)));
 
             CurrentPage = Pages.FirstOrDefault();
         }

@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Log;
 using System;
 using System.IO;
 using System.Security.Cryptography;

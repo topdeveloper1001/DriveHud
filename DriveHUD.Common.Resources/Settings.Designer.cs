@@ -70,7 +70,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-32.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-38.
         /// </summary>
         internal static string Settings_AmericasCardroomHelpLink {
             get {
@@ -106,7 +106,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-26.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-32.
         /// </summary>
         internal static string Settings_BetOnlineHelpLink {
             get {
@@ -115,7 +115,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-30.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-36.
         /// </summary>
         internal static string Settings_BlackChipPokerHelpLink {
             get {
@@ -124,7 +124,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-27.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-33.
         /// </summary>
         internal static string Settings_BodogHelpLink {
             get {
@@ -187,7 +187,25 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-24.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-29.
+        /// </summary>
+        internal static string Settings_HorizonHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_HorizonHelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://www.acepokerdrills.com/hud-store.
+        /// </summary>
+        internal static string Settings_HudStoreService {
+            get {
+                return ResourceManager.GetString("Settings_HudStoreService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-28.
         /// </summary>
         internal static string Settings_IPokerHelpLink {
             get {
@@ -259,7 +277,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-23.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-27.
         /// </summary>
         internal static string Settings_PartyPokerHelpLink {
             get {
@@ -268,7 +286,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-31.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-37.
         /// </summary>
         internal static string Settings_Poker888HelpLink {
             get {
@@ -277,7 +295,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-25.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-31.
         /// </summary>
         internal static string Settings_PokerStarsHelpLink {
             get {
@@ -484,7 +502,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-29.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-35.
         /// </summary>
         internal static string Settings_SportsBettingHelpLink {
             get {
@@ -529,7 +547,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-28.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-34.
         /// </summary>
         internal static string Settings_TigerGamingHelpLink {
             get {
@@ -556,7 +574,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-32.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-38.
         /// </summary>
         internal static string Settings_TruePokerHelpLink {
             get {
@@ -592,7 +610,16 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-32.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-30.
+        /// </summary>
+        internal static string Settings_WinamaxHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_WinamaxHelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-38.
         /// </summary>
         internal static string Settings_WinningPokerNetworkHelpLink {
             get {
@@ -601,7 +628,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-32.
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-38.
         /// </summary>
         internal static string Settings_YaPokerHelpLink {
             get {
