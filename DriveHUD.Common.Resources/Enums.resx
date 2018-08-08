@@ -947,7 +947,7 @@
   <data name="Enum_EnumReports_Position" xml:space="preserve">
     <value>Position</value>
   </data>
-  <data name="Enum_EnumReports_Sessions" xml:space="preserve">
+  <data name="Enum_EnumReports_Session" xml:space="preserve">
     <value>Sessions</value>
   </data>
   <data name="Enum_EnumReports_ShowdownHands" xml:space="preserve">

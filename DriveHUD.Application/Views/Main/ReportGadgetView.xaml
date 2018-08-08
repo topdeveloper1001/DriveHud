@@ -1677,7 +1677,7 @@
                         Visibility="{Binding IsShowCashData, Converter={dh:BoolToVisibilityConverter}}" />
                     <RadioButton
                         Style="{StaticResource ReportRadioButton}"
-                        Content="{ResX Key=Enum_EnumReports_Sessions}"
+                        Content="{ResX Key=Enum_EnumReports_Session}"
                         Width="150"
                         Height="51"
                         IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Session}}"

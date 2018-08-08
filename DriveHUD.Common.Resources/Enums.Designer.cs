@@ -423,9 +423,9 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sessions.
         /// </summary>
-        internal static string Enum_EnumReports_Sessions {
+        internal static string Enum_EnumReports_Session {
             get {
-                return ResourceManager.GetString("Enum_EnumReports_Sessions", resourceCulture);
+                return ResourceManager.GetString("Enum_EnumReports_Session", resourceCulture);
             }
         }
         
