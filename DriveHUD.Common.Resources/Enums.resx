@@ -929,7 +929,7 @@
   <data name="Enum_Stat_BB100" xml:space="preserve">
     <value>bb/100</value>
   </data>
-  <data name="Enum_EnumReports_Holecards" xml:space="preserve">
+  <data name="Enum_EnumReports_HoleCards" xml:space="preserve">
     <value>Hole Cards</value>
   </data>
   <data name="Enum_EnumReports_OpponentAnalysis" xml:space="preserve">
@@ -953,7 +953,7 @@
   <data name="Enum_EnumReports_ShowdownHands" xml:space="preserve">
     <value>Showdown Hands</value>
   </data>
-  <data name="Enum_EnumReports_Stakes" xml:space="preserve">
+  <data name="Enum_EnumReports_Stake" xml:space="preserve">
     <value>Stakes</value>
   </data>
   <data name="Enum_EnumReports_Time" xml:space="preserve">
