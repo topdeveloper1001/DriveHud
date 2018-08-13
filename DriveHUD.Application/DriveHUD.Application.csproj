@@ -491,6 +491,7 @@
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Graphs\BarSeriesChartBehavior.cs" />
+    <Compile Include="ViewModels\Graphs\BaseGraphViewModel.cs" />
     <Compile Include="ViewModels\Graphs\CashGraphPopupRequestInfo.cs" />
     <Compile Include="ViewModels\Graphs\CashGraphPopupViewModelInfo.cs" />
     <Compile Include="ViewModels\Graphs\CashGraphSettings.cs" />
@@ -514,6 +515,7 @@
     <Compile Include="ViewModels\Graphs\SeriesProviders\WinningByMonthSeriesProvider.cs" />
     <Compile Include="ViewModels\Graphs\SeriesProviders\WinningByYearSeriesProvider.cs" />
     <Compile Include="ViewModels\Graphs\SerieType.cs" />
+    <Compile Include="ViewModels\Graphs\TournamentGraphViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\IHudToolBar.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBumperStickersViewModel.cs" />

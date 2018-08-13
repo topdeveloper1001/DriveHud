@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ChartSeries.cs" company="Ace Poker Solutions">
+// <copyright file="TournamentChartSeries.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
+using Model.Data;
 using Model.Enums;
 using ReactiveUI;
 using System;
@@ -18,44 +18,26 @@ using System;
 namespace DriveHUD.ViewModels
 {
     [Serializable]
-    public class ChartSeries : BaseChartSeries
+    public class TournamentChartSeries : BaseChartSeries
     {
-        #region Properties
+        private ChartTournamentSeriesType seriesType;
 
-        private ChartCashSeriesWinningType chartCashSeriesWinningType;
-
-        public ChartCashSeriesWinningType ChartCashSeriesWinningType
+        public ChartTournamentSeriesType SeriesType
         {
             get
             {
-                return chartCashSeriesWinningType;
+                return seriesType;
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref chartCashSeriesWinningType, value);
+                this.RaiseAndSetIfChanged(ref seriesType, value);
             }
         }
 
-        private ChartCashSeriesValueType chartCashSeriesValueType;
-
-        public ChartCashSeriesValueType ChartCashSeriesValueType
-        {
-            get
-            {
-                return chartCashSeriesValueType;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref chartCashSeriesValueType, value);
-            }
-        }
-
-        public Action<ChartSeriesItem, ChartSeriesItem, Playerstatistic, int> UpdateChartSeriesItem
+        public Action<ChartSeriesItem, ChartSeriesItem, TournamentReportRecord> UpdateChartSeriesItem
         {
             get;
             set;
         }
-
-        #endregion
     }
 }

@@ -10,18 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
 using Model.Data;
-using System;
 using System.Collections.Generic;
 
 namespace Model.ChartData
 {
-    public interface ICashChartData
-    {
-        IEnumerable<Tuple<DateTime, decimal, decimal>> Create(IList<Playerstatistic> statistics);
-    }
-
     public interface ITournamentChartData
     {
         IEnumerable<TournamentReportRecord> Create();

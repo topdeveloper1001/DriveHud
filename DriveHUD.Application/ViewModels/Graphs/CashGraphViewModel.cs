@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.ViewModels;
 using Model.ChartData;
@@ -22,7 +21,7 @@ using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Graphs
 {
-    public class CashGraphViewModel : BaseViewModel, IBaseGraphViewModel
+    public class CashGraphViewModel : BaseGraphViewModel<ChartSeries>
     {
         private readonly CashGraphSettings settings;
 
@@ -30,24 +29,9 @@ namespace DriveHUD.Application.ViewModels.Graphs
         {
         }
 
-        public CashGraphViewModel(IEnumerable<ChartSeries> chartSeries, CashGraphSettings cashGraphSettings)
+        public CashGraphViewModel(IEnumerable<ChartSeries> chartSeries, CashGraphSettings cashGraphSettings) : base(chartSeries)
         {
-            chartCollection = new ObservableCollection<ChartSeries>(chartSeries);
             settings = cashGraphSettings;
-        }
-
-        private ObservableCollection<ChartSeries> chartCollection;
-
-        public ObservableCollection<ChartSeries> ChartCollection
-        {
-            get
-            {
-                return chartCollection;
-            }
-            set
-            {
-                SetProperty(ref chartCollection, value);
-            }
         }
 
         public ChartDisplayRange ChartDisplayRange
@@ -156,7 +140,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
             }
         }
 
-        public void Update()
+        public override void Update()
         {
             var chartItemDataBuilder = CreateCharItemDataBuilder(ChartDisplayRange);
 
@@ -186,7 +170,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
 
                 previousGroupKey = currentGroupKey;
 
-                foreach (var chartSerie in chartCollection)
+                foreach (var chartSerie in ChartCollection)
                 {
                     ChartSeriesItem previousChartSeriesItem = null;
                     ChartSeriesItem chartSeriesItem = null;
@@ -221,7 +205,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 HandsCount = itemsCounter;
             }
 
-            App.Current.Dispatcher.Invoke(() => chartCollection.ForEach(x => x.ItemsCollection.Clear()));
+            App.Current.Dispatcher.Invoke(() => ChartCollection.ForEach(x => x.ItemsCollection.Clear()));
 
             if (chartSeriesItems.Count > 0)
             {

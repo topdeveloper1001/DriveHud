@@ -10,7 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.ViewModels;
 using Model.Enums;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -31,6 +33,21 @@ namespace DriveHUD.Application.Controls
         }
 
         #region Dependency properties
+
+        public static readonly DependencyProperty ItemsSourceProperty = DependencyProperty.Register("ItemsSource", typeof(ObservableCollection<TournamentChartSeries>),
+            typeof(ChartGadget), new PropertyMetadata(null, OnItemsSourceChanged));
+
+        public ObservableCollection<TournamentChartSeries> ItemsSource
+        {
+            get
+            {
+                return (ObservableCollection<TournamentChartSeries>)GetValue(ItemsSourceProperty);
+            }
+            set
+            {
+                SetValue(ItemsSourceProperty, value);
+            }
+        }
 
         public static readonly DependencyProperty HeaderStartColorProperty = DependencyProperty.Register(
             "HeaderStartColor", typeof(Color), typeof(ChartGadget), new PropertyMetadata(default(Color)));
@@ -69,7 +86,8 @@ namespace DriveHUD.Application.Controls
         }
 
         public static readonly DependencyProperty SelectedRangeProperty =
-            DependencyProperty.Register("SelectedRange", typeof(ChartDisplayRange), typeof(ChartGadget), new PropertyMetadata(ChartDisplayRange.Year, OnSelectedRangeChanged));
+            DependencyProperty.Register("SelectedRange", typeof(ChartDisplayRange), typeof(ChartGadget),
+                new FrameworkPropertyMetadata(ChartDisplayRange.None, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnSelectedRangeChanged));
 
         public ChartDisplayRange SelectedRange
         {
@@ -109,6 +127,10 @@ namespace DriveHUD.Application.Controls
                     chartGadget.AxisDateTime.LabelFormat = dayFormatString;
                     break;
             }
+        }
+
+        private static void OnItemsSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
         }
     }
 }

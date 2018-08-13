@@ -10,12 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.Graphs;
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
-using Model.ChartData;
-using Model.Data;
 using Model.Enums;
 using Model.Events;
 using Model.Filters;
@@ -26,7 +25,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
@@ -137,31 +135,6 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        public ChartSeries ChartSeriesSelectedItem
-        {
-            get
-            {
-                return chartSeriesSelectedItem;
-            }
-            set
-            {
-                SetProperty(ref chartSeriesSelectedItem, value);
-            }
-        }
-
-        public ChartDisplayRange ChartSeriesDisplayRange
-        {
-            get
-            {
-                return chartSeriesDisplayRange;
-            }
-            set
-            {
-                SetProperty(ref chartSeriesDisplayRange, value);
-                SetSerieDataAsync(ChartSeriesCollection, ChartSeriesDisplayRange);
-            }
-        }
-
         public Bracelet GoldenBracelet
         {
             get
@@ -246,17 +219,17 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private bool isBusy;
+        private GraphViewModel tournamentGraphViewModel;
 
-        public bool IsBusy
+        public GraphViewModel TournamentGraphViewModel
         {
             get
             {
-                return isBusy;
+                return tournamentGraphViewModel;
             }
-            private set
+            set
             {
-                SetProperty(ref isBusy, value);
+                SetProperty(ref tournamentGraphViewModel, value);
             }
         }
 
@@ -295,7 +268,7 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            SetSerieDataAsync(ChartSeriesCollection, ChartSeriesDisplayRange);
+            TournamentGraphViewModel?.Update();
 
             var playerTournaments = StorageModel.PlayerSelectedItem != null ?
                 ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(StorageModel.PlayerSelectedItem.PlayerIds) :
@@ -343,56 +316,8 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeChartSeries()
         {
-            var blueResource = ChartSerieResourceHelper.GetSeriesBluePalette();
-            var yellowResource = ChartSerieResourceHelper.GetSeriesYellowPalette();
-            var orangeResource = ChartSerieResourceHelper.GetSerieOrangePalette();
-            var greenResource = ChartSerieResourceHelper.GetSerieGreenPalette();
-
-            ObservableCollection<ChartSeries> chartSeriesCollection = new ObservableCollection<ChartSeries>();
-
-            ChartSeries series0 = new ChartSeries()
-            {
-                IsVisible = true,
-                Caption = "ITM%",
-                FunctionName = EnumTelerikRadChartFunctionType.ITM,
-                Type = EnumTelerikRadChartSeriesType.Area,
-                ColorsPalette = blueResource
-            };
-
-            ChartSeries series1 = new ChartSeries()
-            {
-                IsVisible = true,
-                Caption = "ROI%",
-                FunctionName = EnumTelerikRadChartFunctionType.ROI,
-                Type = EnumTelerikRadChartSeriesType.Area,
-                ColorsPalette = yellowResource
-            };
-
-            ChartSeries series2 = new ChartSeries()
-            {
-                IsVisible = true,
-                Caption = "$",
-                FunctionName = EnumTelerikRadChartFunctionType.MoneyWon,
-                Type = EnumTelerikRadChartSeriesType.Area,
-                ColorsPalette = greenResource,
-            };
-
-            ChartSeries series3 = new ChartSeries()
-            {
-                IsVisible = true,
-                Caption = "Luck",
-                FunctionName = EnumTelerikRadChartFunctionType.Luck,
-                Type = EnumTelerikRadChartSeriesType.Area,
-                ColorsPalette = orangeResource
-            };
-
-            ChartSeriesCollection = new ObservableCollection<ChartSeries>
-            {
-                series0,
-                series1,
-                series2,
-                series3
-            };
+            var tournamentChartSeries = ChartSeriesProvider.CreateTournamentChartSeries();
+            TournamentGraphViewModel = new GraphViewModel(new TournamentGraphViewModel(tournamentChartSeries));          
         }
 
         private void SetBraceletData(Bracelet bracelet, IEnumerable<Tournaments> playerTournaments)
@@ -409,116 +334,6 @@ namespace DriveHUD.Application.ViewModels
                     AmountString = String.Format("{0} {1:0.##}", limit.GetCurrencySymbol(), item.Winningsincents / 100m)
                 });
             }
-        }
-
-        private void SetSerieDataAsync(IEnumerable<ChartSeries> chartCollection, ChartDisplayRange displayRange)
-        {
-            if (IsBusy)
-            {
-                return;
-            }
-
-            IsBusy = true;
-
-            Task.Run(() =>
-            {
-                try
-                {
-                    SetSerieData(chartCollection, displayRange);
-                }
-                finally
-                {
-                    IsBusy = false;
-                }
-            });
-        }
-
-        private void SetSerieData(IEnumerable<ChartSeries> chartCollection, ChartDisplayRange displayRange)
-        {
-            var groupedStats = GetGroupedStats(displayRange);
-
-            foreach (var serie in chartCollection)
-            {
-                List<ChartSeriesItem> itemsList = new List<ChartSeriesItem>();
-
-                foreach (var stat in groupedStats)
-                {
-                    switch (serie.FunctionName)
-                    {
-                        case EnumTelerikRadChartFunctionType.ITM:
-
-                            itemsList.Add(new ChartSeriesItem()
-                            {
-                                Date = stat.Started,
-                                Value = stat.ITM,
-                                Format = "{0:0.##}%",
-                                PointColor = serie.ColorsPalette.PointColor,
-                                TrackBallColor = serie.ColorsPalette.TrackBallColor,
-                                TooltipColor = serie.ColorsPalette.TooltipColor,
-                                TooltipForegroundColor = serie.ColorsPalette.TooltipForeground
-                            });
-                            break;
-                        case EnumTelerikRadChartFunctionType.ROI:
-                            itemsList.Add(new ChartSeriesItem()
-                            {
-                                Date = stat.Started,
-                                Value = stat.ROI,
-                                Format = "{0:0.##}%",
-                                PointColor = serie.ColorsPalette.PointColor,
-                                TrackBallColor = serie.ColorsPalette.TrackBallColor,
-                                TooltipColor = serie.ColorsPalette.TooltipColor,
-                                TooltipForegroundColor = serie.ColorsPalette.TooltipForeground
-                            });
-                            break;
-                        case EnumTelerikRadChartFunctionType.MoneyWon:
-                            itemsList.Add(new ChartSeriesItem()
-                            {
-                                Date = stat.Started,
-                                Value = stat.NetWon,
-                                Format = "{0:0.##}$",
-                                PointColor = serie.ColorsPalette.PointColor,
-                                TrackBallColor = serie.ColorsPalette.TrackBallColor,
-                                TooltipColor = serie.ColorsPalette.TooltipColor,
-                                TooltipForegroundColor = serie.ColorsPalette.TooltipForeground
-                            });
-                            break;
-                        case EnumTelerikRadChartFunctionType.Luck:
-                            itemsList.Add(new ChartSeriesItem()
-                            {
-                                Date = stat.Started,
-                                Value = 0,
-                                Format = "{0:0.##}%",
-                                PointColor = serie.ColorsPalette.PointColor,
-                                TrackBallColor = serie.ColorsPalette.TrackBallColor,
-                                TooltipColor = serie.ColorsPalette.TooltipColor,
-                                TooltipForegroundColor = serie.ColorsPalette.TooltipForeground
-                            });
-                            break;
-                    }
-                }
-
-                serie.ItemsCollection = new ObservableCollection<ChartSeriesItem>(itemsList.OrderBy(x => x.Date));
-            }
-        }
-
-        private IEnumerable<TournamentReportRecord> GetGroupedStats(ChartDisplayRange range)
-        {
-            List<TournamentReportRecord> indicators = null;
-
-            switch (range)
-            {
-                case ChartDisplayRange.Year:
-                    indicators = new List<TournamentReportRecord>(new YearTournamentChartData().Create());
-                    break;
-                case ChartDisplayRange.Month:
-                    indicators = new List<TournamentReportRecord>(new MonthTournamentChartData().Create());
-                    break;
-                case ChartDisplayRange.Week:
-                    indicators = new List<TournamentReportRecord>(new WeekTournamentChartData().Create());
-                    break;
-            }
-
-            return indicators;
         }
 
         #region ICommand Implementation
