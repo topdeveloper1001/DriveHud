@@ -17,6 +17,7 @@ using DriveHUD.Entities;
 using Model.Settings;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
@@ -39,6 +40,7 @@ namespace Model.Site
         private const string iniSaveMyTournSummariesPath = "SaveMyTournSummariesPath";
         private const string settingsFileName = "user.ini";
         private const string correctLanguageSetting = "0";
+        private const string psClientLaunchFile = "PokerStars.exe";
 
         public PokerStarsConfiguration()
         {
@@ -169,6 +171,8 @@ namespace Model.Site
             {
                 return null;
             }
+
+            LogPSVersion();
 
             var configurationDirectories = GetConfigurationDirectories();
 
@@ -317,6 +321,63 @@ namespace Model.Site
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Add information about PS version to the log file
+        /// </summary>
+        private void LogPSVersion()
+        {
+            try
+            {
+                var programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+                var programFilesX64 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+
+                foreach (var possibleFolder in PossibleFolders)
+                {
+                    var launchFile = Path.Combine(programFilesX86, possibleFolder, psClientLaunchFile);
+
+                    if (!TryLogPSLaunchFileVersion(launchFile))
+                    {
+                        launchFile = Path.Combine(programFilesX64, possibleFolder, psClientLaunchFile);
+                        TryLogPSLaunchFileVersion(launchFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not log version of PS launch file", ex);
+            }
+        }
+
+        private bool TryLogPSLaunchFileVersion(string launchFile)
+        {
+            if (!File.Exists(launchFile))
+            {
+                return false;
+            }
+
+            try
+            {
+                var fvi = FileVersionInfo.GetVersionInfo(launchFile);
+
+                if (!Version.TryParse(fvi.FileVersion, out Version fv) && fvi.FileMajorPart != 0)
+                {
+                    fv = new Version(fvi.FileMajorPart, fvi.FileMinorPart, fvi.FileBuildPart, fvi.FilePrivatePart);
+                }
+
+                if (fv != null)
+                {
+                    LogProvider.Log.Info($"PS client v.{fv} found at {launchFile}");
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, $"Could not log version of PS launch file: {launchFile}", ex);
+                return false;
+            }
+
+            return true;
         }
     }
 }
