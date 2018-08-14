@@ -33,6 +33,7 @@ namespace Model.Site
         private const string ProfileHandHistoryId = "3";
         private const string ProfileSaveHandHistoryId = "1";
         private const string CorrectSaveHandHistoryTag = "1";
+        private const string HandHistoryFolder = "HandHistory";
 
         public AmericasCardroomConfiguration()
         {
@@ -129,6 +130,11 @@ namespace Model.Site
 
             var path = GetInstalledPath(RegistryDisplayName);
 
+            if (!Directory.Exists(path))
+            {
+                return handHistoryFolders.ToArray();
+            }
+
             var profilesDirectoryPath = Path.Combine(path, ProfilesFolder);
 
             try
@@ -137,6 +143,8 @@ namespace Model.Site
 
                 if (!profilesDirectory.Exists)
                 {
+                    // no profiles are created, so add this folder by default
+                    handHistoryFolders.Add(profilesDirectoryPath);
                     return handHistoryFolders.ToArray();
                 }
 
@@ -150,11 +158,21 @@ namespace Model.Site
                         {
                             handHistoryFolders.Add(xmlValues[ProfileHandHistoryId]);
                         }
+                        else
+                        {
+                            var handHistoryFolder = Path.Combine(settingsFile.Directory.FullName, HandHistoryFolder);
+                            handHistoryFolders.Add(handHistoryFolder);
+                        }
                     }
                     catch (Exception ex)
                     {
                         LogProvider.Log.Error(this, $"Error occurred during reading {settingsFile.FullName}", ex);
                     }
+                }
+
+                if (handHistoryFolders.Count == 0)
+                {
+                    handHistoryFolders.Add(profilesDirectoryPath);
                 }
             }
             catch (Exception e)
