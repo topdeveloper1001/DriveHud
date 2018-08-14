@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ChartGadget.xaml.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="TournamentChart.xaml.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -20,14 +20,14 @@ using System.Windows.Media;
 namespace DriveHUD.Application.Controls
 {
     /// <summary>
-    /// Interaction logic for ChartGadget.xaml
+    /// Interaction logic for TournamentChart.xaml
     /// </summary>
-    public partial class ChartGadget : UserControl
+    public partial class TournamentChart : UserControl
     {
         private static readonly string monthFormatString = "MMM";
         private static readonly string dayFormatString = "MMM dd";
 
-        public ChartGadget()
+        public TournamentChart()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace DriveHUD.Application.Controls
         #region Dependency properties
 
         public static readonly DependencyProperty ItemsSourceProperty = DependencyProperty.Register("ItemsSource", typeof(ObservableCollection<TournamentChartSeries>),
-            typeof(ChartGadget), new PropertyMetadata(null, OnItemsSourceChanged));
+            typeof(TournamentChart), new PropertyMetadata(null, OnItemsSourceChanged));
 
         public ObservableCollection<TournamentChartSeries> ItemsSource
         {
@@ -50,7 +50,7 @@ namespace DriveHUD.Application.Controls
         }
 
         public static readonly DependencyProperty HeaderStartColorProperty = DependencyProperty.Register(
-            "HeaderStartColor", typeof(Color), typeof(ChartGadget), new PropertyMetadata(default(Color)));
+            "HeaderStartColor", typeof(Color), typeof(TournamentChart), new PropertyMetadata(default(Color)));
 
         public Color HeaderStartColor
         {
@@ -59,7 +59,7 @@ namespace DriveHUD.Application.Controls
         }
 
         public static readonly DependencyProperty HeaderStopColorProperty = DependencyProperty.Register(
-            "HeaderStopColor", typeof(Color), typeof(ChartGadget), new PropertyMetadata(default(Color)));
+            "HeaderStopColor", typeof(Color), typeof(TournamentChart), new PropertyMetadata(default(Color)));
 
         public Color HeaderStopColor
         {
@@ -68,7 +68,7 @@ namespace DriveHUD.Application.Controls
         }
 
         public static readonly DependencyProperty CaptionColorProperty = DependencyProperty.Register(
-            "CaptionColor", typeof(Color), typeof(ChartGadget), new PropertyMetadata(default(Color)));
+            "CaptionColor", typeof(Color), typeof(TournamentChart), new PropertyMetadata(default(Color)));
 
         public Color CaptionColor
         {
@@ -77,7 +77,7 @@ namespace DriveHUD.Application.Controls
         }
 
         public static readonly DependencyProperty CaptionProperty = DependencyProperty.Register(
-            "Caption", typeof(string), typeof(ChartGadget), new PropertyMetadata(default(string)));
+            "Caption", typeof(string), typeof(TournamentChart), new PropertyMetadata(default(string)));
 
         public string Caption
         {
@@ -86,7 +86,7 @@ namespace DriveHUD.Application.Controls
         }
 
         public static readonly DependencyProperty SelectedRangeProperty =
-            DependencyProperty.Register("SelectedRange", typeof(ChartDisplayRange), typeof(ChartGadget),
+            DependencyProperty.Register("SelectedRange", typeof(ChartDisplayRange), typeof(TournamentChart),
                 new FrameworkPropertyMetadata(ChartDisplayRange.None, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnSelectedRangeChanged));
 
         public ChartDisplayRange SelectedRange
@@ -106,7 +106,7 @@ namespace DriveHUD.Application.Controls
 
         private static void OnSelectedRangeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var chartGadget = d as ChartGadget;
+            var chartGadget = d as TournamentChart;
 
             if (chartGadget == null)
             {

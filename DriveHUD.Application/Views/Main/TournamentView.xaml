@@ -248,7 +248,7 @@
                         <telerik:RadBusyIndicator
                             IsBusy="{Binding TournamentGraphViewModel.OperationInfo.IsBusy, FallbackValue=True}"
                             Style="{DynamicResource AppStoreRadBusyIndicatorStyle}">
-                            <ctl:ChartGadget
+                            <ctl:TournamentChart
                                 ItemsSource="{Binding TournamentGraphViewModel.ViewModel.ChartCollection}"
                                 Margin="0 10 0 0"
                                 HeaderStartColor="#fd3e0e"

@@ -282,8 +282,8 @@
     <Compile Include="Controls\CashChart.xaml.cs">
       <DependentUpon>CashChart.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ChartGadget.xaml.cs">
-      <DependentUpon>ChartGadget.xaml</DependentUpon>
+    <Compile Include="Controls\TournamentChart.xaml.cs">
+      <DependentUpon>TournamentChart.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\DropDownMenu.xaml.cs">
       <DependentUpon>DropDownMenu.xaml</DependentUpon>
@@ -949,7 +949,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\ChartGadget.xaml">
+    <Page Include="Controls\TournamentChart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
