@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPopupWindowViewModel.cs" company="Ace Poker Solutions">
+// <copyright file="ILightWindowViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -14,7 +14,7 @@ using System;
 
 namespace DriveHUD.Common.Wpf.Mvvm
 {
-    public interface IPopupWindowViewModel : IInitializedViewModel, ICloseableViewModel, IConfigurableViewModel, IDisposable
+    public interface IWindowViewModelBase : IInitializedViewModel, ICloseableViewModel, IConfigurableViewModel, IDisposable
     {
     }
 }

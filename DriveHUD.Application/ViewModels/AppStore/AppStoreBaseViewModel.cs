@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Common.Wpf.Events;
 using DriveHUD.Common.Wpf.Mvvm;
 using Microsoft.Practices.ServiceLocation;
@@ -20,7 +21,7 @@ using System;
 
 namespace DriveHUD.Application.ViewModels.AppStore
 {
-    public abstract class AppStoreBaseViewModel<TModel> : WindowViewModelBase, IAppStoreViewModel
+    public abstract class AppStoreBaseViewModel<TModel> : WpfViewModel<AppStoreBaseViewModel<TModel>>, IAppStoreViewModel
         where TModel : IAppStoreModel
     {
         public event EventHandler Updated;
@@ -28,6 +29,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
         public AppStoreBaseViewModel()
         {
             Model = ServiceLocator.Current.GetInstance<TModel>();
+            NotificationRequest = new InteractionRequest<PopupBaseNotification>();
         }
 
         #region Properties
@@ -104,6 +106,20 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
         }
 
+        private InteractionRequest<PopupBaseNotification> notificationRequest;
+
+        public InteractionRequest<PopupBaseNotification> NotificationRequest
+        {
+            get
+            {
+                return notificationRequest;
+            }
+            protected set
+            {
+                this.RaiseAndSetIfChanged(ref notificationRequest, value);
+            }
+        }
+
         private string viewName;
 
         public string ViewName
@@ -132,6 +148,34 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
         }
 
+        private double viewWidth;
+
+        public double ViewWidth
+        {
+            get
+            {
+                return viewWidth;
+            }
+            protected set
+            {
+                this.RaiseAndSetIfChanged(ref viewWidth, value);
+            }
+        }
+
+        private double viewHeight;
+
+        public double ViewHeight
+        {
+            get
+            {
+                return viewHeight;
+            }
+            protected set
+            {
+                this.RaiseAndSetIfChanged(ref viewHeight, value);
+            }
+        }
+
         #endregion
 
         #region IAppStoreViewModel implementation
@@ -155,7 +199,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
         #endregion
 
-        protected virtual void ModelInitialized()
+        protected virtual void ModelInitialized(Exception ex)
         {
             OnUpdated();
         }

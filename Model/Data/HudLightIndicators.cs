@@ -1147,7 +1147,7 @@ namespace Model.Data
                 {
                     Value = FoldToThreeBetIP,
                     Occurred = Source.FoldToThreeBetIP,
-                    CouldOccurred = Source.FoldToThreeBetIP
+                    CouldOccurred = Source.FacedThreeBetIP
                 };
             }
         }
@@ -1160,7 +1160,7 @@ namespace Model.Data
                 {
                     Value = FoldToThreeBetOOP,
                     Occurred = Source.FoldToThreeBetOOP,
-                    CouldOccurred = Source.FoldToThreeBetOOP
+                    CouldOccurred = Source.FacedThreeBetOOP
                 };
             }
         }

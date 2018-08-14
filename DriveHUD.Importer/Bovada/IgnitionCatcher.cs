@@ -10,11 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
-using System.Linq;
+using Prism.Events;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
 
 namespace DriveHUD.Importers.Bovada
 {
@@ -23,6 +30,8 @@ namespace DriveHUD.Importers.Bovada
     /// </summary>
     internal class IgnitionCatcher : PokerCatcher, IIgnitionCatcher
     {
+        protected IEventAggregator eventAggregator;
+
         /// <summary>
         /// Dll to be injected
         /// </summary>
@@ -52,6 +61,11 @@ namespace DriveHUD.Importers.Bovada
             "- Lobby de Poker",
             "- Lobby do Poker"
         };
+
+        public IgnitionCatcher()
+        {
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+        }
 
         #region PokerCatcher members
 
@@ -113,6 +127,67 @@ namespace DriveHUD.Importers.Bovada
             }
 
             return true;
+        }
+
+        protected override void InjectDll()
+        {
+            NotifyNotDetectableWindows();
+            base.InjectDll();
+        }
+
+        protected void NotifyNotDetectableWindows()
+        {
+            try
+            {
+                var windowsToNotify = new List<IntPtr>();
+
+                foreach (ProcessThread thread in pokerClientProcess.Threads)
+                {
+                    WinApi.EnumThreadWindows(thread.Id, (hWnd, lParam) =>
+                    {
+                        var sb = new StringBuilder(256);
+
+                        if (hWnd != IntPtr.Zero && WinApi.GetClassName(hWnd, sb, sb.Capacity) != 0 &&
+                            sb.ToString().Contains(WindowClassName))
+                        {
+                            var windowTitle = WinApi.GetWindowText(hWnd);
+
+                            var titleInfo = new IgnitionTableTitle(windowTitle);
+
+                            if (titleInfo.IsValid && !titleInfo.IsZone)
+                            {
+                                windowsToNotify.Add(hWnd);
+                            }
+                        }
+
+                        return true;
+                    }, IntPtr.Zero);
+                }
+
+                NotifyNotDetectableWindows(windowsToNotify);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not notify not detectable windows. [{Identifier}]", e);
+            }
+        }
+
+        private void NotifyNotDetectableWindows(IEnumerable<IntPtr> windowsToNotify)
+        {
+            var warningText = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_PreLoadingText_IgnitionNotDetectable");
+
+            foreach (var window in windowsToNotify)
+            {
+                var gameInfo = new GameInfo
+                {
+                    PokerSite = EnumPokerSites.Ignition,
+                    TableType = EnumTableType.Nine,
+                    WindowHandle = window.ToInt32()
+                };
+
+                var eventArgs = new PreImportedDataEventArgs(gameInfo, warningText);
+                eventAggregator.GetEvent<PreImportedDataEvent>().Publish(eventArgs);
+            }
         }
 
         #endregion

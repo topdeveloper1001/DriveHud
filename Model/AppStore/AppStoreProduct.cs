@@ -31,13 +31,7 @@ namespace Model.AppStore
             }
             set
             {
-                if (productName == value)
-                {
-                    return;
-                }
-
-                productName = value;
-                RaisePropertyChanged();
+                SetProperty(ref productName, value);
             }
         }
 
@@ -51,13 +45,7 @@ namespace Model.AppStore
             }
             set
             {
-                if (productDescription == value)
-                {
-                    return;
-                }
-
-                productDescription = value;
-                RaisePropertyChanged();
+                SetProperty(ref productDescription, value);
             }
         }
 
@@ -71,13 +59,7 @@ namespace Model.AppStore
             }
             set
             {
-                if (price == value)
-                {
-                    return;
-                }
-
-                price = value;
-                RaisePropertyChanged();
+                SetProperty(ref price, value);
             }
         }
 
@@ -91,13 +73,7 @@ namespace Model.AppStore
             }
             set
             {
-                if (cartLink == value)
-                {
-                    return;
-                }
-
-                cartLink = value;
-                RaisePropertyChanged();
+                SetProperty(ref cartLink, value);
             }
         }
 
@@ -111,13 +87,7 @@ namespace Model.AppStore
             }
             set
             {
-                if (learnMoreLink == value)
-                {
-                    return;
-                }
-
-                learnMoreLink = value;
-                RaisePropertyChanged();
+                SetProperty(ref learnMoreLink, value);
             }
         }
 
@@ -131,13 +101,7 @@ namespace Model.AppStore
             }
             set
             {
-                if (imageLink == value)
-                {
-                    return;
-                }
-
-                imageLink = value;
-                RaisePropertyChanged();
+                SetProperty(ref imageLink, value);
             }
         }
 
@@ -151,13 +115,7 @@ namespace Model.AppStore
             }
             set
             {
-                if (isAnimatedGif == value)
-                {
-                    return;
-                }
-
-                isAnimatedGif = value;
-                RaisePropertyChanged();
+                SetProperty(ref isAnimatedGif, value);
             }
         }
     }

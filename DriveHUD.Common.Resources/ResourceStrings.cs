@@ -27,12 +27,16 @@ namespace DriveHUD.Common.Resources
         public static string AppStoreDataFolder = "SystemSettings_AppStoreDataFolder";
         public static string AppStoreLocalProductRepo = "SystemSettings_AppStoreLocalProductRepo";
         public static string AppStoreLocalTrainingRepo = "SystemSettings_AppStoreLocalTrainingProductRepo";
+        public static string AppStoreLocalRakebackRepo = "SystemSettings_AppStoreLocalRakebackRepo";
         public static string AppStoreLocalTempProductRepo = "SystemSettings_AppStoreLocalTempProductRepo";
         public static string AppStoreLocalTempTrainingProductRepo = "SystemSettings_AppStoreLocalTempTrainingProductRepo";
+        public static string AppStoreLocalTempRakebackRepo = "SystemSettings_AppStoreLocalTempRakebackRepo";
         public static string AppStoreRemoteProductRepo = "SystemSettings_AppStoreRemoteProductRepo";
         public static string AppStoreRemoteTrainingProductRepo = "SystemSettings_AppStoreRemoteTrainingProductRepo";
+        public static string AppStoreRemoteRakebackRepo = "SystemSettings_AppStoreRemoteRakebackRepo";
         public static string AppStoreRemoteProductHash = "SystemSettings_AppStoreRemoteProductHash";
         public static string AppStoreRemoteTrainingProductHash = "SystemSettings_AppStoreRemoteTrainingProductHash";
+        public static string AppStoreRemoteRakebackHash = "SystemSettings_AppStoreRemoteRakebackHash";
         public static string DefaultPlayersFolderName = "SystemSettings_DefaultPlayersFolderName";
         public static string DefaultPlayerStatisticFolderName = "SystemSettings_DefaultPlayerStatisticFolderName";
         public static string DefaultPlayerStatisticExtension = "SystemSettings_DefaultPlayerStatisticExtension";
@@ -101,7 +105,9 @@ namespace DriveHUD.Common.Resources
             [EnumPokerSites.TruePoker] = "Settings_TruePokerHelpLink",
             [EnumPokerSites.WinningPokerNetwork] = "Settings_WinningPokerNetworkHelpLink",
             [EnumPokerSites.YaPoker] = "Settings_YaPokerHelpLink",
-            [EnumPokerSites.IPoker] = "Settings_IPokerHelpLink"
+            [EnumPokerSites.IPoker] = "Settings_IPokerHelpLink",
+            [EnumPokerSites.Horizon] = "Settings_HorizonHelpLink",
+            [EnumPokerSites.Winamax] = "Settings_WinamaxHelpLink",
         };
 
         #endregion

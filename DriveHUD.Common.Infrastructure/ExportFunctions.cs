@@ -68,18 +68,18 @@ namespace DriveHUD.Common.Ifrastructure
             {
                 [EnumPosition.UTG] = "UTG",
                 [EnumPosition.UTG_1] = "EP",
-                [EnumPosition.UTG_2] = "MP",
-                [EnumPosition.MP1] = "MP",
+                [EnumPosition.UTG_2] = "MP1",
+                [EnumPosition.MP1] = "MP2",
                 [EnumPosition.MP2] = "HJ"
             },
             // 10-handed table
             [10] = new Dictionary<EnumPosition, string>
             {
                 [EnumPosition.UTG] = "UTG",
-                [EnumPosition.UTG_1] = "EP",
-                [EnumPosition.UTG_2] = "EP",
-                [EnumPosition.MP1] = "MP",
-                [EnumPosition.MP2] = "MP",
+                [EnumPosition.UTG_1] = "EP1",
+                [EnumPosition.UTG_2] = "EP2",
+                [EnumPosition.MP1] = "MP1",
+                [EnumPosition.MP2] = "MP2",
                 [EnumPosition.MP3] = "HJ"
             }
         };

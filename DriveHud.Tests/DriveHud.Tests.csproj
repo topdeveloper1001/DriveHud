@@ -650,6 +650,9 @@
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-CashWithPost.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Many-MP.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\ExportTest-Forum-Result-Omaha.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -699,6 +702,9 @@
     </Content>
     <Content Include="UnitTests\TestData\HandHistoryCloneSample.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Many-MP.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\Ignition\ign-cash-2017-11-22.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -198,8 +198,8 @@
                     <TextBox
                         Grid.Row="3"
                         Grid.Column="1"
-                        Style="{StaticResource TextBoxStyle}"
-                        MaxLength="26"
+                        Style="{StaticResource TextBoxStyle}"                        
+                        MaxLength="28"
                         Visibility="{Binding IsSerialVisible, Converter={dh:BoolToVisibilityConverter} }"
                         Text="{Binding Serial}" />
 

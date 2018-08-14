@@ -9,9 +9,7 @@
     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     mc:Ignorable="d"
     Style="{DynamicResource BaseFontStyle}"
-    x:Name="MainView"
-    MinWidth="550"
-    MinHeight="390">
+    x:Name="MainView">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

@@ -1,0 +1,68 @@
+<session sessioncode="2700019111">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.5/$1</gametype>
+		<tablename>BAD BEAT JACKPOT $0.50/$1 - 6 Seater</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2018-07-04 08:25:12</startdate>
+		<currency>USD</currency>
+		<nickname>ChiTownMCA</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>0</buyin>
+		<totalbuyin>0</totalbuyin>
+		<win>0</win>		
+		<maxplayers>6</maxplayers>		
+		<pokersite>BetOnline</pokersite>
+	</general>
+	<game gamecode="316578404">
+		<general>
+			<startdate>2018-07-04 08:25:12</startdate>
+			<players>
+				<player seat="2" name="Hero" chips="145.87" dealer="1" win="244.48" bet="123.74" rebuy="0" addon="0" />
+				<player seat="3" name="talrush" chips="118.93" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
+				<player seat="4" name="ChiTownMCA" chips="123.74" dealer="0" win="0" bet="123.74" rebuy="0" addon="0" />
+				<player seat="5" name="groggy" chips="76.82" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="6" name="ginac808" chips="100" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="1" name="Fleayam" chips="64.27" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="talrush" type="1" sum="0.5" cards="" />
+			<action no="2" player="ChiTownMCA" type="2" sum="1" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Hero">DK DQ</cards>
+			<cards type="Pocket" player="talrush">X X</cards>
+			<cards type="Pocket" player="ChiTownMCA">C7 S7</cards>
+			<cards type="Pocket" player="groggy">X X</cards>
+			<cards type="Pocket" player="ginac808">X X</cards>
+			<action no="3" player="groggy" type="0" sum="0" cards="" />
+			<action no="4" player="ginac808" type="0" sum="0" cards="" />
+			<action no="5" player="Hero" type="23" sum="3.5" cards="" />
+			<action no="6" player="talrush" type="0" sum="0" cards="" />
+			<action no="7" player="ChiTownMCA" type="23" sum="13" cards="" />
+			<action no="8" player="Hero" type="3" sum="9.5" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SQ SK DA</cards>
+			<action no="9" player="ChiTownMCA" type="5" sum="15" cards="" />
+			<action no="10" player="Hero" type="3" sum="15" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H4</cards>
+			<action no="11" player="ChiTownMCA" type="5" sum="95.74" cards="" />
+			<action no="12" player="Hero" type="3" sum="95.74" cards="" />
+		</round>
+		<round no="4">
+			<cards type="River" player="">HJ</cards>
+		</round>
+	</game>
+</session>

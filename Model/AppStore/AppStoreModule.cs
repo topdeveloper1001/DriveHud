@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="AppStoreModule.cs" company="Ace Poker Solutions">
-// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -24,13 +24,7 @@ namespace Model.AppStore
             }
             set
             {
-                if (moduleName == value)
-                {
-                    return;
-                }
-
-                moduleName = value;
-                RaisePropertyChanged();
+                SetProperty(ref moduleName, value);
             }
         }
 
@@ -44,13 +38,35 @@ namespace Model.AppStore
             }
             set
             {
-                if (windowIconSource == value)
-                {
-                    return;
-                }
+                SetProperty(ref windowIconSource, value);
+            }
+        }
 
-                windowIconSource = value;
-                RaisePropertyChanged();
+        private double windowWidth;
+
+        public double WindowWidth
+        {
+            get
+            {
+                return windowWidth;
+            }
+            set
+            {
+                SetProperty(ref windowWidth, value);
+            }
+        }
+
+        private double windowHeight;
+
+        public double WindowHeight
+        {
+            get
+            {
+                return windowHeight;
+            }
+            set
+            {
+                SetProperty(ref windowHeight, value);
             }
         }
     }

@@ -1,0 +1,666 @@
+﻿<UserControl
+    x:Class="DriveHUD.Application.Views.Hud.HudUploadToStoreView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:ctl="clr-namespace:DriveHUD.Application.Controls"
+    xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Hud"
+    mc:Ignorable="d"
+    Background="{StaticResource MainBackround}"
+    d:DesignHeight="600"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="/DriveHUD.Application;Component/ControlStyles/AppStoreResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <SolidColorBrush
+                x:Key="ActiveTextForeground"
+                Color="#ffffff" />
+
+            <SolidColorBrush
+                x:Key="InputBackground"
+                Color="#50565f" />
+
+            <SolidColorBrush
+                x:Key="CheckboxBulletColor"
+                Color="#5f8bea" />
+
+            <Color
+                x:Key="ShadowBorderColor">#000000</Color>
+
+            <SolidColorBrush
+                x:Key="ShadowBorderBrush"
+                Color="{StaticResource ShadowBorderColor}" />
+
+            <SolidColorBrush
+                x:Key="SelectionBlockBackground"
+                Color="#24292e" />
+
+            <Style
+                x:Key="TextBlockStyle"
+                TargetType="{x:Type TextBlock}">
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ActiveTextForeground}" />
+                <Setter
+                    Property="FontFamily"
+                    Value="/DriveHUD.Application;component/Fonts/#Open Sans" />
+                <Setter
+                    Property="FontSize"
+                    Value="12px" />
+                <Setter
+                    Property="VerticalAlignment"
+                    Value="Center" />
+            </Style>
+
+            <Style
+                x:Key="TextBoxStyle"
+                TargetType="{x:Type TextBox}"
+                BasedOn="{StaticResource {x:Type TextBox}}">
+                <Setter
+                    Property="BorderThickness"
+                    Value="0" />
+                <Setter
+                    Property="FontSize"
+                    Value="12px" />
+                <Setter
+                    Property="Height"
+                    Value="25" />
+                <Setter
+                    Property="Background"
+                    Value="{StaticResource BackgroundBrush3}" />
+                <Setter
+                    Property="HorizontalAlignment"
+                    Value="Left" />
+                <Setter
+                    Property="VerticalAlignment"
+                    Value="Center" />
+                <Setter
+                    Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+                            TargetType="{x:Type TextBox}">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="2"
+                                Padding="2,0,0,0"
+                                BorderBrush="{TemplateBinding BorderBrush}">
+                                <ScrollViewer
+                                    x:Name="PART_ContentHost"
+                                    VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
+                x:Key="ButtonStyle"
+                TargetType="{x:Type Button}"
+                BasedOn="{StaticResource {x:Type Button}}">
+                <Setter
+                    Property="Foreground"
+                    Value="{StaticResource ActiveTextForeground}" />
+                <Setter
+                    Property="Width"
+                    Value="100" />
+            </Style>
+
+            <ControlTemplate
+                x:Key="ValidationTemplate">
+                <DockPanel>
+                    <Image
+                        Margin="5,0,0,0"
+                        DockPanel.Dock="Right"
+                        VerticalAlignment="Center"
+                        Width="20"
+                        Height="17"
+                        Source="pack://application:,,,/DriveHUD.Common.Resources;component/images/validation_error.png">
+                        <Image.ToolTip>
+                            <ItemsControl
+                                ItemsSource="{Binding}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock
+                                            Text="{Binding ErrorContent}" />
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Image.ToolTip>
+                    </Image>
+                    <AdornedElementPlaceholder
+                        DockPanel.Dock="Left" />
+                </DockPanel>
+            </ControlTemplate>
+
+            <ControlTemplate
+                x:Key="InternalValidationTemplate">
+                <Grid>
+                    <AdornedElementPlaceholder />
+                    <Image
+                        Margin="0,4,5,0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Width="20"
+                        Height="17"
+                        Source="pack://application:,,,/DriveHUD.Common.Resources;component/images/validation_error.png">
+                        <Image.ToolTip>
+                            <ItemsControl
+                                ItemsSource="{Binding}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock
+                                            Text="{Binding ErrorContent}" />
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Image.ToolTip>
+                    </Image>
+                </Grid>
+            </ControlTemplate>
+
+            <ControlTemplate
+                x:Key="ValidationLoadingIcon">
+                <DockPanel>
+                    <Border
+                        BorderThickness="0"
+                        Background="Transparent"
+                        Margin="5,0,0,0"
+                        DockPanel.Dock="Right"
+                        VerticalAlignment="Center"
+                        ToolTip="Validating...">
+                        <ctl:LoadingAnimation />
+                    </Border>
+                    <dh:ValidationAdornedElementPlaceholder
+                        DockPanel.Dock="Left" />
+                </DockPanel>
+            </ControlTemplate>
+
+            <Style
+                x:Key="ItemsControlStyle"
+                TargetType="{x:Type ItemsControl}">
+                <Setter
+                    Property="Margin"
+                    Value="0,0,30,0" />
+                <Setter
+                    Property="VerticalAlignment"
+                    Value="Center" />
+                <Setter
+                    Property="HorizontalAlignment"
+                    Value="Left" />
+                <Setter
+                    Property="ItemsPanel">
+                    <Setter.Value>
+                        <ItemsPanelTemplate>
+                            <WrapPanel
+                                Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <DataTemplate
+                x:Key="ItemsControlCheckboxTemplate">
+
+                <CheckBox
+                    Margin="0,2,15,2"
+                    BorderBrush="{StaticResource CheckboxBulletColor}"
+                    Background="{StaticResource BackgroundBrush3}"
+                    Content="{Binding Item.Name}"
+                    VerticalAlignment="Center"
+                    IsChecked="{Binding IsSelected}" />
+
+            </DataTemplate>
+
+            <DataTemplate
+                x:Key="HudImageTemplate">
+
+                <Grid
+                    Margin="0,5,10,10">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="30" />
+                        <RowDefinition
+                            Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        HorizontalAlignment="Stretch"
+                        Validation.ErrorTemplate="{StaticResource InternalValidationTemplate}"
+                        Style="{StaticResource TextBoxStyle}"
+                        Text="{Binding Caption, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <Grid
+                        Grid.Row="1"
+                        Margin="0,5,0,0"
+                        HorizontalAlignment="Left">
+
+                        <Image
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Height="150"
+                            Validation.ErrorTemplate="{StaticResource InternalValidationTemplate}"
+                            Source="{Binding Path}" />
+
+                        <CheckBox
+                            Margin="3,3,0,0"
+                            BorderBrush="{StaticResource CheckboxBulletColor}"
+                            Background="{StaticResource InputBackground}"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            IsChecked="{Binding IsSelected}" />
+
+                    </Grid>
+
+                </Grid>
+
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <telerik:RadBusyIndicator
+        IsBusy="{Binding OperationInfo.IsBusy, FallbackValue=True}"
+        BusyContent="{Binding BusyStatus, Converter={dh:EnumToLocalizedStringConverter}, FallbackValue={x:Static vm:HudUploadToStoreBusyStatus.Loading}}"
+        Style="{DynamicResource AppStoreRadBusyIndicatorStyle}">
+        <Grid
+            Margin="10,10,0,10">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="40" />
+            </Grid.RowDefinitions>
+
+            <!-- Message -->
+            <TextBlock
+                Style="{StaticResource TextBlockStyle}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                TextWrapping="Wrap"
+                Margin="10"
+                Visibility="{Binding Message, Converter={dh:NullOrEmptyToVisibilityConverter}}"
+                Text="{Binding Message}" />
+
+            <!-- Layout selection -->
+            <Grid
+                Margin="10"
+                Width="465"
+                Visibility="{Binding IsLayoutSelectionVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+                <Border
+                    BorderThickness="1"
+                    BorderBrush="{StaticResource ShadowBorderBrush}"
+                    Margin="7">
+
+                    <Border.Effect>
+                        <DropShadowEffect
+                            BlurRadius="15"
+                            ShadowDepth="7"
+                            Color="{DynamicResource ShadowBorderColor}" />
+                    </Border.Effect>
+
+                </Border>
+
+                <Border
+                    Width="455"
+                    Height="130"
+                    Background="{StaticResource SelectionBlockBackground}">
+                    <Grid
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+                                Height="Auto" />
+                            <RowDefinition
+                                Height="10" />
+                            <RowDefinition
+                                Height="Auto" />
+                            <RowDefinition
+                                Height="10" />
+                            <RowDefinition
+                                Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="15" />
+                            <ColumnDefinition
+                                Width="Auto" />
+                            <ColumnDefinition
+                                Width="15" />
+                            <ColumnDefinition
+                                Width="Auto" />
+                            <ColumnDefinition
+                                Width="15" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock
+                            Grid.Column="1"
+                            Grid.ColumnSpan="3"
+                            Text="{ResX Key=Common_HudUploadToStoreView_SelectHudToUpload}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="13" />
+
+                        <TextBlock
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Text="{ResX Key=Common_Hud_TableLayout}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="13" />
+
+                        <dh:ComboBoxEx
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Height="35"
+                            PopupMaxWidth="255"
+                            Width="125"
+                            HorizontalAlignment="Center"
+                            ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                            ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
+                            ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
+                            ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
+                            ItemsSource="{Binding LayoutTableTypes}"
+                            SelectedValue="{Binding Path=CurrentLayoutTableType}">
+                            <dh:ComboBoxEx.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock
+                                        Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}" />
+                                </DataTemplate>
+                            </dh:ComboBoxEx.ItemTemplate>
+                        </dh:ComboBoxEx>
+
+                        <TextBlock
+                            Grid.Row="2"
+                            Grid.Column="3"
+                            HorizontalAlignment="Center"
+                            Text="{ResX Key=Common_Hud_HudName}"
+                            VerticalAlignment="Center"
+                            FontSize="13" />
+
+                        <dh:ComboBoxEx
+                            Grid.Column="3"
+                            Grid.Row="4"
+                            Height="35"
+                            PopupMaxWidth="255"
+                            Width="285"
+                            HorizontalAlignment="Center"
+                            ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                            ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
+                            ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
+                            ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
+                            ItemsSource="{Binding Layouts}"
+                            DisplayMemberPath="Name"
+                            SelectedValue="{Binding Path=CurrentLayout}">
+                        </dh:ComboBoxEx>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <!-- Upload form -->
+            <ScrollViewer
+                Visibility="{Binding IsUploadFormVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                HorizontalScrollBarVisibility="Disabled"
+                VerticalScrollBarVisibility="Auto">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="100" />
+                        <ColumnDefinition
+                            Width="15" />
+                        <ColumnDefinition
+                            Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="35" />
+                        <RowDefinition
+                            Height="125" />
+                        <RowDefinition
+                            Height="Auto"
+                            MinHeight="35" />
+                        <RowDefinition
+                            Height="Auto"
+                            MinHeight="35" />
+                        <RowDefinition
+                            Height="Auto"
+                            MinHeight="35" />
+                        <RowDefinition
+                            Height="35" />
+                        <RowDefinition
+                            Height="Auto"
+                            MinHeight="35" />
+                        <RowDefinition
+                            Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!-- Name -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="{ResX Key=Common_HudUploadToStoreView_Name}" />
+
+                    <TextBox
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        Width="400"
+                        dh:Validation.AsyncValidation="True"
+                        dh:Validation.ValidationTemplate="{StaticResource ValidationLoadingIcon}"
+                        Style="{StaticResource TextBoxStyle}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        MaxLength="50"
+                        Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <!-- Description -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="{ResX Key=Common_HudUploadToStoreView_Description}" />
+
+                    <TextBox
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Width="400"
+                        Height="120"
+                        dh:Validation.AsyncValidation="True"
+                        dh:Validation.ValidationTemplate="{StaticResource ValidationLoadingIcon}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        Style="{StaticResource TextBoxStyle}"
+                        VerticalScrollBarVisibility="Auto"
+                        HorizontalScrollBarVisibility="Disabled"
+                        AcceptsReturn="True"
+                        AcceptsTab="True"
+                        TextWrapping="Wrap"
+                        SpellCheck.IsEnabled="True"
+                        Padding="2"
+                        VerticalContentAlignment="Bottom"
+                        Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <!-- Game Variants -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="{ResX Key=Common_HudUploadToStoreView_GameVariants}" />
+
+                    <ItemsControl
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        Style="{StaticResource ItemsControlStyle}"
+                        ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        ItemsSource="{Binding GameVariants}" />
+
+                    <!-- Game Types -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="{ResX Key=Common_HudUploadToStoreView_GameTypes}" />
+
+                    <ItemsControl
+                        Grid.Column="2"
+                        Grid.Row="3"
+                        Style="{StaticResource ItemsControlStyle}"
+                        ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        ItemsSource="{Binding GameTypes}" />
+
+                    <!-- Table types -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="{ResX Key=Common_HudUploadToStoreView_TableTypes}" />
+
+                    <ItemsControl
+                        Grid.Column="2"
+                        Grid.Row="4"
+                        Style="{StaticResource ItemsControlStyle}"
+                        ItemTemplate="{StaticResource ItemsControlCheckboxTemplate}"
+                        Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                        ItemsSource="{Binding TableTypes}" />
+
+                    <!-- Cost -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="{ResX Key=Common_HudUploadToStoreView_Cost}" />
+
+                    <StackPanel
+                        Grid.Column="2"
+                        Grid.Row="5"
+                        Orientation="Horizontal">
+                        <TextBox
+                            Width="50"
+                            IsEnabled="False"
+                            Style="{StaticResource TextBoxStyle}"
+                            Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                            Text="{Binding Cost}" />
+                        <TextBlock
+                            Margin="5,0,0,0"
+                            VerticalAlignment="Center"
+                            Style="{StaticResource TextBlockStyle}"
+                            Text="(enter 0 for free)" />
+                    </StackPanel>
+
+                    <!-- Images -->
+                    <TextBlock
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource TextBlockStyle}"
+                        Text="{ResX Key=Common_HudUploadToStoreView_Images}" />
+
+                    <StackPanel
+                        Grid.Column="2"
+                        Grid.Row="6"
+                        Orientation="Horizontal">
+                        <Button
+                            Content="{ResX Key=Common_HudUploadToStoreView_Add}"
+                            Width="40"
+                            Height="25"
+                            Style="{StaticResource ButtonStyle}"
+                            Command="{Binding AddImageCommand, ValidatesOnNotifyDataErrors=False}" />
+                        <Button
+                            Content="{ResX Key=Common_HudUploadToStoreView_Remove}"
+                            Width="60"
+                            Height="25"
+                            Margin="5,0,0,0"
+                            Style="{StaticResource ButtonStyle}"
+                            Command="{Binding RemoveImageCommand, ValidatesOnNotifyDataErrors=False}" />
+                        <Label
+                            Tag="{Binding Images}"
+                            Visibility="Visible"
+                            Validation.ErrorTemplate="{StaticResource ValidationTemplate}" />
+
+                    </StackPanel>
+
+                    <ItemsControl
+                        Grid.Column="2"
+                        Grid.Row="7"
+                        Margin="0,0,35,0"
+                        HorizontalAlignment="Left"
+                        ItemTemplate="{StaticResource HudImageTemplate}"
+                        ItemsSource="{Binding Images, ValidatesOnNotifyDataErrors=False}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel
+                                    HorizontalAlignment="Left" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </Grid>
+
+            </ScrollViewer>
+
+            <!-- Buttons -->
+            <StackPanel
+                Grid.Row="1"
+                Margin="0,10,10,0"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right">
+                <Button
+                    Content="{ResX Key=Common_HudUploadToStoreView_Select}"
+                    Visibility="{Binding IsSelectLayoutButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding SelectLayoutCommand, ValidatesOnNotifyDataErrors=False}" />
+                <Button
+                    Content="{ResX Key=Common_HudUploadToStoreView_Submit}"
+                    Visibility="{Binding IsSubmitButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding SubmitCommand, ValidatesOnNotifyDataErrors=False}" />
+                <Button
+                    Content="{ResX Key=Common_HudUploadToStoreView_Reset}"
+                    Margin="5,0,0,0"
+                    Visibility="{Binding IsResetButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding ResetCommand, ValidatesOnNotifyDataErrors=False}" />
+                <Button
+                    Content="{ResX Key=Common_HudUploadToStoreView_Retry}"
+                    Margin="5,0,0,0"
+                    Visibility="{Binding IsRetryButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding SubmitCommand, ValidatesOnNotifyDataErrors=False}" />
+                <Button
+                    Content="{ResX Key=Common_HudUploadToStoreView_Back}"
+                    Margin="5,0,0,0"
+                    Visibility="{Binding IsBackButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding BackCommand, ValidatesOnNotifyDataErrors=False}" />
+                <Button
+                    Content="{ResX Key=Common_HudUploadToStoreView_Cancel}"
+                    Margin="5,0,0,0"
+                    Visibility="{Binding IsCancelButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding CancelCommand, ValidatesOnNotifyDataErrors=False}" />
+                <Button
+                    Content="{ResX Key=Common_HudUploadToStoreView_Close}"
+                    Margin="5,0,0,0"
+                    Visibility="{Binding IsCloseButtonVisible, Converter={dh:BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding CancelCommand, ValidatesOnNotifyDataErrors=False}" />
+            </StackPanel>
+
+        </Grid>
+    </telerik:RadBusyIndicator>
+</UserControl>

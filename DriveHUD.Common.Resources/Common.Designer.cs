@@ -1223,6 +1223,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Upload to store.
+        /// </summary>
+        internal static string Common_Hud_UploadToStore {
+            get {
+                return ResourceManager.GetString("Common_Hud_UploadToStore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string Common_HudLayout_Cancel {
@@ -1764,6 +1773,142 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Buy.
+        /// </summary>
+        internal static string Common_HudStoreView_Buy {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_Buy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game types: {0}.
+        /// </summary>
+        internal static string Common_HudStoreView_GameTypes {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_GameTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game variants: {0}.
+        /// </summary>
+        internal static string Common_HudStoreView_GameVariants {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_GameVariants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Install.
+        /// </summary>
+        internal static string Common_HudStoreView_Install {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_Install", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installed.
+        /// </summary>
+        internal static string Common_HudStoreView_Installed {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_Installed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Popularity.
+        /// </summary>
+        internal static string Common_HudStoreView_Popularity {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_Popularity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price: ${0:F2}.
+        /// </summary>
+        internal static string Common_HudStoreView_Price {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price: FREE.
+        /// </summary>
+        internal static string Common_HudStoreView_PriceFree {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_PriceFree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table types: {0}.
+        /// </summary>
+        internal static string Common_HudStoreView_TableTypes {
+            get {
+                return ResourceManager.GetString("Common_HudStoreView_TableTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to install HUD. Please try again or contact support. 
+        ///{0}.
+        /// </summary>
+        internal static string Common_HudStoreViewModel_InstallingFailedContent {
+            get {
+                return ResourceManager.GetString("Common_HudStoreViewModel_InstallingFailedContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to install HUD. Internal error. Please try again or contact support..
+        /// </summary>
+        internal static string Common_HudStoreViewModel_InstallingFailedInternalErrorContent {
+            get {
+                return ResourceManager.GetString("Common_HudStoreViewModel_InstallingFailedInternalErrorContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to install HUD.
+        /// </summary>
+        internal static string Common_HudStoreViewModel_InstallingFailedTitle {
+            get {
+                return ResourceManager.GetString("Common_HudStoreViewModel_InstallingFailedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD has been successfully installed..
+        /// </summary>
+        internal static string Common_HudStoreViewModel_InstallingSucceededContent {
+            get {
+                return ResourceManager.GetString("Common_HudStoreViewModel_InstallingSucceededContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installing succeeded.
+        /// </summary>
+        internal static string Common_HudStoreViewModel_InstallingSucceededTitle {
+            get {
+                return ResourceManager.GetString("Common_HudStoreViewModel_InstallingSucceededTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string Common_HudStoreViewModel_OK {
+            get {
+                return ResourceManager.GetString("Common_HudStoreViewModel_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Avg.Pot Size.
         /// </summary>
         internal static string Common_HudTrackConditions_AveragePotSize {
@@ -1778,6 +1923,649 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudTrackConditions_TrackConditions {
             get {
                 return ResourceManager.GetString("Common_HudTrackConditions_TrackConditions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upload HUD to the store.
+        /// </summary>
+        internal static string Common_HudUploadToStorePopup_Title {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStorePopup_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Add {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_All {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At least one image must be specified.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_AtLeastOneImageMustBeSpecified {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_AtLeastOneImageMustBeSpecified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Back {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Cancel {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caption must be not empty.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_CaptionMustBeNotEmpty {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_CaptionMustBeNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Close {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cost of HUD.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Cost {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Cost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cost format is invalid.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_CostFormatIsInvalid {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_CostFormatIsInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cost be must be 0 for free HUD or positive number for commerical HUD.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_CostMustBeNotNegative {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_CostMustBeNotNegative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Description {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description must be not empty.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_DescriptionMustBeNotEmpty {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_DescriptionMustBeNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Length of description must be less than 1000.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_DescriptionMustBeNotLongerThan1000 {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_DescriptionMustBeNotLongerThan1000", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At least one game type must be selected.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_GameTypeMustBeSelected {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_GameTypeMustBeSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game Types.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_GameTypes {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_GameTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At least one game variant must be selected.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_GameVariantMustBeSelected {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_GameVariantMustBeSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game Variants.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_GameVariants {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_GameVariants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The height of the image must be between 100 and 4000.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_ImageHeightOutOfRange {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_ImageHeightOutOfRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Images.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Images {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Images", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The width of the image must be between 100 and 4000.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_ImageWidthOutOfRange {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_ImageWidthOutOfRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not get required data from web service. Please contact support or try later..
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_ModelNotLoaded {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_ModelNotLoaded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Name {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This name is already in use.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_NameIsAlreadyInUse {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_NameIsAlreadyInUse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Length of name must be greater than 10, but less than 50.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_NameMustBeLongerThan10 {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_NameMustBeLongerThan10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name must be not empty.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_NameMustBeNotEmpty {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_NameMustBeNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Remove {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Reset {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retry.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Retry {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Retry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Select {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select HUD to upload.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_SelectHudToUpload {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_SelectHudToUpload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select an image for your HUD.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_SelectImageDialogTitle {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_SelectImageDialogTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submit.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_Submit {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At least one table type must be selected.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_TableTypeMustBeSelected {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_TableTypeMustBeSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table Types.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_TableTypes {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_TableTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uploading failed. Please try again or contact support. 
+        ///{0}.
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_UploadingFailed {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_UploadingFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your HUD has been successfully uploaded. Once verification is done it will be available in HUD store..
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_UploadingSucceed {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_UploadingSucceed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bad request.
+        /// </summary>
+        internal static string Common_HudWebService_BadRequest {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_BadRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caption of images must be set.
+        /// </summary>
+        internal static string Common_HudWebService_CaptionMustBeSet {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_CaptionMustBeSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DB general failure.
+        /// </summary>
+        internal static string Common_HudWebService_DbGeneralFailure {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_DbGeneralFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service returned the following errors: 
+        ///{0}.
+        /// </summary>
+        internal static string Common_HudWebService_DownloadingFailed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_DownloadingFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to get hud name.
+        /// </summary>
+        internal static string Common_HudWebService_FailedToGetHudName {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_FailedToGetHudName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to get user.
+        /// </summary>
+        internal static string Common_HudWebService_FailedToGetUser {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_FailedToGetUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to insert user.
+        /// </summary>
+        internal static string Common_HudWebService_FailedToInsertUser {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_FailedToInsertUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game types could not be inserted.
+        /// </summary>
+        internal static string Common_HudWebService_GameTypesInsertFailed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_GameTypesInsertFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game variants could not be inserted.
+        /// </summary>
+        internal static string Common_HudWebService_GameVariantsInsertFailed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_GameVariantsInsertFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service returned the following errors: 
+        ///{0}.
+        /// </summary>
+        internal static string Common_HudWebService_GettingHudFailed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_GettingHudFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hud could not be inserted.
+        /// </summary>
+        internal static string Common_HudWebService_HudInsertFailed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_HudInsertFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The height of the image is out of range (50-600).
+        /// </summary>
+        internal static string Common_HudWebService_ImageFileHeightOutOfRange {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_ImageFileHeightOutOfRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One of image is too large.
+        /// </summary>
+        internal static string Common_HudWebService_ImageFileIsTooLarge {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_ImageFileIsTooLarge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image file could not be moved.
+        /// </summary>
+        internal static string Common_HudWebService_ImageFileMoveFailed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_ImageFileMoveFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unsupported image format.
+        /// </summary>
+        internal static string Common_HudWebService_ImageFileMustBeImage {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_ImageFileMustBeImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The width of the image is out of range (50-800).
+        /// </summary>
+        internal static string Common_HudWebService_ImageFileWidthOutOfRange {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_ImageFileWidthOutOfRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Images could not be inserted.
+        /// </summary>
+        internal static string Common_HudWebService_ImageInsertFailed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_ImageInsertFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image files must be set.
+        /// </summary>
+        internal static string Common_HudWebService_ImagesFilesMustBeSet {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_ImagesFilesMustBeSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Images must be set.
+        /// </summary>
+        internal static string Common_HudWebService_ImagesMustBeSet {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_ImagesMustBeSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mismatch in images data.
+        /// </summary>
+        internal static string Common_HudWebService_ImagesMustMatchImagesFiles {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_ImagesMustMatchImagesFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid data.
+        /// </summary>
+        internal static string Common_HudWebService_InvalidData {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_InvalidData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid game type.
+        /// </summary>
+        internal static string Common_HudWebService_InvalidGameType {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_InvalidGameType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid game variant.
+        /// </summary>
+        internal static string Common_HudWebService_InvalidGameVariant {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_InvalidGameVariant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid serial number.
+        /// </summary>
+        internal static string Common_HudWebService_InvalidSerial {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_InvalidSerial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid table type.
+        /// </summary>
+        internal static string Common_HudWebService_InvalidTableType {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_InvalidTableType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not create layout file.
+        /// </summary>
+        internal static string Common_HudWebService_LayoutFileCreationFailed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_LayoutFileCreationFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD file not found.
+        /// </summary>
+        internal static string Common_HudWebService_LayoutFileNotFound {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_LayoutFileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD data must be not empty.
+        /// </summary>
+        internal static string Common_HudWebService_LayoutMustBeNotEmpty {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_LayoutMustBeNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD not found.
+        /// </summary>
+        internal static string Common_HudWebService_LayoutNotFound {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_LayoutNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max uploads per day limit has been reached.
+        /// </summary>
+        internal static string Common_HudWebService_MaxUploadsPerDayExceed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_MaxUploadsPerDayExceed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table types could not be inserted.
+        /// </summary>
+        internal static string Common_HudWebService_TableTypesInsertFailed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_TableTypesInsertFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service returned the following errors: 
+        ///{0}.
+        /// </summary>
+        internal static string Common_HudWebService_UploadingFailed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_UploadingFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User has not been identified.
+        /// </summary>
+        internal static string Common_HudWebService_UserIsNotIdentified {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_UserIsNotIdentified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Validation failed.
+        /// </summary>
+        internal static string Common_HudWebService_ValidationFailed {
+            get {
+                return ResourceManager.GetString("Common_HudWebService_ValidationFailed", resourceCulture);
             }
         }
         
@@ -2030,6 +2818,60 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Rake {
             get {
                 return ResourceManager.GetString("Common_Rake", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instructions:.
+        /// </summary>
+        internal static string Common_RakebackAppStoreView_Instructions {
+            get {
+                return ResourceManager.GetString("Common_RakebackAppStoreView_Instructions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Network: {0}.
+        /// </summary>
+        internal static string Common_RakebackAppStoreView_Network {
+            get {
+                return ResourceManager.GetString("Common_RakebackAppStoreView_Network", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rakeback: {0}%.
+        /// </summary>
+        internal static string Common_RakebackAppStoreView_Rakeback {
+            get {
+                return ResourceManager.GetString("Common_RakebackAppStoreView_Rakeback", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SIGN-UP.
+        /// </summary>
+        internal static string Common_RakebackAppStoreView_SignUp {
+            get {
+                return ResourceManager.GetString("Common_RakebackAppStoreView_SignUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To signup for this rakeback deal, simply click on this link:.
+        /// </summary>
+        internal static string Common_RakebackAppStoreView_SignUpText1 {
+            get {
+                return ResourceManager.GetString("Common_RakebackAppStoreView_SignUpText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Then enter this code into the bonus code area during sign-up:.
+        /// </summary>
+        internal static string Common_RakebackAppStoreView_SignUpText2 {
+            get {
+                return ResourceManager.GetString("Common_RakebackAppStoreView_SignUpText2", resourceCulture);
             }
         }
         
@@ -2661,6 +3503,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Shop_LearnMore {
             get {
                 return ResourceManager.GetString("Common_Shop_LearnMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rakeback.
+        /// </summary>
+        internal static string Common_Shop_Rakeback {
+            get {
+                return ResourceManager.GetString("Common_Shop_Rakeback", resourceCulture);
             }
         }
         

@@ -14,6 +14,8 @@ namespace DriveHUD.Application.Views
 {
     internal static class RegionViewNames
     {
-        public const string CashGraphPopupView = "CashGraphPopupView";
+        public const string CashGraphPopupView = nameof(CashGraphPopupView);
+
+        public const string HudUploadToStoreView = nameof(HudUploadToStoreView);
     }
 }

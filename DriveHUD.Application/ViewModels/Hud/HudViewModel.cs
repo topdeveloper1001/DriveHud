@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.Licensing;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
@@ -24,9 +25,11 @@ using Microsoft.Practices.ServiceLocation;
 using Microsoft.Win32;
 using Model.Data;
 using Model.Enums;
+using Model.Events;
 using Model.Filters;
 using Model.Settings;
 using Model.Stats;
+using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
 using System;
@@ -57,12 +60,22 @@ namespace DriveHUD.Application.ViewModels
 
         private bool skipOnStatInfoObserveCollectionChanged = false;
 
+        private readonly ILicenseService licenseService;
+
+        private readonly IEventAggregator eventAggregator;
+
         /// <summary>
         /// Initializes a <see cref="HudViewModel"/> instance
         /// </summary>
         public HudViewModel()
         {
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            eventAggregator.GetEvent<LicenseUpdatedEvent>().Subscribe(x => this.RaisePropertyChanged(nameof(IsOpenHudUploadToStoreVisible)));
+
+            licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
+
             NotificationRequest = new InteractionRequest<PopupBaseNotification>();
+            OpenHudUploadToStoreRequest = new InteractionRequest<INotification>();
 
             InitializeStatInfoCollection();
             InitializeStatInfoCollectionObserved();
@@ -78,6 +91,8 @@ namespace DriveHUD.Application.ViewModels
         public EnumViewModelType ViewModelType => EnumViewModelType.HudViewModel;
 
         public InteractionRequest<PopupBaseNotification> NotificationRequest { get; private set; }
+
+        public InteractionRequest<INotification> OpenHudUploadToStoreRequest { get; private set; }
 
         private bool currentLayoutIsSwitching;
 
@@ -403,6 +418,15 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+
+        public bool IsOpenHudUploadToStoreVisible
+        {
+            get
+            {
+                return !licenseService.IsTrial;
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -438,6 +462,8 @@ namespace DriveHUD.Application.ViewModels
         public ReactiveCommand ToolClickCommand { get; private set; }
 
         public ReactiveCommand DuplicateCommand { get; private set; }
+
+        public ReactiveCommand OpenHudUploadToStoreCommand { get; private set; }
 
         #endregion
 
@@ -479,11 +505,12 @@ namespace DriveHUD.Application.ViewModels
                     {
                         x.InitializePositions();
 
-                        if (x is IHudStatsToolViewModel && x is IHudBaseStatToolViewModel)
+                        if (x is IHudStatsToolViewModel)
                         {
                             (x as IHudStatsToolViewModel).Stats.ForEach(s =>
                             {
                                 s.CurrentValue = random.Next(0, 100);
+                                s.CaptionPreview = string.Format(s.Format, s.CurrentValue);
 
                                 if (StatsProvider.StatsBases.ContainsKey(s.Stat) && StatsProvider.StatsBases[s.Stat].CreateStatDto != null)
                                 {
@@ -554,6 +581,18 @@ namespace DriveHUD.Application.ViewModels
             BumperStickersCommand = ReactiveCommand.Create<StatInfo>(x => OpenBumperStickers(x));
             DesignerToolCommand = ReactiveCommand.Create(() => InitializeDesigner());
             CancelDesignCommand = ReactiveCommand.Create(() => CloseDesigner());
+
+            OpenHudUploadToStoreCommand = ReactiveCommand.Create(() =>
+            {
+                var viewModelInfo = new HudUploadToStoreViewModelInfo
+                {
+                    Layout = CurrentLayout.Clone()
+                };
+
+                var requestInfo = new HudUploadToStoreRequestInfo(viewModelInfo);
+
+                OpenHudUploadToStoreRequest.Raise(requestInfo);
+            });
 
             AddToolCommand = new RelayCommand(x =>
             {
@@ -851,6 +890,14 @@ namespace DriveHUD.Application.ViewModels
             {
                 return;
             }
+
+            var random = new Random();
+
+            statsCollection.ForEach(s =>
+            {
+                s.CurrentValue = random.Next(0, 100);
+                s.CaptionPreview = string.Format(s.Format, s.CurrentValue);
+            });
 
             if (startingIndex > statTool.Stats.Count)
             {
@@ -1343,11 +1390,7 @@ namespace DriveHUD.Application.ViewModels
             foreach (var mergeItem in statInfoToMerge)
             {
                 mergeItem.OldItem.Merge(mergeItem.NewItem);
-
-                if (SelectedToolViewModel != null && SelectedToolViewModel is HudGaugeIndicatorViewModel)
-                {
-                    mergeItem.OldItem.UpdateColor();
-                }
+                mergeItem.OldItem.UpdateColor();
 
                 var previewStat = PreviewHudElementViewModel.ToolsStatInfoCollection.FirstOrDefault(x => x.Stat == mergeItem.NewItem.Stat);
                 previewStat?.Merge(mergeItem.NewItem);

@@ -16,7 +16,7 @@ using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Main
 {
-    public class ErrorViewModel : PopupWindowViewModel
+    public class ErrorViewModel : WindowViewModelBase<ErrorViewModel>
     {
         private ErrorViewModelInfo errorViewModelInfo;
 

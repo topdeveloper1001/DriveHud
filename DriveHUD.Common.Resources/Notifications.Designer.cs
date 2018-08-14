@@ -178,6 +178,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to HUD can&apos;t be loaded, because this table was opened before DriveHUD was launched. Please reopen table..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_IgnitionNotDetectable {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_IgnitionNotDetectable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to HUD can&apos;t be loaded. DH License doesn&apos;t support this table..
         /// </summary>
         internal static string Notifications_HudLayout_PreLoadingText_NoLicense {

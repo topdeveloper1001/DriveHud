@@ -430,44 +430,6 @@
             </Style>
 
             <Style
-                x:Key="SimpleImageButtonStyle"
-                TargetType="{x:Type Button}">
-                <Setter
-                    Property="Cursor"
-                    Value="Hand" />
-                <Setter
-                    Property="SnapsToDevicePixels"
-                    Value="true" />
-                <Setter
-                    Property="OverridesDefaultStyle"
-                    Value="true" />
-                <Setter
-                    Property="BorderThickness"
-                    Value="0" />
-                <Setter
-                    Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate
-                            TargetType="{x:Type Button}">
-                            <Border
-                                x:Name="Border"
-                                TextBlock.Foreground="{TemplateBinding Foreground}"
-                                Padding="{TemplateBinding Padding}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                Background="{TemplateBinding Background}">
-                                <ContentPresenter
-                                    Margin="{TemplateBinding Padding}"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    RecognizesAccessKey="True" />
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-
-            <Style
                 x:Key="FoldCheckRadioButtonStyle"
                 TargetType="{x:Type RadioButton}"
                 BasedOn="{StaticResource RadioButtonStyle}">

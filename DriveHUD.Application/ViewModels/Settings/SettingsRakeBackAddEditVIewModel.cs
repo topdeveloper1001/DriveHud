@@ -20,7 +20,7 @@ using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Settings
 {
-    public class SettingsRakeBackAddEditViewModel : WindowViewModelBase
+    public class SettingsRakeBackAddEditViewModel : WpfViewModel<SettingsRakeBackAddEditViewModel>
     {
         private SettingsRakeBackViewModelInfo<RakeBackModel> infoViewModel;
         private RakeBackModel settingsModel;

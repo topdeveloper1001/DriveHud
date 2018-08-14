@@ -568,5 +568,33 @@ namespace DriveHUD.Application.Licensing
 
             return null;
         }
+
+        /// <summary>
+        /// Provides license to send to hud store
+        /// </summary>
+        /// <returns>License</returns>
+        public ILicenseInfo GetHudStoreLicenseInfo(bool isTrialAllowed)
+        {
+            var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
+
+            // trial can't be used to upload data
+            if (licenseService.IsTrial)
+            {
+                if (!isTrialAllowed)
+                {
+                    throw new DHBusinessException(new NonLocalizableString("Trial license isn't eligible to upload HUD to the store."));
+                }
+
+                return licenseService.LicenseInfos.FirstOrDefault(x => x.IsRegistered);
+            }
+
+            var registerdLicenses = licenseService.LicenseInfos.Where(x => x.IsRegistered).ToArray();
+
+            var license = registerdLicenses.FirstOrDefault(x => x.LicenseType == LicenseType.Combo) ??
+                registerdLicenses.FirstOrDefault(x => x.LicenseType == LicenseType.Holdem) ??
+                registerdLicenses.FirstOrDefault(x => x.LicenseType == LicenseType.Omaha);
+
+            return license;
+        }
     }
 }

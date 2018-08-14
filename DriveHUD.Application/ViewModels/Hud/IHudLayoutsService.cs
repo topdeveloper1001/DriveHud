@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Entities;
+using Model.Data;
 using Model.Hud;
 using System.Collections.Generic;
 using System.IO;
@@ -77,6 +78,19 @@ namespace DriveHUD.Application.ViewModels.Hud
         HudLayoutInfoV2 Import(string path);
 
         /// <summary>
+        /// Imports <see cref="HudLayoutInfoV2"/> layout from the specified stream
+        /// </summary>
+        /// <param name="stream">Stream</param>
+        HudLayoutInfoV2 Import(Stream stream);
+
+        /// <summary>
+        /// Imports <see cref="HudLayoutInfoV2"/> layout from the specified stream
+        /// </summary>
+        /// <param name="stream">Stream</param>
+        /// <param name="layoutId">Id of layout</param>
+        HudLayoutInfoV2 Import(Stream stream, int layoutId);
+
+        /// <summary>
         /// Exports <see cref="IEnumerable{HudPlayerType}"/> to the specified path
         /// </summary>
         /// <param name="path">Path to file</param>
@@ -102,7 +116,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <summary>
         /// Sets stickers for hud elements based on stats and bumper sticker settings
         /// </summary>
-        void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics, HudLayoutInfoV2 layout);
+        void SetStickers(HudElementViewModel hudElement, IDictionary<string, HudLightIndicators> stickersStatistics, HudLayoutInfoV2 layout);
 
         /// <summary>
         /// Sets active layout for the specified <see cref="EnumPokerSites"/> poker site, <see cref="EnumGameType"/> game type and <see cref="EnumTableType"/> table type
@@ -152,6 +166,6 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="layoutName">Name of the duplicated layout</param>
         /// <param name="layoutToDuplicate">Layout to duplicate</param>
         /// <returns>The duplicated layout</returns>
-        HudLayoutInfoV2 DuplicateLayout(EnumTableType tableType, string layoutName, HudLayoutInfoV2 layoutToDuplicate);      
+        HudLayoutInfoV2 DuplicateLayout(EnumTableType tableType, string layoutName, HudLayoutInfoV2 layoutToDuplicate);
     }
 }

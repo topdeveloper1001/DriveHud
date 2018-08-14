@@ -31,6 +31,7 @@ using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Application.Views;
 using DriveHUD.Application.Views.Graphs;
+using DriveHUD.Application.Views.Hud;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
 using DriveHUD.Common.Utils;
@@ -343,9 +344,11 @@ namespace DriveHUD.Application
 
             // Register views containers
             Container.RegisterType<IViewModelContainer, CashGraphPopupView>(RegionViewNames.CashGraphPopupView);
+            Container.RegisterType<IViewModelContainer, HudUploadToStoreView>(RegionViewNames.HudUploadToStoreView);
 
             // Register view models
             Container.RegisterType<ICashGraphPopupViewModel, CashGraphPopupViewModel>();
+            Container.RegisterType<IHudUploadToStoreViewModel, HudUploadToStoreViewModel>();
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

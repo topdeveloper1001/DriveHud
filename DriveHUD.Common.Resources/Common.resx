@@ -1126,4 +1126,291 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_TableSize" xml:space="preserve">
     <value>Table size</value>
   </data>
+  <data name="Common_HudUploadToStorePopup_Title" xml:space="preserve">
+    <value>Upload HUD to the store</value>
+  </data>
+  <data name="Common_Hud_UploadToStore" xml:space="preserve">
+    <value>Upload to store</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_CostMustBeNotNegative" xml:space="preserve">
+    <value>Cost be must be 0 for free HUD or positive number for commerical HUD</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_DescriptionMustBeNotEmpty" xml:space="preserve">
+    <value>Description must be not empty</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_GameTypeMustBeSelected" xml:space="preserve">
+    <value>At least one game type must be selected</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_GameVariantMustBeSelected" xml:space="preserve">
+    <value>At least one game variant must be selected</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_NameMustBeLongerThan10" xml:space="preserve">
+    <value>Length of name must be greater than 10, but less than 50</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_NameMustBeNotEmpty" xml:space="preserve">
+    <value>Name must be not empty</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_TableTypeMustBeSelected" xml:space="preserve">
+    <value>At least one table type must be selected</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_CaptionMustBeNotEmpty" xml:space="preserve">
+    <value>Caption must be not empty</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_AtLeastOneImageMustBeSpecified" xml:space="preserve">
+    <value>At least one image must be specified</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_SelectImageDialogTitle" xml:space="preserve">
+    <value>Select an image for your HUD</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_UploadingFailed" xml:space="preserve">
+    <value>Uploading failed. Please try again or contact support. 
+{0}</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_UploadingSucceed" xml:space="preserve">
+    <value>Your HUD has been successfully uploaded. Once verification is done it will be available in HUD store.</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_NameIsAlreadyInUse" xml:space="preserve">
+    <value>This name is already in use</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_ModelNotLoaded" xml:space="preserve">
+    <value>Could not get required data from web service. Please contact support or try later.</value>
+  </data>
+  <data name="Common_HudWebService_UploadingFailed" xml:space="preserve">
+    <value>Service returned the following errors: 
+{0}</value>
+  </data>
+  <data name="Common_HudStoreViewModel_InstallingFailedContent" xml:space="preserve">
+    <value>Failed to install HUD. Please try again or contact support. 
+{0}</value>
+  </data>
+  <data name="Common_HudStoreViewModel_InstallingFailedInternalErrorContent" xml:space="preserve">
+    <value>Failed to install HUD. Internal error. Please try again or contact support.</value>
+  </data>
+  <data name="Common_HudStoreViewModel_InstallingFailedTitle" xml:space="preserve">
+    <value>Failed to install HUD</value>
+  </data>
+  <data name="Common_HudStoreViewModel_InstallingSucceededContent" xml:space="preserve">
+    <value>HUD has been successfully installed.</value>
+  </data>
+  <data name="Common_HudStoreViewModel_InstallingSucceededTitle" xml:space="preserve">
+    <value>Installing succeeded</value>
+  </data>
+  <data name="Common_HudStoreViewModel_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_CostFormatIsInvalid" xml:space="preserve">
+    <value>Cost format is invalid</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_DescriptionMustBeNotLongerThan1000" xml:space="preserve">
+    <value>Length of description must be less than 1000</value>
+  </data>
+  <data name="Common_HudWebService_BadRequest" xml:space="preserve">
+    <value>Bad request</value>
+  </data>
+  <data name="Common_HudWebService_CaptionMustBeSet" xml:space="preserve">
+    <value>Caption of images must be set</value>
+  </data>
+  <data name="Common_HudWebService_DbGeneralFailure" xml:space="preserve">
+    <value>DB general failure</value>
+  </data>
+  <data name="Common_HudWebService_DownloadingFailed" xml:space="preserve">
+    <value>Service returned the following errors: 
+{0}</value>
+  </data>
+  <data name="Common_HudWebService_GameTypesInsertFailed" xml:space="preserve">
+    <value>Game types could not be inserted</value>
+  </data>
+  <data name="Common_HudWebService_GameVariantsInsertFailed" xml:space="preserve">
+    <value>Game variants could not be inserted</value>
+  </data>
+  <data name="Common_HudWebService_GettingHudFailed" xml:space="preserve">
+    <value>Service returned the following errors: 
+{0}</value>
+  </data>
+  <data name="Common_HudWebService_HudInsertFailed" xml:space="preserve">
+    <value>Hud could not be inserted</value>
+  </data>
+  <data name="Common_HudWebService_ImageFileIsTooLarge" xml:space="preserve">
+    <value>One of image is too large</value>
+  </data>
+  <data name="Common_HudWebService_ImageFileMoveFailed" xml:space="preserve">
+    <value>Image file could not be moved</value>
+  </data>
+  <data name="Common_HudWebService_ImageFileMustBeImage" xml:space="preserve">
+    <value>Unsupported image format</value>
+  </data>
+  <data name="Common_HudWebService_ImageInsertFailed" xml:space="preserve">
+    <value>Images could not be inserted</value>
+  </data>
+  <data name="Common_HudWebService_ImagesFilesMustBeSet" xml:space="preserve">
+    <value>Image files must be set</value>
+  </data>
+  <data name="Common_HudWebService_ImagesMustBeSet" xml:space="preserve">
+    <value>Images must be set</value>
+  </data>
+  <data name="Common_HudWebService_ImagesMustMatchImagesFiles" xml:space="preserve">
+    <value>Mismatch in images data</value>
+  </data>
+  <data name="Common_HudWebService_InvalidData" xml:space="preserve">
+    <value>Invalid data</value>
+  </data>
+  <data name="Common_HudWebService_InvalidGameType" xml:space="preserve">
+    <value>Invalid game type</value>
+  </data>
+  <data name="Common_HudWebService_InvalidGameVariant" xml:space="preserve">
+    <value>Invalid game variant</value>
+  </data>
+  <data name="Common_HudWebService_InvalidTableType" xml:space="preserve">
+    <value>Invalid table type</value>
+  </data>
+  <data name="Common_HudWebService_TableTypesInsertFailed" xml:space="preserve">
+    <value>Table types could not be inserted</value>
+  </data>
+  <data name="Common_HudWebService_ValidationFailed" xml:space="preserve">
+    <value>Validation failed</value>
+  </data>
+  <data name="Common_HudWebService_FailedToGetHudName" xml:space="preserve">
+    <value>Failed to get hud name</value>
+  </data>
+  <data name="Common_HudWebService_FailedToGetUser" xml:space="preserve">
+    <value>Failed to get user</value>
+  </data>
+  <data name="Common_HudWebService_FailedToInsertUser" xml:space="preserve">
+    <value>Failed to insert user</value>
+  </data>
+  <data name="Common_HudWebService_ImageFileHeightOutOfRange" xml:space="preserve">
+    <value>The height of the image is out of range (50-600)</value>
+  </data>
+  <data name="Common_HudWebService_ImageFileWidthOutOfRange" xml:space="preserve">
+    <value>The width of the image is out of range (50-800)</value>
+  </data>
+  <data name="Common_HudWebService_InvalidSerial" xml:space="preserve">
+    <value>Invalid serial number</value>
+  </data>
+  <data name="Common_HudWebService_LayoutFileCreationFailed" xml:space="preserve">
+    <value>Could not create layout file</value>
+  </data>
+  <data name="Common_HudWebService_LayoutFileNotFound" xml:space="preserve">
+    <value>HUD file not found</value>
+  </data>
+  <data name="Common_HudWebService_LayoutMustBeNotEmpty" xml:space="preserve">
+    <value>HUD data must be not empty</value>
+  </data>
+  <data name="Common_HudWebService_LayoutNotFound" xml:space="preserve">
+    <value>HUD not found</value>
+  </data>
+  <data name="Common_HudWebService_MaxUploadsPerDayExceed" xml:space="preserve">
+    <value>Max uploads per day limit has been reached</value>
+  </data>
+  <data name="Common_HudWebService_UserIsNotIdentified" xml:space="preserve">
+    <value>User has not been identified</value>
+  </data>
+  <data name="Common_HudStoreView_GameTypes" xml:space="preserve">
+    <value>Game types: {0}</value>
+  </data>
+  <data name="Common_HudStoreView_GameVariants" xml:space="preserve">
+    <value>Game variants: {0}</value>
+  </data>
+  <data name="Common_HudStoreView_TableTypes" xml:space="preserve">
+    <value>Table types: {0}</value>
+  </data>
+  <data name="Common_HudStoreView_Buy" xml:space="preserve">
+    <value>Buy</value>
+  </data>
+  <data name="Common_HudStoreView_Install" xml:space="preserve">
+    <value>Install</value>
+  </data>
+  <data name="Common_HudStoreView_Installed" xml:space="preserve">
+    <value>Installed</value>
+  </data>
+  <data name="Common_HudStoreView_Popularity" xml:space="preserve">
+    <value>Popularity</value>
+  </data>
+  <data name="Common_HudStoreView_Price" xml:space="preserve">
+    <value>Price: ${0:F2}</value>
+  </data>
+  <data name="Common_HudStoreView_PriceFree" xml:space="preserve">
+    <value>Price: FREE</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Cost" xml:space="preserve">
+    <value>Cost of HUD</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_GameTypes" xml:space="preserve">
+    <value>Game Types</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_GameVariants" xml:space="preserve">
+    <value>Game Variants</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Images" xml:space="preserve">
+    <value>Images</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_SelectHudToUpload" xml:space="preserve">
+    <value>Select HUD to upload</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_TableTypes" xml:space="preserve">
+    <value>Table Types</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_ImageHeightOutOfRange" xml:space="preserve">
+    <value>The height of the image must be between 100 and 4000</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_ImageWidthOutOfRange" xml:space="preserve">
+    <value>The width of the image must be between 100 and 4000</value>
+  </data>
+  <data name="Common_RakebackAppStoreView_Instructions" xml:space="preserve">
+    <value>Instructions:</value>
+  </data>
+  <data name="Common_RakebackAppStoreView_Network" xml:space="preserve">
+    <value>Network: {0}</value>
+  </data>
+  <data name="Common_RakebackAppStoreView_Rakeback" xml:space="preserve">
+    <value>Rakeback: {0}%</value>
+  </data>
+  <data name="Common_RakebackAppStoreView_SignUp" xml:space="preserve">
+    <value>SIGN-UP</value>
+  </data>
+  <data name="Common_RakebackAppStoreView_SignUpText1" xml:space="preserve">
+    <value>To signup for this rakeback deal, simply click on this link:</value>
+  </data>
+  <data name="Common_RakebackAppStoreView_SignUpText2" xml:space="preserve">
+    <value>Then enter this code into the bonus code area during sign-up:</value>
+  </data>
+  <data name="Common_Shop_Rakeback" xml:space="preserve">
+    <value>Rakeback</value>
+  </data>
 </root>

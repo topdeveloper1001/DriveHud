@@ -292,6 +292,9 @@
         <Setter
             Property="Foreground"
             Value="#ffffff" />
+        <Setter
+            Property="VerticalAlignment"
+            Value="Top" />
     </Style>
 
     <Style

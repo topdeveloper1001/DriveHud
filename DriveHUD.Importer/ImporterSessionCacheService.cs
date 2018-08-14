@@ -281,7 +281,7 @@ namespace DriveHUD.Importers
                         .Where(stat => (stat.PokersiteId == (short)cacheInfo.Player.PokerSite) &&
                             stat.IsTourney == cacheInfo.Stats.IsTourney &&
                             GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, (GameType)cacheInfo.Stats.PokergametypeId) &&
-                            (cacheInfo.Filter == null || cacheInfo.Filter.Apply(stat))
+                            (sessionData.Filter == null || sessionData.Filter.Apply(stat))
                             && stat.GameNumber != cacheInfo.Stats.GameNumber)
                         .ForEach(stat => sessionCacheStatistic.PlayerData.AddStatistic(stat))
                 );
@@ -397,7 +397,7 @@ namespace DriveHUD.Importers
         /// <param name="stat"></param>
         /// <param name="playerStickersCacheData"></param>
         /// <param name="playerStickersDictionary"></param>
-        private void AddStatToSticker(Playerstatistic stat, PlayerStickersCacheData playerStickersCacheData, Dictionary<string, Playerstatistic> playerStickersDictionary)
+        private void AddStatToSticker(Playerstatistic stat, PlayerStickersCacheData playerStickersCacheData, Dictionary<string, HudLightIndicators> playerStickersDictionary)
         {
             foreach (var stickerFilter in playerStickersCacheData.StickerFilters)
             {
@@ -408,11 +408,11 @@ namespace DriveHUD.Importers
 
                 if (playerStickersDictionary.ContainsKey(stickerFilter.Key))
                 {
-                    playerStickersDictionary[stickerFilter.Key].Add(stat);
+                    playerStickersDictionary[stickerFilter.Key].AddStatistic(stat);
                 }
                 else
                 {
-                    playerStickersDictionary.Add(stickerFilter.Key, stat.Copy());
+                    playerStickersDictionary.Add(stickerFilter.Key, new HudLightIndicators(new[] { stat.Copy() }));
                 }
             }
         }
@@ -450,7 +450,7 @@ namespace DriveHUD.Importers
                     }
                 }
 
-                Dictionary<string, Playerstatistic> playerStickersDictionary = null;
+                Dictionary<string, HudLightIndicators> playerStickersDictionary = null;
 
                 if (sessionData.StickersStatisticByPlayer.ContainsKey(playerStickersCacheData.Player))
                 {
@@ -458,7 +458,7 @@ namespace DriveHUD.Importers
                 }
                 else
                 {
-                    playerStickersDictionary = new Dictionary<string, Playerstatistic>();
+                    playerStickersDictionary = new Dictionary<string, HudLightIndicators>();
                     sessionData.StickersStatisticByPlayer.Add(playerStickersCacheData.Player, playerStickersDictionary);
                 }
 
@@ -482,7 +482,7 @@ namespace DriveHUD.Importers
         /// <param name="session">Session</param>
         /// <param name="playerName">Player name</param>
         /// <returns>Dictionary of bumper stickers and related statistic</returns>
-        public Dictionary<string, Playerstatistic> GetPlayersStickersStatistics(string session, PlayerCollectionItem player)
+        public Dictionary<string, HudLightIndicators> GetPlayersStickersStatistics(string session, PlayerCollectionItem player)
         {
             if (!isStarted || string.IsNullOrWhiteSpace(session))
             {
@@ -617,7 +617,7 @@ namespace DriveHUD.Importers
 
         private class PlayerStickersCacheDataInfo
         {
-            public Dictionary<string, Playerstatistic> PlayerStickersDictionary { get; set; }
+            public Dictionary<string, HudLightIndicators> PlayerStickersDictionary { get; set; }
 
             public PlayerStickersCacheData PlayerStickersCacheData { get; set; }
 

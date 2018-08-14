@@ -369,9 +369,9 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Hole Cards.
         /// </summary>
-        internal static string Enum_EnumReports_Holecards {
+        internal static string Enum_EnumReports_HoleCards {
             get {
-                return ResourceManager.GetString("Enum_EnumReports_Holecards", resourceCulture);
+                return ResourceManager.GetString("Enum_EnumReports_HoleCards", resourceCulture);
             }
         }
         
@@ -423,9 +423,9 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sessions.
         /// </summary>
-        internal static string Enum_EnumReports_Sessions {
+        internal static string Enum_EnumReports_Session {
             get {
-                return ResourceManager.GetString("Enum_EnumReports_Sessions", resourceCulture);
+                return ResourceManager.GetString("Enum_EnumReports_Session", resourceCulture);
             }
         }
         
@@ -441,9 +441,9 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Stakes.
         /// </summary>
-        internal static string Enum_EnumReports_Stakes {
+        internal static string Enum_EnumReports_Stake {
             get {
-                return ResourceManager.GetString("Enum_EnumReports_Stakes", resourceCulture);
+                return ResourceManager.GetString("Enum_EnumReports_Stake", resourceCulture);
             }
         }
         
@@ -777,6 +777,105 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_HudStatsDataFreshness_LastYear {
             get {
                 return ResourceManager.GetString("Enum_HudStatsDataFreshness_LastYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All HUDs.
+        /// </summary>
+        internal static string Enum_HudStoreFilter_All {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreFilter_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commercial Pro HUDs.
+        /// </summary>
+        internal static string Enum_HudStoreFilter_Commercial {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreFilter_Commercial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Free HUDs.
+        /// </summary>
+        internal static string Enum_HudStoreFilter_Free {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreFilter_Free", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Holdem Only HUDs.
+        /// </summary>
+        internal static string Enum_HudStoreSorting_HoldemOnly {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreSorting_HoldemOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Most Popular.
+        /// </summary>
+        internal static string Enum_HudStoreSorting_MostPopular {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreSorting_MostPopular", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Newest HUDs.
+        /// </summary>
+        internal static string Enum_HudStoreSorting_Newest {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreSorting_Newest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All HUDs.
+        /// </summary>
+        internal static string Enum_HudStoreSorting_None {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreSorting_None", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Omaha Only HUDs.
+        /// </summary>
+        internal static string Enum_HudStoreSorting_OmahaOnly {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreSorting_OmahaOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tournament Only HUDs.
+        /// </summary>
+        internal static string Enum_HudStoreSorting_TournamentOnly {
+            get {
+                return ResourceManager.GetString("Enum_HudStoreSorting_TournamentOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading.
+        /// </summary>
+        internal static string Enum_HudUploadToStoreBusyStatus_Loading {
+            get {
+                return ResourceManager.GetString("Enum_HudUploadToStoreBusyStatus_Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submitting.
+        /// </summary>
+        internal static string Enum_HudUploadToStoreBusyStatus_Submitting {
+            get {
+                return ResourceManager.GetString("Enum_HudUploadToStoreBusyStatus_Submitting", resourceCulture);
             }
         }
         

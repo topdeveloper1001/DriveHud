@@ -17,6 +17,7 @@ namespace Model.AppStore
         Recommended,
         Training,
         Huds, 
+        Rakeback,
         Apps
     }
 }

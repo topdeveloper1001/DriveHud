@@ -71,13 +71,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.4.5.2268, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.5.0.2320, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.4.5.2268, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.5.0.2320, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.4.5.2268, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.5.0.2320, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="EPPlus, Version=4.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
@@ -272,6 +272,9 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Bootstrappers\ISQLiteBootstrapper.cs" />
     <Compile Include="Bootstrappers\SQLiteBootstrapper.cs" />
+    <Compile Include="Controls\Block.xaml.cs">
+      <DependentUpon>Block.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BraceletControl.xaml.cs">
       <DependentUpon>BraceletControl.xaml</DependentUpon>
     </Compile>
@@ -351,6 +354,9 @@
     </Compile>
     <Compile Include="Controls\HudToolBar.xaml.cs">
       <DependentUpon>HudToolBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadingAnimation.xaml.cs">
+      <DependentUpon>LoadingAnimation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\TrackConditionsMeterView.xaml.cs">
       <DependentUpon>TrackConditionsMeterView.xaml</DependentUpon>
@@ -476,11 +482,16 @@
     <Compile Include="ViewModels\AppStore\AppStorePageViewModel.cs" />
     <Compile Include="ViewModels\AppStore\AppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\EmptyAppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\HudStoreItemViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\HudStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\IAppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\IHudStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\RakebackAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Graphs\BarSeriesChartBehavior.cs" />
+    <Compile Include="ViewModels\Graphs\BaseGraphViewModel.cs" />
     <Compile Include="ViewModels\Graphs\CashGraphPopupRequestInfo.cs" />
     <Compile Include="ViewModels\Graphs\CashGraphPopupViewModelInfo.cs" />
     <Compile Include="ViewModels\Graphs\CashGraphSettings.cs" />
@@ -504,6 +515,7 @@
     <Compile Include="ViewModels\Graphs\SeriesProviders\WinningByMonthSeriesProvider.cs" />
     <Compile Include="ViewModels\Graphs\SeriesProviders\WinningByYearSeriesProvider.cs" />
     <Compile Include="ViewModels\Graphs\SerieType.cs" />
+    <Compile Include="ViewModels\Graphs\TournamentGraphViewModel.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\IHudToolBar.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBumperStickersViewModel.cs" />
@@ -542,8 +554,14 @@
     <Compile Include="ViewModels\Hud\HudPreviewBehavior.cs" />
     <Compile Include="ViewModels\Hud\HudSaveFirstTimeNotificationViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudStatsDesignerBehavior.cs" />
+    <Compile Include="ViewModels\Hud\HudUploadToStoreBusyStatus.cs" />
+    <Compile Include="ViewModels\Hud\HudUploadToStoreImage.cs" />
+    <Compile Include="ViewModels\Hud\HudUploadToStoreRequestInfo.cs" />
+    <Compile Include="ViewModels\Hud\HudUploadToStoreViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudUploadToStoreViewModelInfo.cs" />
     <Compile Include="ViewModels\Hud\IHudBaseToolViewModel.cs" />
     <Compile Include="ViewModels\Hud\IHudLayoutsService.cs" />
+    <Compile Include="ViewModels\Hud\IHudUploadToStoreViewModel.cs" />
     <Compile Include="ViewModels\Hud\IPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PartyPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PMHudPanelService.cs" />
@@ -628,8 +646,14 @@
     <Compile Include="Views\AppStore\AppsAppStoreView.xaml.cs">
       <DependentUpon>AppsAppStoreView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\AppStore\HudStoreView.xaml.cs">
+      <DependentUpon>HudStoreView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
       <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppStore\RakebackAppStoreView.xaml.cs">
+      <DependentUpon>RakebackAppStoreView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Graphs\CashGraphPopupView.xaml.cs">
       <DependentUpon>CashGraphPopupView.xaml</DependentUpon>
@@ -639,6 +663,9 @@
     </Compile>
     <Compile Include="Views\Hud\HudSaveFirstTimeNotificationView.xaml.cs">
       <DependentUpon>HudSaveFirstTimeNotificationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hud\HudUploadToStoreView.xaml.cs">
+      <DependentUpon>HudUploadToStoreView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Main\AppsView.xaml.cs">
       <DependentUpon>AppsView.xaml</DependentUpon>
@@ -692,7 +719,6 @@
     </Compile>
     <Compile Include="Controls\RadGridViewSettings.cs" />
     <Compile Include="Controls\RadListBoxDragDropBehavior.cs" />
-    <Compile Include="Common\StaticClasses.cs" />
     <Compile Include="ControlTemplateSelectors\ReplayerTemplateSelector.cs" />
     <Compile Include="ControlTemplateSelectors\HudPanelTemplateSelector.cs" />
     <Compile Include="CustomeGauge.xaml.cs">
@@ -911,6 +937,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\Block.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\BraceletControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -1067,6 +1097,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\LoadingAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\TrackConditionsMeterView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -1096,7 +1130,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\AppStore\HudStoreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AppStore\ProductAppStoreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppStore\RakebackAppStoreView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1109,6 +1151,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Hud\HudSaveFirstTimeNotificationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Hud\HudUploadToStoreView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

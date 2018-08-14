@@ -1130,7 +1130,8 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Didthreebet == 1 && Raisedflopcontinuationbet == 1 ? 1 : 0;
+                return Raisedflopcontinuationbet == 1 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
+                    (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
             }
         }
 
@@ -1138,7 +1139,8 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Didthreebet == 1 && Facingflopcontinuationbet == 1 ? 1 : 0;
+                return Facingflopcontinuationbet == 1 && CouldRaiseFlop == 1 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
+                    (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
             }
         }
 
@@ -1196,7 +1198,8 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Foldedtoturncontinuationbet == 1 && Didthreebet == 1 ? 1 : 0;
+                return Foldedtoturncontinuationbet == 1 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
+                    (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
             }
         }
 
@@ -1204,7 +1207,8 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Facingflopcontinuationbet == 1 && Didthreebet == 1 ? 1 : 0;
+                return Facingturncontinuationbet == 1 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
+                    (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
             }
         }
 
