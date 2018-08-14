@@ -369,9 +369,9 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Hole Cards.
         /// </summary>
-        internal static string Enum_EnumReports_Holecards {
+        internal static string Enum_EnumReports_HoleCards {
             get {
-                return ResourceManager.GetString("Enum_EnumReports_Holecards", resourceCulture);
+                return ResourceManager.GetString("Enum_EnumReports_HoleCards", resourceCulture);
             }
         }
         
@@ -423,9 +423,9 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sessions.
         /// </summary>
-        internal static string Enum_EnumReports_Sessions {
+        internal static string Enum_EnumReports_Session {
             get {
-                return ResourceManager.GetString("Enum_EnumReports_Sessions", resourceCulture);
+                return ResourceManager.GetString("Enum_EnumReports_Session", resourceCulture);
             }
         }
         
@@ -441,9 +441,9 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Stakes.
         /// </summary>
-        internal static string Enum_EnumReports_Stakes {
+        internal static string Enum_EnumReports_Stake {
             get {
-                return ResourceManager.GetString("Enum_EnumReports_Stakes", resourceCulture);
+                return ResourceManager.GetString("Enum_EnumReports_Stake", resourceCulture);
             }
         }
         

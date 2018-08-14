@@ -27,7 +27,7 @@ namespace DriveHUD.ViewModels
             {
                 Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NetWonSeries"),
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,                
+                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
                 Format = "{0:0.##}$",
                 UpdateChartSeriesItem = (current, previous, stat, index) =>
                 {
@@ -224,7 +224,7 @@ namespace DriveHUD.ViewModels
             {
                 Caption = CommonResourceManager.Instance.GetResourceString("Common_Chart_NetWonSeries"),
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
-                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,                
+                ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
                 Format = "{0:0.##}$",
                 UpdateChartSeriesItem = (current, previous, stat, index) =>
                 {
@@ -249,6 +249,70 @@ namespace DriveHUD.ViewModels
             });
 
             return bb100ChartCollection;
+        }
+
+        public static IEnumerable<TournamentChartSeries> CreateTournamentChartSeries()
+        {
+            var tournamentChartCollection = new List<TournamentChartSeries>();
+
+            var blueResource = ChartSerieResourceHelper.GetSeriesBluePalette();
+            var yellowResource = ChartSerieResourceHelper.GetSeriesYellowPalette();
+            var orangeResource = ChartSerieResourceHelper.GetSerieOrangePalette();
+            var greenResource = ChartSerieResourceHelper.GetSerieGreenPalette();
+
+            tournamentChartCollection.Add(new TournamentChartSeries()
+            {
+                IsVisible = true,
+                Caption = "ITM%",
+                Format = "{0:0.##}%",
+                SeriesType = ChartTournamentSeriesType.ITM,
+                ColorsPalette = blueResource,
+                UpdateChartSeriesItem = (current, previous, tournament) =>
+                {
+                    current.Value = tournament.ITM;
+                }
+            });
+
+            tournamentChartCollection.Add(new TournamentChartSeries()
+            {
+                IsVisible = true,
+                Caption = "ROI%",
+                Format = "{0:0.##}%",
+                SeriesType = ChartTournamentSeriesType.ROI,
+                ColorsPalette = yellowResource,
+                UpdateChartSeriesItem = (current, previous, tournament) =>
+                {
+                    current.Value = tournament.ROI;
+                }
+            });
+
+            tournamentChartCollection.Add(new TournamentChartSeries()
+            {
+                IsVisible = true,
+                Caption = "$",
+                Format = "{0:0.##}$",
+                SeriesType = ChartTournamentSeriesType.MoneyWon,
+                ColorsPalette = greenResource,
+                UpdateChartSeriesItem = (current, previous, tournament) =>
+                {
+                    current.Value = tournament.NetWon;
+                }
+            });
+
+            tournamentChartCollection.Add(new TournamentChartSeries()
+            {
+                IsVisible = true,
+                Caption = "Luck",
+                Format = "{0:0.##}%",
+                SeriesType = ChartTournamentSeriesType.Luck,
+                ColorsPalette = orangeResource,
+                UpdateChartSeriesItem = (current, previous, tournament) =>
+                {
+                    current.Value = 0;
+                }
+            });
+
+            return tournamentChartCollection;
         }
     }
 }

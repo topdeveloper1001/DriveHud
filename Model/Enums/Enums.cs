@@ -70,7 +70,7 @@ namespace Model.Enums
         Step_Area,
     }
 
-    public enum EnumTelerikRadChartFunctionType
+    public enum ChartTournamentSeriesType
     {
         ROI,
         ITM,

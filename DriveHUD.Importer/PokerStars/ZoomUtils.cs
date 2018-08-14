@@ -60,7 +60,9 @@ namespace DriveHUD.Importers.PokerStars
             "Sirius", "Omicron Capricorni", "Beta Tucanae (CAP)", "Delta Antilae", "Theta Cancri", "Chi Draconis", "Sigam Aquilae (CAP)", "Iota Apodis", "Zeta Phoenicis",
             "Delta Boötis", "Gamma Delphini (CAP)", "Phi Piscium", "Tau Hydrae", "Adhara", "Iota Cancri (CAP)", "Deneb el Okab", "Lambda Arietis", "Cetus", "Mira (CAP)",
             "Crux", "Rho Capricorni", "Gamma Crateris", "Alpha Crucis (CAP)", "Norma", "Canes Venatici", "Draco", "Amália", "Eusébio", "Pessoa", "Cervantes", "Velazquez",
-            "Gaudi", "Dali", "Goya", "Picasso", "Clubs", "Spades", "Hears", "Diamonds", "Turn", "River", "Portland", "Los Angeles", "Houston", "New York", "Las Vegas",
-            "Boston", "Boulder", "Washington", "Dallas", "New Orleans", "Miami", "Antares", "Atena", "Fenice", "Pegaso", "Cigno", "Shun", "Sirio", "Cronos" };
+            "Gaudi", "Dali", "Goya", "Picasso", "Clubs", "Spades", "Hearts", "Diamonds", "Turn", "River", "Portland", "Los Angeles", "Houston", "New York", "Las Vegas",
+            "Boston", "Boulder", "Washington", "Dallas", "New Orleans", "Miami", "Antares", "Atena", "Fenice", "Pegaso", "Cigno", "Shun", "Sirio", "Cronos", "Arneb",
+            "Asterope", "Atria", "Caph", "Chaldene", "Gerda", "Hyperion", "Reseda", "Tanina"
+        };
     }
 }

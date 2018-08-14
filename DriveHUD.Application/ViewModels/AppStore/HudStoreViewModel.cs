@@ -17,6 +17,7 @@ using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
+using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.AppStore;
 using Model.AppStore.HudStore;
@@ -272,7 +273,7 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
             OpenHudUploadToStoreCommand = ReactiveCommand.Create(() =>
             {
-                var viewModelInfo = new HudUploadToStoreViewModelInfo();             
+                var viewModelInfo = new HudUploadToStoreViewModelInfo();
 
                 var requestInfo = new HudUploadToStoreRequestInfo(viewModelInfo);
 
@@ -322,6 +323,13 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
                     hudStoreItem.IsImported = true;
 
+                    var additionalTableTypes = hudStoreItem.Item.TableTypes.Where(x => x.MaxPlayers != (short)importedLayout.TableType).ToArray();
+
+                    if (additionalTableTypes.Length > 0)
+                    {
+                        DuplicateAdditionalLayouts(additionalTableTypes, importedLayout, hudLayoutsService);
+                    }
+
                     return;
                 }
 
@@ -330,6 +338,36 @@ namespace DriveHUD.Application.ViewModels.AppStore
                 RaiseNotification(LocalizableString.ToString("Common_HudStoreViewModel_InstallingFailedTitle"),
                        LocalizableString.ToString("Common_HudStoreViewModel_InstallingFailedInternalErrorContent"));
             });
+        }
+
+        private void DuplicateAdditionalLayouts(TableType[] tableTypes, HudLayoutInfoV2 sourceLayout, IHudLayoutsService hudLayoutsService)
+        {
+            LogProvider.Log.Info($"Duplicate layout for the following types: {string.Join(", ", tableTypes.Select(x => x.Name))}");
+
+            foreach (var tableType in tableTypes)
+            {
+                if (!Enum.IsDefined(typeof(EnumTableType), (byte)tableType.MaxPlayers))
+                {
+                    continue;
+                }
+
+                var duplicateTableType = (EnumTableType)tableType.MaxPlayers;
+
+                var sourceTableTypeText = CommonResourceManager.Instance.GetEnumResource(sourceLayout.TableType);
+                var duplicateTableTypeText = CommonResourceManager.Instance.GetEnumResource(duplicateTableType);
+
+                var duplicateLayoutName = $"{sourceLayout.Name.Replace(sourceTableTypeText, string.Empty)} {duplicateTableTypeText}";
+
+                var duplicatedLayout = hudLayoutsService.DuplicateLayout(duplicateTableType, duplicateLayoutName, sourceLayout);
+
+                if (duplicatedLayout != null)
+                {
+                    LogProvider.Log.Info($"Duplicated {sourceLayout.Name}, {sourceTableTypeText} to {duplicatedLayout.Name}, {duplicateTableTypeText}");
+                    continue;
+                }
+
+                LogProvider.Log.Info($"Failed to duplicate {sourceLayout.Name}, {sourceTableTypeText} to {duplicateLayoutName}, {duplicateTableTypeText}");
+            }
         }
 
         private void RaiseNotification(string title, string text)

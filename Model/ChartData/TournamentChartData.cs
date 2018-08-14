@@ -122,34 +122,7 @@ namespace Model.ChartData
             }
         }
     }
-
-    public class DayTournamentChartData : TournamentChartDataBase, ITournamentChartData
-    {
-        protected override DateTime GetFirstDate(DateTime maxDateTime)
-        {
-            return maxDateTime.AddDays(-1);
-        }
-
-        protected override GroupedDateKey BuildGroupedDateKey(Tournaments tournament)
-        {
-            var dateKey = new GroupedDateKey
-            {
-                Year = tournament.Firsthandtimestamp.Year,
-                Month = tournament.Firsthandtimestamp.Month,
-                Day = tournament.Firsthandtimestamp.Day,
-                Hour = tournament.Firsthandtimestamp.Hour
-            };
-
-            return dateKey;
-        }
-
-        protected override DateTime CreateDateTimeFromDateKey(GroupedDateKey dateKey)
-        {
-            var dateTime = new DateTime(dateKey.Year, dateKey.Month, dateKey.Day, dateKey.Hour, 0, 0);
-            return dateTime;
-        }
-    }
-
+   
     public class WeekTournamentChartData : TournamentChartDataBase, ITournamentChartData
     {
         protected override DateTime GetFirstDate(DateTime maxDateTime)

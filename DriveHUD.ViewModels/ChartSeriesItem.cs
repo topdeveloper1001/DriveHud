@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using Prism.Mvvm;
-using ReactiveUI;
 using System;
 using System.Windows.Media;
 
@@ -73,21 +72,7 @@ namespace DriveHUD.ViewModels
                 SetProperty(ref category, value);
             }
         }
-
-        private DateTime date;
-
-        public DateTime Date
-        {
-            get
-            {
-                return date;
-            }
-            set
-            {
-                SetProperty(ref date, value);
-            }
-        }
-
+        
         private Color pointColor = new Color();
 
         public Color PointColor

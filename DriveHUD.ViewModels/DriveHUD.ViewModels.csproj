@@ -132,6 +132,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseChartSeries.cs" />
     <Compile Include="Bracelet.cs" />
     <Compile Include="BraceletItem.cs" />
     <Compile Include="ChartSerieResourceHelper.cs" />
@@ -158,6 +159,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="RangeSelector\PreDefinedRangesViewModel.cs" />
+    <Compile Include="TournamentChartSeries.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
