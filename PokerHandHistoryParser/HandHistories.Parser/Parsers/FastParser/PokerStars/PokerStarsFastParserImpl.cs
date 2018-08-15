@@ -146,13 +146,22 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             string line = handLines[0];
 
-            var regex = new Regex(@"(?<year>\d{4})/(?<month>\d{2})/(?<day>\d{2}) (?<hour>\d{1,2}):(?<minute>\d{2}):(?<second>\d{2})");
+            var convert = true;
+
+            var regex = new Regex(@"(?<year>\d{4})/(?<month>\d{2})/(?<day>\d{2}) (?<hour>\d{1,2}):(?<minute>\d{2}):(?<second>\d{2}) ET");
 
             var match = regex.Match(line);
 
             if (!match.Success)
             {
-                throw new ParseHandDateException("Date couldn't be recognized.", line);
+                regex = new Regex(@"(?<year>\d{4})/(?<month>\d{2})/(?<day>\d{2}) (?<hour>\d{1,2}):(?<minute>\d{2}):(?<second>\d{2})");
+                match = regex.Match(line);
+                convert = false;
+
+                if (!match.Success)
+                {
+                    throw new ParseHandDateException("Date couldn't be recognized.", line);
+                }
             }
 
             var dateString = match.Value;
@@ -175,7 +184,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             DateTime dateTime = new DateTime(year, month, day, hour, minute, second);
 
-            DateTime converted = TimeZoneInfo.ConvertTimeToUtc(dateTime, PokerStarsTimeZone);
+            DateTime converted = convert ? TimeZoneInfo.ConvertTimeToUtc(dateTime, PokerStarsTimeZone) : dateTime;
 
             return DateTime.SpecifyKind(converted, DateTimeKind.Utc);
         }
