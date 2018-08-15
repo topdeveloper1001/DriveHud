@@ -10,10 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
+using Microsoft.Win32;
 using Model.Settings;
 using System;
 using System.Collections.Generic;
@@ -26,7 +28,7 @@ namespace Model.Site
     public class PokerStarsConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
         private static readonly string[] PossibleFolders = new string[] { "PokerStars", "PokerStars.EU", "PokerStars.USNJ", "PokerStars.PT", "PokerStars.UK", "PokerStars.FR",
-            "PokerStars.DK", "PokerStars.BG", "PokerStars.IT", "PokerStars.ES", "PokerStars.CZ", "PokerStars.SH" };
+            "PokerStars.DK", "PokerStars.BE", "PokerStars.BG", "PokerStars.IT", "PokerStars.ES", "PokerStars.EE", "PokerStars.CZ", "PokerStars.SH", "PokerStars.RO", "PokerStars.RUSO" };
 
         private const string defaultHandHistoryFolder = "HandHistory";
         private const string defaultTourneySummaryFolder = "TournSummary";
@@ -41,6 +43,10 @@ namespace Model.Site
         private const string settingsFileName = "user.ini";
         private const string correctLanguageSetting = "0";
         private const string psClientLaunchFile = "PokerStars.exe";
+        private const string displayNameKey = "DisplayName";
+        private const string displayNameKeyValuePattern = "PokerStars";
+        private const string installLocationKey = "InstallLocation";
+        private const string auditIni = "audit-files.ini";
 
         public PokerStarsConfiguration()
         {
@@ -172,8 +178,6 @@ namespace Model.Site
                 return null;
             }
 
-            LogPSVersion();
-
             var configurationDirectories = GetConfigurationDirectories();
 
             var validationResult = new SiteValidationResult(Site)
@@ -184,6 +188,8 @@ namespace Model.Site
                 IsEnabled = siteModel.Enabled,
                 FastPokerEnabled = true
             };
+
+            InstallAuditIni(validationResult);
 
             foreach (var configurationDirectory in configurationDirectories)
             {
@@ -298,6 +304,105 @@ namespace Model.Site
         }
 
         /// <summary>
+        /// Gets the list of directories where PS clients are installed
+        /// </summary>
+        /// <returns></returns>
+        private IList<DirectoryInfo> GetInstallPaths()
+        {
+            var directories = new List<DirectoryInfo>();
+
+            try
+            {
+                var programFileFolders = new[] {
+                    Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)
+                };
+
+                // Check possible folders
+                foreach (var programFileFolder in programFileFolders)
+                {
+                    foreach (var possibleFolder in PossibleFolders)
+                    {
+                        var launchFile = Path.Combine(programFileFolder, possibleFolder, psClientLaunchFile);
+
+                        if (!File.Exists(launchFile))
+                        {
+                            continue;
+                        }
+
+                        var installationDirectory = Path.GetDirectoryName(launchFile);
+
+                        try
+                        {
+                            var directory = new DirectoryInfo(installationDirectory);
+                            directories.Add(directory);
+                        }
+                        catch (Exception e)
+                        {
+                            LogProvider.Log.Error(this, $"Could not get info about {installationDirectory}", e);
+                        }
+                    }
+                }
+
+                // Check registry for custom installations
+                var uninstallKeys = new[] {  Registry.LocalMachine.OpenSubKey(RegistryUtils.UninstallRegistryPath32Bit),
+                          Registry.LocalMachine.OpenSubKey(RegistryUtils.UninstallRegistryPath64Bit) };
+
+                foreach (var uninstallKey in uninstallKeys)
+                {
+                    if (uninstallKey == null)
+                    {
+                        continue;
+                    }
+
+                    foreach (var subkey in uninstallKey.GetSubKeyNames().Select(keyName => uninstallKey.OpenSubKey(keyName)))
+                    {
+                        var displayNameKeyValue = subkey?.GetValue(displayNameKey) as string;
+
+                        if (string.IsNullOrEmpty(displayNameKeyValue) ||
+                            displayNameKeyValue.IndexOf(displayNameKeyValuePattern, StringComparison.OrdinalIgnoreCase) < 0)
+                        {
+                            continue;
+                        }
+
+                        var installLocationKeyValue = subkey?.GetValue(installLocationKey) as string;
+
+                        if (string.IsNullOrEmpty(installLocationKeyValue))
+                        {
+                            continue;
+                        }
+
+                        var launchFile = Path.Combine(installLocationKeyValue, psClientLaunchFile);
+
+                        if (!File.Exists(launchFile))
+                        {
+                            continue;
+                        }
+
+                        try
+                        {
+                            var directory = new DirectoryInfo(installLocationKeyValue);
+                            directories.Add(directory);
+                        }
+                        catch (Exception e)
+                        {
+                            LogProvider.Log.Error(this, $"Could not get info about {installLocationKeyValue}", e);
+                        }
+                    }
+                }
+
+                directories = directories
+                    .Distinct(new LambdaComparer<DirectoryInfo>((x1, x2) => x1.FullName.Equals(x2.FullName, StringComparison.OrdinalIgnoreCase)))
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not get installation folder of PS", ex);
+            }
+
+            return directories;
+        }
+
+        /// <summary>
         /// Reads the value for the specified key for the specified path to ini file and add value to the specified list
         /// </summary>
         /// <param name="iniKey">Key to read</param>
@@ -323,33 +428,113 @@ namespace Model.Site
             return false;
         }
 
-        /// <summary>
-        /// Add information about PS version to the log file
-        /// </summary>
-        private void LogPSVersion()
+        #region Audit methods
+
+        private const string AuditSection = "Audit";
+        private const string EnabledKey = "Enabled";
+        private const string PathKey = "Path";
+        private const string ProcessName = "PokerStars";
+
+        public static string GetAuditPath()
+        {
+            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "PokerStars", "Audit");
+        }
+
+        private void InstallAuditIni(SiteValidationResult validationResult)
         {
             try
             {
-                var programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
-                var programFilesX64 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+                var installPaths = GetInstallPaths();
 
-                foreach (var possibleFolder in PossibleFolders)
+                var isPokerStarsRunning = IsPokerStarsRunning();
+
+                foreach (var installPath in installPaths)
                 {
-                    var launchFile = Path.Combine(programFilesX86, possibleFolder, psClientLaunchFile);
+                    var launchFile = Path.Combine(installPath.FullName, psClientLaunchFile);
+                    TryLogPSLaunchFileVersion(launchFile);
 
-                    if (!TryLogPSLaunchFileVersion(launchFile))
+                    var auditIniFile = Path.Combine(installPath.FullName, auditIni);
+
+                    var auditPath = GetAuditPath();
+
+                    if (File.Exists(auditIniFile))
                     {
-                        launchFile = Path.Combine(programFilesX64, possibleFolder, psClientLaunchFile);
-                        TryLogPSLaunchFileVersion(launchFile);
+                        ValidateAuditInitFile(auditIniFile, auditPath);
+                        continue;
+                    }
+
+                    CreateAuditInitFile(auditIniFile, auditPath);
+
+                    if (isPokerStarsRunning)
+                    {
+                        var issue = string.Format(CommonResourceManager.Instance.GetResourceString("Error_PS_Validation_ZoomSupport"),
+                                    installPath.Name);
+
+                        validationResult.Issues.Add(issue);
                     }
                 }
             }
             catch (Exception ex)
             {
-                LogProvider.Log.Error(this, "Could not log version of PS launch file", ex);
+                LogProvider.Log.Error(this, "Could not enable zoom support for PS", ex);
             }
         }
 
+        /// <summary>
+        /// Validates audit ini file at the specified path
+        /// </summary>
+        /// <param name="auditIniFile">Path to ini file</param>
+        /// <param name="auditPath">Path to folder where audit files will be stored</param>
+        private void ValidateAuditInitFile(string auditIniFile, string auditPath)
+        {
+            try
+            {
+                var enabled = IniFileHelpers.ReadValue(AuditSection, EnabledKey, auditIniFile);
+
+                if (string.IsNullOrEmpty(enabled))
+                {
+                    IniFileHelpers.WriteValue(AuditSection, EnabledKey, "1", auditIniFile);
+                }
+
+                var path = IniFileHelpers.ReadValue(AuditSection, PathKey, auditIniFile);
+
+                if (string.IsNullOrEmpty(enabled) || !path.Equals(auditPath, StringComparison.OrdinalIgnoreCase))
+                {
+                    IniFileHelpers.WriteValue(AuditSection, PathKey, auditPath, auditIniFile);
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, $"Could not validate {auditIniFile} file", ex);
+            }
+        }
+
+        /// <summary>
+        /// Creates audit ini file at the specified path
+        /// </summary>
+        /// <param name="auditIniFile">Path to ini file</param>
+        /// <param name="auditPath">Path to folder where audit files will be stored</param>
+        private void CreateAuditInitFile(string auditIniFile, string auditPath)
+        {
+            try
+            {
+                IniFileHelpers.WriteValue(AuditSection, EnabledKey, "1", auditIniFile);
+                IniFileHelpers.WriteValue(AuditSection, PathKey, auditPath, auditIniFile);
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, $"Could not create {auditIniFile} file", ex);
+                return;
+            }
+
+            LogProvider.Log.Info($"Created audit file at {auditIniFile}");
+        }
+
+        /// <summary>
+        /// Writes to log the version of the specified PS client launch file
+        /// </summary>
+        /// <param name="launchFile">Launch file to write version to the log</param>
+        /// <returns>True if version was logged; otherwise - false</returns>
         private bool TryLogPSLaunchFileVersion(string launchFile)
         {
             if (!File.Exists(launchFile))
@@ -379,5 +564,25 @@ namespace Model.Site
 
             return true;
         }
+
+        /// <summary>
+        /// Detects whenever PS process is running
+        /// </summary>
+        /// <returns>True if process is running or can't be detected; otherwise - false</returns>
+        private bool IsPokerStarsRunning()
+        {
+            try
+            {
+                var processes = Process.GetProcesses();
+                return processes.Any(x => x.ProcessName.Equals(ProcessName, StringComparison.OrdinalIgnoreCase));
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, "Could not detect if PS client is running", ex);
+                return true;
+            }
+        }
+
+        #endregion
     }
 }

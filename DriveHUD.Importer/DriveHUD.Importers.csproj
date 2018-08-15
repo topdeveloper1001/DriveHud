@@ -335,11 +335,9 @@
     <Compile Include="PokerStars\DataObjects\PokerStarsZoomCacheData.cs" />
     <Compile Include="PokerStars\DataObjects\PokerStarsZoomDataObject.cs" />
     <Compile Include="PokerStars\IPokerStarsImporter.cs" />
-    <Compile Include="PokerStars\IPokerStarsZoomCatcher.cs" />
     <Compile Include="PokerStars\IPokerStarsZoomDataManager.cs" />
     <Compile Include="PokerStars\IPokerStarsZoomImporter.cs" />
     <Compile Include="PokerStars\PokerStarsImporter.cs" />
-    <Compile Include="PokerStars\PokerStarsZoomCatcher.cs" />
     <Compile Include="PokerStars\PokerStarsZoomDataManager.cs" />
     <Compile Include="PokerStars\PokerStarsZoomImporter.cs" />
     <Compile Include="Events\PreImportedDataEvent.cs" />

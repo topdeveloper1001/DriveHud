@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="PokerStarsZoomDataManager.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common;
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
@@ -23,7 +22,6 @@ using HandHistories.Objects.Players;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Settings;
-using Newtonsoft.Json;
 using NHibernate.Linq;
 using Prism.Events;
 using System;
@@ -42,30 +40,21 @@ namespace DriveHUD.Importers.PokerStars
 
         private readonly Dictionary<int, PokerStarsZoomCacheData> cachedData = new Dictionary<int, PokerStarsZoomCacheData>();
 
-        public PokerStarsZoomDataManager(IEventAggregator eventAggregator)
+        public PokerStarsZoomDataManager(IEventAggregator eventAggregator, IImporterSessionCacheService importerSessionCacheService)
         {
             this.eventAggregator = eventAggregator;
+            this.importerSessionCacheService = importerSessionCacheService;
         }
 
-        public void Initialize(PokerClientDataManagerInfo dataManagerInfo)
+        public void ProcessData(PokerStarsZoomDataObject catcherDataObject)
         {
-            Check.ArgumentNotNull(() => dataManagerInfo);
-            importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
-        }
+            if (catcherDataObject == null || catcherDataObject.Handle == 0)
+            {
+                return;
+            }
 
-        public void ProcessData(byte[] data)
-        {
             try
             {
-                var dataText = Decrypt(data);
-
-                var catcherDataObject = JsonConvert.DeserializeObject<PokerStarsZoomDataObject>(dataText);
-
-                if (catcherDataObject == null)
-                {
-                    return;
-                }
-
                 PokerStarsZoomCacheData cachedObject;
 
                 var isNew = false;
@@ -107,8 +96,9 @@ namespace DriveHUD.Importers.PokerStars
                     Session = catcherDataObject.Handle.ToString(),
                     WindowHandle = catcherDataObject.Handle,
                     PokerSite = EnumPokerSites.PokerStars,
-                    GameType = BovadaConverters.ConvertGameTypeFromTitle(catcherDataObject.Title),
-                    TableType = (EnumTableType)catcherDataObject.Size
+                    GameType = catcherDataObject.GameType,
+                    TableType = catcherDataObject.TableType,
+                    GameFormat = catcherDataObject.GameFormat
                 };
 
                 // Initialize cache
@@ -120,16 +110,9 @@ namespace DriveHUD.Importers.PokerStars
                         PlayerId = playerNamePlayerIdMap.ContainsKey(x.Player) ? playerNamePlayerIdMap[x.Player] : 0
                     }));
 
-                var gameFormat = ZoomUtils.ParseGameFormatFromTitle(catcherDataObject.Title);
-
-                if (gameFormat.HasValue)
-                {
-                    gameInfo.GameFormat = gameFormat.Value;
-                }
-
                 var heroPlayer = ProcessPlayers(gameInfo, players, catcherDataObject);
 
-                if (heroPlayer == null || (gameInfo.GameFormat != GameFormat.Zoom && gameFormat != GameFormat.Cash))
+                if (heroPlayer == null || (gameInfo.GameFormat != GameFormat.Zoom && gameInfo.GameFormat != GameFormat.Cash))
                 {
                     return;
                 }
@@ -139,7 +122,7 @@ namespace DriveHUD.Importers.PokerStars
 
                 cachedObject.IsProcessed = true;
 #if DEBUG
-                Console.WriteLine($@"Data has been send to {catcherDataObject.Title}, {catcherDataObject.Handle}, {catcherDataObject.TableName} {catcherDataObject.Size}-max, {string.Join(", ", players.Select(x => $"{x.PlayerName}[{x.PlayerId}]").ToArray())}");
+                Console.WriteLine($@"Data has been send to {catcherDataObject.TableName}, {catcherDataObject.Handle}, {catcherDataObject.TableName} {(int)catcherDataObject.TableType}-max, {string.Join(", ", players.Select(x => $"{x.PlayerName}[{x.PlayerId}]").ToArray())}");
 #endif
             }
             catch (Exception ex)
@@ -257,7 +240,7 @@ namespace DriveHUD.Importers.PokerStars
         {
             Player heroPlayer = null;
 
-            var heroName = ParseHeroNameFromTitle(catcherDataObject.Title);
+            var heroName = catcherDataObject.HeroName;
 
             foreach (var player in players)
             {
@@ -339,7 +322,7 @@ namespace DriveHUD.Importers.PokerStars
                 var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().
                                        SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == EnumPokerSites.PokerStars)?.PrefferedSeats;
 
-                var prefferedSeat = preferredSeats?.FirstOrDefault(x => (int)x.TableType == catcherDataObject.Size && x.IsPreferredSeatEnabled);
+                var prefferedSeat = preferredSeats?.FirstOrDefault(x => x.TableType == catcherDataObject.TableType && x.IsPreferredSeatEnabled);
 
                 if (prefferedSeat != null)
                 {
@@ -349,11 +332,11 @@ namespace DriveHUD.Importers.PokerStars
 
             if (prefferedSeatNumber > 0)
             {
-                var shift = (prefferedSeatNumber - heroPlayer.SeatNumber) % catcherDataObject.Size;
+                var shift = (prefferedSeatNumber - heroPlayer.SeatNumber) % catcherDataObject.MaxPlayers;
 
                 foreach (var player in players)
                 {
-                    player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, catcherDataObject.Size);
+                    player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, catcherDataObject.MaxPlayers);
                 }
             }
 

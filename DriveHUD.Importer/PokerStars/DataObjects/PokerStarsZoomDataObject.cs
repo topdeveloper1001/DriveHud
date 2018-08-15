@@ -10,6 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
+using DriveHUD.Importers.Bovada;
+
 namespace DriveHUD.Importers.PokerStars
 {
     /// <summary>
@@ -17,14 +20,31 @@ namespace DriveHUD.Importers.PokerStars
     /// </summary>
     public class PokerStarsZoomDataObject
     {
-        public string Title { get; set; }
-
         public int Handle { get; set; }
 
-        public short Size { get; set; }
+        public string Title { get; set; }
+
+        internal GameType GameType { get; set; }
+
+        public GameFormat GameFormat { get; set; }
+
+        public EnumTableType TableType { get; set; }
+
+        public byte MaxPlayers { get; set; }
 
         public PlayerDataObject[] Players { get; set; }
 
         public string TableName { get; set; }
+
+        public string HeroName { get; set; }
+
+        public bool IsValid
+        {
+            get
+            {
+                return Handle != 0 && !string.IsNullOrEmpty(Title) && MaxPlayers != 0 &&
+                    !string.IsNullOrEmpty(TableName) && !string.IsNullOrEmpty(HeroName) && Players != null;
+            }
+        }
     }
 }

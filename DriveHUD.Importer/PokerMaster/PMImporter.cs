@@ -812,7 +812,7 @@ namespace DriveHUD.Importers.PokerMaster
             return IntPtr.Zero;
         }
 
-        protected override bool InternalMatch(string title, ParsingResult parsingResult)
+        protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
             return false;
         }

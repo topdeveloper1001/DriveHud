@@ -119,7 +119,7 @@ namespace DriveHUD.Importers
                 }
 
                 LogProvider.Log.Info(this, string.Format("Hand {0} has been imported in {2}ms. [{1}]", result.HandHistory.Gamenumber, SiteString, result.Duration));
-             
+
                 if (gameInfo.WindowHandle == 0 || !WinApi.IsWindow(new IntPtr(gameInfo.WindowHandle)))
                 {
                     gameInfo.WindowHandle = FindWindow(result).ToInt32();
@@ -190,7 +190,7 @@ namespace DriveHUD.Importers
 
                     if (!string.IsNullOrEmpty(title))
                     {
-                        if (Match(title, parsingResult))
+                        if (Match(title, handle, parsingResult))
                         {
                             return handle;
                         }
@@ -205,9 +205,9 @@ namespace DriveHUD.Importers
             return IntPtr.Zero;
         }
 
-        protected virtual bool Match(string title, ParsingResult parsingResult)
+        protected virtual bool Match(string title, IntPtr handle, ParsingResult parsingResult)
         {
-            var matchResult = InternalMatch(title, parsingResult);
+            var matchResult = InternalMatch(title, handle, parsingResult);
 
             if (IsAdvancedLogEnabled)
             {
@@ -218,7 +218,7 @@ namespace DriveHUD.Importers
             return matchResult;
         }
 
-        protected abstract bool InternalMatch(string title, ParsingResult parsingResult);
+        protected abstract bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult);
 
         protected virtual GameFormat ParseGameFormat(ParsingResult parsingResult)
         {

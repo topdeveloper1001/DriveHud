@@ -17,6 +17,7 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -30,7 +31,7 @@ namespace DriveHUD.Importers.Winamax
 
         protected override EnumPokerSites Site => EnumPokerSites.Winamax;
 
-        protected override bool InternalMatch(string title, ParsingResult parsingResult)
+        protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
             if (string.IsNullOrWhiteSpace(title) || parsingResult == null ||
                parsingResult.Source == null || parsingResult.Source.GameDescription == null || string.IsNullOrEmpty(parsingResult.Source.TableName))
