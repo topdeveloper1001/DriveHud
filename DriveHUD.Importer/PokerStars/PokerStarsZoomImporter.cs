@@ -44,6 +44,14 @@ namespace DriveHUD.Importers.PokerStars
             get { return EnumPokerSites.PokerStars; }
         }
 
+        public override string SiteString
+        {
+            get
+            {
+                return Identifier.ToString();
+            }
+        }
+
         protected ImporterIdentifier Identifier
         {
             get
@@ -63,6 +71,11 @@ namespace DriveHUD.Importers.PokerStars
             {
                 try
                 {
+                    if (IsDisabled())
+                    {
+                        break;
+                    }
+
                     if (pokerClientProcess == null || pokerClientProcess.HasExited)
                     {
                         if (pokerClientProcess != null && pokerClientProcess.HasExited)
