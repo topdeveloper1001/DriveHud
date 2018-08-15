@@ -35,7 +35,8 @@ namespace DriveHUD.Importers.PokerStars
 
         private const string AuditFileFilter = "*.dat";
 
-        private const int ReadingTimeout = 500;
+        private const int ReadingTimeout = 5000;
+        private const int FileReadingTimeout = 500;
 
         private Process pokerClientProcess;
 
@@ -117,7 +118,7 @@ namespace DriveHUD.Importers.PokerStars
                     {
                         try
                         {
-                            Task.Delay(ReadingTimeout).Wait(cancellationTokenSource.Token);
+                            Task.Delay(FileReadingTimeout).Wait(cancellationTokenSource.Token);
                         }
                         catch (OperationCanceledException)
                         {
