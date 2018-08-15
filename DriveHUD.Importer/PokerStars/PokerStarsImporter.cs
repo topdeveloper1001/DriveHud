@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="PokerStarsImporter.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -40,6 +40,14 @@ namespace DriveHUD.Importers.PokerStars
             get
             {
                 return "*.txt";
+            }
+        }
+
+        protected string WindowClassName
+        {
+            get
+            {
+                return "PokerStarsTableFrameClass";
             }
         }
 
@@ -89,10 +97,11 @@ namespace DriveHUD.Importers.PokerStars
 
         private const string tournamentPattern = "{0} Table {1}";
 
-        protected override bool InternalMatch(string title, ParsingResult parsingResult)
+        protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
             if (string.IsNullOrWhiteSpace(title) || parsingResult == null ||
-               parsingResult.Source == null || parsingResult.Source.GameDescription == null || string.IsNullOrEmpty(parsingResult.Source.TableName))
+               parsingResult.Source == null || parsingResult.Source.GameDescription == null || string.IsNullOrEmpty(parsingResult.Source.TableName) ||
+               !WindowClassName.Equals(WinApi.GetClassName(handle), StringComparison.OrdinalIgnoreCase))
             {
                 return false;
             }

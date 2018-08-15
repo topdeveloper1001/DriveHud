@@ -209,7 +209,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             return builder.ToString();
         }
 
-        protected override bool InternalMatch(string title, ParsingResult parsingResult)
+        protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
             if (parsingResult != null && parsingResult.Source != null &&
                 parsingResult.Source.FullHandHistoryText != null &&

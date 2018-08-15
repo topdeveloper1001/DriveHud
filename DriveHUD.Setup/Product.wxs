@@ -396,6 +396,7 @@
         <File Id="CAPPIPEDI2.DLL" Name="CapPipedI2.dll" Source="$(var.BuildDirectory)\Lib\CapPipedI2.dll" />
       </Component>
       <Component Id="CAPPIPEDP.DLL" Guid="{D24AED40-896D-40BA-AF6E-52692D2E3858}">
+        <Condition>False</Condition>
         <File Id="CAPPIPEDP.DLL" Name="CapPipedP.dll" Source="$(var.BuildDirectory)\Lib\CapPipedP.dll" />
       </Component>
     </DirectoryRef>

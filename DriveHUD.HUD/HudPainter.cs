@@ -22,7 +22,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Interop;
-using System.Windows.Threading;
 
 namespace DriveHUD.HUD
 {
@@ -121,63 +120,76 @@ namespace DriveHUD.HUD
         {
             var thread = new Thread(() =>
             {
-                var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>(hudLayout.PokerSite.ToString());
-
-                var window = new HudWindow();
-                var windowHandle = hudPanelService.GetWindowHandle(hwnd);
-
-                var windowItem = new HudWindowItem
+                try
                 {
-                    Window = window,
-                    Handle = windowHandle
-                };
+                    var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>(hudLayout.PokerSite.ToString());
 
-                using (rwWindowsLock.Write())
-                {
-                    if (windows.ContainsKey(hwnd))
+                    var window = new HudWindow();
+                    var windowHandle = hudPanelService.GetWindowHandle(hwnd);
+
+                    if (!WinApi.IsWindow(windowHandle))
                     {
+                        LogProvider.Log.Info(typeof(HudPainter), $"Window {windowHandle} doesn't exist. HUD window can't be created.");
                         return;
                     }
 
-                    windows.Add(hwnd, windowItem);
+                    var windowItem = new HudWindowItem
+                    {
+                        Window = window,
+                        Handle = windowHandle
+                    };
+
+                    using (rwWindowsLock.Write())
+                    {
+                        if (windows.ContainsKey(hwnd))
+                        {
+                            return;
+                        }
+
+                        windows.Add(hwnd, windowItem);
+                    }
+
+                    var windowInteropHelper = new WindowInteropHelper(window)
+                    {
+                        Owner = windowHandle
+                    };
+
+                    window.Closed += (s, e) => window.Dispatcher.InvokeShutdown();
+
+                    window.Initialize(hudLayout, hwnd);
+
+                    window.Show();
+
+                    RECT rect;
+
+                    WinApi.GetWindowRect(windowHandle, out rect);
+
+                    SizeF dpi = Utils.GetCurrentDpi();
+
+                    SizeF scale = new SizeF()
+                    {
+                        Width = 96f / dpi.Width,
+                        Height = 96f / dpi.Height
+                    };
+
+                    window.Top = rect.Top * scale.Height;
+                    window.Left = rect.Left * scale.Width;
+                    window.Height = rect.Height * scale.Height;
+                    window.Width = rect.Width * scale.Width;
+
+                    windowItem.IsInitialized = true;
+
+                    if (!WinApi.IsIconic(hwnd))
+                    {
+                        window.Refresh();
+                    }
+
+                    System.Windows.Threading.Dispatcher.Run();
                 }
-
-                var windowInteropHelper = new WindowInteropHelper(window)
+                catch (Exception e)
                 {
-                    Owner = windowHandle
-                };
-
-                window.Closed += (s, e) => window.Dispatcher.InvokeShutdown();
-
-                window.Initialize(hudLayout, hwnd);
-
-                window.Show();
-
-                RECT rect;
-
-                WinApi.GetWindowRect(windowHandle, out rect);
-
-                SizeF dpi = Utils.GetCurrentDpi();
-
-                SizeF scale = new SizeF()
-                {
-                    Width = 96f / dpi.Width,
-                    Height = 96f / dpi.Height
-                };
-
-                window.Top = rect.Top * scale.Height;
-                window.Left = rect.Left * scale.Width;
-                window.Height = rect.Height * scale.Height;
-                window.Width = rect.Width * scale.Width;
-
-                windowItem.IsInitialized = true;
-
-                if (!WinApi.IsIconic(hwnd))
-                {
-                    window.Refresh();
+                    LogProvider.Log.Error(typeof(HudPainter), $"Failed to create HUD window for {hwnd}", e);
                 }
-
-                System.Windows.Threading.Dispatcher.Run();
             });
 
             thread.SetApartmentState(ApartmentState.STA);

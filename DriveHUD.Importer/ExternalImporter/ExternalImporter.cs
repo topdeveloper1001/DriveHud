@@ -139,7 +139,7 @@ namespace DriveHUD.Importers.ExternalImporter
             gameInfo.TournamentSpeed = ParserUtils.ParseTournamentSpeed(title);
         }
 
-        protected override bool InternalMatch(string title, ParsingResult parsingResult)
+        protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
             if (string.IsNullOrWhiteSpace(title) || parsingResult == null ||
               parsingResult.Source == null || parsingResult.Source.GameDescription == null || string.IsNullOrEmpty(parsingResult.Source.TableName))

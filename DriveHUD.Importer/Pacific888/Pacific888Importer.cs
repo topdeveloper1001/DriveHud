@@ -17,6 +17,7 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -50,7 +51,7 @@ namespace DriveHUD.Importers.Pacific888
 
         private const string tournamentPattern = "#{0} Table {1}";
 
-        protected override bool InternalMatch(string title, ParsingResult parsingResult)
+        protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
             if (string.IsNullOrWhiteSpace(title) || parsingResult == null || !parsingResult.WasImported ||
                 parsingResult.Source == null || parsingResult.Source.GameDescription == null)
