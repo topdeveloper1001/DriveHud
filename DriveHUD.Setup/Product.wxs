@@ -395,8 +395,8 @@
       <Component Id="CAPPIPEDI2.DLL" Guid="{495E8EE3-E92E-4646-A18A-09A124205058}">
         <File Id="CAPPIPEDI2.DLL" Name="CapPipedI2.dll" Source="$(var.BuildDirectory)\Lib\CapPipedI2.dll" />
       </Component>
-      <Component Id="CAPPIPEDP.DLL" Guid="{D24AED40-896D-40BA-AF6E-52692D2E3858}">        
-        <RemoveFile Id="CAPPIPEDP.DLL" Name="CapPipedP.dll" On="both"/>
+      <Component Id="CAPPIPEDP.DLL" Guid="{D24AED40-896D-40BA-AF6E-52692D2E3858}" Transitive="yes">
+        <Condition>False</Condition>
         <File Id="CAPPIPEDP.DLL" Name="CapPipedP.dll" Source="$(var.BuildDirectory)\Lib\CapPipedP.dll" />
       </Component>
     </DirectoryRef>
