@@ -187,6 +187,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Zoom support has been enabled for {0}. PokerStars client must be restarted to apply changes..
+        /// </summary>
+        internal static string Error_PS_Validation_ZoomSupport {
+            get {
+                return ResourceManager.GetString("Error_PS_Validation_ZoomSupport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &quot;Save Hand History&quot; option isn&apos;t checked in the settings of {0} client [Profile: {1}].
         /// </summary>
         internal static string Error_WPN_Validation_SaveHandHistory {
