@@ -135,7 +135,7 @@ namespace DriveHUD.ViewModels
                         current.Value = previous.Value;
                     }
 
-                    current.Value += (stat.NetWon + stat.EVDiff) / stat.BigBlind;
+                    current.Value += stat.NetWon / stat.BigBlind;
                 }
             });
 
@@ -207,7 +207,7 @@ namespace DriveHUD.ViewModels
                         current.Value = previous.Value;
                     }
 
-                    current.Value += stat.EVDiff / stat.BigBlind;
+                    current.Value += (stat.NetWon + stat.EVDiff) / stat.BigBlind;
                 }
             });
 
