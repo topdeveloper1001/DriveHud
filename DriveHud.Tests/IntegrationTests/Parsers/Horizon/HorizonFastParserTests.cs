@@ -396,7 +396,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Horizon
             ConfigureContainer();
 
             var HorizonImporter = new HorizonImporterStub();
-            var actualMatch = HorizonImporter.Match(title, parsingResult);
+            var actualMatch = HorizonImporter.Match(title, IntPtr.Zero, parsingResult);
 
             Assert.That(actualMatch, Is.EqualTo(match));
         }
@@ -430,9 +430,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Horizon
 
         private class HorizonImporterStub : HorizonImporter
         {
-            public new bool Match(string title, ParsingResult parsingResult)
+            public new bool Match(string title, IntPtr handle, ParsingResult parsingResult)
             {
-                return base.Match(title, parsingResult);
+                return base.Match(title, handle, parsingResult);
             }
         }
     }

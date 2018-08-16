@@ -135,7 +135,7 @@ namespace DriveHUD.ViewModels
                         current.Value = previous.Value;
                     }
 
-                    current.Value += stat.NetWon / stat.BigBlind;
+                    current.Value += stat.BigBlind != 0 ? stat.NetWon / stat.BigBlind : 0;
                 }
             });
 
@@ -159,7 +159,7 @@ namespace DriveHUD.ViewModels
 
                     if (stat.Sawshowdown == 0)
                     {
-                        current.Value += stat.NetWon / stat.BigBlind;
+                        current.Value += stat.BigBlind != 0 ? stat.NetWon / stat.BigBlind : 0;
                     }
                 }
             });
@@ -184,7 +184,7 @@ namespace DriveHUD.ViewModels
 
                     if (stat.Sawshowdown == 1)
                     {
-                        current.Value += stat.NetWon / stat.BigBlind;
+                        current.Value += stat.BigBlind != 0 ? stat.NetWon / stat.BigBlind : 0;
                     }
                 }
             });
@@ -207,7 +207,7 @@ namespace DriveHUD.ViewModels
                         current.Value = previous.Value;
                     }
 
-                    current.Value += (stat.NetWon + stat.EVDiff) / stat.BigBlind;
+                    current.Value += stat.BigBlind != 0 ? (stat.NetWon + stat.EVDiff) / stat.BigBlind : 0;
                 }
             });
 
