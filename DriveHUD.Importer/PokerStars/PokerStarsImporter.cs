@@ -43,7 +43,7 @@ namespace DriveHUD.Importers.PokerStars
             }
         }
 
-        protected string WindowClassName
+        protected virtual string WindowClassName
         {
             get
             {
@@ -101,7 +101,7 @@ namespace DriveHUD.Importers.PokerStars
         {
             if (string.IsNullOrWhiteSpace(title) || parsingResult == null ||
                parsingResult.Source == null || parsingResult.Source.GameDescription == null || string.IsNullOrEmpty(parsingResult.Source.TableName) ||
-               !WindowClassName.Equals(WinApi.GetClassName(handle), StringComparison.OrdinalIgnoreCase))
+               (!string.IsNullOrEmpty(WindowClassName) && !WindowClassName.Equals(WinApi.GetClassName(handle), StringComparison.OrdinalIgnoreCase)))
             {
                 return false;
             }
