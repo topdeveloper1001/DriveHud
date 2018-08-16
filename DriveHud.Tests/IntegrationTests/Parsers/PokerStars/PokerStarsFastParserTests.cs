@@ -460,7 +460,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Zoom-6-max-0.02-0.05.txt", "Donati - $0.02/$0.05 USD - No Limit Hold'em", true)]
         public void ParsedHistoryMatchedWindowTitleTest(string handHistoryFile, string title, bool match)
         {
-            var handHistory = ParseHandHistory(handHistoryFile);            
+            var handHistory = ParseHandHistory(handHistoryFile);
 
             var parsingResult = new ParsingResult
             {
@@ -471,7 +471,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
             ConfigureContainer();
 
             var pokerStarsImporter = new PokerStarsImporterStub();
-            var actualMatch = pokerStarsImporter.Match(title, parsingResult);
+            var actualMatch = pokerStarsImporter.Match(title, IntPtr.Zero, parsingResult);
 
             Assert.That(actualMatch, Is.EqualTo(match));
         }
@@ -505,9 +505,11 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         private class PokerStarsImporterStub : PokerStarsImporter
         {
-            public new bool Match(string title, ParsingResult parsingResult)
+            protected override string WindowClassName => null;
+
+            public new bool Match(string title, IntPtr handle, ParsingResult parsingResult)
             {
-                return base.Match(title, parsingResult);
+                return base.Match(title, handle, parsingResult);
             }
         }
     }

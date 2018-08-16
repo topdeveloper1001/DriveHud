@@ -488,6 +488,28 @@ namespace DriveHUD.Common.WinApi
         [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
         public static extern int GetClassName(IntPtr hWnd, StringBuilder lpClassName, int nMaxCount);
 
+        /// <summary>
+        /// Retrieves the name of the class to which the specified window belongs.
+        /// </summary>
+        /// <param name="hWnd">A handle to the window and, indirectly, the class to which the window belongs.</param>
+        /// <returns></returns>
+        public static string GetClassName(IntPtr hWnd)
+        {
+            if (hWnd == IntPtr.Zero)
+            {
+                return string.Empty;
+            }
+
+            var sb = new StringBuilder(256);
+
+            if (GetClassName(hWnd, sb, sb.Capacity) == 0)
+            {
+                return string.Empty;
+            }
+
+            return sb.ToString();
+        }
+
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool IsWindow(IntPtr hWnd);

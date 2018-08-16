@@ -30,7 +30,7 @@ param
 
     [string] $VersionExlcudeFilter = '**DriveHUD.PlayerXRay**,**XR*Reg**,**DriveHUD.PMCatcher**,**PM*Reg**',
 
-    [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll',
+    [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll',
 
     [string] $ObfuscatorStrongNamedAssemblies = '',
 

@@ -467,7 +467,7 @@ namespace DriveHUD.Importers
                             Directory.CreateDirectory(moveLocation);
                         }
 
-                        File.Move(capturedFile.ImportedFile.FileName, Path.Combine(moveLocation, Path.GetFileNameWithoutExtension(capturedFile.ImportedFile.FileName)));
+                        File.Move(capturedFile.ImportedFile.FileName, Path.Combine(moveLocation, Path.GetFileName(capturedFile.ImportedFile.FileName)));
                     }
                     catch (Exception ex)
                     {
