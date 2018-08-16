@@ -399,7 +399,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
             ConfigureContainer();
 
             var HorizonImporter = new WinamaxImporterStub();
-            var actualMatch = HorizonImporter.Match(title, parsingResult);
+            var actualMatch = HorizonImporter.Match(title, IntPtr.Zero, parsingResult);
 
             Assert.That(actualMatch, Is.EqualTo(match));
         }
@@ -438,9 +438,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Winamax
 
         private class WinamaxImporterStub : WinamaxImporter
         {
-            public new bool Match(string title, ParsingResult parsingResult)
+            public new bool Match(string title, IntPtr handle, ParsingResult parsingResult)
             {
-                return base.Match(title, parsingResult);
+                return base.Match(title, handle, parsingResult);
             }
         }
     }
