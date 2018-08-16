@@ -101,6 +101,36 @@ namespace DriveHUD.Application.Controls
             }
         }
 
+        public static readonly DependencyProperty TournamentChartFilterTypeProperty =
+            DependencyProperty.Register("TournamentChartFilterType", typeof(TournamentChartFilterType), typeof(TournamentChart),
+                new FrameworkPropertyMetadata(TournamentChartFilterType.All, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+
+        public TournamentChartFilterType TournamentChartFilterType
+        {
+            get
+            {
+                return (TournamentChartFilterType)GetValue(TournamentChartFilterTypeProperty);
+            }
+            set
+            {
+                SetValue(TournamentChartFilterTypeProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty TournamentChartFilterTypesProperty =
+            DependencyProperty.Register("TournamentChartFilterTypes", typeof(ObservableCollection<TournamentChartFilterType>), typeof(TournamentChart));
+
+        public ObservableCollection<TournamentChartFilterType> TournamentChartFilterTypes
+        {
+            get
+            {
+                return (ObservableCollection<TournamentChartFilterType>)GetValue(TournamentChartFilterTypesProperty);
+            }
+            set
+            {
+                SetValue(TournamentChartFilterTypesProperty, value);
+            }
+        }
 
         #endregion
 

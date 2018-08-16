@@ -13,6 +13,7 @@
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Data;
+using Model.Enums;
 using Model.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace Model.ChartData
 {
     public abstract class TournamentChartDataBase : ITournamentChartData
     {
-        public virtual IEnumerable<TournamentReportRecord> Create()
+        public virtual IEnumerable<TournamentReportRecord> Create(TournamentChartFilterType tournamentChartFilterType)
         {
             var report = new List<TournamentReportRecord>();
 
@@ -38,7 +39,10 @@ namespace Model.ChartData
             var firstDate = GetFirstDate(tournaments.Max(x => x.Firsthandtimestamp));
 
             var groupedTournaments = tournaments
-                .Where(x => x.Firsthandtimestamp >= firstDate)
+                .Where(x => x.Firsthandtimestamp >= firstDate &&
+                    (tournamentChartFilterType == TournamentChartFilterType.All ||
+                        tournamentChartFilterType == TournamentChartFilterType.MTT && x.Tourneytagscsv == TournamentsTags.MTT.ToString() ||
+                        tournamentChartFilterType == TournamentChartFilterType.STT && x.Tourneytagscsv == TournamentsTags.STT.ToString()))
                 .OrderBy(x => x.Firsthandtimestamp)
                 .GroupBy(x => BuildGroupedDateKey(x));
 
@@ -122,7 +126,7 @@ namespace Model.ChartData
             }
         }
     }
-   
+
     public class WeekTournamentChartData : TournamentChartDataBase, ITournamentChartData
     {
         protected override DateTime GetFirstDate(DateTime maxDateTime)

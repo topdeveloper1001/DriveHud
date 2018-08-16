@@ -37,9 +37,7 @@ namespace DriveHUD.Application.ViewModels
 
         private bool showLabels = true;
         private bool isShowLabelsEnabled = true;
-        private ObservableCollection<ChartSeries> chartSeriesCollection;
-        private ChartSeries chartSeriesSelectedItem;
-        private ChartDisplayRange chartSeriesDisplayRange = ChartDisplayRange.Month;
+        private ObservableCollection<ChartSeries> chartSeriesCollection;                
         private Bracelet goldenBracelet;
         private Bracelet silverBracelet;
         private Bracelet bronzeBracelet;

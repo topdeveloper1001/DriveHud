@@ -111,6 +111,13 @@ namespace Model.Enums
         Hands
     }
 
+    public enum TournamentChartFilterType
+    {
+        All,
+        STT,
+        MTT
+    }
+
     public enum EnumDashBoardScreen
     {
         Dashboard = 0,

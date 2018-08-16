@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="TournamentGraphViewModel.cs" company="Ace Poker Solutions">
-// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -26,6 +26,13 @@ namespace DriveHUD.Application.ViewModels.Graphs
         public TournamentGraphViewModel(IEnumerable<TournamentChartSeries> chartSeries) : base(chartSeries)
         {
             chartDisplayRange = ChartDisplayRange.Year;
+
+            tournamentChartFilterTypes = new ObservableCollection<TournamentChartFilterType>()
+            {
+                TournamentChartFilterType.All,
+                TournamentChartFilterType.STT,
+                TournamentChartFilterType.MTT
+            };
         }
 
         private ChartDisplayRange chartDisplayRange;
@@ -50,11 +57,36 @@ namespace DriveHUD.Application.ViewModels.Graphs
             }
         }
 
+        private TournamentChartFilterType tournamentChartFilterType;
+
+        public TournamentChartFilterType TournamentChartFilterType
+        {
+            get
+            {
+                return tournamentChartFilterType;
+            }
+            set
+            {
+                SetProperty(ref tournamentChartFilterType, value);
+                Update();
+            }
+        }
+
+        private ObservableCollection<TournamentChartFilterType> tournamentChartFilterTypes;
+
+        public ObservableCollection<TournamentChartFilterType> TournamentChartFilterTypes
+        {
+            get
+            {
+                return tournamentChartFilterTypes;
+            }
+        }
+
         public override void Update()
         {
             var chartItemDataBuilder = CreateChartItemDataBuilder(ChartDisplayRange);
 
-            var tournaments = chartItemDataBuilder.Create();
+            var tournaments = chartItemDataBuilder.Create(TournamentChartFilterType);
 
             var chartSeriesItems = new Dictionary<TournamentChartSeries, List<ChartSeriesItem>>();
 

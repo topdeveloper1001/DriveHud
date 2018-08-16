@@ -61,15 +61,6 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cash - Holdem.
-        /// </summary>
-        internal static string Enum_EnumGameType_CashHoldem {
-            get {
-                return ResourceManager.GetString("Enum_EnumGameType_CashHoldem", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Cash - Omaha.
         /// </summary>
         internal static string Enum_EnumGameType_CashOmaha {
@@ -2937,6 +2928,42 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_WWSF {
             get {
                 return ResourceManager.GetString("Enum_Stat_WWSF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All tournaments.
+        /// </summary>
+        internal static string Enum_TournamentChartFilterType_All {
+            get {
+                return ResourceManager.GetString("Enum_TournamentChartFilterType_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MTT.
+        /// </summary>
+        internal static string Enum_TournamentChartFilterType_MTT {
+            get {
+                return ResourceManager.GetString("Enum_TournamentChartFilterType_MTT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to S&amp;G.
+        /// </summary>
+        internal static string Enum_TournamentChartFilterType_STT {
+            get {
+                return ResourceManager.GetString("Enum_TournamentChartFilterType_STT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cash - Holdem.
+        /// </summary>
+        internal static string s {
+            get {
+                return ResourceManager.GetString("s", resourceCulture);
             }
         }
     }

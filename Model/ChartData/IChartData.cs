@@ -11,12 +11,13 @@
 //----------------------------------------------------------------------
 
 using Model.Data;
+using Model.Enums;
 using System.Collections.Generic;
 
 namespace Model.ChartData
 {
     public interface ITournamentChartData
     {
-        IEnumerable<TournamentReportRecord> Create();
+        IEnumerable<TournamentReportRecord> Create(TournamentChartFilterType tournamentChartFilterType);
     }
 }
