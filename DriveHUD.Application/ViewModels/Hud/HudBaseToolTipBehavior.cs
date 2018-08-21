@@ -102,6 +102,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             var toolTipViewModels = HudElementViewModel.Tools
               .OfType<IHudBaseStatToolViewModel>()
               .Where(x => x.BaseStat != null && x.BaseStat.Stat == statInfo.Stat)
+              .OrderBy(x => x.Order)
               .OfType<HudBaseToolViewModel>()
               .ToArray();
 

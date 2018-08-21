@@ -111,6 +111,17 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Gets the order of tool 
+        /// </summary>
+        public int Order
+        {
+            get
+            {
+                return 2;
+            }
+        }
+
         [ProtoMember(2)]
         private HeatMapDto heatMap = new HeatMapDto();
 
