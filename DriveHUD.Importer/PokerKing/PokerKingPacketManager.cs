@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PokerMasterPacketManager.cs" company="Ace Poker Solutions">
+// <copyright file="PokerKingPacketManager.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,16 +11,14 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Importers.AndroidBase;
-using DriveHUD.Importers.PokerMaster.Model;
+using DriveHUD.Importers.PokerKing.Model;
 using System;
 
-namespace DriveHUD.Importers.PokerMaster
+namespace DriveHUD.Importers.PokerKing
 {
-    internal class PokerMasterPacketManager : PacketManager<PokerMasterPackage>
+    internal class PokerKingPacketManager : PacketManager<PokerKingPackage>
     {
-        private static readonly byte[] startingPacketBytes = new byte[] { 254, 0 };
-
-        private const int packetHeaderLength = 5;
+        private const int packetHeaderLength = 2;
 
         protected override int PacketHeaderLength
         {
@@ -32,24 +30,27 @@ namespace DriveHUD.Importers.PokerMaster
 
         public override bool IsStartingPacket(byte[] bytes)
         {
-            return StartsWith(bytes, startingPacketBytes);
+            return bytes.Length > 5 &&
+              bytes[2] == 0x27 &&
+              bytes[4] == 0x00 &&
+              bytes[5] == 0x00;
         }
 
         public override int ReadPacketLength(byte[] bytes)
         {
-            if (bytes.Length < PacketHeaderLength)
+            if (bytes.Length < packetHeaderLength)
             {
-                throw new ArgumentException(nameof(bytes), $"Packet must have more than {PacketHeaderLength} bytes");
+                throw new ArgumentException(nameof(bytes), $"Packet must have more than {packetHeaderLength} bytes");
             }
 
-            var numArray = new byte[] { bytes[1], bytes[2], bytes[3], bytes[4] };
+            var numArray = new byte[] { bytes[0], bytes[1] };
 
             if (BitConverter.IsLittleEndian)
             {
                 Array.Reverse(numArray);
             }
 
-            return BitConverter.ToInt32(numArray, 0);
+            return BitConverter.ToInt16(numArray, 0);
         }
     }
 }

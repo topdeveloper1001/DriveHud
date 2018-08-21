@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="CustomModulesNames.cs" company="Ace Poker Solutions">
+// <copyright file="ActionType.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,20 +10,25 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace Model
+using ProtoBuf;
+
+namespace DriveHUD.Importers.PokerKing.Model
 {
-    public static class CustomModulesNames
+    [ProtoContract]
+    internal enum ActionType : int
     {
-        public const string PlayerXRay = "PlayerXRay";
-
-        public const string PlayerXRayAssembly = "DriveHUD.PlayerXRay.dll";
-
-        public const string PMCatcher = "PMCatcher";
-
-        public const string PMCatcherAssembly = "DriveHUD.PMCatcher.dll";
-
-        public const string PKCatcher = "PKCatcher";
-
-        public const string PKCatcherAssembly = "DriveHUD.PKCatcher.dll";
+        Null = 0,
+        Check = 1,
+        Fold = 2,
+        Call = 3,
+        Bet = 4,
+        Raise = 5,
+        Allin = 6,
+        CallMuck = 7,
+        AddActionTime = 8,
+        SendCard_Common = 9,
+        Send_HoleCards = 10,
+        Straddle = 11,
+        Post = 12
     }
 }

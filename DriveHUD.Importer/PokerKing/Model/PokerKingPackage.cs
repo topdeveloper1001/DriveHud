@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="CustomModulesNames.cs" company="Ace Poker Solutions">
+// <copyright file="PokerKingPackage.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,20 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace Model
+namespace DriveHUD.Importers.PokerKing.Model
 {
-    public static class CustomModulesNames
+    internal class PokerKingPackage
     {
-        public const string PlayerXRay = "PlayerXRay";
+        public PackageType PackageType { get; set; }
 
-        public const string PlayerXRayAssembly = "DriveHUD.PlayerXRay.dll";
-
-        public const string PMCatcher = "PMCatcher";
-
-        public const string PMCatcherAssembly = "DriveHUD.PMCatcher.dll";
-
-        public const string PKCatcher = "PKCatcher";
-
-        public const string PKCatcherAssembly = "DriveHUD.PKCatcher.dll";
+        public byte[] Body { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="CustomModulesNames.cs" company="Ace Poker Solutions">
+// <copyright file="NoticeBuyin.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,20 +10,29 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace Model
+using ProtoBuf;
+
+namespace DriveHUD.Importers.PokerKing.Model
 {
-    public static class CustomModulesNames
+    [ProtoContract]
+    internal class NoticeBuyin
     {
-        public const string PlayerXRay = "PlayerXRay";
+        [ProtoMember(1)]
+        public long SelfBuyinLimit { get; set; }
 
-        public const string PlayerXRayAssembly = "DriveHUD.PlayerXRay.dll";
+        [ProtoMember(2)]
+        public long SelfBuyin { get; set; }
 
-        public const string PMCatcher = "PMCatcher";
+        [ProtoMember(3)]
+        public long SelfStake { get; set; }
 
-        public const string PMCatcherAssembly = "DriveHUD.PMCatcher.dll";
+        [ProtoMember(4)]
+        public long BankChips { get; set; }
 
-        public const string PKCatcher = "PKCatcher";
+        [ProtoMember(5)]
+        public long SelfBuyout { get; set; }
 
-        public const string PKCatcherAssembly = "DriveHUD.PKCatcher.dll";
+        [ProtoMember(6)]
+        public int RoomId { get; set; }
     }
 }

@@ -10,12 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Importers.AndroidBase;
+
 namespace DriveHUD.Importers.PokerMaster
 {
     /// <summary>
     /// Interface of PM importer
     /// </summary>
-    internal interface IPMImporter : IBackgroundProcess
+    internal interface IPMImporter : IBackgroundProcess, ITcpPacketImporter
     {
     }
 }

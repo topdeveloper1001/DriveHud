@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="CustomModulesNames.cs" company="Ace Poker Solutions">
+// <copyright file="NoticeCheckOutAndLeave.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,20 +10,20 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace Model
+using ProtoBuf;
+
+namespace DriveHUD.Importers.PokerKing.Model
 {
-    public static class CustomModulesNames
+    [ProtoContract]
+    class NoticeCheckOutAndLeave
     {
-        public const string PlayerXRay = "PlayerXRay";
+        [ProtoMember(1)]
+        public int RoomId { get; set; }
 
-        public const string PlayerXRayAssembly = "DriveHUD.PlayerXRay.dll";
+        [ProtoMember(2)]
+        public int TargetId { get; set; }
 
-        public const string PMCatcher = "PMCatcher";
-
-        public const string PMCatcherAssembly = "DriveHUD.PMCatcher.dll";
-
-        public const string PKCatcher = "PKCatcher";
-
-        public const string PKCatcherAssembly = "DriveHUD.PKCatcher.dll";
+        [ProtoMember(3)]
+        public string Name { get; set; }
     }
 }

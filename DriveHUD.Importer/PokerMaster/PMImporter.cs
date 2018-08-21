@@ -45,11 +45,7 @@ namespace DriveHUD.Importers.PokerMaster
     /// </summary>
     internal class PMImporter : GenericImporter, IPMImporter
     {
-        private readonly ManualResetEventSlim captureResetEvent = new ManualResetEventSlim();
-
         private readonly BlockingCollection<CapturedPacket> packetBuffer = new BlockingCollection<CapturedPacket>();
-
-        private readonly ConcurrentStack<CaptureDevice> captureDevices = new ConcurrentStack<CaptureDevice>();
 
         private readonly IPMCatcherService pmCatcherService = ServiceLocator.Current.TryResolve<IPMCatcherService>();
 
@@ -83,6 +79,25 @@ namespace DriveHUD.Importers.PokerMaster
 
         protected override string ProcessName => throw new NotSupportedException($"Process name isn't supported for importer. [{SiteString}]");
 
+        #region Implementation of ITcpImporter
+
+        public bool Match(TcpPacket tcpPacket, IpPacket ipPacket)
+        {
+            return tcpPacket.SourcePort == PMImporterHelper.PortFilter;
+        }
+
+        public void AddPacket(CapturedPacket capturedPacket)
+        {
+            packetBuffer.Add(capturedPacket);
+        }
+
+        public override bool IsDisabled()
+        {
+            return pmCatcherService == null || !pmCatcherService.IsEnabled();
+        }
+
+        #endregion
+
         /// <summary>
         /// Main importer task, executes in the background thread
         /// </summary>
@@ -92,7 +107,6 @@ namespace DriveHUD.Importers.PokerMaster
             {
                 InitializeLogger();
                 InitializeSettings();
-                StartNetworkDataCapture();
                 ProcessBuffer();
             }
             catch (Exception e)
@@ -100,9 +114,6 @@ namespace DriveHUD.Importers.PokerMaster
                 LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Failed importing.", e);
             }
 
-            captureResetEvent.Wait(StopTimeout);
-
-            captureDevices.Clear();
             packetBuffer.Clear();
 
             protectedLogger.StopLogging();
@@ -117,9 +128,9 @@ namespace DriveHUD.Importers.PokerMaster
         {
 
 #if DEBUG
-            if (!Directory.Exists("Hands"))
+            if (!Directory.Exists("PMHands"))
             {
-                Directory.CreateDirectory("Hands");
+                Directory.CreateDirectory("PMHands");
             }
 #endif
             isReloginRequired.Clear();
@@ -156,130 +167,6 @@ namespace DriveHUD.Importers.PokerMaster
             protectedLogger.Initialize(logger);
             protectedLogger.CleanLogs();
             protectedLogger.StartLogging();
-        }
-
-        /// <summary>
-        /// Starts processes to capture network data for all available devices
-        /// </summary>
-        protected void StartNetworkDataCapture()
-        {
-            captureResetEvent.Set();
-
-            var devices = CaptureDeviceList.Instance;
-
-            foreach (var device in devices)
-            {
-                if (IsAdvancedLogEnabled)
-                {
-                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Found device: {device.Name}, {device.Description}.");
-                }
-
-                try
-                {
-                    device.Open(DeviceMode.Normal);
-
-                    var captureDevice = new CaptureDevice(device)
-                    {
-                        IsOpened = true
-                    };
-
-                    captureDevices.Push(captureDevice);
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Could not open device {device.Name}.", e);
-                }
-            }
-
-            captureDevices.ForEach(captureDevice => Task.Run(() => CaptureData(captureDevice)));
-        }
-
-        /// <summary>
-        /// Captures network data of the specified device
-        /// </summary>
-        /// <param name="device">Device to capture</param>
-        protected void CaptureData(CaptureDevice captureDevice)
-        {
-            if (captureResetEvent.IsSet)
-            {
-                captureResetEvent.Reset();
-            }
-
-            while (true)
-            {
-                if (cancellationTokenSource.IsCancellationRequested)
-                {
-                    try
-                    {
-                        captureDevice.Device.Close();
-                        captureDevice.IsOpened = false;
-                    }
-                    catch (Exception e)
-                    {
-                        LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Device {captureDevice.Device.Name} has not been closed.", e);
-                    }
-
-                    if (!captureResetEvent.IsSet && captureDevices.All(x => !x.IsOpened))
-                    {
-                        captureResetEvent.Set();
-                    }
-
-                    return;
-                }
-
-                try
-                {
-                    var nextPacket = captureDevice.Device.GetNextPacket();
-
-                    if (nextPacket != null)
-                    {
-                        ParsePacket(nextPacket);
-                    }
-                    else
-                    {
-                        Task.Delay(NoDataDelay).Wait();
-                    }
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Data has not been captured from {captureDevice.Device.Name}.", e);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Parses captured data into the packet
-        /// </summary>
-        /// <param name="rawCapture">Captured data</param>
-        protected void ParsePacket(RawCapture rawCapture)
-        {
-            var packet = Packet.ParsePacket(rawCapture.LinkLayerType, rawCapture.Data);
-
-            var tcpPacket = packet.Extract<TcpPacket>();
-            var ipPacket = packet.Extract<IpPacket>();
-
-            if (tcpPacket == null || ipPacket == null || tcpPacket.SourcePort != PMImporterHelper.PortFilter)
-            {
-                return;
-            }
-
-            var payloadData = tcpPacket.PayloadData;
-
-            if (payloadData == null || payloadData.Length == 0)
-            {
-                return;
-            }
-
-            var capturedPacket = new CapturedPacket
-            {
-                Bytes = tcpPacket.PayloadData,
-                Source = new IPEndPoint(ipPacket.SourceAddress, tcpPacket.SourcePort),
-                Destination = new IPEndPoint(ipPacket.DestinationAddress, tcpPacket.DestinationPort),
-                CreatedTimeStamp = rawCapture.Timeval.Date,
-                SequenceNumber = tcpPacket.SequenceNumber
-            };
-
-            packetBuffer.Add(capturedPacket);
         }
 
         /// <summary>
@@ -797,12 +684,7 @@ namespace DriveHUD.Importers.PokerMaster
             }
 
             return playerList;
-        }
-
-        protected override bool IsDisabled()
-        {
-            return pmCatcherService == null || !pmCatcherService.IsEnabled();
-        }
+        }    
 
         protected override IntPtr FindWindow(ParsingResult parsingResult)
         {

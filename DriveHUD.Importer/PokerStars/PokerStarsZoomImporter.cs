@@ -311,7 +311,7 @@ namespace DriveHUD.Importers.PokerStars
             }
         }
 
-        protected override bool IsDisabled()
+        public override bool IsDisabled()
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
             var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);

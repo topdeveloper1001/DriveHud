@@ -34,7 +34,7 @@ namespace PMCatcher.Tests
     [TestFixture]
     class HandBuilderTests
     {
-        private const string TestDataFolder = "PMTests\\TestData\\HandsRawData";
+        private const string TestDataFolder = "TcpImportersTests\\PMTests\\TestData\\HandsRawData";
         private const string JsonExt = ".json";
         private const string ExpectedResultFile = "ExpectedResult.xml";
 

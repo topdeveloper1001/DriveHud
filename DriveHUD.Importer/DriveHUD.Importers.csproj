@@ -115,9 +115,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AndroidBase\IPackageBuilder.cs" />
+    <Compile Include="AndroidBase\ITcpImporter.cs" />
+    <Compile Include="AndroidBase\ITcpPacketImporter.cs" />
+    <Compile Include="AndroidBase\TcpImporter.cs" />
     <Compile Include="Base\BaseImporter.cs" />
     <Compile Include="Base\BaseDataManager.cs" />
     <Compile Include="Base\GenericImporter.cs" />
+    <Compile Include="Base\IBaseImporter.cs" />
     <Compile Include="BetOnline\BetOnlineCatcher.cs" />
     <Compile Include="BetOnline\BetOnlineDataManager.cs" />
     <Compile Include="BetOnline\BetOnlineImporter.cs" />
@@ -268,6 +272,46 @@
     <Compile Include="PokerClientImporter.cs" />
     <Compile Include="PokerClientTableClosedEvent.cs" />
     <Compile Include="PokerClientTableClosedEventArgs.cs" />
+    <Compile Include="PokerKing\IPKImporter.cs" />
+    <Compile Include="PokerKing\Model\ActionType.cs" />
+    <Compile Include="PokerKing\Model\BettingRound.cs" />
+    <Compile Include="PokerKing\Model\CardItem.cs" />
+    <Compile Include="PokerKing\Model\JackPotWinInfo.cs" />
+    <Compile Include="PokerKing\Model\NoticeBuyin.cs" />
+    <Compile Include="PokerKing\Model\NoticeCheckOutAndLeave.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameAnte.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameBlind.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameCommunityCards.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameElectDealer.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameHoleCard.cs" />
+    <Compile Include="PokerKing\Model\NoticeGamePost.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameRoundEnd.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameSettlement.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameShowCard.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameShowDown.cs" />
+    <Compile Include="PokerKing\Model\NoticePlayerAction.cs" />
+    <Compile Include="PokerKing\Model\NoticePlayerActionTurn.cs" />
+    <Compile Include="PokerKing\Model\NoticePlayerShowCard.cs" />
+    <Compile Include="PokerKing\Model\NoticePlayerStayPosition.cs" />
+    <Compile Include="PokerKing\Model\NoticeResetGame.cs" />
+    <Compile Include="PokerKing\Model\NoticeSitDown.cs" />
+    <Compile Include="PokerKing\Model\NoticeStandup.cs" />
+    <Compile Include="PokerKing\Model\NoticeStartGame.cs" />
+    <Compile Include="PokerKing\Model\PackageType.cs" />
+    <Compile Include="PokerKing\Model\PlayerInfo.cs" />
+    <Compile Include="PokerKing\Model\PlayerSettleInfo.cs" />
+    <Compile Include="PokerKing\Model\PlayerShowDownInfo.cs" />
+    <Compile Include="PokerKing\Model\PlayerShowInfo.cs" />
+    <Compile Include="PokerKing\Model\PokerKingPackage.cs" />
+    <Compile Include="PokerKing\Model\PositionInfo.cs" />
+    <Compile Include="PokerKing\Model\PotInfo.cs" />
+    <Compile Include="PokerKing\Model\RequestLeaveRoom.cs" />
+    <Compile Include="PokerKing\Model\ShowCardsSeatInfo.cs" />
+    <Compile Include="PokerKing\Model\WinPotInfo.cs" />
+    <Compile Include="PokerKing\PKImporter.cs" />
+    <Compile Include="PokerKing\PKImporterHelper.cs" />
+    <Compile Include="PokerKing\PokerKingPackageBuilder.cs" />
+    <Compile Include="PokerKing\PokerKingPacketManager.cs" />
     <Compile Include="PokerMaster\BodyDecryptor.cs" />
     <Compile Include="AndroidBase\CaptureDevice.cs" />
     <Compile Include="AndroidBase\CapturedPacket.cs" />
@@ -402,9 +446,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PokerKing\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

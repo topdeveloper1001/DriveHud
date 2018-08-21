@@ -209,6 +209,8 @@
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerBovadaFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
+    <Compile Include="TcpImportersTests\PacketManagerTest.cs" />
+    <Compile Include="TcpImportersTests\PKTests\PokerKingPacketManagerTests.cs" />
     <Compile Include="Utils\AssertionUtils.cs" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt" />
@@ -235,13 +237,13 @@
     <Compile Include="IntegrationTests\Parsers\Winamax\WinamaxFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\WinningPokerNetwork\WinningPokerNetworkFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\WSPO\WSPONetFastParserTest.cs" />
-    <Compile Include="PMTests\HandBuilderTests.cs" />
-    <Compile Include="PMTests\MemuEmulatorProviderTest.cs" />
-    <Compile Include="PMTests\MomoEmulatorProviderTest.cs" />
-    <Compile Include="PMTests\NetworkUtilsTests.cs" />
-    <Compile Include="PMTests\NoxEmulatorProviderTest.cs" />
-    <Compile Include="PMTests\PacketManagerTests.cs" />
-    <Compile Include="PMTests\TestExtensions.cs" />
+    <Compile Include="TcpImportersTests\PMTests\HandBuilderTests.cs" />
+    <Compile Include="TcpImportersTests\PMTests\MemuEmulatorProviderTest.cs" />
+    <Compile Include="TcpImportersTests\PMTests\MomoEmulatorProviderTest.cs" />
+    <Compile Include="TcpImportersTests\PMTests\NetworkUtilsTests.cs" />
+    <Compile Include="TcpImportersTests\PMTests\NoxEmulatorProviderTest.cs" />
+    <Compile Include="TcpImportersTests\PMTests\PokerMasterPacketManagerTests.cs" />
+    <Compile Include="TcpImportersTests\PMTests\TestExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\BaseIndicatorsTests.cs" />
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
@@ -285,305 +287,317 @@
     <Compile Include="UnitTests\UtilsTests.cs" />
     <Fakes Include="Fakes\System.fakes" />
     <Fakes Include="Fakes\mscorlib.fakes" />
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\01-Gamestart.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\02-Gamewait.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\03-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\04-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\05-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\06-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\07-Flop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\08-Flop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\09-Flop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\10-Turn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\11-Turn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\12-Turn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\13-River.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\14-River.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\15-River.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\16-River.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\17-Result.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\01-Gamestart.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\02-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\03-Gamewait.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\04-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\05-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\06-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\07-Flop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\08-Flop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\09-Flop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\10-Flop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\11-Turn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\12-Turn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\13-Turn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\14-Turn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\15-River.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\16-River.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\17-River.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\18-Result.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\19-Showcard.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\01-Gamestart.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\02-Gamewait.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\03-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\04-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\05-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\06-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\07-Preflop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\08-Flop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\09-Flop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\10-Flop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\11-Flop.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\12-Turn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\13-Turn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\14-Turn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\15-Turn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\16-River.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\17-River.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\18-River.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\19-River.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\20-River.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\21-Result.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\22-Showcard.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <Content Include="PMTests\TestData\HandsRawData\6-max-Omaha-3\ExpectedResult.xml">
+    <Content Include="TcpImportersTests\PKTests\TestData\Packets\170.33.8.75.31001-192.168.0.104.33644.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\01-Gamestart.json">
+    <None Include="TcpImportersTests\PKTests\TestData\Packets\NoticePlayerActionTurnPacket.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\02-Gamewait.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\01-Gamestart.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\03-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\02-Gamewait.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\04-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\03-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\05-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\04-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\06-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\05-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\07-Flop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\06-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\08-Flop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\07-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\09-Flop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\08-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\10-Flop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\09-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\11-Flop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\10-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\12-Turn.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\11-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\13-Turn.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\12-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\14-Turn.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\13-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\15-Turn.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\14-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\16-Turn.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\15-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\17-River.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\16-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\18-Result.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\17-Result.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\19-Showcard.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\01-Gamestart.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\ExpectedResult.xml">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\02-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\ExpectedResult.xml">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\03-Gamewait.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="PMTests\TestData\HandsRawData\6-max-Omaha-1\ExpectedResult.xml">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\04-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\05-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\06-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\07-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\08-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\09-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\10-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\11-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\12-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\13-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\14-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\15-River.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\16-River.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\17-River.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\18-Result.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\19-Showcard.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\01-Gamestart.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\02-Gamewait.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\03-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\04-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\05-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\06-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\07-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\08-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\09-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\10-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\11-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\12-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\13-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\14-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\15-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\16-River.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\17-River.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\18-River.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\19-River.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\20-River.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\21-Result.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\22-Showcard.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="TcpImportersTests\PKTests\TestData\Packets\170.33.8.75.31001-192.168.0.104.33644-pkgt.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\6-max-Omaha-2\ExpectedResult.xml">
+    <Content Include="TcpImportersTests\PKTests\TestData\Packets\NoticePlayerActionTurnPacket.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\6-max-Omaha-4\ExpectedResult.xml">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\ExpectedResult.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\action-sample.txt">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\01-Gamestart.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\02-Gamewait.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\03-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\04-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\05-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\06-Preflop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\07-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\08-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\09-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\10-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\11-Flop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\12-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\13-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\14-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\15-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\16-Turn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\17-River.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\18-Result.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\19-Showcard.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\ExpectedResult.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-2\ExpectedResult.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\ExpectedResult.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\ExpectedResult.xml">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-2\ExpectedResult.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-4\ExpectedResult.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\action-sample.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\ExpectedResult.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\ExpectedResult.xml">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\ExpectedResult.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\ExpectedResult.xml">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\ExpectedResult.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\ExpectedResult.xml">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\ExpectedResult.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-5\ExpectedResult.xml">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-5\ExpectedResult.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\ExpectedResult.xml">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\ExpectedResult.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\119.28.109.172.9188-192.168.0.104.49082-cmd.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\119.28.109.172.9188-192.168.0.104.49082-cmd.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\119.28.109.172.9188-192.168.0.104.60235-cmd.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\119.28.109.172.9188-192.168.0.104.60235-cmd.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\119.28.109.172.9188-192.168.0.104.60251-cmd.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\119.28.109.172.9188-192.168.0.104.60251-cmd.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-10.0.0.81.3511-cmd.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\218.98.62.171.9188-10.0.0.81.3511-cmd.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-192.168.0.102.60431-cmd.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\218.98.62.171.9188-192.168.0.102.60431-cmd.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-192.168.0.102.60431.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\218.98.62.171.9188-192.168.0.102.60431.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-192.168.0.102.60462-cmd.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\218.98.62.171.9188-192.168.0.102.60462-cmd.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-192.168.0.102.60462.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\218.98.62.171.9188-192.168.0.102.60462.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\Packet1.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\Packet1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\SCLoginBody.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\SCLoginBody.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\BetOnline\BOL-Cash-Holdem-mucked-cards-ipoker.xml">
@@ -706,6 +720,9 @@
     <Content Include="UnitTests\TestData\ExportTest-Forum-Source-Many-MP.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\Horizon.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\Ignition\ign-cash-2017-11-22.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -763,46 +780,46 @@
     <Content Include="UnitTests\TestData\BetOnline\WindfallHand-3max.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\01-Gamestart.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-2\01-Gamestart.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\02-Gamewait.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-2\02-Gamewait.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\03-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-2\03-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\04-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-2\04-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\05-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-2\05-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\06-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-2\06-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\07-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-2\07-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\08-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-2\08-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\09-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-2\09-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\10-Result.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-2\10-Result.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-2\11-Showcard.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-2\11-Showcard.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="PMTests\TestData\Packets\119.28.109.172.9188-192.168.0.104.60251.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\119.28.109.172.9188-192.168.0.104.60251.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\119.28.109.172.9188-192.168.0.104.60235.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\119.28.109.172.9188-192.168.0.104.60235.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\119.28.109.172.9188-192.168.0.104.49082.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\119.28.109.172.9188-192.168.0.104.49082.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\Ignition\ign-zone-2018-03-18-2.log">
@@ -814,7 +831,7 @@
     <Content Include="UnitTests\TestData\Ignition\ign-zone-2018-03-18-4.log">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\Packets\218.98.62.171.9188-10.0.0.81.3511.txt">
+    <Content Include="TcpImportersTests\PMTests\TestData\Packets\218.98.62.171.9188-10.0.0.81.3511.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\Ignition\ign-jp-2018-05-19.log">
@@ -968,310 +985,310 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\01-GameStart.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\01-GameStart.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\02-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\02-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\03-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\03-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\04-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\04-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\05-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\05-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\06-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\06-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\07-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\07-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\08-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\08-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\09-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\09-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\10-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\10-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\11-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\11-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\12-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\12-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\13-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\13-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\14-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\14-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\15-Result.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\15-Result.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-1\16-Showcard.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-1\16-Showcard.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\01-GameStart.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\01-GameStart.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\02-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\02-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\03-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\03-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\04-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\04-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\05-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\05-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\06-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\06-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\07-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\07-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\08-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\08-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\09-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\09-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\10-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\10-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\11-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\11-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\12-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\12-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\13-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\13-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\14-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\14-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\15-Result.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\15-Result.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-2\16-Showcard.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\16-Showcard.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\01-Gamestart.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\01-Gamestart.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\02-Ante.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\02-Ante.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\03-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\03-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\04-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\04-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\05-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\05-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\06-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\06-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\07-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\07-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\08-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\08-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\09-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\09-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\10-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\10-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\11-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\11-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\12-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\12-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\13-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\13-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\14-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\14-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\15-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\15-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\16-Result.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\16-Result.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-3\17-Showcard.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\17-Showcard.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\01-Gamestart.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\01-Gamestart.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\02-Ante.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\02-Ante.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\03-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\03-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\04-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\04-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\05-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\05-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\06-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\06-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\07-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\07-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\08-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\08-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\09-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\09-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\10-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\10-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\11-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\11-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\12-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\12-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\13-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\13-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\14-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\14-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\15-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\15-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\16-Result.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\16-Result.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-4\17-Showcard.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-4\17-Showcard.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-5\01-Gamestart.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-5\01-Gamestart.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-5\02-Ante.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-5\02-Ante.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-5\03-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-5\03-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-5\04-Result.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-5\04-Result.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\HU-5\05-Showcard.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-5\05-Showcard.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\01-Gamestart.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\01-Gamestart.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\02-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\02-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\03-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\03-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\04-Preflop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\04-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\05-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\05-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\06-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\06-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\07-Flop.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\07-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\08-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\08-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\09-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\09-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\10-Turn.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\10-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\11-River.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\11-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\12-Result.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\12-Result.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="PMTests\TestData\HandsRawData\SNG-HU-1\13-Showcard.json">
+    <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\SNG-HU-1\13-Showcard.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\01-Gamestart.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\01-Gamestart.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\02-Gamewait.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\02-Gamewait.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\03-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\03-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\04-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\04-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\05-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\05-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\06-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\06-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\07-Preflop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\07-Preflop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\08-Flop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\08-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\09-Flop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\09-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\10-Flop.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\10-Flop.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\11-Turn.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\11-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\12-Turn.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\12-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\13-Turn.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\13-Turn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\14-River.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\14-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\15-River.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\15-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\16-River.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\16-River.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\17-Result.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\17-Result.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="PMTests\TestData\HandsRawData\6-max-Straddle-1\18-Showcard.json">
+    <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Straddle-1\18-Showcard.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
