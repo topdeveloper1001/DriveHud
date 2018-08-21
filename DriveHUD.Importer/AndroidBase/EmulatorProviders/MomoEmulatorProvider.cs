@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers.PokerMaster.EmulatorProviders
+namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
 {
     internal class MomoEmulatorProvider : VirtualBoxEmulator
     {

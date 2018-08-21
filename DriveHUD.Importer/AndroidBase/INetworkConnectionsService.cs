@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PacketExtensions.cs" company="Ace Poker Solutions">
+// <copyright file="INetworkConnectionsService.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,15 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using PacketDotNet;
+using System.Diagnostics;
 
-namespace DriveHUD.Importers.PokerMaster
+namespace DriveHUD.Importers.AndroidBase
 {
-    internal static class PacketExtensions
+    internal interface INetworkConnectionsService
     {
-        public static T Extract<T>(this Packet packet) where T : Packet
-        {
-            return (T)packet.Extract(typeof(T));
-        }
+        Process GetProcess(CapturedPacket capturedPacket);
+
+        void SetLogger(string name);
     }
 }

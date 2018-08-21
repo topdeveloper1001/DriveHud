@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="MemuEmulatorProvider.cs" company="Ace Poker Solutions">
+// <copyright file="NoxEmulatorProvider.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,18 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers.PokerMaster.EmulatorProviders
+namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
 {
-    internal class MemuEmulatorProvider : VirtualBoxEmulator
+    internal class NoxEmulatorProvider : VirtualBoxEmulator
     {
-        protected override string EmulatorName => "MEmu";
+        protected override string EmulatorName => "NOX";
 
-        protected override string ProcessName => "Memu";
+        protected override string ProcessName => "Nox";
 
-        protected override string InstanceArgumentPrefix => "memu_";
+        protected override string InstanceArgumentPrefix => "nox_";
 
-        protected override string VbProcessName => "Memu";
+        protected override string VbProcessName => "Nox";
 
-        protected override string VbInstanceArgumentPrefix => "memu_";
+        protected override string VbInstanceArgumentPrefix => "nox_";
     }
 }

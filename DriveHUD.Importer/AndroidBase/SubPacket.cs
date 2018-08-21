@@ -10,11 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Extensions;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 
-namespace DriveHUD.Importers.PokerMaster
+namespace DriveHUD.Importers.AndroidBase
 {
     internal class SubPacket<T> where T : class
     {
@@ -130,7 +130,9 @@ namespace DriveHUD.Importers.PokerMaster
                 return false;
             }
 
-            return SerializationHelper.TryDeserialize(Bytes.ToArray(), startingPosition, out package);
+            var packageBuilder = ServiceLocator.Current.GetInstance<IPackageBuilder<T>>();
+
+            return packageBuilder.TryParse(Bytes.ToArray(), startingPosition, out package);
         }
 
         public SubPacket<T> Clone()

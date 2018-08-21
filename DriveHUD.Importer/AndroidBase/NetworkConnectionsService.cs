@@ -12,28 +12,30 @@
 
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils.Network;
-using DriveHUD.Entities;
-using Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
 
-namespace DriveHUD.Importers.PokerMaster
+namespace DriveHUD.Importers.AndroidBase
 {
     internal class NetworkConnectionsService : INetworkConnectionsService
     {
+        private string loggerName;
+
         private List<ConnectionProcessInfo> connectionProcesses = new List<ConnectionProcessInfo>();
 
         private List<LocalConnection> localConnections = new List<LocalConnection>();
 
-        private EnumPokerSites Site
+        public NetworkConnectionsService()
         {
-            get
-            {
-                return EnumPokerSites.PokerMaster;
-            }
+            loggerName = GetType().ToString();
+        }
+
+        public void SetLogger(string name)
+        {
+            loggerName = name;
         }
 
         public Process GetProcess(CapturedPacket capturedPacket)
@@ -64,13 +66,13 @@ namespace DriveHUD.Importers.PokerMaster
 
                 if (localConnection == null)
                 {
-                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Could not find associated process for packet {capturedPacket}");
+                    LogProvider.Log.Info(loggerName, $"Could not find associated process for packet {capturedPacket}");
                     return null;
                 }
 
                 if (localConnection.ProcessId == 0)
                 {
-                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Associated process isn't defined for packet {capturedPacket}");
+                    LogProvider.Log.Info(loggerName, $"Associated process isn't defined for packet {capturedPacket}");
                     return null;
                 }
 
@@ -78,7 +80,8 @@ namespace DriveHUD.Importers.PokerMaster
                 {
                     Source = capturedPacket.Source,
                     Destination = capturedPacket.Destination,
-                    Process = Process.GetProcessById((int)localConnection.ProcessId)
+                    Process = Process.GetProcessById((int)localConnection.ProcessId),
+                    LoggerName = loggerName
                 };
 
                 connectionProcesses.Add(connectionProcess);
@@ -95,6 +98,8 @@ namespace DriveHUD.Importers.PokerMaster
 
             public Process Process { get; set; }
 
+            public string LoggerName { get; set; }
+
             public bool Validate()
             {
                 try
@@ -103,7 +108,7 @@ namespace DriveHUD.Importers.PokerMaster
                 }
                 catch (Exception e)
                 {
-                    LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Process [{Process.Id}] could not be validated.", e);
+                    LogProvider.Log.Error(LoggerName, $"Process [{Process.Id}] could not be validated.", e);
                 }
 
                 return false;

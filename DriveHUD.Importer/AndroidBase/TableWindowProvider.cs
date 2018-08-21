@@ -12,11 +12,11 @@
 
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
-using DriveHUD.Importers.PokerMaster.EmulatorProviders;
+using DriveHUD.Importers.AndroidBase.EmulatorProviders;
 using System;
 using System.Diagnostics;
 
-namespace DriveHUD.Importers.PokerMaster
+namespace DriveHUD.Importers.AndroidBase
 {
     internal class TableWindowProvider : ITableWindowProvider
     {

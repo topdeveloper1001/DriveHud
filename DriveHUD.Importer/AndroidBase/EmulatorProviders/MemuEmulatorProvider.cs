@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="CaptureDevice.cs" company="Ace Poker Solutions">
+// <copyright file="MemuEmulatorProvider.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,32 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using SharpPcap;
-using System;
-
-namespace DriveHUD.Importers.PokerMaster
+namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
 {
-    internal class CaptureDevice
+    internal class MemuEmulatorProvider : VirtualBoxEmulator
     {
-        private readonly ICaptureDevice captureDevice;
+        protected override string EmulatorName => "MEmu";
 
-        public CaptureDevice(ICaptureDevice captureDevice)
-        {
-            this.captureDevice = captureDevice ?? throw new ArgumentNullException(nameof(captureDevice));
-        }
+        protected override string ProcessName => "Memu";
 
-        public ICaptureDevice Device
-        {
-            get
-            {
-                return captureDevice;
-            }
-        }
+        protected override string InstanceArgumentPrefix => "memu_";
 
-        public bool IsOpened
-        {
-            get;
-            set;
-        }
+        protected override string VbProcessName => "Memu";
+
+        protected override string VbInstanceArgumentPrefix => "memu_";
     }
 }

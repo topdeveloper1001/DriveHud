@@ -65,7 +65,7 @@
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\NHibernate.4.1.1.4000\lib\net40\NHibernate.dll</HintPath>
@@ -114,6 +114,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndroidBase\IPackageBuilder.cs" />
     <Compile Include="Base\BaseImporter.cs" />
     <Compile Include="Base\BaseDataManager.cs" />
     <Compile Include="Base\GenericImporter.cs" />
@@ -268,20 +269,20 @@
     <Compile Include="PokerClientTableClosedEvent.cs" />
     <Compile Include="PokerClientTableClosedEventArgs.cs" />
     <Compile Include="PokerMaster\BodyDecryptor.cs" />
-    <Compile Include="PokerMaster\CaptureDevice.cs" />
-    <Compile Include="PokerMaster\CapturedPacket.cs" />
-    <Compile Include="PokerMaster\EmulatorProviders\IEmulatorProvider.cs" />
-    <Compile Include="PokerMaster\EmulatorProviders\MemuEmulatorProvider.cs" />
-    <Compile Include="PokerMaster\EmulatorProviders\MomoEmulatorProvider.cs" />
-    <Compile Include="PokerMaster\EmulatorProviders\NoxEmulatorProvider.cs" />
-    <Compile Include="PokerMaster\EmulatorProviders\VirtualBoxEmulator.cs" />
+    <Compile Include="AndroidBase\CaptureDevice.cs" />
+    <Compile Include="AndroidBase\CapturedPacket.cs" />
+    <Compile Include="AndroidBase\EmulatorProviders\IEmulatorProvider.cs" />
+    <Compile Include="AndroidBase\EmulatorProviders\MemuEmulatorProvider.cs" />
+    <Compile Include="AndroidBase\EmulatorProviders\MomoEmulatorProvider.cs" />
+    <Compile Include="AndroidBase\EmulatorProviders\NoxEmulatorProvider.cs" />
+    <Compile Include="AndroidBase\EmulatorProviders\VirtualBoxEmulator.cs" />
     <Compile Include="PokerMaster\HandBuilder.cs" />
     <Compile Include="PokerMaster\HandBuilderException.cs" />
     <Compile Include="PokerMaster\IHandBuilder.cs" />
-    <Compile Include="PokerMaster\INetworkConnectionsService.cs" />
-    <Compile Include="PokerMaster\IPacketManager.cs" />
+    <Compile Include="AndroidBase\INetworkConnectionsService.cs" />
+    <Compile Include="AndroidBase\IPacketManager.cs" />
     <Compile Include="PokerMaster\IPMImporter.cs" />
-    <Compile Include="PokerMaster\ITableWindowProvider.cs" />
+    <Compile Include="AndroidBase\ITableWindowProvider.cs" />
     <Compile Include="PokerMaster\Model\CreateRoomType.cs" />
     <Compile Include="PokerMaster\Model\DefaultSettingInfoNet.cs" />
     <Compile Include="PokerMaster\Model\DeviceType.cs" />
@@ -304,7 +305,7 @@
     <Compile Include="PokerMaster\Model\LeagueGameFee.cs" />
     <Compile Include="PokerMaster\Model\LeagueGameFeeLadders.cs" />
     <Compile Include="PokerMaster\Model\OddsStructure.cs" />
-    <Compile Include="PokerMaster\Model\Package.cs" />
+    <Compile Include="PokerMaster\Model\PokerMasterPackage.cs" />
     <Compile Include="PokerMaster\Model\PackageCommand.cs" />
     <Compile Include="PokerMaster\Model\PotInfo.cs" />
     <Compile Include="PokerMaster\Model\RaiseShortcutsOptions.cs" />
@@ -323,14 +324,16 @@
     <Compile Include="PokerMaster\Model\UserGameRoles.cs" />
     <Compile Include="PokerMaster\Model\UserGameStates.cs" />
     <Compile Include="PokerMaster\Model\VipType.cs" />
-    <Compile Include="PokerMaster\NetworkConnectionsService.cs" />
-    <Compile Include="PokerMaster\PacketExtensions.cs" />
-    <Compile Include="PokerMaster\PacketManager.cs" />
-    <Compile Include="PokerMaster\PacketsSet.cs" />
+    <Compile Include="AndroidBase\NetworkConnectionsService.cs" />
+    <Compile Include="AndroidBase\PacketExtensions.cs" />
+    <Compile Include="AndroidBase\PacketManager.cs" />
+    <Compile Include="AndroidBase\PacketsSet.cs" />
     <Compile Include="PokerMaster\PMImporter.cs" />
     <Compile Include="PokerMaster\PMImporterHelper.cs" />
-    <Compile Include="PokerMaster\SubPacket.cs" />
-    <Compile Include="PokerMaster\TableWindowProvider.cs" />
+    <Compile Include="PokerMaster\PokerMasterPackageBuilder.cs" />
+    <Compile Include="AndroidBase\SubPacket.cs" />
+    <Compile Include="AndroidBase\TableWindowProvider.cs" />
+    <Compile Include="PokerMaster\PokerMasterPacketManager.cs" />
     <Compile Include="PokerStars\DataObjects\PlayerDataObject.cs" />
     <Compile Include="PokerStars\DataObjects\PokerStarsZoomCacheData.cs" />
     <Compile Include="PokerStars\DataObjects\PokerStarsZoomDataObject.cs" />
@@ -399,7 +402,9 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="PokerKing\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

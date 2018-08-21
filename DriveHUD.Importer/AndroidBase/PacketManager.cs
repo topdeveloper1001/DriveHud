@@ -10,26 +10,22 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Importers.PokerMaster.Model;
-using System;
 using System.Collections.Generic;
 
-namespace DriveHUD.Importers.PokerMaster
+namespace DriveHUD.Importers.AndroidBase
 {
-    internal class PacketManager : IPacketManager
+    internal abstract class PacketManager<T> : IPacketManager<T> where T : class
     {
-        private static readonly int packetHeaderLength = 5;
+        protected Dictionary<SourceDestination, PacketsSet<T>> packetsBytes = new Dictionary<SourceDestination, PacketsSet<T>>();
 
-        private static readonly byte[] startingPacketBytes = new byte[] { 254, 0 };
-
-        private Dictionary<SourceDestination, PacketsSet<Package>> packetsBytes = new Dictionary<SourceDestination, PacketsSet<Package>>();
-
-        public static bool IsStartingPacket(byte[] bytes)
+        protected abstract int PacketHeaderLength
         {
-            return StartsWith(bytes, startingPacketBytes);
+            get;
         }
 
-        public bool TryParse(CapturedPacket packet, out Package package)
+        public abstract bool IsStartingPacket(byte[] bytes);
+
+        public virtual bool TryParse(CapturedPacket packet, out T package)
         {
             var packetsSet = GetPacketsSet(packet);
 
@@ -37,7 +33,7 @@ namespace DriveHUD.Importers.PokerMaster
               packetsSet.AddSubPacket(packet.Bytes, packet.CreatedTimeStamp, packet.SequenceNumber) :
               packetsSet.AddStartingPacket(packet.Bytes, ReadPacketLength(packet.Bytes), packet.CreatedTimeStamp, packet.SequenceNumber);
 
-            if (subPacket == null || !subPacket.TryParse(packetHeaderLength, out package))
+            if (subPacket == null || !subPacket.TryParse(PacketHeaderLength, out package))
             {
                 packetsSet.RemoveExpiredPackets();
                 package = null;
@@ -47,7 +43,9 @@ namespace DriveHUD.Importers.PokerMaster
             return true;
         }
 
-        private PacketsSet<Package> GetPacketsSet(CapturedPacket packet)
+        public abstract int ReadPacketLength(byte[] bytes);
+
+        protected virtual PacketsSet<T> GetPacketsSet(CapturedPacket packet)
         {
             var sourceDestination = new SourceDestination
             {
@@ -57,19 +55,19 @@ namespace DriveHUD.Importers.PokerMaster
                 PortDestination = packet.Destination.Port
             };
 
-            if (packetsBytes.TryGetValue(sourceDestination, out PacketsSet<Package> packetsSet))
+            if (packetsBytes.TryGetValue(sourceDestination, out PacketsSet<T> packetsSet))
             {
                 return packetsSet;
             }
 
-            packetsSet = new PacketsSet<Package>();
+            packetsSet = new PacketsSet<T>();
 
             packetsBytes.Add(sourceDestination, packetsSet);
 
             return packetsSet;
         }
 
-        private static bool StartsWith(byte[] bytes, byte[] value)
+        protected static bool StartsWith(byte[] bytes, byte[] value)
         {
             if (bytes == null || value == null || bytes.Length < value.Length)
             {
@@ -86,25 +84,8 @@ namespace DriveHUD.Importers.PokerMaster
 
             return true;
         }
-
-        public static int ReadPacketLength(byte[] bytes)
-        {
-            if (bytes.Length < packetHeaderLength)
-            {
-                throw new ArgumentException(nameof(bytes), $"Packet must have more than {packetHeaderLength} bytes");
-            }
-
-            var numArray = new byte[] { bytes[1], bytes[2], bytes[3], bytes[4] };
-
-            if (BitConverter.IsLittleEndian)
-            {
-                Array.Reverse(numArray);
-            }
-
-            return BitConverter.ToInt32(numArray, 0);
-        }
-
-        private class SourceDestination
+    
+        protected class SourceDestination
         {
             public string IPSource { get; set; }
 

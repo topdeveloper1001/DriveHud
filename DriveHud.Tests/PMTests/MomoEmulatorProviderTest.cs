@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Importers.PokerMaster.EmulatorProviders;
+using DriveHUD.Importers.AndroidBase.EmulatorProviders;
 using NUnit.Framework;
 using System.Diagnostics;
 

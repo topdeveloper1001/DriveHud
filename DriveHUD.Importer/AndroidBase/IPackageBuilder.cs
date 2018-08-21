@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="NoxEmulatorProvider.cs" company="Ace Poker Solutions">
+// <copyright file="IPackageBuilder.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,18 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers.PokerMaster.EmulatorProviders
+namespace DriveHUD.Importers.AndroidBase
 {
-    internal class NoxEmulatorProvider : VirtualBoxEmulator
+    internal interface IPackageBuilder<T> where T : class
     {
-        protected override string EmulatorName => "NOX";
-
-        protected override string ProcessName => "Nox";
-
-        protected override string InstanceArgumentPrefix => "nox_";
-
-        protected override string VbProcessName => "Nox";
-
-        protected override string VbInstanceArgumentPrefix => "nox_";
+        bool TryParse(byte[] bytes, int startingPosition, out T package);
     }
 }

@@ -12,6 +12,7 @@
 
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Linq;
+using DriveHUD.Importers.AndroidBase;
 using DriveHUD.Importers.PokerMaster;
 using DriveHUD.Importers.PokerMaster.Model;
 using Microsoft.QualityTools.Testing.Fakes;
@@ -40,9 +41,9 @@ namespace PMCatcher.Tests
         public void PacketIsStartingPacketTest(string file, bool expected)
         {
             var bytes = ReadPacketFile(file);
-            var packetManager = new PacketManager();
+            var packetManager = new PokerMasterPacketManager();
 
-            var actual = PacketManager.IsStartingPacket(bytes);
+            var actual = packetManager.IsStartingPacket(bytes);
 
             Assert.That(actual, Is.EqualTo(expected));
         }
@@ -51,7 +52,7 @@ namespace PMCatcher.Tests
         public void TryParsePacketTest(string file)
         {
             var bytes = ReadPacketFile(file);
-            var packetManager = new PacketManager();
+            var packetManager = new PokerMasterPacketManager();
 
             var capturedPacket = new CapturedPacket
             {
@@ -62,7 +63,7 @@ namespace PMCatcher.Tests
                 SequenceNumber = 1962805251
             };
 
-            var result = packetManager.TryParse(capturedPacket, out Package actual);
+            var result = packetManager.TryParse(capturedPacket, out PokerMasterPackage actual);
 
             Assert.IsTrue(result);
             Assert.IsNotNull(actual);
@@ -97,7 +98,7 @@ namespace PMCatcher.Tests
                     GetCommandList(expectedCommandsFile) :
                     new List<PackageCommand>();
 
-            var packetManager = new PacketManager();
+            var packetManager = new PokerMasterPacketManager();
 
             var decryptKeyBytes = Convert.FromBase64String(decryptKey);
 
@@ -111,7 +112,7 @@ namespace PMCatcher.Tests
                 {
                     ShimDateTime.NowGet = () => packet.CreatedTimeStamp;
 
-                    if (packetManager.TryParse(packet, out Package package))
+                    if (packetManager.TryParse(packet, out PokerMasterPackage package))
                     {
                         Console.WriteLine(package.Cmd);
 

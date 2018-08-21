@@ -13,7 +13,7 @@
 using System;
 using System.Net;
 
-namespace DriveHUD.Importers.PokerMaster
+namespace DriveHUD.Importers.AndroidBase
 {
     internal class CapturedPacket
     {

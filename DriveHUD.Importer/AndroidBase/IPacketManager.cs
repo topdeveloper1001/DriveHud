@@ -10,12 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Importers.PokerMaster.Model;
 
-namespace DriveHUD.Importers.PokerMaster
+namespace DriveHUD.Importers.AndroidBase
 {
-    internal interface IPacketManager
+    internal interface IPacketManager<T>
     {     
-        bool TryParse(CapturedPacket packet, out Package package);
+        bool TryParse(CapturedPacket packet, out T package);
     }
 }

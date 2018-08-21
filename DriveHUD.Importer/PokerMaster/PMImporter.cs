@@ -16,6 +16,7 @@ using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
+using DriveHUD.Importers.AndroidBase;
 using DriveHUD.Importers.Helpers;
 using DriveHUD.Importers.Loggers;
 using DriveHUD.Importers.PokerMaster.Model;
@@ -34,7 +35,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -287,11 +287,13 @@ namespace DriveHUD.Importers.PokerMaster
         /// </summary>
         protected void ProcessBuffer()
         {
-            var packetManager = ServiceLocator.Current.GetInstance<IPacketManager>();
+            var packetManager = ServiceLocator.Current.GetInstance<IPacketManager<PokerMasterPackage>>();
             var handBuilder = ServiceLocator.Current.GetInstance<IHandBuilder>();
-            var connectionsService = ServiceLocator.Current.GetInstance<INetworkConnectionsService>();
             var tableWindowProvider = ServiceLocator.Current.GetInstance<ITableWindowProvider>();
             var handHistoriesToProcess = new ConcurrentDictionary<long, List<HandHistoryData>>();
+
+            var connectionsService = ServiceLocator.Current.GetInstance<INetworkConnectionsService>();
+            connectionsService.SetLogger(CustomModulesNames.PMCatcher);
 
             var detectedTableWindows = new HashSet<IntPtr>();
 
@@ -307,15 +309,10 @@ namespace DriveHUD.Importers.PokerMaster
                         continue;
                     }
 
-                    if (IsAdvancedLogEnabled)
-                    {
-                        LogPacket(capturedPacket, ".log");
-                    }
-
-                    if (!packetManager.TryParse(capturedPacket, out Package package) || !IsAllowedPackage(package))
+                    if (!packetManager.TryParse(capturedPacket, out PokerMasterPackage package) || !IsAllowedPackage(package))
                     {
                         continue;
-                    }                 
+                    }
 
                     if (package.Cmd == PackageCommand.Cmd_SCLoginRsp)
                     {
@@ -531,7 +528,7 @@ namespace DriveHUD.Importers.PokerMaster
         /// Parses login package
         /// </summary>
         /// <param name="package">Package to parse</param>
-        private void ParseLoginPackage<T>(Package package, Func<T, UserBaseInfoNet> getUserInfo, Func<T, string> getEncryptKey)
+        private void ParseLoginPackage<T>(PokerMasterPackage package, Func<T, UserBaseInfoNet> getUserInfo, Func<T, string> getEncryptKey)
         {
             if (IsAdvancedLogEnabled)
             {
@@ -615,7 +612,7 @@ namespace DriveHUD.Importers.PokerMaster
         /// <param name="package">Package to parse</param>
         /// <param name="onSuccess">Action to perform if parsing succeed</param>
         /// <param name="onFail">Action to perform if parsing failed</param>
-        private void ParsePackage<T>(Package package, Action<T> onSuccess, Action onFail)
+        private void ParsePackage<T>(PokerMasterPackage package, Action<T> onSuccess, Action onFail)
         {
             if (HeroesKeys.TryGetValue(package.Uuid, out byte[] encryptKey))
             {
@@ -636,7 +633,7 @@ namespace DriveHUD.Importers.PokerMaster
         /// </summary>
         /// <param name="package">Package to check</param>
         /// <returns></returns>
-        private static bool IsAllowedPackage(Package package)
+        private static bool IsAllowedPackage(PokerMasterPackage package)
         {
             switch (package.Cmd)
             {
@@ -815,27 +812,6 @@ namespace DriveHUD.Importers.PokerMaster
         protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
             return false;
-        }
-
-        private void LogPacket(CapturedPacket capturedPacket, string ext)
-        {
-            var packageFileName = Path.Combine("Logs", capturedPacket.ToString().Replace(":", ".").Replace("->", "-")) + ext;
-
-            var sb = new StringBuilder();
-            sb.AppendLine("-----------begin----------------");
-            sb.AppendLine($"Date: {capturedPacket.CreatedTimeStamp}");
-            sb.AppendLine($"Date Now: {DateTime.Now}");
-            sb.AppendLine($"Date Now (ticks): {DateTime.Now.Ticks}");
-            sb.AppendLine($"SequenceNumber: {capturedPacket.SequenceNumber}");
-            sb.AppendLine($"Packet Full Length: {(PacketManager.IsStartingPacket(capturedPacket.Bytes) ? PacketManager.ReadPacketLength(capturedPacket.Bytes) : 0)}");
-            sb.AppendLine($"Packet Current Length: {capturedPacket.Bytes.Length}");
-            sb.AppendLine($"Body:");
-            sb.AppendLine("---------body begin-------------");
-            sb.AppendLine(BitConverter.ToString(capturedPacket.Bytes).Replace("-", " "));
-            sb.AppendLine("----------body end--------------");
-            sb.AppendLine("------------end-----------------");
-
-            File.AppendAllText(packageFileName, sb.ToString());
         }
 
         private class HandHistoryData

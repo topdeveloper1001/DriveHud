@@ -13,7 +13,7 @@
 using System;
 using System.Diagnostics;
 
-namespace DriveHUD.Importers.PokerMaster
+namespace DriveHUD.Importers.AndroidBase
 {
     internal interface ITableWindowProvider
     {

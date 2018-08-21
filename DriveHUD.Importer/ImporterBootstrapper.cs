@@ -28,6 +28,8 @@ using Model.Enums;
 using Model.Solvers;
 using System;
 using DriveHUD.Importers.Winamax;
+using DriveHUD.Importers.AndroidBase;
+using DriveHUD.Importers.PokerMaster.Model;
 
 namespace DriveHUD.Importers
 {
@@ -56,7 +58,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IBetOnlineTournamentImporter, BetOnlineTournamentImporter>();
             container.RegisterType<IBetOnlineTournamentManager, BetOnlineTournamentManager>();
             container.RegisterType<IBetOnlineXmlConverter, BetOnlineXmlToIPokerXmlConverter>();
-            container.RegisterType<IPokerStarsImporter, PokerStarsImporter>();            
+            container.RegisterType<IPokerStarsImporter, PokerStarsImporter>();
             container.RegisterType<IPokerStarsZoomImporter, PokerStarsZoomImporter>();
             container.RegisterType<IPokerStarsZoomDataManager, PokerStarsZoomDataManager>();
             container.RegisterType<IAmericasCardroomImporter, AmericasCardroomImporter>();
@@ -79,8 +81,9 @@ namespace DriveHUD.Importers
             container.RegisterType<IHandBuilder, HandBuilder>();
             container.RegisterType<INetworkConnectionsService, NetworkConnectionsService>();
             container.RegisterType<ITableWindowProvider, TableWindowProvider>();
-            container.RegisterType<IPacketManager, PacketManager>();
+            container.RegisterType<IPacketManager<PokerMasterPackage>, PokerMasterPacketManager>();
             container.RegisterType<IPMImporter, PMImporter>();
+            container.RegisterType<IPackageBuilder<PokerMasterPackage>, PokerMasterPackageBuilder>();
             container.RegisterType<IHorizonImporter, HorizonImporter>();
             container.RegisterType<IWinamaxImporter, WinamaxImporter>();
             container.RegisterType<IPokerEvaluator, HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
@@ -108,7 +111,7 @@ namespace DriveHUD.Importers
             importerService.Register<IBetOnlineImporter>();
             importerService.Register<IBetOnlineTournamentImporter>();
             importerService.Register<IBetOnlineTableService>();
-            importerService.Register<IPokerStarsImporter>();            
+            importerService.Register<IPokerStarsImporter>();
             importerService.Register<IPokerStarsZoomImporter>();
             importerService.Register<IAmericasCardroomImporter>();
             importerService.Register<IBlackChipPokerImporter>();

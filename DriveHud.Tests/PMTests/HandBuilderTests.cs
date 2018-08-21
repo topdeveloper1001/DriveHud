@@ -99,55 +99,7 @@ namespace PMCatcher.Tests
             Assert.IsNotNull(actual, "Hand history must be built as a result.");
 
             AssertionUtils.AssertHandHistory(actual, jsonTestData.ExpectedResult);
-        }
-
-        //[Test]
-        public void CreateSample()
-        {
-            var handHistory = new HandHistory
-            {
-                DateOfHandUtc = new DateTime(2018, 2, 15, 7, 35, 39, DateTimeKind.Utc),
-                HandId = 274421590014,
-                DealerButtonPosition = 1,
-                TableName = "test1",
-                GameDescription = new GameDescriptor(EnumPokerSites.PokerMaster,
-                    GameType.NoLimitHoldem,
-                    Limit.FromSmallBlindBigBlind(1, 2, Currency.YUAN),
-                    TableType.FromTableTypeDescriptions(new TableTypeDescription[] { TableTypeDescription.Regular, TableTypeDescription.SuperSpeed }),
-                    SeatType.FromMaxPlayers(2),
-                    null),
-                Rake = 0,
-                TotalPot = 0,
-                CommunityCards = BoardCards.FromCards("3s 4h 8d Js 5s"),
-                Players = new PlayerList
-                {
-                    new Player("Alex84", 206, 1),
-                    new Player("Peon", 194, 2)
-                },
-                HandActions = new List<HandAction>
-                {
-                    new HandAction("Alex84", HandActionType.SMALL_BLIND, 1, Street.Preflop, 0),
-                    new HandAction("Peon", HandActionType.BIG_BLIND, 2, Street.Preflop, 1),
-                    new HandAction("Alex84", HandActionType.CALL, 1, Street.Preflop, 2),
-                    new HandAction("Peon", HandActionType.CHECK, 0, Street.Preflop, 3),
-                    new HandAction("Peon", HandActionType.CHECK, 0, Street.Flop, 4),
-                    new HandAction("Alex84", HandActionType.CHECK, 0, Street.Flop, 5),
-                    new HandAction("Peon", HandActionType.CHECK, 0, Street.Turn, 6),
-                    new HandAction("Alex84", HandActionType.CHECK, 0, Street.Turn, 7),
-                    new HandAction("Peon", HandActionType.CHECK, 0, Street.River, 8),
-                    new HandAction("Alex84", HandActionType.BET, 2, Street.River, 9),
-                    new HandAction("Peon", HandActionType.FOLD, 0, Street.River, 10),
-                    new WinningsAction("Alex84", HandActionType.WINS, 6, 0),
-                }
-            };
-
-            var result = SerializationHelper.SerializeObject(handHistory);
-            var ds = SerializationHelper.DeserializeObject<HandHistory>(result);
-
-            CollectionAssert.AreEquivalent(handHistory.GameDescription.TableTypeDescriptors, ds.GameDescription.TableTypeDescriptors);
-
-            Assert.IsNotEmpty(result);
-        }
+        }    
 
         //[Test]
         //[TestCase(@"d:\Git\DriveHUD\DriveHUD.Application\bin\Debug\Hands\hand_imported_1044518_277964540025.json", @"d:\Git\DriveHUD\DriveHud.Tests\PMTests\TestData\HandsRawData\6-max-Omaha-4")]

@@ -15,7 +15,7 @@ using ProtoBuf;
 namespace DriveHUD.Importers.PokerMaster.Model
 {
     [ProtoContract]
-    internal class Package
+    internal class PokerMasterPackage
     {
         [ProtoMember(1)]
         public long Uuid { get; set; }
@@ -42,6 +42,6 @@ namespace DriveHUD.Importers.PokerMaster.Model
         public int EncodeType { get; set; }
 
         [ProtoMember(9)]
-        public int Version { get; set; }
+        public int Version { get; set; }     
     }
 }

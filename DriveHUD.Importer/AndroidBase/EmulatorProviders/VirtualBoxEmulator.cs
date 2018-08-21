@@ -16,7 +16,7 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 
-namespace DriveHUD.Importers.PokerMaster.EmulatorProviders
+namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
 {
     internal abstract class VirtualBoxEmulator : IEmulatorProvider
     {
