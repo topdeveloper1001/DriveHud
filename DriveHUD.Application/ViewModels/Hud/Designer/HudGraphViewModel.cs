@@ -118,6 +118,17 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Gets the order of tool 
+        /// </summary>
+        public int Order
+        {
+            get
+            {
+                return 1;
+            }
+        }
+
+        /// <summary>
         /// Gets the parent tool id 
         /// </summary>
         public Guid ParentToolId
