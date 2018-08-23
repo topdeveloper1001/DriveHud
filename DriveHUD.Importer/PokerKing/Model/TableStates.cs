@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PlayerInfo.cs" company="Ace Poker Solutions">
+// <copyright file="TableStates.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,51 +15,39 @@ using ProtoBuf;
 namespace DriveHUD.Importers.PokerKing.Model
 {
     [ProtoContract]
-    internal class PlayerInfo
+    internal class TableStates
     {
         [ProtoMember(1)]
-        public uint Playerid { get; set; }
+        public PlayerInfo[] Players { get; set; }
 
         [ProtoMember(2)]
-        public int Seatid { get; set; }
+        public PotInfo[] Pots { get; set; }
 
         [ProtoMember(3)]
-        public string Name { get; set; }
+        public CardItem[] PublicCard { get; set; }
 
         [ProtoMember(4)]
-        public string Headurl { get; set; }
+        public int CurrActionPlayerSeatId { get; set; }
 
         [ProtoMember(5)]
-        public string Marks { get; set; }
+        public int CurrActionLeftTime { get; set; }
 
         [ProtoMember(6)]
-        public int Gender { get; set; }
+        public int CurrDealerSeatId { get; set; }
 
         [ProtoMember(7)]
-        public long Stake { get; set; }
+        public int CurrBBSeatId { get; set; }
 
         [ProtoMember(8)]
-        public string LastVoice { get; set; }
+        public int CurrSBSeatId { get; set; }
 
         [ProtoMember(9)]
-        public ActionType LastAction { get; set; }
+        public int CurrStraddleSeatId { get; set; }
 
         [ProtoMember(10)]
-        public bool InGame { get; set; }
+        public long BBAmount { get; set; }
 
-        [ProtoMember(12)]
-        public bool InStay { get; set; }
-
-        [ProtoMember(13)]
-        public int LeftStayTime { get; set; }
-
-        [ProtoMember(14)]
-        public long RoundBet { get; set; }
-
-        [ProtoMember(15)]
-        public CardItem[] Cards { get; set; }
-
-        [ProtoMember(16)]
-        public PositionInfo Position { get; set; }
+        [ProtoMember(11)]
+        public long SBAmount { get; set; }
     }
 }

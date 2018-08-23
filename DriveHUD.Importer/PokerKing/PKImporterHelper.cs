@@ -19,7 +19,7 @@ namespace DriveHUD.Importers.PokerKing
         {
             get
             {
-                return 31000;
+                return 31001;
             }
         }
     }

@@ -290,6 +290,10 @@
     <Content Include="TcpImportersTests\PKTests\TestData\Packets\170.33.8.75.31001-192.168.0.104.33644.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular\json1.json" />
+    <None Include="TcpImportersTests\PKTests\TestData\Packets\NoticeGameSnapShotPacket.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="TcpImportersTests\PKTests\TestData\Packets\NoticePlayerActionTurnPacket.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -470,6 +474,9 @@
     <Content Include="TcpImportersTests\PKTests\TestData\Packets\170.33.8.75.31001-192.168.0.104.33644-pkgt.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\Packets\NoticeGameSnapShotPacket.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\Packets\NoticePlayerActionTurnPacket.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -557,6 +564,7 @@
     </Content>
     <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-2\ExpectedResult.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\HU-3\ExpectedResult.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

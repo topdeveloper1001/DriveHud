@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ITcpImporter.cs" company="Ace Poker Solutions">
+// <copyright file="IPKHandBuilder.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,10 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers.AndroidBase
+using DriveHUD.Importers.PokerKing.Model;
+using HandHistories.Objects.Hand;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DriveHUD.Importers.PokerKing
 {
-    internal interface ITcpImporter : IBackgroundProcess
+    internal interface IPKHandBuilder
     {
-        void RegisterImporter<T>() where T : ITcpPacketImporter;
+        bool TryBuild(PokerKingPackage package, out HandHistory handHistory);        
     }
 }

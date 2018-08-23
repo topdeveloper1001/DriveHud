@@ -26,22 +26,22 @@ namespace DriveHUD.Importers.PokerKing.Model
         [ProtoMember(3)]
         public long BBAmount { get; set; }
 
-        [ProtoMember(4)]
+        [ProtoMember(5)]
         public int[] StraddleSeatList { get; set; }
 
-        [ProtoMember(5)]
+        [ProtoMember(6)]
         public int[] StraddleAmountList { get; set; }
 
-        [ProtoMember(6)]
+        [ProtoMember(7)]
         public int[] PostSeatList { get; set; }
 
-        [ProtoMember(7)]
+        [ProtoMember(8)]
         public int SBSeatId { get; set; }
 
-        [ProtoMember(8)]
+        [ProtoMember(9)]
         public int BBSeatId { get; set; }
 
-        [ProtoMember(9)]
+        [ProtoMember(10)]
         public int DealerSeatId { get; set; }
     }
 }

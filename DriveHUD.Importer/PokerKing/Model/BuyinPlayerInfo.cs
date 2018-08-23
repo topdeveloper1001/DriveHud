@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="NoticeResetGame.cs" company="Ace Poker Solutions">
+// <copyright file="BuyinPlayerInfo.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,15 +15,30 @@ using ProtoBuf;
 namespace DriveHUD.Importers.PokerKing.Model
 {
     [ProtoContract]
-    internal class NoticeResetGame
+    internal class BuyinPlayerInfo
     {
         [ProtoMember(1)]
-        public int RoomId { get; set; }
+        public int PlayerId { get; set; }
 
         [ProtoMember(2)]
-        public string GameId { get; set; }
+        public long Amount { get; set; }
 
         [ProtoMember(3)]
-        public PlayerInfo[] Players { get; set; }
+        public string Playername { get; set; }
+
+        [ProtoMember(4)]
+        public string Playerhead { get; set; }
+
+        [ProtoMember(5)]
+        public int RequestId { get; set; }
+
+        [ProtoMember(6)]
+        public uint Timestamp { get; set; }
+
+        [ProtoMember(8)]
+        public uint LastClubId { get; set; }
+
+        [ProtoMember(9)]
+        public AllianceInfo[] AllianceInfos { get; set; }
     }
 }

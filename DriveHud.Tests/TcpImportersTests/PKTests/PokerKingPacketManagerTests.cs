@@ -25,6 +25,7 @@ using System.Fakes;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Text;
 
 namespace DriveHud.Tests.PKTests
 {
@@ -33,7 +34,7 @@ namespace DriveHud.Tests.PKTests
     {
         protected override string TestDataFolder => "TcpImportersTests\\PKTests\\TestData";
 
-        [TestCase(@"Packets\NoticePlayerActionTurnPacket.txt", true)]
+        //[TestCase(@"Packets\NoticePlayerActionTurnPacket.txt", true)]
         public void PacketIsStartingPacketTest(string file, bool expected)
         {
             var bytes = ReadPacketFile(file);
@@ -44,7 +45,7 @@ namespace DriveHud.Tests.PKTests
             Assert.That(actual, Is.EqualTo(expected));
         }
 
-        [TestCase(@"Packets\NoticePlayerActionTurnPacket.txt")]
+        //[TestCase(@"Packets\NoticePlayerActionTurnPacket.txt")]
         public void TryParsePacketTest(string file)
         {
             var bytes = ReadPacketFile(file);
@@ -65,7 +66,8 @@ namespace DriveHud.Tests.PKTests
             Assert.IsNotNull(actual);
         }
 
-        [TestCase(@"Packets\NoticePlayerActionTurnPacket.txt", @"Packets\NoticePlayerActionTurnPacket.json")]
+        //[TestCase(@"Packets\NoticePlayerActionTurnPacket.txt", @"Packets\NoticePlayerActionTurnPacket.json")]
+        [TestCase(@"Packets\NoticeGameSnapShotPacket.txt", @"Packets\NoticeGameSnapShotPacket.json")]
         public void DeserializationTest(string file, string jsonFile)
         {
             var bytes = ReadPacketFile(file);
@@ -82,15 +84,25 @@ namespace DriveHud.Tests.PKTests
 
             var result = packetManager.TryParse(capturedPacket, out PokerKingPackage package);
 
-            var noticePlayerActionTurnActual = SerializationHelper.Deserialize<NoticePlayerActionTurn>(package.Body);
+            object actual = null;
+
+            switch (package.PackageType)
+            {
+                case PackageType.NoticePlayerActionTurn:
+                    actual = SerializationHelper.Deserialize<NoticePlayerActionTurn>(package.Body);
+                    break;
+                case PackageType.NoticeGameSnapShot:
+                    actual = SerializationHelper.Deserialize<NoticeGameSnapShot>(package.Body);
+                    break;
+            }
 
             var jsonExpected = File.ReadAllText(Path.Combine(TestDataFolder, jsonFile));
-            var jsonActual = JsonConvert.SerializeObject(noticePlayerActionTurnActual, Formatting.Indented, new StringEnumConverter());
+            var jsonActual = JsonConvert.SerializeObject(actual, Formatting.Indented, new StringEnumConverter());
 
             Assert.That(jsonActual, Is.EqualTo(jsonExpected));
         }
 
-        [TestCase(@"Packets\170.33.8.75.31001-192.168.0.104.33644.txt", @"Packets\170.33.8.75.31001-192.168.0.104.33644-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
+        //[TestCase(@"Packets\170.33.8.75.31001-192.168.0.104.33644.txt", @"Packets\170.33.8.75.31001-192.168.0.104.33644-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
         public void TryParseTest(string file, string expectedPackageTypesFile, string dateFormat)
         {
             var packets = ReadCapturedPackets(file, dateFormat);
@@ -120,6 +132,42 @@ namespace DriveHud.Tests.PKTests
                     }
                 }
             }
+        }
+
+        //[TestCase(@"d:\Git\DriveHUD\DriveHUD.Application\bin\Debug\Logs\170.33.8.75.31001-192.168.0.104.21667.log", "NoticePlayerActionTurn")]
+        public void ClearPackageFromLog(string log, string type)
+        {
+            var lines = File.ReadAllLines(log);
+
+            var sb = new StringBuilder();
+
+            bool skipLine = false;
+
+            for (var i = 0; i < lines.Length; i++)
+            {
+                if ((i < lines.Length - 1) &&
+                    lines[i + 1].Contains(type))
+                {
+                    skipLine = true;
+                }
+
+                if (!skipLine)
+                {
+                    sb.AppendLine(lines[i]);
+                }
+
+                if (lines[i] == "}")
+                {
+                    skipLine = false;
+                }
+            }
+
+            var folder = Path.GetDirectoryName(log);
+            var fileName = Path.GetFileName(log);
+            var ext = Path.GetExtension(log);
+
+            var newlog = Path.Combine(folder, $"{fileName}-adj{ext}");
+            File.WriteAllText(newlog, sb.ToString());
         }
     }
 }

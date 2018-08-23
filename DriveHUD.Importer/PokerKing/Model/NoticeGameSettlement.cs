@@ -27,9 +27,12 @@ namespace DriveHUD.Importers.PokerKing.Model
         public PotInfo[] Pots { get; set; }
 
         [ProtoMember(4)]
-        public int Gameuuid { get; set; }
+        public ulong Gameuuid { get; set; }
 
         [ProtoMember(5)]
-        public JackPotWinInfo[] Jinfo { get; set; }     
+        public JackPotWinInfo[] Jinfo { get; set; }
+
+        [ProtoMember(6)]
+        public string GameuuidJs { get; set; }
     }
 }

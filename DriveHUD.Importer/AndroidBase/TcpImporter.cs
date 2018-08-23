@@ -44,14 +44,26 @@ namespace DriveHUD.Importers.AndroidBase
 
         private bool isAdvancedLogEnabled;
 
-        public void RegisterImporter(ITcpPacketImporter tcpPacketImporter)
+        private readonly IImporterService importerService;
+
+        public TcpImporter()
         {
-            if (tcpPacketImporter == null)
+            importerService = ServiceLocator.Current.GetInstance<IImporterService>(); ;
+        }
+
+        public void RegisterImporter<T>() where T : ITcpPacketImporter
+        {
+            if (importerService == null)
             {
                 return;
             }
 
-            importers.Add(tcpPacketImporter);
+            var tcpPacketImporter = importerService.GetImporter<T>();
+
+            if (tcpPacketImporter != null)
+            {
+                importers.Add(tcpPacketImporter);
+            }
         }
 
         protected override void DoImport()

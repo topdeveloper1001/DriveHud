@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ITcpImporter.cs" company="Ace Poker Solutions">
+// <copyright file="RequestJoinRoom.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,10 +10,17 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers.AndroidBase
+using ProtoBuf;
+
+namespace DriveHUD.Importers.PokerKing.Model
 {
-    internal interface ITcpImporter : IBackgroundProcess
+    [ProtoContract]
+    internal class RequestJoinRoom
     {
-        void RegisterImporter<T>() where T : ITcpPacketImporter;
+        [ProtoMember(1)]
+        public int RoomId { get; set; }
+
+        [ProtoMember(2)]
+        public bool IsQuickSit { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ITcpImporter.cs" company="Ace Poker Solutions">
+// <copyright file="PlayerBuyinInfo.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,10 +10,26 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers.AndroidBase
+using ProtoBuf;
+
+namespace DriveHUD.Importers.PokerKing.Model
 {
-    internal interface ITcpImporter : IBackgroundProcess
+    [ProtoContract]
+    internal class PlayerBuyinInfo
     {
-        void RegisterImporter<T>() where T : ITcpPacketImporter;
+        [ProtoMember(1)]
+        public string PlayerName { get; set; }
+
+        [ProtoMember(2)]
+        public uint PlayerId { get; set; }
+
+        [ProtoMember(3)]
+        public long TotalBuyin { get; set; }
+
+        [ProtoMember(4)]
+        public long CurrRecord { get; set; }
+
+        [ProtoMember(5)]
+        public long BuyinLimit { get; set; }
     }
 }
