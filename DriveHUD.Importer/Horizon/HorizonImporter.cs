@@ -25,9 +25,11 @@ namespace DriveHUD.Importers.Horizon
 {
     internal class HorizonImporter : FileBasedImporter, IHorizonImporter
     {
+        private readonly static string[] processNames = new[] { "PokerClient" };
+
         protected override string HandHistoryFilter => "*.txt";
 
-        protected override string ProcessName => "PokerClient";
+        protected override string[] ProcessNames => processNames;
 
         protected override EnumPokerSites Site => EnumPokerSites.Horizon;
 

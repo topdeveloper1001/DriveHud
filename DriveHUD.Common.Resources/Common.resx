@@ -1413,4 +1413,10 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_Shop_Rakeback" xml:space="preserve">
     <value>Rakeback</value>
   </data>
+  <data name="Common_Hud_AddLineBreak" xml:space="preserve">
+    <value>Add Line Break</value>
+  </data>
+  <data name="Common_Hud_LineBreak" xml:space="preserve">
+    <value>Line Break</value>
+  </data>
 </root>

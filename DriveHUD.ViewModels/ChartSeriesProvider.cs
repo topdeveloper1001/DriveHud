@@ -259,6 +259,7 @@ namespace DriveHUD.ViewModels
             var yellowResource = ChartSerieResourceHelper.GetSeriesYellowPalette();
             var orangeResource = ChartSerieResourceHelper.GetSerieOrangePalette();
             var greenResource = ChartSerieResourceHelper.GetSerieGreenPalette();
+            var redResource = ChartSerieResourceHelper.GetSerieRedPalette();
 
             tournamentChartCollection.Add(new TournamentChartSeries()
             {
@@ -266,8 +267,9 @@ namespace DriveHUD.ViewModels
                 Caption = "ITM%",
                 Format = "{0:0.##}%",
                 SeriesType = ChartTournamentSeriesType.ITM,
+                SeriesValueType = ChartTournamentSeriesValueType.None,
                 ColorsPalette = blueResource,
-                UpdateChartSeriesItem = (current, previous, tournament) =>
+                UpdateChartSeriesItemByTournament = (current, previous, tournament) =>
                 {
                     current.Value = tournament.ITM;
                 }
@@ -279,8 +281,9 @@ namespace DriveHUD.ViewModels
                 Caption = "ROI%",
                 Format = "{0:0.##}%",
                 SeriesType = ChartTournamentSeriesType.ROI,
+                SeriesValueType = ChartTournamentSeriesValueType.None,
                 ColorsPalette = yellowResource,
-                UpdateChartSeriesItem = (current, previous, tournament) =>
+                UpdateChartSeriesItemByTournament = (current, previous, tournament) =>
                 {
                     current.Value = tournament.ROI;
                 }
@@ -292,10 +295,107 @@ namespace DriveHUD.ViewModels
                 Caption = "$",
                 Format = "{0:0.##}$",
                 SeriesType = ChartTournamentSeriesType.MoneyWon,
+                SeriesValueType = ChartTournamentSeriesValueType.Currency,
                 ColorsPalette = greenResource,
-                UpdateChartSeriesItem = (current, previous, tournament) =>
+                UpdateChartSeriesItemByTournament = (current, previous, tournament) =>
                 {
                     current.Value = tournament.NetWon;
+                }
+            });
+
+            tournamentChartCollection.Add(new TournamentChartSeries()
+            {
+                IsVisible = true,
+                Caption = "Chips",
+                Format = "{0:0.##}",
+                SeriesType = ChartTournamentSeriesType.MoneyWon,
+                SeriesValueType = ChartTournamentSeriesValueType.Chips,
+                ColorsPalette = greenResource,
+                UpdateChartSeriesItemByStatistic = (current, previous, stat) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {
+                        current.Value = previous.Value;
+                    }
+
+                    current.Value += stat.NetWon;
+                }
+            });
+
+            tournamentChartCollection.Add(new TournamentChartSeries()
+            {
+                IsVisible = true,
+                Caption = "BB",
+                Format = "{0:0.##}",
+                SeriesType = ChartTournamentSeriesType.MoneyWon,
+                SeriesValueType = ChartTournamentSeriesValueType.BB,
+                ColorsPalette = greenResource,
+                UpdateChartSeriesItemByStatistic = (current, previous, stat) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {
+                        current.Value = previous.Value;
+                    }
+
+                    current.Value += stat.BigBlind != 0 ? stat.NetWon / stat.BigBlind : 0;
+                }
+            });
+
+            tournamentChartCollection.Add(new TournamentChartSeries()
+            {
+                IsVisible = true,
+                Caption = "Allin EV",
+                Format = "{0:0.##}",
+                SeriesType = ChartTournamentSeriesType.EV,
+                SeriesValueType = ChartTournamentSeriesValueType.Chips,
+                ColorsPalette = redResource,
+                UpdateChartSeriesItemByStatistic = (current, previous, stat) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {
+                        current.Value = previous.Value;
+                    }
+
+                    current.Value += stat.NetWon + stat.EVDiff;
+                }
+            });
+
+            tournamentChartCollection.Add(new TournamentChartSeries()
+            {
+                IsVisible = true,
+                Caption = "Allin EV",
+                Format = "{0:0.##}",
+                SeriesType = ChartTournamentSeriesType.EV,
+                SeriesValueType = ChartTournamentSeriesValueType.BB,
+                ColorsPalette = redResource,
+                UpdateChartSeriesItemByStatistic = (current, previous, stat) =>
+                {
+                    if (current == null)
+                    {
+                        return;
+                    }
+
+                    if (previous != null)
+                    {
+                        current.Value = previous.Value;
+                    }
+
+                    current.Value += stat.BigBlind != 0 ? (stat.NetWon + stat.EVDiff) / stat.BigBlind : 0;
                 }
             });
 
@@ -305,8 +405,9 @@ namespace DriveHUD.ViewModels
                 Caption = "Luck",
                 Format = "{0:0.##}%",
                 SeriesType = ChartTournamentSeriesType.Luck,
+                SeriesValueType = ChartTournamentSeriesValueType.Currency,
                 ColorsPalette = orangeResource,
-                UpdateChartSeriesItem = (current, previous, tournament) =>
+                UpdateChartSeriesItemByTournament = (current, previous, tournament) =>
                 {
                     current.Value = 0;
                 }

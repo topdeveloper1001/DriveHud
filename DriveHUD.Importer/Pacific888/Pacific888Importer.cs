@@ -25,11 +25,13 @@ namespace DriveHUD.Importers.Pacific888
 {
     internal class Pacific888Importer : FileBasedImporter, IPacific888Importer
     {
-        protected override string ProcessName
+        private readonly static string[] processNames = new[] { "poker" };
+
+        protected override string[] ProcessNames
         {
             get
             {
-                return "poker";
+                return processNames;
             }
         }
 

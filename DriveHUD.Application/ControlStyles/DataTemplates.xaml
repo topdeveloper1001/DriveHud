@@ -315,7 +315,7 @@
                     Margin="10 0 0 0"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
-                    Foreground="#4a4b4f"
+                    Foreground="#777777"
                     Background="#1d1e20"
                     FontSize="13"
                     Text="{Binding Caption}" />
@@ -339,9 +339,18 @@
 
             </Grid>
             <Grid
-                Height="5"
+                Height="22"
                 Background="#1d1e20"
                 Visibility="{Binding Path=., Mode=OneWay, Converter={StaticResource StatTypeToVisibilityConverter}, ConverterParameter=StatInfoBreak}">
+
+                <TextBlock
+                    FontSize="12"
+                    Margin="10 0 0 0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Foreground="#666666"
+                    Text="{ResX Key=Common_Hud_LineBreak}" />
+
             </Grid>
         </Grid>
     </DataTemplate>

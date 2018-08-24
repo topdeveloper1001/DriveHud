@@ -23,7 +23,7 @@ namespace DriveHUD.Entities
 
         [Required]
         public virtual short PokergametypeId { get; set; }
-  
+
         [Required]
         public virtual int Finishposition { get; set; }
 
@@ -90,6 +90,11 @@ namespace DriveHUD.Entities
             {
                 return Player != null ? Player.Playername : string.Empty;
             }
+        }
+
+        public virtual TournamentKey BuildKey()
+        {
+            return new TournamentKey(SiteId, Tourneynumber);
         }
     }
 }

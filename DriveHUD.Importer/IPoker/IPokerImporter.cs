@@ -29,6 +29,8 @@ namespace DriveHUD.Importers.IPoker
 {
     internal class IPokerImporter : FileBasedImporter, IIPokerImporter
     {
+        private readonly static string[] processNames = new[] { "pokerclient" };
+
         protected override string HandHistoryFilter
         {
             get
@@ -37,11 +39,11 @@ namespace DriveHUD.Importers.IPoker
             }
         }
 
-        protected override string ProcessName
+        protected override string[] ProcessNames
         {
             get
             {
-                return "pokerclient";
+                return processNames;
             }
         }
 

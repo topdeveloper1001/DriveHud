@@ -1330,43 +1330,43 @@
             <HudPositionInfo>
               <Seat>1</Seat>
               <Position>
-                <X>465</X>
-                <Y>-29</Y>
+                <X>336</X>
+                <Y>4</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>2</Seat>
               <Position>
-                <X>685</X>
-                <Y>114</Y>
-              </Position>
-            </HudPositionInfo>
-            <HudPositionInfo>
-              <Seat>3</Seat>
-              <Position>
-                <X>441</X>
-                <Y>264</Y>
+                <X>651</X>
+                <Y>64</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>4</Seat>
               <Position>
-                <X>270</X>
-                <Y>264</Y>
+                <X>356</X>
+                <Y>323</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>5</Seat>
               <Position>
-                <X>34</X>
-                <Y>114</Y>
+                <X>32</X>
+                <Y>238</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>6</Seat>
               <Position>
-                <X>243</X>
-                <Y>-29</Y>
+                <X>29</X>
+                <Y>72</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>638</X>
+                <Y>233</Y>
               </Position>
             </HudPositionInfo>
           </HudPositions>
@@ -1758,43 +1758,43 @@
             <HudPositionInfo>
               <Seat>1</Seat>
               <Position>
-                <X>437</X>
-                <Y>-15</Y>
+                <X>315</X>
+                <Y>18</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>2</Seat>
               <Position>
-                <X>657</X>
-                <Y>128</Y>
-              </Position>
-            </HudPositionInfo>
-            <HudPositionInfo>
-              <Seat>3</Seat>
-              <Position>
-                <X>413</X>
-                <Y>278</Y>
+                <X>630</X>
+                <Y>78</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>4</Seat>
               <Position>
-                <X>242</X>
-                <Y>278</Y>
+                <X>335</X>
+                <Y>337</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>5</Seat>
               <Position>
-                <X>6</X>
-                <Y>128</Y>
+                <X>11</X>
+                <Y>252</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>6</Seat>
               <Position>
-                <X>215</X>
-                <Y>-15</Y>
+                <X>8</X>
+                <Y>86</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>617</X>
+                <Y>247</Y>
               </Position>
             </HudPositionInfo>
           </HudPositions>
@@ -5099,43 +5099,43 @@
             <HudPositionInfo>
               <Seat>1</Seat>
               <Position>
-                <X>438</X>
-                <Y>3</Y>
+                <X>287</X>
+                <Y>10</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>2</Seat>
               <Position>
-                <X>658</X>
-                <Y>146</Y>
-              </Position>
-            </HudPositionInfo>
-            <HudPositionInfo>
-              <Seat>3</Seat>
-              <Position>
-                <X>414</X>
-                <Y>296</Y>
+                <X>602</X>
+                <Y>70</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>4</Seat>
               <Position>
-                <X>243</X>
-                <Y>296</Y>
+                <X>307</X>
+                <Y>329</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>5</Seat>
               <Position>
                 <X>7</X>
-                <Y>146</Y>
+                <Y>244</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>6</Seat>
               <Position>
-                <X>216</X>
-                <Y>3</Y>
+                <X>4</X>
+                <Y>78</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>589</X>
+                <Y>239</Y>
               </Position>
             </HudPositionInfo>
           </HudPositions>
@@ -5877,48 +5877,48 @@
             </HudPositionInfo>
           </HudPositions>
         </HudPositionsInfo>
-        <HudPositionsInfo PokerSite="PartyPoker" GameType="CashHoldem">
+        <HudPositionsInfo PokerSite="PokerStars" GameType="CashHoldem">
           <HudPositions>
             <HudPositionInfo>
               <Seat>1</Seat>
               <Position>
-                <X>556</X>
-                <Y>5</Y>
+                <X>775</X>
+                <Y>53</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>2</Seat>
               <Position>
-                <X>776</X>
-                <Y>148</Y>
+                <X>780</X>
+                <Y>222</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>3</Seat>
               <Position>
-                <X>532</X>
-                <Y>298</Y>
+                <X>479</X>
+                <Y>320</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>4</Seat>
               <Position>
-                <X>361</X>
-                <Y>298</Y>
+                <X>157</X>
+                <Y>244</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>5</Seat>
               <Position>
-                <X>125</X>
-                <Y>148</Y>
+                <X>182</X>
+                <Y>52</Y>
               </Position>
             </HudPositionInfo>
             <HudPositionInfo>
               <Seat>6</Seat>
               <Position>
-                <X>334</X>
-                <Y>5</Y>
+                <X>479</X>
+                <Y>-4</Y>
               </Position>
             </HudPositionInfo>
           </HudPositions>
