@@ -31,6 +31,7 @@ namespace DriveHUD.Common.Utils
                 {
                     Registry.LocalMachine.OpenSubKey(UninstallRegistryPath64Bit),
                     Registry.LocalMachine.OpenSubKey(UninstallRegistryPath32Bit),
+                    Registry.CurrentUser.OpenSubKey(UninstallRegistryPath32Bit)
                 };
 
                 foreach (var uninstallKey in uninstallKeys)

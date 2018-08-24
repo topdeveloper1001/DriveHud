@@ -22,12 +22,12 @@ namespace Model.Site
 {
     public class PartyPokerConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
-        private static string[] uninstallRegistryKeys = new[] { "PartyPoker", "partypokerNJ" };
+        private static string[] uninstallRegistryKeys = new[] { "PartyPoker", "partypokerNJ", "PartyPokerES" };
         private static string[] pathRegistryKeys = new[]
         {
             @"Software\PartyGaming\Partypoker",
-            @"Software\partyNJ\partypokerNJ"
-
+            @"Software\partyNJ\partypokerNJ",
+            @"Software\PartyEspana\PartyPokerES"
         };
 
         private const string PathRegistyKeyValue = "AppPath";
@@ -106,12 +106,15 @@ namespace Model.Site
             foreach (var key in pathRegistryKeys)
             {
                 var pathRegistryKey = Registry.CurrentUser.OpenSubKey(key);
+
                 if (pathRegistryKey != null)
                 {
                     var path = pathRegistryKey.GetValue(PathRegistyKeyValue)?.ToString();
+
                     if (!string.IsNullOrWhiteSpace(path))
                     {
                         var hhFolder = Path.Combine(Path.GetDirectoryName(path), Path.GetFileName(pathRegistryKey.Name), HandHistoryFolderName);
+
                         if (Directory.Exists(hhFolder))
                         {
                             var directories = new DirectoryInfo(hhFolder).GetDirectories().Where(x => x.Name != FolderNameToExclude).Select(x => x.FullName);

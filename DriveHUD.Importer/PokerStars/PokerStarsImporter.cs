@@ -27,11 +27,13 @@ namespace DriveHUD.Importers.PokerStars
 {
     internal class PokerStarsImporter : FileBasedImporter, IPokerStarsImporter
     {
-        protected override string ProcessName
+        private readonly static string[] processNames = new[] { "PokerStars" };
+
+        protected override string[] ProcessNames
         {
             get
             {
-                return "PokerStars";
+                return processNames;
             }
         }
 

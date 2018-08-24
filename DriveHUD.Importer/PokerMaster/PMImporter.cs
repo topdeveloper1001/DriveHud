@@ -81,7 +81,7 @@ namespace DriveHUD.Importers.PokerMaster
 
         protected override EnumPokerSites Site => EnumPokerSites.PokerMaster;
 
-        protected override string ProcessName => throw new NotSupportedException($"Process name isn't supported for importer. [{SiteString}]");
+        protected override string[] ProcessNames => throw new NotSupportedException($"Process name isn't supported for importer. [{SiteString}]");
 
         /// <summary>
         /// Main importer task, executes in the background thread
