@@ -37,7 +37,7 @@ namespace DriveHUD.Application.ViewModels
 
         private bool showLabels = true;
         private bool isShowLabelsEnabled = true;
-        private ObservableCollection<ChartSeries> chartSeriesCollection;                
+        private ObservableCollection<ChartSeries> chartSeriesCollection;
         private Bracelet goldenBracelet;
         private Bracelet silverBracelet;
         private Bracelet bronzeBracelet;
@@ -277,9 +277,13 @@ namespace DriveHUD.Application.ViewModels
             TotalMTT = 0;
             TotalSTT = 0;
 
-            var dateFilter = filterModelManagerService.FilterModelCollection?.OfType<FilterDateModel>().FirstOrDefault();
+            var tournamentsOfStatistic = new HashSet<TournamentKey>(StorageModel
+                .FilteredTournamentPlayerStatistic
+                .ToArray()
+                .Select(x => new TournamentKey(x.PokersiteId, x.TournamentId))
+                .Distinct());
 
-            var filteredTournaments = dateFilter != null ? dateFilter.FilterTournaments(playerTournaments) : playerTournaments;
+            var filteredTournaments = playerTournaments.Where(x => tournamentsOfStatistic.Contains(x.BuildKey())).ToList();
 
             foreach (var tournament in filteredTournaments)
             {
@@ -315,7 +319,7 @@ namespace DriveHUD.Application.ViewModels
         private void InitializeChartSeries()
         {
             var tournamentChartSeries = ChartSeriesProvider.CreateTournamentChartSeries();
-            TournamentGraphViewModel = new GraphViewModel(new TournamentGraphViewModel(tournamentChartSeries));          
+            TournamentGraphViewModel = new GraphViewModel(new TournamentGraphViewModel(tournamentChartSeries));
         }
 
         private void SetBraceletData(Bracelet bracelet, IEnumerable<Tournaments> playerTournaments)

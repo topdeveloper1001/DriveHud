@@ -1226,6 +1226,7 @@
                             Width="40"
                             Height="40"
                             Style="{StaticResource AddSplitterStyle}"
+                            ToolTip="{ResX Key=Common_Hud_AddLineBreak}"
                             Command="{Binding SpliterAddCommand}">
                             <Path
                                 Data="F1M13.573,359.345C13.573,359.345 392.425,359.345 392.425,359.345 399.368,359.345 404.997,364.969

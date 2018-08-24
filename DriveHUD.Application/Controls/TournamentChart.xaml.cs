@@ -12,6 +12,7 @@
 
 using DriveHUD.ViewModels;
 using Model.Enums;
+using System;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -101,6 +102,8 @@ namespace DriveHUD.Application.Controls
             }
         }
 
+        #region Chart Filter
+
         public static readonly DependencyProperty TournamentChartFilterTypeProperty =
             DependencyProperty.Register("TournamentChartFilterType", typeof(TournamentChartFilterType), typeof(TournamentChart),
                 new FrameworkPropertyMetadata(TournamentChartFilterType.All, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
@@ -134,6 +137,44 @@ namespace DriveHUD.Application.Controls
 
         #endregion
 
+        public static readonly DependencyProperty SeriesValueTypeProperty =
+            DependencyProperty.Register("SeriesValueType", typeof(ChartTournamentSeriesValueType), typeof(TournamentChart),
+                new FrameworkPropertyMetadata(ChartTournamentSeriesValueType.None, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnValueTypeChanged));
+
+        public ChartTournamentSeriesValueType SeriesValueType
+        {
+            get
+            {
+                return (ChartTournamentSeriesValueType)GetValue(SeriesValueTypeProperty);
+            }
+            set
+            {
+                SetValue(SeriesValueTypeProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty SeriesValueTypesProperty =
+            DependencyProperty.Register("SeriesValueTypes", typeof(ObservableCollection<ChartTournamentSeriesValueType>), typeof(TournamentChart));
+
+        public ObservableCollection<ChartTournamentSeriesValueType> SeriesValueTypes
+        {
+            get
+            {
+                return (ObservableCollection<ChartTournamentSeriesValueType>)GetValue(SeriesValueTypesProperty);
+            }
+            set
+            {
+                SetValue(SeriesValueTypesProperty, value);
+            }
+        }
+
+        private static void OnValueTypeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            (d as TournamentChart)?.UpdateSeriesVisibility();
+        }
+
+        #endregion
+
         private static void OnSelectedRangeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var chartGadget = d as TournamentChart;
@@ -161,6 +202,24 @@ namespace DriveHUD.Application.Controls
 
         private static void OnItemsSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
+        }
+
+        private void UpdateSeriesVisibility()
+        {
+            if (ItemsSource == null)
+            {
+                return;
+            }
+
+            foreach (var chartSerie in ItemsSource)
+            {
+                if (chartSerie.SeriesValueType == ChartTournamentSeriesValueType.None)
+                {
+                    continue;
+                }
+
+                chartSerie.IsVisible = SeriesValueType == chartSerie.SeriesValueType;
+            }
         }
     }
 }

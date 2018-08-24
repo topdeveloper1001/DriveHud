@@ -61,6 +61,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BB.
+        /// </summary>
+        internal static string Enum_ChartTournamentSeriesValueType_BB {
+            get {
+                return ResourceManager.GetString("Enum_ChartTournamentSeriesValueType_BB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chips.
+        /// </summary>
+        internal static string Enum_ChartTournamentSeriesValueType_Chips {
+            get {
+                return ResourceManager.GetString("Enum_ChartTournamentSeriesValueType_Chips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Currency.
+        /// </summary>
+        internal static string Enum_ChartTournamentSeriesValueType_Currency {
+            get {
+                return ResourceManager.GetString("Enum_ChartTournamentSeriesValueType_Currency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to None.
+        /// </summary>
+        internal static string Enum_ChartTournamentSeriesValueType_None {
+            get {
+                return ResourceManager.GetString("Enum_ChartTournamentSeriesValueType_None", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cash - Holdem.
+        /// </summary>
+        internal static string Enum_EnumGameType_CashHoldem {
+            get {
+                return ResourceManager.GetString("Enum_EnumGameType_CashHoldem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cash - Omaha.
         /// </summary>
         internal static string Enum_EnumGameType_CashOmaha {
@@ -2955,15 +3000,6 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_TournamentChartFilterType_STT {
             get {
                 return ResourceManager.GetString("Enum_TournamentChartFilterType_STT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cash - Holdem.
-        /// </summary>
-        internal static string s {
-            get {
-                return ResourceManager.GetString("s", resourceCulture);
             }
         }
     }

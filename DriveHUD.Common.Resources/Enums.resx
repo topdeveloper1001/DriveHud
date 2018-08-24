@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="s" xml:space="preserve">
+  <data name="Enum_EnumGameType_CashHoldem" xml:space="preserve">
     <value>Cash - Holdem</value>
   </data>
   <data name="Enum_EnumGameType_CashOmaha" xml:space="preserve">
@@ -1090,5 +1090,17 @@
   </data>
   <data name="Enum_TournamentChartFilterType_STT" xml:space="preserve">
     <value>S&amp;G</value>
+  </data>
+  <data name="Enum_ChartTournamentSeriesValueType_BB" xml:space="preserve">
+    <value>BB</value>
+  </data>
+  <data name="Enum_ChartTournamentSeriesValueType_Chips" xml:space="preserve">
+    <value>Chips</value>
+  </data>
+  <data name="Enum_ChartTournamentSeriesValueType_Currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="Enum_ChartTournamentSeriesValueType_None" xml:space="preserve">
+    <value>None</value>
   </data>
 </root>

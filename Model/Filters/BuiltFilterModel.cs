@@ -77,41 +77,38 @@ namespace Model.Filters
 
         public BuiltFilterModel(FilterServices service)
         {
-            this.FilterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(service.ToString());
-
+            FilterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(service.ToString());
             Initialize();
         }
 
         private void Initialize()
         {
-            this.FilterSectionCollection = new ObservableCollection<FilterSectionItem>
-            (
-                new List<FilterSectionItem>()
-                {
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.StakeLevel.ToString(), ItemType = EnumFilterSectionItemType.StakeLevel },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.PreFlopAction.ToString(), ItemType = EnumFilterSectionItemType.PreFlopAction },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.Currency.ToString(), ItemType = EnumFilterSectionItemType.Currency },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.TableSixRing.ToString(), ItemType = EnumFilterSectionItemType.TableSixRing },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.TableNineRing.ToString(), ItemType = EnumFilterSectionItemType.TableNineRing },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.PlayersBetween.ToString(), ItemType = EnumFilterSectionItemType.PlayersBetween },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.HoleCards.ToString(), ItemType = EnumFilterSectionItemType.HoleCards },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.FlopHandValue.ToString(), ItemType = EnumFilterSectionItemType.FlopHandValue },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.TurnHandValue.ToString(), ItemType = EnumFilterSectionItemType.TurnHandValue },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.RiverHandValue.ToString(), ItemType = EnumFilterSectionItemType.RiverHandValue },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.Date.ToString(), ItemType = EnumFilterSectionItemType.Date },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.FlopBoardCardItem.ToString(), ItemType = EnumFilterSectionItemType.FlopBoardCardItem },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.TurnBoardCardItem.ToString(), ItemType = EnumFilterSectionItemType.TurnBoardCardItem },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.RiverBoardCardItem.ToString(), ItemType = EnumFilterSectionItemType.RiverBoardCardItem },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.FlopBoardTextureItem.ToString(), ItemType = EnumFilterSectionItemType.FlopBoardTextureItem },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.TurnBoardTextureItem.ToString(), ItemType = EnumFilterSectionItemType.TurnBoardTextureItem },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.RiverBoardTextureItem.ToString(), ItemType = EnumFilterSectionItemType.RiverBoardTextureItem },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.PreflopHandActionItem.ToString(), ItemType = EnumFilterSectionItemType.PreflopHandActionItem },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.FlopHandActionItem.ToString(), ItemType = EnumFilterSectionItemType.FlopHandActionItem },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.TurnHandActionItem.ToString(), ItemType = EnumFilterSectionItemType.TurnHandActionItem },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.RiverHandActionItem.ToString(), ItemType = EnumFilterSectionItemType.RiverHandActionItem },
-                    new FilterSectionItem() { Name = EnumFilterSectionItemType.OmahaHandGridItem.ToString(), ItemType = EnumFilterSectionItemType.OmahaHandGridItem },
-                }
-            );
+            FilterSectionCollection = new ObservableCollection<FilterSectionItem>
+            {
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.StakeLevel.ToString(), ItemType = EnumFilterSectionItemType.StakeLevel },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.Buyin.ToString(), ItemType = EnumFilterSectionItemType.Buyin },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.PreFlopAction.ToString(), ItemType = EnumFilterSectionItemType.PreFlopAction },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.Currency.ToString(), ItemType = EnumFilterSectionItemType.Currency },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.TableSixRing.ToString(), ItemType = EnumFilterSectionItemType.TableSixRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.TableNineRing.ToString(), ItemType = EnumFilterSectionItemType.TableNineRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.PlayersBetween.ToString(), ItemType = EnumFilterSectionItemType.PlayersBetween },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.HoleCards.ToString(), ItemType = EnumFilterSectionItemType.HoleCards },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.FlopHandValue.ToString(), ItemType = EnumFilterSectionItemType.FlopHandValue },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.TurnHandValue.ToString(), ItemType = EnumFilterSectionItemType.TurnHandValue },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.RiverHandValue.ToString(), ItemType = EnumFilterSectionItemType.RiverHandValue },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.Date.ToString(), ItemType = EnumFilterSectionItemType.Date },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.FlopBoardCardItem.ToString(), ItemType = EnumFilterSectionItemType.FlopBoardCardItem },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.TurnBoardCardItem.ToString(), ItemType = EnumFilterSectionItemType.TurnBoardCardItem },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.RiverBoardCardItem.ToString(), ItemType = EnumFilterSectionItemType.RiverBoardCardItem },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.FlopBoardTextureItem.ToString(), ItemType = EnumFilterSectionItemType.FlopBoardTextureItem },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.TurnBoardTextureItem.ToString(), ItemType = EnumFilterSectionItemType.TurnBoardTextureItem },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.RiverBoardTextureItem.ToString(), ItemType = EnumFilterSectionItemType.RiverBoardTextureItem },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.PreflopHandActionItem.ToString(), ItemType = EnumFilterSectionItemType.PreflopHandActionItem },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.FlopHandActionItem.ToString(), ItemType = EnumFilterSectionItemType.FlopHandActionItem },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.TurnHandActionItem.ToString(), ItemType = EnumFilterSectionItemType.TurnHandActionItem },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.RiverHandActionItem.ToString(), ItemType = EnumFilterSectionItemType.RiverHandActionItem },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.OmahaHandGridItem.ToString(), ItemType = EnumFilterSectionItemType.OmahaHandGridItem },
+            };
         }
 
         #region Methods   
@@ -135,6 +132,9 @@ namespace Model.Filters
             };
 
             StakeLevelItem.OnIsChecked.Invoke();
+
+            BuyinItem.OnIsChecked = () => SetBuyinItems();
+            BuyinItem.OnIsChecked.Invoke();
 
             // Make PreFlopActionSection_IsActive depending on any FilterSectionItem is/not Checked
             PreFlopActionItem.OnIsChecked = () =>
@@ -263,6 +263,9 @@ namespace Model.Filters
                 case EnumFilterSectionItemType.StakeLevel:
                     RemoveStakeLevelItem();
                     break;
+                case EnumFilterSectionItemType.Buyin:
+                    RemoveBuyinItem();
+                    break;
                 case EnumFilterSectionItemType.PreFlopAction:
                     RemovePreFlopActionItem();
                     break;
@@ -386,9 +389,11 @@ namespace Model.Filters
         #endregion
 
         #region Stake Level (Standard Filter)
+
         private void SetStakeLevelItems()
         {
             FilterSectionItem filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.StakeLevel);
+
             var selectedStakeLevels = StandardModel?.StakeLevelCollection.Where(x => x.IsChecked);
 
             if (selectedStakeLevels == null || !StandardModel.StakeLevelCollection.Any(x => !x.IsChecked))
@@ -406,9 +411,33 @@ namespace Model.Filters
         {
             StandardModel?.ResetStakeLevelCollection();
         }
+
+        private void SetBuyinItems()
+        {
+            var filterSectionItem = FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.Buyin);
+
+            var buyinItems = StandardModel?.BuyinCollection.Where(x => x.IsChecked);
+
+            if (buyinItems == null || !StandardModel.BuyinCollection.Any(x => !x.IsChecked))
+            {
+                filterSectionItem.IsActive = false;
+                return;
+            }
+
+            var buyinString = string.Join(",", buyinItems.Select(x => x.Name.Trim()));
+            filterSectionItem.Name = $"Buyins={buyinString}";
+            filterSectionItem.IsActive = true;
+        }
+
+        private void RemoveBuyinItem()
+        {
+            StandardModel?.ResetBuyinCollection();
+        }
+
         #endregion
 
         #region Pre Flop Action Item (Standard Filter)
+
         private void SetPreFlopActionItems()
         {
             FilterSectionItem filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.PreFlopAction);

@@ -1043,6 +1043,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Line Break.
+        /// </summary>
+        internal static string Common_Hud_AddLineBreak {
+            get {
+                return ResourceManager.GetString("Common_Hud_AddLineBreak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All Stats.
         /// </summary>
         internal static string Common_Hud_AllStats {
@@ -1129,6 +1138,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Hud_Import {
             get {
                 return ResourceManager.GetString("Common_Hud_Import", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Line Break.
+        /// </summary>
+        internal static string Common_Hud_LineBreak {
+            get {
+                return ResourceManager.GetString("Common_Hud_LineBreak", resourceCulture);
             }
         }
         

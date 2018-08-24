@@ -142,7 +142,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
 
         public override void Update()
         {
-            var chartItemDataBuilder = CreateCharItemDataBuilder(ChartDisplayRange);
+            var chartItemDataBuilder = CreateChartItemDataBuilder(ChartDisplayRange);
 
             // filter and orders
             var stats = chartItemDataBuilder.PrepareStatistic(StorageModel.FilteredCashPlayerStatistic);
@@ -216,7 +216,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
             }
         }
 
-        private static CharItemDataBuilder CreateCharItemDataBuilder(ChartDisplayRange displayRange)
+        private static CharItemDataBuilder CreateChartItemDataBuilder(ChartDisplayRange displayRange)
         {
             switch (displayRange)
             {

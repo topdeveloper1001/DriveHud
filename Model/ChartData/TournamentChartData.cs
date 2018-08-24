@@ -23,14 +23,10 @@ namespace Model.ChartData
 {
     public abstract class TournamentChartDataBase : ITournamentChartData
     {
-        public virtual IEnumerable<TournamentReportRecord> Create(TournamentChartFilterType tournamentChartFilterType)
+        public virtual IEnumerable<TournamentReportRecord> Create(IList<Tournaments> tournaments, TournamentChartFilterType tournamentChartFilterType)
         {
             var report = new List<TournamentReportRecord>();
-
-            var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
-
-            var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player?.PlayerIds);
-
+         
             if (tournaments == null || tournaments.Count == 0)
             {
                 return report;
@@ -79,7 +75,7 @@ namespace Model.ChartData
             return report;
         }
 
-        protected abstract DateTime GetFirstDate(DateTime maxDateTime);
+        public abstract DateTime GetFirstDate(DateTime maxDateTime);
 
         protected abstract GroupedDateKey BuildGroupedDateKey(Tournaments tournament);
 
@@ -129,7 +125,7 @@ namespace Model.ChartData
 
     public class WeekTournamentChartData : TournamentChartDataBase, ITournamentChartData
     {
-        protected override DateTime GetFirstDate(DateTime maxDateTime)
+        public override DateTime GetFirstDate(DateTime maxDateTime)
         {
             return maxDateTime.AddDays(-7);
         }
@@ -155,7 +151,7 @@ namespace Model.ChartData
 
     public class MonthTournamentChartData : TournamentChartDataBase, ITournamentChartData
     {
-        protected override DateTime GetFirstDate(DateTime maxDateTime)
+        public override DateTime GetFirstDate(DateTime maxDateTime)
         {
             return maxDateTime.AddMonths(-1);
         }
@@ -181,7 +177,7 @@ namespace Model.ChartData
 
     public class YearTournamentChartData : TournamentChartDataBase, ITournamentChartData
     {
-        protected override DateTime GetFirstDate(DateTime maxDateTime)
+        public override DateTime GetFirstDate(DateTime maxDateTime)
         {
             return maxDateTime.AddYears(-1);
         }
