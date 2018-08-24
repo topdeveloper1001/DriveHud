@@ -46,7 +46,7 @@ namespace Model.Filters
         {
             FilterSectionStatCollectionInitialize();
             FilterSectionStakeLevelCollectionInitialize();
-            FilterSectionBuyinCollectionInitialize();
+        FilterSectionBuyinCollectionInitialize();
             FilterSectionPreFlopActionCollectionInitialize();
             FilterSectionCurrencyCollectionInitialize();
             FilterSectionTableRingCollectionInitialize();
@@ -415,6 +415,11 @@ namespace Model.Filters
 
         private void ResetFilterBuyinTo(IEnumerable<BuyinItem> buyinItems)
         {
+            if (buyinItems == null)
+            {
+                return;
+            }
+
             foreach (var buyinItem in buyinItems)
             {
                 var cur = BuyinCollection.FirstOrDefault(x => x.Buyin == buyinItem.Buyin);
