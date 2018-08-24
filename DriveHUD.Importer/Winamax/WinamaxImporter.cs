@@ -25,9 +25,11 @@ namespace DriveHUD.Importers.Winamax
 {
     internal class WinamaxImporter : FileBasedImporter, IWinamaxImporter
     {
+        private readonly static string[] processNames = new[] { "Winamax Poker" };
+
         protected override string HandHistoryFilter => "*.txt";
 
-        protected override string ProcessName => "Winamax Poker";
+        protected override string[] ProcessNames => processNames;
 
         protected override EnumPokerSites Site => EnumPokerSites.Winamax;
 

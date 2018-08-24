@@ -60,17 +60,15 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         protected override void InitializeViewModelCollection()
         {
             FilterViewCollection = new ObservableCollection<IFilterView>
-                (
-                    new List<IFilterView>()
-                    {
-                        new FilterBoardTextureView(FilterModelManager),
-                        new FilterHandActionView(FilterModelManager),
-                        new FilterHandValueView(FilterModelManager),
-                        new FilterQuickView(FilterModelManager),
-                        new FilterStandardView(FilterModelManager),
-                        new FilterDateView(FilterModelManager),
-                        new FilterHandGridView(FilterModelManager),
-                    });
+            {
+                new FilterBoardTextureView(FilterModelManager),
+                new FilterHandActionView(FilterModelManager),
+                new FilterHandValueView(FilterModelManager),
+                new FilterQuickView(FilterModelManager),
+                new FilterStandardView(FilterModelManager),
+                new FilterDateView(FilterModelManager),
+                new FilterHandGridView(FilterModelManager),
+            };
         }
 
         protected override void InitializeBindings()

@@ -31,6 +31,8 @@ namespace DriveHUD.Importers.PartyPoker
     {
         private readonly Dictionary<string, string[]> _playerNamesDictionary;
 
+        private readonly static string[] processNames = new[] { "PartyGaming", "PartyEspana" };
+
         public PartyPokerImporter()
         {
             _playerNamesDictionary = new Dictionary<string, string[]>();
@@ -44,11 +46,11 @@ namespace DriveHUD.Importers.PartyPoker
             }
         }
 
-        protected override string ProcessName
+        protected override string[] ProcessNames
         {
             get
             {
-                return "PartyGaming";
+                return processNames;
             }
         }
 

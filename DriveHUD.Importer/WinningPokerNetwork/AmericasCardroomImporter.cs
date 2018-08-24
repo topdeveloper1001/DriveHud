@@ -16,14 +16,16 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 {
     internal class AmericasCardroomImporter : WinningPokerNetworkFileBasedImporter, IAmericasCardroomImporter
     {
+        private readonly static string[] processNames = new[] { "AmericasCardroom" };
+
         protected override EnumPokerSites Site
         {
             get { return EnumPokerSites.AmericasCardroom; }
         }
 
-        protected override string ProcessName
+        protected override string[] ProcessNames
         {
-            get { return "AmericasCardroom"; }
+            get { return processNames; }
         }
     }
 }

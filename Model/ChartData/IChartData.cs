@@ -10,13 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using Model.Data;
+using Model.Enums;
+using System;
 using System.Collections.Generic;
 
 namespace Model.ChartData
 {
     public interface ITournamentChartData
     {
-        IEnumerable<TournamentReportRecord> Create();
+        DateTime GetFirstDate(DateTime maxDateTime);
+
+        IEnumerable<TournamentReportRecord> Create(IList<Tournaments> tournaments, TournamentChartFilterType tournamentChartFilterType);
     }
 }
