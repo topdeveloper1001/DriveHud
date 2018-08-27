@@ -40,7 +40,7 @@ namespace DriveHUD.Importers
 
         #region Properties
 
-        protected abstract string ProcessName { get; }
+        protected abstract string[] ProcessNames { get; }
 
         protected virtual bool IsAdvancedLogEnabled { get; set; }
 
@@ -162,7 +162,7 @@ namespace DriveHUD.Importers
         {
             try
             {
-                var pokerClientProcesses = GetPokerClientProcesses(ProcessName);
+                var pokerClientProcesses = GetPokerClientProcesses(ProcessNames);
 
                 if (IsAdvancedLogEnabled)
                 {
@@ -288,11 +288,11 @@ namespace DriveHUD.Importers
         /// Get client process
         /// </summary>
         /// <returns>Client process if exist, otherwise - null</returns>
-        protected virtual Process[] GetPokerClientProcesses(string processName)
+        protected virtual Process[] GetPokerClientProcesses(string[] processNames)
         {
             var processes = Process.GetProcesses();
 
-            var pokerClientProcesses = processes.Where(x => x.ProcessName.Equals(processName, StringComparison.OrdinalIgnoreCase)).ToArray();
+            var pokerClientProcesses = processes.Where(x => processNames.Any(p => x.ProcessName.Equals(p, StringComparison.OrdinalIgnoreCase))).ToArray();
 
             return pokerClientProcesses;
         }

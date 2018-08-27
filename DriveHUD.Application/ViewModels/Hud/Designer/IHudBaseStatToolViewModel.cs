@@ -17,5 +17,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     public interface IHudBaseStatToolViewModel
     {
         StatInfo BaseStat { get; }
+
+        int Order { get; }
     }
 }

@@ -174,6 +174,17 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Gets the order of tool 
+        /// </summary>
+        public int Order
+        {
+            get
+            {
+                return 1;
+            }
+        }
+
+        /// <summary>
         /// Gets the list of <see cref="StatInfo"/> of gauge indicator
         /// </summary>
         public ReactiveList<StatInfo> Stats

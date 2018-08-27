@@ -71,13 +71,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.5.0.2332, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.5.0.2350, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.5.0.2332, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.5.0.2350, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.5.0.2332, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.5.0.2350, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="EPPlus, Version=4.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
@@ -282,8 +282,8 @@
     <Compile Include="Controls\CashChart.xaml.cs">
       <DependentUpon>CashChart.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ChartGadget.xaml.cs">
-      <DependentUpon>ChartGadget.xaml</DependentUpon>
+    <Compile Include="Controls\TournamentChart.xaml.cs">
+      <DependentUpon>TournamentChart.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\DropDownMenu.xaml.cs">
       <DependentUpon>DropDownMenu.xaml</DependentUpon>
@@ -471,8 +471,10 @@
     <Compile Include="TableConfigurators\SeatArea\TableSeatAreaHelper.cs" />
     <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
+    <Compile Include="ValueConverters\CountToItemsControlHeight.cs" />
     <Compile Include="ValueConverters\ChartCashSeriesWinningTypeToColorBrushConverter.cs" />
     <Compile Include="ValueConverters\SelectedLayoutToCheckedConverter.cs" />
+    <Compile Include="ValueConverters\TournamentSeriesValueTypeVisibilityConverter.cs" />
     <Compile Include="ViewModels\Alias\AliasAddEditViewModel.cs" />
     <Compile Include="ViewModels\Alias\AliasPopupViewModelBase.cs" />
     <Compile Include="ViewModels\Alias\AliasViewModel.cs" />
@@ -949,7 +951,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\ChartGadget.xaml">
+    <Page Include="Controls\TournamentChart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

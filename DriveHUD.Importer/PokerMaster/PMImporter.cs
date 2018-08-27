@@ -65,13 +65,13 @@ namespace DriveHUD.Importers.PokerMaster
 
         protected override EnumPokerSites Site => EnumPokerSites.PokerMaster;
 
+        protected override string[] ProcessNames => throw new NotSupportedException($"Process name isn't supported for importer. [{SiteString}]");
         protected override string Logger => CustomModulesNames.PMCatcher;
 
 #if DEBUG
         protected override string HandHistoryFilePrefix => "pm";
 #endif
 
-        protected override string ProcessName => throw new NotSupportedException($"Process name isn't supported for importer. [{SiteString}]");
 
         #region Implementation of ITcpImporter
 

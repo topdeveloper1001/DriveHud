@@ -20,16 +20,14 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
         {
             Positions = new Dictionary<int, int[,]>
             {
-                {
-                    //
+                {                    
                     2,
                     new int[,]
                     {
                         { 665, 251 }, { 15, 251 }
                     }
                 },
-                {
-                    //
+                {                    
                     3,
                     new int[,]
                     {
@@ -50,16 +48,14 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
                         { 490, 40 }, { 633, 244 }, { 311, 363 }, { 6, 244 }, { 132, 40 }
                     }
                 },
-                {
-                    // 
+                {                    
                     6,
                     new int[,]
                     {
                         { 565, 101 }, { 656, 312 }, { 461, 422 }, { 211, 422 }, { 17, 312 }, { 110, 101 }
                     }
                 },                
-                {
-                    //
+                {                    
                     8,
                     new int[,]
                     {

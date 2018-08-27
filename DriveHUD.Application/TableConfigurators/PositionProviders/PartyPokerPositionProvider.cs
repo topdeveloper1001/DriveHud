@@ -1,8 +1,16 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PartyPokerPositionProvider.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Application.TableConfigurators.PositionProviders
 {
@@ -24,37 +32,59 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
         {
             Positions = new Dictionary<int, int[,]>
             {
-                {2, new int[,] { { 580, 285}, {80, 285}}},
-                {3, new int[,] {{ 440, 17 }, { 325, 310 }, { 218, 17 } }},
-                {4, new int[,] {{ 440, 17 }, { 416, 310 }, { 245, 310 }, { 218, 17 } }},
-                {6, new int[,] {{440, 17}, {660, 160}, {416, 310}, {245, 310}, {9, 160}, {218, 17}}},
+                {
+                    2,
+                    new int[,]
+                    {
+                        { 318, 39 }, { 316, 356 }
+                    }
+                },
+                {
+                    3,
+                    new int[,]
+                    {
+                        { 604, 102 }, { 316, 356 }, { 32, 102 }
+                    }
+                },
+                {
+                    4,
+                    new int[,]
+                    {
+                        { 440, 17 }, { 416, 310 }, { 245, 310 }, { 218, 17 }
+                    }
+                },
+                {
+                    6,
+                    new int[,]
+                    {
+                        { 318, 39 }, { 624, 106 }, { 624, 272 }, { 316, 356 }, { 8, 272 }, { 8, 106 }
+                    }
+                },
                 {
                     8,
                     new int[,]
-                        {{440, 17}, {580, 45}, {580, 285}, {416, 310}, {245, 310}, {80, 285}, {80 , 45}, {218, 17}}
+                    {
+                        { 443, 39 }, { 624, 115 }, { 624, 272 }, { 443, 356 }, { 192, 356 }, { 8, 272 }, { 8, 115 }, { 192, 39 }
+                    }
                 },
                 {
                     9,
                     new int[,]
                     {
-                        {440, 17}, {580, 45}, {660, 160},
-                        {530, 285}, {325, 310},
-                        {120, 285}, {9, 160}, {80 , 45},
-                        {218, 17}
+                        { 450, 39 }, { 603, 94 }, { 624, 199 }, { 572, 332 }, { 316, 356 }, { 72, 332 }, { 6, 199 }, { 30, 94 }, { 184, 39 }
                     }
                 },
                 {
                     10,
                     new int[,]
-                        {{440, 17}, {580, 45}, {660, 160},
-                        {580, 285}, {416, 310}, {245, 310},
-                        {80, 285}, {9, 160}, {80 , 45},
-                        {218, 17}}
+                    {
+                        { 450, 39 }, { 603, 94 }, { 624, 199 }, { 599, 305 }, { 417, 356 }, { 217, 356 }, { 36, 305 }, { 6, 199 }, { 31 , 94 }, { 185, 39 }
+                    }
                 }
             };
 
-            PlayerLabelWidth = 120;
-            PlayerLabelHeight = 80;
+            PlayerLabelWidth = 170;
+            PlayerLabelHeight = 53;
         }
     }
 }
