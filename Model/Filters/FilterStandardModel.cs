@@ -46,7 +46,7 @@ namespace Model.Filters
         {
             FilterSectionStatCollectionInitialize();
             FilterSectionStakeLevelCollectionInitialize();
-        FilterSectionBuyinCollectionInitialize();
+            FilterSectionBuyinCollectionInitialize();
             FilterSectionPreFlopActionCollectionInitialize();
             FilterSectionCurrencyCollectionInitialize();
             FilterSectionTableRingCollectionInitialize();
