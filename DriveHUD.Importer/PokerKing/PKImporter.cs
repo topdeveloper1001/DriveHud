@@ -48,7 +48,7 @@ namespace DriveHUD.Importers.PokerKing
         protected override string HandHistoryFilePrefix => "pk";
 #endif
 
-        protected override string ProcessName => throw new NotSupportedException($"Process name isn't supported for importer. [{SiteString}]");
+        protected override string[] ProcessNames => throw new NotSupportedException($"Process name isn't supported for importer. [{SiteString}]");
 
         #region Implementation of ITcpImporter
 

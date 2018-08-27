@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PKHandBuilder.cs" company="Ace Poker Solutions">
+// <copyright file="PKHandBuilderTests.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,18 +10,26 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Importers.PokerKing.Model;
-using HandHistories.Objects.Hand;
+using NUnit.Framework;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DriveHUD.Importers.PokerKing
+namespace DriveHud.Tests.TcpImportersTests.PKTests
 {
-    internal class PKHandBuilder : IPKHandBuilder
+    [TestFixture]
+    class PKHandBuilderTests
     {
-        public bool TryBuild(PokerKingPackage package, out HandHistory handHistory)
+        private const string TestDataFolder = "TcpImportersTests\\PKTests\\TestData\\HandsRawData";
+        private const string JsonExt = ".json";
+        private const string ExpectedResultFile = "Result.xml";
+
+        [TestCase("")]
+        public void TryBuildTest()
         {
-            handHistory = null;
-            return false;
+
         }
     }
 }

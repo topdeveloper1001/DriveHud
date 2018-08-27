@@ -153,6 +153,9 @@
   <data name="Notifications_HudLayout_DeleteHudYes" xml:space="preserve">
     <value>Yes</value>
   </data>
+  <data name="Notifications_HudLayout_PreLoadingCanNotBeCapturedText_PK" xml:space="preserve">
+    <value>HUD can't be loaded, because this table was opened before DriveHUD was launched. Please rejoin to the table.</value>
+  </data>
   <data name="Notifications_HudLayout_PreLoadingText_Ignition" xml:space="preserve">
     <value>One full hand must be played before HUD appears. Please wait.</value>
   </data>
@@ -164,6 +167,9 @@
   </data>
   <data name="Notifications_HudLayout_PreLoadingText_NotSupportedFastFold" xml:space="preserve">
     <value>Hud isn't supported in fast fold mode, but hands will be imported.</value>
+  </data>
+  <data name="Notifications_HudLayout_PreLoadingText_PK" xml:space="preserve">
+    <value>One full hand must be played before HUD appears. Please wait.</value>
   </data>
   <data name="Notifications_HudLayout_PreLoadingText_PM" xml:space="preserve">
     <value>One full hand must be played before HUD appears. Please wait.</value>

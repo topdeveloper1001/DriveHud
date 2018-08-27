@@ -169,6 +169,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to HUD can&apos;t be loaded, because this table was opened before DriveHUD was launched. Please rejoin to the table..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingCanNotBeCapturedText_PK {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingCanNotBeCapturedText_PK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
         /// </summary>
         internal static string Notifications_HudLayout_PreLoadingText_Ignition {
@@ -201,6 +210,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Notifications_HudLayout_PreLoadingText_NotSupportedFastFold {
             get {
                 return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_NotSupportedFastFold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PK {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PK", resourceCulture);
             }
         }
         
