@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Reflection;
+using System.Runtime.Serialization;
 
 namespace HandHistories.Objects.Cards
 {
@@ -50,6 +51,7 @@ namespace HandHistories.Objects.Cards
 
         #region Enums
 
+        [Obfuscation(Exclude = true)]
         enum CardValueEnum : byte
         {
             Unknown = 0,
@@ -68,6 +70,7 @@ namespace HandHistories.Objects.Cards
             _A = 0xE,
         }
 
+        [Obfuscation(Exclude = true)]
         enum SuitEnum : byte
         {
             Unknown = 0,
