@@ -36,19 +36,14 @@ namespace DriveHUD.Importers.PokerKing
 
                 var packageType = BitConverter.ToInt16(packageTypeBytes, 0);
 
-                if (Enum.IsDefined(typeof(PackageType), packageType))
+                package = new PokerKingPackage
                 {
-                    package = new PokerKingPackage
-                    {
-                        PackageType = (PackageType)packageType,
-                        Body = body.Skip(8).ToArray(),
-                        Timestamp = DateTime.Now
-                    };
+                    PackageType = (PackageType)packageType,
+                    Body = body.Skip(8).ToArray(),
+                    Timestamp = DateTime.Now
+                };
 
-                    return true;
-                }
-
-                LogProvider.Log.Info(CustomModulesNames.PKCatcher, $"Unknown package type: {packageType}");
+                return true;
             }
             catch (Exception e)
             {
