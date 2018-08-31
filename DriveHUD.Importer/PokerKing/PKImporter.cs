@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Infrastructure.CustomServices;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using DriveHUD.Importers.AndroidBase;
@@ -38,6 +39,7 @@ namespace DriveHUD.Importers.PokerKing
     internal class PKImporter : TcpPacketImporter, IPKImporter
     {
         private readonly BlockingCollection<CapturedPacket> packetBuffer = new BlockingCollection<CapturedPacket>();
+        private readonly IPKCatcherService pkCatcherService = ServiceLocator.Current.TryResolve<IPKCatcherService>();
         private IPokerClientEncryptedLogger protectedLogger;
 
         protected override bool SupportDuplicates => true;
@@ -163,9 +165,7 @@ namespace DriveHUD.Importers.PokerKing
                     {
                         Task.Delay(NoDataDelay).Wait();
                         continue;
-                    }
-
-                    // LogPacket(capturedPacket, ".log");
+                    }                    
 
                     if (!packetManager.TryParse(capturedPacket, out PokerKingPackage package) || !IsAllowedPackage(package))
                     {
@@ -258,7 +258,12 @@ namespace DriveHUD.Importers.PokerKing
                             LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId}: Found process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
                         }
 
-                        // check PK license
+                        if (!pkCatcherService.CheckHand(handHistory))
+                        {
+                            LogProvider.Log.Info(Logger, $"License doesn't support cash hand {handHistory.HandId}. [bb={handHistory.GameDescription.Limit.BigBlind}]");
+                            SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK_NoLicense", windowHandle);
+                            continue;
+                        }
 
                         var handHistoryData = new HandHistoryData
                         {
@@ -336,9 +341,7 @@ namespace DriveHUD.Importers.PokerKing
         #region Debug logging
 
         private void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
-        {
-            LogProvider.Log.Info(Logger, $"Received package of type <{package.PackageType}>");
-
+        {            
             switch (package.PackageType)
             {
                 case PackageType.RequestLeaveRoom:
@@ -427,6 +430,8 @@ namespace DriveHUD.Importers.PokerKing
             }
         }
 
+#if DEBUG
+
         private void LogPacket(CapturedPacket capturedPacket, string ext)
         {
             var packageFileName = Path.Combine("Logs", capturedPacket.ToString().Replace(":", ".").Replace("->", "-")) + ext;
@@ -449,6 +454,8 @@ namespace DriveHUD.Importers.PokerKing
 
             File.AppendAllText(packageFileName, sb.ToString());
         }
+
+#endif
 
         private class PackageJson<T>
         {

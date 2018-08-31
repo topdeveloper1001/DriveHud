@@ -76,6 +76,7 @@
     <Compile Include="Base\BaseViewModel.cs" />
     <Compile Include="Base\RelayCommand.cs" />
     <Compile Include="CustomServices\IHandNotesService.cs" />
+    <Compile Include="CustomServices\IPKCatcherService.cs" />
     <Compile Include="CustomServices\IPMCatcherService.cs" />
     <Compile Include="ExportFunctions.cs" />
     <Compile Include="Modules\IDHModule.cs" />

@@ -738,6 +738,9 @@
     <Resource Include="images\icons\left-arrow-hud-store.png" />
     <Resource Include="images\icons\right-arrow-hud-store.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Shop\pk-hud-catcher-logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>

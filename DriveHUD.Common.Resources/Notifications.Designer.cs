@@ -223,6 +223,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to HUD can&apos;t be loaded. PRO version of catcher is required..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PK_NoLicense {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PK_NoLicense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
         /// </summary>
         internal static string Notifications_HudLayout_PreLoadingText_PM {
