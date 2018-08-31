@@ -14,9 +14,11 @@ using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using DriveHUD.Importers.AndroidBase;
+using DriveHUD.Importers.Helpers;
 using DriveHUD.Importers.Loggers;
 using DriveHUD.Importers.PokerKing.Model;
 using HandHistories.Objects.Hand;
+using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model;
@@ -249,7 +251,7 @@ namespace DriveHUD.Importers.PokerKing
                         }
                     }
 
-                    if (handBuilder.TryBuild(package, windowHandle.ToInt32(), out HandHistory handHistory))
+                    if (handBuilder.TryBuild(package, windowHandle.ToInt32(), userId, out HandHistory handHistory))
                     {
                         if (IsAdvancedLogEnabled)
                         {
@@ -462,6 +464,41 @@ namespace DriveHUD.Importers.PokerKing
         protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
             return false;
+        }
+
+        private Dictionary<int, int> autoCenterSeats = new Dictionary<int, int>
+        {
+            { 2, 1 },
+            { 3, 1 },
+            { 4, 1 },
+            { 5, 1 },
+            { 6, 1 },
+            { 7, 1 },
+            { 8, 1 },
+            { 9, 1 }
+        };
+
+        protected override PlayerList GetPlayerList(HandHistory handHistory, GameInfo gameInfo)
+        {
+            var playerList = handHistory.Players;
+
+            var maxPlayers = handHistory.GameDescription.SeatType.MaxPlayers;
+
+            var heroSeat = handHistory.Hero != null ? handHistory.Hero.SeatNumber : 0;
+
+            if (heroSeat != 0 && autoCenterSeats.ContainsKey(maxPlayers))
+            {
+                var prefferedSeat = autoCenterSeats[maxPlayers];
+
+                var shift = (prefferedSeat - heroSeat) % maxPlayers;
+
+                foreach (var player in playerList)
+                {
+                    player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, maxPlayers);
+                }
+            }
+
+            return playerList;
         }
     }
 }

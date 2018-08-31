@@ -41,8 +41,10 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
-        [TestCase("8-max-regular-no-hero", 105772)]
-        public void TryBuildTest(string testFolder, long heroId)
+        [TestCase("8-max-regular-no-hero", 105772u)]
+        [TestCase("6-max-short-dbl-ante-no-hero", 105772u)]
+        [TestCase("8-max-regular-hero", 105772u)]
+        public void TryBuildTest(string testFolder, uint heroId)
         {
             var packages = ReadPackages(testFolder);
 
@@ -54,7 +56,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
 
             foreach (var package in packages)
             {
-                if (handBuilder.TryBuild(package, identifier, out actual))
+                if (handBuilder.TryBuild(package, identifier, heroId, out actual))
                 {
                     break;
                 }

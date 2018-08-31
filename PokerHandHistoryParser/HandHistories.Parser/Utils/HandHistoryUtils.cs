@@ -18,7 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace HandHistories.Objects.Utils
+namespace HandHistories.Parser.Utils
 {
     public class HandHistoryUtils
     {
@@ -87,6 +87,12 @@ namespace HandHistories.Objects.Utils
                     handHistory.Hero = null;
                 }
             }
+        }
+
+        public static void UpdateAllInActions(HandHistory handHistory)
+        {
+            AllInActionHelper.IdentifyAllInActions(handHistory.Players, handHistory.HandActions);
+            handHistory.HandActions = AllInActionHelper.UpdateAllInActions(handHistory.HandActions);
         }
 
         /// <summary>

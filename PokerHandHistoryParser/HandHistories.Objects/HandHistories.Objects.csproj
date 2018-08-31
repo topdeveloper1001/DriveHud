@@ -85,7 +85,6 @@
     <Compile Include="Cards\Street.cs" />
     <Compile Include="GameDescription\TableType.cs" />
     <Compile Include="Utils\HandAction.StreetExtension.cs" />
-    <Compile Include="Utils\HandHistoryUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

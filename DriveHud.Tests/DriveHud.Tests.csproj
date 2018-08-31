@@ -288,12 +288,24 @@
     <Compile Include="UnitTests\UtilsTests.cs" />
     <Fakes Include="Fakes\System.fakes" />
     <Fakes Include="Fakes\mscorlib.fakes" />
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\6-max-short-dbl-ante-no-hero\Result.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-hero\Result.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-no-hero\Result.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\Packets\170.33.8.75.31001-192.168.0.104.33644.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\6-max-short-dbl-ante-no-hero\Source.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-hero\Source.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-no-hero\Source.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

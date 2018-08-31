@@ -19,7 +19,7 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
-using HandHistories.Objects.Utils;
+using HandHistories.Parser.Utils;
 using Model;
 using System;
 using System.Collections.Generic;

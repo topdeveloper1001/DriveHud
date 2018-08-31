@@ -22,7 +22,7 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
-using HandHistories.Objects.Utils;
+using HandHistories.Parser.Utils;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -37,7 +37,7 @@ namespace DriveHUD.Importers.PokerKing
 
         private Dictionary<long, List<PokerKingPackage>> userPackages = new Dictionary<long, List<PokerKingPackage>>();
 
-        public bool TryBuild(PokerKingPackage package, int identifier, out HandHistory handHistory)
+        public bool TryBuild(PokerKingPackage package, int identifier, uint userId, out HandHistory handHistory)
         {
             handHistory = null;
 
@@ -62,13 +62,13 @@ namespace DriveHUD.Importers.PokerKing
 
             if (package.PackageType == PackageType.NoticeGameSettlement)
             {
-                handHistory = BuildHand(packages, identifier);
+                handHistory = BuildHand(packages, identifier, userId);
             }
 
             return handHistory != null;
         }
 
-        private HandHistory BuildHand(List<PokerKingPackage> packages, int identifier)
+        private HandHistory BuildHand(List<PokerKingPackage> packages, int identifier, uint userId)
         {
             HandHistory handHistory = null;
 
@@ -103,8 +103,11 @@ namespace DriveHUD.Importers.PokerKing
                         case PackageType.NoticeGameBlind:
                             ParsePackage<NoticeGameBlind>(package, x => ProcessNoticeGameBlind(x, handHistory));
                             break;
+                        case PackageType.NoticeGameAnte:
+                            ParsePackage<NoticeGameAnte>(package, x => ProcessNoticeGameAnte(x, handHistory));
+                            break;
                         case PackageType.NoticeGameHoleCard:
-                            ParsePackage<NoticeGameHoleCard>(package, x => ProcessNoticeGameHoleCard(x, handHistory));
+                            ParsePackage<NoticeGameHoleCard>(package, x => ProcessNoticeGameHoleCard(x, handHistory, userId));
                             break;
                         case PackageType.NoticePlayerAction:
                             ParsePackage<NoticePlayerAction>(package, x => ProcessNoticePlayerAction(x, handHistory));
@@ -143,10 +146,10 @@ namespace DriveHUD.Importers.PokerKing
                 return;
             }
 
+            HandHistoryUtils.UpdateAllInActions(handHistory);
             HandHistoryUtils.CalculateBets(handHistory);
             HandHistoryUtils.CalculateUncalledBets(handHistory, true);
             HandHistoryUtils.CalculateTotalPot(handHistory);
-            HandHistoryUtils.SortHandActions(handHistory);
             HandHistoryUtils.RemoveSittingOutPlayers(handHistory);
 
             if (!handHistory.GameDescription.IsTournament)
@@ -157,6 +160,7 @@ namespace DriveHUD.Importers.PokerKing
 
                 handHistory.GameDescription.Limit.SmallBlind /= divider;
                 handHistory.GameDescription.Limit.BigBlind /= divider;
+                handHistory.GameDescription.Limit.Ante /= divider;
 
                 handHistory.Players.ForEach(p =>
                 {
@@ -221,6 +225,29 @@ namespace DriveHUD.Importers.PokerKing
             handHistory.DealerButtonPosition = noticeGameElectDealer.DealerSeatId + 1;
         }
 
+        private void ProcessNoticeGameAnte(NoticeGameAnte noticeGameAnte, HandHistory handHistory)
+        {
+            if (noticeGameAnte.SeatList == null ||
+                noticeGameAnte.AmountList == null ||
+                noticeGameAnte.SeatList.Length != noticeGameAnte.AmountList.Length)
+            {
+                return;
+            }
+
+            for (var i = 0; i < noticeGameAnte.SeatList.Length; i++)
+            {
+                var seat = noticeGameAnte.SeatList[i] + 1;
+                var ante = noticeGameAnte.AmountList[i];
+
+                var anteAction = new HandAction(GetPlayerName(handHistory, seat),
+                    HandActionType.ANTE,
+                    ante,
+                    Street.Preflop);
+
+                handHistory.HandActions.Add(anteAction);
+            }
+        }
+
         private void ProcessNoticeGameBlind(NoticeGameBlind noticeGameBlind, HandHistory handHistory)
         {
             if (!roomsData.TryGetValue(noticeGameBlind.RoomId, out NoticeGameSnapShot noticeGameSnapShot))
@@ -230,10 +257,17 @@ namespace DriveHUD.Importers.PokerKing
 
             var gameRoomInfo = noticeGameSnapShot.Params ?? throw new HandBuilderException(handHistory.HandId, "NoticeGameSnapShot.Params must be not empty.");
 
+            var ante = Math.Abs(handHistory.HandActions.Where(x => x.HandActionType == HandActionType.ANTE).MaxOrDefault(x => x.Amount));
+
+            if (ante != 0)
+            {
+                ante = ante < gameRoomInfo.RuleAnteAmount ? gameRoomInfo.RuleAnteAmount : ante;
+            }
+
             handHistory.GameDescription = new GameDescriptor(
                 EnumPokerSites.PokerKing,
                 GameType.NoLimitHoldem,
-                Limit.FromSmallBlindBigBlind(noticeGameBlind.SBAmount, noticeGameBlind.BBAmount, Currency.YUAN),
+                Limit.FromSmallBlindBigBlind(noticeGameBlind.SBAmount, noticeGameBlind.BBAmount, Currency.YUAN, ante != 0, ante),
                 TableType.FromTableTypeDescriptions(TableTypeDescription.Regular),
                 SeatType.FromMaxPlayers(gameRoomInfo.PlayerCountMax), null);
 
@@ -241,10 +275,13 @@ namespace DriveHUD.Importers.PokerKing
 
             handHistory.TableName = gameRoomInfo.GameName;
 
-            handHistory.HandActions.Add(new HandAction(GetPlayerName(handHistory, noticeGameBlind.SBSeatId + 1),
-                    HandActionType.SMALL_BLIND,
-                    noticeGameBlind.SBAmount,
-                    Street.Preflop));
+            if (noticeGameBlind.SBAmount > 0)
+            {
+                handHistory.HandActions.Add(new HandAction(GetPlayerName(handHistory, noticeGameBlind.SBSeatId + 1),
+                        HandActionType.SMALL_BLIND,
+                        noticeGameBlind.SBAmount,
+                        Street.Preflop));
+            }
 
             handHistory.HandActions.Add(new HandAction(GetPlayerName(handHistory, noticeGameBlind.BBSeatId + 1),
                  HandActionType.BIG_BLIND,
@@ -259,17 +296,49 @@ namespace DriveHUD.Importers.PokerKing
                     var straddleSeat = noticeGameBlind.StraddleSeatList[straddleIndex];
                     var straddleAmount = noticeGameBlind.StraddleAmountList[straddleIndex];
 
+                    if (straddleSeat < 0 || straddleAmount <= 0)
+                    {
+                        continue;
+                    }
+
                     handHistory.HandActions.Add(new HandAction(GetPlayerName(handHistory, straddleSeat + 1),
                         HandActionType.STRADDLE,
                         straddleAmount,
                         Street.Preflop));
                 }
             }
+
+            if (noticeGameBlind.PostSeatList != null)
+            {
+                foreach (var postSeat in noticeGameBlind.PostSeatList)
+                {
+                    handHistory.HandActions.Add(new HandAction(GetPlayerName(handHistory, postSeat + 1),
+                        HandActionType.POSTS,
+                        noticeGameBlind.BBAmount,
+                        Street.Preflop));
+                }
+            }
         }
 
-        private void ProcessNoticeGameHoleCard(NoticeGameHoleCard noticeGameHoleCard, HandHistory handHistory)
+        private void ProcessNoticeGameHoleCard(NoticeGameHoleCard noticeGameHoleCard, HandHistory handHistory, uint userId)
         {
+            if (noticeGameHoleCard.HoldCards == null)
+            {
+                return;
+            }
 
+            var cards = noticeGameHoleCard.HoldCards.Select(c => ConvertCardItem(c)).ToArray();
+
+            var hero = handHistory.Players.FirstOrDefault(x => x.PlayerName == userId.ToString());
+
+            if (hero == null)
+            {
+                LogProvider.Log.Warn($"Hero not found for hand {handHistory.HandId}, room {noticeGameHoleCard.RoomId}, user {userId}");
+                return;
+            }
+
+            handHistory.Hero = hero;
+            hero.HoleCards = HoleCards.FromCards(hero.PlayerName, cards);
         }
 
         private void ProcessNoticePlayerAction(NoticePlayerAction noticePlayerAction, HandHistory handHistory)
@@ -281,10 +350,14 @@ namespace DriveHUD.Importers.PokerKing
                 return;
             }
 
-            var action = new HandAction(GetPlayerName(handHistory, noticePlayerAction.LastActionSeatId + 1),
-                actionType,
-                noticePlayerAction.Amount,
-                handHistory.CommunityCards.Street);
+            HandAction action = actionType == HandActionType.ALL_IN ?
+                new AllInAction(GetPlayerName(handHistory, noticePlayerAction.LastActionSeatId + 1),
+                    noticePlayerAction.Amount,
+                    handHistory.CommunityCards.Street, false) :
+                new HandAction(GetPlayerName(handHistory, noticePlayerAction.LastActionSeatId + 1),
+                    actionType,
+                    noticePlayerAction.Amount,
+                    handHistory.CommunityCards.Street);
 
             handHistory.HandActions.Add(action);
         }
@@ -314,6 +387,11 @@ namespace DriveHUD.Importers.PokerKing
             foreach (var show in noticeGameShowDown.Shows)
             {
                 var player = GetPlayer(handHistory, show.SeatId + 1);
+
+                if (handHistory.HandActions.Any(x => x.PlayerName == player.PlayerName && x.HandActionType == HandActionType.SHOW))
+                {
+                    continue;
+                }
 
                 var showAction = new HandAction(player.PlayerName,
                     HandActionType.SHOW,
