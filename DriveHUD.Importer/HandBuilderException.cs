@@ -12,7 +12,7 @@
 
 using System;
 
-namespace DriveHUD.Importers.PokerMaster
+namespace DriveHUD.Importers
 {
     public class HandBuilderException : Exception
     {

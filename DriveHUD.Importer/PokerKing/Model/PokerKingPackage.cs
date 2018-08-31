@@ -10,12 +10,23 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
+
 namespace DriveHUD.Importers.PokerKing.Model
 {
     internal class PokerKingPackage
     {
+        public DateTime Timestamp { get; set; }
+
         public PackageType PackageType { get; set; }
 
         public byte[] Body { get; set; }
+
+#if DEBUG
+        public override string ToString()
+        {
+            return $"{PackageType}: {Timestamp}; BodyLength: {Body.Length}";
+        }
+#endif
     }
 }

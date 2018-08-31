@@ -10,24 +10,25 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
+using DriveHUD.Entities;
+using HandHistories.Objects.Actions;
+using HandHistories.Objects.Cards;
+using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
+using HandHistories.Objects.Players;
+using HandHistories.Objects.Utils;
+using HandHistories.Parser.Parsers.Exceptions;
+using HandHistories.Parser.Parsers.FastParser.Base;
+using HandHistories.Parser.Utils.FastParsing;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
-using HandHistories.Objects.Actions;
-using HandHistories.Objects.Cards;
-using HandHistories.Objects.GameDescription;
-using HandHistories.Objects.Players;
-using HandHistories.Parser.Parsers.Exceptions;
-using HandHistories.Parser.Parsers.FastParser.Base;
-using DriveHUD.Common.Log;
-using System.Globalization;
-using DriveHUD.Entities;
-using HandHistories.Parser.Utils.FastParsing;
-using HandHistories.Objects.Hand;
 
 namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
@@ -1402,7 +1403,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 }
             }
 
-            ParserUtils.CalculateUncalledBets(handHistory, !uncalledBetEnabled);
+            HandHistoryUtils.CalculateUncalledBets(handHistory, !uncalledBetEnabled);
         }
 
         private bool TryParseSeatNumber(HandHistory handHistory, string playerNumberText)

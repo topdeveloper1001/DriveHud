@@ -338,7 +338,7 @@
     <Compile Include="AndroidBase\EmulatorProviders\NoxEmulatorProvider.cs" />
     <Compile Include="AndroidBase\EmulatorProviders\VirtualBoxEmulator.cs" />
     <Compile Include="PokerMaster\HandBuilder.cs" />
-    <Compile Include="PokerMaster\HandBuilderException.cs" />
+    <Compile Include="HandBuilderException.cs" />
     <Compile Include="PokerMaster\IHandBuilder.cs" />
     <Compile Include="AndroidBase\INetworkConnectionsService.cs" />
     <Compile Include="AndroidBase\IPacketManager.cs" />

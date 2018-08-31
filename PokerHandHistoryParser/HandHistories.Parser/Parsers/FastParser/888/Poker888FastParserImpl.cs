@@ -18,6 +18,7 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
+using HandHistories.Objects.Utils;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Extensions;
@@ -760,7 +761,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         protected override void CalculateUncalledBets(string[] handLines, HandHistory handHistory)
         {
-            ParserUtils.CalculateUncalledBets(handHistory, false);
+            HandHistoryUtils.CalculateUncalledBets(handHistory, false);
         }
     }
 }

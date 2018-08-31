@@ -14,12 +14,14 @@ using DriveHUD.Common.Extensions;
 using DriveHUD.Importers.PokerKing;
 using DriveHUD.Importers.PokerKing.Model;
 using HandHistories.Objects.Hand;
+using Microsoft.QualityTools.Testing.Fakes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using NUnit.Framework;
 using ProtoBuf;
 using System;
 using System.Collections.Generic;
+using System.Fakes;
 using System.IO;
 
 namespace DriveHud.Tests.TcpImportersTests.PKTests
@@ -30,6 +32,8 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
         private const string TestDataFolder = "TcpImportersTests\\PKTests\\TestData\\HandsRawData";
         private const string SourceJsonFile = "Source.json";
         private const string ExpectedResultFile = "Result.xml";
+
+        private const int identifier = 7777;
 
         [OneTimeSetUp]
         public void SetUp()
@@ -50,7 +54,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
 
             foreach (var package in packages)
             {
-                if (handBuilder.TryBuild(package, out actual))
+                if (handBuilder.TryBuild(package, identifier, out actual))
                 {
                     break;
                 }
@@ -196,7 +200,8 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
                 var package = new PokerKingPackage
                 {
                     PackageType = packet.PackageType,
-                    Body = bytes
+                    Body = bytes,
+                    Timestamp = packet.Time
                 };
 
                 return package;

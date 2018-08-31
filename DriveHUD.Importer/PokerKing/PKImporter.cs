@@ -189,7 +189,7 @@ namespace DriveHUD.Importers.PokerKing
 
                                     if (IsAdvancedLogEnabled)
                                     {
-                                        LogProvider.Log.Info(Logger, $"User id {body.Uid} has been detected.");
+                                        LogProvider.Log.Info(Logger, $"User id {body.Uid} has been detected. [{windowHandle}]");
                                     }
 
                                     return;
@@ -249,7 +249,7 @@ namespace DriveHUD.Importers.PokerKing
                         }
                     }
 
-                    if (handBuilder.TryBuild(package, out HandHistory handHistory))
+                    if (handBuilder.TryBuild(package, windowHandle.ToInt32(), out HandHistory handHistory))
                     {
                         if (IsAdvancedLogEnabled)
                         {
@@ -412,7 +412,7 @@ namespace DriveHUD.Importers.PokerKing
                 {
                     PackageType = package.PackageType,
                     Content = packageContent,
-                    Time = DateTime.Now
+                    Time = package.Timestamp
                 };
 
                 var json = JsonConvert.SerializeObject(packageJson, Formatting.Indented, new StringEnumConverter());

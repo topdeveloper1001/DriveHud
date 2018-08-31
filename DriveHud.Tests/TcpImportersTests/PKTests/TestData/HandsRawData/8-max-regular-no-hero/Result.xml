@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HandHistory>
-  <DateOfHandUtc>2018-08-27T17:47:04Z</DateOfHandUtc>
+  <DateOfHandUtc>2018-08-27T14:47:05.1546616Z</DateOfHandUtc>
   <HandId>254083672603049984</HandId>
   <DealerButtonPosition>6</DealerButtonPosition>
   <TableName>达文波特305</TableName>
@@ -21,7 +21,7 @@
   </GameDescription>
   <Cancelled>false</Cancelled>
   <NumPlayersSeated>0</NumPlayersSeated>
-  <TotalPot>110</TotalPot>
+  <TotalPot>1.1</TotalPot>
   <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
   <Actions>
     <HandAction PlayerName="150958" HandActionType="SMALL_BLIND" Amount="-0.1" Street="Preflop" IsAllIn="false" />
@@ -47,13 +47,13 @@
   </Actions>
   <CommunityCards>2s6cKs8s8h</CommunityCards>
   <Players>
-    <Player PlayerName="2004913" PlayerNick="赛乐林" StartingStack="25.68" Bet="0.4" Win="0.4" SeatNumber="1" Cards="7s2d" IsSittingOut="false" />
+    <Player PlayerName="2004913" PlayerNick="赛乐林" StartingStack="25.68" Bet="0.4" Win="0" SeatNumber="1" Cards="7s2d" IsSittingOut="false" />
     <Player PlayerName="141598" PlayerNick="为啥总是输" StartingStack="17.26" Bet="0" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
     <Player PlayerName="2000440" PlayerNick="神一样的牌神" StartingStack="16.56" Bet="0.4" Win="1.1" SeatNumber="3" Cards="9s9c" IsSittingOut="false" />
     <Player PlayerName="158739" PlayerNick="DWON神" StartingStack="23.20" Bet="0" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
     <Player PlayerName="145398" PlayerNick="aster" StartingStack="23.36" Bet="0" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
     <Player PlayerName="2004824" PlayerNick="游客9527" StartingStack="17.94" Bet="0" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
-    <Player PlayerName="150958" PlayerNick="渔的生活" StartingStack="18.10" Bet="0" Win="0.1" SeatNumber="7" Cards="" IsSittingOut="false" />
-    <Player PlayerName="142377" PlayerNick="血战德州" StartingStack="16.29" Bet="0" Win="0.2" SeatNumber="8" Cards="" IsSittingOut="false" />  
+    <Player PlayerName="150958" PlayerNick="渔的生活" StartingStack="18.10" Bet="0.1" Win="0" SeatNumber="7" Cards="" IsSittingOut="false" />
+    <Player PlayerName="142377" PlayerNick="血战德州" StartingStack="16.29" Bet="0.2" Win="0" SeatNumber="8" Cards="" IsSittingOut="false" />  
   </Players>  
 </HandHistory>

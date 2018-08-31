@@ -17,10 +17,10 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
+using HandHistories.Objects.Utils;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Utils;
-using HandHistories.Parser.Utils.FastParsing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -735,7 +735,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         protected virtual void CalculateUncalledBets(string[] handLines, HandHistory handHistory)
         {
-            ParserUtils.CalculateUncalledBets(handHistory, true);
+            HandHistoryUtils.CalculateUncalledBets(handHistory, true);
         }
     }
 }

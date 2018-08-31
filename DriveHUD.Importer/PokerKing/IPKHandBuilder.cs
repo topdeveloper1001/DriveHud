@@ -12,16 +12,11 @@
 
 using DriveHUD.Importers.PokerKing.Model;
 using HandHistories.Objects.Hand;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.PokerKing
 {
     internal interface IPKHandBuilder
     {
-        bool TryBuild(PokerKingPackage package, out HandHistory handHistory);        
+        bool TryBuild(PokerKingPackage package, int identifier, out HandHistory handHistory);        
     }
 }

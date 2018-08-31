@@ -19,7 +19,7 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
-using HandHistories.Parser.Utils.FastParsing;
+using HandHistories.Objects.Utils;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -351,166 +351,13 @@ namespace DriveHUD.Importers.PokerMaster
             ReplaceFirstRaiseWithBet(handHistory.Turn);
             ReplaceFirstRaiseWithBet(handHistory.River);
 
-            AddShowActions(handHistory);
-            AddWinningActions(handHistory);
-            CalculateBets(handHistory);
-            ParserUtils.CalculateUncalledBets(handHistory, true);
-            CalculateTotalPot(handHistory);
-            SortHandActions(handHistory);
-            RemoveSittingOutPlayers(handHistory);
-        }
-
-        private void AddShowActions(HandHistory handHistory)
-        {
-            // add show
-            var playersCouldSeeShowdown = (from handAction in handHistory.HandActions
-                                           group handAction by handAction.PlayerName into grouped
-                                           let playerFolded = grouped.Any(x => x.IsFold)
-                                           where !playerFolded
-                                           select grouped.Key).ToArray();
-
-            if (playersCouldSeeShowdown.Length > 1)
-            {
-                foreach (var playerCouldSeeShowdown in playersCouldSeeShowdown)
-                {
-                    var showdownAction = new HandAction(playerCouldSeeShowdown, HandActionType.SHOW, 0, Street.Showdown);
-                    handHistory.HandActions.Add(showdownAction);
-                }
-            }
-        }
-
-        private void AddWinningActions(HandHistory handHistory)
-        {
-            foreach (var winner in handHistory.Players.Where(p => p.Win > 0))
-            {
-                var winAction = new WinningsAction(winner.PlayerName, HandActionType.WINS, winner.Win, 0);
-                handHistory.HandActions.Add(winAction);
-            }
-        }
-
-        private void CalculateBets(HandHistory handHistory)
-        {
-            var betsByPlayer = handHistory.HandActions
-                .GroupBy(p => p.PlayerName)
-                .Select(x => new { PlayerName = x.Key, Bet = x.Where(a => a.Amount < 0).Sum(a => a.Amount) })
-                .ToDictionary(x => x.PlayerName, x => Math.Abs(x.Bet));
-
-            foreach (var player in handHistory.Players)
-            {
-                if (betsByPlayer.ContainsKey(player.PlayerName))
-                {
-                    player.Bet = betsByPlayer[player.PlayerName];
-                }
-            }
-        }
-
-        private void CalculateTotalPot(HandHistory handHistory)
-        {
-            handHistory.TotalPot = handHistory.Players.Sum(x => x.Win);
-        }
-
-        private void SortHandActions(HandHistory handHistory)
-        {
-            var dealer = handHistory.DealerButtonPosition;
-
-            var orderedPlayers = handHistory
-                .Players
-                .Skip(dealer)
-                .Concat(handHistory.Players.TakeWhile(x => x.SeatNumber <= dealer))
-                .ToArray();
-
-            var orderedPlayersDictionary = OrderedPlayersToDict(orderedPlayers);
-
-            var orderedHandActions = new List<HandAction>();
-
-            if (orderedPlayersDictionary.Count == 2)
-            {
-                var preflopOrderedPlayersDictionary = OrderedPlayersToDict(orderedPlayers.Reverse());
-                orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, preflopOrderedPlayersDictionary, x => x.Street == Street.Preflop));
-            }
-            else
-            {
-                var blindsCount = handHistory.PreFlop
-                    .Count(x => x.HandActionType == HandActionType.SMALL_BLIND || x.HandActionType == HandActionType.BIG_BLIND || x.HandActionType == HandActionType.STRADDLE);
-
-                var preflopOrderedPlayers = orderedPlayers.Skip(blindsCount).Concat(orderedPlayers.Take(blindsCount)).ToArray();
-                var preflopOrderedPlayersDictionary = OrderedPlayersToDict(preflopOrderedPlayers);
-
-                orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Preflop && x.IsBlinds));
-                orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, preflopOrderedPlayersDictionary, x => x.Street == Street.Preflop && !x.IsBlinds));
-            }
-
-            orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Flop));
-            orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Turn));
-            orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.River));
-            orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Showdown));
-            orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Summary));
-
-            handHistory.HandActions = orderedHandActions;
-        }
-
-        private static Dictionary<string, int> OrderedPlayersToDict(IEnumerable<Player> orderedPlayers)
-        {
-            var orderedPlayersDictionary = orderedPlayers
-               .Select((x, index) => new { Index = index, x.PlayerName })
-               .GroupBy(x => x.PlayerName)
-               .ToDictionary(x => x.Key, x => x.FirstOrDefault().Index);
-
-            return orderedPlayersDictionary;
-        }
-
-        private List<HandAction> OrderStreetHandActions(List<HandAction> handActions, Dictionary<string, int> orderedPlayersDictionary, Func<HandAction, bool> filter)
-        {
-            var streetActions = handActions.Where(filter).ToList();
-
-            if (streetActions.Count == 0)
-            {
-                return streetActions;
-            }
-
-            var orderedHandActions = new List<HandAction>();
-
-            var isInvalid = false;
-
-            var groupedStreetActions = streetActions
-                .GroupBy(x => x.PlayerName)
-                .Select(x => new { PlayerName = x.Key, PlayerActions = x.ToList() })
-                .OrderBy(x =>
-                {
-                    if (!orderedPlayersDictionary.ContainsKey(x.PlayerName))
-                    {
-                        isInvalid = true;
-                        return int.MaxValue;
-                    }
-
-                    return orderedPlayersDictionary[x.PlayerName];
-                })
-                .ToList();
-
-            if (isInvalid)
-            {
-                return streetActions;
-            }
-
-            while (orderedHandActions.Count != streetActions.Count)
-            {
-                foreach (var groupedAction in groupedStreetActions.ToArray())
-                {
-                    var playerAction = groupedAction.PlayerActions.FirstOrDefault();
-
-                    if (playerAction != null)
-                    {
-                        orderedHandActions.Add(playerAction);
-                        groupedAction.PlayerActions.Remove(playerAction);
-                    }
-                    else
-                    {
-                        groupedStreetActions.Remove(groupedAction);
-                    }
-                }
-            }
-
-            return orderedHandActions;
+            HandHistoryUtils.AddShowActions(handHistory);
+            HandHistoryUtils.AddWinningActions(handHistory);
+            HandHistoryUtils.CalculateBets(handHistory);
+            HandHistoryUtils.CalculateUncalledBets(handHistory, true);
+            HandHistoryUtils.CalculateTotalPot(handHistory);
+            HandHistoryUtils.SortHandActions(handHistory);
+            HandHistoryUtils.RemoveSittingOutPlayers(handHistory);
         }
 
         private void ReplaceFirstRaiseWithBet(IEnumerable<HandAction> handActions)
@@ -529,24 +376,6 @@ namespace DriveHUD.Importers.PokerMaster
             }
 
             raiseAction.HandActionType = HandActionType.BET;
-        }
-
-        private void RemoveSittingOutPlayers(HandHistory handHistory)
-        {
-            foreach (var player in handHistory.Players.ToArray())
-            {
-                if (handHistory.HandActions.Any(x => x.PlayerName == player.PlayerName))
-                {
-                    continue;
-                }
-
-                handHistory.Players.Remove(player);
-
-                if (handHistory.Hero == player)
-                {
-                    handHistory.Hero = null;
-                }
-            }
         }
 
         private TableType ParseTableType(GameRoomInfo gameRoomInfo)
@@ -604,11 +433,7 @@ namespace DriveHUD.Importers.PokerMaster
             {
                 return null;
             }
-
-            // post blind condition?             
-            // uncalled bet? (probably calculate when adjust hand) p1,p2 -> p1 sb, p2 bb, p1 all-in, p2 call (all-in), p1 uncalled bet returns
-            // side pot? (how to simulate - p3 stack is less than p1, p2 - p1 sb, p2 bb, p3 all-in raise, p1 raises, p2 calls -> p1 bets, p2 calls -> showcards  )
-
+           
             // ante 
             if (previousUserGameInfo.RoomGameState == GameRoomGameState.ROOM_GAME_STATE_GameStart &&
                 userGameInfoNet.RoomGameState == GameRoomGameState.ROOM_GAME_STATE_Ante)

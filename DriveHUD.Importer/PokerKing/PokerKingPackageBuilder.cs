@@ -41,7 +41,8 @@ namespace DriveHUD.Importers.PokerKing
                     package = new PokerKingPackage
                     {
                         PackageType = (PackageType)packageType,
-                        Body = body.Skip(8).ToArray()
+                        Body = body.Skip(8).ToArray(),
+                        Timestamp = DateTime.Now
                     };
 
                     return true;
