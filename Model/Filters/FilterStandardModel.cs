@@ -201,12 +201,15 @@ namespace Model.Filters
                     (Currency)gameType.CurrencytypeId);
 
                 var isFastFold = ((TableTypeDescription)gameType.TableType & TableTypeDescription.FastFold) == TableTypeDescription.FastFold;
+                var isShortDeck = ((TableTypeDescription)gameType.TableType & TableTypeDescription.ShortDeck) == TableTypeDescription.ShortDeck;
+
+                var subType = isFastFold ? " Fast" : (isShortDeck ? " Short" : string.Empty);
 
                 var gtString = String.Format("{0}{1}{2}{3}",
                     limit.GetCurrencySymbol(),
                     Math.Abs(limit.BigBlind),
                     GameTypeUtils.GetShortName((GameType)gameType.PokergametypeId),
-                    isFastFold ? " Fast" : string.Empty);
+                    subType);
 
                 var stakeLevelItem = new StakeLevelItem
                 {

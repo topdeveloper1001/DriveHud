@@ -23,9 +23,7 @@ using System;
 using System.Collections.Generic;
 using System.Fakes;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 
 namespace DriveHud.Tests.PKTests
 {
@@ -34,7 +32,7 @@ namespace DriveHud.Tests.PKTests
     {
         protected override string TestDataFolder => "TcpImportersTests\\PKTests\\TestData";
 
-        //[TestCase(@"Packets\NoticePlayerActionTurnPacket.txt", true)]
+        [TestCase(@"Packets\NoticePlayerActionTurnPacket.txt", true)]
         public void PacketIsStartingPacketTest(string file, bool expected)
         {
             var bytes = ReadPacketFile(file);
@@ -45,7 +43,7 @@ namespace DriveHud.Tests.PKTests
             Assert.That(actual, Is.EqualTo(expected));
         }
 
-        //[TestCase(@"Packets\NoticePlayerActionTurnPacket.txt")]
+        [TestCase(@"Packets\NoticePlayerActionTurnPacket.txt")]
         public void TryParsePacketTest(string file)
         {
             var bytes = ReadPacketFile(file);
@@ -66,8 +64,10 @@ namespace DriveHud.Tests.PKTests
             Assert.IsNotNull(actual);
         }
 
-        //[TestCase(@"Packets\NoticePlayerActionTurnPacket.txt", @"Packets\NoticePlayerActionTurnPacket.json")]
+        [TestCase(@"Packets\NoticePlayerActionTurnPacket.txt", @"Packets\NoticePlayerActionTurnPacket.json")]
         [TestCase(@"Packets\NoticeGameSnapShotPacket.txt", @"Packets\NoticeGameSnapShotPacket.json")]
+        [TestCase(@"Packets\NoticePlayerActionPacket.txt", @"Packets\NoticePlayerActionPacket.json")]
+        [TestCase(@"Packets\RequestJoinRoomPacket.txt", @"Packets\RequestJoinRoomPacket.json")]
         public void DeserializationTest(string file, string jsonFile)
         {
             var bytes = ReadPacketFile(file);
@@ -88,11 +88,20 @@ namespace DriveHud.Tests.PKTests
 
             switch (package.PackageType)
             {
+                case PackageType.NoticeGameRoundEnd:
+                    actual = SerializationHelper.Deserialize<NoticeGameRoundEnd>(package.Body);
+                    break;
                 case PackageType.NoticePlayerActionTurn:
                     actual = SerializationHelper.Deserialize<NoticePlayerActionTurn>(package.Body);
                     break;
                 case PackageType.NoticeGameSnapShot:
                     actual = SerializationHelper.Deserialize<NoticeGameSnapShot>(package.Body);
+                    break;
+                case PackageType.NoticePlayerAction:
+                    actual = SerializationHelper.Deserialize<NoticePlayerAction>(package.Body);
+                    break;
+                case PackageType.RequestJoinRoom:
+                    actual = SerializationHelper.Deserialize<RequestJoinRoom>(package.Body);
                     break;
             }
 
@@ -102,10 +111,13 @@ namespace DriveHud.Tests.PKTests
             Assert.That(jsonActual, Is.EqualTo(jsonExpected));
         }
 
-        //[TestCase(@"Packets\170.33.8.75.31001-192.168.0.104.33644.txt", @"Packets\170.33.8.75.31001-192.168.0.104.33644-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
+        [TestCase(@"Packets\170.33.8.75.31001-192.168.0.104.33644.txt", @"Packets\170.33.8.75.31001-192.168.0.104.33644-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
+        [TestCase(@"Packets\27.155.82.113.31001-192.168.1.4.55025.txt", @"Packets\27.155.82.113.31001-192.168.1.4.55025-pkgt.txt", "yyyy/MM/dd HH:mm:ss")]
+        [TestCase(@"Packets\170.33.8.75.31001-192.168.0.106.9535.txt", @"Packets\170.33.8.75.31001-192.168.0.106.9535-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
+        [TestCase(@"Packets\192.168.0.106.9535-170.33.8.75.31001.txt", @"Packets\192.168.0.106.9535-170.33.8.75.31001-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
         public void TryParseTest(string file, string expectedPackageTypesFile, string dateFormat)
         {
-            var packets = ReadCapturedPackets(file, dateFormat);
+            var packets = ReadCapturedPackets(file, null);
 
             var expectedPackageTypes = !string.IsNullOrEmpty(expectedPackageTypesFile) ?
                     GetPackageTypeList<PackageType>(expectedPackageTypesFile) :
@@ -121,53 +133,87 @@ namespace DriveHud.Tests.PKTests
                 {
                     ShimDateTime.NowGet = () => packet.CreatedTimeStamp;
 
-                    if (packetManager.TryParse(packet, out PokerKingPackage package))
+                    if (packetManager.TryParse(packet, out PokerKingPackage package, true))
                     {
                         Console.WriteLine(package.PackageType);
 
                         if (expectedPackageTypes.Count > 0)
                         {
                             Assert.That(package.PackageType, Is.EqualTo(expectedPackageTypes[expectedCommandsIndex++]));
+                            AssertPackage(package, packet);
                         }
                     }
                 }
             }
         }
 
-        //[TestCase(@"d:\Git\DriveHUD\DriveHUD.Application\bin\Debug\Logs\170.33.8.75.31001-192.168.0.104.21667.log", "NoticePlayerActionTurn")]
-        public void ClearPackageFromLog(string log, string type)
+        private void AssertPackage(PokerKingPackage package, CapturedPacket capturedPacket)
         {
-            var lines = File.ReadAllLines(log);
-
-            var sb = new StringBuilder();
-
-            bool skipLine = false;
-
-            for (var i = 0; i < lines.Length; i++)
+            switch (package.PackageType)
             {
-                if ((i < lines.Length - 1) &&
-                    lines[i + 1].Contains(type))
-                {
-                    skipLine = true;
-                }
-
-                if (!skipLine)
-                {
-                    sb.AppendLine(lines[i]);
-                }
-
-                if (lines[i] == "}")
-                {
-                    skipLine = false;
-                }
+                case PackageType.RequestLeaveRoom:
+                    AssertPackage<RequestLeaveRoom>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeStartGame:
+                    AssertPackage<NoticeStartGame>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeResetGame:
+                    AssertPackage<NoticeResetGame>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeGamePost:
+                    AssertPackage<NoticeGamePost>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeGameAnte:
+                    AssertPackage<NoticeGameAnte>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeGameElectDealer:
+                    AssertPackage<NoticeGameElectDealer>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeGameBlind:
+                    AssertPackage<NoticeGameBlind>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeGameHoleCard:
+                    AssertPackage<NoticeGameHoleCard>(package, capturedPacket);
+                    break;
+                case PackageType.NoticePlayerAction:
+                    AssertPackage<NoticePlayerAction>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeGameRoundEnd:
+                    AssertPackage<NoticeGameRoundEnd>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeGameCommunityCards:
+                    AssertPackage<NoticeGameCommunityCards>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeGameShowCard:
+                    AssertPackage<NoticeGameShowCard>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeGameSettlement:
+                    AssertPackage<NoticeGameSettlement>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeGameShowDown:
+                    AssertPackage<NoticeGameShowDown>(package, capturedPacket);
+                    break;
+                case PackageType.NoticePlayerStayPosition:
+                    AssertPackage<NoticePlayerStayPosition>(package, capturedPacket);
+                    break;
+                case PackageType.NoticePlayerShowCard:
+                    AssertPackage<NoticePlayerShowCard>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeBuyin:
+                    AssertPackage<NoticeBuyin>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeGameSnapShot:
+                    AssertPackage<NoticeGameSnapShot>(package, capturedPacket);
+                    break;
+                case PackageType.RequestHeartBeat:
+                    AssertPackage<RequestHeartBeat>(package, capturedPacket);
+                    break;
             }
+        }
 
-            var folder = Path.GetDirectoryName(log);
-            var fileName = Path.GetFileName(log);
-            var ext = Path.GetExtension(log);
-
-            var newlog = Path.Combine(folder, $"{fileName}-adj{ext}");
-            File.WriteAllText(newlog, sb.ToString());
+        private void AssertPackage<T>(PokerKingPackage package, CapturedPacket capturedPacket)
+        {
+            Assert.IsTrue(SerializationHelper.TryDeserialize(package.Body, out T packageContent), $"Failed to deserialize {typeof(T)} package [ticks={capturedPacket.CreatedTimeStamp.Ticks}, userid={package.UserId}]");
         }
     }
 }

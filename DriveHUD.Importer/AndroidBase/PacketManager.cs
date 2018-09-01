@@ -25,7 +25,7 @@ namespace DriveHUD.Importers.AndroidBase
 
         public abstract bool IsStartingPacket(byte[] bytes);
 
-        public virtual bool TryParse(CapturedPacket packet, out T package)
+        public virtual bool TryParse(CapturedPacket packet, out T package, bool takeExpectedLength = false)
         {
             var packetsSet = GetPacketsSet(packet);
 
@@ -33,7 +33,7 @@ namespace DriveHUD.Importers.AndroidBase
               packetsSet.AddSubPacket(packet.Bytes, packet.CreatedTimeStamp, packet.SequenceNumber) :
               packetsSet.AddStartingPacket(packet.Bytes, ReadPacketLength(packet.Bytes), packet.CreatedTimeStamp, packet.SequenceNumber);
 
-            if (subPacket == null || !subPacket.TryParse(PacketHeaderLength, out package))
+            if (subPacket == null || !subPacket.TryParse(PacketHeaderLength, out package, takeExpectedLength))
             {
                 packetsSet.RemoveExpiredPackets();
                 package = null;

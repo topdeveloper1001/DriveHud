@@ -15,6 +15,6 @@ namespace DriveHUD.Importers.AndroidBase
 {
     internal interface IPacketManager<T>
     {     
-        bool TryParse(CapturedPacket packet, out T package);
+        bool TryParse(CapturedPacket packet, out T package, bool takeExpectedLength = false);
     }
 }

@@ -17,6 +17,10 @@ namespace DriveHUD.Importers.PokerKing
 {
     internal interface IPKHandBuilder
     {
-        bool TryBuild(PokerKingPackage package, int identifier, uint userId, out HandHistory handHistory);        
+        bool TryBuild(PokerKingPackage package, int identifier, out HandHistory handHistory);
+
+        bool IsRoomSnapShotAvailable(PokerKingPackage package);
+
+        void CleanRoom(int identifier, int roomId);
     }
 }

@@ -75,10 +75,18 @@ namespace DriveHud.Tests.TcpImportersTests
                     continue;
                 }
 
-                if (line.StartsWith("Date:", StringComparison.OrdinalIgnoreCase))
+                if (!string.IsNullOrEmpty(dateFormat) && line.StartsWith("Date:", StringComparison.OrdinalIgnoreCase))
                 {
                     var dateText = line.Substring(5).Trim();
                     capturedPacket.CreatedTimeStamp = DateTime.ParseExact(dateText, dateFormat, null);
+                    continue;
+                }
+
+                if (line.StartsWith("Date Now (ticks):", StringComparison.OrdinalIgnoreCase))
+                {
+                    var ticksText = line.Substring(17).Trim();
+                    var ticks = long.Parse(ticksText);
+                    capturedPacket.CreatedTimeStamp = new DateTime(ticks);
                     continue;
                 }
 
@@ -142,7 +150,7 @@ namespace DriveHud.Tests.TcpImportersTests
         protected Tuple<string, int> ParseIpPort(string ipPort)
         {
             var indexOfPort = ipPort.LastIndexOf('.');
-            var ip = ipPort.Substring(0, indexOfPort - 1);
+            var ip = ipPort.Substring(0, indexOfPort);
             var port = int.Parse(ipPort.Substring(indexOfPort + 1));
             return Tuple.Create(ip, port);
         }

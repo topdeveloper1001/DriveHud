@@ -16,7 +16,7 @@
       <Ante>0.5</Ante>
     </Limit>
     <SeatType MaxPlayers="6" />
-    <TableType>Regular</TableType>
+    <TableType>ShortDeck</TableType>
     <Identifier>599207</Identifier>
   </GameDescription>
   <Cancelled>false</Cancelled>

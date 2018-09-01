@@ -13,6 +13,7 @@
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DriveHUD.Importers.AndroidBase
 {
@@ -80,7 +81,7 @@ namespace DriveHUD.Importers.AndroidBase
         {
             get
             {
-                return ExpectedLength != 0 && ExpectedLength == CurrentLength;
+                return ExpectedLength != 0 && ((ExpectedLength == CurrentLength) || (IsStarting && ExpectedLength > 0 && ExpectedLength < CurrentLength));
             }
         }
 
@@ -121,18 +122,22 @@ namespace DriveHUD.Importers.AndroidBase
             return (DateTime.Now - DateReceived).TotalMilliseconds > expirationPeriod;
         }
 
-        public bool TryParse(int startingPosition, out T package)
+        public bool TryParse(int startingPosition, out T package, bool takeExpectedLength = false)
         {
             package = null;
 
-            if (ExpectedLength != CurrentLength)
+            if ((!takeExpectedLength && ExpectedLength != CurrentLength) ||
+                (takeExpectedLength && (ExpectedLength == 0 || ExpectedLength > CurrentLength)))
             {
                 return false;
             }
 
             var packageBuilder = ServiceLocator.Current.GetInstance<IPackageBuilder<T>>();
 
-            return packageBuilder.TryParse(Bytes.ToArray(), startingPosition, out package);
+            var bytes = takeExpectedLength && Bytes.Count > ExpectedLength ? Bytes.Take(ExpectedLength).ToArray()
+                : Bytes.ToArray();
+
+            return packageBuilder.TryParse(bytes, startingPosition, out package);
         }
 
         public SubPacket<T> Clone()

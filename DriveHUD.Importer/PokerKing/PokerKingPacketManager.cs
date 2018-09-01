@@ -32,8 +32,7 @@ namespace DriveHUD.Importers.PokerKing
         {
             return bytes.Length > 5 &&
               bytes[2] == 0x27 &&
-              bytes[4] == 0x00 &&
-              bytes[5] == 0x00;
+              bytes[4] == 0x00;
         }
 
         public override int ReadPacketLength(byte[] bytes)
@@ -50,7 +49,7 @@ namespace DriveHUD.Importers.PokerKing
                 Array.Reverse(numArray);
             }
 
-            return BitConverter.ToInt16(numArray, 0);
+            return BitConverter.ToUInt16(numArray, 0);
         }
     }
 }

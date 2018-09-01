@@ -1091,7 +1091,68 @@
   </HudBumperStickerTypes>
   <LayoutTools>
     <HudLayoutTool xsi:type="HudLayoutPlainBoxTool" Id="5a9600db-0fa7-4bbc-b667-e454db1b4a5d">
-      <Positions />
+      <Positions>
+        <HudPositionsInfo PokerSite="PokerKing" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>216</X>
+                <Y>817</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>4</X>
+                <Y>652</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>4</X>
+                <Y>460</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>4</X>
+                <Y>286</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>215</X>
+                <Y>127</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>438</X>
+                <Y>289</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>7</Seat>
+              <Position>
+                <X>430</X>
+                <Y>460</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>8</Seat>
+              <Position>
+                <X>429</X>
+                <Y>661</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+      </Positions>
       <UIPositions>
         <HudPositionInfo>
           <Seat>1</Seat>
@@ -2055,7 +2116,68 @@
       </Stats>
     </HudLayoutTool>
     <HudLayoutTool xsi:type="HudLayoutBumperStickersTool" Id="353684f7-0942-4b51-90ec-bf63fb7d5f68">
-      <Positions />
+      <Positions>
+        <HudPositionsInfo PokerSite="PokerKing" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>250</X>
+                <Y>772</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>38</X>
+                <Y>607</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>38</X>
+                <Y>415</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>38</X>
+                <Y>241</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>264</X>
+                <Y>82</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>472</X>
+                <Y>244</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>7</Seat>
+              <Position>
+                <X>488</X>
+                <Y>415</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>8</Seat>
+              <Position>
+                <X>483</X>
+                <Y>614</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+      </Positions>
       <UIPositions>
         <HudPositionInfo>
           <Seat>1</Seat>

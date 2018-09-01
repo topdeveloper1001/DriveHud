@@ -35,9 +35,9 @@ namespace DriveHUD.Importers.PokerKing
     {
         private Dictionary<int, NoticeGameSnapShot> roomsData = new Dictionary<int, NoticeGameSnapShot>();
 
-        private Dictionary<long, List<PokerKingPackage>> userPackages = new Dictionary<long, List<PokerKingPackage>>();
+        private Dictionary<long, Dictionary<int, List<PokerKingPackage>>> userPackages = new Dictionary<long, Dictionary<int, List<PokerKingPackage>>>();
 
-        public bool TryBuild(PokerKingPackage package, int identifier, uint userId, out HandHistory handHistory)
+        public bool TryBuild(PokerKingPackage package, int identifier, out HandHistory handHistory)
         {
             handHistory = null;
 
@@ -52,20 +52,45 @@ namespace DriveHUD.Importers.PokerKing
                 return false;
             }
 
-            if (!userPackages.TryGetValue(identifier, out List<PokerKingPackage> packages))
+            if (!userPackages.TryGetValue(identifier, out Dictionary<int, List<PokerKingPackage>> roomPackages))
+            {
+                roomPackages = new Dictionary<int, List<PokerKingPackage>>();
+                userPackages.Add(identifier, roomPackages);
+            }
+
+            if (!roomPackages.TryGetValue(package.RoomId, out List<PokerKingPackage> packages))
             {
                 packages = new List<PokerKingPackage>();
-                userPackages.Add(identifier, packages);
+                roomPackages.Add(package.RoomId, packages);
             }
 
             packages.Add(package);
 
             if (package.PackageType == PackageType.NoticeGameSettlement)
             {
-                handHistory = BuildHand(packages, identifier, userId);
+                handHistory = BuildHand(packages, identifier, package.UserId);
             }
 
             return handHistory != null;
+        }
+
+        public bool IsRoomSnapShotAvailable(PokerKingPackage package)
+        {
+            if (package == null || package.RoomId == 0)
+            {
+                return false;
+            }
+
+            return roomsData.ContainsKey(package.RoomId);
+        }
+
+        public void CleanRoom(int identifier, int roomId)
+        {
+            if (userPackages.TryGetValue(identifier, out Dictionary<int, List<PokerKingPackage>> roomPackages) &&
+                roomPackages.TryGetValue(roomId, out List<PokerKingPackage> packages))
+            {
+                packages.Clear();
+            }
         }
 
         private HandHistory BuildHand(List<PokerKingPackage> packages, int identifier, uint userId)
@@ -188,10 +213,13 @@ namespace DriveHUD.Importers.PokerKing
             if (!roomsData.ContainsKey(noticeGameSnapShot.RoomId))
             {
                 roomsData.Add(noticeGameSnapShot.RoomId, noticeGameSnapShot);
+                LogProvider.Log.Info(CustomModulesNames.PKCatcher, $"Snapshot of room {noticeGameSnapShot.RoomId} has been stored.");
                 return;
             }
 
             roomsData[noticeGameSnapShot.RoomId] = noticeGameSnapShot;
+
+            LogProvider.Log.Info(CustomModulesNames.PKCatcher, $"Snapshot of room {noticeGameSnapShot.RoomId} has been updated.");
         }
 
         private void ProcessNoticeResetGame(NoticeResetGame noticeResetGame, HandHistory handHistory)
@@ -268,7 +296,7 @@ namespace DriveHUD.Importers.PokerKing
                 EnumPokerSites.PokerKing,
                 GameType.NoLimitHoldem,
                 Limit.FromSmallBlindBigBlind(noticeGameBlind.SBAmount, noticeGameBlind.BBAmount, Currency.YUAN, ante != 0, ante),
-                TableType.FromTableTypeDescriptions(TableTypeDescription.Regular),
+                TableType.FromTableTypeDescriptions(gameRoomInfo.GameMode == 3 ? TableTypeDescription.ShortDeck : TableTypeDescription.Regular),
                 SeatType.FromMaxPlayers(gameRoomInfo.PlayerCountMax), null);
 
             handHistory.GameDescription.Identifier = noticeGameBlind.RoomId;

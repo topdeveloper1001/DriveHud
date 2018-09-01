@@ -312,7 +312,13 @@
     <None Include="TcpImportersTests\PKTests\TestData\Packets\NoticeGameSnapShotPacket.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="TcpImportersTests\PKTests\TestData\Packets\NoticePlayerActionPacket.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="TcpImportersTests\PKTests\TestData\Packets\NoticePlayerActionTurnPacket.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PKTests\TestData\Packets\RequestJoinRoomPacket.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-1\01-Gamestart.json">
@@ -492,10 +498,34 @@
     <Content Include="TcpImportersTests\PKTests\TestData\Packets\170.33.8.75.31001-192.168.0.104.33644-pkgt.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\Packets\170.33.8.75.31001-192.168.0.106.9535-pkgt.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\Packets\170.33.8.75.31001-192.168.0.106.9535.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\Packets\192.168.0.106.9535-170.33.8.75.31001-pkgt.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\Packets\192.168.0.106.9535-170.33.8.75.31001.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\Packets\27.155.82.113.31001-192.168.1.4.55025-pkgt.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\Packets\27.155.82.113.31001-192.168.1.4.55025.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\Packets\NoticeGameSnapShotPacket.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\Packets\NoticePlayerActionPacket.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\Packets\NoticePlayerActionTurnPacket.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\Packets\RequestJoinRoomPacket.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TcpImportersTests\PMTests\TestData\HandsRawData\6-max-Omaha-3\ExpectedResult.xml">

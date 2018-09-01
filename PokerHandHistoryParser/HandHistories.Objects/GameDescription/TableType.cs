@@ -80,7 +80,7 @@ namespace HandHistories.Objects.GameDescription
                 TableTypeDescription.Ante, TableTypeDescription.Cap, TableTypeDescription.Speed,
                 TableTypeDescription.Jackpot, TableTypeDescription.SevenDeuceGame, TableTypeDescription.FiftyBigBlindsMin,
                 TableTypeDescription.Shallow, TableTypeDescription.PushFold, TableTypeDescription.FastFold,
-                TableTypeDescription.Strobe,
+                TableTypeDescription.Strobe, TableTypeDescription.ShortDeck
             };
 
             var descriptions = _tableTypeDescriptions;

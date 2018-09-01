@@ -36,10 +36,30 @@ namespace DriveHUD.Importers.PokerKing
 
                 var packageType = BitConverter.ToInt16(packageTypeBytes, 0);
 
+                var userIdBytes = body.Skip(6).Take(4).ToArray();
+
+                if (BitConverter.IsLittleEndian)
+                {
+                    Array.Reverse(userIdBytes);
+                }
+
+                var userId = BitConverter.ToUInt32(userIdBytes, 0);
+
+                var roomIdBytes = body.Skip(10).Take(4).ToArray();
+
+                if (BitConverter.IsLittleEndian)
+                {
+                    Array.Reverse(roomIdBytes);
+                }
+
+                var roomId = BitConverter.ToInt32(roomIdBytes, 0);
+
                 package = new PokerKingPackage
                 {
                     PackageType = (PackageType)packageType,
-                    Body = body.Skip(8).ToArray(),
+                    Body = body.Skip(14).ToArray(),
+                    UserId = userId,
+                    RoomId = roomId,
                     Timestamp = DateTime.Now
                 };
 

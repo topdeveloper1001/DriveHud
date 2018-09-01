@@ -20,6 +20,10 @@ namespace DriveHUD.Importers.PokerKing.Model
 
         public PackageType PackageType { get; set; }
 
+        public uint UserId { get; set; }
+
+        public int RoomId { get; set; }
+
         public byte[] Body { get; set; }
 
 #if DEBUG

@@ -153,8 +153,6 @@ namespace DriveHUD.Importers.PokerKing
 
             var detectedTableWindows = new HashSet<IntPtr>();
 
-            var usersByWindows = new Dictionary<IntPtr, uint>();
-
             var handHistoriesToProcess = new ConcurrentDictionary<long, List<HandHistoryData>>();
 
             while (!cancellationTokenSource.IsCancellationRequested)
@@ -167,9 +165,12 @@ namespace DriveHUD.Importers.PokerKing
                         continue;
                     }
 
-                    LogPacket(capturedPacket, ".log");
+                    if (IsAdvancedLogEnabled)
+                    {
+                        LogPacket(capturedPacket, ".log");
+                    }
 
-                    if (!packetManager.TryParse(capturedPacket, out PokerKingPackage package) || !IsAllowedPackage(package))
+                    if (!packetManager.TryParse(capturedPacket, out PokerKingPackage package, true) || !IsAllowedPackage(package))
                     {
                         continue;
                     }
@@ -182,39 +183,11 @@ namespace DriveHUD.Importers.PokerKing
                     var process = connectionsService.GetProcess(capturedPacket);
                     var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
 
-                    if (package.PackageType == PackageType.RequestHeartBeat)
-                    {
-                        ParsePackage<RequestHeartBeat>(package,
-                            body =>
-                            {
-                                if (!usersByWindows.ContainsKey(windowHandle))
-                                {
-                                    usersByWindows.Add(windowHandle, body.Uid);
-
-                                    if (IsAdvancedLogEnabled)
-                                    {
-                                        LogProvider.Log.Info(Logger, $"User id {body.Uid} has been detected. [{windowHandle}]");
-                                    }
-
-                                    return;
-                                }
-
-                                usersByWindows[windowHandle] = body.Uid;
-                            }, null);
-
-                        continue;
-                    }
-
-                    if (!usersByWindows.TryGetValue(windowHandle, out uint userId) && IsAdvancedLogEnabled)
-                    {
-                        LogProvider.Log.Warn(Logger, "User id hasn't been detected yet.");
-                    }
-
                     if (package.PackageType == PackageType.RequestJoinRoom)
                     {
                         ParsePackage<RequestJoinRoom>(package,
-                          body => LogProvider.Log.Info(Logger, $"User {userId} entered room {body.RoomId}."),
-                          () => LogProvider.Log.Info(Logger, $"User {userId} entered room."));
+                          body => LogProvider.Log.Info(Logger, $"User {package.UserId} entered room {body.RoomId}."),
+                          () => LogProvider.Log.Info(Logger, $"User {package.UserId} entered room."));
 
                         continue;
                     }
@@ -223,8 +196,12 @@ namespace DriveHUD.Importers.PokerKing
                     if (package.PackageType == PackageType.RequestLeaveRoom)
                     {
                         ParsePackage<RequestLeaveRoom>(package,
-                            body => LogProvider.Log.Info(Logger, $"User {userId} left room {body.RoomId}."),
-                            () => LogProvider.Log.Info(Logger, $"User {userId} left room."));
+                            body =>
+                            {
+                                LogProvider.Log.Info(Logger, $"User {package.UserId} left room {body.RoomId}.");
+                                handBuilder.CleanRoom(windowHandle.ToInt32(), body.RoomId);
+                            },
+                            () => LogProvider.Log.Info(Logger, $"User {package.UserId} left room."));
 
                         Task.Run(() =>
                         {
@@ -243,7 +220,7 @@ namespace DriveHUD.Importers.PokerKing
                     {
                         detectedTableWindows.Add(windowHandle);
 
-                        if (package.PackageType == PackageType.NoticeGameSnapShot)
+                        if (package.PackageType == PackageType.NoticeGameSnapShot || handBuilder.IsRoomSnapShotAvailable(package))
                         {
                             SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK", windowHandle);
                         }
@@ -253,7 +230,7 @@ namespace DriveHUD.Importers.PokerKing
                         }
                     }
 
-                    if (handBuilder.TryBuild(package, windowHandle.ToInt32(), userId, out HandHistory handHistory))
+                    if (handBuilder.TryBuild(package, windowHandle.ToInt32(), out HandHistory handHistory))
                     {
                         if (IsAdvancedLogEnabled)
                         {
@@ -269,7 +246,7 @@ namespace DriveHUD.Importers.PokerKing
 
                         var handHistoryData = new HandHistoryData
                         {
-                            Uuid = userId,
+                            Uuid = package.UserId,
                             HandHistory = handHistory,
                             WindowHandle = windowHandle
                         };
@@ -331,8 +308,8 @@ namespace DriveHUD.Importers.PokerKing
                 case PackageType.NoticePlayerStayPosition:
                 case PackageType.NoticeResetGame:
                 case PackageType.NoticeStartGame:
-                case PackageType.RequestHeartBeat:
                 case PackageType.RequestLeaveRoom:
+                case PackageType.RequestJoinRoom:
                     return true;
 
                 default:

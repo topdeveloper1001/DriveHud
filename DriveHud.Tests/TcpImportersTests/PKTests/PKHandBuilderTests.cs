@@ -14,14 +14,12 @@ using DriveHUD.Common.Extensions;
 using DriveHUD.Importers.PokerKing;
 using DriveHUD.Importers.PokerKing.Model;
 using HandHistories.Objects.Hand;
-using Microsoft.QualityTools.Testing.Fakes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using NUnit.Framework;
 using ProtoBuf;
 using System;
 using System.Collections.Generic;
-using System.Fakes;
 using System.IO;
 
 namespace DriveHud.Tests.TcpImportersTests.PKTests
@@ -56,7 +54,9 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
 
             foreach (var package in packages)
             {
-                if (handBuilder.TryBuild(package, identifier, heroId, out actual))
+                package.UserId = heroId;
+
+                if (handBuilder.TryBuild(package, identifier, out actual))
                 {
                     break;
                 }

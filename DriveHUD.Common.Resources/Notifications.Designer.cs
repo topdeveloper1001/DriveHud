@@ -169,7 +169,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to HUD can&apos;t be loaded, because this table was opened before DriveHUD was launched. Please rejoin to the table..
+        ///   Looks up a localized string similar to HUD can&apos;t be loaded. Please rejoin to the table..
         /// </summary>
         internal static string Notifications_HudLayout_PreLoadingCanNotBeCapturedText_PK {
             get {

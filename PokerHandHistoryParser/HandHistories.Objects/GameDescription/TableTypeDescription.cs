@@ -52,6 +52,8 @@ namespace HandHistories.Objects.GameDescription
         [EnumMember]
         Slow = 0x1 << 14,
         [EnumMember]
+        ShortDeck = 0x1 << 15,
+        [EnumMember]
         Any = 0x1u << 31,
         [EnumMember]
         All = 0xFFFFFFFF
