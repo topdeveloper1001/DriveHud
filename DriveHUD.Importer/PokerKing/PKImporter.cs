@@ -165,7 +165,9 @@ namespace DriveHUD.Importers.PokerKing
                     {
                         Task.Delay(NoDataDelay).Wait();
                         continue;
-                    }                    
+                    }
+
+                    LogPacket(capturedPacket, ".log");
 
                     if (!packetManager.TryParse(capturedPacket, out PokerKingPackage package) || !IsAllowedPackage(package))
                     {
@@ -341,7 +343,7 @@ namespace DriveHUD.Importers.PokerKing
         #region Debug logging
 
         private void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
-        {            
+        {
             switch (package.PackageType)
             {
                 case PackageType.RequestLeaveRoom:
@@ -430,8 +432,6 @@ namespace DriveHUD.Importers.PokerKing
             }
         }
 
-#if DEBUG
-
         private void LogPacket(CapturedPacket capturedPacket, string ext)
         {
             var packageFileName = Path.Combine("Logs", capturedPacket.ToString().Replace(":", ".").Replace("->", "-")) + ext;
@@ -454,8 +454,6 @@ namespace DriveHUD.Importers.PokerKing
 
             File.AppendAllText(packageFileName, sb.ToString());
         }
-
-#endif
 
         private class PackageJson<T>
         {
