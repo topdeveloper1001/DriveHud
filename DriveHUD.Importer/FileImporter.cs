@@ -21,6 +21,7 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Loggers;
 using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Factory;
@@ -202,10 +203,13 @@ namespace DriveHUD.Importers
 
                 var parsingResult = ParseHands(hands, handHistoryParser, gameInfo);
 
-                if (gameInfo.UpdateAction != null && parsingResult.Count > 0)
+                if (parsingResult.Count == 0)
                 {
-                    gameInfo.UpdateAction(parsingResult, gameInfo);
+                    UpdateReportStatus(parsingResult);
+                    return parsingResult;
                 }
+
+                gameInfo.UpdateAction?.Invoke(parsingResult, gameInfo);
 
 #if DEBUG
                 using (var perfomanceScope = new PerformanceMonitor($"Insert hand({gameInfo.GameNumber})"))
@@ -225,9 +229,6 @@ namespace DriveHUD.Importers
             }
             catch (Exception e)
             {
-                var logger = ServiceLocator.Current.GetInstance<IFileImporterLogger>();
-                logger.Log(text);
-
                 throw new DHInternalException(new NonLocalizableString("Could not import hand."), e);
             }
         }
@@ -288,7 +289,16 @@ namespace DriveHUD.Importers
         {
             Check.ArgumentNotNull(() => handHistoryParser);
 
-            var parsedHand = handHistoryParser.ParseFullHandHistory(hand, true);
+            HandHistory parsedHand = null;
+
+            try
+            {
+                parsedHand = handHistoryParser.ParseFullHandHistory(hand, true);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Failed to parse hand.", e);
+            }
 
             if (parsedHand == null)
             {

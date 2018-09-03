@@ -289,6 +289,7 @@
     <Compile Include="UnitTests\UtilsTests.cs" />
     <Fakes Include="Fakes\System.fakes" />
     <Fakes Include="Fakes\mscorlib.fakes" />
+    <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLH-Cash-PP-ES-1.txt" />
     <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\6-max-short-dbl-ante-no-hero\Result.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
