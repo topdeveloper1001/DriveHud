@@ -99,7 +99,7 @@ namespace DriveHUD.Importers.PokerKing
 
             if (noticeGameSettlementPackage == null)
             {
-                LogProvider.Log.Warn("Hand cannot be built because settlement data is missing.");
+                LogProvider.Log.Warn(CustomModulesNames.PKCatcher, "Hand cannot be built because settlement data is missing.");
                 return false;
             }
 
@@ -116,11 +116,11 @@ namespace DriveHUD.Importers.PokerKing
                 {
                     if (!noticeGameSnapshotExists)
                     {
-                        LogProvider.Log.Warn($"Hand #{x.Gameuuid} of room #{x.RoomId} cannot be built because room snapshot is missing.");
+                        LogProvider.Log.Warn(CustomModulesNames.PKCatcher, $"Hand #{x.Gameuuid} of room #{x.RoomId} cannot be built because room snapshot is missing.");
                         return;
                     }
 
-                    LogProvider.Log.Warn($"Hand #{x.Gameuuid} of room #{x.RoomId} cannot be built because some data is missing.");
+                    LogProvider.Log.Warn(CustomModulesNames.PKCatcher, $"Hand #{x.Gameuuid} of room #{x.RoomId} cannot be built because some data is missing.");
                 }
             });
 
