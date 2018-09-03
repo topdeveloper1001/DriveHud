@@ -238,8 +238,11 @@
                 Margin="3,2,3,2"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
+                TextAlignment="Center"
                 Foreground="#FFFFFF"
                 FontWeight="Bold"
+                TextWrapping="Wrap"
+                MaxWidth="400"
                 Text="{Binding PreLoadText}" />
         </Grid>
         <Border

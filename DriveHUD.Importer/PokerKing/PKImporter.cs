@@ -226,7 +226,7 @@ namespace DriveHUD.Importers.PokerKing
                         }
                         else
                         {
-                            SendPreImporedData("Notifications_HudLayout_PreLoadingCanNotBeCapturedText_PK", windowHandle);
+                            SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK_CanNotBeCapturedText", windowHandle);
                         }
                     }
 
@@ -287,7 +287,7 @@ namespace DriveHUD.Importers.PokerKing
         /// </summary>
         /// <param name="package">Package to check</param>
         /// <returns></returns>
-        private bool IsAllowedPackage(PokerKingPackage package)
+        protected static bool IsAllowedPackage(PokerKingPackage package)
         {
             switch (package.PackageType)
             {

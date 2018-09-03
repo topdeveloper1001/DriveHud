@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Extensions;
+using DriveHUD.Importers.AndroidBase;
 using DriveHUD.Importers.PokerKing;
 using DriveHUD.Importers.PokerKing.Model;
 using HandHistories.Objects.Hand;
@@ -21,23 +22,19 @@ using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace DriveHud.Tests.TcpImportersTests.PKTests
 {
     [TestFixture]
-    class PKHandBuilderTests
+    class PKHandBuilderTests : PacketManagerTest
     {
-        private const string TestDataFolder = "TcpImportersTests\\PKTests\\TestData\\HandsRawData";
         private const string SourceJsonFile = "Source.json";
         private const string ExpectedResultFile = "Result.xml";
 
         private const int identifier = 7777;
 
-        [OneTimeSetUp]
-        public void SetUp()
-        {
-            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
-        }
+        protected override string TestDataFolder => "TcpImportersTests\\PKTests\\TestData\\HandsRawData";
 
         [TestCase("8-max-regular-no-hero", 105772u)]
         [TestCase("6-max-short-dbl-ante-no-hero", 105772u)]
@@ -69,6 +66,47 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
             Assert.IsNotNull(expected, $"Expected HandHistory must be not null for {testFolder}");
 
             AssertionUtils.AssertHandHistory(actual, expected);
+        }
+
+        [TestCase("multiple-accounts-raw-1", 31001)]
+        public void MultipleTryBuildTest(string folder, int destinationPort)
+        {
+            var testFolder = Path.Combine(TestDataFolder, folder);
+
+            DirectoryAssert.Exists(testFolder);
+
+            var logFiles = Directory.GetFiles(testFolder, "*.txt.");
+
+            var packages = new List<CapturedPacket>();
+
+            foreach (var logFile in logFiles)
+            {
+                packages.AddRange(TcpImporterTestUtils.ReadCapturedPackets(logFile, null));
+            }
+
+            packages = packages.OrderBy(x => x.CreatedTimeStamp).ToList();
+
+            var handHistories = new List<HandHistory>();
+
+            var packetManager = new PokerKingPacketManager();
+            var handBuilder = new PKHandBuilder();
+
+            foreach (var capturedPacket in packages)
+            {
+                if (!packetManager.TryParse(capturedPacket, out PokerKingPackage package, true) || !PKImporterStub.IsAllowedPackage(package))
+                {
+                    continue;
+                }
+
+                var port = capturedPacket.Destination.Port != destinationPort ? capturedPacket.Destination.Port : capturedPacket.Source.Port;
+
+                if (handBuilder.TryBuild(package, port, out HandHistory handHistory))
+                {
+                    handHistories.Add(handHistory);
+                }
+            }
+
+            Assert.IsTrue(handHistories.Count > 0);
         }
 
         private HandHistory ReadExpectedHandHistory(string folder)
@@ -222,6 +260,14 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
             public DateTime Time { get; set; }
 
             public object Content { get; set; }
+        }
+
+        private class PKImporterStub : PKImporter
+        {
+            public new static bool IsAllowedPackage(PokerKingPackage package)
+            {
+                return PKImporter.IsAllowedPackage(package);
+            }
         }
     }
 }

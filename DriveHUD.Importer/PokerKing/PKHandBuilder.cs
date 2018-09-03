@@ -93,12 +93,52 @@ namespace DriveHUD.Importers.PokerKing
             }
         }
 
+        private bool ValidatePackages(List<PokerKingPackage> packages)
+        {
+            var noticeGameSettlementPackage = packages.FirstOrDefault(x => x.PackageType == PackageType.NoticeGameSettlement);
+
+            if (noticeGameSettlementPackage == null)
+            {
+                LogProvider.Log.Warn("Hand cannot be built because settlement data is missing.");
+                return false;
+            }
+
+            var isValid = false;
+
+            ParsePackage<NoticeGameSettlement>(noticeGameSettlementPackage, x =>
+            {
+                var noticeResetGameExists = packages.Any(p => p.PackageType == PackageType.NoticeResetGame);
+                var noticeGameSnapshotExists = roomsData.ContainsKey(x.RoomId);
+
+                isValid = noticeResetGameExists && noticeGameSnapshotExists;
+
+                if (!isValid)
+                {
+                    if (!noticeGameSnapshotExists)
+                    {
+                        LogProvider.Log.Warn($"Hand #{x.Gameuuid} of room #{x.RoomId} cannot be built because room snapshot is missing.");
+                        return;
+                    }
+
+                    LogProvider.Log.Warn($"Hand #{x.Gameuuid} of room #{x.RoomId} cannot be built because some data is missing.");
+                }
+            });
+
+            return isValid;
+        }
+
         private HandHistory BuildHand(List<PokerKingPackage> packages, int identifier, uint userId)
         {
             HandHistory handHistory = null;
 
             try
             {
+                if (!ValidatePackages(packages))
+                {
+                    packages.Clear();
+                    return handHistory;
+                }
+
                 var isGameStarted = false;
 
                 foreach (var package in packages)
@@ -280,7 +320,7 @@ namespace DriveHUD.Importers.PokerKing
         {
             if (!roomsData.TryGetValue(noticeGameBlind.RoomId, out NoticeGameSnapShot noticeGameSnapShot))
             {
-                throw new HandBuilderException(handHistory.HandId, "NoticeGameSnapShot has not been found.");
+                throw new HandBuilderException(handHistory.HandId, $"NoticeGameSnapShot has not been found for room #{noticeGameBlind.RoomId}.");
             }
 
             var gameRoomInfo = noticeGameSnapShot.Params ?? throw new HandBuilderException(handHistory.HandId, "NoticeGameSnapShot.Params must be not empty.");
