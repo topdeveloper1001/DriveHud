@@ -106,12 +106,15 @@ namespace DriveHUD.Importers.PokerStars
                         auditDirectory = new DirectoryInfo(auditPath);
                     }
 
-                    var auditFiles = auditDirectory.GetFiles(AuditFileFilter);
-
-                    foreach (var auditFile in auditFiles)
+                    if (auditDirectory.Exists)
                     {
-                        var dataObject = ParseAuditFile(auditFile);
-                        dataManager.ProcessData(dataObject);
+                        var auditFiles = auditDirectory.GetFiles(AuditFileFilter);
+
+                        foreach (var auditFile in auditFiles)
+                        {
+                            var dataObject = ParseAuditFile(auditFile);
+                            dataManager.ProcessData(dataObject);
+                        }
                     }
 
                     if (!cancellationTokenSource.IsCancellationRequested)
@@ -127,7 +130,7 @@ namespace DriveHUD.Importers.PokerStars
                     }
                 }
                 catch (Exception e)
-                {
+                {                    
                     LogProvider.Log.Error(this, $"Failed to process audit files [{Identifier}]", e);
                 }
             }
