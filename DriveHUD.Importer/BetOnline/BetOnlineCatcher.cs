@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Extensions;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
@@ -90,6 +91,17 @@ namespace DriveHUD.Importers.BetOnline
                 x.PokerSite == EnumPokerSites.TigerGaming);
 
             return siteSettings != null && siteSettings.Any(x => x.Enabled);
+        }
+
+        /// <summary>
+        /// Checks whenever window matches conditions
+        /// </summary>
+        /// <param name="windowTitle"></param>
+        /// <param name="windowClassName"></param>
+        /// <returns></returns>
+        protected override bool IsWindowMatch(string windowTitle, string windowClassName)
+        {
+            return windowClassName.ContainsIgnoreCase(WindowClassName);
         }
     }
 }
