@@ -235,7 +235,7 @@ namespace DriveHUD.Importers.ExternalImporter
             }
         }
 
-        protected override bool IsDisabled()
+        public override bool IsDisabled()
         {
             return false;
         }

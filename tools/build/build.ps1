@@ -24,11 +24,11 @@ param
 
     [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
     
-    [string] $Version = '1.5.0',
+    [string] $Version = '1.5.1',
 
     [string] $VersionIncludeFilter = '**',
 
-    [string] $VersionExlcudeFilter = '**DriveHUD.PlayerXRay**,**XR*Reg**,**DriveHUD.PMCatcher**,**PM*Reg**',
+    [string] $VersionExlcudeFilter = '**DriveHUD.PlayerXRay**,**XR*Reg**,**DriveHUD.PMCatcher**,**PM*Reg**,**DriveHUD.PKCatcher**,**PK*Reg**',
 
     [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll',
 
@@ -63,9 +63,9 @@ param
 
     [string] $LicObfuscatorIncludeFilter = '*Reg.dll',        
 
-    [string] $LicProjectsToUpdate = 'DriveHUD.Application\DriveHUD.Application.csproj,DriveHUD.PMCatcher\DriveHUD.PMCatcher.csproj',
+    [string] $LicProjectsToUpdate = 'DriveHUD.Application\DriveHUD.Application.csproj,DriveHUD.PMCatcher\DriveHUD.PMCatcher.csproj,DriveHUD.PKCatcher\DriveHUD.PKCatcher.csproj',
 
-    [string] $LicCSFileToUpdate = 'DriveHUD.Application\App.xaml.cs,DriveHUD.PMCatcher\PMCatcherModule.cs',
+    [string] $LicCSFileToUpdate = 'DriveHUD.Application\App.xaml.cs,DriveHUD.PMCatcher\PMCatcherModule.cs,DriveHUD.PKCatcher\PKCatcherModule.cs',
 
     [string] $LicOutputPath = 'dependencies',
 
@@ -270,7 +270,11 @@ try
    # setup pm-catcher version
    Write-LogInfo 'SETUP' 'Set PM-Catcher version' 
    & .\tools\build\pmc-build.ps1   
-        
+   
+   # setup pk-catcher version
+   Write-LogInfo 'SETUP' 'Set PK-Catcher version' 
+   & .\tools\build\pkc-build.ps1       
+		
    # nuget
    Use-Nuget $session $session.Solution 'nuget.log'   
 

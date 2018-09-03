@@ -1,0 +1,227 @@
+﻿<UserControl
+    x:Class="DriveHUD.PKCatcher.PKCatcherView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    mc:Ignorable="d"
+    Style="{DynamicResource BaseFontStyle}"
+    x:Name="MainView">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="PKCatcherStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style
+                x:Key="StackPanelStyle"
+                TargetType="{x:Type StackPanel}">
+                <Style.Triggers>
+                    <DataTrigger
+                        Binding="{Binding PopupIsOpen}"
+                        Value="True">
+                        <Setter
+                            Property="IsEnabled"
+                            Value="False" />
+                    </DataTrigger>
+                    <DataTrigger
+                        Binding="{Binding PopupIsOpen}"
+                        Value="False">
+                        <Setter
+                            Property="IsEnabled"
+                            Value="True" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid
+        Background="{StaticResource WindowBackgroundBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="70" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="35" />
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.Row="0"
+            Orientation="Vertical">
+
+            <Border
+                Background="{StaticResource MenuBackgroundBrush}"
+                BorderBrush="{StaticResource BorderBrush}"
+                BorderThickness="0,0,0,1"
+                Height="62" />
+
+            <Border
+                Height="8"
+                Background="{StaticResource OuterGlowDarkBrush}"
+                BorderThickness="0" />
+
+        </StackPanel>
+
+        <StackPanel
+            Style="{StaticResource StackPanelStyle}"
+            Margin="14,0,0,0"
+            Orientation="Horizontal"
+            HorizontalAlignment="Left"
+            Grid.Row="0">
+
+            <TextBlock
+                FontSize="16"
+                Text="{ResX Key=PKC_MainView_Header}" />
+
+        </StackPanel>
+
+        <Grid
+            Grid.Row="1"
+            Margin="20,20,0,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackPanel
+                Orientation="Vertical">
+
+                <CheckBox
+                    Style="{StaticResource CheckBoxStyle}"
+                    IsChecked="{Binding Enabled}"
+                    Content="{ResX Key=PKC_MainView_Enable}" />
+
+            </StackPanel>
+
+            <StackPanel
+                Grid.Row="1"
+                Margin="0,15,0,0"
+                Orientation="Horizontal">
+
+                <Button
+                    Height="27"
+                    Width="70"
+                    Command="{Binding ManualCommand}"
+                    Content="{ResX Key=PKC_MainView_Manual}" />
+
+                <Button
+                    Margin="10,0,0,0"
+                    Height="27"
+                    Width="70"
+                    Command="{Binding TutorialCommand}"
+                    Content="{ResX Key=PKC_MainView_Tutorial}" />
+
+                <Button
+                    Margin="10,0,0,0"
+                    Height="27"
+                    Width="70"
+                    Visibility="{Binding IsUpgradable, Converter={dh:BoolToVisibilityConverter}}"
+                    Command="{Binding PurchaseCommand}"
+                    Content="{ResX Key=PKC_MainView_Purchase}" />
+
+            </StackPanel>
+
+        </Grid>
+
+        <Border
+            Grid.Row="2"
+            BorderBrush="{StaticResource BorderBrush}"
+            BorderThickness="0,1,0,0">
+
+            <StackPanel
+                Style="{StaticResource StackPanelStyle}"
+                Margin="12,0,0,0"
+                Orientation="Horizontal"
+                VerticalAlignment="Center">
+
+                <TextBlock
+                    Style="{StaticResource BottomTextStyle}"
+                    Text="{ResX Key=PKC_MainView_Version}" />
+
+                <TextBlock
+                    Style="{StaticResource BottomActiveTextStyle}"
+                    Text="{Binding Version}" />
+
+                <TextBlock
+                    Style="{StaticResource BottomTextStyle}"
+                    Text="{ResX Key=PKC_MainView_BuildDate}" />
+
+                <TextBlock
+                    Style="{StaticResource BottomActiveTextStyle}"
+                    Text="{Binding BuildDate, StringFormat=d, ConverterCulture=en-US}" />
+
+                <TextBlock
+                    Style="{StaticResource BottomTextStyle}"
+                    Text="{ResX Key=PKC_MainView_License}" />
+
+                <TextBlock
+                    Style="{StaticResource BottomActiveTextStyle}"
+                    Margin="0,0,10,0"
+                    Text="{Binding LicenseType}" />
+
+                <Button
+                    Content="{ResX PKC_MainView_Upgrade}"
+                    Command="{Binding UpgradeCommand}"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Visibility="{Binding IsUpgradable, Converter={dh:BoolToVisibilityConverter}}" />
+
+            </StackPanel>
+
+        </Border>
+
+        <dh:NonTopmostPopup
+            IsOpen="{Binding PopupIsOpen, Delay=200}"
+            AllowsTransparency="True"
+            IsTopmost="False"
+            IgnoreDisableTopmost="True"
+            Placement="Center">
+
+            <i:Interaction.Behaviors>
+                <dh:MouseDragPopupBehavior />
+            </i:Interaction.Behaviors>
+
+            <Grid>
+                <Border
+                    Margin="7"
+                    Background="Transparent">
+
+                    <Border.Effect>
+                        <DropShadowEffect
+                            BlurRadius="7"
+                            ShadowDepth="0"
+                            Color="{DynamicResource DropShadowColor}" />
+                    </Border.Effect>
+
+                </Border>
+
+                <GroupBox
+                    Margin="7"
+                    Header="{Binding PopupTitle}"
+                    Padding="15,10,10,10">
+                    <GroupBox.Height>
+                        <sys:Double>NaN</sys:Double>
+                    </GroupBox.Height>
+
+                    <ContentControl
+                        Content="{Binding PopupContent}" />
+
+                </GroupBox>
+
+            </Grid>
+
+        </dh:NonTopmostPopup>
+
+    </Grid>
+</UserControl>

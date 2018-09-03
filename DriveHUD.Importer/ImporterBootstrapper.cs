@@ -10,24 +10,28 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Importers.AndroidBase;
 using DriveHUD.Importers.BetOnline;
 using DriveHUD.Importers.Bovada;
 using DriveHUD.Importers.Builders.iPoker;
 using DriveHUD.Importers.ExternalImporter;
+using DriveHUD.Importers.Horizon;
 using DriveHUD.Importers.IPoker;
 using DriveHUD.Importers.Loggers;
 using DriveHUD.Importers.Pacific888;
 using DriveHUD.Importers.PartyPoker;
+using DriveHUD.Importers.PokerKing;
+using DriveHUD.Importers.PokerKing.Model;
 using DriveHUD.Importers.PokerMaster;
+using DriveHUD.Importers.PokerMaster.Model;
 using DriveHUD.Importers.PokerStars;
-using DriveHUD.Importers.Horizon;
+using DriveHUD.Importers.Winamax;
 using DriveHUD.Importers.WinningPokerNetwork;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using Model.Enums;
 using Model.Solvers;
 using System;
-using DriveHUD.Importers.Winamax;
 
 namespace DriveHUD.Importers
 {
@@ -56,7 +60,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IBetOnlineTournamentImporter, BetOnlineTournamentImporter>();
             container.RegisterType<IBetOnlineTournamentManager, BetOnlineTournamentManager>();
             container.RegisterType<IBetOnlineXmlConverter, BetOnlineXmlToIPokerXmlConverter>();
-            container.RegisterType<IPokerStarsImporter, PokerStarsImporter>();            
+            container.RegisterType<IPokerStarsImporter, PokerStarsImporter>();
             container.RegisterType<IPokerStarsZoomImporter, PokerStarsZoomImporter>();
             container.RegisterType<IPokerStarsZoomDataManager, PokerStarsZoomDataManager>();
             container.RegisterType<IAmericasCardroomImporter, AmericasCardroomImporter>();
@@ -76,11 +80,17 @@ namespace DriveHUD.Importers
             container.RegisterType<IPlayerStatisticReImporter, PlayerStatisticReImporter>();
             container.RegisterType<IIgnitionWindowCache, IgnitionWindowCache>(new ContainerControlledLifetimeManager());
             container.RegisterType<IExternalImporter, ExternalImporter.ExternalImporter>();
+            container.RegisterType<ITcpImporter, TcpImporter>();
             container.RegisterType<IHandBuilder, HandBuilder>();
+            container.RegisterType<IPKHandBuilder, PKHandBuilder>();
             container.RegisterType<INetworkConnectionsService, NetworkConnectionsService>();
             container.RegisterType<ITableWindowProvider, TableWindowProvider>();
-            container.RegisterType<IPacketManager, PacketManager>();
+            container.RegisterType<IPacketManager<PokerMasterPackage>, PokerMasterPacketManager>();
+            container.RegisterType<IPacketManager<PokerKingPackage>, PokerKingPacketManager>();
             container.RegisterType<IPMImporter, PMImporter>();
+            container.RegisterType<IPKImporter, PKImporter>();
+            container.RegisterType<IPackageBuilder<PokerMasterPackage>, PokerMasterPackageBuilder>();
+            container.RegisterType<IPackageBuilder<PokerKingPackage>, PokerKingPackageBuilder>();
             container.RegisterType<IHorizonImporter, HorizonImporter>();
             container.RegisterType<IWinamaxImporter, WinamaxImporter>();
             container.RegisterType<IPokerEvaluator, HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
@@ -108,7 +118,7 @@ namespace DriveHUD.Importers
             importerService.Register<IBetOnlineImporter>();
             importerService.Register<IBetOnlineTournamentImporter>();
             importerService.Register<IBetOnlineTableService>();
-            importerService.Register<IPokerStarsImporter>();            
+            importerService.Register<IPokerStarsImporter>();
             importerService.Register<IPokerStarsZoomImporter>();
             importerService.Register<IAmericasCardroomImporter>();
             importerService.Register<IBlackChipPokerImporter>();
@@ -119,8 +129,15 @@ namespace DriveHUD.Importers
             importerService.Register<IIPokerImporter>();
             importerService.Register<IExternalImporter>();
             importerService.Register<IPMImporter>();
+            importerService.Register<IPKImporter>();
+            importerService.Register<ITcpImporter>();
             importerService.Register<IHorizonImporter>();
             importerService.Register<IWinamaxImporter>();
+
+            var tcpImporter = importerService.GetImporter<ITcpImporter>();
+
+            tcpImporter.RegisterImporter<IPMImporter>();
+            tcpImporter.RegisterImporter<IPKImporter>();
         }
     }
 }

@@ -37,6 +37,6 @@ namespace DriveHUD.Importers
         /// <summary>
         /// Stop background process
         /// </summary>     
-        void Stop();
+        void Stop();        
     }
 }

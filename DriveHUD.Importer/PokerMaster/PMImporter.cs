@@ -12,10 +12,10 @@
 
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Infrastructure.CustomServices;
-using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
+using DriveHUD.Importers.AndroidBase;
 using DriveHUD.Importers.Helpers;
 using DriveHUD.Importers.Loggers;
 using DriveHUD.Importers.PokerMaster.Model;
@@ -27,15 +27,11 @@ using Model;
 using Model.Settings;
 using Newtonsoft.Json;
 using PacketDotNet;
-using SharpPcap;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.PokerMaster
@@ -43,24 +39,12 @@ namespace DriveHUD.Importers.PokerMaster
     /// <summary>
     /// Poker master data importer
     /// </summary>
-    internal class PMImporter : GenericImporter, IPMImporter
+    internal class PMImporter : TcpPacketImporter, IPMImporter
     {
-        private readonly ManualResetEventSlim captureResetEvent = new ManualResetEventSlim();
-
         private readonly BlockingCollection<CapturedPacket> packetBuffer = new BlockingCollection<CapturedPacket>();
-
-        private readonly ConcurrentStack<CaptureDevice> captureDevices = new ConcurrentStack<CaptureDevice>();
-
         private readonly IPMCatcherService pmCatcherService = ServiceLocator.Current.TryResolve<IPMCatcherService>();
-
         private Lazy<BodyDecryptor> bodyDecryptor = new Lazy<BodyDecryptor>(false);
-
-        private const int StopTimeout = 5000;
-
-        private const int NoDataDelay = 100;
-
-        private Dictionary<long, bool> isReloginRequired = new Dictionary<long, bool>();
-
+        private Dictionary<long, bool> isReloginRequired = new Dictionary<long, bool>();    
         private IPokerClientEncryptedLogger protectedLogger;
 
         private BodyDecryptor BodyDecryptor
@@ -82,6 +66,31 @@ namespace DriveHUD.Importers.PokerMaster
         protected override EnumPokerSites Site => EnumPokerSites.PokerMaster;
 
         protected override string[] ProcessNames => throw new NotSupportedException($"Process name isn't supported for importer. [{SiteString}]");
+        protected override string Logger => CustomModulesNames.PMCatcher;
+
+#if DEBUG
+        protected override string HandHistoryFilePrefix => "pm";
+#endif
+
+
+        #region Implementation of ITcpImporter
+
+        public override bool Match(TcpPacket tcpPacket, IpPacket ipPacket)
+        {
+            return tcpPacket.SourcePort == PMImporterHelper.PortFilter;
+        }
+
+        public override void AddPacket(CapturedPacket capturedPacket)
+        {
+            packetBuffer.Add(capturedPacket);
+        }
+
+        public override bool IsDisabled()
+        {
+            return pmCatcherService == null || !pmCatcherService.IsEnabled();
+        }
+
+        #endregion
 
         /// <summary>
         /// Main importer task, executes in the background thread
@@ -92,17 +101,13 @@ namespace DriveHUD.Importers.PokerMaster
             {
                 InitializeLogger();
                 InitializeSettings();
-                StartNetworkDataCapture();
                 ProcessBuffer();
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Failed importing.", e);
+                LogProvider.Log.Error(Logger, $"Failed importing.", e);
             }
 
-            captureResetEvent.Wait(StopTimeout);
-
-            captureDevices.Clear();
             packetBuffer.Clear();
 
             protectedLogger.StopLogging();
@@ -117,9 +122,9 @@ namespace DriveHUD.Importers.PokerMaster
         {
 
 #if DEBUG
-            if (!Directory.Exists("Hands"))
+            if (!Directory.Exists("PMHands"))
             {
-                Directory.CreateDirectory("Hands");
+                Directory.CreateDirectory("PMHands");
             }
 #endif
             isReloginRequired.Clear();
@@ -159,139 +164,17 @@ namespace DriveHUD.Importers.PokerMaster
         }
 
         /// <summary>
-        /// Starts processes to capture network data for all available devices
-        /// </summary>
-        protected void StartNetworkDataCapture()
-        {
-            captureResetEvent.Set();
-
-            var devices = CaptureDeviceList.Instance;
-
-            foreach (var device in devices)
-            {
-                if (IsAdvancedLogEnabled)
-                {
-                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Found device: {device.Name}, {device.Description}.");
-                }
-
-                try
-                {
-                    device.Open(DeviceMode.Normal);
-
-                    var captureDevice = new CaptureDevice(device)
-                    {
-                        IsOpened = true
-                    };
-
-                    captureDevices.Push(captureDevice);
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Could not open device {device.Name}.", e);
-                }
-            }
-
-            captureDevices.ForEach(captureDevice => Task.Run(() => CaptureData(captureDevice)));
-        }
-
-        /// <summary>
-        /// Captures network data of the specified device
-        /// </summary>
-        /// <param name="device">Device to capture</param>
-        protected void CaptureData(CaptureDevice captureDevice)
-        {
-            if (captureResetEvent.IsSet)
-            {
-                captureResetEvent.Reset();
-            }
-
-            while (true)
-            {
-                if (cancellationTokenSource.IsCancellationRequested)
-                {
-                    try
-                    {
-                        captureDevice.Device.Close();
-                        captureDevice.IsOpened = false;
-                    }
-                    catch (Exception e)
-                    {
-                        LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Device {captureDevice.Device.Name} has not been closed.", e);
-                    }
-
-                    if (!captureResetEvent.IsSet && captureDevices.All(x => !x.IsOpened))
-                    {
-                        captureResetEvent.Set();
-                    }
-
-                    return;
-                }
-
-                try
-                {
-                    var nextPacket = captureDevice.Device.GetNextPacket();
-
-                    if (nextPacket != null)
-                    {
-                        ParsePacket(nextPacket);
-                    }
-                    else
-                    {
-                        Task.Delay(NoDataDelay).Wait();
-                    }
-                }
-                catch (Exception e)
-                {
-                    LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Data has not been captured from {captureDevice.Device.Name}.", e);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Parses captured data into the packet
-        /// </summary>
-        /// <param name="rawCapture">Captured data</param>
-        protected void ParsePacket(RawCapture rawCapture)
-        {
-            var packet = Packet.ParsePacket(rawCapture.LinkLayerType, rawCapture.Data);
-
-            var tcpPacket = packet.Extract<TcpPacket>();
-            var ipPacket = packet.Extract<IpPacket>();
-
-            if (tcpPacket == null || ipPacket == null || tcpPacket.SourcePort != PMImporterHelper.PortFilter)
-            {
-                return;
-            }
-
-            var payloadData = tcpPacket.PayloadData;
-
-            if (payloadData == null || payloadData.Length == 0)
-            {
-                return;
-            }
-
-            var capturedPacket = new CapturedPacket
-            {
-                Bytes = tcpPacket.PayloadData,
-                Source = new IPEndPoint(ipPacket.SourceAddress, tcpPacket.SourcePort),
-                Destination = new IPEndPoint(ipPacket.DestinationAddress, tcpPacket.DestinationPort),
-                CreatedTimeStamp = rawCapture.Timeval.Date,
-                SequenceNumber = tcpPacket.SequenceNumber
-            };
-
-            packetBuffer.Add(capturedPacket);
-        }
-
-        /// <summary>
         /// Processes packets in the buffer
         /// </summary>
         protected void ProcessBuffer()
         {
-            var packetManager = ServiceLocator.Current.GetInstance<IPacketManager>();
+            var packetManager = ServiceLocator.Current.GetInstance<IPacketManager<PokerMasterPackage>>();
             var handBuilder = ServiceLocator.Current.GetInstance<IHandBuilder>();
-            var connectionsService = ServiceLocator.Current.GetInstance<INetworkConnectionsService>();
             var tableWindowProvider = ServiceLocator.Current.GetInstance<ITableWindowProvider>();
             var handHistoriesToProcess = new ConcurrentDictionary<long, List<HandHistoryData>>();
+
+            var connectionsService = ServiceLocator.Current.GetInstance<INetworkConnectionsService>();
+            connectionsService.SetLogger(Logger);
 
             var detectedTableWindows = new HashSet<IntPtr>();
 
@@ -307,15 +190,10 @@ namespace DriveHUD.Importers.PokerMaster
                         continue;
                     }
 
-                    if (IsAdvancedLogEnabled)
-                    {
-                        LogPacket(capturedPacket, ".log");
-                    }
-
-                    if (!packetManager.TryParse(capturedPacket, out Package package) || !IsAllowedPackage(package))
+                    if (!packetManager.TryParse(capturedPacket, out PokerMasterPackage package) || !IsAllowedPackage(package))
                     {
                         continue;
-                    }                 
+                    }
 
                     if (package.Cmd == PackageCommand.Cmd_SCLoginRsp)
                     {
@@ -347,9 +225,9 @@ namespace DriveHUD.Importers.PokerMaster
                                     userRooms.Remove(package.Uuid);
                                 }
 
-                                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room {body.RoomId}.");
+                                LogProvider.Log.Info(Logger, $"User {package.Uuid} left room {body.RoomId}.");
                             },
-                            () => LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} left room."));
+                            () => LogProvider.Log.Info(Logger, $"User {package.Uuid} left room."));
 
                         var process = connectionsService.GetProcess(capturedPacket);
                         var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
@@ -370,8 +248,8 @@ namespace DriveHUD.Importers.PokerMaster
                     if (package.Cmd == PackageCommand.Cmd_SCEnterGameRoomRsp)
                     {
                         ParsePackage<SCEnterGameRoomRsp>(package,
-                           body => LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} entered room {body.RoomId}."),
-                           () => LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User {package.Uuid} entered room."));
+                           body => LogProvider.Log.Info(Logger, $"User {package.Uuid} entered room {body.RoomId}."),
+                           () => LogProvider.Log.Info(Logger, $"User {package.Uuid} entered room."));
 
                         continue;
                     }
@@ -401,7 +279,7 @@ namespace DriveHUD.Importers.PokerMaster
                                 continue;
                             }
 
-                            LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Encryption key not found [User {package.Uuid}].");
+                            LogProvider.Log.Info(Logger, $"Encryption key not found [User {package.Uuid}].");
 
                             SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_Relogin", windowHandle);
 
@@ -418,12 +296,12 @@ namespace DriveHUD.Importers.PokerMaster
 
                         if (!SerializationHelper.TryDeserialize(bytes, out SCGameRoomStateChange scGameRoomStateChange))
                         {
-                            LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Package has not been decrypted. Relogin [User {package.Uuid}] is required. [{capturedPacket}] [{capturedPacket.SequenceNumber}]");
+                            LogProvider.Log.Error(Logger, $"Package has not been decrypted. Relogin [User {package.Uuid}] is required. [{capturedPacket}] [{capturedPacket.SequenceNumber}]");
 
                             var base64Body = Convert.ToBase64String(package.Body);
                             var base64Key = Convert.ToBase64String(encryptKey);
 
-                            LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Package body: [{base64Key}, {base64Body}]");
+                            LogProvider.Log.Error(Logger, $"Package body: [{base64Key}, {base64Body}]");
 
                             SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_Relogin", windowHandle);
                             continue;
@@ -434,7 +312,7 @@ namespace DriveHUD.Importers.PokerMaster
                             SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM", windowHandle);
                         }
 #if DEBUG
-                        File.AppendAllText($"Hands\\hand_imported_{package.Uuid}_{scGameRoomStateChange.GameNumber}.json", JsonConvert.SerializeObject(scGameRoomStateChange, Formatting.Indented));
+                        File.AppendAllText($"Hands\\pm_hand_imported_{package.Uuid}_{scGameRoomStateChange.GameNumber}.json", JsonConvert.SerializeObject(scGameRoomStateChange, Formatting.Indented));
 #endif
 
                         if (IsAdvancedLogEnabled)
@@ -446,18 +324,18 @@ namespace DriveHUD.Importers.PokerMaster
                         {
                             if (IsAdvancedLogEnabled)
                             {
-                                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Hand #{handHistory.HandId}: Found process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
+                                LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId}: Found process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
                             }
 
                             if (!pmCatcherService.CheckHand(handHistory))
                             {
                                 if (handHistory.GameDescription.IsTournament)
                                 {
-                                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"License doesn't support tourney hand {handHistory.HandId}. [buyin={handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue}]");
+                                    LogProvider.Log.Info(Logger, $"License doesn't support tourney hand {handHistory.HandId}. [buyin={handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue}]");
                                 }
                                 else
                                 {
-                                    LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"License doesn't support cash hand {handHistory.HandId}. [bb={handHistory.GameDescription.Limit.BigBlind}]");
+                                    LogProvider.Log.Info(Logger, $"License doesn't support cash hand {handHistory.HandId}. [bb={handHistory.GameDescription.Limit.BigBlind}]");
                                 }
 
                                 SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_NoLicense", windowHandle);
@@ -480,7 +358,7 @@ namespace DriveHUD.Importers.PokerMaster
                 {
                     if (IsAdvancedLogEnabled)
                     {
-                        LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Could not process captured packet.", e);
+                        LogProvider.Log.Error(Logger, $"Could not process captured packet.", e);
                     }
                 }
             }
@@ -497,7 +375,7 @@ namespace DriveHUD.Importers.PokerMaster
         {
             if (scGameRoomStateChange.GameRoomInfo == null)
             {
-                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Room info is empty.");
+                LogProvider.Log.Info(Logger, $"Room info is empty.");
                 return false;
             }
 
@@ -519,7 +397,7 @@ namespace DriveHUD.Importers.PokerMaster
 
             if (accountsPerRoom > 1)
             {
-                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"More than 1 account detected in room {roomId}.");
+                LogProvider.Log.Info(Logger, $"More than 1 account detected in room {roomId}.");
                 SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_AccountPerTable", windowHandle);
                 return false;
             }
@@ -531,18 +409,18 @@ namespace DriveHUD.Importers.PokerMaster
         /// Parses login package
         /// </summary>
         /// <param name="package">Package to parse</param>
-        private void ParseLoginPackage<T>(Package package, Func<T, UserBaseInfoNet> getUserInfo, Func<T, string> getEncryptKey)
+        private void ParseLoginPackage<T>(PokerMasterPackage package, Func<T, UserBaseInfoNet> getUserInfo, Func<T, string> getEncryptKey)
         {
             if (IsAdvancedLogEnabled)
             {
-                LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Login package [{package.Cmd}] has been received.");
+                LogProvider.Log.Info(Logger, $"Login package [{package.Cmd}] has been received.");
             }
 
             var bytes = BodyDecryptor.Decrypt(package.Body);
 
             if (bytes == null)
             {
-                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Failed to parse login package [{package.Cmd}].");
+                LogProvider.Log.Error(Logger, $"Failed to parse login package [{package.Cmd}].");
                 return;
             }
 
@@ -551,23 +429,23 @@ namespace DriveHUD.Importers.PokerMaster
 
             if (scLoginRsp == null)
             {
-                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"Login package is empty.");
+                LogProvider.Log.Error(Logger, $"Login package is empty.");
                 return;
             }
 
             if (userInfo == null)
             {
-                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"UserInfo is missing.");
+                LogProvider.Log.Error(Logger, $"UserInfo is missing.");
                 return;
             }
 
-            LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"User [{userInfo.Uuid}, {userInfo.ShowID}] has logged in.");
+            LogProvider.Log.Info(Logger, $"User [{userInfo.Uuid}, {userInfo.ShowID}] has logged in.");
 
             var encryptKeyText = getEncryptKey(scLoginRsp);
 
             if (string.IsNullOrWhiteSpace(encryptKeyText))
             {
-                LogProvider.Log.Error(CustomModulesNames.PMCatcher, $"EncryptKey is missing.");
+                LogProvider.Log.Error(Logger, $"EncryptKey is missing.");
                 return;
             }
 
@@ -615,7 +493,7 @@ namespace DriveHUD.Importers.PokerMaster
         /// <param name="package">Package to parse</param>
         /// <param name="onSuccess">Action to perform if parsing succeed</param>
         /// <param name="onFail">Action to perform if parsing failed</param>
-        private void ParsePackage<T>(Package package, Action<T> onSuccess, Action onFail)
+        private void ParsePackage<T>(PokerMasterPackage package, Action<T> onSuccess, Action onFail)
         {
             if (HeroesKeys.TryGetValue(package.Uuid, out byte[] encryptKey))
             {
@@ -636,7 +514,7 @@ namespace DriveHUD.Importers.PokerMaster
         /// </summary>
         /// <param name="package">Package to check</param>
         /// <returns></returns>
-        private static bool IsAllowedPackage(Package package)
+        private static bool IsAllowedPackage(PokerMasterPackage package)
         {
             switch (package.Cmd)
             {
@@ -652,121 +530,7 @@ namespace DriveHUD.Importers.PokerMaster
                     return true;
             }
         }
-
-        private const int DelayToProcessHands = 2000;
-
-        /// <summary>
-        /// Exports captured hand history to the supported DB
-        /// </summary>
-        private void ExportHandHistory(HandHistoryData handHistoryData, ConcurrentDictionary<long, List<HandHistoryData>> handHistoriesToProcess)
-        {
-            LogProvider.Log.Info(CustomModulesNames.PMCatcher, $"Hand #{handHistoryData.HandHistory.HandId} has been sent [{handHistoryData.Uuid}].");
-
-            var handId = handHistoryData.HandHistory.HandId;
-
-            if (!handHistoriesToProcess.TryGetValue(handId, out List<HandHistoryData> handHistoriesData))
-            {
-                handHistoriesData = new List<HandHistoryData>();
-                handHistoriesToProcess.AddOrUpdate(handId, handHistoriesData, (key, prev) => handHistoriesData);
-
-                Task.Run(() =>
-                {
-                    try
-                    {
-                        Task.Delay(DelayToProcessHands).Wait(cancellationTokenSource.Token);
-                        ExportHandHistory(handHistoriesData.ToList());
-                    }
-                    catch (OperationCanceledException)
-                    {
-                        return;
-                    }
-                    finally
-                    {
-                        handHistoriesToProcess.TryRemove(handId, out List<HandHistoryData> removedData);
-                    }
-                });
-            }
-
-            handHistoriesData.Add(handHistoryData);
-        }
-
-        /// <summary>
-        /// Exports captured hand history to the supported DB
-        /// </summary>
-        private void ExportHandHistory(List<HandHistoryData> handHistories)
-        {
-            // merge hands
-            var playerWithHoleCards = handHistories
-                .SelectMany(x => x.HandHistory.Players)
-                .Where(x => x.hasHoleCards)
-                .DistinctBy(x => x.SeatNumber)
-                .ToDictionary(x => x.SeatNumber, x => x.HoleCards);
-
-            GameInfo mainGameInfo = null;
-
-            foreach (var handHistoryData in handHistories)
-            {
-                handHistoryData.HandHistory.Players.ForEach(player =>
-                {
-                    if (!player.hasHoleCards && playerWithHoleCards.ContainsKey(player.SeatNumber))
-                    {
-                        player.HoleCards = playerWithHoleCards[player.SeatNumber];
-                    }
-                });
-
-                var handHistoryText = SerializationHelper.SerializeObject(handHistoryData.HandHistory);
-
-#if DEBUG
-                File.WriteAllText($"Hands\\hand_exported_{handHistoryData.Uuid}_{handHistoryData.HandHistory.HandId}.xml", handHistoryText);
-#endif
-                var gameInfo = new GameInfo
-                {
-                    PokerSite = Site,
-                    WindowHandle = handHistoryData.WindowHandle.ToInt32(),
-                    GameNumber = handHistoryData.HandHistory.HandId,
-                    Session = $"{handHistoryData.HandHistory.GameDescription.Identifier}{handHistoryData.Uuid}"
-                };
-
-                if (mainGameInfo == null)
-                {
-                    mainGameInfo = gameInfo;
-                }
-                else
-                {
-                    var playersCashInfo = mainGameInfo.GetPlayersCacheInfo();
-
-                    if (playersCashInfo != null)
-                    {
-                        gameInfo.ResetPlayersCacheInfo();
-                        gameInfo.DoNotReset = true;
-
-                        foreach (var playerCashInfo in playersCashInfo)
-                        {
-                            var cacheInfo = new PlayerStatsSessionCacheInfo
-                            {
-                                Session = gameInfo.Session,
-                                Player = new PlayerCollectionItem
-                                {
-                                    PlayerId = playerCashInfo.Player.PlayerId,
-                                    Name = playerCashInfo.Player.Name,
-                                    PokerSite = playerCashInfo.Player.PokerSite,
-                                },
-                                Stats = playerCashInfo.Stats.Copy(),
-                                IsHero = handHistoryData.HandHistory.HeroName != null &&
-                                    handHistoryData.HandHistory.HeroName.Equals(playerCashInfo.Player.Name),
-                                GameFormat = playerCashInfo.GameFormat,
-                                GameNumber = playerCashInfo.GameNumber
-                            };
-
-                            gameInfo.AddToPlayersCacheInfo(cacheInfo);
-                        }
-                    }
-                }
-
-                ProcessHand(handHistoryText, gameInfo);
-            }
-        }
-
+       
         private Dictionary<int, int> autoCenterSeats = new Dictionary<int, int>
         {
             { 2, 1 },
@@ -800,12 +564,7 @@ namespace DriveHUD.Importers.PokerMaster
             }
 
             return playerList;
-        }
-
-        protected override bool IsDisabled()
-        {
-            return pmCatcherService == null || !pmCatcherService.IsEnabled();
-        }
+        }    
 
         protected override IntPtr FindWindow(ParsingResult parsingResult)
         {
@@ -815,36 +574,6 @@ namespace DriveHUD.Importers.PokerMaster
         protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
             return false;
-        }
-
-        private void LogPacket(CapturedPacket capturedPacket, string ext)
-        {
-            var packageFileName = Path.Combine("Logs", capturedPacket.ToString().Replace(":", ".").Replace("->", "-")) + ext;
-
-            var sb = new StringBuilder();
-            sb.AppendLine("-----------begin----------------");
-            sb.AppendLine($"Date: {capturedPacket.CreatedTimeStamp}");
-            sb.AppendLine($"Date Now: {DateTime.Now}");
-            sb.AppendLine($"Date Now (ticks): {DateTime.Now.Ticks}");
-            sb.AppendLine($"SequenceNumber: {capturedPacket.SequenceNumber}");
-            sb.AppendLine($"Packet Full Length: {(PacketManager.IsStartingPacket(capturedPacket.Bytes) ? PacketManager.ReadPacketLength(capturedPacket.Bytes) : 0)}");
-            sb.AppendLine($"Packet Current Length: {capturedPacket.Bytes.Length}");
-            sb.AppendLine($"Body:");
-            sb.AppendLine("---------body begin-------------");
-            sb.AppendLine(BitConverter.ToString(capturedPacket.Bytes).Replace("-", " "));
-            sb.AppendLine("----------body end--------------");
-            sb.AppendLine("------------end-----------------");
-
-            File.AppendAllText(packageFileName, sb.ToString());
-        }
-
-        private class HandHistoryData
-        {
-            public long Uuid { get; set; }
-
-            public HandHistory HandHistory { get; set; }
-
-            public IntPtr WindowHandle { get; set; }
-        }
+        }      
     }
 }

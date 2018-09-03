@@ -22,7 +22,7 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Importers
 {
-    internal abstract class BaseImporter : IBackgroundProcess
+    internal abstract class BaseImporter : IBackgroundProcess, IBaseImporter
     {
         protected bool isRunning;
 
@@ -101,6 +101,14 @@ namespace DriveHUD.Importers
             }
         }
 
+        public virtual bool IsDisabled()
+        {
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);
+
+            return siteSettings != null && !siteSettings.Enabled;
+        }
+
         #endregion
 
         #region Infrastructure      
@@ -121,15 +129,7 @@ namespace DriveHUD.Importers
 
             LogProvider.Log.Info(this, $"\"{SiteString}\" importer has been stopped");
         }
-
-        protected virtual bool IsDisabled()
-        {
-            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
-            var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);
-
-            return siteSettings != null && !siteSettings.Enabled;
-        }
-
+      
         #endregion
 
         #region IDisposable implementation

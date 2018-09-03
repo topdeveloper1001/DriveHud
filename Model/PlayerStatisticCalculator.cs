@@ -728,13 +728,16 @@ namespace Model
 
             CalculateEquity(creationInfo, stat);
 
-            if (parsedHand.GameDescription.Limit.SmallBlind > 0 && parsedHand.GameDescription.Limit.BigBlind > 0)
+            if (parsedHand.GameDescription.Limit.SmallBlind >= 0 && parsedHand.GameDescription.Limit.BigBlind > 0)
             {
+                var subType = parsedHand.GameDescription.TableTypeDescriptors.Contains(TableTypeDescription.FastFold) ? " (Fast)" :
+                    (parsedHand.GameDescription.TableTypeDescriptors.Contains(TableTypeDescription.ShortDeck) ? " (Short)" : string.Empty);
+
                 stat.GameType = string.Format("{0}/{1} - {2}{3}",
                     parsedHand.GameDescription.Limit.SmallBlind,
                     parsedHand.GameDescription.Limit.BigBlind,
                     parsedHand.GameDescription.GameType,
-                    parsedHand.GameDescription.TableTypeDescriptors.Contains(TableTypeDescription.FastFold) ? " (Fast)" : string.Empty);
+                    subType);
             }
             else
             {

@@ -171,7 +171,7 @@
             Grid.Row="2"
             Height="20"
             Value="{Binding TrialDaysLeft, Mode=OneWay}"
-            Maximum="30"
+            Maximum="7"
             BorderBrush="{StaticResource SelectionBackgroundBrush}"
             BorderThickness="1"            
             Margin="0,0,0,10"

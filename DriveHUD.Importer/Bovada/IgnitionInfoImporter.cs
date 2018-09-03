@@ -106,7 +106,7 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
-        protected override bool IsDisabled()
+        public override bool IsDisabled()
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
             var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == EnumPokerSites.Ignition);

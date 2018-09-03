@@ -87,6 +87,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new HorizonFastParserImpl();
                 case EnumPokerSites.Winamax:
                     return new WinamaxFastParserImpl();
+                case EnumPokerSites.PokerKing:
+                    return new CommonHandHistoryParser(EnumPokerSites.PokerKing);
                 default:
                     throw new NotImplementedException("GetFullHandHistoryParser: No parser for " + siteName);
             }

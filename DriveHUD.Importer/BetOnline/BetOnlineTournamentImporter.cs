@@ -100,7 +100,7 @@ namespace DriveHUD.Importers.BetOnline
             }
         }
 
-        protected override bool IsDisabled()
+        public override bool IsDisabled()
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
             var siteSettings = settings.SiteSettings.SitesModelList?.Where(x => x.PokerSite == EnumPokerSites.BetOnline || x.PokerSite == EnumPokerSites.SportsBetting || x.PokerSite == EnumPokerSites.TigerGaming);

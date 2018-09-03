@@ -1,0 +1,14 @@
+﻿{
+  "RoomId": 914360,
+  "LastActionSeatId": 7,
+  "ActionType": "Fold",
+  "Amount": 0,
+  "Pots": [
+    {
+      "PotId": 254,
+      "Amount": 1400
+    }
+  ],
+  "DefaultFold": true,
+  "ActionSeq": 5
+}

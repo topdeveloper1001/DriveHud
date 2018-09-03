@@ -64,6 +64,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveHUD.API", "DriveHUD.AP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveHUD.PMCatcher", "DriveHUD.PMCatcher\DriveHUD.PMCatcher.csproj", "{2C65E536-BBB7-4C93-8458-767680BB9748}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveHUD.PKCatcher", "DriveHUD.PKCatcher\DriveHUD.PKCatcher.csproj", "{43D57252-1C99-4C99-AB5D-B5D686FD2512}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -352,6 +354,18 @@ Global
 		{2C65E536-BBB7-4C93-8458-767680BB9748}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{2C65E536-BBB7-4C93-8458-767680BB9748}.Release|x86.ActiveCfg = Release|Any CPU
 		{2C65E536-BBB7-4C93-8458-767680BB9748}.Release|x86.Build.0 = Release|Any CPU
+		{43D57252-1C99-4C99-AB5D-B5D686FD2512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D57252-1C99-4C99-AB5D-B5D686FD2512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D57252-1C99-4C99-AB5D-B5D686FD2512}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{43D57252-1C99-4C99-AB5D-B5D686FD2512}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{43D57252-1C99-4C99-AB5D-B5D686FD2512}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{43D57252-1C99-4C99-AB5D-B5D686FD2512}.Debug|x86.Build.0 = Debug|Any CPU
+		{43D57252-1C99-4C99-AB5D-B5D686FD2512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D57252-1C99-4C99-AB5D-B5D686FD2512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D57252-1C99-4C99-AB5D-B5D686FD2512}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{43D57252-1C99-4C99-AB5D-B5D686FD2512}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{43D57252-1C99-4C99-AB5D-B5D686FD2512}.Release|x86.ActiveCfg = Release|Any CPU
+		{43D57252-1C99-4C99-AB5D-B5D686FD2512}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

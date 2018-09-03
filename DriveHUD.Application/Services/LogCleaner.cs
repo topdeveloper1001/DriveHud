@@ -26,7 +26,7 @@ namespace DriveHUD.Application.Services
     {
         private const int maxSizeLogBackups = 8;
 
-        private static readonly string[] logsPatterns = new string[] { "drivehud*", "hud*", "NHibernate*", "ign-games*", "bol-games*", "playerxray*", "pmcatcher*" };
+        private static readonly string[] logsPatterns = new string[] { "drivehud*", "hud*", "NHibernate*", "ign-games*", "bol-games*", "playerxray*", "pmcatcher*", "pkcatcher*" };
 
         /// <summary>
         /// Clear folder with logs

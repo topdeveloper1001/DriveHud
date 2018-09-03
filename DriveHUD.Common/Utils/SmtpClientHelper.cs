@@ -109,6 +109,7 @@ namespace DriveHUD.Common.Utils
                     logs.AddRange(Directory.GetFiles(logsFolder, "playerxray*log*"));
                     logs.AddRange(Directory.GetFiles(logsFolder, "hud*log*"));
                     logs.AddRange(Directory.GetFiles(logsFolder, "pmcatcher*log*"));
+                    logs.AddRange(Directory.GetFiles(logsFolder, "pkcatcher*log*"));
                 }
             }
 
