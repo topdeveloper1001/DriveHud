@@ -93,13 +93,13 @@ namespace DriveHUD.Importers.PokerKing
             }
         }
 
-        private bool ValidatePackages(List<PokerKingPackage> packages)
+        private bool ValidatePackages(List<PokerKingPackage> packages, uint userId)
         {
             var noticeGameSettlementPackage = packages.FirstOrDefault(x => x.PackageType == PackageType.NoticeGameSettlement);
 
             if (noticeGameSettlementPackage == null)
             {
-                LogProvider.Log.Warn(CustomModulesNames.PKCatcher, "Hand cannot be built because settlement data is missing.");
+                LogProvider.Log.Warn(CustomModulesNames.PKCatcher, $"Hand cannot be built because settlement data is missing. [{userId}]");
                 return false;
             }
 
@@ -116,11 +116,11 @@ namespace DriveHUD.Importers.PokerKing
                 {
                     if (!noticeGameSnapshotExists)
                     {
-                        LogProvider.Log.Warn(CustomModulesNames.PKCatcher, $"Hand #{x.Gameuuid} of room #{x.RoomId} cannot be built because room snapshot is missing.");
+                        LogProvider.Log.Warn(CustomModulesNames.PKCatcher, $"Hand #{x.Gameuuid} of room #{x.RoomId} cannot be built because room snapshot is missing. [{userId}]");
                         return;
                     }
 
-                    LogProvider.Log.Warn(CustomModulesNames.PKCatcher, $"Hand #{x.Gameuuid} of room #{x.RoomId} cannot be built because some data is missing.");
+                    LogProvider.Log.Warn(CustomModulesNames.PKCatcher, $"Hand #{x.Gameuuid} of room #{x.RoomId} cannot be built because some data is missing. [{userId}]");
                 }
             });
 
@@ -133,7 +133,7 @@ namespace DriveHUD.Importers.PokerKing
 
             try
             {
-                if (!ValidatePackages(packages))
+                if (!ValidatePackages(packages, userId))
                 {
                     packages.Clear();
                     return handHistory;
@@ -195,7 +195,7 @@ namespace DriveHUD.Importers.PokerKing
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(CustomModulesNames.PKCatcher, $"Failed to build hand #{handHistory?.HandId ?? 0} room #{handHistory?.GameDescription.Identifier ?? 0} [{identifier}]", e);
+                LogProvider.Log.Error(CustomModulesNames.PKCatcher, $"Failed to build hand #{handHistory?.HandId ?? 0} room #{handHistory?.GameDescription.Identifier ?? 0} [{userId}] [{identifier}]", e);
                 return null;
             }
             finally

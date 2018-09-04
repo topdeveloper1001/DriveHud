@@ -10,7 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DriveHUD.Importers.AndroidBase
 {
@@ -25,25 +27,80 @@ namespace DriveHUD.Importers.AndroidBase
 
         public abstract bool IsStartingPacket(byte[] bytes);
 
-        public virtual bool TryParse(CapturedPacket packet, out T package, bool takeExpectedLength = false)
+        public virtual bool TryParse(CapturedPacket capturedPacket, out IList<T> packages)
         {
-            var packetsSet = GetPacketsSet(packet);
+            var packetsSet = GetPacketsSet(capturedPacket);
 
-            var subPacket = !IsStartingPacket(packet.Bytes) ?
-              packetsSet.AddSubPacket(packet.Bytes, packet.CreatedTimeStamp, packet.SequenceNumber) :
-              packetsSet.AddStartingPacket(packet.Bytes, ReadPacketLength(packet.Bytes), packet.CreatedTimeStamp, packet.SequenceNumber);
+            var packets = ExtractPackets(capturedPacket);
 
-            if (subPacket == null || !subPacket.TryParse(PacketHeaderLength, out package, takeExpectedLength))
+            packages = new List<T>();
+
+            foreach (var packet in packets)
             {
-                packetsSet.RemoveExpiredPackets();
-                package = null;
-                return false;
+                var subPacket = !IsStartingPacket(packet.Bytes) ?
+                    packetsSet.AddSubPacket(packet) :
+                    packetsSet.AddStartingPacket(packet, ReadPacketLength(packet.Bytes));
+
+                if (subPacket == null || !subPacket.TryParse(PacketHeaderLength, out T package))
+                {
+                    packetsSet.RemoveExpiredPackets();
+                    continue;
+                }
+
+                packages.Add(package);
             }
 
-            return true;
+            return packages.Count > 0;
         }
 
         public abstract int ReadPacketLength(byte[] bytes);
+
+        protected virtual IList<CapturedPacket> ExtractPackets(CapturedPacket packet)
+        {
+            var packets = new List<CapturedPacket>();
+            var packetLength = 0;
+
+            if (!IsStartingPacket(packet.Bytes) ||
+                (packetLength = ReadPacketLength(packet.Bytes)) >= packet.Bytes.Length || packetLength == 0)
+            {
+                packets.Add(packet);
+                return packets;
+            }
+
+            var offset = 0;
+
+            var sequenceNumber = packet.SequenceNumber;
+
+            while (offset < packet.Bytes.Length)
+            {
+                var bytes = packet.Bytes.Skip(offset).ToArray();
+
+                if (offset != 0)
+                {
+                    if (!IsStartingPacket(bytes))
+                    {
+                        break;
+                    }
+
+                    packetLength = ReadPacketLength(bytes);
+                }
+
+                var subPacket = new CapturedPacket
+                {
+                    Bytes = bytes.Take(packetLength).ToArray(),
+                    CreatedTimeStamp = packet.CreatedTimeStamp,
+                    Destination = packet.Destination,
+                    SequenceNumber = sequenceNumber++,
+                    Source = packet.Source
+                };
+
+                packets.Add(subPacket);
+
+                offset += packetLength;
+            }
+
+            return packets;
+        }
 
         protected virtual PacketsSet<T> GetPacketsSet(CapturedPacket packet)
         {
@@ -84,7 +141,7 @@ namespace DriveHUD.Importers.AndroidBase
 
             return true;
         }
-    
+
         protected class SourceDestination
         {
             public string IPSource { get; set; }

@@ -44,7 +44,7 @@ namespace DriveHUD.Importers.PokerMaster
         private readonly BlockingCollection<CapturedPacket> packetBuffer = new BlockingCollection<CapturedPacket>();
         private readonly IPMCatcherService pmCatcherService = ServiceLocator.Current.TryResolve<IPMCatcherService>();
         private Lazy<BodyDecryptor> bodyDecryptor = new Lazy<BodyDecryptor>(false);
-        private Dictionary<long, bool> isReloginRequired = new Dictionary<long, bool>();    
+        private Dictionary<long, bool> isReloginRequired = new Dictionary<long, bool>();
         private IPokerClientEncryptedLogger protectedLogger;
 
         private BodyDecryptor BodyDecryptor
@@ -190,167 +190,175 @@ namespace DriveHUD.Importers.PokerMaster
                         continue;
                     }
 
-                    if (!packetManager.TryParse(capturedPacket, out PokerMasterPackage package) || !IsAllowedPackage(package))
+                    if (!packetManager.TryParse(capturedPacket, out IList<PokerMasterPackage> packages))
                     {
                         continue;
                     }
 
-                    if (package.Cmd == PackageCommand.Cmd_SCLoginRsp)
+                    foreach (var package in packages)
                     {
-                        ParseLoginPackage<SCLoginRsp>(package, x => x?.UserInfo, x => x?.EncryptKey);
-                        continue;
-                    }
-
-                    if (package.Cmd == PackageCommand.Cmd_SCUploadVerifyCodeRsp)
-                    {
-                        ParseLoginPackage<SCUploadVerifyCodeRsp>(package, x => x?.UserInfo, x => x?.EncryptKey);
-                        continue;
-                    }
-
-                    if (package.Cmd == PackageCommand.Cmd_SCLoginThirdPartyRsp)
-                    {
-                        ParseLoginPackage<SCLoginThirdPartyRsp>(package, x => x?.UserInfo, x => x?.EncryptKey);
-                        continue;
-                    }
-
-                    if (package.Cmd == PackageCommand.Cmd_SCLeaveGameRoomRsp ||
-                        package.Cmd == PackageCommand.Cmd_SCLeaveMTTGameRoom ||
-                        package.Cmd == PackageCommand.Cmd_SCLeaveSNGGameRoomRsp)
-                    {
-                        ParsePackage<SCLeaveGameRoomRsp>(package,
-                            body =>
-                            {
-                                if (userRooms.ContainsKey(package.Uuid))
-                                {
-                                    userRooms.Remove(package.Uuid);
-                                }
-
-                                LogProvider.Log.Info(Logger, $"User {package.Uuid} left room {body.RoomId}.");
-                            },
-                            () => LogProvider.Log.Info(Logger, $"User {package.Uuid} left room."));
-
-                        var process = connectionsService.GetProcess(capturedPacket);
-                        var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
-
-                        Task.Run(() =>
+                        if (!IsAllowedPackage(package))
                         {
-                            Task.Delay(DelayToProcessHands * 2).Wait();
-
-                            var args = new TableClosedEventArgs(windowHandle.ToInt32());
-                            eventAggregator.GetEvent<TableClosedEvent>().Publish(args);
-                        });
-
-                        detectedTableWindows.Remove(windowHandle);
-
-                        continue;
-                    }
-
-                    if (package.Cmd == PackageCommand.Cmd_SCEnterGameRoomRsp)
-                    {
-                        ParsePackage<SCEnterGameRoomRsp>(package,
-                           body => LogProvider.Log.Info(Logger, $"User {package.Uuid} entered room {body.RoomId}."),
-                           () => LogProvider.Log.Info(Logger, $"User {package.Uuid} entered room."));
-
-                        continue;
-                    }
-
-                    if (package.Cmd == PackageCommand.Cmd_SCGameRoomStateChange)
-                    {
-                        var process = connectionsService.GetProcess(capturedPacket);
-                        var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
-
-                        var newlyDetectedTable = false;
-
-                        if (!detectedTableWindows.Contains(windowHandle))
-                        {
-                            detectedTableWindows.Add(windowHandle);
-                            newlyDetectedTable = true;
+                            continue;
                         }
 
-                        if (!HeroesKeys.TryGetValue(package.Uuid, out byte[] encryptKey))
+                        if (package.Cmd == PackageCommand.Cmd_SCLoginRsp)
                         {
-                            if (!isReloginRequired.ContainsKey(package.Uuid))
+                            ParseLoginPackage<SCLoginRsp>(package, x => x?.UserInfo, x => x?.EncryptKey);
+                            continue;
+                        }
+
+                        if (package.Cmd == PackageCommand.Cmd_SCUploadVerifyCodeRsp)
+                        {
+                            ParseLoginPackage<SCUploadVerifyCodeRsp>(package, x => x?.UserInfo, x => x?.EncryptKey);
+                            continue;
+                        }
+
+                        if (package.Cmd == PackageCommand.Cmd_SCLoginThirdPartyRsp)
+                        {
+                            ParseLoginPackage<SCLoginThirdPartyRsp>(package, x => x?.UserInfo, x => x?.EncryptKey);
+                            continue;
+                        }
+
+                        if (package.Cmd == PackageCommand.Cmd_SCLeaveGameRoomRsp ||
+                            package.Cmd == PackageCommand.Cmd_SCLeaveMTTGameRoom ||
+                            package.Cmd == PackageCommand.Cmd_SCLeaveSNGGameRoomRsp)
+                        {
+                            ParsePackage<SCLeaveGameRoomRsp>(package,
+                                body =>
+                                {
+                                    if (userRooms.ContainsKey(package.Uuid))
+                                    {
+                                        userRooms.Remove(package.Uuid);
+                                    }
+
+                                    LogProvider.Log.Info(Logger, $"User {package.Uuid} left room {body.RoomId}.");
+                                },
+                                () => LogProvider.Log.Info(Logger, $"User {package.Uuid} left room."));
+
+                            var process = connectionsService.GetProcess(capturedPacket);
+                            var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
+
+                            Task.Run(() =>
                             {
-                                isReloginRequired.Add(package.Uuid, false);
+                                Task.Delay(DelayToProcessHands * 2).Wait();
+
+                                var args = new TableClosedEventArgs(windowHandle.ToInt32());
+                                eventAggregator.GetEvent<TableClosedEvent>().Publish(args);
+                            });
+
+                            detectedTableWindows.Remove(windowHandle);
+
+                            continue;
+                        }
+
+                        if (package.Cmd == PackageCommand.Cmd_SCEnterGameRoomRsp)
+                        {
+                            ParsePackage<SCEnterGameRoomRsp>(package,
+                               body => LogProvider.Log.Info(Logger, $"User {package.Uuid} entered room {body.RoomId}."),
+                               () => LogProvider.Log.Info(Logger, $"User {package.Uuid} entered room."));
+
+                            continue;
+                        }
+
+                        if (package.Cmd == PackageCommand.Cmd_SCGameRoomStateChange)
+                        {
+                            var process = connectionsService.GetProcess(capturedPacket);
+                            var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
+
+                            var newlyDetectedTable = false;
+
+                            if (!detectedTableWindows.Contains(windowHandle))
+                            {
+                                detectedTableWindows.Add(windowHandle);
+                                newlyDetectedTable = true;
                             }
 
-                            if (isReloginRequired[package.Uuid])
+                            if (!HeroesKeys.TryGetValue(package.Uuid, out byte[] encryptKey))
+                            {
+                                if (!isReloginRequired.ContainsKey(package.Uuid))
+                                {
+                                    isReloginRequired.Add(package.Uuid, false);
+                                }
+
+                                if (isReloginRequired[package.Uuid])
+                                {
+                                    continue;
+                                }
+
+                                LogProvider.Log.Info(Logger, $"Encryption key not found [User {package.Uuid}].");
+
+                                SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_Relogin", windowHandle);
+
+                                isReloginRequired[package.Uuid] = true;
+                                continue;
+                            }
+
+                            if (package.Body == null || package.Body.Length == 0)
                             {
                                 continue;
                             }
 
-                            LogProvider.Log.Info(Logger, $"Encryption key not found [User {package.Uuid}].");
+                            var bytes = BodyDecryptor.Decrypt(package.Body, encryptKey, IsAdvancedLogEnabled);
 
-                            SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_Relogin", windowHandle);
+                            if (!SerializationHelper.TryDeserialize(bytes, out SCGameRoomStateChange scGameRoomStateChange))
+                            {
+                                LogProvider.Log.Error(Logger, $"Package has not been decrypted. Relogin [User {package.Uuid}] is required. [{capturedPacket}] [{capturedPacket.SequenceNumber}]");
 
-                            isReloginRequired[package.Uuid] = true;
-                            continue;
-                        }
+                                var base64Body = Convert.ToBase64String(package.Body);
+                                var base64Key = Convert.ToBase64String(encryptKey);
 
-                        if (package.Body == null || package.Body.Length == 0)
-                        {
-                            continue;
-                        }
+                                LogProvider.Log.Error(Logger, $"Package body: [{base64Key}, {base64Body}]");
 
-                        var bytes = BodyDecryptor.Decrypt(package.Body, encryptKey, IsAdvancedLogEnabled);
+                                SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_Relogin", windowHandle);
+                                continue;
+                            }
 
-                        if (!SerializationHelper.TryDeserialize(bytes, out SCGameRoomStateChange scGameRoomStateChange))
-                        {
-                            LogProvider.Log.Error(Logger, $"Package has not been decrypted. Relogin [User {package.Uuid}] is required. [{capturedPacket}] [{capturedPacket.SequenceNumber}]");
-
-                            var base64Body = Convert.ToBase64String(package.Body);
-                            var base64Key = Convert.ToBase64String(encryptKey);
-
-                            LogProvider.Log.Error(Logger, $"Package body: [{base64Key}, {base64Body}]");
-
-                            SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_Relogin", windowHandle);
-                            continue;
-                        }
-
-                        if (newlyDetectedTable)
-                        {
-                            SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM", windowHandle);
-                        }
+                            if (newlyDetectedTable)
+                            {
+                                SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM", windowHandle);
+                            }
 #if DEBUG
-                        File.AppendAllText($"Hands\\pm_hand_imported_{package.Uuid}_{scGameRoomStateChange.GameNumber}.json", JsonConvert.SerializeObject(scGameRoomStateChange, Formatting.Indented));
+                            File.AppendAllText($"Hands\\pm_hand_imported_{package.Uuid}_{scGameRoomStateChange.GameNumber}.json", JsonConvert.SerializeObject(scGameRoomStateChange, Formatting.Indented));
 #endif
 
-                        if (IsAdvancedLogEnabled)
-                        {
-                            protectedLogger.Log(JsonConvert.SerializeObject(scGameRoomStateChange, Formatting.Indented));
-                        }
-
-                        if (handBuilder.TryBuild(scGameRoomStateChange, package.Uuid, out HandHistory handHistory))
-                        {
                             if (IsAdvancedLogEnabled)
                             {
-                                LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId}: Found process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
+                                protectedLogger.Log(JsonConvert.SerializeObject(scGameRoomStateChange, Formatting.Indented));
                             }
 
-                            if (!pmCatcherService.CheckHand(handHistory))
+                            if (handBuilder.TryBuild(scGameRoomStateChange, package.Uuid, out HandHistory handHistory))
                             {
-                                if (handHistory.GameDescription.IsTournament)
+                                if (IsAdvancedLogEnabled)
                                 {
-                                    LogProvider.Log.Info(Logger, $"License doesn't support tourney hand {handHistory.HandId}. [buyin={handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue}]");
-                                }
-                                else
-                                {
-                                    LogProvider.Log.Info(Logger, $"License doesn't support cash hand {handHistory.HandId}. [bb={handHistory.GameDescription.Limit.BigBlind}]");
+                                    LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId}: Found process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
                                 }
 
-                                SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_NoLicense", windowHandle);
+                                if (!pmCatcherService.CheckHand(handHistory))
+                                {
+                                    if (handHistory.GameDescription.IsTournament)
+                                    {
+                                        LogProvider.Log.Info(Logger, $"License doesn't support tourney hand {handHistory.HandId}. [buyin={handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue}]");
+                                    }
+                                    else
+                                    {
+                                        LogProvider.Log.Info(Logger, $"License doesn't support cash hand {handHistory.HandId}. [bb={handHistory.GameDescription.Limit.BigBlind}]");
+                                    }
 
-                                continue;
+                                    SendPreImporedData("Notifications_HudLayout_PreLoadingText_PM_NoLicense", windowHandle);
+
+                                    continue;
+                                }
+
+                                var handHistoryData = new HandHistoryData
+                                {
+                                    Uuid = package.Uuid,
+                                    HandHistory = handHistory,
+                                    WindowHandle = windowHandle
+                                };
+
+                                ExportHandHistory(handHistoryData, handHistoriesToProcess);
                             }
-
-                            var handHistoryData = new HandHistoryData
-                            {
-                                Uuid = package.Uuid,
-                                HandHistory = handHistory,
-                                WindowHandle = windowHandle
-                            };
-
-                            ExportHandHistory(handHistoryData, handHistoriesToProcess);
                         }
                     }
                 }
@@ -530,7 +538,7 @@ namespace DriveHUD.Importers.PokerMaster
                     return true;
             }
         }
-       
+
         private Dictionary<int, int> autoCenterSeats = new Dictionary<int, int>
         {
             { 2, 1 },
@@ -564,7 +572,7 @@ namespace DriveHUD.Importers.PokerMaster
             }
 
             return playerList;
-        }    
+        }
 
         protected override IntPtr FindWindow(ParsingResult parsingResult)
         {
@@ -574,6 +582,6 @@ namespace DriveHUD.Importers.PokerMaster
         protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
             return false;
-        }      
+        }
     }
 }

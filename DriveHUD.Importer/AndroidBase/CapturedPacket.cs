@@ -25,7 +25,7 @@ namespace DriveHUD.Importers.AndroidBase
 
         public DateTime CreatedTimeStamp { get; set; }
 
-        public uint SequenceNumber { get; set; }
+        public uint SequenceNumber { get; set; }        
 
         public string IPDestination
         {

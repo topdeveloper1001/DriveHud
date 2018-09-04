@@ -122,22 +122,18 @@ namespace DriveHUD.Importers.AndroidBase
             return (DateTime.Now - DateReceived).TotalMilliseconds > expirationPeriod;
         }
 
-        public bool TryParse(int startingPosition, out T package, bool takeExpectedLength = false)
+        public bool TryParse(int startingPosition, out T package)
         {
             package = null;
 
-            if ((!takeExpectedLength && ExpectedLength != CurrentLength) ||
-                (takeExpectedLength && (ExpectedLength == 0 || ExpectedLength > CurrentLength)))
+            if (ExpectedLength != CurrentLength)
             {
                 return false;
             }
 
             var packageBuilder = ServiceLocator.Current.GetInstance<IPackageBuilder<T>>();
 
-            var bytes = takeExpectedLength && Bytes.Count > ExpectedLength ? Bytes.Take(ExpectedLength).ToArray()
-                : Bytes.ToArray();
-
-            return packageBuilder.TryParse(bytes, startingPosition, out package);
+            return packageBuilder.TryParse(Bytes.ToArray(), startingPosition, out package);
         }
 
         public SubPacket<T> Clone()

@@ -25,28 +25,28 @@ namespace DriveHUD.Importers.AndroidBase
 
         private SortedDictionary<uint, SubPacket<T>> packets = new SortedDictionary<uint, SubPacket<T>>();
 
-        public SubPacket<T> AddSubPacket(byte[] body, DateTime createdDate, uint sequenceNumber)
+        public SubPacket<T> AddSubPacket(CapturedPacket capturedPacket)
         {
-            return AddPacket(body, 0, createdDate, sequenceNumber, false);
+            return AddPacket(capturedPacket, 0, false);
         }
 
-        public SubPacket<T> AddStartingPacket(byte[] body, int expectedLength, DateTime createdDate, uint sequenceNumber)
+        public SubPacket<T> AddStartingPacket(CapturedPacket capturedPacket, int expectedLength)
         {
-            return AddPacket(body, expectedLength, createdDate, sequenceNumber, true);
+            return AddPacket(capturedPacket, expectedLength, true);
         }
 
-        private SubPacket<T> AddPacket(byte[] body, int expectedLength, DateTime createdDate, uint sequenceNumber, bool isStarting)
+        private SubPacket<T> AddPacket(CapturedPacket capturedPacket, int expectedLength, bool isStarting)
         {
-            if (processedPackets.Contains(sequenceNumber))
+            if (processedPackets.Contains(capturedPacket.SequenceNumber))
             {
                 return null;
             }
 
-            var subPacket = new SubPacket<T>(body, expectedLength, createdDate, sequenceNumber, isStarting);
+            var subPacket = new SubPacket<T>(capturedPacket.Bytes, expectedLength, capturedPacket.CreatedTimeStamp, capturedPacket.SequenceNumber, isStarting);
 
-            packets.Add(sequenceNumber, subPacket);
+            packets.Add(capturedPacket.SequenceNumber, subPacket);
 
-            processedPackets.Add(sequenceNumber);
+            processedPackets.Add(capturedPacket.SequenceNumber);
 
             if (TryAssemblyPacket(out SubPacket<T> reassembliedPacket))
             {
