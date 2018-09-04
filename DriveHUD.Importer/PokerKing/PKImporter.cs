@@ -40,7 +40,7 @@ namespace DriveHUD.Importers.PokerKing
     {
         private readonly BlockingCollection<CapturedPacket> packetBuffer = new BlockingCollection<CapturedPacket>();
         private readonly IPKCatcherService pkCatcherService = ServiceLocator.Current.TryResolve<IPKCatcherService>();
-        private IPokerClientEncryptedLogger protectedLogger;
+        protected IPokerClientEncryptedLogger protectedLogger;
 
         protected override bool SupportDuplicates => true;
 
@@ -100,7 +100,7 @@ namespace DriveHUD.Importers.PokerKing
         /// <summary>
         /// Initializes logger with protection
         /// </summary>
-        protected void InitializeLogger()
+        protected virtual void InitializeLogger()
         {
             var logger = new PokerClientLoggerConfiguration
             {
@@ -201,7 +201,7 @@ namespace DriveHUD.Importers.PokerKing
                                 LogProvider.Log.Info(Logger, $"User {package.UserId} left room {body.RoomId}.");
                                 handBuilder.CleanRoom(windowHandle.ToInt32(), body.RoomId);
                             },
-                            () => LogProvider.Log.Info(Logger, $"User {package.UserId} left room."));
+                            () => LogProvider.Log.Info(Logger, $"User {package.UserId} left room {package.RoomId}."));
 
                         Task.Run(() =>
                         {
@@ -234,7 +234,7 @@ namespace DriveHUD.Importers.PokerKing
                     {
                         if (IsAdvancedLogEnabled)
                         {
-                            LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId}: Found process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
+                            LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: Found process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
                         }
 
                         if (!pkCatcherService.CheckHand(handHistory))
@@ -319,7 +319,7 @@ namespace DriveHUD.Importers.PokerKing
 
         #region Debug logging
 
-        private void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
+        protected virtual void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
         {
             switch (package.PackageType)
             {
@@ -383,7 +383,7 @@ namespace DriveHUD.Importers.PokerKing
             }
         }
 
-        private void LogPackage<T>(PokerKingPackage package)
+        protected virtual void LogPackage<T>(PokerKingPackage package)
         {
             try
             {
