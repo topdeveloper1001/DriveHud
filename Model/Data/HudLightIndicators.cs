@@ -562,7 +562,7 @@ namespace Model.Data
                 {
                     Value = CheckRaise,
                     Occurred = Source.DidCheckRaise,
-                    CouldOccurred = Source.Totalhands
+                    CouldOccurred = Source.CouldFlopCheckRaise + Source.CouldTurnCheckRaise + Source.CouldRiverCheckRaise
                 };
             }
         }
