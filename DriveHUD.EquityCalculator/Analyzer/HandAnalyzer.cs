@@ -6499,7 +6499,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
                 if (strongestOpponentIsPreflopRaiser)
                 {
-                    handsToTryBluffingWith = UngroupHands(GetHandsToOpenRaiseWith()["CO"] as List<String>, handHistory);
+                    var groupedHands = GetHandsToOpenRaiseWith()["CO"];
+                    handsToTryBluffingWith = UngroupHands(groupedHands, handHistory);
                     handsToAddToRange.AddRange(handsToTryBluffingWith);
                     handsToAddToRange = handsToAddToRange.Distinct().ToList();
                 }
@@ -9377,7 +9378,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
             return ungroupedHands;
         }
 
-        internal static List<string> UngroupHands(List<String> groupedHands, HandHistory handHistory, bool ignoreHeroCards = false)
+        internal static List<string> UngroupHands(IEnumerable<String> groupedHands, HandHistory handHistory, bool ignoreHeroCards = false)
         {
             var boardCards = string.Empty;
 
