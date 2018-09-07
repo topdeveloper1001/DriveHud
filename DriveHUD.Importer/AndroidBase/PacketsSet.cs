@@ -35,6 +35,44 @@ namespace DriveHUD.Importers.AndroidBase
             return AddPacket(capturedPacket, expectedLength, true);
         }
 
+        public int GetLengthToCompletePacket()
+        {
+            SubPacket<T> startingPacket = null;
+
+            foreach (var packet in packets.Values.ToArray())
+            {
+                if (packet.IsStarting)
+                {
+                    if (packet.IsCompleted)
+                    {
+                        continue;
+                    }
+
+                    startingPacket = packet.Clone();
+                    continue;
+                }
+
+                if (startingPacket == null)
+                {
+                    continue;
+                }
+
+                var packetBytes = packet.Bytes.ToArray();
+
+                if (startingPacket.CanAddSubPacket(packetBytes, packet.SequenceNumber))
+                {
+                    if (startingPacket.CanCompleteBySubPacket(packetBytes, packet.SequenceNumber))
+                    {
+                        return 0;
+                    }
+
+                    startingPacket.Add(packetBytes);
+                }
+            }
+
+            return startingPacket != null ? startingPacket.ExpectedLength - startingPacket.CurrentLength : 0;
+        }
+
         private SubPacket<T> AddPacket(CapturedPacket capturedPacket, int expectedLength, bool isStarting)
         {
             if (processedPackets.Contains(capturedPacket.SequenceNumber))

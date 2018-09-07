@@ -69,7 +69,7 @@ namespace DriveHUD.Importers.PokerKing
 
         public override bool IsDisabled()
         {
-            return false;
+            return pkCatcherService == null || !pkCatcherService.IsEnabled();
         }
 
         #endregion

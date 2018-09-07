@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -31,7 +30,7 @@ namespace DriveHUD.Importers.AndroidBase
         {
             var packetsSet = GetPacketsSet(capturedPacket);
 
-            var packets = ExtractPackets(capturedPacket);
+            var packets = ExtractPackets(capturedPacket, packetsSet);
 
             packages = new List<T>();
 
@@ -55,19 +54,35 @@ namespace DriveHUD.Importers.AndroidBase
 
         public abstract int ReadPacketLength(byte[] bytes);
 
-        protected virtual IList<CapturedPacket> ExtractPackets(CapturedPacket packet)
+        protected virtual IList<CapturedPacket> ExtractPackets(CapturedPacket packet, PacketsSet<T> packetsSet)
         {
             var packets = new List<CapturedPacket>();
             var packetLength = 0;
+            var offset = 0;
 
-            if (!IsStartingPacket(packet.Bytes) ||
-                (packetLength = ReadPacketLength(packet.Bytes)) >= packet.Bytes.Length || packetLength == 0)
+            if (!IsStartingPacket(packet.Bytes))
+            {
+                var lengthToComplete = packetsSet.GetLengthToCompletePacket();
+
+                if (lengthToComplete == 0 ||
+                    lengthToComplete >= packet.Bytes.Length)
+                {
+                    packets.Add(packet);
+                    return packets;
+                }
+
+                var additionalPacket = packet.Bytes.Skip(lengthToComplete).ToArray();
+
+                if (IsStartingPacket(additionalPacket))
+                {
+                    packetLength = lengthToComplete;
+                }
+            }
+            else if ((packetLength = ReadPacketLength(packet.Bytes)) >= packet.Bytes.Length || packetLength == 0)
             {
                 packets.Add(packet);
                 return packets;
             }
-
-            var offset = 0;
 
             var sequenceNumber = packet.SequenceNumber;
 
@@ -97,6 +112,11 @@ namespace DriveHUD.Importers.AndroidBase
                 packets.Add(subPacket);
 
                 offset += packetLength;
+
+                if (packetLength == 0)
+                {
+                    break;
+                }
             }
 
             return packets;
