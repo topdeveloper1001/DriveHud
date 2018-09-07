@@ -369,8 +369,8 @@ namespace DriveHUD.PKCatcher.ViewModels
             IsBuyButtonVisible = true;
             IsRenewButtonVisible = true;
             IsBackButtonVisible = false;
-            IsOKButtonVisible = false;
-            IsCancelButtonVisible = true;
+            IsOKButtonVisible = true;
+            IsCancelButtonVisible = false;
             IsActivateButtonVisible = false;
             IsResetLicensesButtonVisible = false;
 

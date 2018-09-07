@@ -157,8 +157,7 @@
                             Maximum="31"
                             BorderBrush="{StaticResource SelectionBackgroundBrush}"
                             BorderThickness="1"                            
-                            Margin="0,3,0,10"
-                            Visibility="{Binding IsTrialProgressBarVisible, Converter={dh:BoolToVisibilityConverter} }"
+                            Margin="0,3,0,10"                            
                             Style="{StaticResource ProgressBarExStyle1}" />
                     </StackPanel>
                 </DataTemplate>
