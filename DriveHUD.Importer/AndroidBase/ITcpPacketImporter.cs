@@ -14,7 +14,7 @@ using PacketDotNet;
 
 namespace DriveHUD.Importers.AndroidBase
 {
-    internal interface ITcpPacketImporter : IBaseImporter
+    internal interface ITcpPacketImporter : IBaseImporter, IBackgroundProcess
     {
         bool Match(TcpPacket tcpPacket, IpPacket ipPacket);
 

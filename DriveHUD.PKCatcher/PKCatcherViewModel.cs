@@ -213,6 +213,7 @@ namespace DriveHUD.PKCatcher
             set
             {
                 this.RaiseAndSetIfChanged(ref enabled, value);
+                SaveSettings();
             }
         }
 

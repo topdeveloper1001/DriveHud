@@ -78,6 +78,8 @@
     <Compile Include="CustomServices\IHandNotesService.cs" />
     <Compile Include="CustomServices\IPKCatcherService.cs" />
     <Compile Include="CustomServices\IPMCatcherService.cs" />
+    <Compile Include="Events\StartTcpImporterEvent.cs" />
+    <Compile Include="Events\StartTcpImporterEventArgs.cs" />
     <Compile Include="ExportFunctions.cs" />
     <Compile Include="Modules\IDHModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

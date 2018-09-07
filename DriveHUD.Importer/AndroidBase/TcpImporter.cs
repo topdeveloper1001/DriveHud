@@ -215,7 +215,7 @@ namespace DriveHUD.Importers.AndroidBase
                 return;
             }
 
-            var matchedImporter = importers.FirstOrDefault(x => x.Match(tcpPacket, ipPacket));
+            var matchedImporter = importers.FirstOrDefault(x => x.IsRunning && !x.IsDisabled() && x.Match(tcpPacket, ipPacket));
 
             if (matchedImporter == null)
             {

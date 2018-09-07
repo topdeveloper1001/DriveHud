@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPKImporter.cs" company="Ace Poker Solutions">
+// <copyright file="StartTcpImporterEvent.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,14 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Importers.AndroidBase;
+using Prism.Events;
 
-namespace DriveHUD.Importers.PokerKing
+namespace DriveHUD.Common.Infrastructure.Events
 {
-    /// <summary>
-    /// Interface of PK importer
-    /// </summary>
-    internal interface IPKImporter : ITcpPacketImporter
+    public class StartTcpImporterEvent : PubSubEvent<StartTcpImporterEventArgs>
     {
     }
 }

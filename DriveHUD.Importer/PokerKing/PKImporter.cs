@@ -155,7 +155,7 @@ namespace DriveHUD.Importers.PokerKing
 
             var handHistoriesToProcess = new ConcurrentDictionary<long, List<HandHistoryData>>();
 
-            while (!cancellationTokenSource.IsCancellationRequested)
+            while (!cancellationTokenSource.IsCancellationRequested && !IsDisabled())
             {
                 try
                 {
