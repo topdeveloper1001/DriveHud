@@ -652,6 +652,7 @@ namespace DriveHUD.Importers
                     {
                         t.Winningsincents = Utils.ConvertToCents(tournamentDescription.Winning);
                         t.Finishposition = tournamentDescription.FinishPosition;
+                        t.Tourneyendedforplayer = true;
                     }
 
                     t.Buyinincents = Utils.ConvertToCents(tournamentDescription.BuyIn.PrizePoolValue);
@@ -977,7 +978,8 @@ namespace DriveHUD.Importers
             // get end position in tournament
             foreach (var lastHandByPlayer in lastHandsByPlayer.OrderBy(x => x.HandNumber).ThenBy(x => x.InitialStackSize))
             {
-                if (!tournamentsByPlayer.ContainsKey(lastHandByPlayer.PlayerName))
+                if (!tournamentsByPlayer.ContainsKey(lastHandByPlayer.PlayerName) ||
+                    tournamentsByPlayer[lastHandByPlayer.PlayerName].Tourneyendedforplayer)
                 {
                     continue;
                 }
@@ -996,8 +998,6 @@ namespace DriveHUD.Importers
                     currentPosition;
 
                 currentPosition--;
-
-                tournamentsByPlayer[lastHandByPlayer.PlayerName].Tourneyendedforplayer = true;
             }
 
             var numberOfWinners = GetNumberOfWinnersForTournament(tournamentName, totalPlayers, tournamentTag);
@@ -1019,8 +1019,6 @@ namespace DriveHUD.Importers
                         winnerPlayer.Winningsincents = GetTournamentWinnings(tournamentName, 1, tournamentBase.Buyinincents, totalPlayers,
                             lastParsingResult.Source.GameDescription.Tournament.BuyIn.Currency, tournamentBase.SiteId, totalPrize: lastParsingResult.Source.GameDescription.Tournament.TotalPrize);
                     }
-
-                    winnerPlayer.Tourneyendedforplayer = true;
                 }
             }
 
