@@ -21,6 +21,7 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Loggers;
 using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Factory;
@@ -202,10 +203,13 @@ namespace DriveHUD.Importers
 
                 var parsingResult = ParseHands(hands, handHistoryParser, gameInfo);
 
-                if (gameInfo.UpdateAction != null && parsingResult.Count > 0)
+                if (parsingResult.Count == 0)
                 {
-                    gameInfo.UpdateAction(parsingResult, gameInfo);
+                    UpdateReportStatus(parsingResult);
+                    return parsingResult;
                 }
+
+                gameInfo.UpdateAction?.Invoke(parsingResult, gameInfo);
 
 #if DEBUG
                 using (var perfomanceScope = new PerformanceMonitor($"Insert hand({gameInfo.GameNumber})"))
@@ -225,9 +229,6 @@ namespace DriveHUD.Importers
             }
             catch (Exception e)
             {
-                var logger = ServiceLocator.Current.GetInstance<IFileImporterLogger>();
-                logger.Log(text);
-
                 throw new DHInternalException(new NonLocalizableString("Could not import hand."), e);
             }
         }
@@ -288,7 +289,16 @@ namespace DriveHUD.Importers
         {
             Check.ArgumentNotNull(() => handHistoryParser);
 
-            var parsedHand = handHistoryParser.ParseFullHandHistory(hand, true);
+            HandHistory parsedHand = null;
+
+            try
+            {
+                parsedHand = handHistoryParser.ParseFullHandHistory(hand, true);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Failed to parse hand.", e);
+            }
 
             if (parsedHand == null)
             {
@@ -642,6 +652,7 @@ namespace DriveHUD.Importers
                     {
                         t.Winningsincents = Utils.ConvertToCents(tournamentDescription.Winning);
                         t.Finishposition = tournamentDescription.FinishPosition;
+                        t.Tourneyendedforplayer = true;
                     }
 
                     t.Buyinincents = Utils.ConvertToCents(tournamentDescription.BuyIn.PrizePoolValue);
@@ -967,7 +978,8 @@ namespace DriveHUD.Importers
             // get end position in tournament
             foreach (var lastHandByPlayer in lastHandsByPlayer.OrderBy(x => x.HandNumber).ThenBy(x => x.InitialStackSize))
             {
-                if (!tournamentsByPlayer.ContainsKey(lastHandByPlayer.PlayerName))
+                if (!tournamentsByPlayer.ContainsKey(lastHandByPlayer.PlayerName) ||
+                    tournamentsByPlayer[lastHandByPlayer.PlayerName].Tourneyendedforplayer)
                 {
                     continue;
                 }
@@ -986,8 +998,6 @@ namespace DriveHUD.Importers
                     currentPosition;
 
                 currentPosition--;
-
-                tournamentsByPlayer[lastHandByPlayer.PlayerName].Tourneyendedforplayer = true;
             }
 
             var numberOfWinners = GetNumberOfWinnersForTournament(tournamentName, totalPlayers, tournamentTag);
@@ -1009,8 +1019,6 @@ namespace DriveHUD.Importers
                         winnerPlayer.Winningsincents = GetTournamentWinnings(tournamentName, 1, tournamentBase.Buyinincents, totalPlayers,
                             lastParsingResult.Source.GameDescription.Tournament.BuyIn.Currency, tournamentBase.SiteId, totalPrize: lastParsingResult.Source.GameDescription.Tournament.TotalPrize);
                     }
-
-                    winnerPlayer.Tourneyendedforplayer = true;
                 }
             }
 

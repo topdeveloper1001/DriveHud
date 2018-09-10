@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using Model.Data;
 using Model.Enums;
 using ReactiveUI;
@@ -34,7 +35,36 @@ namespace DriveHUD.ViewModels
             }
         }
 
-        public Action<ChartSeriesItem, ChartSeriesItem, TournamentReportRecord> UpdateChartSeriesItem
+        private ChartTournamentSeriesValueType seriesValueType;
+
+        public ChartTournamentSeriesValueType SeriesValueType
+        {
+            get
+            {
+                return seriesValueType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref seriesValueType, value);
+            }
+        }
+
+        public bool IsBasedOnStatistic
+        {
+            get
+            {
+                return seriesValueType == ChartTournamentSeriesValueType.Chips ||
+                    seriesValueType == ChartTournamentSeriesValueType.BB;
+            }
+        }
+
+        public Action<ChartSeriesItem, ChartSeriesItem, TournamentReportRecord> UpdateChartSeriesItemByTournament
+        {
+            get;
+            set;
+        }
+
+        public Action<ChartSeriesItem, ChartSeriesItem, Playerstatistic> UpdateChartSeriesItemByStatistic
         {
             get;
             set;

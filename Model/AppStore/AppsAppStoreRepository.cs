@@ -40,7 +40,18 @@ namespace Model.AppStore
                 WindowHeight = 429
             };
 
-            return new[] { playerXRayApp, pmCatcherApp };
+            var pkCatcherApp = new AppStoreModule
+            {
+                ProductName = "PK HUD Catcher",
+                ProductDescription = "The PK HUD catcher is an add-on application that will allow you to capture and run a HUD through DriveHUD. It includes a fully functional 7 day trial. Click Try to enable the trial.",
+                ImageLink = "pack://application:,,,/DriveHUD.Common.Resources;component/images/Shop/pk-hud-catcher-logo.png",
+                WindowIconSource = "pack://application:,,,/images/pk-icon.ico",
+                ModuleName = CustomModulesNames.PKCatcher,
+                WindowWidth = 556,
+                WindowHeight = 429
+            };
+
+            return new[] { playerXRayApp, pmCatcherApp, pkCatcherApp };
         }
     }
 }

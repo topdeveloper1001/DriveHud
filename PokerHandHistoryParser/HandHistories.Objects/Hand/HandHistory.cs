@@ -35,7 +35,6 @@ namespace HandHistories.Objects.Hand
 
         public HandHistory() : this(new GameDescriptor())
         {
-
         }
 
         [XmlArray(ElementName = "Actions")]

@@ -65,7 +65,7 @@
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\NHibernate.4.1.1.4000\lib\net40\NHibernate.dll</HintPath>
@@ -114,9 +114,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndroidBase\IPackageBuilder.cs" />
+    <Compile Include="AndroidBase\ITcpImporter.cs" />
+    <Compile Include="AndroidBase\ITcpPacketImporter.cs" />
+    <Compile Include="AndroidBase\TcpImporter.cs" />
+    <Compile Include="AndroidBase\TcpPacketImporter.cs" />
     <Compile Include="Base\BaseImporter.cs" />
     <Compile Include="Base\BaseDataManager.cs" />
     <Compile Include="Base\GenericImporter.cs" />
+    <Compile Include="Base\IBaseImporter.cs" />
     <Compile Include="BetOnline\BetOnlineCatcher.cs" />
     <Compile Include="BetOnline\BetOnlineDataManager.cs" />
     <Compile Include="BetOnline\BetOnlineImporter.cs" />
@@ -267,21 +273,77 @@
     <Compile Include="PokerClientImporter.cs" />
     <Compile Include="PokerClientTableClosedEvent.cs" />
     <Compile Include="PokerClientTableClosedEventArgs.cs" />
+    <Compile Include="PokerKing\IPKHandBuilder.cs" />
+    <Compile Include="PokerKing\IPKImporter.cs" />
+    <Compile Include="PokerKing\Model\ActionType.cs" />
+    <Compile Include="PokerKing\Model\AllianceInfo.cs" />
+    <Compile Include="PokerKing\Model\BettingRound.cs" />
+    <Compile Include="PokerKing\Model\BuyinPlayerInfo.cs" />
+    <Compile Include="PokerKing\Model\CardItem.cs" />
+    <Compile Include="PokerKing\Model\ClubInfo.cs" />
+    <Compile Include="PokerKing\Model\FeeItem.cs" />
+    <Compile Include="PokerKing\Model\JackPotWinInfo.cs" />
+    <Compile Include="PokerKing\Model\JsStringGameUUid.cs" />
+    <Compile Include="PokerKing\Model\NoticeBuyin.cs" />
+    <Compile Include="PokerKing\Model\NoticeCheckOutAndLeave.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameAnte.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameBlind.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameCommunityCards.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameElectDealer.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameHoleCard.cs" />
+    <Compile Include="PokerKing\Model\NoticeGamePost.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameRoundEnd.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameSettlement.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameShowCard.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameShowDown.cs" />
+    <Compile Include="PokerKing\Model\NoticeGameSnapShot.cs" />
+    <Compile Include="PokerKing\Model\NoticePlayerAction.cs" />
+    <Compile Include="PokerKing\Model\NoticePlayerActionTurn.cs" />
+    <Compile Include="PokerKing\Model\NoticePlayerShowCard.cs" />
+    <Compile Include="PokerKing\Model\NoticePlayerStayPosition.cs" />
+    <Compile Include="PokerKing\Model\NoticeResetGame.cs" />
+    <Compile Include="PokerKing\Model\NoticeSitDown.cs" />
+    <Compile Include="PokerKing\Model\NoticeStandup.cs" />
+    <Compile Include="PokerKing\Model\NoticeStartGame.cs" />
+    <Compile Include="PokerKing\Model\PackageType.cs" />
+    <Compile Include="PokerKing\Model\PayMoneyItems.cs" />
+    <Compile Include="PokerKing\Model\PlayerBuyinInfo.cs" />
+    <Compile Include="PokerKing\Model\PlayerInfo.cs" />
+    <Compile Include="PokerKing\Model\PlayerSettleInfo.cs" />
+    <Compile Include="PokerKing\Model\PlayerShowDownInfo.cs" />
+    <Compile Include="PokerKing\Model\PlayerShowInfo.cs" />
+    <Compile Include="PokerKing\Model\PokerKingPackage.cs" />
+    <Compile Include="PokerKing\Model\PositionInfo.cs" />
+    <Compile Include="PokerKing\Model\PotInfo.cs" />
+    <Compile Include="PokerKing\Model\RequestHeartBeat.cs" />
+    <Compile Include="PokerKing\Model\RequestJoinRoom.cs" />
+    <Compile Include="PokerKing\Model\RequestLeaveRoom.cs" />
+    <Compile Include="PokerKing\Model\RequestLogon.cs" />
+    <Compile Include="PokerKing\Model\RoomParams.cs" />
+    <Compile Include="PokerKing\Model\RoomStates.cs" />
+    <Compile Include="PokerKing\Model\ShowCardsSeatInfo.cs" />
+    <Compile Include="PokerKing\Model\TableStates.cs" />
+    <Compile Include="PokerKing\Model\WinPotInfo.cs" />
+    <Compile Include="PokerKing\PKHandBuilder.cs" />
+    <Compile Include="PokerKing\PKImporter.cs" />
+    <Compile Include="PokerKing\PKImporterHelper.cs" />
+    <Compile Include="PokerKing\PokerKingPackageBuilder.cs" />
+    <Compile Include="PokerKing\PokerKingPacketManager.cs" />
     <Compile Include="PokerMaster\BodyDecryptor.cs" />
-    <Compile Include="PokerMaster\CaptureDevice.cs" />
-    <Compile Include="PokerMaster\CapturedPacket.cs" />
-    <Compile Include="PokerMaster\EmulatorProviders\IEmulatorProvider.cs" />
-    <Compile Include="PokerMaster\EmulatorProviders\MemuEmulatorProvider.cs" />
-    <Compile Include="PokerMaster\EmulatorProviders\MomoEmulatorProvider.cs" />
-    <Compile Include="PokerMaster\EmulatorProviders\NoxEmulatorProvider.cs" />
-    <Compile Include="PokerMaster\EmulatorProviders\VirtualBoxEmulator.cs" />
+    <Compile Include="AndroidBase\CaptureDevice.cs" />
+    <Compile Include="AndroidBase\CapturedPacket.cs" />
+    <Compile Include="AndroidBase\EmulatorProviders\IEmulatorProvider.cs" />
+    <Compile Include="AndroidBase\EmulatorProviders\MemuEmulatorProvider.cs" />
+    <Compile Include="AndroidBase\EmulatorProviders\MomoEmulatorProvider.cs" />
+    <Compile Include="AndroidBase\EmulatorProviders\NoxEmulatorProvider.cs" />
+    <Compile Include="AndroidBase\EmulatorProviders\VirtualBoxEmulator.cs" />
     <Compile Include="PokerMaster\HandBuilder.cs" />
-    <Compile Include="PokerMaster\HandBuilderException.cs" />
+    <Compile Include="HandBuilderException.cs" />
     <Compile Include="PokerMaster\IHandBuilder.cs" />
-    <Compile Include="PokerMaster\INetworkConnectionsService.cs" />
-    <Compile Include="PokerMaster\IPacketManager.cs" />
+    <Compile Include="AndroidBase\INetworkConnectionsService.cs" />
+    <Compile Include="AndroidBase\IPacketManager.cs" />
     <Compile Include="PokerMaster\IPMImporter.cs" />
-    <Compile Include="PokerMaster\ITableWindowProvider.cs" />
+    <Compile Include="AndroidBase\ITableWindowProvider.cs" />
     <Compile Include="PokerMaster\Model\CreateRoomType.cs" />
     <Compile Include="PokerMaster\Model\DefaultSettingInfoNet.cs" />
     <Compile Include="PokerMaster\Model\DeviceType.cs" />
@@ -304,7 +366,7 @@
     <Compile Include="PokerMaster\Model\LeagueGameFee.cs" />
     <Compile Include="PokerMaster\Model\LeagueGameFeeLadders.cs" />
     <Compile Include="PokerMaster\Model\OddsStructure.cs" />
-    <Compile Include="PokerMaster\Model\Package.cs" />
+    <Compile Include="PokerMaster\Model\PokerMasterPackage.cs" />
     <Compile Include="PokerMaster\Model\PackageCommand.cs" />
     <Compile Include="PokerMaster\Model\PotInfo.cs" />
     <Compile Include="PokerMaster\Model\RaiseShortcutsOptions.cs" />
@@ -323,14 +385,16 @@
     <Compile Include="PokerMaster\Model\UserGameRoles.cs" />
     <Compile Include="PokerMaster\Model\UserGameStates.cs" />
     <Compile Include="PokerMaster\Model\VipType.cs" />
-    <Compile Include="PokerMaster\NetworkConnectionsService.cs" />
-    <Compile Include="PokerMaster\PacketExtensions.cs" />
-    <Compile Include="PokerMaster\PacketManager.cs" />
-    <Compile Include="PokerMaster\PacketsSet.cs" />
+    <Compile Include="AndroidBase\NetworkConnectionsService.cs" />
+    <Compile Include="AndroidBase\PacketExtensions.cs" />
+    <Compile Include="AndroidBase\PacketManager.cs" />
+    <Compile Include="AndroidBase\PacketsSet.cs" />
     <Compile Include="PokerMaster\PMImporter.cs" />
     <Compile Include="PokerMaster\PMImporterHelper.cs" />
-    <Compile Include="PokerMaster\SubPacket.cs" />
-    <Compile Include="PokerMaster\TableWindowProvider.cs" />
+    <Compile Include="PokerMaster\PokerMasterPackageBuilder.cs" />
+    <Compile Include="AndroidBase\SubPacket.cs" />
+    <Compile Include="AndroidBase\TableWindowProvider.cs" />
+    <Compile Include="PokerMaster\PokerMasterPacketManager.cs" />
     <Compile Include="PokerStars\DataObjects\PlayerDataObject.cs" />
     <Compile Include="PokerStars\DataObjects\PokerStarsZoomCacheData.cs" />
     <Compile Include="PokerStars\DataObjects\PokerStarsZoomDataObject.cs" />

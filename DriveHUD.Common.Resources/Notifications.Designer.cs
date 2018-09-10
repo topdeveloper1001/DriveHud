@@ -178,7 +178,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to HUD can&apos;t be loaded, because this table was opened before DriveHUD was launched. Please reopen table..
+        ///   Looks up a localized string similar to DriveHUD cannot load a HUD since the table was open prior to DriveHUD being loaded. DriveHUD needs to be loaded first, then a table for Ignition can be loaded..
         /// </summary>
         internal static string Notifications_HudLayout_PreLoadingText_IgnitionNotDetectable {
             get {
@@ -201,6 +201,33 @@ namespace DriveHUD.Common.Resources {
         internal static string Notifications_HudLayout_PreLoadingText_NotSupportedFastFold {
             get {
                 return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_NotSupportedFastFold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PK {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD cannot load a HUD since the table was open prior to DriveHUD being loaded. DriveHUD needs to be loaded first, then a table for PokerKing can be loaded..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PK_CanNotBeCapturedText {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PK_CanNotBeCapturedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD can&apos;t be loaded. PRO version of catcher is required..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PK_NoLicense {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PK_NoLicense", resourceCulture);
             }
         }
         

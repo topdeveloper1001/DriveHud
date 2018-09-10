@@ -31,7 +31,7 @@ namespace DriveHUD.Importers.ExternalImporter
     {
         private static readonly object locker = new object();
 
-        private const string processName = "GGNet";
+        private readonly static string[] processNames = new[] { "GGNet" };        
 
         private ServiceHost serviceHost;
 
@@ -43,11 +43,11 @@ namespace DriveHUD.Importers.ExternalImporter
             }
         }
 
-        protected override string ProcessName
+        protected override string[] ProcessNames
         {
             get
             {
-                return processName;
+                return processNames;
             }
         }
 
@@ -235,7 +235,7 @@ namespace DriveHUD.Importers.ExternalImporter
             }
         }
 
-        protected override bool IsDisabled()
+        public override bool IsDisabled()
         {
             return false;
         }

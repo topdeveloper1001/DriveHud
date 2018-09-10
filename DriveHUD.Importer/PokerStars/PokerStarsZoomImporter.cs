@@ -106,12 +106,15 @@ namespace DriveHUD.Importers.PokerStars
                         auditDirectory = new DirectoryInfo(auditPath);
                     }
 
-                    var auditFiles = auditDirectory.GetFiles(AuditFileFilter);
-
-                    foreach (var auditFile in auditFiles)
+                    if (auditDirectory.Exists)
                     {
-                        var dataObject = ParseAuditFile(auditFile);
-                        dataManager.ProcessData(dataObject);
+                        var auditFiles = auditDirectory.GetFiles(AuditFileFilter);
+
+                        foreach (var auditFile in auditFiles)
+                        {
+                            var dataObject = ParseAuditFile(auditFile);
+                            dataManager.ProcessData(dataObject);
+                        }
                     }
 
                     if (!cancellationTokenSource.IsCancellationRequested)
@@ -127,7 +130,7 @@ namespace DriveHUD.Importers.PokerStars
                     }
                 }
                 catch (Exception e)
-                {
+                {                    
                     LogProvider.Log.Error(this, $"Failed to process audit files [{Identifier}]", e);
                 }
             }
@@ -311,7 +314,7 @@ namespace DriveHUD.Importers.PokerStars
             }
         }
 
-        protected override bool IsDisabled()
+        public override bool IsDisabled()
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
             var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);

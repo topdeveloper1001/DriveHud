@@ -76,9 +76,7 @@ namespace Model.Enums
         ITM,
         MoneyWon,
         Luck,
-        ThreeBet,
-        PFR,
-        BB
+        EV
     }
 
     public enum ChartCashSeriesWinningType
@@ -95,6 +93,13 @@ namespace Model.Enums
         BB
     }
 
+    public enum ChartTournamentSeriesValueType
+    {
+        None,
+        Currency,
+        Chips,
+        BB
+    }
 
     public enum CashChartType
     {
@@ -109,6 +114,13 @@ namespace Model.Enums
         Month,
         Year,
         Hands
+    }
+
+    public enum TournamentChartFilterType
+    {
+        All,
+        STT,
+        MTT
     }
 
     public enum EnumDashBoardScreen

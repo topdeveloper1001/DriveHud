@@ -228,6 +228,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", "marlboro man", -0.71, HandActionType.CALL, Street.Flop, 1)]
         [TestCase(TestDataFolder + @"Hands/NLHoldem2_4_allin.txt", "Moose4Life", 371.87, HandActionType.UNCALLED_BET, Street.Preflop, 1)]
         [TestCase(TestDataFolder + @"Hands/NLHoldem2_4_allin.txt", "Moose4Life", 265.92, HandActionType.WINS, Street.Summary, 1)]
+        [TestCase(TestDataFolder + @"Hands/NLH-Cash-PP-ES-1.txt", "BlackSwam", 0.5, HandActionType.WINS, Street.Summary, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -277,9 +278,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"MultipleHands/Neptune-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 90, 0)]
         [TestCase(TestDataFolder + @"MultipleHands/Orange-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 146, 0)]
         [TestCase(TestDataFolder + @"MultipleHands/Union City-2-4-USD-NoLimitHoldem-PartyPokerNJ-5-22-2017.txt", 466, 0)]
-        [TestCase(TestDataFolder + @"MultipleHands/WithInvalid/Kirkcaldy.txt", 2, 1)]
-        [TestCase(TestDataFolder + @"MultipleHands/WithInvalid/Rangoon.txt", 2, 1)]
-        [TestCase(TestDataFolder + @"MultipleHands/WithInvalid/Supersonic 3_35560068.txt", 12, 1)]
+        [TestCase(TestDataFolder + @"MultipleHands/WithInvalid/Kirkcaldy.txt", 3, 0)]
+        [TestCase(TestDataFolder + @"MultipleHands/WithInvalid/Rangoon.txt", 3, 0)]
+        [TestCase(TestDataFolder + @"MultipleHands/WithInvalid/Supersonic 3_35560068.txt", 13, 0)]
         [TestCase(TestDataFolder + @"Tournaments/Flyweight. $150 Gtd KO (138340269) Table #10.txt", 33, 0)]
         [TestCase(TestDataFolder + @"Tournaments/Jab Micro Warm Up PKO - $500 Gtd (156119820) Table #15.txt", 77, 0)]
         [TestCase(TestDataFolder + @"Tournaments/$0.25 Sit & Go 3-Handed (169131785) Table #1.txt", 27, 0)]

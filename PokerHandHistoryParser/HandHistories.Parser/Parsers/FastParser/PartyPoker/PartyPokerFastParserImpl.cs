@@ -75,10 +75,21 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             var result = base.SplitUpMultipleHands(rawHandHistories);
+
             if (result.Any() && result.First().StartsWith("Game #"))
                 result = result.Skip(1);
 
             return result;
+        }
+
+        protected override string ClearHandHistory(string handText)
+        {
+            if (handText.Contains("The hand history for this hand number is not available here"))
+            {
+                return string.Empty;
+            }
+
+            return handText;
         }
 
         protected override int ParseDealerPosition(string[] handLines)
@@ -637,6 +648,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 //Expected Formats:
                 //"Player wins $5.18 USD"
                 case 'D':
+                case 'R':
                     action = ParseWinsAction(line);
                     break;
             }

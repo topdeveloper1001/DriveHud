@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="CustomModulesNames.cs" company="Ace Poker Solutions">
-// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -21,5 +21,9 @@ namespace Model
         public const string PMCatcher = "PMCatcher";
 
         public const string PMCatcherAssembly = "DriveHUD.PMCatcher.dll";
+
+        public const string PKCatcher = "PKCatcher";
+
+        public const string PKCatcherAssembly = "DriveHUD.PKCatcher.dll";
     }
 }

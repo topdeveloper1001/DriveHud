@@ -1,0 +1,167 @@
+﻿{
+  "RoomId": 688503,
+  "CurrActionSeatId": 1,
+  "CurrActionUid": 148526,
+  "ActionTime": 20,
+  "MinimumBet": 150,
+  "LastActionSeatId": 0,
+  "LastActionUid": 0,
+  "IsGreatestBet": true,
+  "ActionSeq": 2,
+  "Players": [
+    {
+      "Playerid": 2001025,
+      "Seatid": 0,
+      "Name": "小雨哥",
+      "Headurl": null,
+      "Marks": null,
+      "Gender": 1,
+      "Stake": 11337,
+      "LastVoice": "@小雨哥@http://qiniu.t-no.cn/voice_2001025_s_s_2018082001022060009709793.mp3",
+      "LastAction": "Call",
+      "InGame": true,
+      "InStay": false,
+      "LeftStayTime": 0,
+      "RoundBet": 100,
+      "Cards": null,
+      "Position": {
+        "Longtitude": 124.894165,
+        "Latitude": 46.5675354,
+        "Ip": "117.136.7.13"
+      }
+    },
+    {
+      "Playerid": 148526,
+      "Seatid": 1,
+      "Name": "♠AA",
+      "Headurl": "148526_a_s_1534153528.png",
+      "Marks": null,
+      "Gender": 1,
+      "Stake": 15138,
+      "LastVoice": "@♠AA@http://qiniu.t-no.cn/voice_148526_s_s_2018082020485752934185502.mp3",
+      "LastAction": "Null",
+      "InGame": true,
+      "InStay": false,
+      "LeftStayTime": 0,
+      "RoundBet": 0,
+      "Cards": null,
+      "Position": {
+        "Longtitude": 124.940926,
+        "Latitude": 46.52167,
+        "Ip": "111.43.246.212"
+      }
+    },
+    {
+      "Playerid": 101226,
+      "Seatid": 2,
+      "Name": "吉利",
+      "Headurl": null,
+      "Marks": null,
+      "Gender": 0,
+      "Stake": 3841,
+      "LastVoice": null,
+      "LastAction": "Null",
+      "InGame": true,
+      "InStay": false,
+      "LeftStayTime": 0,
+      "RoundBet": 0,
+      "Cards": null,
+      "Position": {
+        "Longtitude": 117.044212,
+        "Latitude": 25.0611858,
+        "Ip": "27.152.51.236"
+      }
+    },
+    {
+      "Playerid": 2001231,
+      "Seatid": 3,
+      "Name": "noahcity",
+      "Headurl": null,
+      "Marks": null,
+      "Gender": 0,
+      "Stake": 8950,
+      "LastVoice": null,
+      "LastAction": "Null",
+      "InGame": true,
+      "InStay": false,
+      "LeftStayTime": 0,
+      "RoundBet": 0,
+      "Cards": null,
+      "Position": {
+        "Longtitude": 112.890358,
+        "Latitude": 28.6786976,
+        "Ip": "223.145.219.241"
+      }
+    },
+    {
+      "Playerid": 111650,
+      "Seatid": 4,
+      "Name": "hjdjdf",
+      "Headurl": null,
+      "Marks": null,
+      "Gender": 0,
+      "Stake": 3790,
+      "LastVoice": null,
+      "LastAction": "Null",
+      "InGame": true,
+      "InStay": false,
+      "LeftStayTime": 0,
+      "RoundBet": 20,
+      "Cards": null,
+      "Position": {
+        "Longtitude": 113.021057,
+        "Latitude": 28.1474724,
+        "Ip": "58.20.69.42"
+      }
+    },
+    {
+      "Playerid": 150957,
+      "Seatid": 5,
+      "Name": "AAAAA1",
+      "Headurl": null,
+      "Marks": null,
+      "Gender": 0,
+      "Stake": 2946,
+      "LastVoice": "#5#4#3#AAAAA1",
+      "LastAction": "Null",
+      "InGame": true,
+      "InStay": false,
+      "LeftStayTime": 0,
+      "RoundBet": 50,
+      "Cards": null,
+      "Position": {
+        "Longtitude": 108.939049,
+        "Latitude": 34.2965279,
+        "Ip": "36.43.87.163"
+      }
+    },
+    {
+      "Playerid": 2000210,
+      "Seatid": 6,
+      "Name": "精神病",
+      "Headurl": null,
+      "Marks": null,
+      "Gender": 0,
+      "Stake": 9528,
+      "LastVoice": "#2#3#5#精神病",
+      "LastAction": "Straddle",
+      "InGame": true,
+      "InStay": false,
+      "LeftStayTime": 0,
+      "RoundBet": 100,
+      "Cards": null,
+      "Position": {
+        "Longtitude": 124.877,
+        "Latitude": 46.59529,
+        "Ip": "117.136.56.0"
+      }
+    }
+  ],
+  "Pots": null,
+  "LastBetAmount": 100,
+  "CurrActionSeatRoundBet": 0,
+  "DefaultFold": false,
+  "CallAmount": -100,
+  "MaxRoundBet": 100,
+  "LastValidRaiseAmount": 50
+}

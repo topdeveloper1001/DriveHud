@@ -74,6 +74,7 @@ namespace Model.Enums
         RiverHandActionItem,
         OmahaHandGridItem,
         QuickFilterItem,
+        Buyin
     }
 
     public struct EnumDateFiterStruct

@@ -288,22 +288,28 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private void Save(object obj)
         {
             IsSelectError = false;
+
             if ((_selectedCards.Count == 1) && (SelectorType.Equals(CardSelectorType.PlayerSelector)))
             {
                 IsOneCard = true;
                 return;
             }
-            this._notification.ReturnType = CardSelectorReturnType.Cards;
+
+            _notification.ReturnType = CardSelectorReturnType.Cards;
+
             switch (SelectorType)
             {
                 case CardSelectorType.BoardSelector:
-                    this._notification.CardsContainer = new BoardModel(_selectedCards.Select(x => new CardModel(x.Rank, x.Suit)).ToList());
+                    _notification.CardsContainer = new BoardModel(_selectedCards.Select(x => new CardModel(x.Rank, x.Suit)).ToList());
                     break;
                 case CardSelectorType.PlayerSelector:
-                    this._notification.CardsContainer = new PlayerModel(_selectedCards.Select(x => new CardModel(x.Rank, x.Suit)).ToList());
+                    _notification.CardsContainer = new PlayerModel(_selectedCards.Select(x => new CardModel(x.Rank, x.Suit)).ToList());
                     break;
             }
-            this.FinishInteraction();
+
+            _notification.Confirmed = true;
+
+            FinishInteraction();
         }
 
         private void Reset(object obj)

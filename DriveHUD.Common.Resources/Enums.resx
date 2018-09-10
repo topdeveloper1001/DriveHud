@@ -1082,4 +1082,25 @@
   <data name="Enum_HudStoreSorting_None" xml:space="preserve">
     <value>All HUDs</value>
   </data>
+  <data name="Enum_TournamentChartFilterType_All" xml:space="preserve">
+    <value>All tournaments</value>
+  </data>
+  <data name="Enum_TournamentChartFilterType_MTT" xml:space="preserve">
+    <value>MTT</value>
+  </data>
+  <data name="Enum_TournamentChartFilterType_STT" xml:space="preserve">
+    <value>S&amp;G</value>
+  </data>
+  <data name="Enum_ChartTournamentSeriesValueType_BB" xml:space="preserve">
+    <value>BB</value>
+  </data>
+  <data name="Enum_ChartTournamentSeriesValueType_Chips" xml:space="preserve">
+    <value>Chips</value>
+  </data>
+  <data name="Enum_ChartTournamentSeriesValueType_Currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="Enum_ChartTournamentSeriesValueType_None" xml:space="preserve">
+    <value>None</value>
+  </data>
 </root>

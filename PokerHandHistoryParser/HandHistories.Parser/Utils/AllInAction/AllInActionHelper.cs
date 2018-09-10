@@ -46,21 +46,21 @@ namespace HandHistories.Parser.Utils
 
             foreach (HandAction action in handActions)
             {
-                //Negative amounts represent putting money into the pot - ignore actions which aren't negative
+                // Negative amounts represent putting money into the pot - ignore actions which aren't negative
                 if (action.Amount >= 0)
                 {
                     identifiedActions.Add(action);
                     continue;
                 }
 
-                //Skip actions which have already been identified
+                // Skip actions which have already been identified
                 if (action is AllInAction)
                 {
                     identifiedActions.Add(action);
                     continue;
                 }
 
-                //Update the remaining stack with our action's amount
+                // Update the remaining stack with our action's amount
                 playerStackRemaining[action.PlayerName] += action.Amount;
 
                 if (playerStackRemaining[action.PlayerName] == 0)
@@ -72,7 +72,7 @@ namespace HandHistories.Parser.Utils
                         continue;
                     }
 
-                    //This was a bet/raise/call for our remaining chips - we are all in
+                    // This was a bet/raise/call for our remaining chips - we are all in
                     var allInAction = new AllInAction(action.PlayerName,
                         action.Amount,
                         action.Street,

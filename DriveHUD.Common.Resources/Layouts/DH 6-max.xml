@@ -1091,7 +1091,54 @@
   </HudBumperStickerTypes>
   <LayoutTools>
     <HudLayoutTool xsi:type="HudLayoutPlainBoxTool" Id="2042bc08-aa61-4332-abf7-059613fa1c13">
-      <Positions />
+      <Positions>
+        <HudPositionsInfo PokerSite="PokerKing" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>218</X>
+                <Y>818</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>3</X>
+                <Y>613</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>3</X>
+                <Y>319</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>229</X>
+                <Y>130</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>434</X>
+                <Y>322</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>432</X>
+                <Y>612</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+      </Positions>
       <UIPositions>
         <HudPositionInfo>
           <Seat>1</Seat>
@@ -2037,7 +2084,54 @@
       </Stats>
     </HudLayoutTool>
     <HudLayoutTool xsi:type="HudLayoutBumperStickersTool" Id="23c833b5-4e67-4836-9669-4a7368cb142a">
-      <Positions />
+      <Positions>
+        <HudPositionsInfo PokerSite="PokerKing" GameType="CashHoldem">
+          <HudPositions>
+            <HudPositionInfo>
+              <Seat>1</Seat>
+              <Position>
+                <X>242</X>
+                <Y>772</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>2</Seat>
+              <Position>
+                <X>27</X>
+                <Y>567</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>3</Seat>
+              <Position>
+                <X>27</X>
+                <Y>273</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>4</Seat>
+              <Position>
+                <X>253</X>
+                <Y>84</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>5</Seat>
+              <Position>
+                <X>458</X>
+                <Y>276</Y>
+              </Position>
+            </HudPositionInfo>
+            <HudPositionInfo>
+              <Seat>6</Seat>
+              <Position>
+                <X>456</X>
+                <Y>566</Y>
+              </Position>
+            </HudPositionInfo>
+          </HudPositions>
+        </HudPositionsInfo>
+      </Positions>
       <UIPositions>
         <HudPositionInfo>
           <Seat>1</Seat>

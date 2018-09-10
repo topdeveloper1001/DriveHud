@@ -1,0 +1,436 @@
+﻿{
+  "RoomId": 132062,
+  "RoomOwnerId": 0,
+  "Params": {
+    "OwnerType": 4,
+    "GameMode": 3,
+    "PlayerCountMax": 6,
+    "RuleBlindEnum": 20,
+    "BuyinMinEnum": 5,
+    "RuleBuyinFold": 2000,
+    "RuleTimeLimit": 1,
+    "RuleSwitchBuyinControl": 1,
+    "RuleSwitchInsurance": 1,
+    "RuleSwitchAntiCheat": 1,
+    "RuleSwitchForceStraddle": 0,
+    "RuleSwitchRandomSeat": 0,
+    "RuleAnteAmount": 50,
+    "GameName": "班布里奇477",
+    "ClubId": 1,
+    "IsAssociatedJackpot": false,
+    "IsAllinAllFold": false,
+    "AllianceIds": null,
+    "OwnerClubname": null,
+    "CreatorId": 0,
+    "ShortGameDoubleAnte": true,
+    "ShortFullHouseFlushStraightThree": false,
+    "IsOpenedDrawback": true,
+    "DrawbackHoldTimes": 10,
+    "DrawbackTimes": 10,
+    "ChooseOuts": true,
+    "MuckSwitch": false,
+    "AntiSimulator": true,
+    "ForceShowcard": true,
+    "UnlimitForceShowcard": false,
+    "ClubHead": null,
+    "AutoStartNum": 2,
+    "JoinPassword": null,
+    "BuyinPassword": null,
+    "IsCalcIncomePerHand": false,
+    "IsMirco": 1
+  },
+  "SelfBuyinLimit": 0,
+  "SelfBuyin": 0,
+  "SelfStake": 0,
+  "Rstate": {
+    "IsBegin": true,
+    "IsWaiting": false,
+    "IsPause": false,
+    "IsMute": true,
+    "Paused": false
+  },
+  "Buyins": null,
+  "Tstate": {
+    "Players": [
+      {
+        "Playerid": 2003035,
+        "Seatid": 1,
+        "Name": "Neemesis",
+        "Headurl": null,
+        "Marks": null,
+        "Gender": 0,
+        "Stake": 2450,
+        "LastVoice": null,
+        "LastAction": "Fold",
+        "InGame": true,
+        "InStay": false,
+        "LeftStayTime": 0,
+        "RoundBet": 0,
+        "Cards": null,
+        "Position": {
+          "Longtitude": 115.908333,
+          "Latitude": 28.6624432,
+          "Ip": "127.0.0.1"
+        }
+      },
+      {
+        "Playerid": 2002767,
+        "Seatid": 2,
+        "Name": "zy520",
+        "Headurl": null,
+        "Marks": null,
+        "Gender": 0,
+        "Stake": 7393,
+        "LastVoice": null,
+        "LastAction": "Null",
+        "InGame": true,
+        "InStay": false,
+        "LeftStayTime": 0,
+        "RoundBet": 0,
+        "Cards": [
+          {
+            "Rank": 11,
+            "Suit": 0
+          },
+          {
+            "Rank": 8,
+            "Suit": 2
+          }
+        ],
+        "Position": {
+          "Longtitude": 104.188751,
+          "Latitude": 31.1322136,
+          "Ip": "112.44.164.64"
+        }
+      },
+      {
+        "Playerid": 157320,
+        "Seatid": 4,
+        "Name": "生命在布拉夫",
+        "Headurl": "157320_a_s_1534162030.png",
+        "Marks": null,
+        "Gender": 1,
+        "Stake": 0,
+        "LastVoice": "#4#0#2#生命在布拉夫",
+        "LastAction": "Null",
+        "InGame": true,
+        "InStay": false,
+        "LeftStayTime": 0,
+        "RoundBet": 0,
+        "Cards": [
+          {
+            "Rank": 12,
+            "Suit": 3
+          },
+          {
+            "Rank": 8,
+            "Suit": 1
+          }
+        ],
+        "Position": {
+          "Longtitude": 108.917793,
+          "Latitude": 34.22288,
+          "Ip": "117.136.86.45"
+        }
+      },
+      {
+        "Playerid": 142204,
+        "Seatid": 5,
+        "Name": "麋鹿仙踪",
+        "Headurl": null,
+        "Marks": null,
+        "Gender": 1,
+        "Stake": 3710,
+        "LastVoice": null,
+        "LastAction": "Fold",
+        "InGame": true,
+        "InStay": false,
+        "LeftStayTime": 0,
+        "RoundBet": 0,
+        "Cards": null,
+        "Position": {
+          "Longtitude": 113.659752,
+          "Latitude": 34.7969055,
+          "Ip": "123.14.81.24"
+        }
+      }
+    ],
+    "Pots": [
+      {
+        "PotId": 20,
+        "Amount": 5300
+      }
+    ],
+    "PublicCard": [
+      {
+        "Rank": 12,
+        "Suit": 0
+      },
+      {
+        "Rank": 7,
+        "Suit": 2
+      },
+      {
+        "Rank": 12,
+        "Suit": 2
+      },
+      {
+        "Rank": 9,
+        "Suit": 1
+      }
+    ],
+    "CurrActionPlayerSeatId": 2,
+    "CurrActionLeftTime": 0,
+    "CurrDealerSeatId": 4,
+    "CurrBBSeatId": 4,
+    "CurrSBSeatId": 4,
+    "CurrStraddleSeatId": -1,
+    "BBAmount": 50,
+    "SBAmount": 0
+  },
+  "RoomCreateTime": 1534951876,
+  "RoomStartTime": 1534952292,
+  "GameUuids": [
+    252284961024327680,
+    252285155642048512,
+    252285353199505408,
+    252285466555756544,
+    252285663579922432,
+    252285822209486848,
+    252285969547608064,
+    252286184654315520,
+    252286331171344384,
+    252286448909631488,
+    252286566092554240,
+    252286742455971840,
+    252286855884783616,
+    252287055622918144
+  ],
+  "ProhibitSitdownList": null,
+  "LastBuyinClubId": 0,
+  "LastBuyinOwnerId": 0,
+  "ClubInfos": [
+    {
+      "CludId": 100041,
+      "CreatorId": 100118,
+      "ClubName": "澳门站"
+    }
+  ],
+  "BuyinInfos": [
+    {
+      "PlayerName": "再与天比高",
+      "PlayerId": 131772,
+      "TotalBuyin": 2500,
+      "CurrRecord": -2500,
+      "BuyinLimit": 5000
+    },
+    {
+      "PlayerName": "麋鹿仙踪",
+      "PlayerId": 142204,
+      "TotalBuyin": 2500,
+      "CurrRecord": 4160,
+      "BuyinLimit": 2500
+    },
+    {
+      "PlayerName": "Neemesis",
+      "PlayerId": 2003035,
+      "TotalBuyin": 7500,
+      "CurrRecord": -5000,
+      "BuyinLimit": 7500
+    },
+    {
+      "PlayerName": "zy520",
+      "PlayerId": 2002767,
+      "TotalBuyin": 15000,
+      "CurrRecord": -5207,
+      "BuyinLimit": 15000
+    },
+    {
+      "PlayerName": "生命在布拉夫",
+      "PlayerId": 157320,
+      "TotalBuyin": 2500,
+      "CurrRecord": -100,
+      "BuyinLimit": 2500
+    }
+  ],
+  "AutoAddActiontimeCount": 0,
+  "ActionTimeCount": 0,
+  "ClubCreaterIds": [
+    0
+  ],
+  "TotalBuyout": 0,
+  "LastBuyinAllianceId": 0,
+  "AllFeeItems": {
+    "PlayWay": 1,
+    "ActionCount": 0,
+    "ShowCardCount": 0,
+    "InsuranceCount": 0,
+    "ActionDelayCountsFee": [
+      {
+        "StartCount": 1,
+        "EndCount": 1,
+        "NeedCoin": 25,
+        "State": null
+      },
+      {
+        "StartCount": 2,
+        "EndCount": 2,
+        "NeedCoin": 50,
+        "State": null
+      },
+      {
+        "StartCount": 3,
+        "EndCount": 3,
+        "NeedCoin": 100,
+        "State": null
+      },
+      {
+        "StartCount": 4,
+        "EndCount": 4,
+        "NeedCoin": 100,
+        "State": null
+      },
+      {
+        "StartCount": 5,
+        "EndCount": 5,
+        "NeedCoin": 100,
+        "State": null
+      },
+      {
+        "StartCount": 6,
+        "EndCount": 6,
+        "NeedCoin": 100,
+        "State": null
+      },
+      {
+        "StartCount": 7,
+        "EndCount": 7,
+        "NeedCoin": 100,
+        "State": null
+      },
+      {
+        "StartCount": 8,
+        "EndCount": 8,
+        "NeedCoin": 100,
+        "State": null
+      },
+      {
+        "StartCount": 9,
+        "EndCount": 9,
+        "NeedCoin": 100,
+        "State": null
+      }
+    ],
+    "ShowCardCountsFee": [
+      {
+        "StartCount": 1,
+        "EndCount": 2,
+        "NeedCoin": 100,
+        "State": null
+      },
+      {
+        "StartCount": 3,
+        "EndCount": 4,
+        "NeedCoin": 200,
+        "State": null
+      },
+      {
+        "StartCount": 5,
+        "EndCount": 999999,
+        "NeedCoin": 300,
+        "State": null
+      }
+    ],
+    "InsurnanceCountsFee": [
+      {
+        "StartCount": 1,
+        "EndCount": 1,
+        "NeedCoin": 100,
+        "State": null
+      },
+      {
+        "StartCount": 2,
+        "EndCount": 2,
+        "NeedCoin": 100,
+        "State": null
+      }
+    ],
+    "ShowLeftCardFee": [
+      {
+        "StartCount": 0,
+        "EndCount": 0,
+        "NeedCoin": 20,
+        "State": "flop"
+      },
+      {
+        "StartCount": 0,
+        "EndCount": 0,
+        "NeedCoin": 20,
+        "State": "turn"
+      },
+      {
+        "StartCount": 0,
+        "EndCount": 0,
+        "NeedCoin": 20,
+        "State": "river"
+      }
+    ],
+    "EmotionFee": {
+      "StartCount": 0,
+      "EndCount": 0,
+      "NeedCoin": 5,
+      "State": null
+    },
+    "EmotionFee2": {
+      "StartCount": 0,
+      "EndCount": 0,
+      "NeedCoin": 5,
+      "State": null
+    }
+  },
+  "IsQuickSit": false,
+  "GameUuidsJs": [
+    {
+      "GameUuidJs": "252284961024327680"
+    },
+    {
+      "GameUuidJs": "252285155642048512"
+    },
+    {
+      "GameUuidJs": "252285353199505408"
+    },
+    {
+      "GameUuidJs": "252285466555756544"
+    },
+    {
+      "GameUuidJs": "252285663579922432"
+    },
+    {
+      "GameUuidJs": "252285822209486848"
+    },
+    {
+      "GameUuidJs": "252285969547608064"
+    },
+    {
+      "GameUuidJs": "252286184654315520"
+    },
+    {
+      "GameUuidJs": "252286331171344384"
+    },
+    {
+      "GameUuidJs": "252286448909631488"
+    },
+    {
+      "GameUuidJs": "252286566092554240"
+    },
+    {
+      "GameUuidJs": "252286742455971840"
+    },
+    {
+      "GameUuidJs": "252286855884783616"
+    },
+    {
+      "GameUuidJs": "252287055622918144"
+    }
+  ]
+}

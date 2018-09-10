@@ -562,7 +562,7 @@ namespace Model.Data
                 {
                     Value = CheckRaise,
                     Occurred = Source.DidCheckRaise,
-                    CouldOccurred = Source.Totalhands
+                    CouldOccurred = Source.CouldFlopCheckRaise + Source.CouldTurnCheckRaise + Source.CouldRiverCheckRaise
                 };
             }
         }
@@ -575,7 +575,7 @@ namespace Model.Data
                 {
                     Value = FlopCheckRaise,
                     Occurred = Source.DidFlopCheckRaise,
-                    CouldOccurred = Source.Sawflop
+                    CouldOccurred = Source.CouldFlopCheckRaise
                 };
             }
         }
@@ -588,7 +588,7 @@ namespace Model.Data
                 {
                     Value = TurnCheckRaise,
                     Occurred = Source.DidTurnCheckRaise,
-                    CouldOccurred = Source.SawTurn
+                    CouldOccurred = Source.CouldTurnCheckRaise
                 };
             }
         }
@@ -601,7 +601,7 @@ namespace Model.Data
                 {
                     Value = RiverCheckRaise,
                     Occurred = Source.DidRiverCheckRaise,
-                    CouldOccurred = Source.SawRiver
+                    CouldOccurred = Source.CouldRiverCheckRaise
                 };
             }
         }

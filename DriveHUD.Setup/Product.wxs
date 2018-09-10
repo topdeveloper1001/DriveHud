@@ -120,6 +120,12 @@
       <Component Id="PMNReg.dll" Guid="{BA60930E-8AF3-4CC9-BA1B-62F55134E604}">
         <File Id="PMNReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\PMNReg.dll" />
       </Component>
+      <Component Id="PKTReg.dll" Guid="{C7B84CC0-889A-46EA-A23D-4A4BF20BA408}">
+        <File Id="PKTReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\PKTReg.dll" />
+      </Component>
+      <Component Id="PKNReg.dll" Guid="{8CEF10B9-B658-48D9-9A05-50B8A2158935}">
+        <File Id="PKNReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\PKNReg.dll" />
+      </Component>
     </DirectoryRef>
 
     <DirectoryRef Id="INSTALLDIR">
@@ -172,6 +178,9 @@
       </Component>
       <Component Id="DriveHUD.PMCatcher.dll" Guid="{DB165E97-2D6D-46B5-83B6-E922716CB49A}">
         <File Id="DriveHUD.PMCatcher.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.PMCatcher.dll" />
+      </Component>
+      <Component Id="DriveHUD.PKCatcher.dll" Guid="{A5AB8ADC-A4D3-4495-8E02-3154EA255E5A}">
+        <File Id="DriveHUD.PKCatcher.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.PKCatcher.dll" />
       </Component>
       <Component Id="Xceed.Wpf.Toolkit.dll" Guid="{5E51C286-A865-4A26-9998-AE01C55CBE03}">
         <File Id="Xceed.Wpf.Toolkit.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Xceed.Wpf.Toolkit.dll" />
@@ -552,6 +561,7 @@
       <ComponentRef Id="DriveHUD.Controls.dll" />
       <ComponentRef Id="DriveHUD.Importers.dll" />
       <ComponentRef Id="DriveHUD.PMCatcher.dll" />
+      <ComponentRef Id="DriveHUD.PKCatcher.dll" />
       <ComponentRef Id="Model.dll" />
       <ComponentRef Id="HandHistories.Objects.dll" />
       <ComponentRef Id="HandHistories.Parser.dll" />
@@ -638,6 +648,8 @@
       <ComponentRef Id="PMOReg.dll" />
       <ComponentRef Id="PMTReg.dll" />
       <ComponentRef Id="PMNReg.dll" />
+      <ComponentRef Id="PKTReg.dll" />
+      <ComponentRef Id="PKNReg.dll" />
       <ComponentRef Id="SharpPcap.dll" />
       <ComponentRef Id="bdec.dll" />
       <ComponentRef Id="pokereval.dll" />

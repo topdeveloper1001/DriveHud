@@ -1,14 +1,26 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="FilterStandardModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Reflection;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
+using HandHistories.Objects.GameDescription;
+using Model.Enums;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows.Media;
-using Model.Enums;
-using DriveHUD.Entities;
-using HandHistories.Objects.GameDescription;
-using DriveHUD.Common.Resources;
-using DriveHUD.Common.Reflection;
-using DriveHUD.Common.Utils;
 using System.Linq.Expressions;
 
 namespace Model.Filters
@@ -34,6 +46,7 @@ namespace Model.Filters
         {
             FilterSectionStatCollectionInitialize();
             FilterSectionStakeLevelCollectionInitialize();
+            FilterSectionBuyinCollectionInitialize();
             FilterSectionPreFlopActionCollectionInitialize();
             FilterSectionCurrencyCollectionInitialize();
             FilterSectionTableRingCollectionInitialize();
@@ -51,39 +64,37 @@ namespace Model.Filters
 
         public void FilterSectionStatCollectionInitialize()
         {
-            ////////////////////////////////
-            // Initialize StatItemCollection
             StatCollection = new ObservableCollection<StatItem>
-                (
-                    new List<StatItem>()
-                    {
-                        new StatItem() { Name = "VPIP", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Vpiphands ) },
-                        new StatItem() { Name = "PFR", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Pfrhands ) },
-                        new StatItem() { Name = "3-Bet", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet) },
-                        new StatItem() { Name = "Called 3-Bet", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Calledthreebetpreflop) },
-                        new StatItem() { Name = "4-Bet", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didfourbet) },
-                        new StatItem() { Name = "C-Bet", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Flopcontinuationbetmade) },
-                        new StatItem() { Name = "Fold to C-Bet", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Foldedtoflopcontinuationbet) },
-                        new StatItem() { Name = "Check-Raise", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidCheckRaise) },
-                        new StatItem() { Name = "Squeezed", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didsqueeze) },
-                        new StatItem() { Name = "Relative Position", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.IsRelativePosition) },
-                        new StatItem() { Name = "Saw Flop", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Sawflop) },
-                        new StatItem() { Name = "Saw Turn", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.SawTurn) },
-                        new StatItem() { Name = "Saw River", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.SawRiver) },
-                        new StatItem() { Name = "Saw Showdown", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Sawshowdown) },
-                        new StatItem() { Name = "Open Raised", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidOpenRaise) },
-                        new StatItem() { Name = "Relative 3-Bet POS", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.IsRelative3BetPosition) },
-                        new StatItem() { Name = "Steal", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.StealMade) },
-                        new StatItem() { Name = "Raised Limpers", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.IsRaisedLimpers) },
-                    }
-                );
+            {
+                new StatItem { Name = "VPIP", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Vpiphands ) },
+                new StatItem { Name = "PFR", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Pfrhands ) },
+                new StatItem { Name = "3-Bet", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet) },
+                new StatItem { Name = "Called 3-Bet", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Calledthreebetpreflop) },
+                new StatItem { Name = "4-Bet", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didfourbet) },
+                new StatItem { Name = "C-Bet", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Flopcontinuationbetmade) },
+                new StatItem { Name = "Fold to C-Bet", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Foldedtoflopcontinuationbet) },
+                new StatItem { Name = "Check-Raise", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidCheckRaise) },
+                new StatItem { Name = "Squeezed", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didsqueeze) },
+                new StatItem { Name = "Relative Position", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.IsRelativePosition) },
+                new StatItem { Name = "Saw Flop", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Sawflop) },
+                new StatItem { Name = "Saw Turn", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.SawTurn) },
+                new StatItem { Name = "Saw River", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.SawRiver) },
+                new StatItem { Name = "Saw Showdown", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Sawshowdown) },
+                new StatItem { Name = "Open Raised", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.DidOpenRaise) },
+                new StatItem { Name = "Relative 3-Bet POS", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.IsRelative3BetPosition) },
+                new StatItem { Name = "Steal", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.StealMade) },
+                new StatItem { Name = "Raised Limpers", PropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.IsRaisedLimpers) }
+            };
         }
 
         public void FilterSectionStakeLevelCollectionInitialize()
         {
-            //////////////////////////////////
-            // Initialize StakeLevelCollection
-            this.StakeLevelCollection = new ObservableCollection<StakeLevelItem>();
+            StakeLevelCollection = new ObservableCollection<StakeLevelItem>();
+        }
+
+        public void FilterSectionBuyinCollectionInitialize()
+        {
+            BuyinCollection = new ObservableCollection<BuyinItem>();
         }
 
         public void FilterSectionPreFlopActionCollectionInitialize()
@@ -190,12 +201,15 @@ namespace Model.Filters
                     (Currency)gameType.CurrencytypeId);
 
                 var isFastFold = ((TableTypeDescription)gameType.TableType & TableTypeDescription.FastFold) == TableTypeDescription.FastFold;
+                var isShortDeck = ((TableTypeDescription)gameType.TableType & TableTypeDescription.ShortDeck) == TableTypeDescription.ShortDeck;
+
+                var subType = isFastFold ? " Fast" : (isShortDeck ? " Short" : string.Empty);
 
                 var gtString = String.Format("{0}{1}{2}{3}",
                     limit.GetCurrencySymbol(),
                     Math.Abs(limit.BigBlind),
                     GameTypeUtils.GetShortName((GameType)gameType.PokergametypeId),
-                    isFastFold ? " Fast" : string.Empty);
+                    subType);
 
                 var stakeLevelItem = new StakeLevelItem
                 {
@@ -237,6 +251,46 @@ namespace Model.Filters
             }
         }
 
+        public void UpdateFilterSectionBuyinCollection(IList<Tournaments> tournaments)
+        {
+            BuyinCollection.Clear();
+
+            var tournamentsGroupedByBuyin = tournaments
+                .GroupBy(x => x.Buyinincents)
+                .Select(x => new { Buyin = x.Key, Tournaments = x.Select(t => t.BuildKey()).Distinct().ToArray() })
+                .ToArray();
+
+            var buyinItems = new List<BuyinItem>();
+
+            foreach (var tournamentGroupedByBuyin in tournamentsGroupedByBuyin)
+            {
+                var buyin = tournamentGroupedByBuyin.Buyin / 100m;
+
+                var buyinItem = new BuyinItem
+                {
+                    Name = $"${buyin}",
+                    Buyin = buyin,
+                    TournamentKeys = new HashSet<TournamentKey>(tournamentGroupedByBuyin.Tournaments),
+                    IsChecked = true
+                };
+
+                buyinItems.Add(buyinItem);
+
+                if (!BuyinCollection.Any(x => x.Buyin == buyinItem.Buyin))
+                {
+                    BuyinCollection.Add(buyinItem);
+                }
+            }
+
+            var buyinItemsToRemove = (from buyin in BuyinCollection
+                                      join buyinItem in buyinItems on buyin.Buyin equals buyinItem.Buyin into gj
+                                      from buyinItem in gj.DefaultIfEmpty()
+                                      where buyinItem == null
+                                      select buyin).ToArray();
+
+            buyinItemsToRemove.ForEach(x => BuyinCollection.Remove(x));
+        }
+
         public override object Clone()
         {
             FilterStandardModel model = this.DeepCloneJson();
@@ -250,6 +304,7 @@ namespace Model.Filters
         public Expression<Func<Playerstatistic, bool>> GetFilterPredicate()
         {
             return PredicateBuilder.Create(GetStakeLevelPredicate())
+                .And(GetBuyinPredicate())
                 .And(GetPlayersBetweenPredicate())
                 .And(GetTableRingPredicate())
                 .And(GetCurrencyPredicate())
@@ -261,6 +316,7 @@ namespace Model.Filters
         {
             ResetTableRingCollection();
             ResetStakeLevelCollection();
+            ResetBuyinCollection();
             ResetCurrencyCollection();
             ResetPreFlopActionCollection();
             ResetStatCollection();
@@ -275,6 +331,7 @@ namespace Model.Filters
 
                 ResetFilterStatTo(filterToLoad.StatCollection);
                 ResetFilterStakeLevelTo(filterToLoad.StakeLevelCollection);
+                ResetFilterBuyinTo(filterToLoad.BuyinCollection);
                 ResetFilterPreFlopActionTo(filterToLoad.PreFlopActionCollection);
                 ResetFilterCurrencyTo(filterToLoad.CurrencyCollection);
                 ResetFilterTableRingTo(filterToLoad.Table6MaxCollection, EnumTableType.Six);
@@ -297,11 +354,11 @@ namespace Model.Filters
             switch (tableType)
             {
                 case EnumTableType.Six:
-                    this.Table6MaxCollection.ToList().ForEach(x => x.IsChecked = true);
+                    Table6MaxCollection.ToList().ForEach(x => x.IsChecked = true);
                     break;
 
                 case EnumTableType.Nine:
-                    this.TableFullRingCollection.ToList().ForEach(x => x.IsChecked = true);
+                    TableFullRingCollection.ToList().ForEach(x => x.IsChecked = true);
                     break;
             }
         }
@@ -309,6 +366,11 @@ namespace Model.Filters
         public void ResetStakeLevelCollection()
         {
             StakeLevelCollection.ToList().ForEach(x => x.IsChecked = true);
+        }
+
+        public void ResetBuyinCollection()
+        {
+            BuyinCollection.ToList().ForEach(x => x.IsChecked = true);
         }
 
         public void ResetCurrencyCollection()
@@ -354,6 +416,24 @@ namespace Model.Filters
             }
         }
 
+        private void ResetFilterBuyinTo(IEnumerable<BuyinItem> buyinItems)
+        {
+            if (buyinItems == null)
+            {
+                return;
+            }
+
+            foreach (var buyinItem in buyinItems)
+            {
+                var cur = BuyinCollection.FirstOrDefault(x => x.Buyin == buyinItem.Buyin);
+
+                if (cur != null)
+                {
+                    cur.IsChecked = buyinItem.IsChecked;
+                }
+            }
+        }
+
         private void ResetFilterPreFlopActionTo(IEnumerable<PreFlopActionItem> preflopActionList)
         {
             foreach (var preflop in preflopActionList)
@@ -381,21 +461,23 @@ namespace Model.Filters
         private void ResetFilterTableRingTo(IEnumerable<TableRingItem> tableRingList, EnumTableType tableType)
         {
             IList<TableRingItem> curCollection;
+
             switch (tableType)
             {
                 case EnumTableType.Six:
-                    curCollection = this.Table6MaxCollection;
+                    curCollection = Table6MaxCollection;
                     break;
 
                 case EnumTableType.Nine:
                 default:
-                    curCollection = this.TableFullRingCollection;
+                    curCollection = TableFullRingCollection;
                     break;
             }
 
             foreach (var item in tableRingList)
             {
                 var cur = curCollection.FirstOrDefault(x => x.Seat == item.Seat);
+
                 if (cur != null)
                 {
                     cur.IsChecked = item.IsChecked;
@@ -406,12 +488,14 @@ namespace Model.Filters
 
         private void ResetFilterPlayersBetweenTo(int minSelected, int maxSelected)
         {
-            this.PlayerCountMinSelectedItem = minSelected;
-            this.PlayerCountMaxSelectedItem = maxSelected;
+            PlayerCountMinSelectedItem = minSelected;
+            PlayerCountMaxSelectedItem = maxSelected;
         }
+
         #endregion
 
         #region Predicates
+
         private Expression<Func<Playerstatistic, bool>> GetStakeLevelPredicate()
         {
             var predicate = PredicateBuilder.True<Playerstatistic>();
@@ -423,6 +507,20 @@ namespace Model.Filters
                                             && x.CurrencyId == (short)state.StakeLimit.Currency
                                             && (x.TableTypeDescription & state.TableType) == x.TableTypeDescription
                                             && x.PokergametypeId == state.PokergametypeId));
+            }
+
+            return predicate;
+        }
+
+        private Expression<Func<Playerstatistic, bool>> GetBuyinPredicate()
+        {
+            var predicate = PredicateBuilder.True<Playerstatistic>();
+
+            var uncheckedBuyins = BuyinCollection.Where(x => !x.IsChecked).ToArray();
+
+            foreach (var buyin in uncheckedBuyins)
+            {
+                predicate = predicate.And(x => !x.IsTourney || !buyin.TournamentKeys.Contains(new TournamentKey(x.PokersiteId, x.TournamentId)));
             }
 
             return predicate;
@@ -512,6 +610,7 @@ namespace Model.Filters
             }
             return predicate;
         }
+
         #endregion
 
         #region Properties
@@ -529,6 +628,7 @@ namespace Model.Filters
 
         private ObservableCollection<PreFlopActionItem> _preFlopActionCollection;
         private ObservableCollection<StakeLevelItem> _stakeLevelCollection;
+        private ObservableCollection<BuyinItem> _buyinCollection;
         private ObservableCollection<CurrencyItem> _currencyCollection;
         private ObservableCollection<StatItem> _statCollection;
         private ObservableCollection<TableRingItem> _table6maxCollection;
@@ -539,9 +639,7 @@ namespace Model.Filters
             get { return _type; }
             set
             {
-                if (value == _type) return;
-                _type = value;
-                RaisePropertyChanged();
+                SetProperty(ref _type, value);
             }
         }
 
@@ -550,9 +648,7 @@ namespace Model.Filters
             get { return _description; }
             set
             {
-                if (value == _description) return;
-                _description = value;
-                RaisePropertyChanged();
+                SetProperty(ref _description, value);
             }
         }
 
@@ -561,9 +657,7 @@ namespace Model.Filters
             get { return _playerCountMinAvailable; }
             set
             {
-                if (value == _playerCountMinAvailable) return;
-                _playerCountMinAvailable = value;
-                RaisePropertyChanged();
+                SetProperty(ref _playerCountMinAvailable, value);
             }
         }
 
@@ -572,9 +666,12 @@ namespace Model.Filters
             get { return _playerCountMinList; }
             set
             {
-                if (value != null && _playerCountMinList != null && value.SequenceEqual(_playerCountMinList)) return;
-                _playerCountMinList = value;
-                RaisePropertyChanged();
+                if (value != null && _playerCountMinList != null && value.SequenceEqual(_playerCountMinList))
+                {
+                    return;
+                }
+
+                SetProperty(ref _playerCountMinList, value);
 
                 PlayerCountListSet();
             }
@@ -585,10 +682,12 @@ namespace Model.Filters
             get { return _playerCountMinSelectedItem; }
             set
             {
-                if (value == _playerCountMinSelectedItem) return;
-                _playerCountMinSelectedItem = value;
-                RaisePropertyChanged();
+                if (_playerCountMinSelectedItem == value)
+                {
+                    return;
+                }
 
+                SetProperty(ref _playerCountMinSelectedItem, value);
                 PlayerCountListSet();
             }
         }
@@ -598,9 +697,7 @@ namespace Model.Filters
             get { return _playerCountMaxAvailable; }
             set
             {
-                if (value == _playerCountMaxAvailable) return;
-                _playerCountMaxAvailable = value;
-                RaisePropertyChanged();
+                SetProperty(ref _playerCountMaxAvailable, value);
             }
         }
 
@@ -609,10 +706,12 @@ namespace Model.Filters
             get { return _playerCountMaxList; }
             set
             {
-                if (value != null && _playerCountMaxList != null && value.SequenceEqual(_playerCountMaxList)) return;
-                _playerCountMaxList = value;
-                RaisePropertyChanged();
+                if (value != null && _playerCountMaxList != null && value.SequenceEqual(_playerCountMaxList))
+                {
+                    return;
+                }
 
+                SetProperty(ref _playerCountMaxList, value);
                 PlayerCountListSet();
             }
         }
@@ -622,10 +721,12 @@ namespace Model.Filters
             get { return _playerCountMaxSelectedItem; }
             set
             {
-                if (value == _playerCountMaxSelectedItem) return;
-                _playerCountMaxSelectedItem = value;
-                RaisePropertyChanged();
+                if (_playerCountMaxSelectedItem == value)
+                {
+                    return;
+                }
 
+                SetProperty(ref _playerCountMaxSelectedItem, value);
                 PlayerCountListSet();
             }
         }
@@ -635,9 +736,7 @@ namespace Model.Filters
             get { return _preFlopActionCollection; }
             set
             {
-                if (value == _preFlopActionCollection) return;
-                _preFlopActionCollection = value;
-                RaisePropertyChanged();
+                SetProperty(ref _preFlopActionCollection, value);
             }
         }
 
@@ -646,9 +745,19 @@ namespace Model.Filters
             get { return _stakeLevelCollection; }
             set
             {
-                if (value == _stakeLevelCollection) return;
-                _stakeLevelCollection = value;
-                RaisePropertyChanged();
+                SetProperty(ref _stakeLevelCollection, value);
+            }
+        }
+
+        public ObservableCollection<BuyinItem> BuyinCollection
+        {
+            get
+            {
+                return _buyinCollection;
+            }
+            set
+            {
+                SetProperty(ref _buyinCollection, value);
             }
         }
 
@@ -657,20 +766,15 @@ namespace Model.Filters
             get { return _currencyCollection; }
             set
             {
-                if (value == _currencyCollection) return;
-                _currencyCollection = value;
-                RaisePropertyChanged();
+                SetProperty(ref _currencyCollection, value);
             }
         }
-
         public ObservableCollection<StatItem> StatCollection
         {
             get { return _statCollection; }
             set
             {
-                if (value == _statCollection) return;
-                _statCollection = value;
-                RaisePropertyChanged();
+                SetProperty(ref _statCollection, value);
             }
         }
 
@@ -679,9 +783,7 @@ namespace Model.Filters
             get { return _table6maxCollection; }
             set
             {
-                if (value == _table6maxCollection) return;
-                _table6maxCollection = value;
-                RaisePropertyChanged();
+                SetProperty(ref _table6maxCollection, value);
             }
         }
 
@@ -690,9 +792,7 @@ namespace Model.Filters
             get { return _tableFullRingCollection; }
             set
             {
-                if (value == _tableFullRingCollection) return;
-                _tableFullRingCollection = value;
-                RaisePropertyChanged();
+                SetProperty(ref _tableFullRingCollection, value);
             }
         }
 
@@ -703,17 +803,17 @@ namespace Model.Filters
     public class FilterSectionItem : FilterBaseEntity
     {
         private EnumFilterSectionItemType _itemType = EnumFilterSectionItemType.FilterSectionNone;
-        private string value = string.Empty;
+        private string _value = string.Empty;
 
         public EnumFilterSectionItemType ItemType
         {
-            get { return _itemType; }
-
+            get
+            {
+                return _itemType;
+            }
             set
             {
-                if (value == _itemType) return;
-                _itemType = value;
-                RaisePropertyChanged();
+                SetProperty(ref _itemType, value);
             }
         }
 
@@ -721,12 +821,11 @@ namespace Model.Filters
         {
             get
             {
-                return value;
+                return _value;
             }
-
             set
             {
-                this.value = value;
+                SetProperty(ref _value, value);
             }
         }
     }
@@ -955,6 +1054,55 @@ namespace Model.Filters
                 {
                     OnTriState.Invoke();
                 }
+            }
+        }
+    }
+
+    [Serializable]
+    public class BuyinItem : FilterBaseEntity
+    {
+        public static Action OnIsChecked;
+
+        private bool isChecked;
+
+        public bool IsChecked
+        {
+            get
+            {
+                return isChecked;
+            }
+            set
+            {
+                SetProperty(ref isChecked, value);
+                OnIsChecked?.Invoke();
+            }
+        }
+
+        private decimal buyin;
+
+        public decimal Buyin
+        {
+            get
+            {
+                return buyin;
+            }
+            set
+            {
+                SetProperty(ref buyin, value);
+            }
+        }
+
+        private HashSet<TournamentKey> tournamentKeys;
+
+        public HashSet<TournamentKey> TournamentKeys
+        {
+            get
+            {
+                return tournamentKeys;
+            }
+            set
+            {
+                SetProperty(ref tournamentKeys, value);
             }
         }
     }
