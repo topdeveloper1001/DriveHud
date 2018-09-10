@@ -418,14 +418,27 @@ namespace DriveHUD.Importers.PokerKing
                 return;
             }
 
-            HandAction action = actionType == HandActionType.ALL_IN ?
-                new AllInAction(GetPlayerName(handHistory, noticePlayerAction.LastActionSeatId + 1),
-                    noticePlayerAction.Amount,
-                    handHistory.CommunityCards.Street, false) :
-                new HandAction(GetPlayerName(handHistory, noticePlayerAction.LastActionSeatId + 1),
+
+            HandAction action;
+
+            if (actionType == HandActionType.ALL_IN)
+            {
+                var player = GetPlayer(handHistory, noticePlayerAction.LastActionSeatId + 1);
+
+                var playerPutInPot = Math.Abs(handHistory.HandActions.Where(x => x.PlayerName == player.PlayerName).Sum(x => x.Amount));
+                var allInAmount = player.StartingStack - playerPutInPot;
+
+                action = new AllInAction(player.PlayerName,
+                    allInAmount,
+                    handHistory.CommunityCards.Street, false);
+            }
+            else
+            {
+                action = new HandAction(GetPlayerName(handHistory, noticePlayerAction.LastActionSeatId + 1),
                     actionType,
                     noticePlayerAction.Amount,
                     handHistory.CommunityCards.Street);
+            }
 
             handHistory.HandActions.Add(action);
         }

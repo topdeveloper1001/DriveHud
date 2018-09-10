@@ -1,0 +1,1379 @@
+﻿{
+  "Packets": [
+    {
+      "timestamp": "10/09/2018 16:04:50",
+      "PackageType": "NoticeGameSnapShot",
+      "Time": "2018-09-10T16:04:50.6126014+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "RoomOwnerId": 0,
+        "Params": {
+          "OwnerType": 4,
+          "GameMode": 3,
+          "PlayerCountMax": 6,
+          "RuleBlindEnum": 20,
+          "BuyinMinEnum": 50,
+          "RuleBuyinFold": 100,
+          "RuleTimeLimit": 1,
+          "RuleSwitchBuyinControl": 1,
+          "RuleSwitchInsurance": 1,
+          "RuleSwitchAntiCheat": 1,
+          "RuleSwitchForceStraddle": 0,
+          "RuleSwitchRandomSeat": 0,
+          "RuleAnteAmount": 50,
+          "GameName": "南旧金山305",
+          "ClubId": 1,
+          "IsAssociatedJackpot": false,
+          "IsAllinAllFold": false,
+          "AllianceIds": null,
+          "OwnerClubname": null,
+          "CreatorId": 0,
+          "ShortGameDoubleAnte": true,
+          "ShortFullHouseFlushStraightThree": false,
+          "IsOpenedDrawback": true,
+          "DrawbackHoldTimes": 10,
+          "DrawbackTimes": 10,
+          "ChooseOuts": true,
+          "MuckSwitch": false,
+          "AntiSimulator": true,
+          "ForceShowcard": true,
+          "UnlimitForceShowcard": false,
+          "ClubHead": null,
+          "AutoStartNum": 2,
+          "JoinPassword": null,
+          "BuyinPassword": null,
+          "IsCalcIncomePerHand": false,
+          "IsMirco": 1
+        },
+        "SelfBuyinLimit": 0,
+        "SelfBuyin": 0,
+        "SelfStake": 0,
+        "Rstate": {
+          "IsBegin": true,
+          "IsWaiting": false,
+          "IsPause": false,
+          "IsMute": true,
+          "Paused": false
+        },
+        "Buyins": null,
+        "Tstate": {
+          "Players": [
+            {
+              "Playerid": 159636,
+              "Seatid": 0,
+              "Name": "梦不觉",
+              "Headurl": null,
+              "Marks": null,
+              "Gender": 0,
+              "Stake": 4070,
+              "LastVoice": null,
+              "LastAction": "Null",
+              "InGame": true,
+              "InStay": false,
+              "LeftStayTime": 0,
+              "RoundBet": 0,
+              "Cards": null,
+              "Position": {
+                "Longtitude": 0.0,
+                "Latitude": 0.0,
+                "Ip": "111.85.252.180"
+              }
+            },
+            {
+              "Playerid": 145188,
+              "Seatid": 1,
+              "Name": "提莫一米五",
+              "Headurl": null,
+              "Marks": null,
+              "Gender": 0,
+              "Stake": 8417,
+              "LastVoice": null,
+              "LastAction": "Null",
+              "InGame": true,
+              "InStay": false,
+              "LeftStayTime": 0,
+              "RoundBet": 0,
+              "Cards": null,
+              "Position": {
+                "Longtitude": 117.7666,
+                "Latitude": 35.9081421,
+                "Ip": "112.224.17.197"
+              }
+            },
+            {
+              "Playerid": 2001038,
+              "Seatid": 2,
+              "Name": "77777700",
+              "Headurl": null,
+              "Marks": null,
+              "Gender": 0,
+              "Stake": 1386,
+              "LastVoice": "#4#2#5#77777700",
+              "LastAction": "Null",
+              "InGame": true,
+              "InStay": false,
+              "LeftStayTime": 0,
+              "RoundBet": 0,
+              "Cards": null,
+              "Position": {
+                "Longtitude": 110.388382,
+                "Latitude": 28.4608078,
+                "Ip": "223.149.60.62"
+              }
+            },
+            {
+              "Playerid": 150935,
+              "Seatid": 3,
+              "Name": "苏神",
+              "Headurl": null,
+              "Marks": null,
+              "Gender": 0,
+              "Stake": 2906,
+              "LastVoice": "@苏神@http://image.jikao51.com:10010/voice_150935_s_s_2018091019150660360533463.mp3",
+              "LastAction": "Null",
+              "InGame": true,
+              "InStay": false,
+              "LeftStayTime": 0,
+              "RoundBet": 0,
+              "Cards": null,
+              "Position": {
+                "Longtitude": 109.180336,
+                "Latitude": 27.6896572,
+                "Ip": "111.124.245.22"
+              }
+            },
+            {
+              "Playerid": 2008173,
+              "Seatid": 4,
+              "Name": "是丁哥啊",
+              "Headurl": null,
+              "Marks": null,
+              "Gender": 0,
+              "Stake": 2250,
+              "LastVoice": null,
+              "LastAction": "Null",
+              "InGame": true,
+              "InStay": false,
+              "LeftStayTime": 0,
+              "RoundBet": 0,
+              "Cards": null,
+              "Position": {
+                "Longtitude": 113.058037,
+                "Latitude": 22.82324,
+                "Ip": "112.96.68.119"
+              }
+            },
+            {
+              "Playerid": 2004736,
+              "Seatid": 5,
+              "Name": "我是吃鸡王",
+              "Headurl": null,
+              "Marks": null,
+              "Gender": 0,
+              "Stake": 2400,
+              "LastVoice": "@我是吃鸡王@http://image.jikao51.com:10010/voice_2004736_s_s_2018091015500595529349081.mp3",
+              "LastAction": "Null",
+              "InGame": true,
+              "InStay": false,
+              "LeftStayTime": 0,
+              "RoundBet": 50,
+              "Cards": null,
+              "Position": {
+                "Longtitude": 110.38871,
+                "Latitude": 28.4559345,
+                "Ip": "117.136.24.142"
+              }
+            }
+          ],
+          "Pots": [
+            {
+              "PotId": 63,
+              "Amount": 300
+            }
+          ],
+          "PublicCard": null,
+          "CurrActionPlayerSeatId": 0,
+          "CurrActionLeftTime": -1536584578,
+          "CurrDealerSeatId": 5,
+          "CurrBBSeatId": 5,
+          "CurrSBSeatId": 5,
+          "CurrStraddleSeatId": -1,
+          "BBAmount": 50,
+          "SBAmount": 0
+        },
+        "RoomCreateTime": 1536522508,
+        "RoomStartTime": 1536536993,       
+        "ProhibitSitdownList": null,
+        "LastBuyinClubId": 0,
+        "LastBuyinOwnerId": 0,
+        "ClubInfos": [
+          {
+            "CludId": 100041,
+            "CreatorId": 100118,
+            "ClubName": "澳门站"
+          }
+        ],
+        "BuyinInfos": [
+          {
+            "PlayerName": "求了必应",
+            "PlayerId": 140103,
+            "TotalBuyin": 15000,
+            "CurrRecord": 7500,
+            "BuyinLimit": 5000
+          },
+          {
+            "PlayerName": "泥鳅哥",
+            "PlayerId": 150317,
+            "TotalBuyin": 17500,
+            "CurrRecord": -2500,
+            "BuyinLimit": 20000
+          },
+          {
+            "PlayerName": "是丁哥啊",
+            "PlayerId": 2008173,
+            "TotalBuyin": 2500,
+            "CurrRecord": -200,
+            "BuyinLimit": 2500
+          },
+          {
+            "PlayerName": "我是吃鸡王",
+            "PlayerId": 2004736,
+            "TotalBuyin": 2500,
+            "CurrRecord": 0,
+            "BuyinLimit": 2500
+          },
+          {
+            "PlayerName": "swagchen",
+            "PlayerId": 2013156,
+            "TotalBuyin": 9660,
+            "CurrRecord": -9660,
+            "BuyinLimit": 9660
+          },
+          {
+            "PlayerName": "你爸爸",
+            "PlayerId": 2006174,
+            "TotalBuyin": 10000,
+            "CurrRecord": -10000,
+            "BuyinLimit": 10000
+          },
+          {
+            "PlayerName": "够钟",
+            "PlayerId": 2000555,
+            "TotalBuyin": 10000,
+            "CurrRecord": 8156,
+            "BuyinLimit": 10000
+          },
+          {
+            "PlayerName": "苏神",
+            "PlayerId": 150935,
+            "TotalBuyin": 2500,
+            "CurrRecord": 7956,
+            "BuyinLimit": 2500
+          },
+          {
+            "PlayerName": "好多好多",
+            "PlayerId": 2012330,
+            "TotalBuyin": 9792,
+            "CurrRecord": -9792,
+            "BuyinLimit": 19584
+          },
+          {
+            "PlayerName": "77777700",
+            "PlayerId": 2001038,
+            "TotalBuyin": 5000,
+            "CurrRecord": 1744,
+            "BuyinLimit": 2500
+          },
+          {
+            "PlayerName": "zfzfzf",
+            "PlayerId": 145210,
+            "TotalBuyin": 5000,
+            "CurrRecord": -5000,
+            "BuyinLimit": 7500
+          },
+          {
+            "PlayerName": "红",
+            "PlayerId": 110332,
+            "TotalBuyin": 5000,
+            "CurrRecord": -5000,
+            "BuyinLimit": 5000
+          },
+          {
+            "PlayerName": "通吃",
+            "PlayerId": 124066,
+            "TotalBuyin": 12500,
+            "CurrRecord": -3369,
+            "BuyinLimit": 10000
+          },
+          {
+            "PlayerName": "提莫一米五",
+            "PlayerId": 145188,
+            "TotalBuyin": 2500,
+            "CurrRecord": 5967,
+            "BuyinLimit": 2500
+          },
+          {
+            "PlayerName": "zhengdag",
+            "PlayerId": 151662,
+            "TotalBuyin": 2500,
+            "CurrRecord": -2500,
+            "BuyinLimit": 2500
+          },
+          {
+            "PlayerName": "梦不觉",
+            "PlayerId": 159636,
+            "TotalBuyin": 2500,
+            "CurrRecord": 6620,
+            "BuyinLimit": 2500
+          }
+        ],
+        "AutoAddActiontimeCount": 0,
+        "ActionTimeCount": 0,
+        "ClubCreaterIds": [ 0 ],
+        "TotalBuyout": 0,
+        "LastBuyinAllianceId": 0,
+        "AllFeeItems": {
+          "PlayWay": 1,
+          "ActionCount": 0,
+          "ShowCardCount": 0,
+          "InsuranceCount": 0,
+          "ActionDelayCountsFee": [
+            {
+              "StartCount": 1,
+              "EndCount": 1,
+              "NeedCoin": 25,
+              "State": null
+            },
+            {
+              "StartCount": 2,
+              "EndCount": 2,
+              "NeedCoin": 50,
+              "State": null
+            },
+            {
+              "StartCount": 3,
+              "EndCount": 3,
+              "NeedCoin": 100,
+              "State": null
+            },
+            {
+              "StartCount": 4,
+              "EndCount": 4,
+              "NeedCoin": 100,
+              "State": null
+            },
+            {
+              "StartCount": 5,
+              "EndCount": 5,
+              "NeedCoin": 100,
+              "State": null
+            },
+            {
+              "StartCount": 6,
+              "EndCount": 6,
+              "NeedCoin": 100,
+              "State": null
+            },
+            {
+              "StartCount": 7,
+              "EndCount": 7,
+              "NeedCoin": 100,
+              "State": null
+            },
+            {
+              "StartCount": 8,
+              "EndCount": 8,
+              "NeedCoin": 100,
+              "State": null
+            },
+            {
+              "StartCount": 9,
+              "EndCount": 9,
+              "NeedCoin": 100,
+              "State": null
+            }
+          ],
+          "ShowCardCountsFee": [
+            {
+              "StartCount": 1,
+              "EndCount": 2,
+              "NeedCoin": 100,
+              "State": null
+            },
+            {
+              "StartCount": 3,
+              "EndCount": 4,
+              "NeedCoin": 100,
+              "State": null
+            },
+            {
+              "StartCount": 5,
+              "EndCount": 999999,
+              "NeedCoin": 100,
+              "State": null
+            }
+          ],
+          "InsurnanceCountsFee": [
+            {
+              "StartCount": 1,
+              "EndCount": 1,
+              "NeedCoin": 100,
+              "State": null
+            },
+            {
+              "StartCount": 2,
+              "EndCount": 2,
+              "NeedCoin": 100,
+              "State": null
+            }
+          ],
+          "ShowLeftCardFee": [
+            {
+              "StartCount": 0,
+              "EndCount": 0,
+              "NeedCoin": 20,
+              "State": "flop"
+            },
+            {
+              "StartCount": 0,
+              "EndCount": 0,
+              "NeedCoin": 20,
+              "State": "turn"
+            },
+            {
+              "StartCount": 0,
+              "EndCount": 0,
+              "NeedCoin": 20,
+              "State": "river"
+            }
+          ],
+          "EmotionFee": {
+            "StartCount": 0,
+            "EndCount": 0,
+            "NeedCoin": 5,
+            "State": null
+          },
+          "EmotionFee2": {
+            "StartCount": 0,
+            "EndCount": 0,
+            "NeedCoin": 0,
+            "State": null
+          }
+        },
+        "IsQuickSit": false
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:39",
+      "PackageType": "NoticeStartGame",
+      "Time": "2018-09-10T16:09:39.5236544+03:00",
+      "Content": {
+        "RoomId": 906146
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:39",
+      "PackageType": "NoticeResetGame",
+      "Time": "2018-09-10T16:09:39.7335651+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "GameId": "259132557434114048",
+        "Players": [
+          {
+            "Playerid": 159636,
+            "Seatid": 0,
+            "Name": "梦不觉",
+            "Headurl": null,
+            "Marks": null,
+            "Gender": 0,
+            "Stake": 3928,
+            "LastVoice": null,
+            "LastAction": "Null",
+            "InGame": true,
+            "InStay": false,
+            "LeftStayTime": 0,
+            "RoundBet": 0,
+            "Cards": null,
+            "Position": {
+              "Longtitude": 0.0,
+              "Latitude": 0.0,
+              "Ip": "111.85.252.180"
+            }
+          },
+          {
+            "Playerid": 2008173,
+            "Seatid": 1,
+            "Name": "是丁哥啊",
+            "Headurl": null,
+            "Marks": null,
+            "Gender": 0,
+            "Stake": 2500,
+            "LastVoice": null,
+            "LastAction": "Null",
+            "InGame": true,
+            "InStay": false,
+            "LeftStayTime": 0,
+            "RoundBet": 0,
+            "Cards": null,
+            "Position": {
+              "Longtitude": 113.063133,
+              "Latitude": 22.8333244,
+              "Ip": "112.96.68.119"
+            }
+          },
+          {
+            "Playerid": 2001038,
+            "Seatid": 2,
+            "Name": "77777700",
+            "Headurl": null,
+            "Marks": null,
+            "Gender": 0,
+            "Stake": 1715,
+            "LastVoice": "#4#2#5#77777700",
+            "LastAction": "Null",
+            "InGame": true,
+            "InStay": false,
+            "LeftStayTime": 0,
+            "RoundBet": 0,
+            "Cards": null,
+            "Position": {
+              "Longtitude": 110.388382,
+              "Latitude": 28.4608078,
+              "Ip": "223.149.60.62"
+            }
+          },
+          {
+            "Playerid": 150935,
+            "Seatid": 3,
+            "Name": "苏神",
+            "Headurl": null,
+            "Marks": null,
+            "Gender": 0,
+            "Stake": 4622,
+            "LastVoice": "@苏神@http://image.jikao51.com:10010/voice_150935_s_s_2018091019150660360533463.mp3",
+            "LastAction": "Null",
+            "InGame": true,
+            "InStay": false,
+            "LeftStayTime": 0,
+            "RoundBet": 0,
+            "Cards": null,
+            "Position": {
+              "Longtitude": 109.180344,
+              "Latitude": 27.6896687,
+              "Ip": "111.124.245.22"
+            }
+          },
+          {
+            "Playerid": 105927,
+            "Seatid": 4,
+            "Name": "玩你",
+            "Headurl": null,
+            "Marks": null,
+            "Gender": 1,
+            "Stake": 2789,
+            "LastVoice": "#2#0#9#玩你",
+            "LastAction": "Null",
+            "InGame": true,
+            "InStay": false,
+            "LeftStayTime": 0,
+            "RoundBet": 0,
+            "Cards": null,
+            "Position": {
+              "Longtitude": 120.577888,
+              "Latitude": 32.23029,
+              "Ip": "180.120.70.76"
+            }
+          },
+          {
+            "Playerid": 2004736,
+            "Seatid": 5,
+            "Name": "我是吃鸡王",
+            "Headurl": null,
+            "Marks": null,
+            "Gender": 0,
+            "Stake": 3040,
+            "LastVoice": "@我是吃鸡王@http://image.jikao51.com:10010/voice_2004736_s_s_2018091015500595529349081.mp3",
+            "LastAction": "Null",
+            "InGame": true,
+            "InStay": false,
+            "LeftStayTime": 0,
+            "RoundBet": 0,
+            "Cards": null,
+            "Position": {
+              "Longtitude": 110.38871,
+              "Latitude": 28.4559345,
+              "Ip": "117.136.24.142"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:39",
+      "PackageType": "NoticeGameElectDealer",
+      "Time": "2018-09-10T16:09:39.9161395+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "DealerSeatId": 5,
+        "SBSeatId": 5,
+        "BBSeatId": 5
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:40",
+      "PackageType": "NoticeGameAnte",
+      "Time": "2018-09-10T16:09:40.1104289+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "SeatList": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "AmountList": [
+          50,
+          50,
+          50,
+          50,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:41",
+      "PackageType": "NoticeGameRoundEnd",
+      "Time": "2018-09-10T16:09:41.4967272+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "Pots": [
+          {
+            "PotId": 63,
+            "Amount": 300
+          }
+        ],
+        "PublicCards": null
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:41",
+      "PackageType": "NoticeGameBlind",
+      "Time": "2018-09-10T16:09:41.7173798+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "SBAmount": 0,
+        "BBAmount": 50,
+        "StraddleSeatList": [
+          -1
+        ],
+        "StraddleAmountList": [
+          0
+        ],
+        "PostSeatList": null,
+        "SBSeatId": 5,
+        "BBSeatId": 5,
+        "DealerSeatId": 5
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:41",
+      "PackageType": "NoticeGameHoleCard",
+      "Time": "2018-09-10T16:09:41.9479316+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "SeatList": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "HoldCards": null
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:45",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:09:45.635084+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 0,
+        "ActionType": "Fold",
+        "Amount": 0,
+        "Pots": [
+          {
+            "PotId": 63,
+            "Amount": 300
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 1
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:46",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:09:46.6970325+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 1,
+        "ActionType": "Call",
+        "Amount": 50,
+        "Pots": [
+          {
+            "PotId": 63,
+            "Amount": 300
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 2
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:48",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:09:48.7002317+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 2,
+        "ActionType": "Call",
+        "Amount": 50,
+        "Pots": [
+          {
+            "PotId": 63,
+            "Amount": 300
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 3
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:48",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:09:48.899402+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 3,
+        "ActionType": "Call",
+        "Amount": 50,
+        "Pots": [
+          {
+            "PotId": 63,
+            "Amount": 300
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 4
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:52",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:09:52.7109256+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 4,
+        "ActionType": "Call",
+        "Amount": 50,
+        "Pots": [
+          {
+            "PotId": 63,
+            "Amount": 300
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 5
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:54",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:09:54.6522033+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 5,
+        "ActionType": "Check",
+        "Amount": 0,
+        "Pots": [
+          {
+            "PotId": 63,
+            "Amount": 300
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 6
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:55",
+      "PackageType": "NoticeGameRoundEnd",
+      "Time": "2018-09-10T16:09:55.6385287+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "Pots": [
+          {
+            "PotId": 62,
+            "Amount": 550
+          }
+        ],
+        "PublicCards": null
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:55",
+      "PackageType": "NoticeGameCommunityCards",
+      "Time": "2018-09-10T16:09:55.8523508+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "Cards": [
+          {
+            "Rank": 8,
+            "Suit": 1
+          },
+          {
+            "Rank": 7,
+            "Suit": 1
+          },
+          {
+            "Rank": 11,
+            "Suit": 2
+          }
+        ],
+        "BettingRound": "Flop"
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:09:58",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:09:58.7282498+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 1,
+        "ActionType": "Check",
+        "Amount": 0,
+        "Pots": [
+          {
+            "PotId": 62,
+            "Amount": 550
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 7
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:01",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:10:01.8975986+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 2,
+        "ActionType": "Check",
+        "Amount": 0,
+        "Pots": [
+          {
+            "PotId": 62,
+            "Amount": 550
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 8
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:03",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:10:03.7305241+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 3,
+        "ActionType": "Check",
+        "Amount": 0,
+        "Pots": [
+          {
+            "PotId": 62,
+            "Amount": 550
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 9
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:04",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:10:04.8071312+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 4,
+        "ActionType": "Check",
+        "Amount": 0,
+        "Pots": [
+          {
+            "PotId": 62,
+            "Amount": 550
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 10
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:05",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:10:05.7436376+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 5,
+        "ActionType": "Bet",
+        "Amount": 370,
+        "Pots": [
+          {
+            "PotId": 62,
+            "Amount": 550
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 11
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:07",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:10:07.5769869+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 1,
+        "ActionType": "Call",
+        "Amount": 370,
+        "Pots": [
+          {
+            "PotId": 62,
+            "Amount": 550
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 12
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:11",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:10:11.5551394+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 2,
+        "ActionType": "Fold",
+        "Amount": 0,
+        "Pots": [
+          {
+            "PotId": 62,
+            "Amount": 550
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 13
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:12",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:10:12.5433255+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 3,
+        "ActionType": "Allin",
+        "Amount": 4522,
+        "Pots": [
+          {
+            "PotId": 62,
+            "Amount": 550
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 14
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:13",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:10:13.5080878+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 4,
+        "ActionType": "Allin",
+        "Amount": 2689,
+        "Pots": [
+          {
+            "PotId": 62,
+            "Amount": 550
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 15
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:16",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:10:16.5124969+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 5,
+        "ActionType": "Allin",
+        "Amount": 2940,
+        "Pots": [
+          {
+            "PotId": 62,
+            "Amount": 550
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 16
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:24",
+      "PackageType": "NoticePlayerAction",
+      "Time": "2018-09-10T16:10:24.530581+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "LastActionSeatId": 1,
+        "ActionType": "Allin",
+        "Amount": 2400,
+        "Pots": [
+          {
+            "PotId": 62,
+            "Amount": 550
+          }
+        ],
+        "DefaultFold": false,
+        "ActionSeq": 17
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:25",
+      "PackageType": "NoticeGameRoundEnd",
+      "Time": "2018-09-10T16:10:25.7937838+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "Pots": [
+          {
+            "PotId": 58,
+            "Amount": 10150
+          },
+          {
+            "PotId": 56,
+            "Amount": 867
+          },
+          {
+            "PotId": 40,
+            "Amount": 502
+          },
+          {
+            "PotId": 8,
+            "Amount": 1582
+          }
+        ],
+        "PublicCards": [
+          {
+            "Rank": 8,
+            "Suit": 1
+          },
+          {
+            "Rank": 7,
+            "Suit": 1
+          },
+          {
+            "Rank": 11,
+            "Suit": 2
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:26",
+      "PackageType": "NoticeGameShowDown",
+      "Time": "2018-09-10T16:10:26.7900833+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "Shows": [
+          {
+            "SeatId": 1,
+            "PlayerId": 2008173,
+            "Cards": [
+              {
+                "Rank": 12,
+                "Suit": 1
+              },
+              {
+                "Rank": 4,
+                "Suit": 1
+              }
+            ]
+          },
+          {
+            "SeatId": 3,
+            "PlayerId": 150935,
+            "Cards": [
+              {
+                "Rank": 11,
+                "Suit": 1
+              },
+              {
+                "Rank": 7,
+                "Suit": 3
+              }
+            ]
+          },
+          {
+            "SeatId": 4,
+            "PlayerId": 105927,
+            "Cards": [
+              {
+                "Rank": 4,
+                "Suit": 0
+              },
+              {
+                "Rank": 6,
+                "Suit": 3
+              }
+            ]
+          },
+          {
+            "SeatId": 5,
+            "PlayerId": 2004736,
+            "Cards": [
+              {
+                "Rank": 9,
+                "Suit": 0
+              },
+              {
+                "Rank": 11,
+                "Suit": 3
+              }
+            ]
+          }
+        ],
+        "MuckList": 0
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:28",
+      "PackageType": "NoticeGameCommunityCards",
+      "Time": "2018-09-10T16:10:28.7305921+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "Cards": [
+          {
+            "Rank": 5,
+            "Suit": 1
+          }
+        ],
+        "BettingRound": "Turn"
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:30",
+      "PackageType": "NoticeGameCommunityCards",
+      "Time": "2018-09-10T16:10:30.7915677+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "Cards": [
+          {
+            "Rank": 6,
+            "Suit": 1
+          }
+        ],
+        "BettingRound": "River"
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:30",
+      "PackageType": "NoticeGameShowDown",
+      "Time": "2018-09-10T16:10:30.9749105+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "Shows": [
+          {
+            "SeatId": 1,
+            "PlayerId": 2008173,
+            "Cards": [
+              {
+                "Rank": 12,
+                "Suit": 1
+              },
+              {
+                "Rank": 4,
+                "Suit": 1
+              }
+            ]
+          },
+          {
+            "SeatId": 3,
+            "PlayerId": 150935,
+            "Cards": [
+              {
+                "Rank": 11,
+                "Suit": 1
+              },
+              {
+                "Rank": 7,
+                "Suit": 3
+              }
+            ]
+          },
+          {
+            "SeatId": 4,
+            "PlayerId": 105927,
+            "Cards": [
+              {
+                "Rank": 4,
+                "Suit": 0
+              },
+              {
+                "Rank": 6,
+                "Suit": 3
+              }
+            ]
+          },
+          {
+            "SeatId": 5,
+            "PlayerId": 2004736,
+            "Cards": [
+              {
+                "Rank": 9,
+                "Suit": 0
+              },
+              {
+                "Rank": 11,
+                "Suit": 3
+              }
+            ]
+          }
+        ],
+        "MuckList": 0
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:32",
+      "PackageType": "NoticeGameSettlement",
+      "Time": "2018-09-10T16:10:32.7909018+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "Winners": [
+          {
+            "SeatId": 1,
+            "PlayerId": 2008173,
+            "Amount": 10150,
+            "IsStealBlind": false,
+            "Pots": [
+              {
+                "PotId": 58,
+                "Amount": 10150
+              }
+            ],
+            "TotalInvestment": 2500
+          },
+          {
+            "SeatId": 3,
+            "PlayerId": 150935,
+            "Amount": 2951,
+            "IsStealBlind": false,
+            "Pots": [
+              {
+                "PotId": 56,
+                "Amount": 867
+              },
+              {
+                "PotId": 40,
+                "Amount": 502
+              },
+              {
+                "PotId": 8,
+                "Amount": 1582
+              }
+            ],
+            "TotalInvestment": 4622
+          }
+        ],
+        "Pots": [
+          {
+            "PotId": 58,
+            "Amount": 10150
+          },
+          {
+            "PotId": 56,
+            "Amount": 867
+          },
+          {
+            "PotId": 40,
+            "Amount": 502
+          },
+          {
+            "PotId": 8,
+            "Amount": 1582
+          }
+        ],
+        "Gameuuid": 259132557434114048,
+        "Jinfo": null,
+        "GameuuidJs": "259132557434114048"
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:32",
+      "PackageType": "NoticePlayerShowCard",
+      "Time": "2018-09-10T16:10:32.9964544+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "ShowCardId": null,
+        "Players": null
+      }
+    },
+    {
+      "timestamp": "10/09/2018 16:10:33",
+      "PackageType": "NoticePlayerStayPosition",
+      "Time": "2018-09-10T16:10:33.1839112+03:00",
+      "Content": {
+        "RoomId": 906146,
+        "Players": [
+          {
+            "Playerid": 2004736,
+            "Seatid": 5,
+            "Name": "我是吃鸡王",
+            "Headurl": null,
+            "Marks": null,
+            "Gender": 0,
+            "Stake": 0,
+            "LastVoice": "@我是吃鸡王@http://image.jikao51.com:10010/voice_2004736_s_s_2018091015500595529349081.mp3",
+            "LastAction": "Null",
+            "InGame": false,
+            "InStay": true,
+            "LeftStayTime": 180,
+            "RoundBet": 0,
+            "Cards": [
+              {
+                "Rank": 9,
+                "Suit": 0
+              },
+              {
+                "Rank": 11,
+                "Suit": 3
+              }
+            ],
+            "Position": {
+              "Longtitude": 110.38871,
+              "Latitude": 28.4559345,
+              "Ip": "117.136.24.142"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

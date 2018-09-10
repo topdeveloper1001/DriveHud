@@ -155,6 +155,8 @@ namespace DriveHUD.Importers.PokerKing
 
             var handHistoriesToProcess = new ConcurrentDictionary<long, List<HandHistoryData>>();
 
+            var usersRooms = new Dictionary<uint, int>();
+
             while (!cancellationTokenSource.IsCancellationRequested && !IsDisabled())
             {
                 try
@@ -193,7 +195,19 @@ namespace DriveHUD.Importers.PokerKing
                         if (package.PackageType == PackageType.RequestJoinRoom)
                         {
                             ParsePackage<RequestJoinRoom>(package,
-                              body => LogProvider.Log.Info(Logger, $"User {package.UserId} entered room {body.RoomId}."),
+                              body =>
+                              {
+                                  if (!usersRooms.ContainsKey(package.UserId))
+                                  {
+                                      usersRooms.Add(package.UserId, body.RoomId);
+                                  }
+                                  else
+                                  {
+                                      usersRooms[package.UserId] = body.RoomId;
+                                  }
+
+                                  LogProvider.Log.Info(Logger, $"User {package.UserId} entered room {body.RoomId}.");
+                              },
                               () => LogProvider.Log.Info(Logger, $"User {package.UserId} entered room."));
 
                             continue;
@@ -222,8 +236,10 @@ namespace DriveHUD.Importers.PokerKing
                             continue;
                         }
 
+                        var unexpectedRoomDetected = !usersRooms.TryGetValue(package.UserId, out int roomId) || roomId != package.RoomId;
+
                         // add detected window to list of detected tables
-                        if (!detectedTableWindows.Contains(windowHandle))
+                        if (!unexpectedRoomDetected && !detectedTableWindows.Contains(windowHandle))
                         {
                             detectedTableWindows.Add(windowHandle);
 
@@ -241,14 +257,7 @@ namespace DriveHUD.Importers.PokerKing
                         {
                             if (IsAdvancedLogEnabled)
                             {
-                                LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: Found process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
-                            }
-
-                            if (!pkCatcherService.CheckHand(handHistory))
-                            {
-                                LogProvider.Log.Info(Logger, $"License doesn't support cash hand {handHistory.HandId}. [bb={handHistory.GameDescription.Limit.BigBlind}]");
-                                SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK_NoLicense", windowHandle);
-                                continue;
+                                LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: Process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
                             }
 
                             var handHistoryData = new HandHistoryData
@@ -257,6 +266,28 @@ namespace DriveHUD.Importers.PokerKing
                                 HandHistory = handHistory,
                                 WindowHandle = windowHandle
                             };
+
+                            if (unexpectedRoomDetected)
+                            {
+                                if (IsAdvancedLogEnabled)
+                                {
+                                    LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: unexpected room detected.");
+                                }
+
+                                handHistoryData.WindowHandle = IntPtr.Zero;
+                            }
+
+                            if (!pkCatcherService.CheckHand(handHistory))
+                            {
+                                LogProvider.Log.Info(Logger, $"License doesn't support cash hand {handHistory.HandId}. [BB={handHistory.GameDescription.Limit.BigBlind}]");
+
+                                if (handHistoryData.WindowHandle != IntPtr.Zero)
+                                {
+                                    SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK_NoLicense", windowHandle);
+                                }
+
+                                continue;
+                            }
 
                             ExportHandHistory(handHistoryData, handHistoriesToProcess);
                         }
@@ -296,7 +327,7 @@ namespace DriveHUD.Importers.PokerKing
         /// <param name="package">Package to check</param>
         /// <returns></returns>
         protected static bool IsAllowedPackage(PokerKingPackage package)
-        {
+        {            
             switch (package.PackageType)
             {
                 case PackageType.NoticeBuyin:
@@ -489,6 +520,11 @@ namespace DriveHUD.Importers.PokerKing
             }
 
             return playerList;
+        }
+
+        protected override IntPtr FindWindow(ParsingResult parsingResult)
+        {
+            return IntPtr.Zero;
         }
     }
 }
