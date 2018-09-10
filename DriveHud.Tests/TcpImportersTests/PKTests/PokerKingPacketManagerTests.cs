@@ -43,8 +43,9 @@ namespace DriveHud.Tests.PKTests
             Assert.That(actual, Is.EqualTo(expected));
         }
 
-        [TestCase(@"Packets\NoticePlayerActionTurnPacket.txt")]
-        public void TryParsePacketTest(string file)
+        [TestCase(@"Packets\NoticePlayerActionTurnPacket.txt", 1)]
+        [TestCase(@"Packets\MultiplePacket.txt", 2)]
+        public void TryParsePacketTest(string file, int expected)
         {
             var bytes = ReadPacketFile(file);
             var packetManager = new PokerKingPacketManager();
@@ -58,10 +59,11 @@ namespace DriveHud.Tests.PKTests
                 SequenceNumber = 1962805251
             };
 
-            var result = packetManager.TryParse(capturedPacket, out PokerKingPackage actual);
+            var result = packetManager.TryParse(capturedPacket, out IList<PokerKingPackage> actualPackages);
 
             Assert.IsTrue(result);
-            Assert.IsNotNull(actual);
+            Assert.IsNotNull(actualPackages);
+            Assert.That(actualPackages.Count, Is.EqualTo(expected));
         }
 
         [TestCase(@"Packets\NoticePlayerActionTurnPacket.txt", @"Packets\NoticePlayerActionTurnPacket.json")]
@@ -82,39 +84,43 @@ namespace DriveHud.Tests.PKTests
                 SequenceNumber = 1962805251
             };
 
-            var result = packetManager.TryParse(capturedPacket, out PokerKingPackage package);
+            var result = packetManager.TryParse(capturedPacket, out IList<PokerKingPackage> packages);
 
-            object actual = null;
-
-            switch (package.PackageType)
+            foreach (var package in packages)
             {
-                case PackageType.NoticeGameRoundEnd:
-                    actual = SerializationHelper.Deserialize<NoticeGameRoundEnd>(package.Body);
-                    break;
-                case PackageType.NoticePlayerActionTurn:
-                    actual = SerializationHelper.Deserialize<NoticePlayerActionTurn>(package.Body);
-                    break;
-                case PackageType.NoticeGameSnapShot:
-                    actual = SerializationHelper.Deserialize<NoticeGameSnapShot>(package.Body);
-                    break;
-                case PackageType.NoticePlayerAction:
-                    actual = SerializationHelper.Deserialize<NoticePlayerAction>(package.Body);
-                    break;
-                case PackageType.RequestJoinRoom:
-                    actual = SerializationHelper.Deserialize<RequestJoinRoom>(package.Body);
-                    break;
+                object actual = null;
+
+                switch (package.PackageType)
+                {
+                    case PackageType.NoticeGameRoundEnd:
+                        actual = SerializationHelper.Deserialize<NoticeGameRoundEnd>(package.Body);
+                        break;
+                    case PackageType.NoticePlayerActionTurn:
+                        actual = SerializationHelper.Deserialize<NoticePlayerActionTurn>(package.Body);
+                        break;
+                    case PackageType.NoticeGameSnapShot:
+                        actual = SerializationHelper.Deserialize<NoticeGameSnapShot>(package.Body);
+                        break;
+                    case PackageType.NoticePlayerAction:
+                        actual = SerializationHelper.Deserialize<NoticePlayerAction>(package.Body);
+                        break;
+                    case PackageType.RequestJoinRoom:
+                        actual = SerializationHelper.Deserialize<RequestJoinRoom>(package.Body);
+                        break;
+                }
+
+                var jsonExpected = File.ReadAllText(Path.Combine(TestDataFolder, jsonFile));
+                var jsonActual = JsonConvert.SerializeObject(actual, Formatting.Indented, new StringEnumConverter());
+
+                Assert.That(jsonActual, Is.EqualTo(jsonExpected));
             }
-
-            var jsonExpected = File.ReadAllText(Path.Combine(TestDataFolder, jsonFile));
-            var jsonActual = JsonConvert.SerializeObject(actual, Formatting.Indented, new StringEnumConverter());
-
-            Assert.That(jsonActual, Is.EqualTo(jsonExpected));
         }
 
         [TestCase(@"Packets\170.33.8.75.31001-192.168.0.104.33644.txt", @"Packets\170.33.8.75.31001-192.168.0.104.33644-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
         [TestCase(@"Packets\27.155.82.113.31001-192.168.1.4.55025.txt", @"Packets\27.155.82.113.31001-192.168.1.4.55025-pkgt.txt", "yyyy/MM/dd HH:mm:ss")]
         [TestCase(@"Packets\170.33.8.75.31001-192.168.0.106.9535.txt", @"Packets\170.33.8.75.31001-192.168.0.106.9535-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
         [TestCase(@"Packets\192.168.0.106.9535-170.33.8.75.31001.txt", @"Packets\192.168.0.106.9535-170.33.8.75.31001-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
+        [TestCase(@"Packets\218.65.131.23.31001-192.168.1.101.2495.txt", @"Packets\218.65.131.23.31001-192.168.1.101.2495-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
         public void TryParseTest(string file, string expectedPackageTypesFile, string dateFormat)
         {
             var packets = ReadCapturedPackets(file, null);
@@ -133,14 +139,17 @@ namespace DriveHud.Tests.PKTests
                 {
                     ShimDateTime.NowGet = () => packet.CreatedTimeStamp;
 
-                    if (packetManager.TryParse(packet, out PokerKingPackage package, true))
+                    if (packetManager.TryParse(packet, out IList<PokerKingPackage> packages))
                     {
-                        Console.WriteLine(package.PackageType);
-
-                        if (expectedPackageTypes.Count > 0)
+                        foreach (var package in packages)
                         {
-                            Assert.That(package.PackageType, Is.EqualTo(expectedPackageTypes[expectedCommandsIndex++]));
-                            AssertPackage(package, packet);
+                            Console.WriteLine(package.PackageType);
+
+                            if (expectedPackageTypes.Count > 0)
+                            {
+                                Assert.That(package.PackageType, Is.EqualTo(expectedPackageTypes[expectedCommandsIndex++]));
+                                AssertPackage(package, packet);
+                            }
                         }
                     }
                 }

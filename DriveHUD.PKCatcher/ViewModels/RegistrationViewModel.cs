@@ -10,12 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Infrastructure.Events;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.PKCatcher.Licensing;
 using Microsoft.Practices.ServiceLocation;
 using Model;
+using Prism.Events;
 using ReactiveUI;
 using System;
 using System.Collections.ObjectModel;
@@ -133,7 +135,7 @@ namespace DriveHUD.PKCatcher.ViewModels
                 }
             });
 
-            ResetLicensesCommand = ReactiveCommand.Create(()=>
+            ResetLicensesCommand = ReactiveCommand.Create(() =>
             {
                 try
                 {
@@ -367,8 +369,8 @@ namespace DriveHUD.PKCatcher.ViewModels
             IsBuyButtonVisible = true;
             IsRenewButtonVisible = true;
             IsBackButtonVisible = false;
-            IsOKButtonVisible = false;
-            IsCancelButtonVisible = true;
+            IsOKButtonVisible = true;
+            IsCancelButtonVisible = false;
             IsActivateButtonVisible = false;
             IsResetLicensesButtonVisible = false;
 
@@ -788,6 +790,7 @@ namespace DriveHUD.PKCatcher.ViewModels
                 return;
             }
 
+            StartImporters();
             Cancel();
         }
 
@@ -840,6 +843,7 @@ namespace DriveHUD.PKCatcher.ViewModels
             }
 
             InitializeMessage("PKC_RegistrationView_Success", true);
+            StartImporters();
         }
 
         private void Back()
@@ -866,6 +870,12 @@ namespace DriveHUD.PKCatcher.ViewModels
             }
 
             InitializeGreeting();
+        }
+
+        private void StartImporters()
+        {
+            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            eventAggregator.GetEvent<StartTcpImporterEvent>().Publish(new StartTcpImporterEventArgs());
         }
 
         #endregion

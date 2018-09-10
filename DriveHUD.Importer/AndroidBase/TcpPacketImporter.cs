@@ -29,9 +29,7 @@ namespace DriveHUD.Importers.AndroidBase
     {
         #region ITcpPacketImporter implementation
 
-        public abstract void AddPacket(CapturedPacket capturedPacket);
-
-        public abstract bool IsDisabled();
+        public abstract void AddPacket(CapturedPacket capturedPacket);        
 
         public abstract bool Match(TcpPacket tcpPacket, IpPacket ipPacket);
 

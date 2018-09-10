@@ -154,12 +154,10 @@
                         <dh:ProgressBarEx
                             Height="20"
                             Value="{Binding DaysLeft, Mode=OneWay}"
-                            Maximum="365"
+                            Maximum="31"
                             BorderBrush="{StaticResource SelectionBackgroundBrush}"
-                            BorderThickness="1"
-                            Width="530"
-                            Margin="0,3,0,10"
-                            Visibility="{Binding IsTrialProgressBarVisible, Converter={dh:BoolToVisibilityConverter} }"
+                            BorderThickness="1"                            
+                            Margin="0,3,0,10"                            
                             Style="{StaticResource ProgressBarExStyle1}" />
                     </StackPanel>
                 </DataTemplate>

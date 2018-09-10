@@ -17,8 +17,10 @@ using DriveHUD.Importers.PokerMaster;
 using DriveHUD.Importers.PokerMaster.Model;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
+using NSubstitute;
 using NUnit.Framework;
 using PMCatcher.Tests;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -39,6 +41,9 @@ namespace DriveHud.Tests.TcpImportersTests
 
             unityContainer.RegisterType<IPackageBuilder<PokerKingPackage>, PokerKingPackageBuilder>();
             unityContainer.RegisterType<IPackageBuilder<PokerMasterPackage>, PokerMasterPackageBuilder>();
+
+            var eventAggregator = Substitute.For<IEventAggregator>();
+            unityContainer.RegisterInstance(eventAggregator);
 
             var locator = new UnityServiceLocator(unityContainer);
 

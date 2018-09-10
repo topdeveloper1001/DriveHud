@@ -10,11 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Collections.Generic;
 
 namespace DriveHUD.Importers.AndroidBase
 {
     internal interface IPacketManager<T>
     {     
-        bool TryParse(CapturedPacket packet, out T package, bool takeExpectedLength = false);
+        bool TryParse(CapturedPacket packet, out IList<T> packages);
     }
 }

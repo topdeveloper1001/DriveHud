@@ -1,0 +1,780 @@
+-----------begin----------------
+Date: 2018/9/6 9:03:14
+Date Now: 2018/9/6 17:03:14
+Date Now (ticks): 636718501943592428
+SequenceNumber: 889307807
+Packet Full Length: 200
+Packet Current Length: 200
+Body:
+---------body begin-------------
+00 C8 27 10 00 00 00 00 00 02 65 EA 00 00 00 00 0A 06 31 2E 31 2E 35 31 12 20 66 34 66 65 62 38 62 64 34 62 62 30 35 37 66 64 34 34 38 65 33 64 38 63 63 32 31 34 66 31 37 32 1A 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36 22 7C 7B 22 64 69 73 72 6F 6F 74 22 3A 66 61 6C 73 65 2C 22 64 6D 6F 64 65 6C 22 3A 22 65 6D 75 6C 61 74 6F 72 22 2C 22 64 6E 61 6D 65 22 3A 22 76 69 76 6F 20 78 36 70 6C 75 73 20 64 22 2C 22 64 75 75 69 64 22 3A 22 62 64 33 31 63 64 65 61 66 36 62 32 63 30 62 64 32 32 34 33 39 39 38 64 33 32 34 37 65 63 31 30 22 2C 22 64 76 65 72 73 69 6F 6E 22 3A 22 35 2E 31 2E 31 22 7D 0A
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:03:18
+Date Now: 2018/9/6 17:03:19
+Date Now (ticks): 636718501990058329
+SequenceNumber: 889308007
+Packet Full Length: 20
+Packet Current Length: 20
+Body:
+---------body begin-------------
+00 14 27 18 00 00 00 01 00 02 65 EA 00 07 EA C9 08 C9 D5 1F
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:03:19
+Date Now: 2018/9/6 17:03:20
+Date Now (ticks): 636718502003330014
+SequenceNumber: 889308027
+Packet Full Length: 20
+Packet Current Length: 20
+Body:
+---------body begin-------------
+00 14 27 3F 00 00 00 02 00 02 65 EA 00 07 EA C9 08 C9 D5 1F
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:03:20
+Date Now: 2018/9/6 17:03:20
+Date Now (ticks): 636718502008055614
+SequenceNumber: 889308047
+Packet Full Length: 54
+Packet Current Length: 54
+Body:
+---------body begin-------------
+00 36 27 87 00 00 00 03 00 02 65 EA 00 07 EA C9 08 C9 D5 1F 12 20 66 34 66 65 62 38 62 64 34 62 62 30 35 37 66 64 34 34 38 65 33 64 38 63 63 32 31 34 66 31 37 32
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:03:32
+Date Now: 2018/9/6 17:03:32
+Date Now (ticks): 636718502127310758
+SequenceNumber: 889308101
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 04 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:03:44
+Date Now: 2018/9/6 17:03:44
+Date Now (ticks): 636718502247175978
+SequenceNumber: 889308137
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 05 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:03:56
+Date Now: 2018/9/6 17:03:56
+Date Now (ticks): 636718502368121337
+SequenceNumber: 889308173
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 06 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:04:08
+Date Now: 2018/9/6 17:04:08
+Date Now (ticks): 636718502486926423
+SequenceNumber: 889308209
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 07 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:04:20
+Date Now: 2018/9/6 17:04:20
+Date Now (ticks): 636718502607046676
+SequenceNumber: 889308245
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 08 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:04:32
+Date Now: 2018/9/6 17:04:32
+Date Now (ticks): 636718502726546851
+SequenceNumber: 889308281
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 09 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:04:44
+Date Now: 2018/9/6 17:04:44
+Date Now (ticks): 636718502848612351
+SequenceNumber: 889308317
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 0A 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:04:56
+Date Now: 2018/9/6 17:04:56
+Date Now (ticks): 636718502967247416
+SequenceNumber: 889308353
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 0B 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:05:08
+Date Now: 2018/9/6 17:05:08
+Date Now (ticks): 636718503086582570
+SequenceNumber: 889308389
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 0C 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:05:20
+Date Now: 2018/9/6 17:05:20
+Date Now (ticks): 636718503207137878
+SequenceNumber: 889308425
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 0D 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:05:32
+Date Now: 2018/9/6 17:05:33
+Date Now (ticks): 636718503331443663
+SequenceNumber: 889308461
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 0E 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:05:44
+Date Now: 2018/9/6 17:05:44
+Date Now (ticks): 636718503446923327
+SequenceNumber: 889308497
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 0F 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:05:56
+Date Now: 2018/9/6 17:05:56
+Date Now (ticks): 636718503568328744
+SequenceNumber: 889308533
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 10 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:06:08
+Date Now: 2018/9/6 17:06:08
+Date Now (ticks): 636718503688794041
+SequenceNumber: 889308569
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 11 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:06:20
+Date Now: 2018/9/6 17:06:20
+Date Now (ticks): 636718503806493987
+SequenceNumber: 889308605
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 12 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:06:32
+Date Now: 2018/9/6 17:06:32
+Date Now (ticks): 636718503928839523
+SequenceNumber: 889308641
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 13 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:06:44
+Date Now: 2018/9/6 17:06:44
+Date Now (ticks): 636718504047179550
+SequenceNumber: 889308677
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 14 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:06:56
+Date Now: 2018/9/6 17:06:56
+Date Now (ticks): 636718504167079775
+SequenceNumber: 889308713
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 15 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:07:08
+Date Now: 2018/9/6 17:07:08
+Date Now (ticks): 636718504286354921
+SequenceNumber: 889308749
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 16 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:07:20
+Date Now: 2018/9/6 17:07:20
+Date Now (ticks): 636718504406475175
+SequenceNumber: 889308785
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 17 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:07:32
+Date Now: 2018/9/6 17:07:32
+Date Now (ticks): 636718504526150371
+SequenceNumber: 889308821
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 18 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:07:44
+Date Now: 2018/9/6 17:07:44
+Date Now (ticks): 636718504646440646
+SequenceNumber: 889308857
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 19 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:07:56
+Date Now: 2018/9/6 17:07:56
+Date Now (ticks): 636718504767065964
+SequenceNumber: 889308893
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 1A 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:08:08
+Date Now: 2018/9/6 17:08:08
+Date Now (ticks): 636718504886621145
+SequenceNumber: 889308929
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 1B 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:08:20
+Date Now: 2018/9/6 17:08:20
+Date Now (ticks): 636718505006991431
+SequenceNumber: 889308965
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 1C 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:08:32
+Date Now: 2018/9/6 17:08:32
+Date Now (ticks): 636718505126791643
+SequenceNumber: 889309001
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 1D 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:08:44
+Date Now: 2018/9/6 17:08:44
+Date Now (ticks): 636718505248957156
+SequenceNumber: 889309037
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 1E 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:08:56
+Date Now: 2018/9/6 17:08:56
+Date Now (ticks): 636718505366547088
+SequenceNumber: 889309073
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 1F 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:09:08
+Date Now: 2018/9/6 17:09:09
+Date Now (ticks): 636718505490812868
+SequenceNumber: 889309109
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 20 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:09:20
+Date Now: 2018/9/6 17:09:21
+Date Now (ticks): 636718505611278165
+SequenceNumber: 889309145
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 21 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:09:32
+Date Now: 2018/9/6 17:09:33
+Date Now (ticks): 636718505730673326
+SequenceNumber: 889309181
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 22 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:09:44
+Date Now: 2018/9/6 17:09:44
+Date Now (ticks): 636718505848108239
+SequenceNumber: 889309217
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 23 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:09:56
+Date Now: 2018/9/6 17:09:56
+Date Now (ticks): 636718505967593411
+SequenceNumber: 889309253
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 24 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:10:08
+Date Now: 2018/9/6 17:10:09
+Date Now (ticks): 636718506096039722
+SequenceNumber: 889309289
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 25 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:10:20
+Date Now: 2018/9/6 17:10:20
+Date Now (ticks): 636718506208679025
+SequenceNumber: 889309325
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 26 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:10:32
+Date Now: 2018/9/6 17:10:34
+Date Now (ticks): 636718506341870939
+SequenceNumber: 889309361
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 27 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:10:44
+Date Now: 2018/9/6 17:10:47
+Date Now (ticks): 636718506474222745
+SequenceNumber: 889309397
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 28 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:10:56
+Date Now: 2018/9/6 17:10:58
+Date Now (ticks): 636718506587722158
+SequenceNumber: 889309433
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 29 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:11:08
+Date Now: 2018/9/6 17:11:09
+Date Now (ticks): 636718506695000780
+SequenceNumber: 889309469
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 2A 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:11:20
+Date Now: 2018/9/6 17:11:23
+Date Now (ticks): 636718506831323091
+SequenceNumber: 889309505
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 2B 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:11:32
+Date Now: 2018/9/6 17:11:33
+Date Now (ticks): 636718506937276546
+SequenceNumber: 889309541
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 2C 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:11:44
+Date Now: 2018/9/6 17:11:44
+Date Now (ticks): 636718507048665690
+SequenceNumber: 889309577
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 2D 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:11:56
+Date Now: 2018/9/6 17:11:58
+Date Now (ticks): 636718507180687455
+SequenceNumber: 889309613
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 2E 00 02 65 EA 00 07 EA C9 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:12:06
+Date Now: 2018/9/6 17:12:07
+Date Now (ticks): 636718507270013798
+SequenceNumber: 889309649
+Packet Full Length: 20
+Packet Current Length: 20
+Body:
+---------body begin-------------
+00 14 27 1A 00 00 00 2F 00 02 65 EA 00 07 EA C9 08 C9 D5 1F
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:12:21
+Date Now: 2018/9/6 17:12:22
+Date Now (ticks): 636718507420537912
+SequenceNumber: 889309669
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 30 00 02 65 EA 00 00 00 00 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:12:24
+Date Now: 2018/9/6 17:12:24
+Date Now (ticks): 636718507449596602
+SequenceNumber: 889309705
+Packet Full Length: 20
+Packet Current Length: 20
+Body:
+---------body begin-------------
+00 14 27 18 00 00 00 31 00 02 65 EA 00 0B CF 8B 08 8B 9F 2F
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:12:24
+Date Now: 2018/9/6 17:12:25
+Date Now (ticks): 636718507454267195
+SequenceNumber: 889309725
+Packet Full Length: 20
+Packet Current Length: 20
+Body:
+---------body begin-------------
+00 14 27 3F 00 00 00 32 00 02 65 EA 00 0B CF 8B 08 8B 9F 2F
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:12:25
+Date Now: 2018/9/6 17:12:26
+Date Now (ticks): 636718507466048691
+SequenceNumber: 889309745
+Packet Full Length: 54
+Packet Current Length: 54
+Body:
+---------body begin-------------
+00 36 27 87 00 00 00 33 00 02 65 EA 00 0B CF 8B 08 8B 9F 2F 12 20 66 34 66 65 62 38 62 64 34 62 62 30 35 37 66 64 34 34 38 65 33 64 38 63 63 32 31 34 66 31 37 32
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:12:37
+Date Now: 2018/9/6 17:12:42
+Date Now (ticks): 636718507622733588
+SequenceNumber: 889309799
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 34 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:12:49
+Date Now: 2018/9/6 17:12:50
+Date Now (ticks): 636718507706609238
+SequenceNumber: 889309835
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 35 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:13:01
+Date Now: 2018/9/6 17:13:02
+Date Now (ticks): 636718507822954012
+SequenceNumber: 889309871
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 36 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:13:13
+Date Now: 2018/9/6 17:13:16
+Date Now (ticks): 636718507962506733
+SequenceNumber: 889309907
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 37 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:13:25
+Date Now: 2018/9/6 17:13:28
+Date Now (ticks): 636718508083202060
+SequenceNumber: 889309943
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 38 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:13:37
+Date Now: 2018/9/6 17:13:39
+Date Now (ticks): 636718508196721475
+SequenceNumber: 889309979
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 39 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:13:49
+Date Now: 2018/9/6 17:13:51
+Date Now (ticks): 636718508314321408
+SequenceNumber: 889310015
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 3A 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:14:01
+Date Now: 2018/9/6 17:14:03
+Date Now (ticks): 636718508431226253
+SequenceNumber: 889310051
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 3B 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:14:13
+Date Now: 2018/9/6 17:14:16
+Date Now (ticks): 636718508562717950
+SequenceNumber: 889310087
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 3C 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:14:25
+Date Now: 2018/9/6 17:14:27
+Date Now (ticks): 636718508672366874
+SequenceNumber: 889310123
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 3D 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:14:37
+Date Now: 2018/9/6 17:14:38
+Date Now (ticks): 636718508783160943
+SequenceNumber: 889310159
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 3E 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:14:49
+Date Now: 2018/9/6 17:14:52
+Date Now (ticks): 636718508929294500
+SequenceNumber: 889310195
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 3F 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------
+-----------begin----------------
+Date: 2018/9/6 9:15:01
+Date Now: 2018/9/6 17:15:04
+Date Now (ticks): 636718509046219347
+SequenceNumber: 889310231
+Packet Full Length: 36
+Packet Current Length: 36
+Body:
+---------body begin-------------
+00 24 27 67 00 00 00 40 00 02 65 EA 00 0B CF 8B 08 EA CB 09 12 0E 1A 0C 34 39 2E 37 32 2E 36 36 2E 31 34 36
+----------body end--------------
+------------end-----------------

@@ -40,7 +40,7 @@ namespace DriveHUD.Importers.PokerKing
     {
         private readonly BlockingCollection<CapturedPacket> packetBuffer = new BlockingCollection<CapturedPacket>();
         private readonly IPKCatcherService pkCatcherService = ServiceLocator.Current.TryResolve<IPKCatcherService>();
-        private IPokerClientEncryptedLogger protectedLogger;
+        protected IPokerClientEncryptedLogger protectedLogger;
 
         protected override bool SupportDuplicates => true;
 
@@ -69,7 +69,7 @@ namespace DriveHUD.Importers.PokerKing
 
         public override bool IsDisabled()
         {
-            return false;
+            return pkCatcherService == null || !pkCatcherService.IsEnabled();
         }
 
         #endregion
@@ -100,7 +100,7 @@ namespace DriveHUD.Importers.PokerKing
         /// <summary>
         /// Initializes logger with protection
         /// </summary>
-        protected void InitializeLogger()
+        protected virtual void InitializeLogger()
         {
             var logger = new PokerClientLoggerConfiguration
             {
@@ -155,7 +155,9 @@ namespace DriveHUD.Importers.PokerKing
 
             var handHistoriesToProcess = new ConcurrentDictionary<long, List<HandHistoryData>>();
 
-            while (!cancellationTokenSource.IsCancellationRequested)
+            var usersRooms = new Dictionary<uint, int>();
+
+            while (!cancellationTokenSource.IsCancellationRequested && !IsDisabled())
             {
                 try
                 {
@@ -170,88 +172,125 @@ namespace DriveHUD.Importers.PokerKing
                         LogPacket(capturedPacket, ".log");
                     }
 
-                    if (!packetManager.TryParse(capturedPacket, out PokerKingPackage package, true) || !IsAllowedPackage(package))
+                    if (!packetManager.TryParse(capturedPacket, out IList<PokerKingPackage> packages))
                     {
                         continue;
                     }
 
-                    if (IsAdvancedLogEnabled)
+                    foreach (var package in packages)
                     {
-                        LogPackage(capturedPacket, package);
-                    }
-
-                    var process = connectionsService.GetProcess(capturedPacket);
-                    var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
-
-                    if (package.PackageType == PackageType.RequestJoinRoom)
-                    {
-                        ParsePackage<RequestJoinRoom>(package,
-                          body => LogProvider.Log.Info(Logger, $"User {package.UserId} entered room {body.RoomId}."),
-                          () => LogProvider.Log.Info(Logger, $"User {package.UserId} entered room."));
-
-                        continue;
-                    }
-
-                    // need to close HUD if user left room
-                    if (package.PackageType == PackageType.RequestLeaveRoom)
-                    {
-                        ParsePackage<RequestLeaveRoom>(package,
-                            body =>
-                            {
-                                LogProvider.Log.Info(Logger, $"User {package.UserId} left room {body.RoomId}.");
-                                handBuilder.CleanRoom(windowHandle.ToInt32(), body.RoomId);
-                            },
-                            () => LogProvider.Log.Info(Logger, $"User {package.UserId} left room."));
-
-                        Task.Run(() =>
+                        if (!IsAllowedPackage(package))
                         {
-                            Task.Delay(DelayToProcessHands * 2).Wait();
-
-                            var args = new TableClosedEventArgs(windowHandle.ToInt32());
-                            eventAggregator.GetEvent<TableClosedEvent>().Publish(args);
-                        });
-
-                        detectedTableWindows.Remove(windowHandle);
-                        continue;
-                    }
-
-                    // add detected window to list of detected tables
-                    if (!detectedTableWindows.Contains(windowHandle))
-                    {
-                        detectedTableWindows.Add(windowHandle);
-
-                        if (package.PackageType == PackageType.NoticeGameSnapShot || handBuilder.IsRoomSnapShotAvailable(package))
-                        {
-                            SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK", windowHandle);
-                        }
-                        else
-                        {
-                            SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK_CanNotBeCapturedText", windowHandle);
-                        }
-                    }
-
-                    if (handBuilder.TryBuild(package, windowHandle.ToInt32(), out HandHistory handHistory))
-                    {
-                        if (IsAdvancedLogEnabled)
-                        {
-                            LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId}: Found process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
-                        }
-
-                        if (!pkCatcherService.CheckHand(handHistory))
-                        {
-                            LogProvider.Log.Info(Logger, $"License doesn't support cash hand {handHistory.HandId}. [bb={handHistory.GameDescription.Limit.BigBlind}]");
-                            SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK_NoLicense", windowHandle);
                             continue;
                         }
 
-                        var handHistoryData = new HandHistoryData
+                        if (IsAdvancedLogEnabled)
                         {
-                            Uuid = package.UserId,
-                            HandHistory = handHistory,
-                            WindowHandle = windowHandle
-                        };
+                            LogPackage(capturedPacket, package);
+                        }
 
-                        ExportHandHistory(handHistoryData, handHistoriesToProcess);
+                        var process = connectionsService.GetProcess(capturedPacket);
+                        var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
+
+                        if (package.PackageType == PackageType.RequestJoinRoom)
+                        {
+                            ParsePackage<RequestJoinRoom>(package,
+                              body =>
+                              {
+                                  if (!usersRooms.ContainsKey(package.UserId))
+                                  {
+                                      usersRooms.Add(package.UserId, body.RoomId);
+                                  }
+                                  else
+                                  {
+                                      usersRooms[package.UserId] = body.RoomId;
+                                  }
+
+                                  LogProvider.Log.Info(Logger, $"User {package.UserId} entered room {body.RoomId}.");
+                              },
+                              () => LogProvider.Log.Info(Logger, $"User {package.UserId} entered room."));
+
+                            continue;
+                        }
+
+                        // need to close HUD if user left room
+                        if (package.PackageType == PackageType.RequestLeaveRoom)
+                        {
+                            ParsePackage<RequestLeaveRoom>(package,
+                                body =>
+                                {
+                                    LogProvider.Log.Info(Logger, $"User {package.UserId} left room {body.RoomId}.");
+                                    handBuilder.CleanRoom(windowHandle.ToInt32(), body.RoomId);
+                                },
+                                () => LogProvider.Log.Info(Logger, $"User {package.UserId} left room {package.RoomId}."));
+
+                            Task.Run(() =>
+                            {
+                                Task.Delay(DelayToProcessHands * 2).Wait();
+
+                                var args = new TableClosedEventArgs(windowHandle.ToInt32());
+                                eventAggregator.GetEvent<TableClosedEvent>().Publish(args);
+                            });
+
+                            detectedTableWindows.Remove(windowHandle);
+                            continue;
+                        }
+
+                        var unexpectedRoomDetected = !usersRooms.TryGetValue(package.UserId, out int roomId) || roomId != package.RoomId;
+
+                        // add detected window to list of detected tables
+                        if (!unexpectedRoomDetected && !detectedTableWindows.Contains(windowHandle))
+                        {
+                            detectedTableWindows.Add(windowHandle);
+
+                            if (package.PackageType == PackageType.NoticeGameSnapShot || handBuilder.IsRoomSnapShotAvailable(package))
+                            {
+                                SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK", windowHandle);
+                            }
+                            else
+                            {
+                                SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK_CanNotBeCapturedText", windowHandle);
+                            }
+                        }
+
+                        if (handBuilder.TryBuild(package, windowHandle.ToInt32(), out HandHistory handHistory))
+                        {
+                            if (IsAdvancedLogEnabled)
+                            {
+                                LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: Process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
+                            }
+
+                            var handHistoryData = new HandHistoryData
+                            {
+                                Uuid = package.UserId,
+                                HandHistory = handHistory,
+                                WindowHandle = windowHandle
+                            };
+
+                            if (unexpectedRoomDetected)
+                            {
+                                if (IsAdvancedLogEnabled)
+                                {
+                                    LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: unexpected room detected.");
+                                }
+
+                                handHistoryData.WindowHandle = IntPtr.Zero;
+                            }
+
+                            if (!pkCatcherService.CheckHand(handHistory))
+                            {
+                                LogProvider.Log.Info(Logger, $"License doesn't support cash hand {handHistory.HandId}. [BB={handHistory.GameDescription.Limit.BigBlind}]");
+
+                                if (handHistoryData.WindowHandle != IntPtr.Zero)
+                                {
+                                    SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK_NoLicense", windowHandle);
+                                }
+
+                                continue;
+                            }
+
+                            ExportHandHistory(handHistoryData, handHistoriesToProcess);
+                        }
                     }
                 }
                 catch (Exception e)
@@ -269,7 +308,7 @@ namespace DriveHUD.Importers.PokerKing
         /// <param name="package">Package to parse</param>
         /// <param name="onSuccess">Action to perform if parsing succeed</param>
         /// <param name="onFail">Action to perform if parsing failed</param>
-        private void ParsePackage<T>(PokerKingPackage package, Action<T> onSuccess, Action onFail)
+        protected virtual void ParsePackage<T>(PokerKingPackage package, Action<T> onSuccess, Action onFail)
         {
             if (SerializationHelper.TryDeserialize(package.Body, out T packageBody))
             {
@@ -288,7 +327,7 @@ namespace DriveHUD.Importers.PokerKing
         /// <param name="package">Package to check</param>
         /// <returns></returns>
         protected static bool IsAllowedPackage(PokerKingPackage package)
-        {
+        {            
             switch (package.PackageType)
             {
                 case PackageType.NoticeBuyin:
@@ -319,7 +358,7 @@ namespace DriveHUD.Importers.PokerKing
 
         #region Debug logging
 
-        private void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
+        protected virtual void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
         {
             switch (package.PackageType)
             {
@@ -383,7 +422,7 @@ namespace DriveHUD.Importers.PokerKing
             }
         }
 
-        private void LogPackage<T>(PokerKingPackage package)
+        protected virtual void LogPackage<T>(PokerKingPackage package)
         {
             try
             {
@@ -481,6 +520,11 @@ namespace DriveHUD.Importers.PokerKing
             }
 
             return playerList;
+        }
+
+        protected override IntPtr FindWindow(ParsingResult parsingResult)
+        {
+            return IntPtr.Zero;
         }
     }
 }

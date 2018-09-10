@@ -17,7 +17,7 @@ namespace DriveHUD.Importers.PokerKing
     /// <summary>
     /// Interface of PK importer
     /// </summary>
-    internal interface IPKImporter : IBackgroundProcess, ITcpPacketImporter
+    internal interface IPKImporter : ITcpPacketImporter
     {
     }
 }

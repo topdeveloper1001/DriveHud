@@ -20,8 +20,6 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Fakes;
-using System.IO;
-using System.Linq;
 using System.Net;
 
 namespace PMCatcher.Tests
@@ -57,10 +55,11 @@ namespace PMCatcher.Tests
                 SequenceNumber = 1962805251
             };
 
-            var result = packetManager.TryParse(capturedPacket, out PokerMasterPackage actual);
+            var result = packetManager.TryParse(capturedPacket, out IList<PokerMasterPackage> actualPackages);
 
             Assert.IsTrue(result);
-            Assert.IsNotNull(actual);
+            Assert.IsNotNull(actualPackages);
+            CollectionAssert.IsNotEmpty(actualPackages);
         }
 
         [TestCase(@"Packets\SCLoginBody.txt", "Peon")]
@@ -106,27 +105,30 @@ namespace PMCatcher.Tests
                 {
                     ShimDateTime.NowGet = () => packet.CreatedTimeStamp;
 
-                    if (packetManager.TryParse(packet, out PokerMasterPackage package))
+                    if (packetManager.TryParse(packet, out IList<PokerMasterPackage> packages))
                     {
-                        Console.WriteLine(package.Cmd);
-
-                        if (expectedCommands.Count > 0)
+                        foreach (var package in packages)
                         {
-                            Assert.That(package.Cmd, Is.EqualTo(expectedCommands[expectedCommandsIndex++]));
-                        }
+                            Console.WriteLine(package.Cmd);
 
-                        if (package.Cmd == PackageCommand.Cmd_SCGameRoomStateChange)
-                        {
-                            var body = bodyDecryptor.Decrypt(package.Body, decryptKeyBytes, false);
-
-                            if (!SerializationHelper.TryDeserialize(body, out SCGameRoomStateChange sCGameRoomStateChange))
+                            if (expectedCommands.Count > 0)
                             {
-                                Assert.Fail($"Packet {packet.SequenceNumber} was incorrectly combined with other packets. So result can't be deserialized.");
+                                Assert.That(package.Cmd, Is.EqualTo(expectedCommands[expectedCommandsIndex++]));
+                            }
+
+                            if (package.Cmd == PackageCommand.Cmd_SCGameRoomStateChange)
+                            {
+                                var body = bodyDecryptor.Decrypt(package.Body, decryptKeyBytes, false);
+
+                                if (!SerializationHelper.TryDeserialize(body, out SCGameRoomStateChange sCGameRoomStateChange))
+                                {
+                                    Assert.Fail($"Packet {packet.SequenceNumber} was incorrectly combined with other packets. So result can't be deserialized.");
+                                }
                             }
                         }
                     }
                 }
             }
-        }  
+        }
     }
 }

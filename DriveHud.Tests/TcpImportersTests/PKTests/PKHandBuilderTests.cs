@@ -11,6 +11,8 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Log;
+using DriveHUD.Importers;
 using DriveHUD.Importers.AndroidBase;
 using DriveHUD.Importers.PokerKing;
 using DriveHUD.Importers.PokerKing.Model;
@@ -31,14 +33,26 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
     {
         private const string SourceJsonFile = "Source.json";
         private const string ExpectedResultFile = "Result.xml";
+        private const int destinationPort = 31001;
 
         private const int identifier = 7777;
+
+        private IDHLog testLogger;
+
+        public override void SetUp()
+        {
+            base.SetUp();
+
+            testLogger = new TestLogger();
+            LogProvider.SetCustomLogger(testLogger);
+        }
 
         protected override string TestDataFolder => "TcpImportersTests\\PKTests\\TestData\\HandsRawData";
 
         [TestCase("8-max-regular-no-hero", 105772u)]
         [TestCase("6-max-short-dbl-ante-no-hero", 105772u)]
         [TestCase("8-max-regular-hero", 105772u)]
+        [TestCase("6-max-short-all-in", 105772u)]
         public void TryBuildTest(string testFolder, uint heroId)
         {
             var packages = ReadPackages(testFolder);
@@ -68,8 +82,10 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
             AssertionUtils.AssertHandHistory(actual, expected);
         }
 
-        [TestCase("multiple-accounts-raw-1", 31001)]
-        public void MultipleTryBuildTest(string folder, int destinationPort)
+        [TestCase("multiple-accounts-raw-1")]
+        [TestCase("multiple-accounts-raw-2")]
+        [TestCase("multiple-accounts-raw-3")]
+        public void MultipleTryBuildTest(string folder)
         {
             var testFolder = Path.Combine(TestDataFolder, folder);
 
@@ -77,36 +93,88 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
 
             var logFiles = Directory.GetFiles(testFolder, "*.txt.");
 
-            var packages = new List<CapturedPacket>();
+            var capturedPackets = new List<CapturedPacket>();
 
             foreach (var logFile in logFiles)
             {
-                packages.AddRange(TcpImporterTestUtils.ReadCapturedPackets(logFile, null));
+                capturedPackets.AddRange(TcpImporterTestUtils.ReadCapturedPackets(logFile, null));
             }
 
-            packages = packages.OrderBy(x => x.CreatedTimeStamp).ToList();
+            capturedPackets = capturedPackets.OrderBy(x => x.CreatedTimeStamp).ToList();
 
             var handHistories = new List<HandHistory>();
 
             var packetManager = new PokerKingPacketManager();
             var handBuilder = new PKHandBuilder();
+            var debugPKImporter = new DebugPKImporter();
 
-            foreach (var capturedPacket in packages)
+            foreach (var capturedPacket in capturedPackets)
             {
-                if (!packetManager.TryParse(capturedPacket, out PokerKingPackage package, true) || !PKImporterStub.IsAllowedPackage(package))
+                if (!packetManager.TryParse(capturedPacket, out IList<PokerKingPackage> packages))
                 {
                     continue;
                 }
 
-                var port = capturedPacket.Destination.Port != destinationPort ? capturedPacket.Destination.Port : capturedPacket.Source.Port;
+                foreach (var package in packages)
+                {                    
+                    if (!PKImporterStub.IsAllowedPackage(package))
+                    {
+                        continue;
+                    }
 
-                if (handBuilder.TryBuild(package, port, out HandHistory handHistory))
-                {
-                    handHistories.Add(handHistory);
+                    package.Timestamp = capturedPacket.CreatedTimeStamp;
+
+                    debugPKImporter.LogPackage(capturedPacket, package);
+
+                    if (package.PackageType == PackageType.RequestJoinRoom)
+                    {
+                        debugPKImporter.ParsePackage<RequestJoinRoom>(package,
+                          body => LogProvider.Log.Info($"User {package.UserId} entered room {body.RoomId}."),
+                          () => LogProvider.Log.Info($"User {package.UserId} entered room."));
+
+                        continue;
+                    }
+
+                    var port = capturedPacket.Destination.Port != destinationPort ? capturedPacket.Destination.Port : capturedPacket.Source.Port;
+
+                    if (package.PackageType == PackageType.RequestLeaveRoom)
+                    {
+                        debugPKImporter.ParsePackage<RequestLeaveRoom>(package,
+                            body =>
+                            {
+                                LogProvider.Log.Info($"User {package.UserId} left room {body.RoomId}.");
+                                handBuilder.CleanRoom(port, body.RoomId);
+                            },
+                            () => LogProvider.Log.Info($"User {package.UserId} left room {package.RoomId}."));
+
+                        continue;
+                    }
+
+                    if (handBuilder.TryBuild(package, port, out HandHistory handHistory))
+                    {
+                        handHistories.Add(handHistory);
+                        LogProvider.Log.Info($"Hand #{handHistory.HandId} has been sent. [{package.UserId}]");
+                    }
                 }
             }
 
+            WriteHandHistoriesToFile(handHistories);
+
             Assert.IsTrue(handHistories.Count > 0);
+        }
+
+        private void WriteHandHistoriesToFile(IEnumerable<HandHistory> handHistories)
+        {
+            var groupedHandHistories = handHistories.GroupBy(x => x.GameDescription.Identifier).ToDictionary(x => x.Key, x => x.ToArray());
+
+            foreach (var handHistoriesByIdentifier in groupedHandHistories)
+            {
+                var file = $"{handHistoriesByIdentifier.Key}.xml";
+
+                var xml = SerializationHelper.SerializeObject(handHistoriesByIdentifier.Value);
+
+                File.WriteAllText(file, xml);
+            }
         }
 
         private HandHistory ReadExpectedHandHistory(string folder)
@@ -267,6 +335,94 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
             public new static bool IsAllowedPackage(PokerKingPackage package)
             {
                 return PKImporter.IsAllowedPackage(package);
+            }
+        }
+
+        private class TestLogger : IDHLog
+        {
+            public void Log(Type senderType, object message, LogMessageType logMessageType)
+            {
+            }
+
+            public void Log(Type senderType, object message, Exception exception, LogMessageType logMessageType)
+            {
+            }
+
+            public void Log(string loggerName, object message, LogMessageType logMessageType)
+            {
+                Console.WriteLine(message);
+            }
+
+            public void Log(string loggerName, object message, Exception exception, LogMessageType logMessageType)
+            {
+                Console.WriteLine(message);
+            }
+        }
+
+        private class DebugPKImporter : PKImporter
+        {
+            private Dictionary<int, DebugPKLogger> loggers = new Dictionary<int, DebugPKLogger>();
+
+            public DebugPKImporter()
+            {
+            }
+
+            public new void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
+            {
+                var port = capturedPacket.Destination.Port != destinationPort ? capturedPacket.Destination.Port : capturedPacket.Source.Port;
+
+                if (!loggers.TryGetValue(port, out DebugPKLogger logger))
+                {
+                    logger = new DebugPKLogger(port);
+                    loggers.Add(port, logger);
+                }
+
+                protectedLogger = logger;
+
+                base.LogPackage(capturedPacket, package);
+            }
+
+            public new void ParsePackage<T>(PokerKingPackage package, Action<T> onSuccess, Action onFail)
+            {
+                base.ParsePackage(package, onSuccess, onFail);
+            }
+
+            private class DebugPKLogger : IPokerClientEncryptedLogger
+            {
+                private const string logFilePattern = "Json-raw-{0}.json";
+
+                private string logFile;
+
+                public DebugPKLogger(int port)
+                {
+                    logFile = string.Format(logFilePattern, port);
+
+                    if (File.Exists(logFile))
+                    {
+                        File.Delete(logFile);
+                    }
+                }
+
+                public void CleanLogs()
+                {
+                }
+
+                public void Initialize(PokerClientLoggerConfiguration configuration)
+                {
+                }
+
+                public void Log(string message)
+                {
+                    File.AppendAllText(logFile, message);
+                }
+
+                public void StartLogging()
+                {
+                }
+
+                public void StopLogging()
+                {
+                }
             }
         }
     }

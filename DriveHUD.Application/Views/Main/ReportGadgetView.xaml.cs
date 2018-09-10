@@ -255,6 +255,7 @@ namespace DriveHUD.Application.Views
 
         private void RefreshReport(object sender, RadRoutedEventArgs e)
         {
+            ReportLayoutSave();
             ReportUpdate(true);
         }
 

@@ -443,7 +443,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 }
 
                 SetStreetVisibility(_currentHandHistory);
-                LoadBoardData(_currentHandHistory, _currentHandHistory.CommunityCards.Count());
+                LoadBoardByCurrentStreet();
                 LoadPlayersData(_currentHandHistory);
 
                 var strongestOpponent = CalculateStrongestOpponent(_currentHandHistory, _currentStreet);
@@ -674,6 +674,14 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             CurrentStreet = (Street)obj;
 
+            LoadBoardByCurrentStreet();
+
+            CalculateStrongestOpponent(_currentHandHistory, _currentStreet);
+            ClearEquity();
+        }
+
+        private void LoadBoardByCurrentStreet()
+        {
             switch (CurrentStreet)
             {
                 case Street.Preflop:
@@ -689,9 +697,6 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     LoadBoardData(_currentHandHistory, 5);
                     break;
             }
-
-            CalculateStrongestOpponent(_currentHandHistory, _currentStreet);
-            ClearEquity();
         }
 
         private void ResetAll(object obj)

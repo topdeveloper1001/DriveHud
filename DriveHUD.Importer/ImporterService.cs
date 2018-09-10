@@ -11,8 +11,12 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common;
+using DriveHUD.Common.Infrastructure.Events;
+using DriveHUD.Common.Linq;
+using DriveHUD.Importers.AndroidBase;
 using DriveHUD.Importers.Bovada;
 using Microsoft.Practices.ServiceLocation;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +31,12 @@ namespace DriveHUD.Importers
         private List<IBackgroundProcess> importers = new List<IBackgroundProcess>();
 
         private object locker = new object();
+
+        public ImporterService()
+        {
+            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            eventAggregator.GetEvent<StartTcpImporterEvent>().Subscribe(arg => StartTcpImporters());
+        }
 
         public bool IsStarted
         {
@@ -75,7 +85,7 @@ namespace DriveHUD.Importers
             foreach (var importer in importers)
             {
                 importer.Stop();
-            }         
+            }
         }
 
         /// <summary>
@@ -135,6 +145,21 @@ namespace DriveHUD.Importers
                     ignitionWindowsCache.Clear();
                 }
             }
+        }
+
+        private void StartTcpImporters()
+        {
+            var tcpImporter = importers.OfType<ITcpImporter>().FirstOrDefault();
+
+            if (tcpImporter != null && !tcpImporter.IsRunning)
+            {
+                tcpImporter.Start();
+            }
+
+            importers
+                .OfType<ITcpPacketImporter>()
+                .Where(x => !x.IsRunning && !x.IsDisabled())
+                .ForEach(x => x.Start());
         }
     }
 }

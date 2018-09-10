@@ -395,7 +395,7 @@ namespace DriveHUD.PKCatcher.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thank you. PK HUD Catcher has been successfully registered!.
+        ///   Looks up a localized string similar to Thank you. PK HUD Catcher has been successfully registered! Please restart auto-import in DriveHUD!.
         /// </summary>
         internal static string PKC_RegistrationView_Success {
             get {
