@@ -86,8 +86,7 @@ namespace DriveHUD.Importers
             container.RegisterType<INetworkConnectionsService, NetworkConnectionsService>();
             container.RegisterType<ITableWindowProvider, TableWindowProvider>();
             container.RegisterType<IPacketManager<PokerMasterPackage>, PokerMasterPacketManager>();
-            container.RegisterType<IPacketManager<PokerKingPackage>, PokerKingPacketManager>();
-            container.RegisterType<IPMImporter, PMImporter>();
+            container.RegisterType<IPacketManager<PokerKingPackage>, PokerKingPacketManager>();            
             container.RegisterType<IPKImporter, PKImporter>();
             container.RegisterType<IPackageBuilder<PokerMasterPackage>, PokerMasterPackageBuilder>();
             container.RegisterType<IPackageBuilder<PokerKingPackage>, PokerKingPackageBuilder>();
@@ -127,16 +126,14 @@ namespace DriveHUD.Importers
             importerService.Register<IPacific888Importer>();
             importerService.Register<IPartyPokerImporter>();
             importerService.Register<IIPokerImporter>();
-            importerService.Register<IExternalImporter>();
-            importerService.Register<IPMImporter>();
+            importerService.Register<IExternalImporter>();            
             importerService.Register<IPKImporter>();
             importerService.Register<ITcpImporter>();
             importerService.Register<IHorizonImporter>();
             importerService.Register<IWinamaxImporter>();
 
             var tcpImporter = importerService.GetImporter<ITcpImporter>();
-
-            tcpImporter.RegisterImporter<IPMImporter>();
+            
             tcpImporter.RegisterImporter<IPKImporter>();
         }
     }
