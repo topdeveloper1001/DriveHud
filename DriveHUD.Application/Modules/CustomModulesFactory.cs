@@ -21,8 +21,7 @@ namespace DriveHUD.Application.Modules
         {
             return new[]
             {
-                new CustomModule(CustomModulesNames.PlayerXRay, CustomModulesNames.PlayerXRayAssembly),
-                new CustomModule(CustomModulesNames.PMCatcher, CustomModulesNames.PMCatcherAssembly),
+                new CustomModule(CustomModulesNames.PlayerXRay, CustomModulesNames.PlayerXRayAssembly),                
                 new CustomModule(CustomModulesNames.PKCatcher, CustomModulesNames.PKCatcherAssembly)
             };
         }
