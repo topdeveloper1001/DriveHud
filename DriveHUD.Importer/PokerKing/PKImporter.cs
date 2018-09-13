@@ -123,14 +123,6 @@ namespace DriveHUD.Importers.PokerKing
         /// </summary>
         protected void InitializeSettings()
         {
-
-#if DEBUG
-            if (!Directory.Exists("PKHands"))
-            {
-                Directory.CreateDirectory("PKHands");
-            }
-#endif            
-
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
             if (settings != null)
@@ -186,7 +178,7 @@ namespace DriveHUD.Importers.PokerKing
 
                         if (IsAdvancedLogEnabled)
                         {
-                            LogPackage(capturedPacket, package);
+                            LogPackage(package);
                         }
 
                         var process = connectionsService.GetProcess(capturedPacket);
@@ -358,7 +350,7 @@ namespace DriveHUD.Importers.PokerKing
 
         #region Debug logging
 
-        protected virtual void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
+        protected virtual void LogPackage(PokerKingPackage package)
         {
             switch (package.PackageType)
             {

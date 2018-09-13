@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ITcpPacketImporter.cs" company="Ace Poker Solutions">
+// <copyright file="IProxyImporter.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,12 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using PacketDotNet;
-
-namespace DriveHUD.Importers.AndroidBase
+namespace DriveHUD.Importers.ProxyBase
 {
-    internal interface ITcpPacketImporter : INetworkBaseImporter
+    internal interface IProxyImporter : IBackgroundProcess
     {
-        bool Match(TcpPacket tcpPacket, IpPacket ipPacket);       
+        void RegisterImporter<T>() where T : IProxyPacketImporter;
     }
 }
