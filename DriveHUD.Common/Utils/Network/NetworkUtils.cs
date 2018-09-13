@@ -37,6 +37,7 @@ namespace DriveHUD.Common.Utils.Network
         {
             var connections = WinApi.WinApi.
                 GetAllTCPConnections().
+                Where(x => x.State == WinApi.MibTcpState.MIB_TCP_STATE_ESTAB || x.State == WinApi.MibTcpState.MIB_TCP_STATE_LISTEN).
                 Select(x => x.ToLocalConnection()).
                 Concat(WinApi.WinApi.GetAllTCPv6Connections().
                     Select(x => x.ToLocalConnection())).
