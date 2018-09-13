@@ -208,20 +208,27 @@ namespace DriveHUD.Application.Views
                 return;
             }
 
-            var trackConditionViewModel = new HudTrackConditionsViewModel(trackConditionViewModelInfo)
+            try
             {
-                OffsetX = trackerConditionsMeterPositionOffset.X,
-                OffsetY = trackerConditionsMeterPositionOffset.Y
-            };
+                var trackConditionViewModel = new HudTrackConditionsViewModel(trackConditionViewModelInfo)
+                {
+                    OffsetX = trackerConditionsMeterPositionOffset.X,
+                    OffsetY = trackerConditionsMeterPositionOffset.Y
+                };
 
-            var trackConditionView = new TrackConditionsMeterView
+                var trackConditionView = new TrackConditionsMeterView
+                {
+                    DataContext = trackConditionViewModel
+                };
+
+                dgCanvas.Children.Add(trackConditionView);
+
+                UpdateTrackConditionMeterPosition(trackConditionViewModelInfo, trackConditionView);
+            }
+            catch (Exception e)
             {
-                DataContext = trackConditionViewModel
-            };
-
-            dgCanvas.Children.Add(trackConditionView);
-
-            UpdateTrackConditionMeterPosition(trackConditionViewModelInfo, trackConditionView);
+                LogProvider.Log.Error(this, "Failed to initialize track condition meter.", e);
+            }
         }
 
         private void UpdateTrackConditionMeterPosition(HudTrackConditionsViewModelInfo trackConditionViewModelInfo, FrameworkElement trackConditionView)

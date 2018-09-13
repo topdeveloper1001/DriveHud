@@ -190,8 +190,7 @@ namespace DriveHUD.ViewModels
 
         public virtual void HandUpdateAndRefresh()
         {
-            HandUpdate();
-            HandRefresh();
+            HandUpdate();            
         }
 
         public static RangeSelectorItemViewModel FromString(string s)
