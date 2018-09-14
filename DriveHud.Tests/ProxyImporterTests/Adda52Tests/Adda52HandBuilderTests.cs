@@ -1,6 +1,10 @@
-﻿using NUnit.Framework;
+﻿using DriveHUD.Importers.Adda52.Model;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +17,11 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
         [Test]
         public void Test()
         {
-            var uri = new Uri("https://www.adda52.com:8893/websocket");
+            var bytes = File.ReadAllBytes(@"d:\adda52-package.json");
 
-            Assert.That(uri.Port, Is.EqualTo(8893));
-        }
+            Adda52JsonPackage.TryParse(bytes, out Adda52JsonPackage package);
+
+            Assert.IsNotNull(package);
+        }        
     }
 }

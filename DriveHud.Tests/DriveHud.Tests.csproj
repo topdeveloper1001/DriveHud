@@ -292,6 +292,9 @@
     <Fakes Include="Fakes\System.fakes" />
     <Fakes Include="Fakes\mscorlib.fakes" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLH-Cash-PP-ES-1.txt" />
+    <Content Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-6-max-no-hero\Result.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="ProxyImporterTests\Adda52Tests\TestData\Packets\0.0.0.0.8893-127.0.0.1.12031.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -346,6 +349,7 @@
     <Content Include="ProxyImporterTests\Adda52Tests\TestData\Packets\0.0.0.0.8893-127.0.0.1.12032.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-6-max-no-hero\Source.json" />
     <None Include="ProxyImporterTests\Adda52Tests\TestData\Packets\LongPacket.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

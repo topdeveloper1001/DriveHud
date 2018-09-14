@@ -367,7 +367,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
             {
             }
 
-            public new void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
+            public void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
             {
                 var port = capturedPacket.Destination.Port != destinationPort ? capturedPacket.Destination.Port : capturedPacket.Source.Port;
 
@@ -379,7 +379,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
 
                 protectedLogger = logger;
 
-                base.LogPackage(capturedPacket, package);
+                base.LogPackage(package);
             }
 
             public new void ParsePackage<T>(PokerKingPackage package, Action<T> onSuccess, Action onFail)

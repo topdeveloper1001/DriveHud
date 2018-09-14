@@ -20,6 +20,7 @@ using System.Threading.Tasks;
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
+using DriveHUD.Importers.Adda52.Model;
 using DriveHUD.Importers.AndroidBase;
 using DriveHUD.Importers.Loggers;
 using HandHistories.Parser.Parsers;
@@ -142,11 +143,6 @@ namespace DriveHUD.Importers.Adda52
                         continue;
                     }
 
-                    if (IsAdvancedLogEnabled)
-                    {
-                        LogPacket(capturedPacket, ".log");
-                    }
-
                     if (!packetManager.TryParse(capturedPacket, out IList<Adda52Package> packages))
                     {
                         continue;
@@ -158,6 +154,15 @@ namespace DriveHUD.Importers.Adda52
                         {
                             LogPackage(package);
                         }
+
+                        if (!Adda52JsonPackage.TryParse(package.Bytes, out Adda52JsonPackage jsonPackage))
+                        {
+                            continue;
+                        }
+
+
+
+
                     }
                 }
                 catch (Exception e)
@@ -206,38 +211,21 @@ namespace DriveHUD.Importers.Adda52
             {
                 var contentJson = Encoding.UTF8.GetString(package.Bytes);
 
-                var content = JsonConvert.DeserializeObject(contentJson);
-
-                var packageJson = new PackageJson
-                {
-                    Time = DateTime.UtcNow,
-                    Content = content
-                };
-
-                var json = JsonConvert.SerializeObject(packageJson, Formatting.Indented, new StringEnumConverter());
-
                 var ignoreList = new[] { "game.keepAlive", "game.Message", "game.usercount", "game.avgstack", "game.account" };
 
-                if (ignoreList.Any(x => json.Contains(x)))
+                if (ignoreList.Any(x => contentJson.Contains(x)))
                 {
                     return;
                 }
 
-                Console.WriteLine(contentJson.Replace(" ", string.Empty));
+                Console.WriteLine(contentJson);
 
-                protectedLogger.Log(json);
+                protectedLogger.Log(contentJson);
             }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, $"Failed to log package. [{SiteString}]", e);
             }
-        }
-
-        private class PackageJson
-        {
-            public DateTime Time { get; set; }
-
-            public object Content { get; set; }
         }
 
         #endregion
