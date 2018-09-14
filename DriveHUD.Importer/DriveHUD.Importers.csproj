@@ -129,9 +129,14 @@
     <Compile Include="Adda52\Adda52PacketManager.cs" />
     <Compile Include="Adda52\IAdda52Importer.cs" />
     <Compile Include="Adda52\Model\Adda52Command.cs" />
+    <Compile Include="Adda52\Model\Adda52JsonPackage.cs" />
     <Compile Include="Adda52\Model\Adda52Message.cs" />
     <Compile Include="Adda52\Model\Adda52PackageType.cs" />
+    <Compile Include="Adda52\Model\Ante.cs" />
     <Compile Include="Adda52\Model\RoomData.cs" />
+    <Compile Include="Adda52\Model\RoomSeatInfo.cs" />
+    <Compile Include="Adda52\Model\Seat.cs" />
+    <Compile Include="Adda52\Model\SeatInfo.cs" />
     <Compile Include="AndroidBase\IPackageBuilder.cs" />
     <Compile Include="AndroidBase\ITcpImporter.cs" />
     <Compile Include="AndroidBase\ITcpPacketImporter.cs" />
