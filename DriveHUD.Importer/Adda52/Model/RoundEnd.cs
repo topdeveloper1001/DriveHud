@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Adda52Message.cs" company="Ace Poker Solutions">
+// <copyright file="RoundEnd.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -14,15 +14,11 @@ using Newtonsoft.Json;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
-    internal sealed class Adda52Message<T> where T : class
+    internal sealed class RoundEnd
     {
-        [JsonProperty("c")]
-        public int C { get; set; }
+        public const string Command = "game.roundend";
 
-        [JsonProperty("p")]
-        public Adda52Command<T> Body { get; set; }
-
-        [JsonProperty("a")]
-        public int A { get; set; }        
+        [JsonProperty("roomName")]
+        public string RoomName { get; set; }
     }
 }

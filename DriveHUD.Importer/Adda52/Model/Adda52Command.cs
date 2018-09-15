@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
-    internal class Adda52Command<T> where T : class
+    internal sealed class Adda52Command<T> where T : class
     {
         [JsonProperty("c")]
         public string Command { get; set; }

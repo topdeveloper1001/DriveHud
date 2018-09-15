@@ -15,23 +15,11 @@ using System.Text;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
-    internal class Adda52JsonPackage
+    internal sealed class Adda52JsonPackage
     {
         public Adda52PackageType PackageType { get; set; }
 
         public string JsonData { get; set; }
-
-        #region Parsing
-
-        private const string Blinds = "game.Blinds";
-        private const string Dealer = "game.Dealer";
-        private const string UserAction = "game.useraction";
-        private const string GameEnd = "game.roundend";
-        private const string UncalledBet = "game.returnPotMoney";
-        private const string CommunityCard = "game.communitycard";
-        private const string Pot = "game.pot";
-        private const string Winner = "game.winner";
-        private const string GameStart = "game.started";
 
         public static bool TryParse(byte[] bytes, out Adda52JsonPackage package)
         {
@@ -75,31 +63,28 @@ namespace DriveHUD.Importers.Adda52.Model
                     case Ante.Command:
                         packageType = Adda52PackageType.Ante;
                         break;
-                    case Blinds:
+                    case Blinds.Command:
                         packageType = Adda52PackageType.Blinds;
                         break;
-                    case Dealer:
+                    case Dealer.Command:
                         packageType = Adda52PackageType.Dealer;
                         break;
-                    case UserAction:
+                    case UserAction.Command:
                         packageType = Adda52PackageType.UserAction;
                         break;
-                    case GameStart:
+                    case GameStart.Command:
                         packageType = Adda52PackageType.GameStart;
                         break;
-                    case GameEnd:
-                        packageType = Adda52PackageType.GameEnd;
+                    case RoundEnd.Command:
+                        packageType = Adda52PackageType.RoundEnd;
                         break;
-                    case CommunityCard:
+                    case CommunityCardInfo.Command:
                         packageType = Adda52PackageType.CommunityCard;
                         break;
-                    case Pot:
-                        packageType = Adda52PackageType.Pot;
-                        break;
-                    case Winner:
+                    case Winner.Command:
                         packageType = Adda52PackageType.Winner;
                         break;
-                    case UncalledBet:
+                    case UncalledBet.Command:
                         packageType = Adda52PackageType.UncalledBet;
                         break;
                     default:
@@ -118,8 +103,6 @@ namespace DriveHUD.Importers.Adda52.Model
             {
                 return false;
             }
-        }
-
-        #endregion 
+        }        
     }
 }

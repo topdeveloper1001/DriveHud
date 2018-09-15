@@ -209,6 +209,7 @@
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerBovadaFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
+    <Compile Include="ProxyImporterTests\Adda52Tests\Adda52JsonPackageTests.cs" />
     <Compile Include="ProxyImporterTests\Adda52Tests\Adda52HandBuilderTests.cs" />
     <Compile Include="ProxyImporterTests\Adda52Tests\Adda52PacketManagerTests.cs" />
     <Compile Include="TcpImportersTests\PacketManagerTest.cs" />

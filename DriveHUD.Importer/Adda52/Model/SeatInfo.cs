@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
-    internal class SeatInfo
+    internal sealed class SeatInfo
     {
         [JsonProperty("seats")]
         public Seat[] Seats { get; set; }

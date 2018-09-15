@@ -14,14 +14,14 @@ using Newtonsoft.Json;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
-    internal class RoomSeatInfo
+    internal sealed class RoomSeatInfo
     {
         public const string Command = "game.seatinfo";
 
         [JsonProperty("roomName")]
         public string RoomName { get; set; }
 
-
-
+        [JsonProperty("seatinfo")]
+        public SeatInfo SeatInfo { get; set; }
     }
 }

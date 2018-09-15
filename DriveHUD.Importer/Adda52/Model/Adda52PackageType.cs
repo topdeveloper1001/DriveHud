@@ -21,7 +21,7 @@ namespace DriveHUD.Importers.Adda52.Model
         Dealer = 4,
         UserAction = 5,
         GameStart = 6,
-        GameEnd = 7,
+        RoundEnd = 7,
         CommunityCard = 8,
         Pot = 9,
         Winner = 9,

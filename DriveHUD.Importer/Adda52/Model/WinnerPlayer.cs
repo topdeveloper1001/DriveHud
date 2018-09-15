@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Adda52Message.cs" company="Ace Poker Solutions">
+// <copyright file="WinnerPlayer.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -14,15 +14,15 @@ using Newtonsoft.Json;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
-    internal sealed class Adda52Message<T> where T : class
+    internal sealed class WinnerPlayer
     {
-        [JsonProperty("c")]
-        public int C { get; set; }
+        [JsonProperty("amount")]
+        public int Amount { get; set; }
 
-        [JsonProperty("p")]
-        public Adda52Command<T> Body { get; set; }
+        [JsonProperty("playerId")]
+        public int PlayerId { get; set; }
 
-        [JsonProperty("a")]
-        public int A { get; set; }        
+        [JsonProperty("potId")]
+        public int PotId { get; set; }
     }
 }

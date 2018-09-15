@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
-    internal class RoomData
+    internal sealed class RoomData
     {
         public const string Command = "game.roomdata";
 

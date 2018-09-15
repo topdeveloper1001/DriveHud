@@ -14,13 +14,16 @@ using Newtonsoft.Json;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
-    internal class Seat
+    internal sealed class Seat
     {
         [JsonProperty("chips")]
         public int Chips { get; set; }
 
         [JsonProperty("playerName")]
         public string PlayerName { get; set; }
+
+        [JsonProperty("playerId")]
+        public int PlayerId { get; set; }
 
         [JsonProperty("seatId")]
         public int SeatId { get; set; }
