@@ -436,6 +436,7 @@
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />
     <Compile Include="Surrogates\PointDto.cs" />
     <Compile Include="TableConfigurators\PositionConfiguratorHelper.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\Adda52PositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\GGNPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\IPokerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\PartyPokerPositionProvider.cs" />
@@ -519,6 +520,7 @@
     <Compile Include="ViewModels\Graphs\SeriesProviders\WinningByYearSeriesProvider.cs" />
     <Compile Include="ViewModels\Graphs\SerieType.cs" />
     <Compile Include="ViewModels\Graphs\TournamentGraphViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Adda52HudPanelService.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\IHudToolBar.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBumperStickersViewModel.cs" />

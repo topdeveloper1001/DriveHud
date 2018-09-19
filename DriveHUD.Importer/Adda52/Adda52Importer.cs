@@ -142,7 +142,7 @@ namespace DriveHUD.Importers.Adda52
                     {
                         Task.Delay(NoDataDelay).Wait();
                         continue;
-                    }                    
+                    }
 
                     if (!packetManager.TryParse(capturedPacket, out IList<Adda52Package> packages))
                     {
@@ -166,12 +166,7 @@ namespace DriveHUD.Importers.Adda52
                             continue;
                         }
 
-
-
-                        if (IsAdvancedLogEnabled)
-                        {
-                            //LogProvider.Log.Info(this, $"Hand #{handHistory.HandId} user #{package.UserId} room #{jsonPackage.RoomId}: Process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
-                        }
+                        var handHistoryText = SerializationHelper.SerializeObject(handHistory);
 
 #if DEBUG
                         if (!Directory.Exists("Hands"))
@@ -179,13 +174,17 @@ namespace DriveHUD.Importers.Adda52
                             Directory.CreateDirectory("Hands");
                         }
 
-                        var handHistoryText = SerializationHelper.SerializeObject(handHistory);
-
                         File.WriteAllText($"Hands\\adda52_hand_exported_{handHistory.HandId}.xml", handHistoryText);
 #endif
 
+                        var gameInfo = new GameInfo
+                        {
+                            PokerSite = Site,                            
+                            GameNumber = handHistory.HandId,
+                            Session = $"{handHistory.GameDescription.Identifier}"
+                        };
 
-
+                        ProcessHand(handHistoryText, gameInfo);
                     }
                 }
                 catch (Exception e)
@@ -197,7 +196,7 @@ namespace DriveHUD.Importers.Adda52
 
         protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
         #region Debug logging
