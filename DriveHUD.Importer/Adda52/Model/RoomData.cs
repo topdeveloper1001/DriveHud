@@ -47,5 +47,8 @@ namespace DriveHUD.Importers.Adda52.Model
 
         [JsonProperty("smallBlind")]
         public int SmallBlind { get; set; }
+
+        [JsonProperty("buyinFees")]
+        public string BuyinFees { get; set; }
     }
 }

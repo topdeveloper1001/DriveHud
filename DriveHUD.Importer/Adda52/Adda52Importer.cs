@@ -142,9 +142,7 @@ namespace DriveHUD.Importers.Adda52
                     {
                         Task.Delay(NoDataDelay).Wait();
                         continue;
-                    }
-
-                    LogPacket(capturedPacket, ".txt");
+                    }                    
 
                     if (!packetManager.TryParse(capturedPacket, out IList<Adda52Package> packages))
                     {
@@ -168,6 +166,8 @@ namespace DriveHUD.Importers.Adda52
                             continue;
                         }
 
+
+
                         if (IsAdvancedLogEnabled)
                         {
                             //LogProvider.Log.Info(this, $"Hand #{handHistory.HandId} user #{package.UserId} room #{jsonPackage.RoomId}: Process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
@@ -183,6 +183,8 @@ namespace DriveHUD.Importers.Adda52
 
                         File.WriteAllText($"Hands\\adda52_hand_exported_{handHistory.HandId}.xml", handHistoryText);
 #endif
+
+
 
                     }
                 }
@@ -238,20 +240,21 @@ namespace DriveHUD.Importers.Adda52
                 {
                     return;
                 }
-
+#if DEBUG
                 Console.WriteLine(contentJson);
 
                 if (contentJson.Contains("game.started"))
                 {
                     protectedLogger.Log("-------------------------------------------------------------------------------------");
                 }
-
+#endif
                 protectedLogger.Log(contentJson);
-
+#if DEBUG
                 if (contentJson.Contains("game.roundend"))
                 {
                     protectedLogger.Log("-------------------------------------------------------------------------------------");
                 }
+#endif
             }
             catch (Exception e)
             {

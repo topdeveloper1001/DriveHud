@@ -306,7 +306,8 @@ namespace DriveHUD.Importers.Adda52
 
                 if (isSTT)
                 {
-                    ProcessSTT(tournament, blinds.RoomName);
+                    ProcessSTT(tournament, blinds.RoomName, roomData);
+                    tournament.StartDate = handHistory.DateOfHandUtc;
                 }
                 else
                 {
@@ -373,9 +374,31 @@ namespace DriveHUD.Importers.Adda52
             }
         }
 
-        private void ProcessSTT(TournamentDescriptor tournament, string roomName)
+        private void ProcessSTT(TournamentDescriptor tournament, string roomName, RoomData roomData)
         {
             tournament.TournamentsTags = TournamentsTags.STT;
+            tournament.TournamentId = roomName.Substring(roomName.IndexOf('#') + 1);
+
+            if (string.IsNullOrEmpty(roomData.BuyinFees))
+            {
+                return;
+            }
+
+            var buyinFeeStrings = roomData.BuyinFees.Split('#');
+
+            if (!int.TryParse(buyinFeeStrings[0], out int prizePool))
+            {
+                LogProvider.Log.Warn($"Failed to parse prize pool of buyinFee {roomData.BuyinFees} of STT {roomName}. [{loggerName}]");
+            }
+
+            var fee = 0;
+
+            if (buyinFeeStrings.Length > 1 && !string.IsNullOrEmpty(buyinFeeStrings[1]) && !int.TryParse(buyinFeeStrings[1], out fee))
+            {
+                LogProvider.Log.Warn($"Failed to parse fee of buyinFee {roomData.BuyinFees} of STT {roomName}. [{loggerName}]");
+            }
+
+            tournament.BuyIn = Buyin.FromBuyinRake(prizePool, fee, currency);            
         }
 
         private void ProcessDealer(Dealer dealer, HandHistory handHistory)
@@ -641,7 +664,7 @@ namespace DriveHUD.Importers.Adda52
 
         private GameType GetGameType(RoomData roomData)
         {
-            if (roomData.RingVariant.Equals("HOLDEM", StringComparison.OrdinalIgnoreCase))
+            if (roomData.RingVariant == null || roomData.RingVariant.Equals("HOLDEM", StringComparison.OrdinalIgnoreCase))
             {
                 if (roomData.BettingRule.Equals("NL", StringComparison.OrdinalIgnoreCase))
                 {

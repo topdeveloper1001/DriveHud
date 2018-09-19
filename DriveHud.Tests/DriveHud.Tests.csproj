@@ -306,6 +306,9 @@
     <Content Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\mtt-9-max-no-hero-1\Result.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\stt-6-max-no-hero-1\Result.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="ProxyImporterTests\Adda52Tests\TestData\Packets\0.0.0.0.8893-127.0.0.1.12031.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -370,6 +373,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\mtt-9-max-no-hero-1\Source.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\stt-6-max-no-hero-1\Source.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProxyImporterTests\Adda52Tests\TestData\Packets\LongPacket.json">
