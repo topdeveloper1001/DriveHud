@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2018-09-12T00:05:04Z</DateOfHandUtc>
+  <HandId>319199500098</HandId>
+  <DealerButtonPosition>8</DealerButtonPosition>
+  <TableName>RING9#3191995</TableName>
+  <GameDescription>
+    <PokerFormat>CashGame</PokerFormat>
+    <Site>Adda52</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>Rupee</Currency>
+      <SmallBlind>25</SmallBlind>
+      <BigBlind>50</BigBlind>
+      <IsAnteTable>false</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="9" />
+    <TableType>Regular</TableType>
+    <Identifier>57858</Identifier>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>1800</TotalPot>
+  <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+  <Actions>
+    <HandAction PlayerName="vbesra" HandActionType="SMALL_BLIND" Amount="-25" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="masterpiece210" HandActionType="BIG_BLIND" Amount="-50" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Virus05" HandActionType="RAISE" Amount="-100" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="vbesra" HandActionType="CALL" Amount="-75" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="masterpiece210" HandActionType="CALL" Amount="-50" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="vbesra" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="masterpiece210" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="Virus05" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="vbesra" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="masterpiece210" HandActionType="BET" Amount="-150" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="Virus05" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="vbesra" HandActionType="CALL" Amount="-150" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="vbesra" HandActionType="CHECK" Amount="0" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="masterpiece210" HandActionType="BET" Amount="-600" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="vbesra" HandActionType="CALL" Amount="-600" Street="River" IsAllIn="false" />
+    <HandAction p3:type="WinningsAction" PlayerName="masterpiece210" HandActionType="WINS" Amount="1710" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>ThQsKh2s4c</CommunityCards>
+  <Players>        
+    <Player PlayerName="vbesra" StartingStack="2295" Bet="850" Win="0" SeatNumber="4" Cards="7sTs" IsSittingOut="false" />        
+    <Player PlayerName="masterpiece210" StartingStack="2000" Bet="850" Win="1710" SeatNumber="7" Cards="2c2d" IsSittingOut="false" />
+    <Player PlayerName="Virus05" StartingStack="9171" Bet="100" Win="0" SeatNumber="8" Cards="" IsSittingOut="false" />    
+  </Players>
+  <HeroName>masterpiece210</HeroName>
+</HandHistory>

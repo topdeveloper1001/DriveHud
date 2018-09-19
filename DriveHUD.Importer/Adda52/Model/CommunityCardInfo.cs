@@ -21,7 +21,7 @@ namespace DriveHUD.Importers.Adda52.Model
         [JsonProperty("roomName")]
         public string RoomName { get; set; }
 
-        [JsonProperty("communityCards")]
-        public Card[] CommunityCards { get; set; }
+        [JsonProperty("CommunityCard")]
+        public CommunityCard CommunityCard { get; set; }
     }
 }

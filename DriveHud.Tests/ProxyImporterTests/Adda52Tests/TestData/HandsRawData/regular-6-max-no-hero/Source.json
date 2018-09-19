@@ -3,6 +3,46 @@
     {
       "c": 1,
       "p": {
+        "c": "game.roomdata",
+        "r": 46486,
+        "p": {
+          "chipType": "VIP",
+          "isMR": 1,
+          "isCoolOff": false,
+          "isAnonynounsTable": false,
+          "gameType": "RING",
+          "bettingRule": "NL",
+          "minPlayers": 2,
+          "isMultiRun": true,
+          "amount": "1#0#,",
+          "timeBank": 15,
+          "rakeCap2": 40,
+          "rakeCap1": 30,
+          "buyInHigh": 400,
+          "roomName": "RING6#3180623",
+          "rakeNonHeadsUp": 5,
+          "rakeHeadsUp": 4,
+          "timeBankMaxHands": 10,
+          "turnTime": 20,
+          "useConverter": false,
+          "isTimeBank": true,
+          "coolOffTime": 20,
+          "isSprintSitOutRoom": false,
+          "isDynamic": true,
+          "isRebuy": false,
+          "ringVariant": "HOLDEM",
+          "isZoom": false,
+          "bigBlind": 4,
+          "players": 6,
+          "buyInLow": 100,
+          "smallBlind": 2
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
         "c": "game.gamestart_timer",
         "r": 46486,
         "p": {

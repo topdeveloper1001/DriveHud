@@ -19,6 +19,9 @@ namespace DriveHUD.Importers.Adda52.Model
         [JsonProperty("chips")]
         public int Chips { get; set; }
 
+        [JsonProperty("chipsLeft")]
+        public int ChipsLeft { get; set; }
+
         [JsonProperty("playerName")]
         public string PlayerName { get; set; }
 

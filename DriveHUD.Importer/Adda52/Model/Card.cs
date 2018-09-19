@@ -21,5 +21,15 @@ namespace DriveHUD.Importers.Adda52.Model
 
         [JsonProperty("suit")]
         public CardInfo Suit { get; set; }
+
+        public override string ToString()
+        {
+            if (Face == null || Suit == null)
+            {
+                return string.Empty;
+            }
+
+            return $"{Face.Text.Replace("10", "T").Replace("1", "A").ToUpperInvariant()}{Suit.Text}";
+        }
     }
 }

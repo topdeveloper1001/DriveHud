@@ -1,59 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HandHistory>
-  <DateOfHandUtc>2018-09-12T19:29:17.417Z</DateOfHandUtc>
-  <HandId>254083672603049984</HandId>
-  <DealerButtonPosition>6</DealerButtonPosition>
+  <DateOfHandUtc>2018-09-12T00:05:04Z</DateOfHandUtc>
+  <HandId>318062300251</HandId>
+  <DealerButtonPosition>5</DealerButtonPosition>
   <TableName>RING6#3180623</TableName>
   <GameDescription>
     <PokerFormat>CashGame</PokerFormat>
     <Site>Adda52</Site>
     <GameType>NoLimitHoldem</GameType>
     <Limit>
-      <Currency>USD</Currency>
-      <SmallBlind>0.1</SmallBlind>
-      <BigBlind>0.2</BigBlind>
+      <Currency>Rupee</Currency>
+      <SmallBlind>2</SmallBlind>
+      <BigBlind>4</BigBlind>
       <IsAnteTable>false</IsAnteTable>
       <Ante>0</Ante>
     </Limit>
-    <SeatType MaxPlayers="8" />
+    <SeatType MaxPlayers="6" />
     <TableType>Regular</TableType>
-    <Identifier>617105</Identifier>
+    <Identifier>46486</Identifier>
   </GameDescription>
   <Cancelled>false</Cancelled>
   <NumPlayersSeated>0</NumPlayersSeated>
-  <TotalPot>1.1</TotalPot>
+  <TotalPot>20</TotalPot>
   <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
   <Actions>
-    <HandAction PlayerName="150958" HandActionType="SMALL_BLIND" Amount="-0.1" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="142377" HandActionType="BIG_BLIND" Amount="-0.2" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="2004913" HandActionType="STRADDLE" Amount="-0.4" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="141598" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="2000440" HandActionType="CALL" Amount="-0.4" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="158739" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="145398" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="2004824" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="150958" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="142377" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="2004913" HandActionType="CHECK" Amount="0" Street="Preflop" IsAllIn="false" />
-    <HandAction PlayerName="2004913" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
-    <HandAction PlayerName="2000440" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
-    <HandAction PlayerName="2004913" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
-    <HandAction PlayerName="2000440" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
-    <HandAction PlayerName="2004913" HandActionType="CHECK" Amount="0" Street="River" IsAllIn="false" />
-    <HandAction PlayerName="2000440" HandActionType="CHECK" Amount="0" Street="River" IsAllIn="false" />
-    <HandAction PlayerName="2004913" HandActionType="SHOW" Amount="0" Street="Showdown" IsAllIn="false" />
-    <HandAction PlayerName="2000440" HandActionType="SHOW" Amount="0" Street="Showdown" IsAllIn="false" />
-    <HandAction p3:type="WinningsAction" PlayerName="2000440" HandActionType="WINS" Amount="1.1" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="pradip9882" HandActionType="SMALL_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="AlphaMale47" HandActionType="BIG_BLIND" Amount="-4" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="bretwalda7" HandActionType="RAISE" Amount="-8" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Ngarumshem" HandActionType="FOLD" Amount="-0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="pradip9882" HandActionType="CALL" Amount="-6" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="AlphaMale47" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />   
+    <HandAction PlayerName="pradip9882" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="bretwalda7" HandActionType="BET" Amount="-16" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="pradip9882" HandActionType="FOLD" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="bretwalda7" HandActionType="UNCALLED_BET" Amount="16" Street="Flop" IsAllIn="false" /> 
+    <HandAction p3:type="WinningsAction" PlayerName="bretwalda7" HandActionType="WINS" Amount="19" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
   </Actions>
-  <CommunityCards>2s6cKs8s8h</CommunityCards>
-  <Players>
-    <Player PlayerName="sunilbanjara" StartingStack="0" Bet="0.4" Win="0" SeatNumber="1" Cards="7s2d" IsSittingOut="false" />
-    <Player PlayerName="pradip9882" StartingStack="104" Bet="0" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
-    <Player PlayerName="AlphaMale47" StartingStack="438" Bet="0.4" Win="1.1" SeatNumber="3" Cards="9s9c" IsSittingOut="false" />
-    <Player PlayerName="bretwalda7" StartingStack="179" Bet="0" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
-    <Player PlayerName="145398" PlayerNick="aster" StartingStack="23.36" Bet="0" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
-    <Player PlayerName="2004824" PlayerNick="游客9527" StartingStack="17.94" Bet="0" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
-    <Player PlayerName="150958" PlayerNick="渔的生活" StartingStack="18.10" Bet="0.1" Win="0" SeatNumber="7" Cards="" IsSittingOut="false" />
-    <Player PlayerName="142377" PlayerNick="血战德州" StartingStack="16.29" Bet="0.2" Win="0" SeatNumber="8" Cards="" IsSittingOut="false" />
+  <CommunityCards>4c7c6d</CommunityCards>
+  <Players>    
+    <Player PlayerName="pradip9882" StartingStack="104" Bet="8" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
+    <Player PlayerName="AlphaMale47" StartingStack="438" Bet="4" Win="0" SeatNumber="3" Cards="" IsSittingOut="false" />
+    <Player PlayerName="bretwalda7" StartingStack="179" Bet="24" Win="19" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Ngarumshem" StartingStack="561" Bet="0" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />  
   </Players>
 </HandHistory>

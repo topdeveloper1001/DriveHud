@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Dealer.cs" company="Ace Poker Solutions">
+// <copyright file="MTTTableInfo.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,18 +11,12 @@
 //----------------------------------------------------------------------
 
 using Newtonsoft.Json;
-using System;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
-    internal sealed class Dealer
+    internal sealed class MTTTableInfo
     {
-        public const string Command = "game.Dealer";
-
-        [JsonProperty("roomName")]
-        public string RoomName { get; set; }
-
-        [JsonProperty("dealer")]
-        public int DealerSeat { get; set; }     
+        [JsonProperty("mttPrizes")]
+        public MTTPrize[] MTTPrizes { get; set; }
     }
 }

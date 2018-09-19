@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Dealer.cs" company="Ace Poker Solutions">
+// <copyright file="IAdda52HandBuilder.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,19 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Newtonsoft.Json;
-using System;
+using DriveHUD.Importers.Adda52.Model;
+using HandHistories.Objects.Hand;
 
-namespace DriveHUD.Importers.Adda52.Model
+namespace DriveHUD.Importers.Adda52
 {
-    internal sealed class Dealer
+    internal interface IAdda52HandBuilder
     {
-        public const string Command = "game.Dealer";
-
-        [JsonProperty("roomName")]
-        public string RoomName { get; set; }
-
-        [JsonProperty("dealer")]
-        public int DealerSeat { get; set; }     
+        bool TryBuild(Adda52JsonPackage package, out HandHistory handHistory);
     }
 }

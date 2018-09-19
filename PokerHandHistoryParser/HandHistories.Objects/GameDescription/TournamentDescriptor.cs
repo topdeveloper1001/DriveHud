@@ -62,6 +62,9 @@ namespace HandHistories.Objects.GameDescription
         public TournamentSpeed Speed { get; set; }
 
         [XmlElement]
+        public int StartingStack { get; set; }
+
+        [XmlElement]
         public bool IsSummary
         {
             get

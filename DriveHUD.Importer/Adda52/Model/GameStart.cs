@@ -20,5 +20,8 @@ namespace DriveHUD.Importers.Adda52.Model
 
         [JsonProperty("roomName")]
         public string RoomName { get; set; }
+
+        [JsonProperty("roundId")]
+        public uint RoundId { get; set; }
     }
 }

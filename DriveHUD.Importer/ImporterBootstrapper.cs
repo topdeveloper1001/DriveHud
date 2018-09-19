@@ -101,6 +101,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IPokerEvaluator, OmahaHiLoEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
             container.RegisterType<IProxyImporter, ProxyImporter>();
             container.RegisterType<IAdda52Importer, Adda52Importer>();
+            container.RegisterType<IAdda52HandBuilder, Adda52HandBuilder>();
 
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());

@@ -122,9 +122,6 @@ namespace DriveHUD.Importers.ProxyBase
             {
                 return;
             }
-#if DEBUG
-            // Console.WriteLine($"Request from host: {e.WebSession.Request.RequestUri}");
-#endif
 
             var importer = importers.FirstOrDefault(x => !x.IsDisabled() && x.IsRunning && x.IsMatch(e.WebSession.Request));
 
@@ -144,7 +141,7 @@ namespace DriveHUD.Importers.ProxyBase
 
                     var capturedPacket = new CapturedPacket
                     {
-                        Bytes = a.Buffer.ToArray(),
+                        Bytes = a.Buffer.Take(a.Count).ToArray(),
                         CreatedTimeStamp = DateTime.UtcNow,
                         Source = new IPEndPoint(IPAddress.Any, e.WebSession.Request.RequestUri.Port),
                         Destination = e.ClientEndPoint
@@ -152,24 +149,6 @@ namespace DriveHUD.Importers.ProxyBase
 
                     importer.AddPacket(capturedPacket);
                 };
-
-                //e.DataSent += (s, a) =>
-                //{
-                //    if (a.Count == 0)
-                //    {
-                //        return;
-                //    }
-
-                //    var capturedPacket = new CapturedPacket
-                //    {
-                //        Bytes = a.Buffer,
-                //        CreatedTimeStamp = DateTime.UtcNow,
-                //        Source = e.ClientEndPoint,
-                //        Destination = new IPEndPoint(IPAddress.Any, e.WebSession.Request.RequestUri.Port)
-                //    };
-
-                //    importer.AddPacket(capturedPacket);
-                //};
             });
         }
 

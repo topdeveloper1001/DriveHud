@@ -25,9 +25,9 @@ namespace DriveHUD.Importers.Adda52.Model
         public int Amount { get; set; }
 
         [JsonProperty("action")]
-        public int Action { get; set; }
+        public UserActionType Action { get; set; }
 
-        [JsonProperty("playerId")]
+        [JsonProperty("playerid")]
         public int PlayerId { get; set; }
     }
 }

@@ -46,6 +46,7 @@ namespace HandHistories.Objects.GameDescription
         [XmlElement]
         public decimal KnockoutValue { get; set; }
 
+        // TODO: move to static method of some UTILS as well as Limit.GetCurrencySymbol()
         public string GetCurrencySymbol()
         {
             switch (Currency)
@@ -60,6 +61,10 @@ namespace HandHistories.Objects.GameDescription
                     return @"";
                 case Currency.YUAN:
                     return @"¥";
+                case Currency.Rupee:
+                    return @"₹";
+                case Currency.Chips:
+                    return string.Empty;
                 default:
                     throw new Exception("Unrecognized currency " + Currency);
             }
@@ -82,7 +87,7 @@ namespace HandHistories.Objects.GameDescription
             {
                 return LimitGrouping.Mid;
             }
-            
+
             return LimitGrouping.High;
         }
 
@@ -91,14 +96,14 @@ namespace HandHistories.Objects.GameDescription
             // result should be like B100c-100c-10c ( knockout version )
             //                       B100c-10c ( regular version )
 
-            if(PrizePoolValue == 0 && Rake == 0)
+            if (PrizePoolValue == 0 && Rake == 0)
             {
                 return "Any";
             }
 
             string buyin;
-            
-            if(IsKnockout)
+
+            if (IsKnockout)
             {
                 buyin = string.Format("B{0}c-{1}c-{2}c", (int)(PrizePoolValue * 100), (int)(KnockoutValue * 100), (int)(Rake * 100));
             }
@@ -124,14 +129,14 @@ namespace HandHistories.Objects.GameDescription
 
             if (buyinString[0] == 'B' || buyinString[0] == 'B') buyinString = buyinString.Substring(1);
             string[] split = buyinString.Replace("c", "").Split('-');
-            
+
             decimal prizePoolValue = Int32.Parse(split[0]) / 100.0m;
             decimal rake = 0m;
             decimal knockoutValue = 0m;
             string currencyString = "All";
 
             // Format: PrizePool-Knockout-Rake-Currency
-            if(split.Length == 4)
+            if (split.Length == 4)
             {
                 knockoutValue = Int32.Parse(split[1]) / 100.0m;
                 rake = Int32.Parse(split[2]) / 100.0m;
@@ -139,10 +144,10 @@ namespace HandHistories.Objects.GameDescription
             }
 
             // Format: PrizePool-Knockout-Rake OR PrizePool-Rake-Currency
-            else if(split.Length == 3)
+            else if (split.Length == 3)
             {
                 int test;
-                if(Int32.TryParse(split[2], out test))
+                if (Int32.TryParse(split[2], out test))
                 {
                     rake = test / 100.0m;
                     knockoutValue = Int32.Parse(split[1]) / 100.0m;
@@ -155,7 +160,7 @@ namespace HandHistories.Objects.GameDescription
             }
 
             // Format: PrizePool-Rake
-            else if(split.Length == 2)
+            else if (split.Length == 2)
             {
                 rake = Int32.Parse(split[1]) / 100.0m;
             }

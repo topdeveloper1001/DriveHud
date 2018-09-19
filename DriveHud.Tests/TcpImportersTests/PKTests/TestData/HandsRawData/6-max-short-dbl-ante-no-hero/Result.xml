@@ -21,7 +21,7 @@
   </GameDescription>
   <Cancelled>false</Cancelled>
   <NumPlayersSeated>0</NumPlayersSeated>
-  <TotalPot>57.10</TotalPot>
+  <TotalPot>66.82</TotalPot>
   <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
   <Actions>
     <HandAction PlayerName="100425" HandActionType="ANTE" Amount="-0.5" Street="Preflop" IsAllIn="false" />

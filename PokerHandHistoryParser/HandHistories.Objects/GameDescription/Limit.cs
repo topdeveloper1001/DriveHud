@@ -1,6 +1,5 @@
-using System;
+ï»¿using System;
 using System.Globalization;
-using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
 namespace HandHistories.Objects.GameDescription
@@ -14,26 +13,26 @@ namespace HandHistories.Objects.GameDescription
         }
 
         private Limit(decimal smallBlind, decimal bigBlind, Currency currency, bool isAnteTable, decimal ante)
-        {           
+        {
             Currency = currency;
             SmallBlind = smallBlind;
             BigBlind = bigBlind;
             IsAnteTable = isAnteTable;
             Ante = ante;
-        }       
+        }
 
         public static Limit FromSmallBlindBigBlind(decimal smallBlind,
-                                                   decimal bigBlind, 
-                                                   Currency currency, 
-                                                   bool isAnteTable = false, 
+                                                   decimal bigBlind,
+                                                   Currency currency,
+                                                   bool isAnteTable = false,
                                                    decimal anteAmount = 0)
         {
             return new Limit(smallBlind, bigBlind, currency, isAnteTable, anteAmount);
         }
 
-        public  static Limit FromLimitEnum(LimitEnum limitEnum,
+        public static Limit FromLimitEnum(LimitEnum limitEnum,
                                            Currency currency,
-                                           bool isAnteTable = false, 
+                                           bool isAnteTable = false,
                                            decimal anteAmount = 0)
         {
             if (limitEnum == LimitEnum.Any)
@@ -74,20 +73,24 @@ namespace HandHistories.Objects.GameDescription
                 case Currency.USD:
                     return @"$";
                 case Currency.EURO:
-                    return @"€";
+                    return @"â‚¬";
                 case Currency.GBP:
-                    return @"£";
+                    return @"Â£";
                 case Currency.All:
                     return @"";
                 case Currency.YUAN:
-                    return @"¥";
+                    return @"Â¥";
+                case Currency.Rupee:
+                    return @"â‚¹";
+                case Currency.Chips:
+                    return string.Empty;
                 default:
                     throw new Exception("Unrecognized currency " + Currency);
             }
         }
 
         public LimitGrouping GetLimitGrouping()
-        {           
+        {
             if (BigBlind < 1)
             {
                 return LimitGrouping.Micro;
@@ -131,7 +134,7 @@ namespace HandHistories.Objects.GameDescription
             }
 
             return limitEnum;
-        }        
+        }
 
         public string ToDbSafeString(bool skipCurrency = false)
         {
@@ -141,8 +144,8 @@ namespace HandHistories.Objects.GameDescription
             }
 
             string anteString = (IsAnteTable)
-                                    ? string.Format("-Ante{0}", (int) (Ante*100))
-                                    : string.Empty;                
+                                    ? string.Format("-Ante{0}", (int)(Ante * 100))
+                                    : string.Empty;
 
             string limit = string.Format("L{0}c-{1}c{2}", (int)(SmallBlind * 100), (int)(BigBlind * 100), anteString);
 
@@ -164,13 +167,13 @@ namespace HandHistories.Objects.GameDescription
             if (limitString[0] == 'L' || limitString[0] == 'l') limitString = limitString.Substring(1);
             string[] split = limitString.Replace("Ante", "").Replace("ante", "").Replace("L", "").Replace("c", "").Split('-');
 
-            decimal smallBlind = Int32.Parse(split[0])/100.0m;
+            decimal smallBlind = Int32.Parse(split[0]) / 100.0m;
             decimal bigBlind = Int32.Parse(split[1]) / 100.0m;
 
-            decimal ante = (split.Length == 4) ? Int32.Parse(split[2])/100.0m : 0;
+            decimal ante = (split.Length == 4) ? Int32.Parse(split[2]) / 100.0m : 0;
 
             string currencyString = (split.Length == 4) ? split[3] : split[2];
-            Currency currency = (Currency) Enum.Parse(typeof (Currency), currencyString, true);
+            Currency currency = (Currency)Enum.Parse(typeof(Currency), currencyString, true);
 
             return Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, currency, ante != 0, ante);
         }
@@ -190,7 +193,7 @@ namespace HandHistories.Objects.GameDescription
             string currencySymbol = (ignoreCurrencyStrings ? string.Empty : GetCurrencySymbol());
 
             return GetLimitString(currencySymbol, seperatorCharacter, ignoreAntes, format);
-        }        
+        }
 
         private string GetLimitString(string currencySymbol, string seperatorCharacter, bool ignoreAntes, IFormatProvider format)
         {

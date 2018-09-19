@@ -21,5 +21,11 @@ namespace DriveHUD.Importers.Adda52.Model
 
         [JsonProperty("holeCards")]
         public HoleCardsInfo HoleCards { get; set; }
+
+        [JsonProperty("kickerCards")]
+        public Card[] KickerCards { get; set; }
+
+        [JsonProperty("rankCards")]
+        public Card[] RankCards { get; set; }
     }
 }

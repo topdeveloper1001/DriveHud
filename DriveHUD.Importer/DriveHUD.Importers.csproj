@@ -123,11 +123,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adda52\Adda52HandBuilder.cs" />
     <Compile Include="Adda52\Adda52PackageBuilder.cs" />
     <Compile Include="Adda52\Adda52Importer.cs" />
     <Compile Include="Adda52\Adda52Package.cs" />
     <Compile Include="Adda52\Adda52PacketManager.cs" />
+    <Compile Include="Adda52\IAdda52HandBuilder.cs" />
     <Compile Include="Adda52\IAdda52Importer.cs" />
+    <Compile Include="Adda52\Model\AccessToken.cs" />
     <Compile Include="Adda52\Model\Adda52Command.cs" />
     <Compile Include="Adda52\Model\Adda52JsonPackage.cs" />
     <Compile Include="Adda52\Model\Adda52Message.cs" />
@@ -136,10 +139,19 @@
     <Compile Include="Adda52\Model\Blinds.cs" />
     <Compile Include="Adda52\Model\CardInfo.cs" />
     <Compile Include="Adda52\Model\Card.cs" />
+    <Compile Include="Adda52\Model\CommunityCard.cs" />
     <Compile Include="Adda52\Model\CommunityCardInfo.cs" />
     <Compile Include="Adda52\Model\Dealer.cs" />
+    <Compile Include="Adda52\Model\EntryChip.cs" />
+    <Compile Include="Adda52\Model\EntryChipInfo.cs" />
     <Compile Include="Adda52\Model\GameStart.cs" />
+    <Compile Include="Adda52\Model\HoleCard.cs" />
     <Compile Include="Adda52\Model\HoleCardsInfo.cs" />
+    <Compile Include="Adda52\Model\MTTDetailedInfo.cs" />
+    <Compile Include="Adda52\Model\MTTInfo.cs" />
+    <Compile Include="Adda52\Model\MTTPrize.cs" />
+    <Compile Include="Adda52\Model\MTTTableInfo.cs" />
+    <Compile Include="Adda52\Model\MTTTables.cs" />
     <Compile Include="Adda52\Model\PlayerRank.cs" />
     <Compile Include="Adda52\Model\RoomData.cs" />
     <Compile Include="Adda52\Model\RoomSeatInfo.cs" />
@@ -148,6 +160,7 @@
     <Compile Include="Adda52\Model\SeatInfo.cs" />
     <Compile Include="Adda52\Model\UncalledBet.cs" />
     <Compile Include="Adda52\Model\UserAction.cs" />
+    <Compile Include="Adda52\Model\UserActionType.cs" />
     <Compile Include="Adda52\Model\Winner.cs" />
     <Compile Include="Adda52\Model\WinnerInfo.cs" />
     <Compile Include="Adda52\Model\WinnerPlayer.cs" />

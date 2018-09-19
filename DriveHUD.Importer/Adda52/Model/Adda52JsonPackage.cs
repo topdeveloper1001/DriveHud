@@ -19,7 +19,13 @@ namespace DriveHUD.Importers.Adda52.Model
     {
         public Adda52PackageType PackageType { get; set; }
 
+        public int RoomId { get; set; }
+
         public string JsonData { get; set; }
+
+        public DateTime TimestampUtc { get; set; }
+
+        private readonly static string[] validPrefixes = new string[] { "game", "mtt", "user" };
 
         public static bool TryParse(byte[] bytes, out Adda52JsonPackage package)
         {
@@ -34,7 +40,17 @@ namespace DriveHUD.Importers.Adda52.Model
             {
                 var jsonData = Encoding.UTF8.GetString(bytes);
 
-                var packageTypeStartIndex = jsonData.IndexOf("\"game.", StringComparison.OrdinalIgnoreCase) + 1;
+                var packageTypeStartIndex = -1;
+
+                foreach (var validPrefix in validPrefixes)
+                {
+                    packageTypeStartIndex = jsonData.IndexOf($"\"{validPrefix}.", StringComparison.OrdinalIgnoreCase) + 1;
+
+                    if (packageTypeStartIndex > 1)
+                    {
+                        break;
+                    }
+                }
 
                 if (packageTypeStartIndex <= 1)
                 {
@@ -87,14 +103,54 @@ namespace DriveHUD.Importers.Adda52.Model
                     case UncalledBet.Command:
                         packageType = Adda52PackageType.UncalledBet;
                         break;
+                    case HoleCard.Command:
+                        packageType = Adda52PackageType.HoleCard;
+                        break;
+                    case AccessToken.Command:
+                        packageType = Adda52PackageType.AccessToken;
+                        break;
+                    case MTTInfo.Command:
+                        packageType = Adda52PackageType.MTTInfo;
+                        break;
+                    case MTTTables.Command:
+                        packageType = Adda52PackageType.MTTTables;
+                        break;
                     default:
                         return false;
+                }
+
+                int roomId = 0;
+
+                if (packageType != Adda52PackageType.AccessToken)
+                {
+                    var roomIdStartIndex = jsonData.IndexOf("r\":") + 3;
+
+                    if (roomIdStartIndex <= 3)
+                    {
+                        return false;
+                    }
+
+                    var roomIdEndIndex = jsonData.IndexOf(",", roomIdStartIndex);
+
+                    if (roomIdEndIndex <= 0)
+                    {
+                        return false;
+                    }
+
+                    var roomIdText = jsonData.Substring(roomIdStartIndex, roomIdEndIndex - roomIdStartIndex);
+
+                    if (!int.TryParse(roomIdText, out roomId))
+                    {
+                        return false;
+                    }
                 }
 
                 package = new Adda52JsonPackage
                 {
                     PackageType = packageType,
-                    JsonData = jsonData
+                    RoomId = roomId,
+                    JsonData = jsonData,
+                    TimestampUtc = DateTime.UtcNow
                 };
 
                 return true;
@@ -103,6 +159,6 @@ namespace DriveHUD.Importers.Adda52.Model
             {
                 return false;
             }
-        }        
+        }
     }
 }

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2018-09-12T00:05:04Z</DateOfHandUtc>
+  <HandId>319424300028</HandId>
+  <DealerButtonPosition>8</DealerButtonPosition>
+  <TableName>MTT9#3194243</TableName>
+  <GameDescription>
+    <PokerFormat>Tournament</PokerFormat>
+    <Site>Adda52</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>Chips</Currency>
+      <SmallBlind>100</SmallBlind>
+      <BigBlind>200</BigBlind>
+      <IsAnteTable>true</IsAnteTable>
+      <Ante>20</Ante>
+    </Limit>
+    <SeatType MaxPlayers="9" />
+    <TableType>Regular</TableType>
+    <Tournament>
+      <TournamentId>71683</TournamentId>
+      <TournamentsTags>MTT</TournamentsTags>
+      <BuyIn>
+        <Currency>Rupee</Currency>
+        <PrizePoolValue>250</PrizePoolValue>
+        <Rake>25</Rake>
+      </BuyIn>
+      <StartDate>2018-09-19T13:30:30Z</StartDate>
+    </Tournament>
+    <Identifier>60106</Identifier>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>4094</TotalPot>
+  <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+  <Actions>
+    <HandAction PlayerName="Pokdad" HandActionType="ANTE" Amount="-20" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="joy_pn80" HandActionType="ANTE" Amount="-20" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="harshalchawla" HandActionType="ANTE" Amount="-20" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Nananoko" HandActionType="ANTE" Amount="-20" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="somyasheshank" HandActionType="ANTE" Amount="-20" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="urfish" HandActionType="ANTE" Amount="-20" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="hemantmelovedine" HandActionType="ANTE" Amount="-20" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="PUSR" HandActionType="ANTE" Amount="-20" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Pokdad" HandActionType="SMALL_BLIND" Amount="-100" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="joy_pn80" HandActionType="BIG_BLIND" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="harshalchawla" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Nananoko" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="somyasheshank" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="urfish" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="hemantmelovedine" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="PUSR" HandActionType="RAISE" Amount="-400" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Pokdad" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="joy_pn80" HandActionType="CALL" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="joy_pn80" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="PUSR" HandActionType="BET" Amount="-795" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="joy_pn80" HandActionType="CALL" Amount="-795" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="joy_pn80" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />    
+    <HandAction p3:type="AllInAction" PlayerName="PUSR" HandActionType="ALL_IN" Amount="-722" Street="Turn" IsAllIn="true" IsRaiseAllIn="true" SourceActionType="BET" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="joy_pn80" HandActionType="CALL" Amount="-722" Street="Turn" IsAllIn="false" />            
+    <HandAction p3:type="WinningsAction" PlayerName="joy_pn80" HandActionType="WINS" Amount="2047" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction p3:type="WinningsAction" PlayerName="PUSR" HandActionType="WINS" Amount="2047" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>6cQsAs6sQh</CommunityCards>
+  <Players>
+    <Player PlayerName="joy_pn80" id="806073" StartingStack="4621" Bet="1937" Win="2047" SeatNumber="1" Cards="KhJd" IsSittingOut="false" />
+    <Player PlayerName="harshalchawla" id="1234791" StartingStack="6937" Bet="20" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Nananoko" id="1129410" StartingStack="2907" Bet="20" Win="0" SeatNumber="3" Cards="" IsSittingOut="false" />
+    <Player PlayerName="somyasheshank" id="1234740" StartingStack="2208" Bet="20" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="urfish" id="614608" StartingStack="6956" Bet="20" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+    <Player PlayerName="hemantmelovedine" id="456379" StartingStack="4530" Bet="20" Win="0" SeatNumber="7" Cards="" IsSittingOut="false" />
+    <Player PlayerName="PUSR" id="502437" StartingStack="1937" Bet="1937" Win="2047" SeatNumber="8" Cards="7cTc" IsSittingOut="false" />
+    <Player PlayerName="Pokdad" id="1407170" StartingStack="3114" Bet="120" Win="0" SeatNumber="9" Cards="" IsSittingOut="false" />
+  </Players>
+</HandHistory>

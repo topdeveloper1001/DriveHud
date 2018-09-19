@@ -25,6 +25,10 @@ namespace DriveHUD.Importers.Adda52.Model
         CommunityCard = 8,
         Pot = 9,
         Winner = 9,
-        UncalledBet = 10
+        UncalledBet = 10,
+        HoleCard = 11,
+        AccessToken = 12,
+        MTTInfo = 13,
+        MTTTables = 14
     }
 }

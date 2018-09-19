@@ -22,11 +22,16 @@ namespace DriveHUD.Importers.Adda52
 
         public override bool IsStartingPacket(byte[] bytes)
         {
-            return bytes[0] == 0x81;
+            return bytes != null && bytes.Length > 0 && bytes[0] == 0x81;
         }
 
         public override int ReadPacketLength(byte[] bytes)
         {
+            if (bytes == null || bytes.Length < 4)
+            {
+                return 0;
+            }
+
             if (bytes[1] == 0x7E && bytes[0] == 0x81)
             {
                 var numArray = new byte[] { bytes[2], bytes[3] };

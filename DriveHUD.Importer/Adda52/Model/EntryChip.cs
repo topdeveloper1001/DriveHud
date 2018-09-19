@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Dealer.cs" company="Ace Poker Solutions">
+// <copyright file="EntryChip.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,14 +15,23 @@ using System;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
-    internal sealed class Dealer
+    internal sealed class EntryChip
     {
-        public const string Command = "game.Dealer";
+        [JsonProperty("amt")]
+        public int Amount { get; set; }
 
-        [JsonProperty("roomName")]
-        public string RoomName { get; set; }
+        [JsonProperty("initAmt")]
+        public int InitialStakes { get; set; }
 
-        [JsonProperty("dealer")]
-        public int DealerSeat { get; set; }     
+        [JsonProperty("type")]
+        public string Type { get; set; }
+
+        public bool IsReal
+        {
+            get
+            {
+                return !string.IsNullOrEmpty(Type) && Type.Equals("real", StringComparison.OrdinalIgnoreCase);
+            }
+        }
     }
 }

@@ -20,9 +20,14 @@ namespace DriveHUD.Importers.Adda52
     {
         public bool TryParse(byte[] bytes, int startingPosition, out Adda52Package package)
         {
-            var offset = bytes[1] == 0x7E ? 4 : 2;
-
             package = null;
+
+            if (bytes.Length < 2)
+            {
+                return false;
+            }
+
+            var offset = bytes[1] == 0x7E ? 4 : 2;
 
             if (bytes.Length <= offset)
             {

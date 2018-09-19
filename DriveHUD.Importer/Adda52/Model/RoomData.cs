@@ -40,7 +40,7 @@ namespace DriveHUD.Importers.Adda52.Model
         public string RingVariant { get; set; }
 
         [JsonProperty("players")]
-        public string MaxPlayers { get; set; }
+        public int MaxPlayers { get; set; }
 
         [JsonProperty("bigBlind")]
         public int BigBlind { get; set; }

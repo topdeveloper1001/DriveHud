@@ -23,6 +23,7 @@ using DriveHUD.Entities;
 using DriveHUD.Importers.Adda52.Model;
 using DriveHUD.Importers.AndroidBase;
 using DriveHUD.Importers.Loggers;
+using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
@@ -131,7 +132,7 @@ namespace DriveHUD.Importers.Adda52
         protected void ProcessBuffer()
         {
             var packetManager = ServiceLocator.Current.GetInstance<IPacketManager<Adda52Package>>();
-            //var handBuilder = ServiceLocator.Current.GetInstance<IPKHandBuilder>();
+            var handBuilder = ServiceLocator.Current.GetInstance<IAdda52HandBuilder>();
 
             while (!cancellationTokenSource.IsCancellationRequested && !IsDisabled())
             {
@@ -142,6 +143,8 @@ namespace DriveHUD.Importers.Adda52
                         Task.Delay(NoDataDelay).Wait();
                         continue;
                     }
+
+                    LogPacket(capturedPacket, ".txt");
 
                     if (!packetManager.TryParse(capturedPacket, out IList<Adda52Package> packages))
                     {
@@ -160,8 +163,26 @@ namespace DriveHUD.Importers.Adda52
                             continue;
                         }
 
+                        if (!handBuilder.TryBuild(jsonPackage, out HandHistory handHistory))
+                        {
+                            continue;
+                        }
 
+                        if (IsAdvancedLogEnabled)
+                        {
+                            //LogProvider.Log.Info(this, $"Hand #{handHistory.HandId} user #{package.UserId} room #{jsonPackage.RoomId}: Process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
+                        }
 
+#if DEBUG
+                        if (!Directory.Exists("Hands"))
+                        {
+                            Directory.CreateDirectory("Hands");
+                        }
+
+                        var handHistoryText = SerializationHelper.SerializeObject(handHistory);
+
+                        File.WriteAllText($"Hands\\adda52_hand_exported_{handHistory.HandId}.xml", handHistoryText);
+#endif
 
                     }
                 }
@@ -220,7 +241,17 @@ namespace DriveHUD.Importers.Adda52
 
                 Console.WriteLine(contentJson);
 
+                if (contentJson.Contains("game.started"))
+                {
+                    protectedLogger.Log("-------------------------------------------------------------------------------------");
+                }
+
                 protectedLogger.Log(contentJson);
+
+                if (contentJson.Contains("game.roundend"))
+                {
+                    protectedLogger.Log("-------------------------------------------------------------------------------------");
+                }
             }
             catch (Exception e)
             {

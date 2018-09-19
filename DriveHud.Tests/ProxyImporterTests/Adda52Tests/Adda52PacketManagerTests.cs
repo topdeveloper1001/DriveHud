@@ -31,7 +31,7 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
         [TestCase(@"Packets\0.0.0.0.8893-127.0.0.1.55025.txt", @"Packets\LongPacket.json")]
         [TestCase(@"Packets\0.0.0.0.8893-127.0.0.1.12031.txt", @"Packets\SinglePacket.json")]
         [TestCase(@"Packets\0.0.0.0.8893-127.0.0.1.12032.txt", @"Packets\NotJsonOnlyPacket.json")]
-        public void Test(string file, string expectedResultFile)
+        public void TryParseTest(string file, string expectedResultFile)
         {
             var packets = ReadCapturedPackets(file, null);
 
@@ -65,6 +65,6 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
             }
 
             Assert.That(actualJson, Is.EqualTo(expectedJson));
-        }
+        }      
     }
 }
