@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Adda52PackageType.cs" company="Ace Poker Solutions">
+// <copyright file="IAdda52TableService.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,26 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers.Adda52.Model
+using HandHistories.Objects.Hand;
+using System;
+
+namespace DriveHUD.Importers.Adda52
 {
-    internal enum Adda52PackageType
+    internal interface IAdda52TableService : IBaseImporter, IBackgroundProcess
     {
-        RoomData = 0,
-        SeatInfo = 1,
-        Ante = 2,
-        Blinds = 3,
-        Dealer = 4,
-        UserAction = 5,
-        GameStart = 6,
-        RoundEnd = 7,
-        CommunityCard = 8,
-        Pot = 9,
-        Winner = 9,
-        UncalledBet = 10,
-        HoleCard = 11,
-        AccessToken = 12,
-        MTTInfo = 13,
-        MTTTables = 14,
-        MTTPrizes = 15
+        IntPtr GetWindow(HandHistory handHistory);
+
+        IntPtr[] GetAllWindows();
     }
 }

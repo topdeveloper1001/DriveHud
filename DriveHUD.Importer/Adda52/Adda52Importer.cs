@@ -10,13 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
@@ -27,9 +20,13 @@ using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using Titanium.Web.Proxy.EventArguments;
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Titanium.Web.Proxy.Http;
 
 namespace DriveHUD.Importers.Adda52
@@ -43,15 +40,17 @@ namespace DriveHUD.Importers.Adda52
         protected IPokerClientEncryptedLogger protectedLogger;
 
         protected readonly ISettingsService settings;
+        protected readonly IAdda52TableService tableService;
 
         private uint sequenceNumber = 0;
 
         public Adda52Importer()
         {
             settings = ServiceLocator.Current.GetInstance<ISettingsService>();
+            tableService = ServiceLocator.Current.GetInstance<IAdda52TableService>();
         }
 
-        protected override string[] ProcessNames => new[] { "poker" };
+        protected override string[] ProcessNames => new string[0];
 
         protected override EnumPokerSites Site => EnumPokerSites.Adda52;
 
@@ -176,12 +175,14 @@ namespace DriveHUD.Importers.Adda52
 
                         File.WriteAllText($"Hands\\adda52_hand_exported_{handHistory.HandId}.xml", handHistoryText);
 #endif
+                        var windowHandle = tableService.GetWindow(handHistory);
 
                         var gameInfo = new GameInfo
                         {
-                            PokerSite = Site,                            
+                            WindowHandle = windowHandle.ToInt32(),
+                            PokerSite = Site,
                             GameNumber = handHistory.HandId,
-                            Session = $"{handHistory.GameDescription.Identifier}"
+                            Session = windowHandle.ToString()
                         };
 
                         ProcessHand(handHistoryText, gameInfo);
@@ -192,6 +193,11 @@ namespace DriveHUD.Importers.Adda52
                     LogProvider.Log.Error(this, $"Failed to process captured packet.", e);
                 }
             }
+        }
+
+        protected override IntPtr FindWindow(ParsingResult parsingResult)
+        {
+            return parsingResult != null ? tableService.GetWindow(parsingResult.Source) : IntPtr.Zero;
         }
 
         protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)

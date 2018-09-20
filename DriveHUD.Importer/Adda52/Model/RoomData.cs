@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using Newtonsoft.Json;
+using System;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
@@ -50,5 +51,19 @@ namespace DriveHUD.Importers.Adda52.Model
 
         [JsonProperty("buyinFees")]
         public string BuyinFees { get; set; }
+
+        [JsonProperty("turnTime")]
+        public int TurnTime { get; set; }
+
+        [JsonProperty("buyInHigh")]
+        public int BuyinHigh { get; set; }
+
+        public bool IsFreeroll
+        {
+            get
+            {
+                return !string.IsNullOrEmpty(ChipType) && ChipType.Equals("Freeroll", StringComparison.OrdinalIgnoreCase);
+            }
+        }    
     }
 }

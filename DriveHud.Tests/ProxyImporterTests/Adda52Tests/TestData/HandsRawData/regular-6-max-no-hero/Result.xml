@@ -18,6 +18,7 @@
     <SeatType MaxPlayers="6" />
     <TableType>Regular</TableType>
     <Identifier>46486</Identifier>
+    <CashBuyInHigh>400</CashBuyInHigh>
   </GameDescription>
   <Cancelled>false</Cancelled>
   <NumPlayersSeated>0</NumPlayersSeated>

@@ -115,6 +115,9 @@ namespace DriveHUD.Importers.Adda52.Model
                     case MTTTables.Command:
                         packageType = Adda52PackageType.MTTTables;
                         break;
+                    case MTTPrizes.Command:
+                        packageType = Adda52PackageType.MTTPrizes;
+                        break;
                     default:
                         return false;
                 }

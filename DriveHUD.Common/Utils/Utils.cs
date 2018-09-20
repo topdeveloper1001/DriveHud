@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="Utils.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -14,9 +14,11 @@ using DeployLX.Licensing.v5;
 using DriveHUD.Common.Log;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -273,6 +275,19 @@ namespace DriveHUD.Common.Utils
             Array.Copy(data, cleanData, i + 1);
 
             return cleanData;
-        }       
+        }
+
+        /// <summary>
+        /// Get processes for the specified processes names
+        /// </summary>
+        /// <returns>Array of found processes</returns>
+        public static Process[] GetProcessesByNames(string[] processNames)
+        {
+            var processes = Process.GetProcesses();
+
+            var pokerClientProcesses = processes.Where(x => processNames.Any(p => x.ProcessName.Equals(p, StringComparison.OrdinalIgnoreCase))).ToArray();
+
+            return pokerClientProcesses;
+        }
     }
 }

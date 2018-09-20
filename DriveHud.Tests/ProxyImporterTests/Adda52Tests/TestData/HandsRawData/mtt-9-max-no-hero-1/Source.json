@@ -72,6 +72,60 @@
     {
       "c": 1,
       "p": {
+        "c": "mtt.prizes",
+        "r": 59169,
+        "p": {
+          "roomName": "MTTLobby#71683",
+          "useConverter": false,
+          "MttPrizeInfo": {
+            "chipType": "real",
+            "gameDetail": "Super 200",
+            "mttPrizes": [
+              {
+                "chipType": "real",
+                "prize": 11250,
+                "prizeDL": "",
+                "prizePercent": 45,
+                "rnk": 1,
+                "uid": 0,
+                "usr": "Winner_1"
+              },
+              {
+                "chipType": "real",
+                "prize": 6250,
+                "prizeDL": "",
+                "prizePercent": 25,
+                "rnk": 2,
+                "uid": 0,
+                "usr": "Winner_2"
+              },
+              {
+                "chipType": "real",
+                "prize": 4500,
+                "prizeDL": "",
+                "prizePercent": 18,
+                "rnk": 3,
+                "uid": 0,
+                "usr": "Winner_3"
+              },
+              {
+                "chipType": "real",
+                "prize": 3000,
+                "prizeDL": "",
+                "prizePercent": 12,
+                "rnk": 4,
+                "uid": 0,
+                "usr": "Winner_4"
+              }
+            ]
+          }
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
         "c": "mtt.tables",
         "r": 59169,
         "p": {

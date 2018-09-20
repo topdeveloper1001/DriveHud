@@ -109,6 +109,12 @@ namespace HandHistories.Objects.GameDescription
             get; set;
         }
 
+        [XmlElement, DefaultValue(0)]
+        public decimal CashBuyInHigh
+        {
+            get; set;
+        }
+
         public override bool Equals(object obj)
         {
             var descriptor = obj as GameDescriptor;

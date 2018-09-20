@@ -74,6 +74,12 @@ namespace DriveHUD.Importers.Adda52
                 return false;
             }
 
+            if (package.PackageType == Adda52PackageType.MTTPrizes)
+            {
+                ParsePackage<MTTPrizes>(package, x => ProcessMTTPrizes(x));
+                return false;
+            }
+
             if (!roomPackages.TryGetValue(package.RoomId, out List<Adda52JsonPackage> packages))
             {
                 packages = new List<Adda52JsonPackage>();
@@ -189,7 +195,7 @@ namespace DriveHUD.Importers.Adda52
 
         private void ProcessAccessToken(AccessToken accessToken)
         {
-            LogProvider.Log.Info($"User {accessToken.UserId} has logged in. [{loggerName}]");
+            LogProvider.Log.Info(this, $"User {accessToken.UserId} has logged in. [{loggerName}]");
             heroName = accessToken.UserId.ToString();
         }
 
@@ -204,13 +210,13 @@ namespace DriveHUD.Importers.Adda52
 
                 mttData.Add(mttInfo.RoomName, mttCombinedData);
 
-                LogProvider.Log.Info($"MTT info {mttInfo.RoomName} has been stored. [{loggerName}]");
+                LogProvider.Log.Info(this, $"MTT info {mttInfo.RoomName} has been stored. [{loggerName}]");
                 return;
             }
 
             mttCombinedData.MTTInfo = mttInfo;
 
-            LogProvider.Log.Info($"MTT info {mttInfo.RoomName} has been updated. [{loggerName}]");
+            LogProvider.Log.Info(this, $"MTT info {mttInfo.RoomName} has been updated. [{loggerName}]");
         }
 
         private void ProcessMTTTables(MTTTables mttTables)
@@ -224,13 +230,33 @@ namespace DriveHUD.Importers.Adda52
 
                 mttData.Add(mttTables.RoomName, mttCombinedData);
 
-                LogProvider.Log.Info($"MTT tables info {mttTables.RoomName} has been stored. [{loggerName}]");
+                LogProvider.Log.Info(this, $"MTT tables info {mttTables.RoomName} has been stored. [{loggerName}]");
                 return;
             }
 
             mttCombinedData.MTTTables = mttTables;
 
-            LogProvider.Log.Info($"MTT tables info {mttTables.RoomName} has been updated. [{loggerName}]");
+            LogProvider.Log.Info(this, $"MTT tables info {mttTables.RoomName} has been updated. [{loggerName}]");
+        }
+
+        private void ProcessMTTPrizes(MTTPrizes mttPrizes)
+        {
+            if (!mttData.TryGetValue(mttPrizes.RoomName, out MTTCombinedData mttCombinedData))
+            {
+                mttCombinedData = new MTTCombinedData
+                {
+                    MTTPrizes = mttPrizes
+                };
+
+                mttData.Add(mttPrizes.RoomName, mttCombinedData);
+
+                LogProvider.Log.Info(this, $"MTT prizes info {mttPrizes.RoomName} has been stored. [{loggerName}]");
+                return;
+            }
+
+            mttCombinedData.MTTPrizes = mttPrizes;
+
+            LogProvider.Log.Info(this, $"MTT prizes info {mttPrizes.RoomName} has been updated. [{loggerName}]");
         }
 
         private void ProcessGameStart(GameStart gameStart, HandHistory handHistory)
@@ -315,16 +341,31 @@ namespace DriveHUD.Importers.Adda52
                 }
             }
 
+            var tableType = roomData.TurnTime != 0 && roomData.TurnTime <= 15 ? TableTypeDescription.Speed : TableTypeDescription.Regular;
+
+            if (roomData.IsAnonymousTable)
+            {
+                tableType = TableTypeDescription.Anonymous;
+            }
+
+            var limit = Limit.FromSmallBlindBigBlind(blinds.SmallBlind, blinds.BigBlind,
+                tournament != null ? Currency.Chips : (roomData.IsFreeroll ? Currency.PlayMoney : currency));
+
             handHistory.GameDescription = new GameDescriptor(
                 tournament != null ? PokerFormat.Tournament : PokerFormat.CashGame,
                 EnumPokerSites.Adda52,
                 GetGameType(roomData),
-                Limit.FromSmallBlindBigBlind(blinds.SmallBlind, blinds.BigBlind, tournament != null ? Currency.Chips : currency),
-                TableType.FromTableTypeDescriptions(TableTypeDescription.Regular),
+                limit,
+                TableType.FromTableTypeDescriptions(tableType),
                 SeatType.FromMaxPlayers(roomData.MaxPlayers), tournament);
 
             handHistory.GameDescription.Identifier = roomId;
             handHistory.TableName = blinds.RoomName;
+
+            if (tournament == null)
+            {
+                handHistory.GameDescription.CashBuyInHigh = roomData.BuyinHigh;
+            }
         }
 
         private void ProcessMTT(TournamentDescriptor tournament, string roomName)
@@ -339,11 +380,12 @@ namespace DriveHUD.Importers.Adda52
             if (tournamentData == null)
             {
                 tournament.TournamentId = roomName;
-                LogProvider.Log.Warn($"Failed to find MTT info for {roomName}. [{loggerName}]");
+                LogProvider.Log.Warn(this, $"Failed to find MTT info for {roomName}. [{loggerName}]");
             }
             else
             {
                 tournament.TournamentId = tournamentData.MTTTables.RoomName.Substring(tournamentData.MTTTables.RoomName.IndexOf('#') + 1);
+                tournament.TournamentName = tournamentData.MTTPrizes?.MTTPrizeInfo?.GameDetail;
 
                 if (DateTime.TryParseExact(tournamentData.MTTInfo?.MTTDetailedInfo?.StartDateText, "MMM dd, yyyy HH:mm:ss",
                     CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime startDate))
@@ -369,7 +411,7 @@ namespace DriveHUD.Importers.Adda52
                 }
                 else
                 {
-                    LogProvider.Log.Warn($"Failed to find buyin info for {tournamentData.MTTTables.RoomName}. [{loggerName}]");
+                    LogProvider.Log.Warn(this, $"Failed to find buyin info for {tournamentData.MTTTables.RoomName}. [{loggerName}]");
                 }
             }
         }
@@ -388,17 +430,17 @@ namespace DriveHUD.Importers.Adda52
 
             if (!int.TryParse(buyinFeeStrings[0], out int prizePool))
             {
-                LogProvider.Log.Warn($"Failed to parse prize pool of buyinFee {roomData.BuyinFees} of STT {roomName}. [{loggerName}]");
+                LogProvider.Log.Warn(this, $"Failed to parse prize pool of buyinFee {roomData.BuyinFees} of STT {roomName}. [{loggerName}]");
             }
 
             var fee = 0;
 
             if (buyinFeeStrings.Length > 1 && !string.IsNullOrEmpty(buyinFeeStrings[1]) && !int.TryParse(buyinFeeStrings[1], out fee))
             {
-                LogProvider.Log.Warn($"Failed to parse fee of buyinFee {roomData.BuyinFees} of STT {roomName}. [{loggerName}]");
+                LogProvider.Log.Warn(this, $"Failed to parse fee of buyinFee {roomData.BuyinFees} of STT {roomName}. [{loggerName}]");
             }
 
-            tournament.BuyIn = Buyin.FromBuyinRake(prizePool, fee, currency);            
+            tournament.BuyIn = Buyin.FromBuyinRake(prizePool, fee, currency);
         }
 
         private void ProcessDealer(Dealer dealer, HandHistory handHistory)
@@ -473,7 +515,7 @@ namespace DriveHUD.Importers.Adda52
 
             if (hero == null)
             {
-                LogProvider.Log.Warn($"Hero {heroName} wasn't found in hand. [{loggerName}]");
+                LogProvider.Log.Warn(this, $"Hero {heroName} wasn't found in hand. [{loggerName}]");
                 return;
             }
 
@@ -758,6 +800,8 @@ namespace DriveHUD.Importers.Adda52
             public MTTInfo MTTInfo { get; set; }
 
             public MTTTables MTTTables { get; set; }
+
+            public MTTPrizes MTTPrizes { get; set; }
         }
     }
 }

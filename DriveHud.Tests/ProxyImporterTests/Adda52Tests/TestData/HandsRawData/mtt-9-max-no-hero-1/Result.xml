@@ -16,9 +16,10 @@
       <Ante>20</Ante>
     </Limit>
     <SeatType MaxPlayers="9" />
-    <TableType>Regular</TableType>
+    <TableType>Speed</TableType>
     <Tournament>
       <TournamentId>71683</TournamentId>
+      <TournamentName>Super 200</TournamentName>
       <TournamentsTags>MTT</TournamentsTags>
       <BuyIn>
         <Currency>Rupee</Currency>
@@ -55,9 +56,9 @@
     <HandAction PlayerName="joy_pn80" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
     <HandAction PlayerName="PUSR" HandActionType="BET" Amount="-795" Street="Flop" IsAllIn="false" />
     <HandAction PlayerName="joy_pn80" HandActionType="CALL" Amount="-795" Street="Flop" IsAllIn="false" />
-    <HandAction PlayerName="joy_pn80" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />    
+    <HandAction PlayerName="joy_pn80" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
     <HandAction p3:type="AllInAction" PlayerName="PUSR" HandActionType="ALL_IN" Amount="-722" Street="Turn" IsAllIn="true" IsRaiseAllIn="true" SourceActionType="BET" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
-    <HandAction PlayerName="joy_pn80" HandActionType="CALL" Amount="-722" Street="Turn" IsAllIn="false" />            
+    <HandAction PlayerName="joy_pn80" HandActionType="CALL" Amount="-722" Street="Turn" IsAllIn="false" />
     <HandAction p3:type="WinningsAction" PlayerName="joy_pn80" HandActionType="WINS" Amount="2047" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
     <HandAction p3:type="WinningsAction" PlayerName="PUSR" HandActionType="WINS" Amount="2047" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
   </Actions>

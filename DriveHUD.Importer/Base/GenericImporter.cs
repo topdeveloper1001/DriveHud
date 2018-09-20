@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="GenericImporter.cs" company="Ace Poker Solutions">
-// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -14,6 +14,7 @@ using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using HandHistories.Objects.GameDescription;
@@ -290,11 +291,7 @@ namespace DriveHUD.Importers
         /// <returns>Client process if exist, otherwise - null</returns>
         protected virtual Process[] GetPokerClientProcesses(string[] processNames)
         {
-            var processes = Process.GetProcesses();
-
-            var pokerClientProcesses = processes.Where(x => processNames.Any(p => x.ProcessName.Equals(p, StringComparison.OrdinalIgnoreCase))).ToArray();
-
-            return pokerClientProcesses;
+            return Utils.GetProcessesByNames(processNames);
         }
 
         #endregion

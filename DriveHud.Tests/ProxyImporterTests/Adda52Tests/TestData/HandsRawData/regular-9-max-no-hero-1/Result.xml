@@ -9,7 +9,7 @@
     <Site>Adda52</Site>
     <GameType>NoLimitHoldem</GameType>
     <Limit>
-      <Currency>Rupee</Currency>
+      <Currency>PlayMoney</Currency>
       <SmallBlind>25</SmallBlind>
       <BigBlind>50</BigBlind>
       <IsAnteTable>false</IsAnteTable>
@@ -18,6 +18,7 @@
     <SeatType MaxPlayers="9" />
     <TableType>Regular</TableType>
     <Identifier>58230</Identifier>
+    <CashBuyInHigh>3000</CashBuyInHigh>
   </GameDescription>
   <Cancelled>false</Cancelled>
   <NumPlayersSeated>0</NumPlayersSeated>

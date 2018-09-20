@@ -15,7 +15,6 @@ using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using System;
-using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -41,6 +40,14 @@ namespace DriveHUD.Importers
             get
             {
                 return Site.ToString();
+            }
+        }
+
+        protected virtual string ImporterName
+        {
+            get
+            {
+                return "importer";
             }
         }
 
@@ -71,11 +78,11 @@ namespace DriveHUD.Importers
 
             if (IsDisabled())
             {
-                LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "\"{0}\" importer is disabled.", SiteString));
+                LogProvider.Log.Info(this, $"\"{SiteString}\" {ImporterName} is disabled.");
                 return;
             }
 
-            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Starting \"{0}\" importer", SiteString));
+            LogProvider.Log.Info(this, $"Starting \"{SiteString}\" {ImporterName}");
 
             // start main job
             Task.Run(() =>
@@ -92,7 +99,7 @@ namespace DriveHUD.Importers
         {
             if (IsRunning)
             {
-                LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Stopping \"{0}\" importer", SiteString));
+                LogProvider.Log.Info(this, $"Stopping \"{SiteString}\" {ImporterName}");
             }
 
             if (cancellationTokenSource != null)
@@ -127,9 +134,9 @@ namespace DriveHUD.Importers
 
             ProcessStopped?.Invoke(this, EventArgs.Empty);
 
-            LogProvider.Log.Info(this, $"\"{SiteString}\" importer has been stopped");
+            LogProvider.Log.Info(this, $"\"{SiteString}\" {ImporterName} has been stopped.");
         }
-      
+
         #endregion
 
         #region IDisposable implementation

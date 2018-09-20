@@ -128,8 +128,10 @@
     <Compile Include="Adda52\Adda52Importer.cs" />
     <Compile Include="Adda52\Adda52Package.cs" />
     <Compile Include="Adda52\Adda52PacketManager.cs" />
+    <Compile Include="Adda52\Adda52TableService.cs" />
     <Compile Include="Adda52\IAdda52HandBuilder.cs" />
     <Compile Include="Adda52\IAdda52Importer.cs" />
+    <Compile Include="Adda52\IAdda52TableService.cs" />
     <Compile Include="Adda52\Model\AccessToken.cs" />
     <Compile Include="Adda52\Model\Adda52Command.cs" />
     <Compile Include="Adda52\Model\Adda52JsonPackage.cs" />
@@ -150,6 +152,8 @@
     <Compile Include="Adda52\Model\MTTDetailedInfo.cs" />
     <Compile Include="Adda52\Model\MTTInfo.cs" />
     <Compile Include="Adda52\Model\MTTPrize.cs" />
+    <Compile Include="Adda52\Model\MTTPrizeInfo.cs" />
+    <Compile Include="Adda52\Model\MTTPrizes.cs" />
     <Compile Include="Adda52\Model\MTTTableInfo.cs" />
     <Compile Include="Adda52\Model\MTTTables.cs" />
     <Compile Include="Adda52\Model\PlayerRank.cs" />

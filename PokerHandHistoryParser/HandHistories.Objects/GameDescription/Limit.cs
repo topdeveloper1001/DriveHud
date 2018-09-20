@@ -67,9 +67,7 @@ namespace HandHistories.Objects.GameDescription
         public string GetCurrencySymbol()
         {
             switch (Currency)
-            {
-                case Currency.PlayMoney:
-                    return @"";
+            {               
                 case Currency.USD:
                     return @"$";
                 case Currency.EURO:
@@ -83,6 +81,7 @@ namespace HandHistories.Objects.GameDescription
                 case Currency.Rupee:
                     return @"₹";
                 case Currency.Chips:
+                case Currency.PlayMoney:
                     return string.Empty;
                 default:
                     throw new Exception("Unrecognized currency " + Currency);
