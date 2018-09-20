@@ -13,6 +13,6 @@ namespace HandHistories.Objects.GameDescription
         [EnumMember] CAD = 5,
         [EnumMember] YUAN = 6,
         [EnumMember] All = 7,
-        [EnumMember] Rupee = 8,
+        [EnumMember] INR = 8,
     }
 }

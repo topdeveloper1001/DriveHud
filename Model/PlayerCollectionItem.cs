@@ -120,6 +120,8 @@ namespace Model
                     return "TG";
                 case EnumPokerSites.Winamax:
                     return "WMX";
+                case EnumPokerSites.Adda52:
+                    return "ADDA";
                 default:
                     break;
             }

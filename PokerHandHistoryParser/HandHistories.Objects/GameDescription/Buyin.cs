@@ -61,7 +61,7 @@ namespace HandHistories.Objects.GameDescription
                     return @"";
                 case Currency.YUAN:
                     return @"¥";
-                case Currency.Rupee:
+                case Currency.INR:
                     return @"₹";
                 case Currency.Chips:
                 case Currency.PlayMoney:

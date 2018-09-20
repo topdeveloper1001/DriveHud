@@ -24,6 +24,7 @@ namespace DriveHUD.Entities
         GGN,
         Horizon,
         Winamax,
+        Adda52,
         Unknown
     }
 }

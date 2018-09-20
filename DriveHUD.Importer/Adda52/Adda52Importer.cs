@@ -15,8 +15,10 @@ using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Adda52.Model;
 using DriveHUD.Importers.AndroidBase;
+using DriveHUD.Importers.Helpers;
 using DriveHUD.Importers.Loggers;
 using HandHistories.Objects.Hand;
+using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
@@ -203,6 +205,35 @@ namespace DriveHUD.Importers.Adda52
         protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
             return false;
+        }
+
+        protected override PlayerList GetPlayerList(HandHistory handHistory, GameInfo gameInfo)
+        {
+            var playerList = handHistory.Players;
+
+            var maxPlayers = handHistory.GameDescription.SeatType.MaxPlayers;
+
+            var heroSeat = handHistory.Hero != null ? handHistory.Hero.SeatNumber : 0;
+
+            if (heroSeat != 0)
+            {
+                var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().
+                                        SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == Site)?.PrefferedSeats;
+
+                var prefferedSeat = preferredSeats?.FirstOrDefault(x => (int)x.TableType == maxPlayers && x.IsPreferredSeatEnabled);
+
+                if (prefferedSeat != null)
+                {
+                    var shift = (prefferedSeat.PreferredSeat - heroSeat) % maxPlayers;
+
+                    foreach (var player in playerList)
+                    {
+                        player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, maxPlayers);
+                    }
+                }
+            }
+
+            return playerList;
         }
 
         #region Debug logging

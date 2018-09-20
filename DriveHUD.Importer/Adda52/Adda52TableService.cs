@@ -19,6 +19,7 @@ using DriveHUD.Entities;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,7 @@ namespace DriveHUD.Importers.Adda52
         private Process pokerClientProcess;
         private readonly ReaderWriterLockSlim lockObject;
         private readonly IEventAggregator eventAggregator;
+        private readonly ISettingsService settingService;
         protected Dictionary<IntPtr, string> openedTables;
 
         public Adda52TableService()
@@ -44,6 +46,7 @@ namespace DriveHUD.Importers.Adda52
             lockObject = new ReaderWriterLockSlim();
             openedTables = new Dictionary<IntPtr, string>();
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            settingService = ServiceLocator.Current.GetInstance<ISettingsService>();
         }
 
         #region Properties
@@ -51,6 +54,10 @@ namespace DriveHUD.Importers.Adda52
         protected override EnumPokerSites Site => EnumPokerSites.Adda52;
 
         protected override string ImporterName => "table service";
+
+        protected bool IsAdvancedLogging { get; set; }
+
+        protected bool? IsAdda52Launched { get; set; }
 
         #endregion
 
@@ -165,7 +172,7 @@ namespace DriveHUD.Importers.Adda52
                 [CashTableKey.From(4, 200, TableTypeDescription.Regular, GameType.NoLimitHoldem, 9)] = "Ahmedabad Aces",
                 [CashTableKey.From(4, 400, TableTypeDescription.Regular, GameType.NoLimitHoldem, 6)] = "Chandigarh Crack",
                 [CashTableKey.From(6, 600, TableTypeDescription.Regular, GameType.NoLimitHoldem, 6)] = "Kolkata Riders",
-                [CashTableKey.From(10, 1000, TableTypeDescription.Regular, GameType.PotLimitOmaha, 6)] = "Pot Limit Omaha",
+                [CashTableKey.From(10, 1000, TableTypeDescription.Speed, GameType.PotLimitOmaha, 6)] = "Pot Limit Omaha",
                 [CashTableKey.From(10, 1000, TableTypeDescription.Regular, GameType.NoLimitHoldem, 9)] = "Trichi Trips",
                 [CashTableKey.From(10, 1600, TableTypeDescription.Speed, GameType.NoLimitHoldem, 2)] = "Lucknow Headsup",
                 [CashTableKey.From(10, 1000, TableTypeDescription.Speed, GameType.PotLimitOmahaHiLo, 6)] = "PLO Hi/Lo Devil",
@@ -255,6 +262,9 @@ namespace DriveHUD.Importers.Adda52
 
         protected override void DoImport()
         {
+            IsAdda52Launched = null;
+            IsAdvancedLogging = settingService.GetSettings()?.GeneralSettings?.IsAdvancedLoggingEnabled ?? false;
+
             try
             {
                 while (!cancellationTokenSource.IsCancellationRequested)
@@ -266,10 +276,17 @@ namespace DriveHUD.Importers.Adda52
                             break;
                         }
 
+                        if (pokerClientProcess != null && pokerClientProcess.HasExited)
+                        {
+                            IsAdda52Launched = null;
+                        }
+
                         pokerClientProcess = GetPokerClientProcess();
 
                         if (pokerClientProcess == null)
                         {
+                            IsAdda52Launched = false;
+
                             try
                             {
                                 Task.Delay(ScanInterval).Wait(cancellationTokenSource.Token);
@@ -280,6 +297,10 @@ namespace DriveHUD.Importers.Adda52
                             }
 
                             continue;
+                        }
+                        else if (!IsAdda52Launched.HasValue)
+                        {
+                            IsAdda52Launched = true;
                         }
                     }
 
@@ -339,6 +360,8 @@ namespace DriveHUD.Importers.Adda52
                     {
                         openedTables.Add(handle, title);
                         NotifyHUDTableIsDetected(handle);
+
+                        LogProvider.Log.Info(this, $"Detected {title} table. [{SiteString}]");
                     }
 
                     openedTables[handle] = title;
@@ -377,10 +400,17 @@ namespace DriveHUD.Importers.Adda52
                 WindowHandle = handle.ToInt32()
             };
 
-            var loadingText = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_PreLoadingText_Adda52");
+            var loadingText = IsAdda52Launched == true ?
+                CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_PreLoadingText_Adda52FailedToLoad") :
+                CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_PreLoadingText_Adda52");
 
-            var eventArgs = new PreImportedDataEventArgs(gameInfo, loadingText);
-            eventAggregator.GetEvent<PreImportedDataEvent>().Publish(eventArgs);
+            Task.Run(() =>
+            {
+                Task.Delay(ScanInterval).Wait();
+
+                var eventArgs = new PreImportedDataEventArgs(gameInfo, loadingText);
+                eventAggregator.GetEvent<PreImportedDataEvent>().Publish(eventArgs);
+            });
         }
 
         protected bool Match(string title)
@@ -394,11 +424,17 @@ namespace DriveHUD.Importers.Adda52
             {
                 try
                 {
-                    LogProvider.Log.Info(this, $"Found the suitable process {x.ProcessName} [{x.Id}], main window = [{x.MainWindowHandle}] [{SiteString}]");
+                    if (IsAdvancedLogging)
+                    {
+                        LogProvider.Log.Info(this, $"Found the suitable process {x.ProcessName} [{x.Id}], main window = [{x.MainWindowHandle}] [{SiteString}]");
+                    }
 
                     if (!IsAssociatedWindow(x.MainWindowHandle))
                     {
-                        LogProvider.Log.Info(this, $"The process {x.ProcessName} [{x.Id}] has no main window. Checking all associated windows [{SiteString}]");
+                        if (IsAdvancedLogging)
+                        {
+                            LogProvider.Log.Info(this, $"The process {x.ProcessName} [{x.Id}] has no main window. Checking all associated windows [{SiteString}]");
+                        }
 
                         var wasFound = false;
 
@@ -443,7 +479,10 @@ namespace DriveHUD.Importers.Adda52
 
             var match = windowTitle.ContainsIgnoreCase("adda52.com") && windowClassName.ContainsIgnoreCase("Chrome_WidgetWin");
 
-            LogProvider.Log.Info(this, $"Check if the window [{handle}, {windowTitle}, {windowClassName}] of process matches: {match} [{SiteString}]");
+            if (IsAdvancedLogging)
+            {
+                LogProvider.Log.Info(this, $"Check if the window [{handle}, {windowTitle}, {windowClassName}] of process matches: {match} [{SiteString}]");
+            }
 
             return match;
         }

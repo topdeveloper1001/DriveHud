@@ -32,6 +32,7 @@ namespace Model.Settings
                 new CurrencyRate() { Name = "CAN", Currency = EnumCurrency.CAN, Rate = 0.774593m },
                 new CurrencyRate() { Name = "YUAN", Currency = EnumCurrency.CNY, Rate = 0.150551m },
                 new CurrencyRate() { Name = "SEK", Currency = EnumCurrency.SEK, Rate =  0.118549m },
+                new CurrencyRate() { Name = "Rs.", Currency = EnumCurrency.INR, Rate =  0.014m },
             };
         }
 

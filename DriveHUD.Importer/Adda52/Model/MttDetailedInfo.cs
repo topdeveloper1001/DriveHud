@@ -19,6 +19,12 @@ namespace DriveHUD.Importers.Adda52.Model
         [JsonProperty("mtst")]
         public string StartDateText { get; set; }
 
+        [JsonProperty("bountyAmount")]
+        public int BountyAmount { get; set; }
+
+        [JsonProperty("comissionRate")]
+        public decimal ComissionRate { get; set; }
+
         [JsonProperty("entryChipInfo")]
         public EntryChipInfo EntryChipInfo { get; set; }
     }

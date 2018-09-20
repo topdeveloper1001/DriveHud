@@ -41,6 +41,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             PokerSitesDictionary = new Dictionary<EnumPokerSites, string>()
             {
+                { EnumPokerSites.Adda52, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Adda52) },
                 { EnumPokerSites.AmericasCardroom, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.AmericasCardroom) },
                 { EnumPokerSites.Ignition, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Ignition) },
                 { EnumPokerSites.IPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.IPoker) },

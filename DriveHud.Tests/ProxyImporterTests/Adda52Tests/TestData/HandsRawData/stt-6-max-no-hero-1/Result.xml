@@ -20,8 +20,9 @@
     <Tournament>
       <TournamentId>3187419</TournamentId>
       <TournamentsTags>STT</TournamentsTags>
+      <Speed>Regular</Speed>
       <BuyIn>
-        <Currency>Rupee</Currency>
+        <Currency>INR</Currency>
         <PrizePoolValue>50</PrizePoolValue>
         <Rake>2</Rake>
       </BuyIn>

@@ -9,7 +9,7 @@
     <Site>Adda52</Site>
     <GameType>NoLimitHoldem</GameType>
     <Limit>
-      <Currency>Rupee</Currency>
+      <Currency>INR</Currency>
       <SmallBlind>2</SmallBlind>
       <BigBlind>4</BigBlind>
       <IsAnteTable>false</IsAnteTable>

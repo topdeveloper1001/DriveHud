@@ -21,8 +21,9 @@
       <TournamentId>71683</TournamentId>
       <TournamentName>Super 200</TournamentName>
       <TournamentsTags>MTT</TournamentsTags>
+      <Speed>Regular</Speed>
       <BuyIn>
-        <Currency>Rupee</Currency>
+        <Currency>INR</Currency>
         <PrizePoolValue>250</PrizePoolValue>
         <Rake>25</Rake>
       </BuyIn>

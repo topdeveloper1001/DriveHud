@@ -37,7 +37,7 @@ namespace DriveHUD.Importers.Adda52
         private Dictionary<int, RoomData> roomsData = new Dictionary<int, RoomData>();
         private Dictionary<string, MTTCombinedData> mttData = new Dictionary<string, MTTCombinedData>();
 
-        private static readonly Currency currency = Currency.Rupee;
+        private static readonly Currency currency = Currency.INR;
         private static string heroName;
         private static readonly string loggerName = EnumPokerSites.Adda52.ToString();
 
@@ -328,7 +328,10 @@ namespace DriveHUD.Importers.Adda52
 
             if (isSTT || isMTT)
             {
-                tournament = new TournamentDescriptor();
+                tournament = new TournamentDescriptor
+                {
+                    Speed = TournamentSpeed.Regular
+                };
 
                 if (isSTT)
                 {
@@ -404,8 +407,11 @@ namespace DriveHUD.Importers.Adda52
                 {
                     tournament.StartingStack = entryChips.InitialStakes;
 
-                    var prizePool = entryChips.Amount / 1.1m;
-                    var fee = entryChips.Amount - prizePool;
+                    var comissionRate = tournamentData.MTTInfo.MTTDetailedInfo.ComissionRate;
+
+                    var fee = Math.Round(entryChips.Amount * comissionRate / 100, 0);
+                    // it isn't correct to include bounty in prize, but currently DH doesn't show bounty as standalone field
+                    var prizePool = entryChips.Amount - fee + tournamentData.MTTInfo.MTTDetailedInfo.BountyAmount;
 
                     tournament.BuyIn = Buyin.FromBuyinRake(prizePool, fee, currency);
                 }
@@ -606,7 +612,7 @@ namespace DriveHUD.Importers.Adda52
 
                 var holeCards = string.Join(string.Empty, playerRank.HoleCards.HoleCards.Where(x => x != null).Select(x => x.ToString()));
 
-                if (!string.IsNullOrEmpty(holeCards))
+                if (!string.IsNullOrEmpty(holeCards) && (holeCards.Length == 4 || holeCards.Length == 8))
                 {
                     player.HoleCards = HoleCards.FromCards(holeCards);
                 }
@@ -627,7 +633,7 @@ namespace DriveHUD.Importers.Adda52
                     var playerHoleCards = string.Join(string.Empty, possibleHoleCards
                         .Where(x => !handHistory.CommunityCardsString.ContainsIgnoreCase(x)).Distinct());
 
-                    if (!string.IsNullOrEmpty(playerHoleCards))
+                    if (!string.IsNullOrEmpty(playerHoleCards) && (playerHoleCards.Length == 4 || playerHoleCards.Length == 8))
                     {
                         player.HoleCards = HoleCards.FromCards(playerHoleCards);
                     }

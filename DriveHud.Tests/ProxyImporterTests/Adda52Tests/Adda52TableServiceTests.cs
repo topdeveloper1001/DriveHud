@@ -16,6 +16,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
+using Model.Settings;
 using NSubstitute;
 using NUnit.Framework;
 using Prism.Events;
@@ -39,6 +40,8 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
             var eventAggregator = Substitute.For<IEventAggregator>();
             unityContainer.RegisterInstance(eventAggregator);
 
+            unityContainer.RegisterType<ISettingsService, SettingsServiceStub>();
+          
             var locator = new UnityServiceLocator(unityContainer);
 
             ServiceLocator.SetLocatorProvider(() => locator);
@@ -97,7 +100,7 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
                             PokerFormat.CashGame,
                             EnumPokerSites.Adda52,
                             GameType.NoLimitHoldem,
-                            Limit.FromSmallBlindBigBlind(1, 2, Currency.Rupee),
+                            Limit.FromSmallBlindBigBlind(1, 2, Currency.INR),
                             TableType.FromTableTypeDescriptions(TableTypeDescription.Regular),
                             SeatType.FromMaxPlayers(9), null)
                         {
@@ -131,7 +134,7 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
                           PokerFormat.CashGame,
                           EnumPokerSites.Adda52,
                           GameType.PotLimitOmahaHiLo,
-                          Limit.FromSmallBlindBigBlind(1, 2, Currency.Rupee),
+                          Limit.FromSmallBlindBigBlind(1, 2, Currency.INR),
                           TableType.FromTableTypeDescriptions(TableTypeDescription.Regular),
                           SeatType.FromMaxPlayers(6), null)
                       {
@@ -148,7 +151,7 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
                            PokerFormat.CashGame,
                            EnumPokerSites.Adda52,
                            GameType.NoLimitHoldem,
-                           Limit.FromSmallBlindBigBlind(25, 50, Currency.Rupee),
+                           Limit.FromSmallBlindBigBlind(25, 50, Currency.INR),
                            TableType.FromTableTypeDescriptions(TableTypeDescription.Speed),
                            SeatType.FromMaxPlayers(6), null)
                        {
@@ -170,7 +173,7 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
                             SeatType.FromMaxPlayers(4),
                             new TournamentDescriptor
                             {
-                                BuyIn = Buyin.FromBuyinRake(10, 1, Currency.Rupee),
+                                BuyIn = Buyin.FromBuyinRake(10, 1, Currency.INR),
                                 TournamentsTags = TournamentsTags.STT
                             })
                     }, GetWindowTestDataOpenedTables(), 4)
@@ -189,7 +192,7 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
                            SeatType.FromMaxPlayers(8),
                            new TournamentDescriptor
                            {
-                               BuyIn = Buyin.FromBuyinRake(182, 18, Currency.Rupee),
+                               BuyIn = Buyin.FromBuyinRake(182, 18, Currency.INR),
                                TournamentsTags = TournamentsTags.MTT,
                                TournamentName = "Super 200"
                            })
@@ -230,6 +233,21 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
             public new Process GetPokerClientProcess()
             {
                 return base.GetPokerClientProcess();
+            }
+        }
+
+        protected class SettingsServiceStub : ISettingsService
+        {
+            public SettingsModel GetSettings()
+            {
+                var settingsModel = new SettingsModel();
+                settingsModel.GeneralSettings.TimeZoneOffset = 0;
+                return settingsModel;
+            }
+
+            public void SaveSettings(SettingsModel settings)
+            {
+                throw new NotImplementedException();
             }
         }
 

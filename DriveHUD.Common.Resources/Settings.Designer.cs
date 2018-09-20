@@ -61,6 +61,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/.
+        /// </summary>
+        internal static string Settings_Adda52HelpLink {
+            get {
+                return ResourceManager.GetString("Settings_Adda52HelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add Additional Activation.
         /// </summary>
         internal static string Settings_AddActivation {

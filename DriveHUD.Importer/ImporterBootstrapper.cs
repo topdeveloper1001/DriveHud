@@ -118,33 +118,33 @@ namespace DriveHUD.Importers
                 throw new InvalidCastException("Importers could not be registered");
             }
 
-            //importerService.Register<IIgnitionCatcher>();
-            //importerService.Register<IIgnitionImporter>();
-            //importerService.Register<IIgnitionInfoImporter>();
-            //importerService.Register<IBetOnlineCatcher>();
-            //importerService.Register<IBetOnlineImporter>();
-            //importerService.Register<IBetOnlineTournamentImporter>();
-            //importerService.Register<IBetOnlineTableService>();
-            //importerService.Register<IPokerStarsImporter>();
-            //importerService.Register<IPokerStarsZoomImporter>();
-            //importerService.Register<IAmericasCardroomImporter>();
-            //importerService.Register<IBlackChipPokerImporter>();
-            //importerService.Register<ITruePokerImporter>();
-            //importerService.Register<IYaPokerImporter>();
-            //importerService.Register<IPacific888Importer>();
-            //importerService.Register<IPartyPokerImporter>();
-            //importerService.Register<IIPokerImporter>();
-            //importerService.Register<IExternalImporter>();
-            //importerService.Register<IPKImporter>();
-            //importerService.Register<ITcpImporter>();
-            //importerService.Register<IHorizonImporter>();
-            //importerService.Register<IWinamaxImporter>();
+            importerService.Register<IIgnitionCatcher>();
+            importerService.Register<IIgnitionImporter>();
+            importerService.Register<IIgnitionInfoImporter>();
+            importerService.Register<IBetOnlineCatcher>();
+            importerService.Register<IBetOnlineImporter>();
+            importerService.Register<IBetOnlineTournamentImporter>();
+            importerService.Register<IBetOnlineTableService>();
+            importerService.Register<IPokerStarsImporter>();
+            importerService.Register<IPokerStarsZoomImporter>();
+            importerService.Register<IAmericasCardroomImporter>();
+            importerService.Register<IBlackChipPokerImporter>();
+            importerService.Register<ITruePokerImporter>();
+            importerService.Register<IYaPokerImporter>();
+            importerService.Register<IPacific888Importer>();
+            importerService.Register<IPartyPokerImporter>();
+            importerService.Register<IIPokerImporter>();
+            importerService.Register<IExternalImporter>();
+            importerService.Register<IPKImporter>();
+            importerService.Register<ITcpImporter>();
+            importerService.Register<IHorizonImporter>();
+            importerService.Register<IWinamaxImporter>();
             importerService.Register<IAdda52Importer>();
             importerService.Register<IProxyImporter>();
             importerService.Register<IAdda52TableService>();
 
-            //var tcpImporter = importerService.GetImporter<ITcpImporter>();
-            //tcpImporter.RegisterImporter<IPKImporter>();
+            var tcpImporter = importerService.GetImporter<ITcpImporter>();
+            tcpImporter.RegisterImporter<IPKImporter>();
 
             var proxyImporter = importerService.GetImporter<IProxyImporter>();
             proxyImporter.RegisterImporter<IAdda52Importer>();

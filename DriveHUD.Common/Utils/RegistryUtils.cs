@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Log;
 using Microsoft.Win32;
 using System;
@@ -91,7 +92,7 @@ namespace DriveHUD.Common.Utils
                         var displayNameValue = productKey.GetValue("DisplayName");
                         var displayName = displayNameValue != null ? displayNameValue.ToString() : null;
 
-                        if (!string.IsNullOrEmpty(displayName) && displayNames.Contains(displayName, StringComparer.OrdinalIgnoreCase))
+                        if (!string.IsNullOrEmpty(displayName) && displayNames.Any(x => displayName.ContainsIgnoreCase(x)))
                         {
                             return true;
                         }
@@ -104,6 +105,6 @@ namespace DriveHUD.Common.Utils
             }
 
             return false;
-        }     
+        }
     }
 }

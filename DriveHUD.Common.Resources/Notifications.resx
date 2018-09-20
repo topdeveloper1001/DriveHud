@@ -153,6 +153,12 @@
   <data name="Notifications_HudLayout_DeleteHudYes" xml:space="preserve">
     <value>Yes</value>
   </data>
+  <data name="Notifications_HudLayout_PreLoadingText_Adda52" xml:space="preserve">
+    <value>One full hand must be played before HUD appears. Please wait.</value>
+  </data>
+  <data name="Notifications_HudLayout_PreLoadingText_Adda52FailedToLoad" xml:space="preserve">
+    <value>DriveHUD cannot load a HUD since Adda52 was launched prior to DriveHUD being loaded. DriveHUD needs to be loaded first, then Adda52 can be launched.</value>
+  </data>
   <data name="Notifications_HudLayout_PreLoadingText_Ignition" xml:space="preserve">
     <value>One full hand must be played before HUD appears. Please wait.</value>
   </data>

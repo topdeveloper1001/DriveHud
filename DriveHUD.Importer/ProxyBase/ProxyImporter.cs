@@ -227,7 +227,7 @@ namespace DriveHUD.Importers.ProxyBase
                 }
                 while (PortInUse(port));
 
-                LogProvider.Log.Error($"Assigned port {port} to use. [{SiteString}]");
+                LogProvider.Log.Info(this, $"Assigned port {port} to use. [{SiteString}]");
 
                 return port;
             }

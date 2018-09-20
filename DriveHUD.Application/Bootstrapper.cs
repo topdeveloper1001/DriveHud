@@ -289,6 +289,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, PartyPokerConfiguration>(EnumPokerSites.PartyPoker.ToString());
             Container.RegisterType<ISiteConfiguration, HorizonConfiguration>(EnumPokerSites.Horizon.ToString());
             Container.RegisterType<ISiteConfiguration, WinamaxConfiguration>(EnumPokerSites.Winamax.ToString());
+            Container.RegisterType<ISiteConfiguration, Adda52SiteConfiguration>(EnumPokerSites.Adda52.ToString());
 
             // HUD designer 
             Container.RegisterType<IHudToolFactory, HudToolFactory>();
@@ -328,6 +329,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, GGNSiteSettingTableConfigurator>(EnumPokerSites.GGN.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, HorizonSiteSettingTableConfigurator>(EnumPokerSites.Horizon.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, WinamaxSiteSettingTableConfigurator>(EnumPokerSites.Winamax.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, Adda52SiteSettingTableConfiguration>(EnumPokerSites.Adda52.ToString());
 
             // Series providers
             Container.RegisterType<IGraphsProvider, GraphsProvider>();
