@@ -312,4 +312,7 @@
   <data name="Settings_YaPokerHelpLink" xml:space="preserve">
     <value>http://drivehud.com/blog/manual/#document-38</value>
   </data>
+  <data name="Settings_SpartanPokerHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#</value>
+  </data>
 </root>
