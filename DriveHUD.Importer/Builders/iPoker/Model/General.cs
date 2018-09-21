@@ -1,10 +1,8 @@
 ﻿using DriveHUD.Entities;
+using HandHistories.Objects.GameDescription;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace DriveHUD.Importers.Builders.iPoker
@@ -99,5 +97,13 @@ namespace DriveHUD.Importers.Builders.iPoker
 
         [XmlElement("pokersite")]
         public EnumPokerSites? Site { get; set; }
+
+        [XmlElement("tournamentstags", IsNullable = true)]
+        public TournamentsTags? TournamentsTags { get; set; }
+
+        public bool ShouldSerializeTournamentsTags()
+        {
+            return TournamentsTags != null;
+        }
     }
 }

@@ -122,6 +122,8 @@ namespace Model
                     return "WMX";
                 case EnumPokerSites.Adda52:
                     return "ADDA";
+                case EnumPokerSites.SpartanPoker:
+                    return "TSP";
                 default:
                     break;
             }

@@ -257,7 +257,6 @@
     <Compile Include="Builders\iPoker\Model\ActionType.cs" />
     <Compile Include="Builders\iPoker\Model\Cards.cs" />
     <Compile Include="Builders\iPoker\Model\CardsType.cs" />
-    <Compile Include="Builders\iPoker\Model\Currency.cs" />
     <Compile Include="Builders\iPoker\Model\Game.cs" />
     <Compile Include="Builders\iPoker\Model\GameGeneral.cs" />
     <Compile Include="Builders\iPoker\Model\General.cs" />

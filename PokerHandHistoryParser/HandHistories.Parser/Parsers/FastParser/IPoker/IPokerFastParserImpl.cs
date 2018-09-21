@@ -320,14 +320,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         {
             var maxPlayersText = GetMaxPlayersFromHandLines(handLines);
 
-            if (!string.IsNullOrEmpty(maxPlayersText))
+            if (!string.IsNullOrEmpty(maxPlayersText) && int.TryParse(maxPlayersText, out int maxPlayers) && maxPlayers > 0 && maxPlayers < 11)
             {
-                var maxPlayers = 0;
-
-                if (int.TryParse(maxPlayersText, out maxPlayers) && maxPlayers > 0 && maxPlayers < 11)
-                {
-                    return SeatType.FromMaxPlayers(maxPlayers);
-                }
+                return SeatType.FromMaxPlayers(maxPlayers);
             }
 
             var playerLines = GetPlayerLinesFromHandLines(handLines);
@@ -651,6 +646,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     return Currency.GBP;
                 case "EUR":
                     return Currency.EURO;
+                case "INR":
+                    return Currency.INR;
 
                 default:
                     throw new CurrencyException(handLines[0], "Unrecognized currency symbol " + tagValue);
@@ -1090,9 +1087,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             DateTime startDate = DateTime.MinValue;
 
+            TournamentsTags? tournamentTags = null;
+
             foreach (var handLine in handLines)
             {
-                if (handLine.StartsWith("<session", StringComparison.Ordinal))
+                if (handLine.StartsWith("<session", StringComparison.OrdinalIgnoreCase))
                 {
                     var sessionCodeStartIndex = handLine.IndexOf("\"", StringComparison.Ordinal) + 1;
                     var sessionCodeEndIndex = handLine.LastIndexOf("\"", StringComparison.Ordinal);
@@ -1105,20 +1104,20 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     tournamentId = handLine.Substring(sessionCodeStartIndex, sessionCodeEndIndex - sessionCodeStartIndex);
                 }
 
-                if (handLine.StartsWith("<tournamentcode", StringComparison.Ordinal))
+                if (handLine.StartsWith("<tournamentcode", StringComparison.OrdinalIgnoreCase))
                 {
                     tournamentId = GetTagValue(handLine);
                     continue;
                 }
 
-                if (handLine.StartsWith("<place", StringComparison.Ordinal))
+                if (handLine.StartsWith("<place", StringComparison.OrdinalIgnoreCase))
                 {
                     var placeText = GetTagValue(handLine);
 
                     short.TryParse(placeText, out finishPosition);
                 }
 
-                if (handLine.StartsWith("<buyin", StringComparison.Ordinal))
+                if (handLine.StartsWith("<buyin", StringComparison.OrdinalIgnoreCase))
                 {
                     var buyinText = GetTagValue(handLine);
 
@@ -1151,14 +1150,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     ParserUtils.TryParseMoney(winningText, out winning);
                 }
 
-                if (startDate == DateTime.MinValue && handLine.StartsWith("<startdate", StringComparison.Ordinal))
+                if (startDate == DateTime.MinValue && handLine.StartsWith("<startdate", StringComparison.OrdinalIgnoreCase))
                 {
                     var startdateText = GetTagValue(handLine);
 
                     DateTime.TryParse(startdateText, CultureInfo.InvariantCulture, DateTimeStyles.None, out startDate);
                 }
 
-                if (handLine.StartsWith("<tablename", StringComparison.Ordinal))
+                if (handLine.StartsWith("<tablename", StringComparison.OrdinalIgnoreCase))
                 {
                     var tableNameText = GetTagValue(handLine);
 
@@ -1185,15 +1184,25 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     tournamentInGameId = tournamentInGameIdText;
                 }
 
-                if (handLine.StartsWith("<tournamentname", StringComparison.Ordinal))
+                if (handLine.StartsWith("<tournamentname", StringComparison.OrdinalIgnoreCase))
                 {
                     tournamentName = GetTagValue(handLine);
                 }
 
-                if (handLine.StartsWith("<totalprize", StringComparison.Ordinal))
+                if (handLine.StartsWith("<totalprize", StringComparison.OrdinalIgnoreCase))
                 {
                     var totalPrizeText = GetTagValue(handLine);
                     ParserUtils.TryParseMoney(totalPrizeText, out totalPrize);
+                }
+
+                if (handLine.StartsWith("<tournamentstags", StringComparison.OrdinalIgnoreCase))
+                {
+                    var tournamentTagText = GetTagValue(handLine);
+
+                    if (Enum.TryParse(tournamentTagText, out TournamentsTags tags))
+                    {
+                        tournamentTags = tags;
+                    }
                 }
             }
 
@@ -1207,7 +1216,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 FinishPosition = finishPosition,
                 StartDate = startDate,
                 Speed = speed,
-                TotalPrize = totalPrize
+                TotalPrize = totalPrize,
+                TournamentsTags = tournamentTags
             };
 
             return tournamentDescriptor;

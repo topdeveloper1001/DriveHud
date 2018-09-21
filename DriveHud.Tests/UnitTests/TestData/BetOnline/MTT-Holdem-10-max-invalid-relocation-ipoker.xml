@@ -23,6 +23,7 @@
     <win>0</win>
     <maxplayers>10</maxplayers>
     <pokersite>BetOnline</pokersite>
+    <tournamentstags>MTT</tournamentstags>
   </general>
   <game gamecode="10725877">
     <general>

@@ -25,6 +25,7 @@ namespace DriveHUD.Entities
         Horizon,
         Winamax,
         Adda52,
+        QuadnetIndia,
         Unknown
     }
 }

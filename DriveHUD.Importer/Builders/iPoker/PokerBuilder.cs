@@ -574,7 +574,7 @@ namespace DriveHUD.Importers.Builders.iPoker
                 Duration = PokerConfiguration.DefaultDuration,
                 Nickname = configuration.HeroName,
                 BuyIn = GetBuyIn(),
-                Currency = Currency.USD,
+                Currency = HandHistories.Objects.GameDescription.Currency.USD,
                 TotalBuyIn = GetTotalBuyIn(),
                 MaxPlayers = handModel.TableType
             };

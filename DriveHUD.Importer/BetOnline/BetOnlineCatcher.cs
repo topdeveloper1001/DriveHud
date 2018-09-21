@@ -88,7 +88,8 @@ namespace DriveHUD.Importers.BetOnline
 
             var siteSettings = settings.SiteSettings.SitesModelList?.Where(x => x.PokerSite == EnumPokerSites.BetOnline ||
                 x.PokerSite == EnumPokerSites.SportsBetting ||
-                x.PokerSite == EnumPokerSites.TigerGaming);
+                x.PokerSite == EnumPokerSites.TigerGaming || 
+                x.PokerSite == EnumPokerSites.SpartanPoker);
 
             return siteSettings != null && siteSettings.Any(x => x.Enabled);
         }

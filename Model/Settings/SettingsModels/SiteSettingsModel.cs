@@ -47,6 +47,7 @@ namespace Model.Settings
                 EnumPokerSites.BetOnline,
                 EnumPokerSites.TigerGaming,
                 EnumPokerSites.SportsBetting,
+                EnumPokerSites.SpartanPoker,
                 EnumPokerSites.PokerStars,
                 EnumPokerSites.Poker888,
                 EnumPokerSites.AmericasCardroom,

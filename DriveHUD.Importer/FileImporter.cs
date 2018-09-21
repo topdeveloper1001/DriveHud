@@ -659,7 +659,7 @@ namespace DriveHUD.Importers
 
                     t.Buyinincents = Utils.ConvertToCents(tournamentDescription.BuyIn.PrizePoolValue);
                     t.Rakeincents = Utils.ConvertToCents(tournamentDescription.BuyIn.Rake);
-                    t.Rebuyamountincents = Utils.ConvertToCents(tournamentDescription.Rebuy);                    
+                    t.Rebuyamountincents = Utils.ConvertToCents(tournamentDescription.Rebuy);
                     t.Tourneysize = tournamentDescription.TotalPlayers;
                     t.Tourneytagscsv = tournamentDescription.TotalPlayers > t.Tablesize ? TournamentsTags.MTT.ToString() : TournamentsTags.STT.ToString();
 
@@ -740,7 +740,8 @@ namespace DriveHUD.Importers
                 Rakeincents = Utils.ConvertToCents(parsedHand.GameDescription.Tournament.BuyIn.Rake),
                 Tourneysize = (int)gameInfo.TableType > parsedHand.GameDescription.Tournament.TotalPlayers ?
                      (int)gameInfo.TableType : parsedHand.GameDescription.Tournament.TotalPlayers,
-                Tourneytagscsv = string.Empty,
+                Tourneytagscsv = parsedHand.GameDescription.Tournament.TournamentsTags.HasValue ?
+                    parsedHand.GameDescription.Tournament.TournamentsTags.ToString() : string.Empty,
                 SiteId = parsingResult.HandHistory.PokersiteId,
                 SpeedtypeId = gameInfo.TournamentSpeed.HasValue ? (short)gameInfo.TournamentSpeed.Value : (short)parsedHand.GameDescription.Tournament.Speed,
                 PokergametypeId = (short)parsedHand.GameDescription.GameType,
@@ -941,16 +942,17 @@ namespace DriveHUD.Importers
                 throw new DHBusinessException(new NonLocalizableString("Table size is 0"));
             }
 
-            var tournamentTag = totalPlayers > tableSize ? TournamentsTags.MTT : TournamentsTags.STT;
+            var firstParsingResult = parsingResult.FirstOrDefault();
+            var lastParsingResult = parsingResult.LastOrDefault();
+
+            var tournamentTag = totalPlayers > tableSize || firstParsingResult.Source.GameDescription.Tournament.TournamentsTags == TournamentsTags.MTT ?
+                TournamentsTags.MTT : TournamentsTags.STT;
 
             parsingResult.ForEach(x => x.TournamentsTags = tournamentTag);
 
             var tournamentTables = (short)Math.Ceiling((double)totalPlayers / tableSize);
 
             var tournamentBase = tournaments.FirstOrDefault();
-
-            var firstParsingResult = parsingResult.FirstOrDefault();
-            var lastParsingResult = parsingResult.LastOrDefault();
 
             var tournamentName = firstParsingResult.Source.GameDescription.Tournament.TournamentName;
 
