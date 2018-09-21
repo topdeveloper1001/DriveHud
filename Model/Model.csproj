@@ -387,6 +387,7 @@
     <Compile Include="AppStore\ProductAppStoreRepository.cs" />
     <Compile Include="AppStore\AppStoreType.cs" />
     <Compile Include="SingletonStorageModel.cs" />
+    <Compile Include="Site\Adda52SiteConfiguration.cs" />
     <Compile Include="Site\BaseSiteConfiguration.cs" />
     <Compile Include="Site\BlackChipPokerConfiguration.cs" />
     <Compile Include="Site\IPokerConfiguration.cs" />

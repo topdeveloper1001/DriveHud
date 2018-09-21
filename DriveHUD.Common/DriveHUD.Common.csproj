@@ -161,6 +161,7 @@
     <Compile Include="WinApi\RectType.cs" />
     <Compile Include="WinApi\SecurityAttributes.cs" />
     <Compile Include="WinApi\SecurityDescriptor.cs" />
+    <Compile Include="WinApi\ShowWindowCommands.cs" />
     <Compile Include="WinApi\StartupInfo.cs" />
     <Compile Include="WinApi\ThreadWaitValue.cs" />
     <Compile Include="WinApi\WinApi.cs" />

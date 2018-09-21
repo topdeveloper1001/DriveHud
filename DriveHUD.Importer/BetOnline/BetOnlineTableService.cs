@@ -194,7 +194,7 @@ namespace DriveHUD.Importers.BetOnline
         {
             try
             {
-                while (true)
+                while (!cancellationTokenSource.IsCancellationRequested)
                 {
                     if (pokerClientProcess == null || pokerClientProcess.HasExited)
                     {
@@ -206,16 +206,22 @@ namespace DriveHUD.Importers.BetOnline
 
                         if (cancellationTokenSource.IsCancellationRequested)
                         {
-                            Clear();
-                            RaiseProcessStopped();
-                            return;
+                            break;
                         }
 
                         pokerClientProcess = GetPokerClientProcess();
 
                         if (pokerClientProcess == null)
                         {
-                            Task.Delay(ProcessSearchingTimeout).Wait();
+                            try
+                            {
+                                Task.Delay(ProcessSearchingTimeout).Wait(cancellationTokenSource.Token);
+                            }
+                            catch (OperationCanceledException)
+                            {
+                                break;
+                            }
+
                             continue;
                         }
                     }
@@ -233,9 +239,7 @@ namespace DriveHUD.Importers.BetOnline
 
                     if (cancellationTokenSource.IsCancellationRequested)
                     {
-                        Clear();
-                        RaiseProcessStopped();
-                        return;
+                        break;
                     }
 
                     lockObject.EnterWriteLock();
@@ -249,13 +253,23 @@ namespace DriveHUD.Importers.BetOnline
                         lockObject.ExitWriteLock();
                     }
 
-                    Task.Delay(ProcessSearchingTimeout).Wait();
+                    try
+                    {
+                        Task.Delay(ProcessSearchingTimeout).Wait(cancellationTokenSource.Token);
+                    }
+                    catch (OperationCanceledException)
+                    {
+                        break;
+                    }
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, "Overlaying is failed", e);
+                LogProvider.Log.Error(this, $"Failed to detect {ProcessName} tables.", e);
             }
+
+            Clear();
+            RaiseProcessStopped();
         }
 
         private void RemoveClosedHandles(List<IntPtr> handles)

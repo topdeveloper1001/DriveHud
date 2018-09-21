@@ -232,6 +232,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adda52 .
+        /// </summary>
+        internal static string Enum_EnumPokerSites_Adda52 {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_Adda52", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AmericasCardroom.
         /// </summary>
         internal static string Enum_EnumPokerSites_AmericasCardroom {

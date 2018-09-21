@@ -167,7 +167,8 @@ namespace Model.Enums
         CNY = 2,
         RUB = 3,
         CAN = 4,
-        SEK = 5
+        SEK = 5,
+        INR = 6
     }
 
     public enum EnumChipColor

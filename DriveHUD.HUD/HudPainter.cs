@@ -35,11 +35,13 @@ namespace DriveHUD.HUD
         private static IntPtr moveHook;
         private static IntPtr closeHook;
         private static IntPtr createHook;
+        private static IntPtr createCreateHook;
 
         //Create delegate instances to prevent GC collecting.
         private static WinApi.WinEventDelegate moveCallback = WindowMoved;
         private static WinApi.WinEventDelegate closeCallback = WindowClosed;
         private static WinApi.WinEventDelegate createCallback = WindowMoved;
+        private static WinApi.WinEventDelegate createWindowCallback = WindowCreated;
 
         private static readonly ReaderWriterLockSlim rwWindowsLock = new ReaderWriterLockSlim();
 
@@ -93,6 +95,12 @@ namespace DriveHUD.HUD
             moveHook = WinApi.SetWinEventHook(WinApi.EVENT_SYSTEM_MOVESIZEEND, moveCallback, processId);
             closeHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_DESTROY, closeCallback, processId);
             createHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_NAMECHANGE, createCallback, processId);
+
+            // dirty workaround for Adda52 issues
+            if (hudLayout.PokerSite == Entities.EnumPokerSites.Adda52)
+            {
+                createCreateHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_CREATE, createWindowCallback, processId);
+            }
 
             CreateHudWindow(hwnd, hudLayout);
         }
@@ -160,9 +168,7 @@ namespace DriveHUD.HUD
 
                     window.Show();
 
-                    RECT rect;
-
-                    WinApi.GetWindowRect(windowHandle, out rect);
+                    WinApi.GetWindowRect(windowHandle, out RECT rect);
 
                     SizeF dpi = Utils.GetCurrentDpi();
 
@@ -206,6 +212,29 @@ namespace DriveHUD.HUD
             }
 
             UpdateWindowOverlay(hwnd);
+        }
+
+        private static void WindowCreated(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
+        {
+            if (idObject != 0 || idChild != 0)
+            {
+                return;
+            }
+
+            try
+            {
+                if (!WinApi.IsWindow(hwnd))
+                {
+                    return;
+                }
+
+                WinApi.ShowWindow(hwnd, ShowWindowCommands.Minimize);
+                Thread.Sleep(150);
+                WinApi.ShowWindow(hwnd, ShowWindowCommands.Restore);
+            }
+            catch
+            {
+            }
         }
 
         private static void WindowClosed(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)

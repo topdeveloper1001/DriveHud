@@ -525,6 +525,10 @@ namespace DriveHUD.Common.WinApi
         [DllImport("user32.dll", ExactSpelling = true, CharSet = CharSet.Auto)]
         public static extern IntPtr GetParent(IntPtr hWnd);
 
+
+        [DllImport("user32.dll", EntryPoint = "ShowWindow", SetLastError = true)]
+        public static extern bool ShowWindow(IntPtr hWnd, ShowWindowCommands nCmdShow);
+
         #region Setting hooks
 
         public delegate void WinEventDelegate(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime);
@@ -537,6 +541,7 @@ namespace DriveHUD.Common.WinApi
 
         public const uint WINEVENT_OUTOFCONTEXT = 0;
         public const uint EVENT_SYSTEM_MOVESIZEEND = 0x800B;
+        public const uint EVENT_OBJECT_CREATE = 0x8000;
         public const uint EVENT_OBJECT_DESTROY = 0x8001;
         public const uint EVENT_OBJECT_NAMECHANGE = 0x800C;
 

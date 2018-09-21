@@ -56,7 +56,8 @@ namespace Model.Settings
                 EnumPokerSites.PartyPoker,
                 EnumPokerSites.IPoker,
                 EnumPokerSites.Horizon,
-                EnumPokerSites.Winamax
+                EnumPokerSites.Winamax,
+                EnumPokerSites.Adda52
             };
 
             SitesModelList = sites.Select(x => new SiteModel
@@ -151,50 +152,13 @@ namespace Model.Settings
     [Serializable]
     public class PreferredSeatModel : SettingsBase
     {
-        private EnumTableType _tableType;
-        private bool _isPreferredSeatEnabled = false;
-        private int _preferredSeat = -1;
+        [XmlAttribute]
+        public EnumTableType TableType { get; set; }
 
         [XmlAttribute]
-        public EnumTableType TableType
-        {
-            get
-            {
-                return _tableType;
-            }
-
-            set
-            {
-                _tableType = value;
-            }
-        }
+        public bool IsPreferredSeatEnabled { get; set; } = false;
 
         [XmlAttribute]
-        public bool IsPreferredSeatEnabled
-        {
-            get
-            {
-                return _isPreferredSeatEnabled;
-            }
-
-            set
-            {
-                _isPreferredSeatEnabled = value;
-            }
-        }
-
-        [XmlAttribute]
-        public int PreferredSeat
-        {
-            get
-            {
-                return _preferredSeat;
-            }
-
-            set
-            {
-                _preferredSeat = value;
-            }
-        }
+        public int PreferredSeat { get; set; } = -1;
     }
 }

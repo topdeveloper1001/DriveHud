@@ -45,13 +45,33 @@ namespace DriveHUD.Application.Security
                 return false;
             }
 
+            if ((gameInfo.Currency == Currency.PlayMoney && gameInfo.TournamentBuyIn == 0) ||
+                (gameInfo.TournamentCurrency == Currency.PlayMoney && gameInfo.CashBuyIn == 0))
+            {
+                return true;
+            }
+
+            decimal cashBuyin = gameInfo.CashBuyIn;
+
+            if (gameInfo.Currency == Currency.INR)
+            {
+                cashBuyin *= 0.014m;
+            }
+
+            decimal tournamentBuyIn = gameInfo.TournamentBuyIn;
+
+            if (gameInfo.TournamentCurrency == Currency.INR)
+            {
+                tournamentBuyIn *= 0.014m;
+            }
+
             var match = AllowedGameTypes.Contains(gameInfo.GameType) &&
-                            gameInfo.CashBuyIn <= CashLimit &&
-                                gameInfo.TournamentBuyIn <= TournamentLimit;
+                            cashBuyin <= CashLimit &&
+                                tournamentBuyIn <= TournamentLimit;
 
             if (!match)
             {
-                LogProvider.Log.Info($"GameType: {gameInfo.GameType}, GameCashBuyIn: {gameInfo.CashBuyIn}, GameTournamentBuyIn: {gameInfo.TournamentBuyIn}");
+                LogProvider.Log.Info($"GameType: {gameInfo.GameType}, GameCashBuyIn: {cashBuyin}, GameTournamentBuyIn: {tournamentBuyIn}, Curr: {gameInfo.Currency}, TournCurr: {gameInfo.TournamentCurrency}");
                 LogProvider.Log.Info($"LicenseCashBuyIn: {CashLimit}, LicenseTournamentBuyIn: {TournamentLimit}");
             }
 

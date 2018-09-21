@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="LogCleaner.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -32,11 +32,12 @@ namespace DriveHUD.Application.Services
             ["drivehud*"] = maxSizeLogBackups,
             ["hud*"] = maxSizeLogBackups,
             ["NHibernate*"] = maxSizeLogBackups,
-            ["ign-games*"] = maxSizeLogBackups,
-            ["bol-games*"] = maxSizeLogBackups,
+            ["ign-games*"] = 5,
+            ["bol-games*"] = 5,
             ["playerxray*"] = maxSizeLogBackups,
             ["pmcatcher*"] = maxSizeLogBackups,
             ["pkcatcher*"] = maxSizeLogBackups,
+            ["adda-games*"] = 5,
             ["*.*-*.*.log"] = 2
         };
 

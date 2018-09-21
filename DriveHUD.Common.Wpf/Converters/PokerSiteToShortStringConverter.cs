@@ -43,6 +43,8 @@ namespace DriveHUD.Common.Wpf.Converters
                         return "PP";
                     case EnumPokerSites.Horizon:
                         return "REV";
+                    case EnumPokerSites.Adda52:
+                        return "ADDA";
                     default:
                         break;
                 }

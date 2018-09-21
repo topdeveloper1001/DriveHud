@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Importers.Adda52;
 using DriveHUD.Importers.AndroidBase;
 using DriveHUD.Importers.PokerKing;
 using DriveHUD.Importers.PokerKing.Model;
@@ -41,6 +42,7 @@ namespace DriveHud.Tests.TcpImportersTests
 
             unityContainer.RegisterType<IPackageBuilder<PokerKingPackage>, PokerKingPackageBuilder>();
             unityContainer.RegisterType<IPackageBuilder<PokerMasterPackage>, PokerMasterPackageBuilder>();
+            unityContainer.RegisterType<IPackageBuilder<Adda52Package>, Adda52PackageBuilder>();
 
             var eventAggregator = Substitute.For<IEventAggregator>();
             unityContainer.RegisterInstance(eventAggregator);

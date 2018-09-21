@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 namespace HandHistories.Objects.GameDescription
 {
     [DataContract]
-    public enum Currency : byte 
+    public enum Currency : byte
     {
         [EnumMember] PlayMoney = 0,
         [EnumMember] USD = 1,
@@ -12,6 +12,7 @@ namespace HandHistories.Objects.GameDescription
         [EnumMember] Chips = 4,
         [EnumMember] CAD = 5,
         [EnumMember] YUAN = 6,
-        [EnumMember] All = 7
+        [EnumMember] All = 7,
+        [EnumMember] INR = 8,
     }
 }

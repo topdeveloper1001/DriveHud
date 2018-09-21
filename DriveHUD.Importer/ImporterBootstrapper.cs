@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="ImporterBootstrapper.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Importers.Adda52;
 using DriveHUD.Importers.AndroidBase;
 using DriveHUD.Importers.BetOnline;
 using DriveHUD.Importers.Bovada;
@@ -25,6 +26,7 @@ using DriveHUD.Importers.PokerKing.Model;
 using DriveHUD.Importers.PokerMaster;
 using DriveHUD.Importers.PokerMaster.Model;
 using DriveHUD.Importers.PokerStars;
+using DriveHUD.Importers.ProxyBase;
 using DriveHUD.Importers.Winamax;
 using DriveHUD.Importers.WinningPokerNetwork;
 using Microsoft.Practices.ServiceLocation;
@@ -86,15 +88,21 @@ namespace DriveHUD.Importers
             container.RegisterType<INetworkConnectionsService, NetworkConnectionsService>();
             container.RegisterType<ITableWindowProvider, TableWindowProvider>();
             container.RegisterType<IPacketManager<PokerMasterPackage>, PokerMasterPacketManager>();
-            container.RegisterType<IPacketManager<PokerKingPackage>, PokerKingPacketManager>();            
+            container.RegisterType<IPacketManager<PokerKingPackage>, PokerKingPacketManager>();
+            container.RegisterType<IPacketManager<Adda52Package>, Adda52PacketManager>();
             container.RegisterType<IPKImporter, PKImporter>();
             container.RegisterType<IPackageBuilder<PokerMasterPackage>, PokerMasterPackageBuilder>();
             container.RegisterType<IPackageBuilder<PokerKingPackage>, PokerKingPackageBuilder>();
+            container.RegisterType<IPackageBuilder<Adda52Package>, Adda52PackageBuilder>();
             container.RegisterType<IHorizonImporter, HorizonImporter>();
             container.RegisterType<IWinamaxImporter, WinamaxImporter>();
             container.RegisterType<IPokerEvaluator, HoldemEvaluator>(GeneralGameTypeEnum.Holdem.ToString());
             container.RegisterType<IPokerEvaluator, OmahaEvaluator>(GeneralGameTypeEnum.Omaha.ToString());
             container.RegisterType<IPokerEvaluator, OmahaHiLoEvaluator>(GeneralGameTypeEnum.OmahaHiLo.ToString());
+            container.RegisterType<IProxyImporter, ProxyImporter>();
+            container.RegisterType<IAdda52Importer, Adda52Importer>();
+            container.RegisterType<IAdda52HandBuilder, Adda52HandBuilder>();
+            container.RegisterType<IAdda52TableService, Adda52TableService>(new ContainerControlledLifetimeManager());
 
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());
@@ -126,15 +134,20 @@ namespace DriveHUD.Importers
             importerService.Register<IPacific888Importer>();
             importerService.Register<IPartyPokerImporter>();
             importerService.Register<IIPokerImporter>();
-            importerService.Register<IExternalImporter>();            
+            importerService.Register<IExternalImporter>();
             importerService.Register<IPKImporter>();
             importerService.Register<ITcpImporter>();
             importerService.Register<IHorizonImporter>();
             importerService.Register<IWinamaxImporter>();
+            importerService.Register<IAdda52Importer>();
+            importerService.Register<IProxyImporter>();
+            importerService.Register<IAdda52TableService>();
 
             var tcpImporter = importerService.GetImporter<ITcpImporter>();
-            
             tcpImporter.RegisterImporter<IPKImporter>();
+
+            var proxyImporter = importerService.GetImporter<IProxyImporter>();
+            proxyImporter.RegisterImporter<IAdda52Importer>();
         }
     }
 }

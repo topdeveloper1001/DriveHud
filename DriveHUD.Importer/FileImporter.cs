@@ -364,7 +364,9 @@ namespace DriveHUD.Importers
             {
                 GameType = parsedHand.GameDescription.GameType,
                 CashBuyIn = !parsedHand.GameDescription.IsTournament ? gameType.Bigblindincents : 0,
-                TournamentBuyIn = parsedHand.GameDescription.IsTournament ? parsedHand.GameDescription.Tournament.BuyIn.PrizePoolValue : 0
+                Currency = parsedHand.GameDescription.Limit != null ? parsedHand.GameDescription.Limit.Currency : Currency.USD,
+                TournamentBuyIn = parsedHand.GameDescription.IsTournament ? parsedHand.GameDescription.Tournament.BuyIn.PrizePoolValue : 0,
+                TournamentCurrency = parsedHand.GameDescription.IsTournament ? parsedHand.GameDescription.Tournament.BuyIn.Currency : Currency.USD
             };
 
             var sessionService = ServiceLocator.Current.GetInstance<ISessionService>();
@@ -657,7 +659,7 @@ namespace DriveHUD.Importers
 
                     t.Buyinincents = Utils.ConvertToCents(tournamentDescription.BuyIn.PrizePoolValue);
                     t.Rakeincents = Utils.ConvertToCents(tournamentDescription.BuyIn.Rake);
-                    t.Rebuyamountincents = Utils.ConvertToCents(tournamentDescription.Rebuy);
+                    t.Rebuyamountincents = Utils.ConvertToCents(tournamentDescription.Rebuy);                    
                     t.Tourneysize = tournamentDescription.TotalPlayers;
                     t.Tourneytagscsv = tournamentDescription.TotalPlayers > t.Tablesize ? TournamentsTags.MTT.ToString() : TournamentsTags.STT.ToString();
 

@@ -29,7 +29,7 @@ namespace DriveHUD.Importers.AndroidBase
     {
         #region ITcpPacketImporter implementation
 
-        public abstract void AddPacket(CapturedPacket capturedPacket);        
+        public abstract void AddPacket(CapturedPacket capturedPacket);
 
         public abstract bool Match(TcpPacket tcpPacket, IpPacket ipPacket);
 
@@ -112,7 +112,12 @@ namespace DriveHUD.Importers.AndroidBase
 
                 var handHistoryText = SerializationHelper.SerializeObject(handHistoryData.HandHistory);
 
-#if DEBUG
+#if DEBUG                                
+                if (!Directory.Exists("Hands"))
+                {
+                    Directory.CreateDirectory("Hands");
+                }
+
                 File.WriteAllText($"Hands\\{HandHistoryFilePrefix}_hand_exported_{handHistoryData.Uuid}_{handHistoryData.HandHistory.HandId}.xml", handHistoryText);
 #endif
                 var gameInfo = new GameInfo
