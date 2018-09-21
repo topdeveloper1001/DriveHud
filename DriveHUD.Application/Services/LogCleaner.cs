@@ -14,6 +14,7 @@ using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using Model;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -26,7 +27,18 @@ namespace DriveHUD.Application.Services
     {
         private const int maxSizeLogBackups = 8;
 
-        private static readonly string[] logsPatterns = new string[] { "drivehud*", "hud*", "NHibernate*", "ign-games*", "bol-games*", "playerxray*", "pmcatcher*", "pkcatcher*" };
+        private static readonly Dictionary<string, int> logsPatterns = new Dictionary<string, int>
+        {
+            ["drivehud*"] = maxSizeLogBackups,
+            ["hud*"] = maxSizeLogBackups,
+            ["NHibernate*"] = maxSizeLogBackups,
+            ["ign-games*"] = maxSizeLogBackups,
+            ["bol-games*"] = maxSizeLogBackups,
+            ["playerxray*"] = maxSizeLogBackups,
+            ["pmcatcher*"] = maxSizeLogBackups,
+            ["pkcatcher*"] = maxSizeLogBackups,
+            ["*.*-*.*.log"] = 2
+        };
 
         /// <summary>
         /// Clear folder with logs
@@ -46,13 +58,13 @@ namespace DriveHUD.Application.Services
                     return;
                 }
 
-                foreach (var logPattern in logsPatterns)
+                foreach (var logPatternKeyValue in logsPatterns)
                 {
-                    var logFilesToDelete = logsDirectory.GetFiles(logPattern)
+                    var logFilesToDelete = logsDirectory.GetFiles(logPatternKeyValue.Key)
                         .GroupBy(x => x.LastWriteTime.Date)
                         .Select(x => new { Day = x.Key, Files = x.ToArray() })
                         .OrderByDescending(x => x.Day)
-                        .Skip(maxSizeLogBackups)
+                        .Skip(logPatternKeyValue.Value)
                         .SelectMany(x => x.Files)
                         .ToArray();
 

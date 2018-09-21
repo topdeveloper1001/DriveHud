@@ -61,7 +61,18 @@ namespace DriveHUD.Importers.AndroidBase
                 if (localConnection == null || localConnection.ProcessId == 0)
                 {
                     localConnections = NetworkUtils.GetAllTcpConnections().ToList();
-                    localConnection = localConnections.FirstOrDefault(x => filterConnection(x));
+
+                    var foundLocalConnections = localConnections.Where(x => filterConnection(x)).ToArray();
+
+                    if (foundLocalConnections.Length > 1)
+                    {
+                        var processes = new HashSet<int>(Process.GetProcesses().Select(x => x.Id).Distinct());
+                        localConnection = foundLocalConnections.FirstOrDefault(x => processes.Contains((int)x.ProcessId));
+                    }
+                    else
+                    {
+                        localConnection = foundLocalConnections.FirstOrDefault();
+                    }
                 }
 
                 if (localConnection == null)
@@ -76,15 +87,23 @@ namespace DriveHUD.Importers.AndroidBase
                     return null;
                 }
 
-                connectionProcess = new ConnectionProcessInfo
+                try
                 {
-                    Source = capturedPacket.Source,
-                    Destination = capturedPacket.Destination,
-                    Process = Process.GetProcessById((int)localConnection.ProcessId),
-                    LoggerName = loggerName
-                };
+                    connectionProcess = new ConnectionProcessInfo
+                    {
+                        Source = capturedPacket.Source,
+                        Destination = capturedPacket.Destination,
+                        Process = Process.GetProcessById((int)localConnection.ProcessId),
+                        LoggerName = loggerName
+                    };
 
-                connectionProcesses.Add(connectionProcess);
+                    connectionProcesses.Add(connectionProcess);
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(loggerName, "Failed to create connection process info", e);
+                    return null;
+                }
             }
 
             return connectionProcess.Process;
