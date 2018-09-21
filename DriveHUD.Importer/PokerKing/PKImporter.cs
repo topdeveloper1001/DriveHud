@@ -27,6 +27,7 @@ using Model.Settings;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using PacketDotNet;
+using ProtoBuf;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -319,7 +320,7 @@ namespace DriveHUD.Importers.PokerKing
         /// <param name="package">Package to check</param>
         /// <returns></returns>
         protected static bool IsAllowedPackage(PokerKingPackage package)
-        {            
+        {
             switch (package.PackageType)
             {
                 case PackageType.NoticeBuyin:
@@ -418,6 +419,7 @@ namespace DriveHUD.Importers.PokerKing
         {
             try
             {
+#if DEBUG
                 if (!SerializationHelper.TryDeserialize(package.Body, out T packageContent))
                 {
                     LogProvider.Log.Warn(Logger, $"Failed to deserialize {typeof(T)} package");
@@ -433,6 +435,16 @@ namespace DriveHUD.Importers.PokerKing
                 var json = JsonConvert.SerializeObject(packageJson, Formatting.Indented, new StringEnumConverter());
 
                 protectedLogger.Log(json);
+#else
+                using (var ms = new MemoryStream())
+                {
+                    Serializer.Serialize(ms, package);
+                    var packageBytes = ms.ToArray();
+
+                    var logText = Encoding.UTF8.GetString(packageBytes);
+                    protectedLogger.Log(logText);
+                }
+#endif
             }
             catch (Exception e)
             {
@@ -463,14 +475,16 @@ namespace DriveHUD.Importers.PokerKing
             File.AppendAllText(packageFileName, sb.ToString());
         }
 
+#if DEBUG
         private class PackageJson<T>
-        {
+        {          
             public PackageType PackageType { get; set; }
-
+         
             public DateTime Time { get; set; }
-
+         
             public T Content { get; set; }
         }
+#endif
 
         #endregion
 
