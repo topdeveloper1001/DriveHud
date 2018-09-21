@@ -53,7 +53,6 @@ using ProtoBuf.Meta;
 using System;
 using System.Linq;
 using System.Windows;
-using System.Windows.Forms;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application
@@ -269,6 +268,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(ITreatAsService), typeof(TreatAsService), true);
             RegisterTypeIfMissing(typeof(IModuleService), typeof(ModuleService), false);
             RegisterTypeIfMissing(typeof(IWindowController), typeof(WindowController), true);
+            RegisterTypeIfMissing(typeof(ICurrencyRatesService), typeof(CurrencyRatesService), false);
 
             // Migration
             Container.RegisterType<IMigrationService, SQLiteMigrationService>(DatabaseType.SQLite.ToString());

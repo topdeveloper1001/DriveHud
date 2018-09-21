@@ -56,13 +56,10 @@ namespace DriveHUD.Application.Security
             }
 
             var gameTypes = registeredLicenses.SelectMany(x => ConvertLicenseType(x.LicenseType)).Distinct().ToArray();
+            var cashLimit = registeredLicenses.Length > 0 ? registeredLicenses.Max(x => x.CashLimit) : 0;
+            var tournamentLimit = registeredLicenses.Length > 0 ? registeredLicenses.Max(x => x.TournamentLimit) : 0;
 
-            userSession = new UserSession
-            {
-                TournamentLimit = registeredLicenses.Length > 0 ? registeredLicenses.Max(x => x.TournamentLimit) : 0,
-                CashLimit = registeredLicenses.Length > 0 ? registeredLicenses.Max(x => x.CashLimit) : 0,
-                AllowedGameTypes = gameTypes
-            };
+            userSession = new UserSession(cashLimit, tournamentLimit, gameTypes);
         }
 
         private static IEnumerable<GameType> ConvertLicenseType(LicenseType licenseType)

@@ -10,39 +10,43 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Linq;
-
+using DriveHUD.Common.Log;
 using DriveHUD.Importers;
 using HandHistories.Objects.GameDescription;
-using DriveHUD.Common.Log;
+using Microsoft.Practices.ServiceLocation;
+using System.Linq;
 
 namespace DriveHUD.Application.Security
 {
     internal class UserSession : IUserSession
     {
-        public GameType[] AllowedGameTypes
-        {
-            get;
-            set;
-        }
+        private readonly ICurrencyRatesService currencyRatesService;
 
-        public decimal TournamentLimit
-        {
-            get;
-            set;
-        }
+        private readonly GameType[] allowedGameTypes;
+        private readonly decimal cashLimit;
+        private readonly decimal tournamentLimit;
+        private CurrencyRates currencyRates;
 
-        public int CashLimit
+        public UserSession(decimal cashLimit, decimal tournamentLimit, GameType[] allowedGameTypes)
         {
-            get;
-            set;
+            this.cashLimit = cashLimit;
+            this.tournamentLimit = tournamentLimit;
+            this.allowedGameTypes = allowedGameTypes;
+
+            currencyRatesService = ServiceLocator.Current.GetInstance<ICurrencyRatesService>();
+            currencyRatesService.RefreshCurrencyRates();
         }
 
         public bool IsMatch(GameMatchInfo gameInfo)
         {
-            if (gameInfo == null)
+            if (gameInfo == null || cashLimit == 0 || tournamentLimit == 0)
             {
                 return false;
+            }
+
+            if (currencyRates == null)
+            {
+                InitializeCurrencyRates();
             }
 
             if ((gameInfo.Currency == Currency.PlayMoney && gameInfo.TournamentBuyIn == 0) ||
@@ -51,31 +55,28 @@ namespace DriveHUD.Application.Security
                 return true;
             }
 
-            decimal cashBuyin = gameInfo.CashBuyIn;
+            var cashBuyin = currencyRates != null && currencyRates.Rates != null && currencyRates.Rates.TryGetValue(gameInfo.Currency, out decimal cashRate) ?
+                cashRate * gameInfo.CashBuyIn : gameInfo.CashBuyIn;
 
-            if (gameInfo.Currency == Currency.INR)
-            {
-                cashBuyin *= 0.014m;
-            }
+            var tournamentBuyIn = currencyRates != null && currencyRates.Rates != null && currencyRates.Rates.TryGetValue(gameInfo.Currency, out decimal tourneyRate) ?
+                tourneyRate * gameInfo.TournamentBuyIn : gameInfo.TournamentBuyIn;
 
-            decimal tournamentBuyIn = gameInfo.TournamentBuyIn;
-
-            if (gameInfo.TournamentCurrency == Currency.INR)
-            {
-                tournamentBuyIn *= 0.014m;
-            }
-
-            var match = AllowedGameTypes.Contains(gameInfo.GameType) &&
-                            cashBuyin <= CashLimit &&
-                                tournamentBuyIn <= TournamentLimit;
+            var match = allowedGameTypes.Contains(gameInfo.GameType) &&
+                            cashBuyin <= cashLimit &&
+                                tournamentBuyIn <= tournamentLimit;
 
             if (!match)
             {
                 LogProvider.Log.Info($"GameType: {gameInfo.GameType}, GameCashBuyIn: {cashBuyin}, GameTournamentBuyIn: {tournamentBuyIn}, Curr: {gameInfo.Currency}, TournCurr: {gameInfo.TournamentCurrency}");
-                LogProvider.Log.Info($"LicenseCashBuyIn: {CashLimit}, LicenseTournamentBuyIn: {TournamentLimit}");
+                LogProvider.Log.Info($"LicenseCashBuyIn: {cashLimit}, LicenseTournamentBuyIn: {tournamentLimit}");
             }
 
             return match;
+        }
+
+        private void InitializeCurrencyRates()
+        {
+            currencyRates = currencyRatesService.GetCurrencyRates();
         }
     }
 }

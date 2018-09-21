@@ -410,10 +410,14 @@
     <Compile Include="Modules\ModuleService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
     <Compile Include="ReportsLayout\PopulationAnalysisLayoutCreator.cs" />
+    <Compile Include="Security\CurrencyRates.cs" />
+    <Compile Include="Security\CurrencyRatesInfo.cs" />
+    <Compile Include="Security\CurrencyRatesService.cs" />
     <Compile Include="Security\DHCReg.cs" />
     <Compile Include="Security\DHHReg.cs" />
     <Compile Include="Security\DHOReg.cs" />
     <Compile Include="Security\DHTReg.cs" />
+    <Compile Include="Security\ICurrencyRatesService.cs" />
     <Compile Include="Security\SessionService.cs" />
     <Compile Include="Services\ITreatAsService.cs" />
     <Compile Include="Services\LogCleaner.cs" />

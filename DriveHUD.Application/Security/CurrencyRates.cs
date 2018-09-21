@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IUserSession.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="CurrencyRates.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,13 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers
+using HandHistories.Objects.GameDescription;
+using ProtoBuf;
+using System.Collections.Generic;
+
+namespace DriveHUD.Application.Security
 {
-    /// <summary>
-    /// User session interface
-    /// </summary>
-    public interface IUserSession
-    {      
-        bool IsMatch(GameMatchInfo gameInfo);
+    [ProtoContract]
+    internal class CurrencyRates
+    {
+        [ProtoMember(1)]
+        public Dictionary<Currency, decimal> Rates { get; set; }
     }
 }
