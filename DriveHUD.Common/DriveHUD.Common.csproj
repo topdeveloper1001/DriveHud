@@ -139,6 +139,7 @@
     </Compile>
     <Compile Include="WinApi\AllocationType.cs" />
     <Compile Include="WinApi\GetWindowType.cs" />
+    <Compile Include="WinApi\Hwnd.cs" />
     <Compile Include="WinApi\MemoryProtection.cs" />
     <Compile Include="WinApi\Network\TCP\MibTcp6RowOwnerPid.cs" />
     <Compile Include="WinApi\Network\TCP\MibTcp6TableOwnerPid.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="WinApi\SecurityDescriptor.cs" />
     <Compile Include="WinApi\ShowWindowCommands.cs" />
     <Compile Include="WinApi\StartupInfo.cs" />
+    <Compile Include="WinApi\Swp.cs" />
     <Compile Include="WinApi\ThreadWaitValue.cs" />
     <Compile Include="WinApi\WinApi.cs" />
     <Compile Include="WinApi\WinTrust.cs" />

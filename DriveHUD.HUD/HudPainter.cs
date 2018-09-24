@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Interop;
+using System.Windows.Threading;
 
 namespace DriveHUD.HUD
 {
@@ -30,18 +31,21 @@ namespace DriveHUD.HUD
     /// </summary>
     internal static class HudPainter
     {
+        private const int timerInterval = 50;
+        private const Swp TopMostFlags = Swp.NOMOVE | Swp.NOSIZE | Swp.NOACTIVATE | Swp.NOOWNERZORDER | Swp.NOSENDCHANGING | Swp.NOREDRAW;
+
         private static Dictionary<IntPtr, HudWindowItem> windows = new Dictionary<IntPtr, HudWindowItem>();
 
         private static IntPtr moveHook;
         private static IntPtr closeHook;
         private static IntPtr createHook;
-        private static IntPtr createCreateHook;
+        private static IntPtr foregroundChangedHook;
 
         //Create delegate instances to prevent GC collecting.
         private static WinApi.WinEventDelegate moveCallback = WindowMoved;
         private static WinApi.WinEventDelegate closeCallback = WindowClosed;
         private static WinApi.WinEventDelegate createCallback = WindowMoved;
-        private static WinApi.WinEventDelegate createWindowCallback = WindowCreated;
+        private static WinApi.WinEventDelegate foregroundChangedCallback = ForegroundChanged;
 
         private static readonly ReaderWriterLockSlim rwWindowsLock = new ReaderWriterLockSlim();
 
@@ -96,10 +100,9 @@ namespace DriveHUD.HUD
             closeHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_DESTROY, closeCallback, processId);
             createHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_NAMECHANGE, createCallback, processId);
 
-            // dirty workaround for Adda52 issues
             if (hudLayout.PokerSite == Entities.EnumPokerSites.Adda52)
             {
-                createCreateHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_CREATE, createWindowCallback, processId);
+                foregroundChangedHook = WinApi.SetWinEventHook(WinApi.EVENT_SYSTEM_FOREGROUND, foregroundChangedCallback, processId);
             }
 
             CreateHudWindow(hwnd, hudLayout);
@@ -141,10 +144,13 @@ namespace DriveHUD.HUD
                         return;
                     }
 
+                    var windowInteropHelper = CreateWindowInteropHelper(window, hudLayout, hwnd);
+
                     var windowItem = new HudWindowItem
                     {
                         Window = window,
-                        Handle = windowHandle
+                        Handle = windowHandle,
+                        OverlayHandle = windowInteropHelper.EnsureHandle()
                     };
 
                     using (rwWindowsLock.Write())
@@ -157,15 +163,8 @@ namespace DriveHUD.HUD
                         windows.Add(hwnd, windowItem);
                     }
 
-                    var windowInteropHelper = new WindowInteropHelper(window)
-                    {
-                        Owner = windowHandle
-                    };
-
                     window.Closed += (s, e) => window.Dispatcher.InvokeShutdown();
-
                     window.Initialize(hudLayout, hwnd);
-
                     window.Show();
 
                     WinApi.GetWindowRect(windowHandle, out RECT rect);
@@ -185,6 +184,8 @@ namespace DriveHUD.HUD
 
                     windowItem.IsInitialized = true;
 
+                    PrepareWindow(windowItem, hudLayout, hwnd);
+
                     if (!WinApi.IsIconic(hwnd))
                     {
                         window.Refresh();
@@ -202,6 +203,89 @@ namespace DriveHUD.HUD
             thread.Start();
         }
 
+        private static WindowInteropHelper CreateWindowInteropHelper(HudWindow window, HudLayout hudLayout, IntPtr windowHandle)
+        {
+            if (hudLayout.PokerSite == Entities.EnumPokerSites.Adda52)
+            {
+                return new WindowInteropHelper(window);
+            }
+
+            return new WindowInteropHelper(window)
+            {
+                Owner = windowHandle
+            };
+        }
+
+        private static void PrepareWindow(HudWindowItem windowItem, HudLayout hudLayout, IntPtr windowHandle)
+        {
+            if (hudLayout.PokerSite != Entities.EnumPokerSites.Adda52)
+            {
+                return;
+            }
+
+            var isHiddenWindow = false;
+
+            var dispatcherTimer = new DispatcherTimer();
+
+            var timerThrownException = false;
+            var handle = windowItem.OverlayHandle;
+
+            WinApi.SetWindowPos(windowItem.OverlayHandle, windowHandle, 0, 0, 0, 0, TopMostFlags);
+            WinApi.SetWindowPos(windowHandle, windowItem.OverlayHandle, 0, 0, 0, 0, TopMostFlags);
+
+            dispatcherTimer.Tick += (s, e) =>
+            {
+                try
+                {
+                    // handle minimize/restore 
+                    if (!isHiddenWindow && WinApi.IsIconic(windowHandle))
+                    {
+                        windowItem.Window.Hide();
+                        isHiddenWindow = true;
+                    }
+                    else if (isHiddenWindow && !WinApi.IsIconic(windowHandle))
+                    {
+                        windowItem.Window.Show();
+                        isHiddenWindow = false;
+                    }
+
+                    var activeWindow = WinApi.GetForegroundWindow();
+
+                    if (activeWindow != handle)
+                    {
+                        if (activeWindow == windowHandle && !windowItem.IsTopMost)
+                        {
+                            WinApi.SetWindowPos(handle, Hwnd.TopMost, 0, 0, 0, 0, TopMostFlags);
+                            windowItem.IsTopMost = true;
+                        }
+                        else if (activeWindow != windowHandle && windowItem.IsTopMost)
+                        {
+                            WinApi.SetWindowPos(handle, activeWindow, 0, 0, 0, 0, TopMostFlags);
+                            WinApi.SetWindowPos(handle, Hwnd.NoTopMost, 0, 0, 0, 0, TopMostFlags);
+                            windowItem.IsTopMost = false;
+                        }
+                    }
+                    else if (!windowItem.IsTopMost)
+                    {
+                        WinApi.SetForegroundWindow(windowHandle);
+                        WinApi.SetWindowPos(handle, Hwnd.TopMost, 0, 0, 0, 0, TopMostFlags);
+                        windowItem.IsTopMost = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    if (!timerThrownException)
+                    {
+                        LogProvider.Log.Error(typeof(HudPainter), "Failed to prepare window", ex);
+                        timerThrownException = true;
+                    }
+                }
+            };
+
+            dispatcherTimer.Interval = TimeSpan.FromMilliseconds(timerInterval);
+            dispatcherTimer.Start();
+        }
+
         #region Infrastructure
 
         private static void WindowMoved(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
@@ -214,26 +298,21 @@ namespace DriveHUD.HUD
             UpdateWindowOverlay(hwnd);
         }
 
-        private static void WindowCreated(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
+        private static void ForegroundChanged(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
         {
-            if (idObject != 0 || idChild != 0)
-            {
-                return;
-            }
-
             try
             {
-                if (!WinApi.IsWindow(hwnd))
+                if (!windows.TryGetValue(hwnd, out HudWindowItem window) || !window.IsTopMost)
                 {
                     return;
                 }
 
-                WinApi.ShowWindow(hwnd, ShowWindowCommands.Minimize);
-                Thread.Sleep(150);
-                WinApi.ShowWindow(hwnd, ShowWindowCommands.Restore);
+                window.IsTopMost = true;
+                WinApi.SetWindowPos(window.OverlayHandle, Hwnd.TopMost, 0, 0, 0, 0, TopMostFlags);
             }
-            catch
+            catch (Exception e)
             {
+                LogProvider.Log.Error(typeof(HudPainter), "Failed to process foreground changed hook.", e);
             }
         }
 
@@ -307,11 +386,15 @@ namespace DriveHUD.HUD
         {
             public IntPtr Handle { get; set; }
 
+            public IntPtr OverlayHandle { get; set; }
+
             public HudWindow Window { get; set; }
 
             public bool IsInitialized { get; set; }
+
+            public bool IsTopMost { get; set; }
         }
 
-        #endregion       
+        #endregion
     }
 }

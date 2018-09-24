@@ -525,9 +525,35 @@ namespace DriveHUD.Common.WinApi
         [DllImport("user32.dll", ExactSpelling = true, CharSet = CharSet.Auto)]
         public static extern IntPtr GetParent(IntPtr hWnd);
 
-
         [DllImport("user32.dll", EntryPoint = "ShowWindow", SetLastError = true)]
         public static extern bool ShowWindow(IntPtr hWnd, ShowWindowCommands nCmdShow);
+
+        [DllImport("user32.dll", EntryPoint = "SetWindowPos")]
+        public static extern IntPtr SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int x, int Y, int cx, int cy, Swp wFlags);
+
+        /// <summary>
+        /// Retrieves a handle to the foreground window (the window with which the user is currently working). The system
+        /// assigns a slightly higher priority to the thread that creates the foreground window than it does to other threads.
+        /// <para>See https://msdn.microsoft.com/en-us/library/windows/desktop/ms633505%28v=vs.85%29.aspx for more information.</para>
+        /// </summary>
+        /// <returns>The return value is a handle to the foreground window. The foreground window
+        /// can be NULL in certain circumstances, such as when a window is losing activation.
+        /// </returns>
+        [DllImport("user32.dll")]
+        public static extern IntPtr GetForegroundWindow();
+
+        /// <summary>
+        /// Brings the thread that created the specified window into the foreground and activates the window. Keyboard input is
+        /// directed to the window, and various visual cues are changed for the user. The system assigns a slightly higher
+        /// priority to the thread that created the foreground window than it does to other threads.
+        /// <para>See for https://msdn.microsoft.com/en-us/library/windows/desktop/ms633539%28v=vs.85%29.aspx more information.</para>
+        /// </summary>
+        /// <param name="hWnd"> A handle to the window that should be activated and brought to the foreground.</param>
+        /// <returns><c>true</c> or nonzero if the window was brought to the foreground, <c>false</c> or zero If the window was not
+        /// brought to the foreground.
+        /// </returns>
+        [DllImport("user32.dll")]
+        public static extern bool SetForegroundWindow(IntPtr hWnd);
 
         #region Setting hooks
 
@@ -544,6 +570,7 @@ namespace DriveHUD.Common.WinApi
         public const uint EVENT_OBJECT_CREATE = 0x8000;
         public const uint EVENT_OBJECT_DESTROY = 0x8001;
         public const uint EVENT_OBJECT_NAMECHANGE = 0x800C;
+        public const uint EVENT_SYSTEM_FOREGROUND = 0x0003;
 
         public static IntPtr SetWinEventHook(uint eventId, WinEventDelegate callback, uint idProcess)
         {
