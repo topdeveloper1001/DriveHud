@@ -397,6 +397,7 @@
     <Compile Include="Site\AmericasCardroomConfiguration.cs" />
     <Compile Include="Site\HorizonConfiguration.cs" />
     <Compile Include="Site\SiteValidationResult.cs" />
+    <Compile Include="Site\SpartanPokerConfiguration.cs" />
     <Compile Include="Site\SportsBettingConfiguration.cs" />
     <Compile Include="Site\TigerGamingConfiguration.cs" />
     <Compile Include="Site\BetOnlineConfiguration.cs" />

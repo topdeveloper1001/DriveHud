@@ -53,7 +53,6 @@ using ProtoBuf.Meta;
 using System;
 using System.Linq;
 using System.Windows;
-using System.Windows.Forms;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application
@@ -269,6 +268,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(ITreatAsService), typeof(TreatAsService), true);
             RegisterTypeIfMissing(typeof(IModuleService), typeof(ModuleService), false);
             RegisterTypeIfMissing(typeof(IWindowController), typeof(WindowController), true);
+            RegisterTypeIfMissing(typeof(ICurrencyRatesService), typeof(CurrencyRatesService), false);
 
             // Migration
             Container.RegisterType<IMigrationService, SQLiteMigrationService>(DatabaseType.SQLite.ToString());
@@ -290,6 +290,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, HorizonConfiguration>(EnumPokerSites.Horizon.ToString());
             Container.RegisterType<ISiteConfiguration, WinamaxConfiguration>(EnumPokerSites.Winamax.ToString());
             Container.RegisterType<ISiteConfiguration, Adda52SiteConfiguration>(EnumPokerSites.Adda52.ToString());
+            Container.RegisterType<ISiteConfiguration, SpartanPokerConfiguration>(EnumPokerSites.SpartanPoker.ToString());
 
             // HUD designer 
             Container.RegisterType<IHudToolFactory, HudToolFactory>();
@@ -330,6 +331,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, HorizonSiteSettingTableConfigurator>(EnumPokerSites.Horizon.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, WinamaxSiteSettingTableConfigurator>(EnumPokerSites.Winamax.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, Adda52SiteSettingTableConfiguration>(EnumPokerSites.Adda52.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.SpartanPoker.ToString());
 
             // Series providers
             Container.RegisterType<IGraphsProvider, GraphsProvider>();

@@ -362,6 +362,11 @@ namespace DriveHUD.Importers.BetOnline
                 return EnumPokerSites.SportsBetting;
             }
 
+            if (title.StartsWith("The Spartan", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return EnumPokerSites.SpartanPoker;
+            }
+
             return EnumPokerSites.Unknown;
         }
 

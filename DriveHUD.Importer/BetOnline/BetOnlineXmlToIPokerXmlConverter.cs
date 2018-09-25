@@ -15,6 +15,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Builders.iPoker;
+using HandHistories.Objects.GameDescription;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using Model.Site;
@@ -157,7 +158,7 @@ namespace DriveHUD.Importers.BetOnline
             {
                 gameInfo = new GameInfo
                 {
-                    PokerSite = EnumPokerSites.BetOnline                    
+                    PokerSite = EnumPokerSites.BetOnline
                 };
 
                 sessionCode = BuildSessionCode();
@@ -201,6 +202,30 @@ namespace DriveHUD.Importers.BetOnline
         /// <param name="handHistory">Hand history</param>
         private void AdjustHandHistory(HandHistory handHistory)
         {
+            var currencySymbol = "$";
+
+            if (handHistory.General.Site == EnumPokerSites.SpartanPoker)
+            {
+                handHistory.General.Currency = Currency.INR;
+
+                if (!string.IsNullOrEmpty(handHistory.General.BuyIn))
+                {
+                    handHistory.General.BuyIn = handHistory.General.BuyIn.Replace(currencySymbol, string.Empty);
+                }
+
+                if (!string.IsNullOrEmpty(handHistory.General.TotalBuyIn))
+                {
+                    handHistory.General.TotalBuyIn = handHistory.General.TotalBuyIn.Replace(currencySymbol, string.Empty);
+                }
+
+                if (!string.IsNullOrEmpty(handHistory.General.TotalPrizePool))
+                {
+                    handHistory.General.TotalPrizePool = handHistory.General.TotalPrizePool.Replace(currencySymbol, string.Empty);
+                }
+
+                currencySymbol = string.Empty;
+            }
+
             // cards
             var game = handHistory.Games.FirstOrDefault();
             var preflop = game.Rounds.FirstOrDefault(x => x.No == 1);
@@ -285,7 +310,7 @@ namespace DriveHUD.Importers.BetOnline
                 var smallBlind = parameters.Attribute("stakes-low").Value;
                 var bigBlind = parameters.Attribute("stakes-high").Value;
 
-                handHistory.General.GameType = string.Format(CultureInfo.InvariantCulture, "{0} ${1}/${2}", handHistory.General.GameType, smallBlind, bigBlind);
+                handHistory.General.GameType = string.Format(CultureInfo.InvariantCulture, "{0} {3}{1}/{3}{2}", handHistory.General.GameType, smallBlind, bigBlind, currencySymbol);
             }
 
             AdjustRaises(game.Rounds);
@@ -366,7 +391,6 @@ namespace DriveHUD.Importers.BetOnline
 
             var handNumber = games[0].GameCode;
 
-
             var windowHandle = tableService.GetWindowHandle(handNumber, out EnumPokerSites site);
 
             if (string.IsNullOrEmpty(sessionCode))
@@ -414,7 +438,8 @@ namespace DriveHUD.Importers.BetOnline
                 Nickname = configuration.HeroName,
                 BuyIn = buyIn,
                 Currency = Currency.USD,
-                TotalBuyIn = totalBuyIn
+                TotalBuyIn = totalBuyIn,
+                TournamentsTags = isTournament ? (gameInfo.GameFormat == GameFormat.MTT ? TournamentsTags.MTT : TournamentsTags.STT) : (TournamentsTags?)null
             };
 
             if (isTournament)

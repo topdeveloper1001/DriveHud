@@ -10,21 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using HandHistories.Objects.GameDescription;
-
 namespace DriveHUD.Importers
 {
     /// <summary>
     /// User session interface
     /// </summary>
     public interface IUserSession
-    {
-        GameType[] AllowedGameTypes { get; }
-
-        decimal TournamentLimit { get; }
-
-        int CashLimit { get; }
-
+    {      
         bool IsMatch(GameMatchInfo gameInfo);
     }
 }

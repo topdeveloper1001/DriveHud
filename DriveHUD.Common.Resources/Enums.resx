@@ -1106,4 +1106,7 @@
   <data name="Enum_EnumPokerSites_Adda52" xml:space="preserve">
     <value>Adda52 </value>
   </data>
+  <data name="Enum_EnumPokerSites_SpartanPoker" xml:space="preserve">
+    <value>The Spartan Poker</value>
+  </data>
 </root>

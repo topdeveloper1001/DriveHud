@@ -131,6 +131,7 @@ namespace DriveHUD.Importers
                 case EnumPokerSites.BetOnline:
                 case EnumPokerSites.SportsBetting:
                 case EnumPokerSites.TigerGaming:
+                case EnumPokerSites.SpartanPoker:
                     return BetOnlineSnGWinningsMultiplierDictionary;
                 case EnumPokerSites.WinningPokerNetwork:
                 case EnumPokerSites.AmericasCardroom:

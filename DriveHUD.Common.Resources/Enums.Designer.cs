@@ -358,6 +358,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The Spartan Poker.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_SpartanPoker {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_SpartanPoker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SportsBetting.
         /// </summary>
         internal static string Enum_EnumPokerSites_SportsBetting {

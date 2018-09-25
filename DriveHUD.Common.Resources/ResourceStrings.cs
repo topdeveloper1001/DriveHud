@@ -109,6 +109,7 @@ namespace DriveHUD.Common.Resources
             [EnumPokerSites.Horizon] = "Settings_HorizonHelpLink",
             [EnumPokerSites.Winamax] = "Settings_WinamaxHelpLink",
             [EnumPokerSites.Adda52] = "Settings_Adda52HelpLink",
+            [EnumPokerSites.SpartanPoker] = "Settings_SpartanPokerHelpLink",
         };
 
         #endregion

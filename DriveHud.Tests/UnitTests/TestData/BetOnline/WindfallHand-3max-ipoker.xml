@@ -24,6 +24,7 @@
     <win>0</win>
     <maxplayers>3</maxplayers>
     <pokersite>BetOnline</pokersite>
+    <tournamentstags>STT</tournamentstags>
   </general>
   <game gamecode="249361905">
     <general>

@@ -34,6 +34,7 @@ namespace DriveHUD.Importers.Adda52
     internal class Adda52TableService : BaseImporter, IAdda52TableService
     {
         private const string ProcessName = "poker";
+        private const string CrazyPineappleTableName = "Crazy Pineapple";
         private const int ScanInterval = 2500;
         private Process pokerClientProcess;
         private readonly ReaderWriterLockSlim lockObject;
@@ -359,7 +360,8 @@ namespace DriveHUD.Importers.Adda52
                     if (!openedTables.ContainsKey(handle))
                     {
                         openedTables.Add(handle, title);
-                        NotifyHUDTableIsDetected(handle);
+
+                        NotifyHUDTableIsDetected(handle, title);
 
                         LogProvider.Log.Info(this, $"Detected {title} table. [{SiteString}]");
                     }
@@ -391,7 +393,27 @@ namespace DriveHUD.Importers.Adda52
             }
         }
 
-        private void NotifyHUDTableIsDetected(IntPtr handle)
+        private void NotifyHUDTableIsDetected(IntPtr handle, string title)
+        {
+            string loadingText;
+
+            if (IsAdda52Launched == true)
+            {
+                loadingText = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_PreLoadingText_Adda52FailedToLoad");
+            }
+            else if (title.ContainsIgnoreCase(CrazyPineappleTableName))
+            {
+                loadingText = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_PreLoadingText_Adda52CrazyPineappleNotSupported"); ;
+            }
+            else
+            {
+                loadingText = CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_PreLoadingText_Adda52");
+            }
+
+            SendHUDTableNotification(handle, loadingText);
+        }
+
+        private void SendHUDTableNotification(IntPtr handle, string loadingText)
         {
             var gameInfo = new GameInfo
             {
@@ -399,10 +421,6 @@ namespace DriveHUD.Importers.Adda52
                 TableType = EnumTableType.Nine,
                 WindowHandle = handle.ToInt32()
             };
-
-            var loadingText = IsAdda52Launched == true ?
-                CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_PreLoadingText_Adda52FailedToLoad") :
-                CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_PreLoadingText_Adda52");
 
             Task.Run(() =>
             {

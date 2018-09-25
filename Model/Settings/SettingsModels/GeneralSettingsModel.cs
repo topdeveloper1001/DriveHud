@@ -61,6 +61,9 @@ namespace Model.Settings
         [DataMember]
         public bool RememberScreenPosition { get; set; }
 
+        [DataMember]
+        public string CRates { get; set; }
+
         public GeneralSettingsModel()
         {
             SetDefaults();
@@ -80,6 +83,7 @@ namespace Model.Settings
             IsAPIEnabled = false;
 
             StartDayOfWeek = DayOfWeek.Monday;
+            CRates = "CjsKBggBEgIIAQoJCAISBQiEARgECggIAxIECHYYBAoICAUSBAhNGAQKCAgGEgQIDxgECggICBIECAwYBhKAAUN3EmlMh4u3EI8t1r29bIyFAVFUcuCDCaOjhcOwhM37/VkZ0gicFwUrW9XqbouEKOU2Tm/NHIr4L0iUXb4luKXvwuU13JNzfphdOnAjedXp/soKHcfAtd/ibYeC0c+6cydRmZBpGdYSw+CrkkbjL5JAnqlUf27uQpPm9RAQa9cb";
         }
     }
 }

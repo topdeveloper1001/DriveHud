@@ -14,7 +14,7 @@ using System.Collections.Generic;
 
 namespace DriveHUD.Application.TableConfigurators.PositionProviders
 {
-    internal class Adda52PositionProvider : IPositionProvider
+    internal sealed class Adda52PositionProvider : IPositionProvider
     {
         public Adda52PositionProvider()
         {

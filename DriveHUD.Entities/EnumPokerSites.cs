@@ -60,6 +60,8 @@ namespace DriveHUD.Entities
         [EnumMember]
         PokerKing = 20,
         [EnumMember]
-        Adda52 = 21
+        Adda52 = 21,
+        [EnumMember]
+        SpartanPoker = 22
     }
 }
