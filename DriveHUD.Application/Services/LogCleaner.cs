@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="LogCleaner.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -14,6 +14,7 @@ using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using Model;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -26,7 +27,19 @@ namespace DriveHUD.Application.Services
     {
         private const int maxSizeLogBackups = 8;
 
-        private static readonly string[] logsPatterns = new string[] { "drivehud*", "hud*", "NHibernate*", "ign-games*", "bol-games*", "playerxray*", "pmcatcher*", "pkcatcher*" };
+        private static readonly Dictionary<string, int> logsPatterns = new Dictionary<string, int>
+        {
+            ["drivehud*"] = maxSizeLogBackups,
+            ["hud*"] = maxSizeLogBackups,
+            ["NHibernate*"] = maxSizeLogBackups,
+            ["ign-games*"] = 5,
+            ["bol-games*"] = 5,
+            ["playerxray*"] = maxSizeLogBackups,
+            ["pmcatcher*"] = maxSizeLogBackups,
+            ["pkcatcher*"] = maxSizeLogBackups,
+            ["adda-games*"] = 5,
+            ["*.*-*.*.log"] = 2
+        };
 
         /// <summary>
         /// Clear folder with logs
@@ -46,13 +59,13 @@ namespace DriveHUD.Application.Services
                     return;
                 }
 
-                foreach (var logPattern in logsPatterns)
+                foreach (var logPatternKeyValue in logsPatterns)
                 {
-                    var logFilesToDelete = logsDirectory.GetFiles(logPattern)
+                    var logFilesToDelete = logsDirectory.GetFiles(logPatternKeyValue.Key)
                         .GroupBy(x => x.LastWriteTime.Date)
                         .Select(x => new { Day = x.Key, Files = x.ToArray() })
                         .OrderByDescending(x => x.Day)
-                        .Skip(maxSizeLogBackups)
+                        .Skip(logPatternKeyValue.Value)
                         .SelectMany(x => x.Files)
                         .ToArray();
 

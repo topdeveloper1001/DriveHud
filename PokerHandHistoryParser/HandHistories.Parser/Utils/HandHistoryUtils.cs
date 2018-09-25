@@ -68,7 +68,7 @@ namespace HandHistories.Parser.Utils
 
         public static void CalculateTotalPot(HandHistory handHistory)
         {
-            handHistory.TotalPot = handHistory.Players.Sum(x => x.Win);
+            handHistory.TotalPot = Math.Abs(handHistory.HandActions.Where(x => !x.IsWinningsAction).Sum(x => x.Amount));
         }
 
         public static void RemoveSittingOutPlayers(HandHistory handHistory)

@@ -205,6 +205,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/appstore/currency.dat.
+        /// </summary>
+        internal static string SystemSettings_CurrencyRates {
+            get {
+                return ResourceManager.GetString("SystemSettings_CurrencyRates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to drivehud.db.
         /// </summary>
         internal static string SystemSettings_DbFileName {

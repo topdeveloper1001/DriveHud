@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2018-09-12T00:05:04Z</DateOfHandUtc>
+  <HandId>319236700151</HandId>
+  <DealerButtonPosition>6</DealerButtonPosition>
+  <TableName>RING9#3192367</TableName>
+  <GameDescription>
+    <PokerFormat>CashGame</PokerFormat>
+    <Site>Adda52</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>PlayMoney</Currency>
+      <SmallBlind>25</SmallBlind>
+      <BigBlind>50</BigBlind>
+      <IsAnteTable>false</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="9" />
+    <TableType>Regular</TableType>
+    <Identifier>58230</Identifier>
+    <CashBuyInHigh>3000</CashBuyInHigh>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>4124</TotalPot>
+  <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+  <Actions>
+    <HandAction PlayerName="TK1981" HandActionType="SMALL_BLIND" Amount="-25" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Barsara02" HandActionType="BIG_BLIND" Amount="-50" Street="Preflop" IsAllIn="false" />    
+    <HandAction p3:type="AllInAction" PlayerName="sharanappa2017" HandActionType="ALL_IN" Amount="-2037" Street="Preflop" IsAllIn="true" IsRaiseAllIn="true" SourceActionType="RAISE" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="TK1981" HandActionType="CALL" Amount="-2012" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Barsara02" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />    
+    <HandAction p3:type="WinningsAction" PlayerName="sharanappa2017" HandActionType="WINS" Amount="3918" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>2hKhKd8h6c</CommunityCards>
+  <Players>
+    <Player PlayerName="TK1981" id="1416642" StartingStack="3800" Bet="2037" Win="0" SeatNumber="1" Cards="5sAc" IsSittingOut="false" />
+    <Player PlayerName="Barsara02" id="1700770" StartingStack="29701" Bet="50" Win="0" SeatNumber="3" Cards="" IsSittingOut="false" />    
+    <Player PlayerName="sharanappa2017" id="1253818" StartingStack="2037" Bet="2037" Win="3918" SeatNumber="6" Cards="8s9s" IsSittingOut="false" />    
+  </Players>  
+</HandHistory>

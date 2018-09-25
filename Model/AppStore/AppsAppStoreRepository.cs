@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="AppsAppStoreRepository.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -29,17 +29,6 @@ namespace Model.AppStore
                 WindowHeight = 789
             };
 
-            var pmCatcherApp = new AppStoreModule
-            {
-                ProductName = "PM HUD Catcher",
-                ProductDescription = "The PM HUD catcher is an add-on application that will allow you to capture and run a HUD through DriveHUD. It includes a fully functional 7 day trial. Click Try to enable the trial.",
-                ImageLink = "pack://application:,,,/DriveHUD.Common.Resources;component/images/Shop/pm-hud-catcher-logo.png",
-                WindowIconSource = "pack://application:,,,/images/pm-icon.ico",
-                ModuleName = CustomModulesNames.PMCatcher,
-                WindowWidth = 556,
-                WindowHeight = 429
-            };
-
             var pkCatcherApp = new AppStoreModule
             {
                 ProductName = "PK HUD Catcher",
@@ -51,7 +40,7 @@ namespace Model.AppStore
                 WindowHeight = 429
             };
 
-            return new[] { playerXRayApp, pmCatcherApp, pkCatcherApp };
+            return new[] { playerXRayApp, pkCatcherApp };
         }
     }
 }

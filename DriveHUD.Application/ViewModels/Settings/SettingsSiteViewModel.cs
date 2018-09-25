@@ -41,6 +41,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             PokerSitesDictionary = new Dictionary<EnumPokerSites, string>()
             {
+                { EnumPokerSites.Adda52, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Adda52) },
                 { EnumPokerSites.AmericasCardroom, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.AmericasCardroom) },
                 { EnumPokerSites.Ignition, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Ignition) },
                 { EnumPokerSites.IPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.IPoker) },
@@ -51,6 +52,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.Poker888, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Poker888) },
                 { EnumPokerSites.SportsBetting, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.SportsBetting) },
                 { EnumPokerSites.TigerGaming, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TigerGaming) },
+                { EnumPokerSites.SpartanPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.SpartanPoker) },
                 { EnumPokerSites.TruePoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TruePoker) },
                 { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) },
                 { EnumPokerSites.Horizon, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Horizon) },

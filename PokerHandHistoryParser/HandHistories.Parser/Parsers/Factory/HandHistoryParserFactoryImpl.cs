@@ -62,6 +62,7 @@ namespace HandHistories.Parser.Parsers.Factory
                 case EnumPokerSites.BetOnline:
                 case EnumPokerSites.SportsBetting:
                 case EnumPokerSites.TigerGaming:
+                case EnumPokerSites.SpartanPoker:
                     return new IPokerBovadaFastParserImpl();
                 case EnumPokerSites.Poker888:
                     return new Poker888FastParserImpl();
@@ -89,6 +90,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new WinamaxFastParserImpl();
                 case EnumPokerSites.PokerKing:
                     return new CommonHandHistoryParser(EnumPokerSites.PokerKing);
+                case EnumPokerSites.Adda52:
+                    return new CommonHandHistoryParser(EnumPokerSites.Adda52);
                 default:
                     throw new NotImplementedException("GetFullHandHistoryParser: No parser for " + siteName);
             }

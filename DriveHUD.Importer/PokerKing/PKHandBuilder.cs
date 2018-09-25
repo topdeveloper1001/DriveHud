@@ -107,10 +107,11 @@ namespace DriveHUD.Importers.PokerKing
 
             ParsePackage<NoticeGameSettlement>(noticeGameSettlementPackage, x =>
             {
+                var noticeStartGameExists = packages.Any(p => p.PackageType == PackageType.NoticeStartGame);
                 var noticeResetGameExists = packages.Any(p => p.PackageType == PackageType.NoticeResetGame);
                 var noticeGameSnapshotExists = roomsData.ContainsKey(x.RoomId);
 
-                isValid = noticeResetGameExists && noticeGameSnapshotExists;
+                isValid = noticeResetGameExists && noticeGameSnapshotExists && noticeStartGameExists;
 
                 if (!isValid)
                 {
@@ -141,16 +142,25 @@ namespace DriveHUD.Importers.PokerKing
 
                 var isGameStarted = false;
 
+                var startGamePackageIndex = packages.FindLastIndex(x => x.PackageType == PackageType.NoticeStartGame);
+                var resetGamePackageIndex = packages.FindIndex(x => x.PackageType == PackageType.NoticeResetGame);
+
+                if (startGamePackageIndex + 1 < resetGamePackageIndex)
+                {
+                    var noticeResetPackage = packages[resetGamePackageIndex];
+                    packages.RemoveAt(resetGamePackageIndex);
+                    packages.Insert(startGamePackageIndex + 1, noticeResetPackage);
+                }
+
                 foreach (var package in packages)
                 {
-                    if (package.PackageType == PackageType.NoticeResetGame)
+                    if (package.PackageType == PackageType.NoticeStartGame)
                     {
                         handHistory = new HandHistory
                         {
                             DateOfHandUtc = package.Timestamp.ToUniversalTime()
                         };
 
-                        ParsePackage<NoticeResetGame>(package, x => ProcessNoticeResetGame(x, handHistory));
                         isGameStarted = true;
                         continue;
                     }
@@ -162,6 +172,9 @@ namespace DriveHUD.Importers.PokerKing
 
                     switch (package.PackageType)
                     {
+                        case PackageType.NoticeResetGame:
+                            ParsePackage<NoticeResetGame>(package, x => ProcessNoticeResetGame(x, handHistory));
+                            break;
                         case PackageType.NoticeGameElectDealer:
                             ParsePackage<NoticeGameElectDealer>(package, x => ProcessNoticeGameElectDealer(x, handHistory));
                             break;
@@ -217,11 +230,21 @@ namespace DriveHUD.Importers.PokerKing
             HandHistoryUtils.CalculateTotalPot(handHistory);
             HandHistoryUtils.RemoveSittingOutPlayers(handHistory);
 
+            if (handHistory.GameDescription == null)
+            {
+                throw new HandBuilderException(handHistory.HandId, "GameDescription must be not null.");
+            }
+
             if (!handHistory.GameDescription.IsTournament)
             {
                 const decimal divider = 100m;
 
                 handHistory.HandActions.ForEach(a => a.Amount = a.Amount / divider);
+
+                if (handHistory.GameDescription.Limit == null)
+                {
+                    throw new HandBuilderException(handHistory.HandId, "GameDescription.Limit must be not null.");
+                }
 
                 handHistory.GameDescription.Limit.SmallBlind /= divider;
                 handHistory.GameDescription.Limit.BigBlind /= divider;

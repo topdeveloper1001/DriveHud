@@ -10,20 +10,27 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using ProtoBuf;
 using System;
 
 namespace DriveHUD.Importers.PokerKing.Model
 {
+    [ProtoContract]
     internal class PokerKingPackage
     {
+        [ProtoMember(1)]
         public DateTime Timestamp { get; set; }
 
+        [ProtoMember(2)]
         public PackageType PackageType { get; set; }
 
+        [ProtoMember(3)]
         public uint UserId { get; set; }
 
+        [ProtoMember(4)]
         public int RoomId { get; set; }
 
+        [ProtoMember(5)]
         public byte[] Body { get; set; }
 
 #if DEBUG

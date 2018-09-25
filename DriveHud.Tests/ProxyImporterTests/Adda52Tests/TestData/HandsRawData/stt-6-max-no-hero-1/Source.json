@@ -1,0 +1,1675 @@
+{
+  "Packages": [
+    {
+      "c": 1,
+      "p": {
+        "c": "game.roomdata",
+        "r": 53282,
+        "p": {
+          "chipType": "real",
+          "turnTime": 30,
+          "isCoolOff": false,
+          "isAnonynounsTable": false,
+          "gameType": "STT",
+          "isTimeBank": false,
+          "useConverter": false,
+          "bettingRule": "NL",
+          "coolOffTime": 0,
+          "buyinFees": "50#2",
+          "minPlayers": 6,
+          "isSprintSitOutRoom": false,
+          "isDynamic": true,
+          "isRebuy": false,
+          "amount": "1#225#,2#75#,",
+          "isZoom": false,
+          "bigBlind": 20,
+          "buyInHigh": 52,
+          "roomName": "STT6#3187419",
+          "rakeNonHeadsUp": 10,
+          "players": 6,
+          "buyInLow": 52,
+          "smallBlind": 10
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.started",
+        "r": 53282,
+        "p": {
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "roundId": 7
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.Blinds",
+        "r": 53282,
+        "p": {
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "sb": 15,
+          "bb": 30
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.Dealer",
+        "r": 53282,
+        "p": {
+          "dealer": 2,
+          "timestamp": "2018-09-20 00:15:46:344",
+          "roomName": "STT6#3187419",
+          "useConverter": false
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.useraction",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:15:46:345",
+          "amt": 15,
+          "totAmt": 15,
+          "flagToCheckBet": false,
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "action": 11,
+          "playerid": 904170,
+          "chipsLeft": 1205,
+          "maxRaiseAmount": -1
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.useraction",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:15:46:346",
+          "amt": 30,
+          "totAmt": 30,
+          "flagToCheckBet": false,
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "action": 12,
+          "playerid": 1693342,
+          "chipsLeft": 1200,
+          "maxRaiseAmount": -1
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.seatinfo",
+        "r": 53282,
+        "p": {
+          "isOnSitout": [ false, false, false, false, false, false ],
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "seatinfo": {
+            "seats": [
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Mavatar45",
+                "away": false,
+                "bet": 0,
+                "chips": 180,
+                "chipsLeft": 0,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": false,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": -1,
+                "playerName": "vikash431",
+                "playing": 1,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 1,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Favatar19",
+                "away": false,
+                "bet": 0,
+                "chips": 1730,
+                "chipsLeft": 1730,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": true,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": 1063643,
+                "playerName": "usa01",
+                "playing": 0,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 2,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Mavatar38",
+                "away": false,
+                "bet": 0,
+                "chips": 590,
+                "chipsLeft": 0,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": false,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": -1,
+                "playerName": "anitasahu8000",
+                "playing": 1,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 3,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Mavatar32",
+                "away": false,
+                "bet": 15,
+                "chips": 1220,
+                "chipsLeft": 1205,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": true,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": 904170,
+                "playerName": "garibnawaz",
+                "playing": 0,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 4,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Favatar67",
+                "away": false,
+                "bet": 30,
+                "chips": 1230,
+                "chipsLeft": 1200,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": true,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": 1693342,
+                "playerName": "tmarak91",
+                "playing": 0,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 5,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Mavatar23",
+                "away": false,
+                "bet": 0,
+                "chips": 1820,
+                "chipsLeft": 1820,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": true,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": 836495,
+                "playerName": "mahakaali",
+                "playing": 0,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 6,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              }
+            ],
+            "sprintAvailableSeat": {
+              "actionTakenInThisRound": false,
+              "addOn": false,
+              "addOnAllowed": false,
+              "allIn": false,
+              "avatar": "Mavatar45",
+              "away": false,
+              "bet": 0,
+              "chips": 180,
+              "chipsLeft": 0,
+              "chipsType": "",
+              "folded": false,
+              "lostAllin": false,
+              "lostAllinPlayerId": -1,
+              "mucked": false,
+              "occupied": false,
+              "offeredAddon": false,
+              "offeredRebuy": false,
+              "onSitout": false,
+              "playerId": -1,
+              "playerName": "vikash431",
+              "playing": 1,
+              "rebuy": false,
+              "rebuyAllowed": false,
+              "reserved": false,
+              "seatId": 1,
+              "seatLock": {
+                "fair": true,
+                "queueLength": 0,
+                "readHoldCount": 0,
+                "readLockCount": 0,
+                "writeHoldCount": 0,
+                "writeLocked": false,
+                "writeLockedByCurrentThread": false
+              },
+              "sitoutHandle": null,
+              "sprintReserved": false
+            },
+            "unreservedSeat": {
+              "actionTakenInThisRound": false,
+              "addOn": false,
+              "addOnAllowed": false,
+              "allIn": false,
+              "avatar": "Mavatar45",
+              "away": false,
+              "bet": 0,
+              "chips": 180,
+              "chipsLeft": 0,
+              "chipsType": "",
+              "folded": false,
+              "lostAllin": false,
+              "lostAllinPlayerId": -1,
+              "mucked": false,
+              "occupied": false,
+              "offeredAddon": false,
+              "offeredRebuy": false,
+              "onSitout": false,
+              "playerId": -1,
+              "playerName": "vikash431",
+              "playing": 1,
+              "rebuy": false,
+              "rebuyAllowed": false,
+              "reserved": false,
+              "seatId": 1,
+              "seatLock": {
+                "fair": true,
+                "queueLength": 0,
+                "readHoldCount": 0,
+                "readLockCount": 0,
+                "writeHoldCount": 0,
+                "writeLocked": false,
+                "writeLockedByCurrentThread": false
+              },
+              "sitoutHandle": null,
+              "sprintReserved": false
+            },
+            "zoomSitoutSeat": {
+              "actionTakenInThisRound": false,
+              "addOn": false,
+              "addOnAllowed": false,
+              "allIn": false,
+              "avatar": "Favatar19",
+              "away": false,
+              "bet": 0,
+              "chips": 1730,
+              "chipsLeft": 1730,
+              "chipsType": "",
+              "folded": false,
+              "lostAllin": false,
+              "lostAllinPlayerId": -1,
+              "mucked": false,
+              "occupied": true,
+              "offeredAddon": false,
+              "offeredRebuy": false,
+              "onSitout": false,
+              "playerId": 1063643,
+              "playerName": "usa01",
+              "playing": 0,
+              "rebuy": false,
+              "rebuyAllowed": false,
+              "reserved": false,
+              "seatId": 2,
+              "seatLock": {
+                "fair": true,
+                "queueLength": 0,
+                "readHoldCount": 0,
+                "readLockCount": 0,
+                "writeHoldCount": 0,
+                "writeLocked": false,
+                "writeLockedByCurrentThread": false
+              },
+              "sitoutHandle": null,
+              "sprintReserved": false
+            }
+          }
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.seatinfo",
+        "r": 53282,
+        "p": {
+          "isOnSitout": [ false, false, false, false, false, false ],
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "seatinfo": {
+            "seats": [
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Mavatar45",
+                "away": false,
+                "bet": 0,
+                "chips": 180,
+                "chipsLeft": 0,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": false,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": -1,
+                "playerName": "vikash431",
+                "playing": 1,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 1,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Favatar19",
+                "away": false,
+                "bet": 0,
+                "chips": 1730,
+                "chipsLeft": 1730,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": true,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": 1063643,
+                "playerName": "usa01",
+                "playing": 0,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 2,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Mavatar38",
+                "away": false,
+                "bet": 0,
+                "chips": 590,
+                "chipsLeft": 0,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": false,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": -1,
+                "playerName": "anitasahu8000",
+                "playing": 1,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 3,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Mavatar32",
+                "away": false,
+                "bet": 15,
+                "chips": 1220,
+                "chipsLeft": 1205,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": true,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": 904170,
+                "playerName": "garibnawaz",
+                "playing": 0,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 4,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Favatar67",
+                "away": false,
+                "bet": 30,
+                "chips": 1230,
+                "chipsLeft": 1200,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": true,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": 1693342,
+                "playerName": "tmarak91",
+                "playing": 0,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 5,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Mavatar23",
+                "away": false,
+                "bet": 0,
+                "chips": 1820,
+                "chipsLeft": 1820,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": true,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": 836495,
+                "playerName": "mahakaali",
+                "playing": 0,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 6,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              }
+            ],
+            "sprintAvailableSeat": {
+              "actionTakenInThisRound": false,
+              "addOn": false,
+              "addOnAllowed": false,
+              "allIn": false,
+              "avatar": "Mavatar45",
+              "away": false,
+              "bet": 0,
+              "chips": 180,
+              "chipsLeft": 0,
+              "chipsType": "",
+              "folded": false,
+              "lostAllin": false,
+              "lostAllinPlayerId": -1,
+              "mucked": false,
+              "occupied": false,
+              "offeredAddon": false,
+              "offeredRebuy": false,
+              "onSitout": false,
+              "playerId": -1,
+              "playerName": "vikash431",
+              "playing": 1,
+              "rebuy": false,
+              "rebuyAllowed": false,
+              "reserved": false,
+              "seatId": 1,
+              "seatLock": {
+                "fair": true,
+                "queueLength": 0,
+                "readHoldCount": 0,
+                "readLockCount": 0,
+                "writeHoldCount": 0,
+                "writeLocked": false,
+                "writeLockedByCurrentThread": false
+              },
+              "sitoutHandle": null,
+              "sprintReserved": false
+            },
+            "unreservedSeat": {
+              "actionTakenInThisRound": false,
+              "addOn": false,
+              "addOnAllowed": false,
+              "allIn": false,
+              "avatar": "Mavatar45",
+              "away": false,
+              "bet": 0,
+              "chips": 180,
+              "chipsLeft": 0,
+              "chipsType": "",
+              "folded": false,
+              "lostAllin": false,
+              "lostAllinPlayerId": -1,
+              "mucked": false,
+              "occupied": false,
+              "offeredAddon": false,
+              "offeredRebuy": false,
+              "onSitout": false,
+              "playerId": -1,
+              "playerName": "vikash431",
+              "playing": 1,
+              "rebuy": false,
+              "rebuyAllowed": false,
+              "reserved": false,
+              "seatId": 1,
+              "seatLock": {
+                "fair": true,
+                "queueLength": 0,
+                "readHoldCount": 0,
+                "readLockCount": 0,
+                "writeHoldCount": 0,
+                "writeLocked": false,
+                "writeLockedByCurrentThread": false
+              },
+              "sitoutHandle": null,
+              "sprintReserved": false
+            },
+            "zoomSitoutSeat": {
+              "actionTakenInThisRound": false,
+              "addOn": false,
+              "addOnAllowed": false,
+              "allIn": false,
+              "avatar": "Favatar19",
+              "away": false,
+              "bet": 0,
+              "chips": 1730,
+              "chipsLeft": 1730,
+              "chipsType": "",
+              "folded": false,
+              "lostAllin": false,
+              "lostAllinPlayerId": -1,
+              "mucked": false,
+              "occupied": true,
+              "offeredAddon": false,
+              "offeredRebuy": false,
+              "onSitout": false,
+              "playerId": 1063643,
+              "playerName": "usa01",
+              "playing": 0,
+              "rebuy": false,
+              "rebuyAllowed": false,
+              "reserved": false,
+              "seatId": 2,
+              "seatLock": {
+                "fair": true,
+                "queueLength": 0,
+                "readHoldCount": 0,
+                "readLockCount": 0,
+                "writeHoldCount": 0,
+                "writeLocked": false,
+                "writeLockedByCurrentThread": false
+              },
+              "sitoutHandle": null,
+              "sprintReserved": false
+            }
+          }
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.gameState",
+        "r": 53282,
+        "p": {
+          "roomName": "STT6#3187419",
+          "gameState": "Preflop",
+          "useConverter": false
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.userturn",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:15:47:360",
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "raiseToHigh": 1820,
+          "gameStateKey": 1,
+          "playerid": 836495,
+          "raiseTo": 60,
+          "PlayerActionChoices": {
+            "callAllowed": true,
+            "callAmount": 30,
+            "foldAllowed": true,
+            "raiseAllowed": true,
+            "raiseHigh": 1820,
+            "raiseLow": 60,
+            "raiseStep": 1,
+            "timeBank": false,
+            "timeBankLeft": 0,
+            "totalPotAmount": 45,
+            "turnTime": 30
+          }
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.roomDataUpdate",
+        "p": {
+          "playersnames": "usa01,garibnawaz,tmarak91,mahakaali",
+          "roomVacantInfo": "false",
+          "stateKeys": "16",
+          "waitListCount": "0",
+          "playerGameChips": "1730,1220,1230,1820#",
+          "roomnamebyplayoptionsstr": "STT6#3187419$true"
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.useraction",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:15:49:898",
+          "amt": 0,
+          "totAmt": 0,
+          "flagToCheckBet": false,
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "action": 1,
+          "playerid": 836495,
+          "chipsLeft": 1820,
+          "maxRaiseAmount": -1
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.userturn",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:15:49:899",
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "raiseToHigh": 1730,
+          "gameStateKey": 2,
+          "playerid": 1063643,
+          "raiseTo": 60,
+          "PlayerActionChoices": {
+            "callAllowed": true,
+            "callAmount": 30,
+            "foldAllowed": true,
+            "raiseAllowed": true,
+            "raiseHigh": 1730,
+            "raiseLow": 60,
+            "raiseStep": 1,
+            "timeBank": false,
+            "timeBankLeft": 0,
+            "totalPotAmount": 45,
+            "turnTime": 30
+          }
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.mttStatus",
+        "p": {
+          "rName": "STT2#3194778",
+          "status": 2
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.useraction",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:15:52:231",
+          "amt": 30,
+          "totAmt": 30,
+          "flagToCheckBet": false,
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "action": 0,
+          "playerid": 1063643,
+          "chipsLeft": 1700,
+          "maxRaiseAmount": -1
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.userturn",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:15:52:232",
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "raiseToHigh": 1220,
+          "gameStateKey": 3,
+          "playerid": 904170,
+          "raiseTo": 60,
+          "PlayerActionChoices": {
+            "callAllowed": true,
+            "callAmount": 15,
+            "foldAllowed": true,
+            "raiseAllowed": true,
+            "raiseHigh": 1205,
+            "raiseLow": 45,
+            "raiseStep": 1,
+            "timeBank": false,
+            "timeBankLeft": 0,
+            "totalPotAmount": 75,
+            "turnTime": 30
+          }
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.useraction",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:15:58:876",
+          "amt": 15,
+          "totAmt": 30,
+          "flagToCheckBet": false,
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "action": 0,
+          "playerid": 904170,
+          "chipsLeft": 1190,
+          "maxRaiseAmount": -1
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.userturn",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:15:58:878",
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "raiseToHigh": 1230,
+          "gameStateKey": 4,
+          "playerid": 1693342,
+          "raiseTo": 60,
+          "PlayerActionChoices": {
+            "callAllowed": true,
+            "callAmount": 0,
+            "foldAllowed": true,
+            "raiseAllowed": true,
+            "raiseHigh": 1200,
+            "raiseLow": 30,
+            "raiseStep": 1,
+            "timeBank": false,
+            "timeBankLeft": 0,
+            "totalPotAmount": 90,
+            "turnTime": 30
+          }
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.useraction",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:16:03:103",
+          "amt": 1200,
+          "totAmt": 1230,
+          "flagToCheckBet": false,
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "action": 13,
+          "playerid": 1693342,
+          "chipsLeft": 0,
+          "maxRaiseAmount": -1
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.userturn",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:16:03:104",
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "raiseToHigh": 1730,
+          "gameStateKey": 5,
+          "playerid": 1063643,
+          "raiseTo": 1730,
+          "PlayerActionChoices": {
+            "callAllowed": true,
+            "callAmount": 1200,
+            "foldAllowed": true,
+            "raiseAllowed": true,
+            "raiseHigh": 1700,
+            "raiseLow": 1700,
+            "raiseStep": 1,
+            "timeBank": false,
+            "timeBankLeft": 0,
+            "totalPotAmount": 1290,
+            "turnTime": 30
+          }
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.useraction",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:16:04:893",
+          "amt": 0,
+          "totAmt": 30,
+          "flagToCheckBet": false,
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "action": 1,
+          "playerid": 1063643,
+          "chipsLeft": 1700,
+          "maxRaiseAmount": -1
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.userturn",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:16:04:894",
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "raiseToHigh": 30,
+          "gameStateKey": 6,
+          "playerid": 904170,
+          "raiseTo": 30,
+          "PlayerActionChoices": {
+            "callAllowed": true,
+            "callAmount": 1190,
+            "foldAllowed": true,
+            "raiseAllowed": false,
+            "raiseHigh": 0,
+            "raiseLow": 0,
+            "raiseStep": 0,
+            "timeBank": false,
+            "timeBankLeft": 0,
+            "totalPotAmount": 1290,
+            "turnTime": 30
+          }
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.noOfHands",
+        "p": {
+          "userCount": 738,
+          "tableCount": 133,
+          "noOfHands": 136805980
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.useraction",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:16:07:836",
+          "amt": 0,
+          "totAmt": 30,
+          "flagToCheckBet": false,
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "action": 1,
+          "playerid": 904170,
+          "chipsLeft": 1190,
+          "maxRaiseAmount": -1
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.returnPotMoney",
+        "r": 53282,
+        "p": {
+          "amount": 1200,
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "seatId": 5,
+          "toBeCredited": true,
+          "updateStatus": false,
+          "chipsLeft": 1200
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.pot",
+        "r": 53282,
+        "p": {
+          "totalPotAmount": 90,
+          "potinfo": {
+            "potList": [
+              {
+                "allinPlayerIds": [],
+                "amount": 90,
+                "playerIdList": [ 1693342 ],
+                "playerWinningAmtMap": {}
+              }
+            ],
+            "splitCase": false,
+            "splitCasePotList": [],
+            "totalPotAmount": 90
+          },
+          "roomName": "STT6#3187419",
+          "useConverter": false
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.pot",
+        "r": 53282,
+        "p": {
+          "totalPotAmount": 90,
+          "potinfo": {
+            "potList": [
+              {
+                "allinPlayerIds": [],
+                "amount": 90,
+                "playerIdList": [ 1693342 ],
+                "playerWinningAmtMap": { "1693342": 90 }
+              }
+            ],
+            "splitCase": false,
+            "splitCasePotList": [],
+            "totalPotAmount": 90
+          },
+          "roomName": "STT6#3187419",
+          "useConverter": false
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.winner",
+        "r": 53282,
+        "p": {
+          "timestamp": "2018-09-20 00:16:07:840",
+          "duration": 4,
+          "WinnerInfo": {
+            "lowCardWinnerInfo": false,
+            "notifyMultiRun": false,
+            "playerRankingList": [],
+            "toShowLowPotWinnerNotExits": false,
+            "winnerList": [
+              {
+                "amount": 90,
+                "playerId": 1693342,
+                "playerPotBuyinAmount": 0,
+                "potId": 0
+              }
+            ]
+          },
+          "roomName": "STT6#3187419",
+          "useConverter": false
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.seatinfo",
+        "r": 53282,
+        "p": {
+          "isOnSitout": [ false, false, false, false, false, false ],
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "seatinfo": {
+            "seats": [
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Mavatar45",
+                "away": false,
+                "bet": 0,
+                "chips": 180,
+                "chipsLeft": 0,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": false,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": -1,
+                "playerName": "vikash431",
+                "playing": 1,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 1,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": true,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Favatar19",
+                "away": false,
+                "bet": 0,
+                "chips": 1730,
+                "chipsLeft": 1700,
+                "chipsType": "",
+                "folded": true,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": true,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": 1063643,
+                "playerName": "usa01",
+                "playing": 0,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 2,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": false,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Mavatar38",
+                "away": false,
+                "bet": 0,
+                "chips": 590,
+                "chipsLeft": 0,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": false,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": -1,
+                "playerName": "anitasahu8000",
+                "playing": 1,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 3,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": true,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Mavatar32",
+                "away": false,
+                "bet": 0,
+                "chips": 1220,
+                "chipsLeft": 1190,
+                "chipsType": "",
+                "folded": true,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": true,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": 904170,
+                "playerName": "garibnawaz",
+                "playing": 0,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 4,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": true,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": true,
+                "avatar": "Favatar67",
+                "away": false,
+                "bet": 0,
+                "chips": 1230,
+                "chipsLeft": 1290,
+                "chipsType": "",
+                "folded": false,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": true,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": 1693342,
+                "playerName": "tmarak91",
+                "playing": 0,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 5,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              },
+              {
+                "actionTakenInThisRound": true,
+                "addOn": false,
+                "addOnAllowed": false,
+                "allIn": false,
+                "avatar": "Mavatar23",
+                "away": false,
+                "bet": 0,
+                "chips": 1820,
+                "chipsLeft": 1820,
+                "chipsType": "",
+                "folded": true,
+                "lostAllin": false,
+                "lostAllinPlayerId": -1,
+                "mucked": false,
+                "occupied": true,
+                "offeredAddon": false,
+                "offeredRebuy": false,
+                "onSitout": false,
+                "playerId": 836495,
+                "playerName": "mahakaali",
+                "playing": 0,
+                "rebuy": false,
+                "rebuyAllowed": false,
+                "reserved": false,
+                "seatId": 6,
+                "seatLock": {
+                  "fair": true,
+                  "queueLength": 0,
+                  "readHoldCount": 0,
+                  "readLockCount": 0,
+                  "writeHoldCount": 0,
+                  "writeLocked": false,
+                  "writeLockedByCurrentThread": false
+                },
+                "sitoutHandle": null,
+                "sprintReserved": false
+              }
+            ],
+            "sprintAvailableSeat": {
+              "actionTakenInThisRound": false,
+              "addOn": false,
+              "addOnAllowed": false,
+              "allIn": false,
+              "avatar": "Mavatar45",
+              "away": false,
+              "bet": 0,
+              "chips": 180,
+              "chipsLeft": 0,
+              "chipsType": "",
+              "folded": false,
+              "lostAllin": false,
+              "lostAllinPlayerId": -1,
+              "mucked": false,
+              "occupied": false,
+              "offeredAddon": false,
+              "offeredRebuy": false,
+              "onSitout": false,
+              "playerId": -1,
+              "playerName": "vikash431",
+              "playing": 1,
+              "rebuy": false,
+              "rebuyAllowed": false,
+              "reserved": false,
+              "seatId": 1,
+              "seatLock": {
+                "fair": true,
+                "queueLength": 0,
+                "readHoldCount": 0,
+                "readLockCount": 0,
+                "writeHoldCount": 0,
+                "writeLocked": false,
+                "writeLockedByCurrentThread": false
+              },
+              "sitoutHandle": null,
+              "sprintReserved": false
+            },
+            "unreservedSeat": {
+              "actionTakenInThisRound": false,
+              "addOn": false,
+              "addOnAllowed": false,
+              "allIn": false,
+              "avatar": "Mavatar45",
+              "away": false,
+              "bet": 0,
+              "chips": 180,
+              "chipsLeft": 0,
+              "chipsType": "",
+              "folded": false,
+              "lostAllin": false,
+              "lostAllinPlayerId": -1,
+              "mucked": false,
+              "occupied": false,
+              "offeredAddon": false,
+              "offeredRebuy": false,
+              "onSitout": false,
+              "playerId": -1,
+              "playerName": "vikash431",
+              "playing": 1,
+              "rebuy": false,
+              "rebuyAllowed": false,
+              "reserved": false,
+              "seatId": 1,
+              "seatLock": {
+                "fair": true,
+                "queueLength": 0,
+                "readHoldCount": 0,
+                "readLockCount": 0,
+                "writeHoldCount": 0,
+                "writeLocked": false,
+                "writeLockedByCurrentThread": false
+              },
+              "sitoutHandle": null,
+              "sprintReserved": false
+            },
+            "zoomSitoutSeat": {
+              "actionTakenInThisRound": true,
+              "addOn": false,
+              "addOnAllowed": false,
+              "allIn": false,
+              "avatar": "Favatar19",
+              "away": false,
+              "bet": 0,
+              "chips": 1730,
+              "chipsLeft": 1700,
+              "chipsType": "",
+              "folded": true,
+              "lostAllin": false,
+              "lostAllinPlayerId": -1,
+              "mucked": false,
+              "occupied": true,
+              "offeredAddon": false,
+              "offeredRebuy": false,
+              "onSitout": false,
+              "playerId": 1063643,
+              "playerName": "usa01",
+              "playing": 0,
+              "rebuy": false,
+              "rebuyAllowed": false,
+              "reserved": false,
+              "seatId": 2,
+              "seatLock": {
+                "fair": true,
+                "queueLength": 0,
+                "readHoldCount": 0,
+                "readLockCount": 0,
+                "writeHoldCount": 0,
+                "writeLocked": false,
+                "writeLockedByCurrentThread": false
+              },
+              "sitoutHandle": null,
+              "sprintReserved": false
+            }
+          }
+        }
+      },
+      "a": 13
+    },
+    {
+      "c": 0,
+      "p": {
+        "r": [
+          60686,
+          "STT2#3194823",
+          "default",
+          true,
+          false,
+          false,
+          0,
+          2,
+          [ [ "configId", 2, 23973, false, false ] ],
+          0,
+          5000
+        ]
+      },
+      "a": 6
+    },
+    {
+      "c": 1,
+      "p": {
+        "c": "game.roundend",
+        "r": 53282,
+        "p": {
+          "roomName": "STT6#3187419",
+          "useConverter": false,
+          "delay": 2
+        }
+      },
+      "a": 13
+    }
+  ]
+}

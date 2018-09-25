@@ -209,6 +209,10 @@
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerBovadaFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
+    <Compile Include="ProxyImporterTests\Adda52Tests\Adda52JsonPackageTests.cs" />
+    <Compile Include="ProxyImporterTests\Adda52Tests\Adda52HandBuilderTests.cs" />
+    <Compile Include="ProxyImporterTests\Adda52Tests\Adda52PacketManagerTests.cs" />
+    <Compile Include="ProxyImporterTests\Adda52Tests\Adda52TableServiceTests.cs" />
     <Compile Include="TcpImportersTests\PacketManagerTest.cs" />
     <Compile Include="TcpImportersTests\PKTests\PKHandBuilderTests.cs" />
     <Compile Include="TcpImportersTests\PKTests\PokerKingPacketManagerTests.cs" />
@@ -290,10 +294,35 @@
     <Fakes Include="Fakes\System.fakes" />
     <Fakes Include="Fakes\mscorlib.fakes" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLH-Cash-PP-ES-1.txt" />
+    <Content Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-6-max-no-hero\Result.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-9-max-hero\Result.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-9-max-no-hero-1\Result.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\mtt-9-max-no-hero-1\Result.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\stt-6-max-no-hero-1\Result.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProxyImporterTests\Adda52Tests\TestData\Packets\0.0.0.0.8893-127.0.0.1.12031.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProxyImporterTests\Adda52Tests\TestData\Packets\0.0.0.0.8893-127.0.0.1.55025.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\6-max-short-all-in\Result.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\6-max-short-dbl-ante-no-hero\Result.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-hero-wrong-order\Result.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-hero\Result.xml">
@@ -335,10 +364,40 @@
     <Content Include="TcpImportersTests\PKTests\TestData\Packets\170.33.8.75.31001-192.168.0.104.33644.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="ProxyImporterTests\Adda52Tests\TestData\Packets\0.0.0.0.8893-127.0.0.1.12032.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-6-max-no-hero\Source.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-9-max-hero\Source.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-9-max-no-hero-1\Source.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\mtt-9-max-no-hero-1\Source.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\stt-6-max-no-hero-1\Source.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProxyImporterTests\Adda52Tests\TestData\Packets\LongPacket.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProxyImporterTests\Adda52Tests\TestData\Packets\NotJsonOnlyPacket.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProxyImporterTests\Adda52Tests\TestData\Packets\SinglePacket.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\6-max-short-all-in\Source.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\6-max-short-dbl-ante-no-hero\Source.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-hero-wrong-order\Source.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-hero\Source.json">
@@ -369,6 +428,36 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-3\218.65.131.23.31001-192.168.1.101.2495.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-4\118.123.249.219.31001-192.168.199.171.57621.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-4\118.26.161.42.31001-192.168.199.171.57901.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-4\192.168.199.171.57554-27.155.82.113.31001.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-4\192.168.199.171.57562-59.153.74.17.31001.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-4\192.168.199.171.57621-118.123.249.219.31001.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-4\192.168.199.171.57872-59.153.74.17.31001.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-4\192.168.199.171.57901-118.26.161.42.31001.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-4\27.155.82.113.31001-192.168.199.171.57554.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-4\59.153.74.17.31001-192.168.199.171.57562.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-4\59.153.74.17.31001-192.168.199.171.57872.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="TcpImportersTests\PKTests\TestData\Packets\NoticeGameSnapShotPacket.json">

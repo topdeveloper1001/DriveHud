@@ -97,6 +97,15 @@ namespace DriveHUD.Importers
             { 10, new decimal[] { 0.5m, 0.3m, 0.2m } },
         };
 
+        private static readonly Dictionary<int, decimal[]> Adda52SnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>
+        {
+            { 2, new decimal[] { 1m } },
+            { 4, new decimal[] { 1m } },
+            { 6, new decimal[] { 0.75m, 0.25m } },
+            { 8, new decimal[] { 0.5m, 0.3m, 0.2m } },
+            { 9, new decimal[] { 0.5m, 0.3m, 0.2m } },
+        };
+
         #endregion
 
         public const int MaximumPlayersPerTable = 10;
@@ -122,6 +131,7 @@ namespace DriveHUD.Importers
                 case EnumPokerSites.BetOnline:
                 case EnumPokerSites.SportsBetting:
                 case EnumPokerSites.TigerGaming:
+                case EnumPokerSites.SpartanPoker:
                     return BetOnlineSnGWinningsMultiplierDictionary;
                 case EnumPokerSites.WinningPokerNetwork:
                 case EnumPokerSites.AmericasCardroom:
@@ -133,6 +143,8 @@ namespace DriveHUD.Importers
                     return isBounty ? HorizonBountySnGWinningsMultiplierDictionary : HorizonSnGWinningsMultiplierDictionary;
                 case EnumPokerSites.Winamax:
                     return WinamaxSnGWinningsMultiplierDictionary;
+                case EnumPokerSites.Adda52:
+                    return Adda52SnGWinningsMultiplierDictionary;
                 default:
                     break;
             }

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2018-09-12T00:05:04Z</DateOfHandUtc>
+  <HandId>318062300251</HandId>
+  <DealerButtonPosition>5</DealerButtonPosition>
+  <TableName>RING6#3180623</TableName>
+  <GameDescription>
+    <PokerFormat>CashGame</PokerFormat>
+    <Site>Adda52</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>INR</Currency>
+      <SmallBlind>2</SmallBlind>
+      <BigBlind>4</BigBlind>
+      <IsAnteTable>false</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="6" />
+    <TableType>Regular</TableType>
+    <Identifier>46486</Identifier>
+    <CashBuyInHigh>400</CashBuyInHigh>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>20</TotalPot>
+  <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+  <Actions>
+    <HandAction PlayerName="pradip9882" HandActionType="SMALL_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="AlphaMale47" HandActionType="BIG_BLIND" Amount="-4" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="bretwalda7" HandActionType="RAISE" Amount="-8" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Ngarumshem" HandActionType="FOLD" Amount="-0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="pradip9882" HandActionType="CALL" Amount="-6" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="AlphaMale47" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />   
+    <HandAction PlayerName="pradip9882" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="bretwalda7" HandActionType="BET" Amount="-16" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="pradip9882" HandActionType="FOLD" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="bretwalda7" HandActionType="UNCALLED_BET" Amount="16" Street="Flop" IsAllIn="false" /> 
+    <HandAction p3:type="WinningsAction" PlayerName="bretwalda7" HandActionType="WINS" Amount="19" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>4c7c6d</CommunityCards>
+  <Players>    
+    <Player PlayerName="pradip9882" StartingStack="104" Bet="8" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
+    <Player PlayerName="AlphaMale47" StartingStack="438" Bet="4" Win="0" SeatNumber="3" Cards="" IsSittingOut="false" />
+    <Player PlayerName="bretwalda7" StartingStack="179" Bet="24" Win="19" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Ngarumshem" StartingStack="561" Bet="0" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />  
+  </Players>
+</HandHistory>

@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="SiteConfigurationService.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -44,6 +44,7 @@ namespace Model.Site
                 EnumPokerSites.BetOnline,
                 EnumPokerSites.TigerGaming,
                 EnumPokerSites.SportsBetting,
+                EnumPokerSites.SpartanPoker,
                 EnumPokerSites.PokerStars,
                 EnumPokerSites.Poker888,
                 EnumPokerSites.AmericasCardroom,
@@ -52,7 +53,8 @@ namespace Model.Site
                 EnumPokerSites.YaPoker,
                 EnumPokerSites.PartyPoker,
                 EnumPokerSites.Horizon,
-                EnumPokerSites.Winamax
+                EnumPokerSites.Winamax,
+                EnumPokerSites.Adda52
             };
 
             foreach (EnumPokerSites site in sites)

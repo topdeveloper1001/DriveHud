@@ -27,5 +27,15 @@ namespace DriveHUD.Importers
         /// Max table buyin in NL (100NL = 1$)
         /// </summary>
         public int CashBuyIn { get; set; }
+
+        /// <summary>
+        /// Currency
+        /// </summary>
+        public Currency Currency { get; set; }
+
+        /// <summary>
+        /// Currency of tournament
+        /// </summary>
+        public Currency TournamentCurrency { get; set; }
     }
 }

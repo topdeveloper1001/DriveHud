@@ -27,6 +27,7 @@ using Model.Settings;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using PacketDotNet;
+using ProtoBuf;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -123,14 +124,6 @@ namespace DriveHUD.Importers.PokerKing
         /// </summary>
         protected void InitializeSettings()
         {
-
-#if DEBUG
-            if (!Directory.Exists("PKHands"))
-            {
-                Directory.CreateDirectory("PKHands");
-            }
-#endif            
-
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
             if (settings != null)
@@ -186,7 +179,7 @@ namespace DriveHUD.Importers.PokerKing
 
                         if (IsAdvancedLogEnabled)
                         {
-                            LogPackage(capturedPacket, package);
+                            LogPackage(package);
                         }
 
                         var process = connectionsService.GetProcess(capturedPacket);
@@ -257,25 +250,23 @@ namespace DriveHUD.Importers.PokerKing
                         {
                             if (IsAdvancedLogEnabled)
                             {
-                                LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: Process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
+                                var unexpectedRoomLogMessage = string.Empty;
+
+                                if (unexpectedRoomDetected)
+                                {
+                                    unexpectedRoomLogMessage = " Unexpected room detected. No data will be sent to HUD.";
+                                }
+
+                                LogProvider.Log.Info(Logger,
+                                    $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: Process={(process != null ? process.Id : 0)}, windows={windowHandle}.{unexpectedRoomLogMessage}");
                             }
 
                             var handHistoryData = new HandHistoryData
                             {
                                 Uuid = package.UserId,
                                 HandHistory = handHistory,
-                                WindowHandle = windowHandle
+                                WindowHandle = !unexpectedRoomDetected ? windowHandle : IntPtr.Zero
                             };
-
-                            if (unexpectedRoomDetected)
-                            {
-                                if (IsAdvancedLogEnabled)
-                                {
-                                    LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: unexpected room detected.");
-                                }
-
-                                handHistoryData.WindowHandle = IntPtr.Zero;
-                            }
 
                             if (!pkCatcherService.CheckHand(handHistory))
                             {
@@ -327,7 +318,7 @@ namespace DriveHUD.Importers.PokerKing
         /// <param name="package">Package to check</param>
         /// <returns></returns>
         protected static bool IsAllowedPackage(PokerKingPackage package)
-        {            
+        {
             switch (package.PackageType)
             {
                 case PackageType.NoticeBuyin:
@@ -358,7 +349,7 @@ namespace DriveHUD.Importers.PokerKing
 
         #region Debug logging
 
-        protected virtual void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
+        protected virtual void LogPackage(PokerKingPackage package)
         {
             switch (package.PackageType)
             {
@@ -426,6 +417,7 @@ namespace DriveHUD.Importers.PokerKing
         {
             try
             {
+#if DEBUG
                 if (!SerializationHelper.TryDeserialize(package.Body, out T packageContent))
                 {
                     LogProvider.Log.Warn(Logger, $"Failed to deserialize {typeof(T)} package");
@@ -441,6 +433,16 @@ namespace DriveHUD.Importers.PokerKing
                 var json = JsonConvert.SerializeObject(packageJson, Formatting.Indented, new StringEnumConverter());
 
                 protectedLogger.Log(json);
+#else
+                using (var ms = new MemoryStream())
+                {
+                    Serializer.Serialize(ms, package);
+                    var packageBytes = ms.ToArray();
+
+                    var logText = Encoding.UTF8.GetString(packageBytes);
+                    protectedLogger.Log(logText);
+                }
+#endif
             }
             catch (Exception e)
             {
@@ -471,6 +473,7 @@ namespace DriveHUD.Importers.PokerKing
             File.AppendAllText(packageFileName, sb.ToString());
         }
 
+#if DEBUG
         private class PackageJson<T>
         {
             public PackageType PackageType { get; set; }
@@ -479,6 +482,7 @@ namespace DriveHUD.Importers.PokerKing
 
             public T Content { get; set; }
         }
+#endif
 
         #endregion
 

@@ -53,6 +53,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
         [TestCase("6-max-short-dbl-ante-no-hero", 105772u)]
         [TestCase("8-max-regular-hero", 105772u)]
         [TestCase("6-max-short-all-in", 105772u)]
+        [TestCase("8-max-regular-hero-wrong-order", 105772u)]
         public void TryBuildTest(string testFolder, uint heroId)
         {
             var packages = ReadPackages(testFolder);
@@ -85,6 +86,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
         [TestCase("multiple-accounts-raw-1")]
         [TestCase("multiple-accounts-raw-2")]
         [TestCase("multiple-accounts-raw-3")]
+        [TestCase("multiple-accounts-raw-4")]
         public void MultipleTryBuildTest(string folder)
         {
             var testFolder = Path.Combine(TestDataFolder, folder);
@@ -116,7 +118,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
                 }
 
                 foreach (var package in packages)
-                {                    
+                {
                     if (!PKImporterStub.IsAllowedPackage(package))
                     {
                         continue;
@@ -355,7 +357,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
 
             public void Log(string loggerName, object message, Exception exception, LogMessageType logMessageType)
             {
-                Console.WriteLine(message);
+                Console.WriteLine($"{message}: {exception}");
             }
         }
 
@@ -367,7 +369,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
             {
             }
 
-            public new void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
+            public void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
             {
                 var port = capturedPacket.Destination.Port != destinationPort ? capturedPacket.Destination.Port : capturedPacket.Source.Port;
 
@@ -379,7 +381,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
 
                 protectedLogger = logger;
 
-                base.LogPackage(capturedPacket, package);
+                base.LogPackage(package);
             }
 
             public new void ParsePackage<T>(PokerKingPackage package, Action<T> onSuccess, Action onFail)

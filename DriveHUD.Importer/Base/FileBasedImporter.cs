@@ -88,7 +88,11 @@ namespace DriveHUD.Importers
                     IsAdvancedLogEnabled = settings.GeneralSettings.IsAdvancedLoggingEnabled;
 
                     // detect all *.txt files in directories
-                    var handHistoryFiles = handHistoryFolders.Where(x => x.Exists).SelectMany(x => x.GetFiles(HandHistoryFilter, SearchOption.AllDirectories)).ToArray();
+                    var handHistoryFiles = handHistoryFolders
+                        .Where(x => x.Exists)
+                        .SelectMany(x => x.GetFiles(HandHistoryFilter, SearchOption.AllDirectories))
+                        .DistinctBy(x => x.FullName.ToLower())
+                        .ToArray();
 
                     var capturedFiles = actualCapturedFiles.Select(x => x.Value).Concat(notActualCapturedFiles.Select(x => x.Value)).ToArray();
 

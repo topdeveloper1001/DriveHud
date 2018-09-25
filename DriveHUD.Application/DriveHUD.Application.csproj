@@ -71,13 +71,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.5.1.2396, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.5.2.2426, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.5.1.2396, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.5.2.2426, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.5.1.2396, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.5.2.2426, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="EPPlus, Version=4.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
@@ -410,10 +410,14 @@
     <Compile Include="Modules\ModuleService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
     <Compile Include="ReportsLayout\PopulationAnalysisLayoutCreator.cs" />
+    <Compile Include="Security\CurrencyRates.cs" />
+    <Compile Include="Security\CurrencyRatesInfo.cs" />
+    <Compile Include="Security\CurrencyRatesService.cs" />
     <Compile Include="Security\DHCReg.cs" />
     <Compile Include="Security\DHHReg.cs" />
     <Compile Include="Security\DHOReg.cs" />
     <Compile Include="Security\DHTReg.cs" />
+    <Compile Include="Security\ICurrencyRatesService.cs" />
     <Compile Include="Security\SessionService.cs" />
     <Compile Include="Services\ITreatAsService.cs" />
     <Compile Include="Services\LogCleaner.cs" />
@@ -436,12 +440,14 @@
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />
     <Compile Include="Surrogates\PointDto.cs" />
     <Compile Include="TableConfigurators\PositionConfiguratorHelper.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\Adda52PositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\GGNPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\IPokerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\PartyPokerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\PKPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\PMPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\HorizonPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\SpartanPokerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\WinamaxPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\WinningPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\CommonPositionProvider.cs" />
@@ -452,6 +458,7 @@
     <Compile Include="TableConfigurators\SeatArea\WinningPokerNetworkTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\Poker888TableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\PokerStarsTableSeatAreaConfigurator.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\Adda52SiteSettingTableConfiguration.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\GGNSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\IPokerSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\PartyPokerSiteSettingTableConfigurator.cs" />
@@ -519,6 +526,7 @@
     <Compile Include="ViewModels\Graphs\SeriesProviders\WinningByYearSeriesProvider.cs" />
     <Compile Include="ViewModels\Graphs\SerieType.cs" />
     <Compile Include="ViewModels\Graphs\TournamentGraphViewModel.cs" />
+    <Compile Include="ViewModels\Hud\Adda52HudPanelService.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\HudDesignerBehavior.cs" />
     <Compile Include="ViewModels\Hud\Designer\Behaviors\IHudToolBar.cs" />
     <Compile Include="ViewModels\Hud\Designer\HudBumperStickersViewModel.cs" />
@@ -570,6 +578,7 @@
     <Compile Include="ViewModels\Hud\PKHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PMHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\HorizonHudPanelService.cs" />
+    <Compile Include="ViewModels\Hud\SpartanPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\WinamaxHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />

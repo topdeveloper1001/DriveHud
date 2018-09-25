@@ -50,6 +50,7 @@ namespace DriveHud.Tests
                 CollectionAssert.AreEquivalent(actual.GameDescription.TableTypeDescriptors, expected.GameDescription.TableTypeDescriptors, "GameDescription.TableTypeDescriptors must be equivalent");
                 Assert.That(actual.GameDescription.IsTournament, Is.EqualTo(expected.GameDescription.IsTournament), "GameDescription.IsTournament must be equal");
                 Assert.That(actual.GameDescription.Identifier, Is.EqualTo(expected.GameDescription.Identifier), "GameDescription.Identifier must be equal");
+                Assert.That(actual.GameDescription.CashBuyInHigh, Is.EqualTo(expected.GameDescription.CashBuyInHigh), "GameDescription.CashBuyInHigh must be equal");
 
                 if (actual.GameDescription.IsTournament)
                 {                    

@@ -387,6 +387,7 @@
     <Compile Include="AppStore\ProductAppStoreRepository.cs" />
     <Compile Include="AppStore\AppStoreType.cs" />
     <Compile Include="SingletonStorageModel.cs" />
+    <Compile Include="Site\Adda52SiteConfiguration.cs" />
     <Compile Include="Site\BaseSiteConfiguration.cs" />
     <Compile Include="Site\BlackChipPokerConfiguration.cs" />
     <Compile Include="Site\IPokerConfiguration.cs" />
@@ -396,6 +397,7 @@
     <Compile Include="Site\AmericasCardroomConfiguration.cs" />
     <Compile Include="Site\HorizonConfiguration.cs" />
     <Compile Include="Site\SiteValidationResult.cs" />
+    <Compile Include="Site\SpartanPokerConfiguration.cs" />
     <Compile Include="Site\SportsBettingConfiguration.cs" />
     <Compile Include="Site\TigerGamingConfiguration.cs" />
     <Compile Include="Site\BetOnlineConfiguration.cs" />

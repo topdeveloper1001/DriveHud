@@ -171,6 +171,33 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
         /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_Adda52 {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_Adda52", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD cannot load a HUD since Crazy Pineapple mode isn&apos;t supported..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_Adda52CrazyPineappleNotSupported {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_Adda52CrazyPineappleNotSupported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD cannot load a HUD since Adda52 was launched prior to DriveHUD being loaded. DriveHUD needs to be loaded first, then Adda52 can be launched..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_Adda52FailedToLoad {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_Adda52FailedToLoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
+        /// </summary>
         internal static string Notifications_HudLayout_PreLoadingText_Ignition {
             get {
                 return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_Ignition", resourceCulture);

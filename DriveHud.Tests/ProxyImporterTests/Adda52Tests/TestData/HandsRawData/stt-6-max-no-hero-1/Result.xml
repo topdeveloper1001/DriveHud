@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2018-09-12T00:05:04Z</DateOfHandUtc>
+  <HandId>318741900007</HandId>
+  <DealerButtonPosition>2</DealerButtonPosition>
+  <TableName>STT6#3187419</TableName>
+  <GameDescription>
+    <PokerFormat>Tournament</PokerFormat>
+    <Site>Adda52</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>Chips</Currency>
+      <SmallBlind>15</SmallBlind>
+      <BigBlind>30</BigBlind>
+      <IsAnteTable>false</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="6" />
+    <TableType>Regular</TableType>
+    <Tournament>
+      <TournamentId>3187419</TournamentId>
+      <TournamentsTags>STT</TournamentsTags>
+      <Speed>Regular</Speed>
+      <BuyIn>
+        <Currency>INR</Currency>
+        <PrizePoolValue>50</PrizePoolValue>
+        <Rake>2</Rake>
+      </BuyIn>
+      <StartDate>2018-09-12T00:05:04Z</StartDate>
+    </Tournament>
+    <Identifier>53282</Identifier>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>90</TotalPot>
+  <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+  <Actions> 
+    <HandAction PlayerName="garibnawaz" HandActionType="SMALL_BLIND" Amount="-15" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="tmarak91" HandActionType="BIG_BLIND" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="mahakaali" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="usa01" HandActionType="CALL" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="garibnawaz" HandActionType="CALL" Amount="-15" Street="Preflop" IsAllIn="false" />
+    <HandAction p3:type="AllInAction" PlayerName="tmarak91" HandActionType="ALL_IN" Amount="-1200" Street="Preflop" IsAllIn="true" IsRaiseAllIn="true" SourceActionType="RAISE" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="usa01" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="garibnawaz" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="tmarak91" HandActionType="UNCALLED_BET" Amount="1200" Street="Preflop" IsAllIn="false" />
+    <HandAction p3:type="WinningsAction" PlayerName="tmarak91" HandActionType="WINS" Amount="90" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards></CommunityCards>
+  <Players>
+    <Player PlayerName="usa01" id="1063643" StartingStack="1730" Bet="30" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
+    <Player PlayerName="garibnawaz" id="904170" StartingStack="1220" Bet="30" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="tmarak91" id="1693342" StartingStack="1230" Bet="1230" Win="90" SeatNumber="5" Cards="" IsSittingOut="false" />
+    <Player PlayerName="mahakaali" id="836495" StartingStack="1820" Bet="0" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+  </Players>
+</HandHistory>
