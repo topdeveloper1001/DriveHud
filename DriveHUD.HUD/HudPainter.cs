@@ -333,6 +333,8 @@ namespace DriveHUD.HUD
                 var window = windows[hwnd];
                 windows.Remove(hwnd);
                 window.Window.Dispatcher.Invoke(() => window.Window.Close());
+
+                LogProvider.Log.Info(typeof(HudPainter), $"Window [{hwnd}] has been closed.");
             }
             catch (Exception e)
             {

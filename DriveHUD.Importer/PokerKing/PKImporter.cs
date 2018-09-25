@@ -250,25 +250,23 @@ namespace DriveHUD.Importers.PokerKing
                         {
                             if (IsAdvancedLogEnabled)
                             {
-                                LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: Process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
+                                var unexpectedRoomLogMessage = string.Empty;
+
+                                if (unexpectedRoomDetected)
+                                {
+                                    unexpectedRoomLogMessage = " Unexpected room detected. No data will be sent to HUD.";
+                                }
+
+                                LogProvider.Log.Info(Logger,
+                                    $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: Process={(process != null ? process.Id : 0)}, windows={windowHandle}.{unexpectedRoomLogMessage}");
                             }
 
                             var handHistoryData = new HandHistoryData
                             {
                                 Uuid = package.UserId,
                                 HandHistory = handHistory,
-                                WindowHandle = windowHandle
+                                WindowHandle = !unexpectedRoomDetected ? windowHandle : IntPtr.Zero
                             };
-
-                            if (unexpectedRoomDetected)
-                            {
-                                if (IsAdvancedLogEnabled)
-                                {
-                                    LogProvider.Log.Info(Logger, $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: unexpected room detected.");
-                                }
-
-                                handHistoryData.WindowHandle = IntPtr.Zero;
-                            }
 
                             if (!pkCatcherService.CheckHand(handHistory))
                             {
@@ -477,11 +475,11 @@ namespace DriveHUD.Importers.PokerKing
 
 #if DEBUG
         private class PackageJson<T>
-        {          
+        {
             public PackageType PackageType { get; set; }
-         
+
             public DateTime Time { get; set; }
-         
+
             public T Content { get; set; }
         }
 #endif
