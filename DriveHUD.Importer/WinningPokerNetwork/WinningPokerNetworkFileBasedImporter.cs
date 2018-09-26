@@ -251,9 +251,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
         protected override EnumTableType ParseTableType(ParsingResult parsingResult, GameInfo gameInfo)
         {
-            EnumTableType tableType;
-
-            if (!TryParseTableTypeFromFile(gameInfo.FullFileName, out tableType))
+            if (!TryParseTableTypeFromFile(gameInfo.FullFileName, out EnumTableType tableType))
             {
                 tableType = base.ParseTableType(parsingResult, gameInfo);
             }

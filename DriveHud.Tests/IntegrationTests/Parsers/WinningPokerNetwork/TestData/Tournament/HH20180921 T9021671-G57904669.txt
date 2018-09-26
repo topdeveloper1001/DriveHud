@@ -1,0 +1,56 @@
+Game started at: 2018/9/21 19:14:8
+Game ID: 1274468305 100/200 $1,000 GTD 8-max, Table 4 (Hold'em)
+Seat 3 is the button
+Seat 1: ohplee2 (10000).
+Seat 2: jbuckey09 (10000).
+Seat 3: TheTopFive (9713).
+Seat 4: aszaszin36 (10570).
+Seat 5: Dizzzyyy (8746).
+Seat 6: sgroitoysuzy1 (33190).
+Seat 7: jgallo23 (3749).
+Seat 8: FartinGreenSince1717 (12518).
+Player aszaszin36 has small blind (100)
+Player Dizzzyyy has big blind (200)
+Player aszaszin36 received a card.
+Player aszaszin36 received a card.
+Player Dizzzyyy received a card.
+Player Dizzzyyy received a card.
+Player sgroitoysuzy1 received a card.
+Player sgroitoysuzy1 received a card.
+Player jgallo23 received a card.
+Player jgallo23 received a card.
+Player FartinGreenSince1717 received a card.
+Player FartinGreenSince1717 received a card.
+Player ohplee2 received card: [7s]
+Player ohplee2 received card: [Qs]
+Player jbuckey09 received a card.
+Player jbuckey09 received a card.
+Player TheTopFive received a card.
+Player TheTopFive received a card.
+Player sgroitoysuzy1 folds
+Player jgallo23 folds
+Player FartinGreenSince1717 folds
+Player ohplee2 raises (460)
+Player jbuckey09 folds
+Player TheTopFive folds
+Player aszaszin36 folds
+Player Dizzzyyy calls (260)
+*** FLOP ***: [4d 7h Qd]
+Player Dizzzyyy checks
+Player ohplee2 bets (765)
+Player Dizzzyyy folds
+Uncalled bet (765) returned to ohplee2
+Player ohplee2 mucks cards
+------ Summary ------
+Pot: 1020
+Board: [4d 7h Qd]
+*Player ohplee2 mucks (does not show cards). Bets: 460. Collects: 1020. Wins: 560.
+Player jbuckey09 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player TheTopFive does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player aszaszin36 does not show cards.Bets: 100. Collects: 0. Loses: 100.
+Player Dizzzyyy does not show cards.Bets: 460. Collects: 0. Loses: 460.
+Player sgroitoysuzy1 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player jgallo23 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player FartinGreenSince1717 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2018/9/21 19:14:50
+
