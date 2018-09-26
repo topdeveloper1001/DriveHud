@@ -296,7 +296,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Jackpot-2.txt", "Peon_84", 840, HandActionType.WINS, Street.Summary, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Jackpot-2.txt", "atm money man", -120, HandActionType.CALL, Street.Flop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Sng2-Wins.txt", "Villain6", 217, HandActionType.WINS, Street.Summary, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Sng2-Wins.txt", "Villain7", 218, HandActionType.WINS, Street.Summary, 1)]        
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Sng2-Wins.txt", "Villain7", 218, HandActionType.WINS, Street.Summary, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -468,6 +468,20 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.Hero.Win, Is.EqualTo(win));
+        }
+        
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\HH20180921 T9021671-G57904669.txt", 8)]
+        public void SeatTypeMaxPlayersIsParsedTest(string handHistoryFile, int maxPlayers)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.SeatType.MaxPlayers, Is.EqualTo(maxPlayers));
+        }
+        
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\HH20180921 T9021671-G57904669.txt", TournamentsTags.MTT)]
+        public void TournamentsTagsIsParsedTest(string handHistoryFile, TournamentsTags tournamentTags)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.TournamentsTags, Is.EqualTo(tournamentTags));
         }
 
         private ParsingResult GetParsingResult(string handHistoryFile)

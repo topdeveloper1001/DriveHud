@@ -17,6 +17,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using HandHistories.Objects.Hand;
+using DriveHUD.Common.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.Winning
 {
@@ -116,7 +117,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
             return false;
         }
-        
+
         public override bool IsValidOrCanceledHand(string[] handLines, out bool isCancelled)
         {
             isCancelled = false;
@@ -376,7 +377,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 }
                 else if (endChar == ']')
                 {
-                    int NameEndIndex = line.LastIndexOf(" rec", line.Length - 12, StringComparison.Ordinal);
+                    int NameEndIndex = line.LastIndexOf(" rec", line.Length - 12, StringComparison.OrdinalIgnoreCase);
                     string playerName = line.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
 
                     char rank = line[line.Length - 3];
@@ -411,7 +412,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 int playerNameStartIndex = PlayerMinLength + (summaryLine[0] == '*' ? WinningStartOffset : 0);
                 int playerNameEndIndex = summaryLine.IndexOf(' ', playerNameStartIndex);
 
-                int ShowIndex = summaryLine.IndexOf(" shows: ", StringComparison.Ordinal);
+                int ShowIndex = summaryLine.IndexOf(" shows: ", StringComparison.OrdinalIgnoreCase);
                 if (ShowIndex != -1)
                 {
                     string playerName = summaryLine.Substring(playerNameStartIndex, ShowIndex - playerNameStartIndex);
@@ -435,7 +436,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         protected override PokerFormat ParsePokerFormat(string[] handLines)
         {
             //Game ID: 775559540 30 / 60 $10 Freeroll - On Demand, Table 27(Hold'em)
-            if (handLines[1].Contains("Table "))
+            if (handLines[1].ContainsIgnoreCase("Table "))
             {
                 return PokerFormat.Tournament;
             }
@@ -540,7 +541,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 else if (actionLine[0] == 'U')
                 {
                     const string UncalledBet = ") returned to ";
-                    string playerName = actionLine.Substring(actionLine.IndexOf(UncalledBet, StringComparison.Ordinal) + UncalledBet.Length);
+                    string playerName = actionLine.Substring(actionLine.IndexOf(UncalledBet, StringComparison.OrdinalIgnoreCase) + UncalledBet.Length);
                     handActions.Add(new HandAction(playerName, HandActionType.UNCALLED_BET, ParseActionAmountBeforePlayer(actionLine), currentStreet));
                 }
                 else if (actionLine[0] == '-')
@@ -691,7 +692,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
             var match = regex.Match(tournamentString);
 
-            var tournamentName = RemoveTableNumber(ParseTableName(handLines));
+            var tournamentName = RemoveTableNumber(ParseTableName(handLines), out int tableNumber);
 
             if (!match.Success)
             {
@@ -700,7 +701,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     BuyIn = Buyin.AllBuyin(),
                     TournamentName = tournamentName,
                     TournamentId = string.Empty,
-                    Speed = TournamentSpeed.Regular
+                    Speed = TournamentSpeed.Regular,
+                    TournamentsTags = tableNumber > 1 ? TournamentsTags.MTT : (TournamentsTags?)null
                 };
             }
 
@@ -708,7 +710,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             var rake = 0m;
 
             var speed = ParserUtils.ParseTournamentSpeed(tournamentName);
-            var seatType = SeatType.Parse(tournamentName);
 
             // for majority of tournaments the buyIn is in the tournament name. 
             // the buyIn from the summary line contains rake in it.
@@ -744,6 +745,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 BuyIn = Buyin.FromBuyinRake(buyIn, rake, Currency.USD),
                 Speed = speed,
                 TournamentName = $"{tournamentName} #{match.Groups["tournament_id"].Value}",
+                TournamentsTags = tableNumber > 1 ? TournamentsTags.MTT : (TournamentsTags?)null
             };
 
             return tournamentDescriptor;
@@ -760,10 +762,13 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             try
             {
                 var file = System.IO.Path.GetFileNameWithoutExtension(filename);
-                var startIndexOfTournament = file.IndexOf("T") + 1;
+
+                var startIndexOfTournament = file.IndexOf("T", StringComparison.OrdinalIgnoreCase) + 1;
+
                 if (startIndexOfTournament > 0)
                 {
-                    var endIndexOfTournament = file.IndexOf("-G", startIndexOfTournament);
+                    var endIndexOfTournament = file.IndexOf("-G", startIndexOfTournament, StringComparison.OrdinalIgnoreCase);
+
                     if (endIndexOfTournament > 0)
                     {
                         return file.Substring(startIndexOfTournament, endIndexOfTournament - startIndexOfTournament);
@@ -778,17 +783,33 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             return "0";
         }
 
-        private string RemoveTableNumber(string tableName)
+        private string RemoveTableNumber(string tableName, out int tableNumber)
         {
+            tableNumber = 1;
+
             if (string.IsNullOrWhiteSpace(tableName))
             {
                 return tableName;
             }
 
-            var tableNumberStartIndex = tableName.LastIndexOf(", Table");
+            var tableNumberStartIndex = tableName.LastIndexOf(", Table", StringComparison.OrdinalIgnoreCase);
+
             if (tableNumberStartIndex == -1)
             {
                 return tableName;
+            }
+
+            var startTableNumberIndex = tableNumberStartIndex + 8;
+
+            if (startTableNumberIndex < tableName.Length)
+            {
+                var endTableNumberIndex = tableName.IndexOf(' ', startTableNumberIndex);
+
+                var tableNumberText = endTableNumberIndex < 0 ?
+                    tableName.Substring(startTableNumberIndex) :
+                    tableName.Substring(startTableNumberIndex, endTableNumberIndex - startTableNumberIndex);
+
+                int.TryParse(tableNumberText, out tableNumber);
             }
 
             return tableName.Remove(tableNumberStartIndex);
@@ -858,7 +879,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         private HandAction ParseWinningsAction(string line, PlayerList playerList, bool PlayerWithSpaces)
         {
             string playerName = PlayerWithSpaces ? GetWinnerNameWithSpaces(line, playerList) : GetWinnerNameWithoutSpaces(line);
-            int winAmountStartIndex = line.LastIndexOf("cts:", StringComparison.Ordinal) + 5;
+            int winAmountStartIndex = line.LastIndexOf("cts:", StringComparison.OrdinalIgnoreCase) + 5;
             int winAmountEndIndex = line.IndexOf(". ", winAmountStartIndex, StringComparison.Ordinal);
             string winString = line.Substring(winAmountStartIndex, winAmountEndIndex - winAmountStartIndex);
             decimal winAmount = winString.ParseAmount();
@@ -1074,10 +1095,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
                 HandActionType actionType = HandActionType.UNKNOWN;
 
-                int playerNameEndIndex = line.IndexOf(" posts (", StringComparison.Ordinal);
+                int playerNameEndIndex = line.IndexOf(" posts (", StringComparison.OrdinalIgnoreCase);
                 if (playerNameEndIndex == -1)
                 {
-                    playerNameEndIndex = line.IndexOf(" straddle (", StringComparison.Ordinal);
+                    playerNameEndIndex = line.IndexOf(" straddle (", StringComparison.OrdinalIgnoreCase);
                 }
 
                 if (playerNameEndIndex != -1)
@@ -1086,21 +1107,21 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 }
                 else
                 {
-                    playerNameEndIndex = line.IndexOf(" has small blind (", StringComparison.Ordinal);
+                    playerNameEndIndex = line.IndexOf(" has small blind (", StringComparison.OrdinalIgnoreCase);
                     actionType = HandActionType.SMALL_BLIND;
                     if (playerNameEndIndex == -1)
                     {
-                        playerNameEndIndex = line.IndexOf(" has big blind (", StringComparison.Ordinal);
+                        playerNameEndIndex = line.IndexOf(" has big blind (", StringComparison.OrdinalIgnoreCase);
                         actionType = HandActionType.BIG_BLIND;
                     }
                     if (playerNameEndIndex == -1)
                     {
-                        playerNameEndIndex = line.IndexOf(" ante (", StringComparison.Ordinal);
+                        playerNameEndIndex = line.IndexOf(" ante (", StringComparison.OrdinalIgnoreCase);
                         actionType = HandActionType.ANTE;
                     }
                     if (playerNameEndIndex == -1)
                     {
-                        playerNameEndIndex = line.IndexOf(" allin (", StringComparison.Ordinal);
+                        playerNameEndIndex = line.IndexOf(" allin (", StringComparison.OrdinalIgnoreCase);
                         actionType = HandActionType.ALL_IN;
                     }
                 }
@@ -1163,32 +1184,32 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         {
             var line = handLines[1];
 
-            if (line.ToLower().Contains("heads-up"))
+            if (line.ToLower().ContainsIgnoreCase("heads-up"))
             {
                 return SeatType.FromMaxPlayers(2);
             }
 
-            if (line.Contains("Jackpot"))
+            if (line.ContainsIgnoreCase("Jackpot"))
             {
                 return SeatType.FromMaxPlayers(3);
             }
 
-            if (line.Contains("4-Max"))
+            if (line.ContainsIgnoreCase("4-Max"))
             {
                 return SeatType.FromMaxPlayers(4);
             }
 
-            if (line.Contains("6-Max"))
+            if (line.ContainsIgnoreCase("6-Max"))
             {
                 return SeatType.FromMaxPlayers(6);
             }
 
-            if (line.Contains("8-Max"))
+            if (line.ContainsIgnoreCase("8-Max"))
             {
                 return SeatType.FromMaxPlayers(8);
             }
 
-            if (line.Contains("9-Max"))
+            if (line.ContainsIgnoreCase("9-Max"))
             {
                 return SeatType.FromMaxPlayers(9);
             }
