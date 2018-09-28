@@ -1562,6 +1562,86 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto RaiseLimpersObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RaiseLimpers,
+                    Occurred = raisedLimpers,
+                    CouldOccurred = couldRaiseLimpers
+                };
+            }
+        }
+
+        public virtual StatDto RaiseLimpersInMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RaiseLimpersInMP,
+                    Occurred = positionRaiseLimpers?.MP ?? 0,
+                    CouldOccurred = positionCouldRaiseLimpers?.MP ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto RaiseLimpersInCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RaiseLimpersInMP,
+                    Occurred = positionRaiseLimpers?.CO ?? 0,
+                    CouldOccurred = positionCouldRaiseLimpers?.CO ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto RaiseLimpersInBNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RaiseLimpersInBN,
+                    Occurred = positionRaiseLimpers?.BN ?? 0,
+                    CouldOccurred = positionCouldRaiseLimpers?.BN ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto RaiseLimpersInSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RaiseLimpersInSB,
+                    Occurred = positionRaiseLimpers?.SB ?? 0,
+                    CouldOccurred = positionCouldRaiseLimpers?.SB ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto RaiseLimpersInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RaiseLimpersInBB,
+                    Occurred = positionRaiseLimpers?.BB ?? 0,
+                    CouldOccurred = positionCouldRaiseLimpers?.BB ?? 0
+                };
+            }
+        }
+
+        #endregion
+
         public virtual StatDto BetWhenCheckedToObject
         {
             get
@@ -1663,6 +1743,19 @@ namespace Model.Data
                     Value = FoldToRiverCheckRaise,
                     Occurred = Source.FoldedToRiverCheckRaise,
                     CouldOccurred = Source.FacedRiverCheckRaise,
+                };
+            }
+        }
+
+        public virtual StatDto FoldToRiverRaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToRiverRaise,
+                    Occurred = Source.FoldedFacedRaiseRiver,
+                    CouldOccurred = Source.FacedRaiseRiver,
                 };
             }
         }
@@ -1771,7 +1864,403 @@ namespace Model.Data
             }
         }
 
+        #region 3-Bet vs Pos stats
+
+        public virtual StatDto ThreeBetMPvsEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetMPvsEP,
+                    Occurred = threeBetMPvsEP,
+                    CouldOccurred = couldThreeBetMPvsEP,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetCOvsEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetCOvsEP,
+                    Occurred = threeBetCOvsEP,
+                    CouldOccurred = couldThreeBetCOvsEP,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetCOvsMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetCOvsMP,
+                    Occurred = threeBetCOvsMP,
+                    CouldOccurred = couldThreeBetCOvsMP,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetBTNvsEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetBTNvsEP,
+                    Occurred = threeBetBTNvsEP,
+                    CouldOccurred = couldThreeBetBTNvsEP,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetBTNvsMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetBTNvsMP,
+                    Occurred = threeBetBTNvsMP,
+                    CouldOccurred = couldThreeBetBTNvsMP,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetBTNvsCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetBTNvsCO,
+                    Occurred = threeBetBTNvsCO,
+                    CouldOccurred = couldThreeBetBTNvsCO,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetSBvsEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetSBvsEP,
+                    Occurred = threeBetSBvsEP,
+                    CouldOccurred = couldThreeBetSBvsEP,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetSBvsMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetSBvsMP,
+                    Occurred = threeBetSBvsMP,
+                    CouldOccurred = couldThreeBetSBvsMP,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetSBvsCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetSBvsCO,
+                    Occurred = threeBetSBvsCO,
+                    CouldOccurred = couldThreeBetSBvsCO,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetSBvsBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetSBvsBTN,
+                    Occurred = threeBetSBvsBTN,
+                    CouldOccurred = couldThreeBetSBvsBTN,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetBBvsEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetBBvsEP,
+                    Occurred = threeBetBBvsEP,
+                    CouldOccurred = couldThreeBetBBvsEP,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetBBvsMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetBBvsMP,
+                    Occurred = threeBetBBvsMP,
+                    CouldOccurred = couldThreeBetBBvsMP,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetBBvsCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetBBvsCO,
+                    Occurred = threeBetBBvsCO,
+                    CouldOccurred = couldThreeBetBBvsCO,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetBBvsBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetBBvsBTN,
+                    Occurred = threeBetBBvsBTN,
+                    CouldOccurred = couldThreeBetBBvsBTN,
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetBBvsSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetBBvsSB,
+                    Occurred = threeBetBBvsSB,
+                    CouldOccurred = couldThreeBetBBvsSB,
+                };
+            }
+        }
+
         #endregion
+
+        #region Fold to 3-Bet in Pos vs 3-bet Pos
+
+        public virtual StatDto FoldTo3BetInEPvs3BetMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInEPvs3BetMP,
+                    Occurred = foldTo3BetInEPvs3BetMP,
+                    CouldOccurred = couldFoldTo3BetInEPvs3BetMP,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInEPvs3BetCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInEPvs3BetCO,
+                    Occurred = foldTo3BetInEPvs3BetCO,
+                    CouldOccurred = couldFoldTo3BetInEPvs3BetCO,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInEPvs3BetBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInEPvs3BetBTN,
+                    Occurred = foldTo3BetInEPvs3BetBTN,
+                    CouldOccurred = couldFoldTo3BetInEPvs3BetBTN,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInEPvs3BetSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInEPvs3BetSB,
+                    Occurred = foldTo3BetInEPvs3BetSB,
+                    CouldOccurred = couldFoldTo3BetInEPvs3BetSB,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInEPvs3BetBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInEPvs3BetBB,
+                    Occurred = foldTo3BetInEPvs3BetBB,
+                    CouldOccurred = couldFoldTo3BetInEPvs3BetBB,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInMPvs3BetCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInMPvs3BetCO,
+                    Occurred = foldTo3BetInMPvs3BetCO,
+                    CouldOccurred = couldFoldTo3BetInMPvs3BetCO,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInMPvs3BetBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInMPvs3BetBTN,
+                    Occurred = foldTo3BetInMPvs3BetBTN,
+                    CouldOccurred = couldFoldTo3BetInMPvs3BetBTN,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInMPvs3BetSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInMPvs3BetSB,
+                    Occurred = foldTo3BetInMPvs3BetSB,
+                    CouldOccurred = couldFoldTo3BetInMPvs3BetSB,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInMPvs3BetBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInMPvs3BetBB,
+                    Occurred = foldTo3BetInMPvs3BetBB,
+                    CouldOccurred = couldFoldTo3BetInMPvs3BetBB,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInCOvs3BetBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInCOvs3BetBTN,
+                    Occurred = foldTo3BetInCOvs3BetBTN,
+                    CouldOccurred = couldFoldTo3BetInCOvs3BetBTN,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInCOvs3BetSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInCOvs3BetSB,
+                    Occurred = foldTo3BetInCOvs3BetSB,
+                    CouldOccurred = couldFoldTo3BetInCOvs3BetSB,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInCOvs3BetBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInCOvs3BetBB,
+                    Occurred = foldTo3BetInCOvs3BetBB,
+                    CouldOccurred = couldFoldTo3BetInCOvs3BetBB,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInBTNvs3BetSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInBTNvs3BetSB,
+                    Occurred = foldTo3BetInBTNvs3BetSB,
+                    CouldOccurred = couldFoldTo3BetInBTNvs3BetSB,
+                };
+            }
+        }
+
+        public virtual StatDto FoldTo3BetInBTNvs3BetBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldTo3BetInBTNvs3BetBB,
+                    Occurred = foldTo3BetInBTNvs3BetBB,
+                    CouldOccurred = couldFoldTo3BetInBTNvs3BetBB,
+                };
+            }
+        }
+
+        #endregion
+
+        public virtual StatDto CheckRaiseFlopAsPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckRaiseFlopAsPFR,
+                    Occurred = checkRaiseFlopAsPFR,
+                    CouldOccurred = couldCheckRaiseFlopAsPFR,
+                };
+            }
+        }
 
         #region Positional
 

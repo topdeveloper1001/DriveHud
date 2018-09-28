@@ -30,7 +30,7 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.FrozenColumnCount = 1;            
             gridView.Columns.Clear();
 
-            gridView.Columns.Add(AddPlayerType("Reports_Columns_PlayerType", ReflectionHelper.GetPath<PopulationReportIndicators>(o => o.PlayerType)));
+            gridView.Columns.Add(AddPlayerType("Reports_Column_PlayerType", ReflectionHelper.GetPath<PopulationReportIndicators>(o => o.PlayerType)));
             gridView.Columns.Add(Add("Reports_Column_TotalHands", nameof(Indicators.TotalHands)));
             gridView.Columns.Add(AddFinancial("Reports_Column_TotalWon", nameof(Indicators.TotalWon)));
             gridView.Columns.Add(Add("Reports_Column_BB100", nameof(Indicators.BB)));

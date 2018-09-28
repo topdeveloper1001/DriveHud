@@ -1379,6 +1379,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal FoldToRiverRaise
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedFacedRaiseRiver, Source.FacedRaiseRiver);
+            }
+        }
+
         public virtual decimal FoldToRiverCBet
         {
             get
@@ -1720,6 +1728,132 @@ namespace Model.Data
 
         #endregion
 
+        #region Raise Limpers
+
+        public virtual decimal RaiseLimpers
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.IsRaisedLimpers), Statistics.Sum(x => x.CouldRaiseLimpers));
+            }
+        }
+
+        [ProtoMember(13)]
+        protected PositionalStat positionRaiseLimpers = new PositionalStat();
+
+        [ProtoMember(14)]
+        protected PositionalStat positionCouldRaiseLimpers = new PositionalStat();
+
+        public virtual decimal RaiseLimpersInMP
+        {
+            get
+            {
+                return GetPercentage(positionRaiseLimpers?.MP, positionCouldRaiseLimpers?.MP);
+            }
+        }
+
+        public virtual decimal RaiseLimpersInCO
+        {
+            get
+            {
+                return GetPercentage(positionRaiseLimpers?.CO, positionCouldRaiseLimpers?.CO);
+            }
+        }
+
+        public virtual decimal RaiseLimpersInBN
+        {
+            get
+            {
+                return GetPercentage(positionRaiseLimpers?.BN, positionCouldRaiseLimpers?.BN);
+            }
+        }
+
+        public virtual decimal RaiseLimpersInSB
+        {
+            get
+            {
+                return GetPercentage(positionRaiseLimpers?.SB, positionCouldRaiseLimpers?.SB);
+            }
+        }
+
+        public virtual decimal RaiseLimpersInBB
+        {
+            get
+            {
+                return GetPercentage(positionRaiseLimpers?.BB, positionCouldRaiseLimpers?.BB);
+            }
+        }
+
+        #endregion
+
+        #region 3-Bet vs Pos stats
+
+        public abstract decimal ThreeBetMPvsEP { get; }
+
+        public abstract decimal ThreeBetCOvsEP { get; }
+
+        public abstract decimal ThreeBetCOvsMP { get; }
+
+        public abstract decimal ThreeBetBTNvsEP { get; }
+
+        public abstract decimal ThreeBetBTNvsMP { get; }
+
+        public abstract decimal ThreeBetBTNvsCO { get; }
+
+        public abstract decimal ThreeBetSBvsEP { get; }
+
+        public abstract decimal ThreeBetSBvsMP { get; }
+
+        public abstract decimal ThreeBetSBvsCO { get; }
+
+        public abstract decimal ThreeBetSBvsBTN { get; }
+
+        public abstract decimal ThreeBetBBvsEP { get; }
+
+        public abstract decimal ThreeBetBBvsMP { get; }
+
+        public abstract decimal ThreeBetBBvsCO { get; }
+
+        public abstract decimal ThreeBetBBvsBTN { get; }
+
+        public abstract decimal ThreeBetBBvsSB { get; }
+
+        #endregion
+
+        #region Fold to 3-Bet in Pos vs 3-bet Pos
+
+        public abstract decimal FoldTo3BetInEPvs3BetMP { get; }
+
+        public abstract decimal FoldTo3BetInEPvs3BetCO { get; }
+
+        public abstract decimal FoldTo3BetInEPvs3BetBTN { get; }
+
+        public abstract decimal FoldTo3BetInEPvs3BetSB { get; }
+
+        public abstract decimal FoldTo3BetInEPvs3BetBB { get; }
+
+        public abstract decimal FoldTo3BetInMPvs3BetCO { get; }
+
+        public abstract decimal FoldTo3BetInMPvs3BetBTN { get; }
+
+        public abstract decimal FoldTo3BetInMPvs3BetSB { get; }
+
+        public abstract decimal FoldTo3BetInMPvs3BetBB { get; }
+
+        public abstract decimal FoldTo3BetInCOvs3BetBTN { get; }
+
+        public abstract decimal FoldTo3BetInCOvs3BetSB { get; }
+
+        public abstract decimal FoldTo3BetInCOvs3BetBB { get; }
+
+        public abstract decimal FoldTo3BetInBTNvs3BetSB { get; }
+
+        public abstract decimal FoldTo3BetInBTNvs3BetBB { get; }
+
+        #endregion
+
+        public abstract decimal CheckRaiseFlopAsPFR { get; }
+
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
         {
             foreach (var statistic in statistics)
@@ -1775,6 +1909,8 @@ namespace Model.Data
             positionCouldFourBet?.Add(statistic.Position, statistic.CouldfourbetpreflopVirtual);
             positionLimpMade?.Add(statistic.Position, statistic.LimpMade);
             positionLimpPossible?.Add(statistic.Position, statistic.LimpPossible);
+            positionRaiseLimpers?.Add(statistic.Position, statistic.IsRaisedLimpers);
+            positionCouldRaiseLimpers?.Add(statistic.Position, statistic.CouldRaiseLimpers);
         }
 
         protected virtual void ResetPositionalStats()
@@ -1790,6 +1926,8 @@ namespace Model.Data
             positionCouldFourBet?.Reset();
             positionLimpMade?.Reset();
             positionLimpPossible?.Reset();
+            positionRaiseLimpers?.Reset();
+            positionCouldRaiseLimpers?.Reset();
         }
 
         #region Helpers

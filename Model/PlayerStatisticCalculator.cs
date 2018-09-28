@@ -222,7 +222,15 @@ namespace Model
             {
                 var raiser = preflops.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE).PlayerName;
 
+                stat.FirstRaiserPosition = Converter.ToPosition(parsedHand, raiser);
+
                 Calculate3Bet(threeBet, preflops, player, raiser);
+
+                if (threeBet.Happened)
+                {
+                    stat.ThreeBettorPosition = Converter.ToPosition(parsedHand, threeBet.HappenedByPlayer);
+                }
+
                 Calculate4Bet(fourBet, preflops, player, raiser, parsedHand.Players);
                 Calculate5Bet(threeBet, fourBet, fiveBet, preflops, player, raiser);
             }
@@ -230,10 +238,13 @@ namespace Model
             #endregion
 
             #region 2 preflop raisers
+
             ConditionalBet twoPfr = new ConditionalBet();
 
             if (pfrOcurred)
+            {
                 Calculate2PreflopRaisers(twoPfr, preflops, player);
+            }
 
             #endregion
 
@@ -2099,6 +2110,7 @@ namespace Model
                     if (!limp.Made)
                     {
                         limp.Possible = true;
+
                         if (action.IsCall() || action.IsCheck)
                         {
                             limp.Made = true;
@@ -2177,6 +2189,7 @@ namespace Model
         private static bool IsRaisedLimpers(IList<HandAction> preflops, string player)
         {
             bool limpersFound = false;
+
             foreach (var action in preflops.Where(x => !x.IsBlinds))
             {
                 if (action.PlayerName == player)

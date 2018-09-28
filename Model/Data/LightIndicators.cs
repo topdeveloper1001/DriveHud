@@ -12,11 +12,9 @@
 
 using DriveHUD.Entities;
 using Model.Importer;
-using Model.Reports;
 using ProtoBuf;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Model.Data
 {
@@ -741,6 +739,8 @@ namespace Model.Data
             }
         }
 
+        #endregion
+
         [ProtoMember(44)]
         protected int did4Bet;
 
@@ -777,7 +777,553 @@ namespace Model.Data
             }
         }
 
+        #region Raise Limpers
+
+        [ProtoMember(48)]
+        protected int raisedLimpers;
+
+        [ProtoMember(49)]
+        protected int couldRaiseLimpers;
+
+        public override decimal RaiseLimpers
+        {
+            get
+            {
+                return GetPercentage(raisedLimpers, couldRaiseLimpers);
+            }
+        }
+
+
+
+
         #endregion
+
+        #region 3-Bet vs Pos stats
+
+        [ProtoMember(50)]
+        protected int threeBetMPvsEP;
+
+        [ProtoMember(51)]
+        protected int couldThreeBetMPvsEP;
+
+        public override decimal ThreeBetMPvsEP => GetPercentage(threeBetMPvsEP, couldThreeBetMPvsEP);
+
+        [ProtoMember(52)]
+        protected int threeBetCOvsEP;
+
+        [ProtoMember(53)]
+        protected int couldThreeBetCOvsEP;
+
+        public override decimal ThreeBetCOvsEP => GetPercentage(threeBetCOvsEP, couldThreeBetCOvsEP);
+
+        [ProtoMember(54)]
+        protected int threeBetCOvsMP;
+
+        [ProtoMember(55)]
+        protected int couldThreeBetCOvsMP;
+
+        public override decimal ThreeBetCOvsMP => GetPercentage(threeBetCOvsMP, couldThreeBetCOvsMP);
+
+        [ProtoMember(56)]
+        protected int threeBetBTNvsEP;
+
+        [ProtoMember(57)]
+        protected int couldThreeBetBTNvsEP;
+
+        public override decimal ThreeBetBTNvsEP => GetPercentage(threeBetBTNvsEP, couldThreeBetBTNvsEP);
+
+        [ProtoMember(58)]
+        protected int threeBetBTNvsMP;
+
+        [ProtoMember(59)]
+        protected int couldThreeBetBTNvsMP;
+
+        public override decimal ThreeBetBTNvsMP => GetPercentage(threeBetBTNvsMP, couldThreeBetBTNvsMP);
+
+        [ProtoMember(60)]
+        protected int threeBetBTNvsCO;
+
+        [ProtoMember(61)]
+        protected int couldThreeBetBTNvsCO;
+
+        public override decimal ThreeBetBTNvsCO => GetPercentage(threeBetBTNvsCO, couldThreeBetBTNvsCO);
+
+        [ProtoMember(62)]
+        protected int threeBetSBvsEP;
+
+        [ProtoMember(63)]
+        protected int couldThreeBetSBvsEP;
+
+        public override decimal ThreeBetSBvsEP => GetPercentage(threeBetSBvsEP, couldThreeBetSBvsEP);
+
+        [ProtoMember(64)]
+        protected int threeBetSBvsMP;
+
+        [ProtoMember(65)]
+        protected int couldThreeBetSBvsMP;
+
+        public override decimal ThreeBetSBvsMP => GetPercentage(threeBetSBvsMP, couldThreeBetSBvsMP);
+
+        [ProtoMember(66)]
+        protected int threeBetSBvsCO;
+
+        [ProtoMember(67)]
+        protected int couldThreeBetSBvsCO;
+
+        public override decimal ThreeBetSBvsCO => GetPercentage(threeBetSBvsCO, couldThreeBetSBvsCO);
+
+        [ProtoMember(68)]
+        protected int threeBetSBvsBTN;
+
+        [ProtoMember(69)]
+        protected int couldThreeBetSBvsBTN;
+
+        public override decimal ThreeBetSBvsBTN => GetPercentage(threeBetSBvsBTN, couldThreeBetSBvsBTN);
+
+        [ProtoMember(70)]
+        protected int threeBetBBvsEP;
+
+        [ProtoMember(71)]
+        protected int couldThreeBetBBvsEP;
+
+        public override decimal ThreeBetBBvsEP => GetPercentage(threeBetBBvsEP, couldThreeBetBBvsEP);
+
+        [ProtoMember(72)]
+        protected int threeBetBBvsMP;
+
+        [ProtoMember(73)]
+        protected int couldThreeBetBBvsMP;
+
+        public override decimal ThreeBetBBvsMP => GetPercentage(threeBetBBvsMP, couldThreeBetBBvsMP);
+
+        [ProtoMember(74)]
+        protected int threeBetBBvsCO;
+
+        [ProtoMember(75)]
+        protected int couldThreeBetBBvsCO;
+
+        public override decimal ThreeBetBBvsCO => GetPercentage(threeBetBBvsCO, couldThreeBetBBvsCO);
+
+        [ProtoMember(76)]
+        protected int threeBetBBvsBTN;
+
+        [ProtoMember(77)]
+        protected int couldThreeBetBBvsBTN;
+
+        public override decimal ThreeBetBBvsBTN => GetPercentage(threeBetBBvsBTN, couldThreeBetBBvsBTN);
+
+        [ProtoMember(78)]
+        protected int threeBetBBvsSB;
+
+        [ProtoMember(79)]
+        protected int couldThreeBetBBvsSB;
+
+        public override decimal ThreeBetBBvsSB => GetPercentage(threeBetBBvsSB, couldThreeBetBBvsSB);
+
+        private void Add3BetVsRaiserInPosStatistic(Playerstatistic statistic)
+        {
+            threeBetMPvsEP += statistic.ThreeBetMPvsEP;
+            couldThreeBetMPvsEP += statistic.CouldThreeBetMPvsEP;
+
+            threeBetCOvsEP += statistic.ThreeBetCOvsEP;
+            couldThreeBetCOvsEP += statistic.CouldThreeBetCOvsEP;
+
+            threeBetCOvsMP += statistic.ThreeBetCOvsMP;
+            couldThreeBetCOvsMP += statistic.CouldThreeBetCOvsMP;
+
+            threeBetBTNvsEP += statistic.ThreeBetBTNvsEP;
+            couldThreeBetBTNvsEP += statistic.CouldThreeBetBTNvsEP;
+
+            threeBetBTNvsMP += statistic.ThreeBetBTNvsMP;
+            couldThreeBetBTNvsMP += statistic.CouldThreeBetBTNvsMP;
+
+            threeBetBTNvsCO += statistic.ThreeBetBTNvsCO;
+            couldThreeBetBTNvsCO += statistic.CouldThreeBetBTNvsCO;
+
+            threeBetSBvsEP += statistic.ThreeBetSBvsEP;
+            couldThreeBetSBvsEP += statistic.CouldThreeBetSBvsEP;
+
+            threeBetSBvsMP += statistic.ThreeBetSBvsMP;
+            couldThreeBetSBvsMP += statistic.CouldThreeBetSBvsMP;
+
+            threeBetSBvsCO += statistic.ThreeBetSBvsCO;
+            couldThreeBetSBvsCO += statistic.CouldThreeBetSBvsCO;
+
+            threeBetSBvsBTN += statistic.ThreeBetSBvsBTN;
+            couldThreeBetSBvsBTN += statistic.CouldThreeBetSBvsBTN;
+
+            threeBetBBvsEP += statistic.ThreeBetBBvsEP;
+            couldThreeBetBBvsEP += statistic.CouldThreeBetBBvsEP;
+
+            threeBetBBvsMP += statistic.ThreeBetBBvsMP;
+            couldThreeBetBBvsMP += statistic.CouldThreeBetBBvsMP;
+
+            threeBetBBvsCO += statistic.ThreeBetBBvsCO;
+            couldThreeBetBBvsCO += statistic.CouldThreeBetBBvsCO;
+
+            threeBetBBvsBTN += statistic.ThreeBetBBvsBTN;
+            couldThreeBetBBvsBTN += statistic.CouldThreeBetBBvsBTN;
+
+            threeBetBBvsSB += statistic.ThreeBetBBvsSB;
+            couldThreeBetBBvsSB += statistic.CouldThreeBetBBvsSB;
+        }
+
+        private void Clean3BetVsRaiserInPos()
+        {
+            threeBetMPvsEP = 0;
+            couldThreeBetMPvsEP = 0;
+
+            threeBetCOvsEP = 0;
+            couldThreeBetCOvsEP = 0;
+
+            threeBetCOvsMP = 0;
+            couldThreeBetCOvsMP = 0;
+
+            threeBetBTNvsEP = 0;
+            couldThreeBetBTNvsEP = 0;
+
+            threeBetBTNvsMP = 0;
+            couldThreeBetBTNvsMP = 0;
+
+            threeBetBTNvsCO = 0;
+            couldThreeBetBTNvsCO = 0;
+
+            threeBetSBvsEP = 0;
+            couldThreeBetSBvsEP = 0;
+
+            threeBetSBvsMP = 0;
+            couldThreeBetSBvsMP = 0;
+
+            threeBetSBvsCO = 0;
+            couldThreeBetSBvsCO = 0;
+
+            threeBetSBvsBTN = 0;
+            couldThreeBetSBvsBTN = 0;
+
+            threeBetBBvsEP = 0;
+            couldThreeBetBBvsEP = 0;
+
+            threeBetBBvsMP = 0;
+            couldThreeBetBBvsMP = 0;
+
+            threeBetBBvsCO = 0;
+            couldThreeBetBBvsCO = 0;
+
+            threeBetBBvsBTN = 0;
+            couldThreeBetBBvsBTN = 0;
+
+            threeBetBBvsSB = 0;
+            couldThreeBetBBvsSB = 0;
+        }
+
+        private void Add3BetVsRaiserInPosIndicator(LightIndicators indicator)
+        {
+            threeBetMPvsEP += indicator.threeBetMPvsEP;
+            couldThreeBetMPvsEP += indicator.couldThreeBetMPvsEP;
+
+            threeBetCOvsEP += indicator.threeBetCOvsEP;
+            couldThreeBetCOvsEP += indicator.couldThreeBetCOvsEP;
+
+            threeBetCOvsMP += indicator.threeBetCOvsMP;
+            couldThreeBetCOvsMP += indicator.couldThreeBetCOvsMP;
+
+            threeBetBTNvsEP += indicator.threeBetBTNvsEP;
+            couldThreeBetBTNvsEP += indicator.couldThreeBetBTNvsEP;
+
+            threeBetBTNvsMP += indicator.threeBetBTNvsMP;
+            couldThreeBetBTNvsMP += indicator.couldThreeBetBTNvsMP;
+
+            threeBetBTNvsCO += indicator.threeBetBTNvsCO;
+            couldThreeBetBTNvsCO += indicator.couldThreeBetBTNvsCO;
+
+            threeBetSBvsEP += indicator.threeBetSBvsEP;
+            couldThreeBetSBvsEP += indicator.couldThreeBetSBvsEP;
+
+            threeBetSBvsMP += indicator.threeBetSBvsMP;
+            couldThreeBetSBvsMP += indicator.couldThreeBetSBvsMP;
+
+            threeBetSBvsCO += indicator.threeBetSBvsCO;
+            couldThreeBetSBvsCO += indicator.couldThreeBetSBvsCO;
+
+            threeBetSBvsBTN += indicator.threeBetSBvsBTN;
+            couldThreeBetSBvsBTN += indicator.couldThreeBetSBvsBTN;
+
+            threeBetBBvsEP += indicator.threeBetBBvsEP;
+            couldThreeBetBBvsEP += indicator.couldThreeBetBBvsEP;
+
+            threeBetBBvsMP += indicator.threeBetBBvsMP;
+            couldThreeBetBBvsMP += indicator.couldThreeBetBBvsMP;
+
+            threeBetBBvsCO += indicator.threeBetBBvsCO;
+            couldThreeBetBBvsCO += indicator.couldThreeBetBBvsCO;
+
+            threeBetBBvsBTN += indicator.threeBetBBvsBTN;
+            couldThreeBetBBvsBTN += indicator.couldThreeBetBBvsBTN;
+
+            threeBetBBvsSB += indicator.threeBetBBvsSB;
+            couldThreeBetBBvsSB += indicator.couldThreeBetBBvsSB;
+        }
+
+        #endregion
+
+        #region Fold to 3-Bet in Pos vs 3-bet Pos
+
+        [ProtoMember(80)]
+        protected int foldTo3BetInEPvs3BetMP;
+
+        [ProtoMember(81)]
+        protected int couldFoldTo3BetInEPvs3BetMP;
+
+        public override decimal FoldTo3BetInEPvs3BetMP => GetPercentage(foldTo3BetInEPvs3BetMP, couldFoldTo3BetInEPvs3BetMP);
+
+        [ProtoMember(82)]
+        protected int foldTo3BetInEPvs3BetCO;
+
+        [ProtoMember(83)]
+        protected int couldFoldTo3BetInEPvs3BetCO;
+
+        public override decimal FoldTo3BetInEPvs3BetCO => GetPercentage(foldTo3BetInEPvs3BetCO, couldFoldTo3BetInEPvs3BetCO);
+
+        [ProtoMember(84)]
+        protected int foldTo3BetInEPvs3BetBTN;
+
+        [ProtoMember(85)]
+        protected int couldFoldTo3BetInEPvs3BetBTN;
+
+        public override decimal FoldTo3BetInEPvs3BetBTN => GetPercentage(foldTo3BetInEPvs3BetBTN, couldFoldTo3BetInEPvs3BetBTN);
+
+        [ProtoMember(86)]
+        protected int foldTo3BetInEPvs3BetSB;
+
+        [ProtoMember(87)]
+        protected int couldFoldTo3BetInEPvs3BetSB;
+
+        public override decimal FoldTo3BetInEPvs3BetSB => GetPercentage(foldTo3BetInEPvs3BetSB, couldFoldTo3BetInEPvs3BetSB);
+
+        [ProtoMember(88)]
+        protected int foldTo3BetInEPvs3BetBB;
+
+        [ProtoMember(89)]
+        protected int couldFoldTo3BetInEPvs3BetBB;
+
+        public override decimal FoldTo3BetInEPvs3BetBB => GetPercentage(foldTo3BetInEPvs3BetBB, couldFoldTo3BetInEPvs3BetBB);
+
+        [ProtoMember(90)]
+        protected int foldTo3BetInMPvs3BetCO;
+
+        [ProtoMember(91)]
+        protected int couldFoldTo3BetInMPvs3BetCO;
+
+        public override decimal FoldTo3BetInMPvs3BetCO => GetPercentage(foldTo3BetInMPvs3BetCO, couldFoldTo3BetInMPvs3BetCO);
+
+        [ProtoMember(92)]
+        protected int foldTo3BetInMPvs3BetBTN;
+
+        [ProtoMember(93)]
+        protected int couldFoldTo3BetInMPvs3BetBTN;
+
+        public override decimal FoldTo3BetInMPvs3BetBTN => GetPercentage(foldTo3BetInMPvs3BetBTN, couldFoldTo3BetInMPvs3BetBTN);
+
+        [ProtoMember(94)]
+        protected int foldTo3BetInMPvs3BetSB;
+
+        [ProtoMember(95)]
+        protected int couldFoldTo3BetInMPvs3BetSB;
+
+        public override decimal FoldTo3BetInMPvs3BetSB => GetPercentage(foldTo3BetInMPvs3BetSB, couldFoldTo3BetInMPvs3BetSB);
+
+        [ProtoMember(96)]
+        protected int foldTo3BetInMPvs3BetBB;
+
+        [ProtoMember(97)]
+        protected int couldFoldTo3BetInMPvs3BetBB;
+
+        public override decimal FoldTo3BetInMPvs3BetBB => GetPercentage(foldTo3BetInMPvs3BetBB, couldFoldTo3BetInMPvs3BetBB);
+
+        [ProtoMember(98)]
+        protected int foldTo3BetInCOvs3BetBTN;
+
+        [ProtoMember(99)]
+        protected int couldFoldTo3BetInCOvs3BetBTN;
+
+        public override decimal FoldTo3BetInCOvs3BetBTN => GetPercentage(foldTo3BetInCOvs3BetBTN, couldFoldTo3BetInCOvs3BetBTN);
+
+        [ProtoMember(100)]
+        protected int foldTo3BetInCOvs3BetSB;
+
+        [ProtoMember(101)]
+        protected int couldFoldTo3BetInCOvs3BetSB;
+
+        public override decimal FoldTo3BetInCOvs3BetSB => GetPercentage(foldTo3BetInCOvs3BetSB, couldFoldTo3BetInCOvs3BetSB);
+
+        [ProtoMember(102)]
+        protected int foldTo3BetInCOvs3BetBB;
+
+        [ProtoMember(103)]
+        protected int couldFoldTo3BetInCOvs3BetBB;
+
+        public override decimal FoldTo3BetInCOvs3BetBB => GetPercentage(foldTo3BetInCOvs3BetBB, couldFoldTo3BetInCOvs3BetBB);
+
+        [ProtoMember(104)]
+        protected int foldTo3BetInBTNvs3BetSB;
+
+        [ProtoMember(105)]
+        protected int couldFoldTo3BetInBTNvs3BetSB;
+
+        public override decimal FoldTo3BetInBTNvs3BetSB => GetPercentage(foldTo3BetInBTNvs3BetSB, couldFoldTo3BetInBTNvs3BetSB);
+
+        [ProtoMember(106)]
+        protected int foldTo3BetInBTNvs3BetBB;
+
+        [ProtoMember(107)]
+        protected int couldFoldTo3BetInBTNvs3BetBB;
+
+        public override decimal FoldTo3BetInBTNvs3BetBB => GetPercentage(foldTo3BetInBTNvs3BetBB, couldFoldTo3BetInBTNvs3BetBB);
+
+        private void AddFoldTo3BetInPosVs3BetPosStatistic(Playerstatistic statistic)
+        {
+            foldTo3BetInEPvs3BetMP += statistic.FoldTo3BetInEPvs3BetMP;
+            couldFoldTo3BetInEPvs3BetMP += statistic.CouldFoldTo3BetInEPvs3BetMP;
+
+            foldTo3BetInEPvs3BetCO += statistic.FoldTo3BetInEPvs3BetCO;
+            couldFoldTo3BetInEPvs3BetCO += statistic.CouldFoldTo3BetInEPvs3BetCO;
+
+            foldTo3BetInEPvs3BetBTN += statistic.FoldTo3BetInEPvs3BetBTN;
+            couldFoldTo3BetInEPvs3BetBTN += statistic.CouldFoldTo3BetInEPvs3BetBTN;
+
+            foldTo3BetInEPvs3BetSB += statistic.FoldTo3BetInEPvs3BetSB;
+            couldFoldTo3BetInEPvs3BetSB += statistic.CouldFoldTo3BetInEPvs3BetSB;
+
+            foldTo3BetInEPvs3BetBB += statistic.FoldTo3BetInEPvs3BetBB;
+            couldFoldTo3BetInEPvs3BetBB += statistic.CouldFoldTo3BetInEPvs3BetBB;
+
+            foldTo3BetInMPvs3BetCO += statistic.FoldTo3BetInMPvs3BetCO;
+            couldFoldTo3BetInMPvs3BetCO += statistic.CouldFoldTo3BetInMPvs3BetCO;
+
+            foldTo3BetInMPvs3BetBTN += statistic.FoldTo3BetInMPvs3BetBTN;
+            couldFoldTo3BetInMPvs3BetBTN += statistic.CouldFoldTo3BetInMPvs3BetBTN;
+
+            foldTo3BetInMPvs3BetSB += statistic.FoldTo3BetInMPvs3BetSB;
+            couldFoldTo3BetInMPvs3BetSB += statistic.CouldFoldTo3BetInMPvs3BetSB;
+
+            foldTo3BetInMPvs3BetBB += statistic.FoldTo3BetInMPvs3BetBB;
+            couldFoldTo3BetInMPvs3BetBB += statistic.CouldFoldTo3BetInMPvs3BetBB;
+
+            foldTo3BetInCOvs3BetBTN += statistic.FoldTo3BetInCOvs3BetBTN;
+            couldFoldTo3BetInCOvs3BetBTN += statistic.CouldFoldTo3BetInCOvs3BetBTN;
+
+            foldTo3BetInCOvs3BetSB += statistic.FoldTo3BetInCOvs3BetSB;
+            couldFoldTo3BetInCOvs3BetSB += statistic.CouldFoldTo3BetInCOvs3BetSB;
+
+            foldTo3BetInCOvs3BetBB += statistic.FoldTo3BetInCOvs3BetBB;
+            couldFoldTo3BetInCOvs3BetBB += statistic.CouldFoldTo3BetInCOvs3BetBB;
+
+            foldTo3BetInBTNvs3BetSB += statistic.FoldTo3BetInBTNvs3BetSB;
+            couldFoldTo3BetInBTNvs3BetSB += statistic.CouldFoldTo3BetInBTNvs3BetSB;
+
+            foldTo3BetInBTNvs3BetBB += statistic.FoldTo3BetInBTNvs3BetBB;
+            couldFoldTo3BetInBTNvs3BetBB += statistic.CouldFoldTo3BetInBTNvs3BetBB;
+        }
+
+        private void CleanFoldTo3BetInPosVs3BetPos()
+        {
+            foldTo3BetInEPvs3BetMP = 0;
+            couldFoldTo3BetInEPvs3BetMP = 0;
+
+            foldTo3BetInEPvs3BetCO = 0;
+            couldFoldTo3BetInEPvs3BetCO = 0;
+
+            foldTo3BetInEPvs3BetBTN = 0;
+            couldFoldTo3BetInEPvs3BetBTN = 0;
+
+            foldTo3BetInEPvs3BetSB = 0;
+            couldFoldTo3BetInEPvs3BetSB = 0;
+
+            foldTo3BetInEPvs3BetBB = 0;
+            couldFoldTo3BetInEPvs3BetBB = 0;
+
+            foldTo3BetInMPvs3BetCO = 0;
+            couldFoldTo3BetInMPvs3BetCO = 0;
+
+            foldTo3BetInMPvs3BetBTN = 0;
+            couldFoldTo3BetInMPvs3BetBTN = 0;
+
+            foldTo3BetInMPvs3BetSB = 0;
+            couldFoldTo3BetInMPvs3BetSB = 0;
+
+            foldTo3BetInMPvs3BetBB = 0;
+            couldFoldTo3BetInMPvs3BetBB = 0;
+
+            foldTo3BetInCOvs3BetBTN = 0;
+            couldFoldTo3BetInCOvs3BetBTN = 0;
+
+            foldTo3BetInCOvs3BetSB = 0;
+            couldFoldTo3BetInCOvs3BetSB = 0;
+
+            foldTo3BetInCOvs3BetBB = 0;
+            couldFoldTo3BetInCOvs3BetBB = 0;
+
+            foldTo3BetInBTNvs3BetSB = 0;
+            couldFoldTo3BetInBTNvs3BetSB = 0;
+
+            foldTo3BetInBTNvs3BetBB = 0;
+            couldFoldTo3BetInBTNvs3BetBB = 0;
+        }
+
+        private void AddFoldTo3BetInPosVs3BetPosIndicator(LightIndicators indicator)
+        {
+            foldTo3BetInEPvs3BetMP += indicator.foldTo3BetInEPvs3BetMP;
+            couldFoldTo3BetInEPvs3BetMP += indicator.couldFoldTo3BetInEPvs3BetMP;
+
+            foldTo3BetInEPvs3BetCO += indicator.foldTo3BetInEPvs3BetCO;
+            couldFoldTo3BetInEPvs3BetCO += indicator.couldFoldTo3BetInEPvs3BetCO;
+
+            foldTo3BetInEPvs3BetBTN += indicator.foldTo3BetInEPvs3BetBTN;
+            couldFoldTo3BetInEPvs3BetBTN += indicator.couldFoldTo3BetInEPvs3BetBTN;
+
+            foldTo3BetInEPvs3BetSB += indicator.foldTo3BetInEPvs3BetSB;
+            couldFoldTo3BetInEPvs3BetSB += indicator.couldFoldTo3BetInEPvs3BetSB;
+
+            foldTo3BetInEPvs3BetBB += indicator.foldTo3BetInEPvs3BetBB;
+            couldFoldTo3BetInEPvs3BetBB += indicator.couldFoldTo3BetInEPvs3BetBB;
+
+            foldTo3BetInMPvs3BetCO += indicator.foldTo3BetInMPvs3BetCO;
+            couldFoldTo3BetInMPvs3BetCO += indicator.couldFoldTo3BetInMPvs3BetCO;
+
+            foldTo3BetInMPvs3BetBTN += indicator.foldTo3BetInMPvs3BetBTN;
+            couldFoldTo3BetInMPvs3BetBTN += indicator.couldFoldTo3BetInMPvs3BetBTN;
+
+            foldTo3BetInMPvs3BetSB += indicator.foldTo3BetInMPvs3BetSB;
+            couldFoldTo3BetInMPvs3BetSB += indicator.couldFoldTo3BetInMPvs3BetSB;
+
+            foldTo3BetInMPvs3BetBB += indicator.foldTo3BetInMPvs3BetBB;
+            couldFoldTo3BetInMPvs3BetBB += indicator.couldFoldTo3BetInMPvs3BetBB;
+
+            foldTo3BetInCOvs3BetBTN += indicator.foldTo3BetInCOvs3BetBTN;
+            couldFoldTo3BetInCOvs3BetBTN += indicator.couldFoldTo3BetInCOvs3BetBTN;
+
+            foldTo3BetInCOvs3BetSB += indicator.foldTo3BetInCOvs3BetSB;
+            couldFoldTo3BetInCOvs3BetSB += indicator.couldFoldTo3BetInCOvs3BetSB;
+
+            foldTo3BetInCOvs3BetBB += indicator.foldTo3BetInCOvs3BetBB;
+            couldFoldTo3BetInCOvs3BetBB += indicator.couldFoldTo3BetInCOvs3BetBB;
+
+            foldTo3BetInBTNvs3BetSB += indicator.foldTo3BetInBTNvs3BetSB;
+            couldFoldTo3BetInBTNvs3BetSB += indicator.couldFoldTo3BetInBTNvs3BetSB;
+
+            foldTo3BetInBTNvs3BetBB += indicator.foldTo3BetInBTNvs3BetBB;
+            couldFoldTo3BetInBTNvs3BetBB += indicator.couldFoldTo3BetInBTNvs3BetBB;
+        }
+
+        #endregion
+
+        [ProtoMember(108)]
+        protected int checkRaiseFlopAsPFR;
+
+        [ProtoMember(109)]
+        protected int couldCheckRaiseFlopAsPFR;
+
+        public override decimal CheckRaiseFlopAsPFR => GetPercentage(checkRaiseFlopAsPFR, couldCheckRaiseFlopAsPFR);
 
         #endregion
 
@@ -858,6 +1404,12 @@ namespace Model.Data
 
             faced3Bet += statistic.FacedthreebetpreflopVirtual;
             foldedTo3Bet += statistic.FoldedtothreebetpreflopVirtual;
+
+            raisedLimpers += statistic.IsRaisedLimpers;
+            couldRaiseLimpers += statistic.CouldRaiseLimpers;
+
+            checkRaiseFlopAsPFR += statistic.CheckRaiseFlopAsPFR;
+            couldCheckRaiseFlopAsPFR += statistic.CouldCheckRaiseFlopAsPFR;
         }
 
         public override void Clean()
@@ -919,6 +1471,14 @@ namespace Model.Data
             could4Bet = 0;
             faced3Bet = 0;
             foldedTo3Bet = 0;
+
+            raisedLimpers = 0;
+            couldRaiseLimpers = 0;
+
+            checkRaiseFlopAsPFR = 0;
+            couldCheckRaiseFlopAsPFR = 0;
+
+            Clean3BetVsRaiserInPos();
         }
 
         public virtual void AddIndicator(LightIndicators indicator)
@@ -936,6 +1496,8 @@ namespace Model.Data
             positionCouldFourBet?.Add(indicator.positionCouldFourBet);
             positionLimpMade?.Add(indicator.positionLimpMade);
             positionLimpPossible?.Add(indicator.positionLimpPossible);
+            positionRaiseLimpers?.Add(indicator.positionRaiseLimpers);
+            positionCouldRaiseLimpers?.Add(indicator.positionCouldRaiseLimpers);
 
             if (gameNumberMax < indicator.gameNumberMax)
             {
@@ -1006,6 +1568,14 @@ namespace Model.Data
 
             faced3Bet += indicator.faced3Bet;
             foldedTo3Bet += indicator.foldedTo3Bet;
+
+            raisedLimpers += indicator.raisedLimpers;
+            couldRaiseLimpers += indicator.couldRaiseLimpers;
+
+            checkRaiseFlopAsPFR += indicator.checkRaiseFlopAsPFR;
+            couldCheckRaiseFlopAsPFR += indicator.couldCheckRaiseFlopAsPFR;
+
+            Add3BetVsRaiserInPosIndicator(indicator);
         }
 
         public override int CompareTo(object obj)
