@@ -2262,6 +2262,123 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto ProbeBetTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ProbeBetTurn,
+                    Occurred = probeBetTurn,
+                    CouldOccurred = Source.CouldProbeBetTurn,
+                };
+            }
+        }
+
+        public virtual StatDto ProbeBetRiverObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ProbeBetRiver,
+                    Occurred = probeBetRiver,
+                    CouldOccurred = Source.CouldProbeBetRiver,
+                };
+            }
+        }
+
+        public virtual StatDto FloatFlopThenBetTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FloatFlopThenBetTurn,
+                    Occurred = floatFlopThenBetTurn,
+                    CouldOccurred = couldFloatFlopThenBetTurn,
+                };
+            }
+        }
+
+        public virtual StatDto FoldBBvsSBStealObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldBBvsSBSteal,
+                    Occurred = foldBBvsSBSteal,
+                    CouldOccurred = couldFoldBBvsSBSteal,
+                };
+            }
+        }
+
+        public virtual StatDto BetTurnWhenCheckedToSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BetTurnWhenCheckedToSRP,
+                    Occurred = betTurnWhenCheckedToSRP,
+                    CouldOccurred = couldBetTurnWhenCheckedToSRP,
+                };
+            }
+        }
+
+        public virtual StatDto BetRiverWhenCheckedToSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BetRiverWhenCheckedToSRP,
+                    Occurred = betRiverWhenCheckedToSRP,
+                    CouldOccurred = couldBetRiverWhenCheckedToSRP,
+                };
+            }
+        }
+
+        public virtual StatDto BetFlopWhenCheckedToIn3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BetFlopWhenCheckedToIn3BetPot,
+                    Occurred = betFlopWhenCheckedToIn3BetPot,
+                    CouldOccurred = couldBetFlopWhenCheckedToIn3BetPot,
+                };
+            }
+        }
+
+        public virtual StatDto BetTurnWhenCheckedToIn3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BetTurnWhenCheckedToIn3BetPot,
+                    Occurred = betTurnWhenCheckedToIn3BetPot,
+                    CouldOccurred = couldBetTurnWhenCheckedToIn3BetPot,
+                };
+            }
+        }
+
+        public virtual StatDto BetRiverWhenCheckedToIn3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BetRiverWhenCheckedToIn3BetPot,
+                    Occurred = betRiverWhenCheckedToIn3BetPot,
+                    CouldOccurred = couldBetRiverWhenCheckedToIn3BetPot,
+                };
+            }
+        }
+
         #region Positional
 
         #region Unopened Pot        
@@ -2728,6 +2845,209 @@ namespace Model.Data
                     Value = FourBetInSB,
                     Occurred = positionDidFourBet?.SB ?? 0,
                     CouldOccurred = positionCouldFourBet?.SB ?? 0,
+                };
+            }
+        }
+
+        #endregion
+
+        #region Positional Cold Call 3-Bet
+
+        public virtual StatDto ColdCall3BetInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCall3BetInBB,
+                    Occurred = positionDidColdCallThreeBet?.BB ?? 0,
+                    CouldOccurred = positionCouldColdCallThreeBet?.BB ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto ColdCall3BetInSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCall3BetInSB,
+                    Occurred = positionDidColdCallThreeBet?.SB ?? 0,
+                    CouldOccurred = positionCouldColdCallThreeBet?.SB ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto ColdCall3BetInMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCall3BetInMP,
+                    Occurred = positionDidColdCallThreeBet?.MP ?? 0,
+                    CouldOccurred = positionCouldColdCallThreeBet?.MP ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto ColdCall3BetInCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCall3BetInCO,
+                    Occurred = positionDidColdCallThreeBet?.CO ?? 0,
+                    CouldOccurred = positionCouldColdCallThreeBet?.CO ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto ColdCall3BetInBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCall3BetInBTN,
+                    Occurred = positionDidColdCallThreeBet?.BN ?? 0,
+                    CouldOccurred = positionCouldColdCallThreeBet?.BN ?? 0
+                };
+            }
+        }
+
+        #endregion
+
+        #region Positional Cold Call 4-Bet
+
+        public virtual StatDto ColdCall4BetInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCall4BetInBB,
+                    Occurred = positionDidColdCallFourBet?.BB ?? 0,
+                    CouldOccurred = positionCouldColdCallFourBet?.BB ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto ColdCall4BetInSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCall4BetInSB,
+                    Occurred = positionDidColdCallFourBet?.SB ?? 0,
+                    CouldOccurred = positionCouldColdCallFourBet?.SB ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto ColdCall4BetInMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCall4BetInMP,
+                    Occurred = positionDidColdCallFourBet?.MP ?? 0,
+                    CouldOccurred = positionCouldColdCallFourBet?.MP ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto ColdCall4BetInCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCall4BetInCO,
+                    Occurred = positionDidColdCallFourBet?.CO ?? 0,
+                    CouldOccurred = positionCouldColdCallFourBet?.CO ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto ColdCall4BetInBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ColdCall4BetInBTN,
+                    Occurred = positionDidColdCallFourBet?.BN ?? 0,
+                    CouldOccurred = positionCouldColdCallFourBet?.BN ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto DoubleBarrelSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = DoubleBarrelSRP,
+                    Occurred = doubleBarrelSRP,
+                    CouldOccurred = couldDoubleBarrelSRP
+                };
+            }
+        }
+
+        public virtual StatDto DoubleBarrel3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = DoubleBarrel3BetPot,
+                    Occurred = doubleBarrel3BetPot,
+                    CouldOccurred = couldDoubleBarrel3BetPot
+                };
+            }
+        }
+
+        public virtual StatDto TripleBarrelSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TripleBarrelSRP,
+                    Occurred = tripleBarrelSRP,
+                    CouldOccurred = couldTripleBarrelSRP
+                };
+            }
+        }
+
+        public virtual StatDto TripleBarrel3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TripleBarrel3BetPot,
+                    Occurred = tripleBarrel3BetPot,
+                    CouldOccurred = couldTripleBarrel3BetPot
+                };
+            }
+        }
+
+        public virtual StatDto CBetThenFoldFlopSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CBetThenFoldFlopSRP,
+                    Occurred = cBetThenFoldFlopSRP,
+                    CouldOccurred = couldCBetThenFoldFlopSRP
                 };
             }
         }

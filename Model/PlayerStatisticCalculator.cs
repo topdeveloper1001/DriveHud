@@ -133,6 +133,10 @@ namespace Model
 
             var numberOfActivePlayerOnFlop = parsedHand.NumPlayersActive - parsedHand.PreFlop.Count(x => x.IsFold);
 
+            var positionturnPlayer = GetInPositionPlayer(parsedHand, Street.Flop, player);
+
+            var flopInPosition = positionturnPlayer != null && positionturnPlayer.PlayerName == player;
+
             #region C-Bet
 
             var flopCBet = new ConditionalBet();
@@ -171,14 +175,17 @@ namespace Model
                             CalculateContinuationBet(riverCBet, rivers, player, raiser);
                         }
                     }
+
+                    // could probe turn bet
+                    if (raiser != player && !preflopInPosition)
+                    {
+                        stat.CouldProbeBetTurn = parsedHand.Flop.All(x => x.IsCheck) && CouldProbeBet(parsedHand.Turn, player, raiser) ? 1 : 0;
+                        stat.CouldProbeBetRiver = parsedHand.Flop.All(x => x.IsCheck) && parsedHand.Turn.All(x => x.IsCheck) && CouldProbeBet(parsedHand.River, player, raiser) ? 1 : 0;
+                    }
                 }
             }
 
             var turnIpPassFlopCbet = new ConditionalBet();
-
-            var positionturnPlayer = GetInPositionPlayer(parsedHand, Street.Flop, player);
-
-            var flopInPosition = positionturnPlayer != null && positionturnPlayer.PlayerName == player;
 
             if (positionturnPlayer != null && positionturnPlayer.PlayerName == player && flopCBet.Passed)
             {
@@ -911,7 +918,7 @@ namespace Model
 
             if (pfrOcurred && preflopInPosition && parsedHand.PreFlop.Count(x => x.IsRaise()) == 1 &&
                 parsedHand.Flop.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold))
-            {
+            {                
                 stat.CouldBetFlopWhenCheckedToSRP = 1;
                 stat.BetFlopWhenCheckedToSRP = betOnFlop ? 1 : 0;
             }
@@ -2408,6 +2415,16 @@ namespace Model
                 stat.Equity = creationInfo.EquityData[stat.PlayerName].Equity;
                 stat.EVDiff = creationInfo.EquityData[stat.PlayerName].EVDiff;
             }
+        }
+
+        private static bool CouldProbeBet(IEnumerable<HandAction> streetActions, string player, string raiser)
+        {
+            var priorToHeroAction = streetActions.TakeWhile(x => x.PlayerName != player);
+
+            return (!priorToHeroAction.Any() ||
+                priorToHeroAction.All(x => x.IsCheck || x.IsFold) &&
+                priorToHeroAction.All(x => x.PlayerName != raiser)) &&
+                streetActions.Any(x => x.PlayerName == player && (x.IsBet() || x.IsCheck));
         }
 
         #endregion

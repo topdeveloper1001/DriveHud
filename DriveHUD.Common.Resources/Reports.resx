@@ -870,4 +870,76 @@
   <data name="Reports_Column_CheckRaiseFlopAsPFR" xml:space="preserve">
     <value>Check-raise flop as PFR%</value>
   </data>
+  <data name="Reports_Column_BetFlopWhenCheckedToIn3BetPot" xml:space="preserve">
+    <value>Bet when checked to on Flop in 3-Bet Pot%</value>
+  </data>
+  <data name="Reports_Column_BetRiverWhenCheckedToIn3BetPot" xml:space="preserve">
+    <value>Bet when checked to on River in 3-Bet Pot%</value>
+  </data>
+  <data name="Reports_Column_BetRiverWhenCheckedToSRP" xml:space="preserve">
+    <value>Bet River when Checked to SRP%</value>
+  </data>
+  <data name="Reports_Column_BetTurnWhenCheckedToIn3BetPot" xml:space="preserve">
+    <value>Bet when checked to on Turn in 3-Bet Pot%</value>
+  </data>
+  <data name="Reports_Column_BetTurnWhenCheckedToSRP" xml:space="preserve">
+    <value>Bet Turn when Checked to SRP%</value>
+  </data>
+  <data name="Reports_Column_ColdCall3BetInBB" xml:space="preserve">
+    <value>Cold call 3-Bet in BB%</value>
+  </data>
+  <data name="Reports_Column_ColdCall3BetInBTN" xml:space="preserve">
+    <value>Cold call 3-Bet in BTN%</value>
+  </data>
+  <data name="Reports_Column_ColdCall3BetInCO" xml:space="preserve">
+    <value>Cold call 3-Bet in CO%</value>
+  </data>
+  <data name="Reports_Column_ColdCall3BetInMP" xml:space="preserve">
+    <value>Cold call 3-Bet in MP%</value>
+  </data>
+  <data name="Reports_Column_ColdCall3BetInSB" xml:space="preserve">
+    <value>Cold call 3-Bet in SB%</value>
+  </data>
+  <data name="Reports_Column_ColdCall4BetInBB" xml:space="preserve">
+    <value>Cold call 4-Bet in BB%</value>
+  </data>
+  <data name="Reports_Column_ColdCall4BetInBTN" xml:space="preserve">
+    <value>Cold call 4-Bet in BTN%</value>
+  </data>
+  <data name="Reports_Column_ColdCall4BetInCO" xml:space="preserve">
+    <value>Cold call 4-Bet in CO%</value>
+  </data>
+  <data name="Reports_Column_ColdCall4BetInMP" xml:space="preserve">
+    <value>Cold call 4-Bet in MP%</value>
+  </data>
+  <data name="Reports_Column_ColdCall4BetInSB" xml:space="preserve">
+    <value>Cold call 4-Bet in SB%</value>
+  </data>
+  <data name="Reports_Column_FloatFlopThenBetTurn" xml:space="preserve">
+    <value>Float Flop then Bet Turn%</value>
+  </data>
+  <data name="Reports_Column_FoldBBvsSBSteal" xml:space="preserve">
+    <value>Fold BB vs. SB Steal%</value>
+  </data>
+  <data name="Reports_Column_ProbeBetRiver" xml:space="preserve">
+    <value>Probe bet River%</value>
+  </data>
+  <data name="Reports_Column_ProbeBetTurn" xml:space="preserve">
+    <value>Probe bet Turn%</value>
+  </data>
+  <data name="Reports_Column_DoubleBarrelSRP" xml:space="preserve">
+    <value>Double Barrel SRP%</value>
+  </data>
+  <data name="Reports_Column_DoubleBarrel3BetPot" xml:space="preserve">
+    <value>Double Barrel 3-bet Pot%</value>
+  </data>
+  <data name="Reports_Column_TripleBarrel3BetPot" xml:space="preserve">
+    <value>Triple Barrel 3-bet Pot%</value>
+  </data>
+  <data name="Reports_Column_TripleBarrelSRP" xml:space="preserve">
+    <value>Triple Barrel SRP%</value>
+  </data>
+  <data name="Reposrts_Column_CBetThenFoldFlopSRP" xml:space="preserve">
+    <value>C-Bet then Fold Flop SRP%</value>
+  </data>
 </root>

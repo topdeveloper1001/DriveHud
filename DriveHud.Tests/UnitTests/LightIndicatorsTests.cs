@@ -101,6 +101,66 @@ namespace DriveHud.Tests.UnitTests
             public TestIndicators(IEnumerable<Playerstatistic> playerStatistic) : base(playerStatistic)
             {
             }
+
+            public override decimal ThreeBetMPvsEP => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetCOvsEP => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetCOvsMP => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetBTNvsEP => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetBTNvsMP => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetBTNvsCO => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetSBvsEP => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetSBvsMP => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetSBvsCO => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetSBvsBTN => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetBBvsEP => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetBBvsMP => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetBBvsCO => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetBBvsBTN => throw new System.NotImplementedException();
+
+            public override decimal ThreeBetBBvsSB => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInEPvs3BetMP => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInEPvs3BetCO => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInEPvs3BetBTN => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInEPvs3BetSB => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInEPvs3BetBB => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInMPvs3BetCO => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInMPvs3BetBTN => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInMPvs3BetSB => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInMPvs3BetBB => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInCOvs3BetBTN => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInCOvs3BetSB => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInCOvs3BetBB => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInBTNvs3BetSB => throw new System.NotImplementedException();
+
+            public override decimal FoldTo3BetInBTNvs3BetBB => throw new System.NotImplementedException();
+
+            public override decimal CheckRaiseFlopAsPFR => throw new System.NotImplementedException();
         }
     }
 }

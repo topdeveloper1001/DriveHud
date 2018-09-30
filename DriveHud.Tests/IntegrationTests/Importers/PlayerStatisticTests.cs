@@ -26,7 +26,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
     /// </summary>
     [TestFixture]
     class PlayerStatisticTests : PlayerStatisticBaseTests
-    {        
+    {
         protected override string TestDataFolder
         {
             get
@@ -1239,11 +1239,28 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         public void TotalWonAmountOnRiverCallIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.TotalWonAmountOnRiverCall, fileName, pokerSite, playerName, expected);
-        }   
+        }
 
+        [TestCase(@"Hero-CouldProbeBetTurn-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CouldProbeBetTurn-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-CouldProbeBetTurn-False-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
         public void CouldProbeBetTurnIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
+            AssertThatStatIsCalculated(x => x.CouldProbeBetTurn, fileName, pokerSite, playerName, expected);
+        }
 
+        [TestCase(@"Hero-CouldProbeBetRiver-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CouldProbeBetRiver-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void CouldProbeBetRiverIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldProbeBetRiver, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-DoubleBarrelSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-DoubleBarrelSRP-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void DoubleBarrelSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.DoubleBarrelSRP, fileName, pokerSite, playerName, expected);
         }
     }
 }

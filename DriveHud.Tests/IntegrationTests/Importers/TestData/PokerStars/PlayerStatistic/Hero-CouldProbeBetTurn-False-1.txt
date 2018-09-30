@@ -1,0 +1,40 @@
+PokerStars Game #47150143300:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:22:31 ET
+Table 'Libussa' 6-max Seat #3 is the button
+Seat 1: DeLepel ($200 in chips) 
+Seat 2: FIrmFighter ($203 in chips) 
+Seat 3: Hero ($373.60 in chips) 
+Seat 4: Desateur ($450.10 in chips) 
+Seat 5: stopme10 ($200 in chips) 
+Seat 6: Krilin736 ($205.25 in chips) 
+Desateur: posts small blind $1
+stopme10: posts big blind $2
+*** HOLE CARDS ***
+Krilin736: folds 
+DeLepel: folds 
+FIrmFighter: raises $4 to $6
+Hero: calls $6
+Desateur: folds 
+stopme10: calls $4
+*** FLOP *** [7s 8h Jh]
+stopme10: checks 
+FIrmFighter: checks 
+Hero: checks 
+*** TURN *** [7s 8h Jh] [7h]
+stopme10: checks 
+FIrmFighter: checks 
+Hero: bets $11
+stopme10: folds 
+FIrmFighter: folds 
+Uncalled bet ($11) returned to Hero
+Hero collected $18.05 from pot
+Hero: doesn't show hand 
+*** SUMMARY ***
+Total pot $19 | Rake $0.95 
+Board [7s 8h Jh 7h]
+Seat 1: DeLepel folded before Flop (didn't bet)
+Seat 2: FIrmFighter folded on the Turn
+Seat 3: Hero (button) collected ($18.05)
+Seat 4: Desateur (small blind) folded before Flop
+Seat 5: stopme10 (big blind) folded on the Turn
+Seat 6: Krilin736 folded before Flop (didn't bet)
+

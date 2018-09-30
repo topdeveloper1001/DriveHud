@@ -1325,6 +1325,146 @@ namespace Model.Data
 
         public override decimal CheckRaiseFlopAsPFR => GetPercentage(checkRaiseFlopAsPFR, couldCheckRaiseFlopAsPFR);
 
+        [ProtoMember(110)]
+        protected int probeBetTurn;
+
+        public override decimal ProbeBetTurn => GetPercentage(probeBetTurn, Source.CouldProbeBetTurn);
+
+        [ProtoMember(111)]
+        protected int probeBetRiver;
+
+        public override decimal ProbeBetRiver => GetPercentage(probeBetRiver, Source.CouldProbeBetRiver);
+
+        [ProtoMember(112)]
+        protected int floatFlopThenBetTurn;
+
+        [ProtoMember(113)]
+        protected int couldFloatFlopThenBetTurn;
+
+        public override decimal FloatFlopThenBetTurn => GetPercentage(floatFlopThenBetTurn, couldFloatFlopThenBetTurn);
+
+        [ProtoMember(114)]
+        protected int foldBBvsSBSteal;
+
+        [ProtoMember(115)]
+        protected int couldFoldBBvsSBSteal;
+
+        public override decimal FoldBBvsSBSteal => GetPercentage(foldBBvsSBSteal, couldFoldBBvsSBSteal);
+
+        [ProtoMember(116)]
+        protected int betTurnWhenCheckedToSRP;
+
+        [ProtoMember(117)]
+        protected int couldBetTurnWhenCheckedToSRP;
+
+        public override decimal BetTurnWhenCheckedToSRP => GetPercentage(betTurnWhenCheckedToSRP, couldBetTurnWhenCheckedToSRP);
+
+        [ProtoMember(118)]
+        protected int betRiverWhenCheckedToSRP;
+
+        [ProtoMember(119)]
+        protected int couldBetRiverWhenCheckedToSRP;
+
+        public override decimal BetRiverWhenCheckedToSRP => GetPercentage(betRiverWhenCheckedToSRP, couldBetRiverWhenCheckedToSRP);
+
+        [ProtoMember(126)]
+        protected int doubleBarrelSRP;
+
+        [ProtoMember(127)]
+        protected int couldDoubleBarrelSRP;
+
+        public override decimal DoubleBarrelSRP => GetPercentage(doubleBarrelSRP, couldDoubleBarrelSRP);
+
+        [ProtoMember(128)]
+        protected int doubleBarrel3BetPot;
+
+        [ProtoMember(129)]
+        protected int couldDoubleBarrel3BetPot;
+
+        public override decimal DoubleBarrel3BetPot => GetPercentage(doubleBarrel3BetPot, couldDoubleBarrel3BetPot);
+
+        [ProtoMember(130)]
+        protected int tripleBarrelSRP;
+
+        [ProtoMember(131)]
+        protected int couldTripleBarrelSRP;
+
+        public override decimal TripleBarrelSRP => GetPercentage(tripleBarrelSRP, couldTripleBarrelSRP);
+
+        [ProtoMember(132)]
+        protected int tripleBarrel3BetPot;
+
+        [ProtoMember(133)]
+        protected int couldTripleBarrel3BetPot;
+
+        public override decimal TripleBarrel3BetPot => GetPercentage(tripleBarrel3BetPot, couldTripleBarrel3BetPot);
+
+        [ProtoMember(134)]
+        protected int cBetThenFoldFlopSRP;
+
+        [ProtoMember(135)]
+        protected int couldCBetThenFoldFlopSRP;
+
+        public override decimal CBetThenFoldFlopSRP => GetPercentage(cBetThenFoldFlopSRP, couldCBetThenFoldFlopSRP);
+
+        #endregion
+
+        #region Bet When Checked to in 3Bet Pot
+
+        [ProtoMember(120)]
+        protected int betFlopWhenCheckedToIn3BetPot;
+
+        [ProtoMember(121)]
+        protected int couldBetFlopWhenCheckedToIn3BetPot;
+
+        public override decimal BetFlopWhenCheckedToIn3BetPot => GetPercentage(betFlopWhenCheckedToIn3BetPot, couldBetFlopWhenCheckedToIn3BetPot);
+
+        [ProtoMember(122)]
+        protected int betTurnWhenCheckedToIn3BetPot;
+
+        [ProtoMember(123)]
+        protected int couldBetTurnWhenCheckedToIn3BetPot;
+
+        public override decimal BetTurnWhenCheckedToIn3BetPot => GetPercentage(betTurnWhenCheckedToIn3BetPot, couldBetTurnWhenCheckedToIn3BetPot);
+
+        [ProtoMember(124)]
+        protected int betRiverWhenCheckedToIn3BetPot;
+
+        [ProtoMember(125)]
+        protected int couldBetRiverWhenCheckedToIn3BetPot;
+
+        public override decimal BetRiverWhenCheckedToIn3BetPot => GetPercentage(betRiverWhenCheckedToIn3BetPot, couldBetRiverWhenCheckedToIn3BetPot);
+
+        private void AddBetWhenCheckedToIn3BetPotStatistic(Playerstatistic statistic)
+        {
+            betFlopWhenCheckedToIn3BetPot += statistic.BetFlopWhenCheckedToIn3BetPot;
+            couldBetFlopWhenCheckedToIn3BetPot += statistic.CouldBetFlopWhenCheckedToIn3BetPot;
+            betTurnWhenCheckedToIn3BetPot += statistic.BetTurnWhenCheckedToIn3BetPot;
+            couldBetTurnWhenCheckedToIn3BetPot += statistic.CouldBetTurnWhenCheckedToIn3BetPot;
+            betRiverWhenCheckedToIn3BetPot += statistic.BetRiverWhenCheckedToIn3BetPot;
+            couldBetRiverWhenCheckedToIn3BetPot += statistic.CouldBetRiverWhenCheckedToIn3BetPot;
+        }
+
+        private void CleanBetWhenCheckedToIn3BetPot()
+        {
+            betFlopWhenCheckedToIn3BetPot = 0;
+            couldBetFlopWhenCheckedToIn3BetPot = 0;
+            betTurnWhenCheckedToIn3BetPot = 0;
+            couldBetTurnWhenCheckedToIn3BetPot = 0;
+            betRiverWhenCheckedToIn3BetPot = 0;
+            couldBetRiverWhenCheckedToIn3BetPot = 0;
+        }
+
+        private void AddBetWhenCheckedToIn3BetPotIndicator(LightIndicators indicator)
+        {
+            betFlopWhenCheckedToIn3BetPot += indicator.betFlopWhenCheckedToIn3BetPot;
+            couldBetFlopWhenCheckedToIn3BetPot += indicator.couldBetFlopWhenCheckedToIn3BetPot;
+            betTurnWhenCheckedToIn3BetPot += indicator.betTurnWhenCheckedToIn3BetPot;
+            couldBetTurnWhenCheckedToIn3BetPot += indicator.couldBetTurnWhenCheckedToIn3BetPot;
+            betRiverWhenCheckedToIn3BetPot += indicator.betRiverWhenCheckedToIn3BetPot;
+            couldBetRiverWhenCheckedToIn3BetPot += indicator.couldBetRiverWhenCheckedToIn3BetPot;
+        }
+
         #endregion
 
         #endregion
@@ -1410,6 +1550,37 @@ namespace Model.Data
 
             checkRaiseFlopAsPFR += statistic.CheckRaiseFlopAsPFR;
             couldCheckRaiseFlopAsPFR += statistic.CouldCheckRaiseFlopAsPFR;
+
+            probeBetTurn += statistic.ProbeBetTurn;
+            probeBetRiver += statistic.ProbeBetRiver;
+
+            floatFlopThenBetTurn += statistic.FloatFlopThenBetTurn;
+            couldFloatFlopThenBetTurn += statistic.CouldFloatFlopThenBetTurn;
+
+            foldBBvsSBSteal += statistic.FoldBBvsSBSteal;
+            couldFoldBBvsSBSteal += statistic.CouldFoldBBvsSBSteal;
+
+            betTurnWhenCheckedToSRP += statistic.BetTurnWhenCheckedToSRP;
+            couldBetTurnWhenCheckedToSRP += statistic.CouldBetTurnWhenCheckedToSRP;
+            betRiverWhenCheckedToSRP += statistic.BetRiverWhenCheckedToSRP;
+            couldBetRiverWhenCheckedToSRP += statistic.CouldBetRiverWhenCheckedToSRP;
+
+            doubleBarrelSRP += statistic.DoubleBarrelSRP;
+            couldDoubleBarrelSRP += statistic.CouldDoubleBarrelSRP;
+            doubleBarrel3BetPot += statistic.DoubleBarrel3BetPot;
+            couldDoubleBarrel3BetPot += statistic.CouldDoubleBarrel3BetPot;
+
+            tripleBarrelSRP += statistic.TripleBarrelSRP;
+            couldTripleBarrelSRP += statistic.CouldTripleBarrelSRP;
+            tripleBarrel3BetPot += statistic.TripleBarrel3BetPot;
+            couldTripleBarrel3BetPot += statistic.CouldTripleBarrel3BetPot;
+
+            cBetThenFoldFlopSRP += statistic.CBetThenFoldFlopSRP;
+            couldCBetThenFoldFlopSRP += statistic.CouldCBetThenFoldFlopSRP;
+
+            Add3BetVsRaiserInPosStatistic(statistic);
+            AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
+            AddBetWhenCheckedToIn3BetPotStatistic(statistic);
         }
 
         public override void Clean()
@@ -1478,7 +1649,36 @@ namespace Model.Data
             checkRaiseFlopAsPFR = 0;
             couldCheckRaiseFlopAsPFR = 0;
 
+            probeBetTurn = 0;
+            probeBetRiver = 0;
+
+            floatFlopThenBetTurn = 0;
+            couldFloatFlopThenBetTurn = 0;
+
+            foldBBvsSBSteal = 0;
+            couldFoldBBvsSBSteal = 0;
+
+            betTurnWhenCheckedToSRP = 0;
+            couldBetTurnWhenCheckedToSRP = 0;
+            betRiverWhenCheckedToSRP = 0;
+            couldBetRiverWhenCheckedToSRP = 0;
+
+            doubleBarrelSRP = 0;
+            couldDoubleBarrelSRP = 0;
+            doubleBarrel3BetPot = 0;
+            couldDoubleBarrel3BetPot = 0;
+
+            tripleBarrelSRP = 0;
+            couldTripleBarrelSRP = 0;
+            tripleBarrel3BetPot = 0;
+            couldTripleBarrel3BetPot = 0;
+
+            cBetThenFoldFlopSRP = 0;
+            couldCBetThenFoldFlopSRP = 0;
+
             Clean3BetVsRaiserInPos();
+            CleanFoldTo3BetInPosVs3BetPos();
+            CleanBetWhenCheckedToIn3BetPot();
         }
 
         public virtual void AddIndicator(LightIndicators indicator)
@@ -1498,6 +1698,10 @@ namespace Model.Data
             positionLimpPossible?.Add(indicator.positionLimpPossible);
             positionRaiseLimpers?.Add(indicator.positionRaiseLimpers);
             positionCouldRaiseLimpers?.Add(indicator.positionCouldRaiseLimpers);
+            positionDidColdCallThreeBet?.Add(indicator.positionDidColdCallThreeBet);
+            positionCouldColdCallThreeBet?.Add(indicator.positionCouldColdCallThreeBet);
+            positionDidColdCallFourBet?.Add(indicator.positionDidColdCallFourBet);
+            positionCouldColdCallFourBet?.Add(indicator.positionCouldColdCallFourBet);
 
             if (gameNumberMax < indicator.gameNumberMax)
             {
@@ -1575,7 +1779,36 @@ namespace Model.Data
             checkRaiseFlopAsPFR += indicator.checkRaiseFlopAsPFR;
             couldCheckRaiseFlopAsPFR += indicator.couldCheckRaiseFlopAsPFR;
 
+            probeBetTurn += indicator.probeBetTurn;
+            probeBetRiver += indicator.probeBetRiver;
+
+            floatFlopThenBetTurn += indicator.floatFlopThenBetTurn;
+            couldFloatFlopThenBetTurn += indicator.couldFloatFlopThenBetTurn;
+
+            foldBBvsSBSteal += indicator.foldBBvsSBSteal;
+            couldFoldBBvsSBSteal += indicator.couldFoldBBvsSBSteal;
+
+            betTurnWhenCheckedToSRP += indicator.betTurnWhenCheckedToSRP;
+            couldBetTurnWhenCheckedToSRP += indicator.couldBetTurnWhenCheckedToSRP;
+            betRiverWhenCheckedToSRP += indicator.betRiverWhenCheckedToSRP;
+            couldBetRiverWhenCheckedToSRP += indicator.couldBetRiverWhenCheckedToSRP;
+
+            doubleBarrelSRP += indicator.doubleBarrelSRP;
+            couldDoubleBarrelSRP += indicator.couldDoubleBarrelSRP;
+            doubleBarrel3BetPot += indicator.doubleBarrel3BetPot;
+            couldDoubleBarrel3BetPot += indicator.couldDoubleBarrel3BetPot;
+
+            tripleBarrelSRP += indicator.tripleBarrelSRP;
+            couldTripleBarrelSRP += indicator.couldTripleBarrelSRP;
+            tripleBarrel3BetPot += indicator.tripleBarrel3BetPot;
+            couldTripleBarrel3BetPot += indicator.couldTripleBarrel3BetPot;
+
+            cBetThenFoldFlopSRP += indicator.cBetThenFoldFlopSRP;
+            couldCBetThenFoldFlopSRP += indicator.couldCBetThenFoldFlopSRP;
+
             Add3BetVsRaiserInPosIndicator(indicator);
+            AddFoldTo3BetInPosVs3BetPosIndicator(indicator);
+            AddBetWhenCheckedToIn3BetPotIndicator(indicator);
         }
 
         public override int CompareTo(object obj)

@@ -1524,9 +1524,81 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region Others
+
         public virtual int CheckRaiseFlopAsPFR => DidFlopCheckRaise != 0 && Pfrhands != 0 ? 1 : 0;
 
         public virtual int CouldCheckRaiseFlopAsPFR => CouldFlopCheckRaise != 0 && Pfrhands != 0 ? 1 : 0;
+
+        public virtual int ProbeBetTurn => CouldProbeBetTurn != 0 && DidTurnBet != 0 ? 1 : 0;
+
+        public virtual int ProbeBetRiver => CouldProbeBetRiver != 0 && DidRiverBet != 0 ? 1 : 0;
+
+        public virtual int FloatFlopThenBetTurn => PlayedFloatFlop != 0 && DidTurnBet != 0 ? 1 : 0;
+
+        public virtual int CouldFloatFlopThenBetTurn => PlayedFloatFlop != 0 && CouldTurnBet != 0 ? 1 : 0;
+
+        public virtual int FoldBBvsSBSteal => Bigblindstealfolded != 0 && FirstRaiserPosition.IsSBPosition() ? 1 : 0;
+
+        public virtual int CouldFoldBBvsSBSteal => Bigblindstealfaced != 0 && FirstRaiserPosition.IsSBPosition() ? 1 : 0;
+
+        public virtual int CouldBetTurnWhenCheckedToSRP => CouldBetFlopWhenCheckedToSRP != 0 && DidCheckFlop != 0 && CouldTurnBet != 0 ? 1 : 0;
+
+        public virtual int BetTurnWhenCheckedToSRP => CouldBetFlopWhenCheckedToSRP != 0 && DidCheckFlop != 0 && DidTurnBet != 0 ? 1 : 0;
+
+        public virtual int CouldBetRiverWhenCheckedToSRP => CouldBetTurnWhenCheckedToSRP != 0 && DidCheckTurn != 0 && CouldRiverBet != 0 ? 1 : 0;
+
+        public virtual int BetRiverWhenCheckedToSRP => CouldBetTurnWhenCheckedToSRP != 0 && DidCheckTurn != 0 && DidRiverBet != 0 ? 1 : 0;
+
+        public virtual int DoubleBarrelSRP => Turncontinuationbetmade != 0 && FirstRaiser != 0 &&
+            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+
+        public virtual int CouldDoubleBarrelSRP => Turncontinuationbetpossible != 0 && FirstRaiser != 0 &&
+           FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+
+        public virtual int DoubleBarrel3BetPot => Turncontinuationbetmade != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||                    
+            (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+
+        public virtual int CouldDoubleBarrel3BetPot => Turncontinuationbetpossible != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||                 
+            (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+
+        public virtual int TripleBarrelSRP => Rivercontinuationbetmade != 0 && FirstRaiser != 0 &&          
+            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+
+        public virtual int CouldTripleBarrelSRP => Rivercontinuationbetpossible != 0 && FirstRaiser != 0 &&           
+            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+
+        public virtual int TripleBarrel3BetPot => Rivercontinuationbetmade != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||                
+            (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+
+        public virtual int CouldTripleBarrel3BetPot => Rivercontinuationbetpossible != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||                 
+            (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+
+        public virtual int CBetThenFoldFlopSRP => Flopcontinuationbetmade != 0 && BetFoldFlopPfrRaiser != 0 && FirstRaiser != 0 &&
+            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+
+        public virtual int CouldCBetThenFoldFlopSRP => Flopcontinuationbetpossible != 0 && CouldBetFoldFlopPfrRaiser != 0 && FirstRaiser != 0 &&
+           FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+
+        #endregion
+
+        #region Bet When Checked to in 3Bet Pot
+
+        public virtual int BetFlopWhenCheckedToIn3BetPot => DidFlopBet != 0 && PreflopIP != 0 && (Didthreebet != 0 || FacedthreebetpreflopVirtual != 0 ||
+                    (Couldthreebet != 0 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+
+        public virtual int CouldBetFlopWhenCheckedToIn3BetPot => CouldFlopBet != 0 && PreflopIP != 0 && (Didthreebet != 0 || FacedthreebetpreflopVirtual != 0 ||
+                   (Couldthreebet != 0 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+
+        public virtual int BetTurnWhenCheckedToIn3BetPot => DidTurnBet != 0 && DidCheckFlop != 0 && CouldBetFlopWhenCheckedToIn3BetPot != 0 ? 1 : 0;
+
+        public virtual int CouldBetTurnWhenCheckedToIn3BetPot => CouldTurnBet != 0 && DidCheckFlop != 0 && CouldBetFlopWhenCheckedToIn3BetPot != 0 ? 1 : 0;
+
+        public virtual int BetRiverWhenCheckedToIn3BetPot => DidRiverBet != 0 && DidCheckTurn != 0 && CouldBetTurnWhenCheckedToIn3BetPot != 0 ? 1 : 0;
+
+        public virtual int CouldBetRiverWhenCheckedToIn3BetPot => CouldRiverBet != 0 && DidCheckTurn != 0 && CouldBetTurnWhenCheckedToIn3BetPot != 0 ? 1 : 0;
+
+        #endregion      
 
         #endregion
 
@@ -1567,6 +1639,54 @@ namespace DriveHUD.Entities
         public virtual int CouldColdCallCO => Position.IsCOPosition() ? Couldcoldcall : 0;
 
         public virtual int CouldColdCallBN => Position.IsBTNPosition() ? Couldcoldcall : 0;
+
+        #endregion
+
+        #region Positional Cold call 3-Bet 
+
+        public virtual int DidColdCall3BetInBB => Position.IsBBPosition() ? DidColdCallThreeBet : 0;
+
+        public virtual int DidColdCall3BetInSB => Position.IsSBPosition() ? DidColdCallThreeBet : 0;
+
+        public virtual int DidColdCall3BetInMP => Position.IsMPPosition() ? DidColdCallThreeBet : 0;
+
+        public virtual int DidColdCall3BetInCO => Position.IsCOPosition() ? DidColdCallThreeBet : 0;
+
+        public virtual int DidColdCall3BetInBTN => Position.IsBTNPosition() ? DidColdCallThreeBet : 0;
+
+        public virtual int CouldColdCall3BetInBB => Position.IsBBPosition() ? CouldColdCallThreeBet : 0;
+
+        public virtual int CouldColdCall3BetInSB => Position.IsSBPosition() ? CouldColdCallThreeBet : 0;
+
+        public virtual int CouldColdCall3BetInMP => Position.IsMPPosition() ? CouldColdCallThreeBet : 0;
+
+        public virtual int CouldColdCall3BetInCO => Position.IsCOPosition() ? CouldColdCallThreeBet : 0;
+
+        public virtual int CouldColdCall3BetInBTN => Position.IsBTNPosition() ? CouldColdCallThreeBet : 0;
+
+        #endregion
+
+        #region Positional Cold call 4-Bet 
+
+        public virtual int DidColdCall4BetInBB => Position.IsBBPosition() ? DidColdCallFourBet : 0;
+
+        public virtual int DidColdCall4BetInSB => Position.IsSBPosition() ? DidColdCallFourBet : 0;
+
+        public virtual int DidColdCall4BetInMP => Position.IsMPPosition() ? DidColdCallFourBet : 0;
+
+        public virtual int DidColdCall4BetInCO => Position.IsCOPosition() ? DidColdCallFourBet : 0;
+
+        public virtual int DidColdCall4BetInBTN => Position.IsBTNPosition() ? DidColdCallFourBet : 0;
+
+        public virtual int CouldColdCall4BetInBB => Position.IsBBPosition() ? CouldColdCallFourBet : 0;
+
+        public virtual int CouldColdCall4BetInSB => Position.IsSBPosition() ? CouldColdCallFourBet : 0;
+
+        public virtual int CouldColdCall4BetInMP => Position.IsMPPosition() ? CouldColdCallFourBet : 0;
+
+        public virtual int CouldColdCall4BetInCO => Position.IsCOPosition() ? CouldColdCallFourBet : 0;
+
+        public virtual int CouldColdCall4BetInBTN => Position.IsBTNPosition() ? CouldColdCallFourBet : 0;
 
         #endregion
 
