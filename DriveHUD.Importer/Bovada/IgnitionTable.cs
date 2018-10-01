@@ -189,12 +189,16 @@ namespace DriveHUD.Importers.Bovada
 
         protected override void ParseGidInfo(BovadaCommandDataObject cmdObj)
         {
-            if (!cmdObj.gid.Equals("Unjoined", StringComparison.OrdinalIgnoreCase))
+            if (!cmdObj.gid.Equals("Unjoined", StringComparison.OrdinalIgnoreCase) &&
+                !cmdObj.gid.Equals("disconnecting", StringComparison.OrdinalIgnoreCase))
             {
                 return;
             }
 
-            LogProvider.Log.Info($"Unjoined table [{TableName}, {TableId}, {TableIndex}, {WindowHandle}]. [{Identifier}]");
+            if (WindowHandle != IntPtr.Zero || !string.IsNullOrEmpty(TableName))
+            {
+                LogProvider.Log.Info($"Unjoined table [{TableName}, {TableId}, {TableIndex}, {WindowHandle}]. [{Identifier}]");
+            }
 
             ignitionWindowCache.RemoveWindow(WindowHandle);
 
