@@ -441,12 +441,7 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         /// <param name="cmdObj">Command data object</param>
         protected virtual void ProcessCmdObject(BovadaCommandDataObject cmdObj)
-        {
-            if (cmdObj.gid != null)
-            {
-                ParseGidInfo(cmdObj);
-            }
-
+        {            
             if (cmdObj.pid == null)
             {
                 return;

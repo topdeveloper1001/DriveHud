@@ -60,6 +60,18 @@ namespace DriveHUD.Importers.Bovada
         /// <param name="cmdObj">Command data object</param>
         protected override void ProcessCmdObject(BovadaCommandDataObject cmdObj)
         {
+            if (cmdObj.gid != null)
+            {
+                ParseGidInfo(cmdObj);
+                return;
+            }
+
+            if (cmdObj.pid != null &&
+                cmdObj.pid.Equals("PING", StringComparison.OrdinalIgnoreCase))
+            {
+                return;
+            }
+
             SetWindowHandle();
             base.ProcessCmdObject(cmdObj);
             SetBaseTableData();
