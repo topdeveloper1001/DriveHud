@@ -58,7 +58,7 @@ namespace DriveHUD.Application.Security
             var cashBuyin = currencyRates != null && currencyRates.Rates != null && currencyRates.Rates.TryGetValue(gameInfo.Currency, out decimal cashRate) ?
                 cashRate * gameInfo.CashBuyIn : gameInfo.CashBuyIn;
 
-            var tournamentBuyIn = currencyRates != null && currencyRates.Rates != null && currencyRates.Rates.TryGetValue(gameInfo.Currency, out decimal tourneyRate) ?
+            var tournamentBuyIn = currencyRates != null && currencyRates.Rates != null && currencyRates.Rates.TryGetValue(gameInfo.TournamentCurrency, out decimal tourneyRate) ?
                 tourneyRate * gameInfo.TournamentBuyIn : gameInfo.TournamentBuyIn;
 
             var match = allowedGameTypes.Contains(gameInfo.GameType) &&
