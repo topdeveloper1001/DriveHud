@@ -23,14 +23,22 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
     class IPokerBovadaFastParserTests : IPokerBaseTests
     {
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-positions.xml", "P2_127068GC", 0, HandActionType.FOLD, Street.Preflop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-positions.xml", "Hero", 0, HandActionType.FOLD, Street.Preflop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-positions.xml", "P4_753926TU", 0, HandActionType.FOLD, Street.Preflop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-positions.xml", "P5_530485GH", 0, HandActionType.FOLD, Street.Preflop, 1)]
-        public void ZoneActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-positions.xml", "P2_127068GC", 0, HandActionType.FOLD, Street.Preflop, 1, 3)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-positions.xml", "Hero", 0, HandActionType.FOLD, Street.Preflop, 1, 4)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-positions.xml", "P4_753926TU", 0, HandActionType.FOLD, Street.Preflop, 1, 5)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-positions.xml", "P5_530485GH", 0, HandActionType.FOLD, Street.Preflop, 1, 6)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-2-players.xml", "Hero", -9.5, HandActionType.RAISE, Street.Preflop, 1, 3)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-2-players.xml", "P1-243595JX", -14, HandActionType.RAISE, Street.Preflop, 1, 4)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-2-players.xml", "P1-243595JX", 0, HandActionType.CHECK, Street.Flop, 1, 7)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-2-players.xml", "Hero", -40, HandActionType.BET, Street.Flop, 1, 8)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\ign-zone-2-players.xml", "P1-243595JX", -40, HandActionType.CALL, Street.Flop, 1, 9)]
+        public void ZoneActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions, int actionNo)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
-            var actions = handHistory.HandActions.Where(x => x.Street == street && x.PlayerName.Equals(playerName) && x.HandActionType == handActionType && x.Amount == amount).ToArray();
+            var actions = handHistory.HandActions
+                .Select((x, index) => new { Action = x, Number = index + 1 })
+                .Where(x => x.Action.Street == street && x.Action.PlayerName.Equals(playerName) &&
+                    x.Action.HandActionType == handActionType && x.Action.Amount == amount && x.Number == actionNo).ToArray();
 
             Assert.That(actions.Length, Is.EqualTo(numberOfActions));
         }
