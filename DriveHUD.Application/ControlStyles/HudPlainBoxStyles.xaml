@@ -116,6 +116,9 @@
                             <Setter
                                 Property="Source"
                                 Value="{Binding DataContext.Parent.PlayerIcon, Converter={dh:StringToImageSourceConverter}, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}" />
+                            <Setter
+                                Property="ToolTip"
+                                Value="{Binding DataContext.Parent.PlayerIconToolTip, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, AncestorLevel=1}}" />
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
