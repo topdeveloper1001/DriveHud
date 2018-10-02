@@ -60,6 +60,18 @@ namespace DriveHUD.Importers.Bovada
         /// <param name="cmdObj">Command data object</param>
         protected override void ProcessCmdObject(BovadaCommandDataObject cmdObj)
         {
+            if (cmdObj.gid != null)
+            {
+                ParseGidInfo(cmdObj);
+                return;
+            }
+
+            if (cmdObj.pid != null &&
+                cmdObj.pid.Equals("PING", StringComparison.OrdinalIgnoreCase))
+            {
+                return;
+            }
+
             SetWindowHandle();
             base.ProcessCmdObject(cmdObj);
             SetBaseTableData();
@@ -189,12 +201,16 @@ namespace DriveHUD.Importers.Bovada
 
         protected override void ParseGidInfo(BovadaCommandDataObject cmdObj)
         {
-            if (!cmdObj.gid.Equals("Unjoined", StringComparison.OrdinalIgnoreCase))
+            if (!cmdObj.gid.Equals("Unjoined", StringComparison.OrdinalIgnoreCase) &&
+                !cmdObj.gid.Equals("disconnecting", StringComparison.OrdinalIgnoreCase))
             {
                 return;
             }
 
-            LogProvider.Log.Info($"Unjoined table [{TableName}, {TableId}, {TableIndex}, {WindowHandle}]. [{Identifier}]");
+            if (WindowHandle != IntPtr.Zero || !string.IsNullOrEmpty(TableName))
+            {
+                LogProvider.Log.Info($"Unjoined table [{TableName}, {TableId}, {TableIndex}, {WindowHandle}]. [{Identifier}]");
+            }
 
             ignitionWindowCache.RemoveWindow(WindowHandle);
 
