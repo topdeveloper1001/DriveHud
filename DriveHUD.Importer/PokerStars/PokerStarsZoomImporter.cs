@@ -63,10 +63,9 @@ namespace DriveHUD.Importers.PokerStars
 
         protected override void DoImport()
         {
-            var auditPath = PokerStarsConfiguration.GetAuditPath();
             var dataManager = ServiceLocator.Current.GetInstance<IPokerStarsZoomDataManager>();
 
-            DirectoryInfo auditDirectory = null;
+            string auditDirectory = null;
 
             while (!cancellationTokenSource.IsCancellationRequested)
             {
@@ -81,6 +80,7 @@ namespace DriveHUD.Importers.PokerStars
                     {
                         if (pokerClientProcess != null && pokerClientProcess.HasExited)
                         {
+                            auditDirectory = null;
                             LogProvider.Log.Info(this, $"Process \"{ProcessName}\" has exited. [{Identifier}]");
                         }
 
@@ -103,12 +103,17 @@ namespace DriveHUD.Importers.PokerStars
 
                     if (auditDirectory == null)
                     {
-                        auditDirectory = new DirectoryInfo(auditPath);
+                        auditDirectory = PokerStarsConfiguration.GetAuditPath(pokerClientProcess);
+
+                        if (!Directory.Exists(auditDirectory))
+                        {
+                            Directory.CreateDirectory(auditDirectory);
+                        }
                     }
 
-                    if (auditDirectory.Exists)
+                    if (Directory.Exists(auditDirectory))
                     {
-                        var auditFiles = auditDirectory.GetFiles(AuditFileFilter);
+                        var auditFiles = Directory.GetFiles(auditDirectory, AuditFileFilter);
 
                         foreach (var auditFile in auditFiles)
                         {
@@ -130,7 +135,7 @@ namespace DriveHUD.Importers.PokerStars
                     }
                 }
                 catch (Exception e)
-                {                    
+                {
                     LogProvider.Log.Error(this, $"Failed to process audit files [{Identifier}]", e);
                 }
             }
@@ -138,11 +143,11 @@ namespace DriveHUD.Importers.PokerStars
             RaiseProcessStopped();
         }
 
-        private PokerStarsZoomDataObject ParseAuditFile(FileInfo auditFile)
+        private PokerStarsZoomDataObject ParseAuditFile(string auditFile)
         {
             try
             {
-                var auditFileContent = File.ReadAllText(auditFile.FullName);
+                var auditFileContent = File.ReadAllText(auditFile);
 
                 if (string.IsNullOrEmpty(auditFileContent))
                 {
@@ -245,7 +250,7 @@ namespace DriveHUD.Importers.PokerStars
             }
             catch (Exception ex)
             {
-                LogProvider.Log.Error(this, $"Could not parse audit file at {auditFile.FullName} [{Identifier}]", ex);
+                LogProvider.Log.Error(this, $"Could not parse audit file at {auditFile} [{Identifier}]", ex);
             }
 
             return null;

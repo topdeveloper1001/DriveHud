@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace Model.Site
 {
@@ -440,6 +441,33 @@ namespace Model.Site
             return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "PokerStars", "Audit");
         }
 
+        public static string GetAuditPath(Process pokerStarsProcess)
+        {
+            if (pokerStarsProcess == null)
+            {
+                return GetAuditPath();
+            }
+
+            try
+            {
+                var pokerStarsFolder = Path.GetDirectoryName(pokerStarsProcess.MainModule.FileName);
+                var auditIniFile = Path.Combine(pokerStarsFolder, auditIni);
+
+                if (!File.Exists(auditIniFile))
+                {
+                    return GetAuditPath();
+                }
+
+                var path = IniFileHelpers.ReadValue(AuditSection, PathKey, auditIniFile);
+
+                return !string.IsNullOrEmpty(path) ? path : GetAuditPath();
+            }
+            catch
+            {
+                return GetAuditPath();
+            }
+        }
+
         private void InstallAuditIni(SiteValidationResult validationResult)
         {
             try
@@ -448,14 +476,20 @@ namespace Model.Site
 
                 var isPokerStarsRunning = IsPokerStarsRunning();
 
+                var auditPath = GetAuditPath();
+
+                if (!Directory.Exists(auditPath))
+                {
+                    Directory.CreateDirectory(auditPath);
+                    LogProvider.Log.Info($"Created '{auditPath}' folder");
+                }
+
                 foreach (var installPath in installPaths)
                 {
                     var launchFile = Path.Combine(installPath.FullName, psClientLaunchFile);
                     TryLogPSLaunchFileVersion(launchFile);
 
                     var auditIniFile = Path.Combine(installPath.FullName, auditIni);
-
-                    var auditPath = GetAuditPath();
 
                     if (File.Exists(auditIniFile))
                     {
@@ -500,7 +534,7 @@ namespace Model.Site
 
                 if (string.IsNullOrEmpty(enabled) || !path.Equals(auditPath, StringComparison.OrdinalIgnoreCase))
                 {
-                    IniFileHelpers.WriteValue(AuditSection, PathKey, auditPath, auditIniFile);
+                    LogProvider.Log.Warn($"PS audit path '{path}' isn't equal to default '{auditPath}' in '{auditIniFile}'");
                 }
             }
             catch (Exception ex)
