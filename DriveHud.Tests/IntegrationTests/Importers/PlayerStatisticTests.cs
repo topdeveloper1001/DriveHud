@@ -1262,5 +1262,33 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         {
             AssertThatStatIsCalculated(x => x.DoubleBarrelSRP, fileName, pokerSite, playerName, expected);
         }
+
+        [TestCase(@"Hero-FacedProbeBetTurn-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FacedProbeBetTurn-True-2.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FacedProbeBetTurn-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void FacedProbeBetTurnIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacedProbeBetTurn, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-FoldedToProbeBetTurn-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FoldedToProbeBetTurn-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void FoldedToProbeBetTurnIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldedToProbeBetTurn, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-FacedProbeBetRiver-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)] 
+        public void FacedProbeBetRiverIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacedProbeBetRiver, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-FoldedToProbeBetRiver-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FoldedToProbeBetRiver-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void FoldedToProbeBetRiverIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldedToProbeBetRiver, fileName, pokerSite, playerName, expected);
+        }
     }
 }

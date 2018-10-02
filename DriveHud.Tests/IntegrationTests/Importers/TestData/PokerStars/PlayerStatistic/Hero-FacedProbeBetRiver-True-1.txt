@@ -1,0 +1,40 @@
+PokerStars Game #47147974112:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 5:35:22 ET
+Table 'Melete II' 6-max Seat #4 is the button
+Seat 1: Hero ($203 in chips) 
+Seat 2: pobolero ($228.10 in chips) 
+Seat 3: LuckKi$$Me ($208.40 in chips) 
+Seat 4: Desateur ($583.65 in chips) 
+Seat 5: iLeftFTP ($206 in chips) 
+Seat 6: forty111999 ($87.85 in chips) 
+iLeftFTP: posts small blind $1
+forty111999: posts big blind $2
+*** HOLE CARDS ***
+Hero: raises $4 to $6
+pobolero: folds 
+LuckKi$$Me: folds 
+Desateur: folds 
+iLeftFTP: folds 
+forty111999: calls $4
+*** FLOP *** [9h 7s 8s]
+forty111999: checks 
+Hero: checks 
+*** TURN *** [9h 7s 8s] [Ks]
+forty111999: checks 
+Hero: checks 
+*** RIVER *** [9h 7s 8s Ks] [Qc]
+forty111999: bets $4
+Hero: calls $4
+*** SHOW DOWN ***
+forty111999: shows [4h 2c] (high card King)
+Hero: shows [Qh Ac] (a pair of Queens)
+Hero collected $20 from pot
+*** SUMMARY ***
+Total pot $21 | Rake $1 
+Board [9h 7s 8s Ks Qc]
+Seat 1: Hero showed [Qh Ac] and won ($20) with a pair of Queens
+Seat 2: pobolero folded before Flop (didn't bet)
+Seat 3: LuckKi$$Me folded before Flop (didn't bet)
+Seat 4: Desateur (button) folded before Flop (didn't bet)
+Seat 5: iLeftFTP (small blind) folded before Flop
+Seat 6: forty111999 (big blind) showed [4h 2c] and lost with high card King
+

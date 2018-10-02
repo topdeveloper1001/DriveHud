@@ -939,7 +939,13 @@
   <data name="Reports_Column_TripleBarrelSRP" xml:space="preserve">
     <value>Triple Barrel SRP%</value>
   </data>
-  <data name="Reposrts_Column_CBetThenFoldFlopSRP" xml:space="preserve">
+  <data name="Reports_Column_CBetThenFoldFlopSRP" xml:space="preserve">
     <value>C-Bet then Fold Flop SRP%</value>
+  </data>
+  <data name="Reports_Column_FoldToRiverProbeIP" xml:space="preserve">
+    <value>Fold to river probe IP%</value>
+  </data>
+  <data name="Reports_Column_FoldToTurnProbeIP" xml:space="preserve">
+    <value>Fold to turn probe IP%</value>
   </data>
 </root>

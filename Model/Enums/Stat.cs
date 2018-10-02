@@ -270,6 +270,8 @@ namespace Model.Enums
         DoubleBarrel3BetPot,
         TripleBarrelSRP,
         TripleBarrel3BetPot,
-        CBetThenFoldFlopSRP
+        CBetThenFoldFlopSRP,
+        FoldToTurnProbeIP,
+        FoldToRiverProbeIP
     }
 }

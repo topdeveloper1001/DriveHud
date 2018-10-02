@@ -1918,6 +1918,10 @@ namespace Model.Data
 
         public virtual decimal CBetThenFoldFlopSRP => GetPercentage(Statistics.Sum(x => x.CBetThenFoldFlopSRP), Statistics.Sum(x => x.CouldCBetThenFoldFlopSRP));
 
+        public virtual decimal FoldToProbeBetTurn => GetPercentage(Statistics.Sum(x => x.FoldedToProbeBetTurn), Statistics.Sum(x => x.FacedProbeBetTurn));
+
+        public virtual decimal FoldToProbeBetRiver => GetPercentage(Statistics.Sum(x => x.FoldedToProbeBetRiver), Statistics.Sum(x => x.FacedProbeBetRiver));
+
         #endregion
 
         #region Bet When Checked to in 3Bet Pot

@@ -1292,4 +1292,10 @@
   <data name="Enum_Stat_TripleBarrelSRP" xml:space="preserve">
     <value>Triple Barrel SRP%</value>
   </data>
+  <data name="Enum_Stat_FoldToRiverProbeIP" xml:space="preserve">
+    <value>Fold to river probe IP%</value>
+  </data>
+  <data name="Enum_Stat_FoldToTurnProbeIP" xml:space="preserve">
+    <value>Fold to turn probe IP%</value>
+  </data>
 </root>

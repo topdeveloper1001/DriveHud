@@ -1407,6 +1407,22 @@ namespace Model.Data
 
         public override decimal CBetThenFoldFlopSRP => GetPercentage(cBetThenFoldFlopSRP, couldCBetThenFoldFlopSRP);
 
+        [ProtoMember(136)]
+        protected int foldedToProbeBetTurn;
+
+        [ProtoMember(137)]
+        protected int facedProbeBetTurn;
+
+        public override decimal FoldToProbeBetTurn => GetPercentage(foldedToProbeBetTurn, facedProbeBetTurn);
+
+        [ProtoMember(138)]
+        protected int foldedToProbeBetRiver;
+
+        [ProtoMember(139)]
+        protected int facedProbeBetRiver;
+
+        public override decimal FoldToProbeBetRiver => GetPercentage(foldedToProbeBetRiver, facedProbeBetRiver);
+
         #endregion
 
         #region Bet When Checked to in 3Bet Pot
@@ -1578,6 +1594,11 @@ namespace Model.Data
             cBetThenFoldFlopSRP += statistic.CBetThenFoldFlopSRP;
             couldCBetThenFoldFlopSRP += statistic.CouldCBetThenFoldFlopSRP;
 
+            foldedToProbeBetTurn += statistic.FoldedToProbeBetTurn;
+            facedProbeBetTurn += statistic.FacedProbeBetTurn;
+            foldedToProbeBetRiver += statistic.FoldedToProbeBetRiver;
+            facedProbeBetRiver += statistic.FacedProbeBetRiver;
+
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
@@ -1675,6 +1696,11 @@ namespace Model.Data
 
             cBetThenFoldFlopSRP = 0;
             couldCBetThenFoldFlopSRP = 0;
+
+            foldedToProbeBetTurn = 0;
+            facedProbeBetTurn = 0;
+            foldedToProbeBetRiver = 0;
+            facedProbeBetRiver = 0;
 
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
@@ -1805,6 +1831,11 @@ namespace Model.Data
 
             cBetThenFoldFlopSRP += indicator.cBetThenFoldFlopSRP;
             couldCBetThenFoldFlopSRP += indicator.couldCBetThenFoldFlopSRP;
+
+            foldedToProbeBetTurn += indicator.foldedToProbeBetTurn;
+            facedProbeBetTurn += indicator.facedProbeBetTurn;
+            foldedToProbeBetRiver += indicator.foldedToProbeBetRiver;
+            facedProbeBetRiver += indicator.facedProbeBetRiver;
 
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);

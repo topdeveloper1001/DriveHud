@@ -1556,22 +1556,22 @@ namespace DriveHUD.Entities
         public virtual int CouldDoubleBarrelSRP => Turncontinuationbetpossible != 0 && FirstRaiser != 0 &&
            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
 
-        public virtual int DoubleBarrel3BetPot => Turncontinuationbetmade != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||                    
+        public virtual int DoubleBarrel3BetPot => Turncontinuationbetmade != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
             (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
 
-        public virtual int CouldDoubleBarrel3BetPot => Turncontinuationbetpossible != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||                 
+        public virtual int CouldDoubleBarrel3BetPot => Turncontinuationbetpossible != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
             (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
 
-        public virtual int TripleBarrelSRP => Rivercontinuationbetmade != 0 && FirstRaiser != 0 &&          
+        public virtual int TripleBarrelSRP => Rivercontinuationbetmade != 0 && FirstRaiser != 0 &&
             FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
 
-        public virtual int CouldTripleBarrelSRP => Rivercontinuationbetpossible != 0 && FirstRaiser != 0 &&           
+        public virtual int CouldTripleBarrelSRP => Rivercontinuationbetpossible != 0 && FirstRaiser != 0 &&
             FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
 
-        public virtual int TripleBarrel3BetPot => Rivercontinuationbetmade != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||                
+        public virtual int TripleBarrel3BetPot => Rivercontinuationbetmade != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
             (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
 
-        public virtual int CouldTripleBarrel3BetPot => Rivercontinuationbetpossible != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||                 
+        public virtual int CouldTripleBarrel3BetPot => Rivercontinuationbetpossible != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
             (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
 
         public virtual int CBetThenFoldFlopSRP => Flopcontinuationbetmade != 0 && BetFoldFlopPfrRaiser != 0 && FirstRaiser != 0 &&
@@ -1598,7 +1598,19 @@ namespace DriveHUD.Entities
 
         public virtual int CouldBetRiverWhenCheckedToIn3BetPot => CouldRiverBet != 0 && DidCheckTurn != 0 && CouldBetTurnWhenCheckedToIn3BetPot != 0 ? 1 : 0;
 
-        #endregion      
+        #endregion
+
+        #region Fold to probe bet
+
+        public virtual int FacedProbeBetTurn => PreflopIP != 0 && Flopcontinuationbetpossible != 0 && FacedBetOnTurn != 0 && Line.Contains("R-X-") ? 1 : 0;
+
+        public virtual int FoldedToProbeBetTurn => PreflopIP != 0 && Flopcontinuationbetpossible != 0 && FacedBetOnTurn != 0 && Line.Contains("R-X-F") ? 1 : 0;
+
+        public virtual int FacedProbeBetRiver => PreflopIP != 0 && Flopcontinuationbetpossible != 0 && FacedBetOnRiver != 0 && Line.Contains("R-X-X-") ? 1 : 0;
+
+        public virtual int FoldedToProbeBetRiver => PreflopIP != 0 && Flopcontinuationbetpossible != 0 && FacedBetOnRiver != 0 && Line.Contains("R-X-X-F") ? 1 : 0;
+
+        #endregion
 
         #endregion
 

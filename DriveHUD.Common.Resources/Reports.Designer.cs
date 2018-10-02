@@ -520,6 +520,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to C-Bet then Fold Flop SRP%.
+        /// </summary>
+        internal static string Reports_Column_CBetThenFoldFlopSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CBetThenFoldFlopSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C-Bet vs 1 Opp%.
         /// </summary>
         internal static string Reports_Column_CBetVs1Opp {
@@ -1357,6 +1366,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to river probe IP%.
+        /// </summary>
+        internal static string Reports_Column_FoldToRiverProbeIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToRiverProbeIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to River Raise%.
         /// </summary>
         internal static string Reports_Column_FoldToRiverRaise {
@@ -1380,6 +1398,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_FoldToTurnCheckRaise {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldToTurnCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to turn probe IP%.
+        /// </summary>
+        internal static string Reports_Column_FoldToTurnProbeIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToTurnProbeIP", resourceCulture);
             }
         }
         
@@ -2523,15 +2550,6 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_WTSDAsPF3Bettor {
             get {
                 return ResourceManager.GetString("Reports_Column_WTSDAsPF3Bettor", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to C-Bet then Fold Flop SRP%.
-        /// </summary>
-        internal static string Reposrts_Column_CBetThenFoldFlopSRP {
-            get {
-                return ResourceManager.GetString("Reposrts_Column_CBetThenFoldFlopSRP", resourceCulture);
             }
         }
     }

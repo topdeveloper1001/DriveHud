@@ -2392,6 +2392,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to river probe IP%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToRiverProbeIP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToRiverProbeIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to River Raise%.
         /// </summary>
         internal static string Enum_Stat_FoldToRiverRaise {
@@ -2424,6 +2433,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_FoldToTurnCheckRaise {
             get {
                 return ResourceManager.GetString("Enum_Stat_FoldToTurnCheckRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to turn probe IP%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToTurnProbeIP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToTurnProbeIP", resourceCulture);
             }
         }
         

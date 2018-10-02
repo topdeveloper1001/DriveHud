@@ -2379,6 +2379,32 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto FoldToProbeBetTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToProbeBetTurn,
+                    Occurred = foldedToProbeBetTurn,
+                    CouldOccurred = facedProbeBetTurn,
+                };
+            }
+        }
+
+        public virtual StatDto FoldToProbeBetRiverObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToProbeBetRiver,
+                    Occurred = foldedToProbeBetRiver,
+                    CouldOccurred = facedProbeBetRiver,
+                };
+            }
+        }
+
         #region Positional
 
         #region Unopened Pot        
