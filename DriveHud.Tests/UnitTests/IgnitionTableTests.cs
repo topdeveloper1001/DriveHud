@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using DriveHud.Tests.UnitTests.Helpers;
-using DriveHUD.Common.Linq;
 using DriveHUD.Common.Progress;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
@@ -129,6 +128,8 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("ign-zone-2018-03-18-4.log", "ign-info.log", "ign-zone-2018-03-18-4.xml")]
         [TestCase("ign-omaha-cash-2018-04-07.log", "ign-info.log", "ign-omaha-cash-2018-04-07.xml")]
         [TestCase("ign-jp-2018-05-19.log", "ign-info.log", "ign-jp-2018-05-19.xml")]
+        [TestCase("ign-jp-2018-05-19.log", "ign-info.log", "ign-jp-2018-05-19.xml")]
+
         public void HandsAreImported(string testData, string infoTestData, string expectedFile)
         {
             // initialize info manager with test data
@@ -197,6 +198,7 @@ namespace DriveHud.Tests.UnitTests
                 if (string.IsNullOrWhiteSpace(textLine))
                 {
                     var dataText = sb.ToString();
+
                     try
                     {
                         var catcherDataObject = JsonConvert.DeserializeObject<BovadaCatcherDataObjectWithTime>(dataText);
