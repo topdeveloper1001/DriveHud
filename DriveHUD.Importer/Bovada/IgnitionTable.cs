@@ -19,7 +19,9 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using Prism.Events;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using System.Web;
 
@@ -212,11 +214,37 @@ namespace DriveHUD.Importers.Bovada
                 LogProvider.Log.Info($"Unjoined table [{TableName}, {TableId}, {TableIndex}, {WindowHandle}]. [{Identifier}]");
             }
 
-            ignitionWindowCache.RemoveWindow(WindowHandle);
+            ignitionWindowCache.RemoveWindow(WindowHandle, true);
 
             WindowHandle = IntPtr.Zero;
             TableName = string.Empty;
             isConnectedInfoParsed = false;
+        }
+
+        protected override void ParsePlayBuyinQs2(BovadaCommandDataObject cmdObj)
+        {
+            if (cmdObj.prevTableId == 0)
+            {
+                return;
+            }
+
+            var previousHandle = ignitionWindowCache.GetPreviousHandle(cmdObj.prevTableId);
+
+            if (previousHandle == IntPtr.Zero || !WinApi.IsWindow(previousHandle) || previousHandle == WindowHandle)
+            {
+                return;
+            }
+
+            var cachedTable = ignitionWindowCache.GetCachedTable(previousHandle);
+
+            if (cachedTable != null)
+            {
+                ignitionWindowCache.RemoveWindow(previousHandle);
+                cachedTable.WindowHandle = IntPtr.Zero;
+            }
+
+            WindowHandle = previousHandle;
+            ignitionWindowCache.AddWindow(previousHandle, this);
         }
 
         protected override void PreImportChecks()
@@ -261,6 +289,8 @@ namespace DriveHUD.Importers.Bovada
         private IntPtr GetWindowHandle(Process pokerClientProcess)
         {
             var windowHandle = IntPtr.Zero;
+
+            var possibleWindowHandles = new List<IntPtr>();
 
             foreach (ProcessThread thread in pokerClientProcess.Threads)
             {
@@ -318,13 +348,19 @@ namespace DriveHUD.Importers.Bovada
                                 LogProvider.Log.Info(this, $"Window [{windowTitle}, {windowClassName}, {hWnd}] does match table [{TableName}, {TableId}, {TableIndex}]. [{Identifier}]");
                             }
 
-                            windowHandle = hWnd;
-                            return false;
+                            possibleWindowHandles.Add(hWnd);
+
+                            return true;
                         }
                     }
 
                     return true;
                 }, IntPtr.Zero);
+            }
+
+            if (windowHandle == IntPtr.Zero)
+            {
+                windowHandle = possibleWindowHandles.FirstOrDefault();
             }
 
             return windowHandle;

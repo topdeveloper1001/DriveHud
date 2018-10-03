@@ -151,6 +151,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"GameTypes/PotLimitOmahaHiLo.txt", 13550515602)]
         [TestCase(TestDataFolder + @"GameTypes/PotLimitHoldem.txt", 11614201072)]
         [TestCase(TestDataFolder + @"Hands/JabMicroWarmUpPko500Hand.txt", 16847329734)]
+        [TestCase(TestDataFolder + @"Hands/NLH-Cash-BB-Dead.txt", 17793933523)]
         public void ParseHandIdTest(string handHistoryFile, long handId)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -229,6 +230,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"Hands/NLHoldem2_4_allin.txt", "Moose4Life", 371.87, HandActionType.UNCALLED_BET, Street.Preflop, 1)]
         [TestCase(TestDataFolder + @"Hands/NLHoldem2_4_allin.txt", "Moose4Life", 265.92, HandActionType.WINS, Street.Summary, 1)]
         [TestCase(TestDataFolder + @"Hands/NLH-Cash-PP-ES-1.txt", "BlackSwam", 0.5, HandActionType.WINS, Street.Summary, 1)]
+        [TestCase(TestDataFolder + @"Hands/NLH-Cash-BB-Dead.txt", "MPADAM1980", -0.03, HandActionType.POSTS, Street.Preflop, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
