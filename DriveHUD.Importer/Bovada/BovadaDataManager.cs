@@ -192,10 +192,16 @@ namespace DriveHUD.Importers.Bovada
                 return null;
             }
 
-            // deserialize stream data
-            var catcherDataObject = JsonConvert.DeserializeObject<BovadaCatcherDataObject>(dataText);
-
-            return catcherDataObject;
+            try
+            {
+                // deserialize stream data
+                var catcherDataObject = JsonConvert.DeserializeObject<BovadaCatcherDataObject>(dataText);
+                return catcherDataObject;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         /// <summary>

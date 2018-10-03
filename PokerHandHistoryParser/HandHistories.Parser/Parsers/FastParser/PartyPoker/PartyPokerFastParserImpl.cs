@@ -754,7 +754,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             if (lastChar == ']')
             {
                 int amountStartIndex = line.LastIndexOf('[');
-                decimal amount = ParseDecimal(line, GetDecimalStartIndex(line, amountStartIndex + 1));
+
+                decimal amount;
 
                 char blindIdentifier = line[amountStartIndex - 8];
 
@@ -762,16 +763,20 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 {
                     //"Player posts big blind [$10 USD]."
                     case 'g':
+                        amount = ParseDecimal(line, GetDecimalStartIndex(line, amountStartIndex + 1));
                         playerName = line.Remove(amountStartIndex - bigBlindWidth);
                         return new HandAction(playerName, HandActionType.BIG_BLIND, amount, street);
 
                     //"Player posts small blind [$5 USD]."
                     case 'l':
+                        amount = ParseDecimal(line, GetDecimalStartIndex(line, amountStartIndex + 1));
                         playerName = line.Remove(amountStartIndex - smallBlindWidth);
                         return new HandAction(playerName, HandActionType.SMALL_BLIND, amount, street);
 
                     //"Player posts big blind + dead [$0.15].
+                    // MPADAM1980 posts big blind + dead [$0,03].
                     case ' ':
+                        amount = ParseDecimal(line, GetDecimalStartIndex(line, amountStartIndex + 1), true);
                         playerName = line.Remove(amountStartIndex - deadBigBlindWidth);
                         return new HandAction(playerName, HandActionType.POSTS, amount, street);
                     default:
@@ -859,13 +864,20 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             return result != -1;
         }
 
-        static decimal ParseDecimal(string line, int startIndex)
+        static decimal ParseDecimal(string line, int startIndex, bool useMoneyParse = false)
         {
             int endIndex = line.IndexOf(' ', startIndex);
+
             if (endIndex == -1)
                 endIndex = line.IndexOf(']', startIndex);
 
             string text = line.Substring(startIndex, endIndex - startIndex);
+
+            if (useMoneyParse)
+            {                       
+                return ParserUtils.ParseMoney(text);
+            }
+
             return decimal.Parse(text, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
         }
 
@@ -1169,9 +1181,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                         //Peacli posts big blind + dead [$3].
                         case 'd':
                             playerName = line.Remove(amountStartIndex - PostingWidth);
-                            action = HandActionType.POSTS;
-                            string deadString = line.Substring(amountStartIndex + 2, line.Length - amountStartIndex - 2 - 2);
-                            amount = ParseDecimal(line, GetDecimalStartIndex(line, amountStartIndex + 1));
+                            action = HandActionType.POSTS;                            
+                            amount = ParseDecimal(line, GetDecimalStartIndex(line, amountStartIndex + 1), true);
                             break;
 
                         default:

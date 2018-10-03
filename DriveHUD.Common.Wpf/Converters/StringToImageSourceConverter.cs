@@ -15,11 +15,18 @@ namespace DriveHUD.Common.Wpf.Converters
                 return DependencyProperty.UnsetValue;
             }
 
-            var path = value.ToString();
-            var imageUri = new Uri(path, UriKind.RelativeOrAbsolute);
-            var imageBitmap = new BitmapImage(imageUri);
+            try
+            {
+                var path = value.ToString();
+                var imageUri = new Uri(path, UriKind.RelativeOrAbsolute);
+                var imageBitmap = new BitmapImage(imageUri);
 
-            return imageBitmap;
+                return imageBitmap;
+            }
+            catch
+            {
+                return DependencyProperty.UnsetValue;
+            }
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
