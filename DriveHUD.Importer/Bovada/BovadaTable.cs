@@ -441,7 +441,7 @@ namespace DriveHUD.Importers.Bovada
         /// </summary>
         /// <param name="cmdObj">Command data object</param>
         protected virtual void ProcessCmdObject(BovadaCommandDataObject cmdObj)
-        {            
+        {
             if (cmdObj.pid == null)
             {
                 return;
@@ -756,6 +756,9 @@ namespace DriveHUD.Importers.Bovada
                     }
 
                     break;
+                case "PLAY_BUYIN_QS2":
+                    ParsePlayBuyinQs2(cmdObj);
+                    break;
 
                 default:
                     break;
@@ -848,6 +851,11 @@ namespace DriveHUD.Importers.Bovada
         }
 
         #region Command Parsers
+
+        protected virtual void ParsePlayBuyinQs2(BovadaCommandDataObject cmdObj)
+        {
+            // do nothing
+        }
 
         protected virtual void ParseGidInfo(BovadaCommandDataObject cmdObj)
         {
