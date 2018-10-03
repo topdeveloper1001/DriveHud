@@ -523,18 +523,37 @@ namespace Model.Site
         {
             try
             {
-                var enabled = IniFileHelpers.ReadValue(AuditSection, EnabledKey, auditIniFile);
+                var wasModified = false;
+                var auditFileLines = File.ReadAllLines(auditIniFile);
 
-                if (string.IsNullOrEmpty(enabled))
+                for (var i = 0; i < auditFileLines.Length; i++)
                 {
-                    IniFileHelpers.WriteValue(AuditSection, EnabledKey, "1", auditIniFile);
+                    if (auditFileLines[i].StartsWith(EnabledKey, StringComparison.Ordinal))
+                    {
+                        var enabledValue = auditFileLines[i].Substring(auditFileLines[i].IndexOf('=') + 1);
+
+                        if (enabledValue != "1")
+                        {
+                            auditFileLines[i] = $"{EnabledKey}=1";
+                            wasModified = true;
+                        }
+                    }
+
+                    if (auditFileLines[i].StartsWith(PathKey, StringComparison.Ordinal))
+                    {
+                        var path = auditFileLines[i].Substring(auditFileLines[i].IndexOf('=') + 1);
+
+                        if (!path.Equals(auditPath, StringComparison.OrdinalIgnoreCase))
+                        {
+                            LogProvider.Log.Warn($"PS audit path '{path}' isn't equal to default '{auditPath}' in '{auditIniFile}'");
+                        }
+                    }
                 }
 
-                var path = IniFileHelpers.ReadValue(AuditSection, PathKey, auditIniFile);
-
-                if (string.IsNullOrEmpty(enabled) || !path.Equals(auditPath, StringComparison.OrdinalIgnoreCase))
+                if (wasModified)
                 {
-                    LogProvider.Log.Warn($"PS audit path '{path}' isn't equal to default '{auditPath}' in '{auditIniFile}'");
+                    File.WriteAllLines(auditIniFile, auditFileLines, new UTF8Encoding(true));
+                    LogProvider.Log.Info($"PS audit file '{auditIniFile}' was updated.");
                 }
             }
             catch (Exception ex)
@@ -552,8 +571,12 @@ namespace Model.Site
         {
             try
             {
-                IniFileHelpers.WriteValue(AuditSection, EnabledKey, "1", auditIniFile);
-                IniFileHelpers.WriteValue(AuditSection, PathKey, auditPath, auditIniFile);
+                var sb = new StringBuilder();
+                sb.AppendLine($"[{AuditSection}]");
+                sb.AppendLine($"{EnabledKey}=1");
+                sb.AppendLine($"{PathKey}={auditPath}");
+
+                File.WriteAllText(auditIniFile, sb.ToString(), new UTF8Encoding(true));
             }
             catch (Exception ex)
             {
