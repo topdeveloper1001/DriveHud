@@ -730,9 +730,27 @@ namespace Model
 
             List<string> line = new List<string>();
 
-            foreach (var streetLine in parsedHand.HandActions.Where(x => x.PlayerName == stat.PlayerName || x is StreetAction).GroupBy(x => x.Street))
+            foreach (var streetLineGroup in parsedHand.HandActions.Where(x => x.PlayerName == stat.PlayerName || x is StreetAction).GroupBy(x => x.Street))
             {
-                line.Add(string.Join(string.Empty, streetLine.Select(Converter.ActionToString)));
+                var streetLine = string.Join(string.Empty, streetLineGroup.Select(Converter.ActionToString));
+
+                switch (streetLineGroup.Key)
+                {
+                    case Street.Preflop:
+                        stat.PreflopActions = streetLine;
+                        break;
+                    case Street.Flop:
+                        stat.FlopActions = streetLine;
+                        break;
+                    case Street.Turn:
+                        stat.TurnActions = streetLine;
+                        break;
+                    case Street.River:
+                        stat.RiverActions = streetLine;
+                        break;
+                }
+
+                line.Add(streetLine);
             }
 
             stat.Line = string.Join(StringFormatter.ActionLineSeparator, line).Trim(StringFormatter.ActionLineSeparator.ToCharArray());
@@ -918,7 +936,7 @@ namespace Model
 
             if (pfrOcurred && preflopInPosition && parsedHand.PreFlop.Count(x => x.IsRaise()) == 1 &&
                 parsedHand.Flop.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold))
-            {                
+            {
                 stat.CouldBetFlopWhenCheckedToSRP = 1;
                 stat.BetFlopWhenCheckedToSRP = betOnFlop ? 1 : 0;
             }

@@ -1031,6 +1031,18 @@ namespace DriveHUD.Entities
         [ProtoMember(368)]
         public virtual int CouldProbeBetRiver { get; set; }
 
+        [ProtoMember(369)]
+        public virtual string PreflopActions { get; set; } = string.Empty;
+
+        [ProtoMember(370)]
+        public virtual string FlopActions { get; set; } = string.Empty;
+
+        [ProtoMember(371)]
+        public virtual string TurnActions { get; set; } = string.Empty;
+
+        [ProtoMember(372)]
+        public virtual string RiverActions { get; set; } = string.Empty;
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1580,6 +1592,8 @@ namespace DriveHUD.Entities
         public virtual int CouldCBetThenFoldFlopSRP => Flopcontinuationbetpossible != 0 && CouldBetFoldFlopPfrRaiser != 0 && FirstRaiser != 0 &&
            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
 
+
+
         #endregion
 
         #region Bet When Checked to in 3Bet Pot
@@ -1609,6 +1623,34 @@ namespace DriveHUD.Entities
         public virtual int FacedProbeBetRiver => PreflopIP != 0 && Flopcontinuationbetpossible != 0 && FacedBetOnRiver != 0 && Line.Contains("R-X-X-") ? 1 : 0;
 
         public virtual int FoldedToProbeBetRiver => PreflopIP != 0 && Flopcontinuationbetpossible != 0 && FacedBetOnRiver != 0 && Line.Contains("R-X-X-F") ? 1 : 0;
+
+        #endregion
+
+        #region Check Flop as PFR and Fold to Turn Bet SRP
+
+        public virtual int CheckFlopAsPFRAndFoldToTurnBetIPSRP => PreflopIP != 0 && FirstRaiser != 0 &&
+         PreflopActions.Equals("R") && FlopActions.StartsWith("X") && TurnActions.Equals("F") ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToTurnBetIPSRP => PreflopIP != 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnTurn != 0 ? 1 : 0;
+
+        public virtual int CheckFlopAsPFRAndFoldToTurnBetOOPSRP => PreflopIP == 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && (TurnActions.Equals("F") || TurnActions.Equals("XF")) ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP => PreflopIP == 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnTurn != 0 ? 1 : 0;
+
+        public virtual int CheckFlopAsPFRAndFoldToRiverBetIPSRP => PreflopIP != 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && RiverActions.Equals("F") ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToRiverBetIPSRP => PreflopIP != 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnRiver != 0 ? 1 : 0;
+
+        public virtual int CheckFlopAsPFRAndFoldToRiverBetOOPSRP => PreflopIP == 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && (RiverActions.Equals("F") || RiverActions.Equals("XF")) ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToRiverBetOOPSRP => PreflopIP == 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnRiver != 0 ? 1 : 0;
 
         #endregion
 

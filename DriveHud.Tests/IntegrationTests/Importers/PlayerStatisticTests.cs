@@ -1278,7 +1278,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.FoldedToProbeBetTurn, fileName, pokerSite, playerName, expected);
         }
 
-        [TestCase(@"Hero-FacedProbeBetRiver-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)] 
+        [TestCase(@"Hero-FacedProbeBetRiver-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
         public void FacedProbeBetRiverIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.FacedProbeBetRiver, fileName, pokerSite, playerName, expected);
@@ -1289,6 +1289,45 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         public void FoldedToProbeBetRiverIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.FoldedToProbeBetRiver, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToTurnBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToTurnBetIPSRP-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void CheckFlopAsPFRAndFoldToTurnBetIPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CheckFlopAsPFRAndFoldToTurnBetIPSRP, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToTurnBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToTurnBetIPSRP-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void CouldCheckFlopAsPFRAndFoldToTurnBetIPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetIPSRP, fileName, pokerSite, playerName, expected);
+        }
+
+        public void CheckFlopAsPFRAndFoldToTurnBetOOPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CheckFlopAsPFRAndFoldToTurnBetOOPSRP, fileName, pokerSite, playerName, expected);
+        }
+
+        public void CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToRiverBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void CheckFlopAsPFRAndFoldToRiverBetIPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CheckFlopAsPFRAndFoldToRiverBetIPSRP, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToRiverBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToRiverBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void CouldCheckFlopAsPFRAndFoldToRiverBetIPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldCheckFlopAsPFRAndFoldToRiverBetIPSRP, fileName, pokerSite, playerName, expected);
         }
     }
 }
