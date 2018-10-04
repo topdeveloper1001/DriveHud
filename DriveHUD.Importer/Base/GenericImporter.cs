@@ -213,7 +213,7 @@ namespace DriveHUD.Importers
             if (IsAdvancedLogEnabled)
             {
                 var tableName = parsingResult?.Source?.TableName;
-                LogProvider.Log.Info($"Checking if window '{title}' matches '{tableName}' table: {matchResult} [{SiteString}]");
+                LogProvider.Log.Info($"Checking if window '{title}' [{handle}] matches '{tableName}' table: {matchResult} [{SiteString}]");
             }
 
             return matchResult;
