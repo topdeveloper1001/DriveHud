@@ -2249,6 +2249,114 @@ namespace Model.Data
 
         #endregion
 
+        #region Check Flop as PFR and Fold to Turn Bet SRP
+
+        public virtual StatDto CheckFlopAsPFRAndFoldToTurnBetIPSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndFoldToTurnBetIPSRP,
+                    Occurred = checkFlopAsPFRAndFoldToTurnBetIPSRP,
+                    CouldOccurred = couldCheckFlopAsPFRAndFoldToTurnBetIPSRP,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndFoldToTurnBetOOPSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndFoldToTurnBetOOPSRP,
+                    Occurred = checkFlopAsPFRAndFoldToTurnBetOOPSRP,
+                    CouldOccurred = couldCheckFlopAsPFRAndFoldToTurnBetOOPSRP,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndFoldToRiverBetIPSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndFoldToRiverBetIPSRP,
+                    Occurred = checkFlopAsPFRAndFoldToRiverBetIPSRP,
+                    CouldOccurred = couldCheckFlopAsPFRAndFoldToRiverBetIPSRP,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndFoldToRiverBetOOPSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndFoldToRiverBetOOPSRP,
+                    Occurred = checkFlopAsPFRAndFoldToRiverBetOOPSRP,
+                    CouldOccurred = couldCheckFlopAsPFRAndFoldToRiverBetOOPSRP,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndFoldToTurnBetIP3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndFoldToTurnBetIP3BetPot,
+                    Occurred = checkFlopAsPFRAndFoldToTurnBetIP3BetPot,
+                    CouldOccurred = couldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndFoldToTurnBetOOP3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot,
+                    Occurred = checkFlopAsPFRAndFoldToTurnBetOOP3BetPot,
+                    CouldOccurred = couldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndFoldToRiverBetIP3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndFoldToRiverBetIP3BetPot,
+                    Occurred = сheckFlopAsPFRAndFoldToRiverBetIP3BetPot,
+                    CouldOccurred = couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot,
+                };
+            }
+        }
+
+        public virtual StatDto CheckFlopAsPFRAndFoldToRiverBetOOP3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot,
+                    Occurred = checkFlopAsPFRAndFoldToRiverBetOOP3BetPot,
+                    CouldOccurred = couldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot,
+                };
+            }
+        }
+
+        #endregion
+
         public virtual StatDto CheckRaiseFlopAsPFRObject
         {
             get

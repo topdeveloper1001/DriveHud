@@ -1298,4 +1298,28 @@
   <data name="Enum_Stat_FoldToTurnProbeIP" xml:space="preserve">
     <value>Fold to turn probe IP%</value>
   </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetIP3BetPot" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to river bet IP 3B Pot%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetIPSRP" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to river bet IP SRP%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to river bet OOP 3B Pot%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetOOPSRP" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to river bet OOP SRP%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetIP3BetPot" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to turn bet IP 3B Pot%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetIPSRP" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to turn bet IP SRP%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to turn bet OOP 3B Pot%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetOOPSRP" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to turn bet OOP SRP%</value>
+  </data>
 </root>

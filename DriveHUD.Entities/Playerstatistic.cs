@@ -1154,8 +1154,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Raisedflopcontinuationbet == 1 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
-                    (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+                return Raisedflopcontinuationbet == 1 && In3BetPot ? 1 : 0;
             }
         }
 
@@ -1163,10 +1162,12 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Facingflopcontinuationbet == 1 && CouldRaiseFlop == 1 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
-                    (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+                return Facingflopcontinuationbet == 1 && CouldRaiseFlop == 1 && In3BetPot ? 1 : 0;
             }
         }
+
+        public virtual bool In3BetPot => Didthreebet != 0 || FacedthreebetpreflopVirtual != 0 ||
+            (Couldthreebet != 0 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0);
 
         #region FlopBetSize stats
 
@@ -1598,11 +1599,9 @@ namespace DriveHUD.Entities
 
         #region Bet When Checked to in 3Bet Pot
 
-        public virtual int BetFlopWhenCheckedToIn3BetPot => DidFlopBet != 0 && PreflopIP != 0 && (Didthreebet != 0 || FacedthreebetpreflopVirtual != 0 ||
-                    (Couldthreebet != 0 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+        public virtual int BetFlopWhenCheckedToIn3BetPot => DidFlopBet != 0 && PreflopIP != 0 && In3BetPot ? 1 : 0;
 
-        public virtual int CouldBetFlopWhenCheckedToIn3BetPot => CouldFlopBet != 0 && PreflopIP != 0 && (Didthreebet != 0 || FacedthreebetpreflopVirtual != 0 ||
-                   (Couldthreebet != 0 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+        public virtual int CouldBetFlopWhenCheckedToIn3BetPot => CouldFlopBet != 0 && PreflopIP != 0 && In3BetPot ? 1 : 0;
 
         public virtual int BetTurnWhenCheckedToIn3BetPot => DidTurnBet != 0 && DidCheckFlop != 0 && CouldBetFlopWhenCheckedToIn3BetPot != 0 ? 1 : 0;
 
@@ -1626,7 +1625,7 @@ namespace DriveHUD.Entities
 
         #endregion
 
-        #region Check Flop as PFR and Fold to Turn Bet SRP
+        #region Check Flop as PFR and Fold to Turn/River Bet SRP
 
         public virtual int CheckFlopAsPFRAndFoldToTurnBetIPSRP => PreflopIP != 0 && FirstRaiser != 0 &&
          PreflopActions.Equals("R") && FlopActions.StartsWith("X") && TurnActions.Equals("F") ? 1 : 0;
@@ -1650,6 +1649,34 @@ namespace DriveHUD.Entities
             PreflopActions.Equals("R") && FlopActions.StartsWith("X") && (RiverActions.Equals("F") || RiverActions.Equals("XF")) ? 1 : 0;
 
         public virtual int CouldCheckFlopAsPFRAndFoldToRiverBetOOPSRP => PreflopIP == 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnRiver != 0 ? 1 : 0;
+
+        #endregion
+
+        #region Check Flop as PFR and Fold to Turn/River Bet in 3-Bet Pot   
+
+        public virtual int CheckFlopAsPFRAndFoldToTurnBetIP3BetPot => PreflopIP != 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && TurnActions.Equals("F") ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot => PreflopIP != 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnTurn != 0 ? 1 : 0;
+
+        public virtual int CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot => PreflopIP == 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && (TurnActions.Equals("F") || TurnActions.Equals("XF")) ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot => PreflopIP == 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnTurn != 0 ? 1 : 0;
+
+        public virtual int CheckFlopAsPFRAndFoldToRiverBetIP3BetPot => PreflopIP != 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && RiverActions.Equals("F") ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot => PreflopIP != 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnRiver != 0 ? 1 : 0;
+
+        public virtual int CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot => PreflopIP == 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && (RiverActions.Equals("F") || RiverActions.Equals("XF")) ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot => PreflopIP == 0 && In3BetPot &&
             PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnRiver != 0 ? 1 : 0;
 
         #endregion

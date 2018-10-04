@@ -1519,6 +1519,78 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to river bet IP 3B Pot%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetIP3BetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetIP3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to river bet IP SRP%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetIPSRP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetIPSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to river bet OOP 3B Pot%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to river bet OOP SRP%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetOOPSRP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetOOPSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to turn bet IP 3B Pot%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetIP3BetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetIP3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to turn bet IP SRP%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetIPSRP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetIPSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to turn bet OOP 3B Pot%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to turn bet OOP SRP%.
+        /// </summary>
+        internal static string Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetOOPSRP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetOOPSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Checks Flop as PFR and Raises Turn Bet%.
         /// </summary>
         internal static string Enum_Stat_CheckFlopAsPFRAndRaiseOnTurn {

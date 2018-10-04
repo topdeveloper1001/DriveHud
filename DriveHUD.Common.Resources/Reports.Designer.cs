@@ -565,6 +565,78 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to river bet IP 3B Pot%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndFoldToRiverBetIP3BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndFoldToRiverBetIP3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to river bet IP SRP%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndFoldToRiverBetIPSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndFoldToRiverBetIPSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to river bet OOP 3B Pot%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to river bet OOP SRP%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndFoldToRiverBetOOPSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndFoldToRiverBetOOPSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to turn bet IP 3B Pot%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndFoldToTurnBetIP3BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndFoldToTurnBetIP3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to turn bet IP SRP%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndFoldToTurnBetIPSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndFoldToTurnBetIPSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to turn bet OOP 3B Pot%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Flop as PFR and Fold to turn bet OOP SRP%.
+        /// </summary>
+        internal static string Reports_Column_CheckFlopAsPFRAndFoldToTurnBetOOPSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndFoldToTurnBetOOPSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Checks Flop as PFR and Raises Turn Bet%.
         /// </summary>
         internal static string Reports_Column_CheckFlopAsPFRAndRaiseOnTurn {

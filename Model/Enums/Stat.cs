@@ -272,6 +272,14 @@ namespace Model.Enums
         TripleBarrel3BetPot,
         CBetThenFoldFlopSRP,
         FoldToTurnProbeIP,
-        FoldToRiverProbeIP
+        FoldToRiverProbeIP,
+        CheckFlopAsPFRAndFoldToTurnBetIPSRP,
+        CheckFlopAsPFRAndFoldToTurnBetOOPSRP,
+        CheckFlopAsPFRAndFoldToRiverBetIPSRP,
+        CheckFlopAsPFRAndFoldToRiverBetOOPSRP,
+        CheckFlopAsPFRAndFoldToTurnBetIP3BetPot,
+        CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot,
+        CheckFlopAsPFRAndFoldToRiverBetIP3BetPot,
+        CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot
     }
 }

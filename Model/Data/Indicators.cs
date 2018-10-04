@@ -1934,6 +1934,30 @@ namespace Model.Data
 
         #endregion
 
+        #region Check Flop as PFR and Fold to Turn/River Bet SRP
+
+        public virtual decimal CheckFlopAsPFRAndFoldToTurnBetIPSRP => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToTurnBetIPSRP), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetIPSRP));
+
+        public virtual decimal CheckFlopAsPFRAndFoldToTurnBetOOPSRP => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToTurnBetOOPSRP), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP));
+
+        public virtual decimal CheckFlopAsPFRAndFoldToRiverBetIPSRP => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToRiverBetIPSRP), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToRiverBetIPSRP));
+
+        public virtual decimal CheckFlopAsPFRAndFoldToRiverBetOOPSRP => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToRiverBetOOPSRP), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToRiverBetOOPSRP));
+
+        #endregion
+
+        #region Check Flop as PFR and Fold to Turn/River Bet in 3-Bet Pot
+
+        public virtual decimal CheckFlopAsPFRAndFoldToTurnBetIP3BetPot => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToTurnBetIP3BetPot), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot));
+
+        public virtual decimal CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot));
+
+        public virtual decimal CheckFlopAsPFRAndFoldToRiverBetIP3BetPot => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToRiverBetIP3BetPot), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot));
+
+        public virtual decimal CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot));
+
+        #endregion
+
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
         {
             foreach (var statistic in statistics)

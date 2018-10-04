@@ -1,0 +1,42 @@
+PokerStars Game #47152969842:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:10:04 ET
+Table 'Onnie IV' 6-max Seat #4 is the button
+Seat 2: Hero ($691.60 in chips) 
+Seat 3: welle85 ($273 in chips) 
+Seat 4: AceKanone ($202 in chips) 
+Seat 5: mad.afurable ($203.40 in chips) 
+Seat 6: blackduck11 ($231.30 in chips) 
+mad.afurable: posts small blind $1
+blackduck11: posts big blind $2
+twinpsych: sits out 
+*** HOLE CARDS ***
+Hero: raises $4 to $6
+welle85: calls $6
+AceKanone: folds 
+mad.afurable: calls $5
+blackduck11: calls $4
+*** FLOP *** [4d Ks 2h]
+mad.afurable: checks 
+blackduck11: checks 
+Hero: checks 
+welle85: checks 
+*** TURN *** [4d Ks 2h] [As]
+mad.afurable: checks 
+blackduck11: bets $6
+Hero: calls $6
+welle85: calls $6
+mad.afurable: raises $30 to $36
+blackduck11: folds 
+Hero: folds 
+welle85: folds 
+Uncalled bet ($30) returned to mad.afurable
+mad.afurable collected $46 from pot
+mad.afurable: doesn't show hand 
+*** SUMMARY ***
+Total pot $48 | Rake $2 
+Board [4d Ks 2h As]
+Seat 2: Hero folded on the Turn
+Seat 3: welle85 folded on the Turn
+Seat 4: AceKanone (button) folded before Flop (didn't bet)
+Seat 5: mad.afurable (small blind) collected ($46)
+Seat 6: blackduck11 (big blind) folded on the Turn
+

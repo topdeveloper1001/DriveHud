@@ -1307,11 +1307,16 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetIPSRP, fileName, pokerSite, playerName, expected);
         }
 
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
         public void CheckFlopAsPFRAndFoldToTurnBetOOPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.CheckFlopAsPFRAndFoldToTurnBetOOPSRP, fileName, pokerSite, playerName, expected);
         }
 
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-2.txt", EnumPokerSites.PokerStars, "Hero", 1)]        
         public void CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP, fileName, pokerSite, playerName, expected);

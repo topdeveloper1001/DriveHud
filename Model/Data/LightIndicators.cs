@@ -1483,6 +1483,150 @@ namespace Model.Data
 
         #endregion
 
+        #region Check Flop as PFR and Fold to Turn Bet SRP
+
+        [ProtoMember(140)]
+        protected int checkFlopAsPFRAndFoldToTurnBetIPSRP;
+
+        [ProtoMember(141)]
+        protected int couldCheckFlopAsPFRAndFoldToTurnBetIPSRP;
+
+        public override decimal CheckFlopAsPFRAndFoldToTurnBetIPSRP => GetPercentage(checkFlopAsPFRAndFoldToTurnBetIPSRP, couldCheckFlopAsPFRAndFoldToTurnBetIPSRP);
+
+        [ProtoMember(142)]
+        protected int checkFlopAsPFRAndFoldToTurnBetOOPSRP;
+
+        [ProtoMember(143)]
+        protected int couldCheckFlopAsPFRAndFoldToTurnBetOOPSRP;
+
+        public override decimal CheckFlopAsPFRAndFoldToTurnBetOOPSRP => GetPercentage(checkFlopAsPFRAndFoldToTurnBetOOPSRP, couldCheckFlopAsPFRAndFoldToTurnBetOOPSRP);
+
+        [ProtoMember(144)]
+        protected int checkFlopAsPFRAndFoldToRiverBetIPSRP;
+
+        [ProtoMember(145)]
+        protected int couldCheckFlopAsPFRAndFoldToRiverBetIPSRP;
+
+        public override decimal CheckFlopAsPFRAndFoldToRiverBetIPSRP => GetPercentage(checkFlopAsPFRAndFoldToRiverBetIPSRP, couldCheckFlopAsPFRAndFoldToRiverBetIPSRP);
+
+        [ProtoMember(146)]
+        protected int checkFlopAsPFRAndFoldToRiverBetOOPSRP;
+
+        [ProtoMember(147)]
+        protected int couldCheckFlopAsPFRAndFoldToRiverBetOOPSRP;
+
+        public override decimal CheckFlopAsPFRAndFoldToRiverBetOOPSRP => GetPercentage(checkFlopAsPFRAndFoldToRiverBetOOPSRP, couldCheckFlopAsPFRAndFoldToRiverBetOOPSRP);
+
+        private void AddCheckFlopAsPFRAndFoldToTurnBetSRPStatistic(Playerstatistic statistic)
+        {
+            checkFlopAsPFRAndFoldToTurnBetIPSRP += statistic.CheckFlopAsPFRAndFoldToTurnBetIPSRP;
+            couldCheckFlopAsPFRAndFoldToTurnBetIPSRP += statistic.CouldCheckFlopAsPFRAndFoldToTurnBetIPSRP;
+            checkFlopAsPFRAndFoldToTurnBetOOPSRP += statistic.CheckFlopAsPFRAndFoldToTurnBetOOPSRP;
+            couldCheckFlopAsPFRAndFoldToTurnBetOOPSRP += statistic.CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP;
+            checkFlopAsPFRAndFoldToRiverBetIPSRP += statistic.CheckFlopAsPFRAndFoldToRiverBetIPSRP;
+            couldCheckFlopAsPFRAndFoldToRiverBetIPSRP += statistic.CouldCheckFlopAsPFRAndFoldToRiverBetIPSRP;
+            checkFlopAsPFRAndFoldToRiverBetOOPSRP += statistic.CheckFlopAsPFRAndFoldToRiverBetOOPSRP;
+            couldCheckFlopAsPFRAndFoldToRiverBetOOPSRP += statistic.CouldCheckFlopAsPFRAndFoldToRiverBetOOPSRP;
+        }
+
+        private void CleanCheckFlopAsPFRAndFoldToTurnBetSRP()
+        {
+            checkFlopAsPFRAndFoldToTurnBetIPSRP = 0;
+            couldCheckFlopAsPFRAndFoldToTurnBetIPSRP = 0;
+            checkFlopAsPFRAndFoldToTurnBetOOPSRP = 0;
+            couldCheckFlopAsPFRAndFoldToTurnBetOOPSRP = 0;
+            checkFlopAsPFRAndFoldToRiverBetIPSRP = 0;
+            couldCheckFlopAsPFRAndFoldToRiverBetIPSRP = 0;
+            checkFlopAsPFRAndFoldToRiverBetOOPSRP = 0;
+            couldCheckFlopAsPFRAndFoldToRiverBetOOPSRP = 0;
+        }
+
+        private void AddCheckFlopAsPFRAndFoldToTurnBetSRPIndicator(LightIndicators indicator)
+        {
+            checkFlopAsPFRAndFoldToTurnBetIPSRP += indicator.checkFlopAsPFRAndFoldToTurnBetIPSRP;
+            couldCheckFlopAsPFRAndFoldToTurnBetIPSRP += indicator.couldCheckFlopAsPFRAndFoldToTurnBetIPSRP;
+            checkFlopAsPFRAndFoldToTurnBetOOPSRP += indicator.checkFlopAsPFRAndFoldToTurnBetOOPSRP;
+            couldCheckFlopAsPFRAndFoldToTurnBetOOPSRP += indicator.couldCheckFlopAsPFRAndFoldToTurnBetOOPSRP;
+            checkFlopAsPFRAndFoldToRiverBetIPSRP += indicator.checkFlopAsPFRAndFoldToRiverBetIPSRP;
+            couldCheckFlopAsPFRAndFoldToRiverBetIPSRP += indicator.couldCheckFlopAsPFRAndFoldToRiverBetIPSRP;
+            checkFlopAsPFRAndFoldToRiverBetOOPSRP += indicator.checkFlopAsPFRAndFoldToRiverBetOOPSRP;
+            couldCheckFlopAsPFRAndFoldToRiverBetOOPSRP += indicator.couldCheckFlopAsPFRAndFoldToRiverBetOOPSRP;
+        }
+
+        #endregion
+
+        #region Check Flop as PFR and Fold to Turn/River Bet in 3-Bet Pot
+
+        [ProtoMember(148)]
+        protected int checkFlopAsPFRAndFoldToTurnBetIP3BetPot;
+
+        [ProtoMember(149)]
+        protected int couldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot;
+
+        public override decimal CheckFlopAsPFRAndFoldToTurnBetIP3BetPot => GetPercentage(checkFlopAsPFRAndFoldToTurnBetIP3BetPot, couldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot);
+
+        [ProtoMember(150)]
+        protected int checkFlopAsPFRAndFoldToTurnBetOOP3BetPot;
+
+        [ProtoMember(151)]
+        protected int couldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot;
+
+        public override decimal CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot => GetPercentage(checkFlopAsPFRAndFoldToTurnBetOOP3BetPot, couldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot);
+
+        [ProtoMember(152)]
+        protected int сheckFlopAsPFRAndFoldToRiverBetIP3BetPot;
+
+        [ProtoMember(153)]
+        protected int couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot;
+
+        public override decimal CheckFlopAsPFRAndFoldToRiverBetIP3BetPot => GetPercentage(сheckFlopAsPFRAndFoldToRiverBetIP3BetPot, couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot);
+
+        [ProtoMember(154)]
+        protected int checkFlopAsPFRAndFoldToRiverBetOOP3BetPot;
+
+        [ProtoMember(155)]
+        protected int couldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot;
+
+        public override decimal CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot => GetPercentage(checkFlopAsPFRAndFoldToRiverBetOOP3BetPot, couldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot);
+
+        private void AddCheckFlopAsPFRAndFoldToTurnBet3BetPotStatistic(Playerstatistic statistic)
+        {
+            checkFlopAsPFRAndFoldToTurnBetIP3BetPot += statistic.CheckFlopAsPFRAndFoldToTurnBetIP3BetPot;
+            couldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot += statistic.CouldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot;
+            checkFlopAsPFRAndFoldToTurnBetOOP3BetPot += statistic.CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot;
+            couldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot += statistic.CouldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot;
+            checkFlopAsPFRAndFoldToRiverBetIP3BetPot += statistic.CheckFlopAsPFRAndFoldToRiverBetIP3BetPot;
+            couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot += statistic.CouldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot;
+            checkFlopAsPFRAndFoldToRiverBetOOP3BetPot += statistic.CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot;
+            couldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot += statistic.CouldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot;
+        }
+
+        private void CleanCheckFlopAsPFRAndFoldToTurnBet3BetPot()
+        {
+            checkFlopAsPFRAndFoldToTurnBetIP3BetPot = 0;
+            couldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot = 0;
+            checkFlopAsPFRAndFoldToTurnBetOOP3BetPot = 0;
+            couldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot = 0;
+            checkFlopAsPFRAndFoldToRiverBetIP3BetPot = 0;
+            couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot = 0;
+            checkFlopAsPFRAndFoldToRiverBetOOP3BetPot = 0;
+            couldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot = 0;
+        }
+
+        private void AddCheckFlopAsPFRAndFoldToTurnBet3BetPotIndicator(LightIndicators indicator)
+        {
+            checkFlopAsPFRAndFoldToTurnBetIP3BetPot += indicator.checkFlopAsPFRAndFoldToTurnBetIP3BetPot;
+            couldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot += indicator.couldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot;
+            checkFlopAsPFRAndFoldToTurnBetOOP3BetPot += indicator.checkFlopAsPFRAndFoldToTurnBetOOP3BetPot;
+            couldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot += indicator.couldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot;
+            checkFlopAsPFRAndFoldToRiverBetIP3BetPot += indicator.checkFlopAsPFRAndFoldToRiverBetIP3BetPot;
+            couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot += indicator.couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot;
+            checkFlopAsPFRAndFoldToRiverBetOOP3BetPot += indicator.checkFlopAsPFRAndFoldToRiverBetOOP3BetPot;
+            couldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot += indicator.couldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot;
+        }
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -1602,6 +1746,8 @@ namespace Model.Data
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
+            AddCheckFlopAsPFRAndFoldToTurnBetSRPStatistic(statistic);
+            AddCheckFlopAsPFRAndFoldToTurnBet3BetPotStatistic(statistic);
         }
 
         public override void Clean()
@@ -1705,6 +1851,8 @@ namespace Model.Data
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
             CleanBetWhenCheckedToIn3BetPot();
+            CleanCheckFlopAsPFRAndFoldToTurnBetSRP();
+            CleanCheckFlopAsPFRAndFoldToTurnBet3BetPot();
         }
 
         public virtual void AddIndicator(LightIndicators indicator)
@@ -1840,6 +1988,8 @@ namespace Model.Data
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);
             AddBetWhenCheckedToIn3BetPotIndicator(indicator);
+            AddCheckFlopAsPFRAndFoldToTurnBetSRPIndicator(indicator);
+            AddCheckFlopAsPFRAndFoldToTurnBet3BetPotIndicator(indicator);
         }
 
         public override int CompareTo(object obj)
