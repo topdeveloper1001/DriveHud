@@ -118,7 +118,7 @@ namespace DriveHUD.Importers.PokerStars
                         foreach (var auditFile in auditFiles)
                         {
                             var dataObject = ParseAuditFile(auditFile);
-                            dataManager.ProcessData(dataObject);
+                            dataManager.ProcessData(dataObject);                            
                         }
                     }
 
@@ -279,6 +279,7 @@ namespace DriveHUD.Importers.PokerStars
 
                         if (!string.IsNullOrEmpty(title) &&
                             windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase) &&
+                            (!tableName.Contains("#") && !title.Contains("#") || tableName.Contains("#")) &&
                             title.Replace(" Table ", " ").ContainsIgnoreCase(tableName) && !title.ContainsIgnoreCase(" Lobby"))
                         {
                             handle = hWnd;
