@@ -610,10 +610,7 @@ namespace DriveHUD.Application.ViewModels
                         activeLayout.Filter.Clone() :
                         new HudLayoutFilter();
 
-                    if (!e.DoNotUpdateHud)
-                    {
-                        playersCacheInfo = playersCacheInfo.Where(x => x.GameNumber == e.GameNumber).ToList();
-                    }
+                    playersCacheInfo = playersCacheInfo.Where(x => x.GameNumber == e.GameNumber).ToList();
 
                     importerSessionCacheService.AddOrUpdatePlayersStats(playersCacheInfo, gameInfo.Session, filter);
                 }
