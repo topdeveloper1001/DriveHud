@@ -10,9 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Helpers;
+using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
@@ -122,17 +124,31 @@ namespace DriveHUD.Importers.PokerStars
             // check if there is more than 1 opened table
             if (!string.IsNullOrWhiteSpace(parsingResult.FileName))
             {
-                var tableNameIndex = parsingResult.FileName.IndexOf($"{tableName} #", StringComparison.OrdinalIgnoreCase);
+                var originalTableName = tableName;
+                var preparedTableName = tableName.Replace("/", "-");
+
+                var tableNameIndex = parsingResult.FileName.IndexOf($"{preparedTableName} #", StringComparison.OrdinalIgnoreCase);
 
                 if (tableNameIndex >= 0)
                 {
-                    //HH20180514 Halley #2 - $0.01-$0.02 - USD No Limit Hold'em.txt
+                    // HH20180514 Halley #2 - $0.01-$0.02 - USD No Limit Hold'em.txt
                     var tableNameEndIndex = parsingResult.FileName.IndexOf(" ", tableNameIndex + tableName.Length + 2);
-                    tableName = parsingResult.FileName.Substring(tableNameIndex, tableNameEndIndex - tableNameIndex).Trim();
+
+                    tableName = parsingResult.FileName
+                        .Substring(tableNameIndex, tableNameEndIndex - tableNameIndex)
+                        .Trim()
+                        .Replace(preparedTableName, originalTableName);
                 }
             }
 
-            return title.Contains(tableName);
+            var result = title.Contains(tableName) && (tableName.Contains("#") || !title.Contains("#"));
+
+            if (IsAdvancedLogEnabled)
+            {
+                LogProvider.Log.Info($"Check if window '{title}' [{handle}] matches '{tableName}': {result}. [{SiteString}]");
+            }
+
+            return result;
         }
 
         protected override void PublishImportedResults(DataImportedEventArgs args)
@@ -160,6 +176,12 @@ namespace DriveHUD.Importers.PokerStars
             if (window == IntPtr.Zero)
             {
                 return;
+            }
+
+            if (parsingResult.Source.GameDescription != null &&
+                parsingResult.Source.GameDescription.TableTypeDescriptors.Contains(TableTypeDescription.FastFold))
+            {
+                gameInfo.GameFormat = GameFormat.Zoom;
             }
 
             var title = WinApi.GetWindowText(window);
