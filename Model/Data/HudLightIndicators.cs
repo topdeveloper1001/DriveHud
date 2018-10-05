@@ -2336,7 +2336,7 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = CheckFlopAsPFRAndFoldToRiverBetIP3BetPot,
-                    Occurred = сheckFlopAsPFRAndFoldToRiverBetIP3BetPot,
+                    Occurred = checkFlopAsPFRAndFoldToRiverBetIP3BetPot,
                     CouldOccurred = couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot,
                 };
             }

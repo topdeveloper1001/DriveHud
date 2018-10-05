@@ -571,7 +571,7 @@ namespace DriveHUD.Application.ViewModels
                 {
                     if (e.GameInfo.GameFormat != GameFormat.Zone)
                     {
-                        LogProvider.Log.Warn($"No window found for hand #{e.GameInfo.GameNumber}");
+                        LogProvider.Log.Warn(this, $"No window found for hand #{e.GameInfo.GameNumber}");
                     }
 
                     return;
@@ -612,7 +612,10 @@ namespace DriveHUD.Application.ViewModels
 
                     playersCacheInfo = playersCacheInfo.Where(x => x.GameNumber == e.GameNumber).ToList();
 
-                    importerSessionCacheService.AddOrUpdatePlayersStats(playersCacheInfo, gameInfo.Session, filter);
+                    using (var pf = new PerformanceMonitor($"AddOrUpdatePlayersStats for hand #{gameInfo.GameNumber}, session={gameInfo.Session}", isAdvancedLoggingEnabled, this))
+                    {
+                        importerSessionCacheService.AddOrUpdatePlayersStats(playersCacheInfo, gameInfo.Session, filter);
+                    }
                 }
 
                 if (e.DoNotUpdateHud)
@@ -645,7 +648,10 @@ namespace DriveHUD.Application.ViewModels
                                                             IsHero = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerItem)?.IsHero ?? false
                                                         }).ToArray();
 
-                        importerSessionCacheService.AddOrUpdatePlayerStickerStats(playersStickersCacheData, gameInfo.Session);
+                        using (var pf = new PerformanceMonitor($"AddOrUpdatePlayerStickerStats for hand #{gameInfo.GameNumber}, session={gameInfo.Session}", isAdvancedLoggingEnabled, this))
+                        {
+                            importerSessionCacheService.AddOrUpdatePlayerStickerStats(playersStickersCacheData, gameInfo.Session);
+                        }
                     }
                 }
 
@@ -887,7 +893,7 @@ namespace DriveHUD.Application.ViewModels
 
                 if (isAdvancedLoggingEnabled)
                 {
-                    LogProvider.Log.Info(this, $"Sending {serialized.Length} bytes to HUD [handle={ht.WindowId}, title={WinApi.GetWindowText(new IntPtr(ht.WindowId))}]");
+                    LogProvider.Log.Info(this, $"Sending {serialized.Length} bytes to HUD [{ht}]");
                 }
 
                 hudTransmitter.Send(serialized);

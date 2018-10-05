@@ -1574,12 +1574,12 @@ namespace Model.Data
         public override decimal CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot => GetPercentage(checkFlopAsPFRAndFoldToTurnBetOOP3BetPot, couldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot);
 
         [ProtoMember(152)]
-        protected int сheckFlopAsPFRAndFoldToRiverBetIP3BetPot;
+        protected int checkFlopAsPFRAndFoldToRiverBetIP3BetPot;
 
         [ProtoMember(153)]
         protected int couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot;
 
-        public override decimal CheckFlopAsPFRAndFoldToRiverBetIP3BetPot => GetPercentage(сheckFlopAsPFRAndFoldToRiverBetIP3BetPot, couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot);
+        public override decimal CheckFlopAsPFRAndFoldToRiverBetIP3BetPot => GetPercentage(checkFlopAsPFRAndFoldToRiverBetIP3BetPot, couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot);
 
         [ProtoMember(154)]
         protected int checkFlopAsPFRAndFoldToRiverBetOOP3BetPot;
@@ -1607,7 +1607,7 @@ namespace Model.Data
             couldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot = 0;
             checkFlopAsPFRAndFoldToTurnBetOOP3BetPot = 0;
             couldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot = 0;
-            checkFlopAsPFRAndFoldToRiverBetIP3BetPot = 0;
+            checkFlopAsPFRAndFoldToRiverBetIP3BetPot = 0;            
             couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot = 0;
             checkFlopAsPFRAndFoldToRiverBetOOP3BetPot = 0;
             couldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot = 0;
