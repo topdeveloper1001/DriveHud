@@ -90,7 +90,9 @@ namespace HandHistories.Parser.Utils.FastParsing
                 return false;
             }
 
-            if (!string.IsNullOrEmpty(match.Groups["currency1"].Value))
+            var currency1Group = match.Groups["currency1"];
+
+            if (currency1Group != null && currency1Group.Success && !string.IsNullOrEmpty(match.Groups["currency1"].Value))
             {
                 switch (match.Groups["currency1"].Value)
                 {
@@ -104,7 +106,7 @@ namespace HandHistories.Parser.Utils.FastParsing
                         currency = Currency.YUAN;
                         break;
                     case "₹":
-                        currency = Currency.YUAN;
+                        currency = Currency.INR;
                         break;
                 }
             }
