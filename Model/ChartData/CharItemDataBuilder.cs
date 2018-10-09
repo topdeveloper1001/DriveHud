@@ -92,6 +92,11 @@ namespace Model.ChartData
 
         protected override DateTime GetStartDate(DateTime maxDateTime)
         {
+            if (DateTime.MinValue.AddYears(1) >= maxDateTime)
+            {
+                return DateTime.MinValue;
+            }
+
             return maxDateTime.AddYears(-1);
         }
 
@@ -118,6 +123,11 @@ namespace Model.ChartData
 
         protected override DateTime GetStartDate(DateTime maxDateTime)
         {
+            if (DateTime.MinValue.AddMonths(1) >= maxDateTime)
+            {
+                return DateTime.MinValue;
+            }
+
             return maxDateTime.AddMonths(-1);
         }
 
@@ -132,6 +142,11 @@ namespace Model.ChartData
     {
         protected override DateTime GetStartDate(DateTime maxDateTime)
         {
+            if (DateTime.MinValue.AddDays(7) >= maxDateTime)
+            {
+                return DateTime.MinValue;
+            }
+
             return maxDateTime.AddDays(-7);
         }
     }
