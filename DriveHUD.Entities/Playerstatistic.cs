@@ -1043,6 +1043,12 @@ namespace DriveHUD.Entities
         [ProtoMember(372)]
         public virtual string RiverActions { get; set; } = string.Empty;
 
+        [ProtoMember(373)]
+        public virtual int PreflopRaisersCount { get; set; }
+
+        [ProtoMember(374)]
+        public virtual decimal OpenRaisePreflopInBBs { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1169,6 +1175,14 @@ namespace DriveHUD.Entities
         public virtual bool In3BetPot => Didthreebet != 0 || FacedthreebetpreflopVirtual != 0 ||
             (Couldthreebet != 0 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0);
 
+        public virtual bool In4BetPot => PreflopRaisersCount == 3 && !PreflopActions.EndsWith("F");
+
+        public virtual bool IsSRP => (PreflopActions.Equals("C") || PreflopActions.Equals("F")) &&
+            (FacingPreflop == EnumFacingPreflop.Raiser || FacingPreflop == EnumFacingPreflop.RaiserAndCaller) ||
+            (FacingPreflop == EnumFacingPreflop.Unopened && PreflopActions.Equals("CC")) ||
+            PreflopActions.Equals("R");
+
+
         #region FlopBetSize stats
 
         public virtual int FlopBetSizeOneHalfOrLess
@@ -1223,8 +1237,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Foldedtoturncontinuationbet == 1 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
-                    (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+                return Foldedtoturncontinuationbet == 1 && In3BetPot ? 1 : 0;
             }
         }
 
@@ -1232,8 +1245,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Facingturncontinuationbet == 1 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
-                    (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+                return Facingturncontinuationbet == 1 && In3BetPot ? 1 : 0;
             }
         }
 
@@ -1569,11 +1581,9 @@ namespace DriveHUD.Entities
         public virtual int CouldDoubleBarrelSRP => Turncontinuationbetpossible != 0 && FirstRaiser != 0 &&
            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
 
-        public virtual int DoubleBarrel3BetPot => Turncontinuationbetmade != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
-            (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+        public virtual int DoubleBarrel3BetPot => Turncontinuationbetmade != 0 && In3BetPot ? 1 : 0;
 
-        public virtual int CouldDoubleBarrel3BetPot => Turncontinuationbetpossible != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
-            (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+        public virtual int CouldDoubleBarrel3BetPot => Turncontinuationbetpossible != 0 && In3BetPot ? 1 : 0;
 
         public virtual int TripleBarrelSRP => Rivercontinuationbetmade != 0 && FirstRaiser != 0 &&
             FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
@@ -1581,19 +1591,15 @@ namespace DriveHUD.Entities
         public virtual int CouldTripleBarrelSRP => Rivercontinuationbetpossible != 0 && FirstRaiser != 0 &&
             FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
 
-        public virtual int TripleBarrel3BetPot => Rivercontinuationbetmade != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
-            (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+        public virtual int TripleBarrel3BetPot => Rivercontinuationbetmade != 0 && In3BetPot ? 1 : 0;
 
-        public virtual int CouldTripleBarrel3BetPot => Rivercontinuationbetpossible != 0 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
-            (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+        public virtual int CouldTripleBarrel3BetPot => Rivercontinuationbetpossible != 0 && In3BetPot ? 1 : 0;
 
         public virtual int CBetThenFoldFlopSRP => Flopcontinuationbetmade != 0 && BetFoldFlopPfrRaiser != 0 && FirstRaiser != 0 &&
             FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
 
         public virtual int CouldCBetThenFoldFlopSRP => Flopcontinuationbetpossible != 0 && CouldBetFoldFlopPfrRaiser != 0 && FirstRaiser != 0 &&
            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
-
-
 
         #endregion
 
@@ -1678,6 +1684,34 @@ namespace DriveHUD.Entities
 
         public virtual int CouldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot => PreflopIP == 0 && In3BetPot &&
             PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnRiver != 0 ? 1 : 0;
+
+        #endregion
+
+        #region Fold to continuation bets in SRP/3Bet/4Bet
+
+        public virtual int FoldToTripleBarrelSRP => IsSRP && Foldedtorivercontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FacingTripleBarrelSRP => IsSRP && Facingrivercontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FoldToTripleBarrel3BetPot => In3BetPot && Foldedtorivercontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FacingTripleBarrel3BetPot => In3BetPot && Facingrivercontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FoldToTripleBarrel4BetPot => In4BetPot && Foldedtorivercontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FacingTripleBarrel4BetPot => In4BetPot && Facingrivercontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FoldToDoubleBarrelSRP => IsSRP && Foldedtoturncontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FacingDoubleBarrelSRP => IsSRP && Facingturncontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FoldToDoubleBarrel4BetPot => In4BetPot && Foldedtoturncontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FacingDoubleBarrel4BetPot => In4BetPot && Facingturncontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FoldToCBetSRP => IsSRP && Foldedtoflopcontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FacingCBetSRP => IsSRP && Facingflopcontinuationbet != 0 ? 1 : 0;
 
         #endregion
 
@@ -2340,6 +2374,9 @@ namespace DriveHUD.Entities
             ThreeBettorPosition = a.ThreeBettorPosition;
             CouldProbeBetTurn += a.CouldProbeBetTurn;
             CouldProbeBetRiver += a.CouldProbeBetRiver;
+
+            PreflopRaisersCount = a.PreflopRaisersCount;
+            OpenRaisePreflopInBBs = a.OpenRaisePreflopInBBs;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -2774,6 +2811,9 @@ namespace DriveHUD.Entities
             r.ThreeBettorPosition = b.ThreeBettorPosition;
             r.CouldProbeBetTurn = a.CouldProbeBetTurn + b.CouldProbeBetTurn;
             r.CouldProbeBetRiver = a.CouldProbeBetRiver + b.CouldProbeBetRiver;
+
+            r.PreflopRaisersCount = b.PreflopRaisersCount;
+            r.OpenRaisePreflopInBBs = b.OpenRaisePreflopInBBs;
 
             return r;
         }

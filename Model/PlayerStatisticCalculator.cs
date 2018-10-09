@@ -94,8 +94,12 @@ namespace Model
             bool wonTurn = playedTurn && won;
             bool wonRiver = playedRiver && won;
 
+            var pfrAction = playerHandActions.FirstOrDefault(x => x.Street == Street.Preflop && x.IsRaise());
+
+            stat.OpenRaisePreflopInBBs = pfrAction != null && stat.BigBlind != 0 ? Math.Abs(pfrAction.Amount) / stat.BigBlind : 0;
+
             bool vpip = playerHandActions.PreFlopAny(handAction => handAction.IsRaise() || handAction.IsCall());
-            bool pfr = playerHandActions.PreFlopAny(handAction => handAction.IsRaise());
+            bool pfr = pfrAction != null;
             bool pfrOcurred = parsedHand.PreFlop.Any(handAction => handAction.HandActionType == HandActionType.RAISE);
             int pfrRaisers = parsedHand.PreFlop.Where(x => x.HandActionType == HandActionType.RAISE).Count();
 
@@ -439,6 +443,7 @@ namespace Model
             stat.Pfrhands = pfr ? 1 : 0;
             stat.Vpiphands = vpip ? 1 : 0;
             stat.PfrOop = pfr && !preflopInPosition ? 1 : 0;
+            stat.PreflopRaisersCount = pfrRaisers;
 
             stat.DidDonkBet = donkBet.Made ? 1 : 0;
             stat.CouldDonkBet = donkBet.Possible ? 1 : 0;

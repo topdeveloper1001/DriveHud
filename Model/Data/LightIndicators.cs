@@ -1607,7 +1607,7 @@ namespace Model.Data
             couldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot = 0;
             checkFlopAsPFRAndFoldToTurnBetOOP3BetPot = 0;
             couldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot = 0;
-            checkFlopAsPFRAndFoldToRiverBetIP3BetPot = 0;            
+            checkFlopAsPFRAndFoldToRiverBetIP3BetPot = 0;
             couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot = 0;
             checkFlopAsPFRAndFoldToRiverBetOOP3BetPot = 0;
             couldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot = 0;
@@ -1623,6 +1623,121 @@ namespace Model.Data
             couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot += indicator.couldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot;
             checkFlopAsPFRAndFoldToRiverBetOOP3BetPot += indicator.checkFlopAsPFRAndFoldToRiverBetOOP3BetPot;
             couldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot += indicator.couldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot;
+        }
+
+        #endregion
+
+        #region Fold to continuation bets in SRP/3Bet/4Bet
+
+        [ProtoMember(156)]
+        protected int foldToTripleBarrelSRP;
+
+        [ProtoMember(157)]
+        protected int facingTripleBarrelSRP;
+
+        public override decimal FoldToTripleBarrelSRP => GetPercentage(foldToTripleBarrelSRP, facingTripleBarrelSRP);
+
+        [ProtoMember(158)]
+        protected int foldToTripleBarrel3BetPot;
+
+        [ProtoMember(159)]
+        protected int facingTripleBarrel3BetPot;
+
+        public override decimal FoldToTripleBarrel3BetPot => GetPercentage(foldToTripleBarrel3BetPot, facingTripleBarrel3BetPot);
+
+        [ProtoMember(160)]
+        protected int foldToTripleBarrel4BetPot;
+
+        [ProtoMember(161)]
+        protected int facingTripleBarrel4BetPot;
+
+        public override decimal FoldToTripleBarrel4BetPot => GetPercentage(foldToTripleBarrel4BetPot, facingTripleBarrel4BetPot);
+
+        [ProtoMember(162)]
+        protected int foldToDoubleBarrelSRP;
+
+        [ProtoMember(163)]
+        protected int facingDoubleBarrelSRP;
+
+        public override decimal FoldToDoubleBarrelSRP => GetPercentage(foldToDoubleBarrelSRP, facingDoubleBarrelSRP);
+      
+        [ProtoMember(164)]
+        protected int foldToDoubleBarrel4BetPot;
+
+        [ProtoMember(165)]
+        protected int facingDoubleBarrel4BetPot;
+
+        public override decimal FoldToDoubleBarrel4BetPot => GetPercentage(foldToDoubleBarrel4BetPot, facingDoubleBarrel4BetPot);
+
+        [ProtoMember(166)]
+        protected int foldToCBetSRP;
+
+        [ProtoMember(167)]
+        protected int facingCBetSRP;
+
+        public override decimal FoldToCBetSRP => GetPercentage(foldToCBetSRP, facingCBetSRP);
+        
+        private void AddFoldToContinuationBetsInPotsStatistic(Playerstatistic statistic)
+        {
+            foldToTripleBarrelSRP += statistic.FoldToTripleBarrelSRP;
+            facingTripleBarrelSRP += statistic.FacingTripleBarrelSRP;
+
+            foldToTripleBarrel3BetPot += statistic.FoldToTripleBarrel3BetPot;
+            facingTripleBarrel3BetPot += statistic.FacingTripleBarrel3BetPot;
+
+            foldToTripleBarrel4BetPot += statistic.FoldToTripleBarrel4BetPot;
+            facingTripleBarrel4BetPot += statistic.FacingTripleBarrel4BetPot;
+
+            foldToDoubleBarrelSRP += statistic.FoldToDoubleBarrelSRP;
+            facingDoubleBarrelSRP += statistic.FacingDoubleBarrelSRP;
+       
+            foldToDoubleBarrel4BetPot += statistic.FoldToDoubleBarrel4BetPot;
+            facingDoubleBarrel4BetPot += statistic.FacingDoubleBarrel4BetPot;
+
+            foldToCBetSRP += statistic.FoldToCBetSRP;
+            facingCBetSRP += statistic.FacingCBetSRP;        
+        }
+
+        private void CleanFoldToContinuationBetsInPots()
+        {
+            foldToTripleBarrelSRP = 0;
+            facingTripleBarrelSRP = 0;
+
+            foldToTripleBarrel3BetPot = 0;
+            facingTripleBarrel3BetPot = 0;
+
+            foldToTripleBarrel4BetPot = 0;
+            facingTripleBarrel4BetPot = 0;
+
+            foldToDoubleBarrelSRP = 0;
+            facingDoubleBarrelSRP = 0;
+
+            foldToDoubleBarrel4BetPot = 0;
+            facingDoubleBarrel4BetPot = 0;
+
+            foldToCBetSRP = 0;
+            facingCBetSRP = 0; 
+        }
+
+        private void AddFoldToContinuationBetsInPotsIndicator(LightIndicators indicator)
+        {
+            foldToTripleBarrelSRP += indicator.foldToTripleBarrelSRP;
+            facingTripleBarrelSRP += indicator.facingTripleBarrelSRP;
+
+            foldToTripleBarrel3BetPot += indicator.foldToTripleBarrel3BetPot;
+            facingTripleBarrel3BetPot += indicator.facingTripleBarrel3BetPot;
+
+            foldToTripleBarrel4BetPot += indicator.foldToTripleBarrel4BetPot;
+            facingTripleBarrel4BetPot += indicator.facingTripleBarrel4BetPot;
+
+            foldToDoubleBarrelSRP += indicator.foldToDoubleBarrelSRP;
+            facingDoubleBarrelSRP += indicator.facingDoubleBarrelSRP;
+         
+            foldToDoubleBarrel4BetPot += indicator.foldToDoubleBarrel4BetPot;
+            facingDoubleBarrel4BetPot += indicator.facingDoubleBarrel4BetPot;
+
+            foldToCBetSRP += indicator.foldToCBetSRP;
+            facingCBetSRP += indicator.facingCBetSRP;
         }
 
         #endregion
@@ -1748,6 +1863,7 @@ namespace Model.Data
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
             AddCheckFlopAsPFRAndFoldToTurnBetSRPStatistic(statistic);
             AddCheckFlopAsPFRAndFoldToTurnBet3BetPotStatistic(statistic);
+            AddFoldToContinuationBetsInPotsStatistic(statistic);
         }
 
         public override void Clean()
@@ -1853,6 +1969,7 @@ namespace Model.Data
             CleanBetWhenCheckedToIn3BetPot();
             CleanCheckFlopAsPFRAndFoldToTurnBetSRP();
             CleanCheckFlopAsPFRAndFoldToTurnBet3BetPot();
+            CleanFoldToContinuationBetsInPots();
         }
 
         public virtual void AddIndicator(LightIndicators indicator)
@@ -1990,6 +2107,7 @@ namespace Model.Data
             AddBetWhenCheckedToIn3BetPotIndicator(indicator);
             AddCheckFlopAsPFRAndFoldToTurnBetSRPIndicator(indicator);
             AddCheckFlopAsPFRAndFoldToTurnBet3BetPotIndicator(indicator);
+            AddFoldToContinuationBetsInPotsIndicator(indicator);
         }
 
         public override int CompareTo(object obj)

@@ -1958,6 +1958,22 @@ namespace Model.Data
 
         #endregion
 
+        #region Fold to continuation bets in SRP/3Bet/4Bet
+
+        public virtual decimal FoldToTripleBarrelSRP => GetPercentage(Statistics.Sum(x => x.FoldToTripleBarrelSRP), Statistics.Sum(x => x.FacingTripleBarrelSRP));
+
+        public virtual decimal FoldToTripleBarrel3BetPot => GetPercentage(Statistics.Sum(x => x.FoldToTripleBarrel3BetPot), Statistics.Sum(x => x.FacingTripleBarrel3BetPot));
+
+        public virtual decimal FoldToTripleBarrel4BetPot => GetPercentage(Statistics.Sum(x => x.FoldToTripleBarrel4BetPot), Statistics.Sum(x => x.FacingTripleBarrel4BetPot));
+
+        public virtual decimal FoldToDoubleBarrelSRP => GetPercentage(Statistics.Sum(x => x.FoldToDoubleBarrelSRP), Statistics.Sum(x => x.FacingDoubleBarrelSRP));      
+
+        public virtual decimal FoldToDoubleBarrel4BetPot => GetPercentage(Statistics.Sum(x => x.FoldToDoubleBarrel4BetPot), Statistics.Sum(x => x.FacingDoubleBarrel4BetPot));
+
+        public virtual decimal FoldToCBetSRP => GetPercentage(Statistics.Sum(x => x.FoldToCBetSRP), Statistics.Sum(x => x.FacingCBetSRP));      
+
+        #endregion
+
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
         {
             foreach (var statistic in statistics)

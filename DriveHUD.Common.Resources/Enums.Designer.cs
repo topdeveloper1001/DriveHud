@@ -2374,6 +2374,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to C-Bet SRP%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToCBetSRP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToCBetSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check-Raise &amp; Fold vs. Flop C-Bet%.
         /// </summary>
         internal static string Enum_Stat_FoldToCheckRaiseVsFlopCBet {
@@ -2401,11 +2410,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to Double Barrel 4-Bet Pot%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToDoubleBarrel4BetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToDoubleBarrel4BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to Double Barrell in 3-Bet Pot%.
         /// </summary>
         internal static string Enum_Stat_FoldToDoubleBarrelIn3BetPot {
             get {
                 return ResourceManager.GetString("Enum_Stat_FoldToDoubleBarrelIn3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Double Barrel SRP%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToDoubleBarrelSRP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToDoubleBarrelSRP", resourceCulture);
             }
         }
         
@@ -2496,6 +2523,33 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_FoldToSteal {
             get {
                 return ResourceManager.GetString("Enum_Stat_FoldToSteal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Triple Barrel 4-Bet Pot%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToTripleBarrel3BetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToTripleBarrel3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Triple Barrel SRP%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToTripleBarrel4BetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToTripleBarrel4BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Triple Barrel 3-Bet Pot%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToTripleBarrelSRP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToTripleBarrelSRP", resourceCulture);
             }
         }
         

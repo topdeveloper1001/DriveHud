@@ -2355,6 +2355,88 @@ namespace Model.Data
             }
         }
 
+        #region Fold to continuation bets in SRP/3Bet/4Bet
+
+        public virtual StatDto FoldToTripleBarrelSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToTripleBarrelSRP,
+                    Occurred = foldToTripleBarrelSRP,
+                    CouldOccurred = facingTripleBarrelSRP,
+                };
+            }
+        }
+
+        public virtual StatDto FoldToTripleBarrel3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToTripleBarrel3BetPot,
+                    Occurred = foldToTripleBarrel3BetPot,
+                    CouldOccurred = facingTripleBarrel3BetPot,
+                };
+            }
+        }
+
+        public virtual StatDto FoldToTripleBarrel4BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToTripleBarrel4BetPot,
+                    Occurred = foldToTripleBarrel4BetPot,
+                    CouldOccurred = facingTripleBarrel4BetPot,
+                };
+            }
+        }
+
+        public virtual StatDto FoldToDoubleBarrelSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToDoubleBarrelSRP,
+                    Occurred = foldToDoubleBarrelSRP,
+                    CouldOccurred = facingDoubleBarrelSRP,
+                };
+            }
+        }      
+
+        public virtual StatDto FoldToDoubleBarrel4BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToDoubleBarrel4BetPot,
+                    Occurred = foldToDoubleBarrel4BetPot,
+                    CouldOccurred = facingDoubleBarrel4BetPot,
+                };
+            }
+        }
+
+        public virtual StatDto FoldToCBetSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToCBetSRP,
+                    Occurred = foldToCBetSRP,
+                    CouldOccurred = facingCBetSRP,
+                };
+            }
+        }       
+
+        #endregion
+
         #endregion
 
         public virtual StatDto CheckRaiseFlopAsPFRObject

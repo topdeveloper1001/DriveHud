@@ -1339,6 +1339,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to C-Bet SRP%.
+        /// </summary>
+        internal static string Reports_Column_FoldToCBetSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToCBetSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check-Raise &amp; Fold vs. Flop C-bet%.
         /// </summary>
         internal static string Reports_Column_FoldToCheckRaiseVsFlopCBet {
@@ -1366,11 +1375,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to Double Barrel 4-Bet Pot%.
+        /// </summary>
+        internal static string Reports_Column_FoldToDoubleBarrel4BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToDoubleBarrel4BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to Double Barrell in 3-Bet Pot%.
         /// </summary>
         internal static string Reports_Column_FoldToDoubleBarrelIn3BetPot {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldToDoubleBarrelIn3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Double Barrel SRP%.
+        /// </summary>
+        internal static string Reports_Column_FoldToDoubleBarrelSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToDoubleBarrelSRP", resourceCulture);
             }
         }
         
@@ -1461,6 +1488,33 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_FoldToSqueez {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldToSqueez", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Triple Barrel 4-Bet Pot%.
+        /// </summary>
+        internal static string Reports_Column_FoldToTripleBarrel3BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToTripleBarrel3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Triple Barrel SRP%.
+        /// </summary>
+        internal static string Reports_Column_FoldToTripleBarrel4BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToTripleBarrel4BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to Triple Barrel 3-Bet Pot%.
+        /// </summary>
+        internal static string Reports_Column_FoldToTripleBarrelSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToTripleBarrelSRP", resourceCulture);
             }
         }
         

@@ -1322,4 +1322,22 @@
   <data name="Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetOOPSRP" xml:space="preserve">
     <value>Check Flop as PFR and Fold to turn bet OOP SRP%</value>
   </data>
+  <data name="Enum_Stat_FoldToCBetSRP" xml:space="preserve">
+    <value>Fold to C-Bet SRP%</value>
+  </data>
+  <data name="Enum_Stat_FoldToDoubleBarrel4BetPot" xml:space="preserve">
+    <value>Fold to Double Barrel 4-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_FoldToDoubleBarrelSRP" xml:space="preserve">
+    <value>Fold to Double Barrel SRP%</value>
+  </data>
+  <data name="Enum_Stat_FoldToTripleBarrel3BetPot" xml:space="preserve">
+    <value>Fold to Triple Barrel 4-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_FoldToTripleBarrel4BetPot" xml:space="preserve">
+    <value>Fold to Triple Barrel SRP%</value>
+  </data>
+  <data name="Enum_Stat_FoldToTripleBarrelSRP" xml:space="preserve">
+    <value>Fold to Triple Barrel 3-Bet Pot%</value>
+  </data>
 </root>

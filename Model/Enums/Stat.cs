@@ -280,6 +280,12 @@ namespace Model.Enums
         CheckFlopAsPFRAndFoldToTurnBetIP3BetPot,
         CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot,
         CheckFlopAsPFRAndFoldToRiverBetIP3BetPot,
-        CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot
+        CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot,
+        FoldToTripleBarrelSRP,
+        FoldToTripleBarrel3BetPot,
+        FoldToTripleBarrel4BetPot,
+        FoldToDoubleBarrelSRP,        
+        FoldToDoubleBarrel4BetPot,
+        FoldToCBetSRP,      
     }
 }
