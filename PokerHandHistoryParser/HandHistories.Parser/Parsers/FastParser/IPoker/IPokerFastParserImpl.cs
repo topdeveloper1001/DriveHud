@@ -648,9 +648,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     return Currency.EURO;
                 case "INR":
                     return Currency.INR;
-
                 default:
-                    throw new CurrencyException(handLines[0], "Unrecognized currency symbol " + tagValue);
+                    LogProvider.Log.Warn(this, $"Unrecognized currency symbol {tagValue}");
+                    return Currency.USD;
             }
         }
 
@@ -1125,7 +1125,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     {
                         var buyinAndRake = buyinText.Split('+');
 
-                        var prizePoolValue = ParserUtils.ParseMoney(buyinAndRake[0]);
+                        ParserUtils.TryParseMoney(buyinAndRake[0], out decimal prizePoolValue, out Currency prizeCurrency);
                         var rake = 0m;
 
                         if (buyinAndRake.Length > 1)
@@ -1138,7 +1138,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                             prizePoolValue += ParserUtils.ParseMoney(buyinAndRake[2]);
                         }
 
-                        var currency = GetCurrency(handLines);
+                        var currency = prizeCurrency == Currency.All ? GetCurrency(handLines) : prizeCurrency;
 
                         buyin = Buyin.FromBuyinRake(prizePoolValue, rake, currency);
                     }

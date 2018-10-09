@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6878198948">
+ <general>
+  <mode>real</mode>
+  <gametype>Holdem NL</gametype>
+  <tablename>€100 Gtd - Rebuy, 935408419</tablename>
+  <tournamentcurrency>1</tournamentcurrency>
+  <currency>NOK</currency>
+  <nickname>Vurorrr</nickname>
+  <buyin>€0.45 + €0.05</buyin>
+  <totalbuyin>€0.50</totalbuyin>
+  <tournamentname>€100 Gtd - Rebuy</tournamentname>
+ </general>
+ <game gamecode="8075625917">
+  <general>
+   <startdate>2017-09-11 13:00:34</startdate>
+   <players>
+    <player seat="6" reg_code="" dealer="0" chips="10,000" name="BCarneiro1986"/>
+    <player seat="5" reg_code="" dealer="0" chips="20,000" name="EASYMONEYAK1"/>
+    <player seat="3" reg_code="" dealer="0" chips="10,000" name="MikeyMonster"/>
+    <player seat="8" reg_code="" dealer="0" chips="10,000" name="Parvin1603"/>
+    <player seat="4" reg_code="6878198948" dealer="0" chips="10,000" name="Vurorrr"/>
+    <player seat="10" reg_code="" dealer="0" chips="10,000" name="alanlees"/>
+    <player seat="1" reg_code="" dealer="1" chips="10,000" name="alfie1965"/>
+    <player seat="9" reg_code="" dealer="0" chips="10,000" name="lucky4444444444"/>
+    <player seat="2" reg_code="" dealer="0" chips="10,000" name="no9to5"/>
+   </players>
+  </general>
+  <round no="0">
+   <action sum="€5" no="1" type="15" player="no9to5"/>
+   <action sum="€5" no="2" type="15" player="MikeyMonster"/>
+   <action sum="€5" no="3" type="15" player="Vurorrr"/>
+   <action sum="€5" no="4" type="15" player="EASYMONEYAK1"/>
+   <action sum="€5" no="5" type="15" player="BCarneiro1986"/>
+   <action sum="€5" no="6" type="15" player="Parvin1603"/>
+   <action sum="€5" no="7" type="15" player="lucky4444444444"/>
+   <action sum="€5" no="8" type="15" player="alanlees"/>
+   <action sum="€5" no="9" type="15" player="alfie1965"/>
+   <action sum="€25" no="10" type="1" player="no9to5"/>
+   <action sum="€50" no="11" type="2" player="MikeyMonster"/>
+  </round>
+ </game> 
+</session>
