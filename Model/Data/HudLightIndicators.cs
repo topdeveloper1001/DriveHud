@@ -2433,7 +2433,336 @@ namespace Model.Data
                     CouldOccurred = facingCBetSRP,
                 };
             }
-        }       
+        }
+
+        #endregion
+
+        #region Open Shove UO Pot positional
+
+        public virtual StatDto SBOpenShove1to8bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SBOpenShove1to8bbUOPot,
+                    Occurred = sbOpenShove1to8bbUOPot,
+                    CouldOccurred = sbOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto SBOpenShove9to14bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SBOpenShove9to14bbUOPot,
+                    Occurred = sbOpenShove9to14bbUOPot,
+                    CouldOccurred = sbOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto SBOpenShove15to25bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SBOpenShove15to25bbUOPot,
+                    Occurred = sbOpenShove15to25bbUOPot,
+                    CouldOccurred = sbOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto SBOpenShove26to50bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SBOpenShove26to50bbUOPot,
+                    Occurred = sbOpenShove26to50bbUOPot,
+                    CouldOccurred = sbOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto SBOpenShove51plusbbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SBOpenShove51plusbbUOPot,
+                    Occurred = sbOpenShove51plusbbUOPot,
+                    CouldOccurred = sbOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto BTNOpenShove1to8bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNOpenShove1to8bbUOPot,
+                    Occurred = btnOpenShove1to8bbUOPot,
+                    CouldOccurred = btnOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto BTNOpenShove9to14bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNOpenShove9to14bbUOPot,
+                    Occurred = btnOpenShove9to14bbUOPot,
+                    CouldOccurred = btnOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto BTNOpenShove15to25bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNOpenShove15to25bbUOPot,
+                    Occurred = btnOpenShove15to25bbUOPot,
+                    CouldOccurred = btnOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto BTNOpenShove26to50bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNOpenShove26to50bbUOPot,
+                    Occurred = btnOpenShove26to50bbUOPot,
+                    CouldOccurred = btnOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto BTNOpenShove51plusbbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNOpenShove51plusbbUOPot,
+                    Occurred = btnOpenShove51plusbbUOPot,
+                    CouldOccurred = btnOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto COOpenShove1to8bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = COOpenShove1to8bbUOPot,
+                    Occurred = coOpenShove1to8bbUOPot,
+                    CouldOccurred = coOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto COOpenShove9to14bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = COOpenShove9to14bbUOPot,
+                    Occurred = coOpenShove9to14bbUOPot,
+                    CouldOccurred = coOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto COOpenShove15to25bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = COOpenShove15to25bbUOPot,
+                    Occurred = coOpenShove15to25bbUOPot,
+                    CouldOccurred = coOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto COOpenShove26to50bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = COOpenShove26to50bbUOPot,
+                    Occurred = coOpenShove26to50bbUOPot,
+                    CouldOccurred = coOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto COOpenShove51plusbbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = COOpenShove51plusbbUOPot,
+                    Occurred = coOpenShove51plusbbUOPot,
+                    CouldOccurred = coOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto MPOpenShove1to8bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = MPOpenShove1to8bbUOPot,
+                    Occurred = mpOpenShove1to8bbUOPot,
+                    CouldOccurred = mpOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto MPOpenShove9to14bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = MPOpenShove9to14bbUOPot,
+                    Occurred = mpOpenShove9to14bbUOPot,
+                    CouldOccurred = mpOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto MPOpenShove15to25bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = MPOpenShove15to25bbUOPot,
+                    Occurred = mpOpenShove15to25bbUOPot,
+                    CouldOccurred = mpOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto MPOpenShove26to50bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = MPOpenShove26to50bbUOPot,
+                    Occurred = mpOpenShove26to50bbUOPot,
+                    CouldOccurred = mpOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto MPOpenShove51plusbbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = MPOpenShove51plusbbUOPot,
+                    Occurred = mpOpenShove51plusbbUOPot,
+                    CouldOccurred = mpOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto EPOpenShove1to8bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = EPOpenShove1to8bbUOPot,
+                    Occurred = epOpenShove1to8bbUOPot,
+                    CouldOccurred = epOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto EPOpenShove9to14bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = EPOpenShove9to14bbUOPot,
+                    Occurred = epOpenShove9to14bbUOPot,
+                    CouldOccurred = epOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto EPOpenShove15to25bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = EPOpenShove15to25bbUOPot,
+                    Occurred = epOpenShove15to25bbUOPot,
+                    CouldOccurred = epOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto EPOpenShove26to50bbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = EPOpenShove26to50bbUOPot,
+                    Occurred = epOpenShove26to50bbUOPot,
+                    CouldOccurred = epOpenShoveUOPot,
+                };
+            }
+        }
+
+        public virtual StatDto EPOpenShove51plusbbUOPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = EPOpenShove51plusbbUOPot,
+                    Occurred = epOpenShove51plusbbUOPot,
+                    CouldOccurred = epOpenShoveUOPot,
+                };
+            }
+        }
 
         #endregion
 

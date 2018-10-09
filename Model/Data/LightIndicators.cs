@@ -1660,7 +1660,7 @@ namespace Model.Data
         protected int facingDoubleBarrelSRP;
 
         public override decimal FoldToDoubleBarrelSRP => GetPercentage(foldToDoubleBarrelSRP, facingDoubleBarrelSRP);
-      
+
         [ProtoMember(164)]
         protected int foldToDoubleBarrel4BetPot;
 
@@ -1676,7 +1676,7 @@ namespace Model.Data
         protected int facingCBetSRP;
 
         public override decimal FoldToCBetSRP => GetPercentage(foldToCBetSRP, facingCBetSRP);
-        
+
         private void AddFoldToContinuationBetsInPotsStatistic(Playerstatistic statistic)
         {
             foldToTripleBarrelSRP += statistic.FoldToTripleBarrelSRP;
@@ -1690,12 +1690,12 @@ namespace Model.Data
 
             foldToDoubleBarrelSRP += statistic.FoldToDoubleBarrelSRP;
             facingDoubleBarrelSRP += statistic.FacingDoubleBarrelSRP;
-       
+
             foldToDoubleBarrel4BetPot += statistic.FoldToDoubleBarrel4BetPot;
             facingDoubleBarrel4BetPot += statistic.FacingDoubleBarrel4BetPot;
 
             foldToCBetSRP += statistic.FoldToCBetSRP;
-            facingCBetSRP += statistic.FacingCBetSRP;        
+            facingCBetSRP += statistic.FacingCBetSRP;
         }
 
         private void CleanFoldToContinuationBetsInPots()
@@ -1716,7 +1716,7 @@ namespace Model.Data
             facingDoubleBarrel4BetPot = 0;
 
             foldToCBetSRP = 0;
-            facingCBetSRP = 0; 
+            facingCBetSRP = 0;
         }
 
         private void AddFoldToContinuationBetsInPotsIndicator(LightIndicators indicator)
@@ -1732,12 +1732,270 @@ namespace Model.Data
 
             foldToDoubleBarrelSRP += indicator.foldToDoubleBarrelSRP;
             facingDoubleBarrelSRP += indicator.facingDoubleBarrelSRP;
-         
+
             foldToDoubleBarrel4BetPot += indicator.foldToDoubleBarrel4BetPot;
             facingDoubleBarrel4BetPot += indicator.facingDoubleBarrel4BetPot;
 
             foldToCBetSRP += indicator.foldToCBetSRP;
             facingCBetSRP += indicator.facingCBetSRP;
+        }
+
+        #endregion
+
+        #region Open Shove UO Pot positional
+
+        [ProtoMember(168)]
+        protected int sbOpenShoveUOPot;
+
+        [ProtoMember(169)]
+        protected int sbOpenShove1to8bbUOPot;
+
+        public override decimal SBOpenShove1to8bbUOPot => GetPercentage(sbOpenShove1to8bbUOPot, sbOpenShoveUOPot);
+
+        [ProtoMember(170)]
+        protected int sbOpenShove9to14bbUOPot;
+
+        public override decimal SBOpenShove9to14bbUOPot => GetPercentage(sbOpenShove9to14bbUOPot, sbOpenShoveUOPot);
+
+        [ProtoMember(171)]
+        protected int sbOpenShove15to25bbUOPot;
+
+        public override decimal SBOpenShove15to25bbUOPot => GetPercentage(sbOpenShove15to25bbUOPot, sbOpenShoveUOPot);
+
+        [ProtoMember(172)]
+        protected int sbOpenShove26to50bbUOPot;
+
+        public override decimal SBOpenShove26to50bbUOPot => GetPercentage(sbOpenShove26to50bbUOPot, sbOpenShoveUOPot);
+
+        [ProtoMember(173)]
+        protected int sbOpenShove51plusbbUOPot;
+
+        public override decimal SBOpenShove51plusbbUOPot => GetPercentage(sbOpenShove51plusbbUOPot, sbOpenShoveUOPot);
+
+        [ProtoMember(174)]
+        protected int btnOpenShoveUOPot;
+
+        [ProtoMember(175)]
+        protected int btnOpenShove1to8bbUOPot;
+
+        public override decimal BTNOpenShove1to8bbUOPot => GetPercentage(btnOpenShove1to8bbUOPot, btnOpenShoveUOPot);
+
+        [ProtoMember(175)]
+        protected int btnOpenShove9to14bbUOPot;
+
+        public override decimal BTNOpenShove9to14bbUOPot => GetPercentage(btnOpenShove9to14bbUOPot, btnOpenShoveUOPot);
+
+        [ProtoMember(176)]
+        protected int btnOpenShove15to25bbUOPot;
+
+        public override decimal BTNOpenShove15to25bbUOPot => GetPercentage(btnOpenShove15to25bbUOPot, btnOpenShoveUOPot);
+
+        [ProtoMember(177)]
+        protected int btnOpenShove26to50bbUOPot;
+
+        public override decimal BTNOpenShove26to50bbUOPot => GetPercentage(btnOpenShove26to50bbUOPot, btnOpenShoveUOPot);
+
+        [ProtoMember(178)]
+        protected int btnOpenShove51plusbbUOPot;
+
+        public override decimal BTNOpenShove51plusbbUOPot => GetPercentage(btnOpenShove51plusbbUOPot, btnOpenShoveUOPot);
+
+        [ProtoMember(179)]
+        protected int coOpenShoveUOPot;
+
+        [ProtoMember(180)]
+        protected int coOpenShove1to8bbUOPot;
+
+        public override decimal COOpenShove1to8bbUOPot => GetPercentage(coOpenShove1to8bbUOPot, coOpenShoveUOPot);
+
+        [ProtoMember(181)]
+        protected int coOpenShove9to14bbUOPot;
+
+        public override decimal COOpenShove9to14bbUOPot => GetPercentage(coOpenShove9to14bbUOPot, coOpenShoveUOPot);
+
+        [ProtoMember(182)]
+        protected int coOpenShove15to25bbUOPot;
+
+        public override decimal COOpenShove15to25bbUOPot => GetPercentage(coOpenShove15to25bbUOPot, coOpenShoveUOPot);
+
+        [ProtoMember(183)]
+        protected int coOpenShove26to50bbUOPot;
+
+        public override decimal COOpenShove26to50bbUOPot => GetPercentage(coOpenShove26to50bbUOPot, coOpenShoveUOPot);
+
+        [ProtoMember(184)]
+        protected int coOpenShove51plusbbUOPot;
+
+        public override decimal COOpenShove51plusbbUOPot => GetPercentage(coOpenShove51plusbbUOPot, coOpenShoveUOPot);
+
+        [ProtoMember(185)]
+        protected int mpOpenShoveUOPot;
+
+        [ProtoMember(186)]
+        protected int mpOpenShove1to8bbUOPot;
+
+        public override decimal MPOpenShove1to8bbUOPot => GetPercentage(mpOpenShove1to8bbUOPot, mpOpenShoveUOPot);
+
+        [ProtoMember(187)]
+        protected int mpOpenShove9to14bbUOPot;
+
+        public override decimal MPOpenShove9to14bbUOPot => GetPercentage(mpOpenShove9to14bbUOPot, mpOpenShoveUOPot);
+
+        [ProtoMember(188)]
+        protected int mpOpenShove15to25bbUOPot;
+
+        public override decimal MPOpenShove15to25bbUOPot => GetPercentage(mpOpenShove15to25bbUOPot, mpOpenShoveUOPot);
+
+        [ProtoMember(189)]
+        protected int mpOpenShove26to50bbUOPot;
+
+        public override decimal MPOpenShove26to50bbUOPot => GetPercentage(mpOpenShove26to50bbUOPot, mpOpenShoveUOPot);
+
+        [ProtoMember(190)]
+        protected int mpOpenShove51plusbbUOPot;
+
+        public override decimal MPOpenShove51plusbbUOPot => GetPercentage(mpOpenShove51plusbbUOPot, mpOpenShoveUOPot);
+
+        [ProtoMember(191)]
+        protected int epOpenShoveUOPot;
+
+        [ProtoMember(192)]
+        protected int epOpenShove1to8bbUOPot;
+
+        public override decimal EPOpenShove1to8bbUOPot => GetPercentage(epOpenShove1to8bbUOPot, epOpenShoveUOPot);
+
+        [ProtoMember(193)]
+        protected int epOpenShove9to14bbUOPot;
+
+        public override decimal EPOpenShove9to14bbUOPot => GetPercentage(epOpenShove9to14bbUOPot, epOpenShoveUOPot);
+
+        [ProtoMember(194)]
+        protected int epOpenShove15to25bbUOPot;
+
+        public override decimal EPOpenShove15to25bbUOPot => GetPercentage(epOpenShove15to25bbUOPot, epOpenShoveUOPot);
+
+        [ProtoMember(195)]
+        protected int epOpenShove26to50bbUOPot;
+
+        public override decimal EPOpenShove26to50bbUOPot => GetPercentage(epOpenShove26to50bbUOPot, epOpenShoveUOPot);
+
+        [ProtoMember(196)]
+        protected int epOpenShove51plusbbUOPot;
+
+        public override decimal EPOpenShove51plusbbUOPot => GetPercentage(epOpenShove51plusbbUOPot, epOpenShoveUOPot);
+
+        private void AddOpenShoveUOPotStatistic(Playerstatistic statistic)
+        {
+            sbOpenShoveUOPot += statistic.SBOpenShoveUOPot;
+            sbOpenShove1to8bbUOPot += statistic.SBOpenShove1to8bbUOPot;
+            sbOpenShove9to14bbUOPot += statistic.SBOpenShove9to14bbUOPot;
+            sbOpenShove15to25bbUOPot += statistic.SBOpenShove15to25bbUOPot;
+            sbOpenShove26to50bbUOPot += statistic.SBOpenShove26to50bbUOPot;
+            sbOpenShove51plusbbUOPot += statistic.SBOpenShove51plusbbUOPot;
+
+            btnOpenShoveUOPot += statistic.BTNOpenShoveUOPot;
+            btnOpenShove1to8bbUOPot += statistic.BTNOpenShove1to8bbUOPot;
+            btnOpenShove9to14bbUOPot += statistic.BTNOpenShove9to14bbUOPot;
+            btnOpenShove15to25bbUOPot += statistic.BTNOpenShove15to25bbUOPot;
+            btnOpenShove26to50bbUOPot += statistic.BTNOpenShove26to50bbUOPot;
+            btnOpenShove51plusbbUOPot += statistic.BTNOpenShove51plusbbUOPot;
+
+            coOpenShoveUOPot += statistic.COOpenShoveUOPot;
+            coOpenShove1to8bbUOPot += statistic.COOpenShove1to8bbUOPot;
+            coOpenShove9to14bbUOPot += statistic.COOpenShove9to14bbUOPot;
+            coOpenShove15to25bbUOPot += statistic.COOpenShove15to25bbUOPot;
+            coOpenShove26to50bbUOPot += statistic.COOpenShove26to50bbUOPot;
+            coOpenShove51plusbbUOPot += statistic.COOpenShove51plusbbUOPot;
+
+            mpOpenShoveUOPot += statistic.MPOpenShoveUOPot;
+            mpOpenShove1to8bbUOPot += statistic.MPOpenShove1to8bbUOPot;
+            mpOpenShove9to14bbUOPot += statistic.MPOpenShove9to14bbUOPot;
+            mpOpenShove15to25bbUOPot += statistic.MPOpenShove15to25bbUOPot;
+            mpOpenShove26to50bbUOPot += statistic.MPOpenShove26to50bbUOPot;
+            mpOpenShove51plusbbUOPot += statistic.MPOpenShove51plusbbUOPot;
+
+            epOpenShoveUOPot += statistic.EPOpenShoveUOPot;
+            epOpenShove1to8bbUOPot += statistic.EPOpenShove1to8bbUOPot;
+            epOpenShove9to14bbUOPot += statistic.EPOpenShove9to14bbUOPot;
+            epOpenShove15to25bbUOPot += statistic.EPOpenShove15to25bbUOPot;
+            epOpenShove26to50bbUOPot += statistic.EPOpenShove26to50bbUOPot;
+            epOpenShove51plusbbUOPot += statistic.EPOpenShove51plusbbUOPot;
+        }
+
+        private void CleanOpenShoveUOPotStatistic()
+        {
+            sbOpenShoveUOPot = 0;
+            sbOpenShove1to8bbUOPot = 0;
+            sbOpenShove9to14bbUOPot = 0;
+            sbOpenShove15to25bbUOPot = 0;
+            sbOpenShove26to50bbUOPot = 0;
+            sbOpenShove51plusbbUOPot = 0;
+
+            btnOpenShoveUOPot = 0;
+            btnOpenShove1to8bbUOPot = 0;
+            btnOpenShove9to14bbUOPot = 0;
+            btnOpenShove15to25bbUOPot = 0;
+            btnOpenShove26to50bbUOPot = 0;
+            btnOpenShove51plusbbUOPot = 0;
+
+            coOpenShoveUOPot = 0;
+            coOpenShove1to8bbUOPot = 0;
+            coOpenShove9to14bbUOPot = 0;
+            coOpenShove15to25bbUOPot = 0;
+            coOpenShove26to50bbUOPot = 0;
+            coOpenShove51plusbbUOPot = 0;
+
+            mpOpenShoveUOPot = 0;
+            mpOpenShove1to8bbUOPot = 0;
+            mpOpenShove9to14bbUOPot = 0;
+            mpOpenShove15to25bbUOPot = 0;
+            mpOpenShove26to50bbUOPot = 0;
+            mpOpenShove51plusbbUOPot = 0;
+
+            epOpenShoveUOPot = 0;
+            epOpenShove1to8bbUOPot = 0;
+            epOpenShove9to14bbUOPot = 0;
+            epOpenShove15to25bbUOPot = 0;
+            epOpenShove26to50bbUOPot = 0;
+            epOpenShove51plusbbUOPot = 0;
+        }
+
+        private void AddOpenShoveUOPotIndicators(LightIndicators indicator)
+        {
+            sbOpenShoveUOPot += indicator.sbOpenShoveUOPot;
+            sbOpenShove1to8bbUOPot += indicator.sbOpenShove1to8bbUOPot;
+            sbOpenShove9to14bbUOPot += indicator.sbOpenShove9to14bbUOPot;
+            sbOpenShove15to25bbUOPot += indicator.sbOpenShove15to25bbUOPot;
+            sbOpenShove26to50bbUOPot += indicator.sbOpenShove26to50bbUOPot;
+            sbOpenShove51plusbbUOPot += indicator.sbOpenShove51plusbbUOPot;
+
+            btnOpenShoveUOPot += indicator.btnOpenShoveUOPot;
+            btnOpenShove1to8bbUOPot += indicator.btnOpenShove1to8bbUOPot;
+            btnOpenShove9to14bbUOPot += indicator.btnOpenShove9to14bbUOPot;
+            btnOpenShove15to25bbUOPot += indicator.btnOpenShove15to25bbUOPot;
+            btnOpenShove26to50bbUOPot += indicator.btnOpenShove26to50bbUOPot;
+            btnOpenShove51plusbbUOPot += indicator.btnOpenShove51plusbbUOPot;
+
+            coOpenShoveUOPot += indicator.coOpenShoveUOPot;
+            coOpenShove1to8bbUOPot += indicator.coOpenShove1to8bbUOPot;
+            coOpenShove9to14bbUOPot += indicator.coOpenShove9to14bbUOPot;
+            coOpenShove15to25bbUOPot += indicator.coOpenShove15to25bbUOPot;
+            coOpenShove26to50bbUOPot += indicator.coOpenShove26to50bbUOPot;
+            coOpenShove51plusbbUOPot += indicator.coOpenShove51plusbbUOPot;
+
+            mpOpenShoveUOPot += indicator.mpOpenShoveUOPot;
+            mpOpenShove1to8bbUOPot += indicator.mpOpenShove1to8bbUOPot;
+            mpOpenShove9to14bbUOPot += indicator.mpOpenShove9to14bbUOPot;
+            mpOpenShove15to25bbUOPot += indicator.mpOpenShove15to25bbUOPot;
+            mpOpenShove26to50bbUOPot += indicator.mpOpenShove26to50bbUOPot;
+            mpOpenShove51plusbbUOPot += indicator.mpOpenShove51plusbbUOPot;
+
+            epOpenShoveUOPot += indicator.epOpenShoveUOPot;
+            epOpenShove1to8bbUOPot += indicator.epOpenShove1to8bbUOPot;
+            epOpenShove9to14bbUOPot += indicator.epOpenShove9to14bbUOPot;
+            epOpenShove15to25bbUOPot += indicator.epOpenShove15to25bbUOPot;
+            epOpenShove26to50bbUOPot += indicator.epOpenShove26to50bbUOPot;
+            epOpenShove51plusbbUOPot += indicator.epOpenShove51plusbbUOPot;
         }
 
         #endregion
@@ -1864,6 +2122,7 @@ namespace Model.Data
             AddCheckFlopAsPFRAndFoldToTurnBetSRPStatistic(statistic);
             AddCheckFlopAsPFRAndFoldToTurnBet3BetPotStatistic(statistic);
             AddFoldToContinuationBetsInPotsStatistic(statistic);
+            AddOpenShoveUOPotStatistic(statistic);
         }
 
         public override void Clean()
@@ -1970,6 +2229,7 @@ namespace Model.Data
             CleanCheckFlopAsPFRAndFoldToTurnBetSRP();
             CleanCheckFlopAsPFRAndFoldToTurnBet3BetPot();
             CleanFoldToContinuationBetsInPots();
+            CleanOpenShoveUOPotStatistic();
         }
 
         public virtual void AddIndicator(LightIndicators indicator)
@@ -2108,6 +2368,7 @@ namespace Model.Data
             AddCheckFlopAsPFRAndFoldToTurnBetSRPIndicator(indicator);
             AddCheckFlopAsPFRAndFoldToTurnBet3BetPotIndicator(indicator);
             AddFoldToContinuationBetsInPotsIndicator(indicator);
+            AddOpenShoveUOPotIndicators(indicator);
         }
 
         public override int CompareTo(object obj)

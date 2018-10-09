@@ -1715,6 +1715,95 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region Open Shove UO Pot positional
+
+        public virtual int SBOpenShove1to8bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int SBOpenShove9to14bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int SBOpenShove15to25bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int SBOpenShove26to50bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int SBOpenShove51plusbbUOPot => IsUnopened && Line.StartsWith("R") &&
+            (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int SBOpenShoveUOPot => IsUnopened && Line.StartsWith("R") && (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int BTNOpenShove1to8bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int BTNOpenShove9to14bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int BTNOpenShove15to25bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int BTNOpenShove26to50bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int BTNOpenShove51plusbbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int BTNOpenShoveUOPot => IsUnopened && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int COOpenShove1to8bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int COOpenShove9to14bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int COOpenShove15to25bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int COOpenShove26to50bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int COOpenShove51plusbbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int COOpenShoveUOPot => IsUnopened && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int MPOpenShove1to8bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int MPOpenShove9to14bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int MPOpenShove15to25bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int MPOpenShove26to50bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int MPOpenShove51plusbbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int MPOpenShoveUOPot => IsUnopened && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int EPOpenShove1to8bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int EPOpenShove9to14bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int EPOpenShove15to25bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int EPOpenShove26to50bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int EPOpenShove51plusbbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int EPOpenShoveUOPot => IsUnopened && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() ? 1 : 0;
+
+        #endregion
+
         #endregion
 
         #region Additional properties (not for serialization)

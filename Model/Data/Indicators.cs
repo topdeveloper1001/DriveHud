@@ -1970,7 +1970,61 @@ namespace Model.Data
 
         public virtual decimal FoldToDoubleBarrel4BetPot => GetPercentage(Statistics.Sum(x => x.FoldToDoubleBarrel4BetPot), Statistics.Sum(x => x.FacingDoubleBarrel4BetPot));
 
-        public virtual decimal FoldToCBetSRP => GetPercentage(Statistics.Sum(x => x.FoldToCBetSRP), Statistics.Sum(x => x.FacingCBetSRP));      
+        public virtual decimal FoldToCBetSRP => GetPercentage(Statistics.Sum(x => x.FoldToCBetSRP), Statistics.Sum(x => x.FacingCBetSRP));
+
+        #endregion
+
+        #region Open Shove UO Pot positional
+
+        public virtual decimal SBOpenShove1to8bbUOPot => GetPercentage(Statistics.Sum(x => x.SBOpenShove1to8bbUOPot), Statistics.Sum(x => x.SBOpenShoveUOPot));
+
+        public virtual decimal SBOpenShove9to14bbUOPot => GetPercentage(Statistics.Sum(x => x.SBOpenShove9to14bbUOPot), Statistics.Sum(x => x.SBOpenShoveUOPot));
+
+        public virtual decimal SBOpenShove15to25bbUOPot => GetPercentage(Statistics.Sum(x => x.SBOpenShove15to25bbUOPot), Statistics.Sum(x => x.SBOpenShoveUOPot));
+
+        public virtual decimal SBOpenShove26to50bbUOPot => GetPercentage(Statistics.Sum(x => x.SBOpenShove26to50bbUOPot), Statistics.Sum(x => x.SBOpenShoveUOPot));
+
+        public virtual decimal SBOpenShove51plusbbUOPot => GetPercentage(Statistics.Sum(x => x.SBOpenShove51plusbbUOPot), Statistics.Sum(x => x.SBOpenShoveUOPot));
+
+        public virtual decimal BTNOpenShove1to8bbUOPot => GetPercentage(Statistics.Sum(x => x.BTNOpenShove1to8bbUOPot), Statistics.Sum(x => x.BTNOpenShoveUOPot));
+
+        public virtual decimal BTNOpenShove9to14bbUOPot => GetPercentage(Statistics.Sum(x => x.BTNOpenShove9to14bbUOPot), Statistics.Sum(x => x.BTNOpenShoveUOPot));
+
+        public virtual decimal BTNOpenShove15to25bbUOPot => GetPercentage(Statistics.Sum(x => x.BTNOpenShove15to25bbUOPot), Statistics.Sum(x => x.BTNOpenShoveUOPot));
+
+        public virtual decimal BTNOpenShove26to50bbUOPot => GetPercentage(Statistics.Sum(x => x.BTNOpenShove26to50bbUOPot), Statistics.Sum(x => x.BTNOpenShoveUOPot));
+
+        public virtual decimal BTNOpenShove51plusbbUOPot => GetPercentage(Statistics.Sum(x => x.BTNOpenShove51plusbbUOPot), Statistics.Sum(x => x.BTNOpenShoveUOPot));
+
+        public virtual decimal COOpenShove1to8bbUOPot => GetPercentage(Statistics.Sum(x => x.COOpenShove1to8bbUOPot), Statistics.Sum(x => x.COOpenShoveUOPot));
+
+        public virtual decimal COOpenShove9to14bbUOPot => GetPercentage(Statistics.Sum(x => x.COOpenShove9to14bbUOPot), Statistics.Sum(x => x.COOpenShoveUOPot));
+
+        public virtual decimal COOpenShove15to25bbUOPot => GetPercentage(Statistics.Sum(x => x.COOpenShove15to25bbUOPot), Statistics.Sum(x => x.COOpenShoveUOPot));
+
+        public virtual decimal COOpenShove26to50bbUOPot => GetPercentage(Statistics.Sum(x => x.COOpenShove26to50bbUOPot), Statistics.Sum(x => x.COOpenShoveUOPot));
+
+        public virtual decimal COOpenShove51plusbbUOPot => GetPercentage(Statistics.Sum(x => x.COOpenShove51plusbbUOPot), Statistics.Sum(x => x.COOpenShoveUOPot));
+
+        public virtual decimal MPOpenShove1to8bbUOPot => GetPercentage(Statistics.Sum(x => x.MPOpenShove1to8bbUOPot), Statistics.Sum(x => x.MPOpenShoveUOPot));
+
+        public virtual decimal MPOpenShove9to14bbUOPot => GetPercentage(Statistics.Sum(x => x.MPOpenShove9to14bbUOPot), Statistics.Sum(x => x.MPOpenShoveUOPot));
+
+        public virtual decimal MPOpenShove15to25bbUOPot => GetPercentage(Statistics.Sum(x => x.MPOpenShove15to25bbUOPot), Statistics.Sum(x => x.MPOpenShoveUOPot));
+
+        public virtual decimal MPOpenShove26to50bbUOPot => GetPercentage(Statistics.Sum(x => x.MPOpenShove26to50bbUOPot), Statistics.Sum(x => x.MPOpenShoveUOPot));
+
+        public virtual decimal MPOpenShove51plusbbUOPot => GetPercentage(Statistics.Sum(x => x.MPOpenShove51plusbbUOPot), Statistics.Sum(x => x.MPOpenShoveUOPot));
+
+        public virtual decimal EPOpenShove1to8bbUOPot => GetPercentage(Statistics.Sum(x => x.EPOpenShove1to8bbUOPot), Statistics.Sum(x => x.EPOpenShoveUOPot));
+
+        public virtual decimal EPOpenShove9to14bbUOPot => GetPercentage(Statistics.Sum(x => x.EPOpenShove9to14bbUOPot), Statistics.Sum(x => x.EPOpenShoveUOPot));
+
+        public virtual decimal EPOpenShove15to25bbUOPot => GetPercentage(Statistics.Sum(x => x.EPOpenShove15to25bbUOPot), Statistics.Sum(x => x.EPOpenShoveUOPot));
+
+        public virtual decimal EPOpenShove26to50bbUOPot => GetPercentage(Statistics.Sum(x => x.EPOpenShove26to50bbUOPot), Statistics.Sum(x => x.EPOpenShoveUOPot));
+
+        public virtual decimal EPOpenShove51plusbbUOPot => GetPercentage(Statistics.Sum(x => x.EPOpenShove51plusbbUOPot), Statistics.Sum(x => x.EPOpenShoveUOPot));
 
         #endregion
 

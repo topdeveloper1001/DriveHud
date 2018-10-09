@@ -990,4 +990,79 @@
   <data name="Reports_Column_FoldToTripleBarrelSRP" xml:space="preserve">
     <value>Fold to Triple Barrel 3-Bet Pot%</value>
   </data>
+  <data name="Reports_Column_BTNOpenShove15to25bbUOPot" xml:space="preserve">
+    <value>BTN Open Shove 15-25bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_BTNOpenShove1to8bbUOPot" xml:space="preserve">
+    <value>BTN Open Shove 1-8bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_BTNOpenShove26to50bbUOPot" xml:space="preserve">
+    <value>BTN Open Shove 26-50bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_BTNOpenShove51plusbbUOPot" xml:space="preserve">
+    <value>BTN Open Shove 51bb+ UO Pot%</value>
+  </data>
+  <data name="Reports_Column_BTNOpenShove9to14bbUOPot" xml:space="preserve">
+    <value>BTN Open Shove 9-14bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_COOpenShove15to25bbUOPot" xml:space="preserve">
+    <value>CO Open Shove 15-25bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_COOpenShove1to8bbUOPot" xml:space="preserve">
+    <value>CO Open Shove 1-8bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_COOpenShove26to50bbUOPot" xml:space="preserve">
+    <value>CO Open Shove 26-50bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_COOpenShove51plusbbUOPot" xml:space="preserve">
+    <value>CO Open Shove 51bb+ UO Pot%</value>
+  </data>
+  <data name="Reports_Column_COOpenShove9to14bbUOPot" xml:space="preserve">
+    <value>CO Open Shove 9-14bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_EPOpenShove15to25bbUOPot" xml:space="preserve">
+    <value>EP Open Shove 15-25bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_EPOpenShove1to8bbUOPot" xml:space="preserve">
+    <value>EP Open Shove 1-8bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_EPOpenShove26to50bbUOPot" xml:space="preserve">
+    <value>EP Open Shove 26-50bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_EPOpenShove51plusbbUOPot" xml:space="preserve">
+    <value>EP Open Shove 51bb+ UO Pot%</value>
+  </data>
+  <data name="Reports_Column_EPOpenShove9to14bbUOPot" xml:space="preserve">
+    <value>EP Open Shove 9-14bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_MPOpenShove15to25bbUOPot" xml:space="preserve">
+    <value>MP Open Shove 15-25bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_MPOpenShove1to8bbUOPot" xml:space="preserve">
+    <value>MP Open Shove 1-8bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_MPOpenShove26to50bbUOPot" xml:space="preserve">
+    <value>MP Open Shove 26-50bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_MPOpenShove51plusbbUOPot" xml:space="preserve">
+    <value>MP Open Shove 51bb+ UO Pot%</value>
+  </data>
+  <data name="Reports_Column_MPOpenShove9to14bbUOPot" xml:space="preserve">
+    <value>MP Open Shove 9-14bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_SBOpenShove15to25bbUOPot" xml:space="preserve">
+    <value>SB Open Shove 15-25bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_SBOpenShove1to8bbUOPot" xml:space="preserve">
+    <value>SB Open Shove 1-8bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_SBOpenShove26to50bbUOPot" xml:space="preserve">
+    <value>SB Open Shove 26-50bb UO Pot%</value>
+  </data>
+  <data name="Reports_Column_SBOpenShove51plusbbUOPot" xml:space="preserve">
+    <value>SB Open Shove 51bb+ UO Pot%</value>
+  </data>
+  <data name="Reports_Column_SBOpenShove9to14bbUOPot" xml:space="preserve">
+    <value>SB Open Shove 9-14bb UO Pot%</value>
+  </data>
 </root>

@@ -1402,6 +1402,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BTN Open Shove 15-25bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_BTNOpenShove15to25bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNOpenShove15to25bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Open Shove 1-8bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_BTNOpenShove1to8bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNOpenShove1to8bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Open Shove 26-50bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_BTNOpenShove26to50bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNOpenShove26to50bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Open Shove 51bb+ UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_BTNOpenShove51plusbbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNOpenShove51plusbbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Open Shove 9-14bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_BTNOpenShove9to14bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check-Raise &amp; Call vs. Flop C-Bet%.
         /// </summary>
         internal static string Enum_Stat_CalledCheckRaiseVsFlopCBet {
@@ -1933,6 +1978,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CO Open Shove 15-25bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_COOpenShove15to25bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_COOpenShove15to25bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO Open Shove 1-8bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_COOpenShove1to8bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_COOpenShove1to8bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO Open Shove 26-50bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_COOpenShove26to50bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_COOpenShove26to50bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO Open Shove 51bb+ UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_COOpenShove51plusbbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_COOpenShove51plusbbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO Open Shove 9-14bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_COOpenShove9to14bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_COOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delayed Turn C-bet%.
         /// </summary>
         internal static string Enum_Stat_DelayedTurnCBet {
@@ -2001,6 +2091,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_DoubleBarrelSRP {
             get {
                 return ResourceManager.GetString("Enum_Stat_DoubleBarrelSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Open Shove 15-25bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_EPOpenShove15to25bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_EPOpenShove15to25bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Open Shove 1-8bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_EPOpenShove1to8bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_EPOpenShove1to8bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Open Shove 26-50bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_EPOpenShove26to50bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_EPOpenShove26to50bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Open Shove 51bb+ UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_EPOpenShove51plusbbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_EPOpenShove51plusbbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Open Shove 9-14bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_EPOpenShove9to14bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_EPOpenShove9to14bbUOPot", resourceCulture);
             }
         }
         
@@ -2671,6 +2806,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MP Open Shove 15-25bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_MPOpenShove15to25bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_MPOpenShove15to25bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP Open Shove 1-8bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_MPOpenShove1to8bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_MPOpenShove1to8bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP Open Shove 26-50bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_MPOpenShove26to50bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_MPOpenShove26to50bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP Open Shove 51bb+ UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_MPOpenShove51plusbbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_MPOpenShove51plusbbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP Open Shove 9-14bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_MPOpenShove9to14bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_MPOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to M-Ratio.
         /// </summary>
         internal static string Enum_Stat_MRatio {
@@ -3117,6 +3297,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_S5Bet {
             get {
                 return ResourceManager.GetString("Enum_Stat_S5Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Open Shove 15-25bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_SBOpenShove15to25bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SBOpenShove15to25bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Open Shove 1-8bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_SBOpenShove1to8bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SBOpenShove1to8bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Open Shove 26-50bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_SBOpenShove26to50bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SBOpenShove26to50bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Open Shove 51bb+ UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_SBOpenShove51plusbbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SBOpenShove51plusbbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Open Shove 9-14bb UO Pot%.
+        /// </summary>
+        internal static string Enum_Stat_SBOpenShove9to14bbUOPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SBOpenShove9to14bbUOPot", resourceCulture);
             }
         }
         

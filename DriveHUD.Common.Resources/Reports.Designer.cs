@@ -394,6 +394,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BTN Open Shove 15-25bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_BTNOpenShove15to25bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNOpenShove15to25bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Open Shove 1-8bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_BTNOpenShove1to8bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNOpenShove1to8bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Open Shove 26-50bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_BTNOpenShove26to50bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNOpenShove26to50bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Open Shove 51bb+ UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_BTNOpenShove51plusbbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNOpenShove51plusbbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Open Shove 9-14bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_BTNOpenShove9to14bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Buy-in.
         /// </summary>
         internal static string Reports_Column_Buyin {
@@ -907,6 +952,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CO Open Shove 15-25bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_COOpenShove15to25bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_COOpenShove15to25bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO Open Shove 1-8bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_COOpenShove1to8bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_COOpenShove1to8bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO Open Shove 26-50bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_COOpenShove26to50bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_COOpenShove26to50bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO Open Shove 51bb+ UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_COOpenShove51plusbbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_COOpenShove51plusbbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO Open Shove 9-14bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_COOpenShove9to14bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_COOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delayed C-Bet%.
         /// </summary>
         internal static string Reports_Column_DelayedCBet {
@@ -984,6 +1074,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_DownCards {
             get {
                 return ResourceManager.GetString("Reports_Column_DownCards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Open Shove 15-25bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_EPOpenShove15to25bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_EPOpenShove15to25bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Open Shove 1-8bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_EPOpenShove1to8bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_EPOpenShove1to8bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Open Shove 26-50bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_EPOpenShove26to50bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_EPOpenShove26to50bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Open Shove 51bb+ UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_EPOpenShove51plusbbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_EPOpenShove51plusbbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Open Shove 9-14bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_EPOpenShove9to14bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_EPOpenShove9to14bbUOPot", resourceCulture);
             }
         }
         
@@ -1672,6 +1807,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MP Open Shove 15-25bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_MPOpenShove15to25bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_MPOpenShove15to25bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP Open Shove 1-8bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_MPOpenShove1to8bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_MPOpenShove1to8bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP Open Shove 26-50bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_MPOpenShove26to50bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_MPOpenShove26to50bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP Open Shove 51bb+ UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_MPOpenShove51plusbbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_MPOpenShove51plusbbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP Open Shove 9-14bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_MPOpenShove9to14bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_MPOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to M-Ratio.
         /// </summary>
         internal static string Reports_Column_MRatio {
@@ -2010,6 +2190,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_ROI {
             get {
                 return ResourceManager.GetString("Reports_Column_ROI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Open Shove 15-25bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_SBOpenShove15to25bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_SBOpenShove15to25bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Open Shove 1-8bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_SBOpenShove1to8bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_SBOpenShove1to8bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Open Shove 26-50bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_SBOpenShove26to50bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_SBOpenShove26to50bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Open Shove 51bb+ UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_SBOpenShove51plusbbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_SBOpenShove51plusbbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Open Shove 9-14bb UO Pot%.
+        /// </summary>
+        internal static string Reports_Column_SBOpenShove9to14bbUOPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_SBOpenShove9to14bbUOPot", resourceCulture);
             }
         }
         
