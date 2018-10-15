@@ -16,7 +16,6 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
-using DriveHUD.Importers.Bovada;
 using DriveHUD.Importers.Helpers;
 using HandHistories.Objects.Players;
 using Microsoft.Practices.ServiceLocation;

@@ -230,8 +230,8 @@ namespace DriveHUD.HUD
             var timerThrownException = false;
             var handle = windowItem.OverlayHandle;
 
-            WinApi.SetWindowPos(windowItem.OverlayHandle, windowHandle, 0, 0, 0, 0, TopMostFlags);
-            WinApi.SetWindowPos(windowHandle, windowItem.OverlayHandle, 0, 0, 0, 0, TopMostFlags);
+            WinApi.SetWindowPos(handle, windowHandle, 0, 0, 0, 0, TopMostFlags);
+            WinApi.SetWindowPos(windowHandle, handle, 0, 0, 0, 0, TopMostFlags);
 
             dispatcherTimer.Tick += (s, e) =>
             {
@@ -247,6 +247,13 @@ namespace DriveHUD.HUD
                     {
                         windowItem.Window.Show();
                         isHiddenWindow = false;
+                    }
+
+                    var nextWindow = WinApi.GetWindow(handle, GetWindowType.GW_HWNDNEXT);
+
+                    if (nextWindow != windowHandle)
+                    {
+                        WinApi.SetWindowPos(windowHandle, handle, 0, 0, 0, 0, TopMostFlags);
                     }
 
                     var activeWindow = WinApi.GetForegroundWindow();

@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace Model.Site
 {
@@ -440,6 +441,33 @@ namespace Model.Site
             return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "PokerStars", "Audit");
         }
 
+        public static string GetAuditPath(Process pokerStarsProcess)
+        {
+            if (pokerStarsProcess == null)
+            {
+                return GetAuditPath();
+            }
+
+            try
+            {
+                var pokerStarsFolder = Path.GetDirectoryName(pokerStarsProcess.MainModule.FileName);
+                var auditIniFile = Path.Combine(pokerStarsFolder, auditIni);
+
+                if (!File.Exists(auditIniFile))
+                {
+                    return GetAuditPath();
+                }
+
+                var path = IniFileHelpers.ReadValue(AuditSection, PathKey, auditIniFile);
+
+                return !string.IsNullOrEmpty(path) ? path : GetAuditPath();
+            }
+            catch
+            {
+                return GetAuditPath();
+            }
+        }
+
         private void InstallAuditIni(SiteValidationResult validationResult)
         {
             try
@@ -448,14 +476,20 @@ namespace Model.Site
 
                 var isPokerStarsRunning = IsPokerStarsRunning();
 
+                var auditPath = GetAuditPath();
+
+                if (!Directory.Exists(auditPath))
+                {
+                    Directory.CreateDirectory(auditPath);
+                    LogProvider.Log.Info($"Created '{auditPath}' folder");
+                }
+
                 foreach (var installPath in installPaths)
                 {
                     var launchFile = Path.Combine(installPath.FullName, psClientLaunchFile);
                     TryLogPSLaunchFileVersion(launchFile);
 
                     var auditIniFile = Path.Combine(installPath.FullName, auditIni);
-
-                    var auditPath = GetAuditPath();
 
                     if (File.Exists(auditIniFile))
                     {
@@ -489,18 +523,37 @@ namespace Model.Site
         {
             try
             {
-                var enabled = IniFileHelpers.ReadValue(AuditSection, EnabledKey, auditIniFile);
+                var wasModified = false;
+                var auditFileLines = File.ReadAllLines(auditIniFile);
 
-                if (string.IsNullOrEmpty(enabled))
+                for (var i = 0; i < auditFileLines.Length; i++)
                 {
-                    IniFileHelpers.WriteValue(AuditSection, EnabledKey, "1", auditIniFile);
+                    if (auditFileLines[i].StartsWith(EnabledKey, StringComparison.Ordinal))
+                    {
+                        var enabledValue = auditFileLines[i].Substring(auditFileLines[i].IndexOf('=') + 1);
+
+                        if (enabledValue != "1")
+                        {
+                            auditFileLines[i] = $"{EnabledKey}=1";
+                            wasModified = true;
+                        }
+                    }
+
+                    if (auditFileLines[i].StartsWith(PathKey, StringComparison.Ordinal))
+                    {
+                        var path = auditFileLines[i].Substring(auditFileLines[i].IndexOf('=') + 1);
+
+                        if (!path.Equals(auditPath, StringComparison.OrdinalIgnoreCase))
+                        {
+                            LogProvider.Log.Warn($"PS audit path '{path}' isn't equal to default '{auditPath}' in '{auditIniFile}'");
+                        }
+                    }
                 }
 
-                var path = IniFileHelpers.ReadValue(AuditSection, PathKey, auditIniFile);
-
-                if (string.IsNullOrEmpty(enabled) || !path.Equals(auditPath, StringComparison.OrdinalIgnoreCase))
+                if (wasModified)
                 {
-                    IniFileHelpers.WriteValue(AuditSection, PathKey, auditPath, auditIniFile);
+                    File.WriteAllLines(auditIniFile, auditFileLines, new UTF8Encoding(true));
+                    LogProvider.Log.Info($"PS audit file '{auditIniFile}' was updated.");
                 }
             }
             catch (Exception ex)
@@ -518,8 +571,12 @@ namespace Model.Site
         {
             try
             {
-                IniFileHelpers.WriteValue(AuditSection, EnabledKey, "1", auditIniFile);
-                IniFileHelpers.WriteValue(AuditSection, PathKey, auditPath, auditIniFile);
+                var sb = new StringBuilder();
+                sb.AppendLine($"[{AuditSection}]");
+                sb.AppendLine($"{EnabledKey}=1");
+                sb.AppendLine($"{PathKey}={auditPath}");
+
+                File.WriteAllText(auditIniFile, sb.ToString(), new UTF8Encoding(true));
             }
             catch (Exception ex)
             {

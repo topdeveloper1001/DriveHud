@@ -100,5 +100,7 @@ namespace DriveHUD.Importers.Bovada
         public object mySeat { get; set; }
 
         public string gid { get; set; }
+
+        public uint prevTableId { get; set; }
     }
 }

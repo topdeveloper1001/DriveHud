@@ -27,6 +27,7 @@ namespace DriveHUD.Importers.Bovada
         private ReaderWriterLockSlim cacheLock = new ReaderWriterLockSlim();
 
         private Dictionary<IntPtr, BovadaTable> windowsHandles = new Dictionary<IntPtr, BovadaTable>();
+        private Dictionary<uint, IntPtr> previousTables = new Dictionary<uint, IntPtr>();
 
         /// <summary>
         /// Adds the specified handle to the cache
@@ -120,11 +121,52 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
+
+        /// <summary>
+        /// Gets the handle of previous table
+        /// </summary>
+        /// <param name="tableId">Table id</param>
+        /// <returns>Handle of previous table</returns>
+        public IntPtr GetPreviousHandle(uint tableId)
+        {
+            cacheLock.EnterUpgradeableReadLock();
+
+            try
+            {
+                var closedWindows = previousTables.Where(pt => !WinApi.IsWindow(pt.Value)).ToArray();
+
+                if (closedWindows.Length > 0)
+                {
+                    cacheLock.EnterWriteLock();
+
+                    try
+                    {
+                        closedWindows.ForEach(pt => previousTables.Remove(pt.Key));
+                    }
+                    finally
+                    {
+                        cacheLock.ExitWriteLock();
+                    }
+                }
+
+                if (previousTables.TryGetValue(tableId, out IntPtr previousTableHandle))
+                {
+                    return previousTableHandle;
+                }
+
+                return IntPtr.Zero;
+            }
+            finally
+            {
+                cacheLock.ExitUpgradeableReadLock();
+            }
+        }
+
         /// <summary>
         /// Removes the specified window from the cache
         /// </summary>
         /// <param name="hWnd">The handle to remove from the cache</param>
-        public void RemoveWindow(IntPtr hWnd)
+        public void RemoveWindow(IntPtr hWnd, bool cacheAsPreviousTable = false)
         {
             cacheLock.EnterUpgradeableReadLock();
 
@@ -139,9 +181,19 @@ namespace DriveHUD.Importers.Bovada
 
                 try
                 {
-                    if (windowsHandles.ContainsKey(hWnd))
+                    if (windowsHandles.TryGetValue(hWnd, out BovadaTable table))
                     {
                         windowsHandles.Remove(hWnd);
+
+                        if (cacheAsPreviousTable && !table.IsTournament &&
+                            !table.IsZonePokerTable && WinApi.IsWindow(hWnd) && !previousTables.ContainsKey(table.TableId))
+                        {
+                            previousTables.Add(table.TableId, hWnd);
+                        }
+                        else if (!cacheAsPreviousTable && previousTables.ContainsKey(table.TableId))
+                        {
+                            previousTables.Remove(table.TableId);
+                        }
                     }
                 }
                 finally

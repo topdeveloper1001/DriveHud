@@ -241,6 +241,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-MTT.xml", 0.91)]
         [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-WildTwister.xml", 0.47)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\TestData\MTT\6878198948.xml", 0.45)]
         public void BuyInPrizePoolIsParsedTest(string handHistoryFile, decimal buyin)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -248,7 +249,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-MTT.xml", Currency.USD)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\SingleHands\NLH-6-max-MTT.xml", Currency.EURO)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\IPoker\TestData\MTT\6878198948.xml", Currency.EURO)]
         public void BuyInCurrencyIsParsedTest(string handHistoryFile, Currency currency)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

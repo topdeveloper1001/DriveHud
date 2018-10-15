@@ -37,11 +37,19 @@ namespace DriveHUD.Importers.Bovada
         /// Removes the specified window from the cache
         /// </summary>
         /// <param name="hWnd">The handle to remove from the cache</param>
-        void RemoveWindow(IntPtr hWnd);
+        /// <param name="cacheAsPreviousTable">Determines whenever removed table must be cached as previous table</param>
+        void RemoveWindow(IntPtr hWnd, bool cacheAsPreviousTable = false);
 
         /// <summary>
         /// Clears the cache
         /// </summary>
         void Clear();
+
+        /// <summary>
+        /// Gets the handle of previous table
+        /// </summary>
+        /// <param name="tableId">Table id</param>
+        /// <returns>Handle of previous table</returns>
+        IntPtr GetPreviousHandle(uint tableId);
     }
 }
