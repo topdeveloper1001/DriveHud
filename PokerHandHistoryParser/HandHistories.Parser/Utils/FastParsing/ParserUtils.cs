@@ -12,12 +12,9 @@
 
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Log;
-using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
-using HandHistories.Objects.Hand;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -91,6 +88,27 @@ namespace HandHistories.Parser.Utils.FastParsing
             if (!match.Success)
             {
                 return false;
+            }
+
+            var currency1Group = match.Groups["currency1"];
+
+            if (currency1Group != null && currency1Group.Success && !string.IsNullOrEmpty(match.Groups["currency1"].Value))
+            {
+                switch (match.Groups["currency1"].Value)
+                {
+                    case "€":
+                        currency = Currency.EURO;
+                        break;
+                    case "£":
+                        currency = Currency.GBP;
+                        break;
+                    case "¥":
+                        currency = Currency.YUAN;
+                        break;
+                    case "₹":
+                        currency = Currency.INR;
+                        break;
+                }
             }
 
             if (!decimal.TryParse(match.Groups["money"].Value, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, numberFormatInfo, out money))
@@ -223,6 +241,6 @@ namespace HandHistories.Parser.Utils.FastParsing
             }
 
             return string.Empty;
-        }       
+        }
     }
 }
