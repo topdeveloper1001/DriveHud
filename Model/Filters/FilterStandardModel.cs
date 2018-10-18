@@ -129,7 +129,8 @@ namespace Model.Filters
                         new CurrencyItem() { Name = "USD", Value = Currency.USD, IsChecked = true },
                         new CurrencyItem() { Name = "CAD", Value = Currency.CAD, IsChecked = true },
                         new CurrencyItem() { Name = "YUAN", Value = Currency.YUAN, IsChecked = true },
-                        new CurrencyItem() { Name = "EUR", Value = Currency.EURO, IsChecked = true }
+                        new CurrencyItem() { Name = "EUR", Value = Currency.EURO, IsChecked = true },
+                        new CurrencyItem() { Name = "INR", Value = Currency.INR, IsChecked = true }                        
                     }
                 );
         }
@@ -451,6 +452,7 @@ namespace Model.Filters
             foreach (var currency in currencyList)
             {
                 var cur = CurrencyCollection.FirstOrDefault(x => x.Value == currency.Value);
+
                 if (cur != null)
                 {
                     cur.IsChecked = currency.IsChecked;
