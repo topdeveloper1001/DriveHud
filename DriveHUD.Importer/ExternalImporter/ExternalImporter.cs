@@ -31,7 +31,7 @@ namespace DriveHUD.Importers.ExternalImporter
     {
         private static readonly object locker = new object();
 
-        private readonly static string[] processNames = new[] { "GGNet" };        
+        private readonly static string[] processNames = new[] { "GGNet" };
 
         private ServiceHost serviceHost;
 
@@ -248,6 +248,13 @@ namespace DriveHUD.Importers.ExternalImporter
             public DHImporterService(ExternalImporter importer)
             {
                 this.importer = importer ?? throw new ArgumentNullException(nameof(importer));
+
+            }
+
+            public void CloseHUD(int windowHandle)
+            {
+                var args = new TableClosedEventArgs(windowHandle);
+                importer.eventAggregator.GetEvent<TableClosedEvent>().Publish(args);
             }
 
             public void ImportHandHistory(HandHistoryDto handHistory)
@@ -272,6 +279,19 @@ namespace DriveHUD.Importers.ExternalImporter
                 {
                     LogProvider.Log.Error(this, $"Hand has not been processed [{importer.SiteString}]", e);
                 }
+            }
+
+            public void ShowHUD(EnumPokerSites site, int windowHandle, string text)
+            {
+                var gameInfo = new GameInfo
+                {
+                    PokerSite = site,
+                    TableType = EnumTableType.Nine,
+                    WindowHandle = windowHandle
+                };
+
+                var eventArgs = new PreImportedDataEventArgs(gameInfo, text);
+                importer.eventAggregator.GetEvent<PreImportedDataEvent>().Publish(eventArgs);
             }
         }
     }
