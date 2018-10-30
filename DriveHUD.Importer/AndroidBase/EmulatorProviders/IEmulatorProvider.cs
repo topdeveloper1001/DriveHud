@@ -18,6 +18,11 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
     internal interface IEmulatorProvider
     {
         /// <summary>
+        /// Name of logger
+        /// </summary>
+        string Logger { get; set; }
+
+        /// <summary>
         /// Determines whenever provider can provide data for the specified process 
         /// </summary>
         /// <param name="process">Process to check</param>
