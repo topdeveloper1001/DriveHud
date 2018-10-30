@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="TruePokerConfiguration.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="WPNImporter.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -12,29 +12,20 @@
 
 using DriveHUD.Entities;
 
-namespace Model.Site
+namespace DriveHUD.Importers.WinningPokerNetwork
 {
-    public class TruePokerConfiguration : AmericasCardroomConfiguration
+    internal class WPNImporter : WinningPokerNetworkFileBasedImporter, IWPNImporter
     {
-        public override EnumPokerSites Site
+        private readonly static string[] processNames = new[] { "AmericasCardroom", "Sekabet WPN" };
+
+        protected override EnumPokerSites Site
         {
-            get { return EnumPokerSites.TruePoker; }
+            get { return EnumPokerSites.WinningPokerNetwork; }
         }
 
-        protected override string[] RegistryDisplayName
+        protected override string[] ProcessNames
         {
-            get
-            {
-                return new[] { "True Poker" };
-            }
-        }
-
-        protected override string[] DefaultInstallPath
-        {
-            get
-            {
-                return new[] { @"C:\True Poker" };
-            }
+            get { return processNames; }
         }
     }
 }

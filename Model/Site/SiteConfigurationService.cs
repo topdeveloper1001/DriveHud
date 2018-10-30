@@ -51,6 +51,7 @@ namespace Model.Site
                 EnumPokerSites.BlackChipPoker,
                 EnumPokerSites.TruePoker,
                 EnumPokerSites.YaPoker,
+                EnumPokerSites.WinningPokerNetwork,
                 EnumPokerSites.PartyPoker,
                 EnumPokerSites.Horizon,
                 EnumPokerSites.Winamax,

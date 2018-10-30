@@ -161,7 +161,7 @@ namespace DriveHUD.Importers
                             }
                             catch (Exception ex)
                             {
-                                LogProvider.Log.Error(this, $"Couldn't detect encoding of {hh.FullName}. UTF8 will be used.", ex);
+                                LogProvider.Log.Error(this, $"Couldn't detect encoding of {hh.FullName}. UTF8 will be used. [{SiteString}]", ex);
                                 encoding = Encoding.UTF8;
                             }
 
@@ -261,9 +261,9 @@ namespace DriveHUD.Importers
                             return;
                         }
 
-                        ProcessCapturedFile(capturedFile.Key, capturedFile.Value);
+                        ProcessCapturedFile(capturedFile.Key, capturedFile.Value, isHighestPriority);
 
-                        if (!capturedFile.Value.WasModified)
+                        if (!capturedFile.Value.WasModified || capturedFile.Value.GameInfo == null)
                         {
                             continue;
                         }
@@ -336,7 +336,7 @@ namespace DriveHUD.Importers
             });
         }
 
-        protected virtual void ProcessCapturedFile(string file, CapturedFile capturedFile)
+        protected virtual void ProcessCapturedFile(string file, CapturedFile capturedFile, bool isHighestPriority)
         {
             try
             {
@@ -366,8 +366,8 @@ namespace DriveHUD.Importers
 
                         fs.Close();
 
-                        LogProvider.Log.Warn($"Cannot find parser for hand: {handText}");
-                        LogProvider.Log.Warn(string.Format("File '{0}' has bad format. Skipped.", file));
+                        LogProvider.Log.Warn($"Cannot find parser for hand: {handText} [{SiteString}]");
+                        LogProvider.Log.Warn($"File '{file}' has bad format. Skipped. [{SiteString}]");
 
                         return;
                     }
@@ -383,7 +383,7 @@ namespace DriveHUD.Importers
                         FullFileName = file
                     };
 
-                    LogProvider.Log.Info(this, $"Found '{file}' file. [{SiteString}]");
+                    LogProvider.Log.Info(this, $"Found '{file}' file. [{(isHighestPriority ? "High" : "Low")}] [{SiteString}]");
 
                     capturedFile.GameInfo = gameInfo;
                 }
@@ -392,7 +392,7 @@ namespace DriveHUD.Importers
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Could not process file {file}. [{SiteString}]", e);
+                LogProvider.Log.Error(this, $"Could not process file {file}. [{(isHighestPriority ? "High" : "Low")}] [{SiteString}]", e);
             }
         }
 
@@ -462,7 +462,7 @@ namespace DriveHUD.Importers
             {
                 capturedFile.FileStream.Close();
 
-                if (isMove)
+                if (isMove && capturedFile.GameInfo != null)
                 {
                     try
                     {
@@ -472,6 +472,7 @@ namespace DriveHUD.Importers
                         }
 
                         File.Move(capturedFile.ImportedFile.FileName, Path.Combine(moveLocation, Path.GetFileName(capturedFile.ImportedFile.FileName)));
+                        LogProvider.Log.Info(this, $"File {capturedFile.ImportedFile.FileName} was moved to processed files [{SiteString}]");
                     }
                     catch (Exception ex)
                     {

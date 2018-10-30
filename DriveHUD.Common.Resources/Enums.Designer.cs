@@ -412,6 +412,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Winning Poker Network.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_WinningPokerNetwork {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_WinningPokerNetwork", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to YaPoker.
         /// </summary>
         internal static string Enum_EnumPokerSites_YaPoker {

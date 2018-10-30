@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="TruePokerConfiguration.cs" company="Ace Poker Solutions">
+// <copyright file="WPNConfiguration.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -14,18 +14,18 @@ using DriveHUD.Entities;
 
 namespace Model.Site
 {
-    public class TruePokerConfiguration : AmericasCardroomConfiguration
+    public class WPNConfiguration : AmericasCardroomConfiguration, ISiteConfiguration
     {
         public override EnumPokerSites Site
         {
-            get { return EnumPokerSites.TruePoker; }
+            get { return EnumPokerSites.WinningPokerNetwork; }
         }
 
         protected override string[] RegistryDisplayName
         {
             get
             {
-                return new[] { "True Poker" };
+                return new[] { "Sekabet WPN", "PokerKing" };
             }
         }
 
@@ -33,7 +33,7 @@ namespace Model.Site
         {
             get
             {
-                return new[] { @"C:\True Poker" };
+                return new[] { @"C:\Sekabet WPN", @"C:\PokerKing" } ;
             }
         }
     }
