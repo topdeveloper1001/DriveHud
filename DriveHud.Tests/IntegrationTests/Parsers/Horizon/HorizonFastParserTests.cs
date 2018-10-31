@@ -369,6 +369,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Horizon
         [TestCase(@"..\..\IntegrationTests\Parsers\Horizon\TestData\SingleHands\NLH-9-max-1.txt", "H0MMER", 392.25, HandActionType.UNCALLED_BET, Street.Turn, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Horizon\TestData\SingleHands\NLH-9-max-1.txt", "H0MMER", 109.73, HandActionType.WINS, Street.Summary, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Horizon\TestData\SingleHands\NLH-9-max-1.txt", "neverwin333", 262.92, HandActionType.WINS, Street.Summary, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Horizon\TestData\SingleHands\NLH-9-max-2.txt", "SharkyPirate", -0.02, HandActionType.POSTS, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Horizon\TestData\SingleHands\NLH-9-max-2.txt", "SharkyPirate", -0.04, HandActionType.BIG_BLIND, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Horizon\TestData\SingleHands\NLN-6-max-5NL.txt", "AlexTh", 0.9, HandActionType.WINS, Street.Summary, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Horizon\TestData\SingleHands\NLH-MTT-8-max-Freeroll-Position.txt", "AlexTh", -30, HandActionType.ANTE, Street.Preflop, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)

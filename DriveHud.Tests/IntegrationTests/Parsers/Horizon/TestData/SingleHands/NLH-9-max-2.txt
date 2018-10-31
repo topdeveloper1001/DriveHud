@@ -1,0 +1,24 @@
+Hand#5322022008000577 - $ Rome (6-max) 22008 -- $0.02/$0.04 NL Hold'em -- 2018/10/31 - 09:37:42
+Dealer: Seat 9
+Seat 3: AlexTh ($1.77 in chips) 
+Seat 8: SharkyPirate ($4.17 in chips) 
+Seat 9: Game8Changer ($4.32 in chips) 
+Seat 10: Mondy ($2 in chips) 
+Mondy: posts small blind $0.02
+AlexTh: posts big blind $0.04
+SharkyPirate:posts dead blind $0.02 and big blind $0.04 
+Dealt to AlexTh [9d,2s]
+SharkyPirate: checks
+Game8Changer: folds
+Mondy: calls $0.02
+AlexTh: checks
+*** FLOP *** [6h,Ad,7h]
+Mondy: checks
+AlexTh: checks
+SharkyPirate: bets $0.12
+Mondy: folds
+AlexTh: folds
+SharkyPirate: returns uncalled bet $0.12
+***SHOW DOWN***
+SharkyPirate: mucks
+SharkyPirate wins $0.14 

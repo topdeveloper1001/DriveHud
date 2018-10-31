@@ -375,7 +375,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Horizon
                     var playerName = handLine.Substring(0, start).Trim();
                     var deadBlindTexts = handLine.Substring(start)
                         .Replace(":posts dead blind ", string.Empty)
-                        .Replace("and big blind", string.Empty)
+                        .Replace("and big blind ", string.Empty)
                         .Split(' ');
 
                     if (!ParserUtils.TryParseMoney(deadBlindTexts[0], out decimal deadBlind))
