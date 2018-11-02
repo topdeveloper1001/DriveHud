@@ -47,7 +47,7 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(Logger, $"Could not check if process is associated with {EmulatorName} emulator {process.Id}", e);
+                LogProvider.Log.Error(Logger, $"Failed to check if process is associated with {EmulatorName} emulator {process.Id}", e);
                 return false;
             }
         }
@@ -99,7 +99,7 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(Logger, $"Could not get window handle of {EmulatorName} emulator for process {process.Id}", e);
+                LogProvider.Log.Error(Logger, $"Failed to get window handle of {EmulatorName} emulator for process {process.Id}", e);
             }
 
             return IntPtr.Zero;
