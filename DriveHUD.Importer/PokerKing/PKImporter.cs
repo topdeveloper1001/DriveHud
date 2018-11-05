@@ -122,7 +122,7 @@ namespace DriveHUD.Importers.PokerKing
         /// <summary>
         /// Reads settings and initializes importer variables
         /// </summary>
-        protected void InitializeSettings()
+        protected virtual void InitializeSettings()
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
@@ -452,7 +452,7 @@ namespace DriveHUD.Importers.PokerKing
             }
         }
 
-        private void LogPacket(CapturedPacket capturedPacket, string ext)
+        protected virtual void LogPacket(CapturedPacket capturedPacket, string ext)
         {
             var packageFileName = Path.Combine("Logs", capturedPacket.ToString().Replace(":", ".").Replace("->", "-")) + ext;
 

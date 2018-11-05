@@ -24,7 +24,7 @@ namespace DriveHud.Tests.TcpImportersTests
 {
     internal class TcpImporterTestUtils
     {
-        public static List<CapturedPacket> ReadCapturedPackets(string file, string dateFormat)
+        public static List<CapturedPacket> ReadCapturedPackets(string file, string dateFormat, bool usePacketDate = false)
         {
             FileAssert.Exists(file);
 
@@ -58,7 +58,7 @@ namespace DriveHud.Tests.TcpImportersTests
                     continue;
                 }
 
-                if (line.StartsWith("Date Now (ticks):", StringComparison.OrdinalIgnoreCase))
+                if (!usePacketDate && line.StartsWith("Date Now (ticks):", StringComparison.OrdinalIgnoreCase))
                 {
                     var ticksText = line.Substring(17).Trim();
                     var ticks = long.Parse(ticksText);

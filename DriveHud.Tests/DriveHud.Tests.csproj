@@ -214,6 +214,7 @@
     <Compile Include="ProxyImporterTests\Adda52Tests\Adda52PacketManagerTests.cs" />
     <Compile Include="ProxyImporterTests\Adda52Tests\Adda52TableServiceTests.cs" />
     <Compile Include="TcpImportersTests\PacketManagerTest.cs" />
+    <Compile Include="TcpImportersTests\PerformanceTests.cs" />
     <Compile Include="TcpImportersTests\PKTests\PKHandBuilderTests.cs" />
     <Compile Include="TcpImportersTests\PKTests\PokerKingPacketManagerTests.cs" />
     <Compile Include="TcpImportersTests\TcpImporterTestUtils.cs" />
