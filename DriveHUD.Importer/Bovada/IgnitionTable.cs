@@ -69,7 +69,9 @@ namespace DriveHUD.Importers.Bovada
             }
 
             if (cmdObj.pid != null &&
-                cmdObj.pid.Equals("PING", StringComparison.OrdinalIgnoreCase))
+                (cmdObj.pid.Equals("PING", StringComparison.OrdinalIgnoreCase) ||
+                cmdObj.pid.Equals("PONG", StringComparison.OrdinalIgnoreCase) ||
+                cmdObj.pid.Equals("SYS_INFO", StringComparison.OrdinalIgnoreCase)))
             {
                 return;
             }
@@ -199,6 +201,11 @@ namespace DriveHUD.Importers.Bovada
                   cmdObj.tableNo;
 
             TableId = tableNumber;
+
+            if (IsJackpotTable)
+            {
+                playersFinalPositions.Clear();
+            }
         }
 
         protected override void ParseGidInfo(BovadaCommandDataObject cmdObj)
@@ -209,6 +216,11 @@ namespace DriveHUD.Importers.Bovada
                 return;
             }
 
+            ProcessUnjoin();
+        }
+
+        protected override void ProcessUnjoin()
+        {
             if (WindowHandle != IntPtr.Zero || !string.IsNullOrEmpty(TableName))
             {
                 LogProvider.Log.Info($"Unjoined table [{TableName}, {TableId}, {TableIndex}, {WindowHandle}]. [{Identifier}]");
@@ -218,7 +230,11 @@ namespace DriveHUD.Importers.Bovada
 
             WindowHandle = IntPtr.Zero;
             TableName = string.Empty;
-            isConnectedInfoParsed = false;
+
+            if (!IsJackpotTable)
+            {
+                isConnectedInfoParsed = false;
+            }
         }
 
         protected override void ParsePlayBuyinQs2(BovadaCommandDataObject cmdObj)
