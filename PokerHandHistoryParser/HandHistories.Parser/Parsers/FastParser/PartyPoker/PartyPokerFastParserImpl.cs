@@ -1215,7 +1215,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             var currency = ParseLimitCurrency(buyInSubstring);
 
             decimal buyIn = 0m, rake = 0m;
-            decimal.TryParse(buyInSubstring.Substring(1), out buyIn);
+            
+            decimal.TryParse(buyInSubstring.Substring(1), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out buyIn);
 
             var tournamentDescriptor = new TournamentDescriptor
             {
