@@ -467,8 +467,7 @@ namespace DriveHUD.Importers.Bovada
 
                     break;
 
-                case "JACKPOT_PRIZE":
-                case "JACKPOT_NEXT_LEVEL":                  
+                case "JACKPOT_PRIZE":                             
                     IsJackpotTable = true;
                     MaxSeat = JackpotMaxSeats;
                     GameFormat = GameFormat.SnG;
