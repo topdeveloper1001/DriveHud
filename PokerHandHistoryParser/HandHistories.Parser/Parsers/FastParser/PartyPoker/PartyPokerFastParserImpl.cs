@@ -356,10 +356,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                     throw new InvalidOperationException("Blinds line wasn't found");
                 }
 
-                int startIndex = blindsLine.IndexOf("Blinds");
-                int endIndex = blindsLine.IndexOf(' ', startIndex);
+                blindsLine = blindsLine.Replace(" ", string.Empty);
 
-                if (endIndex < 0)
+                int startIndex = blindsLine.IndexOf("Blinds");
+                int endIndex = blindsLine.LastIndexOf('-');
+
+                if (endIndex < 7)
                 {
                     endIndex = blindsLine.Length - 1;
                 }
@@ -874,7 +876,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             string text = line.Substring(startIndex, endIndex - startIndex);
 
             if (useMoneyParse)
-            {                       
+            {
                 return ParserUtils.ParseMoney(text);
             }
 
@@ -1181,7 +1183,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                         //Peacli posts big blind + dead [$3].
                         case 'd':
                             playerName = line.Remove(amountStartIndex - PostingWidth);
-                            action = HandActionType.POSTS;                            
+                            action = HandActionType.POSTS;
                             amount = ParseDecimal(line, GetDecimalStartIndex(line, amountStartIndex + 1), true);
                             break;
 
@@ -1215,7 +1217,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             var currency = ParseLimitCurrency(buyInSubstring);
 
             decimal buyIn = 0m, rake = 0m;
-            
+
             decimal.TryParse(buyInSubstring.Substring(1), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out buyIn);
 
             var tournamentDescriptor = new TournamentDescriptor
@@ -1269,6 +1271,22 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         private string GetBuyInString(string line)
         {
             int buyInEndIndex = line.IndexOf(" Buy-in");
+
+            if (buyInEndIndex < 0)
+            {
+                buyInEndIndex = line.IndexOf(" Trny");
+
+                if (buyInEndIndex < 0)
+                {
+                    buyInEndIndex = line.IndexOf("  -");
+
+                    if (buyInEndIndex < 0)
+                    {
+                        throw new BuyinException(line, "Failed to parse buyin");
+                    }
+                }
+            }
+
             buyInEndIndex = line.Substring(0, buyInEndIndex).LastIndexOf(' ');
             int buyInStartIndex = line.Substring(0, buyInEndIndex).LastIndexOf(' ') + 1;
             return line.Substring(buyInStartIndex, buyInEndIndex - buyInStartIndex);

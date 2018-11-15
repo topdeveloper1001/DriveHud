@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
@@ -29,13 +30,13 @@ namespace DriveHUD.Importers.PartyPoker
 {
     internal class PartyPokerImporter : FileBasedImporter, IPartyPokerImporter
     {
-        private readonly Dictionary<string, string[]> _playerNamesDictionary;
+        private readonly Dictionary<string, string[]> playerNamesDictionary;
 
         private readonly static string[] processNames = new[] { "PartyGaming", "PartyEspana" };
 
         public PartyPokerImporter()
         {
-            _playerNamesDictionary = new Dictionary<string, string[]>();
+            playerNamesDictionary = new Dictionary<string, string[]>();
         }
 
         protected override string HandHistoryFilter
@@ -62,7 +63,7 @@ namespace DriveHUD.Importers.PartyPoker
             }
         }
 
-        private const string tournamentPattern = "({0}) Table {1}";
+        private const string tournamentPattern = "({0}) - Table {1}";
 
         protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
@@ -74,6 +75,11 @@ namespace DriveHUD.Importers.PartyPoker
 
             if (parsingResult.Source.GameDescription.IsTournament)
             {
+                if (IsJackpot(parsingResult.Source.GameDescription.Tournament.TournamentName))
+                {
+                    return IsJackpotMatch(title, parsingResult);
+                }
+
                 var tableNumber = parsingResult.Source.TableName.Substring(parsingResult.Source.TableName.LastIndexOf(' ') + 1);
 
                 var tournamentTitle = string.Format(tournamentPattern, parsingResult.Source.GameDescription.Tournament.TournamentId, tableNumber);
@@ -82,6 +88,48 @@ namespace DriveHUD.Importers.PartyPoker
             }
 
             return title.Contains(parsingResult.Source.TableName);
+        }
+
+        private Dictionary<string, string> jackpotSngTournamentIdToTableId = new Dictionary<string, string>();
+
+        protected virtual bool IsJackpotMatch(string title, ParsingResult parsingResult)
+        {
+            var tournamentId = parsingResult.Source.GameDescription?.Tournament?.TournamentId;
+
+            if (string.IsNullOrEmpty(tournamentId))
+            {
+                return false;
+            }
+
+            bool jackpotTitleMatchTableId(string id)
+            {
+                return title.ContainsIgnoreCase($"Jackpot ({id})");
+            }
+
+            if (jackpotSngTournamentIdToTableId.TryGetValue(tournamentId, out string tableId))
+            {
+                return jackpotTitleMatchTableId(tableId);
+            }
+
+            try
+            {
+                tableId = PartyPokerJackpotTableFinder.FindTableId(tournamentId, parsingResult.FileName);
+
+                if (string.IsNullOrEmpty(tableId))
+                {
+                    return false;
+                }
+
+                jackpotSngTournamentIdToTableId[tournamentId] = tableId;
+
+                return jackpotTitleMatchTableId(tableId);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Failed to get jackpot table id.", e);
+            }
+
+            return false;
         }
 
         protected override PlayerList GetPlayerList(HandHistory handHistory, GameInfo gameInfo)
@@ -123,7 +171,9 @@ namespace DriveHUD.Importers.PartyPoker
 
         protected override void Clean()
         {
-            _playerNamesDictionary.Clear();
+            playerNamesDictionary.Clear();
+            jackpotSngTournamentIdToTableId.Clear();
+
             base.Clean();
         }
 
@@ -192,12 +242,12 @@ namespace DriveHUD.Importers.PartyPoker
                     return;
                 }
 
-                if (!_playerNamesDictionary.ContainsKey(parsingResult.Source.TableName))
+                if (!playerNamesDictionary.ContainsKey(parsingResult.Source.TableName))
                 {
-                    _playerNamesDictionary.Add(parsingResult.Source.TableName, new string[tableSize]);
+                    playerNamesDictionary.Add(parsingResult.Source.TableName, new string[tableSize]);
                 }
 
-                var dictEntry = _playerNamesDictionary[parsingResult.Source.TableName];
+                var dictEntry = playerNamesDictionary[parsingResult.Source.TableName];
 
                 for (int i = 0; i < tableSize; i++)
                 {
@@ -246,6 +296,11 @@ namespace DriveHUD.Importers.PartyPoker
             {
                 LogProvider.Log.Error(this, $"Could not update player names. [{SiteString}]", e);
             }
+        }
+
+        private static bool IsJackpot(string title)
+        {
+            return title.ContainsIgnoreCase("Sit & Go 3-Handed");
         }
     }
 }

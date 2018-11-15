@@ -62,7 +62,7 @@ namespace DriveHud.Tests.TcpImportersTests
         }
 
         [SetCulture("zh-CN")]
-        [TestCase(@"d:\Git\Temp\PKLogs\")]
+        //[TestCase(@"d:\Git\Temp\PKLogs\")]
         public void TestPerformance(string logPath)
         {
             var logs = Directory.GetFiles(logPath, "*-*.*.log");

@@ -1,0 +1,928 @@
+Game #17957371155 starts.
+
+#Game No : 17957371155 
+***** Hand History for Game 17957371155 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:27:49 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 1: Lamma3000 ( 500 )
+Seat 3: Peon84 ( 500 )
+Seat 2: kn272 ( 500 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+kn272 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Ts 5c ]
+Lamma3000 folds
+kn272 raises [50]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 80 chips
+Game #17957371506 starts.
+
+#Game No : 17957371506 
+***** Hand History for Game 17957371506 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:27:57 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 1: Lamma3000 ( 500 )
+Seat 3: Peon84 ( 480 )
+Seat 2: kn272 ( 520 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+Peon84 posts small blind [10].
+Lamma3000 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  2c 9h ]
+kn272 raises [60]
+Peon84 folds
+Lamma3000 is all-In  [480]
+kn272 calls [440]
+** Dealing Flop ** [ Ts, 4h, Th ]
+** Dealing Turn ** [ 3d ]
+** Dealing River ** [ 8h ]
+kn272 shows [ 9d, Ah ]a pair of Tens with Ace kicker.
+Lamma3000 shows [ Kc, Qh ]a pair of Tens.
+kn272 wins 1,010 chips from the main pot with a pair of Tens with Ace kicker.
+Player Lamma3000 finished in 3.
+Game #17957372399 starts.
+
+#Game No : 17957372399 
+***** Hand History for Game 17957372399 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:28:12 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 470 )
+Seat 2: kn272 ( 1,030 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+Peon84 posts small blind [10].
+kn272 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  4c 9s ]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 30 chips
+Game #17957372879 starts.
+
+#Game No : 17957372879 
+***** Hand History for Game 17957372879 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:28:20 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 460 )
+Seat 2: kn272 ( 1,040 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+kn272 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Ks 7c ]
+kn272 raises [30]
+Peon84 calls [20]
+** Dealing Flop ** [ 4d, 8d, Jd ]
+Peon84 checks
+kn272 bets [20]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 100 chips
+Game #17957373797 starts.
+
+#Game No : 17957373797 
+***** Hand History for Game 17957373797 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:28:35 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 420 )
+Seat 2: kn272 ( 1,080 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+Peon84 posts small blind [10].
+kn272 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Th 5h ]
+Peon84 calls [10]
+kn272 raises [60]
+Peon84 calls [60]
+** Dealing Flop ** [ Qc, 9d, As ]
+kn272 checks
+Peon84 checks
+** Dealing Turn ** [ 8h ]
+kn272 bets [80]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 240 chips
+Game #17957375526 starts.
+
+#Game No : 17957375526 
+***** Hand History for Game 17957375526 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:28:55 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 340 )
+Seat 2: kn272 ( 1,160 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+kn272 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Jc 2h ]
+kn272 raises [30]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 60 chips
+Game #17957375939 starts.
+
+#Game No : 17957375939 
+***** Hand History for Game 17957375939 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:29:02 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 320 )
+Seat 2: kn272 ( 1,180 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+Peon84 posts small blind [10].
+kn272 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  9c 3d ]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 30 chips
+Game #17957376280 starts.
+
+#Game No : 17957376280 
+***** Hand History for Game 17957376280 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:29:08 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 310 )
+Seat 2: kn272 ( 1,190 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+kn272 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Qs Kd ]
+kn272 raises [30]
+Peon84 is all-In  [290]
+kn272 folds
+Peon84 does not show cards.
+Peon84 wins 350 chips
+Game #17957376793 starts.
+
+#Game No : 17957376793 
+***** Hand History for Game 17957376793 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:29:17 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 350 )
+Seat 2: kn272 ( 1,150 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+Peon84 posts small blind [10].
+kn272 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  6h 9d ]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 30 chips
+Game #17957377108 starts.
+
+#Game No : 17957377108 
+***** Hand History for Game 17957377108 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:29:23 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 340 )
+Seat 2: kn272 ( 1,160 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+kn272 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  4h 5c ]
+kn272 raises [30]
+Peon84 calls [20]
+** Dealing Flop ** [ 2h, Kc, 5s ]
+Peon84 is all-In  [300]
+kn272 calls [300]
+** Dealing Turn ** [ 6c ]
+** Dealing River ** [ 7h ]
+Peon84 shows [ 4h, 5c ]a pair of Fives.
+kn272 shows [ 2d, Js ]a pair of Twos.
+Peon84 wins 680 chips from the main pot with a pair of Fives.
+Game #17957378221 starts.
+
+#Game No : 17957378221 
+***** Hand History for Game 17957378221 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:29:41 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 680 )
+Seat 2: kn272 ( 820 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+Peon84 posts small blind [10].
+kn272 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  2h 7c ]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 30 chips
+Game #17957378538 starts.
+
+#Game No : 17957378538 
+***** Hand History for Game 17957378538 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:29:46 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 670 )
+Seat 2: kn272 ( 830 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+kn272 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Qd 7s ]
+kn272 raises [50]
+Peon84 calls [40]
+** Dealing Flop ** [ 6h, Jh, 7h ]
+Peon84 checks
+kn272 bets [90]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 210 chips
+Game #17957380277 starts.
+
+#Game No : 17957380277 
+***** Hand History for Game 17957380277 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:30:08 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 610 )
+Seat 2: kn272 ( 890 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+Peon84 posts small blind [10].
+kn272 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  6s 9c ]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 30 chips
+Game #17957380658 starts.
+
+#Game No : 17957380658 
+***** Hand History for Game 17957380658 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:30:14 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 600 )
+Seat 2: kn272 ( 900 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+kn272 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Qh 5d ]
+kn272 raises [50]
+Peon84 calls [40]
+** Dealing Flop ** [ Js, Jc, Ac ]
+Peon84 checks
+kn272 bets [90]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 210 chips
+Game #17957381574 starts.
+
+#Game No : 17957381574 
+***** Hand History for Game 17957381574 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:30:29 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 540 )
+Seat 2: kn272 ( 960 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+Peon84 posts small blind [10].
+kn272 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  7s Qd ]
+Peon84 calls [10]
+kn272 raises [40]
+Peon84 calls [40]
+** Dealing Flop ** [ Jd, 5s, 4c ]
+kn272 checks
+Peon84 checks
+** Dealing Turn ** [ Th ]
+kn272 bets [60]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 180 chips
+Game #17957382580 starts.
+
+#Game No : 17957382580 
+***** Hand History for Game 17957382580 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:30:47 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 480 )
+Seat 2: kn272 ( 1,020 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+kn272 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  5h Ts ]
+kn272 raises [50]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 80 chips
+Game #17957383102 starts.
+
+#Game No : 17957383102 
+***** Hand History for Game 17957383102 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:30:55 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 460 )
+Seat 2: kn272 ( 1,040 )
+Trny: 190730272 Level: 2 
+Blinds(15/30)
+Peon84 posts small blind [15].
+kn272 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  Jd Jh ]
+Peon84 raises [45]
+kn272 calls [30]
+** Dealing Flop ** [ 7c, Qd, 2d ]
+kn272 checks
+Peon84 bets [60]
+kn272 folds
+Peon84 does not show cards.
+Peon84 wins 180 chips
+Game #17957384194 starts.
+
+#Game No : 17957384194 
+***** Hand History for Game 17957384194 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:31:14 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 520 )
+Seat 2: kn272 ( 980 )
+Trny: 190730272 Level: 2 
+Blinds(15/30)
+kn272 posts small blind [15].
+Peon84 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  Ks 4c ]
+kn272 raises [75]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Peon84 calls [60]
+** Dealing Flop ** [ 3h, 5h, Jh ]
+Peon84 checks
+kn272 bets [90]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 270 chips
+Game #17957385543 starts.
+
+#Game No : 17957385543 
+***** Hand History for Game 17957385543 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:31:36 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 430 )
+Seat 2: kn272 ( 1,070 )
+Trny: 190730272 Level: 2 
+Blinds(15/30)
+Peon84 posts small blind [15].
+kn272 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  7s Js ]
+Peon84 calls [15]
+kn272 raises [60]
+Peon84 calls [60]
+** Dealing Flop ** [ 2c, 8d, Ks ]
+kn272 checks
+Peon84 checks
+** Dealing Turn ** [ 3d ]
+kn272 checks
+Peon84 checks
+** Dealing River ** [ Qs ]
+kn272 bets [135]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 315 chips
+Game #17957386970 starts.
+
+#Game No : 17957386970 
+***** Hand History for Game 17957386970 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:32:00 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 340 )
+Seat 2: kn272 ( 1,160 )
+Trny: 190730272 Level: 2 
+Blinds(15/30)
+kn272 posts small blind [15].
+Peon84 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  As 8h ]
+kn272 raises [75]
+Peon84 calls [60]
+** Dealing Flop ** [ 2d, 4d, 7s ]
+Peon84 checks
+kn272 bets [90]
+Peon84 calls [90]
+** Dealing Turn ** [ 8c ]
+Peon84 is all-In  [160]
+kn272 calls [160]
+** Dealing River ** [ Ah ]
+Peon84 shows [ As, 8h ]two pairs, Aces and Eights.
+kn272 shows [ Tc, Kc ]high card Ace.
+Peon84 wins 680 chips from the main pot with two pairs, Aces and Eights.
+Game #17957388273 starts.
+
+#Game No : 17957388273 
+***** Hand History for Game 17957388273 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:32:22 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 680 )
+Seat 2: kn272 ( 820 )
+Trny: 190730272 Level: 2 
+Blinds(15/30)
+Peon84 posts small blind [15].
+kn272 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  7h Ks ]
+Peon84 calls [15]
+kn272 raises [60]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 120 chips
+Game #17957388979 starts.
+
+#Game No : 17957388979 
+***** Hand History for Game 17957388979 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:32:34 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 650 )
+Seat 2: kn272 ( 850 )
+Trny: 190730272 Level: 2 
+Blinds(15/30)
+kn272 posts small blind [15].
+Peon84 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  Ac 3d ]
+kn272 raises [45]
+Peon84 calls [30]
+** Dealing Flop ** [ Jd, 6s, 5h ]
+Peon84 checks
+kn272 bets [60]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 180 chips
+Game #17957390213 starts.
+
+#Game No : 17957390213 
+***** Hand History for Game 17957390213 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:32:54 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 590 )
+Seat 2: kn272 ( 910 )
+Trny: 190730272 Level: 2 
+Blinds(15/30)
+Peon84 posts small blind [15].
+kn272 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  7c 6c ]
+Peon84 raises [45]
+kn272 calls [30]
+** Dealing Flop ** [ 8c, 4h, 5s ]
+kn272 checks
+Peon84 bets [60]
+kn272 calls [60]
+** Dealing Turn ** [ 9c ]
+kn272 checks
+Peon84 bets [240]
+kn272 calls [240]
+** Dealing River ** [ 4d ]
+kn272 checks
+Peon84 is all-In  [230]
+kn272 calls [230]
+kn272 shows [ 4s, Jd ]three of a kind, Fours.
+Peon84 shows [ 7c, 6c ]a straight, Five to Nine.
+Peon84 wins 1,180 chips from the main pot with a straight, Five to Nine.
+Game #17957392832 starts.
+
+#Game No : 17957392832 
+***** Hand History for Game 17957392832 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:33:22 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 1,180 )
+Seat 2: kn272 ( 320 )
+Trny: 190730272 Level: 2 
+Blinds(15/30)
+kn272 posts small blind [15].
+Peon84 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  4h Js ]
+kn272 folds
+Peon84 does not show cards.
+Peon84 wins 45 chips
+Game #17957393134 starts.
+
+#Game No : 17957393134 
+***** Hand History for Game 17957393134 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:33:27 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 1,195 )
+Seat 2: kn272 ( 305 )
+Trny: 190730272 Level: 2 
+Blinds(15/30)
+Peon84 posts small blind [15].
+kn272 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  3s 4h ]
+Peon84 raises [45]
+kn272 is all-In  [275]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 365 chips
+Game #17957393981 starts.
+
+#Game No : 17957393981 
+***** Hand History for Game 17957393981 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:33:41 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 1,135 )
+Seat 2: kn272 ( 365 )
+Trny: 190730272 Level: 2 
+Blinds(15/30)
+kn272 posts small blind [15].
+Peon84 posts big blind [30].
+** Dealing down cards **
+Dealt to Peon84 [  Ac Kh ]
+kn272 is all-In  [350]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Peon84 calls [335]
+** Dealing Flop ** [ 8c, Qh, 3s ]
+** Dealing Turn ** [ 4h ]
+** Dealing River ** [ Th ]
+kn272 shows [ Ad, Qs ]a pair of Queens.
+Peon84 shows [ Ac, Kh ]high card Ace.
+kn272 wins 730 chips from the main pot with a pair of Queens.
+Game #17957395148 starts.
+
+#Game No : 17957395148 
+***** Hand History for Game 17957395148 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:34:01 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 770 )
+Seat 2: kn272 ( 730 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+kn272 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  Kd Jc ]
+Peon84 raises [60]
+kn272 calls [40]
+** Dealing Flop ** [ Kc, 2c, Qd ]
+kn272 checks
+Peon84 bets [160]
+kn272 folds
+Peon84 does not show cards.
+Peon84 wins 320 chips
+Game #17957396327 starts.
+
+#Game No : 17957396327 
+***** Hand History for Game 17957396327 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:34:20 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 850 )
+Seat 2: kn272 ( 650 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+kn272 posts small blind [20].
+Peon84 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  Ac 7d ]
+kn272 folds
+Peon84 does not show cards.
+Peon84 wins 60 chips
+Game #17957396623 starts.
+
+#Game No : 17957396623 
+***** Hand History for Game 17957396623 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:34:26 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 870 )
+Seat 2: kn272 ( 630 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+kn272 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  4s 3s ]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Peon84 will be using their time bank for this hand.
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 60 chips
+Game #17957397614 starts.
+
+#Game No : 17957397614 
+***** Hand History for Game 17957397614 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:34:43 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 850 )
+Seat 2: kn272 ( 650 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+kn272 posts small blind [20].
+Peon84 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  9h 4s ]
+kn272 raises [100]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 160 chips
+Game #17957398126 starts.
+
+#Game No : 17957398126 
+***** Hand History for Game 17957398126 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:34:51 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 810 )
+Seat 2: kn272 ( 690 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+kn272 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  4s Td ]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 60 chips
+Game #17957398476 starts.
+
+#Game No : 17957398476 
+***** Hand History for Game 17957398476 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:34:57 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 790 )
+Seat 2: kn272 ( 710 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+kn272 posts small blind [20].
+Peon84 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  5h 2s ]
+kn272 raises [100]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 160 chips
+Game #17957398969 starts.
+
+#Game No : 17957398969 
+***** Hand History for Game 17957398969 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:35:05 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 750 )
+Seat 2: kn272 ( 750 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+kn272 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  9s 8c ]
+Peon84 calls [20]
+kn272 raises [80]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 160 chips
+Game #17957399713 starts.
+
+#Game No : 17957399713 
+***** Hand History for Game 17957399713 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:35:18 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 710 )
+Seat 2: kn272 ( 790 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+kn272 posts small blind [20].
+Peon84 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  8s Ac ]
+kn272 raises [100]
+Peon84 calls [80]
+** Dealing Flop ** [ 4h, 5c, 4c ]
+Peon84 checks
+kn272 bets [120]
+Peon84 calls [120]
+** Dealing Turn ** [ 7s ]
+Peon84 checks
+kn272 checks
+** Dealing River ** [ 4s ]
+Peon84 checks
+kn272 bets [240]
+Peon84 calls [240]
+kn272 shows [ 8h, 7d ]a full house, Fours full of Sevens.
+Peon84 doesn't show [ 8s, Ac ]three of a kind, Fours.
+kn272 wins 960 chips from the main pot with a full house, Fours full of Sevens.
+Game #17957401628 starts.
+
+#Game No : 17957401628 
+***** Hand History for Game 17957401628 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:35:49 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 230 )
+Seat 2: kn272 ( 1,270 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+kn272 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  Ts 2d ]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 60 chips
+Game #17957402024 starts.
+
+#Game No : 17957402024 
+***** Hand History for Game 17957402024 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:35:56 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 210 )
+Seat 2: kn272 ( 1,290 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+kn272 posts small blind [20].
+Peon84 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  3d 4h ]
+kn272 folds
+Peon84 does not show cards.
+Peon84 wins 60 chips
+Game #17957402369 starts.
+
+#Game No : 17957402369 
+***** Hand History for Game 17957402369 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:36:01 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 230 )
+Seat 2: kn272 ( 1,270 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+kn272 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  9h 5h ]
+Peon84 is all-In  [210]
+kn272 folds
+Peon84 does not show cards.
+Peon84 wins 270 chips
+Game #17957402939 starts.
+
+#Game No : 17957402939 
+***** Hand History for Game 17957402939 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:36:10 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 270 )
+Seat 2: kn272 ( 1,230 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+kn272 posts small blind [20].
+Peon84 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  4s 6s ]
+kn272 folds
+Peon84 does not show cards.
+Peon84 wins 60 chips
+Game #17957403251 starts.
+
+#Game No : 17957403251 
+***** Hand History for Game 17957403251 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:36:16 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 290 )
+Seat 2: kn272 ( 1,210 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+kn272 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  4h 2c ]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 60 chips
+Game #17957403609 starts.
+
+#Game No : 17957403609 
+***** Hand History for Game 17957403609 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:36:22 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 270 )
+Seat 2: kn272 ( 1,230 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+kn272 posts small blind [20].
+Peon84 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  9d 2s ]
+kn272 raises [100]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 160 chips
+Game #17957404169 starts.
+
+#Game No : 17957404169 
+***** Hand History for Game 17957404169 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:36:30 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 2/3 
+Seat 3: Peon84 ( 230 )
+Seat 2: kn272 ( 1,270 )
+Trny: 190730272 Level: 3 
+Blinds(20/40)
+Peon84 posts small blind [20].
+kn272 posts big blind [40].
+** Dealing down cards **
+Dealt to Peon84 [  Kc Ad ]
+Peon84 is all-In  [210]
+kn272 calls [190]
+** Dealing Flop ** [ 4c, 8c, Th ]
+** Dealing Turn ** [ 6s ]
+** Dealing River ** [ 4h ]
+Peon84 shows [ Kc, Ad ]a pair of Fours.
+kn272 shows [ 7d, 9d ]a straight, Six to Ten.
+kn272 wins 460 chips from the main pot with a straight, Six to Ten.
+Congratulations to player kn272 for winning tournament $0.25 Sit & Go 3-Handed
+Player Peon84 finished in 2.
+Player kn272 finished in 1 place and received $1 USD 

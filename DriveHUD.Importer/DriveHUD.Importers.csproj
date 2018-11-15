@@ -315,6 +315,7 @@
     <Compile Include="Pacific888\Pacific888Importer.cs" />
     <Compile Include="PartyPoker\IPartyPokerImporter.cs" />
     <Compile Include="PartyPoker\PartyPokerImporter.cs" />
+    <Compile Include="PartyPoker\PartyPokerJackpotTableFinder.cs" />
     <Compile Include="PipeManager.cs" />
     <Compile Include="PlayersAddedEvent.cs" />
     <Compile Include="PlayersAddedEventArgs.cs" />
