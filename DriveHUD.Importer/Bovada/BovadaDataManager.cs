@@ -150,6 +150,8 @@ namespace DriveHUD.Importers.Bovada
 
         #region Infrastructure     
 
+        private Dictionary<string, List<string>> buffer = new Dictionary<string, List<string>>();
+
         /// <summary>
         /// Converts raw data to string
         /// </summary>
@@ -181,25 +183,73 @@ namespace DriveHUD.Importers.Bovada
                 logger.Log(dataText);
             }
 
-            // skip not JSON data 
-            if (!dataText.Contains("{") || !dataText.Contains("}") || dataText.Contains("|"))
+            if (dataText.StartsWith("error", StringComparison.OrdinalIgnoreCase))
             {
-                if (dataText.StartsWith("error", StringComparison.OrdinalIgnoreCase))
-                {
-                    LogProvider.Log.Error(this, $"Catcher data has errors: {dataText}");
-                }
-
+                LogProvider.Log.Error(this, $"Catcher data has errors: {dataText}");
                 return null;
             }
 
             try
             {
-                // deserialize stream data
-                var catcherDataObject = JsonConvert.DeserializeObject<BovadaCatcherDataObject>(dataText);
-                return catcherDataObject;
+                var splitData = dataText.Split('|');
+
+                if (splitData.Length != 3 && splitData.Length != 2)
+                {
+                    return null;
+                }
+
+                var uid = splitData[0];
+                var body = splitData.Length == 3 ? splitData[2] : splitData[1];
+
+                if (!buffer.TryGetValue(uid, out List<string> socketBuffer))
+                {
+                    socketBuffer = new List<string>();
+                    buffer.Add(uid, socketBuffer);
+                }
+
+                // not full command
+                if (!body.Trim().EndsWith("}", StringComparison.OrdinalIgnoreCase))
+                {
+                    socketBuffer.Add(body);
+                    return null;
+                }
+
+                // check if there is data in buffer         
+                if (socketBuffer.Count > 0 && !body.StartsWith("{", StringComparison.OrdinalIgnoreCase))
+                {
+                    socketBuffer.Add(body);
+                    body = string.Join(string.Empty, socketBuffer);
+                    socketBuffer.Clear();
+                }
+                else if (body.StartsWith("{", StringComparison.OrdinalIgnoreCase))
+                {
+                    socketBuffer.Clear();
+                }
+                else
+                {
+                    return null;
+                }
+
+                try
+                {
+                    // deserialize stream data
+                    var catcherDataObject = new BovadaCatcherDataObject
+                    {
+                        uid = uid,
+                        cmd = JsonConvert.DeserializeObject<BovadaCommandDataObject>(body)
+                    };
+
+                    return catcherDataObject;
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Failed to parse body: \r\n{body}", e);
+                    return null;
+                }
             }
-            catch
+            catch (Exception ex)
             {
+                LogProvider.Log.Error(this, $"Failed to process stream data: \r\n{dataText}", ex);
                 return null;
             }
         }
