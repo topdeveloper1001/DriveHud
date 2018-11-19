@@ -19,8 +19,7 @@
     <Property Id="REINSTALLMODE" Value="amus" />
     <Property Id="MSIFASTINSTALL" Value="1" />
 
-    <MajorUpgrade
-      Schedule="afterInstallExecute"
+    <MajorUpgrade      
       DowngradeErrorMessage="A newer version of [ProductName] is already installed."/>
 
     <!-- Properties -->
@@ -365,13 +364,13 @@
         <Condition>False</Condition>
         <File Id="websocket.sharp.dll" Name="websocket-sharp.dll" Source="$(var.ProjectDir)\..\dependencies\Fake\websocket-sharp.dll" />
       </Component>
-      <Component Id="Titanium.Web.Proxy.dll" Guid="{7B159201-D224-4EE2-BC89-A1155D621869}" Transitive="yes">        
+      <Component Id="Titanium.Web.Proxy.dll" Guid="{7B159201-D224-4EE2-BC89-A1155D621869}" Transitive="yes">
         <File Id="Titanium.Web.Proxy.dll" Name="Titanium.Web.Proxy.dll" Source="$(var.BuildDirectory)\Titanium.Web.Proxy.dll" />
       </Component>
-      <Component Id="StreamExtended.dll" Guid="{16041656-FDCC-444A-A23D-B492C1AF0464}" Transitive="yes">        
+      <Component Id="StreamExtended.dll" Guid="{16041656-FDCC-444A-A23D-B492C1AF0464}" Transitive="yes">
         <File Id="StreamExtended.dll" Name="StreamExtended.dll" Source="$(var.BuildDirectory)\StreamExtended.dll" />
       </Component>
-      <Component Id="BouncyCastle.Crypto.dll" Guid="{0DE922F8-86F4-4A97-BDE3-62C2813451B7}" Transitive="yes">        
+      <Component Id="BouncyCastle.Crypto.dll" Guid="{0DE922F8-86F4-4A97-BDE3-62C2813451B7}" Transitive="yes">
         <File Id="BouncyCastle.Crypto.dll" Name="BouncyCastle.Crypto.dll" Source="$(var.BuildDirectory)\BouncyCastle.Crypto.dll" />
       </Component>
       <Component Id="SharpPcap.dll" Guid="{E6B116FD-276F-47D7-B1FC-444D98D3D0F6}">

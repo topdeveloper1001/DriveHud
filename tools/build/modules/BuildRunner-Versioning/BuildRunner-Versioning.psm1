@@ -118,7 +118,8 @@ function Update-Wix()
     )
         
     $pattern = 'ProductVersion\s*=\s*"(.*)"'
-
+	$productcode_pattern = 'ProductCode\s*=\s*"\{(.*)\}"'
+	
     (Get-Content $File) | ForEach-Object {
                           
        if($_ -match $pattern) 
@@ -130,10 +131,19 @@ function Update-Wix()
 
             $fileVersion = [version]$matches[1]            
             $_.Replace($fileVersion, $Version)
-       }                 
+       }   
+       elseif ($_ -match $productcode_pattern)
+       {
+            if($File.EndsWith('Variables.wxi'))
+            {
+				$old_guid = $matches[1]
+				$new_guid = ([guid]::NewGuid()).Guid.ToUpper()
+                $_.Replace($old_guid, $new_guid)            
+            }    
+       }              
        else {            
            $_
-       }
+       }	 
 
     } | Set-Content $File   
 }

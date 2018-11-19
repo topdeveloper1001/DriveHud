@@ -4,7 +4,7 @@
      xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
 
   <?ifndef ProductVersion?>
-  <?define ProductVersion = "1.5.3.2484" ?>
+  <?define ProductVersion = "1.5.3.2486" ?>
   <?endif ?>
 
   <?ifndef ProductName?>
@@ -65,7 +65,7 @@
         <ExitCode Value="3010" Behavior="forceReboot"/>
         <ExitCode Value="1638" Behavior="success"/>
       </ExePackage>
-      <RollbackBoundary/>
+      <RollbackBoundary />
       <ExePackage
          Id="WinPcap"
          Name="WinPcap 4.1.3"
@@ -76,7 +76,7 @@
          Vital="yes"
          InstallCommand="/S" />
       <RollbackBoundary/>
-      <MsiPackage Id="DriveHUD" Compressed="yes" SourceFile="..\DriveHUD.Setup\bin\Release\DriveHUD.msi" Vital="yes">
+      <MsiPackage Id="DriveHUD" Compressed="yes" SourceFile="..\DriveHUD.Setup\bin\Release\DriveHUD.msi" Vital="yes" Cache="no">
         <MsiProperty Name="MANUFACTURERDIR" Value="[MANUFACTURERDIR]"/>
         <MsiProperty Name="INSTALLDESKTOPSHORTCUT" Value="[INSTALLDESKTOPSHORTCUT]"/>
         <MsiProperty Name="INSTALLPROGRAMMENUSHORTCUT" Value="[INSTALLPROGRAMMENUSHORTCUT]"/>
