@@ -1,0 +1,22 @@
+Game #17957371155 starts.
+
+#Game No : 17957371155 
+***** Hand History for Game 17957371155 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 21:27:49 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190730272) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 1: Lamma3000 ( 500 )
+Seat 3: Peon84 ( 500 )
+Seat 2: kn272 ( 500 )
+Trny: 190730272 Level: 1 
+Blinds(10/20)
+kn272 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Ts 5c ]
+Lamma3000 folds
+kn272 raises [50]
+Peon84 folds
+kn272 does not show cards.
+kn272 wins 80 chips

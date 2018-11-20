@@ -160,6 +160,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"AsX4-SB-Position.txt", EnumPokerSites.Winamax, "as x 4", "SB")]
         [TestCase(@"Ginac808-EP-Position.xml", EnumPokerSites.BetOnline, "ginac808", "EP")]
         [TestCase(@"Ginac808-MP-Position.xml", EnumPokerSites.BetOnline, "ginac808", "MP")]
+        [TestCase(@"AlexTh-CO-Position.txt", EnumPokerSites.Horizon, "AlexTh", "CO")]
 
         public void PositionsAreImported(string fileName, EnumPokerSites pokerSite, string playerName, string expectedPosition)
         {
@@ -445,6 +446,12 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         public void CouldThreeBetVsStealIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.CouldThreeBetVsSteal, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"AlexTh-CO-Position.txt", EnumPokerSites.Horizon, "AlexTh", false)]
+        public void IsBigBlindIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, bool expected)
+        {
+            AssertThatStatIsCalculated(x => x.IsBigBlind, fileName, pokerSite, playerName, expected);
         }
 
         [Test]

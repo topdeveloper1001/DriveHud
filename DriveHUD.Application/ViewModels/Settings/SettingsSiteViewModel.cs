@@ -55,6 +55,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.SpartanPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.SpartanPoker) },
                 { EnumPokerSites.TruePoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.TruePoker) },
                 { EnumPokerSites.YaPoker, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.YaPoker) },
+                { EnumPokerSites.WinningPokerNetwork, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.WinningPokerNetwork) },
                 { EnumPokerSites.Horizon, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Horizon) },
                 { EnumPokerSites.Winamax, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Winamax) }
             };

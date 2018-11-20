@@ -37,5 +37,11 @@ namespace DriveHUD.Importers.AndroidBase
             get;
             set;
         }
+
+        public int ReopeningAttempts
+        {
+            get;
+            set;
+        }
     }
 }

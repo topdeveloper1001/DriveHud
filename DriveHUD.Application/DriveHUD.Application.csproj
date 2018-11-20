@@ -71,13 +71,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.5.2.2451, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.5.3.2486, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.5.2.2451, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.5.3.2486, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.5.2.2451, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.5.3.2486, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="EPPlus, Version=4.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
@@ -439,7 +439,6 @@
     <Compile Include="Surrogates\ColorDto.cs" />
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />
     <Compile Include="Surrogates\PointDto.cs" />
-    <Compile Include="TableConfigurators\PositionConfiguratorHelper.cs" />
     <Compile Include="TableConfigurators\PositionProviders\Adda52PositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\GGNPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\IPokerPositionProvider.cs" />
@@ -766,7 +765,6 @@
     <Compile Include="TableConfigurators\FilterTableConfigurators\IFilterTableConfigurator.cs" />
     <Compile Include="TableConfigurators\ReplayerTableConfigurators\IReplayerTableConfigurator.cs" />
     <Compile Include="TableConfigurators\ReplayerTableConfigurators\ReplayerTableConfigurator.cs" />
-    <Compile Include="TableConfigurators\TableConfiguratorHelper.cs" />
     <Compile Include="ValueConverters\CurrentViewModelConverter.cs" />
     <Compile Include="ValueConverters\CurrentViewModelMultiConverter.cs" />
     <Compile Include="ValueConverters\FilterTableRingBooleanToBrushConverter.cs" />

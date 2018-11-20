@@ -108,87 +108,101 @@ namespace Model.Site
             }
         }
 
-        protected virtual string RegistryDisplayName
+        protected virtual string[] RegistryDisplayName
         {
             get
             {
-                return "AmericasCardroom";
+                return new[] { "AmericasCardroom" };
             }
         }
 
-        protected virtual string DefaultInstallPath
+        protected virtual string[] DefaultInstallPath
         {
             get
             {
-                return @"C:\AmericasCardroom";
+                return new[] { @"C:\AmericasCardroom" };
             }
         }
 
         public override string[] GetHandHistoryFolders()
         {
-            var handHistoryFolders = new List<string>();
+            var allHandHistoryFolders = new List<string>();
 
-            var path = GetInstalledPath(RegistryDisplayName);
+            var installPaths = GetInstallPaths(RegistryDisplayName);
 
-            if (!Directory.Exists(path))
+            if (installPaths.Length == 0)
             {
-                return handHistoryFolders.ToArray();
+                return allHandHistoryFolders.ToArray();
             }
 
-            var profilesDirectoryPath = Path.Combine(path, ProfilesFolder);
-
-            try
+            foreach (var installPath in installPaths)
             {
-                var profilesDirectory = new DirectoryInfo(profilesDirectoryPath);
+                var profilesDirectoryPath = Path.Combine(installPath, ProfilesFolder);
 
-                if (!profilesDirectory.Exists)
-                {
-                    // no profiles are created, so add this folder by default
-                    handHistoryFolders.Add(profilesDirectoryPath);
-                    return handHistoryFolders.ToArray();
-                }
+                var handHistoryFolders = new List<string>();
 
-                foreach (var settingsFile in profilesDirectory.GetFiles(SettingsFile, SearchOption.AllDirectories))
+                try
                 {
-                    try
+                    var profilesDirectory = new DirectoryInfo(profilesDirectoryPath);
+
+                    if (!profilesDirectory.Exists)
                     {
-                        var xmlValues = ReadXmlValues(settingsFile.FullName, new[] { ProfileHandHistoryId });
+                        // no profiles are created, so add this folder by default
+                        allHandHistoryFolders.Add(profilesDirectoryPath);
+                        continue;
+                    }
 
-                        if (xmlValues.ContainsKey(ProfileHandHistoryId) && !string.IsNullOrWhiteSpace(xmlValues[ProfileHandHistoryId]))
+                    foreach (var settingsFile in profilesDirectory.GetFiles(SettingsFile, SearchOption.AllDirectories))
+                    {
+                        try
                         {
-                            handHistoryFolders.Add(xmlValues[ProfileHandHistoryId]);
+                            var xmlValues = ReadXmlValues(settingsFile.FullName, new[] { ProfileHandHistoryId });
+
+                            if (xmlValues.ContainsKey(ProfileHandHistoryId) && !string.IsNullOrWhiteSpace(xmlValues[ProfileHandHistoryId]))
+                            {
+                                handHistoryFolders.Add(xmlValues[ProfileHandHistoryId]);
+                            }
+                            else
+                            {
+                                var handHistoryFolder = Path.Combine(settingsFile.Directory.FullName, HandHistoryFolder);
+                                handHistoryFolders.Add(handHistoryFolder);
+                            }
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            var handHistoryFolder = Path.Combine(settingsFile.Directory.FullName, HandHistoryFolder);
-                            handHistoryFolders.Add(handHistoryFolder);
+                            LogProvider.Log.Error(this, $"Error occurred during reading {settingsFile.FullName}", ex);
                         }
                     }
-                    catch (Exception ex)
+
+                    if (handHistoryFolders.Count == 0)
                     {
-                        LogProvider.Log.Error(this, $"Error occurred during reading {settingsFile.FullName}", ex);
+                        handHistoryFolders.Add(profilesDirectoryPath);
                     }
                 }
-
-                if (handHistoryFolders.Count == 0)
+                catch (Exception e)
                 {
-                    handHistoryFolders.Add(profilesDirectoryPath);
+                    LogProvider.Log.Error(this, $"Could not read data from {profilesDirectoryPath}", e);
                 }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Could not read data from {profilesDirectoryPath}", e);
+
+                allHandHistoryFolders.AddRange(handHistoryFolders);
             }
 
-            return handHistoryFolders.Distinct().ToArray();
+            return allHandHistoryFolders.Distinct().ToArray();
         }
 
-        protected string GetInstalledPath(string softwareName)
+        protected string[] GetInstallPaths(string[] softwareNames)
         {
+            var installPaths = new List<string>();
+
             try
             {
-                var uninstallKeys = new[] {  Registry.LocalMachine.OpenSubKey(RegistryUtils.UninstallRegistryPath32Bit),
-                          Registry.LocalMachine.OpenSubKey(RegistryUtils.UninstallRegistryPath64Bit) };
+                var uninstallKeys = new[]
+                {
+                    Registry.LocalMachine.OpenSubKey(RegistryUtils.UninstallRegistryPath32Bit),
+                    Registry.LocalMachine.OpenSubKey(RegistryUtils.UninstallRegistryPath64Bit),
+                    Registry.CurrentUser.OpenSubKey(RegistryUtils.UninstallRegistryPath32Bit),
+                    Registry.CurrentUser.OpenSubKey(RegistryUtils.UninstallRegistryPath64Bit),
+                };
 
                 foreach (var uninstallKey in uninstallKeys)
                 {
@@ -197,37 +211,43 @@ namespace Model.Site
                         continue;
                     }
 
-                    foreach (var subkey in uninstallKey.GetSubKeyNames().Select(keyName => uninstallKey.OpenSubKey(keyName)))
+                    foreach (var subkey in uninstallKey.GetSubKeyNames())
                     {
-                        if (string.Equals(subkey?.GetValue(DisplayNameKeyValue) as string, softwareName, StringComparison.OrdinalIgnoreCase))
+                        var productKey = uninstallKey.OpenSubKey(subkey);
+
+                        var displayName = productKey.GetValue("DisplayName")?.ToString();
+
+                        if (!string.IsNullOrEmpty(displayName) && softwareNames.Any(x => x.Equals(displayName, StringComparison.OrdinalIgnoreCase)))
                         {
-                            return subkey?.GetValue(InstallLocationKeyValue) as string;
+                            var installLocation = productKey.GetValue(InstallLocationKeyValue)?.ToString();
+
+                            if (!string.IsNullOrEmpty(installLocation) && Directory.Exists(installLocation))
+                            {
+                                installPaths.Add(installLocation);
+                            }
                         }
                     }
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Could read data from registry for {softwareName}. [{Site}] ", e);
+                LogProvider.Log.Error(this, $"Could read data from registry for [{string.Join(", ", softwareNames)}]. [{Site}] ", e);
             }
 
-            if (Directory.Exists(DefaultInstallPath))
-            {
-                return DefaultInstallPath;
-            }
+            installPaths.AddRange(DefaultInstallPath.Where(x => Directory.Exists(x)));
 
-            return string.Empty;
+            return installPaths.Distinct().ToArray();
         }
 
         public override ISiteValidationResult ValidateSiteConfiguration(SiteModel siteModel)
         {
-            var installedPath = GetInstalledPath(RegistryDisplayName);
+            var installPaths = GetInstallPaths(RegistryDisplayName);
 
             var validationResult = new SiteValidationResult(Site)
             {
                 IsNew = !siteModel.Configured,
                 IsEnabled = siteModel.Enabled,
-                IsDetected = !string.IsNullOrEmpty(installedPath)
+                IsDetected = installPaths.Length > 0
             };
 
             if (!validationResult.IsDetected)
@@ -235,43 +255,46 @@ namespace Model.Site
                 return validationResult;
             }
 
-            var profilesDirectoryPath = Path.Combine(installedPath, ProfilesFolder);
-
-            try
+            foreach (var installPath in installPaths)
             {
-                var profilesDirectory = new DirectoryInfo(profilesDirectoryPath);
+                var profilesDirectoryPath = Path.Combine(installPath, ProfilesFolder);
 
-                if (!profilesDirectory.Exists)
+                try
                 {
-                    return validationResult;
-                }
+                    var profilesDirectory = new DirectoryInfo(profilesDirectoryPath);
 
-                foreach (var settingsFile in profilesDirectory.GetFiles(SettingsFile, SearchOption.AllDirectories))
-                {
-                    try
+                    if (!profilesDirectory.Exists)
                     {
-                        var xmlValues = ReadXmlValues(settingsFile.FullName, new[] { ProfileHandHistoryId, ProfileSaveHandHistoryId });
+                        continue;
+                    }
 
-                        if (xmlValues.ContainsKey(ProfileHandHistoryId) && !string.IsNullOrWhiteSpace(xmlValues[ProfileHandHistoryId]))
+                    foreach (var settingsFile in profilesDirectory.GetFiles(SettingsFile, SearchOption.AllDirectories))
+                    {
+                        try
                         {
-                            validationResult.HandHistoryLocations.Add(xmlValues[ProfileHandHistoryId]);
+                            var xmlValues = ReadXmlValues(settingsFile.FullName, new[] { ProfileHandHistoryId, ProfileSaveHandHistoryId });
+
+                            if (xmlValues.ContainsKey(ProfileHandHistoryId) && !string.IsNullOrWhiteSpace(xmlValues[ProfileHandHistoryId]))
+                            {
+                                validationResult.HandHistoryLocations.Add(xmlValues[ProfileHandHistoryId]);
+                            }
+
+                            if (xmlValues.ContainsKey(ProfileSaveHandHistoryId) && (!string.IsNullOrEmpty(xmlValues[ProfileSaveHandHistoryId]) && xmlValues[ProfileSaveHandHistoryId] != CorrectSaveHandHistoryTag))
+                            {
+                                var issue = string.Format(CommonResourceManager.Instance.GetResourceString("Error_WPN_Validation_SaveHandHistory"), RegistryDisplayName, settingsFile.Directory?.Name);
+                                validationResult.Issues.Add(issue);
+                            }
                         }
-
-                        if (xmlValues.ContainsKey(ProfileSaveHandHistoryId) && (!string.IsNullOrEmpty(xmlValues[ProfileSaveHandHistoryId]) && xmlValues[ProfileSaveHandHistoryId] != CorrectSaveHandHistoryTag))
+                        catch (Exception ex)
                         {
-                            var issue = string.Format(CommonResourceManager.Instance.GetResourceString("Error_WPN_Validation_SaveHandHistory"), RegistryDisplayName, settingsFile.Directory?.Name);
-                            validationResult.Issues.Add(issue);
+                            LogProvider.Log.Error(this, $"Error occurred during reading {settingsFile.FullName}", ex);
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        LogProvider.Log.Error(this, $"Error occurred during reading {settingsFile.FullName}", ex);
-                    }
                 }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Could not read data from {profilesDirectoryPath}", e);
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Could not read data from {profilesDirectoryPath}", e);
+                }
             }
 
             return validationResult;

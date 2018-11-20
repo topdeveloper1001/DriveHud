@@ -1,0 +1,49 @@
+Game #17957287529 starts.
+
+#Game No : 17957287529 
+***** Hand History for Game 17957287529 *****
+NL Texas Hold'em $0.22 USD Trny:185726743 Level:2  Blinds-Antes(500/1K -90) - Thursday, November 15, 21:05:44 MSK 2018
+Table BIG Bounty Hunter. $500 Gtd (185726743) Table #40 (Real Money)
+Seat 2 is the button
+Total number of players : 6/8 
+Seat 2: Aksuma ( 99,420 )
+Seat 6: Brunobosch ( 100,000 )
+Seat 4: Dschinn1975 ( 100,000 )
+Seat 3: G.R.A.2230 ( 97,720 )
+Seat 5: Peon84 ( 100,000 )
+Seat 1: Valeron19ru ( 102,860 )
+Trny:185726743 Level:2 
+Blinds-Antes(500/1 000 -90)
+Valeron19ru posts ante [90]
+Aksuma posts ante [90]
+G.R.A.2230 posts ante [90]
+Dschinn1975 posts ante [90]
+Peon84 posts ante [90]
+Brunobosch posts ante [90]
+G.R.A.2230 posts small blind [500].
+Dschinn1975 posts big blind [1,000].
+** Dealing down cards **
+Dealt to Peon84 [  Qs Td ]
+Peon84 folds
+Brunobosch folds
+IsThatDave has joined the table.
+TurboMamont has joined the table.
+Valeron19ru folds
+Aksuma calls [1,000]
+G.R.A.2230 calls [500]
+Dschinn1975 checks
+** Dealing Flop ** [ 6d, 7h, 7c ]
+G.R.A.2230 checks
+Dschinn1975 bets [1,000]
+Aksuma calls [1,000]
+G.R.A.2230 folds
+** Dealing Turn ** [ Tc ]
+Dschinn1975 bets [2,770]
+Aksuma calls [2,770]
+** Dealing River ** [ 9s ]
+Dschinn1975 is all-In  [95,140]
+Aksuma is all-In  [94,560]
+Dschinn1975 shows [ Jc, 7s ]three of a kind, Sevens.
+Aksuma shows [ 6s, 8s ]a straight, Six to Ten.
+Dschinn1975 wins 580 chips from the side pot 1 with three of a kind, Sevens.
+Aksuma wins 200,200 chips from the main pot with a straight, Six to Ten.

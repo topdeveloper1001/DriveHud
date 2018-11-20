@@ -21,19 +21,19 @@ namespace Model.Site
             get { return EnumPokerSites.TruePoker; }
         }
 
-        protected override string RegistryDisplayName
+        protected override string[] RegistryDisplayName
         {
             get
             {
-                return "True Poker";
+                return new[] { "True Poker" };
             }
         }
 
-        protected override string DefaultInstallPath
+        protected override string[] DefaultInstallPath
         {
             get
             {
-                return @"C:\True Poker";
+                return new[] { @"C:\True Poker" };
             }
         }
     }

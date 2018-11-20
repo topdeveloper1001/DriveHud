@@ -21,19 +21,19 @@ namespace Model.Site
             get { return EnumPokerSites.BlackChipPoker; }
         }
 
-        protected override string RegistryDisplayName
+        protected override string[] RegistryDisplayName
         {
             get
             {
-                return "BlackChipPoker";
+                return new[] { "BlackChipPoker" };
             }
         }
 
-        protected override string DefaultInstallPath
+        protected override string[] DefaultInstallPath
         {
             get
             {
-                return @"C:\BlackChipPoker";
+                return new[] { @"C:\BlackChipPoker" };
             }
         }
     }
