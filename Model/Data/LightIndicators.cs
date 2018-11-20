@@ -2000,6 +2000,359 @@ namespace Model.Data
 
         #endregion
 
+        #region Limp Positional & Fold to PFR%
+
+        [ProtoMember(197)]
+        protected int limpEPFoldToPFR;
+
+        [ProtoMember(198)]
+        protected int limpEPFacedPFR;
+
+        public override decimal LimpEPFoldToPFR => GetPercentage(limpEPFoldToPFR, limpEPFacedPFR);
+
+        [ProtoMember(199)]
+        protected int limpMPFoldToPFR;
+
+        [ProtoMember(200)]
+        protected int limpMPFacedPFR;
+
+        public override decimal LimpMPFoldToPFR => GetPercentage(limpMPFoldToPFR, limpMPFacedPFR);
+
+        [ProtoMember(201)]
+        protected int limpCOFoldToPFR;
+
+        [ProtoMember(202)]
+        protected int limpCOFacedPFR;
+
+        public override decimal LimpCOFoldToPFR => GetPercentage(limpCOFoldToPFR, limpCOFacedPFR);
+
+        [ProtoMember(203)]
+        protected int limpBTNFoldToPFR;
+
+        [ProtoMember(204)]
+        protected int limpBTNFacedPFR;
+
+        public override decimal LimpBTNFoldToPFR => GetPercentage(limpBTNFoldToPFR, limpBTNFacedPFR);
+
+        [ProtoMember(205)]
+        protected int limpSBFoldToPFR;
+
+        [ProtoMember(206)]
+        protected int limpSBFacedPFR;
+
+        public override decimal LimpSBFoldToPFR => GetPercentage(limpSBFoldToPFR, limpSBFacedPFR);
+
+        private void AddLimpPositionFoldToPFRStatistic(Playerstatistic statistic)
+        {
+            limpEPFoldToPFR += statistic.LimpEPFoldToPFR;
+            limpEPFacedPFR += statistic.LimpEPFacedPFR;
+            limpMPFoldToPFR += statistic.LimpMPFoldToPFR;
+            limpMPFacedPFR += statistic.LimpMPFacedPFR;
+            limpCOFoldToPFR += statistic.LimpCOFoldToPFR;
+            limpCOFacedPFR += statistic.LimpCOFacedPFR;
+            limpBTNFoldToPFR += statistic.LimpBTNFoldToPFR;
+            limpBTNFacedPFR += statistic.LimpBTNFacedPFR;
+            limpSBFoldToPFR += statistic.LimpSBFoldToPFR;
+            limpSBFacedPFR += statistic.LimpSBFacedPFR;
+        }
+
+        private void CleanLimpPositionFoldToPFRStatistic()
+        {
+            limpEPFoldToPFR = 0;
+            limpEPFacedPFR = 0;
+            limpMPFoldToPFR = 0;
+            limpMPFacedPFR = 0;
+            limpCOFoldToPFR = 0;
+            limpCOFacedPFR = 0;
+            limpBTNFoldToPFR = 0;
+            limpBTNFacedPFR = 0;
+            limpSBFoldToPFR = 0;
+            limpSBFacedPFR = 0;
+        }
+
+        private void AddLimpPositionFoldToPFRIndicators(LightIndicators indicator)
+        {
+            limpEPFoldToPFR += indicator.limpEPFoldToPFR;
+            limpEPFacedPFR += indicator.limpEPFacedPFR;
+            limpMPFoldToPFR += indicator.limpMPFoldToPFR;
+            limpMPFacedPFR += indicator.limpMPFacedPFR;
+            limpCOFoldToPFR += indicator.limpCOFoldToPFR;
+            limpCOFacedPFR += indicator.limpCOFacedPFR;
+            limpBTNFoldToPFR += indicator.limpBTNFoldToPFR;
+            limpBTNFacedPFR += indicator.limpBTNFacedPFR;
+            limpSBFoldToPFR += indicator.limpSBFoldToPFR;
+            limpSBFacedPFR += indicator.limpSBFacedPFR;
+        }
+
+        #endregion
+
+        #region Shoves over limpers positional
+
+        [ProtoMember(207)]
+        protected int sbShoveOverLimpers;
+
+        [ProtoMember(208)]
+        protected int sbShoveOverLimpers1to8bb;
+
+        public override decimal SBShoveOverLimpers1to8bb => GetPercentage(sbShoveOverLimpers1to8bb, sbShoveOverLimpers);
+
+        [ProtoMember(209)]
+        protected int sbShoveOverLimpers9to14bb;
+
+        public override decimal SBShoveOverLimpers9to14bb => GetPercentage(sbShoveOverLimpers9to14bb, sbShoveOverLimpers);
+
+        [ProtoMember(210)]
+        protected int sbShoveOverLimpers15to25bb;
+
+        public override decimal SBShoveOverLimpers15to25bb => GetPercentage(sbShoveOverLimpers15to25bb, sbShoveOverLimpers);
+
+        [ProtoMember(211)]
+        protected int sbShoveOverLimpers26to50bb;
+
+        public override decimal SBShoveOverLimpers26to50bb => GetPercentage(sbShoveOverLimpers26to50bb, sbShoveOverLimpers);
+
+        [ProtoMember(212)]
+        protected int sbShoveOverLimpers51plusbb;
+
+        public override decimal SBShoveOverLimpers51plusbb => GetPercentage(sbShoveOverLimpers51plusbb, sbShoveOverLimpers);
+
+        [ProtoMember(213)]
+        protected int btnShoveOverLimpers;
+
+        [ProtoMember(214)]
+        protected int btnShoveOverLimpers1to8bb;
+
+        public override decimal BTNShoveOverLimpers1to8bb => GetPercentage(btnShoveOverLimpers1to8bb, btnShoveOverLimpers);
+
+        [ProtoMember(215)]
+        protected int btnShoveOverLimpers9to14bb;
+
+        public override decimal BTNShoveOverLimpers9to14bb => GetPercentage(btnShoveOverLimpers9to14bb, btnShoveOverLimpers);
+
+        [ProtoMember(216)]
+        protected int btnShoveOverLimpers15to25bb;
+
+        public override decimal BTNShoveOverLimpers15to25bb => GetPercentage(btnShoveOverLimpers15to25bb, btnShoveOverLimpers);
+
+        [ProtoMember(217)]
+        protected int btnShoveOverLimpers26to50bb;
+
+        public override decimal BTNShoveOverLimpers26to50bb => GetPercentage(btnShoveOverLimpers26to50bb, btnShoveOverLimpers);
+
+        [ProtoMember(218)]
+        protected int btnShoveOverLimpers51plusbb;
+
+        public override decimal BTNShoveOverLimpers51plusbb => GetPercentage(btnShoveOverLimpers51plusbb, btnShoveOverLimpers);
+
+        [ProtoMember(219)]
+        protected int coShoveOverLimpers;
+
+        [ProtoMember(220)]
+        protected int coShoveOverLimpers1to8bb;
+
+        public override decimal COShoveOverLimpers1to8bb => GetPercentage(coShoveOverLimpers1to8bb, coShoveOverLimpers);
+
+        [ProtoMember(221)]
+        protected int coShoveOverLimpers9to14bb;
+
+        public override decimal COShoveOverLimpers9to14bb => GetPercentage(coShoveOverLimpers9to14bb, coShoveOverLimpers);
+
+        [ProtoMember(222)]
+        protected int coShoveOverLimpers15to25bb;
+
+        public override decimal COShoveOverLimpers15to25bb => GetPercentage(coShoveOverLimpers15to25bb, coShoveOverLimpers);
+
+        [ProtoMember(223)]
+        protected int coShoveOverLimpers26to50bb;
+
+        public override decimal COShoveOverLimpers26to50bb => GetPercentage(coShoveOverLimpers26to50bb, coShoveOverLimpers);
+
+        [ProtoMember(224)]
+        protected int coShoveOverLimpers51plusbb;
+
+        public override decimal COShoveOverLimpers51plusbb => GetPercentage(coShoveOverLimpers51plusbb, coShoveOverLimpers);
+
+        [ProtoMember(225)]
+        protected int mpShoveOverLimpers;
+
+        [ProtoMember(226)]
+        protected int mpShoveOverLimpers1to8bb;
+
+        public override decimal MPShoveOverLimpers1to8bb => GetPercentage(mpShoveOverLimpers1to8bb, mpShoveOverLimpers);
+
+        [ProtoMember(227)]
+        protected int mpShoveOverLimpers9to14bb;
+
+        public override decimal MPShoveOverLimpers9to14bb => GetPercentage(mpShoveOverLimpers9to14bb, mpShoveOverLimpers);
+
+        [ProtoMember(228)]
+        protected int mpShoveOverLimpers15to25bb;
+
+        public override decimal MPShoveOverLimpers15to25bb => GetPercentage(mpShoveOverLimpers15to25bb, mpShoveOverLimpers);
+
+        [ProtoMember(229)]
+        protected int mpShoveOverLimpers26to50bb;
+
+        public override decimal MPShoveOverLimpers26to50bb => GetPercentage(mpShoveOverLimpers26to50bb, mpShoveOverLimpers);
+
+        [ProtoMember(230)]
+        protected int mpShoveOverLimpers51plusbb;
+
+        public override decimal MPShoveOverLimpers51plusbb => GetPercentage(mpShoveOverLimpers51plusbb, mpShoveOverLimpers);
+
+        [ProtoMember(231)]
+        protected int epShoveOverLimpers;
+
+        [ProtoMember(232)]
+        protected int epShoveOverLimpers1to8bb;
+
+        public override decimal EPShoveOverLimpers1to8bb => GetPercentage(epShoveOverLimpers1to8bb, epShoveOverLimpers);
+
+        [ProtoMember(233)]
+        protected int epShoveOverLimpers9to14bb;
+
+        public override decimal EPShoveOverLimpers9to14bb => GetPercentage(epShoveOverLimpers9to14bb, epShoveOverLimpers);
+
+        [ProtoMember(234)]
+        protected int epShoveOverLimpers15to25bb;
+
+        public override decimal EPShoveOverLimpers15to25bb => GetPercentage(epShoveOverLimpers15to25bb, epShoveOverLimpers);
+
+        [ProtoMember(235)]
+        protected int epShoveOverLimpers26to50bb;
+
+        public override decimal EPShoveOverLimpers26to50bb => GetPercentage(epShoveOverLimpers26to50bb, epShoveOverLimpers);
+
+        [ProtoMember(236)]
+        protected int epShoveOverLimpers51plusbb;
+
+        public override decimal EPShoveOverLimpers51plusbb => GetPercentage(epShoveOverLimpers51plusbb, epShoveOverLimpers);
+
+        private void AddShoveOverLimpersStatistic(Playerstatistic statistic)
+        {
+            sbShoveOverLimpers += statistic.SBShoveOverLimpers;
+            sbShoveOverLimpers1to8bb += statistic.SBShoveOverLimpers1to8bb;
+            sbShoveOverLimpers9to14bb += statistic.SBShoveOverLimpers9to14bb;
+            sbShoveOverLimpers15to25bb += statistic.SBShoveOverLimpers15to25bb;
+            sbShoveOverLimpers26to50bb += statistic.SBShoveOverLimpers26to50bb;
+            sbShoveOverLimpers51plusbb += statistic.SBShoveOverLimpers51plusbb;
+
+            btnShoveOverLimpers += statistic.BTNShoveOverLimpers;
+            btnShoveOverLimpers1to8bb += statistic.BTNShoveOverLimpers1to8bb;
+            btnShoveOverLimpers9to14bb += statistic.BTNShoveOverLimpers9to14bb;
+            btnShoveOverLimpers15to25bb += statistic.BTNShoveOverLimpers15to25bb;
+            btnShoveOverLimpers26to50bb += statistic.BTNShoveOverLimpers26to50bb;
+            btnShoveOverLimpers51plusbb += statistic.BTNShoveOverLimpers51plusbb;
+
+            coShoveOverLimpers += statistic.COShoveOverLimpers;
+            coShoveOverLimpers1to8bb += statistic.COShoveOverLimpers1to8bb;
+            coShoveOverLimpers9to14bb += statistic.COShoveOverLimpers9to14bb;
+            coShoveOverLimpers15to25bb += statistic.COShoveOverLimpers15to25bb;
+            coShoveOverLimpers26to50bb += statistic.COShoveOverLimpers26to50bb;
+            coShoveOverLimpers51plusbb += statistic.COShoveOverLimpers51plusbb;
+
+            mpShoveOverLimpers += statistic.MPShoveOverLimpers;
+            mpShoveOverLimpers1to8bb += statistic.MPShoveOverLimpers1to8bb;
+            mpShoveOverLimpers9to14bb += statistic.MPShoveOverLimpers9to14bb;
+            mpShoveOverLimpers15to25bb += statistic.MPShoveOverLimpers15to25bb;
+            mpShoveOverLimpers26to50bb += statistic.MPShoveOverLimpers26to50bb;
+            mpShoveOverLimpers51plusbb += statistic.MPShoveOverLimpers51plusbb;
+
+            epShoveOverLimpers += statistic.EPShoveOverLimpers;
+            epShoveOverLimpers1to8bb += statistic.EPShoveOverLimpers1to8bb;
+            epShoveOverLimpers9to14bb += statistic.EPShoveOverLimpers9to14bb;
+            epShoveOverLimpers15to25bb += statistic.EPShoveOverLimpers15to25bb;
+            epShoveOverLimpers26to50bb += statistic.EPShoveOverLimpers26to50bb;
+            epShoveOverLimpers51plusbb += statistic.EPShoveOverLimpers51plusbb;
+        }
+
+        private void CleanShoveOverLimpersStatistic()
+        {
+            sbShoveOverLimpers = 0;
+            sbShoveOverLimpers1to8bb = 0;
+            sbShoveOverLimpers9to14bb = 0;
+            sbShoveOverLimpers15to25bb = 0;
+            sbShoveOverLimpers26to50bb = 0;
+            sbShoveOverLimpers51plusbb = 0;
+
+            btnShoveOverLimpers = 0;
+            btnShoveOverLimpers1to8bb = 0;
+            btnShoveOverLimpers9to14bb = 0;
+            btnShoveOverLimpers15to25bb = 0;
+            btnShoveOverLimpers26to50bb = 0;
+            btnShoveOverLimpers51plusbb = 0;
+
+            coShoveOverLimpers = 0;
+            coShoveOverLimpers1to8bb = 0;
+            coShoveOverLimpers9to14bb = 0;
+            coShoveOverLimpers15to25bb = 0;
+            coShoveOverLimpers26to50bb = 0;
+            coShoveOverLimpers51plusbb = 0;
+
+            mpShoveOverLimpers = 0;
+            mpShoveOverLimpers1to8bb = 0;
+            mpShoveOverLimpers9to14bb = 0;
+            mpShoveOverLimpers15to25bb = 0;
+            mpShoveOverLimpers26to50bb = 0;
+            mpShoveOverLimpers51plusbb = 0;
+
+            epShoveOverLimpers = 0;
+            epShoveOverLimpers1to8bb = 0;
+            epShoveOverLimpers9to14bb = 0;
+            epShoveOverLimpers15to25bb = 0;
+            epShoveOverLimpers26to50bb = 0;
+            epShoveOverLimpers51plusbb = 0;
+        }
+
+        private void AddShoveOverLimpersIndicators(LightIndicators indicator)
+        {
+            sbShoveOverLimpers += indicator.sbShoveOverLimpers;
+            sbShoveOverLimpers1to8bb += indicator.sbShoveOverLimpers1to8bb;
+            sbShoveOverLimpers9to14bb += indicator.sbShoveOverLimpers9to14bb;
+            sbShoveOverLimpers15to25bb += indicator.sbShoveOverLimpers15to25bb;
+            sbShoveOverLimpers26to50bb += indicator.sbShoveOverLimpers26to50bb;
+            sbShoveOverLimpers51plusbb += indicator.sbShoveOverLimpers51plusbb;
+
+            btnShoveOverLimpers += indicator.btnShoveOverLimpers;
+            btnShoveOverLimpers1to8bb += indicator.btnShoveOverLimpers1to8bb;
+            btnShoveOverLimpers9to14bb += indicator.btnShoveOverLimpers9to14bb;
+            btnShoveOverLimpers15to25bb += indicator.btnShoveOverLimpers15to25bb;
+            btnShoveOverLimpers26to50bb += indicator.btnShoveOverLimpers26to50bb;
+            btnShoveOverLimpers51plusbb += indicator.btnShoveOverLimpers51plusbb;
+
+            coShoveOverLimpers += indicator.coShoveOverLimpers;
+            coShoveOverLimpers1to8bb += indicator.coShoveOverLimpers1to8bb;
+            coShoveOverLimpers9to14bb += indicator.coShoveOverLimpers9to14bb;
+            coShoveOverLimpers15to25bb += indicator.coShoveOverLimpers15to25bb;
+            coShoveOverLimpers26to50bb += indicator.coShoveOverLimpers26to50bb;
+            coShoveOverLimpers51plusbb += indicator.coShoveOverLimpers51plusbb;
+
+            mpShoveOverLimpers += indicator.mpShoveOverLimpers;
+            mpShoveOverLimpers1to8bb += indicator.mpShoveOverLimpers1to8bb;
+            mpShoveOverLimpers9to14bb += indicator.mpShoveOverLimpers9to14bb;
+            mpShoveOverLimpers15to25bb += indicator.mpShoveOverLimpers15to25bb;
+            mpShoveOverLimpers26to50bb += indicator.mpShoveOverLimpers26to50bb;
+            mpShoveOverLimpers51plusbb += indicator.mpShoveOverLimpers51plusbb;
+
+            epShoveOverLimpers += indicator.epShoveOverLimpers;
+            epShoveOverLimpers1to8bb += indicator.epShoveOverLimpers1to8bb;
+            epShoveOverLimpers9to14bb += indicator.epShoveOverLimpers9to14bb;
+            epShoveOverLimpers15to25bb += indicator.epShoveOverLimpers15to25bb;
+            epShoveOverLimpers26to50bb += indicator.epShoveOverLimpers26to50bb;
+            epShoveOverLimpers51plusbb += indicator.epShoveOverLimpers51plusbb;
+        }
+
+        #endregion
+
+        #region Open minraise
+
+        [ProtoMember(237)]
+        protected int openMinraise;
+
+        public override decimal OpenMinraise => GetPercentage(openMinraise, TotalHands - NumberOfWalks);
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -2116,6 +2469,8 @@ namespace Model.Data
             foldedToProbeBetRiver += statistic.FoldedToProbeBetRiver;
             facedProbeBetRiver += statistic.FacedProbeBetRiver;
 
+            openMinraise += statistic.OpenMinraise;
+
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
@@ -2123,6 +2478,8 @@ namespace Model.Data
             AddCheckFlopAsPFRAndFoldToTurnBet3BetPotStatistic(statistic);
             AddFoldToContinuationBetsInPotsStatistic(statistic);
             AddOpenShoveUOPotStatistic(statistic);
+            AddLimpPositionFoldToPFRStatistic(statistic);
+            AddShoveOverLimpersStatistic(statistic);
         }
 
         public override void Clean()
@@ -2223,6 +2580,8 @@ namespace Model.Data
             foldedToProbeBetRiver = 0;
             facedProbeBetRiver = 0;
 
+            openMinraise = 0;
+
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
             CleanBetWhenCheckedToIn3BetPot();
@@ -2230,6 +2589,8 @@ namespace Model.Data
             CleanCheckFlopAsPFRAndFoldToTurnBet3BetPot();
             CleanFoldToContinuationBetsInPots();
             CleanOpenShoveUOPotStatistic();
+            CleanLimpPositionFoldToPFRStatistic();
+            CleanShoveOverLimpersStatistic();
         }
 
         public virtual void AddIndicator(LightIndicators indicator)
@@ -2253,6 +2614,9 @@ namespace Model.Data
             positionCouldColdCallThreeBet?.Add(indicator.positionCouldColdCallThreeBet);
             positionDidColdCallFourBet?.Add(indicator.positionDidColdCallFourBet);
             positionCouldColdCallFourBet?.Add(indicator.positionCouldColdCallFourBet);
+            positionOpenMinraiseUOPFR?.Add(indicator.positionOpenMinraiseUOPFR);
+            positionDidSqueeze?.Add(indicator.positionDidSqueeze);
+            positionCouldSqueeze?.Add(indicator.positionCouldSqueeze);
 
             if (gameNumberMax < indicator.gameNumberMax)
             {
@@ -2362,6 +2726,8 @@ namespace Model.Data
             foldedToProbeBetRiver += indicator.foldedToProbeBetRiver;
             facedProbeBetRiver += indicator.facedProbeBetRiver;
 
+            openMinraise += indicator.openMinraise;
+
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);
             AddBetWhenCheckedToIn3BetPotIndicator(indicator);
@@ -2369,13 +2735,13 @@ namespace Model.Data
             AddCheckFlopAsPFRAndFoldToTurnBet3BetPotIndicator(indicator);
             AddFoldToContinuationBetsInPotsIndicator(indicator);
             AddOpenShoveUOPotIndicators(indicator);
+            AddLimpPositionFoldToPFRIndicators(indicator);
+            AddShoveOverLimpersIndicators(indicator);
         }
 
         public override int CompareTo(object obj)
         {
-            var objIndicator = obj as LightIndicators;
-
-            if (objIndicator == null)
+            if (!(obj is LightIndicators objIndicator))
             {
                 return 1;
             }

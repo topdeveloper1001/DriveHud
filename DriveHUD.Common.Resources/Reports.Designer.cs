@@ -277,6 +277,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BB minraise UO-PFR%.
+        /// </summary>
+        internal static string Reports_Column_BBOpenMinraiseUOPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_BBOpenMinraiseUOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bets flop when X to in 3-bet pot IP%.
         /// </summary>
         internal static string Reports_Column_BetFlopCalled3BetPreflopIp {
@@ -394,6 +403,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BTN minraise UO-PFR%.
+        /// </summary>
+        internal static string Reports_Column_BTNOpenMinraiseUOPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNOpenMinraiseUOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BTN Open Shove 15-25bb UO Pot%.
         /// </summary>
         internal static string Reports_Column_BTNOpenShove15to25bbUOPot {
@@ -435,6 +453,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_BTNOpenShove9to14bbUOPot {
             get {
                 return ResourceManager.GetString("Reports_Column_BTNOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN with 15-25bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_BTNShoveOverLimpers15to25bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNShoveOverLimpers15to25bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN with 1-8bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_BTNShoveOverLimpers1to8bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNShoveOverLimpers1to8bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN with 26-50bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_BTNShoveOverLimpers26to50bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNShoveOverLimpers26to50bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN with 51bb+ Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_BTNShoveOverLimpers51plusbb {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNShoveOverLimpers51plusbb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN with 9-14bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_BTNShoveOverLimpers9to14bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNShoveOverLimpers9to14bb", resourceCulture);
             }
         }
         
@@ -952,6 +1015,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CO minraise UO-PFR%.
+        /// </summary>
+        internal static string Reports_Column_COOpenMinraiseUOPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_COOpenMinraiseUOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CO Open Shove 15-25bb UO Pot%.
         /// </summary>
         internal static string Reports_Column_COOpenShove15to25bbUOPot {
@@ -993,6 +1065,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_COOpenShove9to14bbUOPot {
             get {
                 return ResourceManager.GetString("Reports_Column_COOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO with 15-25bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_COShoveOverLimpers15to25bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_COShoveOverLimpers15to25bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO with 1-8bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_COShoveOverLimpers1to8bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_COShoveOverLimpers1to8bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO with 26-50bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_COShoveOverLimpers26to50bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_COShoveOverLimpers26to50bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO with 51bb+ Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_COShoveOverLimpers51plusbb {
+            get {
+                return ResourceManager.GetString("Reports_Column_COShoveOverLimpers51plusbb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO with 9-14bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_COShoveOverLimpers9to14bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_COShoveOverLimpers9to14bb", resourceCulture);
             }
         }
         
@@ -1078,6 +1195,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to EP minraise UO-PFR%.
+        /// </summary>
+        internal static string Reports_Column_EPOpenMinraiseUOPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_EPOpenMinraiseUOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to EP Open Shove 15-25bb UO Pot%.
         /// </summary>
         internal static string Reports_Column_EPOpenShove15to25bbUOPot {
@@ -1119,6 +1245,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_EPOpenShove9to14bbUOPot {
             get {
                 return ResourceManager.GetString("Reports_Column_EPOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP with 15-25bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_EPShoveOverLimpers15to25bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_EPShoveOverLimpers15to25bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP with 1-8bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_EPShoveOverLimpers1to8bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_EPShoveOverLimpers1to8bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP with 26-50bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_EPShoveOverLimpers26to50bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_EPShoveOverLimpers26to50bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP with 51bb+ Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_EPShoveOverLimpers51plusbb {
+            get {
+                return ResourceManager.GetString("Reports_Column_EPShoveOverLimpers51plusbb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP with 9-14bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_EPShoveOverLimpers9to14bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_EPShoveOverLimpers9to14bb", resourceCulture);
             }
         }
         
@@ -1780,11 +1951,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Limp BTN &amp; Fold to PFR%.
+        /// </summary>
+        internal static string Reports_Column_LimpBTNFoldToPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_LimpBTNFoldToPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Limp Call%.
         /// </summary>
         internal static string Reports_Column_LimpCall {
             get {
                 return ResourceManager.GetString("Reports_Column_LimpCall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limp CO &amp; Fold to PFR%.
+        /// </summary>
+        internal static string Reports_Column_LimpCOFoldToPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_LimpCOFoldToPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limp EP &amp; Fold to PFR%.
+        /// </summary>
+        internal static string Reports_Column_LimpEPFoldToPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_LimpEPFoldToPFR", resourceCulture);
             }
         }
         
@@ -1798,11 +1996,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Limp MP &amp; Fold to PFR%.
+        /// </summary>
+        internal static string Reports_Column_LimpMPFoldToPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_LimpMPFoldToPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Limp Re-raise%.
         /// </summary>
         internal static string Reports_Column_LimpReRaise {
             get {
                 return ResourceManager.GetString("Reports_Column_LimpReRaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limp SB &amp; Fold to PFR%.
+        /// </summary>
+        internal static string Reports_Column_LimpSBFoldToPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_LimpSBFoldToPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP minraise UO-PFR%.
+        /// </summary>
+        internal static string Reports_Column_MPOpenMinraiseUOPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_MPOpenMinraiseUOPFR", resourceCulture);
             }
         }
         
@@ -1852,6 +2077,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MP with 15-25bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_MPShoveOverLimpers15to25bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_MPShoveOverLimpers15to25bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP with 1-8bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_MPShoveOverLimpers1to8bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_MPShoveOverLimpers1to8bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP with 26-50bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_MPShoveOverLimpers26to50bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_MPShoveOverLimpers26to50bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP with 51bb+ Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_MPShoveOverLimpers51plusbb {
+            get {
+                return ResourceManager.GetString("Reports_Column_MPShoveOverLimpers51plusbb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP with 9-14bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_MPShoveOverLimpers9to14bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_MPShoveOverLimpers9to14bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to M-Ratio.
         /// </summary>
         internal static string Reports_Column_MRatio {
@@ -1875,6 +2145,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_NetWon {
             get {
                 return ResourceManager.GetString("Reports_Column_NetWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open minraise%.
+        /// </summary>
+        internal static string Reports_Column_OpenMinraise {
+            get {
+                return ResourceManager.GetString("Reports_Column_OpenMinraise", resourceCulture);
             }
         }
         
@@ -2194,6 +2473,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SB minraise UO-PFR%.
+        /// </summary>
+        internal static string Reports_Column_SBOpenMinraiseUOPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SBOpenMinraiseUOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SB Open Shove 15-25bb UO Pot%.
         /// </summary>
         internal static string Reports_Column_SBOpenShove15to25bbUOPot {
@@ -2235,6 +2523,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_SBOpenShove9to14bbUOPot {
             get {
                 return ResourceManager.GetString("Reports_Column_SBOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB with 15-25bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_SBShoveOverLimpers15to25bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_SBShoveOverLimpers15to25bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB with 1-8bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_SBShoveOverLimpers1to8bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_SBShoveOverLimpers1to8bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB with 26-50bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_SBShoveOverLimpers26to50bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_SBShoveOverLimpers26to50bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB with 51bb+ Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_SBShoveOverLimpers51plusbb {
+            get {
+                return ResourceManager.GetString("Reports_Column_SBShoveOverLimpers51plusbb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB with 9-14bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Reports_Column_SBShoveOverLimpers9to14bb {
+            get {
+                return ResourceManager.GetString("Reports_Column_SBShoveOverLimpers9to14bb", resourceCulture);
             }
         }
         
@@ -2307,6 +2640,60 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_Squeeze {
             get {
                 return ResourceManager.GetString("Reports_Column_Squeeze", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Squeeze%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeBB {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Squeeze%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeBTN {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeBTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO Squeeze%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeCO {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Squeeze%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeEP {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP Squeeze%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeMP {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Squeeze%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeSB {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeSB", resourceCulture);
             }
         }
         

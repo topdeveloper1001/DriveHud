@@ -1415,4 +1415,133 @@
   <data name="Enum_Stat_SBOpenShove9to14bbUOPot" xml:space="preserve">
     <value>SB Open Shove 9-14bb UO Pot%</value>
   </data>
+  <data name="Enum_Stat_BBOpenMinraiseUOPFR" xml:space="preserve">
+    <value>BB minraise UO-PFR%</value>
+  </data>
+  <data name="Enum_Stat_BTNOpenMinraiseUOPFR" xml:space="preserve">
+    <value>BTN minraise UO-PFR%</value>
+  </data>
+  <data name="Enum_Stat_BTNShoveOverLimpers15to25bb" xml:space="preserve">
+    <value>BB with 15-25bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_BTNShoveOverLimpers1to8bb" xml:space="preserve">
+    <value>BB with 1-8bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_BTNShoveOverLimpers26to50bb" xml:space="preserve">
+    <value>BB with 26-50bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_BTNShoveOverLimpers51plusbb" xml:space="preserve">
+    <value>BB with 51bb+ Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_BTNShoveOverLimpers9to14bb" xml:space="preserve">
+    <value>BB with 9-14bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_COOpenMinraiseUOPFR" xml:space="preserve">
+    <value>CO minraise UO-PFR%</value>
+  </data>
+  <data name="Enum_Stat_COShoveOverLimpers15to25bb" xml:space="preserve">
+    <value>CO with 15-25bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_COShoveOverLimpers1to8bb" xml:space="preserve">
+    <value>CO with 1-8bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_COShoveOverLimpers26to50bb" xml:space="preserve">
+    <value>CO with 26-50bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_COShoveOverLimpers51plusbb" xml:space="preserve">
+    <value>CO with 51bb+ Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_COShoveOverLimpers9to14bb" xml:space="preserve">
+    <value>CO with 9-14bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_EPOpenMinraiseUOPFR" xml:space="preserve">
+    <value>EP minraise UO-PFR%</value>
+  </data>
+  <data name="Enum_Stat_EPShoveOverLimpers15to25bb" xml:space="preserve">
+    <value>EP with 15-25bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_EPShoveOverLimpers1to8bb" xml:space="preserve">
+    <value>EP with 1-8bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_EPShoveOverLimpers26to50bb" xml:space="preserve">
+    <value>EP with 26-50bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_EPShoveOverLimpers51plusbb" xml:space="preserve">
+    <value>EP with 51bb+ Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_EPShoveOverLimpers9to14bb" xml:space="preserve">
+    <value>EP with 9-14bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_LimpBTNFoldToPFR" xml:space="preserve">
+    <value>Limp BTN &amp; Fold to PFR%</value>
+  </data>
+  <data name="Enum_Stat_LimpCOFoldToPFR" xml:space="preserve">
+    <value>Limp CO &amp; Fold to PFR%</value>
+  </data>
+  <data name="Enum_Stat_LimpEPFoldToPFR" xml:space="preserve">
+    <value>Limp EP &amp; Fold to PFR%</value>
+  </data>
+  <data name="Enum_Stat_LimpMPFoldToPFR" xml:space="preserve">
+    <value>Limp MP &amp; Fold to PFR%</value>
+  </data>
+  <data name="Enum_Stat_LimpSBFoldToPFR" xml:space="preserve">
+    <value>Limp SB &amp; Fold to PFR%</value>
+  </data>
+  <data name="Enum_Stat_MPOpenMinraiseUOPFR" xml:space="preserve">
+    <value>MP minraise UO-PFR%</value>
+  </data>
+  <data name="Enum_Stat_MPShoveOverLimpers15to25bb" xml:space="preserve">
+    <value>MP with 15-25bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_MPShoveOverLimpers1to8bb" xml:space="preserve">
+    <value>MP with 1-8bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_MPShoveOverLimpers26to50bb" xml:space="preserve">
+    <value>MP with 26-50bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_MPShoveOverLimpers51plusbb" xml:space="preserve">
+    <value>MP with 51bb+ Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_MPShoveOverLimpers9to14bb" xml:space="preserve">
+    <value>MP with 9-14bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_OpenMinraise" xml:space="preserve">
+    <value>Open minraise%</value>
+  </data>
+  <data name="Enum_Stat_SBOpenMinraiseUOPFR" xml:space="preserve">
+    <value>SB minraise UO-PFR%</value>
+  </data>
+  <data name="Enum_Stat_SBShoveOverLimpers15to25bb" xml:space="preserve">
+    <value>SB with 15-25bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_SBShoveOverLimpers1to8bb" xml:space="preserve">
+    <value>SB with 1-8bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_SBShoveOverLimpers26to50bb" xml:space="preserve">
+    <value>SB with 26-50bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_SBShoveOverLimpers51plusbb" xml:space="preserve">
+    <value>SB with 51bb+ Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_SBShoveOverLimpers9to14bb" xml:space="preserve">
+    <value>SB with 9-14bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBB" xml:space="preserve">
+    <value>BB Squeeze%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBTN" xml:space="preserve">
+    <value>BTN Squeeze%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeCO" xml:space="preserve">
+    <value>CO Squeeze%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeEP" xml:space="preserve">
+    <value>EP Squeeze%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeMP" xml:space="preserve">
+    <value>MP Squeeze%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeSB" xml:space="preserve">
+    <value>SB Squeeze%</value>
+  </data>
 </root>

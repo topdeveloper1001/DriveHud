@@ -1294,6 +1294,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BB minraise UO-PFR%.
+        /// </summary>
+        internal static string Enum_Stat_BBOpenMinraiseUOPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BBOpenMinraiseUOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BBs.
         /// </summary>
         internal static string Enum_Stat_BBs {
@@ -1402,6 +1411,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BTN minraise UO-PFR%.
+        /// </summary>
+        internal static string Enum_Stat_BTNOpenMinraiseUOPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNOpenMinraiseUOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BTN Open Shove 15-25bb UO Pot%.
         /// </summary>
         internal static string Enum_Stat_BTNOpenShove15to25bbUOPot {
@@ -1443,6 +1461,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_BTNOpenShove9to14bbUOPot {
             get {
                 return ResourceManager.GetString("Enum_Stat_BTNOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB with 15-25bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_BTNShoveOverLimpers15to25bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNShoveOverLimpers15to25bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB with 1-8bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_BTNShoveOverLimpers1to8bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNShoveOverLimpers1to8bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB with 26-50bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_BTNShoveOverLimpers26to50bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNShoveOverLimpers26to50bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB with 51bb+ Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_BTNShoveOverLimpers51plusbb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNShoveOverLimpers51plusbb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB with 9-14bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_BTNShoveOverLimpers9to14bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNShoveOverLimpers9to14bb", resourceCulture);
             }
         }
         
@@ -1978,6 +2041,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CO minraise UO-PFR%.
+        /// </summary>
+        internal static string Enum_Stat_COOpenMinraiseUOPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_COOpenMinraiseUOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CO Open Shove 15-25bb UO Pot%.
         /// </summary>
         internal static string Enum_Stat_COOpenShove15to25bbUOPot {
@@ -2019,6 +2091,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_COOpenShove9to14bbUOPot {
             get {
                 return ResourceManager.GetString("Enum_Stat_COOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO with 15-25bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_COShoveOverLimpers15to25bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_COShoveOverLimpers15to25bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO with 1-8bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_COShoveOverLimpers1to8bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_COShoveOverLimpers1to8bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO with 26-50bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_COShoveOverLimpers26to50bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_COShoveOverLimpers26to50bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO with 51bb+ Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_COShoveOverLimpers51plusbb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_COShoveOverLimpers51plusbb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO with 9-14bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_COShoveOverLimpers9to14bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_COShoveOverLimpers9to14bb", resourceCulture);
             }
         }
         
@@ -2095,6 +2212,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to EP minraise UO-PFR%.
+        /// </summary>
+        internal static string Enum_Stat_EPOpenMinraiseUOPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_EPOpenMinraiseUOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to EP Open Shove 15-25bb UO Pot%.
         /// </summary>
         internal static string Enum_Stat_EPOpenShove15to25bbUOPot {
@@ -2136,6 +2262,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_EPOpenShove9to14bbUOPot {
             get {
                 return ResourceManager.GetString("Enum_Stat_EPOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP with 15-25bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_EPShoveOverLimpers15to25bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_EPShoveOverLimpers15to25bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP with 1-8bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_EPShoveOverLimpers1to8bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_EPShoveOverLimpers1to8bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP with 26-50bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_EPShoveOverLimpers26to50bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_EPShoveOverLimpers26to50bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP with 51bb+ Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_EPShoveOverLimpers51plusbb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_EPShoveOverLimpers51plusbb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP with 9-14bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_EPShoveOverLimpers9to14bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_EPShoveOverLimpers9to14bb", resourceCulture);
             }
         }
         
@@ -2743,6 +2914,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Limp BTN &amp; Fold to PFR%.
+        /// </summary>
+        internal static string Enum_Stat_LimpBTNFoldToPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_LimpBTNFoldToPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Limp Call%.
         /// </summary>
         internal static string Enum_Stat_LimpCall {
@@ -2761,11 +2941,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Limp CO &amp; Fold to PFR%.
+        /// </summary>
+        internal static string Enum_Stat_LimpCOFoldToPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_LimpCOFoldToPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Limp EP%.
         /// </summary>
         internal static string Enum_Stat_LimpEp {
             get {
                 return ResourceManager.GetString("Enum_Stat_LimpEp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limp EP &amp; Fold to PFR%.
+        /// </summary>
+        internal static string Enum_Stat_LimpEPFoldToPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_LimpEPFoldToPFR", resourceCulture);
             }
         }
         
@@ -2788,6 +2986,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Limp MP &amp; Fold to PFR%.
+        /// </summary>
+        internal static string Enum_Stat_LimpMPFoldToPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_LimpMPFoldToPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Limp Reraise%.
         /// </summary>
         internal static string Enum_Stat_LimpReraise {
@@ -2802,6 +3009,24 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_LimpSb {
             get {
                 return ResourceManager.GetString("Enum_Stat_LimpSb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limp SB &amp; Fold to PFR%.
+        /// </summary>
+        internal static string Enum_Stat_LimpSBFoldToPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_LimpSBFoldToPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP minraise UO-PFR%.
+        /// </summary>
+        internal static string Enum_Stat_MPOpenMinraiseUOPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_MPOpenMinraiseUOPFR", resourceCulture);
             }
         }
         
@@ -2851,6 +3076,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MP with 15-25bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_MPShoveOverLimpers15to25bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_MPShoveOverLimpers15to25bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP with 1-8bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_MPShoveOverLimpers1to8bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_MPShoveOverLimpers1to8bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP with 26-50bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_MPShoveOverLimpers26to50bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_MPShoveOverLimpers26to50bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP with 51bb+ Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_MPShoveOverLimpers51plusbb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_MPShoveOverLimpers51plusbb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP with 9-14bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_MPShoveOverLimpers9to14bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_MPShoveOverLimpers9to14bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to M-Ratio.
         /// </summary>
         internal static string Enum_Stat_MRatio {
@@ -2865,6 +3135,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_NetWon {
             get {
                 return ResourceManager.GetString("Enum_Stat_NetWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open minraise%.
+        /// </summary>
+        internal static string Enum_Stat_OpenMinraise {
+            get {
+                return ResourceManager.GetString("Enum_Stat_OpenMinraise", resourceCulture);
             }
         }
         
@@ -3301,6 +3580,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SB minraise UO-PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SBOpenMinraiseUOPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SBOpenMinraiseUOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SB Open Shove 15-25bb UO Pot%.
         /// </summary>
         internal static string Enum_Stat_SBOpenShove15to25bbUOPot {
@@ -3346,6 +3634,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SB with 15-25bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_SBShoveOverLimpers15to25bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SBShoveOverLimpers15to25bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB with 1-8bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_SBShoveOverLimpers1to8bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SBShoveOverLimpers1to8bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB with 26-50bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_SBShoveOverLimpers26to50bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SBShoveOverLimpers26to50bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB with 51bb+ Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_SBShoveOverLimpers51plusbb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SBShoveOverLimpers51plusbb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB with 9-14bb Shoves over Limpers%.
+        /// </summary>
+        internal static string Enum_Stat_SBShoveOverLimpers9to14bb {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SBShoveOverLimpers9to14bb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shove flop after 4-betting pre-flop%.
         /// </summary>
         internal static string Enum_Stat_ShovedFlopAfter4Bet {
@@ -3360,6 +3693,60 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_Squeeze {
             get {
                 return ResourceManager.GetString("Enum_Stat_Squeeze", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Squeeze%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeBB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Squeeze%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeBTN {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeBTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO Squeeze%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeCO {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Squeeze%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeEP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MP Squeeze%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeMP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Squeeze%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeSB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeSB", resourceCulture);
             }
         }
         

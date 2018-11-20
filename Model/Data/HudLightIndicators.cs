@@ -41,7 +41,7 @@ namespace Model.Data
                 {
                     Value = VPIP,
                     Occurred = Source.Vpiphands,
-                    CouldOccurred = Source.Totalhands
+                    CouldOccurred = Source.Totalhands - Source.NumberOfWalks
                 };
             }
         }
@@ -54,7 +54,7 @@ namespace Model.Data
                 {
                     Value = PFR,
                     Occurred = Source.Pfrhands,
-                    CouldOccurred = Source.Totalhands
+                    CouldOccurred = Source.Totalhands - Source.NumberOfWalks
                 };
             }
         }
@@ -2407,7 +2407,7 @@ namespace Model.Data
                     CouldOccurred = facingDoubleBarrelSRP,
                 };
             }
-        }      
+        }
 
         public virtual StatDto FoldToDoubleBarrel4BetPotObject
         {
@@ -2760,6 +2760,581 @@ namespace Model.Data
                     Value = EPOpenShove51plusbbUOPot,
                     Occurred = epOpenShove51plusbbUOPot,
                     CouldOccurred = epOpenShoveUOPot,
+                };
+            }
+        }
+
+        #endregion
+
+        #region Limp Positional & Fold to PFR%
+
+        public virtual StatDto LimpEPFoldToPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = LimpEPFoldToPFR,
+                    Occurred = limpEPFoldToPFR,
+                    CouldOccurred = limpEPFacedPFR,
+                };
+            }
+        }
+
+        public virtual StatDto LimpMPFoldToPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = LimpMPFoldToPFR,
+                    Occurred = limpMPFoldToPFR,
+                    CouldOccurred = limpMPFacedPFR,
+                };
+            }
+        }
+
+        public virtual StatDto LimpCOFoldToPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = LimpCOFoldToPFR,
+                    Occurred = limpCOFoldToPFR,
+                    CouldOccurred = limpCOFacedPFR,
+                };
+            }
+        }
+
+        public virtual StatDto LimpBTNFoldToPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = LimpBTNFoldToPFR,
+                    Occurred = limpBTNFoldToPFR,
+                    CouldOccurred = limpBTNFacedPFR,
+                };
+            }
+        }
+
+        public virtual StatDto LimpSBFoldToPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = LimpSBFoldToPFR,
+                    Occurred = limpSBFoldToPFR,
+                    CouldOccurred = limpSBFacedPFR,
+                };
+            }
+        }
+
+        #endregion
+
+        #region Shoves over limpers positional
+
+        public virtual StatDto SBShoveOverLimpers1to8bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SBShoveOverLimpers1to8bb,
+                    Occurred = sbShoveOverLimpers1to8bb,
+                    CouldOccurred = sbShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto SBShoveOverLimpers9to14bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SBShoveOverLimpers9to14bb,
+                    Occurred = sbShoveOverLimpers9to14bb,
+                    CouldOccurred = sbShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto SBShoveOverLimpers15to25bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SBShoveOverLimpers15to25bb,
+                    Occurred = sbShoveOverLimpers15to25bb,
+                    CouldOccurred = sbShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto SBShoveOverLimpers26to50bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SBShoveOverLimpers26to50bb,
+                    Occurred = sbShoveOverLimpers26to50bb,
+                    CouldOccurred = sbShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto SBShoveOverLimpers51plusbbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SBShoveOverLimpers51plusbb,
+                    Occurred = sbShoveOverLimpers51plusbb,
+                    CouldOccurred = sbShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto BTNShoveOverLimpers1to8bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNShoveOverLimpers1to8bb,
+                    Occurred = btnShoveOverLimpers1to8bb,
+                    CouldOccurred = btnShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto BTNShoveOverLimpers9to14bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNShoveOverLimpers9to14bb,
+                    Occurred = btnShoveOverLimpers9to14bb,
+                    CouldOccurred = btnShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto BTNShoveOverLimpers15to25bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNShoveOverLimpers15to25bb,
+                    Occurred = btnShoveOverLimpers15to25bb,
+                    CouldOccurred = btnShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto BTNShoveOverLimpers26to50bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNShoveOverLimpers26to50bb,
+                    Occurred = btnShoveOverLimpers26to50bb,
+                    CouldOccurred = btnShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto BTNShoveOverLimpers51plusbbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNShoveOverLimpers51plusbb,
+                    Occurred = btnShoveOverLimpers51plusbb,
+                    CouldOccurred = btnShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto COShoveOverLimpers1to8bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = COShoveOverLimpers1to8bb,
+                    Occurred = coShoveOverLimpers1to8bb,
+                    CouldOccurred = coShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto COShoveOverLimpers9to14bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = COShoveOverLimpers9to14bb,
+                    Occurred = coShoveOverLimpers9to14bb,
+                    CouldOccurred = coShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto COShoveOverLimpers15to25bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = COShoveOverLimpers15to25bb,
+                    Occurred = coShoveOverLimpers15to25bb,
+                    CouldOccurred = coShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto COShoveOverLimpers26to50bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = COShoveOverLimpers26to50bb,
+                    Occurred = coShoveOverLimpers26to50bb,
+                    CouldOccurred = coShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto COShoveOverLimpers51plusbbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = COShoveOverLimpers51plusbb,
+                    Occurred = coShoveOverLimpers51plusbb,
+                    CouldOccurred = coShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto MPShoveOverLimpers1to8bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = MPShoveOverLimpers1to8bb,
+                    Occurred = mpShoveOverLimpers1to8bb,
+                    CouldOccurred = mpShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto MPShoveOverLimpers9to14bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = MPShoveOverLimpers9to14bb,
+                    Occurred = mpShoveOverLimpers9to14bb,
+                    CouldOccurred = mpShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto MPShoveOverLimpers15to25bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = MPShoveOverLimpers15to25bb,
+                    Occurred = mpShoveOverLimpers15to25bb,
+                    CouldOccurred = mpShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto MPShoveOverLimpers26to50bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = MPShoveOverLimpers26to50bb,
+                    Occurred = mpShoveOverLimpers26to50bb,
+                    CouldOccurred = mpShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto MPShoveOverLimpers51plusbbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = MPShoveOverLimpers51plusbb,
+                    Occurred = mpShoveOverLimpers51plusbb,
+                    CouldOccurred = mpShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto EPShoveOverLimpers1to8bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = EPShoveOverLimpers1to8bb,
+                    Occurred = epShoveOverLimpers1to8bb,
+                    CouldOccurred = epShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto EPShoveOverLimpers9to14bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = EPShoveOverLimpers9to14bb,
+                    Occurred = epShoveOverLimpers9to14bb,
+                    CouldOccurred = epShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto EPShoveOverLimpers15to25bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = EPShoveOverLimpers15to25bb,
+                    Occurred = epShoveOverLimpers15to25bb,
+                    CouldOccurred = epShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto EPShoveOverLimpers26to50bbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = EPShoveOverLimpers26to50bb,
+                    Occurred = epShoveOverLimpers26to50bb,
+                    CouldOccurred = epShoveOverLimpers,
+                };
+            }
+        }
+
+        public virtual StatDto EPShoveOverLimpers51plusbbObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = EPShoveOverLimpers51plusbb,
+                    Occurred = epShoveOverLimpers51plusbb,
+                    CouldOccurred = epShoveOverLimpers,
+                };
+            }
+        }
+
+        #endregion
+
+        #region Positional Open minraise UO-PFR
+
+        public virtual StatDto OpenMinraiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = OpenMinraise,
+                    Occurred = openMinraise,
+                    CouldOccurred = Source.Totalhands - Source.NumberOfWalks,
+                };
+            }
+        }
+
+        public virtual StatDto EPOpenMinraiseUOPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = EPOpenMinraiseUOPFR,
+                    Occurred = positionOpenMinraiseUOPFR?.EP ?? 0,
+                    CouldOccurred = positionUnoppened?.EP ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto MPOpenMinraiseUOPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = MPOpenMinraiseUOPFR,
+                    Occurred = positionOpenMinraiseUOPFR?.MP ?? 0,
+                    CouldOccurred = positionUnoppened?.MP ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto COOpenMinraiseUOPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = COOpenMinraiseUOPFR,
+                    Occurred = positionOpenMinraiseUOPFR?.CO ?? 0,
+                    CouldOccurred = positionUnoppened?.CO ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto BTNOpenMinraiseUOPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNOpenMinraiseUOPFR,
+                    Occurred = positionOpenMinraiseUOPFR?.BN ?? 0,
+                    CouldOccurred = positionUnoppened?.BN ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto SBOpenMinraiseUOPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SBOpenMinraiseUOPFR,
+                    Occurred = positionOpenMinraiseUOPFR?.SB ?? 0,
+                    CouldOccurred = positionUnoppened?.SB ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto BBOpenMinraiseUOPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BBOpenMinraiseUOPFR,
+                    Occurred = positionOpenMinraiseUOPFR?.BB ?? 0,
+                    CouldOccurred = positionUnoppened?.BB ?? 0,
+                };
+            }
+        }
+
+        #endregion
+
+        #region  Positional squeeze
+
+        public virtual StatDto SqueezeEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeEP,
+                    Occurred = positionDidSqueeze?.EP ?? 0,
+                    CouldOccurred = positionCouldSqueeze?.EP ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeMP,
+                    Occurred = positionDidSqueeze?.MP ?? 0,
+                    CouldOccurred = positionCouldSqueeze?.MP ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeCO,
+                    Occurred = positionDidSqueeze?.CO ?? 0,
+                    CouldOccurred = positionCouldSqueeze?.CO ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeBTN,
+                    Occurred = positionDidSqueeze?.BN ?? 0,
+                    CouldOccurred = positionCouldSqueeze?.BN ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeSB,
+                    Occurred = positionDidSqueeze?.SB ?? 0,
+                    CouldOccurred = positionCouldSqueeze?.SB ?? 0,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeBB,
+                    Occurred = positionDidSqueeze?.BB ?? 0,
+                    CouldOccurred = positionCouldSqueeze?.BB ?? 0,
                 };
             }
         }

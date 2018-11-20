@@ -1804,6 +1804,151 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region Limp Positional & Fold to PFR%
+
+        private bool LimpFoldToPfr => (FacingPreflop == EnumFacingPreflop.Unopened || FacingPreflop == EnumFacingPreflop.Limper ||
+            FacingPreflop == EnumFacingPreflop.MultipleLimpers) && PreflopActions.StartsWith("CF");
+
+        private bool LimpFacedPfr => (FacingPreflop == EnumFacingPreflop.Unopened || FacingPreflop == EnumFacingPreflop.Limper ||
+         FacingPreflop == EnumFacingPreflop.MultipleLimpers) && PreflopActions.StartsWith("C") && PreflopActions.Length > 1;
+
+        public int LimpEPFoldToPFR => Position.IsEPPosition() && LimpFoldToPfr ? 1 : 0;
+
+        public int LimpEPFacedPFR => Position.IsEPPosition() && LimpFacedPfr ? 1 : 0;
+
+        public int LimpMPFoldToPFR => Position.IsMPPosition() && LimpFoldToPfr ? 1 : 0;
+
+        public int LimpMPFacedPFR => Position.IsMPPosition() && LimpFacedPfr ? 1 : 0;
+
+        public int LimpCOFoldToPFR => Position.IsCOPosition() && LimpFoldToPfr ? 1 : 0;
+
+        public int LimpCOFacedPFR => Position.IsCOPosition() && LimpFacedPfr ? 1 : 0;
+
+        public int LimpBTNFoldToPFR => Position.IsBTNPosition() && LimpFoldToPfr ? 1 : 0;
+
+        public int LimpBTNFacedPFR => Position.IsBTNPosition() && LimpFacedPfr ? 1 : 0;
+
+        public int LimpSBFoldToPFR => Position.IsSBPosition() && LimpFoldToPfr ? 1 : 0;
+
+        public int LimpSBFacedPFR => Position.IsSBPosition() && LimpFacedPfr ? 1 : 0;
+
+        #endregion
+
+        #region Shoves over limpers positional
+
+        private bool FacedLimpers => FacingPreflop == EnumFacingPreflop.Limper || FacingPreflop == EnumFacingPreflop.MultipleLimpers;
+
+        public virtual int SBShoveOverLimpers1to8bb => SBShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int SBShoveOverLimpers9to14bb => SBShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int SBShoveOverLimpers15to25bb => SBShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int SBShoveOverLimpers26to50bb => SBShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int SBShoveOverLimpers51plusbb => SBShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int SBShoveOverLimpers => FacedLimpers && Line.StartsWith("R") &&
+            (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int BTNShoveOverLimpers1to8bb => BTNShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int BTNShoveOverLimpers9to14bb => BTNShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int BTNShoveOverLimpers15to25bb => BTNShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int BTNShoveOverLimpers26to50bb => BTNShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int BTNShoveOverLimpers51plusbb => BTNShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int BTNShoveOverLimpers => FacedLimpers && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int COShoveOverLimpers1to8bb => COShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int COShoveOverLimpers9to14bb => COShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int COShoveOverLimpers15to25bb => COShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int COShoveOverLimpers26to50bb => COShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int COShoveOverLimpers51plusbb => COShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int COShoveOverLimpers => FacedLimpers && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int MPShoveOverLimpers1to8bb => MPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int MPShoveOverLimpers9to14bb => MPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int MPShoveOverLimpers15to25bb => MPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int MPShoveOverLimpers26to50bb => MPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int MPShoveOverLimpers51plusbb => MPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int MPShoveOverLimpers => FacedLimpers && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int EPShoveOverLimpers1to8bb => EPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int EPShoveOverLimpers9to14bb => EPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int EPShoveOverLimpers15to25bb => EPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int EPShoveOverLimpers26to50bb => EPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int EPShoveOverLimpers51plusbb => EPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int EPShoveOverLimpers => FacedLimpers && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() ? 1 : 0;
+
+        #endregion
+
+        #region Open minraise
+
+        public virtual int OpenMinraise => Pfrhands == 1 && OpenRaisePreflopInBBs == 2 ? 1 : 0;
+
+        public bool IsOpenMinraiseUO => IsUnopened && OpenMinraise == 1;
+
+        public virtual int EPOpenMinraiseUO => IsOpenMinraiseUO && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int MPOpenMinraiseUO => IsOpenMinraiseUO && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int COOpenMinraiseUO => IsOpenMinraiseUO && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int BTNOpenMinraiseUO => IsOpenMinraiseUO && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int SBOpenMinraiseUO => IsOpenMinraiseUO && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int BBOpenMinraiseUO => IsOpenMinraiseUO && Position.IsBBPosition() ? 1 : 0;
+
+        #endregion
+
+        #region Squeeze positional
+
+        public virtual int DidSqueezeEP => Didsqueeze == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeEP => CouldSqueezeEP == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeMP => Didsqueeze == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeMP => CouldSqueezeMP == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeCO => Didsqueeze == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeCO => CouldSqueezeCO == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBTN => Didsqueeze == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBTN => CouldSqueezeBTN == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeSB => Didsqueeze == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeSB => CouldSqueezeSB == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBB => Didsqueeze == 1 && Position.IsBBPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBB => CouldSqueezeBB == 1 && Position.IsBBPosition() ? 1 : 0;
+
+        #endregion
+
         #endregion
 
         #region Additional properties (not for serialization)
