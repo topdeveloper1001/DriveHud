@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="TableConfiguratorHelper.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="IWPNImporter.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,17 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using DriveHUD.Entities;
-using Model.Enums;
-
-namespace DriveHUD.Application.TableConfigurators
+namespace DriveHUD.Importers.WinningPokerNetwork
 {
-    internal static class TableConfiguratorHelper
+    internal interface IWPNImporter : IAutoImporter
     {
-        public static string GetServiceName(EnumPokerSites pokerSite, HudType hudType)
-        {
-            return string.Format("{0}_{1}", pokerSite, hudType);
-        }
     }
 }

@@ -1,0 +1,67 @@
+Hand#5322021915000046 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:36:02
+Dealer: Seat 7
+Seat 1: Sparky1970 ($2.20 in chips) 
+Seat 2: ted53 ($2.69 in chips) 
+Seat 4: burty2 ($3.86 in chips) 
+Seat 5: Arch_aces ($0.16 in chips) 
+Seat 7: Ederzito ($1.06 in chips) 
+Seat 8: prizzy711 ($1.16 in chips) 
+Seat 9: ohindian ($1.16 in chips) 
+Seat 10: RONALD 11 ($5.34 in chips) 
+prizzy711: posts small blind $0.02
+ohindian: posts big blind $0.04
+Dealt to prizzy711 [Tc,4c,Qs,3s]
+RONALD 11: calls $0.04
+Sparky1970: calls $0.04
+ted53: folds
+burty2: calls $0.04
+Arch_aces: calls $0.04
+Ederzito: calls $0.04
+prizzy711: calls $0.02
+ohindian: checks
+*** FLOP *** [8c,Th,4s]
+prizzy711: checks
+ohindian: checks
+RONALD 11: bets $0.04
+Sparky1970: calls $0.04
+burty2: calls $0.04
+Arch_aces: calls $0.04
+Ederzito: calls $0.04
+prizzy711: calls $0.04
+ohindian: folds
+*** TURN *** [Ts]
+prizzy711: checks
+RONALD 11: checks
+Sparky1970: checks
+burty2: checks
+Arch_aces: checks
+Ederzito: bets $0.16
+prizzy711: calls $0.16
+RONALD 11: calls $0.16
+Sparky1970: calls $0.16
+burty2: folds
+Arch_aces: is all in $0.08
+*** RIVER *** [3d]
+prizzy711: bets $0.36
+RONALD 11: raises to $2.32
+Sparky1970: is all in $1.96
+Ederzito: is all in $0.82
+prizzy711: is all in $0.56
+RONALD 11: returns uncalled bet $0.36
+Sparky1970: shows [2s 7c 2c 5d]
+Arch_aces: shows [Kd Qh Jd 6d]
+Ederzito: shows [Td 5c 9h As]
+prizzy711: shows [Tc 4c Qs 3s]
+RONALD 11: shows [4h 2d Ac Jh]
+***SHOW DOWN***
+RONALD 11 wins high pot $0.97 with Two Pairs Tens and Fours   
+RONALD 11 wins low pot $0.97 with  
+***SHOW DOWN***
+prizzy711 wins high pot $0.14 with Full House Tens full of Fours 
+RONALD 11 wins low pot $0.14 with  
+***SHOW DOWN***
+prizzy711 wins high pot $1.68 with Full House Tens full of Fours 
+RONALD 11 wins low pot $1.68 with  
+***SHOW DOWN***
+prizzy711 wins high pot $0.43 with Full House Tens full of Fours 
+RONALD 11 wins low pot $0.43 with  

@@ -38,6 +38,8 @@ namespace DriveHUD.Importers.PokerStars
 
         public string HeroName { get; set; }
 
+        public long HandNumber { get; set; }
+
         public bool IsValid
         {
             get

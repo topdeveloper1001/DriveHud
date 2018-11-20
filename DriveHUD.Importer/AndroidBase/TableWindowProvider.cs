@@ -10,41 +10,86 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
-using DriveHUD.Entities;
+using DriveHUD.Common.WinApi;
 using DriveHUD.Importers.AndroidBase.EmulatorProviders;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DriveHUD.Importers.AndroidBase
 {
     internal class TableWindowProvider : ITableWindowProvider
     {
-        private IEmulatorProvider[] providers = new IEmulatorProvider[]
+        private readonly Dictionary<int, TableWindow> windows = new Dictionary<int, TableWindow>();
+
+        private readonly IEmulatorProvider[] providers = new IEmulatorProvider[]
         {
             new NoxEmulatorProvider(),
             new MemuEmulatorProvider(),
             new MomoEmulatorProvider()
         };
 
+        private string logger;
+
+        public void SetLogger(string logger)
+        {
+            this.logger = logger;
+            providers.ForEach(x => x.Logger = logger);
+        }
+
         public IntPtr GetTableWindowHandle(Process process)
         {
+            if (process == null)
+            {
+                return IntPtr.Zero;
+            }
+
             try
             {
+                if (windows.TryGetValue(process.Id, out TableWindow window))
+                {
+                    if (!window.Process.HasExited && WinApi.IsWindow(window.WindowHandle))
+                    {
+                        return window.WindowHandle;
+                    }
+
+                    windows.Remove(process.Id);
+                }
+
                 foreach (var provider in providers)
                 {
                     if (provider.CanProvide(process))
                     {
-                        return provider.GetProcessWindowHandle(process);
+                        var windowHandle = provider.GetProcessWindowHandle(process);
+
+                        if (windowHandle != IntPtr.Zero)
+                        {
+                            windows.Add(process.Id, new TableWindow
+                            {
+                                Process = process,
+                                WindowHandle = windowHandle
+                            });
+                        }
+
+                        return windowHandle;
                     }
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Could not find window associated with process={process.Id} [{EnumPokerSites.PokerMaster}]", e);
+                LogProvider.Log.Error(logger, $"Could not find window associated with process={process.Id}", e);
             }
 
             return IntPtr.Zero;
+        }
+
+        private class TableWindow
+        {
+            public Process Process { get; set; }
+
+            public IntPtr WindowHandle { get; set; }
         }
     }
 }

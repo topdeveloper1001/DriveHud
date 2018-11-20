@@ -56,7 +56,7 @@ namespace DriveHUD.Importers.Bovada
 
         private Dictionary<int, int> seatsPlayerIds;
 
-        private ConcurrentDictionary<int, PlayerFinalPosition> playersFinalPositions;
+        protected ConcurrentDictionary<int, PlayerFinalPosition> playersFinalPositions;
 
         private bool hasResultCommand = false;
 
@@ -459,12 +459,15 @@ namespace DriveHUD.Importers.Bovada
                     ParseConnectInfo(cmdObj);
                     break;
 
-                case "JACKPOT_PRIZE":
-                    if (IsJackpotTable || isConnectedInfoParsed)
+                case "CONNECT_CLOSE":
+                    if (IsJackpotTable)
                     {
-                        break;
+                        ProcessUnjoin();
                     }
 
+                    break;
+
+                case "JACKPOT_PRIZE":                             
                     IsJackpotTable = true;
                     MaxSeat = JackpotMaxSeats;
                     GameFormat = GameFormat.SnG;
@@ -946,6 +949,12 @@ namespace DriveHUD.Importers.Bovada
         }
 
         protected virtual void PreImportChecks()
+        {
+            // do nothing
+        }
+
+
+        protected virtual void ProcessUnjoin()
         {
             // do nothing
         }
@@ -1890,7 +1899,7 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
-        private class PlayerFinalPosition
+        protected class PlayerFinalPosition
         {
             public int Seat { get; set; }
 

@@ -21,19 +21,19 @@ namespace Model.Site
             get { return EnumPokerSites.YaPoker; }
         }
 
-        protected override string RegistryDisplayName
+        protected override string[] RegistryDisplayName
         {
             get
             {
-                return "YaPoker";
+                return new[] { "YaPoker" };
             }
         }
 
-        protected override string DefaultInstallPath
+        protected override string[] DefaultInstallPath
         {
             get
             {
-                return @"C:\YaPoker";
+                return new[] { @"C:\YaPoker" };
             }
         }
     }

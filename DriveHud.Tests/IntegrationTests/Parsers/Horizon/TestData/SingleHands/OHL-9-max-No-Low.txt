@@ -1,0 +1,43 @@
+ï»¿Hand#5322021915000045 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:34:39
+Dealer: Seat 5
+Seat 1: Sparky1970 ($3.47 in chips) 
+Seat 2: ted53 ($1.27 in chips) 
+Seat 3: nippoker56 ($5.75 in chips) 
+Seat 4: burty2 ($3.90 in chips) 
+Seat 5: Arch_aces ($0.20 in chips) 
+Seat 7: Ederzito ($1.24 in chips) 
+Seat 8: prizzy711 ($1.20 in chips) 
+Seat 9: ohindian ($1.16 in chips) 
+Seat 10: RONALD 11 ($5.38 in chips) 
+Ederzito: posts small blind $0.02
+prizzy711: posts big blind $0.04
+Dealt to prizzy711 [2c,Js,7s,5d]
+ohindian: folds
+RONALD 11: calls $0.04
+Sparky1970: calls $0.04
+ted53: calls $0.04
+nippoker56: folds
+burty2: calls $0.04
+Arch_aces: calls $0.04
+Ederzito: calls $0.02
+prizzy711: checks
+*** FLOP *** [3c,8d,6c]
+Ederzito: bets $0.14
+prizzy711: folds
+RONALD 11: folds
+Sparky1970: calls $0.14
+ted53: raises to $0.84
+burty2: folds
+Arch_aces: folds
+Ederzito: folds
+Sparky1970: calls $0.70
+*** TURN *** [Qc]
+Sparky1970: checks
+ted53: is all in $0.39
+Sparky1970: calls $0.39
+Sparky1970: shows [Ts 6h 6d 7h]
+ted53: shows [3d 4c Kc 3h]
+*** RIVER *** [9d]
+***SHOW DOWN***
+ted53 wins high pot $2.69 with Flush King high 
+There is no low hand

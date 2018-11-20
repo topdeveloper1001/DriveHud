@@ -1,4 +1,16 @@
-﻿using DriveHUD.Entities;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PokerSiteToShortStringConverter.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Entities;
 using System;
 using System.Globalization;
 using System.Windows.Data;
@@ -15,41 +27,9 @@ namespace DriveHUD.Common.Wpf.Converters
                 return EnumPokerSites.Unknown;
             }
 
-            EnumPokerSites site;
-
-            if (Enum.TryParse(value.ToString(), out site))
+            if (Enum.TryParse(value.ToString(), out EnumPokerSites site))
             {
-                switch (site)
-                {
-                    case EnumPokerSites.TigerGaming:
-                        return "TG";
-                    case EnumPokerSites.SportsBetting:
-                        return "SB";
-                    case EnumPokerSites.BetOnline:
-                        return "BOL";
-                    case EnumPokerSites.Poker888:
-                        return "888";
-                    case EnumPokerSites.WinningPokerNetwork:
-                        return "WPN";
-                    case EnumPokerSites.AmericasCardroom:
-                        return "ACR";
-                    case EnumPokerSites.BlackChipPoker:
-                        return "BCP";
-                    case EnumPokerSites.TruePoker:
-                        return "TP";
-                    case EnumPokerSites.YaPoker:
-                        return "YP";
-                    case EnumPokerSites.PartyPoker:
-                        return "PP";
-                    case EnumPokerSites.Horizon:
-                        return "REV";
-                    case EnumPokerSites.Adda52:
-                        return "ADDA";
-                    case EnumPokerSites.SpartanPoker:
-                        return "TSP";
-                    default:
-                        break;
-                }
+                return site.ToShortPokerSiteName();
             }
 
             return value;

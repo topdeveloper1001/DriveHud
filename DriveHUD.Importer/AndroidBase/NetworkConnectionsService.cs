@@ -64,20 +64,13 @@ namespace DriveHUD.Importers.AndroidBase
 
                     var foundLocalConnections = localConnections.Where(x => filterConnection(x)).ToArray();
 
-                    if (foundLocalConnections.Length > 1)
-                    {
-                        var processes = new HashSet<int>(Process.GetProcesses().Select(x => x.Id).Distinct());
-                        localConnection = foundLocalConnections.FirstOrDefault(x => processes.Contains((int)x.ProcessId));
-                    }
-                    else
-                    {
-                        localConnection = foundLocalConnections.FirstOrDefault();
-                    }
+                    var processes = new HashSet<int>(Process.GetProcesses().Select(x => x.Id).Distinct());
+                    localConnection = foundLocalConnections.FirstOrDefault(x => processes.Contains((int)x.ProcessId));
                 }
 
                 if (localConnection == null)
                 {
-                    LogProvider.Log.Info(loggerName, $"Could not find associated process for packet {capturedPacket}");
+                    LogProvider.Log.Info(loggerName, $"Could not find associated process for packet {capturedPacket}. Probably, the emulator was closed.");
                     return null;
                 }
 
@@ -98,6 +91,11 @@ namespace DriveHUD.Importers.AndroidBase
                     };
 
                     connectionProcesses.Add(connectionProcess);
+                }
+                catch (ArgumentException)
+                {
+                    LogProvider.Log.Error(loggerName, $"Process {localConnection.ProcessId} isn't running. Probably, the emulator was closed.");
+                    return null;
                 }
                 catch (Exception e)
                 {

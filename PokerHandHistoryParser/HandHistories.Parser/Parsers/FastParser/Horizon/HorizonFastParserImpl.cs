@@ -375,7 +375,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Horizon
                     var playerName = handLine.Substring(0, start).Trim();
                     var deadBlindTexts = handLine.Substring(start)
                         .Replace(":posts dead blind ", string.Empty)
-                        .Replace("and big blind", string.Empty)
+                        .Replace("and big blind ", string.Empty)
                         .Split(' ');
 
                     if (!ParserUtils.TryParseMoney(deadBlindTexts[0], out decimal deadBlind))
@@ -509,17 +509,41 @@ namespace HandHistories.Parser.Parsers.FastParser.Horizon
                     handActions.Add(new HandAction(playerName, HandActionType.MUCKS, 0, Street.Showdown, actionNumber++));
                 }
 
-                if (handLine.Contains(" wins "))
+                var winsMarkers = new[] { " wins high pot ", " wins low pot ", " wins " };
+
+                foreach (var winsMarker in winsMarkers)
                 {
-                    var playerName = handLine.Substring(0, handLine.LastIndexOf(" wins ")).Trim();
-                    var winText = (handLine + " ").TakeBetween(" wins ", " ", true);
-
-                    if (!ParserUtils.TryParseMoney(winText, out decimal win))
+                    if (handLine.Contains(winsMarker))
                     {
-                        throw new HandActionException(handLine, "Could not parse win.");
-                    }
+                        var playerName = handLine.Substring(0, handLine.LastIndexOf(winsMarker)).Trim();
+                        var winText = (handLine + " ").TakeBetween(winsMarker, " ", true);
 
-                    handActions.Add(new WinningsAction(playerName, HandActionType.WINS, win, 0, actionNumber++));
+                        if (!ParserUtils.TryParseMoney(winText, out decimal win))
+                        {
+                            throw new HandActionException(handLine, $"Could not parse {winsMarker.Trim()}.");
+                        }
+
+                        handActions.Add(new WinningsAction(playerName, HandActionType.WINS, win, 0, actionNumber++));
+
+                        break;
+                    }
+                }
+            }
+
+            // merge wins
+            var winsActionsToMerge = handActions.Where(x => x.IsWinningsAction)
+                .GroupBy(x => x.PlayerName)
+                .Where(x => x.Count() > 1)
+                .ToArray();
+
+            foreach (var winsActions in winsActionsToMerge)
+            {
+                var firstWinAction = winsActions.First();
+
+                foreach (var winAction in winsActions.Skip(1))
+                {
+                    firstWinAction.Amount += winAction.Amount;
+                    handActions.Remove(winAction);
                 }
             }
 

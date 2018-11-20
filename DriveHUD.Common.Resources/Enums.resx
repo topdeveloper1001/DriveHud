@@ -1109,4 +1109,7 @@
   <data name="Enum_EnumPokerSites_SpartanPoker" xml:space="preserve">
     <value>The Spartan Poker</value>
   </data>
+  <data name="Enum_EnumPokerSites_WinningPokerNetwork" xml:space="preserve">
+    <value>Winning Poker Network</value>
+  </data>
 </root>
