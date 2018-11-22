@@ -1799,6 +1799,12 @@ namespace Model.Data
         [ProtoMember(21)]
         protected PositionalStat positionCouldSqueeze = new PositionalStat();
 
+        [ProtoMember(22)]
+        protected PositionalStat positionCall4Bet = new PositionalStat();
+
+        [ProtoMember(23)]
+        protected PositionalStat positionFaced4Bet = new PositionalStat();
+
         #endregion
 
         #region Raise Limpers
@@ -2215,6 +2221,60 @@ namespace Model.Data
 
         public virtual decimal CalledCOStealInBB => GetPercentage(Statistics.Sum(x => x.CalledCOStealInBB), Statistics.Sum(x => x.FacedCOStealInBB));
 
+        public virtual decimal OvercallBTNStealInBB => GetPercentage(Statistics.Sum(x => x.OvercallBTNStealInBB), Statistics.Sum(x => x.CouldOvercallBTNStealInBB));
+
+        #endregion
+
+        #region  WTSD as PFR/4-Bettor
+
+        public virtual decimal WTSDAsPFR => GetPercentage(Statistics.Sum(x => x.WTSDAsPFR), Statistics.Sum(x => x.WTSDAsPFROpportunity));
+
+        public virtual decimal WTSDAs4Bettor => GetPercentage(Statistics.Sum(x => x.WTSDAs4Bettor), Statistics.Sum(x => x.WTSDAs4BettorOpportunity));
+
+        #endregion
+
+        #region Call 4-Bet positional 
+
+        public virtual decimal Call4BetIP => GetPercentage(Statistics.Sum(x => x.Call4BetIP), Statistics.Sum(x => x.Faced4BetIP));
+
+        public virtual decimal Call4BetOOP => GetPercentage(Statistics.Sum(x => x.Call4BetOOP), Statistics.Sum(x => x.Faced4BetOOP));
+
+        public virtual decimal Call4BetEP => GetPercentage(positionCall4Bet?.EP, positionFaced4Bet?.EP);
+
+        public virtual decimal Call4BetMP => GetPercentage(positionCall4Bet?.MP, positionFaced4Bet?.MP);
+
+        public virtual decimal Call4BetCO => GetPercentage(positionCall4Bet?.CO, positionFaced4Bet?.CO);
+
+        public virtual decimal Call4BetBTN => GetPercentage(positionCall4Bet?.BN, positionFaced4Bet?.BN);
+
+        public virtual decimal Call4BetSB => GetPercentage(positionCall4Bet?.SB, positionFaced4Bet?.SB);
+
+        public virtual decimal Call4BetBB => GetPercentage(positionCall4Bet?.BB, positionFaced4Bet?.BB);
+
+        #endregion
+
+        #region Total overcall SRP%
+
+        public virtual decimal TotalOverCallSRP => GetPercentage(Statistics.Sum(x => x.TotalOverCallSRP), Statistics.Sum(x => x.CouldTotalOverCallSRP));
+
+        #endregion
+
+        #region Limped pot Flop Steal IP%
+
+        public virtual decimal LimpedPotFlopStealIP => GetPercentage(Statistics.Sum(x => x.LimpedPotFlopStealIP), Statistics.Sum(x => x.CouldLimpedPotFlopStealIP));
+
+        #endregion
+
+        #region Flop-Check Call
+
+        public virtual decimal FlopCheckCall => GetPercentage(Statistics.Sum(x => x.DidFlopCheckCall), Statistics.Sum(x => x.CouldFlopCheckCall));
+
+        #endregion
+
+        #region Call Flop & Fold Turn
+
+        public virtual decimal CallFlopFoldTurn => GetPercentage(Statistics.Sum(x => x.DidCallFlopFoldTurn), Statistics.Sum(x => x.CouldCallFlopFoldTurn));
+
         #endregion
 
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
@@ -2281,6 +2341,8 @@ namespace Model.Data
             positionOpenMinraiseUOPFR?.Add(statistic.Position, statistic.OpenMinraise);
             positionDidSqueeze?.Add(statistic.Position, statistic.Didsqueeze);
             positionCouldSqueeze?.Add(statistic.Position, statistic.Couldsqueeze);
+            positionCall4Bet?.Add(statistic.Position, statistic.Calledfourbetpreflop);
+            positionFaced4Bet?.Add(statistic.Position, statistic.Facedfourbetpreflop);
         }
 
         protected virtual void ResetPositionalStats()
@@ -2305,6 +2367,8 @@ namespace Model.Data
             positionOpenMinraiseUOPFR?.Reset();
             positionDidSqueeze?.Reset();
             positionCouldSqueeze?.Reset();
+            positionCall4Bet?.Reset();
+            positionFaced4Bet?.Reset();
         }
 
         #region Helpers

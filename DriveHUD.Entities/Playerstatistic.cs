@@ -2077,6 +2077,93 @@ namespace DriveHUD.Entities
 
         public virtual int FoldToBTNStealInBB => FacedBTNStealInBB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
 
+        public virtual int CouldOvercallBTNStealInBB => FacingPreflop == EnumFacingPreflop.RaiserAndCaller && FirstRaiserPosition.IsBTNPosition() ? 1 : 0;
+
+        public virtual int OvercallBTNStealInBB => CouldOvercallBTNStealInBB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        #endregion
+
+        #region WTSD as PFR/4-Bettor
+
+        public virtual int WTSDAsPFR => Pfrhands == 1 && Sawshowdown == 1 ? 1 : 0;
+
+        public virtual int WTSDAsPFROpportunity => Pfrhands == 1 && Sawflop == 1 ? 1 : 0;
+
+        public virtual int WTSDAs4Bettor => Didfourbet == 1 && Sawshowdown == 1 ? 1 : 0;
+
+        public virtual int WTSDAs4BettorOpportunity => Didfourbet == 1 && Sawflop == 1 ? 1 : 0;
+
+        #endregion
+
+        #region Call 4-Bet positional 
+
+        public virtual int Call4BetIP => Calledfourbetpreflop == 1 && PreflopIP == 1 ? 1 : 0;
+
+        public virtual int Faced4BetIP => Facedfourbetpreflop == 1 && PreflopIP == 1 ? 1 : 0;
+
+        public virtual int Call4BetOOP => Calledfourbetpreflop == 1 && PreflopIP == 0 ? 1 : 0;
+
+        public virtual int Faced4BetOOP => Facedfourbetpreflop == 1 && PreflopIP == 0 ? 1 : 0;
+
+        public virtual int Call4BetEP => Calledfourbetpreflop == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int Faced4BetEP => Facedfourbetpreflop == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int Call4BetMP => Calledfourbetpreflop == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int Faced4BetMP => Facedfourbetpreflop == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int Call4BetCO => Calledfourbetpreflop == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int Faced4BetCO => Facedfourbetpreflop == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int Call4BetBTN => Calledfourbetpreflop == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int Faced4BetBTN => Facedfourbetpreflop == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int Call4BetSB => Calledfourbetpreflop == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int Faced4BetSB => Facedfourbetpreflop == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int Call4BetBB => Calledfourbetpreflop == 1 && Position.IsBBPosition() ? 1 : 0;
+
+        public virtual int Faced4BetBB => Facedfourbetpreflop == 1 && Position.IsBBPosition() ? 1 : 0;
+
+        #endregion
+
+        #region Total overcall SRP%
+
+        public virtual int TotalOverCallSRP => (FacingPreflop == EnumFacingPreflop.RaiserAndCaller || FacingPreflop == EnumFacingPreflop.MultipleCallers) &&
+            PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CouldTotalOverCallSRP => (FacingPreflop == EnumFacingPreflop.RaiserAndCaller || FacingPreflop == EnumFacingPreflop.MultipleCallers) ? 1 : 0;
+
+        #endregion
+
+        #region Limped pot Flop Steal IP%
+
+        public virtual int LimpedPotFlopStealIP => PreflopIP == 1 && (FacingPreflop == EnumFacingPreflop.Limper || FacingPreflop == EnumFacingPreflop.MultipleLimpers) &&
+            PreflopActions.Equals("C") && FlopActions.StartsWith("B") ? 1 : 0;
+
+        public virtual int CouldLimpedPotFlopStealIP => PreflopIP == 1 && (FacingPreflop == EnumFacingPreflop.Limper || FacingPreflop == EnumFacingPreflop.MultipleLimpers) &&
+           PreflopActions.Equals("C") && CouldFlopBet == 1 ? 1 : 0;
+
+        #endregion
+
+        #region Flop-Check Call
+
+        public virtual int DidFlopCheckCall => FlopActions.StartsWith("XC") ? 1 : 0;
+
+        public virtual int CouldFlopCheckCall => FlopActions.StartsWith("X") && FlopActions.Length > 1 ? 1 : 0;
+
+        #endregion
+
+        #region Call Flop & Fold Turn
+
+        public virtual int DidCallFlopFoldTurn => FlopActions.EndsWith("C") && TurnActions.EndsWith("F") ? 1 : 0;
+
+        public virtual int CouldCallFlopFoldTurn => FlopActions.EndsWith("C") && FacedBetOnTurn == 1 ? 1 : 0;
+
         #endregion
 
         #endregion

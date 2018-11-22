@@ -1317,7 +1317,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         }
 
         [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
-        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-2.txt", EnumPokerSites.PokerStars, "Hero", 1)]        
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-2.txt", EnumPokerSites.PokerStars, "Hero", 1)]
         public void CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP, fileName, pokerSite, playerName, expected);
@@ -1336,6 +1336,16 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.CouldCheckFlopAsPFRAndFoldToRiverBetIPSRP, fileName, pokerSite, playerName, expected);
         }
 
+        [TestCase(@"Hero-CouldNot-ColdCall4Bet.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void ColdCall4BetInBBIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.DidColdCall4BetInBB, fileName, pokerSite, playerName, expected);
+        }
 
+        [TestCase(@"Hero-CouldNot-ColdCall3Bet.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void ColdCall3BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.DidColdCallThreeBet, fileName, pokerSite, playerName, expected);
+        }
     }
 }

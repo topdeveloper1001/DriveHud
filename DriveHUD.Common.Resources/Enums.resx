@@ -1595,6 +1595,30 @@
   <data name="Enum_Stat_SqueezeSBVsMPPFR" xml:space="preserve">
     <value>SB Squeeze vs MP PFR%</value>
   </data>
+  <data name="Enum_Stat_Call4BetBB" xml:space="preserve">
+    <value>Call 4-Bet BB%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetBTN" xml:space="preserve">
+    <value>Call 4-Bet BTN%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetCO" xml:space="preserve">
+    <value>Call 4-Bet CO%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetEP" xml:space="preserve">
+    <value>Call 4-Bet EP%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetIP" xml:space="preserve">
+    <value>Call 4-Bet IP%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetMP" xml:space="preserve">
+    <value>Call 4-Bet MP%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetOOP" xml:space="preserve">
+    <value>Call 4-Bet OOP%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetSB" xml:space="preserve">
+    <value>Call 4-Bet SB%</value>
+  </data>
   <data name="Enum_Stat_CalledBTNStealInBB" xml:space="preserve">
     <value>BB Call BTN Steal%</value>
   </data>
@@ -1613,6 +1637,12 @@
   <data name="Enum_Stat_CalledStealInSB" xml:space="preserve">
     <value>SB Call Steal%</value>
   </data>
+  <data name="Enum_Stat_CallFlopFoldTurn" xml:space="preserve">
+    <value>Call Flop &amp; Fold Turn%</value>
+  </data>
+  <data name="Enum_Stat_FlopCheckCall" xml:space="preserve">
+    <value>Flop Check-Call%</value>
+  </data>
   <data name="Enum_Stat_FoldToBTNStealInBB" xml:space="preserve">
     <value>BB Fold to BTN Steal%</value>
   </data>
@@ -1630,5 +1660,20 @@
   </data>
   <data name="Enum_Stat_FoldToStealInSB" xml:space="preserve">
     <value>SB Fold to Steal%</value>
+  </data>
+  <data name="Enum_Stat_LimpedPotFlopStealIP" xml:space="preserve">
+    <value>Limped pot Flop Steal IP%</value>
+  </data>
+  <data name="Enum_Stat_OvercallBTNStealInBB" xml:space="preserve">
+    <value>BB overcall BTN Steal%</value>
+  </data>
+  <data name="Enum_Stat_TotalOverCallSRP" xml:space="preserve">
+    <value>Total overcall SRP%</value>
+  </data>
+  <data name="Enum_Stat_WTSDAs4Bettor" xml:space="preserve">
+    <value>WTSD as PF 4-Bettor%</value>
+  </data>
+  <data name="Enum_Stat_WTSDAsPFR" xml:space="preserve">
+    <value>WTSD as PFR%</value>
   </data>
 </root>

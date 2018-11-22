@@ -538,11 +538,137 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Call 4-Bet BB%.
+        /// </summary>
+        internal static string Reports_Column_Call4BetBB {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call4BetBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 4-Bet BTN%.
+        /// </summary>
+        internal static string Reports_Column_Call4BetBTN {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call4BetBTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 4-Bet CO%.
+        /// </summary>
+        internal static string Reports_Column_Call4BetCO {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call4BetCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 4-Bet EP%.
+        /// </summary>
+        internal static string Reports_Column_Call4BetEP {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call4BetEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 4-Bet IP%.
+        /// </summary>
+        internal static string Reports_Column_Call4BetIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call4BetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 4-Bet MP%.
+        /// </summary>
+        internal static string Reports_Column_Call4BetMP {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call4BetMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 4-Bet OOP%.
+        /// </summary>
+        internal static string Reports_Column_Call4BetOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call4BetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 4-Bet SB%.
+        /// </summary>
+        internal static string Reports_Column_Call4BetSB {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call4BetSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Call BTN Steal%.
+        /// </summary>
+        internal static string Reports_Column_CalledBTNStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Column_CalledBTNStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Call BTN Steal%.
+        /// </summary>
+        internal static string Reports_Column_CalledBTNStealInSB {
+            get {
+                return ResourceManager.GetString("Reports_Column_CalledBTNStealInSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check-Raise &amp; Call vs. Flop C-bet%.
         /// </summary>
         internal static string Reports_Column_CalledCheckRaiseVsFlopCBet {
             get {
                 return ResourceManager.GetString("Reports_Column_CalledCheckRaiseVsFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Call CO Steal%.
+        /// </summary>
+        internal static string Reports_Column_CalledCOStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Column_CalledCOStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Call CO Steal%.
+        /// </summary>
+        internal static string Reports_Column_CalledCOStealInSB {
+            get {
+                return ResourceManager.GetString("Reports_Column_CalledCOStealInSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Call Steal%.
+        /// </summary>
+        internal static string Reports_Column_CalledStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Column_CalledStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Call Steal%.
+        /// </summary>
+        internal static string Reports_Column_CalledStealInSB {
+            get {
+                return ResourceManager.GetString("Reports_Column_CalledStealInSB", resourceCulture);
             }
         }
         
@@ -570,6 +696,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_CallFlopCBetOOP {
             get {
                 return ResourceManager.GetString("Reports_Column_CallFlopCBetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call Flop &amp; Fold Turn%.
+        /// </summary>
+        internal static string Reports_Column_CallFlopFoldTurn {
+            get {
+                return ResourceManager.GetString("Reports_Column_CallFlopFoldTurn", resourceCulture);
             }
         }
         
@@ -1447,6 +1582,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Flop Check-Call%.
+        /// </summary>
+        internal static string Reports_Column_FlopCheckCall {
+            get {
+                return ResourceManager.GetString("Reports_Column_FlopCheckCall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Flop Check-Raise%.
         /// </summary>
         internal static string Reports_Column_FlopCheckRaise {
@@ -1654,6 +1798,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BB Fold to BTN Steal%.
+        /// </summary>
+        internal static string Reports_Column_FoldToBTNStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToBTNStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Fold to BTN Steal%.
+        /// </summary>
+        internal static string Reports_Column_FoldToBTNStealInSB {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToBTNStealInSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to C-Bet 3-Bet Pot%.
         /// </summary>
         internal static string Reports_Column_FoldToCBet3BetPot {
@@ -1686,6 +1848,24 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_FoldToCheckRaiseVsFlopCBet {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldToCheckRaiseVsFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Fold to CO Steal%.
+        /// </summary>
+        internal static string Reports_Column_FoldToCOStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToCOStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Fold to CO Steal%.
+        /// </summary>
+        internal static string Reports_Column_FoldToCOStealInSB {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToCOStealInSB", resourceCulture);
             }
         }
         
@@ -1830,6 +2010,24 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_FoldToSqueezeAsColdCaller {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldToSqueezeAsColdCaller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Fold to Steal%.
+        /// </summary>
+        internal static string Reports_Column_FoldToStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Fold to Steal%.
+        /// </summary>
+        internal static string Reports_Column_FoldToStealInSB {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToStealInSB", resourceCulture);
             }
         }
         
@@ -2014,6 +2212,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Limped pot Flop Steal IP%.
+        /// </summary>
+        internal static string Reports_Column_LimpedPotFlopStealIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_LimpedPotFlopStealIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Limp EP &amp; Fold to PFR%.
         /// </summary>
         internal static string Reports_Column_LimpEPFoldToPFR {
@@ -2190,6 +2397,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_OpenMinraise {
             get {
                 return ResourceManager.GetString("Reports_Column_OpenMinraise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB overcall BTN Steal%.
+        /// </summary>
+        internal static string Reports_Column_OvercallBTNStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Column_OvercallBTNStealInBB", resourceCulture);
             }
         }
         
@@ -3058,6 +3274,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Total overcall SRP%.
+        /// </summary>
+        internal static string Reports_Column_TotalOverCallSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_TotalOverCallSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Total Winnings.
         /// </summary>
         internal static string Reports_Column_TotalWinnings {
@@ -3436,6 +3661,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to WTSD as PF 4-Bettor%.
+        /// </summary>
+        internal static string Reports_Column_WTSDAs4Bettor {
+            get {
+                return ResourceManager.GetString("Reports_Column_WTSDAs4Bettor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to WTSD% as PF 3-Bettor%.
         /// </summary>
         internal static string Reports_Column_WTSDAsPF3Bettor {
@@ -3445,110 +3679,11 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BB Call BTN Steal%.
+        ///   Looks up a localized string similar to WTSD as PFR%.
         /// </summary>
-        internal static string Reports_Columns_CalledBTNStealInBB {
+        internal static string Reports_Column_WTSDAsPFR {
             get {
-                return ResourceManager.GetString("Reports_Columns_CalledBTNStealInBB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SB Call BTN Steal%.
-        /// </summary>
-        internal static string Reports_Columns_CalledBTNStealInSB {
-            get {
-                return ResourceManager.GetString("Reports_Columns_CalledBTNStealInSB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to BB Call CO Steal%.
-        /// </summary>
-        internal static string Reports_Columns_CalledCOStealInBB {
-            get {
-                return ResourceManager.GetString("Reports_Columns_CalledCOStealInBB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SB Call CO Steal%.
-        /// </summary>
-        internal static string Reports_Columns_CalledCOStealInSB {
-            get {
-                return ResourceManager.GetString("Reports_Columns_CalledCOStealInSB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to BB Call Steal%.
-        /// </summary>
-        internal static string Reports_Columns_CalledStealInBB {
-            get {
-                return ResourceManager.GetString("Reports_Columns_CalledStealInBB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SB Call Steal%.
-        /// </summary>
-        internal static string Reports_Columns_CalledStealInSB {
-            get {
-                return ResourceManager.GetString("Reports_Columns_CalledStealInSB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to BB Fold to BTN Steal%.
-        /// </summary>
-        internal static string Reports_Columns_FoldToBTNStealInBB {
-            get {
-                return ResourceManager.GetString("Reports_Columns_FoldToBTNStealInBB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SB Fold to BTN Steal%.
-        /// </summary>
-        internal static string Reports_Columns_FoldToBTNStealInSB {
-            get {
-                return ResourceManager.GetString("Reports_Columns_FoldToBTNStealInSB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to BB Fold to CO Steal%.
-        /// </summary>
-        internal static string Reports_Columns_FoldToCOStealInBB {
-            get {
-                return ResourceManager.GetString("Reports_Columns_FoldToCOStealInBB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SB Fold to CO Steal%.
-        /// </summary>
-        internal static string Reports_Columns_FoldToCOStealInSB {
-            get {
-                return ResourceManager.GetString("Reports_Columns_FoldToCOStealInSB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to BB Fold to Steal%.
-        /// </summary>
-        internal static string Reports_Columns_FoldToStealInBB {
-            get {
-                return ResourceManager.GetString("Reports_Columns_FoldToStealInBB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SB Fold to Steal%.
-        /// </summary>
-        internal static string Reports_Columns_FoldToStealInSB {
-            get {
-                return ResourceManager.GetString("Reports_Columns_FoldToStealInSB", resourceCulture);
+                return ResourceManager.GetString("Reports_Column_WTSDAsPFR", resourceCulture);
             }
         }
     }

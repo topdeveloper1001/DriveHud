@@ -3736,6 +3736,225 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto OvercallBTNStealInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = OvercallBTNStealInBB,
+                    Occurred = overcallBTNStealInBB,
+                    CouldOccurred = couldOvercallBTNStealInBB
+                };
+            }
+        }
+
+        #endregion
+
+        #region
+
+        public virtual StatDto WTSDAsPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDAsPFR,
+                    Occurred = wtsdAsPFR,
+                    CouldOccurred = wtsdAsPFROpportunity
+                };
+            }
+        }
+
+        public virtual StatDto WTSDAs4BettorObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDAs4Bettor,
+                    Occurred = wtsdAs4Bettor,
+                    CouldOccurred = wtsdAs4BettorOpportunity
+                };
+            }
+        }
+
+        #endregion
+
+        #region Call 4-Bet positional 
+
+        public virtual StatDto Call4BetIPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call4BetIP,
+                    Occurred = call4BetIP,
+                    CouldOccurred = faced4BetIP
+                };
+            }
+        }
+
+        public virtual StatDto Call4BetOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call4BetOOP,
+                    Occurred = call4BetOOP,
+                    CouldOccurred = faced4BetOOP
+                };
+            }
+        }
+
+        public virtual StatDto Call4BetEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call4BetEP,
+                    Occurred = positionCall4Bet?.EP ?? 0,
+                    CouldOccurred = positionFaced4Bet?.EP ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto Call4BetMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call4BetMP,
+                    Occurred = positionCall4Bet?.MP ?? 0,
+                    CouldOccurred = positionFaced4Bet?.MP ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto Call4BetCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call4BetCO,
+                    Occurred = positionCall4Bet?.CO ?? 0,
+                    CouldOccurred = positionFaced4Bet?.CO ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto Call4BetBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call4BetBTN,
+                    Occurred = positionCall4Bet?.BN ?? 0,
+                    CouldOccurred = positionFaced4Bet?.BN ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto Call4BetSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call4BetSB,
+                    Occurred = positionCall4Bet?.SB ?? 0,
+                    CouldOccurred = positionFaced4Bet?.SB ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto Call4BetBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call4BetBB,
+                    Occurred = positionCall4Bet?.BB ?? 0,
+                    CouldOccurred = positionFaced4Bet?.BB ?? 0
+                };
+            }
+        }
+
+        #endregion
+
+        #region Total overcall SRP%
+
+        public virtual StatDto TotalOverCallSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TotalOverCallSRP,
+                    Occurred = totalOverCallSRP,
+                    CouldOccurred = couldTotalOverCallSRP
+                };
+            }
+        }
+
+        #endregion
+
+        #region Limped pot Flop Steal IP%
+
+        public virtual StatDto LimpedPotFlopStealIPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = LimpedPotFlopStealIP,
+                    Occurred = limpedPotFlopStealIP,
+                    CouldOccurred = couldLimpedPotFlopStealIP
+                };
+            }
+        }
+
+        #endregion
+
+        #region Flop-Check Call
+
+        public virtual StatDto FlopCheckCallObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopCheckCall,
+                    Occurred = flopCheckCall,
+                    CouldOccurred = couldFlopCheckCall
+                };
+            }
+        }
+
+        #endregion
+
+        #region Call Flop & Fold Turn
+
+        public virtual StatDto CallFlopFoldTurnObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CallFlopFoldTurn,
+                    Occurred = didCallFlopFoldTurn,
+                    CouldOccurred = couldCallFlopFoldTurn
+                };
+            }
+        }
+
         #endregion
 
         #endregion

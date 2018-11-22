@@ -2708,6 +2708,14 @@ namespace Model.Data
 
         public override decimal CalledCOStealInBB => GetPercentage(calledCOStealInBB, facedCOStealInBB);
 
+        [ProtoMember(289)]
+        protected int overcallBTNStealInBB;
+
+        [ProtoMember(290)]
+        protected int couldOvercallBTNStealInBB;
+
+        public override decimal OvercallBTNStealInBB => GetPercentage(overcallBTNStealInBB, couldOvercallBTNStealInBB);
+
         private void AddPositionalCallFoldToStealStatistic(Playerstatistic statistic)
         {
             foldToStealInSB += statistic.FoldToStealInSB;
@@ -2728,6 +2736,8 @@ namespace Model.Data
             calledBTNStealInBB += statistic.CalledBTNStealInBB;
             calledCOStealInSB += statistic.CalledCOStealInSB;
             calledCOStealInBB += statistic.CalledCOStealInBB;
+            overcallBTNStealInBB += statistic.OvercallBTNStealInBB;
+            couldOvercallBTNStealInBB += statistic.CouldOvercallBTNStealInBB;
         }
 
         private void CleanPositionalCallFoldToStealStatistic()
@@ -2750,6 +2760,8 @@ namespace Model.Data
             calledBTNStealInBB = 0;
             calledCOStealInSB = 0;
             calledCOStealInBB = 0;
+            overcallBTNStealInBB = 0;
+            couldOvercallBTNStealInBB = 0;
         }
 
         private void AddPositionalCallFoldToStealIndicators(LightIndicators indicator)
@@ -2772,7 +2784,97 @@ namespace Model.Data
             calledBTNStealInBB += indicator.calledBTNStealInBB;
             calledCOStealInSB += indicator.calledCOStealInSB;
             calledCOStealInBB += indicator.calledCOStealInBB;
+            overcallBTNStealInBB += indicator.overcallBTNStealInBB;
+            couldOvercallBTNStealInBB += indicator.couldOvercallBTNStealInBB;
         }
+
+        #endregion
+
+        #region  WTSD as PFR/4-Bettor
+
+        [ProtoMember(291)]
+        protected int wtsdAsPFR;
+
+        [ProtoMember(292)]
+        protected int wtsdAsPFROpportunity;
+
+        public override decimal WTSDAsPFR => GetPercentage(wtsdAsPFR, wtsdAsPFROpportunity);
+
+        [ProtoMember(293)]
+        protected int wtsdAs4Bettor;
+
+        [ProtoMember(294)]
+        protected int wtsdAs4BettorOpportunity;
+
+        public override decimal WTSDAs4Bettor => GetPercentage(wtsdAs4Bettor, wtsdAs4BettorOpportunity);
+
+        #endregion
+
+        #region Call 4-Bet positional 
+
+        [ProtoMember(295)]
+        protected int call4BetIP;
+
+        [ProtoMember(296)]
+        protected int faced4BetIP;
+
+        public override decimal Call4BetIP => GetPercentage(call4BetIP, faced4BetIP);
+
+        [ProtoMember(297)]
+        protected int call4BetOOP;
+
+        [ProtoMember(298)]
+        protected int faced4BetOOP;
+
+        public override decimal Call4BetOOP => GetPercentage(call4BetOOP, faced4BetOOP);
+
+        #endregion
+
+        #region Total overcall SRP%
+
+        [ProtoMember(299)]
+        protected int totalOverCallSRP;
+
+        [ProtoMember(300)]
+        protected int couldTotalOverCallSRP;
+
+        public override decimal TotalOverCallSRP => GetPercentage(totalOverCallSRP, couldTotalOverCallSRP);
+
+        #endregion
+
+        #region Limped pot Flop Steal IP%
+
+        [ProtoMember(301)]
+        protected int limpedPotFlopStealIP;
+
+        [ProtoMember(302)]
+        protected int couldLimpedPotFlopStealIP;
+
+        public override decimal LimpedPotFlopStealIP => GetPercentage(limpedPotFlopStealIP, couldLimpedPotFlopStealIP);
+
+        #endregion
+
+        #region Flop-Check Call
+
+        [ProtoMember(303)]
+        protected int flopCheckCall;
+
+        [ProtoMember(304)]
+        protected int couldFlopCheckCall;
+
+        public override decimal FlopCheckCall => GetPercentage(flopCheckCall, couldFlopCheckCall);
+
+        #endregion
+
+        #region Call Flop & Fold Turn
+
+        [ProtoMember(305)]
+        protected int didCallFlopFoldTurn;
+
+        [ProtoMember(306)]
+        protected int couldCallFlopFoldTurn;
+
+        public override decimal CallFlopFoldTurn => GetPercentage(didCallFlopFoldTurn, couldCallFlopFoldTurn);
 
         #endregion
 
@@ -2904,6 +3006,28 @@ namespace Model.Data
             btnDefendVsCOSteal += statistic.BTNDefendVsCOSteal;
             btnFacedCOSteal += statistic.BTNFacedCOSteal;
 
+            wtsdAsPFR += statistic.WTSDAsPFR;
+            wtsdAsPFROpportunity += statistic.WTSDAsPFROpportunity;
+            wtsdAs4Bettor += statistic.WTSDAs4Bettor;
+            wtsdAs4BettorOpportunity += statistic.WTSDAs4BettorOpportunity;
+
+            call4BetIP += statistic.Call4BetIP;
+            faced4BetIP += statistic.Faced4BetIP;
+            call4BetOOP += statistic.Call4BetOOP;
+            faced4BetOOP += statistic.Faced4BetOOP;
+
+            totalOverCallSRP += statistic.TotalOverCallSRP;
+            couldTotalOverCallSRP += statistic.CouldTotalOverCallSRP;
+
+            limpedPotFlopStealIP += statistic.LimpedPotFlopStealIP;
+            couldLimpedPotFlopStealIP += statistic.CouldLimpedPotFlopStealIP;
+
+            flopCheckCall += statistic.DidFlopCheckCall;
+            couldFlopCheckCall += statistic.CouldFlopCheckCall;
+
+            didCallFlopFoldTurn += statistic.DidCallFlopFoldTurn;
+            couldCallFlopFoldTurn += statistic.CouldCallFlopFoldTurn;
+
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
@@ -3027,6 +3151,28 @@ namespace Model.Data
             btnDefendVsCOSteal = 0;
             btnFacedCOSteal = 0;
 
+            wtsdAsPFR = 0;
+            wtsdAsPFROpportunity = 0;
+            wtsdAs4Bettor = 0;
+            wtsdAs4BettorOpportunity = 0;
+
+            call4BetIP = 0;
+            faced4BetIP = 0;
+            call4BetOOP = 0;
+            faced4BetOOP = 0;
+
+            totalOverCallSRP = 0;
+            couldTotalOverCallSRP = 0;
+
+            limpedPotFlopStealIP = 0;
+            couldLimpedPotFlopStealIP = 0;
+
+            flopCheckCall = 0;
+            couldFlopCheckCall = 0;
+
+            didCallFlopFoldTurn = 0;
+            couldCallFlopFoldTurn = 0;
+
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
             CleanBetWhenCheckedToIn3BetPot();
@@ -3064,6 +3210,8 @@ namespace Model.Data
             positionOpenMinraiseUOPFR?.Add(indicator.positionOpenMinraiseUOPFR);
             positionDidSqueeze?.Add(indicator.positionDidSqueeze);
             positionCouldSqueeze?.Add(indicator.positionCouldSqueeze);
+            positionCall4Bet?.Add(indicator.positionCall4Bet);
+            positionFaced4Bet?.Add(indicator.positionFaced4Bet);
 
             if (gameNumberMax < indicator.gameNumberMax)
             {
@@ -3184,6 +3332,28 @@ namespace Model.Data
             btnReStealVsCOSteal += indicator.btnReStealVsCOSteal;
             btnDefendVsCOSteal += indicator.btnDefendVsCOSteal;
             btnFacedCOSteal += indicator.btnFacedCOSteal;
+
+            wtsdAsPFR += indicator.wtsdAsPFR;
+            wtsdAsPFROpportunity += indicator.wtsdAsPFROpportunity;
+            wtsdAs4Bettor += indicator.wtsdAs4Bettor;
+            wtsdAs4BettorOpportunity += indicator.wtsdAs4BettorOpportunity;
+
+            call4BetIP += indicator.call4BetIP;
+            faced4BetIP += indicator.faced4BetIP;
+            call4BetOOP += indicator.call4BetOOP;
+            faced4BetOOP += indicator.faced4BetOOP;
+
+            totalOverCallSRP += indicator.totalOverCallSRP;
+            couldTotalOverCallSRP += indicator.couldTotalOverCallSRP;
+
+            limpedPotFlopStealIP += indicator.limpedPotFlopStealIP;
+            couldLimpedPotFlopStealIP += indicator.couldLimpedPotFlopStealIP;
+
+            flopCheckCall += indicator.flopCheckCall;
+            couldFlopCheckCall += indicator.couldFlopCheckCall;
+
+            didCallFlopFoldTurn += indicator.didCallFlopFoldTurn;
+            couldCallFlopFoldTurn += indicator.couldCallFlopFoldTurn;
 
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);

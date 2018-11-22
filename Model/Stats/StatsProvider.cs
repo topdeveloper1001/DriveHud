@@ -60,9 +60,18 @@ namespace Model.Stats
             new StatBase { Stat = Stat.BetTurnWhenCheckedToSRP, PropertyName = nameof(Indicators.BetTurnWhenCheckedToSRP), CreateStatDto = x => new StatDto(x.BetTurnWhenCheckedToSRP, x.CouldBetTurnWhenCheckedToSRP) },
             new StatBase { Stat = Stat.BetRiverWhenCheckedToSRP, PropertyName = nameof(Indicators.BetRiverWhenCheckedToSRP), CreateStatDto = x => new StatDto(x.BetRiverWhenCheckedToSRP, x.CouldBetRiverWhenCheckedToSRP) },
             new StatBase { Stat = Stat.BTNDefendCORaise, PropertyName = nameof(Indicators.BTNDefendCORaise), CreateStatDto = x => new StatDto(x.Buttonstealdefended, x.Buttonstealfaced) },
+            new StatBase { Stat = Stat.Call4BetIP, PropertyName = nameof(Indicators.Call4BetIP), CreateStatDto = x => new StatDto(x.Call4BetIP, x.Faced4BetIP) },
+            new StatBase { Stat = Stat.Call4BetOOP, PropertyName = nameof(Indicators.Call4BetOOP), CreateStatDto = x => new StatDto(x.Call4BetOOP, x.Faced4BetOOP) },
+            new StatBase { Stat = Stat.Call4BetEP, PropertyName = nameof(Indicators.Call4BetEP), CreateStatDto = x => new StatDto(x.Call4BetEP, x.Faced4BetEP) },
+            new StatBase { Stat = Stat.Call4BetMP, PropertyName = nameof(Indicators.Call4BetMP), CreateStatDto = x => new StatDto(x.Call4BetMP, x.Faced4BetMP) },
+            new StatBase { Stat = Stat.Call4BetCO, PropertyName = nameof(Indicators.Call4BetCO), CreateStatDto = x => new StatDto(x.Call4BetCO, x.Faced4BetCO) },
+            new StatBase { Stat = Stat.Call4BetBTN, PropertyName = nameof(Indicators.Call4BetBTN), CreateStatDto = x => new StatDto(x.Call4BetBTN, x.Faced4BetBTN) },
+            new StatBase { Stat = Stat.Call4BetSB, PropertyName = nameof(Indicators.Call4BetSB), CreateStatDto = x => new StatDto(x.Call4BetSB, x.Faced4BetSB) },
+            new StatBase { Stat = Stat.Call4BetBB, PropertyName = nameof(Indicators.Call4BetBB), CreateStatDto = x => new StatDto(x.Call4BetBB, x.Faced4BetBB) },
             new StatBase { Stat = Stat.CalledCheckRaiseVsFlopCBet, PropertyName = nameof(Indicators.CalledCheckRaiseVsFlopCBet), CreateStatDto = x => new StatDto(x.CalledCheckRaiseVsFlopCBet, x.FacedCheckRaiseVsFlopCBet) },
             new StatBase { Stat = Stat.CallFlopCBetIP, PropertyName = nameof(Indicators.CallFlopCBetIP), CreateStatDto = x => new StatDto(x.CalledflopcontinuationbetIP, x.FacingflopcontinuationbetIP) },
             new StatBase { Stat = Stat.CallFlopCBetOOP, PropertyName = nameof(Indicators.CallFlopCBetOOP), CreateStatDto = x => new StatDto(x.CalledflopcontinuationbetOOP, x.FacingflopcontinuationbetOOP) },
+            new StatBase { Stat = Stat.CallFlopFoldTurn, PropertyName = nameof(Indicators.CallFlopFoldTurn), CreateStatDto = x => new StatDto(x.DidCallFlopFoldTurn, x.CouldCallFlopFoldTurn) },
             new StatBase { Stat = Stat.CalledTurnCheckRaise, PropertyName = nameof(Indicators.CalledTurnCheckRaise), CreateStatDto = x => new StatDto(x.CalledTurnCheckRaise, x.FacedTurnCheckRaise) },
             new StatBase { Stat = Stat.CallRiverRaise, PropertyName = nameof(Indicators.CallRiverRaise), CreateStatDto = x => new StatDto(x.CalledFacedRaiseRiver, x.FacedRaiseRiver) },
             new StatBase { Stat = Stat.CalledStealInSB, PropertyName = nameof(Indicators.CalledStealInSB), CreateStatDto = x => new StatDto(x.CalledStealInSB, x.FacedStealInSB) },
@@ -144,6 +153,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.FlopCBetVsOneOpp, PropertyName = nameof(Indicators.FlopCBetVsOneOpp), CreateStatDto = x => new StatDto(x.FlopContinuationBetVsOneOpponentMade, x.FlopContinuationBetVsOneOpponentPossible) },
             new StatBase { Stat = Stat.FlopCBetVsTwoOpp, PropertyName = nameof(Indicators.FlopCBetVsTwoOpp), CreateStatDto = x => new StatDto(x.FlopContinuationBetVsTwoOpponentsMade, x.FlopContinuationBetVsTwoOpponentsPossible) },
             new StatBase { Stat = Stat.FlopCheckBehind, PropertyName = nameof(Indicators.FlopCheckBehind), CreateStatDto = x => new StatDto(x.DidFlopCheckBehind, x.CouldFlopCheckBehind) },
+            new StatBase { Stat = Stat.FlopCheckCall, PropertyName = nameof(Indicators.FlopCheckCall), CreateStatDto = x => new StatDto(x.DidFlopCheckCall, x.CouldFlopCheckCall) },
             new StatBase { Stat = Stat.FlopCheckRaise, PropertyName = nameof(Indicators.FlopCheckRaise), CreateStatDto = x => new StatDto(x.DidFlopCheckRaise, x.Sawflop) },
             new StatBase { Stat = Stat.FoldFlop, PropertyName = nameof(Indicators.FoldFlop), CreateStatDto = x => new StatDto(x.FoldedFlop, x.FacedBetOnFlop) },
             new StatBase { Stat = Stat.FoldTo3Bet, PropertyName = nameof(Indicators.FoldToThreeBet), CreateStatDto = x => new StatDto(x.Foldedtothreebetpreflop, x.Facedthreebetpreflop) },
@@ -213,6 +223,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.LimpCOFoldToPFR, PropertyName = nameof(Indicators.LimpCOFoldToPFR), CreateStatDto = x => new StatDto(x.LimpCOFoldToPFR, x.LimpCOFacedPFR) },
             new StatBase { Stat = Stat.LimpBTNFoldToPFR, PropertyName = nameof(Indicators.LimpBTNFoldToPFR), CreateStatDto = x => new StatDto(x.LimpBTNFoldToPFR, x.LimpBTNFacedPFR) },
             new StatBase { Stat = Stat.LimpSBFoldToPFR, PropertyName = nameof(Indicators.LimpSBFoldToPFR), CreateStatDto = x => new StatDto(x.LimpSBFoldToPFR, x.LimpSBFacedPFR) },
+            new StatBase { Stat = Stat.LimpedPotFlopStealIP, PropertyName = nameof(Indicators.LimpedPotFlopStealIP), CreateStatDto = x => new StatDto(x.LimpedPotFlopStealIP, x.CouldLimpedPotFlopStealIP) },
             new StatBase { Stat = Stat.MRatio, PropertyName = nameof(Indicators.MRatio) },
             new StatBase { Stat = Stat.NetWon, PropertyName = nameof(Indicators.NetWon) },
             new StatBase { Stat = Stat.OpenMinraise, PropertyName = nameof(Indicators.OpenMinraise), CreateStatDto = x => new StatDto(x.OpenMinraise, x.Totalhands - x.NumberOfWalks) },
@@ -313,6 +324,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.Steal, PropertyName = nameof(Indicators.Steal), CreateStatDto = x => new StatDto(x.StealMade, x.StealPossible) },
             new StatBase { Stat = Stat.BTNReStealVsCOSteal, PropertyName = nameof(Indicators.BTNReStealVsCOSteal), CreateStatDto = x => new StatDto(x.BTNReStealVsCOSteal, x.BTNFacedCOSteal) },
             new StatBase { Stat = Stat.BTNDefendVsCOSteal, PropertyName = nameof(Indicators.BTNDefendVsCOSteal), CreateStatDto = x => new StatDto(x.BTNDefendVsCOSteal, x.BTNFacedCOSteal) },
+            new StatBase { Stat = Stat.OvercallBTNStealInBB, PropertyName = nameof(Indicators.OvercallBTNStealInBB), CreateStatDto = x => new StatDto(x.OvercallBTNStealInBB, x.CouldOvercallBTNStealInBB) },
             new StatBase { Stat = Stat.SBShoveOverLimpers1to8bb, PropertyName = nameof(Indicators.SBShoveOverLimpers1to8bb), CreateStatDto = x => new StatDto(x.SBShoveOverLimpers1to8bb, x.SBShoveOverLimpers) },
             new StatBase { Stat = Stat.SBShoveOverLimpers9to14bb, PropertyName = nameof(Indicators.SBShoveOverLimpers9to14bb), CreateStatDto = x => new StatDto(x.SBShoveOverLimpers9to14bb, x.SBShoveOverLimpers) },
             new StatBase { Stat = Stat.SBShoveOverLimpers15to25bb, PropertyName = nameof(Indicators.SBShoveOverLimpers15to25bb), CreateStatDto = x => new StatDto(x.SBShoveOverLimpers15to25bb, x.SBShoveOverLimpers) },
@@ -364,6 +376,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.TripleBarrelSRP, PropertyName = nameof(Indicators.TripleBarrelSRP), CreateStatDto = x => new StatDto(x.TripleBarrelSRP, x.CouldTripleBarrelSRP) },
             new StatBase { Stat = Stat.TripleBarrel3BetPot, PropertyName = nameof(Indicators.TripleBarrel3BetPot), CreateStatDto = x => new StatDto(x.TripleBarrel3BetPot, x.CouldTripleBarrel3BetPot) },
             new StatBase { Stat = Stat.TotalHands, PropertyName = nameof(Indicators.TotalHands) },
+            new StatBase { Stat = Stat.TotalOverCallSRP, PropertyName = nameof(Indicators.TotalOverCallSRP), CreateStatDto = x => new StatDto(x.TotalOverCallSRP, x.CouldTotalOverCallSRP) },
             new StatBase { Stat = Stat.TurnAF, PropertyName = nameof(Indicators.TurnAF) },
             new StatBase { Stat = Stat.TrueAggression, PropertyName = nameof(Indicators.TrueAggression), CreateStatDto = x => new StatDto(x.TotalAggressiveBets, x.Totalpostflopstreetsplayed - x.Flopcontinuationbetmade) },
             new StatBase { Stat = Stat.TurnAGG, PropertyName = nameof(Indicators.TurnAgg), CreateStatDto = x => new StatDto(x.TotalbetsTurn, x.TurnAggPossible) },
@@ -396,7 +409,9 @@ namespace Model.Stats
             new StatBase { Stat = Stat.WTSDAfterCallingPfr, PropertyName = nameof(Indicators.WTSDAfterCallingPfr), CreateStatDto = x => new StatDto(x.WTSDAfterCallingPfr, x.WTSDAfterCallingPfrOpportunity) },
             new StatBase { Stat = Stat.WTSDAfterNotCBettingFlopAsPfr, PropertyName = nameof(Indicators.WTSDAfterNotCBettingFlopAsPfr), CreateStatDto = x => new StatDto(x.WTSDAfterNotCBettingFlopAsPfr, x.WTSDAfterNotCBettingFlopAsPfrOpportunity) },
             new StatBase { Stat = Stat.WTSDAfterSeeingTurn, PropertyName = nameof(Indicators.WTSDAfterSeeingTurn), CreateStatDto = x => new StatDto(x.WTSDAfterSeeingTurn, x.SawTurn) },
+            new StatBase { Stat = Stat.WTSDAsPFR, PropertyName = nameof(Indicators.WTSDAsPFR), CreateStatDto = x => new StatDto(x.WTSDAsPFR, x.WTSDAsPFROpportunity) },
             new StatBase { Stat = Stat.WTSDAsPF3Bettor, PropertyName = nameof(Indicators.WTSDAsPF3Bettor), CreateStatDto = x => new StatDto(x.WTSDAsPF3Bettor, x.WTSDAsPF3BettorOpportunity) },
+            new StatBase { Stat = Stat.WTSDAs4Bettor, PropertyName = nameof(Indicators.WTSDAs4Bettor), CreateStatDto = x => new StatDto(x.WTSDAs4Bettor, x.WTSDAs4BettorOpportunity) },
             new StatBase { Stat = Stat.WWSF, PropertyName = nameof(Indicators.WSWSF), CreateStatDto = x => new StatDto(x.Wonhandwhensawflop, x.Sawflop) }
             }).ToDictionary(x => x.Stat)
         );
@@ -546,6 +561,7 @@ namespace Model.Stats
 
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.BTNReStealVsCOSteal },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.BTNDefendVsCOSteal },
+                new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.OvercallBTNStealInBB },
 
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.FoldToStealInSB },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.FoldToStealInBB },
@@ -625,6 +641,14 @@ namespace Model.Stats
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetBB },
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.FourBetVsBlind3Bet },
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.CBetInFourBetPot },
+                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.Call4BetIP },
+                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.Call4BetOOP },
+                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.Call4BetEP },
+                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.Call4BetMP },
+                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.Call4BetCO },
+                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.Call4BetBTN },
+                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.Call4BetSB },
+                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.Call4BetBB },
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.FoldToCBetFromFourBetPot },
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.FoldTo4Bet },
 
@@ -704,10 +728,12 @@ namespace Model.Stats
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.EPShoveOverLimpers15to25bb },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.EPShoveOverLimpers26to50bb },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.EPShoveOverLimpers51plusbb },
+                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.TotalOverCallSRP },
 
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.WWSF },
-                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FlopCheckRaise },
+                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FlopCheckCall },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FlopCheckBehind },
+                new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FlopCheckRaise },                                
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.CBet },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.CBetThenFoldFlopSRP },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.FloatFlop },
@@ -768,6 +794,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.FoldTurn },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.FoldToTurnProbeIP },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnCheckRaise },
+                new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.CallFlopFoldTurn },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnAF },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnAGG },
                 new StatInfo { GroupName = "7", StatInfoGroup = statInfoGroups[6], Stat = Stat.TurnBet },
@@ -845,6 +872,7 @@ namespace Model.Stats
                 new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.LimpCOFoldToPFR },
                 new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.LimpBTNFoldToPFR },
                 new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.LimpSBFoldToPFR },
+                new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.LimpedPotFlopStealIP },
 
                 new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCallVsOpenRaiseBTN },
                 new StatInfo { GroupName = "93", StatInfoGroup = statInfoGroups[11], Stat = Stat.ColdCallVsOpenRaiseCO },
@@ -867,7 +895,9 @@ namespace Model.Stats
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.WTSDAfterCallingPfr },
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.WTSDAfterNotCBettingFlopAsPfr },
                 new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.WTSDAfterSeeingTurn },
-                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.WTSDAsPF3Bettor }
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.WTSDAsPFR },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.WTSDAsPF3Bettor },
+                new StatInfo { GroupName = "94", StatInfoGroup = statInfoGroups[12], Stat = Stat.WTSDAs4Bettor }
             };
 
             return statsCollection;

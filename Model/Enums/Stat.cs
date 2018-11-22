@@ -372,7 +372,6 @@ namespace Model.Enums
         FourBetVsBlind3Bet,
         BTNReStealVsCOSteal,
         BTNDefendVsCOSteal,
-
         FoldToStealInSB,
         FoldToStealInBB,
         CalledStealInSB,
@@ -384,6 +383,21 @@ namespace Model.Enums
         CalledBTNStealInSB,
         CalledBTNStealInBB,
         CalledCOStealInSB,
-        CalledCOStealInBB
+        CalledCOStealInBB,
+        OvercallBTNStealInBB,
+        WTSDAsPFR,
+        WTSDAs4Bettor,
+        Call4BetIP,
+        Call4BetOOP,
+        Call4BetEP,
+        Call4BetMP,
+        Call4BetCO,
+        Call4BetBTN,
+        Call4BetSB,
+        Call4BetBB,
+        TotalOverCallSRP,
+        LimpedPotFlopStealIP,
+        FlopCheckCall,
+        CallFlopFoldTurn
     }
 }

@@ -1245,40 +1245,85 @@
   <data name="Reports_Column_SqueezeSBVsMPPFR" xml:space="preserve">
     <value>SB Squeeze vs MP PFR%</value>
   </data>
-  <data name="Reports_Columns_CalledBTNStealInBB" xml:space="preserve">
+  <data name="Reports_Column_Call4BetBB" xml:space="preserve">
+    <value>Call 4-Bet BB%</value>
+  </data>
+  <data name="Reports_Column_Call4BetBTN" xml:space="preserve">
+    <value>Call 4-Bet BTN%</value>
+  </data>
+  <data name="Reports_Column_Call4BetCO" xml:space="preserve">
+    <value>Call 4-Bet CO%</value>
+  </data>
+  <data name="Reports_Column_Call4BetEP" xml:space="preserve">
+    <value>Call 4-Bet EP%</value>
+  </data>
+  <data name="Reports_Column_Call4BetIP" xml:space="preserve">
+    <value>Call 4-Bet IP%</value>
+  </data>
+  <data name="Reports_Column_Call4BetMP" xml:space="preserve">
+    <value>Call 4-Bet MP%</value>
+  </data>
+  <data name="Reports_Column_Call4BetOOP" xml:space="preserve">
+    <value>Call 4-Bet OOP%</value>
+  </data>
+  <data name="Reports_Column_Call4BetSB" xml:space="preserve">
+    <value>Call 4-Bet SB%</value>
+  </data>
+  <data name="Reports_Column_CalledBTNStealInBB" xml:space="preserve">
     <value>BB Call BTN Steal%</value>
   </data>
-  <data name="Reports_Columns_CalledBTNStealInSB" xml:space="preserve">
+  <data name="Reports_Column_CalledBTNStealInSB" xml:space="preserve">
     <value>SB Call BTN Steal%</value>
   </data>
-  <data name="Reports_Columns_CalledCOStealInBB" xml:space="preserve">
+  <data name="Reports_Column_CalledCOStealInBB" xml:space="preserve">
     <value>BB Call CO Steal%</value>
   </data>
-  <data name="Reports_Columns_CalledCOStealInSB" xml:space="preserve">
+  <data name="Reports_Column_CalledCOStealInSB" xml:space="preserve">
     <value>SB Call CO Steal%</value>
   </data>
-  <data name="Reports_Columns_CalledStealInBB" xml:space="preserve">
+  <data name="Reports_Column_CalledStealInBB" xml:space="preserve">
     <value>BB Call Steal%</value>
   </data>
-  <data name="Reports_Columns_CalledStealInSB" xml:space="preserve">
+  <data name="Reports_Column_CalledStealInSB" xml:space="preserve">
     <value>SB Call Steal%</value>
   </data>
-  <data name="Reports_Columns_FoldToBTNStealInBB" xml:space="preserve">
+  <data name="Reports_Column_CallFlopFoldTurn" xml:space="preserve">
+    <value>Call Flop &amp; Fold Turn%</value>
+  </data>
+  <data name="Reports_Column_FlopCheckCall" xml:space="preserve">
+    <value>Flop Check-Call%</value>
+  </data>
+  <data name="Reports_Column_FoldToBTNStealInBB" xml:space="preserve">
     <value>BB Fold to BTN Steal%</value>
   </data>
-  <data name="Reports_Columns_FoldToBTNStealInSB" xml:space="preserve">
+  <data name="Reports_Column_FoldToBTNStealInSB" xml:space="preserve">
     <value>SB Fold to BTN Steal%</value>
   </data>
-  <data name="Reports_Columns_FoldToCOStealInBB" xml:space="preserve">
+  <data name="Reports_Column_FoldToCOStealInBB" xml:space="preserve">
     <value>BB Fold to CO Steal%</value>
   </data>
-  <data name="Reports_Columns_FoldToCOStealInSB" xml:space="preserve">
+  <data name="Reports_Column_FoldToCOStealInSB" xml:space="preserve">
     <value>SB Fold to CO Steal%</value>
   </data>
-  <data name="Reports_Columns_FoldToStealInBB" xml:space="preserve">
+  <data name="Reports_Column_FoldToStealInBB" xml:space="preserve">
     <value>BB Fold to Steal%</value>
   </data>
-  <data name="Reports_Columns_FoldToStealInSB" xml:space="preserve">
+  <data name="Reports_Column_FoldToStealInSB" xml:space="preserve">
     <value>SB Fold to Steal%</value>
+  </data>
+  <data name="Reports_Column_LimpedPotFlopStealIP" xml:space="preserve">
+    <value>Limped pot Flop Steal IP%</value>
+  </data>
+  <data name="Reports_Column_OvercallBTNStealInBB" xml:space="preserve">
+    <value>BB overcall BTN Steal%</value>
+  </data>
+  <data name="Reports_Column_TotalOverCallSRP" xml:space="preserve">
+    <value>Total overcall SRP%</value>
+  </data>
+  <data name="Reports_Column_WTSDAs4Bettor" xml:space="preserve">
+    <value>WTSD as PF 4-Bettor%</value>
+  </data>
+  <data name="Reports_Column_WTSDAsPFR" xml:space="preserve">
+    <value>WTSD as PFR%</value>
   </data>
 </root>

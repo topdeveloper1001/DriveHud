@@ -1722,9 +1722,7 @@ namespace Model
         }
 
         private static void CalculateColdCall3Bet(ConditionalBet coldCall3Bet, List<HandAction> preflops, string player)
-        {
-            var raisers = new List<string>();
-
+        {         
             bool canThreeBet = false;
             bool wasThreeBet = false;
 
@@ -1765,9 +1763,7 @@ namespace Model
         }
 
         private static void CalculateColdCall4Bet(ConditionalBet coldCall4Bet, List<HandAction> preflops, string player)
-        {
-            var raisers = new List<string>();
-
+        {           
             bool canThreeBet = false;
             bool wasThreeBet = false;
             bool wasFourBet = false;
