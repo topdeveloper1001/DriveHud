@@ -2139,6 +2139,84 @@ namespace Model.Data
 
         #endregion;
 
+        #region Squeeze vs PFR
+
+        public virtual decimal SqueezeBBVsBTNPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeBBVsBTNPFR), Statistics.Sum(x => x.CouldSqueezeBBVsBTNPFR));
+
+        public virtual decimal SqueezeBBVsCOPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeBBVsCOPFR), Statistics.Sum(x => x.CouldSqueezeBBVsCOPFR));
+
+        public virtual decimal SqueezeBBVsMPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeBBVsMPPFR), Statistics.Sum(x => x.CouldSqueezeBBVsMPPFR));
+
+        public virtual decimal SqueezeBBVsEPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeBBVsEPPFR), Statistics.Sum(x => x.CouldSqueezeBBVsEPPFR));
+
+        public virtual decimal SqueezeSBVsCOPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeSBVsCOPFR), Statistics.Sum(x => x.CouldSqueezeSBVsCOPFR));
+
+        public virtual decimal SqueezeSBVsMPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeSBVsMPPFR), Statistics.Sum(x => x.CouldSqueezeSBVsMPPFR));
+
+        public virtual decimal SqueezeSBVsEPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeSBVsEPPFR), Statistics.Sum(x => x.CouldSqueezeSBVsEPPFR));
+
+        public virtual decimal SqueezeBTNVsMPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeBTNVsMPPFR), Statistics.Sum(x => x.CouldSqueezeBTNVsMPPFR));
+
+        public virtual decimal SqueezeBTNVsEPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeBTNVsEPPFR), Statistics.Sum(x => x.CouldSqueezeBTNVsEPPFR));
+
+        public virtual decimal SqueezeCOVsMPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeCOVsMPPFR), Statistics.Sum(x => x.CouldSqueezeCOVsMPPFR));
+
+        public virtual decimal SqueezeCOVsEPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeCOVsEPPFR), Statistics.Sum(x => x.CouldSqueezeCOVsEPPFR));
+
+        public virtual decimal SqueezeMPVsEPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeMPVsEPPFR), Statistics.Sum(x => x.CouldSqueezeMPVsEPPFR));
+
+        public virtual decimal SqueezeEPVsEPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeEPVsEPPFR), Statistics.Sum(x => x.CouldSqueezeEPVsEPPFR));
+
+        #endregion
+
+        #region Fold to Squeeze as Cold Caller
+
+        public virtual decimal FoldToSqueezeAsColdCaller => GetPercentage(Statistics.Sum(x => x.FoldToSqueezeAsColdCaller), Statistics.Sum(x => x.FacedSqueezeAsColdCaller));
+
+        #endregion
+
+        #region 4-Bet vs Blind 3-Bet%
+
+        public virtual decimal FourBetVsBlind3Bet => GetPercentage(Statistics.Sum(x => x.Did4BetVsBlind3Bet), Statistics.Sum(x => x.Could4BetVsBlind3Bet));
+
+        #endregion
+
+        #region BTN Re/Def vs CO Steal
+
+        public virtual decimal BTNReStealVsCOSteal => GetPercentage(Statistics.Sum(x => x.BTNReStealVsCOSteal), Statistics.Sum(x => x.BTNFacedCOSteal));
+
+        public virtual decimal BTNDefendVsCOSteal => GetPercentage(Statistics.Sum(x => x.BTNDefendVsCOSteal), Statistics.Sum(x => x.BTNFacedCOSteal));
+
+        #endregion
+
+        #region Positional Call & Fold to Steal
+
+        public virtual decimal FoldToStealInSB => GetPercentage(Statistics.Sum(x => x.FoldToStealInSB), Statistics.Sum(x => x.FacedStealInSB));
+
+        public virtual decimal FoldToStealInBB => GetPercentage(Statistics.Sum(x => x.FoldToStealInBB), Statistics.Sum(x => x.FacedStealInBB));
+
+        public virtual decimal CalledStealInSB => GetPercentage(Statistics.Sum(x => x.CalledStealInSB), Statistics.Sum(x => x.FacedStealInSB));
+
+        public virtual decimal CalledStealInBB => GetPercentage(Statistics.Sum(x => x.CalledStealInBB), Statistics.Sum(x => x.FacedStealInBB));
+
+        public virtual decimal FoldToBTNStealInSB => GetPercentage(Statistics.Sum(x => x.FoldToBTNStealInSB), Statistics.Sum(x => x.FacedBTNStealInSB));
+
+        public virtual decimal FoldToBTNStealInBB => GetPercentage(Statistics.Sum(x => x.FoldToBTNStealInBB), Statistics.Sum(x => x.FacedBTNStealInBB));
+
+        public virtual decimal FoldToCOStealInSB => GetPercentage(Statistics.Sum(x => x.FoldToCOStealInSB), Statistics.Sum(x => x.FacedCOStealInSB));
+
+        public virtual decimal FoldToCOStealInBB => GetPercentage(Statistics.Sum(x => x.FoldToCOStealInBB), Statistics.Sum(x => x.FacedCOStealInBB));
+
+        public virtual decimal CalledBTNStealInSB => GetPercentage(Statistics.Sum(x => x.CalledBTNStealInSB), Statistics.Sum(x => x.FacedBTNStealInSB));
+
+        public virtual decimal CalledBTNStealInBB => GetPercentage(Statistics.Sum(x => x.CalledBTNStealInBB), Statistics.Sum(x => x.FacedBTNStealInBB));
+
+        public virtual decimal CalledCOStealInSB => GetPercentage(Statistics.Sum(x => x.CalledCOStealInSB), Statistics.Sum(x => x.FacedCOStealInSB));
+
+        public virtual decimal CalledCOStealInBB => GetPercentage(Statistics.Sum(x => x.CalledCOStealInBB), Statistics.Sum(x => x.FacedCOStealInBB));
+
+        #endregion
+
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
         {
             foreach (var statistic in statistics)

@@ -1891,7 +1891,9 @@ namespace Model
         private static void CalculateSqueeze(ConditionalBet squeezBet, IList<HandAction> preflops, string player)
         {
             List<string> squeezePlayers = new List<string>();
+
             bool wasSqueezeRaise = false, wasSqueezeCall = false;
+
             foreach (var action in preflops)
             {
                 if (wasSqueezeRaise)
@@ -1901,13 +1903,16 @@ namespace Model
                         if (!squeezBet.Happened)
                         {
                             if (squeezePlayers.Contains(action.PlayerName))
+                            {
                                 return;
+                            }
 
                             squeezBet.Happened = action.IsRaise();
 
                             if (action.PlayerName == player)
                             {
                                 squeezBet.Possible = true;
+
                                 if (action.IsRaise())
                                 {
                                     squeezBet.Made = true;
@@ -1956,7 +1961,9 @@ namespace Model
                 else
                 {
                     if (!action.IsRaise())
+                    {
                         continue;
+                    }
 
                     wasSqueezeRaise = true;
                     squeezePlayers.Add(action.PlayerName);

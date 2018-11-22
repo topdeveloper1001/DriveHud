@@ -1194,4 +1194,91 @@
   <data name="Reports_Column_SqueezeSB" xml:space="preserve">
     <value>SB Squeeze%</value>
   </data>
+  <data name="Reports_Column_4BetVsBlind3Bet" xml:space="preserve">
+    <value>4-Bet vs Blind 3-Bet%</value>
+  </data>
+  <data name="Reports_Column_BTNDefendVsCOSteal" xml:space="preserve">
+    <value>BTN Defend vs. CO Steal%</value>
+  </data>
+  <data name="Reports_Column_BTNReStealVsCOSteal" xml:space="preserve">
+    <value>BTN Re-steal vs. CO steal%</value>
+  </data>
+  <data name="Reports_Column_FoldToSqueezeAsColdCaller" xml:space="preserve">
+    <value>Fold to Squeeze as Cold Caller%</value>
+  </data>
+  <data name="Reports_Column_SqueezeBBVsBTNPFR" xml:space="preserve">
+    <value>BB Squeeze vs BTN PFR%</value>
+  </data>
+  <data name="Reports_Column_SqueezeBBVsCOPFR" xml:space="preserve">
+    <value>BB Squeeze vs CO PFR%</value>
+  </data>
+  <data name="Reports_Column_SqueezeBBVsEPPFR" xml:space="preserve">
+    <value>BB Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Reports_Column_SqueezeBBVsMPPFR" xml:space="preserve">
+    <value>BB Squeeze vs MP PFR%</value>
+  </data>
+  <data name="Reports_Column_SqueezeBTNVsEPPFR" xml:space="preserve">
+    <value>BTN Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Reports_Column_SqueezeBTNVsMPPFR" xml:space="preserve">
+    <value>BTN Squeeze vs MP PFR%</value>
+  </data>
+  <data name="Reports_Column_SqueezeCOVsEPPFR" xml:space="preserve">
+    <value>CO Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Reports_Column_SqueezeCOVsMPPFR" xml:space="preserve">
+    <value>CO Squeeze vs MP PFR%</value>
+  </data>
+  <data name="Reports_Column_SqueezeEPVsEPPFR" xml:space="preserve">
+    <value>EP Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Reports_Column_SqueezeMPVsEPPFR" xml:space="preserve">
+    <value>MP Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Reports_Column_SqueezeSBVsCOPFR" xml:space="preserve">
+    <value>SB Squeeze vs CO PFR%</value>
+  </data>
+  <data name="Reports_Column_SqueezeSBVsEPPFR" xml:space="preserve">
+    <value>SB Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Reports_Column_SqueezeSBVsMPPFR" xml:space="preserve">
+    <value>SB Squeeze vs MP PFR%</value>
+  </data>
+  <data name="Reports_Columns_CalledBTNStealInBB" xml:space="preserve">
+    <value>BB Call BTN Steal%</value>
+  </data>
+  <data name="Reports_Columns_CalledBTNStealInSB" xml:space="preserve">
+    <value>SB Call BTN Steal%</value>
+  </data>
+  <data name="Reports_Columns_CalledCOStealInBB" xml:space="preserve">
+    <value>BB Call CO Steal%</value>
+  </data>
+  <data name="Reports_Columns_CalledCOStealInSB" xml:space="preserve">
+    <value>SB Call CO Steal%</value>
+  </data>
+  <data name="Reports_Columns_CalledStealInBB" xml:space="preserve">
+    <value>BB Call Steal%</value>
+  </data>
+  <data name="Reports_Columns_CalledStealInSB" xml:space="preserve">
+    <value>SB Call Steal%</value>
+  </data>
+  <data name="Reports_Columns_FoldToBTNStealInBB" xml:space="preserve">
+    <value>BB Fold to BTN Steal%</value>
+  </data>
+  <data name="Reports_Columns_FoldToBTNStealInSB" xml:space="preserve">
+    <value>SB Fold to BTN Steal%</value>
+  </data>
+  <data name="Reports_Columns_FoldToCOStealInBB" xml:space="preserve">
+    <value>BB Fold to CO Steal%</value>
+  </data>
+  <data name="Reports_Columns_FoldToCOStealInSB" xml:space="preserve">
+    <value>SB Fold to CO Steal%</value>
+  </data>
+  <data name="Reports_Columns_FoldToStealInBB" xml:space="preserve">
+    <value>BB Fold to Steal%</value>
+  </data>
+  <data name="Reports_Columns_FoldToStealInSB" xml:space="preserve">
+    <value>SB Fold to Steal%</value>
+  </data>
 </root>

@@ -232,6 +232,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4-Bet vs Blind 3-Bet%.
+        /// </summary>
+        internal static string Reports_Column_4BetVsBlind3Bet {
+            get {
+                return ResourceManager.GetString("Reports_Column_4BetVsBlind3Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 5-Bet%.
         /// </summary>
         internal static string Reports_Column_5Bet {
@@ -403,6 +412,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BTN Defend vs. CO Steal%.
+        /// </summary>
+        internal static string Reports_Column_BTNDefendVsCOSteal {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNDefendVsCOSteal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BTN minraise UO-PFR%.
         /// </summary>
         internal static string Reports_Column_BTNOpenMinraiseUOPFR {
@@ -453,6 +471,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_BTNOpenShove9to14bbUOPot {
             get {
                 return ResourceManager.GetString("Reports_Column_BTNOpenShove9to14bbUOPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Re-steal vs. CO steal%.
+        /// </summary>
+        internal static string Reports_Column_BTNReStealVsCOSteal {
+            get {
+                return ResourceManager.GetString("Reports_Column_BTNReStealVsCOSteal", resourceCulture);
             }
         }
         
@@ -1798,6 +1825,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to Squeeze as Cold Caller%.
+        /// </summary>
+        internal static string Reports_Column_FoldToSqueezeAsColdCaller {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldToSqueezeAsColdCaller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to Triple Barrel 4-Bet Pot%.
         /// </summary>
         internal static string Reports_Column_FoldToTripleBarrel3BetPot {
@@ -2653,11 +2689,65 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BB Squeeze vs BTN PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeBBVsBTNPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeBBVsBTNPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Squeeze vs CO PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeBBVsCOPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeBBVsCOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Squeeze vs EP PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeBBVsEPPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeBBVsEPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Squeeze vs MP PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeBBVsMPPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeBBVsMPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BTN Squeeze%.
         /// </summary>
         internal static string Reports_Column_SqueezeBTN {
             get {
                 return ResourceManager.GetString("Reports_Column_SqueezeBTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Squeeze vs EP PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeBTNVsEPPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeBTNVsEPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Squeeze vs MP PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeBTNVsMPPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeBTNVsMPPFR", resourceCulture);
             }
         }
         
@@ -2671,11 +2761,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CO Squeeze vs EP PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeCOVsEPPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeCOVsEPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO Squeeze vs MP PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeCOVsMPPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeCOVsMPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to EP Squeeze%.
         /// </summary>
         internal static string Reports_Column_SqueezeEP {
             get {
                 return ResourceManager.GetString("Reports_Column_SqueezeEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Squeeze vs EP PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeEPVsEPPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeEPVsEPPFR", resourceCulture);
             }
         }
         
@@ -2689,11 +2806,47 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MP Squeeze vs EP PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeMPVsEPPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeMPVsEPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SB Squeeze%.
         /// </summary>
         internal static string Reports_Column_SqueezeSB {
             get {
                 return ResourceManager.GetString("Reports_Column_SqueezeSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Squeeze vs CO PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeSBVsCOPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeSBVsCOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Squeeze vs EP PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeSBVsEPPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeSBVsEPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Squeeze vs MP PFR%.
+        /// </summary>
+        internal static string Reports_Column_SqueezeSBVsMPPFR {
+            get {
+                return ResourceManager.GetString("Reports_Column_SqueezeSBVsMPPFR", resourceCulture);
             }
         }
         
@@ -3288,6 +3441,114 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_WTSDAsPF3Bettor {
             get {
                 return ResourceManager.GetString("Reports_Column_WTSDAsPF3Bettor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Call BTN Steal%.
+        /// </summary>
+        internal static string Reports_Columns_CalledBTNStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Columns_CalledBTNStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Call BTN Steal%.
+        /// </summary>
+        internal static string Reports_Columns_CalledBTNStealInSB {
+            get {
+                return ResourceManager.GetString("Reports_Columns_CalledBTNStealInSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Call CO Steal%.
+        /// </summary>
+        internal static string Reports_Columns_CalledCOStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Columns_CalledCOStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Call CO Steal%.
+        /// </summary>
+        internal static string Reports_Columns_CalledCOStealInSB {
+            get {
+                return ResourceManager.GetString("Reports_Columns_CalledCOStealInSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Call Steal%.
+        /// </summary>
+        internal static string Reports_Columns_CalledStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Columns_CalledStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Call Steal%.
+        /// </summary>
+        internal static string Reports_Columns_CalledStealInSB {
+            get {
+                return ResourceManager.GetString("Reports_Columns_CalledStealInSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Fold to BTN Steal%.
+        /// </summary>
+        internal static string Reports_Columns_FoldToBTNStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Columns_FoldToBTNStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Fold to BTN Steal%.
+        /// </summary>
+        internal static string Reports_Columns_FoldToBTNStealInSB {
+            get {
+                return ResourceManager.GetString("Reports_Columns_FoldToBTNStealInSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Fold to CO Steal%.
+        /// </summary>
+        internal static string Reports_Columns_FoldToCOStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Columns_FoldToCOStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Fold to CO Steal%.
+        /// </summary>
+        internal static string Reports_Columns_FoldToCOStealInSB {
+            get {
+                return ResourceManager.GetString("Reports_Columns_FoldToCOStealInSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Fold to Steal%.
+        /// </summary>
+        internal static string Reports_Columns_FoldToStealInBB {
+            get {
+                return ResourceManager.GetString("Reports_Columns_FoldToStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Fold to Steal%.
+        /// </summary>
+        internal static string Reports_Columns_FoldToStealInSB {
+            get {
+                return ResourceManager.GetString("Reports_Columns_FoldToStealInSB", resourceCulture);
             }
         }
     }

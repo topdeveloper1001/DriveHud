@@ -3341,6 +3341,403 @@ namespace Model.Data
 
         #endregion
 
+        #region  Squeeze vs PFR
+
+        public virtual StatDto SqueezeBBVsBTNPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeBBVsBTNPFR,
+                    Occurred = didSqueezeBBVsBTNPFR,
+                    CouldOccurred = couldSqueezeBBVsBTNPFR,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeBBVsCOPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeBBVsCOPFR,
+                    Occurred = didSqueezeBBVsCOPFR,
+                    CouldOccurred = couldSqueezeBBVsCOPFR,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeBBVsMPPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeBBVsMPPFR,
+                    Occurred = didSqueezeBBVsMPPFR,
+                    CouldOccurred = couldSqueezeBBVsMPPFR,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeBBVsEPPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeBBVsEPPFR,
+                    Occurred = didSqueezeBBVsEPPFR,
+                    CouldOccurred = couldSqueezeBBVsEPPFR,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeSBVsCOPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeSBVsCOPFR,
+                    Occurred = didSqueezeSBVsCOPFR,
+                    CouldOccurred = couldSqueezeSBVsCOPFR,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeSBVsMPPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeSBVsMPPFR,
+                    Occurred = didSqueezeSBVsMPPFR,
+                    CouldOccurred = couldSqueezeSBVsMPPFR,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeSBVsEPPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeSBVsEPPFR,
+                    Occurred = didSqueezeSBVsEPPFR,
+                    CouldOccurred = couldSqueezeSBVsEPPFR,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeBTNVsMPPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeBTNVsMPPFR,
+                    Occurred = didSqueezeBTNVsMPPFR,
+                    CouldOccurred = couldSqueezeBTNVsMPPFR,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeBTNVsEPPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeBTNVsEPPFR,
+                    Occurred = didSqueezeBTNVsEPPFR,
+                    CouldOccurred = couldSqueezeBTNVsEPPFR,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeCOVsMPPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeCOVsMPPFR,
+                    Occurred = didSqueezeCOVsMPPFR,
+                    CouldOccurred = couldSqueezeCOVsMPPFR,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeCOVsEPPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeCOVsEPPFR,
+                    Occurred = didSqueezeCOVsEPPFR,
+                    CouldOccurred = couldSqueezeCOVsEPPFR,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeMPVsEPPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeMPVsEPPFR,
+                    Occurred = didSqueezeMPVsEPPFR,
+                    CouldOccurred = couldSqueezeMPVsEPPFR,
+                };
+            }
+        }
+
+        public virtual StatDto SqueezeEPVsEPPFRObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SqueezeEPVsEPPFR,
+                    Occurred = didSqueezeEPVsEPPFR,
+                    CouldOccurred = couldSqueezeEPVsEPPFR,
+                };
+            }
+        }
+
+        #endregion
+
+        #region Fold to Squeeze as Cold Caller
+
+        public virtual StatDto FoldToSqueezeAsColdCallerObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToSqueezeAsColdCaller,
+                    Occurred = foldToSqueezeAsColdCaller,
+                    CouldOccurred = facedSqueezeAsColdCaller
+                };
+            }
+        }
+
+        #endregion
+
+        #region 4-Bet vs Blind 3-Bet%
+
+        public virtual StatDto FourBetVsBlind3BetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetVsBlind3Bet,
+                    Occurred = did4BetVsBlind3Bet,
+                    CouldOccurred = could4BetVsBlind3Bet
+                };
+            }
+        }
+
+        #endregion
+
+        #region BTN Re/Def vs CO Steal
+
+        public virtual StatDto BTNReStealVsCOStealObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNReStealVsCOSteal,
+                    Occurred = btnReStealVsCOSteal,
+                    CouldOccurred = btnFacedCOSteal
+                };
+            }
+        }
+
+        public virtual StatDto BTNDefendVsCOStealObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNDefendVsCOSteal,
+                    Occurred = btnDefendVsCOSteal,
+                    CouldOccurred = btnFacedCOSteal
+                };
+            }
+        }
+
+        #endregion
+
+        #region Positional Call & Fold to Steal
+
+        public virtual StatDto FoldToStealInSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToStealInSB,
+                    Occurred = foldToStealInSB,
+                    CouldOccurred = facedStealInSB
+                };
+            }
+        }
+
+        public virtual StatDto FoldToStealInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToStealInBB,
+                    Occurred = foldToStealInBB,
+                    CouldOccurred = facedStealInBB
+                };
+            }
+        }
+
+        public virtual StatDto CalledStealInSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CalledStealInSB,
+                    Occurred = calledStealInSB,
+                    CouldOccurred = facedStealInSB
+                };
+            }
+        }
+
+        public virtual StatDto CalledStealInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CalledStealInBB,
+                    Occurred = calledStealInBB,
+                    CouldOccurred = facedStealInBB
+                };
+            }
+        }
+
+        public virtual StatDto FoldToBTNStealInSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToBTNStealInSB,
+                    Occurred = foldToBTNStealInSB,
+                    CouldOccurred = facedBTNStealInSB
+                };
+            }
+        }
+
+        public virtual StatDto FoldToBTNStealInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToBTNStealInBB,
+                    Occurred = foldToBTNStealInBB,
+                    CouldOccurred = facedBTNStealInBB
+                };
+            }
+        }
+
+        public virtual StatDto FoldToCOStealInSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToCOStealInSB,
+                    Occurred = foldToCOStealInSB,
+                    CouldOccurred = facedCOStealInSB
+                };
+            }
+        }
+
+        public virtual StatDto FoldToCOStealInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldToCOStealInBB,
+                    Occurred = foldToCOStealInBB,
+                    CouldOccurred = facedCOStealInBB
+                };
+            }
+        }
+
+        public virtual StatDto CalledBTNStealInSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CalledBTNStealInSB,
+                    Occurred = calledBTNStealInSB,
+                    CouldOccurred = facedBTNStealInSB
+                };
+            }
+        }
+
+        public virtual StatDto CalledBTNStealInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CalledBTNStealInBB,
+                    Occurred = calledBTNStealInBB,
+                    CouldOccurred = facedBTNStealInBB
+                };
+            }
+        }
+
+        public virtual StatDto CalledCOStealInSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CalledCOStealInSB,
+                    Occurred = calledCOStealInSB,
+                    CouldOccurred = facedCOStealInSB
+                };
+            }
+        }
+
+        public virtual StatDto CalledCOStealInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CalledCOStealInBB,
+                    Occurred = calledCOStealInBB,
+                    CouldOccurred = facedCOStealInBB
+                };
+            }
+        }
+
+        #endregion
+
         #endregion
 
         public virtual StatDto CheckRaiseFlopAsPFRObject

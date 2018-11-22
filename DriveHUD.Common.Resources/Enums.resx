@@ -1544,4 +1544,91 @@
   <data name="Enum_Stat_SqueezeSB" xml:space="preserve">
     <value>SB Squeeze%</value>
   </data>
+  <data name="Enum_Stat_BTNDefendVsCOSteal" xml:space="preserve">
+    <value>BTN Defend vs. CO Steal%</value>
+  </data>
+  <data name="Enum_Stat_BTNReStealVsCOSteal" xml:space="preserve">
+    <value>BTN Re-steal vs. CO steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToSqueezeAsColdCaller" xml:space="preserve">
+    <value>Fold to Squeeze as Cold Caller%</value>
+  </data>
+  <data name="Enum_Stat_FourBetVsBlind3Bet" xml:space="preserve">
+    <value>4-Bet vs Blind 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBBVsBTNPFR" xml:space="preserve">
+    <value>BB Squeeze vs BTN PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBBVsCOPFR" xml:space="preserve">
+    <value>BB Squeeze vs CO PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBBVsEPPFR" xml:space="preserve">
+    <value>BB Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBBVsMPPFR" xml:space="preserve">
+    <value>BB Squeeze vs MP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBTNVsEPPFR" xml:space="preserve">
+    <value>BTN Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBTNVsMPPFR" xml:space="preserve">
+    <value>BTN Squeeze vs MP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeCOVsEPPFR" xml:space="preserve">
+    <value>CO Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeCOVsMPPFR" xml:space="preserve">
+    <value>CO Squeeze vs MP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeEPVsEPPFR" xml:space="preserve">
+    <value>EP Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeMPVsEPPFR" xml:space="preserve">
+    <value>MP Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeSBVsCOPFR" xml:space="preserve">
+    <value>SB Squeeze vs CO PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeSBVsEPPFR" xml:space="preserve">
+    <value>SB Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeSBVsMPPFR" xml:space="preserve">
+    <value>SB Squeeze vs MP PFR%</value>
+  </data>
+  <data name="Enum_Stat_CalledBTNStealInBB" xml:space="preserve">
+    <value>BB Call BTN Steal%</value>
+  </data>
+  <data name="Enum_Stat_CalledBTNStealInSB" xml:space="preserve">
+    <value>SB Call BTN Steal%</value>
+  </data>
+  <data name="Enum_Stat_CalledCOStealInBB" xml:space="preserve">
+    <value>BB Call CO Steal%</value>
+  </data>
+  <data name="Enum_Stat_CalledCOStealInSB" xml:space="preserve">
+    <value>SB Call CO Steal%</value>
+  </data>
+  <data name="Enum_Stat_CalledStealInBB" xml:space="preserve">
+    <value>BB Call Steal%</value>
+  </data>
+  <data name="Enum_Stat_CalledStealInSB" xml:space="preserve">
+    <value>SB Call Steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToBTNStealInBB" xml:space="preserve">
+    <value>BB Fold to BTN Steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToBTNStealInSB" xml:space="preserve">
+    <value>SB Fold to BTN Steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToCOStealInBB" xml:space="preserve">
+    <value>BB Fold to CO Steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToCOStealInSB" xml:space="preserve">
+    <value>SB Fold to CO Steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToStealInBB" xml:space="preserve">
+    <value>BB Fold to Steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToStealInSB" xml:space="preserve">
+    <value>SB Fold to Steal%</value>
+  </data>
 </root>

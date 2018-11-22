@@ -637,6 +637,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-StealMade-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-CouldNotSteal-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
         [TestCase(@"DURKADURDUR-CouldNotSteal-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"Hero-CouldNotSteal-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
         public void StealPossibleIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.StealPossible, fileName, pokerSite, playerName, expected);

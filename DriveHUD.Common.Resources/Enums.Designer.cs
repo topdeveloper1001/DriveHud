@@ -1411,6 +1411,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BTN Defend vs. CO Steal%.
+        /// </summary>
+        internal static string Enum_Stat_BTNDefendVsCOSteal {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNDefendVsCOSteal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BTN minraise UO-PFR%.
         /// </summary>
         internal static string Enum_Stat_BTNOpenMinraiseUOPFR {
@@ -1465,6 +1474,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BTN Re-steal vs. CO steal%.
+        /// </summary>
+        internal static string Enum_Stat_BTNReStealVsCOSteal {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNReStealVsCOSteal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BB with 15-25bb Shoves over Limpers%.
         /// </summary>
         internal static string Enum_Stat_BTNShoveOverLimpers15to25bb {
@@ -1510,11 +1528,65 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BB Call BTN Steal%.
+        /// </summary>
+        internal static string Enum_Stat_CalledBTNStealInBB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CalledBTNStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Call BTN Steal%.
+        /// </summary>
+        internal static string Enum_Stat_CalledBTNStealInSB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CalledBTNStealInSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check-Raise &amp; Call vs. Flop C-Bet%.
         /// </summary>
         internal static string Enum_Stat_CalledCheckRaiseVsFlopCBet {
             get {
                 return ResourceManager.GetString("Enum_Stat_CalledCheckRaiseVsFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Call CO Steal%.
+        /// </summary>
+        internal static string Enum_Stat_CalledCOStealInBB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CalledCOStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Call CO Steal%.
+        /// </summary>
+        internal static string Enum_Stat_CalledCOStealInSB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CalledCOStealInSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Call Steal%.
+        /// </summary>
+        internal static string Enum_Stat_CalledStealInBB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CalledStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Call Steal%.
+        /// </summary>
+        internal static string Enum_Stat_CalledStealInSB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CalledStealInSB", resourceCulture);
             }
         }
         
@@ -2653,6 +2725,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BB Fold to BTN Steal%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToBTNStealInBB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToBTNStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Fold to BTN Steal%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToBTNStealInSB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToBTNStealInSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to C-Bet%.
         /// </summary>
         internal static string Enum_Stat_FoldToCBet {
@@ -2694,6 +2784,24 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_FoldToCheckRaiseVsFlopCBet {
             get {
                 return ResourceManager.GetString("Enum_Stat_FoldToCheckRaiseVsFlopCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Fold to CO Steal%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToCOStealInBB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToCOStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Fold to CO Steal%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToCOStealInSB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToCOStealInSB", resourceCulture);
             }
         }
         
@@ -2824,11 +2932,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to Squeeze as Cold Caller%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToSqueezeAsColdCaller {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToSqueezeAsColdCaller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to Steal%.
         /// </summary>
         internal static string Enum_Stat_FoldToSteal {
             get {
                 return ResourceManager.GetString("Enum_Stat_FoldToSteal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Fold to Steal%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToStealInBB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToStealInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Fold to Steal%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToStealInSB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToStealInSB", resourceCulture);
             }
         }
         
@@ -2892,6 +3027,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_FoldTurn {
             get {
                 return ResourceManager.GetString("Enum_Stat_FoldTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-Bet vs Blind 3-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_FourBetVsBlind3Bet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FourBetVsBlind3Bet", resourceCulture);
             }
         }
         
@@ -3706,11 +3850,65 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BB Squeeze vs BTN PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeBBVsBTNPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeBBVsBTNPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Squeeze vs CO PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeBBVsCOPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeBBVsCOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Squeeze vs EP PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeBBVsEPPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeBBVsEPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BB Squeeze vs MP PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeBBVsMPPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeBBVsMPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BTN Squeeze%.
         /// </summary>
         internal static string Enum_Stat_SqueezeBTN {
             get {
                 return ResourceManager.GetString("Enum_Stat_SqueezeBTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Squeeze vs EP PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeBTNVsEPPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeBTNVsEPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Squeeze vs MP PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeBTNVsMPPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeBTNVsMPPFR", resourceCulture);
             }
         }
         
@@ -3724,11 +3922,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CO Squeeze vs EP PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeCOVsEPPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeCOVsEPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CO Squeeze vs MP PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeCOVsMPPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeCOVsMPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to EP Squeeze%.
         /// </summary>
         internal static string Enum_Stat_SqueezeEP {
             get {
                 return ResourceManager.GetString("Enum_Stat_SqueezeEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP Squeeze vs EP PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeEPVsEPPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeEPVsEPPFR", resourceCulture);
             }
         }
         
@@ -3742,11 +3967,47 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MP Squeeze vs EP PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeMPVsEPPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeMPVsEPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SB Squeeze%.
         /// </summary>
         internal static string Enum_Stat_SqueezeSB {
             get {
                 return ResourceManager.GetString("Enum_Stat_SqueezeSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Squeeze vs CO PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeSBVsCOPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeSBVsCOPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Squeeze vs EP PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeSBVsEPPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeSBVsEPPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SB Squeeze vs MP PFR%.
+        /// </summary>
+        internal static string Enum_Stat_SqueezeSBVsMPPFR {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SqueezeSBVsMPPFR", resourceCulture);
             }
         }
         

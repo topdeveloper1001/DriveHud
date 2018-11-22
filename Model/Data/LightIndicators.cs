@@ -2353,6 +2353,429 @@ namespace Model.Data
 
         #endregion
 
+        #region Squeeze vs PFR
+
+        [ProtoMember(238)]
+        protected int didSqueezeBBVsBTNPFR;
+
+        [ProtoMember(239)]
+        protected int couldSqueezeBBVsBTNPFR;
+
+        public override decimal SqueezeBBVsBTNPFR => GetPercentage(didSqueezeBBVsBTNPFR, couldSqueezeBBVsBTNPFR);
+
+        [ProtoMember(240)]
+        protected int didSqueezeBBVsCOPFR;
+
+        [ProtoMember(241)]
+        protected int couldSqueezeBBVsCOPFR;
+
+        public override decimal SqueezeBBVsCOPFR => GetPercentage(didSqueezeBBVsCOPFR, couldSqueezeBBVsCOPFR);
+
+        [ProtoMember(242)]
+        protected int didSqueezeBBVsMPPFR;
+
+        [ProtoMember(243)]
+        protected int couldSqueezeBBVsMPPFR;
+
+        public override decimal SqueezeBBVsMPPFR => GetPercentage(didSqueezeBBVsMPPFR, couldSqueezeBBVsMPPFR);
+
+        [ProtoMember(244)]
+        protected int didSqueezeBBVsEPPFR;
+
+        [ProtoMember(245)]
+        protected int couldSqueezeBBVsEPPFR;
+
+        public override decimal SqueezeBBVsEPPFR => GetPercentage(didSqueezeBBVsEPPFR, couldSqueezeBBVsEPPFR);
+
+        [ProtoMember(246)]
+        protected int didSqueezeSBVsCOPFR;
+
+        [ProtoMember(247)]
+        protected int couldSqueezeSBVsCOPFR;
+
+        public override decimal SqueezeSBVsCOPFR => GetPercentage(didSqueezeSBVsCOPFR, couldSqueezeSBVsCOPFR);
+
+        [ProtoMember(248)]
+        protected int didSqueezeSBVsMPPFR;
+
+        [ProtoMember(249)]
+        protected int couldSqueezeSBVsMPPFR;
+
+        public override decimal SqueezeSBVsMPPFR => GetPercentage(didSqueezeSBVsMPPFR, couldSqueezeSBVsMPPFR);
+
+        [ProtoMember(250)]
+        protected int didSqueezeSBVsEPPFR;
+
+        [ProtoMember(251)]
+        protected int couldSqueezeSBVsEPPFR;
+
+        public override decimal SqueezeSBVsEPPFR => GetPercentage(didSqueezeSBVsEPPFR, couldSqueezeSBVsEPPFR);
+
+        [ProtoMember(252)]
+        protected int didSqueezeBTNVsMPPFR;
+
+        [ProtoMember(253)]
+        protected int couldSqueezeBTNVsMPPFR;
+
+        public override decimal SqueezeBTNVsMPPFR => GetPercentage(didSqueezeBTNVsMPPFR, couldSqueezeBTNVsMPPFR);
+
+        [ProtoMember(254)]
+        protected int didSqueezeBTNVsEPPFR;
+
+        [ProtoMember(255)]
+        protected int couldSqueezeBTNVsEPPFR;
+
+        public override decimal SqueezeBTNVsEPPFR => GetPercentage(didSqueezeBTNVsEPPFR, couldSqueezeBTNVsEPPFR);
+
+        [ProtoMember(256)]
+        protected int didSqueezeCOVsMPPFR;
+
+        [ProtoMember(257)]
+        protected int couldSqueezeCOVsMPPFR;
+
+        public override decimal SqueezeCOVsMPPFR => GetPercentage(didSqueezeCOVsMPPFR, couldSqueezeCOVsMPPFR);
+
+        [ProtoMember(258)]
+        protected int didSqueezeCOVsEPPFR;
+
+        [ProtoMember(259)]
+        protected int couldSqueezeCOVsEPPFR;
+
+        public override decimal SqueezeCOVsEPPFR => GetPercentage(didSqueezeCOVsEPPFR, couldSqueezeCOVsEPPFR);
+
+        [ProtoMember(260)]
+        protected int didSqueezeMPVsEPPFR;
+
+        [ProtoMember(261)]
+        protected int couldSqueezeMPVsEPPFR;
+
+        public override decimal SqueezeMPVsEPPFR => GetPercentage(didSqueezeMPVsEPPFR, couldSqueezeMPVsEPPFR);
+
+        [ProtoMember(262)]
+        protected int didSqueezeEPVsEPPFR;
+
+        [ProtoMember(263)]
+        protected int couldSqueezeEPVsEPPFR;
+
+        public override decimal SqueezeEPVsEPPFR => GetPercentage(didSqueezeEPVsEPPFR, couldSqueezeEPVsEPPFR);
+
+        private void AddSqueezeVsPFRStatistic(Playerstatistic statistic)
+        {
+            didSqueezeBBVsBTNPFR += statistic.DidSqueezeBBVsBTNPFR;
+            couldSqueezeBBVsBTNPFR += statistic.CouldSqueezeBBVsBTNPFR;
+
+            didSqueezeBBVsCOPFR += statistic.DidSqueezeBBVsCOPFR;
+            couldSqueezeBBVsCOPFR += statistic.CouldSqueezeBBVsCOPFR;
+
+            didSqueezeBBVsMPPFR += statistic.DidSqueezeBBVsMPPFR;
+            couldSqueezeBBVsMPPFR += statistic.CouldSqueezeBBVsMPPFR;
+
+            didSqueezeBBVsEPPFR += statistic.DidSqueezeBBVsEPPFR;
+            couldSqueezeBBVsEPPFR += statistic.CouldSqueezeBBVsEPPFR;
+
+            didSqueezeSBVsCOPFR += statistic.DidSqueezeSBVsCOPFR;
+            couldSqueezeSBVsCOPFR += statistic.CouldSqueezeSBVsCOPFR;
+
+            didSqueezeSBVsMPPFR += statistic.DidSqueezeSBVsMPPFR;
+            couldSqueezeSBVsMPPFR += statistic.CouldSqueezeSBVsMPPFR;
+
+            didSqueezeSBVsEPPFR += statistic.DidSqueezeSBVsEPPFR;
+            couldSqueezeSBVsEPPFR += statistic.CouldSqueezeSBVsEPPFR;
+
+            didSqueezeBTNVsMPPFR += statistic.DidSqueezeBTNVsMPPFR;
+            couldSqueezeBTNVsMPPFR += statistic.CouldSqueezeBTNVsMPPFR;
+
+            didSqueezeBTNVsEPPFR += statistic.DidSqueezeBTNVsEPPFR;
+            couldSqueezeBTNVsEPPFR += statistic.CouldSqueezeBTNVsEPPFR;
+
+            didSqueezeCOVsMPPFR += statistic.DidSqueezeCOVsMPPFR;
+            couldSqueezeCOVsMPPFR += statistic.CouldSqueezeCOVsMPPFR;
+
+            didSqueezeCOVsEPPFR += statistic.DidSqueezeCOVsEPPFR;
+            couldSqueezeCOVsEPPFR += statistic.CouldSqueezeCOVsEPPFR;
+
+            didSqueezeMPVsEPPFR += statistic.DidSqueezeMPVsEPPFR;
+            couldSqueezeMPVsEPPFR += statistic.CouldSqueezeMPVsEPPFR;
+
+            didSqueezeEPVsEPPFR += statistic.DidSqueezeEPVsEPPFR;
+            couldSqueezeEPVsEPPFR += statistic.CouldSqueezeEPVsEPPFR;
+        }
+
+        private void CleanSqueezeVsPFRStatistic()
+        {
+            didSqueezeBBVsBTNPFR = 0;
+            couldSqueezeBBVsBTNPFR = 0;
+
+            didSqueezeBBVsCOPFR = 0;
+            couldSqueezeBBVsCOPFR = 0;
+
+            didSqueezeBBVsMPPFR = 0;
+            couldSqueezeBBVsMPPFR = 0;
+
+            didSqueezeBBVsEPPFR = 0;
+            couldSqueezeBBVsEPPFR = 0;
+
+            didSqueezeSBVsCOPFR = 0;
+            couldSqueezeSBVsCOPFR = 0;
+
+            didSqueezeSBVsMPPFR = 0;
+            couldSqueezeSBVsMPPFR = 0;
+
+            didSqueezeSBVsEPPFR = 0;
+            couldSqueezeSBVsEPPFR = 0;
+
+            didSqueezeBTNVsMPPFR = 0;
+            couldSqueezeBTNVsMPPFR = 0;
+
+            didSqueezeBTNVsEPPFR = 0;
+            couldSqueezeBTNVsEPPFR = 0;
+
+            didSqueezeCOVsMPPFR = 0;
+            couldSqueezeCOVsMPPFR = 0;
+
+            didSqueezeCOVsEPPFR = 0;
+            couldSqueezeCOVsEPPFR = 0;
+
+            didSqueezeMPVsEPPFR = 0;
+            couldSqueezeMPVsEPPFR = 0;
+
+            didSqueezeEPVsEPPFR = 0;
+            couldSqueezeEPVsEPPFR = 0;
+        }
+
+        private void AddSqueezeVsPFRIndicators(LightIndicators indicator)
+        {
+            didSqueezeBBVsBTNPFR += indicator.didSqueezeBBVsBTNPFR;
+            couldSqueezeBBVsBTNPFR += indicator.couldSqueezeBBVsBTNPFR;
+
+            didSqueezeBBVsCOPFR += indicator.didSqueezeBBVsCOPFR;
+            couldSqueezeBBVsCOPFR += indicator.couldSqueezeBBVsCOPFR;
+
+            didSqueezeBBVsMPPFR += indicator.didSqueezeBBVsMPPFR;
+            couldSqueezeBBVsMPPFR += indicator.couldSqueezeBBVsMPPFR;
+
+            didSqueezeBBVsEPPFR += indicator.didSqueezeBBVsEPPFR;
+            couldSqueezeBBVsEPPFR += indicator.couldSqueezeBBVsEPPFR;
+
+            didSqueezeSBVsCOPFR += indicator.didSqueezeSBVsCOPFR;
+            couldSqueezeSBVsCOPFR += indicator.couldSqueezeSBVsCOPFR;
+
+            didSqueezeSBVsMPPFR += indicator.didSqueezeSBVsMPPFR;
+            couldSqueezeSBVsMPPFR += indicator.couldSqueezeSBVsMPPFR;
+
+            didSqueezeSBVsEPPFR += indicator.didSqueezeSBVsEPPFR;
+            couldSqueezeSBVsEPPFR += indicator.couldSqueezeSBVsEPPFR;
+
+            didSqueezeBTNVsMPPFR += indicator.didSqueezeBTNVsMPPFR;
+            couldSqueezeBTNVsMPPFR += indicator.couldSqueezeBTNVsMPPFR;
+
+            didSqueezeBTNVsEPPFR += indicator.didSqueezeBTNVsEPPFR;
+            couldSqueezeBTNVsEPPFR += indicator.couldSqueezeBTNVsEPPFR;
+
+            didSqueezeCOVsMPPFR += indicator.didSqueezeCOVsMPPFR;
+            couldSqueezeCOVsMPPFR += indicator.couldSqueezeCOVsMPPFR;
+
+            didSqueezeCOVsEPPFR += indicator.didSqueezeCOVsEPPFR;
+            couldSqueezeCOVsEPPFR += indicator.couldSqueezeCOVsEPPFR;
+
+            didSqueezeMPVsEPPFR += indicator.didSqueezeMPVsEPPFR;
+            couldSqueezeMPVsEPPFR += indicator.couldSqueezeMPVsEPPFR;
+
+            didSqueezeEPVsEPPFR += indicator.didSqueezeEPVsEPPFR;
+            couldSqueezeEPVsEPPFR += indicator.couldSqueezeEPVsEPPFR;
+        }
+
+        #endregion
+
+        #region Fold to Squeeze as Cold Caller
+
+        [ProtoMember(264)]
+        protected int foldToSqueezeAsColdCaller;
+
+        [ProtoMember(265)]
+        protected int facedSqueezeAsColdCaller;
+
+        public override decimal FoldToSqueezeAsColdCaller => GetPercentage(foldToSqueezeAsColdCaller, facedSqueezeAsColdCaller);
+
+        #endregion
+
+        #region 4-Bet vs Blind 3-Bet%
+
+        [ProtoMember(266)]
+        protected int did4BetVsBlind3Bet;
+
+        [ProtoMember(267)]
+        protected int could4BetVsBlind3Bet;
+
+        public override decimal FourBetVsBlind3Bet => GetPercentage(did4BetVsBlind3Bet, could4BetVsBlind3Bet);
+
+        #endregion
+
+        #region BTN Re/Def vs CO Steal
+
+        [ProtoMember(268)]
+        protected int btnReStealVsCOSteal;
+
+        [ProtoMember(269)]
+        protected int btnFacedCOSteal;
+
+        [ProtoMember(270)]
+        protected int btnDefendVsCOSteal;
+
+        public override decimal BTNReStealVsCOSteal => GetPercentage(btnReStealVsCOSteal, btnFacedCOSteal);
+
+        public override decimal BTNDefendVsCOSteal => GetPercentage(btnDefendVsCOSteal, btnFacedCOSteal);
+
+        #endregion
+
+        #region Positional Call & Fold to Steal
+
+        [ProtoMember(271)]
+        protected int foldToStealInSB;
+
+        [ProtoMember(272)]
+        protected int facedStealInSB;
+
+        public override decimal FoldToStealInSB => GetPercentage(foldToStealInSB, facedStealInSB);
+
+        [ProtoMember(273)]
+        protected int foldToStealInBB;
+
+        [ProtoMember(274)]
+        protected int facedStealInBB;
+
+        public override decimal FoldToStealInBB => GetPercentage(foldToStealInBB, facedStealInBB);
+
+        [ProtoMember(275)]
+        protected int calledStealInSB;
+
+        public override decimal CalledStealInSB => GetPercentage(calledStealInSB, facedStealInSB);
+
+        [ProtoMember(276)]
+        protected int calledStealInBB;
+
+        public override decimal CalledStealInBB => GetPercentage(calledStealInBB, facedStealInBB);
+
+        [ProtoMember(277)]
+        protected int foldToBTNStealInSB;
+
+        [ProtoMember(278)]
+        protected int facedBTNStealInSB;
+
+        public override decimal FoldToBTNStealInSB => GetPercentage(foldToBTNStealInSB, facedBTNStealInSB);
+
+        [ProtoMember(279)]
+        protected int foldToBTNStealInBB;
+
+        [ProtoMember(280)]
+        protected int facedBTNStealInBB;
+
+        public override decimal FoldToBTNStealInBB => GetPercentage(foldToBTNStealInBB, facedBTNStealInBB);
+
+        [ProtoMember(281)]
+        protected int foldToCOStealInSB;
+
+        [ProtoMember(282)]
+        protected int facedCOStealInSB;
+
+        public override decimal FoldToCOStealInSB => GetPercentage(foldToCOStealInSB, facedCOStealInSB);
+
+        [ProtoMember(283)]
+        protected int foldToCOStealInBB;
+
+        [ProtoMember(284)]
+        protected int facedCOStealInBB;
+
+        public override decimal FoldToCOStealInBB => GetPercentage(foldToCOStealInBB, facedCOStealInBB);
+
+        [ProtoMember(285)]
+        protected int calledBTNStealInSB;
+
+        public override decimal CalledBTNStealInSB => GetPercentage(calledBTNStealInSB, facedBTNStealInSB);
+
+        [ProtoMember(286)]
+        protected int calledBTNStealInBB;
+
+        public override decimal CalledBTNStealInBB => GetPercentage(calledBTNStealInBB, facedBTNStealInBB);
+
+        [ProtoMember(287)]
+        protected int calledCOStealInSB;
+
+        public override decimal CalledCOStealInSB => GetPercentage(calledCOStealInSB, facedCOStealInSB);
+
+        [ProtoMember(288)]
+        protected int calledCOStealInBB;
+
+        public override decimal CalledCOStealInBB => GetPercentage(calledCOStealInBB, facedCOStealInBB);
+
+        private void AddPositionalCallFoldToStealStatistic(Playerstatistic statistic)
+        {
+            foldToStealInSB += statistic.FoldToStealInSB;
+            facedStealInSB += statistic.FacedStealInSB;
+            foldToStealInBB += statistic.FoldToStealInBB;
+            facedStealInBB += statistic.FacedStealInBB;
+            calledStealInSB += statistic.CalledStealInSB;
+            calledStealInBB += statistic.CalledStealInBB;
+            foldToBTNStealInSB += statistic.FoldToBTNStealInSB;
+            facedBTNStealInSB += statistic.FacedBTNStealInSB;
+            foldToBTNStealInBB += statistic.FoldToBTNStealInBB;
+            facedBTNStealInBB += statistic.FacedBTNStealInBB;
+            foldToCOStealInSB += statistic.FoldToCOStealInSB;
+            facedCOStealInSB += statistic.FacedCOStealInSB;
+            foldToCOStealInBB += statistic.FoldToCOStealInBB;
+            facedCOStealInBB += statistic.FacedCOStealInBB;
+            calledBTNStealInSB += statistic.CalledBTNStealInSB;
+            calledBTNStealInBB += statistic.CalledBTNStealInBB;
+            calledCOStealInSB += statistic.CalledCOStealInSB;
+            calledCOStealInBB += statistic.CalledCOStealInBB;
+        }
+
+        private void CleanPositionalCallFoldToStealStatistic()
+        {
+            foldToStealInSB = 0;
+            facedStealInSB = 0;
+            foldToStealInBB = 0;
+            facedStealInBB = 0;
+            calledStealInSB = 0;
+            calledStealInBB = 0;
+            foldToBTNStealInSB = 0;
+            facedBTNStealInSB = 0;
+            foldToBTNStealInBB = 0;
+            facedBTNStealInBB = 0;
+            foldToCOStealInSB = 0;
+            facedCOStealInSB = 0;
+            foldToCOStealInBB = 0;
+            facedCOStealInBB = 0;
+            calledBTNStealInSB = 0;
+            calledBTNStealInBB = 0;
+            calledCOStealInSB = 0;
+            calledCOStealInBB = 0;
+        }
+
+        private void AddPositionalCallFoldToStealIndicators(LightIndicators indicator)
+        {
+            foldToStealInSB += indicator.foldToStealInSB;
+            facedStealInSB += indicator.facedStealInSB;
+            foldToStealInBB += indicator.foldToStealInBB;
+            facedStealInBB += indicator.facedStealInBB;
+            calledStealInSB += indicator.calledStealInSB;
+            calledStealInBB += indicator.calledStealInBB;
+            foldToBTNStealInSB += indicator.foldToBTNStealInSB;
+            facedBTNStealInSB += indicator.facedBTNStealInSB;
+            foldToBTNStealInBB += indicator.foldToBTNStealInBB;
+            facedBTNStealInBB += indicator.facedBTNStealInBB;
+            foldToCOStealInSB += indicator.foldToCOStealInSB;
+            facedCOStealInSB += indicator.facedCOStealInSB;
+            foldToCOStealInBB += indicator.foldToCOStealInBB;
+            facedCOStealInBB += indicator.facedCOStealInBB;
+            calledBTNStealInSB += indicator.calledBTNStealInSB;
+            calledBTNStealInBB += indicator.calledBTNStealInBB;
+            calledCOStealInSB += indicator.calledCOStealInSB;
+            calledCOStealInBB += indicator.calledCOStealInBB;
+        }
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -2471,6 +2894,16 @@ namespace Model.Data
 
             openMinraise += statistic.OpenMinraise;
 
+            foldToSqueezeAsColdCaller += statistic.FoldToSqueezeAsColdCaller;
+            facedSqueezeAsColdCaller += statistic.FacedSqueezeAsColdCaller;
+
+            did4BetVsBlind3Bet += statistic.Did4BetVsBlind3Bet;
+            could4BetVsBlind3Bet += statistic.Could4BetVsBlind3Bet;
+
+            btnReStealVsCOSteal += statistic.BTNReStealVsCOSteal;
+            btnDefendVsCOSteal += statistic.BTNDefendVsCOSteal;
+            btnFacedCOSteal += statistic.BTNFacedCOSteal;
+
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
@@ -2480,6 +2913,8 @@ namespace Model.Data
             AddOpenShoveUOPotStatistic(statistic);
             AddLimpPositionFoldToPFRStatistic(statistic);
             AddShoveOverLimpersStatistic(statistic);
+            AddSqueezeVsPFRStatistic(statistic);
+            AddPositionalCallFoldToStealStatistic(statistic);
         }
 
         public override void Clean()
@@ -2582,6 +3017,16 @@ namespace Model.Data
 
             openMinraise = 0;
 
+            foldToSqueezeAsColdCaller = 0;
+            facedSqueezeAsColdCaller = 0;
+
+            did4BetVsBlind3Bet = 0;
+            could4BetVsBlind3Bet = 0;
+
+            btnReStealVsCOSteal = 0;
+            btnDefendVsCOSteal = 0;
+            btnFacedCOSteal = 0;
+
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
             CleanBetWhenCheckedToIn3BetPot();
@@ -2591,6 +3036,8 @@ namespace Model.Data
             CleanOpenShoveUOPotStatistic();
             CleanLimpPositionFoldToPFRStatistic();
             CleanShoveOverLimpersStatistic();
+            CleanSqueezeVsPFRStatistic();
+            CleanPositionalCallFoldToStealStatistic();
         }
 
         public virtual void AddIndicator(LightIndicators indicator)
@@ -2728,6 +3175,16 @@ namespace Model.Data
 
             openMinraise += indicator.openMinraise;
 
+            foldToSqueezeAsColdCaller += indicator.foldToSqueezeAsColdCaller;
+            facedSqueezeAsColdCaller += indicator.facedSqueezeAsColdCaller;
+
+            did4BetVsBlind3Bet += indicator.did4BetVsBlind3Bet;
+            could4BetVsBlind3Bet += indicator.could4BetVsBlind3Bet;
+
+            btnReStealVsCOSteal += indicator.btnReStealVsCOSteal;
+            btnDefendVsCOSteal += indicator.btnDefendVsCOSteal;
+            btnFacedCOSteal += indicator.btnFacedCOSteal;
+
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);
             AddBetWhenCheckedToIn3BetPotIndicator(indicator);
@@ -2737,6 +3194,8 @@ namespace Model.Data
             AddOpenShoveUOPotIndicators(indicator);
             AddLimpPositionFoldToPFRIndicators(indicator);
             AddShoveOverLimpersIndicators(indicator);
+            AddSqueezeVsPFRIndicators(indicator);
+            AddPositionalCallFoldToStealIndicators(indicator);
         }
 
         public override int CompareTo(object obj)

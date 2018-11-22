@@ -1949,6 +1949,136 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region Squeeze vs PFR
+
+        public virtual int DidSqueezeBBVsBTNPFR => DidSqueezeBB == 1 && FirstRaiserPosition.IsBTNPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBBVsBTNPFR => CouldSqueezeBB == 1 && FirstRaiserPosition.IsBTNPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBBVsCOPFR => DidSqueezeBB == 1 && FirstRaiserPosition.IsCOPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBBVsCOPFR => CouldSqueezeBB == 1 && FirstRaiserPosition.IsCOPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBBVsMPPFR => DidSqueezeBB == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBBVsMPPFR => CouldSqueezeBB == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBBVsEPPFR => DidSqueezeBB == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBBVsEPPFR => CouldSqueezeBB == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeSBVsCOPFR => DidSqueezeSB == 1 && FirstRaiserPosition.IsCOPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeSBVsCOPFR => CouldSqueezeSB == 1 && FirstRaiserPosition.IsCOPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeSBVsMPPFR => DidSqueezeSB == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeSBVsMPPFR => CouldSqueezeSB == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeSBVsEPPFR => DidSqueezeSB == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeSBVsEPPFR => CouldSqueezeSB == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBTNVsMPPFR => DidSqueezeBTN == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBTNVsMPPFR => CouldSqueezeBTN == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBTNVsEPPFR => DidSqueezeBTN == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBTNVsEPPFR => CouldSqueezeBTN == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeCOVsMPPFR => DidSqueezeCO == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeCOVsMPPFR => CouldSqueezeCO == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeCOVsEPPFR => DidSqueezeCO == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeCOVsEPPFR => CouldSqueezeCO == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeMPVsEPPFR => DidSqueezeMP == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeMPVsEPPFR => CouldSqueezeMP == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeEPVsEPPFR => DidSqueezeEP == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeEPVsEPPFR => CouldSqueezeEP == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        #endregion
+
+        #region Fold to Squeeze as Cold Caller
+
+        public virtual int FoldToSqueezeAsColdCaller => Didcoldcall == 1 && FoldedFacedSqueez == 1 ? 1 : 0;
+
+        public virtual int FacedSqueezeAsColdCaller => Didcoldcall == 1 && FacedSqueez == 1 ? 1 : 0;
+
+        #endregion
+
+        #region 4-Bet vs Blind 3-Bet%
+
+        public virtual int Did4BetVsBlind3Bet => Didfourbet == 1 &&
+            (ThreeBettorPosition.IsBBPosition() || ThreeBettorPosition.IsSBPosition()) ? 1 : 0;
+
+        public virtual int Could4BetVsBlind3Bet => Couldfourbet == 1 &&
+          (ThreeBettorPosition.IsBBPosition() || ThreeBettorPosition.IsSBPosition()) ? 1 : 0;
+
+        #endregion
+
+        #region BTN Re/Def vs CO Steal
+
+        public virtual int BTNReStealVsCOSteal => FirstRaiserPosition.IsCOPosition() && FacingPreflop == EnumFacingPreflop.Raiser && Pfrhands == 1 ? 1 : 0;
+
+        public virtual int BTNDefendVsCOSteal => FirstRaiserPosition.IsCOPosition() && FacingPreflop == EnumFacingPreflop.Raiser && Vpiphands == 1 ? 1 : 0;
+
+        public virtual int BTNFacedCOSteal => FirstRaiserPosition.IsCOPosition() && FacingPreflop == EnumFacingPreflop.Raiser ? 1 : 0;
+
+        #endregion
+
+        #region Positional Call & Fold to Steal
+
+        public virtual int FacedStealInSB => Position.IsSBPosition() && FacingPreflop == EnumFacingPreflop.Raiser &&
+            (FirstRaiserPosition.IsCOPosition() || FirstRaiserPosition.IsBTNPosition()) ? 1 : 0;
+
+        public virtual int FacedStealInBB => Position.IsBBPosition() && FacingPreflop == EnumFacingPreflop.Raiser &&
+            (FirstRaiserPosition.IsCOPosition() || FirstRaiserPosition.IsBTNPosition() || FirstRaiserPosition.IsSBPosition()) ? 1 : 0;
+
+        public virtual int FacedCOStealInSB => Position.IsSBPosition() && FacingPreflop == EnumFacingPreflop.Raiser &&
+            FirstRaiserPosition.IsCOPosition() ? 1 : 0;
+
+        public virtual int FacedBTNStealInSB => Position.IsSBPosition() && FacingPreflop == EnumFacingPreflop.Raiser &&
+            FirstRaiserPosition.IsBTNPosition() ? 1 : 0;
+
+        public virtual int FacedCOStealInBB => Position.IsBBPosition() && FacingPreflop == EnumFacingPreflop.Raiser &&
+         FirstRaiserPosition.IsCOPosition() ? 1 : 0;
+
+        public virtual int FacedBTNStealInBB => Position.IsBBPosition() && FacingPreflop == EnumFacingPreflop.Raiser &&
+            FirstRaiserPosition.IsBTNPosition() ? 1 : 0;
+
+        public virtual int CalledStealInSB => FacedStealInSB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CalledCOStealInSB => FacedCOStealInSB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CalledBTNStealInSB => FacedBTNStealInSB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CalledStealInBB => FacedStealInBB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CalledCOStealInBB => FacedCOStealInBB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CalledBTNStealInBB => FacedBTNStealInBB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int FoldToStealInSB => FacedStealInSB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
+
+        public virtual int FoldToCOStealInSB => FacedCOStealInSB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
+
+        public virtual int FoldToBTNStealInSB => FacedBTNStealInSB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
+
+        public virtual int FoldToStealInBB => FacedStealInBB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
+
+        public virtual int FoldToCOStealInBB => FacedCOStealInBB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
+
+        public virtual int FoldToBTNStealInBB => FacedBTNStealInBB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
+
+        #endregion
+
         #endregion
 
         #region Additional properties (not for serialization)
