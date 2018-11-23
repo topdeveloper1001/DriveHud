@@ -3957,6 +3957,178 @@ namespace Model.Data
 
         #endregion
 
+        #region River fold in SRP/3-Bet/4-Bet
+
+        public virtual StatDto RiverFoldInSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RiverFoldInSRP,
+                    Occurred = didRiverFoldInSRP,
+                    CouldOccurred = couldRiverFoldInSRP
+                };
+            }
+        }
+
+        public virtual StatDto RiverFoldIn3BetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RiverFoldIn3Bet,
+                    Occurred = didRiverFoldIn3Bet,
+                    CouldOccurred = couldRiverFoldIn3Bet
+                };
+            }
+        }
+
+        public virtual StatDto RiverFoldIn4BetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RiverFoldIn4Bet,
+                    Occurred = didRiverFoldIn4Bet,
+                    CouldOccurred = couldRiverFoldIn4Bet
+                };
+            }
+        }
+
+        #endregion
+
+        #region Delayed Turn C-Bet in SRP/4-Bet Pot%
+
+        public virtual StatDto DelayedTurnCBetInSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = DelayedTurnCBetInSRP,
+                    Occurred = didDelayedTurnCBetInSRP,
+                    CouldOccurred = couldDelayedTurnCBetInSRP
+                };
+            }
+        }
+
+        public virtual StatDto DelayedTurnCBetIn4BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = DelayedTurnCBetIn4BetPot,
+                    Occurred = didDelayedTurnCBetIn4BetPot,
+                    CouldOccurred = couldDelayedTurnCBetIn4BetPot
+                };
+            }
+        }
+
+        #endregion
+
+        #region  Check-Raise Flop as PFR SRP/3-Bet pot
+
+        public virtual StatDto CheckRaiseFlopAsPFRInSRPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckRaiseFlopAsPFRInSRP,
+                    Occurred = didCheckRaiseFlopAsPFRInSRP,
+                    CouldOccurred = couldCheckRaiseFlopAsPFRInSRP
+                };
+            }
+        }
+
+        public virtual StatDto CheckRaiseFlopAsPFRIn3BetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckRaiseFlopAsPFRIn3BetPot,
+                    Occurred = didCheckRaiseFlopAsPFRIn3BetPot,
+                    CouldOccurred = couldCheckRaiseFlopAsPFRIn3BetPot
+                };
+            }
+        }
+
+        #endregion
+
+        #region Open Limp positional
+
+        public virtual StatDto OpenLimpEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = OpenLimpEP,
+                    Occurred = positionDidOpenLimp?.EP ?? 0,
+                    CouldOccurred = positionCouldOpenLimp?.EP ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto OpenLimpMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = OpenLimpMP,
+                    Occurred = positionDidOpenLimp?.MP ?? 0,
+                    CouldOccurred = positionCouldOpenLimp?.MP ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto OpenLimpCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = OpenLimpCO,
+                    Occurred = positionDidOpenLimp?.CO ?? 0,
+                    CouldOccurred = positionCouldOpenLimp?.CO ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto OpenLimpBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = OpenLimpBTN,
+                    Occurred = positionDidOpenLimp?.BN ?? 0,
+                    CouldOccurred = positionCouldOpenLimp?.BN ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto OpenLimpSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = OpenLimpSB,
+                    Occurred = positionDidOpenLimp?.SB ?? 0,
+                    CouldOccurred = positionCouldOpenLimp?.SB ?? 0
+                };
+            }
+        }
+
+        #endregion
+
         #endregion
 
         public virtual StatDto CheckRaiseFlopAsPFRObject

@@ -1805,6 +1805,12 @@ namespace Model.Data
         [ProtoMember(23)]
         protected PositionalStat positionFaced4Bet = new PositionalStat();
 
+        [ProtoMember(24)]
+        protected PositionalStat positionDidOpenLimp = new PositionalStat();
+
+        [ProtoMember(25)]
+        protected PositionalStat positionCouldOpenLimp = new PositionalStat();
+
         #endregion
 
         #region Raise Limpers
@@ -2277,6 +2283,46 @@ namespace Model.Data
 
         #endregion
 
+        #region River fold in SRP/3-Bet/4-Bet
+
+        public virtual decimal RiverFoldInSRP => GetPercentage(Statistics.Sum(x => x.DidRiverFoldInSRP), Statistics.Sum(x => x.CouldRiverFoldInSRP));
+
+        public virtual decimal RiverFoldIn3Bet => GetPercentage(Statistics.Sum(x => x.DidRiverFoldIn3Bet), Statistics.Sum(x => x.CouldRiverFoldIn3Bet));
+
+        public virtual decimal RiverFoldIn4Bet => GetPercentage(Statistics.Sum(x => x.DidRiverFoldIn4Bet), Statistics.Sum(x => x.CouldRiverFoldIn4Bet));
+
+        #endregion
+
+        #region Delayed Turn C-Bet in SRP/4-Bet Pot%
+
+        public virtual decimal DelayedTurnCBetInSRP => GetPercentage(Statistics.Sum(x => x.DidDelayedTurnCBetInSRP), Statistics.Sum(x => x.CouldDelayedTurnCBetInSRP));
+
+        public virtual decimal DelayedTurnCBetIn4BetPot => GetPercentage(Statistics.Sum(x => x.DidDelayedTurnCBetIn4BetPot), Statistics.Sum(x => x.CouldDelayedTurnCBetIn4BetPot));
+
+        #endregion
+
+        #region  Check-Raise Flop as PFR SRP/3-Bet pot
+
+        public virtual decimal CheckRaiseFlopAsPFRInSRP => GetPercentage(Statistics.Sum(x => x.DidCheckRaiseFlopAsPFRInSRP), Statistics.Sum(x => x.CouldCheckRaiseFlopAsPFRInSRP));
+
+        public virtual decimal CheckRaiseFlopAsPFRIn3BetPot => GetPercentage(Statistics.Sum(x => x.DidCheckRaiseFlopAsPFRIn3BetPot), Statistics.Sum(x => x.CouldCheckRaiseFlopAsPFRIn3BetPot));
+
+        #endregion
+
+        #region Open Limp positional
+
+        public virtual decimal OpenLimpEP => GetPercentage(positionDidOpenLimp?.EP, positionCouldOpenLimp?.EP);
+
+        public virtual decimal OpenLimpMP => GetPercentage(positionDidOpenLimp?.MP, positionCouldOpenLimp?.MP);
+
+        public virtual decimal OpenLimpCO => GetPercentage(positionDidOpenLimp?.CO, positionCouldOpenLimp?.CO);
+
+        public virtual decimal OpenLimpBTN => GetPercentage(positionDidOpenLimp?.BN, positionCouldOpenLimp?.BN);
+
+        public virtual decimal OpenLimpSB => GetPercentage(positionDidOpenLimp?.SB, positionCouldOpenLimp?.SB);        
+
+        #endregion
+
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
         {
             foreach (var statistic in statistics)
@@ -2343,6 +2389,8 @@ namespace Model.Data
             positionCouldSqueeze?.Add(statistic.Position, statistic.Couldsqueeze);
             positionCall4Bet?.Add(statistic.Position, statistic.Calledfourbetpreflop);
             positionFaced4Bet?.Add(statistic.Position, statistic.Facedfourbetpreflop);
+            positionDidOpenLimp?.Add(statistic.Position, statistic.DidOpenLimp);
+            positionCouldOpenLimp?.Add(statistic.Position, statistic.CouldOpenLimp);
         }
 
         protected virtual void ResetPositionalStats()
@@ -2369,6 +2417,8 @@ namespace Model.Data
             positionCouldSqueeze?.Reset();
             positionCall4Bet?.Reset();
             positionFaced4Bet?.Reset();
+            positionDidOpenLimp?.Reset();
+            positionCouldOpenLimp?.Reset();
         }
 
         #region Helpers

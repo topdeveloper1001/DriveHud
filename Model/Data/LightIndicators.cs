@@ -2878,6 +2878,104 @@ namespace Model.Data
 
         #endregion
 
+        #region River fold in SRP/3-Bet/4-Bet
+
+        [ProtoMember(307)]
+        protected int didRiverFoldInSRP;
+
+        [ProtoMember(308)]
+        protected int couldRiverFoldInSRP;
+
+        public override decimal RiverFoldInSRP => GetPercentage(didRiverFoldInSRP, couldRiverFoldInSRP);
+
+        [ProtoMember(309)]
+        protected int didRiverFoldIn3Bet;
+
+        [ProtoMember(310)]
+        protected int couldRiverFoldIn3Bet;
+
+        public override decimal RiverFoldIn3Bet => GetPercentage(didRiverFoldIn3Bet, couldRiverFoldIn3Bet);
+
+        [ProtoMember(311)]
+        protected int didRiverFoldIn4Bet;
+
+        [ProtoMember(312)]
+        protected int couldRiverFoldIn4Bet;
+
+        public override decimal RiverFoldIn4Bet => GetPercentage(didRiverFoldIn4Bet, couldRiverFoldIn4Bet);
+
+        private void AddRiverFoldInToStatistic(Playerstatistic statistic)
+        {
+            didRiverFoldInSRP += statistic.DidRiverFoldInSRP;
+            couldRiverFoldInSRP += statistic.CouldRiverFoldInSRP;
+            didRiverFoldIn3Bet += statistic.DidRiverFoldIn3Bet;
+            couldRiverFoldIn3Bet += statistic.CouldRiverFoldIn3Bet;
+            didRiverFoldIn4Bet += statistic.DidRiverFoldIn4Bet;
+            couldRiverFoldIn4Bet += statistic.CouldRiverFoldIn4Bet;
+        }
+
+        private void CleanRiverFoldInToStatistic()
+        {
+            didRiverFoldInSRP = 0;
+            couldRiverFoldInSRP = 0;
+            didRiverFoldIn3Bet = 0;
+            couldRiverFoldIn3Bet = 0;
+            didRiverFoldIn4Bet = 0;
+            couldRiverFoldIn4Bet = 0;
+        }
+
+        private void AddRiverFoldInIndicators(LightIndicators indicator)
+        {
+            didRiverFoldInSRP += indicator.didRiverFoldInSRP;
+            couldRiverFoldInSRP += indicator.couldRiverFoldInSRP;
+            didRiverFoldIn3Bet += indicator.didRiverFoldIn3Bet;
+            couldRiverFoldIn3Bet += indicator.couldRiverFoldIn3Bet;
+            didRiverFoldIn4Bet += indicator.didRiverFoldIn4Bet;
+            couldRiverFoldIn4Bet += indicator.couldRiverFoldIn4Bet;
+        }
+
+        #endregion
+
+        #region Delayed Turn C-Bet in SRP/4-Bet Pot%
+
+        [ProtoMember(313)]
+        protected int didDelayedTurnCBetInSRP;
+
+        [ProtoMember(314)]
+        protected int couldDelayedTurnCBetInSRP;
+
+        public override decimal DelayedTurnCBetInSRP => GetPercentage(didDelayedTurnCBetInSRP, couldDelayedTurnCBetInSRP);
+
+        [ProtoMember(315)]
+        protected int didDelayedTurnCBetIn4BetPot;
+
+        [ProtoMember(316)]
+        protected int couldDelayedTurnCBetIn4BetPot;
+
+        public override decimal DelayedTurnCBetIn4BetPot => GetPercentage(didDelayedTurnCBetIn4BetPot, couldDelayedTurnCBetIn4BetPot);
+
+        #endregion
+
+        #region  Check-Raise Flop as PFR SRP/3-Bet pot
+
+        [ProtoMember(317)]
+        protected int didCheckRaiseFlopAsPFRInSRP;
+
+        [ProtoMember(318)]
+        protected int couldCheckRaiseFlopAsPFRInSRP;
+
+        public override decimal CheckRaiseFlopAsPFRInSRP => GetPercentage(didCheckRaiseFlopAsPFRInSRP, couldCheckRaiseFlopAsPFRInSRP);
+
+        [ProtoMember(319)]
+        protected int didCheckRaiseFlopAsPFRIn3BetPot;
+
+        [ProtoMember(320)]
+        protected int couldCheckRaiseFlopAsPFRIn3BetPot;
+
+        public override decimal CheckRaiseFlopAsPFRIn3BetPot => GetPercentage(didCheckRaiseFlopAsPFRIn3BetPot, couldCheckRaiseFlopAsPFRIn3BetPot);
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -3028,6 +3126,16 @@ namespace Model.Data
             didCallFlopFoldTurn += statistic.DidCallFlopFoldTurn;
             couldCallFlopFoldTurn += statistic.CouldCallFlopFoldTurn;
 
+            didDelayedTurnCBetInSRP += statistic.DidDelayedTurnCBetInSRP;
+            couldDelayedTurnCBetInSRP += statistic.CouldDelayedTurnCBetInSRP;
+            didDelayedTurnCBetIn4BetPot += statistic.DidDelayedTurnCBetIn4BetPot;
+            couldDelayedTurnCBetIn4BetPot += statistic.CouldDelayedTurnCBetIn4BetPot;
+
+            didCheckRaiseFlopAsPFRInSRP += statistic.DidCheckRaiseFlopAsPFRInSRP;
+            couldCheckRaiseFlopAsPFRInSRP += statistic.CouldCheckRaiseFlopAsPFRInSRP;
+            didCheckRaiseFlopAsPFRIn3BetPot += statistic.DidCheckRaiseFlopAsPFRIn3BetPot;
+            couldCheckRaiseFlopAsPFRIn3BetPot += statistic.CouldCheckRaiseFlopAsPFRIn3BetPot;
+
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
@@ -3039,6 +3147,7 @@ namespace Model.Data
             AddShoveOverLimpersStatistic(statistic);
             AddSqueezeVsPFRStatistic(statistic);
             AddPositionalCallFoldToStealStatistic(statistic);
+            AddRiverFoldInToStatistic(statistic);
         }
 
         public override void Clean()
@@ -3173,6 +3282,16 @@ namespace Model.Data
             didCallFlopFoldTurn = 0;
             couldCallFlopFoldTurn = 0;
 
+            didDelayedTurnCBetInSRP = 0;
+            couldDelayedTurnCBetInSRP = 0;
+            didDelayedTurnCBetIn4BetPot = 0;
+            couldDelayedTurnCBetIn4BetPot = 0;
+
+            didCheckRaiseFlopAsPFRInSRP = 0;
+            couldCheckRaiseFlopAsPFRInSRP = 0;
+            didCheckRaiseFlopAsPFRIn3BetPot = 0;
+            couldCheckRaiseFlopAsPFRIn3BetPot = 0;
+
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
             CleanBetWhenCheckedToIn3BetPot();
@@ -3184,6 +3303,7 @@ namespace Model.Data
             CleanShoveOverLimpersStatistic();
             CleanSqueezeVsPFRStatistic();
             CleanPositionalCallFoldToStealStatistic();
+            CleanRiverFoldInToStatistic();
         }
 
         public virtual void AddIndicator(LightIndicators indicator)
@@ -3212,6 +3332,8 @@ namespace Model.Data
             positionCouldSqueeze?.Add(indicator.positionCouldSqueeze);
             positionCall4Bet?.Add(indicator.positionCall4Bet);
             positionFaced4Bet?.Add(indicator.positionFaced4Bet);
+            positionDidOpenLimp?.Add(indicator.positionFaced4Bet);
+            positionCouldOpenLimp?.Add(indicator.positionFaced4Bet);
 
             if (gameNumberMax < indicator.gameNumberMax)
             {
@@ -3355,6 +3477,16 @@ namespace Model.Data
             didCallFlopFoldTurn += indicator.didCallFlopFoldTurn;
             couldCallFlopFoldTurn += indicator.couldCallFlopFoldTurn;
 
+            didDelayedTurnCBetInSRP += indicator.didDelayedTurnCBetInSRP;
+            couldDelayedTurnCBetInSRP += indicator.couldDelayedTurnCBetInSRP;
+            didDelayedTurnCBetIn4BetPot += indicator.didDelayedTurnCBetIn4BetPot;
+            couldDelayedTurnCBetIn4BetPot += indicator.couldDelayedTurnCBetIn4BetPot;
+
+            didCheckRaiseFlopAsPFRInSRP += indicator.didCheckRaiseFlopAsPFRInSRP;
+            couldCheckRaiseFlopAsPFRInSRP += indicator.couldCheckRaiseFlopAsPFRInSRP;
+            didCheckRaiseFlopAsPFRIn3BetPot += indicator.didCheckRaiseFlopAsPFRIn3BetPot;
+            couldCheckRaiseFlopAsPFRIn3BetPot += indicator.couldCheckRaiseFlopAsPFRIn3BetPot;
+
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);
             AddBetWhenCheckedToIn3BetPotIndicator(indicator);
@@ -3366,6 +3498,7 @@ namespace Model.Data
             AddShoveOverLimpersIndicators(indicator);
             AddSqueezeVsPFRIndicators(indicator);
             AddPositionalCallFoldToStealIndicators(indicator);
+            AddRiverFoldInIndicators(indicator);
         }
 
         public override int CompareTo(object obj)

@@ -398,6 +398,18 @@ namespace Model.Enums
         TotalOverCallSRP,
         LimpedPotFlopStealIP,
         FlopCheckCall,
-        CallFlopFoldTurn
+        CallFlopFoldTurn,
+        RiverFoldInSRP,
+        RiverFoldIn3Bet,
+        RiverFoldIn4Bet,
+        DelayedTurnCBetInSRP,
+        DelayedTurnCBetIn4BetPot,
+        CheckRaiseFlopAsPFRInSRP,
+        CheckRaiseFlopAsPFRIn3BetPot,
+        OpenLimpEP,
+        OpenLimpMP,
+        OpenLimpCO,
+        OpenLimpBTN,
+        OpenLimpSB
     }
 }

@@ -2166,6 +2166,78 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region River fold in SRP/3-Bet/4-Bet
+
+        public virtual int DidRiverFoldInSRP => IsSRP && RiverActions.EndsWith("F") ? 1 : 0;
+
+        public virtual int CouldRiverFoldInSRP => IsSRP && RiverActions.Length > 0 ? 1 : 0;
+
+        public virtual int DidRiverFoldIn3Bet => In3BetPot && RiverActions.EndsWith("F") ? 1 : 0;
+
+        public virtual int CouldRiverFoldIn3Bet => In3BetPot && RiverActions.Length > 0 ? 1 : 0;
+
+        public virtual int DidRiverFoldIn4Bet => In4BetPot && RiverActions.EndsWith("F") ? 1 : 0;
+
+        public virtual int CouldRiverFoldIn4Bet => In4BetPot && RiverActions.Length > 0 ? 1 : 0;
+
+        #endregion
+
+        #region Delayed Turn C-Bet in SRP/4-Bet Pot%
+
+        public virtual int DidDelayedTurnCBetInSRP => DidDelayedTurnCBet == 1 && IsSRP ? 1 : 0;
+
+        public virtual int CouldDelayedTurnCBetInSRP => CouldDelayedTurnCBet == 1 && IsSRP ? 1 : 0;
+
+        public virtual int DidDelayedTurnCBetIn4BetPot => DidDelayedTurnCBet == 1 && In4BetPot ? 1 : 0;
+
+        public virtual int CouldDelayedTurnCBetIn4BetPot => CouldDelayedTurnCBet == 1 && In4BetPot ? 1 : 0;
+
+        #endregion
+
+        #region Skip Flop C-Bet SRP & C/F Flop OOP%
+
+        public virtual int SkipFlopCBetInSRPandCheckFoldFlopOOP => Flopcontinuationbetpossible == 1 && IsSRP && FlopActions.Equals("CF") && PreflopIP == 0 ? 1 : 0;
+
+        #endregion
+
+        #region Check-Raise Flop as PFR SRP/3-Bet pot
+
+        public virtual int DidCheckRaiseFlopAsPFRInSRP => DidFlopCheckRaise == 1 && Pfrhands == 1 && IsSRP ? 1 : 0;
+
+        public virtual int CouldCheckRaiseFlopAsPFRInSRP => CouldFlopCheckRaise == 1 && Pfrhands == 1 && IsSRP ? 1 : 0;
+
+        public virtual int DidCheckRaiseFlopAsPFRIn3BetPot => DidFlopCheckRaise == 1 && Pfrhands == 1 && In3BetPot ? 1 : 0;
+
+        public virtual int CouldCheckRaiseFlopAsPFRIn3BetPot => CouldFlopCheckRaise == 1 && Pfrhands == 1 && In3BetPot ? 1 : 0;
+
+        #endregion
+
+        #region Open Limp
+
+        public virtual int DidOpenLimp => FacingPreflop == EnumFacingPreflop.Unopened && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CouldOpenLimp => FacingPreflop == EnumFacingPreflop.Unopened && PreflopActions.Length > 0 ? 1 : 0;
+
+        public virtual int DidOpenLimpEP => DidOpenLimp == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldOpenLimpEP => CouldOpenLimp == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidOpenLimpMP => DidOpenLimp == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int CouldOpenLimpMP => CouldOpenLimp == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int DidOpenLimpCO => DidOpenLimp == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int CouldOpenLimpCO => CouldOpenLimp == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int DidOpenLimpBTN => DidOpenLimp == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int CouldOpenLimpBTN => CouldOpenLimp == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int DidOpenLimpSB => DidOpenLimp == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int CouldOpenLimpSB => CouldOpenLimp == 1 && Position.IsSBPosition() ? 1 : 0;
+
         #endregion
 
         #region Additional properties (not for serialization)

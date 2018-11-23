@@ -1676,4 +1676,40 @@
   <data name="Enum_Stat_WTSDAsPFR" xml:space="preserve">
     <value>WTSD as PFR%</value>
   </data>
+  <data name="Enum_Stat_CheckRaiseFlopAsPFRIn3BetPot" xml:space="preserve">
+    <value>Check-Raise Flop as PFR 3-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_CheckRaiseFlopAsPFRInSRP" xml:space="preserve">
+    <value>Check-Raise Flop as PFR SRP%</value>
+  </data>
+  <data name="Enum_Stat_DelayedTurnCBetIn4BetPot" xml:space="preserve">
+    <value>Delayed Turn C-Bet in 4-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_DelayedTurnCBetInSRP" xml:space="preserve">
+    <value>Delayed Turn C-Bet in SRP%</value>
+  </data>
+  <data name="Enum_Stat_OpenLimpBTN" xml:space="preserve">
+    <value>Open Limp BTN%</value>
+  </data>
+  <data name="Enum_Stat_OpenLimpCO" xml:space="preserve">
+    <value>Open Limp CO%</value>
+  </data>
+  <data name="Enum_Stat_OpenLimpEP" xml:space="preserve">
+    <value>Open Limp EP%</value>
+  </data>
+  <data name="Enum_Stat_OpenLimpMP" xml:space="preserve">
+    <value>Open Limp MP%</value>
+  </data>
+  <data name="Enum_Stat_OpenLimpSB" xml:space="preserve">
+    <value>Open Limp SB%</value>
+  </data>
+  <data name="Enum_Stat_RiverFoldIn3Bet" xml:space="preserve">
+    <value>River Fold in 3-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_RiverFoldIn4Bet" xml:space="preserve">
+    <value>River Fold in 4-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_RiverFoldInSRP" xml:space="preserve">
+    <value>River Fold in SRP%</value>
+  </data>
 </root>

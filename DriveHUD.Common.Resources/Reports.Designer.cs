@@ -961,6 +961,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check-Raise Flop as PFR 3-Bet Pot%.
+        /// </summary>
+        internal static string Reports_Column_CheckRaiseFlopAsPFRIn3BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckRaiseFlopAsPFRIn3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check-Raise Flop as PFR SRP%.
+        /// </summary>
+        internal static string Reports_Column_CheckRaiseFlopAsPFRInSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckRaiseFlopAsPFRInSRP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check River after BB Line%.
         /// </summary>
         internal static string Reports_Column_CheckRiverAfterBBLine {
@@ -1290,6 +1308,24 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_DelayedTurnCBetIn3BetPot {
             get {
                 return ResourceManager.GetString("Reports_Column_DelayedTurnCBetIn3BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delayed Turn C-Bet in 4-Bet Pot%.
+        /// </summary>
+        internal static string Reports_Column_DelayedTurnCBetIn4BetPot {
+            get {
+                return ResourceManager.GetString("Reports_Column_DelayedTurnCBetIn4BetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delayed Turn C-Bet in SRP%.
+        /// </summary>
+        internal static string Reports_Column_DelayedTurnCBetInSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_DelayedTurnCBetInSRP", resourceCulture);
             }
         }
         
@@ -2392,6 +2428,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open Limp BTN%.
+        /// </summary>
+        internal static string Reports_Column_OpenLimpBTN {
+            get {
+                return ResourceManager.GetString("Reports_Column_OpenLimpBTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Limp CO%.
+        /// </summary>
+        internal static string Reports_Column_OpenLimpCO {
+            get {
+                return ResourceManager.GetString("Reports_Column_OpenLimpCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Limp EP%.
+        /// </summary>
+        internal static string Reports_Column_OpenLimpEP {
+            get {
+                return ResourceManager.GetString("Reports_Column_OpenLimpEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Limp MP%.
+        /// </summary>
+        internal static string Reports_Column_OpenLimpMP {
+            get {
+                return ResourceManager.GetString("Reports_Column_OpenLimpMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Limp SB%.
+        /// </summary>
+        internal static string Reports_Column_OpenLimpSB {
+            get {
+                return ResourceManager.GetString("Reports_Column_OpenLimpSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Open minraise%.
         /// </summary>
         internal static string Reports_Column_OpenMinraise {
@@ -2712,6 +2793,33 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_RiverCheckFold {
             get {
                 return ResourceManager.GetString("Reports_Column_RiverCheckFold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Fold in 3-Bet Pot%.
+        /// </summary>
+        internal static string Reports_Column_RiverFoldIn3Bet {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverFoldIn3Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Fold in 4-Bet Pot%.
+        /// </summary>
+        internal static string Reports_Column_RiverFoldIn4Bet {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverFoldIn4Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to River Fold in SRP%.
+        /// </summary>
+        internal static string Reports_Column_RiverFoldInSRP {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverFoldInSRP", resourceCulture);
             }
         }
         
