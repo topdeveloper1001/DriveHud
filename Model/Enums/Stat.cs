@@ -410,6 +410,13 @@ namespace Model.Enums
         OpenLimpMP,
         OpenLimpCO,
         OpenLimpBTN,
-        OpenLimpSB
+        OpenLimpSB,
+        CheckInStraddle,
+        PFRInStraddle,
+        ThreeBetInStraddle,
+        FourBetInStraddle,
+        FoldInStraddle,
+        WTSDInStraddle,
+        SkipFlopCBetInSRPandCheckFoldFlopOOP
     }
 }

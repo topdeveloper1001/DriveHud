@@ -45,5 +45,10 @@ namespace DriveHUD.Entities
         {
             return position == EnumPosition.BTN;
         }
+
+        public static bool IsStraddlePosition(this EnumPosition position)
+        {
+            return position == EnumPosition.STRDL;
+        }
     }
 }

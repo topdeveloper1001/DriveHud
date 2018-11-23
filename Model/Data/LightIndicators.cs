@@ -2976,6 +2976,103 @@ namespace Model.Data
 
         #endregion
 
+        #region Straddle stats 
+
+        [ProtoMember(321)]
+        protected int couldActInStraddle;
+
+        [ProtoMember(322)]
+        protected int didCheckInStraddle;
+
+        public override decimal CheckInStraddle => GetPercentage(didCheckInStraddle, couldActInStraddle);
+
+        [ProtoMember(323)]
+        protected int didPFRInStraddle;
+
+        public override decimal PFRInStraddle => GetPercentage(didPFRInStraddle, couldActInStraddle);
+
+        [ProtoMember(324)]
+        protected int did3BetInStraddle;
+
+        [ProtoMember(325)]
+        protected int could3BetInStraddle;
+
+        public override decimal ThreeBetInStraddle => GetPercentage(did3BetInStraddle, could3BetInStraddle);
+
+        [ProtoMember(326)]
+        protected int did4BetInStraddle;
+
+        [ProtoMember(327)]
+        protected int could4BetInStraddle;
+
+        public override decimal FourBetInStraddle => GetPercentage(did4BetInStraddle, could4BetInStraddle);
+
+        [ProtoMember(328)]
+        protected int didFoldInStraddle;
+
+        public override decimal FoldInStraddle => GetPercentage(didFoldInStraddle, couldActInStraddle);
+
+        [ProtoMember(329)]
+        protected int wtsdInStraddle;
+
+        [ProtoMember(330)]
+        protected int wtsdOpportunityInStraddle;
+
+        public override decimal WTSDInStraddle => GetPercentage(wtsdInStraddle, wtsdOpportunityInStraddle);
+
+        private void AddStraddleStatsToStatistic(Playerstatistic statistic)
+        {
+            couldActInStraddle += statistic.CouldActInStraddle;
+            didCheckInStraddle += statistic.DidCheckInStraddle;
+            didPFRInStraddle += statistic.DidPFRInStraddle;
+            did3BetInStraddle += statistic.Did3BetInStraddle;
+            could3BetInStraddle += statistic.Could3BetInStraddle;
+            did4BetInStraddle += statistic.Did4BetInStraddle;
+            could4BetInStraddle += statistic.Could4BetInStraddle;
+            wtsdInStraddle += statistic.WTSDInStraddle;
+            wtsdOpportunityInStraddle += statistic.WTSDOpportunityInStraddle;
+        }
+
+        private void ClearStraddleStatsToStatistic(Playerstatistic statistic)
+        {
+            couldActInStraddle = 0;
+            didCheckInStraddle = 0;
+            didPFRInStraddle = 0;
+            did3BetInStraddle = 0;
+            could3BetInStraddle = 0;
+            did4BetInStraddle = 0;
+            could4BetInStraddle = 0;
+            wtsdInStraddle = 0;
+            wtsdOpportunityInStraddle = 0;
+        }
+
+        private void AddStraddleStatsToIndicators(LightIndicators indicator)
+        {
+            couldActInStraddle += indicator.couldActInStraddle;
+            didCheckInStraddle += indicator.didCheckInStraddle;
+            didPFRInStraddle += indicator.didPFRInStraddle;
+            did3BetInStraddle += indicator.did3BetInStraddle;
+            could3BetInStraddle += indicator.could3BetInStraddle;
+            did4BetInStraddle += indicator.did4BetInStraddle;
+            could4BetInStraddle += indicator.could4BetInStraddle;
+            wtsdInStraddle += indicator.wtsdInStraddle;
+            wtsdOpportunityInStraddle += indicator.wtsdOpportunityInStraddle;
+        }
+
+        #endregion
+
+        #region Skip Flop C-Bet SRP & C/F Flop OOP%
+
+        [ProtoMember(331)]
+        protected int didSkipFlopCBetInSRPandCheckFoldFlopOOP;
+
+        [ProtoMember(332)]
+        protected int couldSkipFlopCBetInSRPandCheckFoldFlopOOP;
+
+        public override decimal SkipFlopCBetInSRPandCheckFoldFlopOOP => GetPercentage(didSkipFlopCBetInSRPandCheckFoldFlopOOP, couldSkipFlopCBetInSRPandCheckFoldFlopOOP);
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -3136,6 +3233,9 @@ namespace Model.Data
             didCheckRaiseFlopAsPFRIn3BetPot += statistic.DidCheckRaiseFlopAsPFRIn3BetPot;
             couldCheckRaiseFlopAsPFRIn3BetPot += statistic.CouldCheckRaiseFlopAsPFRIn3BetPot;
 
+            didSkipFlopCBetInSRPandCheckFoldFlopOOP += statistic.DidSkipFlopCBetInSRPandCheckFoldFlopOOP;
+            couldSkipFlopCBetInSRPandCheckFoldFlopOOP += statistic.CouldSkipFlopCBetInSRPandCheckFoldFlopOOP;
+
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
@@ -3291,6 +3391,9 @@ namespace Model.Data
             couldCheckRaiseFlopAsPFRInSRP = 0;
             didCheckRaiseFlopAsPFRIn3BetPot = 0;
             couldCheckRaiseFlopAsPFRIn3BetPot = 0;
+
+            didSkipFlopCBetInSRPandCheckFoldFlopOOP = 0;
+            couldSkipFlopCBetInSRPandCheckFoldFlopOOP = 0;
 
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
@@ -3486,6 +3589,9 @@ namespace Model.Data
             couldCheckRaiseFlopAsPFRInSRP += indicator.couldCheckRaiseFlopAsPFRInSRP;
             didCheckRaiseFlopAsPFRIn3BetPot += indicator.didCheckRaiseFlopAsPFRIn3BetPot;
             couldCheckRaiseFlopAsPFRIn3BetPot += indicator.couldCheckRaiseFlopAsPFRIn3BetPot;
+
+            didSkipFlopCBetInSRPandCheckFoldFlopOOP += indicator.didSkipFlopCBetInSRPandCheckFoldFlopOOP;
+            couldSkipFlopCBetInSRPandCheckFoldFlopOOP += indicator.couldSkipFlopCBetInSRPandCheckFoldFlopOOP;
 
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);

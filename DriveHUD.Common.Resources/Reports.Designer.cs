@@ -142,6 +142,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 3-Bet Straddle%.
+        /// </summary>
+        internal static string Reports_Column_3Bet_Straddle {
+            get {
+                return ResourceManager.GetString("Reports_Column_3Bet_Straddle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 3-Bet Call%.
         /// </summary>
         internal static string Reports_Column_3BetCall {
@@ -219,6 +228,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_4Bet_SB {
             get {
                 return ResourceManager.GetString("Reports_Column_4Bet_SB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-Bet Straddle%.
+        /// </summary>
+        internal static string Reports_Column_4Bet_Straddle {
+            get {
+                return ResourceManager.GetString("Reports_Column_4Bet_Straddle", resourceCulture);
             }
         }
         
@@ -930,6 +948,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_CheckFlopAsPFRAndXFOnTurnOOP {
             get {
                 return ResourceManager.GetString("Reports_Column_CheckFlopAsPFRAndXFOnTurnOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Straddle%.
+        /// </summary>
+        internal static string Reports_Column_CheckInStraddle {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckInStraddle", resourceCulture);
             }
         }
         
@@ -1659,6 +1686,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_FoldFlop {
             get {
                 return ResourceManager.GetString("Reports_Column_FoldFlop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold Straddle Pre-Flop%.
+        /// </summary>
+        internal static string Reports_Column_FoldInStraddle {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldInStraddle", resourceCulture);
             }
         }
         
@@ -2554,6 +2590,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PFR Straddle%.
+        /// </summary>
+        internal static string Reports_Column_PFRInStraddle {
+            get {
+                return ResourceManager.GetString("Reports_Column_PFRInStraddle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Place.
         /// </summary>
         internal static string Reports_Column_Place {
@@ -2982,6 +3027,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_ShowdownHand {
             get {
                 return ResourceManager.GetString("Reports_Column_ShowdownHand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skip Flop C-Bet SRP &amp; C/F Flop OOP%.
+        /// </summary>
+        internal static string Reports_Column_SkipFlopCBetInSRPandCheckFoldFlopOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_SkipFlopCBetInSRPandCheckFoldFlopOOP", resourceCulture);
             }
         }
         
@@ -3792,6 +3846,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_WTSDAsPFR {
             get {
                 return ResourceManager.GetString("Reports_Column_WTSDAsPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD from Straddle%.
+        /// </summary>
+        internal static string Reports_Column_WTSDInStraddle {
+            get {
+                return ResourceManager.GetString("Reports_Column_WTSDInStraddle", resourceCulture);
             }
         }
     }

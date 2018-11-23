@@ -645,7 +645,7 @@ namespace Model
             stat.DidColdCallVsOpenRaiseCo = coldCallVsCoOpen.Made ? 1 : 0;
             stat.CouldColdCallVsOpenRaiseCo = coldCallVsCoOpen.Possible ? 1 : 0;
 
-            stat.DidDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && betOnTurn ? 1 : 0;
+            stat.DidDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && stat.FlopActions == "X" && betOnTurn ? 1 : 0;
 
             var couldBetOnFlop = parsedHand.Flop != null &&
                 ((parsedHand.Flop.FirstOrDefault()?.PlayerName == player) ||
@@ -1722,7 +1722,7 @@ namespace Model
         }
 
         private static void CalculateColdCall3Bet(ConditionalBet coldCall3Bet, List<HandAction> preflops, string player)
-        {         
+        {
             bool canThreeBet = false;
             bool wasThreeBet = false;
 
@@ -1763,7 +1763,7 @@ namespace Model
         }
 
         private static void CalculateColdCall4Bet(ConditionalBet coldCall4Bet, List<HandAction> preflops, string player)
-        {           
+        {
             bool canThreeBet = false;
             bool wasThreeBet = false;
             bool wasFourBet = false;

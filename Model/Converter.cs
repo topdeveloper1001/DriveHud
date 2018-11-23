@@ -510,6 +510,7 @@ namespace Model.Importer
         public static EnumFacingPreflop ToFacingPreflop(IEnumerable<HandAction> preflopHandActions, string playerName)
         {
             HandAction firstPlayerAction = preflopHandActions.FirstOrDefault(x => x.PlayerName == playerName && !x.IsBlinds);
+
             if (firstPlayerAction == null)
             {
                 return EnumFacingPreflop.None;

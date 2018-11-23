@@ -1897,6 +1897,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check Straddle%.
+        /// </summary>
+        internal static string Enum_Stat_CheckInStraddle {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckInStraddle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check-Raise%.
         /// </summary>
         internal static string Enum_Stat_CheckRaise {
@@ -2680,6 +2689,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold Straddle Pre-Flop%.
+        /// </summary>
+        internal static string Enum_Stat_FoldInStraddle {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldInStraddle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold to 3-Bet%.
         /// </summary>
         internal static string Enum_Stat_FoldTo3Bet {
@@ -3157,6 +3175,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4-Bet Straddle%.
+        /// </summary>
+        internal static string Enum_Stat_FourBetInStraddle {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FourBetInStraddle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 4-Bet vs Blind 3-Bet%.
         /// </summary>
         internal static string Enum_Stat_FourBetVsBlind3Bet {
@@ -3540,6 +3567,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_PFRInSB {
             get {
                 return ResourceManager.GetString("Enum_Stat_PFRInSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR Straddle%.
+        /// </summary>
+        internal static string Enum_Stat_PFRInStraddle {
+            get {
+                return ResourceManager.GetString("Enum_Stat_PFRInStraddle", resourceCulture);
             }
         }
         
@@ -4048,6 +4084,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Skip Flop C-Bet SRP &amp; C/F Flop OOP%.
+        /// </summary>
+        internal static string Enum_Stat_SkipFlopCBetInSRPandCheckFoldFlopOOP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_SkipFlopCBetInSRPandCheckFoldFlopOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Squeeze%.
         /// </summary>
         internal static string Enum_Stat_Squeeze {
@@ -4377,6 +4422,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_ThreeBetCOvsMP {
             get {
                 return ResourceManager.GetString("Enum_Stat_ThreeBetCOvsMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet Straddle%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBetInStraddle {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBetInStraddle", resourceCulture);
             }
         }
         
@@ -4791,6 +4845,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_WTSDAsPFR {
             get {
                 return ResourceManager.GetString("Enum_Stat_WTSDAsPFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WTSD from Straddle%.
+        /// </summary>
+        internal static string Enum_Stat_WTSDInStraddle {
+            get {
+                return ResourceManager.GetString("Enum_Stat_WTSDInStraddle", resourceCulture);
             }
         }
         

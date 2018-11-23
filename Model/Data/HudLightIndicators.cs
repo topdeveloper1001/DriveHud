@@ -4129,6 +4129,105 @@ namespace Model.Data
 
         #endregion
 
+        #region Straddle stats 
+
+        public virtual StatDto CheckInStraddleObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckInStraddle,
+                    Occurred = didCheckInStraddle,
+                    CouldOccurred = couldActInStraddle
+                };
+            }
+        }
+
+        public virtual StatDto PFRInStraddleObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = PFRInStraddle,
+                    Occurred = didPFRInStraddle,
+                    CouldOccurred = couldActInStraddle
+                };
+            }
+        }
+
+        public virtual StatDto ThreeBetInStraddleObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBetInStraddle,
+                    Occurred = did3BetInStraddle,
+                    CouldOccurred = could3BetInStraddle
+                };
+            }
+        }
+
+        public virtual StatDto FourBetInStraddleObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FourBetInStraddle,
+                    Occurred = did4BetInStraddle,
+                    CouldOccurred = could4BetInStraddle
+                };
+            }
+        }
+
+        public virtual StatDto FoldInStraddleObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldInStraddle,
+                    Occurred = didFoldInStraddle,
+                    CouldOccurred = couldActInStraddle
+                };
+            }
+        }
+
+        public virtual StatDto WTSDInStraddleObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = WTSDInStraddle,
+                    Occurred = wtsdInStraddle,
+                    CouldOccurred = wtsdOpportunityInStraddle
+                };
+            }
+        }
+
+        #endregion
+
+        #region Skip Flop C-Bet SRP & C/F Flop OOP%
+
+        public virtual StatDto SkipFlopCBetInSRPandCheckFoldFlopOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = SkipFlopCBetInSRPandCheckFoldFlopOOP,
+                    Occurred = didSkipFlopCBetInSRPandCheckFoldFlopOOP,
+                    CouldOccurred = couldSkipFlopCBetInSRPandCheckFoldFlopOOP
+                };
+            }
+        }
+
+        #endregion
+
         #endregion
 
         public virtual StatDto CheckRaiseFlopAsPFRObject

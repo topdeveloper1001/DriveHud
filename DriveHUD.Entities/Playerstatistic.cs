@@ -2196,7 +2196,9 @@ namespace DriveHUD.Entities
 
         #region Skip Flop C-Bet SRP & C/F Flop OOP%
 
-        public virtual int SkipFlopCBetInSRPandCheckFoldFlopOOP => Flopcontinuationbetpossible == 1 && IsSRP && FlopActions.Equals("CF") && PreflopIP == 0 ? 1 : 0;
+        public virtual int DidSkipFlopCBetInSRPandCheckFoldFlopOOP => Flopcontinuationbetpossible == 1 && IsSRP && FlopActions.Equals("CF") && PreflopIP == 0 ? 1 : 0;
+
+        public virtual int CouldSkipFlopCBetInSRPandCheckFoldFlopOOP => Flopcontinuationbetpossible == 1 && IsSRP && FlopActions.StartsWith("C") && FlopActions.Length > 1 && PreflopIP == 0 ? 1 : 0;
 
         #endregion
 
@@ -2237,6 +2239,38 @@ namespace DriveHUD.Entities
         public virtual int DidOpenLimpSB => DidOpenLimp == 1 && Position.IsSBPosition() ? 1 : 0;
 
         public virtual int CouldOpenLimpSB => CouldOpenLimp == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        #endregion
+
+        #region Straddle stats
+
+        public virtual int CouldActInStraddle => IsStraddle && Position.IsStraddlePosition() && PreflopActions.Length > 0 ? 1 : 0;
+
+        public virtual int DidCheckInStraddle => IsStraddle && Position.IsStraddlePosition() && PreflopActions.Equals("C") ? 1 : 0;
+
+        public virtual int DidPFRInStraddle => IsStraddle && Position.IsStraddlePosition() && Pfrhands == 1 ? 1 : 0;
+
+        public virtual int Did3BetInStraddle => IsStraddle && Position.IsStraddlePosition() && Didthreebet == 1 ? 1 : 0;
+
+        public virtual int Could3BetInStraddle => IsStraddle && Position.IsStraddlePosition() && Couldthreebet == 1 ? 1 : 0;
+
+        public virtual int Did4BetInStraddle => IsStraddle && Position.IsStraddlePosition() && Didfourbet == 1 ? 1 : 0;
+
+        public virtual int Could4BetInStraddle => IsStraddle && Position.IsStraddlePosition() && Couldfourbet == 1 ? 1 : 0;
+
+        public virtual int DidFoldInStraddle => IsStraddle && Position.IsStraddlePosition() && PreflopActions.Equals("F") ? 1 : 0;
+
+        public virtual int WTSDInStraddle => IsStraddle && Position.IsStraddlePosition() && Sawshowdown == 1 ? 1 : 0;
+
+        public virtual int WTSDOpportunityInStraddle => IsStraddle && Position.IsStraddlePosition() && Sawflop == 1 ? 1 : 0;
+
+        #endregion
+
+        #region Delayed Turn C-Bet
+
+       
+
+        #endregion
 
         #endregion
 

@@ -2301,6 +2301,12 @@ namespace Model.Data
 
         #endregion
 
+        #region Skip Flop C-Bet SRP & C/F Flop OOP%
+
+        public virtual decimal SkipFlopCBetInSRPandCheckFoldFlopOOP => GetPercentage(Statistics.Sum(x => x.DidSkipFlopCBetInSRPandCheckFoldFlopOOP), Statistics.Sum(x => x.CouldSkipFlopCBetInSRPandCheckFoldFlopOOP));
+
+        #endregion
+
         #region  Check-Raise Flop as PFR SRP/3-Bet pot
 
         public virtual decimal CheckRaiseFlopAsPFRInSRP => GetPercentage(Statistics.Sum(x => x.DidCheckRaiseFlopAsPFRInSRP), Statistics.Sum(x => x.CouldCheckRaiseFlopAsPFRInSRP));
@@ -2319,7 +2325,23 @@ namespace Model.Data
 
         public virtual decimal OpenLimpBTN => GetPercentage(positionDidOpenLimp?.BN, positionCouldOpenLimp?.BN);
 
-        public virtual decimal OpenLimpSB => GetPercentage(positionDidOpenLimp?.SB, positionCouldOpenLimp?.SB);        
+        public virtual decimal OpenLimpSB => GetPercentage(positionDidOpenLimp?.SB, positionCouldOpenLimp?.SB);
+
+        #endregion
+
+        #region Straddle stats 
+
+        public virtual decimal CheckInStraddle => GetPercentage(Statistics.Sum(x => x.DidCheckInStraddle), Statistics.Sum(x => x.CouldActInStraddle));
+
+        public virtual decimal PFRInStraddle => GetPercentage(Statistics.Sum(x => x.DidPFRInStraddle), Statistics.Sum(x => x.CouldActInStraddle));
+
+        public virtual decimal ThreeBetInStraddle => GetPercentage(Statistics.Sum(x => x.Did3BetInStraddle), Statistics.Sum(x => x.Could3BetInStraddle));
+
+        public virtual decimal FourBetInStraddle => GetPercentage(Statistics.Sum(x => x.Did4BetInStraddle), Statistics.Sum(x => x.Could4BetInStraddle));
+
+        public virtual decimal FoldInStraddle => GetPercentage(Statistics.Sum(x => x.DidFoldInStraddle), Statistics.Sum(x => x.CouldActInStraddle));
+
+        public virtual decimal WTSDInStraddle => GetPercentage(Statistics.Sum(x => x.WTSDInStraddle), Statistics.Sum(x => x.WTSDOpportunityInStraddle));
 
         #endregion
 

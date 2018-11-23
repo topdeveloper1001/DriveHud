@@ -1676,6 +1676,9 @@
   <data name="Enum_Stat_WTSDAsPFR" xml:space="preserve">
     <value>WTSD as PFR%</value>
   </data>
+  <data name="Enum_Stat_CheckInStraddle" xml:space="preserve">
+    <value>Check Straddle%</value>
+  </data>
   <data name="Enum_Stat_CheckRaiseFlopAsPFRIn3BetPot" xml:space="preserve">
     <value>Check-Raise Flop as PFR 3-Bet Pot%</value>
   </data>
@@ -1687,6 +1690,12 @@
   </data>
   <data name="Enum_Stat_DelayedTurnCBetInSRP" xml:space="preserve">
     <value>Delayed Turn C-Bet in SRP%</value>
+  </data>
+  <data name="Enum_Stat_FoldInStraddle" xml:space="preserve">
+    <value>Fold Straddle Pre-Flop%</value>
+  </data>
+  <data name="Enum_Stat_FourBetInStraddle" xml:space="preserve">
+    <value>4-Bet Straddle%</value>
   </data>
   <data name="Enum_Stat_OpenLimpBTN" xml:space="preserve">
     <value>Open Limp BTN%</value>
@@ -1703,6 +1712,9 @@
   <data name="Enum_Stat_OpenLimpSB" xml:space="preserve">
     <value>Open Limp SB%</value>
   </data>
+  <data name="Enum_Stat_PFRInStraddle" xml:space="preserve">
+    <value>PFR Straddle%</value>
+  </data>
   <data name="Enum_Stat_RiverFoldIn3Bet" xml:space="preserve">
     <value>River Fold in 3-Bet Pot%</value>
   </data>
@@ -1711,5 +1723,14 @@
   </data>
   <data name="Enum_Stat_RiverFoldInSRP" xml:space="preserve">
     <value>River Fold in SRP%</value>
+  </data>
+  <data name="Enum_Stat_SkipFlopCBetInSRPandCheckFoldFlopOOP" xml:space="preserve">
+    <value>Skip Flop C-Bet SRP &amp; C/F Flop OOP%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetInStraddle" xml:space="preserve">
+    <value>3-Bet Straddle%</value>
+  </data>
+  <data name="Enum_Stat_WTSDInStraddle" xml:space="preserve">
+    <value>WTSD from Straddle%</value>
   </data>
 </root>
