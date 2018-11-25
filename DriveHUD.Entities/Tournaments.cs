@@ -10,8 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Reflection;
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Reflection;
+using System.Text;
 
 namespace DriveHUD.Entities
 {
@@ -95,6 +98,28 @@ namespace DriveHUD.Entities
         public virtual TournamentKey BuildKey()
         {
             return new TournamentKey(SiteId, Tourneynumber);
+        }
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+
+            foreach (var property in GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public))
+            {
+                if (property.Name == nameof(Player))
+                {
+                    continue;
+                }
+
+                sb.Append(property.Name);
+                sb.Append("=");
+                sb.Append(property.GetValue(this));
+                sb.Append(", ");
+            }
+
+            sb.Remove(sb.Length - 2, 2);
+
+            return sb.ToString();
         }
     }
 }

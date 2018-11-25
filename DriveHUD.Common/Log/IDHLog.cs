@@ -20,6 +20,11 @@ namespace DriveHUD.Common.Log
     public interface IDHLog
     {
         /// <summary>
+        /// Determine whenever adv logging is enabled
+        /// </summary>
+        bool IsAdvanced { get; set; }
+
+        /// <summary>
         /// Write message to log 
         /// </summary>
         /// <param name="senderType">Class - source of message. If null then mainLog will be used.</param>

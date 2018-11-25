@@ -106,6 +106,21 @@ namespace DriveHUD.Common.Log
             log.Info(string.Empty, message);
         }
 
+        public static void AdvInfo(this IDHLog log, object sender, object message)
+        {
+            if (!log.IsAdvanced)
+            {
+                return;
+            }
+
+            log.Info(sender, message);
+        }
+
+        public static void AdvInfo(this IDHLog log, object message)
+        {            
+            log.AdvInfo(string.Empty, message);
+        }
+
         public static void Warn(this IDHLog log, object sender, object message)
         {
             log.Log(sender, message, LogMessageType.Warning);
