@@ -1,0 +1,99 @@
+Game #17957560869 starts.
+
+#Game No : 17957560869 
+***** Hand History for Game 17957560869 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 22:17:59 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190735059) Table #1 (Real Money)
+Seat 1 is the button
+Total number of players : 3/3 
+Seat 2: Aufgehts1234 ( 500 )
+Seat 3: Peon84 ( 500 )
+Seat 1: kondor1961 ( 500 )
+Trny: 190735059 Level: 1 
+Blinds(10/20)
+Aufgehts1234 posts small blind [10].
+Peon84 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Qh 6d ]
+kondor1961 folds
+Aufgehts1234 calls [10]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Peon84 checks
+** Dealing Flop ** [ 2h, Ah, 7s ]
+Aufgehts1234 checks
+Peon84 checks
+** Dealing Turn ** [ 8h ]
+Aufgehts1234 checks
+Peon84 checks
+** Dealing River ** [ 7h ]
+Aufgehts1234 checks
+Peon84 bets [40]
+Aufgehts1234 folds
+Peon84 does not show cards.
+Peon84 wins 80 chips
+Game #17957563317 starts.
+
+#Game No : 17957563317 
+***** Hand History for Game 17957563317 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 22:18:40 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190735059) Table #1 (Real Money)
+Seat 2 is the button
+Total number of players : 3/3 
+Seat 2: Aufgehts1234 ( 480 )
+Seat 3: Peon84 ( 520 )
+Seat 1: kondor1961 ( 500 )
+Trny: 190735059 Level: 1 
+Blinds(10/20)
+Peon84 posts small blind [10].
+kondor1961 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Td Qd ]
+Aufgehts1234 raises [40]
+Peon84 raises [50]
+kondor1961 calls [40]
+Aufgehts1234 calls [20]
+** Dealing Flop ** [ Qh, Ah, 3d ]
+Peon84 bets [90]
+kondor1961 calls [90]
+Aufgehts1234 calls [90]
+** Dealing Turn ** [ 3s ]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Peon84 bets [225]
+kondor1961 calls [225]
+Aufgehts1234 calls [225]
+** Dealing River ** [ Ts ]
+Peon84 is all-In  [145]
+kondor1961 folds
+Aufgehts1234 is all-In  [105]
+Peon84 shows [ Td, Qd ]two pairs, Queens and Tens.
+Aufgehts1234 shows [ As, 8s ]two pairs, Aces and Threes.
+Peon84 wins 40 chips from the side pot 1 with two pairs, Queens and Tens.
+Aufgehts1234 wins 1,335 chips from the main pot with two pairs, Aces and Threes.
+Game #17957566445 starts.
+
+#Game No : 17957566445 
+***** Hand History for Game 17957566445 *****
+NL Texas Hold'em $0.25 USD  - Thursday, November 15, 22:19:19 MSK 2018
+Table $0.25 Sit & Go 3-Handed (190735059) Table #1 (Real Money)
+Seat 3 is the button
+Total number of players : 3/3 
+Seat 2: Aufgehts1234 ( 1,335 )
+Seat 3: Peon84 ( 40 )
+Seat 1: kondor1961 ( 125 )
+Trny: 190735059 Level: 1 
+Blinds(10/20)
+kondor1961 posts small blind [10].
+Aufgehts1234 posts big blind [20].
+** Dealing down cards **
+Dealt to Peon84 [  Ts 7h ]
+Peon84 is all-In  [40]
+kondor1961 is all-In  [115]
+Aufgehts1234 folds
+** Dealing Flop ** [ 9s, 6h, Ah ]
+** Dealing Turn ** [ 3h ]
+** Dealing River ** [ Ks ]
+Peon84 shows [ Ts, 7h ]high card Ace.
+kondor1961 shows [ Kh, 7s ]a pair of Kings.
+kondor1961 wins 85 chips from the side pot 1 with a pair of Kings.
+kondor1961 wins 100 chips from the main pot with a pair of Kings.
+Player Peon84 finished in 3.

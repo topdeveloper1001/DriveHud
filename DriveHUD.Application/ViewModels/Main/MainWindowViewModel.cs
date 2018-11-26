@@ -110,15 +110,15 @@ namespace DriveHUD.Application.ViewModels
 
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             eventAggregator.GetEvent<RequestEquityCalculatorEvent>().Subscribe(ShowCalculateEquityView);
-            eventAggregator.GetEvent<DataImportedEvent>().Subscribe(OnDataImported, ThreadOption.BackgroundThread, false);
-            eventAggregator.GetEvent<PlayersAddedEvent>().Subscribe(OnPlayersAdded, ThreadOption.BackgroundThread, false);
+            eventAggregator.GetEvent<DataImportedEvent>().Subscribe(OnDataImported, ThreadOption.BackgroundThread, true);
+            eventAggregator.GetEvent<PlayersAddedEvent>().Subscribe(OnPlayersAdded, ThreadOption.BackgroundThread, true);
             eventAggregator.GetEvent<SettingsUpdatedEvent>().Subscribe(HandleSettingsChangedEvent);
             eventAggregator.GetEvent<UpdateViewRequestedEvent>().Subscribe(UpdateCurrentView);
             eventAggregator.GetEvent<MainNotificationEvent>().Subscribe(RaiseNotification);
             eventAggregator.GetEvent<PokerStarsDetectedEvent>().Subscribe(OnPokerStarsDetected);
             eventAggregator.GetEvent<LoadDataRequestedEvent>().Subscribe(arg => Load());
-            eventAggregator.GetEvent<PreImportedDataEvent>().Subscribe(OnPreDataImported, ThreadOption.BackgroundThread, false);
-            eventAggregator.GetEvent<TableClosedEvent>().Subscribe(OnTableClosed, ThreadOption.BackgroundThread, false);
+            eventAggregator.GetEvent<PreImportedDataEvent>().Subscribe(OnPreDataImported, ThreadOption.BackgroundThread, true);
+            eventAggregator.GetEvent<TableClosedEvent>().Subscribe(OnTableClosed, ThreadOption.BackgroundThread, true);
 
             InitializeFilters();
             InitializeData();

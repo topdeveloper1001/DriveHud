@@ -67,6 +67,8 @@ namespace DriveHUD.Importers.PokerStars
 
             string auditDirectory = null;
 
+            var processedHands = new HashSet<long>();
+
             while (!cancellationTokenSource.IsCancellationRequested)
             {
                 try
@@ -118,7 +120,21 @@ namespace DriveHUD.Importers.PokerStars
                         foreach (var auditFile in auditFiles)
                         {
                             var dataObject = ParseAuditFile(auditFile);
-                            dataManager.ProcessData(dataObject);                            
+
+                            if (dataObject != null &&
+                                (!processedHands.Contains(dataObject.HandNumber) || dataObject.HandNumber == 0))
+                            {
+                                processedHands.Add(dataObject.HandNumber);
+                                dataManager.ProcessData(dataObject);
+                            }
+
+                            try
+                            {
+                                File.Delete(auditFile);
+                            }
+                            catch
+                            {
+                            }
                         }
                     }
 
@@ -165,6 +181,12 @@ namespace DriveHUD.Importers.PokerStars
                     .ToDictionary(x => x.Key, x => x.Value);
 
                 var dataObject = new PokerStarsZoomDataObject();
+
+                // Parse hand number
+                if (auditData.TryGetValue("hand", out string handNumberText) && long.TryParse(handNumberText, out long handNumber))
+                {
+                    dataObject.HandNumber = handNumber;
+                }
 
                 // Parse table name
                 if (auditData.TryGetValue("tablenumber", out string tableName))
@@ -280,7 +302,8 @@ namespace DriveHUD.Importers.PokerStars
                         if (!string.IsNullOrEmpty(title) &&
                             windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase) &&
                             (!tableName.Contains("#") && !title.Contains("#") || tableName.Contains("#")) &&
-                            title.Replace(" Table ", " ").ContainsIgnoreCase(tableName) && !title.ContainsIgnoreCase(" Lobby"))
+                            title.Replace(" Table ", " ").ContainsIgnoreCase(tableName) && !title.ContainsIgnoreCase(" Lobby") &&
+                            title.ContainsIgnoreCase("Logged In"))
                         {
                             handle = hWnd;
                             return false;

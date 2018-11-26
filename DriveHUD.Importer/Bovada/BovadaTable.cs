@@ -56,7 +56,7 @@ namespace DriveHUD.Importers.Bovada
 
         private Dictionary<int, int> seatsPlayerIds;
 
-        private ConcurrentDictionary<int, PlayerFinalPosition> playersFinalPositions;
+        protected ConcurrentDictionary<int, PlayerFinalPosition> playersFinalPositions;
 
         private bool hasResultCommand = false;
 
@@ -459,12 +459,15 @@ namespace DriveHUD.Importers.Bovada
                     ParseConnectInfo(cmdObj);
                     break;
 
-                case "JACKPOT_PRIZE":
-                    if (IsJackpotTable || isConnectedInfoParsed)
+                case "CONNECT_CLOSE":
+                    if (IsJackpotTable)
                     {
-                        break;
+                        ProcessUnjoin();
                     }
 
+                    break;
+
+                case "JACKPOT_PRIZE":
                     IsJackpotTable = true;
                     MaxSeat = JackpotMaxSeats;
                     GameFormat = GameFormat.SnG;
@@ -812,7 +815,7 @@ namespace DriveHUD.Importers.Bovada
 
                     UpdatePlayersAddedRemoved(handModel, configuration, false);
 
-                    LogProvider.Log.Info(this, string.Format("Hand {0} processed. [{1}]", handModel.HandNumber, Identifier));
+                    LogProvider.Log.Info(this, $"Hand {handModel.HandNumber} [{handModel.GameType}, {handModel.GameFormat}, {MaxSeat}, {WindowHandle}] processed. [{Identifier}]");
 
                     var gameInfo = new GameInfo
                     {
@@ -950,6 +953,12 @@ namespace DriveHUD.Importers.Bovada
             // do nothing
         }
 
+
+        protected virtual void ProcessUnjoin()
+        {
+            // do nothing
+        }
+
         #endregion
 
         protected virtual void ImportHandAsync(XmlDocument handHistoryXml, ulong handNumber, GameInfo gameInfo, Game game)
@@ -1006,6 +1015,7 @@ namespace DriveHUD.Importers.Bovada
 
             if (parsingResult == null)
             {
+                LogProvider.Log.Warn(this, string.Format("Hand {0} has not been parsed. Result is null. [{1}]", handNumber, Identifier));
                 return;
             }
 
@@ -1890,7 +1900,7 @@ namespace DriveHUD.Importers.Bovada
             }
         }
 
-        private class PlayerFinalPosition
+        protected class PlayerFinalPosition
         {
             public int Seat { get; set; }
 

@@ -59,8 +59,8 @@ namespace DriveHUD.Importers.PokerKing
 
         public override bool Match(TcpPacket tcpPacket, IpPacket ipPacket)
         {
-            return tcpPacket.SourcePort == PKImporterHelper.PortFilter ||
-                tcpPacket.DestinationPort == PKImporterHelper.PortFilter;
+            return PKImporterHelper.IsPortMatch(tcpPacket.SourcePort) ||
+                PKImporterHelper.IsPortMatch(tcpPacket.DestinationPort);
         }
 
         public override void AddPacket(CapturedPacket capturedPacket)
@@ -122,7 +122,7 @@ namespace DriveHUD.Importers.PokerKing
         /// <summary>
         /// Reads settings and initializes importer variables
         /// </summary>
-        protected void InitializeSettings()
+        protected virtual void InitializeSettings()
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
@@ -138,6 +138,8 @@ namespace DriveHUD.Importers.PokerKing
         protected void ProcessBuffer()
         {
             var tableWindowProvider = ServiceLocator.Current.GetInstance<ITableWindowProvider>();
+            tableWindowProvider.SetLogger(Logger);
+
             var packetManager = ServiceLocator.Current.GetInstance<IPacketManager<PokerKingPackage>>();
             var handBuilder = ServiceLocator.Current.GetInstance<IPKHandBuilder>();
 
@@ -450,7 +452,7 @@ namespace DriveHUD.Importers.PokerKing
             }
         }
 
-        private void LogPacket(CapturedPacket capturedPacket, string ext)
+        protected virtual void LogPacket(CapturedPacket capturedPacket, string ext)
         {
             var packageFileName = Path.Combine("Logs", capturedPacket.ToString().Replace(":", ".").Replace("->", "-")) + ext;
 

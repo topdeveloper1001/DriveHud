@@ -356,7 +356,7 @@ namespace DriveHUD.Importers
                 Players = players,
                 GameType = gameType,
                 Source = parsedHand,
-                FileName = gameInfo.FileName
+                FileName = gameInfo.FullFileName
             };
 
             var matchInfo = new GameMatchInfo
@@ -622,6 +622,8 @@ namespace DriveHUD.Importers
                             }
 
                             tournaments.Player = existingPlayer;
+
+                            LogProvider.Log.AdvInfo($"Adding new tournament data: {tournaments}");
 
                             session.Insert(tournaments);
 
@@ -976,7 +978,17 @@ namespace DriveHUD.Importers
                 .Select(x => x.Player.PlayerId)
                 .Count();
 
-            var tournamentsByPlayer = tournaments.ToDictionary(x => x.PlayerName, x => x);
+            var tournamentsGroupedByPlayer = tournaments.GroupBy(x => x.PlayerName);
+
+            if (tournamentsGroupedByPlayer.Any(x => x.Count() > 1))
+            {
+                foreach (var duplicates in tournamentsGroupedByPlayer.Where(x => x.Count() > 1))
+                {
+                    LogProvider.Log.Warn($"Found tournament duplicates: {string.Join(" | ", duplicates.Select(x => x.ToString()))}");
+                }
+            }
+
+            var tournamentsByPlayer = tournamentsGroupedByPlayer.ToDictionary(x => x.Key, x => x.OrderBy(p => p.TourneydataId).LastOrDefault());
 
             // get end position in tournament
             foreach (var lastHandByPlayer in lastHandsByPlayer.OrderBy(x => x.HandNumber).ThenBy(x => x.InitialStackSize))

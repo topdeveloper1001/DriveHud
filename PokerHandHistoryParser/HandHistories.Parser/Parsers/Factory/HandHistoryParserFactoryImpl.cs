@@ -81,17 +81,15 @@ namespace HandHistories.Parser.Parsers.Factory
 
                     return new WinningPokerNetworkFastParserImpl();
                 case EnumPokerSites.GGN:
-                    return new CommonHandHistoryParser(EnumPokerSites.GGN);
                 case EnumPokerSites.PokerMaster:
-                    return new CommonHandHistoryParser(EnumPokerSites.PokerMaster);
+                case EnumPokerSites.PokerKing:
+                case EnumPokerSites.Adda52:
+                case EnumPokerSites.PPPoker:
+                    return new CommonHandHistoryParser(siteName);
                 case EnumPokerSites.Horizon:
                     return new HorizonFastParserImpl();
                 case EnumPokerSites.Winamax:
                     return new WinamaxFastParserImpl();
-                case EnumPokerSites.PokerKing:
-                    return new CommonHandHistoryParser(EnumPokerSites.PokerKing);
-                case EnumPokerSites.Adda52:
-                    return new CommonHandHistoryParser(EnumPokerSites.Adda52);
                 default:
                     throw new NotImplementedException("GetFullHandHistoryParser: No parser for " + siteName);
             }

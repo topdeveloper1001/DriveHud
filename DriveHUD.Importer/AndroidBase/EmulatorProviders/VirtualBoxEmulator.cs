@@ -20,6 +20,8 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
 {
     internal abstract class VirtualBoxEmulator : IEmulatorProvider
     {
+        public string Logger { get; set; }
+
         protected abstract string EmulatorName { get; }
 
         protected abstract string ProcessName { get; }
@@ -38,11 +40,14 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
         {
             try
             {
-                return process != null && process.ProcessName.StartsWith(VbProcessName, StringComparison.OrdinalIgnoreCase);
+                var result = process != null && process.ProcessName.StartsWith(VbProcessName, StringComparison.OrdinalIgnoreCase);
+                LogProvider.Log.Info(Logger, $"Check if process '{process?.ProcessName}' matches '{VbProcessName}': {result} [{EmulatorName}]");
+
+                return result;
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Could not check if process is associated with {EmulatorName} emulator {process.Id}", e);
+                LogProvider.Log.Error(Logger, $"Failed to check if process is associated with {EmulatorName} emulator {process.Id}", e);
                 return false;
             }
         }
@@ -59,6 +64,8 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
                 var cmd = process.GetCommandLine();
 
                 var instanceNumber = GetInstanceNumber(cmd, VbInstanceArgumentPrefix, null);
+
+                LogProvider.Log.Info(Logger, $"Check command line of '{process?.ProcessName}': '{cmd}'. Instance: {instanceNumber} [{EmulatorName}]");
 
                 var emulatorProcess = Process.GetProcesses().
                     FirstOrDefault(x =>
@@ -78,11 +85,21 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
                                 (currentNoxInstanceNumber.HasValue && VbEmptyInstanceNumber == currentNoxInstanceNumber));
                     });
 
-                return emulatorProcess != null ? emulatorProcess.MainWindowHandle : IntPtr.Zero;
+                if (emulatorProcess != null)
+                {
+                    LogProvider.Log.Info(Logger, $"Found emulator process '{emulatorProcess.ProcessName}'. MainWindow={emulatorProcess.MainWindowHandle} [{EmulatorName}]");
+
+                    if (emulatorProcess.MainWindowHandle == IntPtr.Zero)
+                    {
+                        emulatorProcess.Refresh();
+                    }
+
+                    return emulatorProcess.MainWindowHandle;
+                }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Could not get window handle of {EmulatorName} emulator for process {process.Id}", e);
+                LogProvider.Log.Error(Logger, $"Failed to get window handle of {EmulatorName} emulator for process {process.Id}", e);
             }
 
             return IntPtr.Zero;

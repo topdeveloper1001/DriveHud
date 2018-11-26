@@ -65,6 +65,7 @@
     <Compile Include="EnumHandTag.cs" />
     <Compile Include="EnumPokerNetworks.cs" />
     <Compile Include="EnumPokerSites.cs" />
+    <Compile Include="EnumPokerSitesExtensions.cs" />
     <Compile Include="EnumPosition.cs" />
     <Compile Include="EnumPositionExtensions.cs" />
     <Compile Include="EnumTableType.cs" />

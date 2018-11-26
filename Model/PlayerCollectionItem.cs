@@ -58,7 +58,7 @@ namespace Model
         {
             get
             {
-                return GetShortPokerSiteName(PokerSite);
+                return PokerSite.ToShortPokerSiteName();
             }
         }
 
@@ -80,55 +80,6 @@ namespace Model
             {
                 return _linkedAliases;
             }
-        }
-
-        #endregion
-
-        #region Methods
-
-        public static string GetShortPokerSiteName(EnumPokerSites? site)
-        {
-            // TODO : check it for adding new poker sites
-
-            switch (site)
-            {
-                case EnumPokerSites.BetOnline:
-                    return "BOL";
-                case EnumPokerSites.Poker888:
-                    return "888";
-                case EnumPokerSites.WinningPokerNetwork:
-                    return "WPN";
-                case EnumPokerSites.AmericasCardroom:
-                    return "ACR";
-                case EnumPokerSites.BlackChipPoker:
-                    return "BCP";
-                case EnumPokerSites.TruePoker:
-                    return "TP";
-                case EnumPokerSites.YaPoker:
-                    return "YP";
-                case EnumPokerSites.PartyPoker:
-                    return "PP";
-                case EnumPokerSites.PokerMaster:
-                    return "PM";
-                case EnumPokerSites.PokerKing:
-                    return "PK";
-                case EnumPokerSites.GGN:
-                    return "GG";
-                case EnumPokerSites.SportsBetting:
-                    return "SB";
-                case EnumPokerSites.TigerGaming:
-                    return "TG";
-                case EnumPokerSites.Winamax:
-                    return "WMX";
-                case EnumPokerSites.Adda52:
-                    return "ADDA";
-                case EnumPokerSites.SpartanPoker:
-                    return "TSP";
-                default:
-                    break;
-            }
-
-            return site.ToString();
         }
 
         #endregion

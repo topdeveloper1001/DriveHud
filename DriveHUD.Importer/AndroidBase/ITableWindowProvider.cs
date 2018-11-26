@@ -17,6 +17,8 @@ namespace DriveHUD.Importers.AndroidBase
 {
     internal interface ITableWindowProvider
     {
+        void SetLogger(string logger);
+
         IntPtr GetTableWindowHandle(Process process);
     }
 }

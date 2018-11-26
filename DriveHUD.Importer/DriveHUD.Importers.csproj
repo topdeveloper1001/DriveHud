@@ -315,6 +315,7 @@
     <Compile Include="Pacific888\Pacific888Importer.cs" />
     <Compile Include="PartyPoker\IPartyPokerImporter.cs" />
     <Compile Include="PartyPoker\PartyPokerImporter.cs" />
+    <Compile Include="PartyPoker\PartyPokerJackpotTableFinder.cs" />
     <Compile Include="PipeManager.cs" />
     <Compile Include="PlayersAddedEvent.cs" />
     <Compile Include="PlayersAddedEventArgs.cs" />
@@ -478,9 +479,11 @@
     <Compile Include="WinningPokerNetwork\IAmericasCardroomImporter.cs" />
     <Compile Include="WinningPokerNetwork\IBlackChipPokerImporter.cs" />
     <Compile Include="WinningPokerNetwork\ITruePokerImporter.cs" />
+    <Compile Include="WinningPokerNetwork\IWPNImporter.cs" />
     <Compile Include="WinningPokerNetwork\IYaPokerImporter.cs" />
     <Compile Include="WinningPokerNetwork\TruePokerImporter.cs" />
     <Compile Include="WinningPokerNetwork\WinningPokerNetworkFileBasedImporter.cs" />
+    <Compile Include="WinningPokerNetwork\WPNImporter.cs" />
     <Compile Include="WinningPokerNetwork\YaPokerImporter.cs" />
   </ItemGroup>
   <ItemGroup>

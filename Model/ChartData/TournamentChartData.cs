@@ -26,7 +26,7 @@ namespace Model.ChartData
         public virtual IEnumerable<TournamentReportRecord> Create(IList<Tournaments> tournaments, TournamentChartFilterType tournamentChartFilterType)
         {
             var report = new List<TournamentReportRecord>();
-         
+
             if (tournaments == null || tournaments.Count == 0)
             {
                 return report;
@@ -127,6 +127,11 @@ namespace Model.ChartData
     {
         public override DateTime GetFirstDate(DateTime maxDateTime)
         {
+            if (DateTime.MinValue.AddDays(7) >= maxDateTime)
+            {
+                return DateTime.MinValue;
+            }
+
             return maxDateTime.AddDays(-7);
         }
 
@@ -153,6 +158,11 @@ namespace Model.ChartData
     {
         public override DateTime GetFirstDate(DateTime maxDateTime)
         {
+            if (DateTime.MinValue.AddMonths(1) >= maxDateTime)
+            {
+                return DateTime.MinValue;
+            }
+
             return maxDateTime.AddMonths(-1);
         }
 
@@ -179,6 +189,11 @@ namespace Model.ChartData
     {
         public override DateTime GetFirstDate(DateTime maxDateTime)
         {
+            if (DateTime.MinValue.AddYears(1) >= maxDateTime)
+            {
+                return DateTime.MinValue;
+            }
+
             return maxDateTime.AddYears(-1);
         }
 

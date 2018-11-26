@@ -1,0 +1,1183 @@
+﻿ï»¿Hand#5322021915000045 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:34:39
+Dealer: Seat 5
+Seat 1: Sparky1970 ($3.47 in chips) 
+Seat 2: ted53 ($1.27 in chips) 
+Seat 3: nippoker56 ($5.75 in chips) 
+Seat 4: burty2 ($3.90 in chips) 
+Seat 5: Arch_aces ($0.20 in chips) 
+Seat 7: Ederzito ($1.24 in chips) 
+Seat 8: prizzy711 ($1.20 in chips) 
+Seat 9: ohindian ($1.16 in chips) 
+Seat 10: RONALD 11 ($5.38 in chips) 
+Ederzito: posts small blind $0.02
+prizzy711: posts big blind $0.04
+Dealt to prizzy711 [2c,Js,7s,5d]
+ohindian: folds
+RONALD 11: calls $0.04
+Sparky1970: calls $0.04
+ted53: calls $0.04
+nippoker56: folds
+burty2: calls $0.04
+Arch_aces: calls $0.04
+Ederzito: calls $0.02
+prizzy711: checks
+*** FLOP *** [3c,8d,6c]
+Ederzito: bets $0.14
+prizzy711: folds
+RONALD 11: folds
+Sparky1970: calls $0.14
+ted53: raises to $0.84
+burty2: folds
+Arch_aces: folds
+Ederzito: folds
+Sparky1970: calls $0.70
+*** TURN *** [Qc]
+Sparky1970: checks
+ted53: is all in $0.39
+Sparky1970: calls $0.39
+Sparky1970: shows [Ts 6h 6d 7h]
+ted53: shows [3d 4c Kc 3h]
+*** RIVER *** [9d]
+***SHOW DOWN***
+ted53 wins high pot $2.69 with Flush King high 
+There is no low hand
+
+
+Hand#5322021915000046 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:36:02
+Dealer: Seat 7
+Seat 1: Sparky1970 ($2.20 in chips) 
+Seat 2: ted53 ($2.69 in chips) 
+Seat 4: burty2 ($3.86 in chips) 
+Seat 5: Arch_aces ($0.16 in chips) 
+Seat 7: Ederzito ($1.06 in chips) 
+Seat 8: prizzy711 ($1.16 in chips) 
+Seat 9: ohindian ($1.16 in chips) 
+Seat 10: RONALD 11 ($5.34 in chips) 
+prizzy711: posts small blind $0.02
+ohindian: posts big blind $0.04
+Dealt to prizzy711 [Tc,4c,Qs,3s]
+RONALD 11: calls $0.04
+Sparky1970: calls $0.04
+ted53: folds
+burty2: calls $0.04
+Arch_aces: calls $0.04
+Ederzito: calls $0.04
+prizzy711: calls $0.02
+ohindian: checks
+*** FLOP *** [8c,Th,4s]
+prizzy711: checks
+ohindian: checks
+RONALD 11: bets $0.04
+Sparky1970: calls $0.04
+burty2: calls $0.04
+Arch_aces: calls $0.04
+Ederzito: calls $0.04
+prizzy711: calls $0.04
+ohindian: folds
+*** TURN *** [Ts]
+prizzy711: checks
+RONALD 11: checks
+Sparky1970: checks
+burty2: checks
+Arch_aces: checks
+Ederzito: bets $0.16
+prizzy711: calls $0.16
+RONALD 11: calls $0.16
+Sparky1970: calls $0.16
+burty2: folds
+Arch_aces: is all in $0.08
+*** RIVER *** [3d]
+prizzy711: bets $0.36
+RONALD 11: raises to $2.32
+Sparky1970: is all in $1.96
+Ederzito: is all in $0.82
+prizzy711: is all in $0.56
+RONALD 11: returns uncalled bet $0.36
+Sparky1970: shows [2s 7c 2c 5d]
+Arch_aces: shows [Kd Qh Jd 6d]
+Ederzito: shows [Td 5c 9h As]
+prizzy711: shows [Tc 4c Qs 3s]
+RONALD 11: shows [4h 2d Ac Jh]
+***SHOW DOWN***
+RONALD 11 wins high pot $0.97 with Two Pairs Tens and Fours   
+RONALD 11 wins low pot $0.97 with  
+***SHOW DOWN***
+prizzy711 wins high pot $0.14 with Full House Tens full of Fours 
+RONALD 11 wins low pot $0.14 with  
+***SHOW DOWN***
+prizzy711 wins high pot $1.68 with Full House Tens full of Fours 
+RONALD 11 wins low pot $1.68 with  
+***SHOW DOWN***
+prizzy711 wins high pot $0.43 with Full House Tens full of Fours 
+RONALD 11 wins low pot $0.43 with  
+
+
+Hand#5322021915000047 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:38:34
+Dealer: Seat 8
+Seat 1: Sparky1970 ($1.80 in chips) 
+Seat 2: ted53 ($2.69 in chips) 
+Seat 3: nippoker56 ($5.75 in chips) 
+Seat 4: burty2 ($3.78 in chips) 
+Seat 5: Arch_aces ($0.80 in chips) 
+Seat 8: prizzy711 ($2.25 in chips) 
+Seat 9: ohindian ($1.12 in chips) 
+Seat 10: RONALD 11 ($7.33 in chips) 
+ohindian: posts small blind $0.02
+RONALD 11: posts big blind $0.04
+Dealt to prizzy711 [2s,8d,Kh,7h]
+Sparky1970: calls $0.04
+ted53: folds
+nippoker56: folds
+burty2: calls $0.04
+Arch_aces: calls $0.04
+prizzy711: folds
+ohindian: calls $0.02
+RONALD 11: checks
+*** FLOP *** [Ad,4h,7c]
+ohindian: checks
+RONALD 11: bets $0.04
+Sparky1970: calls $0.04
+burty2: calls $0.04
+Arch_aces: calls $0.04
+ohindian: folds
+*** TURN *** [Qc]
+RONALD 11: bets $0.04
+Sparky1970: calls $0.04
+burty2: calls $0.04
+Arch_aces: calls $0.04
+*** RIVER *** [2c]
+RONALD 11: bets $0.52
+Sparky1970: folds
+burty2: folds
+Arch_aces: calls $0.52
+***SHOW DOWN***
+RONALD 11: shows [6s 4d 5s 3h] (Straight Five high)
+Arch_aces: shows [4c 6c 9s 3s] (Flush Queen high)
+Arch_aces wins high pot $0.73 with Flush Queen high 
+RONALD 11 wins low pot $0.73 with  
+
+
+Hand#5322021915000048 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:40:16
+Dealer: Seat 9
+Seat 1: Sparky1970 ($1.68 in chips) 
+Seat 2: ted53 ($2.69 in chips) 
+Seat 3: nippoker56 ($5.75 in chips) 
+Seat 4: burty2 ($3.66 in chips) 
+Seat 5: Arch_aces ($0.89 in chips) 
+Seat 8: prizzy711 ($2.25 in chips) 
+Seat 9: ohindian ($1.08 in chips) 
+Seat 10: RONALD 11 ($7.42 in chips) 
+RONALD 11: posts small blind $0.02
+Sparky1970: posts big blind $0.04
+Dealt to prizzy711 [5c,3d,8d,Tc]
+ted53: folds
+nippoker56: folds
+burty2: calls $0.04
+Arch_aces: raises to $0.12
+prizzy711: folds
+ohindian: folds
+RONALD 11: calls $0.10
+Sparky1970: calls $0.08
+burty2: calls $0.08
+*** FLOP *** [4d,Qc,9c]
+RONALD 11: checks
+Sparky1970: bets $0.04
+burty2: calls $0.04
+Arch_aces: calls $0.04
+RONALD 11: calls $0.04
+*** TURN *** [Jd]
+RONALD 11: checks
+Sparky1970: checks
+burty2: checks
+Arch_aces: checks
+*** RIVER *** [3c]
+RONALD 11: checks
+Sparky1970: checks
+burty2: checks
+Arch_aces: checks
+***SHOW DOWN***
+Sparky1970: shows [6d 2h 9s Kh] (Pair of Nines  )
+burty2: shows [Js Td Qh 7s] (Two Pairs Queens and Jacks  )
+Arch_aces: shows [2c 3h As 8c] (Flush Queen high)
+RONALD 11: mucks
+Arch_aces wins high pot $0.60 with Flush Queen high 
+RONALD_11: mucks [Ah,Jh,9d,2d] (TwoPair) .
+There is no low hand
+
+
+Hand#5322021915000049 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:41:36
+Dealer: Seat 10
+Seat 1: Sparky1970 ($1.52 in chips) 
+Seat 2: ted53 ($2.69 in chips) 
+Seat 4: burty2 ($3.50 in chips) 
+Seat 5: Arch_aces ($1.33 in chips) 
+Seat 7: Ederzito ($1.20 in chips) 
+Seat 8: prizzy711 ($2.25 in chips) 
+Seat 9: ohindian ($1.08 in chips) 
+Seat 10: RONALD 11 ($7.26 in chips) 
+Sparky1970: posts small blind $0.02
+ted53: posts big blind $0.04
+Dealt to prizzy711 [5d,7c,Tc,Kc]
+burty2: folds
+Arch_aces: calls $0.04
+Ederzito: calls $0.04
+prizzy711: folds
+ohindian: calls $0.04
+RONALD 11: calls $0.04
+Sparky1970: calls $0.02
+ted53: checks
+*** FLOP *** [3d,5s,Qh]
+Sparky1970: checks
+ted53: checks
+Arch_aces: checks
+Ederzito: bets $0.12
+ohindian: folds
+RONALD 11: calls $0.12
+Sparky1970: folds
+ted53: folds
+Arch_aces: folds
+*** TURN *** [2d]
+Ederzito: bets $0.24
+RONALD 11: calls $0.24
+*** RIVER *** [4c]
+Ederzito: checks
+RONALD 11: bets $0.96
+Ederzito: is all in $0.80
+RONALD 11: returns uncalled bet $0.16
+Ederzito: shows [7h Qd Js Jh]
+RONALD 11: shows [2h 3s Ah 8s]
+***SHOW DOWN***
+RONALD 11 wins high pot $1.20 with Straight Five high 
+RONALD 11 wins low pot $1.19 with  
+
+
+Hand#5322021915000050 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:43:01
+Dealer: Seat 1
+Seat 1: Sparky1970 ($4 in chips) 
+Seat 2: ted53 ($2.65 in chips) 
+Seat 4: burty2 ($3.50 in chips) 
+Seat 5: Arch_aces ($1.29 in chips) 
+Seat 8: prizzy711 ($2.25 in chips) 
+Seat 9: ohindian ($1.04 in chips) 
+Seat 10: RONALD 11 ($8.45 in chips) 
+ted53: posts small blind $0.02
+burty2: posts big blind $0.04
+Dealt to prizzy711 [8h,Jc,5c,Ad]
+Arch_aces: calls $0.04
+prizzy711: folds
+ohindian: folds
+RONALD 11: calls $0.04
+Sparky1970: calls $0.04
+ted53: raises to $0.24
+burty2: folds
+Arch_aces: folds
+RONALD 11: calls $0.20
+Sparky1970: calls $0.20
+*** FLOP *** [Td,Qd,3c]
+ted53: bets $0.80
+RONALD 11: folds
+Sparky1970: folds
+ted53: returns uncalled bet $0.80
+***SHOW DOWN***
+ted53: mucks
+ted53 wins high pot $0.75 
+There is no low hand
+
+
+Hand#5322021915000051 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:44:09
+Dealer: Seat 2
+Seat 1: Sparky1970 ($3.76 in chips) 
+Seat 2: ted53 ($3.16 in chips) 
+Seat 4: burty2 ($3.46 in chips) 
+Seat 5: Arch_aces ($1.25 in chips) 
+Seat 7: samsonben10 ($4 in chips) 
+Seat 8: prizzy711 ($2.25 in chips) 
+Seat 9: ohindian ($1.04 in chips) 
+Seat 10: RONALD 11 ($8.21 in chips) 
+burty2: posts small blind $0.02
+Arch_aces: posts big blind $0.04
+Dealt to prizzy711 [5h,9d,Tc,2s]
+prizzy711: folds
+ohindian: folds
+RONALD 11: folds
+Sparky1970: calls $0.04
+ted53: folds
+burty2: calls $0.02
+Arch_aces: checks
+*** FLOP *** [Kd,9h,5d]
+burty2: checks
+Arch_aces: bets $0.04
+Sparky1970: raises to $0.08
+burty2: folds
+Arch_aces: calls $0.04
+*** TURN *** [8h]
+Arch_aces: bets $0.04
+Sparky1970: calls $0.04
+*** RIVER *** [Ad]
+Arch_aces: checks
+Sparky1970: checks
+***SHOW DOWN***
+Arch_aces: shows [5s Qd Kc 8s] (Two Pairs Kings and Eights  )
+Sparky1970: mucks
+Arch_aces wins high pot $0.34 with Two Pairs Kings and Eights   
+Sparky1970: mucks [Js,8c,Qh,Td] (Pair) .
+There is no low hand
+
+
+Hand#5322021915000052 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:45:17
+Dealer: Seat 4
+Seat 1: Sparky1970 ($3.60 in chips) 
+Seat 2: ted53 ($3.16 in chips) 
+Seat 3: vmhsadcmb3 ($1.20 in chips) 
+Seat 4: burty2 ($3.42 in chips) 
+Seat 5: Arch_aces ($1.43 in chips) 
+Seat 7: samsonben10 ($4 in chips) 
+Seat 8: prizzy711 ($2.25 in chips) 
+Seat 9: ohindian ($1.04 in chips) 
+Seat 10: RONALD 11 ($8.21 in chips) 
+Arch_aces: posts small blind $0.02
+samsonben10: posts big blind $0.04
+vmhsadcmb3: posts big blind $0.04
+Dealt to prizzy711 [6c,7h,5h,Kc]
+prizzy711: folds
+ohindian: folds
+RONALD 11: folds
+Sparky1970: calls $0.04
+ted53: folds
+vmhsadcmb3: checks
+burty2: calls $0.04
+Arch_aces: calls $0.02
+samsonben10: checks
+*** FLOP *** [3h,6h,2s]
+Arch_aces: checks
+samsonben10: checks
+Sparky1970: checks
+vmhsadcmb3: bets $0.04
+burty2: folds
+Arch_aces: folds
+samsonben10: folds
+Sparky1970: calls $0.04
+*** TURN *** [6d]
+Sparky1970: checks
+vmhsadcmb3: bets $0.04
+Sparky1970: calls $0.04
+*** RIVER *** [2c]
+Sparky1970: checks
+vmhsadcmb3: checks
+***SHOW DOWN***
+vmhsadcmb3: shows [3s Ad 7d 9c] (Two Pairs Sixes and Threes  )
+Sparky1970: shows [3d Kd 5c As] (Two Pairs Sixes and Threes  )
+Sparky1970 wins high pot $0.09 with Two Pairs Sixes and Threes   
+vmhsadcmb3 wins high pot $0.08 with Two Pairs Sixes and Threes   
+Sparky1970 wins low pot $0.17 with  
+
+
+Hand#5322021915000053 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:46:33
+Dealer: Seat 5
+Seat 1: Sparky1970 ($3.74 in chips) 
+Seat 2: ted53 ($3.16 in chips) 
+Seat 3: vmhsadcmb3 ($1.16 in chips) 
+Seat 4: burty2 ($3.38 in chips) 
+Seat 5: Arch_aces ($1.39 in chips) 
+Seat 7: samsonben10 ($3.96 in chips) 
+Seat 8: prizzy711 ($2.25 in chips) 
+Seat 9: ohindian ($1.04 in chips) 
+Seat 10: RONALD 11 ($8.21 in chips) 
+samsonben10: posts small blind $0.02
+prizzy711: posts big blind $0.04
+Dealt to prizzy711 [Qs,2h,Ad,9h]
+ohindian: folds
+RONALD 11: calls $0.04
+Sparky1970: calls $0.04
+ted53: folds
+vmhsadcmb3: calls $0.04
+burty2: folds
+Arch_aces: calls $0.04
+samsonben10: calls $0.02
+prizzy711: checks
+*** FLOP *** [Kd,Ac,5c]
+samsonben10: checks
+prizzy711: checks
+RONALD 11: checks
+Sparky1970: checks
+vmhsadcmb3: checks
+Arch_aces: checks
+*** TURN *** [Ah]
+samsonben10: checks
+prizzy711: bets $0.04
+RONALD 11: folds
+Sparky1970: calls $0.04
+vmhsadcmb3: calls $0.04
+Arch_aces: folds
+samsonben10: calls $0.04
+*** RIVER *** [Qh]
+samsonben10: checks
+prizzy711: bets $0.24
+Sparky1970: folds
+vmhsadcmb3: calls $0.24
+samsonben10: folds
+***SHOW DOWN***
+prizzy711: shows [Qs 2h Ad 9h] (Full House Aces full of Queens)
+vmhsadcmb3: mucks
+prizzy711 wins high pot $0.83 with Full House Aces full of Queens 
+vmhsadcmb3: mucks [Jh,7d,Ts,7h] (Straight) .
+There is no low hand
+
+
+Hand#5322021915000054 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:48:21
+Dealer: Seat 7
+Seat 1: Sparky1970 ($3.66 in chips) 
+Seat 2: ted53 ($3.16 in chips) 
+Seat 3: vmhsadcmb3 ($0.84 in chips) 
+Seat 4: burty2 ($3.38 in chips) 
+Seat 7: samsonben10 ($3.88 in chips) 
+Seat 8: prizzy711 ($2.76 in chips) 
+Seat 10: RONALD 11 ($8.17 in chips) 
+prizzy711: posts small blind $0.02
+RONALD 11: posts big blind $0.04
+Dealt to prizzy711 [5d,As,6d,8s]
+Sparky1970: raises to $0.14
+ted53: calls $0.14
+vmhsadcmb3: folds
+burty2: folds
+samsonben10: folds
+prizzy711: folds
+RONALD 11: calls $0.10
+*** FLOP *** [Kh,Ah,5h]
+RONALD 11: checks
+Sparky1970: checks
+ted53: checks
+*** TURN *** [9h]
+RONALD 11: checks
+Sparky1970: checks
+ted53: checks
+*** RIVER *** [2c]
+RONALD 11: checks
+Sparky1970: checks
+ted53: checks
+***SHOW DOWN***
+Sparky1970: shows [3s Jc Ad 3d] (Pair of Aces  )
+ted53: shows [Jd Js 2s 2h] (Three of a Kind Deuces  )
+RONALD 11: mucks
+ted53 wins high pot $0.42 with Three of a Kind Deuces   
+RONALD_11: mucks [Th,Qc,Ks,Tc] (Pair) .
+There is no low hand
+
+
+Hand#5322021915000055 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:49:07
+Dealer: Seat 8
+Seat 1: Sparky1970 ($3.52 in chips) 
+Seat 2: ted53 ($3.44 in chips) 
+Seat 3: vmhsadcmb3 ($0.84 in chips) 
+Seat 4: burty2 ($3.38 in chips) 
+Seat 7: samsonben10 ($3.88 in chips) 
+Seat 8: prizzy711 ($2.74 in chips) 
+Seat 10: RONALD 11 ($8.03 in chips) 
+RONALD 11: posts small blind $0.02
+Sparky1970: posts big blind $0.04
+Dealt to prizzy711 [Qd,Th,3s,9c]
+ted53: calls $0.04
+vmhsadcmb3: calls $0.04
+burty2: calls $0.04
+samsonben10: folds
+prizzy711: folds
+RONALD 11: calls $0.02
+Sparky1970: checks
+*** FLOP *** [9d,8d,Jd]
+RONALD 11: checks
+Sparky1970: checks
+ted53: checks
+vmhsadcmb3: checks
+burty2: bets $0.10
+RONALD 11: folds
+Sparky1970: folds
+ted53: folds
+vmhsadcmb3: folds
+burty2: returns uncalled bet $0.10
+***SHOW DOWN***
+burty2: mucks
+burty2 wins high pot $0.19 
+There is no low hand
+
+
+Hand#5322021915000056 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:50:12
+Dealer: Seat 10
+Seat 1: Sparky1970 ($3.48 in chips) 
+Seat 2: ted53 ($3.40 in chips) 
+Seat 3: vmhsadcmb3 ($0.80 in chips) 
+Seat 4: burty2 ($3.53 in chips) 
+Seat 7: samsonben10 ($3.88 in chips) 
+Seat 8: prizzy711 ($2.74 in chips) 
+Seat 10: RONALD 11 ($7.99 in chips) 
+Sparky1970: posts small blind $0.02
+ted53: posts big blind $0.04
+Dealt to prizzy711 [7d,Tc,3c,3d]
+vmhsadcmb3: calls $0.04
+burty2: calls $0.04
+samsonben10: folds
+prizzy711: folds
+RONALD 11: calls $0.04
+Sparky1970: calls $0.02
+ted53: checks
+*** FLOP *** [8c,Th,9d]
+Sparky1970: bets $0.20
+ted53: folds
+vmhsadcmb3: calls $0.20
+burty2: folds
+RONALD 11: folds
+*** TURN *** [6d]
+Sparky1970: bets $0.60
+vmhsadcmb3: is all in $0.56
+Sparky1970: returns uncalled bet $0.04
+Sparky1970: shows [7s Js 4d 9s]
+vmhsadcmb3: shows [9h 3h 8d As]
+*** RIVER *** [Td]
+***SHOW DOWN***
+Sparky1970 wins high pot $1.61 with Straight Jack high 
+There is no low hand
+
+
+Hand#5322021915000057 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:51:05
+Dealer: Seat 1
+Seat 1: Sparky1970 ($4.29 in chips) 
+Seat 2: ted53 ($3.36 in chips) 
+Seat 4: burty2 ($3.49 in chips) 
+Seat 7: samsonben10 ($3.88 in chips) 
+Seat 8: prizzy711 ($2.74 in chips) 
+Seat 10: RONALD 11 ($7.95 in chips) 
+ted53: posts small blind $0.02
+burty2: posts big blind $0.04
+Dealt to prizzy711 [5c,6h,3c,Qh]
+samsonben10: folds
+prizzy711: folds
+RONALD 11: calls $0.04
+Sparky1970: calls $0.04
+ted53: calls $0.02
+burty2: checks
+*** FLOP *** [7h,3s,9c]
+ted53: checks
+burty2: bets $0.08
+RONALD 11: calls $0.08
+Sparky1970: calls $0.08
+ted53: calls $0.08
+*** TURN *** [2h]
+ted53: checks
+burty2: checks
+RONALD 11: checks
+Sparky1970: checks
+*** RIVER *** [9h]
+ted53: checks
+burty2: bets $0.48
+RONALD 11: folds
+Sparky1970: folds
+ted53: calls $0.48
+***SHOW DOWN***
+burty2: shows [2d Ad 9d 6s] (Full House Nines full of Deuces)
+ted53: shows [Tc 4h 5d 2c] (Two Pairs Nines and Deuces  )
+burty2 wins high pot $0.68 with Full House Nines full of Deuces 
+ted53 wins low pot $0.67 with  
+
+
+Hand#5322021915000058 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:53:01
+Dealer: Seat 2
+Seat 1: Sparky1970 ($4.17 in chips) 
+Seat 2: ted53 ($3.43 in chips) 
+Seat 4: burty2 ($3.57 in chips) 
+Seat 7: samsonben10 ($3.88 in chips) 
+Seat 8: prizzy711 ($2.74 in chips) 
+Seat 10: RONALD 11 ($7.83 in chips) 
+burty2: posts small blind $0.02
+samsonben10: posts big blind $0.04
+Dealt to prizzy711 [4c,Kc,2d,8h]
+prizzy711: folds
+RONALD 11: calls $0.04
+Sparky1970: calls $0.04
+ted53: calls $0.04
+burty2: calls $0.02
+samsonben10: checks
+*** FLOP *** [Qs,4d,8s]
+burty2: checks
+samsonben10: checks
+RONALD 11: checks
+Sparky1970: checks
+ted53: checks
+*** TURN *** [6h]
+burty2: checks
+samsonben10: checks
+RONALD 11: checks
+Sparky1970: checks
+ted53: checks
+*** RIVER *** [9s]
+burty2: checks
+samsonben10: checks
+RONALD 11: checks
+Sparky1970: checks
+ted53: checks
+***SHOW DOWN***
+RONALD 11: shows [5s 3s 4s Tc] (Flush Queen high)
+Sparky1970: mucks
+ted53: shows [Kh Jc 3c 2h] (High card King  )
+burty2: mucks
+samsonben10: mucks
+RONALD 11 wins high pot $0.10 with Flush Queen high 
+ted53 wins low pot $0.09 with  
+samsonben10: mucks [8c,7c,2c,Ts] (Straight) .
+burty2: mucks [9d,Td,3d,5c] (Pair) .
+Sparky1970: mucks [7h,Ah,6s,7d] (Pair) .
+
+
+Hand#5322021915000059 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:54:24
+Dealer: Seat 4
+Seat 1: Sparky1970 ($4.13 in chips) 
+Seat 2: ted53 ($3.48 in chips) 
+Seat 4: burty2 ($3.53 in chips) 
+Seat 7: samsonben10 ($3.84 in chips) 
+Seat 8: prizzy711 ($2.74 in chips) 
+Seat 10: RONALD 11 ($7.89 in chips) 
+samsonben10: posts small blind $0.02
+prizzy711: posts big blind $0.04
+Dealt to prizzy711 [9c,4c,Jh,Tc]
+RONALD 11: folds
+Sparky1970: calls $0.04
+ted53: folds
+burty2: calls $0.04
+samsonben10: folds
+prizzy711: checks
+*** FLOP *** [Kc,Ah,Ts]
+prizzy711: checks
+Sparky1970: bets $0.14
+burty2: calls $0.14
+prizzy711: folds
+*** TURN *** [Qd]
+Sparky1970: bets $0.04
+burty2: calls $0.04
+*** RIVER *** [5d]
+Sparky1970: bets $0.50
+burty2: folds
+Sparky1970: returns uncalled bet $0.50
+***SHOW DOWN***
+Sparky1970: mucks
+Sparky1970 wins high pot $0.47 
+There is no low hand
+
+
+Hand#5322021915000060 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:55:23
+Dealer: Seat 7
+Seat 1: Sparky1970 ($4.38 in chips) 
+Seat 2: ted53 ($3.48 in chips) 
+Seat 4: burty2 ($3.31 in chips) 
+Seat 7: samsonben10 ($3.82 in chips) 
+Seat 8: prizzy711 ($2.70 in chips) 
+Seat 9: RUFF RUF RUF ($0.84 in chips) 
+Seat 10: RONALD 11 ($7.89 in chips) 
+prizzy711: posts small blind $0.02
+RUFF RUF RUF: posts big blind $0.04
+Dealt to prizzy711 [2d,3d,Ts,4h]
+RONALD 11: calls $0.04
+Sparky1970: calls $0.04
+ted53: calls $0.04
+burty2: folds
+samsonben10: folds
+prizzy711: calls $0.02
+RUFF RUF RUF: checks
+*** FLOP *** [Th,2c,Td]
+prizzy711: bets $0.08
+RUFF RUF RUF: folds
+RONALD 11: calls $0.08
+Sparky1970: folds
+ted53: folds
+*** TURN *** [Qd]
+prizzy711: bets $0.18
+RONALD 11: calls $0.18
+*** RIVER *** [4s]
+prizzy711: checks
+RONALD 11: checks
+***SHOW DOWN***
+prizzy711: shows [2d 3d Ts 4h] (Full House Tens full of Fours)
+RONALD 11: mucks
+prizzy711 wins high pot $0.68 with Full House Tens full of Fours 
+RONALD_11: mucks [9s,Tc,Jc,3s] (ThreeOfAKind) .
+There is no low hand
+
+
+Hand#5322021915000061 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:56:53
+Dealer: Seat 8
+Seat 1: Sparky1970 ($4.34 in chips) 
+Seat 2: ted53 ($3.44 in chips) 
+Seat 4: burty2 ($3.31 in chips) 
+Seat 7: samsonben10 ($3.82 in chips) 
+Seat 8: prizzy711 ($3.08 in chips) 
+Seat 9: RUFF RUF RUF ($0.80 in chips) 
+Seat 10: RONALD 11 ($7.59 in chips) 
+RUFF RUF RUF: posts small blind $0.02
+RONALD 11: posts big blind $0.04
+Dealt to prizzy711 [Ts,Qc,Qh,Jc]
+Sparky1970: raises to $0.14
+ted53: folds
+burty2: folds
+samsonben10: calls $0.14
+prizzy711: folds
+RUFF RUF RUF: folds
+RONALD 11: calls $0.10
+*** FLOP *** [8s,Td,2h]
+RONALD 11: checks
+Sparky1970: bets $0.44
+samsonben10: folds
+RONALD 11: folds
+RONALD 11: mucks
+Sparky1970: returns uncalled bet $0.44
+***SHOW DOWN***
+Sparky1970: mucks
+Sparky1970 wins high pot $0.42 
+There is no low hand
+
+
+Hand#5322021915000062 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:57:30
+Dealer: Seat 9
+Seat 1: Sparky1970 ($4.62 in chips) 
+Seat 2: ted53 ($3.44 in chips) 
+Seat 4: burty2 ($3.31 in chips) 
+Seat 7: samsonben10 ($3.68 in chips) 
+Seat 8: prizzy711 ($3.08 in chips) 
+Seat 9: RUFF RUF RUF ($0.78 in chips) 
+Seat 10: RONALD 11 ($7.45 in chips) 
+RONALD 11: posts small blind $0.02
+Sparky1970: posts big blind $0.04
+Dealt to prizzy711 [8d,2d,8h,7d]
+ted53: calls $0.04
+burty2: folds
+samsonben10: folds
+prizzy711: folds
+RUFF RUF RUF: calls $0.04
+RONALD 11: calls $0.02
+Sparky1970: checks
+*** FLOP *** [3c,9d,Js]
+RONALD 11: checks
+Sparky1970: bets $0.16
+ted53: calls $0.16
+RUFF RUF RUF: folds
+RONALD 11: calls $0.16
+*** TURN *** [Td]
+RONALD 11: checks
+Sparky1970: bets $0.32
+ted53: folds
+RONALD 11: folds
+RONALD 11: mucks
+Sparky1970: returns uncalled bet $0.32
+***SHOW DOWN***
+Sparky1970: mucks
+Sparky1970 wins high pot $0.60 
+There is no low hand
+
+
+Hand#5322021915000063 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:58:44
+Dealer: Seat 10
+Seat 1: Sparky1970 ($5.02 in chips) 
+Seat 2: ted53 ($3.24 in chips) 
+Seat 4: burty2 ($3.31 in chips) 
+Seat 7: samsonben10 ($3.68 in chips) 
+Seat 8: prizzy711 ($3.08 in chips) 
+Seat 9: RUFF RUF RUF ($0.74 in chips) 
+Seat 10: RONALD 11 ($7.25 in chips) 
+Sparky1970: posts small blind $0.02
+ted53: posts big blind $0.04
+Dealt to prizzy711 [2s,Td,5d,4h]
+burty2: folds
+samsonben10: raises to $0.11
+prizzy711: folds
+RUFF RUF RUF: folds
+RONALD 11: calls $0.11
+Sparky1970: calls $0.09
+ted53: calls $0.07
+*** FLOP *** [As,Jd,4d]
+Sparky1970: checks
+ted53: checks
+samsonben10: bets $0.44
+RONALD 11: folds
+Sparky1970: folds
+ted53: calls $0.44
+*** TURN *** [7h]
+ted53: checks
+samsonben10: bets $1.32
+ted53: calls $1.32
+*** RIVER *** [8c]
+ted53: checks
+samsonben10: is all in $1.81
+ted53: is all in $1.37
+samsonben10: returns uncalled bet $0.44
+ted53: shows [4c 9h 3c Js]
+samsonben10: shows [7d Kd Ac Ad]
+***SHOW DOWN***
+samsonben10 wins high pot $3.13 with Three of a Kind Aces   
+ted53 wins low pot $3.13 with  
+
+
+Hand#5322021915000064 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 21:59:55
+Dealer: Seat 1
+Seat 1: Sparky1970 ($4.91 in chips) 
+Seat 2: ted53 ($3.13 in chips) 
+Seat 4: burty2 ($3.31 in chips) 
+Seat 7: samsonben10 ($3.57 in chips) 
+Seat 8: prizzy711 ($3.08 in chips) 
+Seat 9: RUFF RUF RUF ($0.74 in chips) 
+Seat 10: RONALD 11 ($7.14 in chips) 
+ted53: posts small blind $0.02
+burty2: posts big blind $0.04
+Dealt to prizzy711 [5c,8d,Qs,Qd]
+samsonben10: folds
+prizzy711: folds
+RUFF RUF RUF: calls $0.04
+RONALD 11: calls $0.04
+Sparky1970: calls $0.04
+ted53: folds
+burty2: checks
+*** FLOP *** [5d,Kc,7s]
+burty2: checks
+RUFF RUF RUF: checks
+RONALD 11: checks
+Sparky1970: checks
+*** TURN *** [Ts]
+burty2: checks
+RUFF RUF RUF: checks
+RONALD 11: checks
+Sparky1970: checks
+*** RIVER *** [Ks]
+burty2: checks
+RUFF RUF RUF: checks
+RONALD 11: checks
+Sparky1970: bets $0.18
+burty2: folds
+RUFF RUF RUF: folds
+RONALD 11: folds
+RONALD 11: mucks
+Sparky1970: returns uncalled bet $0.18
+***SHOW DOWN***
+Sparky1970: mucks
+Sparky1970 wins high pot $0.17 
+There is no low hand
+
+
+Hand#5322021915000065 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 22:01:30
+Dealer: Seat 2
+Seat 1: Sparky1970 ($5.04 in chips) 
+Seat 2: ted53 ($3.11 in chips) 
+Seat 4: burty2 ($3.27 in chips) 
+Seat 5: bighornrock ($2 in chips) 
+Seat 7: samsonben10 ($3.57 in chips) 
+Seat 8: prizzy711 ($3.08 in chips) 
+Seat 9: RUFF RUF RUF ($0.70 in chips) 
+Seat 10: RONALD 11 ($7.10 in chips) 
+burty2: posts small blind $0.02
+bighornrock: posts big blind $0.04
+Dealt to prizzy711 [Qs,3d,Tc,Ad]
+samsonben10: calls $0.04
+prizzy711: folds
+RUFF RUF RUF: folds
+RONALD 11: calls $0.04
+Sparky1970: raises to $0.22
+ted53: folds
+burty2: folds
+bighornrock: folds
+samsonben10: folds
+RONALD 11: folds
+RONALD 11: mucks
+Sparky1970: returns uncalled bet $0.18
+***SHOW DOWN***
+Sparky1970: mucks
+Sparky1970 wins high pot $0.18 
+There is no low hand
+
+
+Hand#5322021915000066 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 22:02:34
+Dealer: Seat 4
+Seat 1: Sparky1970 ($5.18 in chips) 
+Seat 2: ted53 ($3.11 in chips) 
+Seat 4: burty2 ($3.25 in chips) 
+Seat 5: bighornrock ($1.96 in chips) 
+Seat 7: samsonben10 ($3.53 in chips) 
+Seat 8: prizzy711 ($3.08 in chips) 
+Seat 9: RUFF RUF RUF ($0.70 in chips) 
+Seat 10: RONALD 11 ($7.06 in chips) 
+bighornrock: posts small blind $0.02
+samsonben10: posts big blind $0.04
+Dealt to prizzy711 [2c,Th,6h,Qs]
+prizzy711: folds
+RUFF RUF RUF: folds
+RONALD 11: folds
+Sparky1970: calls $0.04
+ted53: calls $0.04
+burty2: calls $0.04
+bighornrock: calls $0.02
+samsonben10: checks
+*** FLOP *** [7s,8d,7h]
+bighornrock: checks
+samsonben10: checks
+Sparky1970: checks
+ted53: checks
+burty2: checks
+*** TURN *** [5h]
+bighornrock: bets $0.04
+samsonben10: raises to $0.32
+Sparky1970: calls $0.32
+ted53: folds
+burty2: folds
+bighornrock: folds
+*** RIVER *** [As]
+samsonben10: bets $0.88
+Sparky1970: calls $0.88
+***SHOW DOWN***
+samsonben10: shows [9h 7d 8s 2d] (Full House Sevens full of Eights)
+Sparky1970: mucks
+samsonben10 wins high pot $1.24 with Full House Sevens full of Eights 
+samsonben10 wins low pot $1.23 with  
+Sparky1970: mucks [3c,Qc,Tc,Ad] (TwoPair) .
+
+
+Hand#5322021915000067 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 22:03:55
+Dealer: Seat 5
+Seat 1: Sparky1970 ($3.94 in chips) 
+Seat 2: ted53 ($3.07 in chips) 
+Seat 3: Player1009 ($1.20 in chips) 
+Seat 4: burty2 ($3.21 in chips) 
+Seat 5: bighornrock ($1.88 in chips) 
+Seat 7: samsonben10 ($4.76 in chips) 
+Seat 8: prizzy711 ($3.08 in chips) 
+Seat 9: RUFF RUF RUF ($0.70 in chips) 
+Seat 10: RONALD 11 ($7.06 in chips) 
+samsonben10: posts small blind $0.02
+prizzy711: posts big blind $0.04
+Dealt to prizzy711 [Qs,6h,3s,8c]
+RUFF RUF RUF: folds
+RONALD 11: calls $0.04
+Sparky1970: calls $0.04
+ted53: folds
+burty2: folds
+bighornrock: folds
+samsonben10: calls $0.02
+prizzy711: checks
+*** FLOP *** [9s,4s,Ac]
+samsonben10: checks
+prizzy711: checks
+RONALD 11: checks
+Sparky1970: checks
+*** TURN *** [9h]
+samsonben10: checks
+prizzy711: checks
+RONALD 11: bets $0.04
+Sparky1970: folds
+samsonben10: folds
+prizzy711: folds
+RONALD 11: returns uncalled bet $0.04
+***SHOW DOWN***
+RONALD 11: mucks
+RONALD 11 wins high pot $0.15 
+There is no low hand
+
+
+Hand#5322021915000068 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 22:05:24
+Dealer: Seat 7
+Seat 2: ted53 ($3.07 in chips) 
+Seat 3: Player1009 ($1.20 in chips) 
+Seat 4: burty2 ($3.21 in chips) 
+Seat 5: bighornrock ($1.88 in chips) 
+Seat 7: samsonben10 ($4.72 in chips) 
+Seat 8: prizzy711 ($3.04 in chips) 
+Seat 9: RUFF RUF RUF ($0.70 in chips) 
+Seat 10: RONALD 11 ($7.17 in chips) 
+prizzy711: posts small blind $0.02
+RUFF RUF RUF: posts big blind $0.04
+Player1009: posts big blind $0.04
+Dealt to prizzy711 [Qc,8d,Ac,3s]
+RONALD 11: calls $0.04
+ted53: calls $0.04
+Player1009: checks
+burty2: folds
+bighornrock: calls $0.04
+samsonben10: raises to $0.30
+prizzy711: folds
+RUFF RUF RUF: folds
+RONALD 11: folds
+ted53: calls $0.26
+Player1009: calls $0.26
+bighornrock: calls $0.26
+*** FLOP *** [3h,7s,Js]
+ted53: checks
+Player1009: checks
+bighornrock: checks
+samsonben10: bets $1.30
+ted53: calls $1.30
+Player1009: is all in $0.90
+bighornrock: is all in $1.58
+samsonben10: calls $0.28
+ted53: calls $0.28
+*** TURN *** [Ks]
+ted53: checks
+samsonben10: is all in $2.84
+ted53: folds
+samsonben10: returns uncalled bet $2.84
+Player1009: shows [4c Ad 9h 3c]
+bighornrock: shows [7d Ah Jd 2h]
+samsonben10: shows [Kd 2c Kh As]
+*** RIVER *** [9d]
+***SHOW DOWN***
+samsonben10 wins high pot $1.90 with Three of a Kind Kings   
+***SHOW DOWN***
+samsonben10 wins high pot $4.58 with Three of a Kind Kings   
+There is no low hand
+
+
+Hand#5322021915000069 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 22:07:04
+Dealer: Seat 8
+Seat 2: ted53 ($1.19 in chips) 
+Seat 4: burty2 ($3.21 in chips) 
+Seat 7: samsonben10 ($9.32 in chips) 
+Seat 8: prizzy711 ($3.02 in chips) 
+Seat 9: RUFF RUF RUF ($0.66 in chips) 
+Seat 10: RONALD 11 ($7.13 in chips) 
+RUFF RUF RUF: posts small blind $0.02
+RONALD 11: posts big blind $0.04
+Dealt to prizzy711 [6d,7c,8d,4d]
+prizzy711  chats: nh
+ted53: raises to $0.14
+burty2: folds
+samsonben10: calls $0.14
+prizzy711: folds
+RUFF RUF RUF: folds
+RONALD 11: calls $0.10
+*** FLOP *** [7d,Th,Ah]
+RONALD 11: checks
+ted53: bets $0.44
+samsonben10: folds
+RONALD 11: calls $0.44
+*** TURN *** [2h]
+RONALD 11: bets $1.32
+ted53: is all in $0.61
+RONALD 11: returns uncalled bet $0.71
+ted53: shows [Ac Jd Ks 3d]
+RONALD 11: shows [Qh Kh 7s 8s]
+*** RIVER *** [5s]
+***SHOW DOWN***
+RONALD 11 wins high pot $1.19 with Flush Ace high 
+ted53 wins low pot $1.19 with  
+
+
+Hand#5322021915000070 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 22:08:11
+Dealer: Seat 9
+Seat 2: ted53 ($1.19 in chips) 
+Seat 4: burty2 ($3.21 in chips) 
+Seat 5: bighornrock ($2.80 in chips) 
+Seat 7: samsonben10 ($9.18 in chips) 
+Seat 8: prizzy711 ($3.02 in chips) 
+Seat 9: RUFF RUF RUF ($0.64 in chips) 
+Seat 10: RONALD 11 ($7.13 in chips) 
+RONALD 11: posts small blind $0.02
+ted53: posts big blind $0.04
+Dealt to prizzy711 [9c,3s,7h,4c]
+burty2: calls $0.04
+bighornrock: calls $0.04
+samsonben10: folds
+prizzy711: folds
+RUFF RUF RUF: folds
+RONALD 11: folds
+ted53: raises to $0.18
+burty2: folds
+bighornrock: calls $0.14
+*** FLOP *** [8s,8d,Th]
+ted53: bets $0.42
+bighornrock: calls $0.42
+*** TURN *** [5h]
+ted53: is all in $0.59
+bighornrock: calls $0.59
+ted53: shows [2h 3c Jh Ac]
+bighornrock: shows [2d Ah Ks 8c]
+*** RIVER *** [3h]
+***SHOW DOWN***
+ted53 wins high pot $1.14 with Flush Jack high 
+ted53 wins low pot $0.57 with  
+bighornrock wins low pot $0.57 with  
+
+
+Hand#5322021915000071 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 22:09:12
+Dealer: Seat 10
+Seat 1: ACESWILD ($4 in chips) 
+Seat 2: ted53 ($1.71 in chips) 
+Seat 3: Sparky1970 ($4 in chips) 
+Seat 4: burty2 ($3.17 in chips) 
+Seat 5: bighornrock ($2.18 in chips) 
+Seat 7: samsonben10 ($9.18 in chips) 
+Seat 8: prizzy711 ($3.02 in chips) 
+Seat 9: RUFF RUF RUF ($0.64 in chips) 
+Seat 10: RONALD 11 ($7.11 in chips) 
+ted53: posts small blind $0.02
+Sparky1970: posts big blind $0.04
+Dealt to prizzy711 [Jd,Ac,5s,Qs]
+burty2: calls $0.04
+bighornrock: folds
+samsonben10: folds
+prizzy711: folds
+RUFF RUF RUF: folds
+RONALD 11: folds
+ted53: raises to $0.16
+Sparky1970: calls $0.12
+burty2: calls $0.12
+*** FLOP *** [Qc,7s,Qd]
+ted53: bets $0.48
+Sparky1970: folds
+burty2: folds
+ted53: returns uncalled bet $0.48
+***SHOW DOWN***
+ted53: mucks
+ted53 wins high pot $0.45 
+There is no low hand
+
+
+Hand#5322021915000072 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 22:10:43
+Dealer: Seat 2
+Seat 2: ted53 ($2 in chips) 
+Seat 3: Sparky1970 ($3.84 in chips) 
+Seat 4: burty2 ($3.01 in chips) 
+Seat 5: bighornrock ($2.18 in chips) 
+Seat 7: samsonben10 ($9.18 in chips) 
+Seat 8: prizzy711 ($3.02 in chips) 
+Seat 9: RUFF RUF RUF ($0.64 in chips) 
+Seat 10: RONALD 11 ($7.11 in chips) 
+Sparky1970: posts small blind $0.02
+bighornrock: posts big blind $0.04
+Dealt to prizzy711 [Ah,Kd,7c,Kc]
+samsonben10: folds
+prizzy711: raises to $0.12
+RUFF RUF RUF: folds
+RONALD 11: folds
+ted53: calls $0.12
+Sparky1970: calls $0.10
+bighornrock: folds
+*** FLOP *** [Tc,5h,2c]
+Sparky1970: checks
+prizzy711: checks
+ted53: bets $0.40
+Sparky1970: folds
+prizzy711: folds
+ted53: returns uncalled bet $0.40
+***SHOW DOWN***
+ted53: mucks
+ted53 wins high pot $0.38 
+There is no low hand
+
+
+Hand#5322021915000073 - $ Perth (9-Max) 21915 -- $0.02/$0.04 PL OmahaHiLo -- 2018/10/30 - 22:11:49
+Dealer: Seat 3
+Seat 2: ted53 ($2.26 in chips) 
+Seat 3: Sparky1970 ($3.72 in chips) 
+Seat 5: bighornrock ($2.14 in chips) 
+Seat 7: samsonben10 ($9.18 in chips) 
+Seat 8: prizzy711 ($2.90 in chips) 
+Seat 9: RUFF RUF RUF ($0.64 in chips) 
+Seat 10: RONALD 11 ($7.11 in chips) 
+bighornrock: posts small blind $0.02
+samsonben10: posts big blind $0.04
+Dealt to prizzy711 [7s,Qd,8c,3h]
+prizzy711: folds
+Player left the table
+There is no low hand
+
+
