@@ -1383,4 +1383,7 @@
   <data name="Reports_Column_WTSDInStraddle" xml:space="preserve">
     <value>WTSD from Straddle%</value>
   </data>
+  <data name="Reports_Column_FoldedToDelayedCBet" xml:space="preserve">
+    <value>Fold to delayed C-bet%</value>
+  </data>
 </root>

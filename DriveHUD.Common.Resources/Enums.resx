@@ -1736,4 +1736,7 @@
   <data name="Enum_Stat_WTSDInStraddle" xml:space="preserve">
     <value>WTSD from Straddle%</value>
   </data>
+  <data name="Enum_Stat_FoldedToDelayedCBet" xml:space="preserve">
+    <value>Fold to delayed C-bet%</value>
+  </data>
 </root>

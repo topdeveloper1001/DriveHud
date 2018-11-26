@@ -224,8 +224,9 @@ namespace Model
 
                             if (raiserFlopCBet.Possible)
                             {
-                                CalculateContinuationBet(turnCBet, parsedHand.Turn.ToList(), player, raiser);
-                                stat.FacedDelayedCBet = turnCBet.Faced ? 1 : 0;
+                                var delayedTurnCBet = new ConditionalBet();
+                                CalculateContinuationBet(delayedTurnCBet, parsedHand.Turn.ToList(), player, raiser);
+                                stat.FacedDelayedCBet = delayedTurnCBet.Faced ? 1 : 0;
                             }
                         }
                     }

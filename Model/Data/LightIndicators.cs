@@ -3087,6 +3087,15 @@ namespace Model.Data
 
         #endregion
 
+        #region Fold to delayed Turn C-Bet
+
+        [ProtoMember(335)]
+        protected int foldedToDelayedCBet;
+
+        public override decimal FoldedToDelayedCBet => GetPercentage(foldedToDelayedCBet, Source.FacedDelayedCBet);
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -3253,6 +3262,8 @@ namespace Model.Data
             couldCheckFoldFlopPfrOop += statistic.CouldCheckFoldFlopPfrOop;
             couldCheckFoldFlop3BetOop += statistic.CouldCheckFoldFlop3BetOop;
 
+            foldedToDelayedCBet += statistic.FoldedToDelayedCBet;
+
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
@@ -3414,6 +3425,8 @@ namespace Model.Data
 
             couldCheckFoldFlopPfrOop = 0;
             couldCheckFoldFlop3BetOop = 0;
+
+            foldedToDelayedCBet = 0;
 
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
@@ -3615,6 +3628,8 @@ namespace Model.Data
 
             couldCheckFoldFlopPfrOop += indicator.couldCheckFoldFlopPfrOop;
             couldCheckFoldFlop3BetOop += indicator.couldCheckFoldFlop3BetOop;
+
+            foldedToDelayedCBet += indicator.foldedToDelayedCBet;
 
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);

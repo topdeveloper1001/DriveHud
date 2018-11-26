@@ -1681,6 +1681,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to delayed C-bet%.
+        /// </summary>
+        internal static string Reports_Column_FoldedToDelayedCBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_FoldedToDelayedCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold Flop%.
         /// </summary>
         internal static string Reports_Column_FoldFlop {

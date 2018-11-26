@@ -417,6 +417,7 @@ namespace Model.Enums
         FourBetInStraddle,
         FoldInStraddle,
         WTSDInStraddle,
-        SkipFlopCBetInSRPandCheckFoldFlopOOP
+        SkipFlopCBetInSRPandCheckFoldFlopOOP,
+        FoldedToDelayedCBet
     }
 }

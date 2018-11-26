@@ -542,7 +542,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.FourBetInStraddle, Is.EqualTo(expected.FourBetInStraddle), nameof(HudLightIndicators.FourBetInStraddle));
                 Assert.That(actual.FoldInStraddle, Is.EqualTo(expected.FoldInStraddle), nameof(HudLightIndicators.FoldInStraddle));
                 Assert.That(actual.WTSDInStraddle, Is.EqualTo(expected.WTSDInStraddle), nameof(HudLightIndicators.WTSDInStraddle));
-                Assert.That(actual.SkipFlopCBetInSRPandCheckFoldFlopOOP, Is.EqualTo(expected.SkipFlopCBetInSRPandCheckFoldFlopOOP), nameof(HudLightIndicators.SkipFlopCBetInSRPandCheckFoldFlopOOP));                
+                Assert.That(actual.SkipFlopCBetInSRPandCheckFoldFlopOOP, Is.EqualTo(expected.SkipFlopCBetInSRPandCheckFoldFlopOOP), nameof(HudLightIndicators.SkipFlopCBetInSRPandCheckFoldFlopOOP));
+                Assert.That(actual.FoldedToDelayedCBet, Is.EqualTo(expected.FoldedToDelayedCBet), nameof(HudLightIndicators.FoldedToDelayedCBet));
             });
         }
 

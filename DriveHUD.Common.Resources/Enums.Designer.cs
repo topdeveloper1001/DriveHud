@@ -2689,6 +2689,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fold to delayed C-bet%.
+        /// </summary>
+        internal static string Enum_Stat_FoldedToDelayedCBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldedToDelayedCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fold Flop%.
         /// </summary>
         internal static string Enum_Stat_FoldFlop {

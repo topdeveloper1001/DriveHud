@@ -1020,10 +1020,10 @@ namespace DriveHUD.Entities
         public virtual int TotalWonAmountOnRiverCall { get; set; }
 
         [ProtoMember(365)]
-        public virtual EnumPosition FirstRaiserPosition { get; set; }
+        public virtual EnumPosition FirstRaiserPosition { get; set; } = EnumPosition.Undefined;
 
         [ProtoMember(366)]
-        public virtual EnumPosition ThreeBettorPosition { get; set; }
+        public virtual EnumPosition ThreeBettorPosition { get; set; } = EnumPosition.Undefined;
 
         [ProtoMember(367)]
         public virtual int CouldProbeBetTurn { get; set; }
@@ -2269,7 +2269,7 @@ namespace DriveHUD.Entities
 
         #endregion
 
-        #region Delayed Turn C-Bet
+        #region Fold to delayed Turn C-Bet
 
         public virtual int FoldedToDelayedCBet => FacedDelayedCBet == 1 && (TurnActions.Equals("XF") || TurnActions.Equals("F")) ? 1 : 0;
 
@@ -2277,9 +2277,9 @@ namespace DriveHUD.Entities
 
         #region Check Fold Flop
 
-        public virtual int CouldCheckFoldFlopPfrOop => Pfrhands == 1 && PreflopIP == 0 && FlopActions.StartsWith("X") ? 1 : 0;
+        public virtual int CouldCheckFoldFlopPfrOop => Pfrhands == 1 && PreflopIP == 0 && FlopActions.StartsWith("X") && FlopActions.Length > 1 ? 1 : 0;
 
-        public virtual int CouldCheckFoldFlop3BetOop => Didthreebet == 1 && PreflopIP == 0 && FlopActions.StartsWith("X") ? 1 : 0;
+        public virtual int CouldCheckFoldFlop3BetOop => Didthreebet == 1 && PreflopIP == 0 && FlopActions.StartsWith("X") && FlopActions.Length > 1 ? 1 : 0;
 
         #endregion
 
@@ -2945,6 +2945,8 @@ namespace DriveHUD.Entities
 
             PreflopRaisersCount = a.PreflopRaisersCount;
             OpenRaisePreflopInBBs = a.OpenRaisePreflopInBBs;
+
+            FacedDelayedCBet += a.FacedDelayedCBet;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -3278,7 +3280,7 @@ namespace DriveHUD.Entities
 
             r.CheckFoldFlopPfrOop = a.CheckFoldFlopPfrOop + b.CheckFoldFlopPfrOop;
             r.CouldBetFoldFlopPfrRaiser = a.CouldBetFoldFlopPfrRaiser + b.CouldBetFoldFlopPfrRaiser;
-            r.CheckFoldFlop3BetOop = a.CheckFoldFlop3BetOop + b.CheckFoldFlopPfrOop;
+            r.CheckFoldFlop3BetOop = a.CheckFoldFlop3BetOop + b.CheckFoldFlop3BetOop;
             r.BetFoldFlopPfrRaiser = a.BetFoldFlopPfrRaiser + b.BetFoldFlopPfrRaiser;
             r.BetFlopCalled3BetPreflopIp = a.BetFlopCalled3BetPreflopIp + b.BetFlopCalled3BetPreflopIp;
             r.CouldBetFlopCalled3BetPreflopIp = a.CouldBetFlopCalled3BetPreflopIp + b.CouldBetFlopCalled3BetPreflopIp;
@@ -3382,6 +3384,8 @@ namespace DriveHUD.Entities
 
             r.PreflopRaisersCount = b.PreflopRaisersCount;
             r.OpenRaisePreflopInBBs = b.OpenRaisePreflopInBBs;
+
+            r.FacedDelayedCBet = a.FacedDelayedCBet + b.FacedDelayedCBet;
 
             return r;
         }

@@ -32,9 +32,7 @@ namespace Model.Filters
         private void FilterSectionQuickFilterInitialize()
         {
             QuickFilterCollection = new ObservableCollection<QuickFilterItem>()
-            {
-                new QuickFilterItem() { Name = "Fold to turn C-Bet", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Foldedtoturncontinuationbet), NoPropertyName = nameof(Playerstatistic.Calledturncontinuationbet) },
-                new QuickFilterItem() { Name = "Facing turn C-Bet", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Facingturncontinuationbet), NoPropertyName = nameof(Playerstatistic.Calledturncontinuationbet) },
+            {                
                 new QuickFilterItem() { Name = "3-Bet non premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet), NoPropertyName = nameof(Playerstatistic.Couldthreebet), QuickFilterHandType = QuickFilterHandTypeEnum.NonPremiumHand },
                 new QuickFilterItem() { Name = "3-Bet premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet), NoPropertyName = nameof(Playerstatistic.Couldthreebet), QuickFilterHandType = QuickFilterHandTypeEnum.PremiumHand },
                 new QuickFilterItem() { Name = "Call 3-Bet w/ non premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Calledthreebetpreflop), NoPropertyName = nameof(Playerstatistic.Facedthreebetpreflop), QuickFilterHandType = QuickFilterHandTypeEnum.NonPremiumHand },

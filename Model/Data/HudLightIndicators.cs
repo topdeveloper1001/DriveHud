@@ -4228,6 +4228,23 @@ namespace Model.Data
 
         #endregion
 
+        #region Fold to delayed Turn C-Bet
+
+        public virtual StatDto FoldedToDelayedCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldedToDelayedCBet,
+                    Occurred = foldedToDelayedCBet,
+                    CouldOccurred = Source.FacedDelayedCBet
+                };
+            }
+        }
+
+        #endregion
+
         #endregion
 
         public virtual StatDto CheckRaiseFlopAsPFRObject

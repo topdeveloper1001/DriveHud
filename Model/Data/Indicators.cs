@@ -2345,6 +2345,12 @@ namespace Model.Data
 
         #endregion
 
+        #region Fold to delayed Turn C-Bet
+
+        public virtual decimal FoldedToDelayedCBet => GetPercentage(Statistics.Sum(x => x.FoldedToDelayedCBet), Source.FacedDelayedCBet);
+
+        #endregion
+
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
         {
             foreach (var statistic in statistics)
