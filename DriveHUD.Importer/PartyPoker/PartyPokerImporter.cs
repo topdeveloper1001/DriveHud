@@ -63,7 +63,7 @@ namespace DriveHUD.Importers.PartyPoker
             }
         }
 
-        private const string tournamentPattern = "({0}) - Table {1}";
+        private const string tournamentPattern = "({0}) Table {1}";
 
         protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
@@ -84,7 +84,7 @@ namespace DriveHUD.Importers.PartyPoker
 
                 var tournamentTitle = string.Format(tournamentPattern, parsingResult.Source.GameDescription.Tournament.TournamentId, tableNumber);
 
-                return title.Contains(tournamentTitle);
+                return title.Replace(" - ", " ").Contains(tournamentTitle);
             }
 
             return title.Contains(parsingResult.Source.TableName);

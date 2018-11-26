@@ -59,8 +59,8 @@ namespace DriveHUD.Importers.PokerKing
 
         public override bool Match(TcpPacket tcpPacket, IpPacket ipPacket)
         {
-            return tcpPacket.SourcePort == PKImporterHelper.PortFilter ||
-                tcpPacket.DestinationPort == PKImporterHelper.PortFilter;
+            return PKImporterHelper.IsPortMatch(tcpPacket.SourcePort) ||
+                PKImporterHelper.IsPortMatch(tcpPacket.DestinationPort);
         }
 
         public override void AddPacket(CapturedPacket capturedPacket)
@@ -230,7 +230,7 @@ namespace DriveHUD.Importers.PokerKing
                             detectedTableWindows.Remove(windowHandle);
                             continue;
                         }
-                       
+
                         var unexpectedRoomDetected = !usersRooms.TryGetValue(package.UserId, out int roomId) || roomId != package.RoomId;
 
                         // add detected window to list of detected tables

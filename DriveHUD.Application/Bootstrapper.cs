@@ -128,18 +128,25 @@ namespace DriveHUD.Application
 
                     mainRadWindow.DataContext = mainWindowViewModel;
 
-                    if (settingsModel != null && settingsModel.GeneralSettings != null &&
-                        settingsModel.GeneralSettings.RememberScreenPosition)
+                    if (settingsModel != null && settingsModel.GeneralSettings != null)
                     {
-                        var positionsInfo = new WindowPositionsInfo
-                        {
-                            Width = mainWindowViewModel.WindowMinWidth,
-                            Height = mainWindowViewModel.AppStartupHeight,
-                            DisplaySettings = settingsModel?.GeneralSettings?.DisplaySettings,
-                            StartupLocation = WindowStartupLocation.Manual
-                        };
+                        // set logging
+                        LogProvider.Log.IsAdvanced = settingsModel.GeneralSettings.IsAdvancedLoggingEnabled;
 
-                        WindowPositionsService.SetPosition(mainRadWindow, positionsInfo);
+                        LogProvider.Log.Info($"Advanced logging: {settingsModel.GeneralSettings.IsAdvancedLoggingEnabled}");
+
+                        if (settingsModel.GeneralSettings.RememberScreenPosition)
+                        {
+                            var positionsInfo = new WindowPositionsInfo
+                            {
+                                Width = mainWindowViewModel.WindowMinWidth,
+                                Height = mainWindowViewModel.AppStartupHeight,
+                                DisplaySettings = settingsModel?.GeneralSettings?.DisplaySettings,
+                                StartupLocation = WindowStartupLocation.Manual
+                            };
+
+                            WindowPositionsService.SetPosition(mainRadWindow, positionsInfo);
+                        }
                     }
 
                     mainRadWindow.IsTopmost = true;

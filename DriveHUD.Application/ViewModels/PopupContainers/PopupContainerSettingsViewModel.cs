@@ -13,6 +13,7 @@
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.ViewModels.Settings;
 using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Events;
@@ -118,6 +119,13 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             }
 
             _settingsService.SaveSettings(_settingsModel);
+
+            if (_settingsModel != null && _settingsModel.GeneralSettings != null &&
+                _settingsModel.GeneralSettings.IsAdvancedLoggingEnabled != LogProvider.Log.IsAdvanced)
+            {
+                LogProvider.Log.IsAdvanced = _settingsModel.GeneralSettings.IsAdvancedLoggingEnabled;
+                LogProvider.Log.Info($"Advanced logging: {_settingsModel.GeneralSettings.IsAdvancedLoggingEnabled}");
+            }
 
             ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<SettingsUpdatedEvent>()
                 .Publish(new SettingsUpdatedEventArgs() { IsUpdatePlayersCollection = isUpdatePlayersRequired });

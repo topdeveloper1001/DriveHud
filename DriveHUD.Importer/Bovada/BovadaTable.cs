@@ -467,7 +467,7 @@ namespace DriveHUD.Importers.Bovada
 
                     break;
 
-                case "JACKPOT_PRIZE":                             
+                case "JACKPOT_PRIZE":
                     IsJackpotTable = true;
                     MaxSeat = JackpotMaxSeats;
                     GameFormat = GameFormat.SnG;
@@ -815,7 +815,7 @@ namespace DriveHUD.Importers.Bovada
 
                     UpdatePlayersAddedRemoved(handModel, configuration, false);
 
-                    LogProvider.Log.Info(this, string.Format("Hand {0} processed. [{1}]", handModel.HandNumber, Identifier));
+                    LogProvider.Log.Info(this, $"Hand {handModel.HandNumber} [{handModel.GameType}, {handModel.GameFormat}, {MaxSeat}, {WindowHandle}] processed. [{Identifier}]");
 
                     var gameInfo = new GameInfo
                     {
@@ -1015,6 +1015,7 @@ namespace DriveHUD.Importers.Bovada
 
             if (parsingResult == null)
             {
+                LogProvider.Log.Warn(this, string.Format("Hand {0} has not been parsed. Result is null. [{1}]", handNumber, Identifier));
                 return;
             }
 
