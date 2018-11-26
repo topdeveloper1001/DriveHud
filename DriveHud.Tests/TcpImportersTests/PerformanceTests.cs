@@ -48,7 +48,7 @@ namespace DriveHud.Tests.TcpImportersTests
             var tableWindowProvider = Substitute.For<ITableWindowProvider>();
             tableWindowProvider.GetTableWindowHandle(Arg.Any<Process>()).Returns(new IntPtr(1500));
             unityContainer.RegisterInstance(tableWindowProvider);
-           
+
             var pkCatcherService = Substitute.For<IPKCatcherService>();
             pkCatcherService.CheckHand(Arg.Any<HandHistory>()).Returns(true);
             unityContainer.RegisterInstance(pkCatcherService);
@@ -114,7 +114,7 @@ namespace DriveHud.Tests.TcpImportersTests
             }
 
             protected override void ExportHandHistory(List<HandHistoryData> handHistories)
-            {               
+            {
             }
 
             protected override void InitializeLogger()
@@ -163,6 +163,8 @@ namespace DriveHud.Tests.TcpImportersTests
 
         private class TestLogger : IDHLog
         {
+            public bool IsAdvanced { get; set; }
+
             public void Log(Type senderType, object message, LogMessageType logMessageType)
             {
             }

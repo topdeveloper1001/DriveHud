@@ -352,8 +352,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         #endregion
 
         [Test]
-        [TestCase(@"Hero-DidDelayedTurnCBet-1.xml", EnumPokerSites.IPoker, "Hero", 1)]
-        [TestCase(@"Hero-DidDelayedTurnCBet-2.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-DidDelayedTurnCBet-1.xml", EnumPokerSites.IPoker, "Hero", 0)]
+        [TestCase(@"Hero-DidDelayedTurnCBet-2.xml", EnumPokerSites.IPoker, "Hero", 0)]
         [TestCase(@"Hero-DidDelayedTurnCBet-3.xml", EnumPokerSites.IPoker, "Hero", 1)]
         [TestCase(@"DURKADURDUR-DidDelayedTurnCBet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         public void DidDelayedTurnCBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
@@ -483,6 +483,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
         [Test]
         [TestCase(@"DURKADURDUR-MP-DidNotFaceCBet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"Hero-FacingTurnCBet-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FacingTurnCBet-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
         public void FacingturncontinuationbetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.Facingturncontinuationbet, fileName, pokerSite, playerName, expected);
@@ -1353,6 +1355,23 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         public void ColdCall3BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.DidColdCallThreeBet, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-FacedDelayedCBet-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FacedDelayedCBet-True-2.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FacedDelayedCBet-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-FoldedToDelayedCBet-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FoldedToDelayedCBet-True-2.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void FacedDelayedCBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacedDelayedCBet, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-FoldedToDelayedCBet-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FoldedToDelayedCBet-True-2.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void FoldedToDelayedCBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldedToDelayedCBet, fileName, pokerSite, playerName, expected);
         }
     }
 }

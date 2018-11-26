@@ -1,0 +1,32 @@
+PokerStars Game #47182657488:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 22:09:23 ET
+Table 'Rigilkent VIII' 6-max Seat #1 is the button
+Seat 1: mayhem920 ($506.85 in chips) 
+Seat 2: Hero ($201 in chips) 
+Seat 4: rivichico ($426.70 in chips) 
+Seat 5: FrAnWaN ($203 in chips) 
+Hero: posts small blind $1
+rivichico: posts big blind $2
+*** HOLE CARDS ***
+FrAnWaN: folds 
+mayhem920: raises $4 to $6
+Hero: calls $5
+rivichico: folds 
+*** FLOP *** [Ts 3h 6c]
+Hero: checks 
+mayhem920: checks 
+*** TURN *** [Ts 3h 6c] [6s]
+Hero: checks 
+mayhem920: bets $10
+Hero: raises $19 to $29
+mayhem920: folds 
+Uncalled bet ($19) returned to Hero
+Hero collected $32.35 from pot
+Hero: doesn't show hand 
+*** SUMMARY ***
+Total pot $34 | Rake $1.65 
+Board [Ts 3h 6c 6s]
+Seat 1: mayhem920 (button) folded on the Turn
+Seat 2: Hero (small blind) collected ($32.35)
+Seat 4: rivichico (big blind) folded before Flop
+Seat 5: FrAnWaN folded before Flop (didn't bet)
+

@@ -1,0 +1,38 @@
+PokerStars Game #47180621670:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:04:55 ET
+Table 'Lonnrot III' 6-max Seat #3 is the button
+Seat 2: Pappe_Ruk ($299 in chips) 
+Seat 3: Hero ($200 in chips) 
+Seat 4: depomp ($189.55 in chips) 
+Seat 5: rivichico ($505.65 in chips) 
+Seat 6: dimsumboy ($200 in chips) 
+depomp: posts small blind $1
+rivichico: posts big blind $2
+MiraCIe: sits out 
+*** HOLE CARDS ***
+dimsumboy: folds 
+Pappe_Ruk: folds 
+Hero: raises $4 to $6
+depomp: folds 
+rivichico: raises $16 to $22
+Hero: calls $16
+*** FLOP *** [Ts Qd Kd]
+rivichico: bets $25.80
+Hero: calls $25.80
+*** TURN *** [Ts Qd Kd] [4d]
+rivichico: bets $45
+Hero: raises $107.20 to $152.20 and is all-in
+rivichico: calls $107.20
+*** RIVER *** [Ts Qd Kd 4d] [Ac]
+*** SHOW DOWN ***
+rivichico: shows [Ks Qs] (two pair, Kings and Queens)
+Hero: shows [Qh Th] (two pair, Queens and Tens)
+rivichico collected $399 from pot
+*** SUMMARY ***
+Total pot $401 | Rake $2 
+Board [Ts Qd Kd 4d Ac]
+Seat 2: Pappe_Ruk folded before Flop (didn't bet)
+Seat 3: Hero (button) showed [Qh Th] and lost with two pair, Queens and Tens
+Seat 4: depomp (small blind) folded before Flop
+Seat 5: rivichico (big blind) showed [Ks Qs] and won ($399) with two pair, Kings and Queens
+Seat 6: dimsumboy folded before Flop (didn't bet)
+

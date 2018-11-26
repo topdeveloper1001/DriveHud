@@ -1,0 +1,34 @@
+PokerStars Game #47182250534:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 21:55:23 ET
+Table 'Malabar III' 6-max Seat #3 is the button
+Seat 1: dimsumboy ($200 in chips) 
+Seat 2: dajatt13 ($107.85 in chips) 
+Seat 3: nachtvogel ($201.55 in chips) 
+Seat 4: Nehekus ($610.80 in chips) 
+Seat 6: Hero ($203 in chips) 
+Nehekus: posts small blind $1
+Hero: posts big blind $2
+*** HOLE CARDS ***
+PokerOkk joins the table at seat #5 
+dimsumboy: folds 
+dajatt13: folds 
+nachtvogel: raises $4 to $6
+Nehekus: folds 
+Hero: calls $4
+*** FLOP *** [8h Ah Ac]
+Hero: checks 
+nachtvogel: checks 
+*** TURN *** [8h Ah Ac] [Js]
+Hero: checks 
+nachtvogel: bets $8
+Hero: folds 
+Uncalled bet ($8) returned to nachtvogel
+nachtvogel collected $12.35 from pot
+*** SUMMARY ***
+Total pot $13 | Rake $0.65 
+Board [8h Ah Ac Js]
+Seat 1: dimsumboy folded before Flop (didn't bet)
+Seat 2: dajatt13 folded before Flop (didn't bet)
+Seat 3: nachtvogel (button) collected ($12.35)
+Seat 4: Nehekus (small blind) folded before Flop
+Seat 6: Hero (big blind) folded on the Turn
+

@@ -3073,6 +3073,20 @@ namespace Model.Data
 
         #endregion
 
+        #region Check Fold Flop
+
+        [ProtoMember(333)]
+        protected int couldCheckFoldFlopPfrOop;
+
+        public override decimal CheckFoldFlopPfrOop => GetPercentage(Source.CheckFoldFlopPfrOop, couldCheckFoldFlopPfrOop);
+
+        [ProtoMember(334)]
+        protected int couldCheckFoldFlop3BetOop;
+
+        public override decimal CheckFoldFlop3BetOop => GetPercentage(Source.CheckFoldFlop3BetOop, couldCheckFoldFlop3BetOop);
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -3236,6 +3250,9 @@ namespace Model.Data
             didSkipFlopCBetInSRPandCheckFoldFlopOOP += statistic.DidSkipFlopCBetInSRPandCheckFoldFlopOOP;
             couldSkipFlopCBetInSRPandCheckFoldFlopOOP += statistic.CouldSkipFlopCBetInSRPandCheckFoldFlopOOP;
 
+            couldCheckFoldFlopPfrOop += statistic.CouldCheckFoldFlopPfrOop;
+            couldCheckFoldFlop3BetOop += statistic.CouldCheckFoldFlop3BetOop;
+
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
@@ -3394,6 +3411,9 @@ namespace Model.Data
 
             didSkipFlopCBetInSRPandCheckFoldFlopOOP = 0;
             couldSkipFlopCBetInSRPandCheckFoldFlopOOP = 0;
+
+            couldCheckFoldFlopPfrOop = 0;
+            couldCheckFoldFlop3BetOop = 0;
 
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
@@ -3592,6 +3612,9 @@ namespace Model.Data
 
             didSkipFlopCBetInSRPandCheckFoldFlopOOP += indicator.didSkipFlopCBetInSRPandCheckFoldFlopOOP;
             couldSkipFlopCBetInSRPandCheckFoldFlopOOP += indicator.couldSkipFlopCBetInSRPandCheckFoldFlopOOP;
+
+            couldCheckFoldFlopPfrOop += indicator.couldCheckFoldFlopPfrOop;
+            couldCheckFoldFlop3BetOop += indicator.couldCheckFoldFlop3BetOop;
 
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);

@@ -1250,9 +1250,9 @@ namespace Model.Data
 
         #endregion
 
-        public virtual decimal CheckFoldFlopPfrOop => GetPercentage(Source.CheckFoldFlopPfrOop, Source.PfrOop);
+        public virtual decimal CheckFoldFlopPfrOop => GetPercentage(Source.CheckFoldFlopPfrOop, Statistics.Sum(x => x.CouldCheckFoldFlopPfrOop));
 
-        public virtual decimal CheckFoldFlop3BetOop => GetPercentage(Source.CheckFoldFlop3BetOop, Source.DidThreeBetOop);
+        public virtual decimal CheckFoldFlop3BetOop => GetPercentage(Source.CheckFoldFlop3BetOop, Statistics.Sum(x => x.CouldCheckFoldFlop3BetOop));
 
         public virtual decimal BetFoldFlopPfrRaiser => GetPercentage(Source.BetFoldFlopPfrRaiser, Source.CouldBetFoldFlopPfrRaiser);
 

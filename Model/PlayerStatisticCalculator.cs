@@ -52,6 +52,33 @@ namespace Model
             stat.CurrencyId = (short)parsedHand.GameDescription.Limit.Currency;
             stat.PokergametypeId = (short)(parsedHand.GameDescription.GameType);
 
+            List<string> line = new List<string>();
+
+            foreach (var streetLineGroup in parsedHand.HandActions.Where(x => x.PlayerName == stat.PlayerName || x is StreetAction).GroupBy(x => x.Street))
+            {
+                var streetLine = string.Join(string.Empty, streetLineGroup.Select(Converter.ActionToString));
+
+                switch (streetLineGroup.Key)
+                {
+                    case Street.Preflop:
+                        stat.PreflopActions = streetLine;
+                        break;
+                    case Street.Flop:
+                        stat.FlopActions = streetLine;
+                        break;
+                    case Street.Turn:
+                        stat.TurnActions = streetLine;
+                        break;
+                    case Street.River:
+                        stat.RiverActions = streetLine;
+                        break;
+                }
+
+                line.Add(streetLine);
+            }
+
+            stat.Line = string.Join(StringFormatter.ActionLineSeparator, line).Trim(StringFormatter.ActionLineSeparator.ToCharArray());
+
             HandAction[] playerHandActions = parsedHand.HandActions.Where(x => x.PlayerName == player).ToArray();
 
             int call = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street > Street.Preflop);
@@ -181,10 +208,26 @@ namespace Model
                     }
 
                     // could probe turn bet
-                    if (raiser != player && !preflopInPosition)
+                    if (raiser != player)
                     {
-                        stat.CouldProbeBetTurn = parsedHand.Flop.All(x => x.IsCheck) && CouldProbeBet(parsedHand.Turn, player, raiser) ? 1 : 0;
-                        stat.CouldProbeBetRiver = parsedHand.Flop.All(x => x.IsCheck) && parsedHand.Turn.All(x => x.IsCheck) && CouldProbeBet(parsedHand.River, player, raiser) ? 1 : 0;
+                        if (!preflopInPosition)
+                        {
+                            stat.CouldProbeBetTurn = parsedHand.Flop.All(x => x.IsCheck) && CouldProbeBet(parsedHand.Turn, player, raiser) ? 1 : 0;
+                            stat.CouldProbeBetRiver = parsedHand.Flop.All(x => x.IsCheck) && parsedHand.Turn.All(x => x.IsCheck) && CouldProbeBet(parsedHand.River, player, raiser) ? 1 : 0;
+                        }
+
+                        // facing delayed turn c-bet
+                        if (!flopCBet.Happened && stat.FlopActions == "X")
+                        {
+                            var raiserFlopCBet = new ConditionalBet();
+                            CalculateContinuationBet(raiserFlopCBet, flops, raiser, raiser);
+
+                            if (raiserFlopCBet.Possible)
+                            {
+                                CalculateContinuationBet(turnCBet, parsedHand.Turn.ToList(), player, raiser);
+                                stat.FacedDelayedCBet = turnCBet.Faced ? 1 : 0;
+                            }
+                        }
                     }
                 }
             }
@@ -367,6 +410,7 @@ namespace Model
             var limped = !wasRaise && parsedHand.PreFlop.Any(handAction => handAction.PlayerName == player && (handAction.HandActionType == HandActionType.CALL || handAction.HandActionType == HandActionType.CHECK));
             var firstCall = parsedHand.PreFlop.FirstOrDefault(handAction => handAction.HandActionType == HandActionType.CALL);
             var smallBlindAction = parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND);
+
             if (firstCall != null && smallBlindAction != null)
             {
                 if (firstCall.PlayerName == smallBlindAction.PlayerName)
@@ -377,10 +421,12 @@ namespace Model
             stat.SmallBlind = Math.Abs(parsedHand.GameDescription.Limit.SmallBlind);
             stat.BigBlind = Math.Abs(parsedHand.GameDescription.Limit.BigBlind);
             stat.Ante = 0;
+
             if (parsedHand.GameDescription.Limit.IsAnteTable)
             {
                 stat.Ante = Math.Abs(parsedHand.GameDescription.Limit.Ante);
             }
+
             stat.IsSmallBlind = isSmallBlind;
             stat.IsBigBlind = isBigBlind;
             stat.IsStraddle = isStraddle;
@@ -686,7 +732,7 @@ namespace Model
             stat.LimpReraised = limp.Raised ? 1 : 0;
 
             stat.BetFoldFlopPfrRaiser = pfr && betOnFlop && isFoldedFlop ? 1 : 0;
-            stat.CouldBetFoldFlopPfrRaiser = pfr && couldBetOnFlop ? 1 : 0;
+            stat.CouldBetFoldFlopPfrRaiser = pfr && betOnFlop && stat.FlopActions.Length > 1 ? 1 : 0;
             stat.CheckFoldFlopPfrOop = pfr && isCheckedFlop && isFoldedFlop && !preflopInPosition ? 1 : 0;
             stat.CheckFoldFlop3BetOop = isCheckedFlop && threeBet.Made && isFoldedFlop && !preflopInPosition ? 1 : 0;
             stat.BetFlopCalled3BetPreflopIp = betOnFlop && threeBet.Called && preflopInPosition ? 1 : 0;
@@ -732,33 +778,6 @@ namespace Model
 
             stat.Pot = parsedHand.TotalPot ?? 0;
             stat.CalculateTotalPot();
-
-            List<string> line = new List<string>();
-
-            foreach (var streetLineGroup in parsedHand.HandActions.Where(x => x.PlayerName == stat.PlayerName || x is StreetAction).GroupBy(x => x.Street))
-            {
-                var streetLine = string.Join(string.Empty, streetLineGroup.Select(Converter.ActionToString));
-
-                switch (streetLineGroup.Key)
-                {
-                    case Street.Preflop:
-                        stat.PreflopActions = streetLine;
-                        break;
-                    case Street.Flop:
-                        stat.FlopActions = streetLine;
-                        break;
-                    case Street.Turn:
-                        stat.TurnActions = streetLine;
-                        break;
-                    case Street.River:
-                        stat.RiverActions = streetLine;
-                        break;
-                }
-
-                line.Add(streetLine);
-            }
-
-            stat.Line = string.Join(StringFormatter.ActionLineSeparator, line).Trim(StringFormatter.ActionLineSeparator.ToCharArray());
 
             stat.Board = parsedHand.CommunityCards != null ? parsedHand.CommunityCards.ToString() : string.Empty;
             stat.Allin = Converter.ToAllin(parsedHand, stat);
@@ -1723,6 +1742,8 @@ namespace Model
 
         private static void CalculateColdCall3Bet(ConditionalBet coldCall3Bet, List<HandAction> preflops, string player)
         {
+            var raisers = new List<string>();
+
             bool canThreeBet = false;
             bool wasThreeBet = false;
 
@@ -1730,14 +1751,25 @@ namespace Model
             {
                 if (wasThreeBet)
                 {
+                    if (raisers.Contains(action.PlayerName))
+                    {
+                        return;
+                    }
+
                     if (action.PlayerName == player)
+                    {
                         coldCall3Bet.Possible = true;
+                    }
 
                     if (action.IsRaise())
+                    {
                         return;
+                    }
 
                     if (!action.IsCall() || action.PlayerName != player)
+                    {
                         continue;
+                    }
 
                     coldCall3Bet.Made = true;
                     return;
@@ -1747,9 +1779,17 @@ namespace Model
                     if (action.IsRaise())
                     {
                         if (action.PlayerName == player)
+                        {
                             return;
+                        }
+
+                        raisers.Add(action.PlayerName);
 
                         wasThreeBet = true;
+                    }
+                    else if (action.IsCall())
+                    {
+                        return;
                     }
                 }
                 else
@@ -1757,6 +1797,11 @@ namespace Model
                     if (action.IsRaise())
                     {
                         canThreeBet = true;
+                        raisers.Add(action.PlayerName);
+                    }
+                    else if (action.IsCall())
+                    {
+                        return;
                     }
                 }
             }
@@ -1764,6 +1809,8 @@ namespace Model
 
         private static void CalculateColdCall4Bet(ConditionalBet coldCall4Bet, List<HandAction> preflops, string player)
         {
+            var raisers = new List<string>();
+
             bool canThreeBet = false;
             bool wasThreeBet = false;
             bool wasFourBet = false;
@@ -1772,14 +1819,25 @@ namespace Model
             {
                 if (wasFourBet)
                 {
+                    if (raisers.Contains(action.PlayerName))
+                    {
+                        return;
+                    }
+
                     if (action.PlayerName == player)
+                    {
                         coldCall4Bet.Possible = true;
+                    }
 
                     if (action.IsRaise())
+                    {
                         return;
+                    }
 
                     if (!action.IsCall() || action.PlayerName != player)
+                    {
                         continue;
+                    }
 
                     coldCall4Bet.Made = true;
                     return;
@@ -1789,20 +1847,42 @@ namespace Model
                     if (action.IsRaise())
                     {
                         if (action.PlayerName == player)
+                        {
                             return;
+                        }
+
+                        raisers.Add(action.PlayerName);
 
                         wasFourBet = true;
+                    }
+                    else if (action.IsCall())
+                    {
+                        return;
                     }
                 }
                 else if (canThreeBet)
                 {
                     if (action.IsRaise())
+                    {
                         wasThreeBet = true;
+                        raisers.Add(action.PlayerName);
+                    }
+                    else if (action.IsCall())
+                    {
+                        return;
+                    }
                 }
                 else
                 {
                     if (action.IsRaise())
+                    {
                         canThreeBet = true;
+                        raisers.Add(action.PlayerName);
+                    }
+                    else if (action.IsCall())
+                    {
+                        return;
+                    }
                 }
             }
         }

@@ -900,7 +900,7 @@ namespace Model.Data
                 {
                     Value = CheckFoldFlop3BetOop,
                     Occurred = Source.CheckFoldFlop3BetOop,
-                    CouldOccurred = Source.DidThreeBetOop
+                    CouldOccurred = couldCheckFoldFlop3BetOop
                 };
             }
         }
@@ -913,7 +913,7 @@ namespace Model.Data
                 {
                     Value = CheckFoldFlopPfrOop,
                     Occurred = Source.CheckFoldFlopPfrOop,
-                    CouldOccurred = Source.PfrOop
+                    CouldOccurred = couldCheckFoldFlopPfrOop
                 };
             }
         }

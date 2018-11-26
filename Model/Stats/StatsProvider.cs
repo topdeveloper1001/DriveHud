@@ -161,7 +161,7 @@ namespace Model.Stats
             new StatBase { Stat = Stat.FlopCheckCall, PropertyName = nameof(Indicators.FlopCheckCall), CreateStatDto = x => new StatDto(x.DidFlopCheckCall, x.CouldFlopCheckCall) },
             new StatBase { Stat = Stat.FlopCheckRaise, PropertyName = nameof(Indicators.FlopCheckRaise), CreateStatDto = x => new StatDto(x.DidFlopCheckRaise, x.Sawflop) },
             new StatBase { Stat = Stat.FoldFlop, PropertyName = nameof(Indicators.FoldFlop), CreateStatDto = x => new StatDto(x.FoldedFlop, x.FacedBetOnFlop) },
-            new StatBase { Stat = Stat.FoldFlop, PropertyName = nameof(Indicators.FoldInStraddle), CreateStatDto = x => new StatDto(x.DidFoldInStraddle, x.CouldActInStraddle) },
+            new StatBase { Stat = Stat.FoldInStraddle, PropertyName = nameof(Indicators.FoldInStraddle), CreateStatDto = x => new StatDto(x.DidFoldInStraddle, x.CouldActInStraddle) },
             new StatBase { Stat = Stat.FoldTo3Bet, PropertyName = nameof(Indicators.FoldToThreeBet), CreateStatDto = x => new StatDto(x.Foldedtothreebetpreflop, x.Facedthreebetpreflop) },
             new StatBase { Stat = Stat.FoldTo3BetIP, PropertyName = nameof(Indicators.FoldToThreeBetIP), CreateStatDto = x => new StatDto(x.FoldToThreeBetIP, x.FacedThreeBetIP) },
             new StatBase { Stat = Stat.FoldTo3BetOOP, PropertyName = nameof(Indicators.FoldToThreeBetOOP), CreateStatDto = x => new StatDto(x.FoldToThreeBetOOP, x.FacedThreeBetOOP) },

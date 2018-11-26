@@ -1049,6 +1049,9 @@ namespace DriveHUD.Entities
         [ProtoMember(374)]
         public virtual decimal OpenRaisePreflopInBBs { get; set; }
 
+        [ProtoMember(375)]
+        public virtual int FacedDelayedCBet { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1925,27 +1928,27 @@ namespace DriveHUD.Entities
 
         public virtual int DidSqueezeEP => Didsqueeze == 1 && Position.IsEPPosition() ? 1 : 0;
 
-        public virtual int CouldSqueezeEP => CouldSqueezeEP == 1 && Position.IsEPPosition() ? 1 : 0;
+        public virtual int CouldSqueezeEP => Couldsqueeze == 1 && Position.IsEPPosition() ? 1 : 0;
 
         public virtual int DidSqueezeMP => Didsqueeze == 1 && Position.IsMPPosition() ? 1 : 0;
 
-        public virtual int CouldSqueezeMP => CouldSqueezeMP == 1 && Position.IsMPPosition() ? 1 : 0;
+        public virtual int CouldSqueezeMP => Couldsqueeze == 1 && Position.IsMPPosition() ? 1 : 0;
 
         public virtual int DidSqueezeCO => Didsqueeze == 1 && Position.IsCOPosition() ? 1 : 0;
 
-        public virtual int CouldSqueezeCO => CouldSqueezeCO == 1 && Position.IsCOPosition() ? 1 : 0;
+        public virtual int CouldSqueezeCO => Couldsqueeze == 1 && Position.IsCOPosition() ? 1 : 0;
 
         public virtual int DidSqueezeBTN => Didsqueeze == 1 && Position.IsBTNPosition() ? 1 : 0;
 
-        public virtual int CouldSqueezeBTN => CouldSqueezeBTN == 1 && Position.IsBTNPosition() ? 1 : 0;
+        public virtual int CouldSqueezeBTN => Couldsqueeze == 1 && Position.IsBTNPosition() ? 1 : 0;
 
         public virtual int DidSqueezeSB => Didsqueeze == 1 && Position.IsSBPosition() ? 1 : 0;
 
-        public virtual int CouldSqueezeSB => CouldSqueezeSB == 1 && Position.IsSBPosition() ? 1 : 0;
+        public virtual int CouldSqueezeSB => Couldsqueeze == 1 && Position.IsSBPosition() ? 1 : 0;
 
         public virtual int DidSqueezeBB => Didsqueeze == 1 && Position.IsBBPosition() ? 1 : 0;
 
-        public virtual int CouldSqueezeBB => CouldSqueezeBB == 1 && Position.IsBBPosition() ? 1 : 0;
+        public virtual int CouldSqueezeBB => Couldsqueeze == 1 && Position.IsBBPosition() ? 1 : 0;
 
         #endregion
 
@@ -2268,7 +2271,15 @@ namespace DriveHUD.Entities
 
         #region Delayed Turn C-Bet
 
-       
+        public virtual int FoldedToDelayedCBet => FacedDelayedCBet == 1 && (TurnActions.Equals("XF") || TurnActions.Equals("F")) ? 1 : 0;
+
+        #endregion
+
+        #region Check Fold Flop
+
+        public virtual int CouldCheckFoldFlopPfrOop => Pfrhands == 1 && PreflopIP == 0 && FlopActions.StartsWith("X") ? 1 : 0;
+
+        public virtual int CouldCheckFoldFlop3BetOop => Didthreebet == 1 && PreflopIP == 0 && FlopActions.StartsWith("X") ? 1 : 0;
 
         #endregion
 
