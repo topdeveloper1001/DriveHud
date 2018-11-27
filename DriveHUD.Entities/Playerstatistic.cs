@@ -1019,6 +1019,39 @@ namespace DriveHUD.Entities
         [ProtoMember(364)]
         public virtual int TotalWonAmountOnRiverCall { get; set; }
 
+        [ProtoMember(365)]
+        public virtual EnumPosition FirstRaiserPosition { get; set; } = EnumPosition.Undefined;
+
+        [ProtoMember(366)]
+        public virtual EnumPosition ThreeBettorPosition { get; set; } = EnumPosition.Undefined;
+
+        [ProtoMember(367)]
+        public virtual int CouldProbeBetTurn { get; set; }
+
+        [ProtoMember(368)]
+        public virtual int CouldProbeBetRiver { get; set; }
+
+        [ProtoMember(369)]
+        public virtual string PreflopActions { get; set; } = string.Empty;
+
+        [ProtoMember(370)]
+        public virtual string FlopActions { get; set; } = string.Empty;
+
+        [ProtoMember(371)]
+        public virtual string TurnActions { get; set; } = string.Empty;
+
+        [ProtoMember(372)]
+        public virtual string RiverActions { get; set; } = string.Empty;
+
+        [ProtoMember(373)]
+        public virtual int PreflopRaisersCount { get; set; }
+
+        [ProtoMember(374)]
+        public virtual decimal OpenRaisePreflopInBBs { get; set; }
+
+        [ProtoMember(375)]
+        public virtual int FacedDelayedCBet { get; set; }
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1130,8 +1163,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Raisedflopcontinuationbet == 1 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
-                    (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+                return Raisedflopcontinuationbet == 1 && In3BetPot ? 1 : 0;
             }
         }
 
@@ -1139,10 +1171,20 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Facingflopcontinuationbet == 1 && CouldRaiseFlop == 1 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
-                    (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+                return Facingflopcontinuationbet == 1 && CouldRaiseFlop == 1 && In3BetPot ? 1 : 0;
             }
         }
+
+        public virtual bool In3BetPot => Didthreebet != 0 || FacedthreebetpreflopVirtual != 0 ||
+            (Couldthreebet != 0 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0);
+
+        public virtual bool In4BetPot => PreflopRaisersCount == 3 && !PreflopActions.EndsWith("F");
+
+        public virtual bool IsSRP => (PreflopActions.Equals("C") || PreflopActions.Equals("F")) &&
+            (FacingPreflop == EnumFacingPreflop.Raiser || FacingPreflop == EnumFacingPreflop.RaiserAndCaller) ||
+            (FacingPreflop == EnumFacingPreflop.Unopened && PreflopActions.Equals("CC")) ||
+            PreflopActions.Equals("R");
+
 
         #region FlopBetSize stats
 
@@ -1198,8 +1240,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Foldedtoturncontinuationbet == 1 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
-                    (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+                return Foldedtoturncontinuationbet == 1 && In3BetPot ? 1 : 0;
             }
         }
 
@@ -1207,8 +1248,7 @@ namespace DriveHUD.Entities
         {
             get
             {
-                return Facingturncontinuationbet == 1 && (Didthreebet == 1 || FacedthreebetpreflopVirtual == 1 ||
-                    (Couldthreebet == 1 && Line.StartsWith("CC", StringComparison.Ordinal) && Facedfourbetpreflop == 0 && Didfourbet == 0)) ? 1 : 0;
+                return Facingturncontinuationbet == 1 && In3BetPot ? 1 : 0;
             }
         }
 
@@ -1362,6 +1402,887 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region Raise Limpers stats    
+
+        public virtual int CouldRaiseLimpers => (FacingPreflop == EnumFacingPreflop.Limper || FacingPreflop == EnumFacingPreflop.MultipleLimpers) ? 1 : 0;
+
+        public virtual int RaisedLimpersMP => Position.IsMPPosition() ? IsRaisedLimpers : 0;
+
+        public virtual int RaisedLimpersCO => Position.IsCOPosition() ? IsRaisedLimpers : 0;
+
+        public virtual int RaisedLimpersBN => Position.IsBTNPosition() ? IsRaisedLimpers : 0;
+
+        public virtual int RaisedLimpersSB => Position.IsSBPosition() ? IsRaisedLimpers : 0;
+
+        public virtual int RaisedLimpersBB => Position.IsBBPosition() ? IsRaisedLimpers : 0;
+
+        public virtual int CouldRaiseLimpersMP => Position.IsMPPosition() ? CouldRaiseLimpers : 0;
+
+        public virtual int CouldRaiseLimpersCO => Position.IsCOPosition() ? CouldRaiseLimpers : 0;
+
+        public virtual int CouldRaiseLimpersBN => Position.IsBTNPosition() ? CouldRaiseLimpers : 0;
+
+        public virtual int CouldRaiseLimpersSB => Position.IsSBPosition() ? CouldRaiseLimpers : 0;
+
+        public virtual int CouldRaiseLimpersBB => Position.IsBBPosition() ? CouldRaiseLimpers : 0;
+
+        #endregion
+
+        #region 3-Bet vs Pos stats
+
+        public virtual int ThreeBetMPvsEP => FirstRaiserPosition.IsEPPosition() ? DidThreeBetMP : 0;
+
+        public virtual int CouldThreeBetMPvsEP => FirstRaiserPosition.IsEPPosition() ? CouldThreeBetMP : 0;
+
+        public virtual int ThreeBetCOvsEP => FirstRaiserPosition.IsEPPosition() ? DidThreeBetCO : 0;
+
+        public virtual int CouldThreeBetCOvsEP => FirstRaiserPosition.IsEPPosition() ? CouldThreeBetCO : 0;
+
+        public virtual int ThreeBetCOvsMP => FirstRaiserPosition.IsMPPosition() ? DidThreeBetCO : 0;
+
+        public virtual int CouldThreeBetCOvsMP => FirstRaiserPosition.IsMPPosition() ? CouldThreeBetCO : 0;
+
+        public virtual int ThreeBetBTNvsEP => FirstRaiserPosition.IsEPPosition() ? DidThreeBetBN : 0;
+
+        public virtual int CouldThreeBetBTNvsEP => FirstRaiserPosition.IsEPPosition() ? CouldThreeBetBN : 0;
+
+        public virtual int ThreeBetBTNvsMP => FirstRaiserPosition.IsMPPosition() ? DidThreeBetBN : 0;
+
+        public virtual int CouldThreeBetBTNvsMP => FirstRaiserPosition.IsMPPosition() ? CouldThreeBetBN : 0;
+
+        public virtual int ThreeBetBTNvsCO => FirstRaiserPosition.IsCOPosition() ? DidThreeBetBN : 0;
+
+        public virtual int CouldThreeBetBTNvsCO => FirstRaiserPosition.IsCOPosition() ? CouldThreeBetBN : 0;
+
+        public virtual int ThreeBetSBvsEP => FirstRaiserPosition.IsEPPosition() ? DidThreeBetSB : 0;
+
+        public virtual int CouldThreeBetSBvsEP => FirstRaiserPosition.IsEPPosition() ? CouldThreeBetSB : 0;
+
+        public virtual int ThreeBetSBvsMP => FirstRaiserPosition.IsMPPosition() ? DidThreeBetSB : 0;
+
+        public virtual int CouldThreeBetSBvsMP => FirstRaiserPosition.IsMPPosition() ? CouldThreeBetSB : 0;
+
+        public virtual int ThreeBetSBvsCO => FirstRaiserPosition.IsCOPosition() ? DidThreeBetSB : 0;
+
+        public virtual int CouldThreeBetSBvsCO => FirstRaiserPosition.IsCOPosition() ? CouldThreeBetSB : 0;
+
+        public virtual int ThreeBetSBvsBTN => FirstRaiserPosition.IsBTNPosition() ? DidThreeBetSB : 0;
+
+        public virtual int CouldThreeBetSBvsBTN => FirstRaiserPosition.IsBTNPosition() ? CouldThreeBetSB : 0;
+
+        public virtual int ThreeBetBBvsEP => FirstRaiserPosition.IsEPPosition() ? DidThreeBetBB : 0;
+
+        public virtual int CouldThreeBetBBvsEP => FirstRaiserPosition.IsEPPosition() ? CouldThreeBetBB : 0;
+
+        public virtual int ThreeBetBBvsMP => FirstRaiserPosition.IsMPPosition() ? DidThreeBetBB : 0;
+
+        public virtual int CouldThreeBetBBvsMP => FirstRaiserPosition.IsMPPosition() ? CouldThreeBetBB : 0;
+
+        public virtual int ThreeBetBBvsCO => FirstRaiserPosition.IsCOPosition() ? DidThreeBetBB : 0;
+
+        public virtual int CouldThreeBetBBvsCO => FirstRaiserPosition.IsCOPosition() ? CouldThreeBetBB : 0;
+
+        public virtual int ThreeBetBBvsBTN => FirstRaiserPosition.IsBTNPosition() ? DidThreeBetBB : 0;
+
+        public virtual int CouldThreeBetBBvsBTN => FirstRaiserPosition.IsBTNPosition() ? CouldThreeBetBB : 0;
+
+        public virtual int ThreeBetBBvsSB => FirstRaiserPosition.IsSBPosition() ? DidThreeBetBB : 0;
+
+        public virtual int CouldThreeBetBBvsSB => FirstRaiserPosition.IsSBPosition() ? CouldThreeBetBB : 0;
+
+        #endregion
+
+        #region Fold to 3-Bet in Pos vs 3-bet Pos
+
+        public virtual int FoldTo3BetInEPvs3BetMP => Position.IsEPPosition() && ThreeBettorPosition.IsMPPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInEPvs3BetMP => Position.IsEPPosition() && ThreeBettorPosition.IsMPPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInEPvs3BetCO => Position.IsEPPosition() && ThreeBettorPosition.IsCOPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInEPvs3BetCO => Position.IsEPPosition() && ThreeBettorPosition.IsCOPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInEPvs3BetBTN => Position.IsEPPosition() && ThreeBettorPosition.IsBTNPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInEPvs3BetBTN => Position.IsEPPosition() && ThreeBettorPosition.IsBTNPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInEPvs3BetSB => Position.IsEPPosition() && ThreeBettorPosition.IsSBPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInEPvs3BetSB => Position.IsEPPosition() && ThreeBettorPosition.IsSBPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInEPvs3BetBB => Position.IsEPPosition() && ThreeBettorPosition.IsBBPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInEPvs3BetBB => Position.IsEPPosition() && ThreeBettorPosition.IsBBPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInMPvs3BetCO => Position.IsMPPosition() && ThreeBettorPosition.IsCOPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInMPvs3BetCO => Position.IsMPPosition() && ThreeBettorPosition.IsCOPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInMPvs3BetBTN => Position.IsMPPosition() && ThreeBettorPosition.IsBTNPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInMPvs3BetBTN => Position.IsMPPosition() && ThreeBettorPosition.IsBTNPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInMPvs3BetSB => Position.IsMPPosition() && ThreeBettorPosition.IsSBPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInMPvs3BetSB => Position.IsMPPosition() && ThreeBettorPosition.IsSBPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInMPvs3BetBB => Position.IsMPPosition() && ThreeBettorPosition.IsBBPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInMPvs3BetBB => Position.IsMPPosition() && ThreeBettorPosition.IsBBPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInCOvs3BetBTN => Position.IsCOPosition() && ThreeBettorPosition.IsBTNPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInCOvs3BetBTN => Position.IsCOPosition() && ThreeBettorPosition.IsBTNPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInCOvs3BetSB => Position.IsCOPosition() && ThreeBettorPosition.IsSBPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInCOvs3BetSB => Position.IsCOPosition() && ThreeBettorPosition.IsSBPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInCOvs3BetBB => Position.IsCOPosition() && ThreeBettorPosition.IsBBPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInCOvs3BetBB => Position.IsCOPosition() && ThreeBettorPosition.IsBBPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInBTNvs3BetSB => Position.IsBTNPosition() && ThreeBettorPosition.IsSBPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInBTNvs3BetSB => Position.IsBTNPosition() && ThreeBettorPosition.IsSBPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        public virtual int FoldTo3BetInBTNvs3BetBB => Position.IsBTNPosition() && ThreeBettorPosition.IsBBPosition() ? FoldedtothreebetpreflopVirtual : 0;
+
+        public virtual int CouldFoldTo3BetInBTNvs3BetBB => Position.IsBTNPosition() && ThreeBettorPosition.IsBBPosition() ? FacedthreebetpreflopVirtual : 0;
+
+        #endregion
+
+        #region Others
+
+        public virtual int CheckRaiseFlopAsPFR => DidFlopCheckRaise != 0 && Pfrhands != 0 ? 1 : 0;
+
+        public virtual int CouldCheckRaiseFlopAsPFR => CouldFlopCheckRaise != 0 && Pfrhands != 0 ? 1 : 0;
+
+        public virtual int ProbeBetTurn => CouldProbeBetTurn != 0 && DidTurnBet != 0 ? 1 : 0;
+
+        public virtual int ProbeBetRiver => CouldProbeBetRiver != 0 && DidRiverBet != 0 ? 1 : 0;
+
+        public virtual int FloatFlopThenBetTurn => PlayedFloatFlop != 0 && DidTurnBet != 0 ? 1 : 0;
+
+        public virtual int CouldFloatFlopThenBetTurn => PlayedFloatFlop != 0 && CouldTurnBet != 0 ? 1 : 0;
+
+        public virtual int FoldBBvsSBSteal => Bigblindstealfolded != 0 && FirstRaiserPosition.IsSBPosition() ? 1 : 0;
+
+        public virtual int CouldFoldBBvsSBSteal => Bigblindstealfaced != 0 && FirstRaiserPosition.IsSBPosition() ? 1 : 0;
+
+        public virtual int CouldBetTurnWhenCheckedToSRP => CouldBetFlopWhenCheckedToSRP != 0 && DidCheckFlop != 0 && CouldTurnBet != 0 ? 1 : 0;
+
+        public virtual int BetTurnWhenCheckedToSRP => CouldBetFlopWhenCheckedToSRP != 0 && DidCheckFlop != 0 && DidTurnBet != 0 ? 1 : 0;
+
+        public virtual int CouldBetRiverWhenCheckedToSRP => CouldBetTurnWhenCheckedToSRP != 0 && DidCheckTurn != 0 && CouldRiverBet != 0 ? 1 : 0;
+
+        public virtual int BetRiverWhenCheckedToSRP => CouldBetTurnWhenCheckedToSRP != 0 && DidCheckTurn != 0 && DidRiverBet != 0 ? 1 : 0;
+
+        public virtual int DoubleBarrelSRP => Turncontinuationbetmade != 0 && FirstRaiser != 0 &&
+            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+
+        public virtual int CouldDoubleBarrelSRP => Turncontinuationbetpossible != 0 && FirstRaiser != 0 &&
+           FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+
+        public virtual int DoubleBarrel3BetPot => Turncontinuationbetmade != 0 && In3BetPot ? 1 : 0;
+
+        public virtual int CouldDoubleBarrel3BetPot => Turncontinuationbetpossible != 0 && In3BetPot ? 1 : 0;
+
+        public virtual int TripleBarrelSRP => Rivercontinuationbetmade != 0 && FirstRaiser != 0 &&
+            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+
+        public virtual int CouldTripleBarrelSRP => Rivercontinuationbetpossible != 0 && FirstRaiser != 0 &&
+            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+
+        public virtual int TripleBarrel3BetPot => Rivercontinuationbetmade != 0 && In3BetPot ? 1 : 0;
+
+        public virtual int CouldTripleBarrel3BetPot => Rivercontinuationbetpossible != 0 && In3BetPot ? 1 : 0;
+
+        public virtual int CBetThenFoldFlopSRP => Flopcontinuationbetmade != 0 && BetFoldFlopPfrRaiser != 0 && FirstRaiser != 0 &&
+            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+
+        public virtual int CouldCBetThenFoldFlopSRP => Flopcontinuationbetpossible != 0 && CouldBetFoldFlopPfrRaiser != 0 && FirstRaiser != 0 &&
+           FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+
+        #endregion
+
+        #region Bet When Checked to in 3Bet Pot
+
+        public virtual int BetFlopWhenCheckedToIn3BetPot => DidFlopBet != 0 && PreflopIP != 0 && In3BetPot ? 1 : 0;
+
+        public virtual int CouldBetFlopWhenCheckedToIn3BetPot => CouldFlopBet != 0 && PreflopIP != 0 && In3BetPot ? 1 : 0;
+
+        public virtual int BetTurnWhenCheckedToIn3BetPot => DidTurnBet != 0 && DidCheckFlop != 0 && CouldBetFlopWhenCheckedToIn3BetPot != 0 ? 1 : 0;
+
+        public virtual int CouldBetTurnWhenCheckedToIn3BetPot => CouldTurnBet != 0 && DidCheckFlop != 0 && CouldBetFlopWhenCheckedToIn3BetPot != 0 ? 1 : 0;
+
+        public virtual int BetRiverWhenCheckedToIn3BetPot => DidRiverBet != 0 && DidCheckTurn != 0 && CouldBetTurnWhenCheckedToIn3BetPot != 0 ? 1 : 0;
+
+        public virtual int CouldBetRiverWhenCheckedToIn3BetPot => CouldRiverBet != 0 && DidCheckTurn != 0 && CouldBetTurnWhenCheckedToIn3BetPot != 0 ? 1 : 0;
+
+        #endregion
+
+        #region Fold to probe bet
+
+        public virtual int FacedProbeBetTurn => PreflopIP != 0 && Flopcontinuationbetpossible != 0 && FacedBetOnTurn != 0 && Line.Contains("R-X-") ? 1 : 0;
+
+        public virtual int FoldedToProbeBetTurn => PreflopIP != 0 && Flopcontinuationbetpossible != 0 && FacedBetOnTurn != 0 && Line.Contains("R-X-F") ? 1 : 0;
+
+        public virtual int FacedProbeBetRiver => PreflopIP != 0 && Flopcontinuationbetpossible != 0 && FacedBetOnRiver != 0 && Line.Contains("R-X-X-") ? 1 : 0;
+
+        public virtual int FoldedToProbeBetRiver => PreflopIP != 0 && Flopcontinuationbetpossible != 0 && FacedBetOnRiver != 0 && Line.Contains("R-X-X-F") ? 1 : 0;
+
+        #endregion
+
+        #region Check Flop as PFR and Fold to Turn/River Bet SRP
+
+        public virtual int CheckFlopAsPFRAndFoldToTurnBetIPSRP => PreflopIP != 0 && FirstRaiser != 0 &&
+         PreflopActions.Equals("R") && FlopActions.StartsWith("X") && TurnActions.Equals("F") ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToTurnBetIPSRP => PreflopIP != 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnTurn != 0 ? 1 : 0;
+
+        public virtual int CheckFlopAsPFRAndFoldToTurnBetOOPSRP => PreflopIP == 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && (TurnActions.Equals("F") || TurnActions.Equals("XF")) ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP => PreflopIP == 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnTurn != 0 ? 1 : 0;
+
+        public virtual int CheckFlopAsPFRAndFoldToRiverBetIPSRP => PreflopIP != 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && RiverActions.Equals("F") ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToRiverBetIPSRP => PreflopIP != 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnRiver != 0 ? 1 : 0;
+
+        public virtual int CheckFlopAsPFRAndFoldToRiverBetOOPSRP => PreflopIP == 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && (RiverActions.Equals("F") || RiverActions.Equals("XF")) ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToRiverBetOOPSRP => PreflopIP == 0 && FirstRaiser != 0 &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnRiver != 0 ? 1 : 0;
+
+        #endregion
+
+        #region Check Flop as PFR and Fold to Turn/River Bet in 3-Bet Pot   
+
+        public virtual int CheckFlopAsPFRAndFoldToTurnBetIP3BetPot => PreflopIP != 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && TurnActions.Equals("F") ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot => PreflopIP != 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnTurn != 0 ? 1 : 0;
+
+        public virtual int CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot => PreflopIP == 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && (TurnActions.Equals("F") || TurnActions.Equals("XF")) ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot => PreflopIP == 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnTurn != 0 ? 1 : 0;
+
+        public virtual int CheckFlopAsPFRAndFoldToRiverBetIP3BetPot => PreflopIP != 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && RiverActions.Equals("F") ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot => PreflopIP != 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnRiver != 0 ? 1 : 0;
+
+        public virtual int CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot => PreflopIP == 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && (RiverActions.Equals("F") || RiverActions.Equals("XF")) ? 1 : 0;
+
+        public virtual int CouldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot => PreflopIP == 0 && In3BetPot &&
+            PreflopActions.Equals("R") && FlopActions.StartsWith("X") && FacedBetOnRiver != 0 ? 1 : 0;
+
+        #endregion
+
+        #region Fold to continuation bets in SRP/3Bet/4Bet
+
+        public virtual int FoldToTripleBarrelSRP => IsSRP && Foldedtorivercontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FacingTripleBarrelSRP => IsSRP && Facingrivercontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FoldToTripleBarrel3BetPot => In3BetPot && Foldedtorivercontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FacingTripleBarrel3BetPot => In3BetPot && Facingrivercontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FoldToTripleBarrel4BetPot => In4BetPot && Foldedtorivercontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FacingTripleBarrel4BetPot => In4BetPot && Facingrivercontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FoldToDoubleBarrelSRP => IsSRP && Foldedtoturncontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FacingDoubleBarrelSRP => IsSRP && Facingturncontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FoldToDoubleBarrel4BetPot => In4BetPot && Foldedtoturncontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FacingDoubleBarrel4BetPot => In4BetPot && Facingturncontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FoldToCBetSRP => IsSRP && Foldedtoflopcontinuationbet != 0 ? 1 : 0;
+
+        public virtual int FacingCBetSRP => IsSRP && Facingflopcontinuationbet != 0 ? 1 : 0;
+
+        #endregion
+
+        #region Open Shove UO Pot positional
+
+        public virtual int SBOpenShove1to8bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int SBOpenShove9to14bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int SBOpenShove15to25bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int SBOpenShove26to50bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int SBOpenShove51plusbbUOPot => IsUnopened && Line.StartsWith("R") &&
+            (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int SBOpenShoveUOPot => IsUnopened && Line.StartsWith("R") && (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int BTNOpenShove1to8bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int BTNOpenShove9to14bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int BTNOpenShove15to25bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int BTNOpenShove26to50bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int BTNOpenShove51plusbbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int BTNOpenShoveUOPot => IsUnopened && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int COOpenShove1to8bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int COOpenShove9to14bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int COOpenShove15to25bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int COOpenShove26to50bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int COOpenShove51plusbbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int COOpenShoveUOPot => IsUnopened && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int MPOpenShove1to8bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int MPOpenShove9to14bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int MPOpenShove15to25bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int MPOpenShove26to50bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int MPOpenShove51plusbbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int MPOpenShoveUOPot => IsUnopened && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int EPOpenShove1to8bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int EPOpenShove9to14bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int EPOpenShove15to25bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int EPOpenShove26to50bbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int EPOpenShove51plusbbUOPot => IsUnopened && Line.StartsWith("R") &&
+            OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int EPOpenShoveUOPot => IsUnopened && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() ? 1 : 0;
+
+        #endregion
+
+        #region Limp Positional & Fold to PFR%
+
+        private bool LimpFoldToPfr => (FacingPreflop == EnumFacingPreflop.Unopened || FacingPreflop == EnumFacingPreflop.Limper ||
+            FacingPreflop == EnumFacingPreflop.MultipleLimpers) && PreflopActions.StartsWith("CF");
+
+        private bool LimpFacedPfr => (FacingPreflop == EnumFacingPreflop.Unopened || FacingPreflop == EnumFacingPreflop.Limper ||
+         FacingPreflop == EnumFacingPreflop.MultipleLimpers) && PreflopActions.StartsWith("C") && PreflopActions.Length > 1;
+
+        public int LimpEPFoldToPFR => Position.IsEPPosition() && LimpFoldToPfr ? 1 : 0;
+
+        public int LimpEPFacedPFR => Position.IsEPPosition() && LimpFacedPfr ? 1 : 0;
+
+        public int LimpMPFoldToPFR => Position.IsMPPosition() && LimpFoldToPfr ? 1 : 0;
+
+        public int LimpMPFacedPFR => Position.IsMPPosition() && LimpFacedPfr ? 1 : 0;
+
+        public int LimpCOFoldToPFR => Position.IsCOPosition() && LimpFoldToPfr ? 1 : 0;
+
+        public int LimpCOFacedPFR => Position.IsCOPosition() && LimpFacedPfr ? 1 : 0;
+
+        public int LimpBTNFoldToPFR => Position.IsBTNPosition() && LimpFoldToPfr ? 1 : 0;
+
+        public int LimpBTNFacedPFR => Position.IsBTNPosition() && LimpFacedPfr ? 1 : 0;
+
+        public int LimpSBFoldToPFR => Position.IsSBPosition() && LimpFoldToPfr ? 1 : 0;
+
+        public int LimpSBFacedPFR => Position.IsSBPosition() && LimpFacedPfr ? 1 : 0;
+
+        #endregion
+
+        #region Shoves over limpers positional
+
+        private bool FacedLimpers => FacingPreflop == EnumFacingPreflop.Limper || FacingPreflop == EnumFacingPreflop.MultipleLimpers;
+
+        public virtual int SBShoveOverLimpers1to8bb => SBShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int SBShoveOverLimpers9to14bb => SBShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int SBShoveOverLimpers15to25bb => SBShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int SBShoveOverLimpers26to50bb => SBShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int SBShoveOverLimpers51plusbb => SBShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int SBShoveOverLimpers => FacedLimpers && Line.StartsWith("R") &&
+            (OpenRaisePreflopInBBs + SmallBlind) >= StackInBBs && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int BTNShoveOverLimpers1to8bb => BTNShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int BTNShoveOverLimpers9to14bb => BTNShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int BTNShoveOverLimpers15to25bb => BTNShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int BTNShoveOverLimpers26to50bb => BTNShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int BTNShoveOverLimpers51plusbb => BTNShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int BTNShoveOverLimpers => FacedLimpers && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int COShoveOverLimpers1to8bb => COShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int COShoveOverLimpers9to14bb => COShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int COShoveOverLimpers15to25bb => COShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int COShoveOverLimpers26to50bb => COShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int COShoveOverLimpers51plusbb => COShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int COShoveOverLimpers => FacedLimpers && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int MPShoveOverLimpers1to8bb => MPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int MPShoveOverLimpers9to14bb => MPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int MPShoveOverLimpers15to25bb => MPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int MPShoveOverLimpers26to50bb => MPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int MPShoveOverLimpers51plusbb => MPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int MPShoveOverLimpers => FacedLimpers && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int EPShoveOverLimpers1to8bb => EPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 1 && OpenRaisePreflopInBBs < 9 ? 1 : 0;
+
+        public virtual int EPShoveOverLimpers9to14bb => EPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 9 && OpenRaisePreflopInBBs < 15 ? 1 : 0;
+
+        public virtual int EPShoveOverLimpers15to25bb => EPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 15 && OpenRaisePreflopInBBs < 26 ? 1 : 0;
+
+        public virtual int EPShoveOverLimpers26to50bb => EPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 26 && OpenRaisePreflopInBBs < 51 ? 1 : 0;
+
+        public virtual int EPShoveOverLimpers51plusbb => EPShoveOverLimpers == 1 && OpenRaisePreflopInBBs >= 51 ? 1 : 0;
+
+        public virtual int EPShoveOverLimpers => FacedLimpers && Line.StartsWith("R") && OpenRaisePreflopInBBs >= StackInBBs && Position.IsEPPosition() ? 1 : 0;
+
+        #endregion
+
+        #region Open minraise
+
+        public virtual int OpenMinraise => Pfrhands == 1 && OpenRaisePreflopInBBs == 2 ? 1 : 0;
+
+        public bool IsOpenMinraiseUO => IsUnopened && OpenMinraise == 1;
+
+        public virtual int EPOpenMinraiseUO => IsOpenMinraiseUO && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int MPOpenMinraiseUO => IsOpenMinraiseUO && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int COOpenMinraiseUO => IsOpenMinraiseUO && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int BTNOpenMinraiseUO => IsOpenMinraiseUO && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int SBOpenMinraiseUO => IsOpenMinraiseUO && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int BBOpenMinraiseUO => IsOpenMinraiseUO && Position.IsBBPosition() ? 1 : 0;
+
+        #endregion
+
+        #region Squeeze positional
+
+        public virtual int DidSqueezeEP => Didsqueeze == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeEP => Couldsqueeze == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeMP => Didsqueeze == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeMP => Couldsqueeze == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeCO => Didsqueeze == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeCO => Couldsqueeze == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBTN => Didsqueeze == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBTN => Couldsqueeze == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeSB => Didsqueeze == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeSB => Couldsqueeze == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBB => Didsqueeze == 1 && Position.IsBBPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBB => Couldsqueeze == 1 && Position.IsBBPosition() ? 1 : 0;
+
+        #endregion
+
+        #region Squeeze vs PFR
+
+        public virtual int DidSqueezeBBVsBTNPFR => DidSqueezeBB == 1 && FirstRaiserPosition.IsBTNPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBBVsBTNPFR => CouldSqueezeBB == 1 && FirstRaiserPosition.IsBTNPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBBVsCOPFR => DidSqueezeBB == 1 && FirstRaiserPosition.IsCOPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBBVsCOPFR => CouldSqueezeBB == 1 && FirstRaiserPosition.IsCOPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBBVsMPPFR => DidSqueezeBB == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBBVsMPPFR => CouldSqueezeBB == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBBVsEPPFR => DidSqueezeBB == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBBVsEPPFR => CouldSqueezeBB == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeSBVsCOPFR => DidSqueezeSB == 1 && FirstRaiserPosition.IsCOPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeSBVsCOPFR => CouldSqueezeSB == 1 && FirstRaiserPosition.IsCOPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeSBVsMPPFR => DidSqueezeSB == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeSBVsMPPFR => CouldSqueezeSB == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeSBVsEPPFR => DidSqueezeSB == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeSBVsEPPFR => CouldSqueezeSB == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBTNVsMPPFR => DidSqueezeBTN == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBTNVsMPPFR => CouldSqueezeBTN == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeBTNVsEPPFR => DidSqueezeBTN == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeBTNVsEPPFR => CouldSqueezeBTN == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeCOVsMPPFR => DidSqueezeCO == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeCOVsMPPFR => CouldSqueezeCO == 1 && FirstRaiserPosition.IsMPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeCOVsEPPFR => DidSqueezeCO == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeCOVsEPPFR => CouldSqueezeCO == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeMPVsEPPFR => DidSqueezeMP == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeMPVsEPPFR => CouldSqueezeMP == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidSqueezeEPVsEPPFR => DidSqueezeEP == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldSqueezeEPVsEPPFR => CouldSqueezeEP == 1 && FirstRaiserPosition.IsEPPosition() ? 1 : 0;
+
+        #endregion
+
+        #region Fold to Squeeze as Cold Caller
+
+        public virtual int FoldToSqueezeAsColdCaller => Didcoldcall == 1 && FoldedFacedSqueez == 1 ? 1 : 0;
+
+        public virtual int FacedSqueezeAsColdCaller => Didcoldcall == 1 && FacedSqueez == 1 ? 1 : 0;
+
+        #endregion
+
+        #region 4-Bet vs Blind 3-Bet%
+
+        public virtual int Did4BetVsBlind3Bet => Didfourbet == 1 &&
+            (ThreeBettorPosition.IsBBPosition() || ThreeBettorPosition.IsSBPosition()) ? 1 : 0;
+
+        public virtual int Could4BetVsBlind3Bet => Couldfourbet == 1 &&
+          (ThreeBettorPosition.IsBBPosition() || ThreeBettorPosition.IsSBPosition()) ? 1 : 0;
+
+        #endregion
+
+        #region BTN Re/Def vs CO Steal
+
+        public virtual int BTNReStealVsCOSteal => FirstRaiserPosition.IsCOPosition() && FacingPreflop == EnumFacingPreflop.Raiser && Pfrhands == 1 ? 1 : 0;
+
+        public virtual int BTNDefendVsCOSteal => FirstRaiserPosition.IsCOPosition() && FacingPreflop == EnumFacingPreflop.Raiser && Vpiphands == 1 ? 1 : 0;
+
+        public virtual int BTNFacedCOSteal => FirstRaiserPosition.IsCOPosition() && FacingPreflop == EnumFacingPreflop.Raiser ? 1 : 0;
+
+        #endregion
+
+        #region Positional Call & Fold to Steal
+
+        public virtual int FacedStealInSB => Position.IsSBPosition() && FacingPreflop == EnumFacingPreflop.Raiser &&
+            (FirstRaiserPosition.IsCOPosition() || FirstRaiserPosition.IsBTNPosition()) ? 1 : 0;
+
+        public virtual int FacedStealInBB => Position.IsBBPosition() && FacingPreflop == EnumFacingPreflop.Raiser &&
+            (FirstRaiserPosition.IsCOPosition() || FirstRaiserPosition.IsBTNPosition() || FirstRaiserPosition.IsSBPosition()) ? 1 : 0;
+
+        public virtual int FacedCOStealInSB => Position.IsSBPosition() && FacingPreflop == EnumFacingPreflop.Raiser &&
+            FirstRaiserPosition.IsCOPosition() ? 1 : 0;
+
+        public virtual int FacedBTNStealInSB => Position.IsSBPosition() && FacingPreflop == EnumFacingPreflop.Raiser &&
+            FirstRaiserPosition.IsBTNPosition() ? 1 : 0;
+
+        public virtual int FacedCOStealInBB => Position.IsBBPosition() && FacingPreflop == EnumFacingPreflop.Raiser &&
+         FirstRaiserPosition.IsCOPosition() ? 1 : 0;
+
+        public virtual int FacedBTNStealInBB => Position.IsBBPosition() && FacingPreflop == EnumFacingPreflop.Raiser &&
+            FirstRaiserPosition.IsBTNPosition() ? 1 : 0;
+
+        public virtual int CalledStealInSB => FacedStealInSB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CalledCOStealInSB => FacedCOStealInSB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CalledBTNStealInSB => FacedBTNStealInSB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CalledStealInBB => FacedStealInBB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CalledCOStealInBB => FacedCOStealInBB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CalledBTNStealInBB => FacedBTNStealInBB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int FoldToStealInSB => FacedStealInSB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
+
+        public virtual int FoldToCOStealInSB => FacedCOStealInSB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
+
+        public virtual int FoldToBTNStealInSB => FacedBTNStealInSB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
+
+        public virtual int FoldToStealInBB => FacedStealInBB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
+
+        public virtual int FoldToCOStealInBB => FacedCOStealInBB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
+
+        public virtual int FoldToBTNStealInBB => FacedBTNStealInBB == 1 && PreflopActions.StartsWith("F") ? 1 : 0;
+
+        public virtual int CouldOvercallBTNStealInBB => FacingPreflop == EnumFacingPreflop.RaiserAndCaller && FirstRaiserPosition.IsBTNPosition() ? 1 : 0;
+
+        public virtual int OvercallBTNStealInBB => CouldOvercallBTNStealInBB == 1 && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        #endregion
+
+        #region WTSD as PFR/4-Bettor
+
+        public virtual int WTSDAsPFR => Pfrhands == 1 && Sawshowdown == 1 ? 1 : 0;
+
+        public virtual int WTSDAsPFROpportunity => Pfrhands == 1 && Sawflop == 1 ? 1 : 0;
+
+        public virtual int WTSDAs4Bettor => Didfourbet == 1 && Sawshowdown == 1 ? 1 : 0;
+
+        public virtual int WTSDAs4BettorOpportunity => Didfourbet == 1 && Sawflop == 1 ? 1 : 0;
+
+        #endregion
+
+        #region Call 4-Bet positional 
+
+        public virtual int Call4BetIP => Calledfourbetpreflop == 1 && PreflopIP == 1 ? 1 : 0;
+
+        public virtual int Faced4BetIP => Facedfourbetpreflop == 1 && PreflopIP == 1 ? 1 : 0;
+
+        public virtual int Call4BetOOP => Calledfourbetpreflop == 1 && PreflopIP == 0 ? 1 : 0;
+
+        public virtual int Faced4BetOOP => Facedfourbetpreflop == 1 && PreflopIP == 0 ? 1 : 0;
+
+        public virtual int Call4BetEP => Calledfourbetpreflop == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int Faced4BetEP => Facedfourbetpreflop == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int Call4BetMP => Calledfourbetpreflop == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int Faced4BetMP => Facedfourbetpreflop == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int Call4BetCO => Calledfourbetpreflop == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int Faced4BetCO => Facedfourbetpreflop == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int Call4BetBTN => Calledfourbetpreflop == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int Faced4BetBTN => Facedfourbetpreflop == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int Call4BetSB => Calledfourbetpreflop == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int Faced4BetSB => Facedfourbetpreflop == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int Call4BetBB => Calledfourbetpreflop == 1 && Position.IsBBPosition() ? 1 : 0;
+
+        public virtual int Faced4BetBB => Facedfourbetpreflop == 1 && Position.IsBBPosition() ? 1 : 0;
+
+        #endregion
+
+        #region Total overcall SRP%
+
+        public virtual int TotalOverCallSRP => (FacingPreflop == EnumFacingPreflop.RaiserAndCaller || FacingPreflop == EnumFacingPreflop.MultipleCallers) &&
+            PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CouldTotalOverCallSRP => (FacingPreflop == EnumFacingPreflop.RaiserAndCaller || FacingPreflop == EnumFacingPreflop.MultipleCallers) ? 1 : 0;
+
+        #endregion
+
+        #region Limped pot Flop Steal IP%
+
+        public virtual int LimpedPotFlopStealIP => PreflopIP == 1 && (FacingPreflop == EnumFacingPreflop.Limper || FacingPreflop == EnumFacingPreflop.MultipleLimpers) &&
+            PreflopActions.Equals("C") && FlopActions.StartsWith("B") ? 1 : 0;
+
+        public virtual int CouldLimpedPotFlopStealIP => PreflopIP == 1 && (FacingPreflop == EnumFacingPreflop.Limper || FacingPreflop == EnumFacingPreflop.MultipleLimpers) &&
+           PreflopActions.Equals("C") && CouldFlopBet == 1 ? 1 : 0;
+
+        #endregion
+
+        #region Flop-Check Call
+
+        public virtual int DidFlopCheckCall => FlopActions.StartsWith("XC") ? 1 : 0;
+
+        public virtual int CouldFlopCheckCall => FlopActions.StartsWith("X") && FlopActions.Length > 1 ? 1 : 0;
+
+        #endregion
+
+        #region Call Flop & Fold Turn
+
+        public virtual int DidCallFlopFoldTurn => FlopActions.EndsWith("C") && TurnActions.EndsWith("F") ? 1 : 0;
+
+        public virtual int CouldCallFlopFoldTurn => FlopActions.EndsWith("C") && FacedBetOnTurn == 1 ? 1 : 0;
+
+        #endregion
+
+        #region River fold in SRP/3-Bet/4-Bet
+
+        public virtual int DidRiverFoldInSRP => IsSRP && RiverActions.EndsWith("F") ? 1 : 0;
+
+        public virtual int CouldRiverFoldInSRP => IsSRP && RiverActions.Length > 0 ? 1 : 0;
+
+        public virtual int DidRiverFoldIn3Bet => In3BetPot && RiverActions.EndsWith("F") ? 1 : 0;
+
+        public virtual int CouldRiverFoldIn3Bet => In3BetPot && RiverActions.Length > 0 ? 1 : 0;
+
+        public virtual int DidRiverFoldIn4Bet => In4BetPot && RiverActions.EndsWith("F") ? 1 : 0;
+
+        public virtual int CouldRiverFoldIn4Bet => In4BetPot && RiverActions.Length > 0 ? 1 : 0;
+
+        #endregion
+
+        #region Delayed Turn C-Bet in SRP/4-Bet Pot%
+
+        public virtual int DidDelayedTurnCBetInSRP => DidDelayedTurnCBet == 1 && IsSRP ? 1 : 0;
+
+        public virtual int CouldDelayedTurnCBetInSRP => CouldDelayedTurnCBet == 1 && IsSRP ? 1 : 0;
+
+        public virtual int DidDelayedTurnCBetIn4BetPot => DidDelayedTurnCBet == 1 && In4BetPot ? 1 : 0;
+
+        public virtual int CouldDelayedTurnCBetIn4BetPot => CouldDelayedTurnCBet == 1 && In4BetPot ? 1 : 0;
+
+        #endregion
+
+        #region Skip Flop C-Bet SRP & C/F Flop OOP%
+
+        public virtual int DidSkipFlopCBetInSRPandCheckFoldFlopOOP => Flopcontinuationbetpossible == 1 && IsSRP && FlopActions.Equals("CF") && PreflopIP == 0 ? 1 : 0;
+
+        public virtual int CouldSkipFlopCBetInSRPandCheckFoldFlopOOP => Flopcontinuationbetpossible == 1 && IsSRP && FlopActions.StartsWith("C") && FlopActions.Length > 1 && PreflopIP == 0 ? 1 : 0;
+
+        #endregion
+
+        #region Check-Raise Flop as PFR SRP/3-Bet pot
+
+        public virtual int DidCheckRaiseFlopAsPFRInSRP => DidFlopCheckRaise == 1 && Pfrhands == 1 && IsSRP ? 1 : 0;
+
+        public virtual int CouldCheckRaiseFlopAsPFRInSRP => CouldFlopCheckRaise == 1 && Pfrhands == 1 && IsSRP ? 1 : 0;
+
+        public virtual int DidCheckRaiseFlopAsPFRIn3BetPot => DidFlopCheckRaise == 1 && Pfrhands == 1 && In3BetPot ? 1 : 0;
+
+        public virtual int CouldCheckRaiseFlopAsPFRIn3BetPot => CouldFlopCheckRaise == 1 && Pfrhands == 1 && In3BetPot ? 1 : 0;
+
+        #endregion
+
+        #region Open Limp
+
+        public virtual int DidOpenLimp => FacingPreflop == EnumFacingPreflop.Unopened && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CouldOpenLimp => FacingPreflop == EnumFacingPreflop.Unopened && PreflopActions.Length > 0 ? 1 : 0;
+
+        public virtual int DidOpenLimpEP => DidOpenLimp == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int CouldOpenLimpEP => CouldOpenLimp == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int DidOpenLimpMP => DidOpenLimp == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int CouldOpenLimpMP => CouldOpenLimp == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int DidOpenLimpCO => DidOpenLimp == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int CouldOpenLimpCO => CouldOpenLimp == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int DidOpenLimpBTN => DidOpenLimp == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int CouldOpenLimpBTN => CouldOpenLimp == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int DidOpenLimpSB => DidOpenLimp == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int CouldOpenLimpSB => CouldOpenLimp == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        #endregion
+
+        #region Straddle stats
+
+        public virtual int CouldActInStraddle => IsStraddle && Position.IsStraddlePosition() && PreflopActions.Length > 0 ? 1 : 0;
+
+        public virtual int DidCheckInStraddle => IsStraddle && Position.IsStraddlePosition() && PreflopActions.Equals("C") ? 1 : 0;
+
+        public virtual int DidPFRInStraddle => IsStraddle && Position.IsStraddlePosition() && Pfrhands == 1 ? 1 : 0;
+
+        public virtual int Did3BetInStraddle => IsStraddle && Position.IsStraddlePosition() && Didthreebet == 1 ? 1 : 0;
+
+        public virtual int Could3BetInStraddle => IsStraddle && Position.IsStraddlePosition() && Couldthreebet == 1 ? 1 : 0;
+
+        public virtual int Did4BetInStraddle => IsStraddle && Position.IsStraddlePosition() && Didfourbet == 1 ? 1 : 0;
+
+        public virtual int Could4BetInStraddle => IsStraddle && Position.IsStraddlePosition() && Couldfourbet == 1 ? 1 : 0;
+
+        public virtual int DidFoldInStraddle => IsStraddle && Position.IsStraddlePosition() && PreflopActions.Equals("F") ? 1 : 0;
+
+        public virtual int WTSDInStraddle => IsStraddle && Position.IsStraddlePosition() && Sawshowdown == 1 ? 1 : 0;
+
+        public virtual int WTSDOpportunityInStraddle => IsStraddle && Position.IsStraddlePosition() && Sawflop == 1 ? 1 : 0;
+
+        #endregion
+
+        #region Fold to delayed Turn C-Bet
+
+        public virtual int FoldedToDelayedCBet => FacedDelayedCBet == 1 && (TurnActions.Equals("XF") || TurnActions.Equals("F")) ? 1 : 0;
+
+        #endregion
+
+        #region Check Fold Flop
+
+        public virtual int CouldCheckFoldFlopPfrOop => Pfrhands == 1 && PreflopIP == 0 && FlopActions.StartsWith("X") && FlopActions.Length > 1 ? 1 : 0;
+
+        public virtual int CouldCheckFoldFlop3BetOop => Didthreebet == 1 && PreflopIP == 0 && FlopActions.StartsWith("X") && FlopActions.Length > 1 ? 1 : 0;
+
+        #endregion
+
         #endregion
 
         #region Additional properties (not for serialization)
@@ -1374,169 +2295,167 @@ namespace DriveHUD.Entities
             }
         }
 
-        #region Positional stats helpers     
-
-        public virtual bool IsBBPosition
-        {
-            get
-            {
-                return Position == EnumPosition.BB;
-            }
-        }
-
-        public virtual bool IsSBPosition
-        {
-            get
-            {
-                return Position == EnumPosition.SB;
-            }
-        }
-
-        public virtual bool IsEPPosition
-        {
-            get
-            {
-                return Position == EnumPosition.EP || Position == EnumPosition.UTG ||
-                    Position == EnumPosition.UTG_1 || Position == EnumPosition.UTG_2;
-            }
-        }
-
-        public virtual bool IsMPPosition
-        {
-            get
-            {
-                return Position == EnumPosition.MP || Position == EnumPosition.MP1 ||
-                    Position == EnumPosition.MP2 || Position == EnumPosition.MP3;
-            }
-        }
-
-        public virtual bool IsCOPosition
-        {
-            get
-            {
-                return Position == EnumPosition.CO;
-            }
-        }
-
-        public virtual bool IsBNPosition
-        {
-            get
-            {
-                return Position == EnumPosition.BTN;
-            }
-        }
+        #region Positional stats helpers           
 
         #region Positional Cold call 
 
-        public virtual int DidColdCallBB => IsBBPosition ? Didcoldcall : 0;
+        public virtual int DidColdCallBB => Position.IsBBPosition() ? Didcoldcall : 0;
 
-        public virtual int DidColdCallSB => IsSBPosition ? Didcoldcall : 0;
+        public virtual int DidColdCallSB => Position.IsSBPosition() ? Didcoldcall : 0;
 
-        public virtual int DidColdCallEP => IsEPPosition ? Didcoldcall : 0;
+        public virtual int DidColdCallEP => Position.IsEPPosition() ? Didcoldcall : 0;
 
-        public virtual int DidColdCallMP => IsMPPosition ? Didcoldcall : 0;
+        public virtual int DidColdCallMP => Position.IsMPPosition() ? Didcoldcall : 0;
 
-        public virtual int DidColdCallCO => IsCOPosition ? Didcoldcall : 0;
+        public virtual int DidColdCallCO => Position.IsCOPosition() ? Didcoldcall : 0;
 
-        public virtual int DidColdCallBN => IsBNPosition ? Didcoldcall : 0;
+        public virtual int DidColdCallBN => Position.IsBTNPosition() ? Didcoldcall : 0;
 
-        public virtual int CouldColdCallBB => IsBBPosition ? Couldcoldcall : 0;
+        public virtual int CouldColdCallBB => Position.IsBBPosition() ? Couldcoldcall : 0;
 
-        public virtual int CouldColdCallSB => IsSBPosition ? Couldcoldcall : 0;
+        public virtual int CouldColdCallSB => Position.IsSBPosition() ? Couldcoldcall : 0;
 
-        public virtual int CouldColdCallEP => IsEPPosition ? Couldcoldcall : 0;
+        public virtual int CouldColdCallEP => Position.IsEPPosition() ? Couldcoldcall : 0;
 
-        public virtual int CouldColdCallMP => IsMPPosition ? Couldcoldcall : 0;
+        public virtual int CouldColdCallMP => Position.IsMPPosition() ? Couldcoldcall : 0;
 
-        public virtual int CouldColdCallCO => IsCOPosition ? Couldcoldcall : 0;
+        public virtual int CouldColdCallCO => Position.IsCOPosition() ? Couldcoldcall : 0;
 
-        public virtual int CouldColdCallBN => IsBNPosition ? Couldcoldcall : 0;
+        public virtual int CouldColdCallBN => Position.IsBTNPosition() ? Couldcoldcall : 0;
+
+        #endregion
+
+        #region Positional Cold call 3-Bet 
+
+        public virtual int DidColdCall3BetInBB => Position.IsBBPosition() ? DidColdCallThreeBet : 0;
+
+        public virtual int DidColdCall3BetInSB => Position.IsSBPosition() ? DidColdCallThreeBet : 0;
+
+        public virtual int DidColdCall3BetInMP => Position.IsMPPosition() ? DidColdCallThreeBet : 0;
+
+        public virtual int DidColdCall3BetInCO => Position.IsCOPosition() ? DidColdCallThreeBet : 0;
+
+        public virtual int DidColdCall3BetInBTN => Position.IsBTNPosition() ? DidColdCallThreeBet : 0;
+
+        public virtual int CouldColdCall3BetInBB => Position.IsBBPosition() ? CouldColdCallThreeBet : 0;
+
+        public virtual int CouldColdCall3BetInSB => Position.IsSBPosition() ? CouldColdCallThreeBet : 0;
+
+        public virtual int CouldColdCall3BetInMP => Position.IsMPPosition() ? CouldColdCallThreeBet : 0;
+
+        public virtual int CouldColdCall3BetInCO => Position.IsCOPosition() ? CouldColdCallThreeBet : 0;
+
+        public virtual int CouldColdCall3BetInBTN => Position.IsBTNPosition() ? CouldColdCallThreeBet : 0;
+
+        #endregion
+
+        #region Positional Cold call 4-Bet 
+
+        public virtual int DidColdCall4BetInBB => Position.IsBBPosition() ? DidColdCallFourBet : 0;
+
+        public virtual int DidColdCall4BetInSB => Position.IsSBPosition() ? DidColdCallFourBet : 0;
+
+        public virtual int DidColdCall4BetInMP => Position.IsMPPosition() ? DidColdCallFourBet : 0;
+
+        public virtual int DidColdCall4BetInCO => Position.IsCOPosition() ? DidColdCallFourBet : 0;
+
+        public virtual int DidColdCall4BetInBTN => Position.IsBTNPosition() ? DidColdCallFourBet : 0;
+
+        public virtual int CouldColdCall4BetInBB => Position.IsBBPosition() ? CouldColdCallFourBet : 0;
+
+        public virtual int CouldColdCall4BetInSB => Position.IsSBPosition() ? CouldColdCallFourBet : 0;
+
+        public virtual int CouldColdCall4BetInMP => Position.IsMPPosition() ? CouldColdCallFourBet : 0;
+
+        public virtual int CouldColdCall4BetInCO => Position.IsCOPosition() ? CouldColdCallFourBet : 0;
+
+        public virtual int CouldColdCall4BetInBTN => Position.IsBTNPosition() ? CouldColdCallFourBet : 0;
 
         #endregion
 
         #region Positional VPIP
 
-        public virtual int VPIPBB => IsBBPosition ? Vpiphands : 0;
+        public virtual int VPIPBB => Position.IsBBPosition() ? Vpiphands : 0;
 
-        public virtual int VPIPSB => IsSBPosition ? Vpiphands : 0;
+        public virtual int VPIPSB => Position.IsSBPosition() ? Vpiphands : 0;
 
-        public virtual int VPIPEP => IsEPPosition ? Vpiphands : 0;
+        public virtual int VPIPEP => Position.IsEPPosition() ? Vpiphands : 0;
 
-        public virtual int VPIPMP => IsMPPosition ? Vpiphands : 0;
+        public virtual int VPIPMP => Position.IsMPPosition() ? Vpiphands : 0;
 
-        public virtual int VPIPCO => IsCOPosition ? Vpiphands : 0;
+        public virtual int VPIPCO => Position.IsCOPosition() ? Vpiphands : 0;
 
-        public virtual int VPIPBN => IsBNPosition ? Vpiphands : 0;
+        public virtual int VPIPBN => Position.IsBTNPosition() ? Vpiphands : 0;
 
         #endregion
 
         #region Positional 3-bet
 
-        public virtual int DidThreeBetBB => IsBBPosition ? Didthreebet : 0;
+        public virtual int DidThreeBetBB => Position.IsBBPosition() ? Didthreebet : 0;
 
-        public virtual int DidThreeBetSB => IsSBPosition ? Didthreebet : 0;
+        public virtual int DidThreeBetSB => Position.IsSBPosition() ? Didthreebet : 0;
 
-        public virtual int DidThreeBetEP => IsEPPosition ? Didthreebet : 0;
+        public virtual int DidThreeBetEP => Position.IsEPPosition() ? Didthreebet : 0;
 
-        public virtual int DidThreeBetMP => IsMPPosition ? Didthreebet : 0;
+        public virtual int DidThreeBetMP => Position.IsMPPosition() ? Didthreebet : 0;
 
-        public virtual int DidThreeBetCO => IsCOPosition ? Didthreebet : 0;
+        public virtual int DidThreeBetCO => Position.IsCOPosition() ? Didthreebet : 0;
 
-        public virtual int DidThreeBetBN => IsBNPosition ? Didthreebet : 0;
+        public virtual int DidThreeBetBN => Position.IsBTNPosition() ? Didthreebet : 0;
 
-        public virtual int CouldThreeBetBB => IsBBPosition ? Couldthreebet : 0;
+        public virtual int CouldThreeBetBB => Position.IsBBPosition() ? Couldthreebet : 0;
 
-        public virtual int CouldThreeBetSB => IsSBPosition ? Couldthreebet : 0;
+        public virtual int CouldThreeBetSB => Position.IsSBPosition() ? Couldthreebet : 0;
 
-        public virtual int CouldThreeBetEP => IsEPPosition ? Couldthreebet : 0;
+        public virtual int CouldThreeBetEP => Position.IsEPPosition() ? Couldthreebet : 0;
 
-        public virtual int CouldThreeBetMP => IsMPPosition ? Couldthreebet : 0;
+        public virtual int CouldThreeBetMP => Position.IsMPPosition() ? Couldthreebet : 0;
 
-        public virtual int CouldThreeBetCO => IsCOPosition ? Couldthreebet : 0;
+        public virtual int CouldThreeBetCO => Position.IsCOPosition() ? Couldthreebet : 0;
 
-        public virtual int CouldThreeBetBN => IsBNPosition ? Couldthreebet : 0;
+        public virtual int CouldThreeBetBN => Position.IsBTNPosition() ? Couldthreebet : 0;
 
         #endregion
 
         #region Positional 4-bet
 
-        public virtual int DidFourBetBB => IsBBPosition ? Didfourbet : 0;
+        public virtual int DidFourBetBB => Position.IsBBPosition() ? Didfourbet : 0;
 
-        public virtual int DidFourBetSB => IsSBPosition ? Didfourbet : 0;
+        public virtual int DidFourBetSB => Position.IsSBPosition() ? Didfourbet : 0;
 
-        public virtual int DidFourBetEP => IsEPPosition ? Didfourbet : 0;
+        public virtual int DidFourBetEP => Position.IsEPPosition() ? Didfourbet : 0;
 
-        public virtual int DidFourBetMP => IsMPPosition ? Didfourbet : 0;
+        public virtual int DidFourBetMP => Position.IsMPPosition() ? Didfourbet : 0;
 
-        public virtual int DidFourBetCO => IsCOPosition ? Didfourbet : 0;
+        public virtual int DidFourBetCO => Position.IsCOPosition() ? Didfourbet : 0;
 
-        public virtual int DidFourBetBN => IsBNPosition ? Didfourbet : 0;
+        public virtual int DidFourBetBN => Position.IsBTNPosition() ? Didfourbet : 0;
 
-        public virtual int CouldFourBetBB => IsBBPosition ? Couldfourbet : 0;
+        public virtual int CouldFourBetBB => Position.IsBBPosition() ? Couldfourbet : 0;
 
-        public virtual int CouldFourBetSB => IsSBPosition ? Couldfourbet : 0;
+        public virtual int CouldFourBetSB => Position.IsSBPosition() ? Couldfourbet : 0;
 
-        public virtual int CouldFourBetEP => IsEPPosition ? Couldfourbet : 0;
+        public virtual int CouldFourBetEP => Position.IsEPPosition() ? Couldfourbet : 0;
 
-        public virtual int CouldFourBetMP => IsMPPosition ? Couldfourbet : 0;
+        public virtual int CouldFourBetMP => Position.IsMPPosition() ? Couldfourbet : 0;
 
-        public virtual int CouldFourBetCO => IsCOPosition ? Couldfourbet : 0;
+        public virtual int CouldFourBetCO => Position.IsCOPosition() ? Couldfourbet : 0;
 
-        public virtual int CouldFourBetBN => IsBNPosition ? Couldfourbet : 0;
+        public virtual int CouldFourBetBN => Position.IsBTNPosition() ? Couldfourbet : 0;
 
         #endregion
 
         #region Positional Limp
 
-        public virtual int LimpPossibleSB => IsSBPosition ? LimpPossible : 0;
+        public virtual int LimpPossibleSB => Position.IsSBPosition() ? LimpPossible : 0;
 
-        public virtual int LimpPossibleEP => IsEPPosition ? LimpPossible : 0;
+        public virtual int LimpPossibleEP => Position.IsEPPosition() ? LimpPossible : 0;
 
-        public virtual int LimpPossibleMP => IsMPPosition ? LimpPossible : 0;
+        public virtual int LimpPossibleMP => Position.IsMPPosition() ? LimpPossible : 0;
 
-        public virtual int LimpPossibleCO => IsCOPosition ? LimpPossible : 0;
+        public virtual int LimpPossibleCO => Position.IsCOPosition() ? LimpPossible : 0;
 
-        public virtual int LimpPossibleBN => IsBNPosition ? LimpPossible : 0;
+        public virtual int LimpPossibleBN => Position.IsBTNPosition() ? LimpPossible : 0;
 
         #endregion
 
@@ -2012,12 +2931,22 @@ namespace DriveHUD.Entities
             BetFlopWhenCheckedToSRP += a.BetFlopWhenCheckedToSRP;
             CouldBetFlopWhenCheckedToSRP += a.CouldBetFlopWhenCheckedToSRP;
 
-            FacedBetOnRiver += FacedBetOnRiver;
-            RiverVsBetFold += RiverVsBetFold;
-            FlopCBetSuccess += FlopCBetSuccess;
-            DidCheckTurn += DidCheckTurn;
-            TotalCallAmountOnRiver += TotalCallAmountOnRiver;
-            TotalWonAmountOnRiverCall += TotalWonAmountOnRiverCall;
+            FacedBetOnRiver += a.FacedBetOnRiver;
+            RiverVsBetFold += a.RiverVsBetFold;
+            FlopCBetSuccess += a.FlopCBetSuccess;
+            DidCheckTurn += a.DidCheckTurn;
+            TotalCallAmountOnRiver += a.TotalCallAmountOnRiver;
+            TotalWonAmountOnRiverCall += a.TotalWonAmountOnRiverCall;
+
+            FirstRaiserPosition = a.FirstRaiserPosition;
+            ThreeBettorPosition = a.ThreeBettorPosition;
+            CouldProbeBetTurn += a.CouldProbeBetTurn;
+            CouldProbeBetRiver += a.CouldProbeBetRiver;
+
+            PreflopRaisersCount = a.PreflopRaisersCount;
+            OpenRaisePreflopInBBs = a.OpenRaisePreflopInBBs;
+
+            FacedDelayedCBet += a.FacedDelayedCBet;
         }
 
         public static Playerstatistic operator +(Playerstatistic a, Playerstatistic b)
@@ -2351,7 +3280,7 @@ namespace DriveHUD.Entities
 
             r.CheckFoldFlopPfrOop = a.CheckFoldFlopPfrOop + b.CheckFoldFlopPfrOop;
             r.CouldBetFoldFlopPfrRaiser = a.CouldBetFoldFlopPfrRaiser + b.CouldBetFoldFlopPfrRaiser;
-            r.CheckFoldFlop3BetOop = a.CheckFoldFlop3BetOop + b.CheckFoldFlopPfrOop;
+            r.CheckFoldFlop3BetOop = a.CheckFoldFlop3BetOop + b.CheckFoldFlop3BetOop;
             r.BetFoldFlopPfrRaiser = a.BetFoldFlopPfrRaiser + b.BetFoldFlopPfrRaiser;
             r.BetFlopCalled3BetPreflopIp = a.BetFlopCalled3BetPreflopIp + b.BetFlopCalled3BetPreflopIp;
             r.CouldBetFlopCalled3BetPreflopIp = a.CouldBetFlopCalled3BetPreflopIp + b.CouldBetFlopCalled3BetPreflopIp;
@@ -2447,6 +3376,16 @@ namespace DriveHUD.Entities
             r.DidCheckTurn = a.DidCheckTurn + b.DidCheckTurn;
             r.TotalCallAmountOnRiver = a.TotalCallAmountOnRiver + b.TotalCallAmountOnRiver;
             r.TotalWonAmountOnRiverCall = a.TotalWonAmountOnRiverCall + b.TotalWonAmountOnRiverCall;
+
+            r.FirstRaiserPosition = b.FirstRaiserPosition;
+            r.ThreeBettorPosition = b.ThreeBettorPosition;
+            r.CouldProbeBetTurn = a.CouldProbeBetTurn + b.CouldProbeBetTurn;
+            r.CouldProbeBetRiver = a.CouldProbeBetRiver + b.CouldProbeBetRiver;
+
+            r.PreflopRaisersCount = b.PreflopRaisersCount;
+            r.OpenRaisePreflopInBBs = b.OpenRaisePreflopInBBs;
+
+            r.FacedDelayedCBet = a.FacedDelayedCBet + b.FacedDelayedCBet;
 
             return r;
         }

@@ -257,6 +257,7 @@ namespace DriveHUD.Importers.Bovada
             {
                 ignitionWindowCache.RemoveWindow(previousHandle);
                 cachedTable.WindowHandle = IntPtr.Zero;
+                cachedTable.TableName = string.Empty;
             }
 
             WindowHandle = previousHandle;

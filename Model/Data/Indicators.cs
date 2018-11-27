@@ -1147,6 +1147,52 @@ namespace Model.Data
 
         #endregion
 
+        #region Positional Cold call 3-Bet
+
+        public virtual decimal ColdCall3BetInBB => GetPercentage(positionDidColdCallThreeBet?.BB, positionCouldColdCallThreeBet?.BB);
+
+        public virtual decimal ColdCall3BetInSB => GetPercentage(positionDidColdCallThreeBet?.SB, positionCouldColdCallThreeBet?.SB);
+
+        public virtual decimal ColdCall3BetInMP => GetPercentage(positionDidColdCallThreeBet?.MP, positionCouldColdCallThreeBet?.MP);
+
+        public virtual decimal ColdCall3BetInCO => GetPercentage(positionDidColdCallThreeBet?.CO, positionCouldColdCallThreeBet?.CO);
+
+        public virtual decimal ColdCall3BetInBTN => GetPercentage(positionDidColdCallThreeBet?.BN, positionCouldColdCallThreeBet?.BN);
+
+        #endregion
+
+        #region Positional Cold call 4-Bet
+
+        public virtual decimal ColdCall4BetInBB => GetPercentage(positionDidColdCallFourBet?.BB, positionCouldColdCallFourBet?.BB);
+
+        public virtual decimal ColdCall4BetInSB => GetPercentage(positionDidColdCallFourBet?.SB, positionCouldColdCallFourBet?.SB);
+
+        public virtual decimal ColdCall4BetInMP => GetPercentage(positionDidColdCallFourBet?.MP, positionCouldColdCallFourBet?.MP);
+
+        public virtual decimal ColdCall4BetInCO => GetPercentage(positionDidColdCallFourBet?.CO, positionCouldColdCallFourBet?.CO);
+
+        public virtual decimal ColdCall4BetInBTN => GetPercentage(positionDidColdCallFourBet?.BN, positionCouldColdCallFourBet?.BN);
+
+        #endregion
+
+        #region Positional Open minraise UO-PFR
+
+        public virtual decimal OpenMinraise => GetPercentage(Statistics.Sum(x => x.OpenMinraise), TotalHands - Source.NumberOfWalks);
+
+        public virtual decimal EPOpenMinraiseUOPFR => GetPercentage(positionOpenMinraiseUOPFR?.EP, positionUnoppened?.EP);
+
+        public virtual decimal MPOpenMinraiseUOPFR => GetPercentage(positionOpenMinraiseUOPFR?.MP, positionUnoppened?.MP);
+
+        public virtual decimal COOpenMinraiseUOPFR => GetPercentage(positionOpenMinraiseUOPFR?.CO, positionUnoppened?.CO);
+
+        public virtual decimal BTNOpenMinraiseUOPFR => GetPercentage(positionOpenMinraiseUOPFR?.BN, positionUnoppened?.BN);
+
+        public virtual decimal SBOpenMinraiseUOPFR => GetPercentage(positionOpenMinraiseUOPFR?.SB, positionUnoppened?.SB);
+
+        public virtual decimal BBOpenMinraiseUOPFR => GetPercentage(positionOpenMinraiseUOPFR?.BB, positionUnoppened?.BB);
+
+        #endregion
+
         public virtual decimal TiltMeter
         {
             get
@@ -1204,9 +1250,9 @@ namespace Model.Data
 
         #endregion
 
-        public virtual decimal CheckFoldFlopPfrOop => GetPercentage(Source.CheckFoldFlopPfrOop, Source.PfrOop);
+        public virtual decimal CheckFoldFlopPfrOop => GetPercentage(Source.CheckFoldFlopPfrOop, Statistics.Sum(x => x.CouldCheckFoldFlopPfrOop));
 
-        public virtual decimal CheckFoldFlop3BetOop => GetPercentage(Source.CheckFoldFlop3BetOop, Source.DidThreeBetOop);
+        public virtual decimal CheckFoldFlop3BetOop => GetPercentage(Source.CheckFoldFlop3BetOop, Statistics.Sum(x => x.CouldCheckFoldFlop3BetOop));
 
         public virtual decimal BetFoldFlopPfrRaiser => GetPercentage(Source.BetFoldFlopPfrRaiser, Source.CouldBetFoldFlopPfrRaiser);
 
@@ -1376,6 +1422,14 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.FoldedToRiverCheckRaise, Source.FacedRiverCheckRaise);
+            }
+        }
+
+        public virtual decimal FoldToRiverRaise
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedFacedRaiseRiver, Source.FacedRaiseRiver);
             }
         }
 
@@ -1718,6 +1772,583 @@ namespace Model.Data
         [ProtoMember(12)]
         protected PositionalStat positionLimpPossible = new PositionalStat();
 
+        [ProtoMember(13)]
+        protected PositionalStat positionDidColdCallThreeBet = new PositionalStat();
+
+        [ProtoMember(14)]
+        protected PositionalStat positionCouldColdCallThreeBet = new PositionalStat();
+
+        [ProtoMember(15)]
+        protected PositionalStat positionRaiseLimpers = new PositionalStat();
+
+        [ProtoMember(16)]
+        protected PositionalStat positionCouldRaiseLimpers = new PositionalStat();
+
+        [ProtoMember(17)]
+        protected PositionalStat positionDidColdCallFourBet = new PositionalStat();
+
+        [ProtoMember(18)]
+        protected PositionalStat positionCouldColdCallFourBet = new PositionalStat();
+
+        [ProtoMember(19)]
+        protected PositionalStat positionOpenMinraiseUOPFR = new PositionalStat();
+
+        [ProtoMember(20)]
+        protected PositionalStat positionDidSqueeze = new PositionalStat();
+
+        [ProtoMember(21)]
+        protected PositionalStat positionCouldSqueeze = new PositionalStat();
+
+        [ProtoMember(22)]
+        protected PositionalStat positionCall4Bet = new PositionalStat();
+
+        [ProtoMember(23)]
+        protected PositionalStat positionFaced4Bet = new PositionalStat();
+
+        [ProtoMember(24)]
+        protected PositionalStat positionDidOpenLimp = new PositionalStat();
+
+        [ProtoMember(25)]
+        protected PositionalStat positionCouldOpenLimp = new PositionalStat();
+
+        #endregion
+
+        #region Raise Limpers
+
+        public virtual decimal RaiseLimpers
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.IsRaisedLimpers), Statistics.Sum(x => x.CouldRaiseLimpers));
+            }
+        }
+
+        public virtual decimal RaiseLimpersInMP
+        {
+            get
+            {
+                return GetPercentage(positionRaiseLimpers?.MP, positionCouldRaiseLimpers?.MP);
+            }
+        }
+
+        public virtual decimal RaiseLimpersInCO
+        {
+            get
+            {
+                return GetPercentage(positionRaiseLimpers?.CO, positionCouldRaiseLimpers?.CO);
+            }
+        }
+
+        public virtual decimal RaiseLimpersInBN
+        {
+            get
+            {
+                return GetPercentage(positionRaiseLimpers?.BN, positionCouldRaiseLimpers?.BN);
+            }
+        }
+
+        public virtual decimal RaiseLimpersInSB
+        {
+            get
+            {
+                return GetPercentage(positionRaiseLimpers?.SB, positionCouldRaiseLimpers?.SB);
+            }
+        }
+
+        public virtual decimal RaiseLimpersInBB
+        {
+            get
+            {
+                return GetPercentage(positionRaiseLimpers?.BB, positionCouldRaiseLimpers?.BB);
+            }
+        }
+
+        #endregion
+
+        #region 3-Bet vs Pos stats
+
+        public abstract decimal ThreeBetMPvsEP { get; }
+
+        public abstract decimal ThreeBetCOvsEP { get; }
+
+        public abstract decimal ThreeBetCOvsMP { get; }
+
+        public abstract decimal ThreeBetBTNvsEP { get; }
+
+        public abstract decimal ThreeBetBTNvsMP { get; }
+
+        public abstract decimal ThreeBetBTNvsCO { get; }
+
+        public abstract decimal ThreeBetSBvsEP { get; }
+
+        public abstract decimal ThreeBetSBvsMP { get; }
+
+        public abstract decimal ThreeBetSBvsCO { get; }
+
+        public abstract decimal ThreeBetSBvsBTN { get; }
+
+        public abstract decimal ThreeBetBBvsEP { get; }
+
+        public abstract decimal ThreeBetBBvsMP { get; }
+
+        public abstract decimal ThreeBetBBvsCO { get; }
+
+        public abstract decimal ThreeBetBBvsBTN { get; }
+
+        public abstract decimal ThreeBetBBvsSB { get; }
+
+        #endregion
+
+        #region Fold to 3-Bet in Pos vs 3-bet Pos
+
+        public abstract decimal FoldTo3BetInEPvs3BetMP { get; }
+
+        public abstract decimal FoldTo3BetInEPvs3BetCO { get; }
+
+        public abstract decimal FoldTo3BetInEPvs3BetBTN { get; }
+
+        public abstract decimal FoldTo3BetInEPvs3BetSB { get; }
+
+        public abstract decimal FoldTo3BetInEPvs3BetBB { get; }
+
+        public abstract decimal FoldTo3BetInMPvs3BetCO { get; }
+
+        public abstract decimal FoldTo3BetInMPvs3BetBTN { get; }
+
+        public abstract decimal FoldTo3BetInMPvs3BetSB { get; }
+
+        public abstract decimal FoldTo3BetInMPvs3BetBB { get; }
+
+        public abstract decimal FoldTo3BetInCOvs3BetBTN { get; }
+
+        public abstract decimal FoldTo3BetInCOvs3BetSB { get; }
+
+        public abstract decimal FoldTo3BetInCOvs3BetBB { get; }
+
+        public abstract decimal FoldTo3BetInBTNvs3BetSB { get; }
+
+        public abstract decimal FoldTo3BetInBTNvs3BetBB { get; }
+
+        #endregion
+
+        #region Others stats
+
+        public abstract decimal CheckRaiseFlopAsPFR { get; }
+
+        public virtual decimal ProbeBetTurn => GetPercentage(Statistics.Sum(x => x.ProbeBetTurn), Source.CouldProbeBetTurn);
+
+        public virtual decimal ProbeBetRiver => GetPercentage(Statistics.Sum(x => x.ProbeBetRiver), Source.CouldProbeBetRiver);
+
+        public virtual decimal FloatFlopThenBetTurn => GetPercentage(Statistics.Sum(x => x.FloatFlopThenBetTurn), Statistics.Sum(x => x.CouldFloatFlopThenBetTurn));
+
+        public virtual decimal FoldBBvsSBSteal => GetPercentage(Statistics.Sum(x => x.FoldBBvsSBSteal), Statistics.Sum(x => x.CouldFoldBBvsSBSteal));
+
+        public virtual decimal BetTurnWhenCheckedToSRP => GetPercentage(Statistics.Sum(x => x.BetTurnWhenCheckedToSRP), Statistics.Sum(x => x.CouldBetTurnWhenCheckedToSRP));
+
+        public virtual decimal BetRiverWhenCheckedToSRP => GetPercentage(Statistics.Sum(x => x.BetRiverWhenCheckedToSRP), Statistics.Sum(x => x.CouldBetRiverWhenCheckedToSRP));
+
+        public virtual decimal DoubleBarrelSRP => GetPercentage(Statistics.Sum(x => x.DoubleBarrelSRP), Statistics.Sum(x => x.CouldDoubleBarrelSRP));
+
+        public virtual decimal DoubleBarrel3BetPot => GetPercentage(Statistics.Sum(x => x.DoubleBarrel3BetPot), Statistics.Sum(x => x.CouldDoubleBarrel3BetPot));
+
+        public virtual decimal TripleBarrelSRP => GetPercentage(Statistics.Sum(x => x.TripleBarrelSRP), Statistics.Sum(x => x.CouldTripleBarrelSRP));
+
+        public virtual decimal TripleBarrel3BetPot => GetPercentage(Statistics.Sum(x => x.TripleBarrel3BetPot), Statistics.Sum(x => x.CouldTripleBarrel3BetPot));
+
+        public virtual decimal CBetThenFoldFlopSRP => GetPercentage(Statistics.Sum(x => x.CBetThenFoldFlopSRP), Statistics.Sum(x => x.CouldCBetThenFoldFlopSRP));
+
+        public virtual decimal FoldToProbeBetTurn => GetPercentage(Statistics.Sum(x => x.FoldedToProbeBetTurn), Statistics.Sum(x => x.FacedProbeBetTurn));
+
+        public virtual decimal FoldToProbeBetRiver => GetPercentage(Statistics.Sum(x => x.FoldedToProbeBetRiver), Statistics.Sum(x => x.FacedProbeBetRiver));
+
+        #endregion
+
+        #region Bet When Checked to in 3Bet Pot
+
+        public virtual decimal BetFlopWhenCheckedToIn3BetPot => GetPercentage(Statistics.Sum(x => x.BetFlopWhenCheckedToIn3BetPot), Statistics.Sum(x => x.CouldBetFlopWhenCheckedToIn3BetPot));
+
+        public virtual decimal BetTurnWhenCheckedToIn3BetPot => GetPercentage(Statistics.Sum(x => x.BetTurnWhenCheckedToIn3BetPot), Statistics.Sum(x => x.CouldBetTurnWhenCheckedToIn3BetPot));
+
+        public virtual decimal BetRiverWhenCheckedToIn3BetPot => GetPercentage(Statistics.Sum(x => x.BetRiverWhenCheckedToIn3BetPot), Statistics.Sum(x => x.CouldBetRiverWhenCheckedToIn3BetPot));
+
+        #endregion
+
+        #region Check Flop as PFR and Fold to Turn/River Bet SRP
+
+        public virtual decimal CheckFlopAsPFRAndFoldToTurnBetIPSRP => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToTurnBetIPSRP), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetIPSRP));
+
+        public virtual decimal CheckFlopAsPFRAndFoldToTurnBetOOPSRP => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToTurnBetOOPSRP), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP));
+
+        public virtual decimal CheckFlopAsPFRAndFoldToRiverBetIPSRP => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToRiverBetIPSRP), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToRiverBetIPSRP));
+
+        public virtual decimal CheckFlopAsPFRAndFoldToRiverBetOOPSRP => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToRiverBetOOPSRP), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToRiverBetOOPSRP));
+
+        #endregion
+
+        #region Check Flop as PFR and Fold to Turn/River Bet in 3-Bet Pot
+
+        public virtual decimal CheckFlopAsPFRAndFoldToTurnBetIP3BetPot => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToTurnBetIP3BetPot), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetIP3BetPot));
+
+        public virtual decimal CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetOOP3BetPot));
+
+        public virtual decimal CheckFlopAsPFRAndFoldToRiverBetIP3BetPot => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToRiverBetIP3BetPot), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToRiverBetIP3BetPot));
+
+        public virtual decimal CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot => GetPercentage(Statistics.Sum(x => x.CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot), Statistics.Sum(x => x.CouldCheckFlopAsPFRAndFoldToRiverBetOOP3BetPot));
+
+        #endregion
+
+        #region Fold to continuation bets in SRP/3Bet/4Bet
+
+        public virtual decimal FoldToTripleBarrelSRP => GetPercentage(Statistics.Sum(x => x.FoldToTripleBarrelSRP), Statistics.Sum(x => x.FacingTripleBarrelSRP));
+
+        public virtual decimal FoldToTripleBarrel3BetPot => GetPercentage(Statistics.Sum(x => x.FoldToTripleBarrel3BetPot), Statistics.Sum(x => x.FacingTripleBarrel3BetPot));
+
+        public virtual decimal FoldToTripleBarrel4BetPot => GetPercentage(Statistics.Sum(x => x.FoldToTripleBarrel4BetPot), Statistics.Sum(x => x.FacingTripleBarrel4BetPot));
+
+        public virtual decimal FoldToDoubleBarrelSRP => GetPercentage(Statistics.Sum(x => x.FoldToDoubleBarrelSRP), Statistics.Sum(x => x.FacingDoubleBarrelSRP));
+
+        public virtual decimal FoldToDoubleBarrel4BetPot => GetPercentage(Statistics.Sum(x => x.FoldToDoubleBarrel4BetPot), Statistics.Sum(x => x.FacingDoubleBarrel4BetPot));
+
+        public virtual decimal FoldToCBetSRP => GetPercentage(Statistics.Sum(x => x.FoldToCBetSRP), Statistics.Sum(x => x.FacingCBetSRP));
+
+        #endregion
+
+        #region Open Shove UO Pot positional
+
+        public virtual decimal SBOpenShove1to8bbUOPot => GetPercentage(Statistics.Sum(x => x.SBOpenShove1to8bbUOPot), Statistics.Sum(x => x.SBOpenShoveUOPot));
+
+        public virtual decimal SBOpenShove9to14bbUOPot => GetPercentage(Statistics.Sum(x => x.SBOpenShove9to14bbUOPot), Statistics.Sum(x => x.SBOpenShoveUOPot));
+
+        public virtual decimal SBOpenShove15to25bbUOPot => GetPercentage(Statistics.Sum(x => x.SBOpenShove15to25bbUOPot), Statistics.Sum(x => x.SBOpenShoveUOPot));
+
+        public virtual decimal SBOpenShove26to50bbUOPot => GetPercentage(Statistics.Sum(x => x.SBOpenShove26to50bbUOPot), Statistics.Sum(x => x.SBOpenShoveUOPot));
+
+        public virtual decimal SBOpenShove51plusbbUOPot => GetPercentage(Statistics.Sum(x => x.SBOpenShove51plusbbUOPot), Statistics.Sum(x => x.SBOpenShoveUOPot));
+
+        public virtual decimal BTNOpenShove1to8bbUOPot => GetPercentage(Statistics.Sum(x => x.BTNOpenShove1to8bbUOPot), Statistics.Sum(x => x.BTNOpenShoveUOPot));
+
+        public virtual decimal BTNOpenShove9to14bbUOPot => GetPercentage(Statistics.Sum(x => x.BTNOpenShove9to14bbUOPot), Statistics.Sum(x => x.BTNOpenShoveUOPot));
+
+        public virtual decimal BTNOpenShove15to25bbUOPot => GetPercentage(Statistics.Sum(x => x.BTNOpenShove15to25bbUOPot), Statistics.Sum(x => x.BTNOpenShoveUOPot));
+
+        public virtual decimal BTNOpenShove26to50bbUOPot => GetPercentage(Statistics.Sum(x => x.BTNOpenShove26to50bbUOPot), Statistics.Sum(x => x.BTNOpenShoveUOPot));
+
+        public virtual decimal BTNOpenShove51plusbbUOPot => GetPercentage(Statistics.Sum(x => x.BTNOpenShove51plusbbUOPot), Statistics.Sum(x => x.BTNOpenShoveUOPot));
+
+        public virtual decimal COOpenShove1to8bbUOPot => GetPercentage(Statistics.Sum(x => x.COOpenShove1to8bbUOPot), Statistics.Sum(x => x.COOpenShoveUOPot));
+
+        public virtual decimal COOpenShove9to14bbUOPot => GetPercentage(Statistics.Sum(x => x.COOpenShove9to14bbUOPot), Statistics.Sum(x => x.COOpenShoveUOPot));
+
+        public virtual decimal COOpenShove15to25bbUOPot => GetPercentage(Statistics.Sum(x => x.COOpenShove15to25bbUOPot), Statistics.Sum(x => x.COOpenShoveUOPot));
+
+        public virtual decimal COOpenShove26to50bbUOPot => GetPercentage(Statistics.Sum(x => x.COOpenShove26to50bbUOPot), Statistics.Sum(x => x.COOpenShoveUOPot));
+
+        public virtual decimal COOpenShove51plusbbUOPot => GetPercentage(Statistics.Sum(x => x.COOpenShove51plusbbUOPot), Statistics.Sum(x => x.COOpenShoveUOPot));
+
+        public virtual decimal MPOpenShove1to8bbUOPot => GetPercentage(Statistics.Sum(x => x.MPOpenShove1to8bbUOPot), Statistics.Sum(x => x.MPOpenShoveUOPot));
+
+        public virtual decimal MPOpenShove9to14bbUOPot => GetPercentage(Statistics.Sum(x => x.MPOpenShove9to14bbUOPot), Statistics.Sum(x => x.MPOpenShoveUOPot));
+
+        public virtual decimal MPOpenShove15to25bbUOPot => GetPercentage(Statistics.Sum(x => x.MPOpenShove15to25bbUOPot), Statistics.Sum(x => x.MPOpenShoveUOPot));
+
+        public virtual decimal MPOpenShove26to50bbUOPot => GetPercentage(Statistics.Sum(x => x.MPOpenShove26to50bbUOPot), Statistics.Sum(x => x.MPOpenShoveUOPot));
+
+        public virtual decimal MPOpenShove51plusbbUOPot => GetPercentage(Statistics.Sum(x => x.MPOpenShove51plusbbUOPot), Statistics.Sum(x => x.MPOpenShoveUOPot));
+
+        public virtual decimal EPOpenShove1to8bbUOPot => GetPercentage(Statistics.Sum(x => x.EPOpenShove1to8bbUOPot), Statistics.Sum(x => x.EPOpenShoveUOPot));
+
+        public virtual decimal EPOpenShove9to14bbUOPot => GetPercentage(Statistics.Sum(x => x.EPOpenShove9to14bbUOPot), Statistics.Sum(x => x.EPOpenShoveUOPot));
+
+        public virtual decimal EPOpenShove15to25bbUOPot => GetPercentage(Statistics.Sum(x => x.EPOpenShove15to25bbUOPot), Statistics.Sum(x => x.EPOpenShoveUOPot));
+
+        public virtual decimal EPOpenShove26to50bbUOPot => GetPercentage(Statistics.Sum(x => x.EPOpenShove26to50bbUOPot), Statistics.Sum(x => x.EPOpenShoveUOPot));
+
+        public virtual decimal EPOpenShove51plusbbUOPot => GetPercentage(Statistics.Sum(x => x.EPOpenShove51plusbbUOPot), Statistics.Sum(x => x.EPOpenShoveUOPot));
+
+        #endregion
+
+        #region Limp Positional & Fold to PFR%
+
+        public virtual decimal LimpEPFoldToPFR => GetPercentage(Statistics.Sum(x => x.LimpEPFoldToPFR), Statistics.Sum(x => x.LimpEPFacedPFR));
+
+        public virtual decimal LimpMPFoldToPFR => GetPercentage(Statistics.Sum(x => x.LimpMPFoldToPFR), Statistics.Sum(x => x.LimpMPFacedPFR));
+
+        public virtual decimal LimpCOFoldToPFR => GetPercentage(Statistics.Sum(x => x.LimpCOFoldToPFR), Statistics.Sum(x => x.LimpCOFacedPFR));
+
+        public virtual decimal LimpBTNFoldToPFR => GetPercentage(Statistics.Sum(x => x.LimpBTNFoldToPFR), Statistics.Sum(x => x.LimpBTNFacedPFR));
+
+        public virtual decimal LimpSBFoldToPFR => GetPercentage(Statistics.Sum(x => x.LimpSBFoldToPFR), Statistics.Sum(x => x.LimpSBFacedPFR));
+
+        #endregion
+
+        #region Shoves over limpers positional
+
+        public virtual decimal SBShoveOverLimpers1to8bb => GetPercentage(Statistics.Sum(x => x.SBShoveOverLimpers1to8bb), Statistics.Sum(x => x.SBShoveOverLimpers));
+
+        public virtual decimal SBShoveOverLimpers9to14bb => GetPercentage(Statistics.Sum(x => x.SBShoveOverLimpers9to14bb), Statistics.Sum(x => x.SBShoveOverLimpers));
+
+        public virtual decimal SBShoveOverLimpers15to25bb => GetPercentage(Statistics.Sum(x => x.SBShoveOverLimpers15to25bb), Statistics.Sum(x => x.SBShoveOverLimpers));
+
+        public virtual decimal SBShoveOverLimpers26to50bb => GetPercentage(Statistics.Sum(x => x.SBShoveOverLimpers26to50bb), Statistics.Sum(x => x.SBShoveOverLimpers));
+
+        public virtual decimal SBShoveOverLimpers51plusbb => GetPercentage(Statistics.Sum(x => x.SBShoveOverLimpers51plusbb), Statistics.Sum(x => x.SBShoveOverLimpers));
+
+        public virtual decimal BTNShoveOverLimpers1to8bb => GetPercentage(Statistics.Sum(x => x.BTNShoveOverLimpers1to8bb), Statistics.Sum(x => x.BTNShoveOverLimpers));
+
+        public virtual decimal BTNShoveOverLimpers9to14bb => GetPercentage(Statistics.Sum(x => x.BTNShoveOverLimpers9to14bb), Statistics.Sum(x => x.BTNShoveOverLimpers));
+
+        public virtual decimal BTNShoveOverLimpers15to25bb => GetPercentage(Statistics.Sum(x => x.BTNShoveOverLimpers15to25bb), Statistics.Sum(x => x.BTNShoveOverLimpers));
+
+        public virtual decimal BTNShoveOverLimpers26to50bb => GetPercentage(Statistics.Sum(x => x.BTNShoveOverLimpers26to50bb), Statistics.Sum(x => x.BTNShoveOverLimpers));
+
+        public virtual decimal BTNShoveOverLimpers51plusbb => GetPercentage(Statistics.Sum(x => x.BTNShoveOverLimpers51plusbb), Statistics.Sum(x => x.BTNShoveOverLimpers));
+
+        public virtual decimal COShoveOverLimpers1to8bb => GetPercentage(Statistics.Sum(x => x.COShoveOverLimpers1to8bb), Statistics.Sum(x => x.COShoveOverLimpers));
+
+        public virtual decimal COShoveOverLimpers9to14bb => GetPercentage(Statistics.Sum(x => x.COShoveOverLimpers9to14bb), Statistics.Sum(x => x.COShoveOverLimpers));
+
+        public virtual decimal COShoveOverLimpers15to25bb => GetPercentage(Statistics.Sum(x => x.COShoveOverLimpers15to25bb), Statistics.Sum(x => x.COShoveOverLimpers));
+
+        public virtual decimal COShoveOverLimpers26to50bb => GetPercentage(Statistics.Sum(x => x.COShoveOverLimpers26to50bb), Statistics.Sum(x => x.COShoveOverLimpers));
+
+        public virtual decimal COShoveOverLimpers51plusbb => GetPercentage(Statistics.Sum(x => x.COShoveOverLimpers51plusbb), Statistics.Sum(x => x.COShoveOverLimpers));
+
+        public virtual decimal MPShoveOverLimpers1to8bb => GetPercentage(Statistics.Sum(x => x.MPShoveOverLimpers1to8bb), Statistics.Sum(x => x.MPShoveOverLimpers));
+
+        public virtual decimal MPShoveOverLimpers9to14bb => GetPercentage(Statistics.Sum(x => x.MPShoveOverLimpers9to14bb), Statistics.Sum(x => x.MPShoveOverLimpers));
+
+        public virtual decimal MPShoveOverLimpers15to25bb => GetPercentage(Statistics.Sum(x => x.MPShoveOverLimpers15to25bb), Statistics.Sum(x => x.MPShoveOverLimpers));
+
+        public virtual decimal MPShoveOverLimpers26to50bb => GetPercentage(Statistics.Sum(x => x.MPShoveOverLimpers26to50bb), Statistics.Sum(x => x.MPShoveOverLimpers));
+
+        public virtual decimal MPShoveOverLimpers51plusbb => GetPercentage(Statistics.Sum(x => x.MPShoveOverLimpers51plusbb), Statistics.Sum(x => x.MPShoveOverLimpers));
+
+        public virtual decimal EPShoveOverLimpers1to8bb => GetPercentage(Statistics.Sum(x => x.EPShoveOverLimpers1to8bb), Statistics.Sum(x => x.EPShoveOverLimpers));
+
+        public virtual decimal EPShoveOverLimpers9to14bb => GetPercentage(Statistics.Sum(x => x.EPShoveOverLimpers9to14bb), Statistics.Sum(x => x.EPShoveOverLimpers));
+
+        public virtual decimal EPShoveOverLimpers15to25bb => GetPercentage(Statistics.Sum(x => x.EPShoveOverLimpers15to25bb), Statistics.Sum(x => x.EPShoveOverLimpers));
+
+        public virtual decimal EPShoveOverLimpers26to50bb => GetPercentage(Statistics.Sum(x => x.EPShoveOverLimpers26to50bb), Statistics.Sum(x => x.EPShoveOverLimpers));
+
+        public virtual decimal EPShoveOverLimpers51plusbb => GetPercentage(Statistics.Sum(x => x.EPShoveOverLimpers51plusbb), Statistics.Sum(x => x.EPShoveOverLimpers));
+
+        #endregion
+
+        #region Positional squeeze
+
+        public virtual decimal SqueezeEP => GetPercentage(positionDidSqueeze?.EP, positionCouldSqueeze?.EP);
+
+        public virtual decimal SqueezeMP => GetPercentage(positionDidSqueeze?.MP, positionCouldSqueeze?.MP);
+
+        public virtual decimal SqueezeCO => GetPercentage(positionDidSqueeze?.CO, positionCouldSqueeze?.CO);
+
+        public virtual decimal SqueezeBTN => GetPercentage(positionDidSqueeze?.BN, positionCouldSqueeze?.BN);
+
+        public virtual decimal SqueezeSB => GetPercentage(positionDidSqueeze?.SB, positionCouldSqueeze?.SB);
+
+        public virtual decimal SqueezeBB => GetPercentage(positionDidSqueeze?.BB, positionCouldSqueeze?.BB);
+
+        #endregion;
+
+        #region Squeeze vs PFR
+
+        public virtual decimal SqueezeBBVsBTNPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeBBVsBTNPFR), Statistics.Sum(x => x.CouldSqueezeBBVsBTNPFR));
+
+        public virtual decimal SqueezeBBVsCOPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeBBVsCOPFR), Statistics.Sum(x => x.CouldSqueezeBBVsCOPFR));
+
+        public virtual decimal SqueezeBBVsMPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeBBVsMPPFR), Statistics.Sum(x => x.CouldSqueezeBBVsMPPFR));
+
+        public virtual decimal SqueezeBBVsEPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeBBVsEPPFR), Statistics.Sum(x => x.CouldSqueezeBBVsEPPFR));
+
+        public virtual decimal SqueezeSBVsCOPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeSBVsCOPFR), Statistics.Sum(x => x.CouldSqueezeSBVsCOPFR));
+
+        public virtual decimal SqueezeSBVsMPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeSBVsMPPFR), Statistics.Sum(x => x.CouldSqueezeSBVsMPPFR));
+
+        public virtual decimal SqueezeSBVsEPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeSBVsEPPFR), Statistics.Sum(x => x.CouldSqueezeSBVsEPPFR));
+
+        public virtual decimal SqueezeBTNVsMPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeBTNVsMPPFR), Statistics.Sum(x => x.CouldSqueezeBTNVsMPPFR));
+
+        public virtual decimal SqueezeBTNVsEPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeBTNVsEPPFR), Statistics.Sum(x => x.CouldSqueezeBTNVsEPPFR));
+
+        public virtual decimal SqueezeCOVsMPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeCOVsMPPFR), Statistics.Sum(x => x.CouldSqueezeCOVsMPPFR));
+
+        public virtual decimal SqueezeCOVsEPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeCOVsEPPFR), Statistics.Sum(x => x.CouldSqueezeCOVsEPPFR));
+
+        public virtual decimal SqueezeMPVsEPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeMPVsEPPFR), Statistics.Sum(x => x.CouldSqueezeMPVsEPPFR));
+
+        public virtual decimal SqueezeEPVsEPPFR => GetPercentage(Statistics.Sum(x => x.DidSqueezeEPVsEPPFR), Statistics.Sum(x => x.CouldSqueezeEPVsEPPFR));
+
+        #endregion
+
+        #region Fold to Squeeze as Cold Caller
+
+        public virtual decimal FoldToSqueezeAsColdCaller => GetPercentage(Statistics.Sum(x => x.FoldToSqueezeAsColdCaller), Statistics.Sum(x => x.FacedSqueezeAsColdCaller));
+
+        #endregion
+
+        #region 4-Bet vs Blind 3-Bet%
+
+        public virtual decimal FourBetVsBlind3Bet => GetPercentage(Statistics.Sum(x => x.Did4BetVsBlind3Bet), Statistics.Sum(x => x.Could4BetVsBlind3Bet));
+
+        #endregion
+
+        #region BTN Re/Def vs CO Steal
+
+        public virtual decimal BTNReStealVsCOSteal => GetPercentage(Statistics.Sum(x => x.BTNReStealVsCOSteal), Statistics.Sum(x => x.BTNFacedCOSteal));
+
+        public virtual decimal BTNDefendVsCOSteal => GetPercentage(Statistics.Sum(x => x.BTNDefendVsCOSteal), Statistics.Sum(x => x.BTNFacedCOSteal));
+
+        #endregion
+
+        #region Positional Call & Fold to Steal
+
+        public virtual decimal FoldToStealInSB => GetPercentage(Statistics.Sum(x => x.FoldToStealInSB), Statistics.Sum(x => x.FacedStealInSB));
+
+        public virtual decimal FoldToStealInBB => GetPercentage(Statistics.Sum(x => x.FoldToStealInBB), Statistics.Sum(x => x.FacedStealInBB));
+
+        public virtual decimal CalledStealInSB => GetPercentage(Statistics.Sum(x => x.CalledStealInSB), Statistics.Sum(x => x.FacedStealInSB));
+
+        public virtual decimal CalledStealInBB => GetPercentage(Statistics.Sum(x => x.CalledStealInBB), Statistics.Sum(x => x.FacedStealInBB));
+
+        public virtual decimal FoldToBTNStealInSB => GetPercentage(Statistics.Sum(x => x.FoldToBTNStealInSB), Statistics.Sum(x => x.FacedBTNStealInSB));
+
+        public virtual decimal FoldToBTNStealInBB => GetPercentage(Statistics.Sum(x => x.FoldToBTNStealInBB), Statistics.Sum(x => x.FacedBTNStealInBB));
+
+        public virtual decimal FoldToCOStealInSB => GetPercentage(Statistics.Sum(x => x.FoldToCOStealInSB), Statistics.Sum(x => x.FacedCOStealInSB));
+
+        public virtual decimal FoldToCOStealInBB => GetPercentage(Statistics.Sum(x => x.FoldToCOStealInBB), Statistics.Sum(x => x.FacedCOStealInBB));
+
+        public virtual decimal CalledBTNStealInSB => GetPercentage(Statistics.Sum(x => x.CalledBTNStealInSB), Statistics.Sum(x => x.FacedBTNStealInSB));
+
+        public virtual decimal CalledBTNStealInBB => GetPercentage(Statistics.Sum(x => x.CalledBTNStealInBB), Statistics.Sum(x => x.FacedBTNStealInBB));
+
+        public virtual decimal CalledCOStealInSB => GetPercentage(Statistics.Sum(x => x.CalledCOStealInSB), Statistics.Sum(x => x.FacedCOStealInSB));
+
+        public virtual decimal CalledCOStealInBB => GetPercentage(Statistics.Sum(x => x.CalledCOStealInBB), Statistics.Sum(x => x.FacedCOStealInBB));
+
+        public virtual decimal OvercallBTNStealInBB => GetPercentage(Statistics.Sum(x => x.OvercallBTNStealInBB), Statistics.Sum(x => x.CouldOvercallBTNStealInBB));
+
+        #endregion
+
+        #region  WTSD as PFR/4-Bettor
+
+        public virtual decimal WTSDAsPFR => GetPercentage(Statistics.Sum(x => x.WTSDAsPFR), Statistics.Sum(x => x.WTSDAsPFROpportunity));
+
+        public virtual decimal WTSDAs4Bettor => GetPercentage(Statistics.Sum(x => x.WTSDAs4Bettor), Statistics.Sum(x => x.WTSDAs4BettorOpportunity));
+
+        #endregion
+
+        #region Call 4-Bet positional 
+
+        public virtual decimal Call4BetIP => GetPercentage(Statistics.Sum(x => x.Call4BetIP), Statistics.Sum(x => x.Faced4BetIP));
+
+        public virtual decimal Call4BetOOP => GetPercentage(Statistics.Sum(x => x.Call4BetOOP), Statistics.Sum(x => x.Faced4BetOOP));
+
+        public virtual decimal Call4BetEP => GetPercentage(positionCall4Bet?.EP, positionFaced4Bet?.EP);
+
+        public virtual decimal Call4BetMP => GetPercentage(positionCall4Bet?.MP, positionFaced4Bet?.MP);
+
+        public virtual decimal Call4BetCO => GetPercentage(positionCall4Bet?.CO, positionFaced4Bet?.CO);
+
+        public virtual decimal Call4BetBTN => GetPercentage(positionCall4Bet?.BN, positionFaced4Bet?.BN);
+
+        public virtual decimal Call4BetSB => GetPercentage(positionCall4Bet?.SB, positionFaced4Bet?.SB);
+
+        public virtual decimal Call4BetBB => GetPercentage(positionCall4Bet?.BB, positionFaced4Bet?.BB);
+
+        #endregion
+
+        #region Total overcall SRP%
+
+        public virtual decimal TotalOverCallSRP => GetPercentage(Statistics.Sum(x => x.TotalOverCallSRP), Statistics.Sum(x => x.CouldTotalOverCallSRP));
+
+        #endregion
+
+        #region Limped pot Flop Steal IP%
+
+        public virtual decimal LimpedPotFlopStealIP => GetPercentage(Statistics.Sum(x => x.LimpedPotFlopStealIP), Statistics.Sum(x => x.CouldLimpedPotFlopStealIP));
+
+        #endregion
+
+        #region Flop-Check Call
+
+        public virtual decimal FlopCheckCall => GetPercentage(Statistics.Sum(x => x.DidFlopCheckCall), Statistics.Sum(x => x.CouldFlopCheckCall));
+
+        #endregion
+
+        #region Call Flop & Fold Turn
+
+        public virtual decimal CallFlopFoldTurn => GetPercentage(Statistics.Sum(x => x.DidCallFlopFoldTurn), Statistics.Sum(x => x.CouldCallFlopFoldTurn));
+
+        #endregion
+
+        #region River fold in SRP/3-Bet/4-Bet
+
+        public virtual decimal RiverFoldInSRP => GetPercentage(Statistics.Sum(x => x.DidRiverFoldInSRP), Statistics.Sum(x => x.CouldRiverFoldInSRP));
+
+        public virtual decimal RiverFoldIn3Bet => GetPercentage(Statistics.Sum(x => x.DidRiverFoldIn3Bet), Statistics.Sum(x => x.CouldRiverFoldIn3Bet));
+
+        public virtual decimal RiverFoldIn4Bet => GetPercentage(Statistics.Sum(x => x.DidRiverFoldIn4Bet), Statistics.Sum(x => x.CouldRiverFoldIn4Bet));
+
+        #endregion
+
+        #region Delayed Turn C-Bet in SRP/4-Bet Pot%
+
+        public virtual decimal DelayedTurnCBetInSRP => GetPercentage(Statistics.Sum(x => x.DidDelayedTurnCBetInSRP), Statistics.Sum(x => x.CouldDelayedTurnCBetInSRP));
+
+        public virtual decimal DelayedTurnCBetIn4BetPot => GetPercentage(Statistics.Sum(x => x.DidDelayedTurnCBetIn4BetPot), Statistics.Sum(x => x.CouldDelayedTurnCBetIn4BetPot));
+
+        #endregion
+
+        #region Skip Flop C-Bet SRP & C/F Flop OOP%
+
+        public virtual decimal SkipFlopCBetInSRPandCheckFoldFlopOOP => GetPercentage(Statistics.Sum(x => x.DidSkipFlopCBetInSRPandCheckFoldFlopOOP), Statistics.Sum(x => x.CouldSkipFlopCBetInSRPandCheckFoldFlopOOP));
+
+        #endregion
+
+        #region  Check-Raise Flop as PFR SRP/3-Bet pot
+
+        public virtual decimal CheckRaiseFlopAsPFRInSRP => GetPercentage(Statistics.Sum(x => x.DidCheckRaiseFlopAsPFRInSRP), Statistics.Sum(x => x.CouldCheckRaiseFlopAsPFRInSRP));
+
+        public virtual decimal CheckRaiseFlopAsPFRIn3BetPot => GetPercentage(Statistics.Sum(x => x.DidCheckRaiseFlopAsPFRIn3BetPot), Statistics.Sum(x => x.CouldCheckRaiseFlopAsPFRIn3BetPot));
+
+        #endregion
+
+        #region Open Limp positional
+
+        public virtual decimal OpenLimpEP => GetPercentage(positionDidOpenLimp?.EP, positionCouldOpenLimp?.EP);
+
+        public virtual decimal OpenLimpMP => GetPercentage(positionDidOpenLimp?.MP, positionCouldOpenLimp?.MP);
+
+        public virtual decimal OpenLimpCO => GetPercentage(positionDidOpenLimp?.CO, positionCouldOpenLimp?.CO);
+
+        public virtual decimal OpenLimpBTN => GetPercentage(positionDidOpenLimp?.BN, positionCouldOpenLimp?.BN);
+
+        public virtual decimal OpenLimpSB => GetPercentage(positionDidOpenLimp?.SB, positionCouldOpenLimp?.SB);
+
+        #endregion
+
+        #region Straddle stats 
+
+        public virtual decimal CheckInStraddle => GetPercentage(Statistics.Sum(x => x.DidCheckInStraddle), Statistics.Sum(x => x.CouldActInStraddle));
+
+        public virtual decimal PFRInStraddle => GetPercentage(Statistics.Sum(x => x.DidPFRInStraddle), Statistics.Sum(x => x.CouldActInStraddle));
+
+        public virtual decimal ThreeBetInStraddle => GetPercentage(Statistics.Sum(x => x.Did3BetInStraddle), Statistics.Sum(x => x.Could3BetInStraddle));
+
+        public virtual decimal FourBetInStraddle => GetPercentage(Statistics.Sum(x => x.Did4BetInStraddle), Statistics.Sum(x => x.Could4BetInStraddle));
+
+        public virtual decimal FoldInStraddle => GetPercentage(Statistics.Sum(x => x.DidFoldInStraddle), Statistics.Sum(x => x.CouldActInStraddle));
+
+        public virtual decimal WTSDInStraddle => GetPercentage(Statistics.Sum(x => x.WTSDInStraddle), Statistics.Sum(x => x.WTSDOpportunityInStraddle));
+
+        #endregion
+
+        #region Fold to delayed Turn C-Bet
+
+        public virtual decimal FoldedToDelayedCBet => GetPercentage(Statistics.Sum(x => x.FoldedToDelayedCBet), Source.FacedDelayedCBet);
+
         #endregion
 
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
@@ -1775,6 +2406,19 @@ namespace Model.Data
             positionCouldFourBet?.Add(statistic.Position, statistic.CouldfourbetpreflopVirtual);
             positionLimpMade?.Add(statistic.Position, statistic.LimpMade);
             positionLimpPossible?.Add(statistic.Position, statistic.LimpPossible);
+            positionRaiseLimpers?.Add(statistic.Position, statistic.IsRaisedLimpers);
+            positionCouldRaiseLimpers?.Add(statistic.Position, statistic.CouldRaiseLimpers);
+            positionDidColdCallThreeBet?.Add(statistic.Position, statistic.DidColdCallThreeBet);
+            positionCouldColdCallThreeBet?.Add(statistic.Position, statistic.CouldColdCallThreeBet);
+            positionDidColdCallFourBet?.Add(statistic.Position, statistic.DidColdCallFourBet);
+            positionCouldColdCallFourBet?.Add(statistic.Position, statistic.CouldColdCallFourBet);
+            positionOpenMinraiseUOPFR?.Add(statistic.Position, statistic.OpenMinraise);
+            positionDidSqueeze?.Add(statistic.Position, statistic.Didsqueeze);
+            positionCouldSqueeze?.Add(statistic.Position, statistic.Couldsqueeze);
+            positionCall4Bet?.Add(statistic.Position, statistic.Calledfourbetpreflop);
+            positionFaced4Bet?.Add(statistic.Position, statistic.Facedfourbetpreflop);
+            positionDidOpenLimp?.Add(statistic.Position, statistic.DidOpenLimp);
+            positionCouldOpenLimp?.Add(statistic.Position, statistic.CouldOpenLimp);
         }
 
         protected virtual void ResetPositionalStats()
@@ -1790,6 +2434,19 @@ namespace Model.Data
             positionCouldFourBet?.Reset();
             positionLimpMade?.Reset();
             positionLimpPossible?.Reset();
+            positionRaiseLimpers?.Reset();
+            positionCouldRaiseLimpers?.Reset();
+            positionDidColdCallThreeBet?.Reset();
+            positionCouldColdCallThreeBet?.Reset();
+            positionDidColdCallFourBet?.Reset();
+            positionCouldColdCallFourBet?.Reset();
+            positionOpenMinraiseUOPFR?.Reset();
+            positionDidSqueeze?.Reset();
+            positionCouldSqueeze?.Reset();
+            positionCall4Bet?.Reset();
+            positionFaced4Bet?.Reset();
+            positionDidOpenLimp?.Reset();
+            positionCouldOpenLimp?.Reset();
         }
 
         #region Helpers

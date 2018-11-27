@@ -10,18 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHud.Tests.IntegrationTests.Base;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using NSubstitute;
 using NUnit.Framework;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Runtime.CompilerServices;
 
 namespace DriveHud.Tests.IntegrationTests.Importers
 {
@@ -29,36 +25,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
     /// PlayerStatistic integration tests
     /// </summary>
     [TestFixture]
-    class PlayerStatisticTests : BaseDatabaseTest
+    class PlayerStatisticTests : PlayerStatisticBaseTests
     {
-        #region SetUp
-
-        /// <summary>
-        /// Initialize environment for test
-        /// </summary>
-        [OneTimeSetUp]
-        public virtual void SetUp()
-        {
-            Initalize();
-        }
-
-        /// <summary>
-        /// Freeing resources
-        /// </summary>
-        [OneTimeTearDown]
-        public virtual void TearDown()
-        {
-            RemoveDatabase();
-        }
-
-        [TearDown]
-        public virtual void TestTearDown()
-        {
-            CleanUpDatabase();
-        }
-
-        #endregion
-
         protected override string TestDataFolder
         {
             get
@@ -384,8 +352,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         #endregion
 
         [Test]
-        [TestCase(@"Hero-DidDelayedTurnCBet-1.xml", EnumPokerSites.IPoker, "Hero", 1)]
-        [TestCase(@"Hero-DidDelayedTurnCBet-2.xml", EnumPokerSites.IPoker, "Hero", 1)]
+        [TestCase(@"Hero-DidDelayedTurnCBet-1.xml", EnumPokerSites.IPoker, "Hero", 0)]
+        [TestCase(@"Hero-DidDelayedTurnCBet-2.xml", EnumPokerSites.IPoker, "Hero", 0)]
         [TestCase(@"Hero-DidDelayedTurnCBet-3.xml", EnumPokerSites.IPoker, "Hero", 1)]
         [TestCase(@"DURKADURDUR-DidDelayedTurnCBet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         public void DidDelayedTurnCBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
@@ -515,6 +483,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
         [Test]
         [TestCase(@"DURKADURDUR-MP-DidNotFaceCBet-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"Hero-FacingTurnCBet-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FacingTurnCBet-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
         public void FacingturncontinuationbetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.Facingturncontinuationbet, fileName, pokerSite, playerName, expected);
@@ -676,6 +646,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-StealMade-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-CouldNotSteal-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
         [TestCase(@"DURKADURDUR-CouldNotSteal-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"Hero-CouldNotSteal-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
         public void StealPossibleIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.StealPossible, fileName, pokerSite, playerName, expected);
@@ -1280,49 +1251,127 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.TotalWonAmountOnRiverCall, fileName, pokerSite, playerName, expected);
         }
 
-        protected virtual void AssertThatStatIsCalculated<T>(Expression<Func<Playerstatistic, T>> expression, string fileName, EnumPokerSites pokerSite, string playerName, T expected, double tolerance = 0.01, [CallerMemberName] string method = "UnknownMethod")
+        [TestCase(@"Hero-CouldProbeBetTurn-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CouldProbeBetTurn-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-CouldProbeBetTurn-False-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void CouldProbeBetTurnIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            using (var perfScope = new PerformanceMonitor(method))
-            {
-                Playerstatistic playerstatistic = null;
-
-                var playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
-                playerStatisticRepository.Store(Arg.Is<Playerstatistic>(x => GetSinglePlayerstatisticFromStoreCall(ref playerstatistic, x, playerName)));
-
-                FillDatabaseFromSingleFile(fileName, pokerSite);
-
-                Assert.IsNotNull(playerstatistic, $"Player '{playerName}' has not been found");
-
-                var getStat = expression.Compile();
-
-                Assert.That(getStat(playerstatistic), Is.EqualTo(expected).Within(tolerance));
-            }
+            AssertThatStatIsCalculated(x => x.CouldProbeBetTurn, fileName, pokerSite, playerName, expected);
         }
 
-        /// <summary>
-        /// Gets player statistic from the <see cref="IDataService.Store(Playerstatistic)"/> call for the specified player
-        /// </summary>     
-        protected virtual bool GetSinglePlayerstatisticFromStoreCall(ref Playerstatistic playerstatistic, Playerstatistic p, string playerName)
+        [TestCase(@"Hero-CouldProbeBetRiver-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CouldProbeBetRiver-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void CouldProbeBetRiverIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            if (p.PlayerName.Equals(playerName))
-            {
-                playerstatistic = p;
-            }
-
-            return true;
+            AssertThatStatIsCalculated(x => x.CouldProbeBetRiver, fileName, pokerSite, playerName, expected);
         }
 
-        /// <summary>
-        /// Gets player statistics from the <see cref="IDataService.Store(Playerstatistic)"/> call for the specified player
-        /// </summary>     
-        protected virtual bool GetPlayerstatisticCollectionFromStoreCall(ref List<Playerstatistic> playerstatistic, Playerstatistic p, string playerName)
+        [TestCase(@"Hero-DoubleBarrelSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-DoubleBarrelSRP-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void DoubleBarrelSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
-            if (p.PlayerName.Equals(playerName))
-            {
-                playerstatistic.Add(p);
-            }
+            AssertThatStatIsCalculated(x => x.DoubleBarrelSRP, fileName, pokerSite, playerName, expected);
+        }
 
-            return true;
+        [TestCase(@"Hero-FacedProbeBetTurn-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FacedProbeBetTurn-True-2.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FacedProbeBetTurn-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void FacedProbeBetTurnIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacedProbeBetTurn, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-FoldedToProbeBetTurn-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FoldedToProbeBetTurn-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void FoldedToProbeBetTurnIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldedToProbeBetTurn, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-FacedProbeBetRiver-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void FacedProbeBetRiverIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacedProbeBetRiver, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-FoldedToProbeBetRiver-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FoldedToProbeBetRiver-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void FoldedToProbeBetRiverIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldedToProbeBetRiver, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToTurnBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToTurnBetIPSRP-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void CheckFlopAsPFRAndFoldToTurnBetIPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CheckFlopAsPFRAndFoldToTurnBetIPSRP, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToTurnBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToTurnBetIPSRP-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void CouldCheckFlopAsPFRAndFoldToTurnBetIPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetIPSRP, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void CheckFlopAsPFRAndFoldToTurnBetOOPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CheckFlopAsPFRAndFoldToTurnBetOOPSRP, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP-True-2.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldCheckFlopAsPFRAndFoldToTurnBetOOPSRP, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToRiverBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void CheckFlopAsPFRAndFoldToRiverBetIPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CheckFlopAsPFRAndFoldToRiverBetIPSRP, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CheckFlopAsPFRAndFoldToRiverBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-CouldCheckFlopAsPFRAndFoldToRiverBetIPSRP-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void CouldCheckFlopAsPFRAndFoldToRiverBetIPSRPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldCheckFlopAsPFRAndFoldToRiverBetIPSRP, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CouldNot-ColdCall4Bet.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void ColdCall4BetInBBIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.DidColdCall4BetInBB, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CouldNot-ColdCall3Bet.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void ColdCall3BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.DidColdCallThreeBet, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-FacedDelayedCBet-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FacedDelayedCBet-True-2.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FacedDelayedCBet-False-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-FoldedToDelayedCBet-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FoldedToDelayedCBet-True-2.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void FacedDelayedCBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacedDelayedCBet, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-FoldedToDelayedCBet-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        [TestCase(@"Hero-FoldedToDelayedCBet-True-2.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void FoldedToDelayedCBetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldedToDelayedCBet, fileName, pokerSite, playerName, expected);
         }
     }
 }

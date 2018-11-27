@@ -19,7 +19,6 @@ using DriveHUD.Common.Progress;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
-using DriveHUD.Importers.Loggers;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers;
@@ -212,7 +211,7 @@ namespace DriveHUD.Importers
                 gameInfo.UpdateAction?.Invoke(parsingResult, gameInfo);
 
 #if DEBUG
-                using (var perfomanceScope = new PerformanceMonitor($"Insert hand({gameInfo.GameNumber})"))
+                using (var perfomanceScope = new PerformanceMonitor($"Insert hand({gameInfo.GameNumber})", true, this, true))
                 {
 #endif
                     InsertHands(parsingResult, progress, gameInfo);

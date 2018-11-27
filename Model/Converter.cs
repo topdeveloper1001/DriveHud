@@ -90,6 +90,11 @@ namespace Model.Importer
             return ToPosition(hand, stat?.PlayerName, stat);
         }
 
+        public static EnumPosition ToPosition(HandHistory hand, string playerName)
+        {
+            return ToPosition(hand, playerName, null);
+        }
+
         public static EnumPosition ToPosition(HandHistory hand, string playerName, Playerstatistic stat = null)
         {
             if (stat != null && stat.IsDealer)
@@ -496,7 +501,7 @@ namespace Model.Importer
                 case HandActionType.WINS_SIDE_POT:
                 case HandActionType.WINS_THE_LOW:
                 case HandActionType.WINS_TOURNAMENT:
-                    return "Wins";              
+                    return "Wins";
             }
 
             return null;
@@ -505,6 +510,7 @@ namespace Model.Importer
         public static EnumFacingPreflop ToFacingPreflop(IEnumerable<HandAction> preflopHandActions, string playerName)
         {
             HandAction firstPlayerAction = preflopHandActions.FirstOrDefault(x => x.PlayerName == playerName && !x.IsBlinds);
+
             if (firstPlayerAction == null)
             {
                 return EnumFacingPreflop.None;

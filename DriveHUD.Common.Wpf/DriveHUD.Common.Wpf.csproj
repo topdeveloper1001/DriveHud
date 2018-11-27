@@ -140,6 +140,7 @@
     <Compile Include="AttachedBehaviors\LowHighResolutionBehavior.cs" />
     <Compile Include="AttachedBehaviors\MouseDragPopupBehavior.cs" />
     <Compile Include="AttachedBehaviors\RadGridViewMultiSelectBehavior.cs" />
+    <Compile Include="AttachedBehaviors\ScrollViewerHelper.cs" />
     <Compile Include="AttachedBehaviors\Validation.cs" />
     <Compile Include="AttachedBehaviors\ValidationLoadingAdorner.cs" />
     <Compile Include="Controls\CardImageControl.cs" />

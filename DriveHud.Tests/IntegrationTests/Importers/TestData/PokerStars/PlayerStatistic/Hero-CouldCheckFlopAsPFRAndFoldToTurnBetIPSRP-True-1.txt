@@ -1,0 +1,34 @@
+PokerStars Game #47152309702:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:45:43 ET
+Table 'Pyxis III' 6-max Seat #2 is the button
+Seat 1: Bosas2 ($200 in chips) 
+Seat 2: Hero ($655 in chips) 
+Seat 4: kaader ($204 in chips) 
+Seat 5: stopme10 ($227.40 in chips) 
+kaader: posts small blind $1
+stopme10: posts big blind $2
+*** HOLE CARDS ***
+Bosas2: folds 
+Hero: raises $4 to $6
+kaader: folds 
+stopme10: calls $4
+*** FLOP *** [9s 3h 2h]
+stopme10: checks 
+Hero: checks 
+*** TURN *** [9s 3h 2h] [7h]
+stopme10: bets $6
+Hero: calls $6
+*** RIVER *** [9s 3h 2h 7h] [Qh]
+stopme10: checks 
+Hero: checks 
+*** SHOW DOWN ***
+stopme10: shows [8c 8h] (a flush, Queen high)
+Hero: mucks hand 
+stopme10 collected $23.80 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $1.20 
+Board [9s 3h 2h 7h Qh]
+Seat 1: Bosas2 folded before Flop (didn't bet)
+Seat 2: Hero (button) mucked
+Seat 4: kaader (small blind) folded before Flop
+Seat 5: stopme10 (big blind) showed [8c 8h] and won ($23.80) with a flush, Queen high
+

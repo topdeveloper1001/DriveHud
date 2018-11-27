@@ -411,7 +411,7 @@
     <value>Seen River%</value>
   </data>
   <data name="Enum_Stat_S3Bet" xml:space="preserve">
-    <value>3-bet%</value>
+    <value>3-Bet%</value>
   </data>
   <data name="Enum_Stat_S3BetBB" xml:space="preserve">
     <value>3-Bet BB%</value>
@@ -435,7 +435,7 @@
     <value>3-Bet SB%</value>
   </data>
   <data name="Enum_Stat_S4Bet" xml:space="preserve">
-    <value>4-bet%</value>
+    <value>4-Bet%</value>
   </data>
   <data name="Enum_Stat_S4BetBB" xml:space="preserve">
     <value>4-Bet BB%</value>
@@ -1111,5 +1111,632 @@
   </data>
   <data name="Enum_EnumPokerSites_WinningPokerNetwork" xml:space="preserve">
     <value>Winning Poker Network</value>
+  </data>
+  <data name="Enum_Stat_RaiseLimpers" xml:space="preserve">
+    <value>Raise Limpers%</value>
+  </data>
+  <data name="Enum_Stat_RaiseLimpersInBB" xml:space="preserve">
+    <value>Raise Limpers in BB%</value>
+  </data>
+  <data name="Enum_Stat_RaiseLimpersInBN" xml:space="preserve">
+    <value>Raise Limpers on BTN%</value>
+  </data>
+  <data name="Enum_Stat_RaiseLimpersInCO" xml:space="preserve">
+    <value>Raise Limpers in CO%</value>
+  </data>
+  <data name="Enum_Stat_RaiseLimpersInMP" xml:space="preserve">
+    <value>Raise Limpers in MP%</value>
+  </data>
+  <data name="Enum_Stat_RaiseLimpersInSB" xml:space="preserve">
+    <value>Raise Limpers in SB%</value>
+  </data>
+  <data name="Enum_Stat_CheckRaiseFlopAsPFR" xml:space="preserve">
+    <value>Check-raise flop as PFR%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInBTNvs3BetBB" xml:space="preserve">
+    <value>Fold to 3-Bet on BTN vs BB 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInBTNvs3BetSB" xml:space="preserve">
+    <value>Fold to 3-Bet on BTN vs SB 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInCOvs3BetBB" xml:space="preserve">
+    <value>Fold to 3-Bet in CO vs BB 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInCOvs3BetBTN" xml:space="preserve">
+    <value>Fold to 3-Bet in CO vs BTN 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInCOvs3BetSB" xml:space="preserve">
+    <value>Fold to 3-Bet in CO vs SB 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInEPvs3BetBB" xml:space="preserve">
+    <value>Fold to 3-Bet in EP vs BB 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInEPvs3BetBTN" xml:space="preserve">
+    <value>Fold to 3-Bet in EP vs BTN 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInEPvs3BetCO" xml:space="preserve">
+    <value>Fold to 3-Bet in EP vs CO 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInEPvs3BetMP" xml:space="preserve">
+    <value>Fold to 3-Bet in EP vs MP 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInEPvs3BetSB" xml:space="preserve">
+    <value>Fold to 3-Bet in EP vs SB 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInMPvs3BetBB" xml:space="preserve">
+    <value>Fold to 3-Bet in MP vs BB 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInMPvs3BetBTN" xml:space="preserve">
+    <value>Fold to 3-Bet in MP vs BTN 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInMPvs3BetCO" xml:space="preserve">
+    <value>Fold to 3-Bet in MP vs CO 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3BetInMPvs3BetSB" xml:space="preserve">
+    <value>Fold to 3-Bet in MP vs SB 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldToRiverRaise" xml:space="preserve">
+    <value>Fold to River Raise%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetBBvsBTN" xml:space="preserve">
+    <value>3-Bet BB vs BTN%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetBBvsCO" xml:space="preserve">
+    <value>3-Bet BB vs CO%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetBBvsEP" xml:space="preserve">
+    <value>3-Bet BB vs EP%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetBBvsMP" xml:space="preserve">
+    <value>3-Bet BB vs MP%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetBBvsSB" xml:space="preserve">
+    <value>3-Bet BB vs SB%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetBTNvsCO" xml:space="preserve">
+    <value>3-Bet BTN vs CO%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetBTNvsEP" xml:space="preserve">
+    <value>3-Bet BTN vs EP%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetBTNvsMP" xml:space="preserve">
+    <value>3-Bet BTN vs MP%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetCOvsEP" xml:space="preserve">
+    <value>3-Bet CO vs EP%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetCOvsMP" xml:space="preserve">
+    <value>3-Bet CO vs MP%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetMPvsEP" xml:space="preserve">
+    <value>3-Bet MP vs EP%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetSBvsBTN" xml:space="preserve">
+    <value>3-Bet SB vs BTN%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetSBvsCO" xml:space="preserve">
+    <value>3-Bet SB vs CO%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetSBvsEP" xml:space="preserve">
+    <value>3-Bet SB vs EP%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetSBvsMP" xml:space="preserve">
+    <value>3-Bet SB vs MP%</value>
+  </data>
+  <data name="Enum_Stat_BetFlopWhenCheckedToIn3BetPot" xml:space="preserve">
+    <value>Bet when checked to on Flop in 3-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_BetRiverWhenCheckedToIn3BetPot" xml:space="preserve">
+    <value>Bet when checked to on River in 3-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_BetRiverWhenCheckedToSRP" xml:space="preserve">
+    <value>Bet River when Checked to SRP%</value>
+  </data>
+  <data name="Enum_Stat_BetTurnWhenCheckedToIn3BetPot" xml:space="preserve">
+    <value>Bet when checked to on Turn in 3-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_BetTurnWhenCheckedToSRP" xml:space="preserve">
+    <value>Bet Turn when Checked to SRP%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall3BetInBB" xml:space="preserve">
+    <value>Cold call 3-Bet in BB%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall3BetInBTN" xml:space="preserve">
+    <value>Cold call 3-Bet in BTN%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall3BetInCO" xml:space="preserve">
+    <value>Cold call 3-Bet in CO%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall3BetInMP" xml:space="preserve">
+    <value>Cold call 3-Bet in MP%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall3BetInSB" xml:space="preserve">
+    <value>Cold call 3-Bet in SB%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall4BetInBB" xml:space="preserve">
+    <value>Cold call 4-Bet in BB%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall4BetInBTN" xml:space="preserve">
+    <value>Cold call 4-Bet in BTN%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall4BetInCO" xml:space="preserve">
+    <value>Cold call 4-Bet in CO%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall4BetInMP" xml:space="preserve">
+    <value>Cold call 4-Bet in MP%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall4BetInSB" xml:space="preserve">
+    <value>Cold call 4-Bet in SB%</value>
+  </data>
+  <data name="Enum_Stat_FloatFlopThenBetTurn" xml:space="preserve">
+    <value>Float Flop then Bet Turn%</value>
+  </data>
+  <data name="Enum_Stat_FoldBBvsSBSteal" xml:space="preserve">
+    <value>Fold BB vs. SB Steal%</value>
+  </data>
+  <data name="Enum_Stat_ProbeBetRiver" xml:space="preserve">
+    <value>Probe bet River%</value>
+  </data>
+  <data name="Enum_Stat_ProbeBetTurn" xml:space="preserve">
+    <value>Probe bet Turn%</value>
+  </data>
+  <data name="Enum_Stat_DoubleBarrelSRP" xml:space="preserve">
+    <value>Double Barrel SRP%</value>
+  </data>
+  <data name="Enum_Stat_CBetThenFoldFlopSRP" xml:space="preserve">
+    <value>C-Bet then Fold Flop SRP%</value>
+  </data>
+  <data name="Enum_Stat_DoubleBarrel3BetPot" xml:space="preserve">
+    <value>Double Barrel 3-bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_TripleBarrel3BetPot" xml:space="preserve">
+    <value>Triple Barrel 3-bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_TripleBarrelSRP" xml:space="preserve">
+    <value>Triple Barrel SRP%</value>
+  </data>
+  <data name="Enum_Stat_FoldToRiverProbeIP" xml:space="preserve">
+    <value>Fold to river probe IP%</value>
+  </data>
+  <data name="Enum_Stat_FoldToTurnProbeIP" xml:space="preserve">
+    <value>Fold to turn probe IP%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetIP3BetPot" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to river bet IP 3B Pot%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetIPSRP" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to river bet IP SRP%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetOOP3BetPot" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to river bet OOP 3B Pot%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToRiverBetOOPSRP" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to river bet OOP SRP%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetIP3BetPot" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to turn bet IP 3B Pot%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetIPSRP" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to turn bet IP SRP%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetOOP3BetPot" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to turn bet OOP 3B Pot%</value>
+  </data>
+  <data name="Enum_Stat_CheckFlopAsPFRAndFoldToTurnBetOOPSRP" xml:space="preserve">
+    <value>Check Flop as PFR and Fold to turn bet OOP SRP%</value>
+  </data>
+  <data name="Enum_Stat_FoldToCBetSRP" xml:space="preserve">
+    <value>Fold to C-Bet SRP%</value>
+  </data>
+  <data name="Enum_Stat_FoldToDoubleBarrel4BetPot" xml:space="preserve">
+    <value>Fold to Double Barrel 4-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_FoldToDoubleBarrelSRP" xml:space="preserve">
+    <value>Fold to Double Barrel SRP%</value>
+  </data>
+  <data name="Enum_Stat_FoldToTripleBarrel3BetPot" xml:space="preserve">
+    <value>Fold to Triple Barrel 4-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_FoldToTripleBarrel4BetPot" xml:space="preserve">
+    <value>Fold to Triple Barrel SRP%</value>
+  </data>
+  <data name="Enum_Stat_FoldToTripleBarrelSRP" xml:space="preserve">
+    <value>Fold to Triple Barrel 3-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_BTNOpenShove15to25bbUOPot" xml:space="preserve">
+    <value>BTN Open Shove 15-25bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_BTNOpenShove1to8bbUOPot" xml:space="preserve">
+    <value>BTN Open Shove 1-8bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_BTNOpenShove26to50bbUOPot" xml:space="preserve">
+    <value>BTN Open Shove 26-50bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_BTNOpenShove51plusbbUOPot" xml:space="preserve">
+    <value>BTN Open Shove 51bb+ UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_BTNOpenShove9to14bbUOPot" xml:space="preserve">
+    <value>BTN Open Shove 9-14bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_COOpenShove15to25bbUOPot" xml:space="preserve">
+    <value>CO Open Shove 15-25bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_COOpenShove1to8bbUOPot" xml:space="preserve">
+    <value>CO Open Shove 1-8bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_COOpenShove26to50bbUOPot" xml:space="preserve">
+    <value>CO Open Shove 26-50bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_COOpenShove51plusbbUOPot" xml:space="preserve">
+    <value>CO Open Shove 51bb+ UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_COOpenShove9to14bbUOPot" xml:space="preserve">
+    <value>CO Open Shove 9-14bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_EPOpenShove15to25bbUOPot" xml:space="preserve">
+    <value>EP Open Shove 15-25bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_EPOpenShove1to8bbUOPot" xml:space="preserve">
+    <value>EP Open Shove 1-8bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_EPOpenShove26to50bbUOPot" xml:space="preserve">
+    <value>EP Open Shove 26-50bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_EPOpenShove51plusbbUOPot" xml:space="preserve">
+    <value>EP Open Shove 51bb+ UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_EPOpenShove9to14bbUOPot" xml:space="preserve">
+    <value>EP Open Shove 9-14bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_MPOpenShove15to25bbUOPot" xml:space="preserve">
+    <value>MP Open Shove 15-25bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_MPOpenShove1to8bbUOPot" xml:space="preserve">
+    <value>MP Open Shove 1-8bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_MPOpenShove26to50bbUOPot" xml:space="preserve">
+    <value>MP Open Shove 26-50bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_MPOpenShove51plusbbUOPot" xml:space="preserve">
+    <value>MP Open Shove 51bb+ UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_MPOpenShove9to14bbUOPot" xml:space="preserve">
+    <value>MP Open Shove 9-14bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_SBOpenShove15to25bbUOPot" xml:space="preserve">
+    <value>SB Open Shove 15-25bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_SBOpenShove1to8bbUOPot" xml:space="preserve">
+    <value>SB Open Shove 1-8bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_SBOpenShove26to50bbUOPot" xml:space="preserve">
+    <value>SB Open Shove 26-50bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_SBOpenShove51plusbbUOPot" xml:space="preserve">
+    <value>SB Open Shove 51bb+ UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_SBOpenShove9to14bbUOPot" xml:space="preserve">
+    <value>SB Open Shove 9-14bb UO Pot%</value>
+  </data>
+  <data name="Enum_Stat_BBOpenMinraiseUOPFR" xml:space="preserve">
+    <value>BB minraise UO-PFR%</value>
+  </data>
+  <data name="Enum_Stat_BTNOpenMinraiseUOPFR" xml:space="preserve">
+    <value>BTN minraise UO-PFR%</value>
+  </data>
+  <data name="Enum_Stat_BTNShoveOverLimpers15to25bb" xml:space="preserve">
+    <value>BB with 15-25bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_BTNShoveOverLimpers1to8bb" xml:space="preserve">
+    <value>BB with 1-8bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_BTNShoveOverLimpers26to50bb" xml:space="preserve">
+    <value>BB with 26-50bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_BTNShoveOverLimpers51plusbb" xml:space="preserve">
+    <value>BB with 51bb+ Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_BTNShoveOverLimpers9to14bb" xml:space="preserve">
+    <value>BB with 9-14bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_COOpenMinraiseUOPFR" xml:space="preserve">
+    <value>CO minraise UO-PFR%</value>
+  </data>
+  <data name="Enum_Stat_COShoveOverLimpers15to25bb" xml:space="preserve">
+    <value>CO with 15-25bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_COShoveOverLimpers1to8bb" xml:space="preserve">
+    <value>CO with 1-8bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_COShoveOverLimpers26to50bb" xml:space="preserve">
+    <value>CO with 26-50bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_COShoveOverLimpers51plusbb" xml:space="preserve">
+    <value>CO with 51bb+ Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_COShoveOverLimpers9to14bb" xml:space="preserve">
+    <value>CO with 9-14bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_EPOpenMinraiseUOPFR" xml:space="preserve">
+    <value>EP minraise UO-PFR%</value>
+  </data>
+  <data name="Enum_Stat_EPShoveOverLimpers15to25bb" xml:space="preserve">
+    <value>EP with 15-25bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_EPShoveOverLimpers1to8bb" xml:space="preserve">
+    <value>EP with 1-8bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_EPShoveOverLimpers26to50bb" xml:space="preserve">
+    <value>EP with 26-50bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_EPShoveOverLimpers51plusbb" xml:space="preserve">
+    <value>EP with 51bb+ Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_EPShoveOverLimpers9to14bb" xml:space="preserve">
+    <value>EP with 9-14bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_LimpBTNFoldToPFR" xml:space="preserve">
+    <value>Limp BTN &amp; Fold to PFR%</value>
+  </data>
+  <data name="Enum_Stat_LimpCOFoldToPFR" xml:space="preserve">
+    <value>Limp CO &amp; Fold to PFR%</value>
+  </data>
+  <data name="Enum_Stat_LimpEPFoldToPFR" xml:space="preserve">
+    <value>Limp EP &amp; Fold to PFR%</value>
+  </data>
+  <data name="Enum_Stat_LimpMPFoldToPFR" xml:space="preserve">
+    <value>Limp MP &amp; Fold to PFR%</value>
+  </data>
+  <data name="Enum_Stat_LimpSBFoldToPFR" xml:space="preserve">
+    <value>Limp SB &amp; Fold to PFR%</value>
+  </data>
+  <data name="Enum_Stat_MPOpenMinraiseUOPFR" xml:space="preserve">
+    <value>MP minraise UO-PFR%</value>
+  </data>
+  <data name="Enum_Stat_MPShoveOverLimpers15to25bb" xml:space="preserve">
+    <value>MP with 15-25bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_MPShoveOverLimpers1to8bb" xml:space="preserve">
+    <value>MP with 1-8bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_MPShoveOverLimpers26to50bb" xml:space="preserve">
+    <value>MP with 26-50bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_MPShoveOverLimpers51plusbb" xml:space="preserve">
+    <value>MP with 51bb+ Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_MPShoveOverLimpers9to14bb" xml:space="preserve">
+    <value>MP with 9-14bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_OpenMinraise" xml:space="preserve">
+    <value>Open minraise%</value>
+  </data>
+  <data name="Enum_Stat_SBOpenMinraiseUOPFR" xml:space="preserve">
+    <value>SB minraise UO-PFR%</value>
+  </data>
+  <data name="Enum_Stat_SBShoveOverLimpers15to25bb" xml:space="preserve">
+    <value>SB with 15-25bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_SBShoveOverLimpers1to8bb" xml:space="preserve">
+    <value>SB with 1-8bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_SBShoveOverLimpers26to50bb" xml:space="preserve">
+    <value>SB with 26-50bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_SBShoveOverLimpers51plusbb" xml:space="preserve">
+    <value>SB with 51bb+ Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_SBShoveOverLimpers9to14bb" xml:space="preserve">
+    <value>SB with 9-14bb Shoves over Limpers%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBB" xml:space="preserve">
+    <value>BB Squeeze%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBTN" xml:space="preserve">
+    <value>BTN Squeeze%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeCO" xml:space="preserve">
+    <value>CO Squeeze%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeEP" xml:space="preserve">
+    <value>EP Squeeze%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeMP" xml:space="preserve">
+    <value>MP Squeeze%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeSB" xml:space="preserve">
+    <value>SB Squeeze%</value>
+  </data>
+  <data name="Enum_Stat_BTNDefendVsCOSteal" xml:space="preserve">
+    <value>BTN Defend vs. CO Steal%</value>
+  </data>
+  <data name="Enum_Stat_BTNReStealVsCOSteal" xml:space="preserve">
+    <value>BTN Re-steal vs. CO steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToSqueezeAsColdCaller" xml:space="preserve">
+    <value>Fold to Squeeze as Cold Caller%</value>
+  </data>
+  <data name="Enum_Stat_FourBetVsBlind3Bet" xml:space="preserve">
+    <value>4-Bet vs Blind 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBBVsBTNPFR" xml:space="preserve">
+    <value>BB Squeeze vs BTN PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBBVsCOPFR" xml:space="preserve">
+    <value>BB Squeeze vs CO PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBBVsEPPFR" xml:space="preserve">
+    <value>BB Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBBVsMPPFR" xml:space="preserve">
+    <value>BB Squeeze vs MP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBTNVsEPPFR" xml:space="preserve">
+    <value>BTN Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeBTNVsMPPFR" xml:space="preserve">
+    <value>BTN Squeeze vs MP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeCOVsEPPFR" xml:space="preserve">
+    <value>CO Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeCOVsMPPFR" xml:space="preserve">
+    <value>CO Squeeze vs MP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeEPVsEPPFR" xml:space="preserve">
+    <value>EP Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeMPVsEPPFR" xml:space="preserve">
+    <value>MP Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeSBVsCOPFR" xml:space="preserve">
+    <value>SB Squeeze vs CO PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeSBVsEPPFR" xml:space="preserve">
+    <value>SB Squeeze vs EP PFR%</value>
+  </data>
+  <data name="Enum_Stat_SqueezeSBVsMPPFR" xml:space="preserve">
+    <value>SB Squeeze vs MP PFR%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetBB" xml:space="preserve">
+    <value>Call 4-Bet BB%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetBTN" xml:space="preserve">
+    <value>Call 4-Bet BTN%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetCO" xml:space="preserve">
+    <value>Call 4-Bet CO%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetEP" xml:space="preserve">
+    <value>Call 4-Bet EP%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetIP" xml:space="preserve">
+    <value>Call 4-Bet IP%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetMP" xml:space="preserve">
+    <value>Call 4-Bet MP%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetOOP" xml:space="preserve">
+    <value>Call 4-Bet OOP%</value>
+  </data>
+  <data name="Enum_Stat_Call4BetSB" xml:space="preserve">
+    <value>Call 4-Bet SB%</value>
+  </data>
+  <data name="Enum_Stat_CalledBTNStealInBB" xml:space="preserve">
+    <value>BB Call BTN Steal%</value>
+  </data>
+  <data name="Enum_Stat_CalledBTNStealInSB" xml:space="preserve">
+    <value>SB Call BTN Steal%</value>
+  </data>
+  <data name="Enum_Stat_CalledCOStealInBB" xml:space="preserve">
+    <value>BB Call CO Steal%</value>
+  </data>
+  <data name="Enum_Stat_CalledCOStealInSB" xml:space="preserve">
+    <value>SB Call CO Steal%</value>
+  </data>
+  <data name="Enum_Stat_CalledStealInBB" xml:space="preserve">
+    <value>BB Call Steal%</value>
+  </data>
+  <data name="Enum_Stat_CalledStealInSB" xml:space="preserve">
+    <value>SB Call Steal%</value>
+  </data>
+  <data name="Enum_Stat_CallFlopFoldTurn" xml:space="preserve">
+    <value>Call Flop &amp; Fold Turn%</value>
+  </data>
+  <data name="Enum_Stat_FlopCheckCall" xml:space="preserve">
+    <value>Flop Check-Call%</value>
+  </data>
+  <data name="Enum_Stat_FoldToBTNStealInBB" xml:space="preserve">
+    <value>BB Fold to BTN Steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToBTNStealInSB" xml:space="preserve">
+    <value>SB Fold to BTN Steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToCOStealInBB" xml:space="preserve">
+    <value>BB Fold to CO Steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToCOStealInSB" xml:space="preserve">
+    <value>SB Fold to CO Steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToStealInBB" xml:space="preserve">
+    <value>BB Fold to Steal%</value>
+  </data>
+  <data name="Enum_Stat_FoldToStealInSB" xml:space="preserve">
+    <value>SB Fold to Steal%</value>
+  </data>
+  <data name="Enum_Stat_LimpedPotFlopStealIP" xml:space="preserve">
+    <value>Limped pot Flop Steal IP%</value>
+  </data>
+  <data name="Enum_Stat_OvercallBTNStealInBB" xml:space="preserve">
+    <value>BB overcall BTN Steal%</value>
+  </data>
+  <data name="Enum_Stat_TotalOverCallSRP" xml:space="preserve">
+    <value>Total overcall SRP%</value>
+  </data>
+  <data name="Enum_Stat_WTSDAs4Bettor" xml:space="preserve">
+    <value>WTSD as PF 4-Bettor%</value>
+  </data>
+  <data name="Enum_Stat_WTSDAsPFR" xml:space="preserve">
+    <value>WTSD as PFR%</value>
+  </data>
+  <data name="Enum_Stat_CheckInStraddle" xml:space="preserve">
+    <value>Check Straddle%</value>
+  </data>
+  <data name="Enum_Stat_CheckRaiseFlopAsPFRIn3BetPot" xml:space="preserve">
+    <value>Check-Raise Flop as PFR 3-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_CheckRaiseFlopAsPFRInSRP" xml:space="preserve">
+    <value>Check-Raise Flop as PFR SRP%</value>
+  </data>
+  <data name="Enum_Stat_DelayedTurnCBetIn4BetPot" xml:space="preserve">
+    <value>Delayed Turn C-Bet in 4-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_DelayedTurnCBetInSRP" xml:space="preserve">
+    <value>Delayed Turn C-Bet in SRP%</value>
+  </data>
+  <data name="Enum_Stat_FoldInStraddle" xml:space="preserve">
+    <value>Fold Straddle Pre-Flop%</value>
+  </data>
+  <data name="Enum_Stat_FourBetInStraddle" xml:space="preserve">
+    <value>4-Bet Straddle%</value>
+  </data>
+  <data name="Enum_Stat_OpenLimpBTN" xml:space="preserve">
+    <value>Open Limp BTN%</value>
+  </data>
+  <data name="Enum_Stat_OpenLimpCO" xml:space="preserve">
+    <value>Open Limp CO%</value>
+  </data>
+  <data name="Enum_Stat_OpenLimpEP" xml:space="preserve">
+    <value>Open Limp EP%</value>
+  </data>
+  <data name="Enum_Stat_OpenLimpMP" xml:space="preserve">
+    <value>Open Limp MP%</value>
+  </data>
+  <data name="Enum_Stat_OpenLimpSB" xml:space="preserve">
+    <value>Open Limp SB%</value>
+  </data>
+  <data name="Enum_Stat_PFRInStraddle" xml:space="preserve">
+    <value>PFR Straddle%</value>
+  </data>
+  <data name="Enum_Stat_RiverFoldIn3Bet" xml:space="preserve">
+    <value>River Fold in 3-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_RiverFoldIn4Bet" xml:space="preserve">
+    <value>River Fold in 4-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_RiverFoldInSRP" xml:space="preserve">
+    <value>River Fold in SRP%</value>
+  </data>
+  <data name="Enum_Stat_SkipFlopCBetInSRPandCheckFoldFlopOOP" xml:space="preserve">
+    <value>Skip Flop C-Bet SRP &amp; C/F Flop OOP%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetInStraddle" xml:space="preserve">
+    <value>3-Bet Straddle%</value>
+  </data>
+  <data name="Enum_Stat_WTSDInStraddle" xml:space="preserve">
+    <value>WTSD from Straddle%</value>
+  </data>
+  <data name="Enum_Stat_FoldedToDelayedCBet" xml:space="preserve">
+    <value>Fold to delayed C-bet%</value>
   </data>
 </root>

@@ -1,0 +1,39 @@
+PokerStars Game #47151395439:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:13:12 ET
+Table 'Pyxis III' 6-max Seat #3 is the button
+Seat 1: Bosas2 ($200 in chips) 
+Seat 2: Hero ($557.05 in chips) 
+Seat 3: twinpsych ($246.35 in chips) 
+Seat 4: maestroB ($44 in chips) 
+Seat 5: stopme10 ($228.05 in chips) 
+Seat 6: ll Gus ll ($217.35 in chips) 
+maestroB: posts small blind $1
+stopme10: posts big blind $2
+*** HOLE CARDS ***
+ll Gus ll: folds 
+Bosas2: folds 
+Hero: raises $4 to $6
+twinpsych has timed out
+twinpsych: folds 
+maestroB: folds 
+stopme10: calls $4
+*** FLOP *** [7c Jc 3d]
+stopme10: checks 
+Hero: checks 
+*** TURN *** [7c Jc 3d] [2h]
+stopme10: checks 
+Hero: checks 
+*** RIVER *** [7c Jc 3d 2h] [Qd]
+stopme10: bets $8
+Hero: folds 
+Uncalled bet ($8) returned to stopme10
+stopme10 collected $12.35 from pot
+*** SUMMARY ***
+Total pot $13 | Rake $0.65 
+Board [7c Jc 3d 2h Qd]
+Seat 1: Bosas2 folded before Flop (didn't bet)
+Seat 2: Hero folded on the River
+Seat 3: twinpsych (button) folded before Flop (didn't bet)
+Seat 4: maestroB (small blind) folded before Flop
+Seat 5: stopme10 (big blind) collected ($12.35)
+Seat 6: ll Gus ll folded before Flop (didn't bet)
+

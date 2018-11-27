@@ -200,6 +200,8 @@
     <Compile Include="IntegrationTests\Base\SessionFactoryTestService.cs" />
     <Compile Include="IntegrationTests\Base\IFileTestImporter.cs" />
     <Compile Include="IntegrationTests\Base\BasicFileTestImporter.cs" />
+    <Compile Include="IntegrationTests\Importers\HudLightIndicatorsTests.cs" />
+    <Compile Include="IntegrationTests\Importers\PlayerStatisticBaseTests.cs" />
     <Compile Include="IntegrationTests\Importers\PlayerStatisticReImporterTests.cs" />
     <Compile Include="IntegrationTests\Importers\PlayerStatisticTests.cs" />
     <Compile Include="IntegrationTests\Importers\TotalPlayerStatisticTests.cs" />

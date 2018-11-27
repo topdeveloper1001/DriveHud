@@ -1,0 +1,42 @@
+PokerStars Game #47148015720:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 5:37:33 ET
+Table 'Prylis' 6-max Seat #2 is the button
+Seat 1: Desateur ($227.05 in chips) 
+Seat 2: pobolero ($291 in chips) 
+Seat 3: maestroB ($71 in chips) 
+Seat 4: thomaswkm ($191 in chips) 
+Seat 5: BigJimmy32 ($352 in chips) 
+Seat 6: Hero ($219.90 in chips) 
+maestroB: posts small blind $1
+thomaswkm: posts big blind $2
+*** HOLE CARDS ***
+BigJimmy32: raises $4 to $6
+Hero: raises $14 to $20
+Desateur: folds 
+pobolero: folds 
+maestroB: folds 
+thomaswkm: folds 
+BigJimmy32: calls $14
+*** FLOP *** [2h 2d 8c]
+BigJimmy32: checks 
+Hero: checks 
+*** TURN *** [2h 2d 8c] [Ad]
+BigJimmy32: checks 
+Hero: bets $30
+BigJimmy32: calls $30
+*** RIVER *** [2h 2d 8c Ad] [7d]
+BigJimmy32: checks 
+Hero: bets $74
+BigJimmy32: folds 
+Uncalled bet ($74) returned to Hero
+Hero collected $100 from pot
+Hero: doesn't show hand 
+*** SUMMARY ***
+Total pot $103 | Rake $3 
+Board [2h 2d 8c Ad 7d]
+Seat 1: Desateur folded before Flop (didn't bet)
+Seat 2: pobolero (button) folded before Flop (didn't bet)
+Seat 3: maestroB (small blind) folded before Flop
+Seat 4: thomaswkm (big blind) folded before Flop
+Seat 5: BigJimmy32 folded on the River
+Seat 6: Hero collected ($100)
+

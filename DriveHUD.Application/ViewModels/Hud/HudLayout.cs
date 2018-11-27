@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------
 // <copyright file="HudLayout.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,10 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using Model.Interfaces;
 using ProtoBuf;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml.Serialization;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -37,7 +40,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         [ProtoMember(2)]
         public List<PlayerHudContent> ListHUDPlayer { get; set; }
-        
+
         [XmlIgnore, ProtoMember(3)]
         public HudTrackConditionsViewModelInfo HudTrackConditionsMeter { get; set; }
 
@@ -64,5 +67,18 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         [XmlIgnore, ProtoMember(11)]
         public string PreloadText { get; set; }
+
+        public override string ToString()
+        {
+            try
+            {
+                var players = ListHUDPlayer != null ? string.Join(", ", ListHUDPlayer.Select(x => $"{x.Name}({x.SeatNumber})")) : string.Empty;
+                return $"handle={WindowId}, title={WinApi.GetWindowText(new IntPtr(WindowId))}, hand={GameNumber}, site={PokerSite}, tableType={TableType}, gameType={GameType}, layout={LayoutName}, players=[{players}]";
+            }
+            catch
+            {
+                return base.ToString();
+            }
+        }
     }
 }
