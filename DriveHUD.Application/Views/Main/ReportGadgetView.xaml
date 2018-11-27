@@ -1839,12 +1839,26 @@
                         <telerik:RadContextMenu
                             x:Name="GridViewReportMenu"
                             ItemContainerStyle="{StaticResource GridMenuItemStyle}">
+                            <telerik:RadContextMenu.Template>
+                                <ControlTemplate>
+                                    <Border
+                                        Padding="3"
+                                        Background="#181A1D">
+                                        <ScrollViewer
+                                            dh:ScrollViewerHelper.UseMouseWheelForHorizontalScroll="True"
+                                            HorizontalScrollBarVisibility="Visible"
+                                            VerticalScrollBarVisibility="Disabled">
+                                            <ItemsPresenter
+                                                Margin="3" />
+                                        </ScrollViewer>
+                                    </Border>
+                                </ControlTemplate>
+                            </telerik:RadContextMenu.Template>
                             <telerik:RadContextMenu.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapPanel
                                         Orientation="Vertical"
-                                        MaxHeight="540"
-                                        Background="#181A1D" />
+                                        MaxHeight="540" />
                                 </ItemsPanelTemplate>
                             </telerik:RadContextMenu.ItemsPanel>
                         </telerik:RadContextMenu>
