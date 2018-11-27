@@ -74,12 +74,7 @@ namespace DriveHUD.Importers.PartyPoker
             }
 
             if (parsingResult.Source.GameDescription.IsTournament)
-            {
-                if (IsJackpot(parsingResult.Source.GameDescription.Tournament.TournamentName))
-                {
-                    return IsJackpotMatch(title, parsingResult);
-                }
-
+            {               
                 var tableNumber = parsingResult.Source.TableName.Substring(parsingResult.Source.TableName.LastIndexOf(' ') + 1);
 
                 var tournamentTitle = string.Format(tournamentPattern, parsingResult.Source.GameDescription.Tournament.TournamentId, tableNumber);
