@@ -11,17 +11,19 @@
 //----------------------------------------------------------------------
 
 using DriveHud.Tests.UnitTests.Helpers;
+using DriveHUD.Common.Extensions;
 using DriveHUD.Entities;
 using Model.Data;
 using NUnit.Framework;
+using ProtoBuf;
 using System.Collections.Generic;
+using System.IO;
 
 namespace DriveHud.Tests.UnitTests
 {
     [TestFixture]
     class LightIndicatorsTests : BaseIndicatorsTests
     {
-        [Test]
         [TestCase(@"..\..\UnitTests\TestData\testdata.stat")]
         public void TestLightIndicators(string file)
         {
@@ -73,7 +75,6 @@ namespace DriveHud.Tests.UnitTests
             });
         }
 
-        [Test]
         [TestCase(@"..\..\UnitTests\TestData\testdata.stat")]
         public void TestReportIndicators(string file)
         {
@@ -95,6 +96,21 @@ namespace DriveHud.Tests.UnitTests
             Assert.That(reportIndicator.HourOfHand, Is.EqualTo(indicators.HourOfHand), nameof(HudLightIndicators.HourOfHand));
             Assert.That(reportIndicator.Statistics.Count, Is.EqualTo(playerStatistic.Count), "Count");
         }
+
+        [TestCase(@"..\..\UnitTests\TestData\testdata.stat")]
+        public void TestLightIndicatorProtobufSerialization(string file)
+        {
+            var playerStatistic = DataServiceHelper.GetPlayerStatisticFromFile(file);
+            var lightIndicators = new LightIndicators(playerStatistic);
+
+            Assert.DoesNotThrow(() =>
+            {
+                using (var ms = new MemoryStream())
+                {
+                    Serializer.Serialize(ms, lightIndicators);
+                }
+            }, "LightIndicator must be serializable");
+        }       
 
         private class TestIndicators : Indicators
         {

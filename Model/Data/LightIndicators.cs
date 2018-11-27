@@ -1,4 +1,4 @@
-﻿//-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 // <copyright file="LightIndicators.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
@@ -1780,106 +1780,106 @@ namespace Model.Data
 
         public override decimal BTNOpenShove1to8bbUOPot => GetPercentage(btnOpenShove1to8bbUOPot, btnOpenShoveUOPot);
 
-        [ProtoMember(175)]
+        [ProtoMember(176)]
         protected int btnOpenShove9to14bbUOPot;
 
         public override decimal BTNOpenShove9to14bbUOPot => GetPercentage(btnOpenShove9to14bbUOPot, btnOpenShoveUOPot);
 
-        [ProtoMember(176)]
+        [ProtoMember(177)]
         protected int btnOpenShove15to25bbUOPot;
 
         public override decimal BTNOpenShove15to25bbUOPot => GetPercentage(btnOpenShove15to25bbUOPot, btnOpenShoveUOPot);
 
-        [ProtoMember(177)]
+        [ProtoMember(178)]
         protected int btnOpenShove26to50bbUOPot;
 
         public override decimal BTNOpenShove26to50bbUOPot => GetPercentage(btnOpenShove26to50bbUOPot, btnOpenShoveUOPot);
 
-        [ProtoMember(178)]
+        [ProtoMember(179)]
         protected int btnOpenShove51plusbbUOPot;
 
         public override decimal BTNOpenShove51plusbbUOPot => GetPercentage(btnOpenShove51plusbbUOPot, btnOpenShoveUOPot);
 
-        [ProtoMember(179)]
+        [ProtoMember(180)]
         protected int coOpenShoveUOPot;
 
-        [ProtoMember(180)]
+        [ProtoMember(181)]
         protected int coOpenShove1to8bbUOPot;
 
         public override decimal COOpenShove1to8bbUOPot => GetPercentage(coOpenShove1to8bbUOPot, coOpenShoveUOPot);
 
-        [ProtoMember(181)]
+        [ProtoMember(182)]
         protected int coOpenShove9to14bbUOPot;
 
         public override decimal COOpenShove9to14bbUOPot => GetPercentage(coOpenShove9to14bbUOPot, coOpenShoveUOPot);
 
-        [ProtoMember(182)]
+        [ProtoMember(183)]
         protected int coOpenShove15to25bbUOPot;
 
         public override decimal COOpenShove15to25bbUOPot => GetPercentage(coOpenShove15to25bbUOPot, coOpenShoveUOPot);
 
-        [ProtoMember(183)]
+        [ProtoMember(184)]
         protected int coOpenShove26to50bbUOPot;
 
         public override decimal COOpenShove26to50bbUOPot => GetPercentage(coOpenShove26to50bbUOPot, coOpenShoveUOPot);
 
-        [ProtoMember(184)]
+        [ProtoMember(185)]
         protected int coOpenShove51plusbbUOPot;
 
         public override decimal COOpenShove51plusbbUOPot => GetPercentage(coOpenShove51plusbbUOPot, coOpenShoveUOPot);
 
-        [ProtoMember(185)]
+        [ProtoMember(186)]
         protected int mpOpenShoveUOPot;
 
-        [ProtoMember(186)]
+        [ProtoMember(187)]
         protected int mpOpenShove1to8bbUOPot;
 
         public override decimal MPOpenShove1to8bbUOPot => GetPercentage(mpOpenShove1to8bbUOPot, mpOpenShoveUOPot);
 
-        [ProtoMember(187)]
+        [ProtoMember(188)]
         protected int mpOpenShove9to14bbUOPot;
 
         public override decimal MPOpenShove9to14bbUOPot => GetPercentage(mpOpenShove9to14bbUOPot, mpOpenShoveUOPot);
 
-        [ProtoMember(188)]
+        [ProtoMember(189)]
         protected int mpOpenShove15to25bbUOPot;
 
         public override decimal MPOpenShove15to25bbUOPot => GetPercentage(mpOpenShove15to25bbUOPot, mpOpenShoveUOPot);
 
-        [ProtoMember(189)]
+        [ProtoMember(190)]
         protected int mpOpenShove26to50bbUOPot;
 
         public override decimal MPOpenShove26to50bbUOPot => GetPercentage(mpOpenShove26to50bbUOPot, mpOpenShoveUOPot);
 
-        [ProtoMember(190)]
+        [ProtoMember(191)]
         protected int mpOpenShove51plusbbUOPot;
 
         public override decimal MPOpenShove51plusbbUOPot => GetPercentage(mpOpenShove51plusbbUOPot, mpOpenShoveUOPot);
 
-        [ProtoMember(191)]
+        [ProtoMember(192)]
         protected int epOpenShoveUOPot;
 
-        [ProtoMember(192)]
+        [ProtoMember(193)]
         protected int epOpenShove1to8bbUOPot;
 
         public override decimal EPOpenShove1to8bbUOPot => GetPercentage(epOpenShove1to8bbUOPot, epOpenShoveUOPot);
 
-        [ProtoMember(193)]
+        [ProtoMember(194)]
         protected int epOpenShove9to14bbUOPot;
 
         public override decimal EPOpenShove9to14bbUOPot => GetPercentage(epOpenShove9to14bbUOPot, epOpenShoveUOPot);
 
-        [ProtoMember(194)]
+        [ProtoMember(195)]
         protected int epOpenShove15to25bbUOPot;
 
         public override decimal EPOpenShove15to25bbUOPot => GetPercentage(epOpenShove15to25bbUOPot, epOpenShoveUOPot);
 
-        [ProtoMember(195)]
+        [ProtoMember(196)]
         protected int epOpenShove26to50bbUOPot;
 
         public override decimal EPOpenShove26to50bbUOPot => GetPercentage(epOpenShove26to50bbUOPot, epOpenShoveUOPot);
 
-        [ProtoMember(196)]
+        [ProtoMember(197)]
         protected int epOpenShove51plusbbUOPot;
 
         public override decimal EPOpenShove51plusbbUOPot => GetPercentage(epOpenShove51plusbbUOPot, epOpenShoveUOPot);
@@ -2002,42 +2002,42 @@ namespace Model.Data
 
         #region Limp Positional & Fold to PFR%
 
-        [ProtoMember(197)]
+        [ProtoMember(198)]
         protected int limpEPFoldToPFR;
 
-        [ProtoMember(198)]
+        [ProtoMember(199)]
         protected int limpEPFacedPFR;
 
         public override decimal LimpEPFoldToPFR => GetPercentage(limpEPFoldToPFR, limpEPFacedPFR);
 
-        [ProtoMember(199)]
+        [ProtoMember(200)]
         protected int limpMPFoldToPFR;
 
-        [ProtoMember(200)]
+        [ProtoMember(201)]
         protected int limpMPFacedPFR;
 
         public override decimal LimpMPFoldToPFR => GetPercentage(limpMPFoldToPFR, limpMPFacedPFR);
 
-        [ProtoMember(201)]
+        [ProtoMember(202)]
         protected int limpCOFoldToPFR;
 
-        [ProtoMember(202)]
+        [ProtoMember(203)]
         protected int limpCOFacedPFR;
 
         public override decimal LimpCOFoldToPFR => GetPercentage(limpCOFoldToPFR, limpCOFacedPFR);
 
-        [ProtoMember(203)]
+        [ProtoMember(204)]
         protected int limpBTNFoldToPFR;
 
-        [ProtoMember(204)]
+        [ProtoMember(205)]
         protected int limpBTNFacedPFR;
 
         public override decimal LimpBTNFoldToPFR => GetPercentage(limpBTNFoldToPFR, limpBTNFacedPFR);
 
-        [ProtoMember(205)]
+        [ProtoMember(206)]
         protected int limpSBFoldToPFR;
 
-        [ProtoMember(206)]
+        [ProtoMember(207)]
         protected int limpSBFacedPFR;
 
         public override decimal LimpSBFoldToPFR => GetPercentage(limpSBFoldToPFR, limpSBFacedPFR);
@@ -2088,142 +2088,142 @@ namespace Model.Data
 
         #region Shoves over limpers positional
 
-        [ProtoMember(207)]
+        [ProtoMember(208)]
         protected int sbShoveOverLimpers;
 
-        [ProtoMember(208)]
+        [ProtoMember(209)]
         protected int sbShoveOverLimpers1to8bb;
 
         public override decimal SBShoveOverLimpers1to8bb => GetPercentage(sbShoveOverLimpers1to8bb, sbShoveOverLimpers);
 
-        [ProtoMember(209)]
+        [ProtoMember(210)]
         protected int sbShoveOverLimpers9to14bb;
 
         public override decimal SBShoveOverLimpers9to14bb => GetPercentage(sbShoveOverLimpers9to14bb, sbShoveOverLimpers);
 
-        [ProtoMember(210)]
+        [ProtoMember(211)]
         protected int sbShoveOverLimpers15to25bb;
 
         public override decimal SBShoveOverLimpers15to25bb => GetPercentage(sbShoveOverLimpers15to25bb, sbShoveOverLimpers);
 
-        [ProtoMember(211)]
+        [ProtoMember(212)]
         protected int sbShoveOverLimpers26to50bb;
 
         public override decimal SBShoveOverLimpers26to50bb => GetPercentage(sbShoveOverLimpers26to50bb, sbShoveOverLimpers);
 
-        [ProtoMember(212)]
+        [ProtoMember(213)]
         protected int sbShoveOverLimpers51plusbb;
 
         public override decimal SBShoveOverLimpers51plusbb => GetPercentage(sbShoveOverLimpers51plusbb, sbShoveOverLimpers);
 
-        [ProtoMember(213)]
+        [ProtoMember(214)]
         protected int btnShoveOverLimpers;
 
-        [ProtoMember(214)]
+        [ProtoMember(215)]
         protected int btnShoveOverLimpers1to8bb;
 
         public override decimal BTNShoveOverLimpers1to8bb => GetPercentage(btnShoveOverLimpers1to8bb, btnShoveOverLimpers);
 
-        [ProtoMember(215)]
+        [ProtoMember(216)]
         protected int btnShoveOverLimpers9to14bb;
 
         public override decimal BTNShoveOverLimpers9to14bb => GetPercentage(btnShoveOverLimpers9to14bb, btnShoveOverLimpers);
 
-        [ProtoMember(216)]
+        [ProtoMember(217)]
         protected int btnShoveOverLimpers15to25bb;
 
         public override decimal BTNShoveOverLimpers15to25bb => GetPercentage(btnShoveOverLimpers15to25bb, btnShoveOverLimpers);
 
-        [ProtoMember(217)]
+        [ProtoMember(218)]
         protected int btnShoveOverLimpers26to50bb;
 
         public override decimal BTNShoveOverLimpers26to50bb => GetPercentage(btnShoveOverLimpers26to50bb, btnShoveOverLimpers);
 
-        [ProtoMember(218)]
+        [ProtoMember(219)]
         protected int btnShoveOverLimpers51plusbb;
 
         public override decimal BTNShoveOverLimpers51plusbb => GetPercentage(btnShoveOverLimpers51plusbb, btnShoveOverLimpers);
 
-        [ProtoMember(219)]
+        [ProtoMember(220)]
         protected int coShoveOverLimpers;
 
-        [ProtoMember(220)]
+        [ProtoMember(221)]
         protected int coShoveOverLimpers1to8bb;
 
         public override decimal COShoveOverLimpers1to8bb => GetPercentage(coShoveOverLimpers1to8bb, coShoveOverLimpers);
 
-        [ProtoMember(221)]
+        [ProtoMember(222)]
         protected int coShoveOverLimpers9to14bb;
 
         public override decimal COShoveOverLimpers9to14bb => GetPercentage(coShoveOverLimpers9to14bb, coShoveOverLimpers);
 
-        [ProtoMember(222)]
+        [ProtoMember(223)]
         protected int coShoveOverLimpers15to25bb;
 
         public override decimal COShoveOverLimpers15to25bb => GetPercentage(coShoveOverLimpers15to25bb, coShoveOverLimpers);
 
-        [ProtoMember(223)]
+        [ProtoMember(224)]
         protected int coShoveOverLimpers26to50bb;
 
         public override decimal COShoveOverLimpers26to50bb => GetPercentage(coShoveOverLimpers26to50bb, coShoveOverLimpers);
 
-        [ProtoMember(224)]
+        [ProtoMember(225)]
         protected int coShoveOverLimpers51plusbb;
 
         public override decimal COShoveOverLimpers51plusbb => GetPercentage(coShoveOverLimpers51plusbb, coShoveOverLimpers);
 
-        [ProtoMember(225)]
+        [ProtoMember(226)]
         protected int mpShoveOverLimpers;
 
-        [ProtoMember(226)]
+        [ProtoMember(227)]
         protected int mpShoveOverLimpers1to8bb;
 
         public override decimal MPShoveOverLimpers1to8bb => GetPercentage(mpShoveOverLimpers1to8bb, mpShoveOverLimpers);
 
-        [ProtoMember(227)]
+        [ProtoMember(228)]
         protected int mpShoveOverLimpers9to14bb;
 
         public override decimal MPShoveOverLimpers9to14bb => GetPercentage(mpShoveOverLimpers9to14bb, mpShoveOverLimpers);
 
-        [ProtoMember(228)]
+        [ProtoMember(229)]
         protected int mpShoveOverLimpers15to25bb;
 
         public override decimal MPShoveOverLimpers15to25bb => GetPercentage(mpShoveOverLimpers15to25bb, mpShoveOverLimpers);
 
-        [ProtoMember(229)]
+        [ProtoMember(230)]
         protected int mpShoveOverLimpers26to50bb;
 
         public override decimal MPShoveOverLimpers26to50bb => GetPercentage(mpShoveOverLimpers26to50bb, mpShoveOverLimpers);
 
-        [ProtoMember(230)]
+        [ProtoMember(231)]
         protected int mpShoveOverLimpers51plusbb;
 
         public override decimal MPShoveOverLimpers51plusbb => GetPercentage(mpShoveOverLimpers51plusbb, mpShoveOverLimpers);
 
-        [ProtoMember(231)]
+        [ProtoMember(232)]
         protected int epShoveOverLimpers;
 
-        [ProtoMember(232)]
+        [ProtoMember(233)]
         protected int epShoveOverLimpers1to8bb;
 
         public override decimal EPShoveOverLimpers1to8bb => GetPercentage(epShoveOverLimpers1to8bb, epShoveOverLimpers);
 
-        [ProtoMember(233)]
+        [ProtoMember(234)]
         protected int epShoveOverLimpers9to14bb;
 
         public override decimal EPShoveOverLimpers9to14bb => GetPercentage(epShoveOverLimpers9to14bb, epShoveOverLimpers);
 
-        [ProtoMember(234)]
+        [ProtoMember(235)]
         protected int epShoveOverLimpers15to25bb;
 
         public override decimal EPShoveOverLimpers15to25bb => GetPercentage(epShoveOverLimpers15to25bb, epShoveOverLimpers);
 
-        [ProtoMember(235)]
+        [ProtoMember(236)]
         protected int epShoveOverLimpers26to50bb;
 
         public override decimal EPShoveOverLimpers26to50bb => GetPercentage(epShoveOverLimpers26to50bb, epShoveOverLimpers);
 
-        [ProtoMember(236)]
+        [ProtoMember(237)]
         protected int epShoveOverLimpers51plusbb;
 
         public override decimal EPShoveOverLimpers51plusbb => GetPercentage(epShoveOverLimpers51plusbb, epShoveOverLimpers);
@@ -2346,7 +2346,7 @@ namespace Model.Data
 
         #region Open minraise
 
-        [ProtoMember(237)]
+        [ProtoMember(238)]
         protected int openMinraise;
 
         public override decimal OpenMinraise => GetPercentage(openMinraise, TotalHands - NumberOfWalks);
@@ -2355,106 +2355,106 @@ namespace Model.Data
 
         #region Squeeze vs PFR
 
-        [ProtoMember(238)]
+        [ProtoMember(239)]
         protected int didSqueezeBBVsBTNPFR;
 
-        [ProtoMember(239)]
+        [ProtoMember(240)]
         protected int couldSqueezeBBVsBTNPFR;
 
         public override decimal SqueezeBBVsBTNPFR => GetPercentage(didSqueezeBBVsBTNPFR, couldSqueezeBBVsBTNPFR);
 
-        [ProtoMember(240)]
+        [ProtoMember(241)]
         protected int didSqueezeBBVsCOPFR;
 
-        [ProtoMember(241)]
+        [ProtoMember(242)]
         protected int couldSqueezeBBVsCOPFR;
 
         public override decimal SqueezeBBVsCOPFR => GetPercentage(didSqueezeBBVsCOPFR, couldSqueezeBBVsCOPFR);
 
-        [ProtoMember(242)]
+        [ProtoMember(243)]
         protected int didSqueezeBBVsMPPFR;
 
-        [ProtoMember(243)]
+        [ProtoMember(244)]
         protected int couldSqueezeBBVsMPPFR;
 
         public override decimal SqueezeBBVsMPPFR => GetPercentage(didSqueezeBBVsMPPFR, couldSqueezeBBVsMPPFR);
 
-        [ProtoMember(244)]
+        [ProtoMember(245)]
         protected int didSqueezeBBVsEPPFR;
 
-        [ProtoMember(245)]
+        [ProtoMember(246)]
         protected int couldSqueezeBBVsEPPFR;
 
         public override decimal SqueezeBBVsEPPFR => GetPercentage(didSqueezeBBVsEPPFR, couldSqueezeBBVsEPPFR);
 
-        [ProtoMember(246)]
+        [ProtoMember(247)]
         protected int didSqueezeSBVsCOPFR;
 
-        [ProtoMember(247)]
+        [ProtoMember(248)]
         protected int couldSqueezeSBVsCOPFR;
 
         public override decimal SqueezeSBVsCOPFR => GetPercentage(didSqueezeSBVsCOPFR, couldSqueezeSBVsCOPFR);
 
-        [ProtoMember(248)]
+        [ProtoMember(249)]
         protected int didSqueezeSBVsMPPFR;
 
-        [ProtoMember(249)]
+        [ProtoMember(250)]
         protected int couldSqueezeSBVsMPPFR;
 
         public override decimal SqueezeSBVsMPPFR => GetPercentage(didSqueezeSBVsMPPFR, couldSqueezeSBVsMPPFR);
 
-        [ProtoMember(250)]
+        [ProtoMember(251)]
         protected int didSqueezeSBVsEPPFR;
 
-        [ProtoMember(251)]
+        [ProtoMember(252)]
         protected int couldSqueezeSBVsEPPFR;
 
         public override decimal SqueezeSBVsEPPFR => GetPercentage(didSqueezeSBVsEPPFR, couldSqueezeSBVsEPPFR);
 
-        [ProtoMember(252)]
+        [ProtoMember(253)]
         protected int didSqueezeBTNVsMPPFR;
 
-        [ProtoMember(253)]
+        [ProtoMember(254)]
         protected int couldSqueezeBTNVsMPPFR;
 
         public override decimal SqueezeBTNVsMPPFR => GetPercentage(didSqueezeBTNVsMPPFR, couldSqueezeBTNVsMPPFR);
 
-        [ProtoMember(254)]
+        [ProtoMember(255)]
         protected int didSqueezeBTNVsEPPFR;
 
-        [ProtoMember(255)]
+        [ProtoMember(256)]
         protected int couldSqueezeBTNVsEPPFR;
 
         public override decimal SqueezeBTNVsEPPFR => GetPercentage(didSqueezeBTNVsEPPFR, couldSqueezeBTNVsEPPFR);
 
-        [ProtoMember(256)]
+        [ProtoMember(257)]
         protected int didSqueezeCOVsMPPFR;
 
-        [ProtoMember(257)]
+        [ProtoMember(258)]
         protected int couldSqueezeCOVsMPPFR;
 
         public override decimal SqueezeCOVsMPPFR => GetPercentage(didSqueezeCOVsMPPFR, couldSqueezeCOVsMPPFR);
 
-        [ProtoMember(258)]
+        [ProtoMember(259)]
         protected int didSqueezeCOVsEPPFR;
 
-        [ProtoMember(259)]
+        [ProtoMember(260)]
         protected int couldSqueezeCOVsEPPFR;
 
         public override decimal SqueezeCOVsEPPFR => GetPercentage(didSqueezeCOVsEPPFR, couldSqueezeCOVsEPPFR);
 
-        [ProtoMember(260)]
+        [ProtoMember(261)]
         protected int didSqueezeMPVsEPPFR;
 
-        [ProtoMember(261)]
+        [ProtoMember(262)]
         protected int couldSqueezeMPVsEPPFR;
 
         public override decimal SqueezeMPVsEPPFR => GetPercentage(didSqueezeMPVsEPPFR, couldSqueezeMPVsEPPFR);
 
-        [ProtoMember(262)]
+        [ProtoMember(263)]
         protected int didSqueezeEPVsEPPFR;
 
-        [ProtoMember(263)]
+        [ProtoMember(264)]
         protected int couldSqueezeEPVsEPPFR;
 
         public override decimal SqueezeEPVsEPPFR => GetPercentage(didSqueezeEPVsEPPFR, couldSqueezeEPVsEPPFR);
@@ -2589,10 +2589,10 @@ namespace Model.Data
 
         #region Fold to Squeeze as Cold Caller
 
-        [ProtoMember(264)]
+        [ProtoMember(265)]
         protected int foldToSqueezeAsColdCaller;
 
-        [ProtoMember(265)]
+        [ProtoMember(266)]
         protected int facedSqueezeAsColdCaller;
 
         public override decimal FoldToSqueezeAsColdCaller => GetPercentage(foldToSqueezeAsColdCaller, facedSqueezeAsColdCaller);
@@ -2601,10 +2601,10 @@ namespace Model.Data
 
         #region 4-Bet vs Blind 3-Bet%
 
-        [ProtoMember(266)]
+        [ProtoMember(267)]
         protected int did4BetVsBlind3Bet;
 
-        [ProtoMember(267)]
+        [ProtoMember(268)]
         protected int could4BetVsBlind3Bet;
 
         public override decimal FourBetVsBlind3Bet => GetPercentage(did4BetVsBlind3Bet, could4BetVsBlind3Bet);
@@ -2613,13 +2613,13 @@ namespace Model.Data
 
         #region BTN Re/Def vs CO Steal
 
-        [ProtoMember(268)]
+        [ProtoMember(269)]
         protected int btnReStealVsCOSteal;
 
-        [ProtoMember(269)]
+        [ProtoMember(270)]
         protected int btnFacedCOSteal;
 
-        [ProtoMember(270)]
+        [ProtoMember(271)]
         protected int btnDefendVsCOSteal;
 
         public override decimal BTNReStealVsCOSteal => GetPercentage(btnReStealVsCOSteal, btnFacedCOSteal);
@@ -2630,88 +2630,88 @@ namespace Model.Data
 
         #region Positional Call & Fold to Steal
 
-        [ProtoMember(271)]
+        [ProtoMember(272)]
         protected int foldToStealInSB;
 
-        [ProtoMember(272)]
+        [ProtoMember(273)]
         protected int facedStealInSB;
 
         public override decimal FoldToStealInSB => GetPercentage(foldToStealInSB, facedStealInSB);
 
-        [ProtoMember(273)]
+        [ProtoMember(274)]
         protected int foldToStealInBB;
 
-        [ProtoMember(274)]
+        [ProtoMember(275)]
         protected int facedStealInBB;
 
         public override decimal FoldToStealInBB => GetPercentage(foldToStealInBB, facedStealInBB);
 
-        [ProtoMember(275)]
+        [ProtoMember(276)]
         protected int calledStealInSB;
 
         public override decimal CalledStealInSB => GetPercentage(calledStealInSB, facedStealInSB);
 
-        [ProtoMember(276)]
+        [ProtoMember(277)]
         protected int calledStealInBB;
 
         public override decimal CalledStealInBB => GetPercentage(calledStealInBB, facedStealInBB);
 
-        [ProtoMember(277)]
+        [ProtoMember(278)]
         protected int foldToBTNStealInSB;
 
-        [ProtoMember(278)]
+        [ProtoMember(279)]
         protected int facedBTNStealInSB;
 
         public override decimal FoldToBTNStealInSB => GetPercentage(foldToBTNStealInSB, facedBTNStealInSB);
 
-        [ProtoMember(279)]
+        [ProtoMember(280)]
         protected int foldToBTNStealInBB;
 
-        [ProtoMember(280)]
+        [ProtoMember(281)]
         protected int facedBTNStealInBB;
 
         public override decimal FoldToBTNStealInBB => GetPercentage(foldToBTNStealInBB, facedBTNStealInBB);
 
-        [ProtoMember(281)]
+        [ProtoMember(282)]
         protected int foldToCOStealInSB;
 
-        [ProtoMember(282)]
+        [ProtoMember(283)]
         protected int facedCOStealInSB;
 
         public override decimal FoldToCOStealInSB => GetPercentage(foldToCOStealInSB, facedCOStealInSB);
 
-        [ProtoMember(283)]
+        [ProtoMember(284)]
         protected int foldToCOStealInBB;
 
-        [ProtoMember(284)]
+        [ProtoMember(285)]
         protected int facedCOStealInBB;
 
         public override decimal FoldToCOStealInBB => GetPercentage(foldToCOStealInBB, facedCOStealInBB);
 
-        [ProtoMember(285)]
+        [ProtoMember(286)]
         protected int calledBTNStealInSB;
 
         public override decimal CalledBTNStealInSB => GetPercentage(calledBTNStealInSB, facedBTNStealInSB);
 
-        [ProtoMember(286)]
+        [ProtoMember(287)]
         protected int calledBTNStealInBB;
 
         public override decimal CalledBTNStealInBB => GetPercentage(calledBTNStealInBB, facedBTNStealInBB);
 
-        [ProtoMember(287)]
+        [ProtoMember(288)]
         protected int calledCOStealInSB;
 
         public override decimal CalledCOStealInSB => GetPercentage(calledCOStealInSB, facedCOStealInSB);
 
-        [ProtoMember(288)]
+        [ProtoMember(289)]
         protected int calledCOStealInBB;
 
         public override decimal CalledCOStealInBB => GetPercentage(calledCOStealInBB, facedCOStealInBB);
 
-        [ProtoMember(289)]
+        [ProtoMember(290)]
         protected int overcallBTNStealInBB;
 
-        [ProtoMember(290)]
+        [ProtoMember(291)]
         protected int couldOvercallBTNStealInBB;
 
         public override decimal OvercallBTNStealInBB => GetPercentage(overcallBTNStealInBB, couldOvercallBTNStealInBB);
@@ -2792,18 +2792,18 @@ namespace Model.Data
 
         #region  WTSD as PFR/4-Bettor
 
-        [ProtoMember(291)]
+        [ProtoMember(292)]
         protected int wtsdAsPFR;
 
-        [ProtoMember(292)]
+        [ProtoMember(293)]
         protected int wtsdAsPFROpportunity;
 
         public override decimal WTSDAsPFR => GetPercentage(wtsdAsPFR, wtsdAsPFROpportunity);
 
-        [ProtoMember(293)]
+        [ProtoMember(294)]
         protected int wtsdAs4Bettor;
 
-        [ProtoMember(294)]
+        [ProtoMember(295)]
         protected int wtsdAs4BettorOpportunity;
 
         public override decimal WTSDAs4Bettor => GetPercentage(wtsdAs4Bettor, wtsdAs4BettorOpportunity);
@@ -2812,18 +2812,18 @@ namespace Model.Data
 
         #region Call 4-Bet positional 
 
-        [ProtoMember(295)]
+        [ProtoMember(296)]
         protected int call4BetIP;
 
-        [ProtoMember(296)]
+        [ProtoMember(297)]
         protected int faced4BetIP;
 
         public override decimal Call4BetIP => GetPercentage(call4BetIP, faced4BetIP);
 
-        [ProtoMember(297)]
+        [ProtoMember(298)]
         protected int call4BetOOP;
 
-        [ProtoMember(298)]
+        [ProtoMember(299)]
         protected int faced4BetOOP;
 
         public override decimal Call4BetOOP => GetPercentage(call4BetOOP, faced4BetOOP);
@@ -2832,10 +2832,10 @@ namespace Model.Data
 
         #region Total overcall SRP%
 
-        [ProtoMember(299)]
+        [ProtoMember(301)]
         protected int totalOverCallSRP;
 
-        [ProtoMember(300)]
+        [ProtoMember(302)]
         protected int couldTotalOverCallSRP;
 
         public override decimal TotalOverCallSRP => GetPercentage(totalOverCallSRP, couldTotalOverCallSRP);
@@ -2844,10 +2844,10 @@ namespace Model.Data
 
         #region Limped pot Flop Steal IP%
 
-        [ProtoMember(301)]
+        [ProtoMember(303)]
         protected int limpedPotFlopStealIP;
 
-        [ProtoMember(302)]
+        [ProtoMember(304)]
         protected int couldLimpedPotFlopStealIP;
 
         public override decimal LimpedPotFlopStealIP => GetPercentage(limpedPotFlopStealIP, couldLimpedPotFlopStealIP);
@@ -2856,10 +2856,10 @@ namespace Model.Data
 
         #region Flop-Check Call
 
-        [ProtoMember(303)]
+        [ProtoMember(305)]
         protected int flopCheckCall;
 
-        [ProtoMember(304)]
+        [ProtoMember(306)]
         protected int couldFlopCheckCall;
 
         public override decimal FlopCheckCall => GetPercentage(flopCheckCall, couldFlopCheckCall);
@@ -2868,10 +2868,10 @@ namespace Model.Data
 
         #region Call Flop & Fold Turn
 
-        [ProtoMember(305)]
+        [ProtoMember(307)]
         protected int didCallFlopFoldTurn;
 
-        [ProtoMember(306)]
+        [ProtoMember(308)]
         protected int couldCallFlopFoldTurn;
 
         public override decimal CallFlopFoldTurn => GetPercentage(didCallFlopFoldTurn, couldCallFlopFoldTurn);
@@ -2880,26 +2880,26 @@ namespace Model.Data
 
         #region River fold in SRP/3-Bet/4-Bet
 
-        [ProtoMember(307)]
+        [ProtoMember(309)]
         protected int didRiverFoldInSRP;
 
-        [ProtoMember(308)]
+        [ProtoMember(310)]
         protected int couldRiverFoldInSRP;
 
         public override decimal RiverFoldInSRP => GetPercentage(didRiverFoldInSRP, couldRiverFoldInSRP);
 
-        [ProtoMember(309)]
+        [ProtoMember(311)]
         protected int didRiverFoldIn3Bet;
 
-        [ProtoMember(310)]
+        [ProtoMember(312)]
         protected int couldRiverFoldIn3Bet;
 
         public override decimal RiverFoldIn3Bet => GetPercentage(didRiverFoldIn3Bet, couldRiverFoldIn3Bet);
 
-        [ProtoMember(311)]
+        [ProtoMember(313)]
         protected int didRiverFoldIn4Bet;
 
-        [ProtoMember(312)]
+        [ProtoMember(314)]
         protected int couldRiverFoldIn4Bet;
 
         public override decimal RiverFoldIn4Bet => GetPercentage(didRiverFoldIn4Bet, couldRiverFoldIn4Bet);
@@ -2938,18 +2938,18 @@ namespace Model.Data
 
         #region Delayed Turn C-Bet in SRP/4-Bet Pot%
 
-        [ProtoMember(313)]
+        [ProtoMember(315)]
         protected int didDelayedTurnCBetInSRP;
 
-        [ProtoMember(314)]
+        [ProtoMember(316)]
         protected int couldDelayedTurnCBetInSRP;
 
         public override decimal DelayedTurnCBetInSRP => GetPercentage(didDelayedTurnCBetInSRP, couldDelayedTurnCBetInSRP);
 
-        [ProtoMember(315)]
+        [ProtoMember(317)]
         protected int didDelayedTurnCBetIn4BetPot;
 
-        [ProtoMember(316)]
+        [ProtoMember(318)]
         protected int couldDelayedTurnCBetIn4BetPot;
 
         public override decimal DelayedTurnCBetIn4BetPot => GetPercentage(didDelayedTurnCBetIn4BetPot, couldDelayedTurnCBetIn4BetPot);
@@ -2958,18 +2958,18 @@ namespace Model.Data
 
         #region  Check-Raise Flop as PFR SRP/3-Bet pot
 
-        [ProtoMember(317)]
+        [ProtoMember(319)]
         protected int didCheckRaiseFlopAsPFRInSRP;
 
-        [ProtoMember(318)]
+        [ProtoMember(320)]
         protected int couldCheckRaiseFlopAsPFRInSRP;
 
         public override decimal CheckRaiseFlopAsPFRInSRP => GetPercentage(didCheckRaiseFlopAsPFRInSRP, couldCheckRaiseFlopAsPFRInSRP);
 
-        [ProtoMember(319)]
+        [ProtoMember(321)]
         protected int didCheckRaiseFlopAsPFRIn3BetPot;
 
-        [ProtoMember(320)]
+        [ProtoMember(322)]
         protected int couldCheckRaiseFlopAsPFRIn3BetPot;
 
         public override decimal CheckRaiseFlopAsPFRIn3BetPot => GetPercentage(didCheckRaiseFlopAsPFRIn3BetPot, couldCheckRaiseFlopAsPFRIn3BetPot);
@@ -2978,44 +2978,44 @@ namespace Model.Data
 
         #region Straddle stats 
 
-        [ProtoMember(321)]
+        [ProtoMember(323)]
         protected int couldActInStraddle;
 
-        [ProtoMember(322)]
+        [ProtoMember(324)]
         protected int didCheckInStraddle;
 
         public override decimal CheckInStraddle => GetPercentage(didCheckInStraddle, couldActInStraddle);
 
-        [ProtoMember(323)]
+        [ProtoMember(325)]
         protected int didPFRInStraddle;
 
         public override decimal PFRInStraddle => GetPercentage(didPFRInStraddle, couldActInStraddle);
 
-        [ProtoMember(324)]
+        [ProtoMember(326)]
         protected int did3BetInStraddle;
 
-        [ProtoMember(325)]
+        [ProtoMember(327)]
         protected int could3BetInStraddle;
 
         public override decimal ThreeBetInStraddle => GetPercentage(did3BetInStraddle, could3BetInStraddle);
 
-        [ProtoMember(326)]
+        [ProtoMember(328)]
         protected int did4BetInStraddle;
 
-        [ProtoMember(327)]
+        [ProtoMember(329)]
         protected int could4BetInStraddle;
 
         public override decimal FourBetInStraddle => GetPercentage(did4BetInStraddle, could4BetInStraddle);
 
-        [ProtoMember(328)]
+        [ProtoMember(330)]
         protected int didFoldInStraddle;
 
         public override decimal FoldInStraddle => GetPercentage(didFoldInStraddle, couldActInStraddle);
 
-        [ProtoMember(329)]
+        [ProtoMember(331)]
         protected int wtsdInStraddle;
 
-        [ProtoMember(330)]
+        [ProtoMember(332)]
         protected int wtsdOpportunityInStraddle;
 
         public override decimal WTSDInStraddle => GetPercentage(wtsdInStraddle, wtsdOpportunityInStraddle);
@@ -3063,10 +3063,10 @@ namespace Model.Data
 
         #region Skip Flop C-Bet SRP & C/F Flop OOP%
 
-        [ProtoMember(331)]
+        [ProtoMember(333)]
         protected int didSkipFlopCBetInSRPandCheckFoldFlopOOP;
 
-        [ProtoMember(332)]
+        [ProtoMember(334)]
         protected int couldSkipFlopCBetInSRPandCheckFoldFlopOOP;
 
         public override decimal SkipFlopCBetInSRPandCheckFoldFlopOOP => GetPercentage(didSkipFlopCBetInSRPandCheckFoldFlopOOP, couldSkipFlopCBetInSRPandCheckFoldFlopOOP);
@@ -3075,12 +3075,12 @@ namespace Model.Data
 
         #region Check Fold Flop
 
-        [ProtoMember(333)]
+        [ProtoMember(335)]
         protected int couldCheckFoldFlopPfrOop;
 
         public override decimal CheckFoldFlopPfrOop => GetPercentage(Source.CheckFoldFlopPfrOop, couldCheckFoldFlopPfrOop);
 
-        [ProtoMember(334)]
+        [ProtoMember(336)]
         protected int couldCheckFoldFlop3BetOop;
 
         public override decimal CheckFoldFlop3BetOop => GetPercentage(Source.CheckFoldFlop3BetOop, couldCheckFoldFlop3BetOop);
@@ -3089,7 +3089,7 @@ namespace Model.Data
 
         #region Fold to delayed Turn C-Bet
 
-        [ProtoMember(335)]
+        [ProtoMember(337)]
         protected int foldedToDelayedCBet;
 
         public override decimal FoldedToDelayedCBet => GetPercentage(foldedToDelayedCBet, Source.FacedDelayedCBet);
