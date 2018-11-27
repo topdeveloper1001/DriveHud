@@ -576,8 +576,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_ProbeBetTurn", nameof(Indicators.ProbeBetTurn), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_ProbeBetRiver", nameof(Indicators.ProbeBetRiver), ColumnType.Percentile),
             // R
-            new Tuple<string, string, ColumnType>("Reports_Column_RaiseCBet", nameof(Indicators.RaiseCBet), ColumnType.Percentile),
-            new Tuple<string, string, ColumnType>("Reports_Column_RiverBetSizeMoreThanOne", nameof(Indicators.RiverBetSizeMoreThanOne), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_RaiseCBet", nameof(Indicators.RaiseCBet), ColumnType.Percentile),            
             new Tuple<string, string, ColumnType>("Reports_Column_RaiseFlop", nameof(Indicators.RaiseFlop), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RaiseFlopCBetIn3BetPot", nameof(Indicators.RaiseFlopCBetIn3BetPot), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RaiseTurn", nameof(Indicators.RaiseTurn), ColumnType.Percentile),
@@ -591,6 +590,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_RaiseLimpersInBB", nameof(Indicators.RaiseLimpersInBB), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RiverAgg", nameof(Indicators.RiverAgg), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RiverBet", nameof(Indicators.RiverBet), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_RiverBetSizeMoreThanOne", nameof(Indicators.RiverBetSizeMoreThanOne), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RiverCallEffeciency", nameof(Indicators.RiverCallEffeciency), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RiverCheckCall", nameof(Indicators.RiverCheckCall), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_RiverCheckFold", nameof(Indicators.RiverCheckFold), ColumnType.Percentile),
