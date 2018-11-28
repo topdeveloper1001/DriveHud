@@ -471,6 +471,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         }
         
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\HH20180921 T9021671-G57904669.txt", 8)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary4.txt", 8)]
         public void SeatTypeMaxPlayersIsParsedTest(string handHistoryFile, int maxPlayers)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

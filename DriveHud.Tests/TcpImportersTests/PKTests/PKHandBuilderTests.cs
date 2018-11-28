@@ -342,6 +342,8 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
 
         private class TestLogger : IDHLog
         {
+            public bool IsAdvanced { get; set; }
+
             public void Log(Type senderType, object message, LogMessageType logMessageType)
             {
             }
