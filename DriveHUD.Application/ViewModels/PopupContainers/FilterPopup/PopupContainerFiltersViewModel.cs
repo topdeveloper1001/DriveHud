@@ -68,6 +68,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
                 new FilterStandardView(FilterModelManager),
                 new FilterDateView(FilterModelManager),
                 new FilterHandGridView(FilterModelManager),
+                new FilterAdvancedView(FilterModelManager)
             };
         }
 

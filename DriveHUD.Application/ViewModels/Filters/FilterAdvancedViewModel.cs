@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IFilterModel.cs" company="Ace Poker Solutions">
+// <copyright file="FilterAdvancedViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,23 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
 using Model.Enums;
-using System;
-using System.Linq.Expressions;
+using Model.Filters;
 
-namespace Model.Filters
+namespace DriveHUD.Application.ViewModels.Filters
 {
-    public interface IFilterModel : ICloneable
+    public class FilterAdvancedViewModel : FilterViewModel<FilterAdvancedModel>
     {
-        Expression<Func<Playerstatistic, bool>> GetFilterPredicate();
-
-        void ResetFilter();
-
-        void Initialize();
-
-        void LoadFilter(IFilterModel filter);
-
-        EnumFilterModelType Type { get; }
+        internal FilterAdvancedViewModel(IFilterModelManagerService service) :
+            base(EnumViewModelType.FilterAdvancedViewModel, service)
+        {
+        }
     }
 }

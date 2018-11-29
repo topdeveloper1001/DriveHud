@@ -1,12 +1,19 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
-using Microsoft.Practices.ServiceLocation;
+﻿//-----------------------------------------------------------------------
+// <copyright file="FilterViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Infrastructure.Base;
 using Model.Enums;
 using Model.Filters;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -16,40 +23,41 @@ namespace DriveHUD.Application.ViewModels
 
         internal FilterViewModel(EnumViewModelType viewModelType, IFilterModelManagerService service)
         {
-            this.Type = viewModelType;
-            this.FilterModelManager = service;
+            Type = viewModelType;
+            FilterModelManager = service;
 
             InitializeFilterModel();
         }
 
         public virtual void InitializeFilterModel()
         {
-            this.FilterModel = (T)FilterModelManager.FilterModelCollection.FirstOrDefault(x => x.GetType().Equals(typeof(T)));
-            this.FilterModelClone = (T)this.FilterModel.Clone();
+            FilterModel = (T)FilterModelManager.FilterModelCollection.FirstOrDefault(x => x.GetType().Equals(typeof(T)));
+            FilterModelClone = (T)FilterModel.Clone();
         }
 
         public virtual void RestoreDefaultState()
         {
-            this.FilterModel.LoadFilter(FilterModelClone);
+            FilterModel.LoadFilter(FilterModelClone);
         }
 
         public virtual void UpdateDefaultState()
         {
-            this.FilterModelClone = (T)this.FilterModel.Clone();
+            FilterModelClone = (T)FilterModel.Clone();
         }
 
         public virtual object GetDefaultStateModel()
         {
-            return this.FilterModelClone;
+            return FilterModelClone;
         }
 
         public void UpdateDefaultStateModel(object model)
         {
-            var newModel = model as T;
-            if (newModel == null)
+            if (!(model is T newModel))
+            {
                 return;
+            }
 
-            this.FilterModelClone = (T)newModel.Clone();
+            FilterModelClone = (T)newModel.Clone();
         }
 
         #region Properties
@@ -59,23 +67,25 @@ namespace DriveHUD.Application.ViewModels
 
         public virtual T FilterModel
         {
-            get { return _filterModel; }
+            get
+            {
+                return _filterModel;
+            }
             set
             {
-                if (value.Equals(_filterModel)) return;
-                _filterModel = value;
-                OnPropertyChanged();
+                SetProperty(ref _filterModel, value);
             }
         }
 
         public virtual T FilterModelClone
         {
-            get { return _filterModelClone; }
+            get
+            {
+                return _filterModelClone;
+            }
             set
             {
-                if (value.Equals(_filterModelClone)) return;
-                _filterModelClone = value;
-                OnPropertyChanged();
+                SetProperty(ref _filterModelClone, value);
             }
         }
 

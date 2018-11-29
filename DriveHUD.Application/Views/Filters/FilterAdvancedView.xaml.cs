@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="FilterQuickView.xaml.cs" company="Ace Poker Solutions">
+// <copyright file="FilterAdvancedView.xaml.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -17,12 +17,15 @@ using System.Windows.Controls;
 
 namespace DriveHUD.Application.Views
 {
-    public partial class FilterQuickView : UserControl, IFilterView
+    /// <summary>
+    /// Interaction logic for FilterAdvancedView.xaml
+    /// </summary>
+    public partial class FilterAdvancedView : UserControl, IFilterView
     {
-        public FilterQuickView(IFilterModelManagerService service)
+        public FilterAdvancedView(IFilterModelManagerService service)
         {
-            DataContext = new FilterQuickViewModel(service);
             InitializeComponent();
+            DataContext = new FilterAdvancedViewModel(service);
         }
 
         public IFilterViewModel ViewModel

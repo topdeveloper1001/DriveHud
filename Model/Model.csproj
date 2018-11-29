@@ -252,6 +252,7 @@
     <Compile Include="DataService.cs" />
     <Compile Include="Extensions\ComparableCard.cs" />
     <Compile Include="Filters\BuiltFilterModel.cs" />
+    <Compile Include="Filters\FilterAdvancedModel.cs" />
     <Compile Include="Filters\FilterDataService.cs" />
     <Compile Include="Filters\FilterDateModel.cs" />
     <Compile Include="Filters\FilterHandGridModel.cs" />

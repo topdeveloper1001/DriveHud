@@ -19,8 +19,8 @@ namespace Model.Filters
     {
         public FilterQuickModel()
         {
-            this.Name = "Quick Filters";
-            this.Type = EnumFilterModelType.FilterQuickModel;
+            Name = "Quick Filters";
+            Type = EnumFilterModelType.FilterQuickModel;
         }
 
         public void Initialize()
@@ -29,10 +29,11 @@ namespace Model.Filters
         }
 
         #region Methods
+
         private void FilterSectionQuickFilterInitialize()
         {
             QuickFilterCollection = new ObservableCollection<QuickFilterItem>()
-            {                
+            {
                 new QuickFilterItem() { Name = "3-Bet non premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet), NoPropertyName = nameof(Playerstatistic.Couldthreebet), QuickFilterHandType = QuickFilterHandTypeEnum.NonPremiumHand },
                 new QuickFilterItem() { Name = "3-Bet premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Didthreebet), NoPropertyName = nameof(Playerstatistic.Couldthreebet), QuickFilterHandType = QuickFilterHandTypeEnum.PremiumHand },
                 new QuickFilterItem() { Name = "Call 3-Bet w/ non premium hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Calledthreebetpreflop), NoPropertyName = nameof(Playerstatistic.Facedthreebetpreflop), QuickFilterHandType = QuickFilterHandTypeEnum.NonPremiumHand },
@@ -238,27 +239,29 @@ namespace Model.Filters
         #region Properties
 
         private EnumFilterModelType _type;
-        private ObservableCollection<QuickFilterItem> _quickFilterCollection;
+        private ObservableCollection<QuickFilterItem> quickFilterCollection;
 
         public ObservableCollection<QuickFilterItem> QuickFilterCollection
         {
-            get { return _quickFilterCollection; }
+            get
+            {
+                return quickFilterCollection;
+            }
             set
             {
-                if (value == _quickFilterCollection) return;
-                _quickFilterCollection = value;
-                OnPropertyChanged(nameof(QuickFilterCollection));
+                SetProperty(ref quickFilterCollection, value);
             }
         }
 
         public EnumFilterModelType Type
         {
-            get { return _type; }
+            get
+            {
+                return _type;
+            }
             set
             {
-                if (value == _type) return;
-                _type = value;
-                OnPropertyChanged();
+                SetProperty(ref _type, value);
             }
         }
 
@@ -314,7 +317,7 @@ namespace Model.Filters
 
                 currentTriState = value;
 
-                OnPropertyChanged();
+                RaisePropertyChanged();
 
                 if (OnTriState != null)
                 {
@@ -325,14 +328,13 @@ namespace Model.Filters
 
         public QuickFilterHandTypeEnum QuickFilterHandType
         {
-            get { return _quickFilterHandType; }
-
+            get
+            {
+                return _quickFilterHandType;
+            }
             set
             {
-                if (value == _quickFilterHandType) return;
-                _quickFilterHandType = value;
-
-                OnPropertyChanged(nameof(QuickFilterHandType));
+                SetProperty(ref _quickFilterHandType, value);       
             }
         }
 
