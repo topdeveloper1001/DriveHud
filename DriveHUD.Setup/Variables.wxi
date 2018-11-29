@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Include>
   <?define ProductName="DriveHUD" ?>
-  <?define ProductVersion="1.6.2522" ?>
-  <?define ProductCode="{17ACA744-7D51-46B2-AEE3-F258F590F695}"?>
+  <?define ProductVersion="1.6.2529" ?>
+  <?define ProductCode="{0BEAE613-6FF3-4DF1-8ED4-A1F0F18438BE}"?>
   <?define UpgradeCode="85bc9eb1-6409-1d19-9b11-32c7eeaf2dB8"?>
   <?define Manufacturer="Ace Poker Solutions"?>
   <?define ProductUrl="http:////www.acepokersolutions.com"?>
