@@ -1,4 +1,17 @@
-﻿using DriveHUD.Common.Log;
+﻿//-----------------------------------------------------------------------
+// <copyright file="WinningPokerNetworkFastParserImpl.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
@@ -13,11 +26,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using HandHistories.Objects.Hand;
-using DriveHUD.Common.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.Winning
 {
@@ -456,7 +465,26 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             }
             else
             {
-                var maxSeat = Players.Max(x => x.SeatNumber);
+                var summaryLine = GetSummaryString(handLines);
+
+                int maxSeat;
+
+                if (!string.IsNullOrEmpty(summaryLine))
+                {
+                    var tableTypeIndex = summaryLine.LastIndexOf("TableType: ");
+
+                    if (tableTypeIndex > 0)
+                    {
+                        var tableTypeText = summaryLine.Substring(tableTypeIndex + 11);
+
+                        if (int.TryParse(tableTypeText, out maxSeat))
+                        {
+                            return SeatType.FromMaxPlayers(maxSeat);
+                        }
+                    }
+                }
+
+                maxSeat = Players.Max(x => x.SeatNumber);
 
                 return SeatType.FromMaxPlayers(maxSeat, true);
             }
@@ -688,7 +716,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             //TournamentId: 213213123, TournamentBuyIn: 0.65$
             var tournamentString = GetSummaryString(handLines);
 
-            var regex = new Regex(@"TournamentId: (?<tournament_id>[^\s]+), TournamentBuyIn: (?<buyin>[^-]+)");
+            var regex = new Regex(@"TournamentId: (?<tournament_id>[^\s]+), TournamentBuyIn: (?<buyin>[^-,]+)");
 
             var match = regex.Match(tournamentString);
 
@@ -716,18 +744,18 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             if (buyIn > 0)
             {
                 var buyInStartIndex = tournamentName.IndexOf(NumberFormatInfo.CurrencySymbol);
-                var buyInEndIndex = tournamentName.IndexOf(' ', buyInStartIndex);
 
-                if (buyInStartIndex != -1 && buyInEndIndex != -1 && buyInEndIndex > buyInStartIndex)
+                if (buyInStartIndex >= 0)
                 {
-                    var buyInWithoutRake = 0m;
-                    if (decimal.TryParse(tournamentName.Substring(buyInStartIndex, buyInEndIndex - buyInStartIndex), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out buyInWithoutRake))
+                    var buyInEndIndex = tournamentName.IndexOf(' ', buyInStartIndex);
+
+                    if (buyInStartIndex != -1 && buyInEndIndex != -1 && buyInEndIndex > buyInStartIndex &&
+                        decimal.TryParse(tournamentName.Substring(buyInStartIndex, buyInEndIndex - buyInStartIndex),
+                            NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out decimal buyInWithoutRake) &&
+                        buyIn > buyInWithoutRake)
                     {
-                        if (buyIn > buyInWithoutRake)
-                        {
-                            rake = buyIn - buyInWithoutRake;
-                            buyIn = buyInWithoutRake;
-                        }
+                        rake = buyIn - buyInWithoutRake;
+                        buyIn = buyInWithoutRake;
                     }
                 }
             }
@@ -1172,11 +1200,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             const string SummaryPattern = "*** Summary: ";
 
             string line = handLines[0];
+
             int startIndex = line.LastIndexOf(SummaryPattern, StringComparison.Ordinal);
+
             if (startIndex == -1)
             {
                 return string.Empty;
             }
+
             return line.Substring(startIndex + SummaryPattern.Count());
         }
 

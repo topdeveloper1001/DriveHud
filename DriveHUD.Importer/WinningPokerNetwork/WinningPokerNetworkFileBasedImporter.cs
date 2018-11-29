@@ -268,6 +268,12 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
         protected bool TryParseTableTypeFromFile(string fileName, out EnumTableType tableType)
         {
+            if (string.IsNullOrEmpty(fileName))
+            {
+                tableType = EnumTableType.Nine;
+                return false;
+            }
+
             if (handHistoryFileTableType.ContainsKey(fileName))
             {
                 tableType = handHistoryFileTableType[fileName];
@@ -419,6 +425,11 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 summaryText = $" *** Summary: GameType: {gameType}";
             }
 
+            if (TryParseTableTypeFromFile(gameInfo.FullFileName, out EnumTableType tableType))
+            {
+                summaryText = $"{summaryText}, TableType: {(int)tableType}";
+            }
+
             // add summary info to the hand history file
             while (indexGameStarted != -1)
             {
@@ -532,14 +543,9 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             {
                 var endIndex = title.IndexOf(" -", StringComparison.OrdinalIgnoreCase);
 
-                if (endIndex != -1)
+                if (endIndex != -1 && ParserUtils.TryParseMoney(title.Remove(endIndex), out decimal buyIn))
                 {
-                    var buyIn = 0m;
-
-                    if (ParserUtils.TryParseMoney(title.Remove(endIndex), out buyIn))
-                    {
-                        return buyIn;
-                    }
+                    return buyIn;
                 }
             }
 
