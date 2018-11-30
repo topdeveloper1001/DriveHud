@@ -16,6 +16,6 @@ namespace DriveHUD.Importers.AndroidBase
 {
     internal interface ITcpPacketImporter : INetworkBaseImporter
     {
-        bool Match(TcpPacket tcpPacket, IpPacket ipPacket);       
+        bool Match(TcpPacket tcpPacket, IPPacket ipPacket);       
     }
 }

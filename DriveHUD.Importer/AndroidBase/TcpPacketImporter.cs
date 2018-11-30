@@ -31,7 +31,7 @@ namespace DriveHUD.Importers.AndroidBase
 
         public abstract void AddPacket(CapturedPacket capturedPacket);
 
-        public abstract bool Match(TcpPacket tcpPacket, IpPacket ipPacket);
+        public abstract bool Match(TcpPacket tcpPacket, IPPacket ipPacket);
 
         #endregion
 
