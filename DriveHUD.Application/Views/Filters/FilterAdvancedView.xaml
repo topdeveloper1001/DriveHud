@@ -11,19 +11,13 @@
 
         <cnv:CollectionViewGroupConverter
             x:Key="CollectionViewGroupConverter" />
-
-        <Color
-            x:Key="ForegroundColor">#ffffff</Color>
+     
         <Color
             x:Key="SelectionBackgroundColor">#33519b</Color>
 
         <SolidColorBrush
             x:Key="SelectionBackgroundBrush"
             Color="{StaticResource SelectionBackgroundColor}" />
-
-        <SolidColorBrush
-            x:Key="ForegroundBrush"
-            Color="{StaticResource ForegroundColor}" />
 
         <SolidColorBrush
             x:Key="LightBlueBrush"
@@ -40,11 +34,11 @@
                 SnapsToDevicePixels="True">
                 <ScrollViewer
                     x:Name="_tv_scrollviewer_"
-                    Background="{TemplateBinding Background}"
                     CanContentScroll="False"
                     Focusable="False"
                     HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
                     Padding="{TemplateBinding Padding}"
+                    Background="{TemplateBinding Background}"
                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                     VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
                     <ItemsPresenter />
@@ -66,7 +60,7 @@
             TargetType="{x:Type TreeView}">
             <Setter
                 Property="Background"
-                Value="Transparent" />
+                Value="{StaticResource BackgroundBrush3}" />
             <Setter
                 Property="BorderThickness"
                 Value="0" />
@@ -150,11 +144,11 @@
                                 <Setter
                                     Property="Fill"
                                     TargetName="ExpandPath"
-                                    Value="{StaticResource SelectionBackgroundBrush}" />
+                                    Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
                                 <Setter
                                     Property="Stroke"
                                     TargetName="ExpandPath"
-                                    Value="{StaticResource SelectionBackgroundBrush}" />
+                                    Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -259,11 +253,11 @@
                                 <Setter
                                     Property="Background"
                                     TargetName="Bd"
-                                    Value="{StaticResource SelectionBackgroundBrush}" />
+                                    Value="{StaticResource BackgroundBlueBrush}" />
                                 <Setter
                                     Property="BorderBrush"
                                     TargetName="Bd"
-                                    Value="{StaticResource SelectionBackgroundBrush}" />
+                                    Value="{StaticResource BackgroundBlueBrush}" />
                                 <Setter
                                     Property="Foreground"
                                     Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
@@ -280,11 +274,11 @@
                                 <Setter
                                     Property="Background"
                                     TargetName="Bd"
-                                    Value="{StaticResource SelectionBackgroundBrush}" />
+                                    Value="{StaticResource BackgroundBlueBrush}" />
                                 <Setter
                                     Property="BorderBrush"
                                     TargetName="Bd"
-                                    Value="{StaticResource SelectionBackgroundBrush}" />
+                                    Value="{StaticResource BackgroundBlueBrush}" />
                                 <Setter
                                     Property="Foreground"
                                     Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
@@ -301,11 +295,11 @@
                                 <Setter
                                     Property="Background"
                                     TargetName="Bd"
-                                    Value="{StaticResource SelectionBackgroundBrush}" />
+                                    Value="{StaticResource BackgroundBlueBrush}" />
                                 <Setter
                                     Property="BorderBrush"
                                     TargetName="Bd"
-                                    Value="{StaticResource SelectionBackgroundBrush}" />
+                                    Value="{StaticResource BackgroundBlueBrush}" />
                                 <Setter
                                     Property="Foreground"
                                     Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
@@ -324,14 +318,14 @@
                                 <Setter
                                     Property="Background"
                                     TargetName="Bd"
-                                    Value="{StaticResource SelectionBackgroundBrush}" />
+                                    Value="{StaticResource BackgroundBrush1}" />
                                 <Setter
                                     Property="BorderBrush"
                                     TargetName="Bd"
-                                    Value="{StaticResource LightBlueBrush}" />
+                                    Value="{StaticResource BackgroundBrush1}" />
                                 <Setter
                                     Property="Foreground"
-                                    Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
+                                    Value="{StaticResource BackgroundBlueBrush}" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -343,6 +337,13 @@
 
     <Grid>
 
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="30" />
+            <RowDefinition
+                Height="405" />
+        </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition
                 Width="*" />
@@ -352,94 +353,97 @@
                 Width="*" />
         </Grid.ColumnDefinitions>
 
-        <GroupBox
-            Header="Filters">
-            <GroupBox.Height>
-                <sys:Double>NaN</sys:Double>
-            </GroupBox.Height>
-            <TreeView
-                Foreground="{StaticResource ForegroundBrush}"
-                ItemsSource="{Binding FiltersCollectionView.Groups, Converter={StaticResource CollectionViewGroupConverter}}"
-                Margin="0"
-                FontSize="12">
-                <i:Interaction.Triggers>
-                    <i:EventTrigger
-                        EventName="MouseDoubleClick">
-                        <i:InvokeCommandAction
-                            Command="{Binding AddToSelectedFiltersCommand}" />
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
-                <TreeView.Resources>
-                    <DataTemplate
-                        x:Key="FilterTemplate">
-                        <TextBlock
-                            ToolTip="{Binding Name}"
-                            Text="{Binding Name}" />
-                    </DataTemplate>
-                </TreeView.Resources>
+        <Border>
+            <TextBlock
+                FontSize="14"
+                Text="Filters" />
+        </Border>
 
-                <TreeView.ItemTemplate>
-                    <HierarchicalDataTemplate
-                        ItemsSource="{Binding Path=Items}"
-                        ItemTemplate="{StaticResource FilterTemplate}">
-                        <TextBlock
-                            Text="{Binding Name}"
-                            Margin="3,0,0,0" />
-                    </HierarchicalDataTemplate>
-                </TreeView.ItemTemplate>
-            </TreeView>
-        </GroupBox>
+        <TreeView
+            Grid.Row="1"
+            Foreground="{StaticResource ForegroundBrush}"
+            ItemsSource="{Binding FiltersCollectionView.Groups, Converter={StaticResource CollectionViewGroupConverter}}"
+            Margin="0"
+            FontSize="14">
+            <i:Interaction.Triggers>
+                <i:EventTrigger
+                    EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction
+                        Command="{Binding AddToSelectedFiltersCommand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TreeView.Resources>
+                <DataTemplate
+                    x:Key="FilterTemplate">
+                    <TextBlock
+                        ToolTip="{Binding Name}"
+                        Text="{Binding Name}" />
+                </DataTemplate>
+            </TreeView.Resources>
 
-        <GroupBox
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate
+                    ItemsSource="{Binding Path=Items}"
+                    ItemTemplate="{StaticResource FilterTemplate}">
+                    <TextBlock
+                        Text="{Binding Name}"
+                        Margin="3,0,0,0" />
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+
+        <Border
+            Grid.Column="2">
+            <TextBlock
+                FontSize="14"
+                Text="Selected filters" />
+        </Border>
+
+        <TreeView
+            Grid.Row="1"
             Grid.Column="2"
-            Header="Filters">
-            <GroupBox.Height>
-                <sys:Double>NaN</sys:Double>
-            </GroupBox.Height>
-            <TreeView
-                Foreground="{StaticResource ForegroundBrush}"
-                ItemsSource="{Binding SelectedFiltersCollectionView.Groups, Converter={StaticResource CollectionViewGroupConverter}}"
-                Margin="0"
-                FontSize="12">
-                <i:Interaction.Triggers>
-                    <i:EventTrigger
-                        EventName="MouseDoubleClick">
-                        <i:InvokeCommandAction
-                            Command="{Binding RemoveFromSelectedFiltersCommand}" />
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
-                <TreeView.Resources>
-                    <DataTemplate
-                        x:Key="FilterTemplate">
-                        <StackPanel
-                            ToolTip="{Binding ToolTip}"
-                            Orientation="Horizontal">
-                            <TextBlock
-                                Text="{Binding Name}" />
-                            <TextBlock
-                                Visibility="{Binding FilterValue, Converter={dh:NullToVisibilityConverter}}">                             
-                            <Run
-                                    Text=" (" />                                                    
-                            <Run
-                                    Text="{Binding FilterValue}" />                                                     
-                            <Run
-                                    Text=")" />
-                            </TextBlock>
-                        </StackPanel>
-                    </DataTemplate>
-                </TreeView.Resources>
-
-                <TreeView.ItemTemplate>
-                    <HierarchicalDataTemplate
-                        ItemsSource="{Binding Path=Items}"
-                        ItemTemplate="{StaticResource FilterTemplate}">
+            Foreground="{StaticResource ForegroundBrush}"
+            ItemsSource="{Binding SelectedFiltersCollectionView.Groups, Converter={StaticResource CollectionViewGroupConverter}}"
+            Margin="0"
+            FontSize="14">
+            <i:Interaction.Triggers>
+                <i:EventTrigger
+                    EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction
+                        Command="{Binding RemoveFromSelectedFiltersCommand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TreeView.Resources>
+                <DataTemplate
+                    x:Key="FilterTemplate">
+                    <StackPanel
+                        ToolTip="{Binding ToolTip}"
+                        Orientation="Horizontal">
                         <TextBlock
-                            Text="{Binding Name}"
-                            Margin="3,0,0,0" />
-                    </HierarchicalDataTemplate>
-                </TreeView.ItemTemplate>
-            </TreeView>
-        </GroupBox>
+                            Text="{Binding Name}" />
+                        <TextBlock
+                            Visibility="{Binding FilterValue, Converter={dh:NullToVisibilityConverter}}">                             
+                            <Run
+                                Text=" (" />                                                    
+                            <Run
+                                Text="{Binding FilterValue}" />                                                     
+                            <Run
+                                Text=")" />
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </TreeView.Resources>
+
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate
+                    ItemsSource="{Binding Path=Items}"
+                    ItemTemplate="{StaticResource FilterTemplate}">
+                    <TextBlock
+                        Text="{Binding Name}"
+                        Margin="3,0,0,0" />
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
 
     </Grid>
 
