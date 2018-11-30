@@ -61,7 +61,9 @@ namespace Model.Filters
                 new QuickFilterItem() { Name = "Flush Draw on Flop", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Sawflop), QuickFilterHandType = QuickFilterHandTypeEnum.FlushDrawOnFlop },
                 new QuickFilterItem() { Name = "Straight Draw on Flop", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Sawflop), QuickFilterHandType = QuickFilterHandTypeEnum.StraightDrawOnFlop },
                 new QuickFilterItem() { Name = "Defend Blinds w/ marginal hand", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Bigblindstealdefended), NoPropertyName = nameof(Playerstatistic.Bigblindstealfaced), QuickFilterHandType = QuickFilterHandTypeEnum.MarginalHand },
-                new QuickFilterItem() { Name = "Defend BB", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Bigblindstealdefended), NoPropertyName = nameof(Playerstatistic.Bigblindstealfaced) }
+                new QuickFilterItem() { Name = "Defend BB", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.Bigblindstealdefended), NoPropertyName = nameof(Playerstatistic.Bigblindstealfaced) },
+                new QuickFilterItem() { Name = "Preflop IP", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.PreflopIP) },
+                new QuickFilterItem() { Name = "Preflop OOP", YesPropertyName = ReflectionHelper.GetPath<Playerstatistic>(o => o.PreflopOOP) }
             };
         }
 
@@ -334,7 +336,7 @@ namespace Model.Filters
             }
             set
             {
-                SetProperty(ref _quickFilterHandType, value);       
+                SetProperty(ref _quickFilterHandType, value);
             }
         }
 

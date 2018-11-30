@@ -59,6 +59,11 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         protected override void InitializeViewModelCollection()
         {
+            if (FilterViewCollection != null)
+            {
+                return;
+            }
+
             FilterViewCollection = new ObservableCollection<IFilterView>
             {
                 new FilterBoardTextureView(FilterModelManager),

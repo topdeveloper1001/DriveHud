@@ -479,8 +479,11 @@
     <Compile Include="TableConfigurators\SeatArea\TableSeatAreaHelper.cs" />
     <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
+    <Compile Include="ValueConverters\CollectionViewGroupConverter.cs" />
+    <Compile Include="ValueConverters\CollectionViewGroupWrapper.cs" />
     <Compile Include="ValueConverters\CountToItemsControlHeight.cs" />
     <Compile Include="ValueConverters\ChartCashSeriesWinningTypeToColorBrushConverter.cs" />
+    <Compile Include="ValueConverters\LeftMarginMultiplierConverter.cs" />
     <Compile Include="ValueConverters\SelectedLayoutToCheckedConverter.cs" />
     <Compile Include="ValueConverters\TournamentSeriesValueTypeVisibilityConverter.cs" />
     <Compile Include="ViewModels\Alias\AliasAddEditViewModel.cs" />
