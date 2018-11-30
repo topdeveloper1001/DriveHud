@@ -786,7 +786,10 @@ namespace DriveHUD.Application.ViewModels
                             .ToArray()
                             .FirstOrDefault(p => p.Stat == x.BaseStat.Stat);
 
-                        x.HeatMap = playerData.HeatMaps[heatMapKey];
+                        if (heatMapKey != null)
+                        {
+                            x.HeatMap = playerData.HeatMaps[heatMapKey];
+                        }
                     });
 
                     var gaugeIndicatorTools = playerHudContent.HudElement.Tools.OfType<HudGaugeIndicatorViewModel>().ToArray();
