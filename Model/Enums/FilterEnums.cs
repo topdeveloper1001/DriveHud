@@ -83,7 +83,8 @@ namespace Model.Enums
         RiverHandActionItem,
         OmahaHandGridItem,
         QuickFilterItem,
-        Buyin
+        Buyin,
+        AdvancedFilterItem
     }
 
     public struct EnumDateFiterStruct

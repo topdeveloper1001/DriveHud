@@ -25,6 +25,8 @@ namespace Model.Filters
     [Serializable]
     public class FilterAdvancedModel : FilterBaseEntity, IFilterModel
     {
+        private BuiltFilterModel builtFilterModel;
+
         public FilterAdvancedModel()
         {
             Name = "Advanced";
@@ -51,7 +53,7 @@ namespace Model.Filters
 
         public void Initialize()
         {
-            Filters = new ObservableCollection<FilterAdvancedItem>(GetFiltersItems());         
+            Filters = new ObservableCollection<FilterAdvancedItem>(GetFiltersItems());
         }
 
         public void LoadFilter(IFilterModel filter)
@@ -68,6 +70,11 @@ namespace Model.Filters
         public void ResetFilter()
         {
             SelectedFilters.Clear();
+        }
+
+        public void SetBuiltFilterModel(BuiltFilterModel builtFilterModel)
+        {
+            this.builtFilterModel = builtFilterModel;
         }
 
         #region Initilization helpers 
