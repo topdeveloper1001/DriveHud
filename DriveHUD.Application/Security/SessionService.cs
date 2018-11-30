@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.Licensing;
 using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Resources;
 using DriveHUD.Importers;
 using HandHistories.Objects.GameDescription;
@@ -55,50 +56,7 @@ namespace DriveHUD.Application.Security
                 registeredLicenses = registeredLicenses.Where(x => !x.IsTrial).ToArray();
             }
 
-            var gameTypes = registeredLicenses.SelectMany(x => ConvertLicenseType(x.LicenseType)).Distinct().ToArray();
-            var cashLimit = registeredLicenses.Length > 0 ? registeredLicenses.Max(x => x.CashLimit) : 0;
-            var tournamentLimit = registeredLicenses.Length > 0 ? registeredLicenses.Max(x => x.TournamentLimit) : 0;
-
-            userSession = new UserSession(cashLimit, tournamentLimit, gameTypes);
-        }
-
-        private static IEnumerable<GameType> ConvertLicenseType(LicenseType licenseType)
-        {
-            var gameTypes = new List<GameType>();
-
-            switch (licenseType)
-            {
-                case LicenseType.Holdem:
-                    gameTypes.Add(GameType.CapNoLimitHoldem);
-                    gameTypes.Add(GameType.FixedLimitHoldem);
-                    gameTypes.Add(GameType.NoLimitHoldem);
-                    gameTypes.Add(GameType.PotLimitHoldem);
-                    gameTypes.Add(GameType.SpreadLimitHoldem);
-                    break;
-                case LicenseType.Omaha:
-                    gameTypes.Add(GameType.CapPotLimitOmaha);
-                    gameTypes.Add(GameType.FiveCardPotLimitOmaha);
-                    gameTypes.Add(GameType.FiveCardPotLimitOmahaHiLo);
-                    gameTypes.Add(GameType.FiveCardPotLimitOmaha);
-                    gameTypes.Add(GameType.FixedLimitOmaha);
-                    gameTypes.Add(GameType.FixedLimitOmahaHiLo);
-                    gameTypes.Add(GameType.NoLimitOmaha);
-                    gameTypes.Add(GameType.NoLimitOmahaHiLo);
-                    gameTypes.Add(GameType.PotLimitOmaha);
-                    gameTypes.Add(GameType.PotLimitOmahaHiLo);
-                    break;
-                case LicenseType.Combo:
-                case LicenseType.Trial:
-                    foreach (GameType gameType in Enum.GetValues(typeof(GameType)))
-                    {
-                        gameTypes.Add(gameType);
-                    }
-                    break;
-                default:
-                    throw new DHInternalException(new NonLocalizableString("Not supported license type"));
-            }
-
-            return gameTypes;
-        }
+            userSession = new UserSession(registeredLicenses);
+        }        
     }
 }

@@ -10,10 +10,17 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.Licensing;
+using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
 using DriveHUD.Importers;
 using HandHistories.Objects.GameDescription;
 using Microsoft.Practices.ServiceLocation;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace DriveHUD.Application.Security
@@ -21,17 +28,21 @@ namespace DriveHUD.Application.Security
     internal class UserSession : IUserSession
     {
         private readonly ICurrencyRatesService currencyRatesService;
-
-        private readonly GameType[] allowedGameTypes;
-        private readonly decimal cashLimit;
-        private readonly decimal tournamentLimit;
         private CurrencyRates currencyRates;
+        private readonly ReadOnlyDictionary<GameType, LicenseLimit> licenseLimits;
 
-        public UserSession(decimal cashLimit, decimal tournamentLimit, GameType[] allowedGameTypes)
+        public UserSession(ILicenseInfo[] registeredLicenses)
         {
-            this.cashLimit = cashLimit;
-            this.tournamentLimit = tournamentLimit;
-            this.allowedGameTypes = allowedGameTypes;
+            var limits = (from registeredLicense in registeredLicenses
+                          from gameType in ConvertLicenseType(registeredLicense.LicenseType)
+                          select new { GameType = gameType, registeredLicense.CashLimit, registeredLicense.TournamentLimit } into limit
+                          group limit by limit.GameType into groupedLimit
+                          let cashLimit = groupedLimit.MaxOrDefault(x => x.CashLimit)
+                          let tournamentLimit = groupedLimit.MaxOrDefault(x => x.TournamentLimit)
+                          select new { GameType = groupedLimit.Key, Limit = new LicenseLimit(cashLimit, tournamentLimit) }
+                          ).ToDictionary(x => x.GameType, x => x.Limit);
+
+            licenseLimits = new ReadOnlyDictionary<GameType, LicenseLimit>(limits);
 
             currencyRatesService = ServiceLocator.Current.GetInstance<ICurrencyRatesService>();
             currencyRatesService.RefreshCurrencyRates();
@@ -39,7 +50,7 @@ namespace DriveHUD.Application.Security
 
         public bool IsMatch(GameMatchInfo gameInfo)
         {
-            if (gameInfo == null || cashLimit == 0 || tournamentLimit == 0)
+            if (gameInfo == null || licenseLimits.Count == 0)
             {
                 return false;
             }
@@ -55,20 +66,23 @@ namespace DriveHUD.Application.Security
                 return true;
             }
 
+            if (!licenseLimits.TryGetValue(gameInfo.GameType, out LicenseLimit licenseLimit))
+            {
+                return false;
+            }
+
             var cashBuyin = currencyRates != null && currencyRates.Rates != null && currencyRates.Rates.TryGetValue(gameInfo.Currency, out decimal cashRate) ?
                 cashRate * gameInfo.CashBuyIn : gameInfo.CashBuyIn;
 
             var tournamentBuyIn = currencyRates != null && currencyRates.Rates != null && currencyRates.Rates.TryGetValue(gameInfo.TournamentCurrency, out decimal tourneyRate) ?
                 tourneyRate * gameInfo.TournamentBuyIn : gameInfo.TournamentBuyIn;
 
-            var match = allowedGameTypes.Contains(gameInfo.GameType) &&
-                            cashBuyin <= cashLimit &&
-                                tournamentBuyIn <= tournamentLimit;
+            var match = cashBuyin <= licenseLimit.CashLimit && tournamentBuyIn <= licenseLimit.TournamentLimit;
 
             if (!match)
             {
                 LogProvider.Log.Info($"GameType: {gameInfo.GameType}, GameCashBuyIn: {cashBuyin}, GameTournamentBuyIn: {tournamentBuyIn}, Curr: {gameInfo.Currency}, TournCurr: {gameInfo.TournamentCurrency}");
-                LogProvider.Log.Info($"LicenseCashBuyIn: {cashLimit}, LicenseTournamentBuyIn: {tournamentLimit}");
+                LogProvider.Log.Info($"LicenseCashBuyIn: {licenseLimit.CashLimit}, LicenseTournamentBuyIn: {licenseLimit.TournamentLimit}");
             }
 
             return match;
@@ -77,6 +91,58 @@ namespace DriveHUD.Application.Security
         private void InitializeCurrencyRates()
         {
             currencyRates = currencyRatesService.GetCurrencyRates();
+        }
+
+        private static IEnumerable<GameType> ConvertLicenseType(LicenseType licenseType)
+        {
+            var gameTypes = new List<GameType>();
+
+            switch (licenseType)
+            {
+                case LicenseType.Holdem:
+                    gameTypes.Add(GameType.CapNoLimitHoldem);
+                    gameTypes.Add(GameType.FixedLimitHoldem);
+                    gameTypes.Add(GameType.NoLimitHoldem);
+                    gameTypes.Add(GameType.PotLimitHoldem);
+                    gameTypes.Add(GameType.SpreadLimitHoldem);
+                    break;
+                case LicenseType.Omaha:
+                    gameTypes.Add(GameType.CapPotLimitOmaha);
+                    gameTypes.Add(GameType.FiveCardPotLimitOmaha);
+                    gameTypes.Add(GameType.FiveCardPotLimitOmahaHiLo);
+                    gameTypes.Add(GameType.FiveCardPotLimitOmaha);
+                    gameTypes.Add(GameType.FixedLimitOmaha);
+                    gameTypes.Add(GameType.FixedLimitOmahaHiLo);
+                    gameTypes.Add(GameType.NoLimitOmaha);
+                    gameTypes.Add(GameType.NoLimitOmahaHiLo);
+                    gameTypes.Add(GameType.PotLimitOmaha);
+                    gameTypes.Add(GameType.PotLimitOmahaHiLo);
+                    break;
+                case LicenseType.Combo:
+                case LicenseType.Trial:
+                    foreach (GameType gameType in Enum.GetValues(typeof(GameType)))
+                    {
+                        gameTypes.Add(gameType);
+                    }
+                    break;
+                default:
+                    throw new DHInternalException(new NonLocalizableString("Not supported license type"));
+            }
+
+            return gameTypes;
+        }
+
+        private class LicenseLimit
+        {
+            public LicenseLimit(int cashLimit, decimal tournamentLimit)
+            {
+                CashLimit = cashLimit;
+                TournamentLimit = tournamentLimit;
+            }
+
+            public int CashLimit { get; }
+
+            public decimal TournamentLimit { get; }
         }
     }
 }
