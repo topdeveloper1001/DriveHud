@@ -52,6 +52,7 @@ namespace DriveHUD.Application.Security
         {
             if (gameInfo == null || licenseLimits.Count == 0)
             {
+                LogProvider.Log.Info($"Licenses not found or game data is empty.");
                 return false;
             }
 
@@ -66,16 +67,19 @@ namespace DriveHUD.Application.Security
                 return true;
             }
 
-            if (!licenseLimits.TryGetValue(gameInfo.GameType, out LicenseLimit licenseLimit))
-            {
-                return false;
-            }
-
             var cashBuyin = currencyRates != null && currencyRates.Rates != null && currencyRates.Rates.TryGetValue(gameInfo.Currency, out decimal cashRate) ?
                 cashRate * gameInfo.CashBuyIn : gameInfo.CashBuyIn;
 
             var tournamentBuyIn = currencyRates != null && currencyRates.Rates != null && currencyRates.Rates.TryGetValue(gameInfo.TournamentCurrency, out decimal tourneyRate) ?
                 tourneyRate * gameInfo.TournamentBuyIn : gameInfo.TournamentBuyIn;
+
+
+            if (!licenseLimits.TryGetValue(gameInfo.GameType, out LicenseLimit licenseLimit))
+            {
+                LogProvider.Log.Info($"GameType: {gameInfo.GameType}, GameCashBuyIn: {cashBuyin}, GameTournamentBuyIn: {tournamentBuyIn}, Curr: {gameInfo.Currency}, TournCurr: {gameInfo.TournamentCurrency}");
+                LogProvider.Log.Info($"License not found.");
+                return false;
+            }
 
             var match = cashBuyin <= licenseLimit.CashLimit && tournamentBuyIn <= licenseLimit.TournamentLimit;
 
