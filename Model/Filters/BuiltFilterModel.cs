@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using HandHistories.Objects.Cards;
 using Microsoft.Practices.ServiceLocation;
@@ -1034,12 +1035,12 @@ namespace Model.Filters
         private void RemoveAdvancedFilterItem(FilterSectionItem param)
         {
             if (param.ItemType != EnumFilterSectionItemType.AdvancedFilterItem ||
-                string.IsNullOrEmpty(param.Value))
+                string.IsNullOrEmpty(param.Name))
             {
                 return;
             }
 
-
+            AdvancedFilterModel?.SelectedFilters.RemoveByCondition(x => x.ToolTip == param.Name);
         }
 
         #endregion

@@ -10,12 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model.Enums;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Xml.Serialization;
@@ -31,6 +34,9 @@ namespace Model.Filters
         {
             Name = "Advanced";
             Type = EnumFilterModelType.FilterAdvancedModel;
+
+            SelectedFilters = new ReactiveList<FilterAdvancedItem>();
+            SelectedFilters.Changed.Subscribe(x => SelectedFiltersChanged(x));
         }
 
         #region Properties 
@@ -38,9 +44,9 @@ namespace Model.Filters
         public EnumFilterModelType Type { get; }
 
         [XmlIgnore]
-        public ObservableCollection<FilterAdvancedItem> Filters { get; set; } = new ObservableCollection<FilterAdvancedItem>();
+        public ObservableCollection<FilterAdvancedItem> Filters { get; private set; } = new ObservableCollection<FilterAdvancedItem>();
 
-        public ObservableCollection<FilterAdvancedItem> SelectedFilters { get; set; } = new ObservableCollection<FilterAdvancedItem>();
+        public ReactiveList<FilterAdvancedItem> SelectedFilters { get; }
 
         #endregion
 
@@ -64,7 +70,7 @@ namespace Model.Filters
             }
 
             SelectedFilters.Clear();
-            SelectedFilters.AddRange(filterModel.SelectedFilters.Select(x => x.Clone()));
+            filterModel.SelectedFilters.Select(x => x.Clone()).ForEach(x => SelectedFilters.Add(x));
         }
 
         public void ResetFilter()
@@ -75,6 +81,80 @@ namespace Model.Filters
         public void SetBuiltFilterModel(BuiltFilterModel builtFilterModel)
         {
             this.builtFilterModel = builtFilterModel;
+
+            AddFilterItemsToBuiltFilterModel(SelectedFilters);
+        }
+
+        private void SelectedFiltersChanged(NotifyCollectionChangedEventArgs args)
+        {
+            if (builtFilterModel == null)
+            {
+                return;
+            }
+
+            if (args.Action == NotifyCollectionChangedAction.Add)
+            {
+                var addedItems = args.NewItems?.OfType<FilterAdvancedItem>();
+
+                if (addedItems != null)
+                {
+                    AddFilterItemsToBuiltFilterModel(addedItems);
+                }
+            }
+            else if (args.Action == NotifyCollectionChangedAction.Remove)
+            {
+                var removedItems = args.OldItems?.OfType<FilterAdvancedItem>();
+
+                if (removedItems != null)
+                {
+                    foreach (var removedItem in removedItems)
+                    {
+                        var itemToRemove = builtFilterModel.FilterSectionCollection
+                            .FirstOrDefault(f => f.ItemType == EnumFilterSectionItemType.AdvancedFilterItem &&
+                                f.Name == removedItem.ToolTip);
+
+                        if (itemToRemove != null)
+                        {
+                            builtFilterModel.FilterSectionCollection.Remove(itemToRemove);
+                        }
+                    }
+                }
+            }
+            else if (args.Action == NotifyCollectionChangedAction.Reset)
+            {
+                builtFilterModel.FilterSectionCollection.RemoveByCondition(x => x.ItemType == EnumFilterSectionItemType.AdvancedFilterItem);
+            }
+        }
+
+        private void AddFilterItemsToBuiltFilterModel(IEnumerable<FilterAdvancedItem> addedItems)
+        {
+            foreach (var addedItem in addedItems)
+            {
+                if (!builtFilterModel.FilterSectionCollection
+                    .Any(f => f.ItemType == EnumFilterSectionItemType.AdvancedFilterItem &&
+                        f.Name == addedItem.ToolTip))
+                {
+                    var filterItem = new FilterSectionItem
+                    {
+                        ItemType = EnumFilterSectionItemType.AdvancedFilterItem,
+                        Name = addedItem.ToolTip,
+                        Value = addedItem.ToolTip,
+                        IsActive = true
+                    };
+
+                    builtFilterModel.FilterSectionCollection.Add(filterItem);
+                }
+            }
+        }
+
+        public override object Clone()
+        {
+            var clonedFilterAdvancedModel = new FilterAdvancedModel();
+
+            clonedFilterAdvancedModel.Initialize();
+            SelectedFilters.ForEach(x => clonedFilterAdvancedModel.SelectedFilters.Add(x.Clone()));
+
+            return clonedFilterAdvancedModel;
         }
 
         #region Initilization helpers 
