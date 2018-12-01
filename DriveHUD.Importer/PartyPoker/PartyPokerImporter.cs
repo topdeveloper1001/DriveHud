@@ -32,7 +32,7 @@ namespace DriveHUD.Importers.PartyPoker
     {
         private readonly Dictionary<string, string[]> playerNamesDictionary;
 
-        private readonly static string[] processNames = new[] { "PartyGaming", "PartyEspana" };
+        private readonly static string[] processNames = new[] { "PartyGaming", "PartyEspana", "PartyFrance" };
 
         public PartyPokerImporter()
         {

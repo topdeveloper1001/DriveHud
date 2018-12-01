@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ITcpPacketImporter.cs" company="Ace Poker Solutions">
+// <copyright file="GenerateLogView.xaml.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,12 +10,28 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using PacketDotNet;
+using DriveHUD.PKCatcher.ViewModels;
+using System.Windows.Controls;
 
-namespace DriveHUD.Importers.AndroidBase
+namespace DriveHUD.PKCatcher.Views
 {
-    internal interface ITcpPacketImporter : INetworkBaseImporter
+    /// <summary>
+    /// Interaction logic for GenerateLog.xaml
+    /// </summary>
+    public partial class GenerateLogView : UserControl, IPopupContainerView
     {
-        bool Match(TcpPacket tcpPacket, IPPacket ipPacket);       
+        public GenerateLogView(IPopupInteractionAware viewModel)
+        {
+            ViewModel = viewModel;
+            DataContext = viewModel;
+
+            InitializeComponent();
+        }
+
+        public IPopupInteractionAware ViewModel
+        {
+            get;
+            private set;
+        }
     }
 }

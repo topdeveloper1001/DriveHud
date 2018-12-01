@@ -14,6 +14,7 @@ using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
+using HandHistories.Parser.Parsers.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -160,9 +161,16 @@ namespace HandHistories.Parser.Utils
                 {
                     winAction.Amount -= diffBetweenPots;
 
-                    if (handHistory.Players[playerPutMaxInPot.Key].Win > 0)
+                    var player = handHistory.Players[playerPutMaxInPot.Key];
+
+                    if (player == null)
                     {
-                        handHistory.Players[playerPutMaxInPot.Key].Win -= diffBetweenPots;
+                        throw new InvalidHandException(string.Empty, $"Player {playerPutMaxInPot.Key} wasn't found in the list of players.");
+                    }
+
+                    if (player.Win > 0)
+                    {
+                        player.Win -= diffBetweenPots;
                     }
 
                     if (winAction.Amount == 0)

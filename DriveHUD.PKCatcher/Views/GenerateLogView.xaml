@@ -1,0 +1,32 @@
+﻿<UserControl
+    x:Class="DriveHUD.PKCatcher.Views.GenerateLogView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Width="250">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/DriveHUD.PKCatcher;component/PKCatcherStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel
+        Margin="10">
+
+        <TextBlock
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            TextAlignment="Center"
+            TextWrapping="Wrap"
+            Text="{Binding Message}" />
+
+        <Button
+            Margin="0,10,0,0"
+            Content="{ResX Key=PKC_GenerateLogView_OK}"
+            Width="70"
+            Command="{Binding CloseCommand}" />
+
+    </StackPanel>
+</UserControl>

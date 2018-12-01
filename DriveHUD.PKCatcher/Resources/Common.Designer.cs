@@ -70,6 +70,51 @@ namespace DriveHUD.PKCatcher.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to create log. Please try again or contact support..
+        /// </summary>
+        internal static string PKC_GenerateLogView_FailMessage {
+            get {
+                return ResourceManager.GetString("PKC_GenerateLogView_FailMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to create log!.
+        /// </summary>
+        internal static string PKC_GenerateLogView_FailTitle {
+            get {
+                return ResourceManager.GetString("PKC_GenerateLogView_FailTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string PKC_GenerateLogView_OK {
+            get {
+                return ResourceManager.GetString("PKC_GenerateLogView_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log has been successfully created..
+        /// </summary>
+        internal static string PKC_GenerateLogView_SuccessMessage {
+            get {
+                return ResourceManager.GetString("PKC_GenerateLogView_SuccessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log Created!.
+        /// </summary>
+        internal static string PKC_GenerateLogView_SuccessTitle {
+            get {
+                return ResourceManager.GetString("PKC_GenerateLogView_SuccessTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to None.
         /// </summary>
         internal static string PKC_LicenseType_None {
@@ -102,6 +147,15 @@ namespace DriveHUD.PKCatcher.Resources {
         internal static string PKC_MainView_Enable {
             get {
                 return ResourceManager.GetString("PKC_MainView_Enable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generate Log.
+        /// </summary>
+        internal static string PKC_MainView_GenerateLog {
+            get {
+                return ResourceManager.GetString("PKC_MainView_GenerateLog", resourceCulture);
             }
         }
         

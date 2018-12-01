@@ -114,9 +114,13 @@
       <DependentUpon>PKCatcherView.xaml</DependentUpon>
     </Compile>
     <Compile Include="PKCatcherViewModel.cs" />
+    <Compile Include="ViewModels\GenerateLogViewModel.cs" />
     <Compile Include="ViewModels\IPopupInteractionAware.cs" />
     <Compile Include="ViewModels\LicenseInfoViewModel.cs" />
     <Compile Include="ViewModels\RegistrationViewModel.cs" />
+    <Compile Include="Views\GenerateLogView.xaml.cs">
+      <DependentUpon>GenerateLogView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\IPopupContainerView.cs" />
     <Compile Include="Views\RegistrationView.xaml.cs">
       <DependentUpon>RegistrationView.xaml</DependentUpon>
@@ -157,6 +161,10 @@
     <Compile Include="Settings\IPKSettingsService.cs" />
     <Compile Include="Settings\PKSettingsModel.cs" />
     <Compile Include="Settings\PKSettingsService.cs" />
+    <Page Include="Views\GenerateLogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\RegistrationView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

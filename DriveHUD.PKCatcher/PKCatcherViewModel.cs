@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.Wpf.Mvvm;
@@ -19,10 +20,12 @@ using DriveHUD.PKCatcher.Settings;
 using DriveHUD.PKCatcher.ViewModels;
 using DriveHUD.PKCatcher.Views;
 using Microsoft.Practices.ServiceLocation;
+using Model;
 using Prism.Events;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -50,6 +53,7 @@ namespace DriveHUD.PKCatcher
             ManualCommand = ReactiveCommand.Create(() => BrowserHelper.OpenLinkInBrowser(CommonResourceManager.Instance.GetResourceString("PKC_MainView_ManualLink")));
             TutorialCommand = ReactiveCommand.Create(() => BrowserHelper.OpenLinkInBrowser(CommonResourceManager.Instance.GetResourceString("PKC_MainView_TutorialLink")));
             PurchaseCommand = ReactiveCommand.Create(() => BrowserHelper.OpenLinkInBrowser(CommonResourceManager.Instance.GetResourceString("PKC_BuyLink")));
+            GenerateLogCommand = ReactiveCommand.Create(() => GenerateNetLog());
 
             OnInitialized();
 
@@ -69,6 +73,55 @@ namespace DriveHUD.PKCatcher
             }
 
             Initialize(licenseService);
+        }
+        
+        private void GenerateNetLog()
+        {
+            StartAsyncOperation(() =>
+            {
+                var processStartInfo = new ProcessStartInfo("netstat", "-ano")
+                {
+                    CreateNoWindow = true,
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true
+                };
+
+                var process = Process.Start(processStartInfo);
+                var result = process.StandardOutput.ReadToEnd();
+
+                process.WaitForExit(5000);
+
+                File.WriteAllText("Logs\\pk-netstat.log", result);
+            }, ex =>
+            {
+                string message;
+                string title;
+
+                if (ex != null)
+                {
+                    LogProvider.Log.Error(CustomModulesNames.PKCatcher, "Failed to create PK netstat log.", ex);
+                    message = CommonResourceManager.Instance.GetResourceString("PKC_GenerateLogView_FailMessage");
+                    title = CommonResourceManager.Instance.GetResourceString("PKC_GenerateLogView_FailTitle");
+                }
+                else
+                {
+                    message = CommonResourceManager.Instance.GetResourceString("PKC_GenerateLogView_SuccessMessage");
+                    title = CommonResourceManager.Instance.GetResourceString("PKC_GenerateLogView_SuccessTitle");
+                }
+
+                var generateLogViewModel = new GenerateLogViewModel
+                {
+                    Message = message
+                };
+
+                var popupEventArgs = new RaisePopupEventArgs()
+                {
+                    Title = title,
+                    Content = new GenerateLogView(generateLogViewModel)
+                };
+
+                RaisePopup(popupEventArgs);
+            });
         }
 
         #region Properties        
@@ -242,6 +295,8 @@ namespace DriveHUD.PKCatcher
         public ReactiveCommand TutorialCommand { get; private set; }
 
         public ReactiveCommand PurchaseCommand { get; private set; }
+
+        public ReactiveCommand GenerateLogCommand { get; private set; }
 
         #endregion
 
