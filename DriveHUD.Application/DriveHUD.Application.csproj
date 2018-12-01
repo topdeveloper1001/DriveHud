@@ -503,6 +503,10 @@
     <Compile Include="ViewModels\AppStore\RakebackAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\FilterAdvancedViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterEditValuePopupRequestInfo.cs" />
+    <Compile Include="ViewModels\Filters\FilterEditValuePopupViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterEditValuePopupViewModelInfo.cs" />
+    <Compile Include="ViewModels\Filters\IFilterEditValuePopupViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Graphs\BarSeriesChartBehavior.cs" />
     <Compile Include="ViewModels\Graphs\BaseGraphViewModel.cs" />
@@ -675,6 +679,9 @@
     </Compile>
     <Compile Include="Views\Filters\FilterAdvancedView.xaml.cs">
       <DependentUpon>FilterAdvancedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\FilterEditValuePopupView.xaml.cs">
+      <DependentUpon>FilterEditValuePopupView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Graphs\CashGraphPopupView.xaml.cs">
       <DependentUpon>CashGraphPopupView.xaml</DependentUpon>
@@ -1163,6 +1170,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Filters\FilterAdvancedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Filters\FilterEditValuePopupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

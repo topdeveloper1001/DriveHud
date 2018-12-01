@@ -24,12 +24,14 @@ using DriveHUD.Application.Surrogates;
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
 using DriveHUD.Application.ViewModels;
+using DriveHUD.Application.ViewModels.Filters;
 using DriveHUD.Application.ViewModels.Graphs;
 using DriveHUD.Application.ViewModels.Graphs.SeriesProviders;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Application.Views;
+using DriveHUD.Application.Views.Filters;
 using DriveHUD.Application.Views.Graphs;
 using DriveHUD.Application.Views.Hud;
 using DriveHUD.Common.Log;
@@ -358,10 +360,12 @@ namespace DriveHUD.Application
             // Register views containers
             Container.RegisterType<IViewModelContainer, CashGraphPopupView>(RegionViewNames.CashGraphPopupView);
             Container.RegisterType<IViewModelContainer, HudUploadToStoreView>(RegionViewNames.HudUploadToStoreView);
+            Container.RegisterType<IViewModelContainer, FilterEditValuePopupView>(RegionViewNames.FilterEditValuePopupView);
 
             // Register view models
             Container.RegisterType<ICashGraphPopupViewModel, CashGraphPopupViewModel>();
             Container.RegisterType<IHudUploadToStoreViewModel, HudUploadToStoreViewModel>();
+            Container.RegisterType<IFilterEditValuePopupViewModel, FilterEditValuePopupViewModel>();
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

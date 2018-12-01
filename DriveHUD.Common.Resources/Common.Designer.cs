@@ -971,6 +971,42 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Common_FilterEditValuePopupView_Cancel {
+            get {
+                return ResourceManager.GetString("Common_FilterEditValuePopupView_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the amount for:.
+        /// </summary>
+        internal static string Common_FilterEditValuePopupView_EnterTheAmountFor {
+            get {
+                return ResourceManager.GetString("Common_FilterEditValuePopupView_EnterTheAmountFor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string Common_FilterEditValuePopupView_Save {
+            get {
+                return ResourceManager.GetString("Common_FilterEditValuePopupView_Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set filter value.
+        /// </summary>
+        internal static string Common_FilterEditValuePopupView_Title {
+            get {
+                return ResourceManager.GetString("Common_FilterEditValuePopupView_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Filters.
         /// </summary>
         internal static string Common_Filters {

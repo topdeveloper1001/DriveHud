@@ -12,6 +12,7 @@
 
 using Model.Enums;
 using Model.Filters;
+using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
 using System.Linq;
 using System.Windows.Data;
@@ -25,6 +26,8 @@ namespace DriveHUD.Application.ViewModels.Filters
         {
             InitializeCollectionViews();
             InitializeCommands();
+
+            EnterValuePopupRequest = new InteractionRequest<INotification>();
         }
 
         #region Properties
@@ -32,6 +35,8 @@ namespace DriveHUD.Application.ViewModels.Filters
         public CollectionView FiltersCollectionView { get; private set; }
 
         public CollectionView SelectedFiltersCollectionView { get; private set; }
+
+        public InteractionRequest<INotification> EnterValuePopupRequest { get; private set; }
 
         #endregion
 
@@ -78,8 +83,15 @@ namespace DriveHUD.Application.ViewModels.Filters
                     if (FilterAdvancedModel.FiltersWithValueRequired.Contains(filterToAdd.FilterType))
                     {
                         // call popup to add filter
+                        var filterEditValuePopupViewModelInfo = new FilterEditValuePopupViewModelInfo
+                        {
+                            Filter = filterToAdd,
+                            SaveAction = () => FilterModel.SelectedFilters.Add(filterToAdd)
+                        };
 
-                        FilterModel.SelectedFilters.Add(filterToAdd);
+                        var filterEditValuePopupRequestInfo = new FilterEditValuePopupRequestInfo(filterEditValuePopupViewModelInfo);
+
+                        EnterValuePopupRequest.Raise(filterEditValuePopupRequestInfo);
                     }
                     else
                     {

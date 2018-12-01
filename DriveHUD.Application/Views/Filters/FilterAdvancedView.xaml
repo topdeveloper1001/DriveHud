@@ -4,14 +4,17 @@
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     xmlns:cnv="clr-namespace:DriveHUD.Application.ValueConverters"
-    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
+    xmlns:prism="http://www.codeplex.com/prism"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:vw="clr-namespace:DriveHUD.Application.Views"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <UserControl.Resources>
 
         <cnv:CollectionViewGroupConverter
             x:Key="CollectionViewGroupConverter" />
-     
+
         <Color
             x:Key="SelectionBackgroundColor">#33519b</Color>
 
@@ -446,5 +449,40 @@
         </TreeView>
 
     </Grid>
+
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger
+            SourceObject="{Binding EnterValuePopupRequest, Mode=OneWay}">
+            <infra:ShowRadWindowViewAction
+                SingleOnly="True"
+                IsModal="True"
+                ViewName="{x:Static vw:RegionViewNames.FilterEditValuePopupView}"
+                StartupLocation="CenterAssosiated">
+                <infra:ShowRadWindowViewAction.WindowStyle>
+                    <Style
+                        TargetType="{x:Type telerik:RadWindow}">
+                        <Setter
+                            Property="Foreground"
+                            Value="{StaticResource ForegroundBrush}" />
+                        <Setter
+                            Property="Background"
+                            Value="{StaticResource BackgroundBrush1}" />
+                        <Setter
+                            Property="ResizeMode"
+                            Value="NoResize" />
+                        <Setter
+                            Property="SnapsToDevicePixels"
+                            Value="True" />
+                        <Setter
+                            Property="UseLayoutRounding"
+                            Value="True" />
+                        <Setter
+                            Property="SizeToContent"
+                            Value="True" />
+                    </Style>
+                </infra:ShowRadWindowViewAction.WindowStyle>
+            </infra:ShowRadWindowViewAction>
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
 
 </UserControl>
