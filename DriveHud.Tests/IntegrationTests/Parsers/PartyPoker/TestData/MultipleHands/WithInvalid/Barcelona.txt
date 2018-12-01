@@ -1,0 +1,1595 @@
+Game #18010557728 starts.
+
+#Game No : 18010557728 
+***** Hand History for Game 18010557728 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:41:18 CET 2018
+Table Barcelona (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €2 EUR )
+Seat 1: Player1 ( €0.67 EUR )
+Seat 2: Player2 ( €7.44 EUR )
+Seat 3: Player3 ( €2.18 EUR )
+Seat 5: Player5 ( €2.02 EUR )
+Seat 6: Player6 ( €0.27 EUR )
+Player6 posts small blind [€0.01 EUR].
+Player1 posts big blind [€0.02 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  3s Th ]
+Aramovz did not respond in time
+Aramovz folds
+jiph00 folds
+Blauman2 checks
+OBV_DAY folds
+Karl56880 folds
+regza44 raises [€0.06 EUR]
+Blauman2 calls [€0.06 EUR]
+** Dealing Flop ** [ 2d, Qd, Ac ]
+regza44 checks
+Blauman2 checks
+** Dealing Turn ** [ Js ]
+regza44 bets [€0.12 EUR]
+Blauman2 folds
+regza44 does not show cards.
+regza44 wins €0.28 EUR
+Game #18010560571 starts.
+
+#Game No : 18010560571 
+***** Hand History for Game 18010560571 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:42:11 CET 2018
+Table Barcelona (Real Money)
+Seat 6 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.44 EUR )
+Seat 4: Blauman2 ( €1.92 EUR )
+Seat 6: Karl56880 ( €0.26 EUR )
+Seat 5: OBV_DAY ( €2.02 EUR )
+Seat 3: jiph00 ( €2.18 EUR )
+Seat 1: regza44 ( €0.75 EUR )
+regza44 posts small blind [€0.01 EUR].
+Aramovz posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  9s Th ]
+jiph00 folds
+Blauman2 calls [€0.02 EUR]
+OBV_DAY folds
+Karl56880 calls [€0.02 EUR]
+regza44 raises [€0.07 EUR]
+Aramovz folds
+Blauman2 folds
+Karl56880 calls [€0.06 EUR]
+** Dealing Flop ** [ Js, Kd, Jd ]
+regza44 bets [€0.02 EUR]
+Karl56880 calls [€0.02 EUR]
+** Dealing Turn ** [ 2c ]
+regza44 bets [€0.02 EUR]
+Karl56880 calls [€0.02 EUR]
+** Dealing River ** [ Qh ]
+regza44 bets [€0.02 EUR]
+Karl56880 calls [€0.02 EUR]
+regza44 shows [ Ah, Ad ]two pairs, Aces and Jacks.
+Karl56880 doesn't show [ 4s, 4c ]two pairs, Jacks and Fours.
+regza44 wins €0.30 EUR from the main pot with two pairs, Aces and Jacks.
+Game #18010562242 starts.
+
+#Game No : 18010562242 
+***** Hand History for Game 18010562242 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:42:49 CET 2018
+Table Barcelona (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.42 EUR )
+Seat 4: Blauman2 ( €1.90 EUR )
+Seat 6: Karl56880 ( €0.12 EUR )
+Seat 5: OBV_DAY ( €2.02 EUR )
+Seat 3: jiph00 ( €2.18 EUR )
+Seat 1: regza44 ( €0.91 EUR )
+Aramovz posts small blind [€0.01 EUR].
+jiph00 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7h Qh ]
+Blauman2 calls [€0.02 EUR]
+OBV_DAY folds
+Karl56880 folds
+regza44 calls [€0.02 EUR]
+Aramovz calls [€0.01 EUR]
+jiph00 checks
+** Dealing Flop ** [ 3c, Ad, 4c ]
+Aramovz checks
+jiph00 bets [€0.05 EUR]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Blauman2 folds
+regza44 folds
+Aramovz folds
+jiph00 does not show cards.
+jiph00 wins €0.13 EUR
+Game #18010565228 starts.
+
+#Game No : 18010565228 
+***** Hand History for Game 18010565228 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:43:47 CET 2018
+Table Barcelona (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €1.88 EUR )
+Seat 6: Karl56880 ( €0.12 EUR )
+Seat 5: OBV_DAY ( €2.02 EUR )
+Seat 3: jiph00 ( €2.24 EUR )
+Seat 1: regza44 ( €0.89 EUR )
+jiph00 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7h Td ]
+OBV_DAY folds
+Karl56880 folds
+regza44 folds
+Aramovz folds
+jiph00 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.03 EUR
+Game #18010565761 starts.
+
+#Game No : 18010565761 
+***** Hand History for Game 18010565761 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:44:00 CET 2018
+Table Barcelona (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €1.89 EUR )
+Seat 6: Karl56880 ( €0.12 EUR )
+Seat 5: OBV_DAY ( €2.02 EUR )
+Seat 3: jiph00 ( €2.23 EUR )
+Seat 1: regza44 ( €0.89 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Qd Jc ]
+Karl56880 calls [€0.02 EUR]
+regza44 raises [€0.08 EUR]
+Aramovz did not respond in time
+Aramovz folds
+jiph00 folds
+Blauman2 calls [€0.07 EUR]
+OBV_DAY folds
+Karl56880 folds
+** Dealing Flop ** [ 2h, 6d, 7s ]
+Blauman2 checks
+regza44 bets [€0.02 EUR]
+Blauman2 calls [€0.02 EUR]
+** Dealing Turn ** [ Th ]
+Blauman2 checks
+regza44 bets [€0.02 EUR]
+Blauman2 calls [€0.02 EUR]
+** Dealing River ** [ 4s ]
+Blauman2 bets [€0.13 EUR]
+regza44 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.40 EUR
+Game #18010568255 starts.
+
+#Game No : 18010568255 
+***** Hand History for Game 18010568255 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:44:57 CET 2018
+Table Barcelona (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.04 EUR )
+Seat 6: Karl56880 ( €0.10 EUR )
+Seat 5: OBV_DAY ( €2 EUR )
+Seat 3: jiph00 ( €2.23 EUR )
+Seat 1: regza44 ( €0.77 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+Karl56880 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Ks Qd ]
+regza44 raises [€0.08 EUR]
+Aramovz folds
+jiph00 folds
+Blauman2 calls [€0.08 EUR]
+OBV_DAY folds
+Karl56880 folds
+** Dealing Flop ** [ Qc, 2d, 4h ]
+regza44 checks
+Blauman2 checks
+** Dealing Turn ** [ As ]
+regza44 checks
+Blauman2 bets [€0.09 EUR]
+regza44 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.27 EUR
+Game #18010570510 starts.
+
+#Game No : 18010570510 
+***** Hand History for Game 18010570510 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:45:38 CET 2018
+Table Barcelona (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.14 EUR )
+Seat 6: Karl56880 ( €0.08 EUR )
+Seat 5: OBV_DAY ( €1.99 EUR )
+Seat 3: jiph00 ( €2.23 EUR )
+Seat 1: regza44 ( €0.69 EUR )
+Karl56880 posts small blind [€0.01 EUR].
+regza44 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Td Jd ]
+Aramovz folds
+jiph00 folds
+Blauman2 raises [€0.04 EUR]
+OBV_DAY folds
+Karl56880 folds
+regza44 calls [€0.02 EUR]
+** Dealing Flop ** [ 4c, 6c, Qh ]
+regza44 checks
+Blauman2 bets [€0.09 EUR]
+regza44 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.18 EUR
+Game #18010571421 starts.
+
+#Game No : 18010571421 
+***** Hand History for Game 18010571421 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:46:00 CET 2018
+Table Barcelona (Real Money)
+Seat 6 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.19 EUR )
+Seat 6: Karl56880 ( €0.07 EUR )
+Seat 5: OBV_DAY ( €1.99 EUR )
+Seat 3: jiph00 ( €2.23 EUR )
+Seat 1: regza44 ( €0.65 EUR )
+regza44 posts small blind [€0.01 EUR].
+jiph00 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Tc Qs ]
+Blauman2 raises [€0.09 EUR]
+OBV_DAY folds
+Karl56880 is all-In  [€0.07 EUR]
+regza44 folds
+jiph00 folds
+** Dealing Flop ** [ 2c, Qh, 5h ]
+** Dealing Turn ** [ 5d ]
+** Dealing River ** [ Jh ]
+Blauman2 shows [ Tc, Qs ]two pairs, Queens and Fives.
+Karl56880 doesn't show [ As, 2d ]two pairs, Fives and Twos.
+Blauman2 wins €0.02 EUR from the side pot 1 with two pairs, Queens and Fives.
+Blauman2 wins €0.16 EUR from the main pot with two pairs, Queens and Fives.
+Game #18010572234 starts.
+
+#Game No : 18010572234 
+***** Hand History for Game 18010572234 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:46:19 CET 2018
+Table Barcelona (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.28 EUR )
+Seat 6: Karl56880 ( €0 EUR )
+Seat 5: OBV_DAY ( €1.99 EUR )
+Seat 3: jiph00 ( €2.21 EUR )
+Seat 1: regza44 ( €0.64 EUR )
+jiph00 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Td Jc ]
+OBV_DAY folds
+regza44 raises [€0.08 EUR]
+jiph00 calls [€0.07 EUR]
+Blauman2 raises [€0.12 EUR]
+regza44 calls [€0.06 EUR]
+jiph00 calls [€0.06 EUR]
+** Dealing Flop ** [ Qc, 3s, 3h ]
+jiph00 checks
+Blauman2 checks
+regza44 checks
+** Dealing Turn ** [ 9h ]
+jiph00 checks
+Blauman2 bets [€0.20 EUR]
+regza44 folds
+jiph00 calls [€0.20 EUR]
+** Dealing River ** [ 5s ]
+jiph00 checks
+Blauman2 bets [€0.15 EUR]
+jiph00 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.92 EUR
+Game #18010576000 starts.
+
+#Game No : 18010576000 
+***** Hand History for Game 18010576000 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:47:24 CET 2018
+Table Barcelona (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.71 EUR )
+Seat 6: Karl56880 ( €0 EUR )
+Seat 5: OBV_DAY ( €1.99 EUR )
+Seat 3: jiph00 ( €2 EUR )
+Seat 1: regza44 ( €0.50 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  4s 4h ]
+regza44 is all-In  [€0.50 EUR]
+jiph00 folds
+Blauman2 folds
+OBV_DAY folds
+regza44 does not show cards.
+regza44 wins €0.53 EUR
+Game #18010576500 starts.
+
+#Game No : 18010576500 
+***** Hand History for Game 18010576500 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:47:36 CET 2018
+Table Barcelona (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.70 EUR )
+Seat 6: Karl56880 ( €0 EUR )
+Seat 5: OBV_DAY ( €1.97 EUR )
+Seat 3: jiph00 ( €2 EUR )
+Seat 1: regza44 ( €0.53 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+regza44 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  4c 5h ]
+jiph00 folds
+Blauman2 raises [€0.10 EUR]
+OBV_DAY folds
+regza44 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.13 EUR
+Game #18010577011 starts.
+
+#Game No : 18010577011 
+***** Hand History for Game 18010577011 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:47:48 CET 2018
+Table Barcelona (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.73 EUR )
+Seat 6: Karl56880 ( €0 EUR )
+Seat 5: OBV_DAY ( €1.96 EUR )
+Seat 3: jiph00 ( €2 EUR )
+Seat 1: regza44 ( €0.51 EUR )
+regza44 posts small blind [€0.01 EUR].
+jiph00 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Jh 7h ]
+Blauman2 calls [€0.02 EUR]
+OBV_DAY folds
+regza44 calls [€0.01 EUR]
+jiph00 checks
+** Dealing Flop ** [ Jc, Jd, 7s ]
+regza44 bets [€0.02 EUR]
+jiph00 folds
+Blauman2 raises [€0.04 EUR]
+regza44 calls [€0.02 EUR]
+** Dealing Turn ** [ 5h ]
+regza44 bets [€0.02 EUR]
+Blauman2 raises [€0.15 EUR]
+regza44 calls [€0.13 EUR]
+** Dealing River ** [ 6d ]
+regza44 bets [€0.02 EUR]
+Blauman2 raises [€0.27 EUR]
+regza44 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.70 EUR
+Game #18010578763 starts.
+
+#Game No : 18010578763 
+***** Hand History for Game 18010578763 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:48:29 CET 2018
+Table Barcelona (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.95 EUR )
+Seat 6: Karl56880 ( €0 EUR )
+Seat 5: OBV_DAY ( €1.96 EUR )
+Seat 3: jiph00 ( €2 EUR )
+Seat 1: regza44 ( €0.28 EUR )
+jiph00 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Js 5h ]
+OBV_DAY folds
+regza44 is all-In  [€0.28 EUR]
+jiph00 folds
+Blauman2 folds
+regza44 does not show cards.
+regza44 wins €0.31 EUR
+Game #18010579338 starts.
+
+#Game No : 18010579338 
+***** Hand History for Game 18010579338 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:48:42 CET 2018
+Table Barcelona (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.93 EUR )
+Seat 6: Karl56880 ( €0 EUR )
+Seat 5: OBV_DAY ( €1.96 EUR )
+Seat 3: jiph00 ( €2 EUR )
+Seat 1: regza44 ( €0.31 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  8h 4d ]
+regza44 is all-In  [€0.31 EUR]
+jiph00 raises [€0.96 EUR]
+Blauman2 folds
+OBV_DAY folds
+** Dealing Flop ** [ 5c, Tc, Qs ]
+** Dealing Turn ** [ Qh ]
+** Dealing River ** [ 5d ]
+jiph00 shows [ Ks, Js ]two pairs, Queens and Fives with King kicker.
+regza44 doesn't show [ 9h, 4c ]two pairs, Queens and Fives.
+jiph00 wins €0.65 EUR from the side pot 1 with two pairs, Queens and Fives with King kicker.
+jiph00 wins €0.61 EUR from the main pot with two pairs, Queens and Fives with King kicker.
+Game #18010580353 starts.
+
+#Game No : 18010580353 
+***** Hand History for Game 18010580353 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:49:06 CET 2018
+Table Barcelona (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.92 EUR )
+Seat 6: Karl56880 ( €0 EUR )
+Seat 5: OBV_DAY ( €1.94 EUR )
+Seat 3: jiph00 ( €2.30 EUR )
+Seat 1: regza44 ( €0.86 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+regza44 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  As 8c ]
+jiph00 folds
+Blauman2 raises [€0.04 EUR]
+OBV_DAY calls [€0.03 EUR]
+regza44 raises [€0.12 EUR]
+Blauman2 calls [€0.10 EUR]
+OBV_DAY folds
+** Dealing Flop ** [ 8s, 5d, 4c ]
+regza44 bets [€0.02 EUR]
+Blauman2 raises [€0.70 EUR]
+regza44 is all-In  [€0.70 EUR]
+Blauman2 calls [€0.02 EUR]
+** Dealing Turn ** [ 6h ]
+** Dealing River ** [ 7c ]
+Blauman2 shows [ As, 8c ]a straight, Four to Eight.
+regza44 shows [ 6c, Ad ]a straight, Four to Eight.
+regza44 wins €0.83 EUR from the main pot with a straight, Four to Eight.
+Blauman2 wins €0.82 EUR from the main pot with a straight, Four to Eight.
+Game #18010581944 starts.
+
+#Game No : 18010581944 
+***** Hand History for Game 18010581944 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:49:43 CET 2018
+Table Barcelona (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.88 EUR )
+Seat 6: Karl56880 ( €0 EUR )
+Seat 5: OBV_DAY ( €1.90 EUR )
+Seat 3: jiph00 ( €2.30 EUR )
+Seat 1: regza44 ( €0.83 EUR )
+regza44 posts small blind [€0.01 EUR].
+jiph00 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  8s 5h ]
+Blauman2 folds
+OBV_DAY folds
+regza44 calls [€0.01 EUR]
+jiph00 checks
+** Dealing Flop ** [ 6d, 2d, 9d ]
+regza44 bets [€0.02 EUR]
+jiph00 folds
+regza44 does not show cards.
+regza44 wins €0.06 EUR
+Game #18010582685 starts.
+
+#Game No : 18010582685 
+***** Hand History for Game 18010582685 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:50:00 CET 2018
+Table Barcelona (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.88 EUR )
+Seat 6: Karl56880 ( €0 EUR )
+Seat 5: OBV_DAY ( €1.90 EUR )
+Seat 3: jiph00 ( €2.28 EUR )
+Seat 1: regza44 ( €0.85 EUR )
+jiph00 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Ac Ts ]
+OBV_DAY folds
+regza44 folds
+jiph00 calls [€0.01 EUR]
+Blauman2 checks
+** Dealing Flop ** [ 9d, 8d, Tc ]
+jiph00 bets [€0.02 EUR]
+Blauman2 raises [€0.10 EUR]
+jiph00 calls [€0.08 EUR]
+** Dealing Turn ** [ 4h ]
+jiph00 checks
+Blauman2 bets [€0.23 EUR]
+jiph00 is all-In  [€2.16 EUR]
+Blauman2 folds
+jiph00 does not show cards.
+jiph00 wins €2.59 EUR
+Game #18010584367 starts.
+
+#Game No : 18010584367 
+***** Hand History for Game 18010584367 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:50:38 CET 2018
+Table Barcelona (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.53 EUR )
+Seat 6: Karl56880 ( €0 EUR )
+Seat 5: OBV_DAY ( €1.90 EUR )
+Seat 3: jiph00 ( €2.59 EUR )
+Seat 1: regza44 ( €0.85 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Ah 7s ]
+regza44 calls [€0.02 EUR]
+jiph00 folds
+Blauman2 calls [€0.01 EUR]
+OBV_DAY checks
+** Dealing Flop ** [ 6h, 9d, Kh ]
+Blauman2 checks
+OBV_DAY checks
+regza44 bets [€0.02 EUR]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Blauman2 calls [€0.02 EUR]
+OBV_DAY calls [€0.02 EUR]
+** Dealing Turn ** [ 4d ]
+Blauman2 checks
+OBV_DAY checks
+regza44 bets [€0.02 EUR]
+Blauman2 calls [€0.02 EUR]
+OBV_DAY calls [€0.02 EUR]
+** Dealing River ** [ 9c ]
+Blauman2 checks
+Karl56880 has left the table.
+OBV_DAY checks
+regza44 checks
+Blauman2 shows [ Ah, 7s ]a pair of Nines.
+OBV_DAY shows [ 5s, 8h ]a pair of Nines.
+regza44 shows [ 6c, 7h ]two pairs, Nines and Sixes.
+regza44 wins €0.17 EUR from the main pot with two pairs, Nines and Sixes.
+Game #18010589197 starts.
+
+#Game No : 18010589197 
+***** Hand History for Game 18010589197 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:52:07 CET 2018
+Table Barcelona (Real Money)
+Seat 4 is the button
+Total number of players : 5/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.47 EUR )
+Seat 5: OBV_DAY ( €1.84 EUR )
+Seat 3: jiph00 ( €2.59 EUR )
+Seat 1: regza44 ( €0.96 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+regza44 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  9h 2c ]
+jiph00 raises [€0.06 EUR]
+Blauman2 folds
+OBV_DAY folds
+regza44 calls [€0.04 EUR]
+** Dealing Flop ** [ 3h, Kd, 8h ]
+regza44 checks
+jiph00 bets [€0.09 EUR]
+regza44 folds
+jiph00 does not show cards.
+jiph00 wins €0.22 EUR
+Game #18010590331 starts.
+
+#Game No : 18010590331 
+***** Hand History for Game 18010590331 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:52:33 CET 2018
+Table Barcelona (Real Money)
+Seat 5 is the button
+Total number of players : 5/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.47 EUR )
+Seat 5: OBV_DAY ( €1.83 EUR )
+Seat 3: jiph00 ( €2.66 EUR )
+Seat 1: regza44 ( €0.90 EUR )
+regza44 posts small blind [€0.01 EUR].
+jiph00 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  4h 5c ]
+Blauman2 calls [€0.02 EUR]
+OBV_DAY folds
+regza44 calls [€0.01 EUR]
+jiph00 raises [€0.04 EUR]
+Blauman2 folds
+regza44 folds
+jiph00 does not show cards.
+jiph00 wins €0.10 EUR
+Game #18010591519 starts.
+
+#Game No : 18010591519 
+***** Hand History for Game 18010591519 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:53:00 CET 2018
+Table Barcelona (Real Money)
+Seat 1 is the button
+Total number of players : 5/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.45 EUR )
+Seat 5: OBV_DAY ( €1.83 EUR )
+Seat 3: jiph00 ( €2.70 EUR )
+Seat 1: regza44 ( €0.88 EUR )
+jiph00 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  2d Qc ]
+OBV_DAY folds
+regza44 calls [€0.02 EUR]
+Flexi44 has joined the table.
+jiph00 folds
+Blauman2 folds
+regza44 does not show cards.
+regza44 wins €0.05 EUR
+Game #18010591956 starts.
+
+#Game No : 18010591956 
+***** Hand History for Game 18010591956 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:53:10 CET 2018
+Table Barcelona (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 2: Aramovz ( €7.40 EUR )
+Seat 4: Blauman2 ( €2.43 EUR )
+Seat 6: Flexi44 ( €1.58 EUR )
+Seat 5: OBV_DAY ( €1.83 EUR )
+Seat 3: jiph00 ( €2.69 EUR )
+Seat 1: regza44 ( €0.91 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+Flexi44 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  8d 2d ]
+Flexi44 checks
+regza44 calls [€0.02 EUR]
+jiph00 folds
+Blauman2 folds
+OBV_DAY checks
+** Dealing Flop ** [ Kd, Kc, Qh ]
+OBV_DAY checks
+Flexi44 checks
+regza44 checks
+** Dealing Turn ** [ 5h ]
+OBV_DAY checks
+Flexi44 checks
+regza44 bets [€0.03 EUR]
+OBV_DAY calls [€0.03 EUR]
+Flexi44 calls [€0.03 EUR]
+** Dealing River ** [ 4d ]
+OBV_DAY checks
+Flexi44 checks
+regza44 bets [€0.07 EUR]
+OBV_DAY folds
+Flexi44 calls [€0.07 EUR]
+regza44 shows [ Kh, 7d ]three of a kind, Kings.
+Flexi44 doesn't show [ 5c, Ac ]two pairs, Kings and Fives.
+regza44 wins €0.28 EUR from the main pot with three of a kind, Kings.
+Aramovz has left the table.
+Game #18010593768 starts.
+
+#Game No : 18010593768 
+***** Hand History for Game 18010593768 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:53:51 CET 2018
+Table Barcelona (Real Money)
+Seat 4 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.42 EUR )
+Seat 6: Flexi44 ( €1.46 EUR )
+Seat 5: OBV_DAY ( €1.78 EUR )
+Seat 3: jiph00 ( €2.69 EUR )
+Seat 1: regza44 ( €1.07 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+Flexi44 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7s 2h ]
+regza44 calls [€0.02 EUR]
+jiph00 folds
+Blauman2 raises [€0.10 EUR]
+OBV_DAY folds
+Flexi44 calls [€0.08 EUR]
+regza44 calls [€0.08 EUR]
+** Dealing Flop ** [ 9d, 3h, Td ]
+Flexi44 bets [€0.02 EUR]
+regza44 calls [€0.02 EUR]
+Blauman2 raises [€0.19 EUR]
+Flexi44 calls [€0.17 EUR]
+regza44 calls [€0.17 EUR]
+** Dealing Turn ** [ 7d ]
+Flexi44 checks
+regza44 checks
+Blauman2 checks
+** Dealing River ** [ 3s ]
+Flexi44 bets [€0.83 EUR]
+regza44 is all-In  [€0.78 EUR]
+Blauman2 folds
+Flexi44 shows [ 5d, Kd ]a flush, King high.
+regza44 doesn't show [ 8d, Jh ]a straight, Seven to Jack.
+Flexi44 wins €0.05 EUR from the side pot 1 with a flush, King high.
+Flexi44 wins €2.28 EUR from the main pot with a flush, King high.
+Game #18010596004 starts.
+
+#Game No : 18010596004 
+***** Hand History for Game 18010596004 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:54:42 CET 2018
+Table Barcelona (Real Money)
+Seat 5 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.13 EUR )
+Seat 6: Flexi44 ( €2.67 EUR )
+Seat 5: OBV_DAY ( €1.77 EUR )
+Seat 3: jiph00 ( €2.69 EUR )
+Seat 1: regza44 ( €0 EUR )
+Flexi44 posts small blind [€0.01 EUR].
+jiph00 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  9h 6d ]
+Blauman2 folds
+OBV_DAY raises [€0.10 EUR]
+Flexi44 folds
+jiph00 folds
+OBV_DAY does not show cards.
+OBV_DAY wins €0.13 EUR
+Game #18010596509 starts.
+
+#Game No : 18010596509 
+***** Hand History for Game 18010596509 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:54:54 CET 2018
+Table Barcelona (Real Money)
+Seat 6 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.13 EUR )
+Seat 6: Flexi44 ( €2.66 EUR )
+Seat 5: OBV_DAY ( €1.80 EUR )
+Seat 3: jiph00 ( €2.67 EUR )
+Seat 1: regza44 ( €0.93 EUR )
+jiph00 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Jh Ac ]
+OBV_DAY folds
+Flexi44 calls [€0.02 EUR]
+jiph00 calls [€0.01 EUR]
+Blauman2 raises [€0.08 EUR]
+Flexi44 calls [€0.08 EUR]
+jiph00 folds
+** Dealing Flop ** [ 6d, 6s, 3c ]
+Blauman2 checks
+Flexi44 checks
+** Dealing Turn ** [ 5h ]
+Blauman2 bets [€0.10 EUR]
+Flexi44 calls [€0.10 EUR]
+** Dealing River ** [ 3h ]
+Blauman2 bets [€0.20 EUR]
+Flexi44 calls [€0.20 EUR]
+Blauman2 shows [ Jh, Ac ]two pairs, Sixes and Threes with Ace kicker.
+Flexi44 doesn't show [ Tc, Jd ]two pairs, Sixes and Threes.
+Blauman2 wins €0.77 EUR from the main pot with two pairs, Sixes and Threes with Ace kicker.
+Game #18010598680 starts.
+
+#Game No : 18010598680 
+***** Hand History for Game 18010598680 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:55:36 CET 2018
+Table Barcelona (Real Money)
+Seat 3 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.50 EUR )
+Seat 6: Flexi44 ( €2.26 EUR )
+Seat 5: OBV_DAY ( €1.80 EUR )
+Seat 3: jiph00 ( €2.65 EUR )
+Seat 1: regza44 ( €1 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+regza44 posts big blind + dead [0,03 €].
+** Dealing down cards **
+Dealt to Blauman2 [  2c 9s ]
+Flexi44 calls [€0.02 EUR]
+regza44 raises [€0.06 EUR]
+jiph00 folds
+Blauman2 folds
+OBV_DAY calls [€0.06 EUR]
+Flexi44 calls [€0.06 EUR]
+** Dealing Flop ** [ 3h, 2h, 5c ]
+OBV_DAY checks
+Flexi44 checks
+regza44 checks
+** Dealing Turn ** [ 5h ]
+OBV_DAY checks
+Flexi44 checks
+regza44 checks
+** Dealing River ** [ 3d ]
+OBV_DAY checks
+Flexi44 checks
+regza44 checks
+OBV_DAY shows [ Qs, Ks ]two pairs, Fives and Threes with King kicker.
+Flexi44 shows [ Jc, 4c ]two pairs, Fives and Threes.
+regza44 shows [ Qd, 9c ]two pairs, Fives and Threes.
+OBV_DAY wins €0.25 EUR from the main pot with two pairs, Fives and Threes with King kicker.
+Game #18010600410 starts.
+
+#Game No : 18010600410 
+***** Hand History for Game 18010600410 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:56:26 CET 2018
+Table Barcelona (Real Money)
+Seat 4 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.49 EUR )
+Seat 6: Flexi44 ( €2.18 EUR )
+Seat 5: OBV_DAY ( €1.97 EUR )
+Seat 3: jiph00 ( €2.65 EUR )
+Seat 1: regza44 ( €0.91 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+Flexi44 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  2c Kd ]
+regza44 raises [€0.08 EUR]
+jiph00 folds
+Blauman2 folds
+OBV_DAY raises [€0.16 EUR]
+Flexi44 calls [€0.15 EUR]
+regza44 calls [€0.09 EUR]
+** Dealing Flop ** [ 2d, Ks, Kh ]
+OBV_DAY checks
+Flexi44 checks
+regza44 checks
+** Dealing Turn ** [ 9d ]
+OBV_DAY checks
+Flexi44 checks
+regza44 checks
+** Dealing River ** [ 3c ]
+OBV_DAY checks
+Flexi44 checks
+regza44 checks
+OBV_DAY shows [ Jd, Ah ]a pair of Kings with Ace kicker.
+Flexi44 shows [ 5d, Qs ]a pair of Kings.
+regza44 shows [ 4s, Ac ]a pair of Kings.
+OBV_DAY wins €0.48 EUR from the main pot with a pair of Kings with Ace kicker.
+Game #18010602464 starts.
+
+#Game No : 18010602464 
+***** Hand History for Game 18010602464 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:57:15 CET 2018
+Table Barcelona (Real Money)
+Seat 5 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.49 EUR )
+Seat 6: Flexi44 ( €2.01 EUR )
+Seat 5: OBV_DAY ( €2.28 EUR )
+Seat 3: jiph00 ( €2.65 EUR )
+Seat 1: regza44 ( €0.74 EUR )
+Flexi44 posts small blind [€0.01 EUR].
+regza44 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7h 3h ]
+jiph00 raises [€0.06 EUR]
+Blauman2 raises [€0.10 EUR]
+OBV_DAY raises [€0.19 EUR]
+Flexi44 folds
+regza44 is all-In  [€0.72 EUR]
+jiph00 is all-In  [€2.59 EUR]
+Blauman2 folds
+OBV_DAY folds
+** Dealing Flop ** [ 2c, 3d, 7c ]
+** Dealing Turn ** [ 4c ]
+** Dealing River ** [ Tc ]
+regza44 shows [ Ah, Qd ]high card Ace.
+jiph00 shows [ Kd, Kc ]a flush, King high.
+jiph00 wins €1.91 EUR from the side pot 1 with a flush, King high.
+jiph00 wins €1.67 EUR from the main pot with a flush, King high.
+Game #18010603495 starts.
+
+#Game No : 18010603495 
+***** Hand History for Game 18010603495 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:57:49 CET 2018
+Table Barcelona (Real Money)
+Seat 6 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.39 EUR )
+Seat 6: Flexi44 ( €2 EUR )
+Seat 5: OBV_DAY ( €2.09 EUR )
+Seat 3: jiph00 ( €3.58 EUR )
+Seat 1: regza44 ( €1 EUR )
+regza44 posts small blind [€0.01 EUR].
+jiph00 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  5h 7h ]
+Blauman2 calls [€0.02 EUR]
+OBV_DAY folds
+Flexi44 folds
+regza44 calls [€0.01 EUR]
+jiph00 checks
+** Dealing Flop ** [ 9h, Ah, Ks ]
+regza44 checks
+jiph00 checks
+Blauman2 checks
+** Dealing Turn ** [ 4s ]
+regza44 checks
+jiph00 checks
+Blauman2 bets [€0.04 EUR]
+regza44 folds
+jiph00 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.10 EUR
+Game #18010605131 starts.
+
+#Game No : 18010605131 
+***** Hand History for Game 18010605131 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:58:42 CET 2018
+Table Barcelona (Real Money)
+Seat 1 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.43 EUR )
+Seat 6: Flexi44 ( €2 EUR )
+Seat 5: OBV_DAY ( €2.09 EUR )
+Seat 3: jiph00 ( €3.56 EUR )
+Seat 1: regza44 ( €0.98 EUR )
+jiph00 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  6c 2h ]
+OBV_DAY folds
+Flexi44 calls [€0.02 EUR]
+regza44 raises [€0.08 EUR]
+jiph00 folds
+Blauman2 folds
+Flexi44 calls [€0.06 EUR]
+** Dealing Flop ** [ 8h, Jc, Qd ]
+Flexi44 bets [€0.02 EUR]
+regza44 calls [€0.02 EUR]
+** Dealing Turn ** [ 4s ]
+Flexi44 bets [€0.22 EUR]
+regza44 calls [€0.22 EUR]
+** Dealing River ** [ Ks ]
+Flexi44 bets [€0.63 EUR]
+regza44 folds
+Flexi44 does not show cards.
+Flexi44 wins €1.26 EUR
+Game #18010607098 starts.
+
+#Game No : 18010607098 
+***** Hand History for Game 18010607098 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:59:29 CET 2018
+Table Barcelona (Real Money)
+Seat 3 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.41 EUR )
+Seat 6: Flexi44 ( €2.31 EUR )
+Seat 5: OBV_DAY ( €2.09 EUR )
+Seat 3: jiph00 ( €3.55 EUR )
+Seat 1: regza44 ( €0.66 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  2d 9s ]
+Flexi44 calls [€0.02 EUR]
+regza44 is all-In  [€0.66 EUR]
+ceddu67 has joined the table.
+jiph00 folds
+Blauman2 folds
+OBV_DAY folds
+Flexi44 folds
+regza44 does not show cards.
+regza44 wins €0.71 EUR
+Game #18010608445 starts.
+
+#Game No : 18010608445 
+***** Hand History for Game 18010608445 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:59:56 CET 2018
+Table Barcelona (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €2.40 EUR )
+Seat 6: Flexi44 ( €2.29 EUR )
+Seat 5: OBV_DAY ( €2.07 EUR )
+Seat 2: ceddu67 ( €2 EUR )
+Seat 3: jiph00 ( €3.55 EUR )
+Seat 1: regza44 ( €0.71 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+Flexi44 posts big blind [€0.02 EUR].
+ceddu67 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Tc 5h ]
+regza44 folds
+ceddu67 checks
+jiph00 folds
+Blauman2 folds
+OBV_DAY raises [€0.09 EUR]
+Flexi44 folds
+ceddu67 folds
+OBV_DAY does not show cards.
+OBV_DAY wins €0.14 EUR
+Game #18010609193 starts.
+
+#Game No : 18010609193 
+***** Hand History for Game 18010609193 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:00:18 CET 2018
+Table Barcelona (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €2.40 EUR )
+Seat 6: Flexi44 ( €2.27 EUR )
+Seat 5: OBV_DAY ( €2.11 EUR )
+Seat 2: ceddu67 ( €1.98 EUR )
+Seat 3: jiph00 ( €3.55 EUR )
+Seat 1: regza44 ( €0.71 EUR )
+Flexi44 posts small blind [€0.01 EUR].
+regza44 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  9h 8d ]
+ceddu67 folds
+jiph00 folds
+Blauman2 folds
+OBV_DAY folds
+Flexi44 calls [€0.01 EUR]
+regza44 raises [€0.06 EUR]
+Flexi44 calls [€0.06 EUR]
+** Dealing Flop ** [ Jh, 4c, 8s ]
+Flexi44 checks
+regza44 bets [€0.02 EUR]
+Flexi44 calls [€0.02 EUR]
+** Dealing Turn ** [ 3h ]
+Flexi44 checks
+regza44 bets [€0.02 EUR]
+Flexi44 calls [€0.02 EUR]
+** Dealing River ** [ Qh ]
+Flexi44 checks
+regza44 checks
+Flexi44 shows [ 3d, Th ]a pair of Threes.
+regza44 shows [ Ac, 4s ]a pair of Fours.
+regza44 wins €0.23 EUR from the main pot with a pair of Fours.
+Game #18010610787 starts.
+
+#Game No : 18010610787 
+***** Hand History for Game 18010610787 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:00:51 CET 2018
+Table Barcelona (Real Money)
+Seat 6 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €2.40 EUR )
+Seat 6: Flexi44 ( €2.15 EUR )
+Seat 5: OBV_DAY ( €2.11 EUR )
+Seat 2: ceddu67 ( €1.98 EUR )
+Seat 3: jiph00 ( €3.55 EUR )
+Seat 1: regza44 ( €0.82 EUR )
+regza44 posts small blind [€0.01 EUR].
+ceddu67 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7h Qd ]
+jiph00 raises [€0.08 EUR]
+Blauman2 calls [€0.08 EUR]
+OBV_DAY folds
+Flexi44 calls [€0.08 EUR]
+regza44 calls [€0.07 EUR]
+ceddu67 calls [€0.06 EUR]
+** Dealing Flop ** [ 3s, 9d, Kd ]
+regza44 bets [€0.02 EUR]
+ceddu67 calls [€0.02 EUR]
+jiph00 calls [€0.02 EUR]
+Blauman2 calls [€0.02 EUR]
+Flexi44 calls [€0.02 EUR]
+** Dealing Turn ** [ 2s ]
+regza44 bets [€0.02 EUR]
+ceddu67 calls [€0.02 EUR]
+jiph00 raises [€0.28 EUR]
+Blauman2 folds
+Flexi44 calls [€0.28 EUR]
+regza44 folds
+ceddu67 folds
+** Dealing River ** [ 6d ]
+jiph00 checks
+Flexi44 checks
+jiph00 shows [ Qc, Qh ]a pair of Queens.
+Flexi44 shows [ Kh, Jc ]a pair of Kings.
+Flexi44 wins €1.03 EUR from the main pot with a pair of Kings.
+Game #18010614050 starts.
+
+#Game No : 18010614050 
+***** Hand History for Game 18010614050 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:02:17 CET 2018
+Table Barcelona (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €2.30 EUR )
+Seat 6: Flexi44 ( €2.80 EUR )
+Seat 5: OBV_DAY ( €2.11 EUR )
+Seat 2: ceddu67 ( €1.86 EUR )
+Seat 3: jiph00 ( €3.17 EUR )
+Seat 1: regza44 ( €0.70 EUR )
+ceddu67 posts small blind [€0.01 EUR].
+jiph00 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Kh As ]
+Blauman2 raises [€0.09 EUR]
+OBV_DAY folds
+Flexi44 calls [€0.09 EUR]
+regza44 calls [€0.09 EUR]
+ceddu67 calls [€0.08 EUR]
+jiph00 folds
+** Dealing Flop ** [ Ks, 4h, Ad ]
+ceddu67 bets [€0.08 EUR]
+Blauman2 calls [€0.08 EUR]
+Flexi44 calls [€0.08 EUR]
+regza44 folds
+** Dealing Turn ** [ 9s ]
+ceddu67 bets [€0.43 EUR]
+Blauman2 raises [€0.86 EUR]
+Flexi44 calls [€0.86 EUR]
+ceddu67 is all-In  [€1.26 EUR]
+Blauman2 is all-In  [€1.27 EUR]
+Flexi44 calls [€1.27 EUR]
+** Dealing River ** [ 8c ]
+Blauman2 shows [ Kh, As ]two pairs, Aces and Kings.
+Flexi44 shows [ Qs, Js ]high card Ace.
+ceddu67 shows [ 4s, 4d ]three of a kind, Fours.
+Blauman2 wins €0.82 EUR from the side pot 1 with two pairs, Aces and Kings.
+ceddu67 wins €5.32 EUR from the main pot with three of a kind, Fours.
+Game #18010617944 starts.
+
+#Game No : 18010617944 
+***** Hand History for Game 18010617944 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:03:34 CET 2018
+Table Barcelona (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €0.82 EUR )
+Seat 6: Flexi44 ( €0.50 EUR )
+Seat 5: OBV_DAY ( €2.11 EUR )
+Seat 2: ceddu67 ( €5.32 EUR )
+Seat 3: jiph00 ( €3.15 EUR )
+Seat 1: regza44 ( €0.61 EUR )
+jiph00 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  2s Qs ]
+OBV_DAY folds
+Flexi44 calls [€0.02 EUR]
+regza44 folds
+ceddu67 calls [€0.02 EUR]
+jiph00 calls [€0.01 EUR]
+Blauman2 checks
+** Dealing Flop ** [ 8d, Ah, 3c ]
+jiph00 checks
+Blauman2 checks
+Flexi44 checks
+ceddu67 checks
+** Dealing Turn ** [ 4c ]
+jiph00 checks
+Blauman2 checks
+Flexi44 checks
+ceddu67 checks
+** Dealing River ** [ Th ]
+jiph00 checks
+Blauman2 checks
+Flexi44 checks
+ceddu67 bets [€0.04 EUR]
+jiph00 calls [€0.04 EUR]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Blauman2 folds
+Flexi44 folds
+ceddu67 shows [ Ts, 5s ]a pair of Tens.
+jiph00 shows [ 8c, Td ]two pairs, Tens and Eights.
+jiph00 wins €0.15 EUR from the main pot with two pairs, Tens and Eights.
+Game #18010621793 starts.
+
+#Game No : 18010621793 
+***** Hand History for Game 18010621793 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:04:59 CET 2018
+Table Barcelona (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €0.80 EUR )
+Seat 6: Flexi44 ( €0.48 EUR )
+Seat 5: OBV_DAY ( €2.11 EUR )
+Seat 2: ceddu67 ( €5.26 EUR )
+Seat 3: jiph00 ( €3.24 EUR )
+Seat 1: regza44 ( €0.61 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7h Ad ]
+Flexi44 calls [€0.02 EUR]
+regza44 raises [€0.08 EUR]
+ceddu67 folds
+jiph00 folds
+Blauman2 calls [€0.07 EUR]
+OBV_DAY folds
+Flexi44 calls [€0.06 EUR]
+** Dealing Flop ** [ Ts, 7d, Ah ]
+Blauman2 bets [€0.25 EUR]
+Flexi44 calls [€0.25 EUR]
+regza44 is all-In  [€0.53 EUR]
+Blauman2 is all-In  [€0.47 EUR]
+Flexi44 is all-In  [€0.15 EUR]
+** Dealing Turn ** [ 8s ]
+** Dealing River ** [ 7s ]
+Blauman2 shows [ 7h, Ad ]a full house, Sevens full of Aces.
+Flexi44 doesn't show [ Qc, Qs ]two pairs, Queens and Sevens.
+regza44 doesn't show [ Ac, Qd ]two pairs, Aces and Sevens.
+Blauman2 wins €0.19 EUR from the side pot 2 with a full house, Sevens full of Aces.
+Blauman2 wins €0.24 EUR from the side pot 1 with a full house, Sevens full of Aces.
+Blauman2 wins €1.37 EUR from the main pot with a full house, Sevens full of Aces.
+Game #18010624052 starts.
+
+#Game No : 18010624052 
+***** Hand History for Game 18010624052 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:05:39 CET 2018
+Table Barcelona (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €1.80 EUR )
+Seat 6: Flexi44 ( €0 EUR )
+Seat 5: OBV_DAY ( €2.09 EUR )
+Seat 2: ceddu67 ( €5.26 EUR )
+Seat 3: jiph00 ( €3.24 EUR )
+Seat 1: regza44 ( €0.70 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+regza44 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Qc 9d ]
+ceddu67 calls [€0.02 EUR]
+jiph00 folds
+Blauman2 calls [€0.02 EUR]
+OBV_DAY folds
+regza44 raises [€0.06 EUR]
+Blauman2: set 4
+Blauman2: wtf
+ceddu67 calls [€0.06 EUR]
+Blauman2 calls [€0.06 EUR]
+** Dealing Flop ** [ Qs, Ts, Ah ]
+regza44: PPPDDDDDDDDDDDD
+regza44 bets [€0.02 EUR]
+ceddu67 raises [€0.04 EUR]
+Blauman2 raises [€0.10 EUR]
+regza44 calls [€0.08 EUR]
+ceddu67 folds
+** Dealing Turn ** [ 2s ]
+regza44 bets [€0.02 EUR]
+Blauman2 raises [€0.10 EUR]
+regza44 calls [€0.08 EUR]
+** Dealing River ** [ Td ]
+regza44 bets [€0.02 EUR]
+Blauman2 calls [€0.02 EUR]
+regza44 shows [ 2d, Kh ]two pairs, Tens and Twos.
+Blauman2 shows [ Qc, 9d ]two pairs, Queens and Tens.
+Blauman2 wins €0.69 EUR from the main pot with two pairs, Queens and Tens.
+Game #18010626813 starts.
+
+#Game No : 18010626813 
+***** Hand History for Game 18010626813 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:06:39 CET 2018
+Table Barcelona (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €2.19 EUR )
+Seat 6: Flexi44 ( €0 EUR )
+Seat 5: OBV_DAY ( €2.08 EUR )
+Seat 2: ceddu67 ( €5.14 EUR )
+Seat 3: jiph00 ( €3.24 EUR )
+Seat 1: regza44 ( €0.40 EUR )
+regza44 posts small blind [€0.01 EUR].
+ceddu67 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  6s Qh ]
+jiph00 raises [€0.06 EUR]
+Blauman2 folds
+OBV_DAY folds
+regza44 is all-In  [€0.39 EUR]
+ceddu67 folds
+jiph00 calls [€0.34 EUR]
+** Dealing Flop ** [ 7c, 2c, As ]
+** Dealing Turn ** [ Qd ]
+Chat has been disabled till the end of this hand as one or more players have gone All-in. Chat will be enabled as soon as this hand ends.
+** Dealing River ** [ 6h ]
+jiph00 shows [ Ah, Qs ]two pairs, Aces and Queens.
+regza44 doesn't show [ Ts, 2s ]a pair of Twos.
+jiph00 wins €0.77 EUR from the main pot with two pairs, Aces and Queens.
+Game #18010628256 starts.
+
+#Game No : 18010628256 
+***** Hand History for Game 18010628256 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:07:10 CET 2018
+Table Barcelona (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €2.19 EUR )
+Seat 6: Flexi44 ( €0 EUR )
+Seat 5: OBV_DAY ( €2.08 EUR )
+Seat 2: ceddu67 ( €5.12 EUR )
+Seat 3: jiph00 ( €3.61 EUR )
+Seat 1: regza44 ( €1.30 EUR )
+ceddu67 posts small blind [€0.01 EUR].
+jiph00 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Kh 6d ]
+Blauman2: I lost with AK three times today
+Blauman2 calls [€0.02 EUR]
+OBV_DAY folds
+regza44 raises [€0.08 EUR]
+Blauman2: XXXX luck\
+ceddu67 calls [€0.07 EUR]
+jiph00 folds
+Blauman2 calls [€0.06 EUR]
+** Dealing Flop ** [ Jd, Kd, 9h ]
+ceddu67 checks
+Blauman2 checks
+regza44 checks
+** Dealing Turn ** [ Qs ]
+ceddu67 checks
+Blauman2 bets [€0.25 EUR]
+regza44 folds
+ceddu67 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.50 EUR
+Game #18010631252 starts.
+
+#Game No : 18010631252 
+***** Hand History for Game 18010631252 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:08:04 CET 2018
+Table Barcelona (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €2.36 EUR )
+Seat 6: Flexi44 ( €0 EUR )
+Seat 5: OBV_DAY ( €2.08 EUR )
+Seat 2: ceddu67 ( €5.04 EUR )
+Seat 3: jiph00 ( €3.59 EUR )
+Seat 1: regza44 ( €1.22 EUR )
+jiph00 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  4h Qh ]
+OBV_DAY folds
+regza44 raises [€0.08 EUR]
+ceddu67 folds
+jiph00 folds
+Blauman2 calls [€0.06 EUR]
+** Dealing Flop ** [ Th, Tc, 9h ]
+Blauman2 checks
+regza44 bets [€0.08 EUR]
+Blauman2 calls [€0.08 EUR]
+** Dealing Turn ** [ Ad ]
+Blauman2 checks
+regza44 checks
+** Dealing River ** [ Ac ]
+Blauman2 checks
+regza44 checks
+Blauman2 shows [ 4h, Qh ]two pairs, Aces and Tens with Queen kicker.
+regza44 shows [ 9c, 6s ]two pairs, Aces and Tens.
+Blauman2 wins €0.31 EUR from the main pot with two pairs, Aces and Tens with Queen kicker.
+Game #18010632731 starts.
+
+#Game No : 18010632731 
+***** Hand History for Game 18010632731 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:08:35 CET 2018
+Table Barcelona (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €2.51 EUR )
+Seat 6: Flexi44 ( €0 EUR )
+Seat 5: OBV_DAY ( €2.08 EUR )
+Seat 2: ceddu67 ( €5.04 EUR )
+Seat 3: jiph00 ( €3.58 EUR )
+Seat 1: regza44 ( €1.06 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Th 5s ]
+regza44 folds
+ceddu67 folds
+jiph00 folds
+Blauman2 calls [€0.01 EUR]
+OBV_DAY checks
+** Dealing Flop ** [ 3h, 3s, 4d ]
+Blauman2 checks
+OBV_DAY checks
+** Dealing Turn ** [ 8c ]
+Blauman2 bets [€0.04 EUR]
+OBV_DAY calls [€0.04 EUR]
+** Dealing River ** [ Qh ]
+Blauman2 checks
+OBV_DAY checks
+Blauman2 shows [ Th, 5s ]a pair of Threes.
+OBV_DAY shows [ 8s, 2h ]two pairs, Eights and Threes.
+OBV_DAY wins €0.12 EUR from the main pot with two pairs, Eights and Threes.
+Game #18010634189 starts.
+
+#Game No : 18010634189 
+***** Hand History for Game 18010634189 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:09:08 CET 2018
+Table Barcelona (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 4: Blauman2 ( €2.45 EUR )
+Seat 6: Flexi44 ( €0 EUR )
+Seat 5: OBV_DAY ( €2.14 EUR )
+Seat 2: ceddu67 ( €5.04 EUR )
+Seat 3: jiph00 ( €3.58 EUR )
+Seat 1: regza44 ( €1.06 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+regza44 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Qd 9h ]
+ceddu67 folds
+jiph00 calls [€0.02 EUR]
+Blauman2 folds
+OBV_DAY raises [€0.09 EUR]
+regza44 calls [€0.08 EUR]
+jiph00 calls [€0.08 EUR]
+** Dealing Flop ** [ Th, 5d, 7s ]
+OBV_DAY bets [€0.08 EUR]
+regza44 calls [€0.08 EUR]
+jiph00 calls [€0.08 EUR]
+** Dealing Turn ** [ Tc ]
+OBV_DAY checks
+regza44 checks
+jiph00 bets [€0.25 EUR]
+OBV_DAY calls [€0.25 EUR]
+regza44 folds
+** Dealing River ** [ 3h ]
+Flexi44 has left the table.
+OBV_DAY checks
+jiph00 bets [€0.50 EUR]
+OBV_DAY folds
+jiph00 does not show cards.
+jiph00 wins €1.48 EUR
+ceddu67 has left the table.
+Game #18010637157 starts.
+
+#Game No : 18010637157 
+***** Hand History for Game 18010637157 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:10:11 CET 2018
+Table Barcelona (Real Money)
+Seat 5 is the button
+Total number of players : 4/6 
+Seat 4: Blauman2 ( €2.45 EUR )
+Seat 5: OBV_DAY ( €1.71 EUR )
+Seat 3: jiph00 ( €4.13 EUR )
+Seat 1: regza44 ( €0.88 EUR )
+regza44 posts small blind [€0.01 EUR].
+jiph00 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7s 7c ]
+Blauman2 calls [€0.02 EUR]
+OBV_DAY folds
+regza44 raises [€0.07 EUR]
+jiph00 folds
+Blauman2 calls [€0.06 EUR]
+** Dealing Flop ** [ Qs, Kh, 2s ]
+jojofr300 has joined the table.
+regza44 checks
+Blauman2 checks
+** Dealing Turn ** [ Jd ]
+regza44 checks
+Blauman2 checks
+** Dealing River ** [ 5s ]
+regza44 checks
+Blauman2 bets [€0.17 EUR]
+regza44 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.34 EUR
+Game #18010639466 starts.
+
+#Game No : 18010639466 
+***** Hand History for Game 18010639466 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:10:50 CET 2018
+Table Barcelona (Real Money)
+Seat 1 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.54 EUR )
+Seat 5: OBV_DAY ( €1.71 EUR )
+Seat 3: jiph00 ( €4.11 EUR )
+Seat 6: jojofr300 ( €2 EUR )
+Seat 1: regza44 ( €0.80 EUR )
+jiph00 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  4c 5d ]
+OBV_DAY folds
+regza44 raises [€0.08 EUR]
+jiph00 folds
+Blauman2 folds
+regza44 does not show cards.
+regza44 wins €0.11 EUR
+Game #18010640103 starts.
+
+#Game No : 18010640103 
+***** Hand History for Game 18010640103 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:11:03 CET 2018
+Table Barcelona (Real Money)
+Seat 3 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.52 EUR )
+Seat 5: OBV_DAY ( €1.71 EUR )
+Seat 3: jiph00 ( €4.10 EUR )
+Seat 6: jojofr300 ( €2 EUR )
+Seat 1: regza44 ( €0.83 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  3d 6h ]
+regza44 raises [€0.08 EUR]
+jiph00 folds
+Blauman2 folds
+OBV_DAY folds
+regza44 does not show cards.
+regza44 wins €0.11 EUR
+Game #18010641536 starts.
+
+#Game No : 18010641536 
+***** Hand History for Game 18010641536 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:11:24 CET 2018
+Table Barcelona (Real Money)
+Seat 4 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.51 EUR )
+Seat 5: OBV_DAY ( €1.69 EUR )
+Seat 3: jiph00 ( €4.10 EUR )
+Seat 6: jojofr300 ( €2 EUR )
+Seat 1: regza44 ( €0.86 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+jojofr300 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  3d 4s ]
+regza44 raises [€0.08 EUR]
+jiph00 folds
+Blauman2 folds
+OBV_DAY folds
+jojofr300 folds
+regza44 does not show cards.
+regza44 wins €0.11 EUR
+Game #18010642169 starts.
+
+#Game No : 18010642169 
+***** Hand History for Game 18010642169 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:11:37 CET 2018
+Table Barcelona (Real Money)
+Seat 5 is the button
+Total number of players : 5/6 
+Seat 4: Blauman2 ( €2.51 EUR )
+Seat 5: OBV_DAY ( €1.68 EUR )
+Seat 3: jiph00 ( €4.10 EUR )
+Seat 6: jojofr300 ( €1.98 EUR )
+Seat 1: regza44 ( €0.89 EUR )
+jojofr300 posts small blind [€0.01 EUR].
+regza44 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  9s Qd ]
+jiph00 folds
+Blauman2 calls [€0.02 EUR]
+OBV_DAY raises [€0.10 EUR]
+jojofr300 folds
+regza44 folds
+Blauman2 folds
+OBV_DAY does not show cards.
+OBV_DAY wins €0.15 EUR

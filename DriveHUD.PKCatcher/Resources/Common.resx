@@ -120,6 +120,21 @@
   <data name="PKC_BuyLink" xml:space="preserve">
     <value>http://drivehud.com/product/pokerkinghud</value>
   </data>
+  <data name="PKC_GenerateLogView_FailMessage" xml:space="preserve">
+    <value>Failed to create log. Please try again or contact support.</value>
+  </data>
+  <data name="PKC_GenerateLogView_FailTitle" xml:space="preserve">
+    <value>Failed to create log!</value>
+  </data>
+  <data name="PKC_GenerateLogView_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PKC_GenerateLogView_SuccessMessage" xml:space="preserve">
+    <value>Log has been successfully created.</value>
+  </data>
+  <data name="PKC_GenerateLogView_SuccessTitle" xml:space="preserve">
+    <value>Log Created!</value>
+  </data>
   <data name="PKC_LicenseType_None" xml:space="preserve">
     <value>None</value>
   </data>
@@ -131,6 +146,9 @@
   </data>
   <data name="PKC_MainView_Enable" xml:space="preserve">
     <value>Enable</value>
+  </data>
+  <data name="PKC_MainView_GenerateLog" xml:space="preserve">
+    <value>Generate Log</value>
   </data>
   <data name="PKC_MainView_Header" xml:space="preserve">
     <value>PK HUD Catcher - Settings</value>

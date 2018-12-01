@@ -57,7 +57,7 @@ namespace DriveHUD.Importers.PokerKing
 
         #region Implementation of ITcpImporter
 
-        public override bool Match(TcpPacket tcpPacket, IpPacket ipPacket)
+        public override bool Match(TcpPacket tcpPacket, IPPacket ipPacket)
         {
             return PKImporterHelper.IsPortMatch(tcpPacket.SourcePort) ||
                 PKImporterHelper.IsPortMatch(tcpPacket.DestinationPort);

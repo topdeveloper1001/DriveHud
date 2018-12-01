@@ -49,10 +49,10 @@
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PKNReg, Version=1.0.0.179, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="PKNReg, Version=1.0.0.194, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\PKNReg.dll</HintPath>
     </Reference>
-    <Reference Include="PKTReg, Version=1.0.0.179, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="PKTReg, Version=1.0.0.194, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\PKTReg.dll</HintPath>
     </Reference>
     <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
@@ -114,9 +114,13 @@
       <DependentUpon>PKCatcherView.xaml</DependentUpon>
     </Compile>
     <Compile Include="PKCatcherViewModel.cs" />
+    <Compile Include="ViewModels\GenerateLogViewModel.cs" />
     <Compile Include="ViewModels\IPopupInteractionAware.cs" />
     <Compile Include="ViewModels\LicenseInfoViewModel.cs" />
     <Compile Include="ViewModels\RegistrationViewModel.cs" />
+    <Compile Include="Views\GenerateLogView.xaml.cs">
+      <DependentUpon>GenerateLogView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\IPopupContainerView.cs" />
     <Compile Include="Views\RegistrationView.xaml.cs">
       <DependentUpon>RegistrationView.xaml</DependentUpon>
@@ -157,6 +161,10 @@
     <Compile Include="Settings\IPKSettingsService.cs" />
     <Compile Include="Settings\PKSettingsModel.cs" />
     <Compile Include="Settings\PKSettingsService.cs" />
+    <Page Include="Views\GenerateLogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\RegistrationView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -46,6 +46,8 @@ namespace DriveHUD.Importers.AndroidBase
 
         private readonly IImporterService importerService;
 
+        private int parsePacketLogErrorCounter = 0;
+
         public TcpImporter()
         {
             importerService = ServiceLocator.Current.GetInstance<IImporterService>(); ;
@@ -93,6 +95,8 @@ namespace DriveHUD.Importers.AndroidBase
 
             captureResetEvent.Wait(StopTimeout);
             captureDevices.Clear();
+
+            parsePacketLogErrorCounter = 0;
 
             RaiseProcessStopped();
         }
@@ -216,7 +220,7 @@ namespace DriveHUD.Importers.AndroidBase
                     {
                         LogProvider.Log.Error(this, $"Failed to reopen device {captureDevice.Device.Name}. [{SiteString}]", ex);
                         return;
-                    }                    
+                    }
                 }
             }
         }
@@ -227,40 +231,51 @@ namespace DriveHUD.Importers.AndroidBase
         /// <param name="rawCapture">Captured data</param>
         protected void ParsePacket(RawCapture rawCapture)
         {
-            var packet = Packet.ParsePacket(rawCapture.LinkLayerType, rawCapture.Data);
-
-            var tcpPacket = packet.Extract<TcpPacket>();
-            var ipPacket = packet.Extract<IpPacket>();
-
-            if (tcpPacket == null || ipPacket == null)
+            try
             {
-                return;
+                var packet = Packet.ParsePacket(rawCapture.LinkLayerType, rawCapture.Data);
+
+                var tcpPacket = packet.Extract<TcpPacket>();
+                var ipPacket = packet.Extract<IPPacket>();
+
+                if (tcpPacket == null || ipPacket == null)
+                {
+                    return;
+                }
+
+                var matchedImporter = importers.FirstOrDefault(x => x.IsRunning && !x.IsDisabled() && x.Match(tcpPacket, ipPacket));
+
+                if (matchedImporter == null)
+                {
+                    return;
+                }
+
+                var payloadData = tcpPacket.PayloadData;
+
+                if (payloadData == null || payloadData.Length == 0)
+                {
+                    return;
+                }
+
+                var capturedPacket = new CapturedPacket
+                {
+                    Bytes = tcpPacket.PayloadData,
+                    Source = new IPEndPoint(ipPacket.SourceAddress, tcpPacket.SourcePort),
+                    Destination = new IPEndPoint(ipPacket.DestinationAddress, tcpPacket.DestinationPort),
+                    CreatedTimeStamp = rawCapture.Timeval.Date,
+                    SequenceNumber = tcpPacket.SequenceNumber
+                };
+
+                matchedImporter.AddPacket(capturedPacket);
             }
-
-            var matchedImporter = importers.FirstOrDefault(x => x.IsRunning && !x.IsDisabled() && x.Match(tcpPacket, ipPacket));
-
-            if (matchedImporter == null)
+            catch (Exception e)
             {
-                return;
+                if (parsePacketLogErrorCounter < 5)
+                {
+                    LogProvider.Log.Error(this, "Failed to parse captured packet.", e);
+                    parsePacketLogErrorCounter++;
+                }
             }
-
-            var payloadData = tcpPacket.PayloadData;
-
-            if (payloadData == null || payloadData.Length == 0)
-            {
-                return;
-            }
-
-            var capturedPacket = new CapturedPacket
-            {
-                Bytes = tcpPacket.PayloadData,
-                Source = new IPEndPoint(ipPacket.SourceAddress, tcpPacket.SourcePort),
-                Destination = new IPEndPoint(ipPacket.DestinationAddress, tcpPacket.DestinationPort),
-                CreatedTimeStamp = rawCapture.Timeval.Date,
-                SequenceNumber = tcpPacket.SequenceNumber
-            };
-
-            matchedImporter.AddPacket(capturedPacket);
         }
 
         /// <summary>

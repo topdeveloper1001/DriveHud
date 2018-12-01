@@ -22,12 +22,13 @@ namespace Model.Site
 {
     public class PartyPokerConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
-        private static string[] uninstallRegistryKeys = new[] { "PartyPoker", "partypokerNJ", "PartyPokerES" };
-        private static string[] pathRegistryKeys = new[]
+        private static readonly string[] uninstallRegistryKeys = new[] { "PartyPoker", "partypokerNJ", "PartyPokerES", "partypokerFr" };
+        private static readonly string[] pathRegistryKeys = new[]
         {
             @"Software\PartyGaming\Partypoker",
             @"Software\partyNJ\partypokerNJ",
-            @"Software\PartyEspana\PartyPokerES"
+            @"Software\PartyEspana\PartyPokerES",
+            @"Software\PartyFrance\PartyPokerFr"
         };
 
         private const string PathRegistyKeyValue = "AppPath";

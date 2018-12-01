@@ -289,6 +289,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"Tournaments/Flyweight. $150 Gtd KO (138340269) Table #10.txt", 33, 0)]
         [TestCase(TestDataFolder + @"Tournaments/Jab Micro Warm Up PKO - $500 Gtd (156119820) Table #15.txt", 77, 0)]
         [TestCase(TestDataFolder + @"Tournaments/$0.25 Sit & Go 3-Handed (169131785) Table #1.txt", 27, 0)]
+        [TestCase(TestDataFolder + @"MultipleHands/WithInvalid/Barcelona.txt", 47, 1)]
+        [TestCase(TestDataFolder + @"MultipleHands/WithInvalid/Corbeil-Essonnes.txt", 46, 1)]
         public void ParseMultipleHandsTest(string handHistoryFile, int numberOfValidHands, int numberOfInvalidHands)
         {
             var parser = new HandHistories.Parser.Parsers.FastParser.PartyPoker.PartyPokerFastParserImpl();

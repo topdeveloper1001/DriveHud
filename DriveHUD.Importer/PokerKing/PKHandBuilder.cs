@@ -396,6 +396,8 @@ namespace DriveHUD.Importers.PokerKing
                         HandActionType.STRADDLE,
                         straddleAmount,
                         Street.Preflop));
+
+                    handHistory.GameDescription.IsStraddle = true;
                 }
             }
 
