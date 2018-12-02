@@ -55,6 +55,7 @@ namespace DriveHUD.Importers
         private static readonly object locker = new object();
 
         private FileInfo processingFile;
+        private bool isManualImport = false;
 
         private readonly IDataService dataService;
         private readonly IPlayerStatisticRepository playerStatisticRepository;
@@ -95,6 +96,8 @@ namespace DriveHUD.Importers
 
             progress.Report(new LocalizableString("Progress_StartingImport"));
 
+            isManualImport = true;
+
             foreach (var file in files)
             {
                 LogProvider.Log.Info($"Running manual import from file '{file.FullName}'");
@@ -129,7 +132,7 @@ namespace DriveHUD.Importers
                 }
                 catch (Exception ex)
                 {
-                    LogProvider.Log.Error(this, string.Format("File {0} couldn't be read", file.FullName), ex);
+                    LogProvider.Log.Error(this, string.Format("File {0} couldn't be imported", file.FullName), ex);
                 }
             }
         }
@@ -465,7 +468,6 @@ namespace DriveHUD.Importers
                                 handHistory.Duration = sw.ElapsedMilliseconds;
                             }
                         }
-
                     }
 
                     using (var transaction = session.BeginTransaction())
@@ -590,7 +592,11 @@ namespace DriveHUD.Importers
                             opponentReportService.UpdateReport(playerStat);
                         }
 
-                        BuildAutoNotes(playerStatCopy, handHistory.Source, session);
+                        // do not build notes on manual import
+                        if (!isManualImport)
+                        {
+                            BuildAutoNotes(playerStatCopy, handHistory.Source, session);
+                        }
                     }
 
                     #region Process tournament data
