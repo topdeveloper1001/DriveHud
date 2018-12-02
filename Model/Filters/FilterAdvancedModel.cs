@@ -14,6 +14,7 @@ using DriveHUD.Common.Linq;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model.Enums;
+using Newtonsoft.Json;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -43,10 +44,11 @@ namespace Model.Filters
 
         public EnumFilterModelType Type { get; }
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public ObservableCollection<FilterAdvancedItem> Filters { get; private set; } = new ObservableCollection<FilterAdvancedItem>();
 
-        public ReactiveList<FilterAdvancedItem> SelectedFilters { get; }
+        [JsonProperty]
+        public ReactiveList<FilterAdvancedItem> SelectedFilters { get; private set; }
 
         #endregion
 

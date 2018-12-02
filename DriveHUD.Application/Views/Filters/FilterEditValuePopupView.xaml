@@ -4,7 +4,8 @@
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid Margin="15">
+    <Grid
+        Margin="25,15,25,15">
 
         <Grid.RowDefinitions>
             <RowDefinition

@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Newtonsoft.Json;
 using Prism.Mvvm;
 using System;
 using System.Xml.Serialization;
@@ -55,6 +56,7 @@ namespace Model.Filters
             }
         }
 
+        [JsonIgnore]
         public string ToolTip
         {
             get
@@ -67,7 +69,7 @@ namespace Model.Filters
 
         private bool isSelected;
 
-        [XmlIgnore]
+        [XmlIgnore, JsonIgnore]
         public bool IsSelected
         {
             get
