@@ -48,7 +48,7 @@ namespace DriveHUD.Importers
     /// </summary>
     internal class FileImporter : IFileImporter
     {
-        private const int PlayersPerQuery = 100;
+        private const int ParametersPerQuery = 100;
 
         private readonly HashSet<string> importingExtensions = new HashSet<string> { ".txt", ".xml" };
 
@@ -760,23 +760,35 @@ namespace DriveHUD.Importers
         /// <returns>Collection of existing hands. Item1 - hand number, item2 - pokersite id</returns>
         private List<Tuple<long, short>> GetExisting(IStatelessSession session, IEnumerable<ParsingResult> handHistories)
         {
+            var existingHands = new List<Tuple<long, short>>();
+
             var hhGroupedByPokersite = handHistories.GroupBy(x => x.HandHistory.PokersiteId);
 
-            Disjunction restriction = Restrictions.Disjunction();
             foreach (var pokersiteGroup in hhGroupedByPokersite)
             {
-                restriction.Add(Restrictions.Conjunction()
-                     .Add(Restrictions.On<Handhistory>(x => x.Gamenumber).IsIn(pokersiteGroup.Select(x => x.HandHistory.Gamenumber).ToList()))
-                     .Add(Restrictions.Where<Handhistory>(x => x.PokersiteId == pokersiteGroup.Key)));
+                var queriesCount = (int)Math.Ceiling((double)pokersiteGroup.Count() / ParametersPerQuery);
+
+                for (var i = 0; i < queriesCount; i++)
+                {
+                    var handsToQuery = pokersiteGroup.Skip(i * ParametersPerQuery).Take(ParametersPerQuery).ToArray();
+
+                    var restriction = Restrictions.Disjunction();
+
+                    restriction.Add(Restrictions.Conjunction()
+                         .Add(Restrictions.On<Handhistory>(x => x.Gamenumber).IsIn(handsToQuery.Select(x => x.HandHistory.Gamenumber).ToList()))
+                         .Add(Restrictions.Where<Handhistory>(x => x.PokersiteId == pokersiteGroup.Key)));
+
+                    var hands = session.QueryOver<Handhistory>().Where(restriction)
+                          .Select(x => x.Gamenumber, x => x.PokersiteId)
+                          .List<object[]>()
+                          .Select(x => new Tuple<long, short>((long)x[0], (short)x[1]))
+                          .ToList();
+
+                    existingHands.AddRange(hands);
+                }
             }
 
-            var list = session.QueryOver<Handhistory>().Where(restriction)
-                    .Select(x => x.Gamenumber, x => x.PokersiteId)
-                    .List<object[]>()
-                    .Select(x => new Tuple<long, short>((long)x[0], (short)x[1]))
-                    .ToList();
-
-            return list;
+            return existingHands;
         }
 
         private IList<Players> ComposePlayers(IStatelessSession session, IEnumerable<ParsingResult> handHistories, GameInfo gameInfo)
@@ -793,13 +805,13 @@ namespace DriveHUD.Importers
 
             foreach (var pokersiteGroup in playersGroupedByPokersite)
             {
-                var queriesCount = (int)Math.Ceiling((double)pokersiteGroup.Count() / PlayersPerQuery);
+                var queriesCount = (int)Math.Ceiling((double)pokersiteGroup.Count() / ParametersPerQuery);
 
                 for (var i = 0; i < queriesCount; i++)
                 {
                     var restriction = Restrictions.Disjunction();
 
-                    var playersToQuery = pokersiteGroup.Skip(i * PlayersPerQuery).Take(PlayersPerQuery).ToArray();
+                    var playersToQuery = pokersiteGroup.Skip(i * ParametersPerQuery).Take(ParametersPerQuery).ToArray();
 
                     restriction.Add(Restrictions.Conjunction()
                          .Add(Restrictions.On<Players>(x => x.Playername).IsIn(playersToQuery.Select(x => x.Playername).ToList()))
