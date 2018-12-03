@@ -198,28 +198,10 @@ namespace DriveHUD.Importers.AndroidBase
                 }
                 catch (Exception e)
                 {
-                    LogProvider.Log.Error(this, $"Data from {captureDevice.Device.Name} couldn't be captured due to internal error. Reopening device. [{SiteString}]", e);
-
-                    try
+                    if (captureDevice.ParserLogErrorCounter < 3)
                     {
-                        captureDevice.Device.Close();
-                        LogProvider.Log.Error(this, $"Device {captureDevice.Device.Name} closed. [{SiteString}]", e);
-
-                        if (captureDevice.ReopeningAttempts > 2)
-                        {
-                            LogProvider.Log.Error(this, $"Device {captureDevice.Device.Name} reached the limit of reopening attempts. [{SiteString}]", e);
-                            return;
-                        }
-
-                        captureDevice.Device.Open();
-                        LogProvider.Log.Error(this, $"Device {captureDevice.Device.Name} opened. [{SiteString}]", e);
-
-                        captureDevice.ReopeningAttempts++;
-                    }
-                    catch (Exception ex)
-                    {
-                        LogProvider.Log.Error(this, $"Failed to reopen device {captureDevice.Device.Name}. [{SiteString}]", ex);
-                        return;
+                        LogProvider.Log.Error(this, $"Data from {captureDevice.Device.Name}, {captureDevice.Device.Description} couldn't be parsed due to internal error. [{SiteString}]", e);
+                        captureDevice.ParserLogErrorCounter++;
                     }
                 }
             }
