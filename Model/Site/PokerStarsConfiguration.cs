@@ -190,6 +190,7 @@ namespace Model.Site
                 FastPokerEnabled = true
             };
 
+
             InstallAuditIni(validationResult);
 
             foreach (var configurationDirectory in configurationDirectories)
@@ -473,6 +474,11 @@ namespace Model.Site
             try
             {
                 var installPaths = GetInstallPaths();
+
+                if (installPaths.Count == 0)
+                {
+                    return;
+                }
 
                 var isPokerStarsRunning = IsPokerStarsRunning();
 

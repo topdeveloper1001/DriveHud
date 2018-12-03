@@ -38,7 +38,7 @@ namespace DriveHUD.Importers.AndroidBase
             set;
         }
 
-        public int ReopeningAttempts
+        public int ParserLogErrorCounter
         {
             get;
             set;
