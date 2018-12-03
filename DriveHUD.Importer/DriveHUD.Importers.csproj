@@ -80,7 +80,8 @@
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="PacketDotNet, Version=0.19.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PacketDotNet.0.19.2\lib\netstandard2.0\PacketDotNet.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dependencies\PacketDotNet.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -97,7 +98,8 @@
       <HintPath>..\packages\protobuf-net.2.3.7\lib\net40\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="SharpPcap, Version=4.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SharpPcap.4.4.0\lib\SharpPcap.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dependencies\SharpPcap.dll</HintPath>
     </Reference>
     <Reference Include="StreamExtended, Version=1.0.81.0, Culture=neutral, PublicKeyToken=bbfa0f1d54f50043, processorArchitecture=MSIL">
       <HintPath>..\packages\StreamExtended.1.0.81\lib\net45\StreamExtended.dll</HintPath>
