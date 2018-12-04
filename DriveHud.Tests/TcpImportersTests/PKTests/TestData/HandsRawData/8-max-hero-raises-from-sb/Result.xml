@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HandHistory>
+  <DateOfHandUtc>2018-12-04T12:00:06.1261556Z</DateOfHandUtc>
+  <HandId>289918139096817664</HandId>
+  <DealerButtonPosition>1</DealerButtonPosition>
+  <TableName>HL0.10.22045</TableName>
+  <GameDescription>
+    <PokerFormat>CashGame</PokerFormat>
+    <Site>PokerKing</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>YUAN</Currency>
+      <SmallBlind>0.1</SmallBlind>
+      <BigBlind>0.2</BigBlind>
+      <IsAnteTable>false</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="8" />
+    <TableType>Regular</TableType>
+    <IsStraddle>true</IsStraddle>
+    <Identifier>179771</Identifier>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>36.4</TotalPot>
+  <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+  <Actions>
+    <HandAction PlayerName="105772" HandActionType="SMALL_BLIND" Amount="-0.1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2087538" HandActionType="BIG_BLIND" Amount="-0.2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2050569" HandActionType="STRADDLE" Amount="-0.4" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2085819" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2025851" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2067452" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2080008" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2039195" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="105772" HandActionType="RAISE" Amount="-1.3" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2087538" HandActionType="CALL" Amount="-1.2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="2050569" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="105772" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="2087538" HandActionType="BET" Amount="-2.1" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="105772" HandActionType="RAISE" Amount="-5.8" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="2087538" HandActionType="RAISE" Amount="-13.9" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="105772" HandActionType="CALL" Amount="-10.2" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="105772" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="2087538" HandActionType="BET" Amount="-3.9" Street="Turn" IsAllIn="false" />
+    <HandAction p3:type="AllInAction" PlayerName="105772" HandActionType="ALL_IN" Amount="-0.6" Street="Turn" IsAllIn="true" IsRaiseAllIn="false" SourceActionType="CALL" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="2087538" HandActionType="UNCALLED_BET" Amount="3.3" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="105772" HandActionType="SHOW" Amount="0" Street="Showdown" IsAllIn="false" />
+    <HandAction PlayerName="2087538" HandActionType="SHOW" Amount="0" Street="Showdown" IsAllIn="false" />
+    <HandAction p3:type="WinningsAction" PlayerName="105772" HandActionType="WINS" Amount="36.4" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />    
+  </Actions>
+  <CommunityCards>5sAh5d7c6d</CommunityCards>
+  <Players>
+    <Player PlayerName="2039195" PlayerNick="Agamotto" StartingStack="52.69" Bet="0" Win="0" SeatNumber="1" Cards="" IsSittingOut="false" />
+    <Player PlayerName="105772" PlayerNick="大鱼海棠花" StartingStack="18" Bet="18" Win="36.4" SeatNumber="2" Cards="AcAs" IsSittingOut="false" />
+    <Player PlayerName="2087538" PlayerNick="RAYWAI" StartingStack="36.41" Bet="21.3" Win="0" SeatNumber="3" Cards="2sAd" IsSittingOut="false" />
+    <Player PlayerName="2050569" PlayerNick="不准不要钱" StartingStack="45.91" Bet="0.4" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="2085819" PlayerNick="我日你妈现任哦" StartingStack="42.03" Bet="0" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
+    <Player PlayerName="2025851" PlayerNick="守护小宇宙" StartingStack="22.48" Bet="0" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+    <Player PlayerName="2067452" PlayerNick="影魔女王" StartingStack="85" Bet="0" Win="0" SeatNumber="7" Cards="" IsSittingOut="false" />
+    <Player PlayerName="2080008" PlayerNick="脑子不行" StartingStack="70.22" Bet="0" Win="0" SeatNumber="8" Cards="" IsSittingOut="false" />
+  </Players>
+  <HeroName>105772</HeroName>
+</HandHistory>
