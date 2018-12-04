@@ -966,6 +966,10 @@ namespace Model
                 stat.BetFlopWhenCheckedToSRP = betOnFlop ? 1 : 0;
             }
 
+            #region Pot based calculations
+
+            #endregion
+
             return stat;
         }
 

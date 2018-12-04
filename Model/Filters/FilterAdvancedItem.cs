@@ -41,6 +41,9 @@ namespace Model.Filters
 
         public AdvancedFilterType FilterType { get; }
 
+        [XmlIgnore, JsonIgnore]
+        public Action FilterAction { get; set; }
+
         private double? filterValue;
 
         public double? FilterValue

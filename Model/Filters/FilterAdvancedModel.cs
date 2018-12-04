@@ -13,6 +13,7 @@
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
+using HandHistories.Objects.Cards;
 using Model.Enums;
 using Newtonsoft.Json;
 using ReactiveUI;
@@ -55,6 +56,19 @@ namespace Model.Filters
         public Expression<Func<Playerstatistic, bool>> GetFilterPredicate()
         {
             var predicate = PredicateBuilder.True<Playerstatistic>();
+
+            foreach (var filter in SelectedFilters)
+            {
+                if (!FiltersActions.TryGetValue(filter.FilterType, out Func<Playerstatistic, double?, bool> filterAction))
+                {
+#if DEBUG
+                    Console.WriteLine($"Filter {filter.Name} has no action.");
+#endif
+                    continue;
+                }
+
+                predicate = predicate.And(p => filterAction(p, filter.FilterValue));
+            }
 
             return predicate;
         }
@@ -513,6 +527,61 @@ namespace Model.Filters
                 Stage = stage
             };
         }
+
+        private static readonly ReadOnlyDictionary<AdvancedFilterType, Func<Playerstatistic, double?, bool>> FiltersActions =
+            new ReadOnlyDictionary<AdvancedFilterType, Func<Playerstatistic, double?, bool>>(new Dictionary<AdvancedFilterType, Func<Playerstatistic, double?, bool>>
+            {
+                #region Preflop
+                [AdvancedFilterType.VPIP] = (p, v) => p.Vpiphands > 0,
+                [AdvancedFilterType.PutMoneyinPot] = (p, v) => p.Vpiphands > 0 || p.Position.IsBBPosition() || p.Position.IsSBPosition() || p.Position.IsStraddlePosition(),
+                [AdvancedFilterType.PFR] = (p, v) => p.Pfrhands > 0,
+                [AdvancedFilterType.PFRFalse] = (p, v) => p.Pfrhands == 0,
+                [AdvancedFilterType.Did3Bet] = (p, v) => p.Didthreebet > 0,
+                [AdvancedFilterType.DidSqueeze] = (p, v) => p.Didsqueeze > 0,
+                [AdvancedFilterType.DidColdCall] = (p, v) => p.Didcoldcall > 0,
+                [AdvancedFilterType.CouldColdCall] = (p, v) => p.Couldcoldcall > 0,
+                [AdvancedFilterType.CouldColdCallFalse] = (p, v) => p.Couldcoldcall == 0,
+                [AdvancedFilterType.FacedPreflop3Bet] = (p, v) => p.Facedthreebetpreflop > 0,
+                [AdvancedFilterType.FoldedToPreflop3Bet] = (p, v) => p.Foldedtothreebetpreflop > 0,
+                [AdvancedFilterType.CalledPreflop3Bet] = (p, v) => p.Calledthreebetpreflop > 0,
+                [AdvancedFilterType.RaisedPreflop3Bet] = (p, v) => p.Raisedthreebetpreflop > 0,
+                [AdvancedFilterType.FacedPreflop4Bet] = (p, v) => p.Facedfourbetpreflop > 0,
+                [AdvancedFilterType.FoldedToPreflop4Bet] = (p, v) => p.Foldedtofourbetpreflop > 0,
+                [AdvancedFilterType.CalledPreflop4Bbet] = (p, v) => p.Calledfourbetpreflop > 0,
+                [AdvancedFilterType.RaisedPreflop4Bet] = (p, v) => p.Raisedfourbetpreflop > 0,
+                [AdvancedFilterType.InBBandStealAttempted] = (p, v) => p.Bigblindstealfaced > 0,
+                [AdvancedFilterType.InBBandStealDefended] = (p, v) => p.Bigblindstealdefended > 0,
+                [AdvancedFilterType.InBBandStealReraised] = (p, v) => p.Bigblindstealreraised > 0,
+                [AdvancedFilterType.InSBandStealAttempted] = (p, v) => p.Smallblindstealattempted > 0,
+                [AdvancedFilterType.InSBandStealDefended] = (p, v) => p.Smallblindstealdefended > 0,
+                [AdvancedFilterType.InSBandStealReraised] = (p, v) => p.Smallblindstealreraised > 0,
+                [AdvancedFilterType.LimpReraised] = (p, v) => p.LimpReraised > 0,
+                [AdvancedFilterType.BBsBetPreflopisBiggerThan] = (p, v) => p.BetAmountPreflopInBB > v,
+                [AdvancedFilterType.BBsBetPreflopisLessThan] = (p, v) => p.BetAmountPreflopInBB < v,
+                [AdvancedFilterType.BBsCalledPreflopisBiggerThan] = (p, v) => p.CallAmountPreflopInBB > v,
+                [AdvancedFilterType.BBsCalledPreflopisLessThan] = (p, v) => p.CallAmountPreflopInBB < v,
+                [AdvancedFilterType.BBsPutInPreflopisBiggerThan] = (p, v) => (p.BetAmountPreflopInBB + p.CallAmountPreflopInBB + p.PostAmountPreflopInBB) > v,
+                [AdvancedFilterType.BBsPutInPreflopisLessThan] = (p, v) => (p.BetAmountPreflopInBB + p.CallAmountPreflopInBB + p.PostAmountPreflopInBB) < v,
+                [AdvancedFilterType.PreflopRaiseSizePotisBiggerThan] = (p, v) => p.RaiseSizeToPotPreflop > v,
+                [AdvancedFilterType.PreflopRaiseSizePotisLessThan] = (p, v) => p.RaiseSizeToPotPreflop < v,
+                [AdvancedFilterType.PreflopFacingRaiseSizePotisBiggerThan] = (p, v) => p.FacingRaiseSizeToPot > v,
+                [AdvancedFilterType.PreflopFacingRaiseSizePotisLessThan] = (p, v) => p.FacingRaiseSizeToPot < v,
+                [AdvancedFilterType.AllinPreflop] = (p, v) => p.Allin.Equals(Street.Preflop.ToString()),
+                #endregion
+
+                #region Flop
+                [AdvancedFilterType.SawFlop] = (p, v) => p.Sawflop > 0,
+                [AdvancedFilterType.SawFlopFalse] = (p, v) => p.Sawflop == 0,
+                [AdvancedFilterType.LasttoActionFlop] = (p, v) => p.Sawflop > 0 && p.PreflopIP > 0 && p.FlopActions.Length > 0,
+                [AdvancedFilterType.LasttoActionFlopFalse] = (p, v) => p.Sawflop > 0 && p.PreflopIP == 0 && p.FlopActions.Length > 0,
+                [AdvancedFilterType.FlopUnopened] = (p, v) => p.FlopActions.Equals("X"),
+                [AdvancedFilterType.PlayersonFlopisBiggerThan] = (p, v) => p.NumberOfPlayersOnFlop > v,
+                [AdvancedFilterType.PlayersonFlopisLessThan] = (p, v) => p.NumberOfPlayersOnFlop > v,
+                [AdvancedFilterType.PlayersonFlopisEqualTo] = (p, v) => p.NumberOfPlayersOnFlop == v,
+
+
+                #endregion
+            });
 
         #endregion
     }
