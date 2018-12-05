@@ -1373,5 +1373,254 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         {
             AssertThatStatIsCalculated(x => x.FoldedToDelayedCBet, fileName, pokerSite, playerName, expected);
         }
+
+        #region Pot based stat tests
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 2000)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 600)]
+        public void BetAmountPreflopInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.BetAmountPreflopInCents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 500)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void CallAmountPreflopInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CallAmountPreflopInCents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 100)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void PostAmountPreflopInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.PostAmountPreflopInCents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 222.22)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 200)]
+        public void RaiseSizeToPotPreflopIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, double expected)
+        {
+            AssertThatStatIsCalculated(x => x.RaiseSizeToPotPreflop, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 200)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 200)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void FacingRaiseSizeToPotIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, double expected)
+        {
+            AssertThatStatIsCalculated(x => x.FacingRaiseSizeToPot, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 2)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 2)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 2)]
+        public void NumberOfPlayersOnFlopIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.NumberOfPlayersOnFlop, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 2700)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 1100)]
+        public void BetAmountFlopInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.BetAmountFlopInCents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 800)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 15600)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void CallAmountFlopInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CallAmountFlopInCents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 1400)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 4300)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 1500)]
+        public void FlopPotSizeInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FlopPotSizeInCents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void FlopStackPotRatioIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, double expected)
+        {
+            AssertThatStatIsCalculated(x => x.FlopStackPotRatio, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-4.txt", EnumPokerSites.PokerStars, "Hero", 113.79)]
+        public void FlopRaiseSizeToPotIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, double expected)
+        {
+            AssertThatStatIsCalculated(x => x.FlopRaiseSizeToPot, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 57.1428)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void FlopFacingBetSizeToPotIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, double expected)
+        {
+            AssertThatStatIsCalculated(x => x.FlopFacingBetSizeToPot, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 261.428)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void FlopFacingRaiseSizeToPotIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, double expected)
+        {
+            AssertThatStatIsCalculated(x => x.FlopFacingRaiseSizeToPot, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 2)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 2)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 2)]
+        [TestCase(@"Hero-Pot-Calcs-4.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void NumberOfPlayersOnTurnIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.NumberOfPlayersOnTurn, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 2800)]
+        public void BetAmountTurnInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.BetAmountTurnInCents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 2500)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void CallAmountTurnInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CallAmountTurnInCents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 3000)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 40900)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 3700)]
+        [TestCase(@"Hero-Pot-Calcs-4.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void TurnPotSizeInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.TurnPotSizeInCents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void TurnStackPotRatioIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.TurnStackPotRatio, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void TurnRaiseSizeToPotIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.TurnRaiseSizeToPot, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 83.33)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "bluffinmyway", 75.67)]
+        public void TurnFacingBetSizeToPotIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, double expected)
+        {
+            AssertThatStatIsCalculated(x => x.TurnFacingBetSizeToPot, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void TurnFacingRaiseSizeToPotIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.TurnFacingRaiseSizeToPot, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 2)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 2)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 2)]
+        [TestCase(@"Hero-Pot-Calcs-4.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void NumberOfPlayersOnRiverIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.NumberOfPlayersOnRiver, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "bluffinmyway", 5900)]
+        public void BetAmountRiverInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.BetAmountRiverInCents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 5900)]
+        public void CallAmountRiverInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CallAmountRiverInCents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 8000)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 40900)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 9300)]
+        [TestCase(@"Hero-Pot-Calcs-4.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void RiverPotSizeInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.RiverPotSizeInCents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void RiverStackPotRatioIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.RiverStackPotRatio, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void RiverRaiseSizeToPotIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.RiverRaiseSizeToPot, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 63.44)]
+        public void RiverFacingBetSizeToPotIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, double expected)
+        {
+            AssertThatStatIsCalculated(x => x.RiverFacingBetSizeToPot, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        public void RiverFacingRaiseSizeToPotIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.RiverFacingRaiseSizeToPot, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 2)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 2)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 2)]
+        public void NumberOfPlayersSawShowdownIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.NumberOfPlayersSawShowdown, fileName, pokerSite, playerName, expected);
+        }
+
+        #endregion
     }
 }

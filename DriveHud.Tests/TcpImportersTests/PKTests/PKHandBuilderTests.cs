@@ -55,7 +55,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
         [TestCase("6-max-short-all-in", 105772u)]
         [TestCase("8-max-regular-hero-wrong-order", 105772u)]
         [TestCase("8-max-regular-no-hero-bet-on-preflop", 105772u)]
-        [TestCase("8-max-hero-raises-from-sb", 105772u)]
+        [TestCase("8-max-hero-raises-from-sb", 105772u)]        
         public void TryBuildTest(string testFolder, uint heroId)
         {
             var packages = ReadPackages(testFolder);

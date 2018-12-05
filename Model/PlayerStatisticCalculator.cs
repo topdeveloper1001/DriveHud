@@ -990,88 +990,7 @@ namespace Model
 
             foreach (var action in parsedHand.HandActions)
             {
-                if (action.IsBlinds)
-                {
-                    stat.PostAmountPreflopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-                }
-                else if (action.IsBet())
-                {
-                    if (action.Street == Street.Preflop)
-                    {
-                        stat.BetAmountPreflopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-                    }
-                    else if (action.Street == Street.Flop)
-                    {
-                        stat.BetAmountFlopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-                    }
-                    else if (action.Street == Street.Turn)
-                    {
-                        stat.BetAmountTurnInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-                    }
-                    else if (action.Street == Street.River)
-                    {
-                        stat.BetAmountRiverInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-                    }
-                }
-                else if (action.IsRaise())
-                {
-                    if (action.Street == Street.Preflop)
-                    {
-                        stat.BetAmountPreflopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-
-                        if (action.PlayerName == player)
-                        {
-                            stat.RaiseSizeToPotPreflop = SizeToPot(action.Amount, pot);
-                        }
-                    }
-                    else if (action.Street == Street.Flop)
-                    {
-                        stat.BetAmountFlopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-
-                        if (action.PlayerName == player)
-                        {
-                            stat.FlopRaiseSizeToPot = SizeToPot(action.Amount, pot);
-                        }
-                    }
-                    else if (action.Street == Street.Turn)
-                    {
-                        stat.BetAmountTurnInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-
-                        if (action.PlayerName == player)
-                        {
-                            stat.TurnRaiseSizeToPot = SizeToPot(action.Amount, pot);
-                        }
-                    }
-                    else if (action.Street == Street.River)
-                    {
-                        stat.BetAmountRiverInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-
-                        if (action.PlayerName == player)
-                        {
-                            stat.RiverRaiseSizeToPot = SizeToPot(action.Amount, pot);
-                        }
-                    }
-                }
-                else if (action.IsCall())
-                {
-                    if (action.Street == Street.Preflop)
-                    {
-                        stat.CallAmountPreflopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-                    }
-                    else if (action.Street == Street.Flop)
-                    {
-                        stat.CallAmountFlopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-                    }
-                    else if (action.Street == Street.Turn)
-                    {
-                        stat.CallAmountTurnInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-                    }
-                    else if (action.Street == Street.River)
-                    {
-                        stat.CallAmountRiverInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
-                    }
-                }
-                else if (action.IsFold)
+                if (action.IsFold)
                 {
                     if (action.Street == Street.Preflop)
                     {
@@ -1098,9 +1017,9 @@ namespace Model
                 }
 
                 // facing actions
-                if (action.PlayerName == player && previousNotFoldAction != null)
+                if (action.PlayerName == player)
                 {
-                    if (previousNotFoldAction.IsRaise())
+                    if (previousNotFoldAction != null && previousNotFoldAction.IsRaise())
                     {
                         var facingRaiseSizeToPot = SizeToPot(previousNotFoldAction.Amount, pot - Math.Abs(previousNotFoldAction.Amount));
 
@@ -1121,7 +1040,7 @@ namespace Model
                             stat.RiverFacingRaiseSizeToPot = facingRaiseSizeToPot;
                         }
                     }
-                    else if (previousNotFoldAction.IsBet())
+                    else if (previousNotFoldAction != null && previousNotFoldAction.IsBet())
                     {
                         var facingBetSizeToPot = SizeToPot(previousNotFoldAction.Amount, pot - Math.Abs(previousNotFoldAction.Amount));
 
@@ -1138,34 +1057,116 @@ namespace Model
                             stat.RiverFacingBetSizeToPot = facingBetSizeToPot;
                         }
                     }
-                }
 
-                // Pot sizes
-                if (previousNotFoldAction != null && action.Street != previousNotFoldAction.Street)
-                {
-                    if (action.Street == Street.Flop)
+                    if (action.IsBlinds)
                     {
-                        stat.FlopPotSizeInCents = Utils.ConvertToCents(pot);
-                        stat.TurnPotSizeInCents = stat.WasTurn == 1 ? Utils.ConvertToCents(pot) : 0;
-                        stat.RiverPotSizeInCents = stat.WasRiver == 1 ? Utils.ConvertToCents(pot) : 0;
+                        stat.PostAmountPreflopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
                     }
-                    else if (action.Street == Street.Turn)
+                    else if (action.IsBet())
                     {
-                        stat.TurnPotSizeInCents = Utils.ConvertToCents(pot);
-                        stat.RiverPotSizeInCents = stat.WasRiver == 1 ? Utils.ConvertToCents(pot) : 0;
+                        if (action.Street == Street.Preflop)
+                        {
+                            stat.BetAmountPreflopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
+                        }
+                        else if (action.Street == Street.Flop)
+                        {
+                            stat.BetAmountFlopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
+                        }
+                        else if (action.Street == Street.Turn)
+                        {
+                            stat.BetAmountTurnInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
+                        }
+                        else if (action.Street == Street.River)
+                        {
+                            stat.BetAmountRiverInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
+                        }
                     }
-                    else if (action.Street == Street.River)
+                    else if (action.IsRaise())
                     {
-                        stat.RiverPotSizeInCents = Utils.ConvertToCents(pot);
+                        if (action.Street == Street.Preflop)
+                        {
+                            stat.BetAmountPreflopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
+                            stat.RaiseSizeToPotPreflop = SizeToPot(action.Amount, pot);
+                        }
+                        else if (action.Street == Street.Flop)
+                        {
+                            stat.BetAmountFlopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
+                            stat.FlopRaiseSizeToPot = SizeToPot(action.Amount, pot);
+                        }
+                        else if (action.Street == Street.Turn)
+                        {
+                            stat.BetAmountTurnInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
+                            stat.TurnRaiseSizeToPot = SizeToPot(action.Amount, pot);
+                        }
+                        else if (action.Street == Street.River)
+                        {
+                            stat.BetAmountRiverInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
+                            stat.RiverRaiseSizeToPot = SizeToPot(action.Amount, pot);
+                        }
+                    }
+                    else if (action.IsCall())
+                    {
+                        if (action.Street == Street.Preflop)
+                        {
+                            stat.CallAmountPreflopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
+                        }
+                        else if (action.Street == Street.Flop)
+                        {
+                            stat.CallAmountFlopInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
+                        }
+                        else if (action.Street == Street.Turn)
+                        {
+                            stat.CallAmountTurnInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
+                        }
+                        else if (action.Street == Street.River)
+                        {
+                            stat.CallAmountRiverInCents += Math.Abs(Utils.ConvertToCents(action.Amount));
+                        }
                     }
                 }
 
                 pot += Math.Abs(action.Amount);
 
+                if (action.Street < Street.Flop)
+                {
+                    stat.FlopPotSizeInCents = stat.WasFlop == 1 ? Utils.ConvertToCents(pot) : 0;
+                    stat.TurnPotSizeInCents = stat.WasTurn == 1 ? Utils.ConvertToCents(pot) : 0;
+                    stat.RiverPotSizeInCents = stat.WasRiver == 1 ? Utils.ConvertToCents(pot) : 0;
+                }
+                else if (action.Street < Street.Turn)
+                {
+                    stat.TurnPotSizeInCents = stat.WasTurn == 1 ? Utils.ConvertToCents(pot) : 0;
+                    stat.RiverPotSizeInCents = stat.WasRiver == 1 ? Utils.ConvertToCents(pot) : 0;
+                }
+                else if (action.Street < Street.River && stat.WasRiver == 1)
+                {
+                    stat.RiverPotSizeInCents = Utils.ConvertToCents(pot);
+                }
+
                 if (!action.IsFold)
                 {
                     previousNotFoldAction = action;
                 }
+            }
+
+            if (stat.WasTurn == 0)
+            {
+                stat.NumberOfPlayersOnTurn = 0;
+            }
+
+            if (stat.WasRiver == 0)
+            {
+                stat.NumberOfPlayersOnRiver = 0;
+            }
+
+            if (stat.WasFlop == 0)
+            {
+                stat.NumberOfPlayersOnFlop = 0;
+            }
+
+            if (stat.NumberOfPlayersSawShowdown == 1)
+            {
+                stat.NumberOfPlayersSawShowdown = 0;
             }
         }
 
