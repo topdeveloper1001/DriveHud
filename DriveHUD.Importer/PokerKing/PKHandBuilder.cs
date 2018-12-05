@@ -223,7 +223,7 @@ namespace DriveHUD.Importers.PokerKing
             {
                 return;
             }
-
+       
             HandHistoryUtils.UpdateAllInActions(handHistory);
             HandHistoryUtils.CalculateBets(handHistory);
             HandHistoryUtils.CalculateUncalledBets(handHistory, true);
@@ -379,6 +379,8 @@ namespace DriveHUD.Importers.PokerKing
                  noticeGameBlind.BBAmount,
                  Street.Preflop));
 
+            var maxStraddleAmount = 0;
+
             if (noticeGameBlind.StraddleSeatList != null && noticeGameBlind.StraddleSeatList.Length > 0 &&
                 noticeGameBlind.StraddleAmountList != null && noticeGameBlind.StraddleAmountList.Length == noticeGameBlind.StraddleSeatList.Length)
             {
@@ -397,17 +399,24 @@ namespace DriveHUD.Importers.PokerKing
                         straddleAmount,
                         Street.Preflop));
 
+                    if (maxStraddleAmount < straddleAmount)
+                    {
+                        maxStraddleAmount = straddleAmount;
+                    }
+
                     handHistory.GameDescription.IsStraddle = true;
                 }
             }
 
             if (noticeGameBlind.PostSeatList != null)
             {
+                var postAmount = handHistory.GameDescription.IsStraddle ? maxStraddleAmount : noticeGameBlind.BBAmount;
+
                 foreach (var postSeat in noticeGameBlind.PostSeatList)
                 {
                     handHistory.HandActions.Add(new HandAction(GetPlayerName(handHistory, postSeat + 1),
                         HandActionType.POSTS,
-                        noticeGameBlind.BBAmount,
+                        postAmount,
                         Street.Preflop));
                 }
             }
@@ -443,7 +452,6 @@ namespace DriveHUD.Importers.PokerKing
                 return;
             }
 
-
             HandAction action;
 
             if (actionType == HandActionType.ALL_IN)
@@ -456,6 +464,25 @@ namespace DriveHUD.Importers.PokerKing
                 action = new AllInAction(player.PlayerName,
                     allInAmount,
                     handHistory.CommunityCards.Street, false);
+            }
+            else if (actionType == HandActionType.RAISE ||
+                (actionType == HandActionType.BET && handHistory.CommunityCards.Street == Street.Preflop))
+            {
+                if (actionType == HandActionType.BET)
+                {
+                    actionType = HandActionType.RAISE;
+                }
+
+                var player = GetPlayer(handHistory, noticePlayerAction.LastActionSeatId + 1);
+
+                var playerPutInPot = Math.Abs(handHistory.HandActions
+                    .Where(x => x.Street == handHistory.CommunityCards.Street && x.PlayerName == player.PlayerName && x.HandActionType != HandActionType.ANTE)
+                    .Sum(x => x.Amount));
+
+                action = new HandAction(GetPlayerName(handHistory, noticePlayerAction.LastActionSeatId + 1),
+                     actionType,
+                     noticePlayerAction.Amount - playerPutInPot,
+                     handHistory.CommunityCards.Street);
             }
             else
             {

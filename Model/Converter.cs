@@ -210,6 +210,8 @@ namespace Model.Importer
                 case EnumPosition.UTG_2:
                 case EnumPosition.EP:
                     return "EP";
+                case EnumPosition.STRDL:
+                    return "STRDL";
                 case EnumPosition.Undefined:
                 default:
                     return "Undefined";

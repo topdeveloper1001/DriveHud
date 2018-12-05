@@ -326,10 +326,16 @@
     <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\6-max-short-dbl-ante-no-hero\Result.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-hero-raises-from-sb\Result.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-hero-wrong-order\Result.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-hero\Result.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-no-hero-bet-on-preflop\Result.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-no-hero\Result.xml">
@@ -401,10 +407,16 @@
     <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\6-max-short-dbl-ante-no-hero\Source.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-hero-raises-from-sb\Source.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-hero-wrong-order\Source.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-hero\Source.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-no-hero-bet-on-preflop\Source.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TcpImportersTests\PKTests\TestData\HandsRawData\8-max-regular-no-hero\Source.json">
@@ -462,6 +474,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-4\59.153.74.17.31001-192.168.199.171.57872.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-5\170.33.8.252.31001-192.168.0.103.48912.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-5\192.168.0.103.48912-170.33.8.252.31001.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="TcpImportersTests\PKTests\TestData\Packets\NoticeGameSnapShotPacket.json">
