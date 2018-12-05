@@ -1052,6 +1052,129 @@ namespace DriveHUD.Entities
         [ProtoMember(375)]
         public virtual int FacedDelayedCBet { get; set; }
 
+        [ProtoMember(376)]
+        public virtual int BetAmountPreflopInCents { get; set; }
+
+        [ProtoMember(377)]
+        public virtual int CallAmountPreflopInCents { get; set; }
+
+        [ProtoMember(378)]
+        public virtual int PostAmountPreflopInCents { get; set; }
+
+        [ProtoMember(379)]
+        public virtual double RaiseSizeToPotPreflop { get; set; }
+
+        [ProtoMember(380)]
+        public virtual double FacingRaiseSizeToPot { get; set; }
+
+        [ProtoMember(381)]
+        public virtual int NumberOfPlayersOnFlop { get; set; }
+
+        [ProtoMember(382)]
+        public virtual int BetAmountFlopInCents { get; set; }
+
+        [ProtoMember(383)]
+        public virtual int CallAmountFlopInCents { get; set; }
+
+        [ProtoMember(384)]
+        public virtual int FlopPotSizeInCents { get; set; }
+
+        [ProtoMember(385)]
+        public virtual double FlopStackPotRatio { get; set; }
+
+        [ProtoMember(386)]
+        public virtual double FlopRaiseSizeToPot { get; set; }
+
+        [ProtoMember(387)]
+        public virtual double FlopFacingBetSizeToPot { get; set; }
+
+        [ProtoMember(388)]
+        public virtual double FlopFacingRaiseSizeToPot { get; set; }
+
+        [ProtoMember(389)]
+        public virtual int NumberOfPlayersOnTurn { get; set; }
+
+        [ProtoMember(390)]
+        public virtual int BetAmountTurnInCents { get; set; }
+
+        [ProtoMember(391)]
+        public virtual int CallAmountTurnInCents { get; set; }
+
+        [ProtoMember(392)]
+        public virtual int TurnPotSizeInCents { get; set; }
+
+        [ProtoMember(393)]
+        public virtual double TurnStackPotRatio { get; set; }
+
+        [ProtoMember(394)]
+        public virtual double TurnRaiseSizeToPot { get; set; }
+
+        [ProtoMember(395)]
+        public virtual double TurnFacingBetSizeToPot { get; set; }
+
+        [ProtoMember(396)]
+        public virtual double TurnFacingRaiseSizeToPot { get; set; }
+
+        [ProtoMember(397)]
+        public virtual int NumberOfPlayersOnRiver { get; set; }
+
+        [ProtoMember(398)]
+        public virtual int BetAmountRiverInCents { get; set; }
+
+        [ProtoMember(399)]
+        public virtual int CallAmountRiverInCents { get; set; }
+
+        [ProtoMember(400)]
+        public virtual int RiverPotSizeInCents { get; set; }
+
+        [ProtoMember(401)]
+        public virtual double RiverStackPotRatio { get; set; }
+
+        [ProtoMember(402)]
+        public virtual double RiverRaiseSizeToPot { get; set; }
+
+        [ProtoMember(403)]
+        public virtual double RiverFacingBetSizeToPot { get; set; }
+
+        [ProtoMember(404)]
+        public virtual double RiverFacingRaiseSizeToPot { get; set; }
+
+        [ProtoMember(405)]
+        public virtual int NumberOfPlayersSawShowdown { get; set; }
+
+        #region Pot/Amount/Stack based 
+
+        public double BetAmountPreflopInBB => BigBlind != 0 ? BetAmountPreflopInCents / (double)BigBlind * 100 : 0;
+
+        public double CallAmountPreflopInBB => BigBlind != 0 ? CallAmountPreflopInCents / (double)BigBlind * 100 : 0;
+
+        public double PostAmountPreflopInBB => BigBlind != 0 ? PostAmountPreflopInCents / (double)BigBlind * 100 : 0;
+
+        public double BetAmountFlopInBB => BigBlind != 0 ? BetAmountFlopInCents / (double)BigBlind * 100 : 0;
+
+        public double CallAmountFlopInBB => BigBlind != 0 ? CallAmountFlopInCents / (double)BigBlind * 100 : 0;
+
+        public double BetAmountTurnInBB => BigBlind != 0 ? BetAmountTurnInCents / (double)BigBlind * 100 : 0;
+
+        public double CallAmountTurnInBB => BigBlind != 0 ? CallAmountTurnInCents / (double)BigBlind * 100 : 0;
+
+        public double BetAmountRiverInBB => BigBlind != 0 ? BetAmountRiverInCents / (double)BigBlind * 100 : 0;
+
+        public double CallAmountRiverInBB => BigBlind != 0 ? CallAmountRiverInCents / (double)BigBlind * 100 : 0;
+
+        public double FlopPotSizeInBB => BigBlind != 0 ? FlopPotSizeInCents / (double)BigBlind * 100 : 0;
+
+        public double TurnPotSizeInBB => BigBlind != 0 ? TurnPotSizeInCents / (double)BigBlind * 100 : 0;
+
+        public double RiverPotSizeInBB => BigBlind != 0 ? RiverPotSizeInCents / (double)BigBlind * 100 : 0;
+
+        public double PotInBB => BigBlind != 0 ? (double)Pot / (double)BigBlind : 0;
+
+        public double TotalWonInBB => BigBlind != 0 ? Totalamountwonincents / (double)BigBlind * 100 : 0;
+
+        #endregion
+
+
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -1184,7 +1307,6 @@ namespace DriveHUD.Entities
             (FacingPreflop == EnumFacingPreflop.Raiser || FacingPreflop == EnumFacingPreflop.RaiserAndCaller) ||
             (FacingPreflop == EnumFacingPreflop.Unopened && PreflopActions.Equals("CC")) ||
             PreflopActions.Equals("R");
-
 
         #region FlopBetSize stats
 

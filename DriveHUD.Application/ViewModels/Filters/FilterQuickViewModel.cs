@@ -1,11 +1,18 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
+﻿//-----------------------------------------------------------------------
+// <copyright file="FilterQuickViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Infrastructure.Base;
 using Model.Enums;
 using Model.Filters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
@@ -19,7 +26,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeBindings()
         {
-            this.ButtonFilterModelStatItemSwap_CommandClick = new RelayCommand(this.ButtonFilterModelStatItemSwap_OnClick);
+            ButtonFilterModelStatItemSwap_CommandClick = new RelayCommand(ButtonFilterModelStatItemSwap_OnClick);
         }
 
         private void FilterModelStatItemSwap(QuickFilterItem param)
@@ -28,11 +35,14 @@ namespace DriveHUD.Application.ViewModels
         }
 
         #region Commands
+
         public ICommand ButtonFilterModelStatItemSwap_CommandClick { get; set; }
+
         private void ButtonFilterModelStatItemSwap_OnClick(object param)
         {
             FilterModelStatItemSwap((QuickFilterItem)param);
         }
+
         #endregion
     }
 }

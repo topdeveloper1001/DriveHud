@@ -1419,4 +1419,16 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_Hud_LineBreak" xml:space="preserve">
     <value>Line Break</value>
   </data>
+  <data name="Common_FilterEditValuePopupView_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_FilterEditValuePopupView_EnterTheAmountFor" xml:space="preserve">
+    <value>Enter the amount for:</value>
+  </data>
+  <data name="Common_FilterEditValuePopupView_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Common_FilterEditValuePopupView_Title" xml:space="preserve">
+    <value>Set filter value</value>
+  </data>
 </root>

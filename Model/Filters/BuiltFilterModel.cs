@@ -1,19 +1,30 @@
-﻿using DriveHUD.Common.Annotations;
+﻿//-----------------------------------------------------------------------
+// <copyright file="BuiltFilterModel.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using HandHistories.Objects.Cards;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.Extensions;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace Model.Filters
 {
-    public class BuiltFilterModel : INotifyPropertyChanged
+    public class BuiltFilterModel : BindableBase
     {
         #region  Properties
 
@@ -59,15 +70,22 @@ namespace Model.Filters
             get { return FilterModelManager.FilterModelCollection.OfType<FilterQuickModel>().FirstOrDefault(); }
         }
 
+        private FilterAdvancedModel AdvancedFilterModel
+        {
+            get { return FilterModelManager.FilterModelCollection.OfType<FilterAdvancedModel>().FirstOrDefault(); }
+        }
+
         private ObservableCollection<FilterSectionItem> _filterSectionCollection;
+
         public ObservableCollection<FilterSectionItem> FilterSectionCollection
         {
-            get { return _filterSectionCollection; }
+            get
+            {
+                return _filterSectionCollection;
+            }
             set
             {
-                if (value == _filterSectionCollection) return;
-                _filterSectionCollection = value;
-                OnPropertyChanged();
+                SetProperty(ref _filterSectionCollection, value);
             }
         }
 
@@ -254,6 +272,12 @@ namespace Model.Filters
             QuickFilterItem.OnTriState.Invoke();
 
             #endregion
+
+            #region Advanced Filter 
+
+            AdvancedFilterModel?.SetBuiltFilterModel(this);
+
+            #endregion
         }
 
         public void RemoveBuiltFilterItem(FilterSectionItem param)
@@ -318,14 +342,18 @@ namespace Model.Filters
                 case EnumFilterSectionItemType.QuickFilterItem:
                     RemoveQuickFilterItem(param);
                     break;
+                case EnumFilterSectionItemType.AdvancedFilterItem:
+                    RemoveAdvancedFilterItem(param);
+                    break;
             }
         }
 
         public BuiltFilterModel Clone()
         {
-            var model = new BuiltFilterModel();
-
-            model.FilterSectionCollection = new ObservableCollection<FilterSectionItem>(this.FilterSectionCollection.Select(x => (FilterSectionItem)x.Clone()));
+            var model = new BuiltFilterModel
+            {
+                FilterSectionCollection = new ObservableCollection<FilterSectionItem>(this.FilterSectionCollection.Select(x => (FilterSectionItem)x.Clone()))
+            };
 
             return model;
         }
@@ -999,22 +1027,24 @@ namespace Model.Filters
                 fastFilterItem.CurrentTriState = EnumTriState.Any;
             }
         }
-        #endregion
 
         #endregion
 
-        #region  INotifyPropertyChanged
-        public event PropertyChangedEventHandler PropertyChanged;
+        #region Advanced Filter Item
 
-        [NotifyPropertyChangedInvocator]
-        public virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        private void RemoveAdvancedFilterItem(FilterSectionItem param)
         {
-            var handler = PropertyChanged;
-            if (handler != null)
+            if (param.ItemType != EnumFilterSectionItemType.AdvancedFilterItem ||
+                string.IsNullOrEmpty(param.Name))
             {
-                handler(this, new PropertyChangedEventArgs(propertyName));
+                return;
             }
+
+            AdvancedFilterModel?.SelectedFilters.RemoveByCondition(x => x.ToolTip == param.Name);
         }
+
+        #endregion
+
         #endregion
     }
 }

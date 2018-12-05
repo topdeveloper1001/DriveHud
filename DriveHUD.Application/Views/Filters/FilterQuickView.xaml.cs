@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿//-----------------------------------------------------------------------
+// <copyright file="FilterQuickView.xaml.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Filters;
 using Model.Filters;
+using System.Windows.Controls;
 
 namespace DriveHUD.Application.Views
 {
@@ -23,14 +21,13 @@ namespace DriveHUD.Application.Views
     {
         public FilterQuickView(IFilterModelManagerService service)
         {
-            this.DataContext = new FilterQuickViewModel(service);
-
+            DataContext = new FilterQuickViewModel(service);
             InitializeComponent();
         }
 
         public IFilterViewModel ViewModel
         {
-            get { return (this.DataContext as IFilterViewModel); }
+            get { return DataContext as IFilterViewModel; }
         }
     }
 }
