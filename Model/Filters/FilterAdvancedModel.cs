@@ -532,7 +532,7 @@ namespace Model.Filters
                 { AdvancedFilterType.FacingFlopContinuationBet, (p, v) => p.Facingflopcontinuationbet > 0 },
                 { AdvancedFilterType.CalledFlopContinuationBet, (p, v) => p.Calledflopcontinuationbet > 0 },
                 { AdvancedFilterType.RaisedFlopContinuationBet, (p, v) => p.Raisedflopcontinuationbet > 0 },
-                { AdvancedFilterType.FlopWasCheckRaised, (p, v) => p.DidCheckRaise > 0 || p.FacedFlopCheckRaise > 0 },
+                { AdvancedFilterType.FlopWasCheckRaised, (p, v) => p.DidFlopCheckRaise > 0 || p.FacedFlopCheckRaise > 0 },
                 { AdvancedFilterType.FlopWasBetInto, (p, v) => p.TotalbetsFlop >= 1 },
                 { AdvancedFilterType.FlopWasRaised, (p, v) => p.TotalbetsFlop > 1 },
                 { AdvancedFilterType.BBsBetFlopisBiggerThan, (p, v) => p.BetAmountFlopInBB != 0 && p.BetAmountFlopInBB > v },

@@ -3096,6 +3096,26 @@ namespace Model.Data
 
         #endregion
 
+        #region Double/Triple barrel
+
+        [ProtoMember(338)]
+        protected int didDoubleBarrel;
+
+        [ProtoMember(339)]
+        protected int couldDoubleBarrel;
+
+        public override decimal DoubleBarrel => GetPercentage(didDoubleBarrel, couldDoubleBarrel);
+
+        [ProtoMember(340)]
+        protected int didTripleBarrel;
+
+        [ProtoMember(341)]
+        protected int couldTripleBarrel;
+
+        public override decimal TripleBarrel => GetPercentage(didTripleBarrel, couldTripleBarrel);
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -3264,6 +3284,11 @@ namespace Model.Data
 
             foldedToDelayedCBet += statistic.FoldedToDelayedCBet;
 
+            didDoubleBarrel += statistic.DidDoubleBarrel;
+            couldDoubleBarrel += statistic.CouldDoubleBarrel;
+            didTripleBarrel += statistic.DidTripleBarrel;
+            couldTripleBarrel += statistic.CouldTripleBarrel;
+
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
@@ -3427,6 +3452,11 @@ namespace Model.Data
             couldCheckFoldFlop3BetOop = 0;
 
             foldedToDelayedCBet = 0;
+
+            didDoubleBarrel = 0;
+            couldDoubleBarrel = 0;
+            didTripleBarrel = 0;
+            couldTripleBarrel = 0;
 
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
@@ -3630,6 +3660,11 @@ namespace Model.Data
             couldCheckFoldFlop3BetOop += indicator.couldCheckFoldFlop3BetOop;
 
             foldedToDelayedCBet += indicator.foldedToDelayedCBet;
+
+            didDoubleBarrel += indicator.didDoubleBarrel;
+            couldDoubleBarrel += indicator.couldDoubleBarrel;
+            didTripleBarrel += indicator.didTripleBarrel;
+            couldTripleBarrel += indicator.couldTripleBarrel;
 
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);

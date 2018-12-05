@@ -2351,6 +2351,14 @@ namespace Model.Data
 
         #endregion
 
+        #region Double/Triple barrel
+
+        public virtual decimal DoubleBarrel => GetPercentage(Statistics.Sum(x => x.DidDoubleBarrel), Statistics.Sum(x => x.CouldDoubleBarrel));
+
+        public virtual decimal TripleBarrel => GetPercentage(Statistics.Sum(x => x.DidTripleBarrel), Statistics.Sum(x => x.CouldTripleBarrel));
+
+        #endregion
+
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
         {
             foreach (var statistic in statistics)

@@ -2833,6 +2833,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to River C-Bet%.
+        /// </summary>
+        internal static string Reports_Column_RiverCBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_RiverCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to River Check/Call%.
         /// </summary>
         internal static string Reports_Column_RiverCheckCall {
@@ -3603,6 +3612,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_TurnBetSizeTwoThirdsOrLess {
             get {
                 return ResourceManager.GetString("Reports_Column_TurnBetSizeTwoThirdsOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn C-Bet%.
+        /// </summary>
+        internal static string Reports_Column_TurnCBet {
+            get {
+                return ResourceManager.GetString("Reports_Column_TurnCBet", resourceCulture);
             }
         }
         

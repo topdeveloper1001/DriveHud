@@ -1142,6 +1142,12 @@ namespace DriveHUD.Entities
         [ProtoMember(405)]
         public virtual int NumberOfPlayersSawShowdown { get; set; }
 
+        [ProtoMember(406)]
+        public virtual int FacingDoubleBarrel { get; set; }
+
+        [ProtoMember(407)]
+        public virtual int FacingTripleBarrel { get; set; }
+
         #region Pot/Amount/Stack based 
 
         public double BetAmountPreflopInBB => BigBlind != 0 ? BetAmountPreflopInCents / (double)BigBlind * 100 : 0;
@@ -1700,25 +1706,21 @@ namespace DriveHUD.Entities
 
         public virtual int BetRiverWhenCheckedToSRP => CouldBetTurnWhenCheckedToSRP != 0 && DidCheckTurn != 0 && DidRiverBet != 0 ? 1 : 0;
 
-        public virtual int DoubleBarrelSRP => Turncontinuationbetmade != 0 && FirstRaiser != 0 &&
-            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+        public virtual int DoubleBarrelSRP => DidDoubleBarrel == 1 && IsSRP ? 1 : 0;
 
-        public virtual int CouldDoubleBarrelSRP => Turncontinuationbetpossible != 0 && FirstRaiser != 0 &&
-           FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+        public virtual int CouldDoubleBarrelSRP => CouldDoubleBarrel == 1 && IsSRP ? 1 : 0;
 
-        public virtual int DoubleBarrel3BetPot => Turncontinuationbetmade != 0 && In3BetPot ? 1 : 0;
+        public virtual int DoubleBarrel3BetPot => DidDoubleBarrel == 1 && In3BetPot ? 1 : 0;
 
-        public virtual int CouldDoubleBarrel3BetPot => Turncontinuationbetpossible != 0 && In3BetPot ? 1 : 0;
+        public virtual int CouldDoubleBarrel3BetPot => CouldDoubleBarrel == 1 && In3BetPot ? 1 : 0;
 
-        public virtual int TripleBarrelSRP => Rivercontinuationbetmade != 0 && FirstRaiser != 0 &&
-            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+        public virtual int TripleBarrelSRP => DidTripleBarrel == 1 && IsSRP ? 1 : 0;
 
-        public virtual int CouldTripleBarrelSRP => Rivercontinuationbetpossible != 0 && FirstRaiser != 0 &&
-            FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
+        public virtual int CouldTripleBarrelSRP => CouldTripleBarrel == 1 && IsSRP ? 1 : 0;
 
-        public virtual int TripleBarrel3BetPot => Rivercontinuationbetmade != 0 && In3BetPot ? 1 : 0;
+        public virtual int TripleBarrel3BetPot => DidTripleBarrel == 1 && In3BetPot ? 1 : 0;
 
-        public virtual int CouldTripleBarrel3BetPot => Rivercontinuationbetpossible != 0 && In3BetPot ? 1 : 0;
+        public virtual int CouldTripleBarrel3BetPot => CouldTripleBarrel == 1 && In3BetPot ? 1 : 0;
 
         public virtual int CBetThenFoldFlopSRP => Flopcontinuationbetmade != 0 && BetFoldFlopPfrRaiser != 0 && FirstRaiser != 0 &&
             FacedthreebetpreflopVirtual == 0 && Facedfourbetpreflop == 0 && Faced5Bet == 0 ? 1 : 0;
@@ -1814,25 +1816,25 @@ namespace DriveHUD.Entities
 
         #region Fold to continuation bets in SRP/3Bet/4Bet
 
-        public virtual int FoldToTripleBarrelSRP => IsSRP && Foldedtorivercontinuationbet != 0 ? 1 : 0;
+        public virtual int FoldToTripleBarrelSRP => IsSRP && FacingTripleBarrel != 0 && RiverActions.Equals("F") ? 1 : 0;
 
-        public virtual int FacingTripleBarrelSRP => IsSRP && Facingrivercontinuationbet != 0 ? 1 : 0;
+        public virtual int FacingTripleBarrelSRP => IsSRP && FacingTripleBarrel != 0 ? 1 : 0;
 
-        public virtual int FoldToTripleBarrel3BetPot => In3BetPot && Foldedtorivercontinuationbet != 0 ? 1 : 0;
+        public virtual int FoldToTripleBarrel3BetPot => In3BetPot && FacingTripleBarrel != 0 && RiverActions.Equals("F") ? 1 : 0;
 
-        public virtual int FacingTripleBarrel3BetPot => In3BetPot && Facingrivercontinuationbet != 0 ? 1 : 0;
+        public virtual int FacingTripleBarrel3BetPot => In3BetPot && FacingTripleBarrel != 0 ? 1 : 0;
 
-        public virtual int FoldToTripleBarrel4BetPot => In4BetPot && Foldedtorivercontinuationbet != 0 ? 1 : 0;
+        public virtual int FoldToTripleBarrel4BetPot => In4BetPot && FacingTripleBarrel != 0 && RiverActions.Equals("F") ? 1 : 0;
 
-        public virtual int FacingTripleBarrel4BetPot => In4BetPot && Facingrivercontinuationbet != 0 ? 1 : 0;
+        public virtual int FacingTripleBarrel4BetPot => In4BetPot && FacingTripleBarrel != 0 ? 1 : 0;
 
-        public virtual int FoldToDoubleBarrelSRP => IsSRP && Foldedtoturncontinuationbet != 0 ? 1 : 0;
+        public virtual int FoldToDoubleBarrelSRP => IsSRP && FacingDoubleBarrel != 0 && TurnActions.Equals("F") ? 1 : 0;
 
-        public virtual int FacingDoubleBarrelSRP => IsSRP && Facingturncontinuationbet != 0 ? 1 : 0;
+        public virtual int FacingDoubleBarrelSRP => IsSRP && FacingDoubleBarrel != 0 ? 1 : 0;
 
-        public virtual int FoldToDoubleBarrel4BetPot => In4BetPot && Foldedtoturncontinuationbet != 0 ? 1 : 0;
+        public virtual int FoldToDoubleBarrel4BetPot => In4BetPot && FacingDoubleBarrel != 0 && TurnActions.Equals("F") ? 1 : 0;
 
-        public virtual int FacingDoubleBarrel4BetPot => In4BetPot && Facingturncontinuationbet != 0 ? 1 : 0;
+        public virtual int FacingDoubleBarrel4BetPot => In4BetPot && FacingDoubleBarrel != 0 ? 1 : 0;
 
         public virtual int FoldToCBetSRP => IsSRP && Foldedtoflopcontinuationbet != 0 ? 1 : 0;
 
@@ -2402,6 +2404,18 @@ namespace DriveHUD.Entities
         public virtual int CouldCheckFoldFlopPfrOop => Pfrhands == 1 && PreflopIP == 0 && FlopActions.StartsWith("X") && FlopActions.Length > 1 ? 1 : 0;
 
         public virtual int CouldCheckFoldFlop3BetOop => Didthreebet == 1 && PreflopIP == 0 && FlopActions.StartsWith("X") && FlopActions.Length > 1 ? 1 : 0;
+
+        #endregion
+
+        #region Double Barrel / Triple Barrel
+
+        public virtual int DidDoubleBarrel => Flopcontinuationbetmade == 1 && TurnActions.StartsWith("B") ? 1 : 0;
+
+        public virtual int CouldDoubleBarrel => Flopcontinuationbetmade == 1 && CouldTurnBet == 1 ? 1 : 0;
+
+        public virtual int DidTripleBarrel => DidDoubleBarrel == 1 && RiverActions.StartsWith("B") ? 1 : 0;
+
+        public virtual int CouldTripleBarrel => DidDoubleBarrel == 1 && CouldRiverBet == 1 ? 1 : 0;
 
         #endregion
 

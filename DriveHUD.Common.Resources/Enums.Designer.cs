@@ -3778,6 +3778,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to River C-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_RiverCBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_RiverCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to River Check-Call%.
         /// </summary>
         internal static string Enum_Stat_RiverCheckCall {
@@ -4647,6 +4656,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_TurnBetSizeTwoThirdsOrLess {
             get {
                 return ResourceManager.GetString("Enum_Stat_TurnBetSizeTwoThirdsOrLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn C-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_TurnCBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_TurnCBet", resourceCulture);
             }
         }
         

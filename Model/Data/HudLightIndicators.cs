@@ -4245,6 +4245,36 @@ namespace Model.Data
 
         #endregion
 
+        #region Double/Triple barrel
+
+        public virtual StatDto DoubleBarrelObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = DoubleBarrel,
+                    Occurred = didDoubleBarrel,
+                    CouldOccurred = couldDoubleBarrel
+                };
+            }
+        }
+
+        public virtual StatDto TripleBarrelObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = TripleBarrel,
+                    Occurred = didDoubleBarrel,
+                    CouldOccurred = couldDoubleBarrel
+                };
+            }
+        }
+
+        #endregion
+
         #endregion
 
         public virtual StatDto CheckRaiseFlopAsPFRObject

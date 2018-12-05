@@ -1386,4 +1386,10 @@
   <data name="Reports_Column_FoldedToDelayedCBet" xml:space="preserve">
     <value>Fold to delayed C-bet%</value>
   </data>
+  <data name="Reports_Column_RiverCBet" xml:space="preserve">
+    <value>River C-Bet%</value>
+  </data>
+  <data name="Reports_Column_TurnCBet" xml:space="preserve">
+    <value>Turn C-Bet%</value>
+  </data>
 </root>

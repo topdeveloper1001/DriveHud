@@ -418,6 +418,8 @@ namespace Model.Enums
         FoldInStraddle,
         WTSDInStraddle,
         SkipFlopCBetInSRPandCheckFoldFlopOOP,
-        FoldedToDelayedCBet
+        FoldedToDelayedCBet,
+        TurnCBet,
+        RiverCBet
     }
 }

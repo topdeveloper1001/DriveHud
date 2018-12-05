@@ -972,6 +972,12 @@ namespace Model
 
             #endregion
 
+            stat.FacingDoubleBarrel = flopCBet.Faced && stat.FacedBetOnTurn == 1 &&
+                parsedHand.Turn.Any(x => x.IsBet() && x.PlayerName == flopCBet.HappenedByPlayer) ? 1 : 0;
+
+            stat.FacingTripleBarrel = flopCBet.Faced && stat.FacingDoubleBarrel == 1 && stat.FacedBetOnRiver == 1 &&
+              parsedHand.River.Any(x => x.IsBet() && x.PlayerName == flopCBet.HappenedByPlayer) ? 1 : 0;
+
             return stat;
         }
 
@@ -2378,6 +2384,7 @@ namespace Model
 
                         cbet.Made = true;
                         cbet.Happened = true;
+                        cbet.HappenedByPlayer = raiser;
 
                         return;
                     }
@@ -2387,7 +2394,10 @@ namespace Model
                     if (action.IsBet())
                     {
                         if (raiser == action.PlayerName)
+                        {
                             cbet.Happened = true;
+                            cbet.HappenedByPlayer = raiser;
+                        }
                         else
                             return;
                     }
