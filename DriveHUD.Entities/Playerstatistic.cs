@@ -1312,7 +1312,7 @@ namespace DriveHUD.Entities
         public virtual bool IsSRP => (PreflopActions.Equals("C") || PreflopActions.Equals("F")) &&
             (FacingPreflop == EnumFacingPreflop.Raiser || FacingPreflop == EnumFacingPreflop.RaiserAndCaller) ||
             (FacingPreflop == EnumFacingPreflop.Unopened && PreflopActions.Equals("CC")) ||
-            PreflopActions.Equals("R");
+            (PreflopActions.Equals("R") && (FacingPreflop == EnumFacingPreflop.Unopened || FacingPreflop == EnumFacingPreflop.Limper || FacingPreflop == EnumFacingPreflop.MultipleLimpers));
 
         #region FlopBetSize stats
 

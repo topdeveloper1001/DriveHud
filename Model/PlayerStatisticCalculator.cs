@@ -984,6 +984,7 @@ namespace Model
         private static void CalculatePotBasedStats(HandHistory parsedHand, Playerstatistic stat, string player)
         {
             var pot = 0m;
+            var putInPot = 0m;
 
             stat.NumberOfPlayersOnFlop = stat.NumberOfPlayersOnTurn = stat.NumberOfPlayersOnRiver = stat.NumberOfPlayersSawShowdown = stat.Numberofplayers;
 
@@ -1025,6 +1026,8 @@ namespace Model
                 // facing actions
                 if (action.PlayerName == player)
                 {
+                    putInPot += Math.Abs(action.Amount);
+
                     if (previousNotFoldAction != null && previousNotFoldAction.IsRaise())
                     {
                         var facingRaiseSizeToPot = SizeToPot(previousNotFoldAction.Amount, pot - Math.Abs(previousNotFoldAction.Amount));
@@ -1133,20 +1136,30 @@ namespace Model
 
                 pot += Math.Abs(action.Amount);
 
+                var stackToPotRatio = pot != 0 ? (double)(stat.StartingStack - putInPot) / (double)pot : 0;
+
                 if (action.Street < Street.Flop)
                 {
                     stat.FlopPotSizeInCents = stat.WasFlop == 1 ? Utils.ConvertToCents(pot) : 0;
                     stat.TurnPotSizeInCents = stat.WasTurn == 1 ? Utils.ConvertToCents(pot) : 0;
                     stat.RiverPotSizeInCents = stat.WasRiver == 1 ? Utils.ConvertToCents(pot) : 0;
+
+                    stat.FlopStackPotRatio = stat.Sawflop == 1 ? stackToPotRatio : 0;
+                    stat.TurnStackPotRatio = stat.SawTurn == 1 ? stackToPotRatio : 0;
+                    stat.RiverStackPotRatio = stat.SawRiver == 1 ? stackToPotRatio : 0;
                 }
                 else if (action.Street < Street.Turn)
                 {
                     stat.TurnPotSizeInCents = stat.WasTurn == 1 ? Utils.ConvertToCents(pot) : 0;
                     stat.RiverPotSizeInCents = stat.WasRiver == 1 ? Utils.ConvertToCents(pot) : 0;
+
+                    stat.TurnStackPotRatio = stat.SawTurn == 1 ? stackToPotRatio : 0;
+                    stat.RiverStackPotRatio = stat.SawRiver == 1 ? stackToPotRatio : 0;
                 }
                 else if (action.Street < Street.River && stat.WasRiver == 1)
                 {
                     stat.RiverPotSizeInCents = Utils.ConvertToCents(pot);
+                    stat.RiverStackPotRatio = stat.SawRiver == 1 ? stackToPotRatio : 0;
                 }
 
                 if (!action.IsFold)

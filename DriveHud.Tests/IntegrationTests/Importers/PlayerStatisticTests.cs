@@ -1448,9 +1448,9 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.FlopPotSizeInCents, fileName, pokerSite, playerName, expected);
         }
 
-        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
-        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
-        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 19.29)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 4.96)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 25.78)]
         public void FlopStackPotRatioIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, double expected)
         {
             AssertThatStatIsCalculated(x => x.FlopStackPotRatio, fileName, pokerSite, playerName, expected);
@@ -1515,10 +1515,10 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.TurnPotSizeInCents, fileName, pokerSite, playerName, expected);
         }
 
-        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
-        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
-        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
-        public void TurnStackPotRatioIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 8.73)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0.074)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 10.15)]
+        public void TurnStackPotRatioIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, double expected)
         {
             AssertThatStatIsCalculated(x => x.TurnStackPotRatio, fileName, pokerSite, playerName, expected);
         }
@@ -1581,10 +1581,10 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.RiverPotSizeInCents, fileName, pokerSite, playerName, expected);
         }
 
-        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
-        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0)]
-        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 0)]
-        public void RiverStackPotRatioIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 2.96)]
+        [TestCase(@"Hero-Pot-Calcs-2.txt", EnumPokerSites.PokerStars, "Hero", 0.074)]
+        [TestCase(@"Hero-Pot-Calcs-3.txt", EnumPokerSites.PokerStars, "Hero", 3.73)]
+        public void RiverStackPotRatioIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, double expected)
         {
             AssertThatStatIsCalculated(x => x.RiverStackPotRatio, fileName, pokerSite, playerName, expected);
         }
