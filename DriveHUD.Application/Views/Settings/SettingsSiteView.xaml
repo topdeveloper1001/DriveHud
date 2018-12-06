@@ -369,7 +369,7 @@
                     Command="{Binding AutoDetectHandHistoryLocationCommand}" />
 
                 <Button
-                    Width="60"
+                    Width="90"
                     Height="30"
                     Margin="5 0"
                     Content="{ResX Key=Common_Help}"

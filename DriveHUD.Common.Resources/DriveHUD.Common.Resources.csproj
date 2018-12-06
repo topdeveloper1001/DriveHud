@@ -744,6 +744,9 @@
   <ItemGroup>
     <Resource Include="images\SiteLogos\adda_logp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\settings\pokerstars-3max.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>

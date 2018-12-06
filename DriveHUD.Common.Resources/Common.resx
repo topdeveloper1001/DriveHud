@@ -866,7 +866,7 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
     <value>Import</value>
   </data>
   <data name="Common_Help" xml:space="preserve">
-    <value>Help</value>
+    <value>Setup Help</value>
   </data>
   <data name="Common_HudStatSettings_Cancel" xml:space="preserve">
     <value>Cancel</value>

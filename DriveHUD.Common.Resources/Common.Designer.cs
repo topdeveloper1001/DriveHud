@@ -1052,7 +1052,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Help.
+        ///   Looks up a localized string similar to Setup Help.
         /// </summary>
         internal static string Common_Help {
             get {

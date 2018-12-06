@@ -22,7 +22,7 @@ namespace DriveHUD.Application.TableConfigurators
         protected override Dictionary<int, double[,]> PredefinedPlayerPositions { get; } = new Dictionary<int, double[,]>()
         {
             {  2, new double[,] { { 219, 34 }, { 219, 230 } } },
-            {  3, new double[,] { { 219, 34 }, { 309, 230 }, { 128, 230 } } },
+            {  3, new double[,] { { 402, 133 }, { 217, 230 }, { 35, 133 } } },
             {  4, new double[,] { { 219, 34 }, { 401, 130 }, { 219, 230 }, { 37, 130 } } },
             {  6, new double[,] { { 380, 65 }, { 380, 175 }, { 219, 230 }, { 57, 175 }, { 57, 65 }, { 219, 34 } } },
             {  8, new double[,] { { 219, 34 }, { 380, 65 }, { 401, 130 }, { 350, 211 }, { 219, 230 }, { 85, 211 }, { 37, 130 }, { 57, 65 } } },
@@ -34,6 +34,7 @@ namespace DriveHUD.Application.TableConfigurators
         {
             switch (tableType)
             {
+                case EnumTableType.Three:
                 case EnumTableType.Nine:
                 case EnumTableType.Ten:
                     return string.Format(BackgroundTableImage, $"pokerstars-{(byte)tableType}");
