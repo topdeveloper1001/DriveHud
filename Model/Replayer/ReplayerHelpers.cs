@@ -19,6 +19,7 @@ namespace Model.Replayer
         public static IEnumerable<ReplayerDataModel> CreateSessionHandsList(IEnumerable<Playerstatistic> statistics, Playerstatistic current)
         {
             IEnumerable<Playerstatistic> potStat = new List<Playerstatistic>();
+
             if (statistics != null && statistics.Count() > 0)
             {
                 if (current.IsTourney)
@@ -28,6 +29,7 @@ namespace Model.Replayer
                 else
                 {
                     var session = new SessionsReportCreator().Create(statistics.ToList()).Where(x => x.Statistics.Any(s => s.GameNumber == current.GameNumber));
+
                     if (session != null && session.Count() > 0)
                     {
                         potStat = session.FirstOrDefault().Statistics.OrderByDescending(x => x.Time);

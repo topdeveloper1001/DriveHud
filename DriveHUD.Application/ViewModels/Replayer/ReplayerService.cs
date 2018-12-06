@@ -58,9 +58,9 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 return;
             }
 
-            var statistics = playerStatisticRepository.GetPlayerStatistic(playerName, pokerSiteId).ToList();
+            var currentStat = _storageModel.StatisticCollection.FirstOrDefault(x => x.GameNumber == gamenumber);
 
-            var currentStat = statistics.FirstOrDefault(x => x.GameNumber == gamenumber);
+            var statistics = currentStat.IsTourney ? _storageModel.FilteredTournamentPlayerStatistic : _storageModel.FilteredCashPlayerStatistic;
 
             if (currentStat == null)
             {

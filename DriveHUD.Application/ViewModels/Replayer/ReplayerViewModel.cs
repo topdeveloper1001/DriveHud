@@ -129,7 +129,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 ReplayerTableState lastAction = TableStateList.LastOrDefault();
 
                 if (lastAction != null && lastAction.CurrentStreet != action.Street && action.Street >= Street.Flop && action.Street <= Street.River)
-                {                
+                {
                     // if we are inside this "if" we create an extra state between two actions
                     totalPotValue = currentPotValue;
                     state.TotalPotValue = totalPotValue;
@@ -188,7 +188,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private static bool IsSkipAction(HandAction action)
         {
             return action.HandActionType == HandActionType.SHOW
-                || action.HandActionType == HandActionType.SHOWS_FOR_LOW              
+                || action.HandActionType == HandActionType.SHOWS_FOR_LOW
                 || action.HandActionType == HandActionType.UNKNOWN;
         }
 
@@ -701,6 +701,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         #endregion
 
         #region Properties
+
         private ReplayerDataModel _currentHand;
         private ReplayerDataModel _selectedLastHand;
         private ReplayerDataModel _selectedSessionHand;
@@ -737,8 +738,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 _selectedSessionHand = SessionHandsCollection?.FirstOrDefault(x => x?.GameNumber == value?.GameNumber);
                 _selectedLastHand = LastHandsCollection?.FirstOrDefault(x => x?.GameNumber == value?.GameNumber);
 
-                OnPropertyChanged(nameof(SelectedLastHand));
-                OnPropertyChanged(nameof(SelectedSessionHand));
+                RaisePropertyChanged(nameof(SelectedLastHand));
+                RaisePropertyChanged(nameof(SelectedSessionHand));
             }
         }
 
