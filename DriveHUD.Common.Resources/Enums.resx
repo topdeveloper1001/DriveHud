@@ -1745,4 +1745,16 @@
   <data name="Enum_Stat_TurnCBet" xml:space="preserve">
     <value>Turn C-Bet%</value>
   </data>
+  <data name="Enum_PreflopActorPosition_FourBettor" xml:space="preserve">
+    <value>4-Better's position</value>
+  </data>
+  <data name="Enum_PreflopActorPosition_Hero" xml:space="preserve">
+    <value>Hero's position</value>
+  </data>
+  <data name="Enum_PreflopActorPosition_Raiser" xml:space="preserve">
+    <value>Raiser's position</value>
+  </data>
+  <data name="Enum_PreflopActorPosition_ThreeBettor" xml:space="preserve">
+    <value>3-Better's position</value>
+  </data>
 </root>

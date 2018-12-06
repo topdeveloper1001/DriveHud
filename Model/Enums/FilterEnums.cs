@@ -84,7 +84,13 @@ namespace Model.Enums
         OmahaHandGridItem,
         QuickFilterItem,
         Buyin,
-        AdvancedFilterItem
+        AdvancedFilterItem,
+        RaiserSixRing,
+        RaiserNineRing,
+        ThreeBettorSixRing,
+        ThreeBettorNineRing,
+        FourBettorSixRing,
+        FourBettorNineRing,
     }
 
     public struct EnumDateFiterStruct

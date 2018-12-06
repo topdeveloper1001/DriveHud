@@ -1186,6 +1186,42 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4-Better&apos;s position.
+        /// </summary>
+        internal static string Enum_PreflopActorPosition_FourBettor {
+            get {
+                return ResourceManager.GetString("Enum_PreflopActorPosition_FourBettor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hero&apos;s position.
+        /// </summary>
+        internal static string Enum_PreflopActorPosition_Hero {
+            get {
+                return ResourceManager.GetString("Enum_PreflopActorPosition_Hero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Raiser&apos;s position.
+        /// </summary>
+        internal static string Enum_PreflopActorPosition_Raiser {
+            get {
+                return ResourceManager.GetString("Enum_PreflopActorPosition_Raiser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Better&apos;s position.
+        /// </summary>
+        internal static string Enum_PreflopActorPosition_ThreeBettor {
+            get {
+                return ResourceManager.GetString("Enum_PreflopActorPosition_ThreeBettor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BB/100 by time of day.
         /// </summary>
         internal static string Enum_SerieType_BB100ByTimeOfDay {

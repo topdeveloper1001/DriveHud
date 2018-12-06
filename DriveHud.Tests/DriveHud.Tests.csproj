@@ -220,6 +220,7 @@
     <Compile Include="TcpImportersTests\PKTests\PKHandBuilderTests.cs" />
     <Compile Include="TcpImportersTests\PKTests\PokerKingPacketManagerTests.cs" />
     <Compile Include="TcpImportersTests\TcpImporterTestUtils.cs" />
+    <Compile Include="UnitTests\ConverterTests.cs" />
     <Compile Include="UnitTests\PartyPokerJackpotTableFinderTests.cs" />
     <Compile Include="Utils\AssertionUtils.cs" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt" />
@@ -858,6 +859,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\BetOnline\FastFold-6-max-2-ipoker.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnitTests\TestData\CommonHands\Common-Hand-Cash-8-max-1.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\EquitySolverData\AllIn-on-BB-Hero-raised.xml">

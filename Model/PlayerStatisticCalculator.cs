@@ -287,6 +287,12 @@ namespace Model
                 }
 
                 Calculate4Bet(fourBet, preflops, player, raiser, parsedHand.Players);
+
+                if (fourBet.Happened)
+                {
+                    stat.FourBettorPosition = Converter.ToPosition(parsedHand, fourBet.HappenedByPlayer);
+                }
+
                 Calculate5Bet(threeBet, fourBet, fiveBet, preflops, player, raiser);
             }
 

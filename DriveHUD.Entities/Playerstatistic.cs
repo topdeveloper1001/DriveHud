@@ -1148,6 +1148,9 @@ namespace DriveHUD.Entities
         [ProtoMember(407)]
         public virtual int FacingTripleBarrel { get; set; }
 
+        [ProtoMember(408)]
+        public virtual EnumPosition FourBettorPosition { get; set; } = EnumPosition.Undefined;
+
         #region Pot/Amount/Stack based 
 
         public double BetAmountPreflopInBB => BigBlind != 0 ? BetAmountPreflopInCents / (double)BigBlind * 100 : 0;

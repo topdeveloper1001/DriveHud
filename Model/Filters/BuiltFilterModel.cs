@@ -109,6 +109,12 @@ namespace Model.Filters
                 new FilterSectionItem() { Name = EnumFilterSectionItemType.Currency.ToString(), ItemType = EnumFilterSectionItemType.Currency },
                 new FilterSectionItem() { Name = EnumFilterSectionItemType.TableSixRing.ToString(), ItemType = EnumFilterSectionItemType.TableSixRing },
                 new FilterSectionItem() { Name = EnumFilterSectionItemType.TableNineRing.ToString(), ItemType = EnumFilterSectionItemType.TableNineRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.RaiserSixRing.ToString(), ItemType = EnumFilterSectionItemType.RaiserSixRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.RaiserNineRing.ToString(), ItemType = EnumFilterSectionItemType.RaiserNineRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.ThreeBettorSixRing.ToString(), ItemType = EnumFilterSectionItemType.ThreeBettorSixRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.ThreeBettorNineRing.ToString(), ItemType = EnumFilterSectionItemType.ThreeBettorNineRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.FourBettorSixRing.ToString(), ItemType = EnumFilterSectionItemType.FourBettorSixRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.FourBettorNineRing.ToString(), ItemType = EnumFilterSectionItemType.FourBettorNineRing },
                 new FilterSectionItem() { Name = EnumFilterSectionItemType.PlayersBetween.ToString(), ItemType = EnumFilterSectionItemType.PlayersBetween },
                 new FilterSectionItem() { Name = EnumFilterSectionItemType.HoleCards.ToString(), ItemType = EnumFilterSectionItemType.HoleCards },
                 new FilterSectionItem() { Name = EnumFilterSectionItemType.FlopHandValue.ToString(), ItemType = EnumFilterSectionItemType.FlopHandValue },
@@ -301,6 +307,12 @@ namespace Model.Filters
                     break;
                 case EnumFilterSectionItemType.TableSixRing:
                 case EnumFilterSectionItemType.TableNineRing:
+                case EnumFilterSectionItemType.RaiserSixRing:
+                case EnumFilterSectionItemType.RaiserNineRing:
+                case EnumFilterSectionItemType.ThreeBettorSixRing:
+                case EnumFilterSectionItemType.ThreeBettorNineRing:
+                case EnumFilterSectionItemType.FourBettorSixRing:
+                case EnumFilterSectionItemType.FourBettorNineRing:
                     RemoveTableRingItem(param);
                     break;
                 case EnumFilterSectionItemType.PlayersBetween:
@@ -406,8 +418,10 @@ namespace Model.Filters
             {
                 return;
             }
+
             var filterItemValue = param.Value;
             var statItem = StandardModel?.StatCollection.FirstOrDefault(x => x.PropertyName == filterItemValue);
+
             if (statItem != null)
             {
                 statItem.CurrentTriState = EnumTriState.Any;
@@ -511,26 +525,34 @@ namespace Model.Filters
         #endregion
 
         #region Table Ring (Standard Filter)
+
         private void SetTableRingItems()
         {
             if (StandardModel != null)
             {
-                SetTableItem(this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableSixRing), StandardModel.Table6MaxCollection, "Position(6max)={0}");
-                SetTableItem(this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableNineRing), StandardModel.TableFullRingCollection, "Position(Full Ring)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableSixRing), StandardModel.Table6MaxCollection, "Position(6max)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableNineRing), StandardModel.TableFullRingCollection, "Position(Full Ring)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.RaiserSixRing), StandardModel.Raiser6maxPositionsCollection, "Raiser's Position(6max)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.RaiserNineRing), StandardModel.RaiserFullRingPositionsCollection, "Raiser's Position(Full Ring)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.ThreeBettorSixRing), StandardModel.ThreeBettor6maxPositionsCollection, "3-Better's Position(6max)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.ThreeBettorNineRing), StandardModel.ThreeBettorFullRingPositionsCollection, "3-Better's Position(Full Ring)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.FourBettorSixRing), StandardModel.FourBettor6maxPositionsCollection, "4-Better's Position(6max)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.FourBettorNineRing), StandardModel.FourBettorFullRingPositionsCollection, "4-Better's Position(Full Ring)={0}");
             }
         }
 
         private void SetTableItem(FilterSectionItem filterSectionItem, ObservableCollection<TableRingItem> collection, string formatString)
         {
             var selectedTableItems = collection.Where(x => x.IsChecked);
+
             if (selectedTableItems == null || !collection.Any(x => !x.IsChecked))
             {
                 filterSectionItem.IsActive = false;
                 return;
             }
 
-            var tableItemsString = String.Join(",", selectedTableItems.Select(x => x.Name));
-            filterSectionItem.Name = String.Format(formatString, tableItemsString);
+            var tableItemsString = string.Join(",", selectedTableItems.Select(x => x.Name));
+            filterSectionItem.Name = string.Format(formatString, tableItemsString);
             filterSectionItem.IsActive = true;
         }
 
@@ -539,13 +561,32 @@ namespace Model.Filters
             switch (param.ItemType)
             {
                 case EnumFilterSectionItemType.TableSixRing:
-                    StandardModel?.ResetTableRingCollection(EnumTableType.Six);
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Six, PreflopActorPosition.Hero);
                     break;
                 case EnumFilterSectionItemType.TableNineRing:
-                    StandardModel?.ResetTableRingCollection(EnumTableType.Nine);
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Nine, PreflopActorPosition.Hero);
+                    break;
+                case EnumFilterSectionItemType.RaiserSixRing:
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Six, PreflopActorPosition.Raiser);
+                    break;
+                case EnumFilterSectionItemType.RaiserNineRing:
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Nine, PreflopActorPosition.Raiser);
+                    break;
+                case EnumFilterSectionItemType.ThreeBettorSixRing:
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Six, PreflopActorPosition.ThreeBettor);
+                    break;
+                case EnumFilterSectionItemType.ThreeBettorNineRing:
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Nine, PreflopActorPosition.ThreeBettor);
+                    break;
+                case EnumFilterSectionItemType.FourBettorSixRing:
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Six, PreflopActorPosition.FourBettor);
+                    break;
+                case EnumFilterSectionItemType.FourBettorNineRing:
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Nine, PreflopActorPosition.FourBettor);
                     break;
             }
         }
+
         #endregion
 
         #region Players Between Item (Standard Filter)

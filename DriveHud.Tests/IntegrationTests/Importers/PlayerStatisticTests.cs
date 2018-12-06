@@ -1374,6 +1374,18 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.FoldedToDelayedCBet, fileName, pokerSite, playerName, expected);
         }
 
+        [TestCase(@"Hero-FirstRaiserPosition-1.txt", EnumPokerSites.PokerStars, "Hero", EnumPosition.Undefined)]
+        public void FirstRaiserPositionIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, EnumPosition expected)
+        {
+            AssertThatStatIsCalculated(x => x.FirstRaiserPosition, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-ThreeBettorPosition-1.txt", EnumPokerSites.PokerStars, "Hero", EnumPosition.MP1)]
+        public void ThreeBettorPositionIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, EnumPosition expected)
+        {
+            AssertThatStatIsCalculated(x => x.ThreeBettorPosition, fileName, pokerSite, playerName, expected);
+        }
+
         #region Pot based stat tests
 
         [TestCase(@"Hero-Pot-Calcs-1.txt", EnumPokerSites.PokerStars, "Hero", 0)]
