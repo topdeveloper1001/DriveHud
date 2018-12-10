@@ -1213,7 +1213,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opponent 3-Bets position.
+        ///   Looks up a localized string similar to Opponent 3-Bet position.
         /// </summary>
         internal static string Enum_PreflopActorPosition_ThreeBettor {
             get {

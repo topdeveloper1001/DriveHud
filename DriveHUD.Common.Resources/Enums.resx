@@ -1755,6 +1755,6 @@
     <value>Opponent PFR position</value>
   </data>
   <data name="Enum_PreflopActorPosition_ThreeBettor" xml:space="preserve">
-    <value>Opponent 3-Bets position</value>
+    <value>Opponent 3-Bet position</value>
   </data>
 </root>
