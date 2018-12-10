@@ -22,22 +22,21 @@ namespace DriveHUD.Application.Views
 {
     public partial class FilterStandardView : UserControl, IFilterView
     {
+        private IFilterTableConfigurator configurator;
+
         public FilterStandardView(IFilterModelManagerService service)
         {
             InitializeComponent();
 
+            configurator = new FilterBaseTableConfigurator();
+
             DataContext = new FilterStandardViewModel(service);
-            Configurator.ConfigureTable(diagram, viewModel, 6);
+            configurator.ConfigureTable(diagram, viewModel, 6);
         }
 
         public IFilterViewModel ViewModel
         {
             get { return DataContext as IFilterViewModel; }
-        }
-
-        private IFilterTableConfigurator Configurator
-        {
-            get { return new FilterBaseTableConfigurator(); }
         }
 
         private FilterStandardViewModel viewModel
@@ -60,10 +59,10 @@ namespace DriveHUD.Application.Views
             if (sender is RadioButton button)
             {
                 var seats = int.Parse(button.Tag.ToString());
-                Configurator.ConfigureTable(diagram, viewModel, seats);
+                configurator.ConfigureTable(diagram, viewModel, seats);
             }
         }
-      
+
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (viewModel == null)
@@ -71,7 +70,7 @@ namespace DriveHUD.Application.Views
                 return;
             }
 
-            Configurator.ConfigureTable(diagram, viewModel);
+            configurator.ConfigureTable(diagram, viewModel);
         }
     }
 }

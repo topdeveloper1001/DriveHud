@@ -532,12 +532,12 @@ namespace Model.Filters
             {
                 SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableSixRing), StandardModel.Table6MaxCollection, "Position(6max)={0}");
                 SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableNineRing), StandardModel.TableFullRingCollection, "Position(Full Ring)={0}");
-                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.RaiserSixRing), StandardModel.Raiser6maxPositionsCollection, "Raiser's Position(6max)={0}");
-                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.RaiserNineRing), StandardModel.RaiserFullRingPositionsCollection, "Raiser's Position(Full Ring)={0}");
-                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.ThreeBettorSixRing), StandardModel.ThreeBettor6maxPositionsCollection, "3-Better's Position(6max)={0}");
-                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.ThreeBettorNineRing), StandardModel.ThreeBettorFullRingPositionsCollection, "3-Better's Position(Full Ring)={0}");
-                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.FourBettorSixRing), StandardModel.FourBettor6maxPositionsCollection, "4-Better's Position(6max)={0}");
-                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.FourBettorNineRing), StandardModel.FourBettorFullRingPositionsCollection, "4-Better's Position(Full Ring)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.RaiserSixRing), StandardModel.Raiser6maxPositionsCollection, "Opponent PFR position(6max)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.RaiserNineRing), StandardModel.RaiserFullRingPositionsCollection, "Opponent PFR position (Full Ring)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.ThreeBettorSixRing), StandardModel.ThreeBettor6maxPositionsCollection, "Opponent 3-Bet position(6max)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.ThreeBettorNineRing), StandardModel.ThreeBettorFullRingPositionsCollection, "Opponent 3-Bet position(Full Ring)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.FourBettorSixRing), StandardModel.FourBettor6maxPositionsCollection, "Opponent 4-Bet position(6max)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.FourBettorNineRing), StandardModel.FourBettorFullRingPositionsCollection, "Opponent 4-Bet position(Full Ring)={0}");
             }
         }
 
@@ -545,7 +545,7 @@ namespace Model.Filters
         {
             var selectedTableItems = collection.Where(x => x.IsChecked);
 
-            if (selectedTableItems == null || !collection.Any(x => !x.IsChecked))
+            if (selectedTableItems == null || collection.All(x => x.IsChecked) || collection.All(x => !x.IsChecked))
             {
                 filterSectionItem.IsActive = false;
                 return;
