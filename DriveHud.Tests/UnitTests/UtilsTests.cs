@@ -23,15 +23,46 @@ namespace DriveHud.Tests.UnitTests
         [Test]
         [TestCase("", false)]
         [TestCase("1", false)]
+        [TestCase("test@test", false)]
         [TestCase("22@22.232", true)]
         [TestCase("peon84@yandex.ru", true)]
         [TestCase("al.v.dan@gmail.com", true)]
-
+        [TestCase("jasonmc_@hotmail.com", true)]
+        [TestCase("jasünmc@hotmail.com", true)]
+        [TestCase("d.j@server1.proseware.com", true)]
+        [TestCase("jones@ms1.proseware.com", true)]
+        [TestCase("j.@server1.proseware.com", false)]
+        [TestCase("j@proseware.com9", true)]
+        [TestCase("js#internal@proseware.com", true)]
+        [TestCase("j_9@[129.126.118.1]", true)]
+        [TestCase("j..s@proseware.com", false)]
+        [TestCase("js*@proseware.com", false)]
+        [TestCase("js@proseware..com", false)]
+        [TestCase("js@proseware.com9", true)]
+        [TestCase("j.s@server1.proseware.com", true)]
+        [TestCase("\"j\\\"s\\\"\"@proseware.com", true)]
+        [TestCase("js@contoso.中国", true)]
         public void TestIsValidEmail(string email, bool expected)
         {
             var actual = Utils.IsValidEmail(email);
             Assert.That(actual, Is.EqualTo(expected));
         }
+
+        // The example displays the following output:
+        //       Valid: david.jones@proseware.com
+        //       Valid: d.j@server1.proseware.com
+        //       Valid: jones@ms1.proseware.com
+        //       Invalid: j.@server1.proseware.com
+        //       Valid: j@proseware.com9
+        //       Valid: js#internal@proseware.com
+        //       Valid: j_9@[129.126.118.1]
+        //       Invalid: j..s@proseware.com
+        //       Invalid: js*@proseware.com
+        //       Invalid: js@proseware..com
+        //       Valid: js@proseware.com9
+        //       Valid: j.s@server1.proseware.com
+        //       Valid: "j\"s\""@proseware.com
+        //       Valid: js@contoso.ä¸­å›½
 
         [Test]
         [TestCaseSource(typeof(IsInDateRangeTestClass), "GetData")]
@@ -39,7 +70,7 @@ namespace DriveHud.Tests.UnitTests
         {
             var actual = Utils.IsDateInDateRange(testData.Date, testData.StartDate, testData.EndDate, testData.RangeExtension);
             Assert.That(actual, Is.EqualTo(testData.ExpectedResult), $"\r\nDate: {testData.Date} \r\nStartDate: {testData.StartDate} \r\nEndDate: {testData.EndDate} \r\nRangeExt: {testData.RangeExtension}");
-        }       
+        }
 
         #region Support classes
 
@@ -127,3 +158,4 @@ namespace DriveHud.Tests.UnitTests
         #endregion
     }
 }
+ 
