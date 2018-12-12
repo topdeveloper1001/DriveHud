@@ -4267,8 +4267,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = TripleBarrel,
-                    Occurred = didDoubleBarrel,
-                    CouldOccurred = couldDoubleBarrel
+                    Occurred = didTripleBarrel,
+                    CouldOccurred = couldTripleBarrel
                 };
             }
         }

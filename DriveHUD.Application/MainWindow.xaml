@@ -1025,17 +1025,23 @@
                         TargetType="{x:Type telerik:RadWindow}"
                         BasedOn="{StaticResource NotificationWindowStyle}">
                         <Setter
-                            Property="Width"
-                            Value="500" />
-                        <Setter
-                            Property="MinHeight"
-                            Value="200" />
+                            Property="SizeToContent"
+                            Value="True" />
                         <Setter
                             Property="Height"
                             Value="Auto" />
                         <Setter
+                            Property="Width"
+                            Value="Auto" />
+                        <Setter
                             Property="ResizeMode"
                             Value="CanResize" />
+                        <Setter
+                            Property="UseLayoutRounding"
+                            Value="True" />
+                        <Setter
+                            Property="IconTemplate"
+                            Value="{StaticResource IconTemplate}" />
                     </Style>
                 </infra:PopupTelerikWindowAction.WindowStyle>
             </infra:PopupTelerikWindowAction>

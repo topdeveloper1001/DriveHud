@@ -1186,7 +1186,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4-Better&apos;s position.
+        ///   Looks up a localized string similar to Opponent 4-Bet position.
         /// </summary>
         internal static string Enum_PreflopActorPosition_FourBettor {
             get {
@@ -1204,7 +1204,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Raiser&apos;s position.
+        ///   Looks up a localized string similar to Opponent PFR position.
         /// </summary>
         internal static string Enum_PreflopActorPosition_Raiser {
             get {
@@ -1213,7 +1213,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3-Better&apos;s position.
+        ///   Looks up a localized string similar to Opponent 3-Bet position.
         /// </summary>
         internal static string Enum_PreflopActorPosition_ThreeBettor {
             get {
