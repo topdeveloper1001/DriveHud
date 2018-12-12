@@ -691,6 +691,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Holdem.
+        /// </summary>
+        internal static string Enum_EquityCalculatorMode_Holdem {
+            get {
+                return ResourceManager.GetString("Enum_EquityCalculatorMode_Holdem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Holdem 6+.
+        /// </summary>
+        internal static string Enum_EquityCalculatorMode_HoldemSixPlus {
+            get {
+                return ResourceManager.GetString("Enum_EquityCalculatorMode_HoldemSixPlus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cardschat.
         /// </summary>
         internal static string Enum_HandExport_CardsChat {

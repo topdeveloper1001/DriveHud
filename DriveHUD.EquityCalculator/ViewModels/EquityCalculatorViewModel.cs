@@ -202,6 +202,39 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        private EquityCalculatorMode equityCalculatorMode;
+
+        public EquityCalculatorMode EquityCalculatorMode
+        {
+            get
+            {
+                return equityCalculatorMode;
+            }
+            set
+            {
+                SetProperty(ref equityCalculatorMode, value);
+            }
+        }
+
+        public ObservableCollection<EquityCalculatorMode> EquityCalculatorModes => new ObservableCollection<EquityCalculatorMode> {
+            EquityCalculatorMode.Holdem,
+            EquityCalculatorMode.HoldemSixPlus
+        };
+
+        private bool isEquityCalculatorModeEnabled;
+
+        public bool IsEquityCalculatorModeEnabled
+        {
+            get
+            {
+                return isEquityCalculatorModeEnabled;
+            }
+            private set
+            {
+                SetProperty(ref isEquityCalculatorModeEnabled, value);
+            }
+        }
+
         #endregion
 
         #region ICommand
@@ -428,6 +461,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
                 if (obj.IsEmptyRequest)
                 {
+                    IsEquityCalculatorModeEnabled = true;
                     _currentHandHistory = null;
                     IsPreflopVisible = IsFlopVisible = IsTurnVisible = IsRiverVisible = false;
                     CurrentStreet = Street.Null;
@@ -445,6 +479,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 SetStreetVisibility(_currentHandHistory);
                 LoadBoardByCurrentStreet();
                 LoadPlayersData(_currentHandHistory);
+
+                EquityCalculatorMode = _currentHandHistory.GameDescription.TableType.Contains(HandHistories.Objects.GameDescription.TableTypeDescription.ShortDeck) ?
+                    EquityCalculatorMode.HoldemSixPlus : EquityCalculatorMode.Holdem;
+
+                IsEquityCalculatorModeEnabled = false;
 
                 var strongestOpponent = CalculateStrongestOpponent(_currentHandHistory, _currentStreet);
 
@@ -709,7 +748,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             Board.Reset();
             ClearEquity();
 
-            IsCalculateEquityError = false;
+            IsCalculateEquityError = false;            
         }
 
         private void ExportData(object obj)
