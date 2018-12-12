@@ -270,6 +270,8 @@ namespace DriveHUD.Application.ViewModels
         {
             IsEnabled = false;
 
+            var success = false;
+
             await Task.Run(() =>
             {
                 try
@@ -283,12 +285,23 @@ namespace DriveHUD.Application.ViewModels
                     playerStatisticReImporter.ReImport();
 
                     LogProvider.Log.Info("Statistics rebuild has been completed.");
+
+                    success = true;
                 }
                 catch (Exception e)
                 {
                     LogProvider.Log.Error(this, "Statistics rebuilding failed.", e);
                 }
             });
+
+            if (success)
+            {
+                RaiseNotification(new MainNotificationEventArgs("Notifications_RebuildStats_SucceedTitle", "Notifications_RebuildStats_SucceedMessage"));
+            }
+            else
+            {
+                RaiseNotification(new MainNotificationEventArgs("Notifications_RebuildStats_FailedTitle", "Notifications_RebuildStats_FailedMessage"));
+            }
 
             Load();
 
@@ -1736,8 +1749,8 @@ namespace DriveHUD.Application.ViewModels
 
             var confirmation = new PopupActionNotification
             {
-                Title = obj.Title,
-                Content = obj.Message,
+                Title = CommonResourceManager.Instance.GetResourceString(obj.Title),
+                Content = CommonResourceManager.Instance.GetResourceString(obj.Message),
                 HyperLinkText = obj.HyperLink
             };
 

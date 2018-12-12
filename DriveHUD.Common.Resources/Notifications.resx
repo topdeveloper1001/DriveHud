@@ -195,6 +195,12 @@
   <data name="Notifications_HudLayout_PreLoadingText_PM_Relogin" xml:space="preserve">
     <value>HUD can't be loaded. Relogin is required.</value>
   </data>
+  <data name="Notifications_HudLayout_SaveAsFailedDefaultLayout" xml:space="preserve">
+    <value>The default layout can't be overwritten.</value>
+  </data>
+  <data name="Notifications_HudLayout_SaveAsFailedTitle" xml:space="preserve">
+    <value>Failed!</value>
+  </data>
   <data name="Notifications_HudLayout_SaveDesignContent" xml:space="preserve">
     <value>Changes have been made to your HUD layout. Would you like to save them now?</value>
   </data>
@@ -206,6 +212,18 @@
   </data>
   <data name="Notifications_HudLayout_SaveDesignYes" xml:space="preserve">
     <value>Yes</value>
+  </data>
+  <data name="Notifications_RebuildStats_FailedMessage" xml:space="preserve">
+    <value>Failed to rebuild stats. Please contact support.</value>
+  </data>
+  <data name="Notifications_RebuildStats_FailedTitle" xml:space="preserve">
+    <value>Failed!</value>
+  </data>
+  <data name="Notifications_RebuildStats_SucceedMessage" xml:space="preserve">
+    <value>Stats have been rebuilt successfully.</value>
+  </data>
+  <data name="Notifications_RebuildStats_SucceedTitle" xml:space="preserve">
+    <value>Succeed!</value>
   </data>
   <data name="Notifications_SelectPlayer_Message" xml:space="preserve">
     <value>Please, set Player ID in order to see data.</value>
