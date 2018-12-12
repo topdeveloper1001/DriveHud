@@ -568,11 +568,12 @@ namespace DriveHUD.Application.ViewModels
         {
             base.InitializeCommands();
 
-            var canUseDataCommands = this.WhenAny(x => x.IsInDesignMode, x => !x.Value);
+            var canUseDataCommands = this.WhenAny(x => x.IsInDesignMode, x => x.CurrentLayout, (x1, x2) => !x1.GetValue() && x2.GetValue() != null);
+            var canImpo = this.WhenAny(x => x.IsInDesignMode, x => x.CurrentLayout, (x1, x2) => !x1.GetValue() && x2.GetValue() != null);
 
             DataSaveCommand = ReactiveCommand.Create(() => OpenDataSave(), canUseDataCommands);
             DataDeleteCommand = ReactiveCommand.Create(() => DataDelete(), canUseDataCommands);
-            DataImportCommand = ReactiveCommand.Create(() => DataImport(), canUseDataCommands);
+            DataImportCommand = ReactiveCommand.Create(() => DataImport(), this.WhenAny(x => x.IsInDesignMode, x => !x.GetValue()));
             DataExportCommand = ReactiveCommand.Create(() => DataExport(), canUseDataCommands);
             DuplicateCommand = ReactiveCommand.Create(() => OpenDuplicate(), canUseDataCommands);
             SpliterAddCommand = ReactiveCommand.Create(() => SpliterAdd());
@@ -592,7 +593,7 @@ namespace DriveHUD.Application.ViewModels
                 var requestInfo = new HudUploadToStoreRequestInfo(viewModelInfo);
 
                 OpenHudUploadToStoreRequest.Raise(requestInfo);
-            });
+            }, canUseDataCommands);
 
             AddToolCommand = new RelayCommand(x =>
             {
@@ -1063,6 +1064,11 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void OpenDuplicate()
         {
+            if (CurrentLayout == null)
+            {
+                return;
+            }
+
             var hudDuplicateLayoutViewModelInfo = new HudDuplicateLayoutViewModelInfo
             {
                 LayoutName = CurrentLayout.Name,
@@ -1192,7 +1198,7 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            if (!HudLayoutsService.Delete(CurrentLayout.Name))
+            if (CurrentLayout == null || !HudLayoutsService.Delete(CurrentLayout.Name))
             {
                 return;
             }
@@ -1362,9 +1368,7 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void SaveStatsSettings()
         {
-            var hudStatSettings = PopupViewModel as HudStatSettingsViewModel;
-
-            if (hudStatSettings == null)
+            if (!(PopupViewModel is HudStatSettingsViewModel hudStatSettings) || CurrentLayout == null)
             {
                 return;
             }
@@ -1444,9 +1448,13 @@ namespace DriveHUD.Application.ViewModels
             {
                 return;
             }
+
             var hudBumperStickers = CurrentLayout?.HudBumperStickerTypes;
+
             if (hudBumperStickers == null)
+            {
                 return;
+            }
 
             var hudBumperStickersSettingsViewModelInfo = new HudBumperStickersSettingsViewModelInfo
             {
@@ -1465,9 +1473,8 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void PlayerTypeSave()
         {
-            var hudPlayerSettingsViewModel = PopupViewModel as HudPlayerSettingsViewModel;
-
-            if (hudPlayerSettingsViewModel == null)
+            if (!(PopupViewModel is HudPlayerSettingsViewModel hudPlayerSettingsViewModel) ||
+                CurrentLayout == null)
             {
                 ClosePopup();
                 return;
@@ -1512,9 +1519,8 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void BumperStickerSave()
         {
-            var hudStickersSettingsViewModel = PopupViewModel as HudBumperStickersSettingsViewModel;
-
-            if (hudStickersSettingsViewModel == null)
+            if (!(PopupViewModel is HudBumperStickersSettingsViewModel hudStickersSettingsViewModel) ||
+                CurrentLayout == null)
             {
                 ClosePopup();
                 return;
@@ -1580,7 +1586,8 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeDesigner()
         {
-            if (IsInDesignMode)
+            if (IsInDesignMode ||
+                CurrentLayout == null)
             {
                 return;
             }

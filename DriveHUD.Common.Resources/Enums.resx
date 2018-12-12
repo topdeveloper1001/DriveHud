@@ -1746,16 +1746,16 @@
     <value>Turn C-Bet%</value>
   </data>
   <data name="Enum_PreflopActorPosition_FourBettor" xml:space="preserve">
-    <value>4-Better's position</value>
+    <value>Opponent 4-Bet position</value>
   </data>
   <data name="Enum_PreflopActorPosition_Hero" xml:space="preserve">
     <value>Hero's position</value>
   </data>
   <data name="Enum_PreflopActorPosition_Raiser" xml:space="preserve">
-    <value>Raiser's position</value>
+    <value>Opponent PFR position</value>
   </data>
   <data name="Enum_PreflopActorPosition_ThreeBettor" xml:space="preserve">
-    <value>3-Better's position</value>
+    <value>Opponent 3-Bet position</value>
   </data>
   <data name="Enum_EquityCalculatorMode_Holdem" xml:space="preserve">
     <value>Holdem</value>

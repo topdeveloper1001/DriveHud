@@ -222,7 +222,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             if (!isNewLayout && hudData.Name.Equals(originalLayout.Name, StringComparison.OrdinalIgnoreCase) &&
                 originalLayout.IsDefault && originalLayout.TableType != hudData.LayoutInfo.TableType)
             {
-                eventAggregator.GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("DriveHUD", "The default layout can't be overwritten"));
+                eventAggregator.GetEvent<MainNotificationEvent>().Publish(
+                    new MainNotificationEventArgs("Notifications_HudLayout_SaveAsFailedTitle", "Notifications_HudLayout_SaveAsFailedDefaultLayout"));
+
                 return null;
             }
 

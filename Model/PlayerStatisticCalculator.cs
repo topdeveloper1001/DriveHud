@@ -998,7 +998,7 @@ namespace Model
 
             double SizeToPot(decimal amount, decimal potSize)
             {
-                return pot != 0 ? (double)Math.Abs(amount / potSize * 100) : 0;
+                return potSize != 0 ? (double)Math.Abs(amount / potSize * 100) : 0;
             }
 
             foreach (var action in parsedHand.HandActions)

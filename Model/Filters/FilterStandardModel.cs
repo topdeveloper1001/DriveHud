@@ -180,12 +180,12 @@ namespace Model.Filters
         {
             return new ObservableCollection<TableRingItem>()
             {
-                new TableRingItem() { IsChecked = true, Seat = 5, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.BTN, Name = "BTN" },
-                new TableRingItem() { IsChecked = true, Seat = 6, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.SB, Name = "SB" },
-                new TableRingItem() { IsChecked = true, Seat = 1, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.BB, Name = "BB" },
-                new TableRingItem() { IsChecked = true, Seat = 2, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.UTG, Name = "UTG" },
-                new TableRingItem() { IsChecked = true, Seat = 3, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.MP1, Name = "MP1" },
-                new TableRingItem() { IsChecked = true, Seat = 4, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.CO, Name = "CO" },
+                new TableRingItem() { IsChecked = false, Seat = 5, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.BTN, Name = "BTN" },
+                new TableRingItem() { IsChecked = false, Seat = 6, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.SB, Name = "SB" },
+                new TableRingItem() { IsChecked = false, Seat = 1, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.BB, Name = "BB" },
+                new TableRingItem() { IsChecked = false, Seat = 2, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.UTG, Name = "UTG" },
+                new TableRingItem() { IsChecked = false, Seat = 3, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.MP1, Name = "MP1" },
+                new TableRingItem() { IsChecked = false, Seat = 4, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.CO, Name = "CO" },
             };
         }
 
@@ -193,15 +193,15 @@ namespace Model.Filters
         {
             return new ObservableCollection<TableRingItem>()
             {
-                new TableRingItem() { IsChecked = true, Seat = 6, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.BTN, Name = "BTN" },
-                new TableRingItem() { IsChecked = true, Seat = 7, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.SB, Name = "SB" },
-                new TableRingItem() { IsChecked = true, Seat = 8, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.BB, Name = "BB" },
-                new TableRingItem() { IsChecked = true, Seat = 9, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.UTG, Name = "UTG" },
-                new TableRingItem() { IsChecked = true, Seat = 1, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.UTG_1, Name = "UTG+1" },
-                new TableRingItem() { IsChecked = true, Seat = 2, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.UTG_2, Name = "UTG+2" },
-                new TableRingItem() { IsChecked = true, Seat = 3, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.MP1, Name = "MP1" },
-                new TableRingItem() { IsChecked = true, Seat = 4, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.MP2, Name = "MP2" },
-                new TableRingItem() { IsChecked = true, Seat = 5, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.CO, Name = "CO" },
+                new TableRingItem() { IsChecked = false, Seat = 6, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.BTN, Name = "BTN" },
+                new TableRingItem() { IsChecked = false, Seat = 7, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.SB, Name = "SB" },
+                new TableRingItem() { IsChecked = false, Seat = 8, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.BB, Name = "BB" },
+                new TableRingItem() { IsChecked = false, Seat = 9, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.UTG, Name = "UTG" },
+                new TableRingItem() { IsChecked = false, Seat = 1, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.UTG_1, Name = "UTG+1" },
+                new TableRingItem() { IsChecked = false, Seat = 2, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.UTG_2, Name = "UTG+2" },
+                new TableRingItem() { IsChecked = false, Seat = 3, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.MP1, Name = "MP1" },
+                new TableRingItem() { IsChecked = false, Seat = 4, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.MP2, Name = "MP2" },
+                new TableRingItem() { IsChecked = false, Seat = 5, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.CO, Name = "CO" },
             };
         }
 
@@ -425,7 +425,7 @@ namespace Model.Filters
 
         private void ResetCollection(ObservableCollection<TableRingItem> tableRingItems)
         {
-            tableRingItems?.ToList().ForEach(x => x.IsChecked = true);
+            tableRingItems?.ToList().ForEach(x => x.IsChecked = false);
         }
 
         public void ResetStakeLevelCollection()
@@ -591,68 +591,98 @@ namespace Model.Filters
 
         private Expression<Func<Playerstatistic, bool>> GetTableRingPredicate()
         {
+            var is6MaxTable = false;
+            var isFullRingTable = false;
+
             var sixRingPredicate = PredicateBuilder.True<Playerstatistic>();
             sixRingPredicate = sixRingPredicate.And(x => x.Numberofplayers <= 6);
 
-            foreach (var tableItem in Table6MaxCollection.Where(x => !x.IsChecked))
+            foreach (var tableItem in Table6MaxCollection.Where(x => x.IsChecked))
             {
-                sixRingPredicate = sixRingPredicate.And(x => x.Position != tableItem.PlayerPosition &&
+                sixRingPredicate = sixRingPredicate.And(x => x.Position == tableItem.PlayerPosition &&
                     x.Position != EnumPosition.STRDL);
+                is6MaxTable = true;
             }
 
-            foreach (var tableItem in Raiser6maxPositionsCollection.Where(x => !x.IsChecked))
+            foreach (var tableItem in Raiser6maxPositionsCollection.Where(x => x.IsChecked))
             {
                 sixRingPredicate = sixRingPredicate.And(x => x.FirstRaiserPosition != EnumPosition.Undefined &&
                     x.FirstRaiserPosition != EnumPosition.STRDL &&
+                    x.FirstRaiserPosition == x.Position && 
                     x.FirstRaiserPosition != tableItem.PlayerPosition);
+                is6MaxTable = true;
             }
 
-            foreach (var tableItem in ThreeBettor6maxPositionsCollection.Where(x => !x.IsChecked))
+            foreach (var tableItem in ThreeBettor6maxPositionsCollection.Where(x => x.IsChecked))
             {
                 sixRingPredicate = sixRingPredicate.And(x => x.ThreeBettorPosition != EnumPosition.Undefined &&
                     x.ThreeBettorPosition != EnumPosition.STRDL &&
+                    x.ThreeBettorPosition == x.Position &&
                     x.ThreeBettorPosition != tableItem.PlayerPosition);
+                is6MaxTable = true;
             }
 
-            foreach (var tableItem in FourBettor6maxPositionsCollection.Where(x => !x.IsChecked))
+            foreach (var tableItem in FourBettor6maxPositionsCollection.Where(x => x.IsChecked))
             {
                 sixRingPredicate = sixRingPredicate.And(x => x.FourBettorPosition != EnumPosition.Undefined &&
                     x.FourBettorPosition != EnumPosition.STRDL &&
+                    x.FourBettorPosition == x.Position &&
                     x.FourBettorPosition != tableItem.PlayerPosition);
+                is6MaxTable = true;
             }
 
             var fullRingPredicate = PredicateBuilder.True<Playerstatistic>();
 
             fullRingPredicate = fullRingPredicate.And(x => x.Numberofplayers > 6);
 
-            foreach (var tableItem in TableFullRingCollection.Where(x => !x.IsChecked))
+            foreach (var tableItem in TableFullRingCollection.Where(x => x.IsChecked))
             {
-                fullRingPredicate = fullRingPredicate.And(x => x.Position != tableItem.PlayerPosition &&
+                fullRingPredicate = fullRingPredicate.And(x => x.Position == tableItem.PlayerPosition &&
                     x.Position != EnumPosition.STRDL);
+                isFullRingTable = true;
             }
 
-            foreach (var tableItem in RaiserFullRingPositionsCollection.Where(x => !x.IsChecked))
+            foreach (var tableItem in RaiserFullRingPositionsCollection.Where(x => x.IsChecked))
             {
-                fullRingPredicate = sixRingPredicate.And(x => x.FirstRaiserPosition != EnumPosition.Undefined &&
+                fullRingPredicate = fullRingPredicate.And(x => x.FirstRaiserPosition != EnumPosition.Undefined &&
                     x.FirstRaiserPosition != EnumPosition.STRDL &&
+                    x.FirstRaiserPosition == x.Position &&
                     x.FirstRaiserPosition != tableItem.PlayerPosition);
+                isFullRingTable = true;
             }
 
-            foreach (var tableItem in ThreeBettorFullRingPositionsCollection.Where(x => !x.IsChecked))
+            foreach (var tableItem in ThreeBettorFullRingPositionsCollection.Where(x => x.IsChecked))
             {
-                fullRingPredicate = sixRingPredicate.And(x => x.ThreeBettorPosition != EnumPosition.Undefined &&
+                fullRingPredicate = fullRingPredicate.And(x => x.ThreeBettorPosition != EnumPosition.Undefined &&
                     x.ThreeBettorPosition != EnumPosition.STRDL &&
+                    x.ThreeBettorPosition == x.Position &&
                     x.ThreeBettorPosition != tableItem.PlayerPosition);
+                isFullRingTable = true;
             }
 
-            foreach (var tableItem in FourBettorFullRingPositionsCollection.Where(x => !x.IsChecked))
+            foreach (var tableItem in FourBettorFullRingPositionsCollection.Where(x => x.IsChecked))
             {
-                fullRingPredicate = sixRingPredicate.And(x => x.FourBettorPosition != EnumPosition.Undefined &&
+                fullRingPredicate = fullRingPredicate.And(x => x.FourBettorPosition != EnumPosition.Undefined &&
                     x.FourBettorPosition != EnumPosition.STRDL &&
+                    x.FourBettorPosition == x.Position &&
                     x.FourBettorPosition != tableItem.PlayerPosition);
+                isFullRingTable = true;
             }
 
-            return sixRingPredicate.Or(fullRingPredicate);
+            if (is6MaxTable && isFullRingTable)
+            {
+                return sixRingPredicate.Or(fullRingPredicate);
+            }
+            else if (is6MaxTable)
+            {
+                return sixRingPredicate;
+            }
+            else if (isFullRingTable)
+            {
+                return fullRingPredicate;
+            }
+
+            return PredicateBuilder.True<Playerstatistic>();
         }
 
         private Expression<Func<Playerstatistic, bool>> GetCurrencyPredicate()

@@ -59,14 +59,14 @@ namespace DriveHUD.Application.ViewModels.Replayer
             }
 
             var currentStat = _storageModel.StatisticCollection.FirstOrDefault(x => x.GameNumber == gamenumber);
-
-            var statistics = currentStat.IsTourney ? _storageModel.FilteredTournamentPlayerStatistic : _storageModel.FilteredCashPlayerStatistic;
-
+           
             if (currentStat == null)
             {
                 LogProvider.Log.Error(this, $"Cannot find statistics for player {playerName}, site {pokerSiteId}, game {gamenumber}");
                 return;
             }
+
+            var statistics = currentStat.IsTourney ? _storageModel.FilteredTournamentPlayerStatistic : _storageModel.FilteredCashPlayerStatistic;
 
             ReplayHand(currentStat, displayPotList ? statistics : new List<Playerstatistic>(), showHoleCards);
         }

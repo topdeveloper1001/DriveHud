@@ -295,6 +295,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The default layout can&apos;t be overwritten..
+        /// </summary>
+        internal static string Notifications_HudLayout_SaveAsFailedDefaultLayout {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_SaveAsFailedDefaultLayout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed!.
+        /// </summary>
+        internal static string Notifications_HudLayout_SaveAsFailedTitle {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_SaveAsFailedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Changes have been made to your HUD layout. Would you like to save them now?.
         /// </summary>
         internal static string Notifications_HudLayout_SaveDesignContent {
@@ -327,6 +345,42 @@ namespace DriveHUD.Common.Resources {
         internal static string Notifications_HudLayout_SaveDesignYes {
             get {
                 return ResourceManager.GetString("Notifications_HudLayout_SaveDesignYes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to rebuild stats. Please contact support..
+        /// </summary>
+        internal static string Notifications_RebuildStats_FailedMessage {
+            get {
+                return ResourceManager.GetString("Notifications_RebuildStats_FailedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed!.
+        /// </summary>
+        internal static string Notifications_RebuildStats_FailedTitle {
+            get {
+                return ResourceManager.GetString("Notifications_RebuildStats_FailedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stats have been rebuilt successfully..
+        /// </summary>
+        internal static string Notifications_RebuildStats_SucceedMessage {
+            get {
+                return ResourceManager.GetString("Notifications_RebuildStats_SucceedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Succeed!.
+        /// </summary>
+        internal static string Notifications_RebuildStats_SucceedTitle {
+            get {
+                return ResourceManager.GetString("Notifications_RebuildStats_SucceedTitle", resourceCulture);
             }
         }
         
