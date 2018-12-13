@@ -1,4 +1,16 @@
-﻿using DriveHUD.EquityCalculator.Models;
+﻿//-----------------------------------------------------------------------
+// <copyright file="CardSelectorNotification.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.EquityCalculator.Models;
 using Prism.Interactivity.InteractionRequest;
 using System.Collections.Generic;
 
@@ -16,102 +28,26 @@ namespace DriveHUD.EquityCalculator.ViewModels
         Range
     }
 
-
     public class CardSelectorNotification : Confirmation
     {
-        #region Fields
-
-        private ICardCollectionContainer _cardsContainer;
-        private CardSelectorType _selectorType = CardSelectorType.BoardSelector;
-        private IEnumerable<CardModel> _usedCards;
-        private CardSelectorReturnType _returnType = CardSelectorReturnType.Cards;
-        private object source;
-
-        #endregion
+        public CardSelectorNotification() : base() { }
 
         #region Properties
 
-        internal object Source
-        {
-            get
-            {
-                return source;
-            }
-            set
-            {
-                source = value;
-            }
-        }
+        internal object Source { get; set; }
 
-        internal ICardCollectionContainer CardsContainer
-        {
-            get
-            {
-                return _cardsContainer;
-            }
+        internal ICardCollectionContainer CardsContainer { get; set; }
 
-            set
-            {
-                _cardsContainer = value;
-            }
-        }
+        internal CardSelectorType SelectorType { get; set; } = CardSelectorType.BoardSelector;
 
-        internal CardSelectorType SelectorType
-        {
-            get
-            {
-                return _selectorType;
-            }
+        internal IEnumerable<CardModel> UsedCards { get; set; }
 
-            set
-            {
-                _selectorType = value;
-            }
-        }
+        internal IEnumerable<CardModel> BoardCards { get; set; }
 
-        internal IEnumerable<CardModel> UsedCards
-        {
-            get
-            {
-                return _usedCards;
-            }
+        internal CardSelectorReturnType ReturnType { get; set; } = CardSelectorReturnType.Cards;
 
-            set
-            {
-                _usedCards = value;
-            }
-        }
+        public EquityCalculatorMode EquityCalculatorMode { get; set; }
 
-        private IEnumerable<CardModel> boardCards;
-
-        internal IEnumerable<CardModel> BoardCards
-        {
-            get
-            {
-                return boardCards;
-            }
-            set
-            {
-                boardCards = value;
-            }
-        }
-
-        internal CardSelectorReturnType ReturnType
-        {
-            get
-            {
-                return _returnType;
-            }
-
-            set
-            {
-                _returnType = value;
-            }
-        }
-
-        #endregion
-
-        public CardSelectorNotification() : base() { }
-
+        #endregion      
     }
 }

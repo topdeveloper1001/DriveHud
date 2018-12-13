@@ -36,7 +36,9 @@ namespace DriveHUD.EquityCalculator.ViewModels
         #region Fields
 
         private static readonly int RanksLength = Enum.GetValues(typeof(RangeCardRank)).Cast<RangeCardRank>().Where(x => x != RangeCardRank.None).Count();
-        private const int TotalPossibleCombos = 1326;
+
+        private const int regularTotalPossibleCombos = 1326;
+        private const int sixPlusTotalPossibleCombos = 630;
 
         private CardSelectorNotification _notification;
         private EquityRangeSelectorItemViewModel _selectedItem = new EquityRangeSelectorItemViewModel();
@@ -52,6 +54,15 @@ namespace DriveHUD.EquityCalculator.ViewModels
         #endregion
 
         #region Properties
+
+        private int TotalPossibleCombos
+        {
+            get
+            {
+                return _notification == null || _notification.EquityCalculatorMode == EquityCalculatorMode.Holdem ?
+                    regularTotalPossibleCombos : sixPlusTotalPossibleCombos;
+            }
+        }
 
         public InteractionRequest<PreDefinedRangesNotifcation> PreDefinedRangesRequest { get; private set; }
 
@@ -89,6 +100,13 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 PreflopSelectorItems.ForEach(x =>
                 {
                     x.UsedCards = _notification.BoardCards;
+                    x.IsEnabled = _notification.EquityCalculatorMode == EquityCalculatorMode.Holdem ||
+                        (x.FisrtCard > RangeCardRank.Five && x.SecondCard > RangeCardRank.Five);
+
+                    if (!x.IsEnabled)
+                    {
+                        x.IsSelected = false;
+                    }
                 });
 
                 UpdateSlider();
@@ -378,7 +396,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             ResetCommand = new RelayCommand(Reset);
             SaveCommand = new RelayCommand(Save);
             ShowPredefinedRangesViewCommand = new RelayCommand(ShowPredefinedRangesView);
-            SelectAllPairsCommand = new RelayCommand(SeleactAllPairs);
+            SelectAllPairsCommand = new RelayCommand(SelectAllPairs);
             SelectSuitedCommand = new RelayCommand(SelectedSuited);
             SelectOffSuitedCommand = new RelayCommand(SelectOffSuited);
             OnSelectSuitCommand = new RelayCommand(OnSelectSuit);
@@ -612,8 +630,15 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             for (int i = 1; i < RanksLength; i++)
             {
-                PreflopSelectorItems.ElementAt(i * RanksLength + i - 1).IsSelected = true;
-                PreflopSelectorItems.ElementAt(i * RanksLength + i - 1).HandUpdateAndRefresh();
+                var item = PreflopSelectorItems.ElementAt(i * RanksLength + i - 1);
+
+                if (!item.IsEnabled)
+                {
+                    continue;
+                }
+
+                item.IsSelected = true;
+                item.HandUpdateAndRefresh();
             }
 
             SelectedItem = new EquityRangeSelectorItemViewModel();
@@ -623,19 +648,33 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             for (int i = 0; i < RanksLength - 1; i++)
             {
-                PreflopSelectorItems.ElementAt(i * RanksLength + i + 1).IsSelected = true;
-                PreflopSelectorItems.ElementAt(i * RanksLength + i + 1).HandUpdateAndRefresh();
+                var item = PreflopSelectorItems.ElementAt(i * RanksLength + i + 1);
+
+                if (!item.IsEnabled)
+                {
+                    continue;
+                }
+
+                item.IsSelected = true;
+                item.HandUpdateAndRefresh();
             }
 
             SelectedItem = new EquityRangeSelectorItemViewModel();
         }
 
-        private void SeleactAllPairs(object obj)
+        private void SelectAllPairs(object obj)
         {
             for (int i = 0; i < RanksLength; i++)
             {
-                PreflopSelectorItems.ElementAt(i * RanksLength + i).IsSelected = true;
-                PreflopSelectorItems.ElementAt(i * RanksLength + i).HandUpdateAndRefresh();
+                var item = PreflopSelectorItems.ElementAt(i * RanksLength + i);
+
+                if (!item.IsEnabled)
+                {
+                    continue;
+                }
+
+                item.IsSelected = true;
+                item.HandUpdateAndRefresh();
             }
 
             SelectedItem = new EquityRangeSelectorItemViewModel();
@@ -649,10 +688,12 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     if (returned != null && returned.ItemsList != null)
                     {
                         Reset(null);
+
                         foreach (var s in returned.ItemsList)
                         {
                             var current = PreflopSelectorItems.FirstOrDefault(x => x.Caption.Equals(s));
-                            if (current != null)
+
+                            if (current != null && current.IsEnabled)
                             {
                                 current.IsSelected = true;
                                 current.HandUpdateAndRefresh();

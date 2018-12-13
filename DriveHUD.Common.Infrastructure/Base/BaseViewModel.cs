@@ -31,35 +31,38 @@ namespace DriveHUD.Common.Infrastructure.Base
 
         public Guid Id
         {
-            get { return _id; }
+            get
+            {
+                return _id;
+            }
             set
             {
-                if (value == _id) return;
-                _id = value;
-                RaisePropertyChanged();
+                SetProperty(ref _id, value);
             }
         }
 
         public EnumViewModelType Type
         {
-            get { return _type; }
+            get
+            {
+                return _type;
+            }
             set
             {
-                if (value == _type) return;
-                _type = value;
-                RaisePropertyChanged();
+                SetProperty(ref _type, value);
             }
         }
 
         public bool IsActive
         {
-            get { return _isActive; }
+            get
+            {
+                return _isActive;
+            }
             set
             {
-                _isActive = value;
-                RaisePropertyChanged();
+                SetProperty(ref _isActive, value);
             }
         }
-
     }
 }

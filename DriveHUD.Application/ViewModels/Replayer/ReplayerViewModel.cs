@@ -327,11 +327,16 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             var gameType = new GeneralGameTypeEnum().ParseGameType(CurrentGame.GameDescription.GameType);
 
-            var equities = equitySolver.CalculateEquity(ActivePlayerHasHoleCard.Select(x => x.HoleCards).ToArray(),
-                CurrentBoard,
-                AllDeadCards.Distinct(new LambdaComparer<HoleCards>((x, y) => x.ToString().Equals(y.ToString()))).ToArray(),
-                gameType)
-                .Select(x => Math.Round(x * 100, 2))
+            var equitySolverParams = new EquitySolverParams
+            {
+                PlayersCards = ActivePlayerHasHoleCard.Select(x => x.HoleCards).ToArray(),
+                BoardCards = CurrentBoard,
+                Dead = AllDeadCards.Distinct(new LambdaComparer<HoleCards>((x, y) => x.ToString().Equals(y.ToString()))).SelectMany(x => x).ToArray(),
+                GameType = gameType
+            };
+
+            var equities = equitySolver.CalculateEquity(equitySolverParams)
+                .Select(x => Math.Round((decimal)x.Equity * 100, 2))
                 .ToArray();
 
             // updating states in replayer view             

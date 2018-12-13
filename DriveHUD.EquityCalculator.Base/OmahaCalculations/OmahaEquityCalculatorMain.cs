@@ -281,7 +281,7 @@ namespace DriveHUD.EquityCalculator.Base.OmahaCalculations
             return hv;
         }
 
-        internal override int  minHoleCards()
+        internal override int minHoleCards()
         {
             return min;
         }

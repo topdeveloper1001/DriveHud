@@ -2,13 +2,8 @@
     x:Class="DriveHUD.EquityCalculator.Views.CardSelectorView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
-    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-    xmlns:prism="http://www.codeplex.com/prism"
-    xmlns:vm="clr-namespace:DriveHUD.EquityCalculator.ViewModels"
-    mc:Ignorable="d">
+    xmlns:vm="clr-namespace:DriveHUD.EquityCalculator.ViewModels">
 
     <UserControl.DataContext>
         <vm:CardSelectorViewModel />
@@ -24,6 +19,8 @@
     </UserControl.Resources>
 
     <ScrollViewer
+        HorizontalScrollBarVisibility="Auto"
+        VerticalScrollBarVisibility="Auto"
         Margin="20 10">
         <StackPanel>
             <Grid>
@@ -33,11 +30,10 @@
                     <ColumnDefinition
                         Width="*" />
                 </Grid.ColumnDefinitions>
-                <Grid                    
+                <Grid
                     Grid.Column="0">
                     <StackPanel
-                        Orientation="Vertical"
-                        d:LayoutOverrides="Height">
+                        Orientation="Vertical">
                         <ItemsControl
                             ItemsSource="{Binding ClubsSource}"
                             ItemsPanel="{StaticResource CardsItemsPanelTemplate}"
@@ -92,7 +88,7 @@
                 </Grid>
             </Grid>
             <Separator />
-            <WrapPanel                
+            <WrapPanel
                 Orientation="Horizontal"
                 Grid.Column="0"
                 Grid.Row="1">
@@ -104,6 +100,7 @@
                 <Button
                     Command="{Binding ResetCommand}"
                     Margin="15"
+                    Height="25"
                     Content="{ResX Common_Reset}"
                     Width="75" />
 

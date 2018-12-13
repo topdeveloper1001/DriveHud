@@ -23,6 +23,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.Events;
 using Model.Interfaces;
+using Model.Solvers;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
 using System;
@@ -339,6 +340,9 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
                 if (heroAutoHands != null && heroAutoHands.Any())
                 {
+                    heroAutoHands = heroAutoHands.Where(x => EquityCalculatorMode == EquityCalculatorMode.Holdem
+                        || (EquityCalculatorMode == EquityCalculatorMode.HoldemSixPlus && x.FisrtCard > RangeCardRank.Five && x.SecondCard > RangeCardRank.Five));
+
                     heroAutoHands.ForEach(r => r.UsedCards = _board.Cards);
 
                     var opponentsCount = CountOpponents();
@@ -409,45 +413,64 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private async Task CalculateEquity()
         {
             cts = new CancellationTokenSource();
+
             IsCalculationRunning = true;
-            List<double[]> result = new List<double[]>();
+
+            var result = new List<double[]>();
 
             try
             {
                 LogProvider.Log.Info("Equity calculation started");
-                var boardString = GetBoardText();
-                result = await HoldemEquityCalculator.CalculateEquityAsync(PlayersList.Select(x => string.Join(",", x.GetPlayersHand(true))), boardString, cts.Token);
+
+                var equitySolver = ServiceLocator.Current.GetInstance<IEquitySolver>();
+
+                var players = PlayersList
+                    .Where(x => x.PlayerCards.Any())
+                    .Select(x => new { Player = x, HoleCards = HoleCards.FromCards(string.Join(string.Empty, x.PlayerCards)) })
+                    .ToArray();
+
+                var equitySolverParams = new EquitySolverParams
+                {
+                    PlayersCards = players.Select(x => x.HoleCards).ToArray(),
+                    BoardCards = BoardCards.FromCards(GetBoardText()).ToArray(),
+                    GameType = GeneralGameTypeEnum.Holdem,
+                    Dead = GetDeadCardsForEquitySolver(),
+                    CalculatePct = true
+                };
+
+                var equityResults = await Task.Run(() =>
+                {
+                    return equitySolver.CalculateEquity(equitySolverParams);
+                });
+
+                if (equityResults.Length == players.Length)
+                {
+                    for (var i = 0; i < equityResults.Length; i++)
+                    {
+                        players[i].Player.EquityValue = 100 * equityResults[i].Equity;
+                        players[i].Player.WinPrct = 100 * equityResults[i].WinPct;
+                        players[i].Player.TiePrct = 100 * equityResults[i].TiesPct;
+                    }
+                }
+
             }
             catch (OperationCanceledException)
             {
-                Debug.WriteLine("Canceled by user");
-                LogProvider.Log.Info("Equity calculation stopped by user");
+                LogProvider.Log.Info("Equity calculation stopped by user.");
             }
-            catch (ArgumentOutOfRangeException ex)
+            catch (Exception ex)
             {
-                LogProvider.Log.Error(this, "Equity calculation error", ex);
-            }
-            catch (ArgumentException ex)
-            {
-                LogProvider.Log.Error(this, "Equity calculation error", ex);
+                LogProvider.Log.Error(this, "Equity calculation error.", ex);
             }
             finally
             {
                 IsCalculationRunning = false;
                 cts.Dispose();
                 cts = null;
-                LogProvider.Log.Info("Equity calculation finished");
+
+                LogProvider.Log.Info("Equity calculation finished.");
             }
 
-            if (result.Count() == PlayersList.Count())
-            {
-                for (int i = 0; i < result.Count(); i++)
-                {
-                    PlayersList.ElementAt(i).EquityValue = result[i][0];
-                    PlayersList.ElementAt(i).WinPrct = result[i][1];
-                    PlayersList.ElementAt(i).TiePrct = result[i][2];
-                }
-            }
             IsCanExport = true;
         }
 
@@ -647,7 +670,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
                    CardsContainer = container,
                    SelectorType = selectorType,
                    UsedCards = GetProhibitedCardsFor(container),
-                   BoardCards = Board.Cards.Where(x => x.Rank != RangeCardRank.None && x.Suit != RangeCardSuit.None).ToList()
+                   BoardCards = Board.Cards.Where(x => x.Rank != RangeCardRank.None && x.Suit != RangeCardSuit.None).ToList(),
+                   EquityCalculatorMode = equityCalculatorMode
                },
                returned =>
                {
@@ -748,7 +772,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             Board.Reset();
             ClearEquity();
 
-            IsCalculateEquityError = false;            
+            IsCalculateEquityError = false;
         }
 
         private void ExportData(object obj)
@@ -817,6 +841,16 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private string GetBoardText()
         {
             return Board?.ToString().Replace("x", string.Empty).Replace("X", string.Empty);
+        }
+
+        private HandHistories.Objects.Cards.Card[] GetDeadCardsForEquitySolver()
+        {
+            if (EquityCalculatorMode == EquityCalculatorMode.Holdem)
+            {
+                return new HandHistories.Objects.Cards.Card[0];
+            }
+
+            return CardGroup.Parse("2h2c2d2s3h3c3d3s4h4c4d4s5h5c5d5s");
         }
 
         #endregion

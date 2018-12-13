@@ -159,9 +159,9 @@
                 <dh:ComboBoxEx
                     Margin="5"
                     Height="30"
-                    Width="110"          
+                    Width="110"
                     MinWidth="110"
-                    
+                    IsEnabled="{Binding IsEquityCalculatorModeEnabled}"
                     ToggleButtonTemplate="{StaticResource ComboBoxToggleButton}"
                     ItemContainerStyle="{StaticResource ComboboxItemContainerBlueStyle}"
                     ItemsBackgroundColor="{StaticResource ComboboxBackGroundBrush}"
@@ -176,7 +176,7 @@
                 </dh:ComboBoxEx>
                 <Button
                     DockPanel.Dock="Right"
-                    Margin="5"
+                    Margin="0,5,5,5"
                     HorizontalAlignment="Right"
                     IsEnabled="{Binding IsCalculationRunning, Converter={StaticResource BoolNotConverter}}"
                     Command="{Binding ClearCommand}"
@@ -213,7 +213,6 @@
             </ItemsControl>
 
             <Separator />
-
 
             <StackPanel
                 HorizontalAlignment="Center">

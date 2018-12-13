@@ -45,7 +45,7 @@ namespace DriveHUD.ViewModels
                 return _isSelected;
             }
             set
-            {
+            {             
                 if (value != _isSelected)
                 {
                     if (value)
@@ -59,6 +59,20 @@ namespace DriveHUD.ViewModels
                 }
 
                 SetProperty(ref _isSelected, value);
+            }
+        }
+
+        private bool isEnabled = true;
+
+        public bool IsEnabled
+        {
+            get
+            {
+                return isEnabled;
+            }
+            set
+            {
+                SetProperty(ref isEnabled, value);
             }
         }
 
