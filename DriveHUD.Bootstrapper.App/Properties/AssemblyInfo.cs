@@ -52,8 +52,8 @@ using System.Windows;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.6.0.2588")]
-[assembly: AssemblyVersion("1.6.0.2588")]
-[assembly: AssemblyFileVersion("1.6.0.2588")]
+// [assembly: AssemblyVersion("1.6.0.2594")]
+[assembly: AssemblyVersion("1.6.0.2594")]
+[assembly: AssemblyFileVersion("1.6.0.2594")]
 
 [assembly: BootstrapperApplication(typeof(BootstrapperApp))]

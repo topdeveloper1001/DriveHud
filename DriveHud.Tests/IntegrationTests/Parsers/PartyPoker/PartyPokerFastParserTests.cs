@@ -180,6 +180,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PartyPoker
         [TestCase(TestDataFolder + @"Hands/JabMicroWarmUpPko500Hand.txt", 500, 1000, Currency.USD)]
         [TestCase(TestDataFolder + @"Hands/JabMicroWarmUpPko500Hand-2.txt", 700, 1400, Currency.USD)]
         [TestCase(TestDataFolder + @"Hands/BountyHunter500Trny.txt", 500, 1000, Currency.USD)]
+        [TestCase(TestDataFolder + @"Hands/TournamentBigBlind1000.txt", 500, 1000, Currency.USD)]
+        [TestCase(TestDataFolder + @"Hands/TournamentBigBlind1000-2.txt", 600, 1200, Currency.USD)]
         public void ParseLimitTest(string handHistoryFile, decimal smallBlind, decimal bigBlind, Currency currency)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

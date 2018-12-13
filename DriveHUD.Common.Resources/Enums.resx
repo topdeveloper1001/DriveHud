@@ -1757,4 +1757,10 @@
   <data name="Enum_PreflopActorPosition_ThreeBettor" xml:space="preserve">
     <value>Opponent 3-Bet position</value>
   </data>
+  <data name="Enum_EquityCalculatorMode_Holdem" xml:space="preserve">
+    <value>Holdem</value>
+  </data>
+  <data name="Enum_EquityCalculatorMode_HoldemSixPlus" xml:space="preserve">
+    <value>Holdem 6+</value>
+  </data>
 </root>

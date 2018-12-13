@@ -872,6 +872,7 @@
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Margin="1"
+                                IsEnabled="{Binding IsEnabled}"
                                 MouseEnter="Grid_MouseEnter">
 
                                 <Grid.Style>
@@ -951,6 +952,13 @@
                                                     Property="Background"
                                                     Value="{StaticResource ValueBetRangeBackground}" />
                                             </MultiDataTrigger>
+                                            <DataTrigger
+                                                Binding="{Binding IsEnabled}"
+                                                Value="False">
+                                                <Setter
+                                                    Property="Opacity"
+                                                    Value="0.3" />
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </Grid.Style>

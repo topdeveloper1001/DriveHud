@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IEquitySolver.cs" company="Ace Poker Solutions">
+// <copyright file="EquityCalculatorMode.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,15 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using HandHistories.Objects.Hand;
-using System.Collections.Generic;
-
-namespace Model.Solvers
+namespace DriveHUD.EquityCalculator.ViewModels
 {
-    public interface IEquitySolver
+    public enum EquityCalculatorMode
     {
-        Dictionary<string, EquityData> CalculateEquity(HandHistory handHistory);
-
-        EquitySolverResult[] CalculateEquity(EquitySolverParams equitySolverParams);
+        Holdem,
+        HoldemSixPlus
     }
 }

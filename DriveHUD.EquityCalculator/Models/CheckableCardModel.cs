@@ -1,32 +1,61 @@
-﻿using Model.Enums;
+﻿//-----------------------------------------------------------------------
+// <copyright file="CheckableCardModel.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using Model.Enums;
 
 namespace DriveHUD.EquityCalculator.Models
 {
     public class CheckableCardModel : CardModel
     {
-        private bool _isChecked = false;
+        public CheckableCardModel() : base()
+        {
+        }
+
+        public CheckableCardModel(RangeCardRank rank, RangeCardSuit suit) :
+            base(rank, suit)
+        {
+        }
+
+        public static CheckableCardModel GetCheckableCardModel(CardModel card)
+        {
+            return new CheckableCardModel(card.Rank, card.Suit);
+        }
+
+        private bool isChecked = false;
 
         public bool IsChecked
         {
             get
             {
-                return _isChecked;
+                return isChecked;
             }
-
             set
             {
-                SetProperty(ref _isChecked, value);
-                
+                SetProperty(ref isChecked, value);
             }
         }
 
-        public CheckableCardModel() : base() { }
+        private bool isVisible = true;
 
-        public CheckableCardModel(RangeCardRank rank, RangeCardSuit suit) : base(rank, suit) { }
-
-        public static CheckableCardModel GetCheckableCardModel(CardModel card)
+        public bool IsVisible
         {
-            return new CheckableCardModel(card.Rank, card.Suit);
+            get
+            {
+                return isVisible;
+            }
+            set
+            {
+                SetProperty(ref isVisible, value);
+            }
         }
     }
 }

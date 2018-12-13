@@ -122,6 +122,7 @@
     <Compile Include="Analyzer\MainAnalyzer.cs" />
     <Compile Include="Models\CheckableCardModel.cs" />
     <Compile Include="Models\ICardCollectionContainer.cs" />
+    <Compile Include="ViewModels\EquityCalculatorMode.cs" />
     <Compile Include="ViewModels\EquityRangeSelectorItemViewModel.cs" />
     <Compile Include="ViewModels\EquitySelectionMode.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\ExportNotification.cs" />

@@ -79,7 +79,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 RefreshCombos();
             }
         }
-
+        
         #endregion     
 
         public void RefreshCombos()

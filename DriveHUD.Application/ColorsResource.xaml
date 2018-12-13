@@ -517,6 +517,11 @@
     <Color
         x:Key="RangeButtonDisabledColor">#FFAEA5A5</Color>
 
+
+    <SolidColorBrush
+        x:Key="RangeButtonDisabledBrush"
+        Color="{StaticResource RangeButtonDisabledColor}" />
+
     <Color
         x:Key="FoldCheckRangeColor">#B19BD9</Color>
 

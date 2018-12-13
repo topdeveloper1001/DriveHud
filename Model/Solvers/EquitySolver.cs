@@ -91,19 +91,19 @@ namespace Model.Solvers
             return result;
         }
 
-        public decimal[] CalculateEquity(HoleCards[] playersCards, HandHistories.Objects.Cards.Card[] boardCards, HoleCards[] dead, GeneralGameTypeEnum gameType)
+        public EquitySolverResult[] CalculateEquity(EquitySolverParams equitySolverParams)
         {
             var cardsDelimeter = " ";
 
-            var gameTypeArg = gameType == GeneralGameTypeEnum.Holdem ? "-h" :
-                    (gameType == GeneralGameTypeEnum.OmahaHiLo ? "-o8" : "-o");
+            var gameTypeArg = equitySolverParams.GameType == GeneralGameTypeEnum.Holdem ? "-h" :
+                    (equitySolverParams.GameType == GeneralGameTypeEnum.OmahaHiLo ? "-o8" : "-o");
 
-            var playerCardsArgs = string.Join(" - ", playersCards.Select(x => x.ToString(cardsDelimeter)).ToArray());
-            var boardCardsArgs = string.Join(cardsDelimeter, boardCards.Select(x => x.ToString()));
-            var deadCardsArgs = string.Join(cardsDelimeter, dead.Select(x => x.ToString(cardsDelimeter)).ToArray());
+            var playerCardsArgs = string.Join(" - ", equitySolverParams.PlayersCards.Select(x => x.ToString(cardsDelimeter)).ToArray());
+            var boardCardsArgs = string.Join(cardsDelimeter, equitySolverParams.BoardCards.Select(x => x.ToString()));
+            var deadCardsArgs = string.Join(cardsDelimeter, equitySolverParams.Dead.Select(x => x.ToString()).ToArray());
 
             // use monte-carlo simulation for omaha w/o board
-            var prefix = gameType != GeneralGameTypeEnum.Holdem && string.IsNullOrEmpty(boardCardsArgs) ? "p -mc 10000" : "p";
+            var prefix = equitySolverParams.GameType != GeneralGameTypeEnum.Holdem && string.IsNullOrEmpty(boardCardsArgs) ? "p -mc 10000" : "p";
 
             var argsLine = $"{prefix} {gameTypeArg} {playerCardsArgs}";
 
@@ -121,17 +121,58 @@ namespace Model.Solvers
 
             CalculateEquity(argv.Length, argv, out CalculationResult result);
 
-            var equity = new decimal[playersCards.Length];
+            var equitySolverResults = new EquitySolverResult[equitySolverParams.PlayersCards.Length];
 
             unsafe
             {
-                for (var i = 0; i < playersCards.Length; i++)
+                for (var i = 0; i < equitySolverParams.PlayersCards.Length; i++)
                 {
-                    equity[i] = (decimal)result.ev[i];
+                    equitySolverResults[i] = new EquitySolverResult
+                    {
+                        Equity = result.ev[i],
+                        Wins = result.nwinhi[i] + result.nwinlo[i],
+                        Loses = result.nlosehi[i] + result.nloselo[i],
+                        Ties = result.ntiehi[i] + result.ntielo[i]
+                    };
                 }
             }
 
-            return equity;
+            if (!equitySolverParams.CalculatePct)
+            {
+                return equitySolverResults;
+            }
+
+            var sortedEquitySolverResults = equitySolverResults.OrderBy(x => x.Ties).ToList();
+
+            var totalCombinations = 0L;
+
+            var tempsTies = sortedEquitySolverResults.Select(x => x.Ties).ToArray();
+            var resultIndex = 0;
+
+            while (sortedEquitySolverResults.Count > 0)
+            {
+                var equitySolverResult = sortedEquitySolverResults.FirstOrDefault();
+
+                if (totalCombinations == 0)
+                {
+                    totalCombinations = equitySolverResult.Loses + equitySolverResult.Ties + equitySolverResult.Wins;
+                }
+
+                tempsTies[resultIndex] = tempsTies[resultIndex] / sortedEquitySolverResults.Count;
+                equitySolverResult.TiesPct = totalCombinations != 0 ? (double)tempsTies[resultIndex] / totalCombinations : 0;
+                equitySolverResult.WinPct = totalCombinations != 0 ? (double)equitySolverResult.Wins / totalCombinations : 0;
+
+                sortedEquitySolverResults.Remove(equitySolverResult);
+
+                for (var i = resultIndex + 1; i < tempsTies.Length; i++)
+                {
+                    tempsTies[i] -= tempsTies[resultIndex];
+                }
+
+                resultIndex++;
+            }
+
+            return equitySolverResults;
         }
 
         /// <summary>
@@ -271,7 +312,12 @@ namespace Model.Solvers
                      ? handHistory.CommunityCards.GetBoardOnStreet(street)
                      : handHistory.CommunityCards;
 
-                var deadCards = mainPotPlayers.Except(equityPlayers).Where(x => x.HoleCards != null).Select(x => x.HoleCards).ToArray();
+                var deadCards = mainPotPlayers.Except(equityPlayers).Where(x => x.HoleCards != null).SelectMany(x => x.HoleCards).ToArray();
+
+                if (handHistory.GameDescription.TableType.Contains(HandHistories.Objects.GameDescription.TableTypeDescription.ShortDeck))
+                {
+                    deadCards = deadCards.Concat(GetDeadCardsForHoldem6Plus()).ToArray();
+                }
 
                 if (pokerEvalLibLoaded)
                 {
@@ -292,16 +338,21 @@ namespace Model.Solvers
             }
         }
 
-        private void CalculateEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, HoleCards[] dead, GeneralGameTypeEnum gameType, int potIndex)
+        private void CalculateEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, HandHistories.Objects.Cards.Card[] dead, GeneralGameTypeEnum gameType, int potIndex)
         {
-            var equity = CalculateEquity(players.Select(x => x.HoleCards).ToArray(),
-                boardCards.ToArray(),
-                dead,
-                gameType);
+            var equitySolverParams = new EquitySolverParams
+            {
+                PlayersCards = players.Select(x => x.HoleCards).ToArray(),
+                BoardCards = boardCards.ToArray(),
+                Dead = dead,
+                GameType = gameType
+            };
+
+            var equity = CalculateEquity(equitySolverParams);
 
             for (var i = 0; i < players.Count; i++)
             {
-                players[i].Equity[potIndex] = equity[i];
+                players[i].Equity[potIndex] = (decimal)equity[i].Equity;
             }
         }
 
@@ -311,7 +362,7 @@ namespace Model.Solvers
         /// <param name="players">Player to calculate equity</param>
         /// <param name="street">Street</param>
         /// <param name="boardCards">Board cards</param>
-        private void CalculateHoldemEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, HoleCards[] dead, int potIndex)
+        private void CalculateHoldemEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, HandHistories.Objects.Cards.Card[] dead, int potIndex)
         {
             var wins = new long[players.Count];
             var losses = new long[players.Count];
@@ -575,6 +626,11 @@ namespace Model.Solvers
             pokerEvalLibLoaded = true;
         }
 
+        private HandHistories.Objects.Cards.Card[] GetDeadCardsForHoldem6Plus()
+        {
+            return CardGroup.Parse("2h2c2d2s3h3c3d3s4h4c4d4s5h5c5d5s");
+        }
+
         [DllImport("pokereval.dll", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
         private static extern int CalculateEquity(int argc,
            [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 0, ArraySubType = UnmanagedType.LPStr)] string[] argv,
@@ -646,5 +702,33 @@ namespace Model.Solvers
             public decimal Equity { get; set; }
         }
 
+    }
+
+    public class EquitySolverParams
+    {
+        public HoleCards[] PlayersCards { get; set; }
+
+        public HandHistories.Objects.Cards.Card[] BoardCards { get; set; }
+
+        public HandHistories.Objects.Cards.Card[] Dead { get; set; }
+
+        public GeneralGameTypeEnum GameType { get; set; }
+
+        public bool CalculatePct { get; set; }
+    }
+
+    public class EquitySolverResult
+    {
+        public long Wins { get; set; }
+
+        public long Loses { get; set; }
+
+        public long Ties { get; set; }
+
+        public double Equity { get; set; }
+
+        public double WinPct { get; set; }
+
+        public double TiesPct { get; set; }
     }
 }
