@@ -31,28 +31,57 @@ namespace DriveHUD.EquityCalculator.Base.Calculations
         private bool mBig;
         private List<Player> mPlayer = new List<Player>();
 
-        public static async Task<List<double[]>> CalculateEquityAsync(IEnumerable<String> ranges, String sBoard, CancellationToken ct)
+        public static async Task<List<double[]>> CalculateEquityAsync(IEnumerable<string> ranges, string sBoard, bool isHoldem6Plus, CancellationToken ct)
         {
-            HoldemEquityCalculator hd = new HoldemEquityCalculator();
-            String board = sBoard;
+            var hd = new HoldemEquityCalculator();
+
+            var board = sBoard;
+
             hd.GetBoardCards(board, ref hd.mBoard, ref hd.mBoardCount, 5);
-            List<Player> players = new List<Player>();
-            foreach (String range in ranges)
+
+            if (isHoldem6Plus)
+            {
+                hd.GetHoldem6PlusDeadCards(ref hd.mDead);
+            }
+
+            var players = new List<Player>();
+
+            foreach (var range in ranges)
             {
                 players.Add(new Player(range));
             }
+
             hd.mPlayer = players;
             hd.NUM_PLAYERS = players.Count;
+
             await Task.Run(() =>
             {
                 hd.OnCalc(ct);
             }, ct);
-            List<double[]> eqs = new List<double[]>();
-            foreach (Player player in players)
+
+            var eqs = new List<double[]>();
+
+            foreach (var player in players)
             {
                 eqs.Add(new double[] { player.Equity, player.WinPrct, player.TiePrct });
             }
+
             return eqs;
+        }
+
+        private void GetHoldem6PlusDeadCards(ref long dead)
+        {
+            dead = 0;
+
+            for (var rank = 0; rank < 4; rank++)
+            {
+                for (var suit = 0; suit < 4; suit++)
+                {
+                    long mask = WeightTable.GetCardMask(suit * 13 + rank);
+
+                    dead |= mask;
+                }
+            }
         }
 
         private void GetBoardCards(String boardString, ref long board, ref int count, int max)

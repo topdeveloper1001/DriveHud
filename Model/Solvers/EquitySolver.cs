@@ -312,7 +312,12 @@ namespace Model.Solvers
                      ? handHistory.CommunityCards.GetBoardOnStreet(street)
                      : handHistory.CommunityCards;
 
-                var deadCards = mainPotPlayers.Except(equityPlayers).Where(x => x.HoleCards != null).Select(x => x.HoleCards).ToArray();
+                var deadCards = mainPotPlayers.Except(equityPlayers).Where(x => x.HoleCards != null).SelectMany(x => x.HoleCards).ToArray();
+
+                if (handHistory.GameDescription.TableType.Contains(HandHistories.Objects.GameDescription.TableTypeDescription.ShortDeck))
+                {
+                    deadCards = deadCards.Concat(GetDeadCardsForHoldem6Plus()).ToArray();
+                }
 
                 if (pokerEvalLibLoaded)
                 {
@@ -333,13 +338,13 @@ namespace Model.Solvers
             }
         }
 
-        private void CalculateEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, HoleCards[] dead, GeneralGameTypeEnum gameType, int potIndex)
+        private void CalculateEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, HandHistories.Objects.Cards.Card[] dead, GeneralGameTypeEnum gameType, int potIndex)
         {
             var equitySolverParams = new EquitySolverParams
             {
                 PlayersCards = players.Select(x => x.HoleCards).ToArray(),
                 BoardCards = boardCards.ToArray(),
-                Dead = dead.SelectMany(x => x).ToArray(),
+                Dead = dead,
                 GameType = gameType
             };
 
@@ -357,7 +362,7 @@ namespace Model.Solvers
         /// <param name="players">Player to calculate equity</param>
         /// <param name="street">Street</param>
         /// <param name="boardCards">Board cards</param>
-        private void CalculateHoldemEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, HoleCards[] dead, int potIndex)
+        private void CalculateHoldemEquity(List<EquityPlayer> players, Street street, BoardCards boardCards, HandHistories.Objects.Cards.Card[] dead, int potIndex)
         {
             var wins = new long[players.Count];
             var losses = new long[players.Count];
@@ -619,6 +624,11 @@ namespace Model.Solvers
             }
 
             pokerEvalLibLoaded = true;
+        }
+
+        private HandHistories.Objects.Cards.Card[] GetDeadCardsForHoldem6Plus()
+        {
+            return CardGroup.Parse("2h2c2d2s3h3c3d3s4h4c4d4s5h5c5d5s");
         }
 
         [DllImport("pokereval.dll", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
