@@ -26,6 +26,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             CurrencyGroupSeparator = ",",
             CurrencySymbol = "$"
         };
+
         private readonly Currency _currency;
 
         public override EnumPokerSites SiteName
@@ -463,15 +464,15 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             var SB = limitSubstring.Substring(0, splitIndex);
             var BB = limitSubstring.Substring(splitIndex + (isTournament ? 1 : 2));
 
-            var small = ParseBlind(SB);
-            var big = ParseBlind(BB);
+            var small = ParseBlind(SB, isTournament);
+            var big = ParseBlind(BB, isTournament);
 
             return Limit.FromSmallBlindBigBlind(small, big, currency);
         }
 
         private const string blindThousandSymbol = "K";
 
-        private static decimal ParseBlind(string blindText)
+        private static decimal ParseBlind(string blindText, bool isTournament)
         {
             var multiplier = 1;
 
@@ -481,7 +482,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 multiplier = 1000;
             }
 
-            var blind = decimal.Parse(blindText, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+            var blind = isTournament ?
+                ParserUtils.ParseMoney(blindText) :
+                decimal.Parse(blindText, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
 
             return multiplier > 1 ? blind * multiplier : blind;
         }
