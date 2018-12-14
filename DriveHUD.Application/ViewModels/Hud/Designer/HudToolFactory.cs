@@ -17,6 +17,7 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
+using Model.Hud;
 using Model.Stats;
 using ReactiveUI;
 using System;

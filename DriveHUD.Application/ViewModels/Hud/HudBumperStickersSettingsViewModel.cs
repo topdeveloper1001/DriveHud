@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="HudBumperStickersSettingsViewModel.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -12,12 +12,16 @@
 
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Common;
+using DriveHUD.Common.Resources;
 using Microsoft.Practices.ServiceLocation;
+using Microsoft.Win32;
 using Model.Enums;
 using Model.Filters;
+using Model.Hud;
 using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
@@ -26,6 +30,8 @@ namespace DriveHUD.Application.ViewModels.Hud
     public class HudBumperStickersSettingsViewModel : BaseRangeTypePopupViewModel
     {
         private readonly HudBumperStickersSettingsViewModelInfo viewModelInfo;
+        private readonly IHudLayoutsService hudLayoutService;
+        private readonly IHudBumperStickerService bumperStickerTypeService;
 
         private IFilterModelManagerService Service
         {
@@ -40,6 +46,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.ArgumentNotNull(() => viewModelInfo);
 
             this.viewModelInfo = viewModelInfo;
+
+            hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+            bumperStickerTypeService = ServiceLocator.Current.GetInstance<IHudBumperStickerService>();
 
             Initialize();
         }
@@ -60,6 +69,35 @@ namespace DriveHUD.Application.ViewModels.Hud
             PickerSelectColorCommand = ReactiveCommand.Create(() => IsColorPickerPopupOpened = false);
             FilterCommand = ReactiveCommand.Create(() => PopupFiltersRequestExecute(Service.FilterTupleCollection.FirstOrDefault(f => f.ModelType == EnumFilterModelType.FilterHandGridModel)));
             ButtonFilterModelSectionRemoveCommand = ReactiveCommand.Create<object>(x => ButtonFilterModelSectionRemove(x));
+
+            var canDelete = this.WhenAny(x => x.SelectedBumperSticker, x => x.Value != null);
+
+            DeleteCommand = ReactiveCommand.Create(() =>
+            {
+                if (SelectedBumperSticker != null)
+                {
+                    BumperStickers.Remove(SelectedBumperSticker);
+                    SelectedBumperSticker = BumperStickers.FirstOrDefault();
+                }
+            }, canDelete);
+
+            ResetCommand = ReactiveCommand.Create(() =>
+            {
+                var defaultBumperStickers = bumperStickerTypeService.CreateDefaultBumperStickerTypes();
+
+                var defaultBumperSticker = defaultBumperStickers.FirstOrDefault(p => p.Name == SelectedBumperSticker.Name);
+
+                if (defaultBumperSticker == null)
+                {
+                    return;
+                }
+
+                SelectedBumperSticker.StatsToMerge = defaultBumperSticker.Stats;
+            }, canDelete);
+
+            ExportCommand = ReactiveCommand.Create(() => Export(new[] { SelectedBumperSticker }), canDelete);
+            ExportAllCommand = ReactiveCommand.Create(() => Export(bumperStickers));
+            ImportCommand = ReactiveCommand.Create(() => Import());
         }
 
         #region Commands
@@ -71,6 +109,16 @@ namespace DriveHUD.Application.ViewModels.Hud
         public ReactiveCommand PickerSelectColorCommand { get; private set; }
 
         public ReactiveCommand FilterCommand { get; private set; }
+
+        public ReactiveCommand ResetCommand { get; private set; }
+
+        public ReactiveCommand DeleteCommand { get; private set; }
+
+        public ReactiveCommand ExportCommand { get; private set; }
+
+        public ReactiveCommand ExportAllCommand { get; private set; }
+
+        public ReactiveCommand ImportCommand { get; private set; }
 
         #endregion
 
@@ -195,20 +243,69 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private void PopupFiltersRequestExecute(FilterTuple filterTuple)
         {
-            PopupContainerStickersFiltersViewModelNotification notification = new PopupContainerStickersFiltersViewModelNotification();
+            var notification = new PopupContainerStickersFiltersViewModelNotification
+            {
+                Title = "Filters",
+                FilterTuple = filterTuple,
+                Sticker = SelectedBumperSticker
+            };
 
-            notification.Title = "Filters";
-            notification.FilterTuple = filterTuple;
-            notification.Sticker = SelectedBumperSticker;
-
-            this.PopupFiltersRequest.Raise(notification,
+            PopupFiltersRequest.Raise(notification,
                 returned =>
                 {
-                    SelectedBumperSticker.BuiltFilter = new BuiltFilterModel(Model.Enums.FilterServices.Stickers);
+                    SelectedBumperSticker.BuiltFilter = new BuiltFilterModel(FilterServices.Stickers);
                     SelectedBumperSticker.BuiltFilter.BindFilterSectionCollection();
                 });
         }
 
+        private void Import()
+        {
+            var openFileDialog = new OpenFileDialog
+            {
+                Filter = CommonResourceManager.Instance.GetResourceString("SystemSettings_BumperStickerFileDialogFilter")
+            };
+
+            if (openFileDialog.ShowDialog() != true)
+            {
+                return;
+            }
+
+            var importedBumperStickerTypes = hudLayoutService.ImportBumperStickerType(openFileDialog.FileName);
+
+            if (importedBumperStickerTypes == null || importedBumperStickerTypes.Length == 0)
+            {
+                return;
+            }
+
+            var bumperStickerTypesMap = (from importedPlayerType in importedBumperStickerTypes
+                                         join bumperStickerType in BumperStickers on importedPlayerType.Name equals bumperStickerType.Name into gj
+                                         from grouped in gj.DefaultIfEmpty()
+                                         select new { ImportedPlayerType = importedPlayerType, ExistingPlayerType = grouped }).ToArray();
+
+            foreach (var bumperStickerTypeMapItem in bumperStickerTypesMap)
+            {
+                if (bumperStickerTypeMapItem.ExistingPlayerType == null)
+                {
+                    BumperStickers.Add(bumperStickerTypeMapItem.ImportedPlayerType);
+                    continue;
+                }
+
+                bumperStickerTypeMapItem.ExistingPlayerType.MergeWith(bumperStickerTypeMapItem.ImportedPlayerType);
+            }
+        }
+
+        private void Export(IEnumerable<HudBumperStickerType> bumperStickerTypes)
+        {
+            var saveFileDialog = new SaveFileDialog
+            {
+                Filter = CommonResourceManager.Instance.GetResourceString("SystemSettings_BumperStickerFileDialogFilter")
+            };
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                hudLayoutService.ExportBumperStickerType(bumperStickerTypes.ToArray(), saveFileDialog.FileName);
+            }
+        }
 
         #endregion
     }

@@ -20,6 +20,10 @@ namespace Model.Filters
     [Serializable]
     public class FilterAdvancedItem : BindableBase
     {
+        private FilterAdvancedItem()
+        {
+        }
+
         public FilterAdvancedItem(AdvancedFilterType filterType)
         {
             FilterType = filterType;
@@ -39,7 +43,7 @@ namespace Model.Filters
             }
         }
 
-        public AdvancedFilterType FilterType { get; }
+        public AdvancedFilterType FilterType { get; set; }
 
         [XmlIgnore, JsonIgnore]
         public Action FilterAction { get; set; }

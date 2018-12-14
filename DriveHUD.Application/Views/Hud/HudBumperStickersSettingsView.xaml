@@ -251,6 +251,48 @@
         </Style>
 
         <Style
+            x:Key="TopDropDownButtonStyle"
+            BasedOn="{StaticResource RadRibbonDropDownButtonBaseStyle}"
+            TargetType="{x:Type telerik:RadRibbonDropDownButton}">
+            <Setter
+                Property="Height"
+                Value="24" />
+            <Setter
+                Property="Width"
+                Value="115" />
+            <Setter
+                Property="Foreground"
+                Value="{StaticResource ActiveTextForeground}" />
+            <Setter
+                Property="Background"
+                Value="{StaticResource BackgroundBrush3}" />
+            <Setter
+                Property="BorderBrush"
+                Value="{StaticResource BackgroundBrush3}" />
+            <Setter
+                Property="DropDownWidth"
+                Value="115" />
+            <Setter
+                Property="Cursor"
+                Value="Hand" />
+        </Style>
+
+        <Style
+            x:Key="TopButtonMenuItemStyle"
+            TargetType="{x:Type telerik:RadContextMenu}"
+            BasedOn="{StaticResource RadContextMenuStyle1}">
+            <Setter
+                Property="BorderThickness"
+                Value="0" />
+            <Setter
+                Property="Background"
+                Value="{StaticResource BackgroundBrush3}" />
+            <Setter
+                Property="Cursor"
+                Value="Hand" />
+        </Style>
+
+        <Style
             x:Key="IconButtonStyle"
             BasedOn="{StaticResource TopButtonStyle}"
             TargetType="{x:Type Button}">
@@ -836,15 +878,43 @@
                     HorizontalAlignment="Right"
                     Orientation="Horizontal">
 
-                    <Button
-                        Content="{ResX Key=Common_HudPlayerType_Reset}"
-                        Style="{StaticResource TopButtonStyle}" />
+                    <telerik:RadRibbonDropDownButton
+                        Text="{ResX Key=Common_HudPlayerType_ResetDelete}"
+                        Style="{StaticResource TopDropDownButtonStyle}">
+                        <telerik:RadRibbonDropDownButton.DropDownContent>
+                            <telerik:RadContextMenu
+                                IconColumnWidth="0"
+                                Style="{StaticResource TopButtonMenuItemStyle}">
+                                <telerik:RadMenuItem
+                                    Header="{ResX Common_HudPlayerType_Reset}"
+                                    Command="{Binding ResetCommand}" />
+                                <telerik:RadMenuItem
+                                    Header="{ResX Common_HudPlayerType_Delete}"
+                                    Command="{Binding DeleteCommand}" />
+                            </telerik:RadContextMenu>
+                        </telerik:RadRibbonDropDownButton.DropDownContent>
+                    </telerik:RadRibbonDropDownButton>
 
-                    <Button
-                        Content="{ResX Key=Common_HudPlayerType_Import}"
+                    <telerik:RadRibbonDropDownButton
                         Margin="5,0,0,0"
-                        Style="{StaticResource TopButtonStyle}"
-                        IsEnabled="False" />
+                        Text="{ResX Key=Common_HudPlayerType_ImportExport}"
+                        Style="{StaticResource TopDropDownButtonStyle}">
+                        <telerik:RadRibbonDropDownButton.DropDownContent>
+                            <telerik:RadContextMenu
+                                IconColumnWidth="0"
+                                Style="{StaticResource TopButtonMenuItemStyle}">
+                                <telerik:RadMenuItem
+                                    Header="{ResX Common_HudPlayerType_Import}"
+                                    Command="{Binding ImportCommand}" />
+                                <telerik:RadMenuItem
+                                    Header="{ResX Common_HudPlayerType_Export}"
+                                    Command="{Binding ExportCommand}" />
+                                <telerik:RadMenuItem
+                                    Header="{ResX Common_HudPlayerType_ExportAll}"
+                                    Command="{Binding ExportAllCommand}" />
+                            </telerik:RadContextMenu>
+                        </telerik:RadRibbonDropDownButton.DropDownContent>
+                    </telerik:RadRibbonDropDownButton>
 
                     <Button
                         Content="{ResX Key=Common_HudPlayerType_Save}"

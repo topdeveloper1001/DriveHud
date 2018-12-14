@@ -449,6 +449,31 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Exports <see cref="IEnumerable{BumperStickerType}"/> to the specified path
+        /// </summary>
+        /// <param name="path">Path to file</param>
+        public void ExportBumperStickerType(HudBumperStickerType[] bumperStickerTyps, string path)
+        {
+            if (bumperStickerTyps == null || bumperStickerTyps.Length == 0)
+            {
+                return;
+            }
+
+            try
+            {
+                using (var fs = File.Open(path, FileMode.Create))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudBumperStickerType[]));
+                    xmlSerializer.Serialize(fs, bumperStickerTyps);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Bumper sticker types has not been exported", e);
+            }
+        }
+
+        /// <summary>
         /// Imports <see cref="HudPlayerType"/> on the specified path
         /// </summary>
         /// <param name="path">Path to player type</param>
@@ -478,6 +503,37 @@ namespace DriveHUD.Application.ViewModels.Hud
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, $"Player type from '{path}' has not been imported.", e);
+            }
+
+            return null;
+        }
+
+
+        /// <summary>
+        /// Imports <see cref="HudBumperStickerType"/> on the specified path
+        /// </summary>
+        /// <param name="path">Path to bumper sticker type</param>
+        public HudBumperStickerType[] ImportBumperStickerType(string path)
+        {
+            if (!File.Exists(path))
+            {
+                LogProvider.Log.Error($"Bumper sticker type could not be imported. File '{path}' not found.");
+                return null;
+            }
+
+            try
+            {
+                using (var fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudBumperStickerType[]));
+                    var bumperStickerTypes = xmlSerializer.Deserialize(fs) as HudBumperStickerType[];
+
+                    return bumperStickerTypes;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Bumper sticker type from '{path}' has not been imported.", e);
             }
 
             return null;

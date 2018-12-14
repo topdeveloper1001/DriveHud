@@ -47,8 +47,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private void Initialize()
         {
-            playerTypes = new ObservableCollection<HudPlayerType>(viewModelInfo.PlayerTypes);
-            selectedPlayerType = playerTypes.FirstOrDefault();
+            PlayerTypes = new ObservableCollection<HudPlayerType>(viewModelInfo.PlayerTypes);
+            SelectedPlayerType = playerTypes.FirstOrDefault();
         }
 
         protected override void InitializeCommands()

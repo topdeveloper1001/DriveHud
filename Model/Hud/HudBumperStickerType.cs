@@ -15,7 +15,6 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model.Enums;
 using Model.Filters;
-using Model.Hud;
 using ProtoBuf;
 using ReactiveUI;
 using System;
@@ -26,7 +25,7 @@ using System.Linq.Expressions;
 using System.Windows.Media;
 using System.Xml.Serialization;
 
-namespace DriveHUD.Application.ViewModels.Hud
+namespace Model.Hud
 {
     /// <summary>
     /// Bumper sticker type 
@@ -189,7 +188,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         private BuiltFilterModel builtFilter;
- 
+
         public BuiltFilterModel BuiltFilter
         {
             get { return builtFilter; }
@@ -200,7 +199,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         private IFilterModelCollection filterModelCollection;
-               
+
         public IFilterModelCollection FilterModelCollection
         {
             get { return filterModelCollection; }
@@ -278,7 +277,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             return clone;
         }
 
-        internal void InitializeFilterPredicate()
+        public void InitializeFilterPredicate()
         {
             FilterPredicate = PredicateBuilder.True<Playerstatistic>();
 
@@ -295,6 +294,44 @@ namespace DriveHUD.Application.ViewModels.Hud
                     FilterPredicate = FilterPredicate.And(filterPredicate);
                 }
             }
+        }
+
+        /// <summary>
+        /// Merges the current bumper sticker type with the specified bumper sticker type
+        /// </summary>
+        public void MergeWith(HudBumperStickerType bumperStickerType)
+        {
+            if (bumperStickerType == null)
+            {
+                return;
+            }
+
+            MinSample = bumperStickerType.MinSample;
+            EnableBumperSticker = bumperStickerType.EnableBumperSticker;
+            SelectedColor = bumperStickerType.SelectedColor;
+            Name = bumperStickerType.Name;
+            Description = bumperStickerType.Description;
+
+            if (bumperStickerType.FilterModelCollection != null)
+            {
+                FilterModelCollection = new IFilterModelCollection(bumperStickerType.FilterModelCollection.Select(x => (IFilterModel)x.Clone()));
+            }
+            else
+            {
+                FilterModelCollection = new IFilterModelCollection();
+            }
+
+            var statsToMerge = (from currentStat in Stats
+                                join stat in bumperStickerType.Stats on currentStat.Stat equals stat.Stat into gj
+                                from grouped in gj.DefaultIfEmpty()
+                                where grouped != null
+                                select new { CurrentStat = currentStat, Stat = grouped }).ToArray();
+
+            statsToMerge.ForEach(s =>
+            {
+                s.CurrentStat.Low = s.Stat.Low;
+                s.CurrentStat.High = s.Stat.High;
+            });
         }
     }
 }

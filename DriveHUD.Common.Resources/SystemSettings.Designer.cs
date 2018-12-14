@@ -205,6 +205,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bumper stickers (.xml)|*.xml.
+        /// </summary>
+        internal static string SystemSettings_BumperStickerFileDialogFilter {
+            get {
+                return ResourceManager.GetString("SystemSettings_BumperStickerFileDialogFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com/appstore/currency.dat.
         /// </summary>
         internal static string SystemSettings_CurrencyRates {
