@@ -681,7 +681,7 @@ namespace DriveHUD.Application.ViewModels
                     .Distinct()
                     .ToArray();
 
-                var availableLayouts = hudLayoutsService.GetAvailableLayouts(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
+                var availableLayouts = hudLayoutsService.GetAvailableLayouts(e.GameInfo.TableType);
 
                 var ht = new HudLayout
                 {

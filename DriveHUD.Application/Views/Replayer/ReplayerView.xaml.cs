@@ -1,4 +1,16 @@
-﻿using DriveHUD.Application.TableConfigurators;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ReplayerView.xaml.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Common.Ifrastructure;
 using DriveHUD.Common.Reflection;
@@ -14,6 +26,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 using Telerik.Windows;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Diagrams.Core;
@@ -35,12 +48,13 @@ namespace DriveHUD.Application.Views.Replayer
             {
                 throw new ArgumentException("Data model list should contain at least one active value", "dataModelList");
             }
-            this._lastHandsCollection = dataModelList;
+
+            _lastHandsCollection = dataModelList;
 
             var dataModel = dataModelList.First(x => x.IsActive);
 
-            this.Owner = App.Current.MainWindow;
-            this.Header = StringFormatter.GetReplayerHeaderString(dataModel.GameType, dataModel.Time);
+            Owner = App.Current.MainWindow;
+            Header = StringFormatter.GetReplayerHeaderString(dataModel.GameType, dataModel.Time);
 
             ViewModel.PropertyChanged += ViewModel_PropertyChanged;
 
@@ -62,7 +76,7 @@ namespace DriveHUD.Application.Views.Replayer
             {
                 ViewModel.StopCommand.Execute(null);
 
-                Configurator.ConfigureTable(diagram, ViewModel);
+                Configurator.ConfigureTable(diagram, dgCanvas, ViewModel);
 
                 if (ViewModel.CurrentHand != null)
                 {
@@ -73,11 +87,11 @@ namespace DriveHUD.Application.Views.Replayer
 
         private void UpdateCollections()
         {
-            if (this._lastHandsCollection != null)
+            if (_lastHandsCollection != null)
             {
-                if (!this._lastHandsCollection.Any(x => x.Equals(ViewModel.CurrentHand)))
+                if (!_lastHandsCollection.Any(x => x.Equals(ViewModel.CurrentHand)))
                 {
-                    this._lastHandsCollection.Add(ViewModel.CurrentHand);
+                    _lastHandsCollection.Add(ViewModel.CurrentHand);
                     ViewModel.LastHandsCollection.Add(ViewModel.CurrentHand);
                 }
             }
@@ -120,7 +134,7 @@ namespace DriveHUD.Application.Views.Replayer
             Close();
         }
 
-        private void GeneralExportItem_Click(object sender, Telerik.Windows.RadRoutedEventArgs e)
+        private void GeneralExportItem_Click(object sender, RadRoutedEventArgs e)
         {
             if (ViewModel?.CurrentGame != null)
             {
@@ -145,9 +159,26 @@ namespace DriveHUD.Application.Views.Replayer
         {
             if (ViewModel?.CurrentGame != null)
             {
-                Clipboard.SetText(ExportFunctions.ConvertHHToForumFormat(ViewModel.CurrentGame, Model.Enums.EnumExportType.PlainText));
+                Clipboard.SetText(ExportFunctions.ConvertHHToForumFormat(ViewModel.CurrentGame, EnumExportType.PlainText));
                 ViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
             }
         }
+
+        private RadMenuItem previousMenuItem;
+
+        private void RadMenuItem_Click(object sender, RadRoutedEventArgs e)
+        {
+            if (!(sender is RadMenuItem menuItem) || menuItem.Tag.ToString() != "1")
+            {
+                return;
+            }
+
+            if (previousMenuItem != null)
+            {
+                previousMenuItem.IsChecked = false;
+            }
+
+            previousMenuItem = menuItem;
+        }      
     }
 }

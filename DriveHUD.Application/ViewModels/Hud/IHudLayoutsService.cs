@@ -149,10 +149,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <summary>
         /// Gets the names of available layouts for specified <see cref="EnumPokerSites"/> poker site, <see cref="EnumTableType"/> table type and <see cref="EnumGameType"/> game type
         /// </summary>
-        /// <param name="pokerSite">Poker site</param>
-        /// <param name="tableType">Type of table</param>
-        /// <param name="gameType">Type of game</param>        
-        IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
+        /// <param name="tableType">Type of table</param>        
+        IEnumerable<string> GetAvailableLayouts(EnumTableType tableType);
 
         /// <summary>
         /// Gets the sorted list of <see cref="HudLayoutInfoV2"/> layouts for the specified <see cref="EnumTableType"/> table type

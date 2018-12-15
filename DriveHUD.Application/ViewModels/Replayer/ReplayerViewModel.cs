@@ -218,12 +218,14 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private void SetPlayersDefaults()
         {
             PlayersCollection.ForEach(x => x.Reset());
+
             if (CurrentGame == null)
             {
                 return;
             }
 
             var dealer = CurrentGame.Players.FirstOrDefault(x => x.SeatNumber == CurrentGame.DealerButtonPosition);
+
             foreach (Player player in CurrentGame.Players)
             {
                 int i = GetPlayersSeatNumber(player, CurrentGame.Players, CurrentGame.GameDescription.SeatType.MaxPlayers);
@@ -692,17 +694,31 @@ namespace DriveHUD.Application.ViewModels.Replayer
         #endregion
 
         #region ICommand
+
         public ICommand NextStepCommand { get; set; }
+
         public ICommand PlayCommand { get; set; }
+
         public ICommand StopCommand { get; set; }
+
         public ICommand PrevStepCommand { get; set; }
+
         public ICommand ToStartCommand { get; set; }
+
         public ICommand ToEndCommand { get; set; }
+
         public ICommand ToStreetCommand { get; set; }
+
         public ICommand TwitterOAuthCommand { get; set; }
+
         public ICommand FacebookOAuthCommand { get; set; }
+
         public ICommand HandNoteCommand { get; set; }
+
         public ICommand ShowSupportForumsCommand { get; set; }
+
+        public ICommand LoadLayoutCommand { get; set; }
+
         #endregion
 
         #region Properties
@@ -870,6 +886,35 @@ namespace DriveHUD.Application.ViewModels.Replayer
             set
             {
                 _activePlayerName = value;
+            }
+        }
+
+        private ObservableCollection<string> layoutsCollection;
+
+        public ObservableCollection<string> LayoutsCollection
+        {
+            get
+            {
+                return layoutsCollection;
+            }
+            set
+            {
+                SetProperty(ref layoutsCollection, value);
+            }
+        }
+
+        private string layoutName;
+
+        public string LayoutName
+        {
+            get
+            {
+                return layoutName;
+            }
+            set
+            {
+                layoutName = value;
+                RaisePropertyChanged();
             }
         }
 

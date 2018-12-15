@@ -727,7 +727,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="pokerSite">Poker site</param>
         /// <param name="tableType">Type of table</param>
         /// <param name="gameType">Type of game</param>        
-        public IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType)
+        public IEnumerable<string> GetAvailableLayouts(EnumTableType tableType)
         {
             var defaultNames = HudLayoutMappings.Mappings.Where(m => m.TableType == tableType)
                         .Select(m => m.Name).Distinct().ToList();

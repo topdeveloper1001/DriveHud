@@ -12,7 +12,9 @@
     xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
     xmlns:streetEnum="clr-namespace:HandHistories.Objects.Cards;assembly=HandHistories.Objects"
     xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"
+    xmlns:ctls="clr-namespace:DriveHUD.Application.Controls"
     xmlns:me="clr-namespace:Model.Enums;assembly=Model"
+    xmlns:valueConverters="clr-namespace:DriveHUD.Application.ValueConverters"
     FontFamily="./Fonts/#Open Sans"
     Header="Replayer"
     Width="1100"
@@ -57,6 +59,10 @@
                 <ResourceDictionary
                     Source="/DriveHUD.Application;component/ControlStyles/ReplayerTemplates.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <valueConverters:SelectedLayoutToCheckedConverter
+                x:Key="SelectedLayoutToCheckedConverter" />
+
         </ResourceDictionary>
     </telerik:RadWindow.Resources>
 
@@ -238,7 +244,6 @@
             </Button>
         </StackPanel>
 
-
         <telerik:RadDiagram
             x:Name="diagram"
             Width="1060"
@@ -253,6 +258,17 @@
             ViewportChanged="OnDiagramViewportChanged"
             Style="{StaticResource ReplayerDiagramStyle}">
         </telerik:RadDiagram>
+
+        <ctls:HudDragCanvas
+            x:Name="dgCanvas"
+            Width="1060"
+            Height="550"
+            Grid.Column="0"
+            Grid.Row="1"
+            Grid.ColumnSpan="5"
+            AllowDragging="True"
+            AllowDragOutOfView="True"
+            AllowDrop="False" />
 
         <StackPanel
             Grid.Row="2"
@@ -405,6 +421,65 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
         </ListBox>
+
+        <Image
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Source="/DriveHUD.Common.Resources;component/images/logo32x32.png"
+            Stretch="Uniform"
+            Width="32"
+            Height="32"
+            Margin="0,10,0,0"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center">
+            <telerik:RadContextMenu.ContextMenu>
+                <telerik:RadContextMenu>
+                    <!-- Load HUD -->
+                    <telerik:RadMenuItem
+                        Header="{ResX Main_ContextMenu_LoadHud}"
+                        ItemsSource="{Binding LayoutsCollection}">
+                        <telerik:RadMenuItem.ItemContainerStyle>
+                            <Style
+                                TargetType="telerik:RadMenuItem"
+                                BasedOn="{StaticResource {x:Type telerik:RadMenuItem}}">
+                                <Setter
+                                    Property="Header"
+                                    Value="{Binding}" />
+                                <Setter
+                                    Property="IsCheckable"
+                                    Value="True" />
+                                <Setter
+                                    Property="IsChecked">
+                                    <Setter.Value>
+                                        <MultiBinding
+                                            Converter="{StaticResource SelectedLayoutToCheckedConverter}"
+                                            Mode="OneWay">
+                                            <Binding
+                                                RelativeSource="{RelativeSource AncestorType={x:Type telerik:RadMenuItem}}"
+                                                Path="DataContext.LayoutName" />
+                                            <Binding
+                                                Path="." />
+                                        </MultiBinding>
+                                    </Setter.Value>
+                                </Setter>
+                                <EventSetter
+                                    Event="Click"
+                                    Handler="RadMenuItem_Click" />
+                                <Setter
+                                    Property="Tag"
+                                    Value="1" />
+                                <Setter
+                                    Property="Command"
+                                    Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type telerik:RadMenuItem}}, Path=DataContext.LoadLayoutCommand}" />
+                                <Setter
+                                    Property="CommandParameter"
+                                    Value="{Binding}" />
+                            </Style>
+                        </telerik:RadMenuItem.ItemContainerStyle>
+                    </telerik:RadMenuItem>
+                </telerik:RadContextMenu>
+            </telerik:RadContextMenu.ContextMenu>
+        </Image>
 
     </Grid>
 </telerik:RadWindow>
