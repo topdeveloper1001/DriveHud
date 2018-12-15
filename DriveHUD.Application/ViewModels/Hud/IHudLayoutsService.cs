@@ -97,10 +97,22 @@ namespace DriveHUD.Application.ViewModels.Hud
         void ExportPlayerType(HudPlayerType[] playerTypes, string path);
 
         /// <summary>
+        /// Exports <see cref="IEnumerable{BumperStickerType}"/> to the specified path
+        /// </summary>
+        /// <param name="path">Path to file</param>
+        void ExportBumperStickerType(HudBumperStickerType[] bumperStickerTyps, string path);
+
+        /// <summary>
         /// Imports <see cref="HudPlayerType"/> on the specified path
         /// </summary>
         /// <param name="path">Path to player type</param>
         HudPlayerType[] ImportPlayerType(string path);
+
+        /// <summary>
+        /// Imports <see cref="HudBumperStickerType"/> on the specified path
+        /// </summary>
+        /// <param name="path">Path to bumper sticker type</param>
+        HudBumperStickerType[] ImportBumperStickerType(string path);
 
         /// <summary>
         /// Sets icons for hud elements based on stats and layout player type settings
@@ -137,10 +149,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <summary>
         /// Gets the names of available layouts for specified <see cref="EnumPokerSites"/> poker site, <see cref="EnumTableType"/> table type and <see cref="EnumGameType"/> game type
         /// </summary>
-        /// <param name="pokerSite">Poker site</param>
-        /// <param name="tableType">Type of table</param>
-        /// <param name="gameType">Type of game</param>        
-        IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
+        /// <param name="tableType">Type of table</param>        
+        IEnumerable<string> GetAvailableLayouts(EnumTableType tableType);
 
         /// <summary>
         /// Gets the sorted list of <see cref="HudLayoutInfoV2"/> layouts for the specified <see cref="EnumTableType"/> table type

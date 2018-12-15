@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudBumperStickersSettingsViewModelInfo.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="ReplayerHudPanelService.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,16 +10,23 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.Hud;
-using System;
-using System.Collections.Generic;
+using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
-    public class HudBumperStickersSettingsViewModelInfo
+    internal class ReplayerHudPanelService : HudPanelService
     {
-        public IEnumerable<HudBumperStickerType> BumperStickers { get; set; }
+        private static readonly Point initialTableSize = new Point(1060, 550);
 
-        public Action Save { get; set; }
+        /// <summary>
+        /// Gets the initial(default) size of the table 
+        /// </summary>
+        public override Point InitialTableSize
+        {
+            get
+            {
+                return initialTableSize;
+            }
+        }
     }
 }

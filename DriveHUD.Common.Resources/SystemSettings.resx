@@ -245,4 +245,7 @@
   <data name="SystemSettings_CurrencyRates" xml:space="preserve">
     <value>http://drivehud.com/appstore/currency.dat</value>
   </data>
+  <data name="SystemSettings_BumperStickerFileDialogFilter" xml:space="preserve">
+    <value>Bumper stickers (.xml)|*.xml</value>
+  </data>
 </root>

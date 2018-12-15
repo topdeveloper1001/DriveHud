@@ -11,11 +11,11 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels.Filters;
-using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.Views;
 using Model.Enums;
 using Model.Filters;
+using Model.Hud;
 using Prism.Interactivity.InteractionRequest;
 using System.Collections.ObjectModel;
 

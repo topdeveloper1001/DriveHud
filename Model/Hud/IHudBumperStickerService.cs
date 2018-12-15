@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudBumperStickersSettingsViewModelInfo.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="IHudBumperStickerService.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,16 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.Hud;
-using System;
 using System.Collections.Generic;
 
-namespace DriveHUD.Application.ViewModels.Hud
+namespace Model.Hud
 {
-    public class HudBumperStickersSettingsViewModelInfo
+    public interface IHudBumperStickerService
     {
-        public IEnumerable<HudBumperStickerType> BumperStickers { get; set; }
-
-        public Action Save { get; set; }
+        /// <summary>
+        /// Gets the default bumper stickers
+        /// </summary>        
+        /// <returns>The collection of <see cref="HudBumperStickerType"/></returns>
+        IEnumerable<HudBumperStickerType> CreateDefaultBumperStickerTypes();
     }
 }

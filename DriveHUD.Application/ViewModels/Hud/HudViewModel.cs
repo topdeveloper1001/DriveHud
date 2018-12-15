@@ -27,6 +27,7 @@ using Model.Data;
 using Model.Enums;
 using Model.Events;
 using Model.Filters;
+using Model.Hud;
 using Model.Settings;
 using Model.Stats;
 using Prism.Events;
@@ -1527,40 +1528,16 @@ namespace DriveHUD.Application.ViewModels
             }
 
             // merge data to current layout (currently we do not expect new stats or deleted stats)
-            var stickersTypesToMerge = (from currentStickerType in CurrentLayout.HudBumperStickerTypes
-                                        join stickerType in hudStickersSettingsViewModel.BumperStickers on currentStickerType.Name equals stickerType.Name into stgj
-                                        from stgrouped in stgj.DefaultIfEmpty()
-                                        where stgrouped != null
-                                        select new { CurrentStickerType = currentStickerType, StickerType = stgrouped }).ToArray();
+            var stickersTypesToMergeDelete = (from currentStickerType in CurrentLayout.HudBumperStickerTypes
+                                              join stickerType in hudStickersSettingsViewModel.BumperStickers on currentStickerType.Name equals stickerType.Name into stgj
+                                              from stgrouped in stgj.DefaultIfEmpty()
+                                              select new { CurrentStickerType = currentStickerType, StickerType = stgrouped }).ToArray();
+
+            var stickersTypesToMerge = stickersTypesToMergeDelete.Where(x => x.StickerType != null);
 
             stickersTypesToMerge.ForEach(st =>
             {
-                st.CurrentStickerType.MinSample = st.StickerType.MinSample;
-                st.CurrentStickerType.EnableBumperSticker = st.StickerType.EnableBumperSticker;
-                st.CurrentStickerType.SelectedColor = st.StickerType.SelectedColor;
-                st.CurrentStickerType.Name = st.StickerType.Name;
-                st.CurrentStickerType.Description = st.StickerType.Description;
-
-                if (st.StickerType.FilterModelCollection != null)
-                {
-                    st.CurrentStickerType.FilterModelCollection = new IFilterModelCollection(st.StickerType.FilterModelCollection.Select(x => (IFilterModel)x.Clone()));
-                }
-                else
-                {
-                    st.CurrentStickerType.FilterModelCollection = new IFilterModelCollection();
-                }
-
-                var statsToMerge = (from currentStat in st.CurrentStickerType.Stats
-                                    join stat in st.StickerType.Stats on currentStat.Stat equals stat.Stat into gj
-                                    from grouped in gj.DefaultIfEmpty()
-                                    where grouped != null
-                                    select new { CurrentStat = currentStat, Stat = grouped }).ToArray();
-
-                statsToMerge.ForEach(s =>
-                {
-                    s.CurrentStat.Low = s.Stat.Low;
-                    s.CurrentStat.High = s.Stat.High;
-                });
+                st.CurrentStickerType.MergeWith(st.StickerType);
             });
 
             var stickerTypesToAdd = (from stickerType in hudStickersSettingsViewModel.BumperStickers
@@ -1572,6 +1549,13 @@ namespace DriveHUD.Application.ViewModels
             stickerTypesToAdd.ForEach(st =>
             {
                 CurrentLayout.HudBumperStickerTypes.Add(st.AddedPlayerType);
+            });
+
+            var stickersTypesToDelete = stickersTypesToMergeDelete.Where(x => x.StickerType == null).Select(x => x.CurrentStickerType).ToArray();
+
+            stickersTypesToDelete.ForEach(bs =>
+            {
+                CurrentLayout.HudBumperStickerTypes.Remove(bs);
             });
 
             CurrentLayout.HudBumperStickerTypes.ForEach(x => x.InitializeFilterPredicate());

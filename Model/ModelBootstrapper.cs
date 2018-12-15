@@ -51,6 +51,7 @@ namespace Model
             container.RegisterType<IOpponentReportService, OpponentReportService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IPopulationReportService, PopulationReportService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IHudPlayerTypeService, HudPlayerTypeService>();
+            container.RegisterType<IHudBumperStickerService, HudBumperStickerService>();
             container.RegisterType<IEquitySolver, EquitySolver>();
             container.RegisterType<IHudStoreUploadModel, HudStoreUploadModel>();
             container.RegisterType<IHudStoreWebService, HudStoreWebService>();

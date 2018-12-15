@@ -64,6 +64,8 @@ namespace DriveHUD.Entities
         [EnumMember]
         SpartanPoker = 22,
         [EnumMember]
-        PPPoker = 23
+        PPPoker = 23,
+        [EnumMember]
+        DriveHUDReplayer = 24
     }
 }
