@@ -36,6 +36,18 @@ namespace Model.Data
 
         public HudIndicators(IEnumerable<Stat> heatMapStats) : base()
         {
+            InitializeHeatMaps(heatMapStats);
+        }
+
+        public void InitializeHeatMaps(IEnumerable<Stat> heatMapStats)
+        {
+            if (heatMapStats == null)
+            {
+                return;
+            }
+
+            heatMaps.Clear();
+
             var heatMapStatsHash = new HashSet<Stat>(heatMapStats.Distinct());
 
             var heatMapsStats = StatsProvider.StatsBases.Values.Where(x => heatMapStatsHash.Contains(x.Stat));

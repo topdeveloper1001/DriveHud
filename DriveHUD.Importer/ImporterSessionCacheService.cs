@@ -125,7 +125,7 @@ namespace DriveHUD.Importers
         /// Stores specified player data in cache
         /// </summary>
         /// <param name="cacheInfo"><see cref="PlayerStatsSessionCacheInfo"/> to store in cache</param>    
-        public void AddOrUpdatePlayersStats(IEnumerable<PlayerStatsSessionCacheInfo> cacheInfos, string session, ISessionStatisticFilter filter)
+        public void AddOrUpdatePlayersStats(IEnumerable<PlayerStatsSessionCacheInfo> cacheInfos, string session, SessionStatisticCondition condition)
         {
             if (!isStarted || cacheInfos == null || !cacheInfos.Any() || string.IsNullOrEmpty(session))
             {
@@ -149,10 +149,18 @@ namespace DriveHUD.Importers
                 var sessionData = GetOrAddSessionData(sessionCreationInfo);
 
                 // clear statistic for all players except for hero if filter was changed                
-                if (!filter.Equals(sessionData.Filter))
+                if (!condition.Filter.Equals(sessionData.Filter))
                 {
                     sessionData.StatisticByPlayer.RemoveByCondition(x => !x.Value.IsHero);
-                    sessionData.Filter = filter;
+                    sessionData.Filter = condition.Filter;
+                }
+
+                // clear statistic for all players if heat map stats was changed            
+                if (condition.HeatMapStats.Count() > 0 &&
+                        condition.HeatMapStats.Any(x => !sessionData.HeatMapStats.Contains(x)))
+                {
+                    sessionData.StatisticByPlayer.Clear();
+                    sessionData.HeatMapStats = condition.HeatMapStats;
                 }
 
                 var playerSessionCacheStatistic = GetSessionCacheStatistic(cacheInfos, sessionData);
@@ -273,6 +281,8 @@ namespace DriveHUD.Importers
                 {
                     continue;
                 }
+
+                sessionCacheStatistic.PlayerData.InitializeHeatMaps(sessionData.HeatMapStats);
 
                 // read data from statistic
                 var taskToReadPlayerStats = Task.Run(() =>

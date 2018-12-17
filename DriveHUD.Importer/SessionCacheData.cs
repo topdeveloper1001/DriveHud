@@ -13,6 +13,7 @@
 using DriveHUD.Entities;
 using Model;
 using Model.Data;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 
@@ -34,6 +35,7 @@ namespace DriveHUD.Importers
             lastHandStatisticByPlayer = new Dictionary<PlayerCollectionItem, Playerstatistic>();
             stickersStatisticByPlayer = new Dictionary<PlayerCollectionItem, Dictionary<string, HudLightIndicators>>();
             playerLayoutMap = new Dictionary<PlayerCollectionItem, string>();
+            HeatMapStats = new List<Stat>();
             LastModified = DateTime.Now;
         }
 
@@ -68,6 +70,12 @@ namespace DriveHUD.Importers
         }
 
         public ISessionStatisticFilter Filter
+        {
+            get;
+            set;
+        }
+
+        public IEnumerable<Stat> HeatMapStats
         {
             get;
             set;

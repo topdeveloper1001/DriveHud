@@ -217,7 +217,8 @@ namespace DriveHUD.Application.TableConfigurators
                     var layoutHeatMapStats = new HashSet<Stat>(layout.GetHeatMapStats());
 
                     // there are no loaded heat map stats
-                    if (layoutHeatMapStats.Any(x => !heatMapStats.Contains(x)))
+                    if (layoutHeatMapStats.Count > 0 &&
+                        layoutHeatMapStats.Any(x => !heatMapStats.Contains(x)))
                     {
                         viewModel.IsLoadingHUD = true;
                         playerIndicators.Clear();
