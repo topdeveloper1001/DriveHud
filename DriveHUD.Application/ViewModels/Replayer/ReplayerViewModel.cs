@@ -918,6 +918,20 @@ namespace DriveHUD.Application.ViewModels.Replayer
             }
         }
 
+        private bool isLoadingHUD;
+
+        public bool IsLoadingHUD
+        {
+            get
+            {
+                return isLoadingHUD;
+            }
+            set
+            {
+                SetProperty(ref isLoadingHUD, value);
+            }
+        }
+
         #endregion
     }
 }

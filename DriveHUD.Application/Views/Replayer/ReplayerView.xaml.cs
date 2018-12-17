@@ -115,13 +115,7 @@ namespace DriveHUD.Application.Views.Replayer
             get { return DataContext as ReplayerViewModel; }
         }
 
-        private IReplayerTableConfigurator Configurator
-        {
-            get
-            {
-                return Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<IReplayerTableConfigurator>();
-            }
-        }
+        private IReplayerTableConfigurator Configurator = Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<IReplayerTableConfigurator>();
 
         private void RadWindow_Closed(object sender, WindowClosedEventArgs e)
         {
@@ -179,6 +173,6 @@ namespace DriveHUD.Application.Views.Replayer
             }
 
             previousMenuItem = menuItem;
-        }      
+        }
     }
 }
