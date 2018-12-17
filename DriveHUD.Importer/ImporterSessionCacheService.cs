@@ -407,7 +407,7 @@ namespace DriveHUD.Importers
         /// <param name="stat"></param>
         /// <param name="playerStickersCacheData"></param>
         /// <param name="playerStickersDictionary"></param>
-        private void AddStatToSticker(Playerstatistic stat, PlayerStickersCacheData playerStickersCacheData, Dictionary<string, HudLightIndicators> playerStickersDictionary)
+        private void AddStatToSticker(Playerstatistic stat, PlayerStickersCacheData playerStickersCacheData, Dictionary<string, HudStickerIndicators> playerStickersDictionary)
         {
             foreach (var stickerFilter in playerStickersCacheData.StickerFilters)
             {
@@ -422,7 +422,7 @@ namespace DriveHUD.Importers
                 }
                 else
                 {
-                    playerStickersDictionary.Add(stickerFilter.Key, new HudLightIndicators(new[] { stat.Copy() }));
+                    playerStickersDictionary.Add(stickerFilter.Key, new HudStickerIndicators(new[] { stat.Copy() }));
                 }
             }
         }
@@ -460,7 +460,7 @@ namespace DriveHUD.Importers
                     }
                 }
 
-                Dictionary<string, HudLightIndicators> playerStickersDictionary = null;
+                Dictionary<string, HudStickerIndicators> playerStickersDictionary = null;
 
                 if (sessionData.StickersStatisticByPlayer.ContainsKey(playerStickersCacheData.Player))
                 {
@@ -468,7 +468,7 @@ namespace DriveHUD.Importers
                 }
                 else
                 {
-                    playerStickersDictionary = new Dictionary<string, HudLightIndicators>();
+                    playerStickersDictionary = new Dictionary<string, HudStickerIndicators>();
                     sessionData.StickersStatisticByPlayer.Add(playerStickersCacheData.Player, playerStickersDictionary);
                 }
 
@@ -492,7 +492,7 @@ namespace DriveHUD.Importers
         /// <param name="session">Session</param>
         /// <param name="playerName">Player name</param>
         /// <returns>Dictionary of bumper stickers and related statistic</returns>
-        public Dictionary<string, HudLightIndicators> GetPlayersStickersStatistics(string session, PlayerCollectionItem player)
+        public Dictionary<string, HudStickerIndicators> GetPlayersStickersStatistics(string session, PlayerCollectionItem player)
         {
             if (!isStarted || string.IsNullOrWhiteSpace(session))
             {
@@ -627,7 +627,7 @@ namespace DriveHUD.Importers
 
         private class PlayerStickersCacheDataInfo
         {
-            public Dictionary<string, HudLightIndicators> PlayerStickersDictionary { get; set; }
+            public Dictionary<string, HudStickerIndicators> PlayerStickersDictionary { get; set; }
 
             public PlayerStickersCacheData PlayerStickersCacheData { get; set; }
 

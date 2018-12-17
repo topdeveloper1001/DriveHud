@@ -222,6 +222,7 @@
     <Compile Include="TcpImportersTests\TcpImporterTestUtils.cs" />
     <Compile Include="UnitTests\ConverterTests.cs" />
     <Compile Include="UnitTests\PartyPokerJackpotTableFinderTests.cs" />
+    <Compile Include="UnitTests\PlayerStatisticPerformanceTest.cs" />
     <Compile Include="Utils\AssertionUtils.cs" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt" />

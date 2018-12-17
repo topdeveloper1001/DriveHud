@@ -26,14 +26,14 @@ namespace DriveHUD.Importers
     {
         private readonly Dictionary<PlayerCollectionItem, SessionCacheStatistic> statisticByPlayer;
         private readonly Dictionary<PlayerCollectionItem, Playerstatistic> lastHandStatisticByPlayer;
-        private readonly Dictionary<PlayerCollectionItem, Dictionary<string, HudLightIndicators>> stickersStatisticByPlayer;
+        private readonly Dictionary<PlayerCollectionItem, Dictionary<string, HudStickerIndicators>> stickersStatisticByPlayer;
         private readonly Dictionary<PlayerCollectionItem, string> playerLayoutMap;
 
         public SessionCacheData()
         {
             statisticByPlayer = new Dictionary<PlayerCollectionItem, SessionCacheStatistic>();
             lastHandStatisticByPlayer = new Dictionary<PlayerCollectionItem, Playerstatistic>();
-            stickersStatisticByPlayer = new Dictionary<PlayerCollectionItem, Dictionary<string, HudLightIndicators>>();
+            stickersStatisticByPlayer = new Dictionary<PlayerCollectionItem, Dictionary<string, HudStickerIndicators>>();
             playerLayoutMap = new Dictionary<PlayerCollectionItem, string>();
             HeatMapStats = new List<Stat>();
             LastModified = DateTime.Now;
@@ -55,7 +55,7 @@ namespace DriveHUD.Importers
             }
         }
 
-        public Dictionary<PlayerCollectionItem, Dictionary<string, HudLightIndicators>> StickersStatisticByPlayer
+        public Dictionary<PlayerCollectionItem, Dictionary<string, HudStickerIndicators>> StickersStatisticByPlayer
         {
             get
             {

@@ -199,6 +199,7 @@
     <Compile Include="Data\HoleCardsReportRecord.cs" />
     <Compile Include="Data\HudIndicators.cs" />
     <Compile Include="Data\HudLightIndicators.cs" />
+    <Compile Include="Data\HudStickerIndicators.cs" />
     <Compile Include="Data\Indicators.cs" />
     <Compile Include="Data\IThreadSafeIndicators.cs" />
     <Compile Include="Data\LightIndicators.cs" />

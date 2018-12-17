@@ -75,6 +75,6 @@ namespace DriveHUD.Importers
         /// <param name="session">Session</param>
         /// <param name="player">Player name</param>
         /// <returns>Dictionary of sticker-related statistics accessed by sticker name</returns>
-        Dictionary<string, HudLightIndicators> GetPlayersStickersStatistics(string session, PlayerCollectionItem player);
+        Dictionary<string, HudStickerIndicators> GetPlayersStickersStatistics(string session, PlayerCollectionItem player);
     }
 }

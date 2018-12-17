@@ -648,7 +648,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <summary>
         /// Sets stickers for hud elements based on stats and bumper sticker settings
         /// </summary>
-        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, HudLightIndicators> stickersStatistics, HudLayoutInfoV2 layout)
+        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, HudStickerIndicators> stickersStatistics, HudLayoutInfoV2 layout)
         {
             hudElement.Stickers = new ObservableCollection<HudBumperStickerType>();
 
@@ -659,7 +659,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             foreach (var sticker in layout.HudBumperStickerTypes.Where(x => x.EnableBumperSticker))
             {
-                if (!stickersStatistics.TryGetValue(sticker.Name, out HudLightIndicators statistics) ||
+                if (!stickersStatistics.TryGetValue(sticker.Name, out HudStickerIndicators statistics) ||
                     statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0 ||
                     !IsInRange(hudElement, sticker.Stats, statistics))
                 {
