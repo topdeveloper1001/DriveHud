@@ -13,8 +13,10 @@
 using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using HandHistories.Parser.Utils.FastParsing;
+using Model.Enums;
 using Model.Stats;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Model.Data
 {
@@ -30,6 +32,14 @@ namespace Model.Data
         public HudIndicators(IEnumerable<Playerstatistic> playerStatistic) : base(playerStatistic)
         {
             InitializeHeatMaps();
+        }
+
+        public HudIndicators(IEnumerable<Stat> heatMapStats) : base()
+        {
+            var heatMapStatsHash = new HashSet<Stat>(heatMapStats.Distinct());
+
+            var heatMapsStats = StatsProvider.StatsBases.Values.Where(x => heatMapStatsHash.Contains(x.Stat));
+            heatMapsStats.ForEach(heatMapStat => heatMaps.Add(heatMapStat, new HeatMapDto()));
         }
 
         private void InitializeHeatMaps()
@@ -71,8 +81,8 @@ namespace Model.Data
                     heatMaps[stat].OccuredByCardRange.Add(cardsRange, 0);
                 }
 
-                heatMaps[stat].OccuredByCardRange[cardsRange] += statDto.Occurred;                
+                heatMaps[stat].OccuredByCardRange[cardsRange] += statDto.Occurred;
             }
-        }       
-    }  
+        }
+    }
 }
