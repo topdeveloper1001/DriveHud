@@ -392,7 +392,7 @@ namespace DriveHUD.Application.ViewModels
         private async void StartHud()
         {
             LogProvider.Log.Info(string.Format("Memory before starting auto import: {0:N0}", GC.GetTotalMemory(false)));
-
+        
             IsHudRunning = true;
 
             await hudTransmitter.InitializeAsync();
