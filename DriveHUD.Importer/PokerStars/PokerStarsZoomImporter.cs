@@ -163,7 +163,18 @@ namespace DriveHUD.Importers.PokerStars
         {
             try
             {
-                var auditFileContent = File.ReadAllText(auditFile);
+                string auditFileContent = null;
+
+                using (var fs = new FileStream(auditFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (var sr = new StreamReader(fs))
+                    {
+                        if (!sr.EndOfStream)
+                        {
+                            auditFileContent = sr.ReadToEnd();
+                        }
+                    }
+                }
 
                 if (string.IsNullOrEmpty(auditFileContent))
                 {
