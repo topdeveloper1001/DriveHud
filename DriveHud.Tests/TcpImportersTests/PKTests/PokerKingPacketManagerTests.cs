@@ -19,11 +19,15 @@ using Microsoft.QualityTools.Testing.Fakes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using NUnit.Framework;
+using Org.BouncyCastle.Crypto.Parameters;
+using Org.BouncyCastle.Security;
 using System;
 using System.Collections.Generic;
 using System.Fakes;
 using System.IO;
+using System.Linq;
 using System.Net;
+using System.Text;
 
 namespace DriveHud.Tests.PKTests
 {
@@ -114,14 +118,16 @@ namespace DriveHud.Tests.PKTests
 
                 Assert.That(jsonActual, Is.EqualTo(jsonExpected));
             }
-        }
+        }    
 
-        [TestCase(@"Packets\170.33.8.75.31001-192.168.0.104.33644.txt", @"Packets\170.33.8.75.31001-192.168.0.104.33644-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
-        [TestCase(@"Packets\27.155.82.113.31001-192.168.1.4.55025.txt", @"Packets\27.155.82.113.31001-192.168.1.4.55025-pkgt.txt", "yyyy/MM/dd HH:mm:ss")]
-        [TestCase(@"Packets\170.33.8.75.31001-192.168.0.106.9535.txt", @"Packets\170.33.8.75.31001-192.168.0.106.9535-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
-        [TestCase(@"Packets\192.168.0.106.9535-170.33.8.75.31001.txt", @"Packets\192.168.0.106.9535-170.33.8.75.31001-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
-        [TestCase(@"Packets\218.65.131.23.31001-192.168.1.101.2495.txt", @"Packets\218.65.131.23.31001-192.168.1.101.2495-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
-        public void TryParseTest(string file, string expectedPackageTypesFile, string dateFormat)
+        //[TestCase(@"Packets\170.33.8.75.31001-192.168.0.104.33644.txt", @"Packets\170.33.8.75.31001-192.168.0.104.33644-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
+        //[TestCase(@"Packets\27.155.82.113.31001-192.168.1.4.55025.txt", @"Packets\27.155.82.113.31001-192.168.1.4.55025-pkgt.txt", "yyyy/MM/dd HH:mm:ss")]
+        //[TestCase(@"Packets\170.33.8.75.31001-192.168.0.106.9535.txt", @"Packets\170.33.8.75.31001-192.168.0.106.9535-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
+        //[TestCase(@"Packets\192.168.0.106.9535-170.33.8.75.31001.txt", @"Packets\192.168.0.106.9535-170.33.8.75.31001-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
+        //[TestCase(@"Packets\218.65.131.23.31001-192.168.1.101.2495.txt", @"Packets\218.65.131.23.31001-192.168.1.101.2495-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
+        //[TestCase(@"Packets\170.33.8.252.31001-192.168.0.108.2242.txt", @"Packets\170.33.8.252.31001-192.168.0.108.2242-pkgt.txt", "dd/MM/yyyy HH:mm:ss")]
+        [TestCase(@"Packets\170.33.8.252.31001-192.168.0.109.51863.txt", @"Packets\170.33.8.252.31001-192.168.0.109.51863-pkgt.txt", "dd/MM/yyyy HH:mm:ss", "3631e0425ce3f883b9117ee154078b5a")]
+        public void TryParseTest(string file, string expectedPackageTypesFile, string dateFormat, string token)
         {
             var packets = ReadCapturedPackets(file, null);
 
@@ -148,6 +154,20 @@ namespace DriveHud.Tests.PKTests
                             if (expectedPackageTypes.Count > 0)
                             {
                                 Assert.That(package.PackageType, Is.EqualTo(expectedPackageTypes[expectedCommandsIndex++]));
+
+                                var key = Encoding.ASCII.GetBytes(token);
+
+                                var cipher = CipherUtilities.GetCipher("AES/ECB/PKCS5Padding");
+                                cipher.Init(false, new KeyParameter(key));
+
+                                var bytes = cipher.ProcessBytes(package.Body);
+                                var final = cipher.DoFinal();
+
+                                var decryptedData = bytes == null ? final :
+                                    (final == null ? bytes : bytes.Concat(final).ToArray());
+
+                                package.Body = decryptedData;
+                            
                                 AssertPackage(package, packet);
                             }
                         }

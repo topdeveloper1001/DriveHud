@@ -26,12 +26,15 @@ using Model;
 using Model.Settings;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Org.BouncyCastle.Crypto.Parameters;
+using Org.BouncyCastle.Security;
 using PacketDotNet;
 using ProtoBuf;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -48,6 +51,8 @@ namespace DriveHUD.Importers.PokerKing
         protected override EnumPokerSites Site => EnumPokerSites.PokerKing;
 
         protected override string Logger => CustomModulesNames.PKCatcher;
+
+        protected ConcurrentDictionary<uint, string> userTokens = new ConcurrentDictionary<uint, string>();
 
 #if DEBUG
         protected override string HandHistoryFilePrefix => "pk";
@@ -167,6 +172,13 @@ namespace DriveHUD.Importers.PokerKing
                         LogPacket(capturedPacket, ".log");
                     }
 
+                    if (capturedPacket.Destination.Port == PKImporterHelper.LoginPort ||
+                        capturedPacket.Source.Port == PKImporterHelper.LoginPort)
+                    {
+                        ProcessLoginPortPacket(capturedPacket);
+                        continue;
+                    }
+
                     if (!packetManager.TryParse(capturedPacket, out IList<PokerKingPackage> packages))
                     {
                         continue;
@@ -179,13 +191,27 @@ namespace DriveHUD.Importers.PokerKing
                             continue;
                         }
 
+                        var process = connectionsService.GetProcess(capturedPacket);
+                        var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
+
+                        if (!TryDecryptBody(package))
+                        {
+                            if (package.PackageType == PackageType.RequestLeaveRoom)
+                            {
+                                CloseHUD(windowHandle);
+
+                                detectedTableWindows.Remove(windowHandle);
+                                continue;
+                            }
+
+                            SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK_Relogin", windowHandle);
+                            continue;
+                        }
+
                         if (IsAdvancedLogEnabled)
                         {
                             LogPackage(package);
                         }
-
-                        var process = connectionsService.GetProcess(capturedPacket);
-                        var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
 
                         if (package.PackageType == PackageType.RequestJoinRoom)
                         {
@@ -219,13 +245,7 @@ namespace DriveHUD.Importers.PokerKing
                                 },
                                 () => LogProvider.Log.Info(Logger, $"User {package.UserId} left room {package.RoomId}."));
 
-                            Task.Run(() =>
-                            {
-                                Task.Delay(DelayToProcessHands * 2).Wait();
-
-                                var args = new TableClosedEventArgs(windowHandle.ToInt32());
-                                eventAggregator.GetEvent<TableClosedEvent>().Publish(args);
-                            });
+                            CloseHUD(windowHandle);
 
                             detectedTableWindows.Remove(windowHandle);
                             continue;
@@ -293,6 +313,100 @@ namespace DriveHUD.Importers.PokerKing
             }
         }
 
+        protected virtual void CloseHUD(IntPtr windowHandle)
+        {
+            Task.Run(() =>
+            {
+                Task.Delay(DelayToProcessHands * 2).Wait();
+
+                var args = new TableClosedEventArgs(windowHandle.ToInt32());
+                eventAggregator.GetEvent<TableClosedEvent>().Publish(args);
+            });
+        }
+
+        protected virtual void ProcessLoginPortPacket(CapturedPacket packet)
+        {
+            try
+            {
+                if (packet.Bytes.Length == 0)
+                {
+                    return;
+                }
+
+                var packetText = Encoding.UTF8.GetString(packet.Bytes);
+
+                var tokenIndex = packetText.IndexOf("token\":\"", StringComparison.OrdinalIgnoreCase);
+
+                if (tokenIndex <= 0)
+                {
+                    return;
+                }
+
+                var openBracketIndex = packetText.IndexOf("{", StringComparison.OrdinalIgnoreCase);
+
+                if (openBracketIndex < 0)
+                {
+                    return;
+                }
+
+                var closeBracketIndex = packetText.IndexOf("}", openBracketIndex, StringComparison.OrdinalIgnoreCase);
+
+                if (closeBracketIndex < 0)
+                {
+                    return;
+                }
+
+                var json = packetText.Substring(openBracketIndex, closeBracketIndex - openBracketIndex + 1);
+
+                var tokenInfo = JsonConvert.DeserializeObject<PKLoginTokenInfo>(json);
+
+                if (userTokens.TryGetValue(tokenInfo.UserId, out string token) &&
+                    token.Equals(tokenInfo.Token, StringComparison.OrdinalIgnoreCase))
+                {
+                    return;
+                }
+
+                userTokens.AddOrUpdate(tokenInfo.UserId, tokenInfo.Token, (key, oldValue) => tokenInfo.Token);
+
+                LogProvider.Log.Info(Logger, $"Token info {tokenInfo.Token} has been saved for user #{tokenInfo.UserId}");
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(Logger, $"Failed to save token info.", e);
+            }
+        }
+
+        protected virtual bool TryDecryptBody(PokerKingPackage package)
+        {
+            try
+            {
+                if (!userTokens.TryGetValue(package.UserId, out string token))
+                {
+                    LogProvider.Log.Warn(Logger, $"Token for user #{package.UserId} not found");
+                    return false;
+                }
+
+                var key = Encoding.ASCII.GetBytes(token);
+
+                var cipher = CipherUtilities.GetCipher("AES/ECB/PKCS5Padding");
+                cipher.Init(false, new KeyParameter(key));
+
+                var bytes = cipher.ProcessBytes(package.Body);
+                var final = cipher.DoFinal();
+
+                package.Body = (bytes == null) ? final :
+                    ((final == null) ? bytes : bytes.Concat(final).ToArray());
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(Logger, $"Couldn't decode body of {package.PackageType} user #{package.UserId} room #{package.RoomId}", e);
+            }
+
+            return false;
+        }
+
         /// <summary>
         /// Parses package body into the specified type <see cref="{T}"/>, then performs <paramref name="onSuccess"/> if parsing succeed, 
         /// or <paramref name="onFail"/> if parsing failed
@@ -309,7 +423,7 @@ namespace DriveHUD.Importers.PokerKing
                 return;
             }
 
-            LogProvider.Log.Warn(Logger, $"Failed to deserialize {typeof(T)} package");
+            LogProvider.Log.Warn(Logger, $"Failed to deserialize {typeof(T)} package for user #{package.UserId} room #{package.RoomId}");
 
             onFail?.Invoke();
         }
