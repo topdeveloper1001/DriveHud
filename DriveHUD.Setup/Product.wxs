@@ -387,10 +387,7 @@
       </Component>
       <Component Id="pokereval.dll" Guid="{468C33DB-AD98-4DF6-9431-6B5F59A58F78}">
         <File Id="pokereval.dll" KeyPath="yes" Name="pokereval.dll" Source="$(var.BuildDirectory)\pokereval.dll" />
-      </Component>
-      <Component Id="BouncyCastle.Crypto.dll" Guid="{37968A1E-616B-4A50-9196-8F7629E55D8B}">
-        <File Id="BouncyCastle.Crypto.dll" KeyPath="yes" Name="BouncyCastle.Crypto.dll" Source="$(var.BuildDirectory)\BouncyCastle.Crypto.dll" />
-      </Component>
+      </Component>  
     </DirectoryRef>
 
     <DirectoryRef Id="LIB">
@@ -653,8 +650,7 @@
       <ComponentRef Id="bdec.dll" />
       <ComponentRef Id="pokereval.dll" />
       <ComponentRef Id="PacketDotNet.dll" />
-      <ComponentRef Id="EPPlus.dll" />
-      <ComponentRef Id="BouncyCastle.Crypto.dll" />
+      <ComponentRef Id="EPPlus.dll" />      
       <ComponentRef Id="BAD_LAG.PNG" />
       <ComponentRef Id="BOOK.PNG" />
       <ComponentRef Id="CAT_2.PNG" />
