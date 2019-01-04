@@ -648,6 +648,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     return Currency.EURO;
                 case "INR":
                     return Currency.INR;
+                case "CAD":
+                    return Currency.CAD;
                 default:
                     LogProvider.Log.Warn(this, $"Unrecognized currency symbol {tagValue}");
                     return Currency.USD;
