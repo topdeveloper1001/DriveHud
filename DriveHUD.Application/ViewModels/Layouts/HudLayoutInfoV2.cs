@@ -111,6 +111,11 @@ namespace DriveHUD.Application.ViewModels.Layouts
         {
             var heatMapStats = LayoutTools
                 .OfType<HudLayoutHeatMapTool>()
+                .Concat(LayoutTools
+                    .OfType<HudLayoutGaugeIndicator>()
+                    .Where(x => x.Tools != null)
+                    .SelectMany(x => x.Tools)
+                    .OfType<HudLayoutHeatMapTool>())
                 .Where(x => x.BaseStat != null)
                 .Select(x => x.BaseStat.Stat)
                 .Distinct();
