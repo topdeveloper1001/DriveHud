@@ -243,6 +243,8 @@ namespace DriveHUD.Importers
                         IsHero = true,
                         GameFormat = cacheInfo.GameFormat
                     };
+
+                    sessionCacheStatistic.PlayerData.InitializeHeatMaps(sessionData.HeatMapStats);
                 }
                 // try to check existing sessions for this player
                 else
@@ -250,7 +252,7 @@ namespace DriveHUD.Importers
                     var similarPlayerSession = cachedData.Values.FirstOrDefault(x => x.PokerSiteId == sessionData.PokerSiteId &&
                         x.IsTourney == sessionData.IsTourney &&
                         GameTypeUtils.CompareGameType((GameType)x.PokerGameTypeId, (GameType)sessionData.PokerGameTypeId) &&
-                        ((x.Filter == null && sessionData.Filter == null) || x.Filter.Equals(sessionData.Filter)) &&
+                        ((x.Filter == null && sessionData.Filter == null) || x.Filter.Equals(sessionData.Filter)) &&                       
                         x.StatisticByPlayer.ContainsKey(cacheInfo.Player));
 
                     if (similarPlayerSession != null &&
@@ -274,7 +276,7 @@ namespace DriveHUD.Importers
 
                 if (isNewSessionCacheStatistic)
                 {
-                    sessionData.StatisticByPlayer.Add(cacheInfo.Player, sessionCacheStatistic); ;
+                    sessionData.StatisticByPlayer.Add(cacheInfo.Player, sessionCacheStatistic);
                 }
 
                 if (!needToReadStatistic)
