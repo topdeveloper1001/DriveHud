@@ -12,6 +12,7 @@
 
 using DriveHUD.Common;
 using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Infrastructure.CustomServices;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
@@ -1196,6 +1197,14 @@ namespace DriveHUD.Importers
                 {
                     // only 1 winner
                     if (tournamentName.IndexOf("KAMIKAZE", StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        return totalPrize != 0 && finishPosition == 1 ? Utils.ConvertToCents(totalPrize) : 0;
+                    }
+                }
+
+                if (siteNetwork == EnumPokerNetworks.WPN)
+                {
+                    if (tournamentName.ContainsIgnoreCase("Jackpot"))
                     {
                         return totalPrize != 0 && finishPosition == 1 ? Utils.ConvertToCents(totalPrize) : 0;
                     }
