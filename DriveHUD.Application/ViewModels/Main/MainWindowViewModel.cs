@@ -625,9 +625,15 @@ namespace DriveHUD.Application.ViewModels
 
                     playersCacheInfo = playersCacheInfo.Where(x => x.GameNumber == e.GameNumber).ToList();
 
+                    var condition = new SessionStatisticCondition
+                    {
+                        Filter = filter,
+                        HeatMapStats = activeLayout.GetHeatMapStats()
+                    };
+
                     using (var pf = new PerformanceMonitor($"AddOrUpdatePlayersStats for hand #{gameInfo.GameNumber}, session={gameInfo.Session}", isAdvancedLoggingEnabled, this))
                     {
-                        importerSessionCacheService.AddOrUpdatePlayersStats(playersCacheInfo, gameInfo.Session, filter);
+                        importerSessionCacheService.AddOrUpdatePlayersStats(playersCacheInfo, gameInfo.Session, condition);
                     }
                 }
 
@@ -1682,6 +1688,9 @@ namespace DriveHUD.Application.ViewModels
             if (e.PropertyName == ReflectionHelper.GetPath<SingletonStorageModel>(p => p.PlayerSelectedItem))
             {
                 Load();
+
+                eventAggregator.GetEvent<UpdateFilterRequestEvent>()
+                    .Publish(new UpdateFilterRequestEventArgs());
             }
         }
 

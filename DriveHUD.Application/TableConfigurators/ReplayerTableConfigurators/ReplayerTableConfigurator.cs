@@ -38,6 +38,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -113,10 +114,10 @@ namespace DriveHUD.Application.TableConfigurators
 
                 CreateTable(diagram);
                 CreatePlayersLayout(diagram, dgCanvas, viewModel);
-                InitializeHUD(dgCanvas, viewModel);
                 CreateCurrentPotValueLabel(diagram, viewModel);
                 CreateTotalPotValueLabel(diagram, viewModel);
                 PlaceTableCardPanels(diagram, viewModel);
+                InitializeHUD(dgCanvas, viewModel);
             }
             catch (Exception e)
             {
@@ -178,10 +179,15 @@ namespace DriveHUD.Application.TableConfigurators
             }
         }
 
-        private List<HudIndicators> playerIndicators;
+        private Dictionary<string, HudIndicators> playerIndicators = new Dictionary<string, HudIndicators>();
+        private HashSet<Stat> heatMapStats;
 
-        private void InitializeHUD(HudDragCanvas dgCanvas, ReplayerViewModel viewModel)
+        private async void InitializeHUD(HudDragCanvas dgCanvas, ReplayerViewModel viewModel)
         {
+            ClearHUD(dgCanvas);
+
+            viewModel.IsLoadingHUD = true;
+
             var seats = (int)CurrentCapacity;
 
             var tableType = (EnumTableType)viewModel.CurrentGame.GameDescription.SeatType.MaxPlayers;
@@ -208,6 +214,19 @@ namespace DriveHUD.Application.TableConfigurators
 
                     var layout = hudLayoutsService.GetLayout(layoutName);
 
+                    var layoutHeatMapStats = new HashSet<Stat>(layout.GetHeatMapStats());
+
+                    // there are no loaded heat map stats
+                    if (layoutHeatMapStats.Count > 0 &&
+                        layoutHeatMapStats.Any(x => !heatMapStats.Contains(x)))
+                    {
+                        viewModel.IsLoadingHUD = true;
+                        playerIndicators.Clear();
+                        LoadIndicators(seats, viewModel, layoutHeatMapStats);
+                        heatMapStats = layoutHeatMapStats;
+                        viewModel.IsLoadingHUD = false;
+                    }
+
                     ClearHUD(dgCanvas);
                     LoadHUD(dgCanvas, viewModel, layout);
 
@@ -219,26 +238,59 @@ namespace DriveHUD.Application.TableConfigurators
                 }
             });
 
-            playerIndicators = new List<HudIndicators>();
+            heatMapStats = new HashSet<Stat>(activeLayout.GetHeatMapStats());
+
+            await Task.Run(() => LoadIndicators(seats, viewModel, heatMapStats));
+
+            LoadHUD(dgCanvas, viewModel, activeLayout);
+
+            viewModel.IsLoadingHUD = false;
+        }
+
+        private void LoadIndicators(int seats, ReplayerViewModel viewModel, IEnumerable<Stat> heatMapStats)
+        {
+            var tasksToLoad = new List<Task>();
 
             for (var i = 0; i < seats; i++)
             {
                 var player = viewModel.PlayersCollection[i];
 
-                var playerData = new HudIndicators();
+                if (playerIndicators.ContainsKey(player.Name))
+                {
+                    continue;
+                }
+
+                var playerData = new HudIndicators(heatMapStats);
 
                 // read data from statistic
-                playerStatisticRepository
+                var taskToReadPlayerStats = Task.Run(() =>
+                {
+                    if (player.Name == storageModel.PlayerSelectedItem.Name &&
+                        (short?)storageModel.PlayerSelectedItem.PokerSite == viewModel.CurrentHand.PokersiteId)
+                    {
+                        storageModel.StatisticCollection.ToList()
+                           .Where(stat => (stat.PokersiteId == (short)viewModel.CurrentGame.GameDescription.Site) &&
+                                stat.IsTourney == viewModel.CurrentGame.GameDescription.IsTournament &&
+                                GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, viewModel.CurrentGame.GameDescription.GameType))
+                           .ForEach(stat => playerData.AddStatistic(stat));
+
+                        return;
+                    }
+
+                    playerStatisticRepository
                        .GetPlayerStatistic(player.Name, (short)viewModel.CurrentGame.GameDescription.Site)
                        .Where(stat => (stat.PokersiteId == (short)viewModel.CurrentGame.GameDescription.Site) &&
                            stat.IsTourney == viewModel.CurrentGame.GameDescription.IsTournament &&
                            GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, viewModel.CurrentGame.GameDescription.GameType))
                        .ForEach(stat => playerData.AddStatistic(stat));
+                });
 
-                playerIndicators.Add(playerData);
+                tasksToLoad.Add(taskToReadPlayerStats);
+
+                playerIndicators.Add(player.Name, playerData);
             }
 
-            LoadHUD(dgCanvas, viewModel, activeLayout);
+            Task.WhenAll(tasksToLoad).Wait();
         }
 
         private void ClearHUD(HudDragCanvas dgCanvas)
@@ -253,6 +305,7 @@ namespace DriveHUD.Application.TableConfigurators
 
         private void LoadHUD(HudDragCanvas dgCanvas, ReplayerViewModel viewModel, HudLayoutInfoV2 activeLayout)
         {
+
             var seats = (int)CurrentCapacity;
 
             var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>(ReplayerPokerSite.ToString());
@@ -292,12 +345,11 @@ namespace DriveHUD.Application.TableConfigurators
 
                 var hudElement = hudElementCreator.Create(hudElementCreationInfo);
 
-                if (hudElement == null)
+                if (hudElement == null ||
+                    !playerIndicators.TryGetValue(player.Name, out HudIndicators playerData))
                 {
                     continue;
                 }
-
-                var playerData = playerIndicators[i];
 
                 hudElement.PlayerName = player.Name;
                 hudElement.TotalHands = playerData.TotalHands;

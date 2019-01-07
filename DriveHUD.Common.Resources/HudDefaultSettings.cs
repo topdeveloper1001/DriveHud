@@ -31,7 +31,7 @@ namespace DriveHUD.Common.Resources
 
         public const double HudTableHeight = 568;
 
-        public const double HudTableWidth = 812;
+        public const double HudTableWidth = 760;
 
         public const int TableHeight = 320;
 

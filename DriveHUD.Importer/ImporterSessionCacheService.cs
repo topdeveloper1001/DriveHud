@@ -125,7 +125,7 @@ namespace DriveHUD.Importers
         /// Stores specified player data in cache
         /// </summary>
         /// <param name="cacheInfo"><see cref="PlayerStatsSessionCacheInfo"/> to store in cache</param>    
-        public void AddOrUpdatePlayersStats(IEnumerable<PlayerStatsSessionCacheInfo> cacheInfos, string session, ISessionStatisticFilter filter)
+        public void AddOrUpdatePlayersStats(IEnumerable<PlayerStatsSessionCacheInfo> cacheInfos, string session, SessionStatisticCondition condition)
         {
             if (!isStarted || cacheInfos == null || !cacheInfos.Any() || string.IsNullOrEmpty(session))
             {
@@ -149,10 +149,18 @@ namespace DriveHUD.Importers
                 var sessionData = GetOrAddSessionData(sessionCreationInfo);
 
                 // clear statistic for all players except for hero if filter was changed                
-                if (!filter.Equals(sessionData.Filter))
+                if (!condition.Filter.Equals(sessionData.Filter))
                 {
                     sessionData.StatisticByPlayer.RemoveByCondition(x => !x.Value.IsHero);
-                    sessionData.Filter = filter;
+                    sessionData.Filter = condition.Filter;
+                }
+
+                // clear statistic for all players if heat map stats was changed            
+                if (condition.HeatMapStats.Count() > 0 &&
+                        condition.HeatMapStats.Any(x => !sessionData.HeatMapStats.Contains(x)))
+                {
+                    sessionData.StatisticByPlayer.Clear();
+                    sessionData.HeatMapStats = condition.HeatMapStats;
                 }
 
                 var playerSessionCacheStatistic = GetSessionCacheStatistic(cacheInfos, sessionData);
@@ -235,6 +243,8 @@ namespace DriveHUD.Importers
                         IsHero = true,
                         GameFormat = cacheInfo.GameFormat
                     };
+
+                    sessionCacheStatistic.PlayerData.InitializeHeatMaps(sessionData.HeatMapStats);
                 }
                 // try to check existing sessions for this player
                 else
@@ -242,7 +252,7 @@ namespace DriveHUD.Importers
                     var similarPlayerSession = cachedData.Values.FirstOrDefault(x => x.PokerSiteId == sessionData.PokerSiteId &&
                         x.IsTourney == sessionData.IsTourney &&
                         GameTypeUtils.CompareGameType((GameType)x.PokerGameTypeId, (GameType)sessionData.PokerGameTypeId) &&
-                        ((x.Filter == null && sessionData.Filter == null) || x.Filter.Equals(sessionData.Filter)) &&
+                        ((x.Filter == null && sessionData.Filter == null) || x.Filter.Equals(sessionData.Filter)) &&                       
                         x.StatisticByPlayer.ContainsKey(cacheInfo.Player));
 
                     if (similarPlayerSession != null &&
@@ -266,13 +276,15 @@ namespace DriveHUD.Importers
 
                 if (isNewSessionCacheStatistic)
                 {
-                    sessionData.StatisticByPlayer.Add(cacheInfo.Player, sessionCacheStatistic); ;
+                    sessionData.StatisticByPlayer.Add(cacheInfo.Player, sessionCacheStatistic);
                 }
 
                 if (!needToReadStatistic)
                 {
                     continue;
                 }
+
+                sessionCacheStatistic.PlayerData.InitializeHeatMaps(sessionData.HeatMapStats);
 
                 // read data from statistic
                 var taskToReadPlayerStats = Task.Run(() =>
@@ -397,7 +409,7 @@ namespace DriveHUD.Importers
         /// <param name="stat"></param>
         /// <param name="playerStickersCacheData"></param>
         /// <param name="playerStickersDictionary"></param>
-        private void AddStatToSticker(Playerstatistic stat, PlayerStickersCacheData playerStickersCacheData, Dictionary<string, HudLightIndicators> playerStickersDictionary)
+        private void AddStatToSticker(Playerstatistic stat, PlayerStickersCacheData playerStickersCacheData, Dictionary<string, HudStickerIndicators> playerStickersDictionary)
         {
             foreach (var stickerFilter in playerStickersCacheData.StickerFilters)
             {
@@ -412,7 +424,7 @@ namespace DriveHUD.Importers
                 }
                 else
                 {
-                    playerStickersDictionary.Add(stickerFilter.Key, new HudLightIndicators(new[] { stat.Copy() }));
+                    playerStickersDictionary.Add(stickerFilter.Key, new HudStickerIndicators(new[] { stat.Copy() }));
                 }
             }
         }
@@ -450,7 +462,7 @@ namespace DriveHUD.Importers
                     }
                 }
 
-                Dictionary<string, HudLightIndicators> playerStickersDictionary = null;
+                Dictionary<string, HudStickerIndicators> playerStickersDictionary = null;
 
                 if (sessionData.StickersStatisticByPlayer.ContainsKey(playerStickersCacheData.Player))
                 {
@@ -458,7 +470,7 @@ namespace DriveHUD.Importers
                 }
                 else
                 {
-                    playerStickersDictionary = new Dictionary<string, HudLightIndicators>();
+                    playerStickersDictionary = new Dictionary<string, HudStickerIndicators>();
                     sessionData.StickersStatisticByPlayer.Add(playerStickersCacheData.Player, playerStickersDictionary);
                 }
 
@@ -482,7 +494,7 @@ namespace DriveHUD.Importers
         /// <param name="session">Session</param>
         /// <param name="playerName">Player name</param>
         /// <returns>Dictionary of bumper stickers and related statistic</returns>
-        public Dictionary<string, HudLightIndicators> GetPlayersStickersStatistics(string session, PlayerCollectionItem player)
+        public Dictionary<string, HudStickerIndicators> GetPlayersStickersStatistics(string session, PlayerCollectionItem player)
         {
             if (!isStarted || string.IsNullOrWhiteSpace(session))
             {
@@ -617,7 +629,7 @@ namespace DriveHUD.Importers
 
         private class PlayerStickersCacheDataInfo
         {
-            public Dictionary<string, HudLightIndicators> PlayerStickersDictionary { get; set; }
+            public Dictionary<string, HudStickerIndicators> PlayerStickersDictionary { get; set; }
 
             public PlayerStickersCacheData PlayerStickersCacheData { get; set; }
 

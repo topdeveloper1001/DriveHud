@@ -367,6 +367,7 @@
     <Compile Include="PokerKing\Model\NoticeStartGame.cs" />
     <Compile Include="PokerKing\Model\PackageType.cs" />
     <Compile Include="PokerKing\Model\PayMoneyItems.cs" />
+    <Compile Include="PokerKing\Model\PKLoginTokenInfo.cs" />
     <Compile Include="PokerKing\Model\PlayerBuyinInfo.cs" />
     <Compile Include="PokerKing\Model\PlayerInfo.cs" />
     <Compile Include="PokerKing\Model\PlayerSettleInfo.cs" />
@@ -475,6 +476,7 @@
     <Compile Include="ProxyBase\ProxyImporter.cs" />
     <Compile Include="SessionCacheData.cs" />
     <Compile Include="SessionCacheStatistic.cs" />
+    <Compile Include="SessionStatisticCondition.cs" />
     <Compile Include="TournamentSettings.cs" />
     <Compile Include="TournamentsResolver.cs" />
     <Compile Include="Winamax\IWinamaxImporter.cs" />

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PKImporterHelper.cs" company="Ace Poker Solutions">
+// <copyright file="SessionStatisticCondition.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,15 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers.PokerKing
-{
-    internal class PKImporterHelper
-    {
-        public static bool IsPortMatch(int port)
-        {
-            return port == 31001 || port == 38001 || port == LoginPort;
-        }
+using Model.Enums;
+using System.Collections.Generic;
 
-        public const int LoginPort = 41001;
+namespace DriveHUD.Importers
+{
+    public class SessionStatisticCondition
+    {
+        public ISessionStatisticFilter Filter { get; set; }
+
+        public IEnumerable<Stat> HeatMapStats { get; set; }
     }
 }

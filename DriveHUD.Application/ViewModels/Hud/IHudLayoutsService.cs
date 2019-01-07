@@ -128,7 +128,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <summary>
         /// Sets stickers for hud elements based on stats and bumper sticker settings
         /// </summary>
-        void SetStickers(HudElementViewModel hudElement, IDictionary<string, HudLightIndicators> stickersStatistics, HudLayoutInfoV2 layout);
+        void SetStickers(HudElementViewModel hudElement, IDictionary<string, HudStickerIndicators> stickersStatistics, HudLayoutInfoV2 layout);
 
         /// <summary>
         /// Sets active layout for the specified <see cref="EnumPokerSites"/> poker site, <see cref="EnumGameType"/> game type and <see cref="EnumTableType"/> table type

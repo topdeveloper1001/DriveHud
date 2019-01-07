@@ -12,15 +12,16 @@
 
 using DriveHUD.Entities;
 using Model.Data;
+using Model.Enums;
 using System.Collections.Generic;
 
 namespace DriveHUD.Importers
 {
     public class SessionCacheStatistic
     {
-        public HudIndicators PlayerData { get; set; } = new HudIndicators();
+        public HudIndicators PlayerData { get; set; } = new HudIndicators(new List<Stat>());
 
-        public HudIndicators SessionPlayerData { get; set; } = new HudIndicators();
+        public HudIndicators SessionPlayerData { get; set; } = new HudIndicators(new List<Stat>());
 
         public bool IsHero { get; set; }
 

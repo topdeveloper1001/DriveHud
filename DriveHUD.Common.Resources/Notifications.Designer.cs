@@ -259,6 +259,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DriveHUD cannot load a HUD since the PK was open prior to DriveHUD being loaded. DriveHUD needs to be loaded first. Please re-login. .
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PK_Relogin {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PK_Relogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
         /// </summary>
         internal static string Notifications_HudLayout_PreLoadingText_PM {

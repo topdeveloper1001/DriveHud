@@ -25,6 +25,7 @@ using HandHistories.Parser.Utils.FastParsing;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -74,9 +75,23 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             return base.GetSessionForFile(fileName);
         }
 
-        private string GetTournamentNumberFromFile(string fileName)
+        protected virtual string GetTournamentNumberFromFile(string fileName)
         {
             var file = Path.GetFileName(fileName);
+
+            // jackpot table
+            var jackpotPrefixIndex = file.IndexOf("TJPTG", StringComparison.OrdinalIgnoreCase);
+
+            if (jackpotPrefixIndex > 0)
+            {
+                var jackpotTournamentEndIndex = file.IndexOf("T", jackpotPrefixIndex + 5);
+
+                if (jackpotTournamentEndIndex > jackpotPrefixIndex)
+                {
+                    var tornamentNumber = file.Substring(jackpotPrefixIndex + 5, jackpotTournamentEndIndex - jackpotPrefixIndex - 5);
+                    return tornamentNumber;
+                }
+            }
 
             var startIndex = file.IndexOf("T", StringComparison.Ordinal);
 
@@ -107,13 +122,6 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             }
 
             return true;
-        }
-
-        protected override void ProcessHand(string handHistory, GameInfo gameInfo)
-        {
-            gameInfo.UpdateAction = UpdateGameInfo;
-
-            base.ProcessHand(handHistory, gameInfo);
         }
 
         protected override IEnumerable<ParsingResult> ImportHand(string handHistory, GameInfo gameInfo, IFileImporter dbImporter, DHProgress progress)
@@ -343,6 +351,61 @@ namespace DriveHUD.Importers.WinningPokerNetwork
         {
             base.Clean();
             handHistoryFileTableType.Clear();
+            sng2HanhHistoryPrefixes.Clear();
+        }
+
+        protected readonly ConcurrentDictionary<string, string> sng2HanhHistoryPrefixes = new ConcurrentDictionary<string, string>();
+
+        private string AddAdditionalDataSNG2(string handHistory, string windowTitle, string tournamentNumber)
+        {
+            if (string.IsNullOrEmpty(tournamentNumber))
+            {
+                return handHistory;
+            }
+
+            try
+            {
+                if (!sng2HanhHistoryPrefixes.TryGetValue(tournamentNumber, out string header))
+                {
+                    var sb = new StringBuilder();
+                    sb.AppendLine("<Game Information>");
+
+                    var isOmaha = windowTitle.ContainsIgnoreCase("Omaha");
+                    var gameType = isOmaha ? "Omaha" : "Hold’em";
+                    var betLimitType = isOmaha ? "Pot Limit" : "No Limit";
+
+                    var title = windowTitle.Substring(0, windowTitle.IndexOf(" -")).Trim();
+
+                    if (!title.ContainsIgnoreCase("Jackpot") && !title.Contains(" "))
+                    {
+                        title = $"{title} Jackpot {(isOmaha ? "Omaha" : "Holdem")}";
+                    }
+
+                    sb.AppendLine($"Title: {title}");
+                    sb.AppendLine($"Entry #: {tournamentNumber}");
+                    sb.AppendLine($"Begin Time: {DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss")} UTC");
+                    sb.AppendLine($"Buyin to Payout: Real To Real");
+                    sb.AppendLine($"Play Type: Sit & Go");
+                    sb.AppendLine($"Game Type: {gameType}");
+                    sb.AppendLine($"Bet Limit Type: {betLimitType}");
+                    sb.AppendLine();
+                    sb.AppendLine("<Hand History>");
+
+                    header = sb.ToString();
+
+                    sng2HanhHistoryPrefixes.AddOrUpdate(tournamentNumber, header, (key, prev) => header);
+                }
+
+                handHistory = $"{header}{handHistory}";
+
+                return handHistory;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Failed to add additional data to SNG2 format hand", e);
+            }
+
+            return handHistory;
         }
 
         private string AddAdditionalData(string handHistory, GameInfo gameInfo)
@@ -356,6 +419,15 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             var parser = handHistoryParserFactory.GetFullHandHistoryParser(handHistory);
 
             var indexGameStarted = handHistory.IndexOf(GameStartedSearchPattern);
+
+            var isSNG2 = false;
+
+            if (indexGameStarted < 0)
+            {
+                indexGameStarted = handHistory.IndexOf(HandV2Prefix);
+
+                isSNG2 = indexGameStarted >= 0;
+            }
 
             string windowTitleText = string.Empty;
 
@@ -414,6 +486,12 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 tournamentNumber = GetTournamentNumber(windowTitleText);
             }
 
+            // add header for sng2 hand
+            if (isSNG2)
+            {
+                return AddAdditionalDataSNG2(handHistory, windowTitleText, tournamentNumber);
+            }
+
             if (!string.IsNullOrWhiteSpace(tournamentNumber))
             {
                 var totalBuyIn = GetTournamentBuyIn(windowTitleText);
@@ -466,7 +544,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 return "FL";
             }
 
-            return "XX";
+            return "NL";
         }
 
         private string GetTableName(string title)
@@ -525,7 +603,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 return 0m;
             }
 
-            if (title.IndexOf("Jackpot Poker", StringComparison.OrdinalIgnoreCase) >= 0)
+            if (title.IndexOf(" Jackpot ", StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 var spaceIndex = title.IndexOf(' ');
 
@@ -550,42 +628,6 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             }
 
             return 0m;
-        }
-
-        private void UpdateGameInfo(IEnumerable<ParsingResult> parsingResults, GameInfo gameInfo)
-        {
-            var parsingResult = parsingResults?.FirstOrDefault();
-
-            if (parsingResult == null || parsingResult.Source == null || gameInfo == null)
-            {
-                return;
-            }
-
-            var window = gameInfo.WindowHandle == 0 ? FindWindow(parsingResult) : new IntPtr(gameInfo.WindowHandle);
-
-            if (window == IntPtr.Zero)
-            {
-                return;
-            }
-
-            // set pointer to found window to prevent another search
-            if (gameInfo.WindowHandle == 0)
-            {
-                gameInfo.WindowHandle = window.ToInt32();
-            }
-
-            var title = WinApi.GetWindowText(window);
-
-            var jackpotIndex = title.IndexOf(" Jackpot");
-
-            // process only jackpot tables
-            if (jackpotIndex < 0 || !ParserUtils.TryParseMoney(title.Substring(0, jackpotIndex).Trim(), out decimal buyin) ||
-                parsingResult.Source.GameDescription == null || !parsingResult.Source.GameDescription.IsTournament)
-            {
-                return;
-            }
-
-            parsingResult.Source.GameDescription.Tournament.BuyIn = Buyin.FromBuyinRake(buyin, 0, Currency.USD);
         }
 
         private enum WPNFormat

@@ -1,0 +1,25 @@
+Game Hand #46380952 - Tournament #10354204 - Holdem(No Limit) - Level 2 (15.00/30.00)- 2019/01/04 13:42:56 UTC *** Summary: GameType: NL, TournamentId: 10354204, TournamentBuyIn: 2
+Table '1' 3-max Seat #1 is the button
+Seat 1: Golocen (570.00)
+Seat 2: Peon_84 (350.00)
+Seat 3: PkrMstrss (580.00)
+Peon_84 posts the small blind 15.00
+PkrMstrss posts the big blind 30.00
+*** HOLE CARDS ***
+Dealt to Peon_84 [Ad 3d]
+Golocen folds
+Peon_84 calls 15.00
+PkrMstrss checks
+*** FLOP *** [2h 6h Kc]
+Main pot 60.00
+Peon_84 checks
+PkrMstrss bets 90.00
+Peon_84 folds
+Uncalled bet (90.00) returned to PkrMstrss
+PkrMstrss does not show
+*** SUMMARY ***
+Total pot 60.00 | Rake 0.00
+Board [2h 6h Kc]
+Seat 1: Golocen (button) folded on the Pre-Flop
+Seat 2: Peon_84 (small blind) folded on the Flop
+Seat 3: PkrMstrss did not show and won 60.00
