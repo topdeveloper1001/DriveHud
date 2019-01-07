@@ -17,6 +17,7 @@ using DriveHUD.Importers.Loggers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -64,7 +65,7 @@ namespace DriveHUD.Importers
                 try
                 {
                     if (IsDisabled())
-                    {                        
+                    {
                         LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "\"{0}\" importer has been disabled. Aborting process.", Identifier));
                         break;
                     }
@@ -86,23 +87,36 @@ namespace DriveHUD.Importers
                         pipeManager.AddHandle(Identifier, pipeServerHandle);
                     }
 
-                    // Buffer for pipe data
-                    var lbBuffer = new byte[BufferSize];
-                    uint numberOfBytesRead;
+                    var totalBuffer = new List<byte>();
 
-                    // Read data from the pipe.
-                    var readResult = WinApi.ReadFile(
-                        pipeServerHandle,
-                        lbBuffer,
-                        BufferSize,
-                        out numberOfBytesRead,
-                        IntPtr.Zero);
+                    bool readResult = false;
+                    uint numberOfBytesRead = 0;
+
+                    do
+                    {
+                        // Buffer for pipe data
+                        var lbBuffer = new byte[BufferSize];
+
+                        // Read data from the pipe.
+                        readResult = WinApi.ReadFile(
+                            pipeServerHandle,
+                            lbBuffer,
+                            BufferSize,
+                            out numberOfBytesRead,
+                            IntPtr.Zero);
+
+                        if (numberOfBytesRead > 0)
+                        {
+                            totalBuffer.AddRange(lbBuffer.Take((int)numberOfBytesRead));
+                        }
+
+                    } while (!readResult && numberOfBytesRead != 0);
 
                     // If client is not connected, or no data in raw
                     if (!readResult || numberOfBytesRead == 0)
                     {
                         try
-                        {
+                        {                            
                             Task.Delay(PipeReadingTimeout).Wait(cancellationTokenSource.Token);
                         }
                         catch (OperationCanceledException)
@@ -114,7 +128,7 @@ namespace DriveHUD.Importers
                     }
 
                     // process pipe's data
-                    dataManager.ProcessData(lbBuffer);
+                    dataManager.ProcessData(totalBuffer.ToArray());
                 }
                 catch (Exception e)
                 {

@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ImporterIdentifier.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="IPokerBaaziCatcher.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,16 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers
+namespace DriveHUD.Importers.PokerBaazi
 {
-    public enum ImporterIdentifier
+    /// <summary>
+    /// Interface of Baazi catcher
+    /// </summary>
+    internal interface IPokerBaaziCatcher : IPokerCatcher
     {
-        Bovada,
-        Ignition,
-        IgnitionInfo,
-        BetOnline,
-        BetOnlineTournament,
-        PokerStarsZoom,
-        PokerBaazi
     }
 }

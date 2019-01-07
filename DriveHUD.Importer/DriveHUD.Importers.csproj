@@ -327,6 +327,12 @@
     <Compile Include="PlayerStatisticReImporter.cs" />
     <Compile Include="PlayerStatsSessionCacheInfo.cs" />
     <Compile Include="PlayerStickersCacheData.cs" />
+    <Compile Include="PokerBaazi\IPokerBaaziCatcher.cs" />
+    <Compile Include="PokerBaazi\IPokerBaaziDataManager.cs" />
+    <Compile Include="PokerBaazi\IPokerBaaziImporter.cs" />
+    <Compile Include="PokerBaazi\PokerBaaziCatcher.cs" />
+    <Compile Include="PokerBaazi\PokerBaaziDataManager.cs" />
+    <Compile Include="PokerBaazi\PokerBaaziImporter.cs" />
     <Compile Include="PokerCatcher.cs" />
     <Compile Include="PokerClientDataManagerInfo.cs" />
     <Compile Include="PokerClientLoggerConfiguration.cs" />

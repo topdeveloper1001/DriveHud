@@ -1613,6 +1613,9 @@
     </Content>
     <Resource Include="images\pm-icon.ico" />
     <Resource Include="images\pk-icon.ico" />
+    <Content Include="Lib\BaaziHook.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Lib\CapPipedI2.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
