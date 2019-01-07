@@ -122,7 +122,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             }
 
             return true;
-        }   
+        }
 
         protected override IEnumerable<ParsingResult> ImportHand(string handHistory, GameInfo gameInfo, IFileImporter dbImporter, DHProgress progress)
         {
@@ -370,18 +370,22 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                     var sb = new StringBuilder();
                     sb.AppendLine("<Game Information>");
 
-                    var title = windowTitle.Substring(0, windowTitle.IndexOf(" -"));
+                    var isOmaha = windowTitle.ContainsIgnoreCase("Omaha");
+                    var gameType = isOmaha ? "Omaha" : "Hold’em";
+                    var betLimitType = isOmaha ? "Pot Limit" : "No Limit";
+
+                    var title = windowTitle.Substring(0, windowTitle.IndexOf(" -")).Trim();
+
+                    if (!title.ContainsIgnoreCase("Jackpot") && !title.Contains(" "))
+                    {
+                        title = $"{title} Jackpot {(isOmaha ? "Omaha" : "Holdem")}";
+                    }
 
                     sb.AppendLine($"Title: {title}");
                     sb.AppendLine($"Entry #: {tournamentNumber}");
                     sb.AppendLine($"Begin Time: {DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss")} UTC");
                     sb.AppendLine($"Buyin to Payout: Real To Real");
                     sb.AppendLine($"Play Type: Sit & Go");
-
-                    var isOmaha = windowTitle.ContainsIgnoreCase("Omaha");
-                    var gameType = isOmaha ? "Omaha" : "Hold’em";
-                    var betLimitType = isOmaha ? "Pot Limit" : "No Limit";
-
                     sb.AppendLine($"Game Type: {gameType}");
                     sb.AppendLine($"Bet Limit Type: {betLimitType}");
                     sb.AppendLine();
@@ -625,7 +629,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
             return 0m;
         }
-    
+
         private enum WPNFormat
         {
             V1,
