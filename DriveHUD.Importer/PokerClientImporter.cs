@@ -116,7 +116,7 @@ namespace DriveHUD.Importers
                     if (!readResult || numberOfBytesRead == 0)
                     {
                         try
-                        {                            
+                        {
                             Task.Delay(PipeReadingTimeout).Wait(cancellationTokenSource.Token);
                         }
                         catch (OperationCanceledException)
@@ -139,6 +139,8 @@ namespace DriveHUD.Importers
             pipeManager.RemoveHandle(Identifier);
 
             LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Pipe for \"{0}\" was closed.", Identifier));
+
+            dataManager.Dispose();
 
             pokerClientLogger?.StopLogging();
 

@@ -214,6 +214,9 @@
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerBovadaFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
+    <Compile Include="PipeImporterTests\PokerBaazi\PokerBaaziPackageTests.cs" />
+    <Compile Include="PipeImporterTests\PokerBaazi\PokerBaaziDataManagerTests.cs" />
+    <Compile Include="PipeImporterTests\PokerBaazi\PokerBaaziTestsHelper.cs" />
     <Compile Include="ProxyImporterTests\Adda52Tests\Adda52JsonPackageTests.cs" />
     <Compile Include="ProxyImporterTests\Adda52Tests\Adda52HandBuilderTests.cs" />
     <Compile Include="ProxyImporterTests\Adda52Tests\Adda52PacketManagerTests.cs" />
@@ -305,6 +308,7 @@
     <Fakes Include="Fakes\System.fakes" />
     <Fakes Include="Fakes\mscorlib.fakes" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLH-Cash-PP-ES-1.txt" />
+    <Content Include="PipeImporterTests\PokerBaazi\TestData\RawData\RawData-1.txt" />
     <Content Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-6-max-no-hero\Result.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -393,6 +397,11 @@
     <Content Include="ProxyImporterTests\Adda52Tests\TestData\Packets\0.0.0.0.8893-127.0.0.1.12032.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\InitResponse.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\RoundResponse.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\SpectatorResponse.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\UserButtonActionResponse.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\WinnerResponse.json" />
     <None Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-6-max-no-hero\Source.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

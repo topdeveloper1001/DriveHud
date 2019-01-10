@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPokerBaaziImporter.cs" company="Ace Poker Solutions">
+// <copyright file="PokerBaaziTestsHelper.cs" company="Ace Poker Solutions">
 // Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,10 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers.PokerBaazi
+namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
 {
-    internal interface IPokerBaaziImporter : IBackgroundProcess, IBaseImporter
+    class PokerBaaziTestsHelper
     {
-        void AddPackage(string data);
+        public const string TestDataFolder = "../../PipeImporterTests/PokerBaazi/TestData";
     }
 }

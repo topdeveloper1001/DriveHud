@@ -10,12 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Utils;
+using DriveHUD.Common.Log;
+using Microsoft.Practices.ServiceLocation;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.PokerBaazi
 {
@@ -25,17 +23,29 @@ namespace DriveHUD.Importers.PokerBaazi
 
         protected string site;
 
-        public void Dispose()
+        private readonly IPokerBaaziImporter importer;
+
+        public PokerBaaziDataManager()
+        {
+            var importerService = ServiceLocator.Current.GetInstance<IImporterService>();
+            importer = importerService.GetImporter<IPokerBaaziImporter>();
+        }
+
+        public virtual void Dispose()
         {
         }
 
-        public void Initialize(PokerClientDataManagerInfo dataManagerInfo)
+        public virtual void Initialize(PokerClientDataManagerInfo dataManagerInfo)
         {
             logger = dataManagerInfo.Logger;
             site = dataManagerInfo.Site;
         }
 
-        public void ProcessData(byte[] data)
+        /// <summary>
+        /// Processes raw data recieved from pipe and put it into the buffer
+        /// </summary>
+        /// <param name="data">Data to process</param>
+        public virtual void ProcessData(byte[] data)
         {
             if (data == null)
             {
@@ -44,13 +54,17 @@ namespace DriveHUD.Importers.PokerBaazi
 
             var dataText = ConvertDataToString(data);
 
-            // Log stream data
-            if (logger != null)
+            // skip all short messages
+            if (string.IsNullOrEmpty(dataText) || dataText.Length < 20)
             {
-                logger.Log(dataText);
+                return;
             }
 
-            Console.WriteLine(dataText);
+            // Log stream data
+            logger?.Log(dataText);
+
+            // send data to importer 
+            importer.AddPackage(dataText);
         }
 
         /// <summary>
@@ -58,13 +72,21 @@ namespace DriveHUD.Importers.PokerBaazi
         /// </summary>
         /// <param name="data">Data to convert</param>
         /// <returns>The result of conversion</returns>
-        protected string ConvertDataToString(byte[] data)
+        protected virtual string ConvertDataToString(byte[] data)
         {
-            var encryptedData = Encoding.UTF8.GetString(data).Replace("\0", string.Empty);
+            try
+            {
+                var encryptedData = Encoding.UTF8.GetString(data).Replace("\0", string.Empty);
 
-            //var dataText = Decrypt(encryptedData);
+                //var dataText = Decrypt(encryptedData);
 
-            return encryptedData;
+                return encryptedData;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Failed to convert raw data to string. [{site}]", e);
+                return null;
+            }
         }
     }
 }

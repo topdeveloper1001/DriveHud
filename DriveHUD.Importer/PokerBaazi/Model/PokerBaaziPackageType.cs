@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPokerBaaziImporter.cs" company="Ace Poker Solutions">
+// <copyright file="PokerBaaziPackageType.cs" company="Ace Poker Solutions">
 // Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,10 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers.PokerBaazi
+namespace DriveHUD.Importers.PokerBaazi.Model
 {
-    internal interface IPokerBaaziImporter : IBackgroundProcess, IBaseImporter
+    internal enum PokerBaaziPackageType
     {
-        void AddPackage(string data);
+        Unknown = 0,
+        InitResponse = 1,
+        SpectatorResponse = 2,
+        UserButtonActionResponse = 3,
+        RoundResponse = 4,
+        WinnerResponse = 5
     }
 }

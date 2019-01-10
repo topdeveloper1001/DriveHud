@@ -12,8 +12,7 @@
 
 namespace DriveHUD.Importers.PokerBaazi
 {
-    internal interface IPokerBaaziImporter : IBackgroundProcess, IBaseImporter
+    internal interface IPokerBaaziDataImporter : IAutoImporter
     {
-        void AddPackage(string data);
     }
 }

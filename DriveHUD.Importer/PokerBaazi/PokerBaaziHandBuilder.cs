@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPokerBaaziImporter.cs" company="Ace Poker Solutions">
+// <copyright file="PokerBaaziHandBuilder.cs" company="Ace Poker Solutions">
 // Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,10 +10,26 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DriveHUD.Importers.PokerBaazi.Model;
+using HandHistories.Objects.Hand;
+
 namespace DriveHUD.Importers.PokerBaazi
 {
-    internal interface IPokerBaaziImporter : IBackgroundProcess, IBaseImporter
+    internal class PokerBaaziHandBuilder : IPokerBaaziHandBuilder
     {
-        void AddPackage(string data);
+        public PokerBaaziInitResponse GetInitResponse(uint roomId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool TryBuild(PokerBaaziPackage package, out HandHistory handHistory)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

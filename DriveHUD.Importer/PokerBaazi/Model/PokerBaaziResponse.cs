@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPokerBaaziImporter.cs" company="Ace Poker Solutions">
+// <copyright file="PokerBaaziResponse.cs" company="Ace Poker Solutions">
 // Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,10 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.Importers.PokerBaazi
+using Newtonsoft.Json;
+
+namespace DriveHUD.Importers.PokerBaazi.Model
 {
-    internal interface IPokerBaaziImporter : IBackgroundProcess, IBaseImporter
+    internal class PokerBaaziResponse<T> where T : class
     {
-        void AddPackage(string data);
+        [JsonProperty("classObj")]
+        public T ClassObj { get; set; }
+
+        [JsonProperty("timestamp")]
+        public long Timestamp { get; set; }     
     }
 }

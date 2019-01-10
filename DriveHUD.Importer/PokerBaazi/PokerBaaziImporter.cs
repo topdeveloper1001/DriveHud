@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PokerBaaziCatcher.cs" company="Ace Poker Solutions">
+// <copyright file="PokerBaaziImporter.cs" company="Ace Poker Solutions">
 // Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,80 +10,146 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Log;
 using DriveHUD.Entities;
+using DriveHUD.Importers.PokerBaazi.Model;
+using HandHistories.Objects.Hand;
+using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
+using System;
+using System.Collections.Concurrent;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.PokerBaazi
 {
-    internal class PokerBaaziImporter : PokerClientImporter, IPokerBaaziImporter
+    internal class PokerBaaziImporter : GenericImporter, IPokerBaaziImporter
     {
-        private const string site = "PokerBaazi";
+        private const int NoDataDelay = 200;
 
-        private const string pipeName = @"\\.\pipe\PBServer";
+        private readonly BlockingCollection<string> packetBuffer = new BlockingCollection<string>();
 
-        protected override ImporterIdentifier Identifier
+        protected readonly ISettingsService settings;
+
+        public PokerBaaziImporter()
+        {
+            settings = ServiceLocator.Current.GetInstance<ISettingsService>();
+        }
+
+        #region IPokerBaaziImporter implementation
+
+        public void AddPackage(string data)
+        {
+            packetBuffer.Add(data);
+        }
+
+        #endregion
+
+        protected override string[] ProcessNames => new string[0];
+
+        protected override EnumPokerSites Site => EnumPokerSites.PokerBaazi;
+
+        protected override bool IsAdvancedLogEnabled
         {
             get
             {
-                return ImporterIdentifier.PokerBaazi;
+                return settings.GetSettings()?.GeneralSettings.IsAdvancedLoggingEnabled ?? false;
             }
         }
 
-        public override string SiteString
+        protected override void DoImport()
         {
-            get
+            try
             {
-                return site;
+                ProcessBuffer();
             }
-        }
-
-        protected override IPokerClientDataManager CreatePokerClientDataManager(IPokerClientEncryptedLogger logger)
-        {
-            var dataManagerInfo = new PokerClientDataManagerInfo
+            catch (Exception e)
             {
-                Logger = logger,
-                Site = site
-            };
-
-            var dataManager = ServiceLocator.Current.GetInstance<IPokerBaaziDataManager>();
-            dataManager.Initialize(dataManagerInfo);
-
-            return dataManager;
-        }
-
-
-        protected override PokerClientLoggerConfiguration CreatePokerClientLoggerConfiguration()
-        {
-            var logger = new PokerClientLoggerConfiguration
-            {
-                DateFormat = "yyy-MM-dd",
-                DateTimeFormat = "HH:mm:ss",
-                LogCleanupTemplate = "pbz-games-*-*-*.log",
-                LogDirectory = "Logs",
-                LogTemplate = "pbz-games-{0}.log",
-                MessagesInBuffer = 30
-            };
-
-            return logger;
-        }
-
-        protected override string PipeName
-        {
-            get
-            {
-                return pipeName;
+                LogProvider.Log.Error(this, $"Failed to process imported data. [{SiteString}]", e);
             }
+
+            packetBuffer.Clear();
+
+            RaiseProcessStopped();
         }
 
-        public override bool IsDisabled()
+        protected override IntPtr FindWindow(ParsingResult parsingResult)
+        {
+            return IntPtr.Zero;
+        }
+
+        protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
             return false;
         }
 
-        protected override uint BufferSize => 8192;
+        /// <summary>
+        /// Processes buffer data
+        /// </summary>
+        protected virtual void ProcessBuffer()
+        {
+            var handBuilder = ServiceLocator.Current.GetInstance<IPokerBaaziHandBuilder>();
 
-        protected override int PipeReadingTimeout => 2500;
+            while (!cancellationTokenSource.IsCancellationRequested)
+            {
+                try
+                {
+                    if (!packetBuffer.TryTake(out string capturedData))
+                    {
+                        Task.Delay(NoDataDelay).Wait();
+                        continue;
+                    }
 
-        protected override EnumPokerSites Site => EnumPokerSites.PokerBaazi;
+                    if (!PokerBaaziPackage.TryParse(capturedData, out PokerBaaziPackage package))
+                    {
+                        continue;
+                    }
+
+                    if (!handBuilder.TryBuild(package, out HandHistory handHistory))
+                    {
+                        if (package.PackageType == PokerBaaziPackageType.InitResponse)
+                        {
+                            var initResponse = handBuilder.GetInitResponse(package.RoomId);
+
+                            if (initResponse != null)
+                            {
+                                //SendPreImporedData()
+                            }
+                        }
+
+                        continue;
+                    }
+
+                    var handHistoryText = SerializationHelper.SerializeObject(handHistory);
+
+#if DEBUG
+                    if (!Directory.Exists("Hands"))
+                    {
+                        Directory.CreateDirectory("Hands");
+                    }
+
+                    File.WriteAllText($"Hands\\pokerbaazi_hand_exported_{handHistory.HandId}.xml", handHistoryText);
+#endif
+
+                    var windowHandle = IntPtr.Zero;
+
+                    var gameInfo = new GameInfo
+                    {
+                        WindowHandle = windowHandle.ToInt32(),
+                        PokerSite = EnumPokerSites.PokerBaazi,
+                        GameNumber = handHistory.HandId,
+                        Session = windowHandle.ToString()
+                    };
+
+                    ProcessHand(handHistoryText, gameInfo);
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Could not process captured data. [{SiteString}]", e);
+                }
+            }
+        }
     }
 }
