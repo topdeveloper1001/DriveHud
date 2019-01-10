@@ -111,7 +111,7 @@ namespace DriveHUD.Importers.PokerBaazi
                     {
                         if (package.PackageType == PokerBaaziPackageType.InitResponse)
                         {
-                            var initResponse = handBuilder.GetInitResponse(package.RoomId);
+                            var initResponse = handBuilder.FindInitResponse(package.RoomId);
 
                             if (initResponse != null)
                             {

@@ -11,11 +11,6 @@
 //----------------------------------------------------------------------
 
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.PokerBaazi.Model
 {
@@ -29,5 +24,23 @@ namespace DriveHUD.Importers.PokerBaazi.Model
 
         [JsonProperty("maxPlayers")]
         public int MaxPlayers { get; set; }
+
+        [JsonProperty("roomId")]
+        public uint RoomId { get; set; }
+
+        [JsonProperty("smallBlind")]
+        public int SmallBlind { get; set; }
+
+        [JsonProperty("bigBlind")]
+        public int BigBlind { get; set; }
+
+        [JsonProperty("userId")]
+        public uint UserId { get; set; }
+
+        [JsonProperty("tournamentId")]
+        public uint TournamentId { get; set; }
+
+        [JsonProperty("straddle")]
+        public bool Straddle { get; set; }
     }
 }

@@ -19,6 +19,6 @@ namespace DriveHUD.Importers.PokerBaazi
     {
         bool TryBuild(PokerBaaziPackage package, out HandHistory handHistory);
 
-        PokerBaaziInitResponse GetInitResponse(uint roomId);
+        PokerBaaziInitResponse FindInitResponse(uint roomId);
     }
 }

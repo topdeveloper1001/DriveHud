@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PokerBaaziDataManagerTests.cs" company="Ace Poker Solutions">
+// <copyright file="PokerBaaziModelTests.cs" company="Ace Poker Solutions">
 // Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,21 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Importers.PokerBaazi;
 using DriveHUD.Importers.PokerBaazi.Model;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
 {
     [TestFixture]
-    class PokerBaaziDataManagerTests
+    class PokerBaaziModelTests
     {
         [OneTimeSetUp]
         public virtual void SetUp()
@@ -33,7 +28,7 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
         }
 
         [TestCase("Packets\\InitResponse.json")]
-        public void DeserializationTest(string file)
+        public void InitResponseDeserializationTest(string file)
         {
             file = Path.Combine(PokerBaaziTestsHelper.TestDataFolder, file);
 
@@ -45,9 +40,19 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
 
             var actualPackageType = PokerBaaziPackage.ParsePackageType(data);
 
-            var initResponse = JsonConvert.DeserializeObject<PokerBaaziResponse<PokerBaaziInitResponse>>(data);            
+            var initResponse = JsonConvert.DeserializeObject<PokerBaaziResponse<PokerBaaziInitResponse>>(data);
 
-            Assert.That(initResponse.ClassObj.MaxPlayers, Is.EqualTo(9));
+            Assert.Multiple(() =>
+            {
+                Assert.That(initResponse.ClassObj.MaxPlayers, Is.EqualTo(9));
+                Assert.That(initResponse.ClassObj.TournamentName, Is.EqualTo("Dazzling Deuces"));
+                Assert.That(initResponse.ClassObj.RoomId, Is.EqualTo(100529));
+                Assert.That(initResponse.ClassObj.SmallBlind, Is.EqualTo(1));
+                Assert.That(initResponse.ClassObj.BigBlind, Is.EqualTo(2));
+                Assert.That(initResponse.ClassObj.UserId, Is.EqualTo(375337));
+                Assert.That(initResponse.ClassObj.TournamentId, Is.EqualTo(231044));
+                Assert.That(initResponse.ClassObj.Straddle, Is.EqualTo(false));
+            });
         }
     }
 }
