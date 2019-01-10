@@ -38,6 +38,8 @@ namespace DriveHUD.Entities
                     return "PK";
                 case EnumPokerSites.PokerMaster:
                     return "PM";
+                case EnumPokerSites.PokerStars:
+                    return "PS";
                 case EnumPokerSites.PPPoker:
                     return "PPP";
                 case EnumPokerSites.SpartanPoker:

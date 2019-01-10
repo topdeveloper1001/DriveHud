@@ -1,0 +1,27 @@
+PokerStars Game #47154704387:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 10:08:24 ET
+Table 'Burgi' 6-max Seat #1 is the button
+Seat 1: Hero ($200 in chips) 
+Seat 3: TheKaas ($200 in chips) 
+Seat 4: chrisdm ($200 in chips) 
+Seat 5: jklhgf ($340.85 in chips) 
+Seat 6: INVALID_WORD ($102.80 in chips) 
+TheKaas: posts small blind $1
+chrisdm: posts big blind $2
+*** HOLE CARDS ***
+jklhgf: folds 
+INVALID_WORD: folds 
+Hero: raises $4 to $6
+TheKaas: raises $12.55 to $18.55
+chrisdm: folds 
+Hero: folds 
+Uncalled bet ($12.55) returned to TheKaas
+TheKaas collected $14 from pot
+TheKaas: doesn't show hand 
+*** SUMMARY ***
+Total pot $14 | Rake $0 
+Seat 1: Hero (button) folded before Flop
+Seat 3: TheKaas (small blind) collected ($14)
+Seat 4: chrisdm (big blind) folded before Flop
+Seat 5: jklhgf folded before Flop (didn't bet)
+Seat 6: INVALID_WORD folded before Flop (didn't bet)
+
