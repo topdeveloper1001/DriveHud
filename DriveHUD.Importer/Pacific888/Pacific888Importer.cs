@@ -104,7 +104,7 @@ namespace DriveHUD.Importers.Pacific888
 
                 var prefferedSeat = preferredSeats?.FirstOrDefault(x => (int)x.TableType == maxPlayers && x.IsPreferredSeatEnabled);
 
-                if (prefferedSeat != null)
+                if (prefferedSeat != null && prefferedSeat.PreferredSeat > 0)
                 {
                     var shift = (prefferedSeat.PreferredSeat - heroSeat) % maxPlayers;
 
