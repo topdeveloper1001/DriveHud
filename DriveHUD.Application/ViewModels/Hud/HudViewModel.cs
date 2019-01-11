@@ -428,6 +428,20 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private bool isLowResolutionMode;
+
+        public bool IsLowResolutionMode
+        {
+            get
+            {
+                return isLowResolutionMode;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isLowResolutionMode, value);
+            }
+        }
+
         #endregion
 
         #region Commands
