@@ -86,10 +86,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
                             if (current != null)
                             {
                                 current.IsSelected = true;
+                                current.SetEquitySelectionMode(item.EquitySelectionMode);
                                 current.HandSuitsModelList = new List<HandSuitsViewModel>(item.HandSuitsModelList);
                                 current.ItemLikelihood = item.ItemLikelihood;
                                 current.LikelihoodPercent = item.LikelihoodPercent;
-                                current.EquitySelectionMode = item.EquitySelectionMode;
+                                current.RefreshCombos();
                             }
                         }
                     }
@@ -235,8 +236,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             get
             {
                 return PreflopSelectorItems
-                    .Where(x => x.EquitySelectionMode == ViewModels.EquitySelectionMode.FoldCheck)
-                    .Sum(x => x.Combos);
+                    .Sum(x => x.FoldCheckCombos);
             }
         }
 
@@ -244,7 +244,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             get
             {
-                return GetSpecificRangePercentage(ViewModels.EquitySelectionMode.FoldCheck);
+                return GetSpecificRangePercentage(DriveHUD.ViewModels.EquitySelectionMode.FoldCheck);
             }
         }
 
@@ -253,8 +253,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             get
             {
                 return PreflopSelectorItems
-                   .Where(x => x.EquitySelectionMode == ViewModels.EquitySelectionMode.Call)
-                   .Sum(x => x.Combos);
+                   .Sum(x => x.CallCombos);
             }
         }
 
@@ -262,7 +261,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             get
             {
-                return GetSpecificRangePercentage(ViewModels.EquitySelectionMode.Call);
+                return GetSpecificRangePercentage(DriveHUD.ViewModels.EquitySelectionMode.Call);
             }
         }
 
@@ -271,8 +270,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             get
             {
                 return PreflopSelectorItems
-                   .Where(x => x.EquitySelectionMode == ViewModels.EquitySelectionMode.Bluff)
-                   .Sum(x => x.Combos);
+                   .Sum(x => x.BluffCombos);
             }
         }
 
@@ -280,7 +278,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             get
             {
-                return GetSpecificRangePercentage(ViewModels.EquitySelectionMode.Bluff);
+                return GetSpecificRangePercentage(DriveHUD.ViewModels.EquitySelectionMode.Bluff);
             }
         }
 
@@ -289,8 +287,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             get
             {
                 return PreflopSelectorItems
-                   .Where(x => x.EquitySelectionMode == ViewModels.EquitySelectionMode.ValueBet)
-                   .Sum(x => x.Combos);
+                   .Sum(x => x.ValueBetCombos);
             }
         }
 
@@ -298,7 +295,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             get
             {
-                return GetSpecificRangePercentage(ViewModels.EquitySelectionMode.ValueBet);
+                return GetSpecificRangePercentage(DriveHUD.ViewModels.EquitySelectionMode.ValueBet);
             }
         }
 
@@ -436,14 +433,14 @@ namespace DriveHUD.EquityCalculator.ViewModels
             PreflopSelectorItems.ForEach(x =>
             {
                 x.IsSelected = false;
-                x.EquitySelectionMode = null;
+                x.SetEquitySelectionMode(null);
             });
 
             foreach (var mergeItem in mergeResult)
             {
                 mergeItem.Existing.IsSelected = true;
+                mergeItem.Existing.SetEquitySelectionMode(mergeItem.Auto.EquitySelectionMode);
                 mergeItem.Existing.HandSuitsModelList = new List<HandSuitsViewModel>(mergeItem.Auto.HandSuitsModelList);
-                mergeItem.Existing.EquitySelectionMode = mergeItem.Auto.EquitySelectionMode;
                 mergeItem.Existing.HandUpdate();
             }
 
@@ -508,10 +505,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 if (x.PropertyName == nameof(RangeSelectorItemViewModel.IsSelected))
                 {
-                    x.Sender.EquitySelectionMode = x.Sender.IsSelected ? EquitySelectionMode : null;
+                    x.Sender.SetEquitySelectionMode(x.Sender.IsSelected ? EquitySelectionMode : null);
                 }
                 else if (x.PropertyName == nameof(EquityRangeSelectorItemViewModel.EquitySelectionMode))
                 {
+                    x.Sender.RefreshCombos();
                     CombosRaisePropertyChanged();
                 }
             });
@@ -595,18 +593,27 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 return;
             }
 
-            model.IsSelected = !model.IsSelected;
+            model.IsSelected = EquitySelectionMode.HasValue && EquitySelectionMode != model.SelectionMode || !model.IsSelected;
+
+            model.SelectionMode = EquitySelectionMode ?? DriveHUD.ViewModels.EquitySelectionMode.None;
 
             if (SelectedItem != null && SelectedItem.IsMainInSequence &&
                 TemporaryPreflopSelectorItems != null && TemporaryPreflopSelectorItems.Count() > 0)
             {
                 foreach (var item in TemporaryPreflopSelectorItems)
                 {
-                    if (item.HandSuitsModelList.Any(x => x.HandSuit == model.HandSuit))
+                    if (item.HandSuitsModelList.Any(x => x.HandSuit == model.HandSuit && x.IsVisible))
                     {
-                        item.HandSuitsModelList
-                            .FirstOrDefault(x => x.HandSuit == model.HandSuit)
-                            .IsSelected = model.IsSelected;
+                        var handSuitItem = item.HandSuitsModelList
+                            .FirstOrDefault(x => x.HandSuit == model.HandSuit);
+
+                        handSuitItem.IsSelected = model.IsSelected;
+                        handSuitItem.SelectionMode = model.SelectionMode;
+
+                        if (item is EquityRangeSelectorItemViewModel rangeItem)
+                        {
+                            rangeItem.RefreshCombos();
+                        }
                     }
                 }
             }
@@ -718,7 +725,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
             else if (!isRight)
             {
-                item.EquitySelectionMode = EquitySelectionMode;
+                if (EquitySelectionMode.HasValue || !item.EquitySelectionMode.HasValue)
+                {
+                    item.SetEquitySelectionMode(EquitySelectionMode);
+                }
+
                 SelectedItem.HandRefreshVisibilityCheck();
             }
 
@@ -865,9 +876,23 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     .Where(x => x.EquitySelectionMode.HasValue)
                     .Sum(x => x.Combos);
 
-            var rangeCombos = PreflopSelectorItems
-                .Where(x => x.EquitySelectionMode == equitySelectionMode)
-                .Sum(x => x.Combos);
+            var rangeCombos = 0;
+
+            switch (equitySelectionMode)
+            {
+                case DriveHUD.ViewModels.EquitySelectionMode.FoldCheck:
+                    rangeCombos = FoldCheckCombos;
+                    break;
+                case DriveHUD.ViewModels.EquitySelectionMode.Bluff:
+                    rangeCombos = BluffCombos;
+                    break;
+                case DriveHUD.ViewModels.EquitySelectionMode.Call:
+                    rangeCombos = CallCombos;
+                    break;
+                case DriveHUD.ViewModels.EquitySelectionMode.ValueBet:
+                    rangeCombos = ValueBetCombos;
+                    break;
+            }
 
             return rangeCombos == totalCombos || totalCombos == 0 ?
                 (decimal)rangeCombos / TotalPossibleCombos :

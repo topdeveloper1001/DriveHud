@@ -1,62 +1,101 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
+﻿//-----------------------------------------------------------------------
+// <copyright file="HandSuitsViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace DriveHUD.ViewModels
-{
-    public enum HandSuitsEnum
-    {
-        CC, CD, CH, CS, DC, DD, DH, DS, HC, HD, HH, HS, SC, SD, SH, SS, None
-    }
-
+{  
     public class HandSuitsViewModel : BaseViewModel
     {
-        #region Fields
-
-        private string _resourceKey = string.Empty;
-        private bool _isVisible = false;
-        private bool _isSelected = true;
-        private HandSuitsEnum _handSuit;
-
-        #endregion
+        public HandSuitsViewModel(string resourceKey, HandSuitsEnum handSuit)
+        {
+            ResourceKey = resourceKey;
+            HandSuit = handSuit;
+        }
 
         #region Properties
+
+        private string resourceKey = string.Empty;
+
         public string ResourceKey
         {
-            get { return _resourceKey; }
-            set { SetProperty(ref _resourceKey, value); }
+            get
+            {
+                return resourceKey;
+            }
+            set
+            {
+                SetProperty(ref resourceKey, value);
+            }
         }
+
+        private bool isVisible;
 
         public bool IsVisible
         {
-            get { return _isVisible; }
-            set { SetProperty(ref _isVisible, value); }
+            get { return isVisible; }
+            set { SetProperty(ref isVisible, value); }
         }
+
+        private bool isSelected = true;
 
         public bool IsSelected
         {
-            get { return _isSelected; }
-            set { SetProperty(ref _isSelected, value); }
+            get
+            {
+                return isSelected;
+            }
+            set
+            {
+                SetProperty(ref isSelected, value);
+            }
         }
+
+        private HandSuitsEnum handSuit;
 
         public HandSuitsEnum HandSuit
         {
-            get { return _handSuit; }
-            set { SetProperty(ref _handSuit, value); }
+            get
+            {
+                return handSuit;
+            }
+            set
+            {
+                SetProperty(ref handSuit, value);
+            }
+        }
+
+        private EquitySelectionMode selectionMode;
+
+        public EquitySelectionMode SelectionMode
+        {
+            get
+            {
+                return selectionMode;
+            }
+            set
+            {
+                SetProperty(ref selectionMode, value);
+            }
         }
 
         #endregion
-
-        public HandSuitsViewModel(string resourceKey, HandSuitsEnum handSuit)
-        {
-            this.ResourceKey = resourceKey;
-            this.HandSuit = handSuit;
-        }
-
+      
         internal static IEnumerable<HandSuitsViewModel> GetHandSuitsList()
         {
-            List<HandSuitsViewModel> list = new List<HandSuitsViewModel>()
+            var list = new List<HandSuitsViewModel>()
             {
                 new HandSuitsViewModel("SuitCC", HandSuitsEnum.CC),
                 new HandSuitsViewModel("SuitCD", HandSuitsEnum.CD),
@@ -83,37 +122,38 @@ namespace DriveHUD.ViewModels
         {
             model.ForEach(x => x.IsVisible = false);
             model.Where(x => x.HandSuit.Equals(HandSuitsEnum.CD)
-            || x.HandSuit.Equals(HandSuitsEnum.CH)
-            || x.HandSuit.Equals(HandSuitsEnum.CS)
-            || x.HandSuit.Equals(HandSuitsEnum.DH)
-            || x.HandSuit.Equals(HandSuitsEnum.DS)
-            || x.HandSuit.Equals(HandSuitsEnum.HS)).ForEach(x => x.IsVisible = true);
+                || x.HandSuit.Equals(HandSuitsEnum.CH)
+                || x.HandSuit.Equals(HandSuitsEnum.CS)
+                || x.HandSuit.Equals(HandSuitsEnum.DH)
+                || x.HandSuit.Equals(HandSuitsEnum.DS)
+                || x.HandSuit.Equals(HandSuitsEnum.HS)).ForEach(x => x.IsVisible = true);
         }
 
         internal static void SetOffSuitedSuitsVisible(IEnumerable<HandSuitsViewModel> model)
         {
             model.ForEach(x => x.IsVisible = false);
             model.Where(x => x.HandSuit.Equals(HandSuitsEnum.CD)
-            || x.HandSuit.Equals(HandSuitsEnum.CH)
-            || x.HandSuit.Equals(HandSuitsEnum.CS)
-            || x.HandSuit.Equals(HandSuitsEnum.DC)
-            || x.HandSuit.Equals(HandSuitsEnum.DH)
-            || x.HandSuit.Equals(HandSuitsEnum.DS)
-            || x.HandSuit.Equals(HandSuitsEnum.HC)
-            || x.HandSuit.Equals(HandSuitsEnum.HD)
-            || x.HandSuit.Equals(HandSuitsEnum.HS)
-            || x.HandSuit.Equals(HandSuitsEnum.SC)
-            || x.HandSuit.Equals(HandSuitsEnum.SD)
-            || x.HandSuit.Equals(HandSuitsEnum.SH)).ForEach(x => x.IsVisible = true);
+                || x.HandSuit.Equals(HandSuitsEnum.CH)
+                || x.HandSuit.Equals(HandSuitsEnum.CS)
+                || x.HandSuit.Equals(HandSuitsEnum.DC)
+                || x.HandSuit.Equals(HandSuitsEnum.DH)
+                || x.HandSuit.Equals(HandSuitsEnum.DS)
+                || x.HandSuit.Equals(HandSuitsEnum.HC)
+                || x.HandSuit.Equals(HandSuitsEnum.HD)
+                || x.HandSuit.Equals(HandSuitsEnum.HS)
+                || x.HandSuit.Equals(HandSuitsEnum.SC)
+                || x.HandSuit.Equals(HandSuitsEnum.SD)
+                || x.HandSuit.Equals(HandSuitsEnum.SH)).ForEach(x => x.IsVisible = true);
         }
 
         internal static void SetSuitedSuitsVisible(IEnumerable<HandSuitsViewModel> model)
         {
             model.ForEach(x => x.IsVisible = false);
+
             model.Where(x => x.HandSuit.Equals(HandSuitsEnum.CC)
-            || x.HandSuit.Equals(HandSuitsEnum.DD)
-            || x.HandSuit.Equals(HandSuitsEnum.HH)
-            || x.HandSuit.Equals(HandSuitsEnum.SS)).ForEach(x => x.IsVisible = true);
+                || x.HandSuit.Equals(HandSuitsEnum.DD)
+                || x.HandSuit.Equals(HandSuitsEnum.HH)
+                || x.HandSuit.Equals(HandSuitsEnum.SS)).ForEach(x => x.IsVisible = true);
         }
 
         internal static void RefreshCheckedState(IEnumerable<HandSuitsViewModel> model, bool isChecked)

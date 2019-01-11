@@ -12,6 +12,7 @@
 
 using DriveHUD.Common.Linq;
 using DriveHUD.EquityCalculator.ViewModels;
+using DriveHUD.ViewModels;
 using HandHistories.Objects.Cards;
 using System;
 using System.Collections;
@@ -257,7 +258,22 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             rangeItems
                 .Where(x => !x.Range.EquitySelectionMode.HasValue)
-                .ForEach(x => x.Range.EquitySelectionMode = x.BestHand == PostFlopHand.kPair ? EquitySelectionMode.Call : EquitySelectionMode.FoldCheck);
+                .ForEach(x => x.Range.SetEquitySelectionMode(x.BestHand == PostFlopHand.kPair ? EquitySelectionMode.Call : EquitySelectionMode.FoldCheck));
+
+            var flushRanges = rangeItems.Where(x => x.BestHand == PostFlopHand.kFlush).ToArray();
+
+            flushRanges.ForEach(flushRange =>
+            {
+                var topFlushRange = flushRange.Cards.OrderBy(x => x.Weights.First()).First();
+
+                var handSuit = $"{topFlushRange.Caption[1]}{topFlushRange.Caption[3]}".ToUpperInvariant();
+
+                var handSuitEnum = (HandSuitsEnum)Enum.Parse(typeof(HandSuitsEnum), handSuit);
+
+                flushRange.Range.HandSuitsModelList
+                    .Where(x => x.IsVisible)
+                    .ForEach(x => x.SelectionMode = (x.HandSuit == handSuitEnum) ? EquitySelectionMode.ValueBet : EquitySelectionMode.Bluff);
+            });
         }
 
         public static string GetRecommendedRange(int opponentsCount, Street street)
@@ -292,7 +308,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
             rangeGroup
                 .Where(x => x.BestHand < PostFlopHand.kPair ||
                     x.BestHand == PostFlopHand.kPair && x.IsTopPair && !x.IsConnectedToBoard)
-                .ForEach(x => x.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+                .ForEach(x => x.Range.SetEquitySelectionMode(EquitySelectionMode.ValueBet));
         }
 
         private static void MarkPocketMiddlePairs(RangeItem[] rangeGroup)
@@ -304,8 +320,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkLength > 0)
             {
-                middlePairs.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
-                middlePairs.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+                middlePairs.Take(rangesToMarkLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.Call));
+                middlePairs.Skip(rangesToMarkLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.ValueBet));
             }
         }
 
@@ -318,7 +334,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkLength > 0)
             {
-                middlePairs.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+                middlePairs.Take(rangesToMarkLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.ValueBet));
             }
         }
 
@@ -334,8 +350,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkAsCallLength > 0)
             {
-                topPairsGoodKicker.Take(rangesToMarkAsCallLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
-                topPairsGoodKicker.Skip(rangesToMarkAsCallLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+                topPairsGoodKicker.Take(rangesToMarkAsCallLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.Call));
+                topPairsGoodKicker.Skip(rangesToMarkAsCallLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.ValueBet));
             }
 
             var topPairsWeakKicker = rangeGroup
@@ -348,8 +364,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkAsCallLength > 0)
             {
-                topPairsWeakKicker.Take(rangesToMarkAsCallLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
-                topPairsWeakKicker.Skip(rangesToMarkAsCallLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+                topPairsWeakKicker.Take(rangesToMarkAsCallLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.Call));
+                topPairsWeakKicker.Skip(rangesToMarkAsCallLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.ValueBet));
             }
         }
 
@@ -362,8 +378,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkLength > 0)
             {
-                middlePairs.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
-                middlePairs.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+                middlePairs.Take(rangesToMarkLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.Call));
+                middlePairs.Skip(rangesToMarkLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.ValueBet));
             }
         }
 
@@ -379,10 +395,10 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkLength > 0)
             {
-                bottomPairsTopKicker.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
+                bottomPairsTopKicker.Take(rangesToMarkLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.Call));
             }
 
-            bottomPairsTopKicker.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+            bottomPairsTopKicker.Skip(rangesToMarkLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.ValueBet));
 
             var bottomPairsNoTopKicker = rangeGroup
                 .Where(x => x.IsBottomPair && x.IsConnectedToBoard && !x.IsTopKicker)
@@ -393,10 +409,10 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkLength > 0)
             {
-                bottomPairsNoTopKicker.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.FoldCheck);
+                bottomPairsNoTopKicker.Take(rangesToMarkLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.FoldCheck));
             }
 
-            bottomPairsNoTopKicker.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
+            bottomPairsNoTopKicker.Skip(rangesToMarkLength).ForEach(r => r.Range.SetEquitySelectionMode(EquitySelectionMode.Call));
         }
 
         private static void MarkBluffs(PotType potType, RangeItem[] rangeGroup, Street street)
@@ -422,7 +438,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 if (currentCombos < bluffCombos &&
                     (currentCombos + range.Range.Combos - bluffCombos < bluffCombos - currentCombos))
                 {
-                    range.Range.EquitySelectionMode = EquitySelectionMode.Bluff;
+                    range.Range.SetEquitySelectionMode(EquitySelectionMode.Bluff);
                     currentCombos += range.Range.Combos;
                     continue;
                 }
@@ -506,6 +522,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
             public string Caption { get; set; }
 
             public List<int> Weights { get; set; } = new List<int>();
+
+
 
 #if DEBUG
             public override string ToString()

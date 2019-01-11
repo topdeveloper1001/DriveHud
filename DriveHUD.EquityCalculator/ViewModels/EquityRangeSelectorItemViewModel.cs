@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.EquityCalculator.Models;
 using DriveHUD.ViewModels;
 using Model.Enums;
@@ -37,6 +38,15 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         #region Properties
 
+        public void SetEquitySelectionMode(EquitySelectionMode? equitySelectionMode)
+        {
+            HandSuitsModelList
+                .Where(p => p.IsVisible)
+                .ForEach(p => p.SelectionMode = equitySelectionMode ?? DriveHUD.ViewModels.EquitySelectionMode.None);
+
+            EquitySelectionMode = equitySelectionMode;
+        }
+
         private EquitySelectionMode? equitySelectionMode;
 
         public EquitySelectionMode? EquitySelectionMode
@@ -45,7 +55,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 return equitySelectionMode;
             }
-            set
+            private set
             {
                 SetProperty(ref equitySelectionMode, value);
             }
@@ -65,6 +75,63 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        private int foldCheckCombos;
+
+        public int FoldCheckCombos
+        {
+            get
+            {
+                return foldCheckCombos;
+            }
+            private set
+            {
+                SetProperty(ref foldCheckCombos, value);
+            }
+        }
+
+
+        private int callCombos;
+
+        public int CallCombos
+        {
+            get
+            {
+                return callCombos;
+            }
+            private set
+            {
+                SetProperty(ref callCombos, value);
+            }
+        }
+
+        private int bluffCombos;
+
+        public int BluffCombos
+        {
+            get
+            {
+                return bluffCombos;
+            }
+            private set
+            {
+                SetProperty(ref bluffCombos, value);
+            }
+        }
+
+        private int valueBetCombos;
+
+        public int ValueBetCombos
+        {
+            get
+            {
+                return valueBetCombos;
+            }
+            private set
+            {
+                SetProperty(ref valueBetCombos, value);
+            }
+        }
+
         private IEnumerable<CardModel> usedCards;
 
         public IEnumerable<CardModel> UsedCards
@@ -79,22 +146,42 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 RefreshCombos();
             }
         }
-        
-        #endregion     
+
+        #endregion
 
         public void RefreshCombos()
         {
-            var combos = 0;
+            var combos = Enum.GetValues(typeof(EquitySelectionMode)).Cast<EquitySelectionMode>().ToDictionary(x => x, x => 0);
 
             var deadCards = usedCards?.Select(x => x.ToString()).ToArray() ?? new string[0];
-            var selectedSuits = HandSuitsModelList.Where(x => x.IsSelected && x.IsVisible).Select(x => x.HandSuit.ToString()).ToArray();
+
+            var selectedSuits = HandSuitsModelList.Where(x => x.IsSelected && x.IsVisible)
+                .Select(x => new { x.SelectionMode, HandSuit = x.HandSuit.ToString() })
+                .ToArray();
 
             var suits = new[] { RangeCardSuit.Clubs, RangeCardSuit.Diamonds, RangeCardSuit.Hearts, RangeCardSuit.Spades };
 
-            bool checkCombos(string cardCombo, string suitCombo)
+            bool checkCombos(string cardCombo, string suitCombo, out EquitySelectionMode selectionMode)
             {
-                return (deadCards.Length == 0 || deadCards.All(x => !cardCombo.Contains(x))) &&
-                           selectedSuits.Any(x => suitCombo.Equals(x, StringComparison.OrdinalIgnoreCase));
+                selectionMode = DriveHUD.ViewModels.EquitySelectionMode.None;
+
+                var result = deadCards.Length == 0 || deadCards.All(x => !cardCombo.Contains(x));
+
+                if (!result)
+                {
+                    return false;
+                }
+
+                var suit = selectedSuits.FirstOrDefault(x => suitCombo.Equals(x.HandSuit, StringComparison.OrdinalIgnoreCase));
+
+                if (suit == null)
+                {
+                    return false;
+                }
+
+                selectionMode = suit.SelectionMode;
+
+                return true;
             }
 
             if (ItemType == RangeSelectorItemType.Pair)
@@ -111,9 +198,9 @@ namespace DriveHUD.EquityCalculator.ViewModels
                         var cardCombo = $"{rank}{suit1}{rank}{suit2}";
                         var suitCombo = $"{suit1}{suit2}";
 
-                        if (checkCombos(cardCombo, suitCombo))
+                        if (checkCombos(cardCombo, suitCombo, out EquitySelectionMode mode))
                         {
-                            combos++;
+                            combos[mode]++;
                         }
                     }
                 }
@@ -129,9 +216,9 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     var cardCombo = $"{rank1}{suit}{rank2}{suit}";
                     var suitCombo = $"{suit}{suit}";
 
-                    if (checkCombos(cardCombo, suitCombo))
+                    if (checkCombos(cardCombo, suitCombo, out EquitySelectionMode mode))
                     {
-                        combos++;
+                        combos[mode]++;
                     }
                 }
             }
@@ -155,15 +242,22 @@ namespace DriveHUD.EquityCalculator.ViewModels
                         var cardCombo = $"{rank1}{suit1}{rank2}{suit2}";
                         var suitCombo = $"{suit1}{suit2}";
 
-                        if (checkCombos(cardCombo, suitCombo))
+                        if (checkCombos(cardCombo, suitCombo, out EquitySelectionMode mode))
                         {
-                            combos++;
+                            combos[mode]++;
                         }
                     }
                 }
             }
 
-            Combos = combos;
+            FoldCheckCombos = combos[DriveHUD.ViewModels.EquitySelectionMode.FoldCheck];
+            CallCombos = combos[DriveHUD.ViewModels.EquitySelectionMode.Call];
+            BluffCombos = combos[DriveHUD.ViewModels.EquitySelectionMode.Bluff];
+            ValueBetCombos = combos[DriveHUD.ViewModels.EquitySelectionMode.ValueBet];
+
+            Combos = combos.Values.Sum();
+
+            RaisePropertyChanged(nameof(Combos));
         }
 
         public override void HandUpdate()

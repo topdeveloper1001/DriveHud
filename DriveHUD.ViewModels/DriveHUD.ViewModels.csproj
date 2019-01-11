@@ -142,6 +142,8 @@
     <Compile Include="ChipsInfo.cs" />
     <Compile Include="ColorHelper.cs" />
     <Compile Include="EnumerationExtension.cs" />
+    <Compile Include="RangeSelector\EquitySelectionMode.cs" />
+    <Compile Include="RangeSelector\HandSuitsEnum.cs" />
     <Compile Include="Replayer\IReplayerService.cs" />
     <Compile Include="RangeSelector\HandSuitsViewModel.cs" />
     <Compile Include="RangeSelector\CardsSelectorItemViewModel.cs" />
