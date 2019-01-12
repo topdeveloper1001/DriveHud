@@ -1138,9 +1138,12 @@
                             Value="{Binding SliderValue, Mode=TwoWay}" />
                         <telerik:RadNumericUpDown
                             Style="{x:Null}"
-                            IsEnabled="False"
                             Value="{Binding SelectedPercentage, StringFormat={}{0:0.#}%}"
                             ValueFormat="Numeric"
+                            Maximum="100"
+                            Minimum="0"
+                            Foreground="#FFFFFF"
+                            Background="#202125"
                             Margin="10 0 0 0"
                             Grid.Column="1">
                             <telerik:RadNumericUpDown.NumberFormatInfo>

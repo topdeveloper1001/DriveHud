@@ -196,9 +196,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                         }
                     }
 
-                    SelectedPercentage = value / 10.0;
-
-                    RefreshHandsStatistic();
+                    UpdateSlider();
                 }
 
                 SetProperty(ref _sliderValue, value);
@@ -207,8 +205,19 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         public double SelectedPercentage
         {
-            get { return _selectedPercentage; }
-            set { SetProperty(ref _selectedPercentage, value); }
+            get
+            {
+                return _selectedPercentage;
+            }
+            set
+            {
+                if (_isSliderManualMove)
+                {
+                    SliderValue = (int)value * 10;
+                }
+
+                SetProperty(ref _selectedPercentage, value);
+            }
         }
 
         private EquitySelectionMode? equitySelectionMode;
@@ -439,7 +448,16 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 mergeItem.Existing.IsSelected = true;
                 mergeItem.Existing.SetEquitySelectionMode(mergeItem.Auto.EquitySelectionMode);
-                mergeItem.Existing.HandSuitsModelList = new List<HandSuitsViewModel>(mergeItem.Auto.HandSuitsModelList);
+
+                var handSuitsMergeResult = (from existingHandSuit in mergeItem.Existing.HandSuitsModelList
+                                            join autoHandSuit in mergeItem.Auto.HandSuitsModelList on existingHandSuit.HandSuit equals autoHandSuit.HandSuit
+                                            select new { Existing = existingHandSuit, Auto = autoHandSuit }).ToArray();
+
+                handSuitsMergeResult.ForEach(x =>
+                {
+                    x.Existing.SelectionMode = x.Auto.SelectionMode;
+                });
+
                 mergeItem.Existing.HandUpdate();
             }
 
@@ -567,7 +585,14 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             _isSliderManualMove = false;
 
-            var combos = PreflopSelectorItems.Sum(model => model.HandSuitsModelList.Count(x => x.IsVisible && x.IsSelected));
+            var combos = PreflopSelectorItems.Where(x => !x.IsMainInSequence).Sum(model => model.HandSuitsModelList.Count(x => x.IsVisible && x.IsSelected));
+
+            var mainSequnceItem = PreflopSelectorItems.FirstOrDefault(x => x.IsMainInSequence);
+
+            if (mainSequnceItem != null)
+            {
+                combos += mainSequnceItem.Combos;
+            }
 
             double prct = Math.Round((double)combos * 100 / TotalPossibleCombos, 1);
 
@@ -649,6 +674,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
 
             SelectedItem = new EquityRangeSelectorItemViewModel();
+
+            UpdateSlider();
         }
 
         private void SelectedSuited(object obj)
@@ -667,6 +694,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
 
             SelectedItem = new EquityRangeSelectorItemViewModel();
+
+            UpdateSlider();
         }
 
         private void SelectAllPairs(object obj)
@@ -685,6 +714,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
 
             SelectedItem = new EquityRangeSelectorItemViewModel();
+
+            UpdateSlider();
         }
 
         private void ShowPredefinedRangesView(object obj)
@@ -787,6 +818,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
             SelectedItem.IsMainInSequence = true;
             HandSuitsViewModel.SetAllVisible(SelectedItem.HandSuitsModelList);
             SuitsForCaption = string.Join(",", TemporaryPreflopSelectorItems.Select(x => x.Caption));
+
+            UpdateSlider();
         }
 
         private void OnAltClick(object obj)
@@ -832,6 +865,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
             SelectedItem = item;
             SelectedItem.IsMainInSequence = true;
             SuitsForCaption = string.Join(",", this.TemporaryPreflopSelectorItems.Select(x => x.Caption));
+
+            UpdateSlider();
         }
 
         private void OnMouseEnter(object obj)
@@ -854,7 +889,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 item.IsSelected = false;
             }
 
-            SelectedItem = new EquityRangeSelectorItemViewModel();
+            SelectedItem.IsMainInSequence = false;
+            SelectedItem = null;
 
             UpdateSlider();
         }

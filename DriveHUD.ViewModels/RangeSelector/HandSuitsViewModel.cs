@@ -16,7 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace DriveHUD.ViewModels
-{  
+{
     public class HandSuitsViewModel : BaseViewModel
     {
         public HandSuitsViewModel(string resourceKey, HandSuitsEnum handSuit)
@@ -92,7 +92,7 @@ namespace DriveHUD.ViewModels
         }
 
         #endregion
-      
+
         internal static IEnumerable<HandSuitsViewModel> GetHandSuitsList()
         {
             var list = new List<HandSuitsViewModel>()
@@ -169,6 +169,12 @@ namespace DriveHUD.ViewModels
         internal static void RefreshVisibilityCheck(IEnumerable<HandSuitsViewModel> model)
         {
             model.Where(x => !x.IsVisible).ForEach(x => x.IsSelected = true);
+        }
+
+        public override string ToString()
+        {
+            return $"{HandSuit}; IsSelected: {IsSelected}; IsVisible: {isVisible}; SelectionMode: {SelectionMode};";
+
         }
     }
 }

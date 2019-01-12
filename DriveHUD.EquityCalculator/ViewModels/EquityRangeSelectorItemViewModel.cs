@@ -56,7 +56,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 return equitySelectionMode;
             }
-            private set
+            set
             {
                 SetProperty(ref equitySelectionMode, value);
             }
@@ -284,6 +284,12 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             base.HandUpdate();
             RefreshCombos();
+        }
+
+        public override string ToString()
+        {
+            return $"{Caption}; IsSelected: {IsSelected}; EquitySelectionMode:{EquitySelectionMode}; Combos: {Combos}";
+
         }
     }
 }
