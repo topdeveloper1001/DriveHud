@@ -433,7 +433,6 @@ namespace DriveHUD.EquityCalculator.ViewModels
             PreflopSelectorItems.ForEach(x =>
             {
                 x.IsSelected = false;
-                x.SetEquitySelectionMode(null);
             });
 
             foreach (var mergeItem in mergeResult)
@@ -501,11 +500,12 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private void InitializePreflopSelectorItemsTracking()
         {
             PreflopSelectorItems.ChangeTrackingEnabled = true;
+
             PreflopSelectorItems.ItemChanged.Subscribe(x =>
             {
-                if (x.PropertyName == nameof(RangeSelectorItemViewModel.IsSelected))
+                if (x.PropertyName == nameof(RangeSelectorItemViewModel.IsSelected) && x.Sender.IsSelected)
                 {
-                    x.Sender.SetEquitySelectionMode(x.Sender.IsSelected ? EquitySelectionMode : null);
+                    x.Sender.SetEquitySelectionMode(EquitySelectionMode);
                 }
                 else if (x.PropertyName == nameof(EquityRangeSelectorItemViewModel.EquitySelectionMode))
                 {
@@ -706,6 +706,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
                                 current.HandUpdateAndRefresh();
                             }
                         }
+
+                        UpdateSlider();
                     }
                 });
         }
@@ -744,6 +746,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
 
             item.IsSelected = false;
+
             SelectedItem = new EquityRangeSelectorItemViewModel();
             UpdateSlider();
         }

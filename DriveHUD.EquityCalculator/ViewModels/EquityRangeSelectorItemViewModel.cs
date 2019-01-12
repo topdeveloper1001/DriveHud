@@ -17,6 +17,7 @@ using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace DriveHUD.EquityCalculator.ViewModels
 {
@@ -144,6 +145,25 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 SetProperty(ref usedCards, value);
                 RefreshCombos();
+            }
+        }
+
+        public override bool IsSelected
+        {
+            get
+            {
+                return base.IsSelected;
+            }
+            set
+            {
+                if (!value && value != IsSelected)
+                {
+                    SetEquitySelectionMode(null);
+                    HandSuitsModelList.ForEach(x => x.IsVisible = false);
+                    RefreshCombos();
+                }
+
+                base.IsSelected = value;
             }
         }
 
