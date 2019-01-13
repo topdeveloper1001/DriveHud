@@ -643,7 +643,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 }
             }
 
-            SelectedItem.RefreshCombos();
+            SelectedItem?.RefreshCombos();
             CombosRaisePropertyChanged();
 
             UpdateSlider();
@@ -889,15 +889,18 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 item.IsSelected = false;
             }
 
-            SelectedItem.IsMainInSequence = false;
-            SelectedItem = null;
+            if (SelectedItem != null)
+            {
+                SelectedItem.IsMainInSequence = false;
+                SelectedItem = null;
+            }
 
             UpdateSlider();
         }
 
         private void Save(object obj)
         {
-            if (SelectedItem.IsMainInSequence)
+            if (SelectedItem != null && SelectedItem.IsMainInSequence)
             {
                 //update suites
                 SelectedItem = new EquityRangeSelectorItemViewModel();
