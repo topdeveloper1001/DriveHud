@@ -412,74 +412,80 @@ namespace DriveHUD.Importers
 
                     for (var i = 0; i < parsingResult.Count; i++)
                     {
-                        using (var transaction = session.BeginTransaction())
+                        lock (locker)
                         {
-                            Stopwatch sw = null;
-
-                            if (!string.IsNullOrEmpty(importerSession))
+                            using (var transaction = session.BeginTransaction())
                             {
-                                sw = new Stopwatch();
-                                sw.Start();
-                            }
+                                Stopwatch sw = null;
 
-                            var handHistory = parsingResult[i];
+                                if (!string.IsNullOrEmpty(importerSession))
+                                {
+                                    sw = new Stopwatch();
+                                    sw.Start();
+                                }
 
-                            // skip error hand
-                            if (handHistory.Source.HasError)
-                            {
-                                continue;
-                            }
+                                var handHistory = parsingResult[i];
 
-                            progress.Report(new LocalizableString("Progress_UpdatingData", i + 1, parsingResult.Count, duplicates));
+                                // skip error hand
+                                if (handHistory.Source.HasError)
+                                {
+                                    continue;
+                                }
 
-                            // update tournament with summary data
-                            if (handHistory.IsSummary)
-                            {
-                                InsertSummaryHand(session, handHistory, gameInfo);
+                                progress.Report(new LocalizableString("Progress_UpdatingData", i + 1, parsingResult.Count, duplicates));
+
+                                // update tournament with summary data
+                                if (handHistory.IsSummary)
+                                {
+                                    InsertSummaryHand(session, handHistory, gameInfo);
+                                    transaction.Commit();
+                                    continue;
+                                }
+
+                                // Check if this game was already parsed before
+                                var exist = existingGames.Any(x => x.Item1 == handHistory.HandHistory.Gamenumber && x.Item2 == handHistory.HandHistory.PokersiteId);
+
+                                if (exist)
+                                {
+                                    duplicates++;
+                                    handHistory.IsDuplicate = true;
+                                    continue;
+                                }
+
+                                existingGames.Add(new Tuple<long, short>(handHistory.HandHistory.Gamenumber, handHistory.HandHistory.PokersiteId));
+
+                                InsertRegularHand(session, handHistory, existingPlayers, importerSession, tournamentsData, gameInfo);
+
+                                if (progress.CancellationToken.IsCancellationRequested)
+                                {
+                                    progress.Report(new LocalizableString("Progress_StoppingImport"));
+                                    break;
+                                }
+
                                 transaction.Commit();
-                                continue;
-                            }
 
-                            // Check if this game was already parsed before
-                            var exist = existingGames.Any(x => x.Item1 == handHistory.HandHistory.Gamenumber && x.Item2 == handHistory.HandHistory.PokersiteId);
-
-                            if (exist)
-                            {
-                                duplicates++;
-                                handHistory.IsDuplicate = true;
-                                continue;
-                            }
-
-                            existingGames.Add(new Tuple<long, short>(handHistory.HandHistory.Gamenumber, handHistory.HandHistory.PokersiteId));
-
-                            InsertRegularHand(session, handHistory, existingPlayers, importerSession, tournamentsData, gameInfo);
-
-                            if (progress.CancellationToken.IsCancellationRequested)
-                            {
-                                progress.Report(new LocalizableString("Progress_StoppingImport"));
-                                break;
-                            }
-
-                            transaction.Commit();
-
-                            if (sw != null)
-                            {
-                                sw.Stop();
-                                handHistory.Duration = sw.ElapsedMilliseconds;
+                                if (sw != null)
+                                {
+                                    sw.Stop();
+                                    handHistory.Duration = sw.ElapsedMilliseconds;
+                                }
                             }
                         }
                     }
 
-                    using (var transaction = session.BeginTransaction())
+                    lock (locker)
                     {
-                        try
+                        using (var transaction = session.BeginTransaction())
                         {
-                            ProcessTournaments(tournamentsData, parsingResult, session);
-                            transaction.Commit();
-                        }
-                        catch (Exception e)
-                        {
-                            LogProvider.Log.Error(this, $"Could not process tournament data for '{gameInfo?.FullFileName}'.", e);
+                            try
+                            {
+                                ProcessTournaments(tournamentsData, parsingResult, session);
+                                transaction.Commit();
+                            }
+                            catch (Exception e)
+                            {
+                                LogProvider.Log.Error(this, $"Could not process tournament data for '{gameInfo?.FullFileName}'.", e);
+                            }
                         }
                     }
 
@@ -630,11 +636,11 @@ namespace DriveHUD.Importers
 
                             tournaments.Player = existingPlayer;
 
-                            LogProvider.Log.AdvInfo($"Adding new tournament data: {tournaments}");
-
                             session.Insert(tournaments);
 
                             tournamentsData.Add(tournaments);
+
+                            LogProvider.Log.Info(this, $"Added tournament data: {tournaments}");
                         }
                     }
 
@@ -947,7 +953,7 @@ namespace DriveHUD.Importers
             }
 
             var tourneySize = tournaments.Select(x => x.Tourneysize).Max();
-            var totalPlayers = tournaments.Select(x => x.Player.PlayerId).Count();
+            var totalPlayers = tournaments.Select(x => x.Player.PlayerId).Distinct().Count();
 
             if (tourneySize > totalPlayers)
             {
@@ -1003,7 +1009,7 @@ namespace DriveHUD.Importers
             {
                 foreach (var duplicates in tournamentsGroupedByPlayer.Where(x => x.Count() > 1))
                 {
-                    LogProvider.Log.Warn($"Found tournament duplicates: {string.Join(" | ", duplicates.Select(x => x.ToString()))}");
+                    LogProvider.Log.Warn(this, $"Found tournament duplicates: {string.Join(" | ", duplicates.Select(x => x.ToString()))}");
                 }
             }
 
