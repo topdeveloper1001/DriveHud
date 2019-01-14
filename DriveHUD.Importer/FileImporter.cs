@@ -382,7 +382,7 @@ namespace DriveHUD.Importers
 
             return parsingResult;
         }
-
+        
         /// <summary>
         /// Insert hands in DB (to do: create and use repository from model, not here)
         /// </summary>
@@ -415,7 +415,7 @@ namespace DriveHUD.Importers
                         lock (locker)
                         {
                             using (var transaction = session.BeginTransaction())
-                            {
+                            {                              
                                 Stopwatch sw = null;
 
                                 if (!string.IsNullOrEmpty(importerSession))
@@ -913,6 +913,11 @@ namespace DriveHUD.Importers
         /// <param name="session">DB session</param>
         private void ProcessTournaments(List<Tournaments> tournaments, List<ParsingResult> parsingResult, IStatelessSession session)
         {
+            if (tournaments.Count != 0)
+            {
+                LogProvider.Log.Info(this, "Processing tournament data");
+            }
+
             // if hh file contains data about several tournaments we need to group them
             var tournamentsDataGrouped = tournaments
                 .GroupBy(x => x.Tourneynumber)
