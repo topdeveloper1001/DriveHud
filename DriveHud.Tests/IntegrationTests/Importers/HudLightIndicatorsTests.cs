@@ -45,7 +45,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatIndicatorIsCalculated(x => x.RaiseLimpersObject, fileName, pokerSite, playerName, expected, occurredExpected, couldOccurredExpected);
         }
 
-        [TestCase(@"Hero-RaisedLimp-1.txt", EnumPokerSites.PokerStars, "Hero", 100, 1, 1)]               
+        [TestCase(@"Hero-RaisedLimp-1.txt", EnumPokerSites.PokerStars, "Hero", 100, 1, 1)]
         public void RaiseLimpersInBNStatTest(string fileName, EnumPokerSites pokerSite, string playerName, decimal expected, int occurredExpected, int couldOccurredExpected)
         {
             AssertThatIndicatorIsCalculated(x => x.RaiseLimpersInBNObject, fileName, pokerSite, playerName, expected, occurredExpected, couldOccurredExpected);
@@ -55,6 +55,12 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         public void RaiseLimpersInSBStatTest(string fileName, EnumPokerSites pokerSite, string playerName, decimal expected, int occurredExpected, int couldOccurredExpected)
         {
             AssertThatIndicatorIsCalculated(x => x.RaiseLimpersInSBObject, fileName, pokerSite, playerName, expected, occurredExpected, couldOccurredExpected);
+        }
+
+        [TestCase(@"Hero-FoldedTo3BetInBTNvs3BetSB-1.txt", EnumPokerSites.PokerStars, "Hero", 100, 1, 1)]
+        public void FoldTo3BetInBTNvs3BetSBObjectStatTest(string fileName, EnumPokerSites pokerSite, string playerName, decimal expected, int occurredExpected, int couldOccurredExpected)
+        {
+            AssertThatIndicatorIsCalculated(x => x.FoldTo3BetInBTNvs3BetSBObject, fileName, pokerSite, playerName, expected, occurredExpected, couldOccurredExpected);
         }
 
         protected virtual void AssertThatIndicatorIsCalculated(Expression<Func<HudLightIndicators, StatDto>> expression, string fileName, EnumPokerSites pokerSite, string playerName, decimal expected, int occurredExpected, int couldOccurredExpected, [CallerMemberName] string method = "UnknownMethod")

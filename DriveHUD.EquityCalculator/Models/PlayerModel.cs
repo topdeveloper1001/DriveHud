@@ -372,22 +372,10 @@ namespace DriveHUD.EquityCalculator.Models
             {
                 foreach (var range in ranges)
                 {
-                    switch (range.EquitySelectionMode)
-                    {
-                        case EquitySelectionMode.FoldCheck:
-                            foldCheckCombos += range.Combos;
-                            break;
-                        case EquitySelectionMode.Call:
-                            callCombos += range.Combos;
-                            break;
-                        case EquitySelectionMode.Bluff:
-                            bluffCombos += range.Combos;
-                            break;
-                        case EquitySelectionMode.ValueBet:
-                            valueBetCombos += range.Combos;
-                            break;
-                    }
-
+                    foldCheckCombos += range.FoldCheckCombos;
+                    callCombos += range.CallCombos;
+                    bluffCombos += range.BluffCombos;
+                    valueBetCombos += range.ValueBetCombos;
                     totalCombos += range.Combos;
                 }
             }

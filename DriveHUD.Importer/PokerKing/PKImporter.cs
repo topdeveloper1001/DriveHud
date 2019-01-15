@@ -29,6 +29,7 @@ using Newtonsoft.Json.Converters;
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Security;
 using PacketDotNet;
+using ProtoBuf;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;

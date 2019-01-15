@@ -597,37 +597,49 @@ namespace Model.Filters
             var sixRingPredicate = PredicateBuilder.True<Playerstatistic>();
             sixRingPredicate = sixRingPredicate.And(x => x.Numberofplayers <= 6);
 
-            foreach (var tableItem in Table6MaxCollection.Where(x => x.IsChecked))
+            var table6MaxChecked = Table6MaxCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (table6MaxChecked.Length > 0)
             {
-                sixRingPredicate = sixRingPredicate.And(x => x.Position == tableItem.PlayerPosition &&
-                    x.Position != EnumPosition.STRDL);
+                sixRingPredicate = sixRingPredicate.And(x => table6MaxChecked.Contains(x.Position) &&
+                   x.Position != EnumPosition.STRDL);
+
                 is6MaxTable = true;
             }
 
-            foreach (var tableItem in Raiser6maxPositionsCollection.Where(x => x.IsChecked))
+            var raiser6maxPositionsChecked = Raiser6maxPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (raiser6maxPositionsChecked.Length > 0)
             {
                 sixRingPredicate = sixRingPredicate.And(x => x.FirstRaiserPosition != EnumPosition.Undefined &&
-                    x.FirstRaiserPosition != EnumPosition.STRDL &&
-                    x.FirstRaiserPosition == x.Position && 
-                    x.FirstRaiserPosition != tableItem.PlayerPosition);
+                   x.FirstRaiserPosition != EnumPosition.STRDL &&
+                   x.FirstRaiserPosition != x.Position &&
+                   raiser6maxPositionsChecked.Contains(x.FirstRaiserPosition));
+
                 is6MaxTable = true;
             }
 
-            foreach (var tableItem in ThreeBettor6maxPositionsCollection.Where(x => x.IsChecked))
+            var threeBettor6maxPositionsChecked = ThreeBettor6maxPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (threeBettor6maxPositionsChecked.Length > 0)
             {
                 sixRingPredicate = sixRingPredicate.And(x => x.ThreeBettorPosition != EnumPosition.Undefined &&
-                    x.ThreeBettorPosition != EnumPosition.STRDL &&
-                    x.ThreeBettorPosition == x.Position &&
-                    x.ThreeBettorPosition != tableItem.PlayerPosition);
+                   x.ThreeBettorPosition != EnumPosition.STRDL &&
+                   x.ThreeBettorPosition != x.Position &&
+                   threeBettor6maxPositionsChecked.Contains(x.ThreeBettorPosition));
+
                 is6MaxTable = true;
             }
 
-            foreach (var tableItem in FourBettor6maxPositionsCollection.Where(x => x.IsChecked))
+            var fourBettor6maxPositionsChecked = FourBettor6maxPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (fourBettor6maxPositionsChecked.Length > 0)
             {
                 sixRingPredicate = sixRingPredicate.And(x => x.FourBettorPosition != EnumPosition.Undefined &&
-                    x.FourBettorPosition != EnumPosition.STRDL &&
-                    x.FourBettorPosition == x.Position &&
-                    x.FourBettorPosition != tableItem.PlayerPosition);
+                   x.FourBettorPosition != EnumPosition.STRDL &&
+                   x.FourBettorPosition != x.Position &&
+                   fourBettor6maxPositionsChecked.Contains(x.FourBettorPosition));
+
                 is6MaxTable = true;
             }
 
@@ -635,37 +647,49 @@ namespace Model.Filters
 
             fullRingPredicate = fullRingPredicate.And(x => x.Numberofplayers > 6);
 
-            foreach (var tableItem in TableFullRingCollection.Where(x => x.IsChecked))
+            var tableFullRingChecked = TableFullRingCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (tableFullRingChecked.Length > 0)
             {
-                fullRingPredicate = fullRingPredicate.And(x => x.Position == tableItem.PlayerPosition &&
-                    x.Position != EnumPosition.STRDL);
+                fullRingPredicate = fullRingPredicate.And(x => tableFullRingChecked.Contains(x.Position) &&
+                   x.Position != EnumPosition.STRDL);
+
                 isFullRingTable = true;
             }
 
-            foreach (var tableItem in RaiserFullRingPositionsCollection.Where(x => x.IsChecked))
+            var raiserFullRingPositionsChecked = RaiserFullRingPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (raiserFullRingPositionsChecked.Length > 0)
             {
                 fullRingPredicate = fullRingPredicate.And(x => x.FirstRaiserPosition != EnumPosition.Undefined &&
-                    x.FirstRaiserPosition != EnumPosition.STRDL &&
-                    x.FirstRaiserPosition == x.Position &&
-                    x.FirstRaiserPosition != tableItem.PlayerPosition);
+                       x.FirstRaiserPosition != EnumPosition.STRDL &&
+                       x.FirstRaiserPosition != x.Position &&
+                       raiserFullRingPositionsChecked.Contains(x.FirstRaiserPosition));
+
                 isFullRingTable = true;
             }
 
-            foreach (var tableItem in ThreeBettorFullRingPositionsCollection.Where(x => x.IsChecked))
+            var threeBettorFullRingPositionsChecked = ThreeBettorFullRingPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (threeBettorFullRingPositionsChecked.Length > 0)
             {
                 fullRingPredicate = fullRingPredicate.And(x => x.ThreeBettorPosition != EnumPosition.Undefined &&
-                    x.ThreeBettorPosition != EnumPosition.STRDL &&
-                    x.ThreeBettorPosition == x.Position &&
-                    x.ThreeBettorPosition != tableItem.PlayerPosition);
+                       x.ThreeBettorPosition != EnumPosition.STRDL &&
+                       x.ThreeBettorPosition != x.Position &&
+                       threeBettorFullRingPositionsChecked.Contains(x.ThreeBettorPosition));
+
                 isFullRingTable = true;
             }
 
-            foreach (var tableItem in FourBettorFullRingPositionsCollection.Where(x => x.IsChecked))
+            var fourBettorFullRingPositionsChecked = FourBettorFullRingPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (fourBettorFullRingPositionsChecked.Length > 0)
             {
                 fullRingPredicate = fullRingPredicate.And(x => x.FourBettorPosition != EnumPosition.Undefined &&
-                    x.FourBettorPosition != EnumPosition.STRDL &&
-                    x.FourBettorPosition == x.Position &&
-                    x.FourBettorPosition != tableItem.PlayerPosition);
+                       x.FourBettorPosition != EnumPosition.STRDL &&
+                       x.FourBettorPosition != x.Position &&
+                       fourBettorFullRingPositionsChecked.Contains(x.FourBettorPosition));
+
                 isFullRingTable = true;
             }
 

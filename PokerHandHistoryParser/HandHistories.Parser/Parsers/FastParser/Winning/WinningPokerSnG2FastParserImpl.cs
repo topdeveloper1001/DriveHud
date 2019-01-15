@@ -347,7 +347,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         protected override Buyin ParseBuyin(string[] handLines)
         {
             // Title 'SNG 2.0 $5.50'
-            var handLine = handLines.FirstOrDefault(x => x.StartsWith("Title '", StringComparison.OrdinalIgnoreCase));
+            var handLine = handLines.FirstOrDefault(x => x.StartsWith("Title: ", StringComparison.OrdinalIgnoreCase));
 
             if (handLine == null)
             {

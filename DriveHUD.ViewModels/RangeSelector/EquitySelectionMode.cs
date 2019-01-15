@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="EquityCalculatorViewModel.cs" company="Ace Poker Solutions">
+// <copyright file="EquitySelectionMode.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,10 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace DriveHUD.EquityCalculator.ViewModels
+namespace DriveHUD.ViewModels
 {
     public enum EquitySelectionMode
     {
+        None,
         FoldCheck,
         Call,
         Bluff,

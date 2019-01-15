@@ -120,11 +120,11 @@
     <Compile Include="Analyzer\Stats.cs" />
     <Compile Include="Analyzer\TempConfig.cs" />
     <Compile Include="Analyzer\MainAnalyzer.cs" />
+    <Compile Include="Converters\EquityRangeItemToBackgroundConverter.cs" />
     <Compile Include="Models\CheckableCardModel.cs" />
     <Compile Include="Models\ICardCollectionContainer.cs" />
     <Compile Include="ViewModels\EquityCalculatorMode.cs" />
     <Compile Include="ViewModels\EquityRangeSelectorItemViewModel.cs" />
-    <Compile Include="ViewModels\EquitySelectionMode.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\ExportNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\ExportViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\CustomLikelihoodViewModel.cs" />
