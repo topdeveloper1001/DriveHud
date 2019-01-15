@@ -1020,9 +1020,11 @@ namespace DriveHUD.Entities
         public virtual int TotalWonAmountOnRiverCall { get; set; }
 
         [ProtoMember(365)]
+        [DefaultValue(EnumPosition.Undefined)]
         public virtual EnumPosition FirstRaiserPosition { get; set; } = EnumPosition.Undefined;
 
         [ProtoMember(366)]
+        [DefaultValue(EnumPosition.Undefined)]
         public virtual EnumPosition ThreeBettorPosition { get; set; } = EnumPosition.Undefined;
 
         [ProtoMember(367)]
@@ -1149,6 +1151,7 @@ namespace DriveHUD.Entities
         public virtual int FacingTripleBarrel { get; set; }
 
         [ProtoMember(408)]
+        [DefaultValue(EnumPosition.Undefined)]
         public virtual EnumPosition FourBettorPosition { get; set; } = EnumPosition.Undefined;
 
         #region Pot/Amount/Stack based 

@@ -12,6 +12,7 @@
 
 using DriveHUD.Common.Linq;
 using DriveHUD.EquityCalculator.ViewModels;
+using DriveHUD.ViewModels;
 using HandHistories.Objects.Cards;
 using System;
 using System.Collections;
@@ -134,13 +135,13 @@ namespace DriveHUD.EquityCalculator.Analyzer
                               let cards = (from hand in HandAnalyzer.UngroupHands(new List<string> { range.Caption }, handHistory, true).Distinct()
                                            select new RangeItemCard
                                            {
+                                               HandSuit = range.HandSuitsModelList.Where(x => x.IsVisible).First(x => CompareHandToHandSuit(x.HandSuit, hand)),
                                                Caption = hand
                                            }).ToArray()
                               select new RangeItem
                               {
                                   Range = range,
-                                  Cards = cards,
-                                  BestHand = PostFlopHand.kNoPair
+                                  Cards = cards
                               }).ToArray();
 
             // flop cards
@@ -161,103 +162,117 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             var boardCards = new[] { fBoardCard1, fBoardCard2, fBoardCard3, fBoardCard4, fBoardCard5 };
 
+            var rangeItemCards = rangeItems.SelectMany(x => x.Cards).ToArray();
+
             // iterate over all possible combinations to get equity of each range
-            foreach (var rangeItem in rangeItems)
+
+            foreach (var rangeItemCard in rangeItemCards)
             {
-                foreach (var holeCards in rangeItem.Cards)
+                var holeCard1 = rangeItemCard.Caption.Substring(0, 2);
+                var holeCard2 = rangeItemCard.Caption.Substring(2, 2);
+
+                var fHoleCard1 = HandHistory.fastCard(holeCard1[0], holeCard1[1]);
+                var fHoleCard2 = HandHistory.fastCard(holeCard2[0], holeCard2[1]);
+
+                var usedCards = boardCards.Concat(new[] { fHoleCard1, fHoleCard2 }).ToArray();
+
+                var turnCardIterations = boardCard4 == null ? 52 : 1;
+
+                for (var i = 0; i < turnCardIterations; i++)
                 {
-                    var holeCard1 = holeCards.Caption.Substring(0, 2);
-                    var holeCard2 = holeCards.Caption.Substring(2, 2);
-
-                    var fHoleCard1 = HandHistory.fastCard(holeCard1[0], holeCard1[1]);
-                    var fHoleCard2 = HandHistory.fastCard(holeCard2[0], holeCard2[1]);
-
-                    var usedCards = boardCards.Concat(new[] { fHoleCard1, fHoleCard2 }).ToArray();
-
-                    var turnCardIterations = boardCard4 == null ? 52 : 1;
-
-                    for (var i = 0; i < turnCardIterations; i++)
+                    if (boardCard4 == null)
                     {
-                        if (boardCard4 == null)
-                        {
-                            fBoardCard4 = HandHistory.fastCard(Card.CardName[i], Card.CardSuit[i]);
+                        fBoardCard4 = HandHistory.fastCard(Card.CardName[i], Card.CardSuit[i]);
 
-                            if (usedCards.Contains(fBoardCard4))
+                        if (usedCards.Contains(fBoardCard4))
+                        {
+                            continue;
+                        }
+                    }
+
+                    var riverIterationsStartIndex = boardCard4 == null ? i + 1 : 0;
+                    var riverCardIterations = boardCard5 == null ? 52 : 1;
+
+                    for (var j = riverIterationsStartIndex; j < riverCardIterations; j++)
+                    {
+                        if (boardCard5 == null)
+                        {
+                            fBoardCard5 = HandHistory.fastCard(Card.CardName[j], Card.CardSuit[j]);
+
+                            if (usedCards.Contains(fBoardCard5))
                             {
                                 continue;
                             }
                         }
 
-                        var riverIterationsStartIndex = boardCard4 == null ? i + 1 : 0;
-                        var riverCardIterations = boardCard5 == null ? 52 : 1;
+                        var hand = new[] { fBoardCard1, fBoardCard2, fBoardCard3, fBoardCard4, fBoardCard5, fHoleCard1, fHoleCard2 };
+                        var weight = FastEvaluator.eval_7hand(hand);
 
-                        for (var j = riverIterationsStartIndex; j < riverCardIterations; j++)
+                        rangeItemCard.Weights.Add(weight);
+
+                        var boardInfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, holeCard1, holeCard2);
+
+                        if (boardInfo.holesused > 0 && rangeItemCard.BestHand > boardInfo.madehand)
                         {
-                            if (boardCard5 == null)
+                            if (boardInfo.madehand == PostFlopHand.kPair || boardInfo.madehand == PostFlopHand.k2Pair)
                             {
-                                fBoardCard5 = HandHistory.fastCard(Card.CardName[j], Card.CardSuit[j]);
+                                var pairType = boardInfo.madehand == PostFlopHand.k2Pair ?
+                                    GetPairType(holeCard1, holeCard2, new boardinfo { madehand = PostFlopHand.kPair }, RemovePairFromBoard(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5)) :
+                                    GetPairType(holeCard1, holeCard2, boardInfo, $"{handHistory.CommunityCards[1]}{boardCard4}{boardCard5}");
 
-                                if (usedCards.Contains(fBoardCard5))
-                                {
-                                    continue;
-                                }
+                                rangeItemCard.IsMiddlePair = pairType == PairType.Middle;
+                                rangeItemCard.IsBottomPair = pairType == PairType.Bottom;
+                                rangeItemCard.IsTopPair = pairType == PairType.Top;
+                                rangeItemCard.IsWeakKicker = boardInfo.kicker <= Card.AllCardsList.IndexOf("T");
+                                rangeItemCard.IsGoodKicker = !rangeItemCard.IsWeakKicker && boardInfo.kicker <= Card.AllCardsList.IndexOf("J");
+                                rangeItemCard.IsTopKicker = boardInfo.kicker >= Card.AllCardsList.IndexOf("Q");
                             }
 
-                            var hand = new[] { fBoardCard1, fBoardCard2, fBoardCard3, fBoardCard4, fBoardCard5, fHoleCard1, fHoleCard2 };
-                            var weight = FastEvaluator.eval_7hand(hand);
+                            rangeItemCard.IsConnectedToBoard = boardInfo.madehand == PostFlopHand.kPair && boardInfo.holesused == 1 ||
+                                boardInfo.madehand != PostFlopHand.kPair;
 
-                            holeCards.Weights.Add(weight);
-
-                            var boardInfo = Jacob.AnalyzeHand(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5, holeCard1, holeCard2);
-
-                            if (boardInfo.holesused > 0 && rangeItem.BestHand > boardInfo.madehand)
-                            {
-                                if (boardInfo.madehand == PostFlopHand.kPair || boardInfo.madehand == PostFlopHand.k2Pair)
-                                {
-                                    var pairType = boardInfo.madehand == PostFlopHand.k2Pair ?
-                                        GetPairType(holeCard1, holeCard2, new boardinfo { madehand = PostFlopHand.kPair }, RemovePairFromBoard(boardCard1, boardCard2, boardCard3, boardCard4, boardCard5)) :
-                                        GetPairType(holeCard1, holeCard2, boardInfo, $"{handHistory.CommunityCards[1]}{boardCard4}{boardCard5}");
-
-                                    rangeItem.IsMiddlePair = pairType == PairType.Middle;
-                                    rangeItem.IsBottomPair = pairType == PairType.Bottom;
-                                    rangeItem.IsTopPair = pairType == PairType.Top;
-                                    rangeItem.IsWeakKicker = boardInfo.kicker <= Card.AllCardsList.IndexOf("T");
-                                    rangeItem.IsGoodKicker = !rangeItem.IsWeakKicker && boardInfo.kicker <= Card.AllCardsList.IndexOf("J");
-                                    rangeItem.IsTopKicker = boardInfo.kicker >= Card.AllCardsList.IndexOf("Q");
-                                }
-
-                                rangeItem.IsConnectedToBoard = boardInfo.madehand == PostFlopHand.kPair && boardInfo.holesused == 1 ||
-                                    boardInfo.madehand != PostFlopHand.kPair;
-
-                                rangeItem.BestHand = boardInfo.madehand;
-                            }
+                            rangeItemCard.BestHand = boardInfo.madehand;
                         }
                     }
                 }
             }
 
-            Array.Sort(rangeItems, new RangeItemComparer());
+            rangeItemCards.ForEach(x => x.Weights = x.Weights.OrderBy(w => w).ToList());
+
+            Array.Sort(rangeItemCards, new RangeItemCardComparer());
 
             // set weights
-            for (var i = 0; i < rangeItems.Length; i++)
+            for (var i = 0; i < rangeItemCards.Length; i++)
             {
-                rangeItems[i].Weight = i;
+                rangeItemCards[i].Weight = i;
             }
 
             // assign groups            
-            MarkTopPairsAndHigherToValueBet(rangeItems);
-            MarkPocketMiddlePairs(rangeItems);
-            MarkPocketBottomPairs(rangeItems);
+            MarkTopPairsAndHigherToValueBet(rangeItemCards);
+            MarkPocketMiddlePairs(rangeItemCards);
+            MarkPocketBottomPairs(rangeItemCards);
 
-            MarkConnectedTopPairs(rangeItems);
-            MarkConnectedMiddlePairs(rangeItems);
-            MarkConnectedBottomPairs(rangeItems);
+            MarkConnectedTopPairs(rangeItemCards);
+            MarkConnectedMiddlePairs(rangeItemCards);
+            MarkConnectedBottomPairs(rangeItemCards);
 
-            MarkBluffs(potType, rangeItems, street);
+            MarkBluffs(potType, rangeItemCards, street);
 
-            rangeItems
-                .Where(x => !x.Range.EquitySelectionMode.HasValue)
-                .ForEach(x => x.Range.EquitySelectionMode = x.BestHand == PostFlopHand.kPair ? EquitySelectionMode.Call : EquitySelectionMode.FoldCheck);
+            rangeItemCards
+                .Where(x => x.HandSuit.SelectionMode == EquitySelectionMode.None)
+                .ForEach(x => x.HandSuit.SelectionMode = x.BestHand == PostFlopHand.kPair ? EquitySelectionMode.Call : EquitySelectionMode.FoldCheck);
+
+            rangeItems.ForEach(x =>
+            {
+                var handSuit = x.Range
+                    .HandSuitsModelList
+                    .Where(p => p.IsVisible)
+                    .GroupBy(p => p.SelectionMode)
+                    .OrderByDescending(p => p.Count()).First().Key;
+
+                x.Range.EquitySelectionMode = handSuit;
+                x.Range.RefreshCombos();
+            });
         }
 
         public static string GetRecommendedRange(int opponentsCount, Street street)
@@ -287,15 +302,15 @@ namespace DriveHUD.EquityCalculator.Analyzer
             return PairType.Bottom;
         }
 
-        private static void MarkTopPairsAndHigherToValueBet(RangeItem[] rangeGroup)
+        private static void MarkTopPairsAndHigherToValueBet(RangeItemCard[] rangeGroup)
         {
             rangeGroup
                 .Where(x => x.BestHand < PostFlopHand.kPair ||
                     x.BestHand == PostFlopHand.kPair && x.IsTopPair && !x.IsConnectedToBoard)
-                .ForEach(x => x.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+                .ForEach(x => x.HandSuit.SelectionMode = EquitySelectionMode.ValueBet);
         }
 
-        private static void MarkPocketMiddlePairs(RangeItem[] rangeGroup)
+        private static void MarkPocketMiddlePairs(RangeItemCard[] rangeGroup)
         {
             var middlePairs = rangeGroup.Where(x => x.IsMiddlePair && !x.IsConnectedToBoard).OrderBy(x => x.Weight).ToArray();
 
@@ -304,12 +319,12 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkLength > 0)
             {
-                middlePairs.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
-                middlePairs.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+                middlePairs.Take(rangesToMarkLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.Call);
+                middlePairs.Skip(rangesToMarkLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.ValueBet);
             }
         }
 
-        private static void MarkPocketBottomPairs(RangeItem[] rangeGroup)
+        private static void MarkPocketBottomPairs(RangeItemCard[] rangeGroup)
         {
             var middlePairs = rangeGroup.Where(x => x.IsBottomPair && !x.IsConnectedToBoard).OrderByDescending(x => x.Weight).ToArray();
 
@@ -318,11 +333,11 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkLength > 0)
             {
-                middlePairs.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+                middlePairs.Take(rangesToMarkLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.ValueBet);
             }
         }
 
-        private static void MarkConnectedTopPairs(RangeItem[] rangeGroup)
+        private static void MarkConnectedTopPairs(RangeItemCard[] rangeGroup)
         {
             var topPairsGoodKicker = rangeGroup
                 .Where(x => x.IsTopPair && x.IsConnectedToBoard && (x.IsTopKicker || x.IsGoodKicker))
@@ -334,8 +349,8 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkAsCallLength > 0)
             {
-                topPairsGoodKicker.Take(rangesToMarkAsCallLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
-                topPairsGoodKicker.Skip(rangesToMarkAsCallLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+                topPairsGoodKicker.Take(rangesToMarkAsCallLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.Call);
+                topPairsGoodKicker.Skip(rangesToMarkAsCallLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.ValueBet);
             }
 
             var topPairsWeakKicker = rangeGroup
@@ -348,12 +363,12 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkAsCallLength > 0)
             {
-                topPairsWeakKicker.Take(rangesToMarkAsCallLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
-                topPairsWeakKicker.Skip(rangesToMarkAsCallLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+                topPairsWeakKicker.Take(rangesToMarkAsCallLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.Call);
+                topPairsWeakKicker.Skip(rangesToMarkAsCallLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.ValueBet);
             }
         }
 
-        private static void MarkConnectedMiddlePairs(RangeItem[] rangeGroup)
+        private static void MarkConnectedMiddlePairs(RangeItemCard[] rangeGroup)
         {
             var middlePairs = rangeGroup.Where(x => x.IsMiddlePair && x.IsConnectedToBoard).OrderBy(x => x.Weight).ToArray();
 
@@ -362,12 +377,12 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkLength > 0)
             {
-                middlePairs.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
-                middlePairs.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+                middlePairs.Take(rangesToMarkLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.Call);
+                middlePairs.Skip(rangesToMarkLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.ValueBet);
             }
         }
 
-        private static void MarkConnectedBottomPairs(RangeItem[] rangeGroup)
+        private static void MarkConnectedBottomPairs(RangeItemCard[] rangeGroup)
         {
             var bottomPairsTopKicker = rangeGroup
                 .Where(x => x.IsBottomPair && x.IsConnectedToBoard && x.IsTopKicker)
@@ -379,10 +394,10 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkLength > 0)
             {
-                bottomPairsTopKicker.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
+                bottomPairsTopKicker.Take(rangesToMarkLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.Call);
             }
 
-            bottomPairsTopKicker.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.ValueBet);
+            bottomPairsTopKicker.Skip(rangesToMarkLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.ValueBet);
 
             var bottomPairsNoTopKicker = rangeGroup
                 .Where(x => x.IsBottomPair && x.IsConnectedToBoard && !x.IsTopKicker)
@@ -393,37 +408,36 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             if (rangesToMarkLength > 0)
             {
-                bottomPairsNoTopKicker.Take(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.FoldCheck);
+                bottomPairsNoTopKicker.Take(rangesToMarkLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.FoldCheck);
             }
 
-            bottomPairsNoTopKicker.Skip(rangesToMarkLength).ForEach(r => r.Range.EquitySelectionMode = EquitySelectionMode.Call);
+            bottomPairsNoTopKicker.Skip(rangesToMarkLength).ForEach(r => r.HandSuit.SelectionMode = EquitySelectionMode.Call);
         }
 
-        private static void MarkBluffs(PotType potType, RangeItem[] rangeGroup, Street street)
+        private static void MarkBluffs(PotType potType, RangeItemCard[] rangeGroup, Street street)
         {
             if (!PredefinedRatio[potType].ContainsKey(street))
             {
                 return;
             }
 
-            var ranges = rangeGroup.Where(x => !x.Range.EquitySelectionMode.HasValue)
+            var ranges = rangeGroup.Where(x => x.HandSuit.SelectionMode == EquitySelectionMode.None)
                 .OrderByDescending(x => x.Weight)
                 .ToArray();
 
             var bluffToValueRatio = (PredefinedRatio[potType][street][0] + PredefinedRatio[potType][street][1]) / 2;
 
-            var valueBetCombos = rangeGroup.Where(x => x.Range.EquitySelectionMode == EquitySelectionMode.ValueBet).Sum(x => x.Range.Combos);
+            var valueBetCombos = rangeGroup.Count(x => x.HandSuit.SelectionMode == EquitySelectionMode.ValueBet);
             var bluffCombos = bluffToValueRatio * valueBetCombos;
 
             var currentCombos = 0;
 
             foreach (var range in ranges)
             {
-                if (currentCombos < bluffCombos &&
-                    (currentCombos + range.Range.Combos - bluffCombos < bluffCombos - currentCombos))
+                if (currentCombos < bluffCombos)
                 {
-                    range.Range.EquitySelectionMode = EquitySelectionMode.Bluff;
-                    currentCombos += range.Range.Combos;
+                    range.HandSuit.SelectionMode = EquitySelectionMode.Bluff;
+                    currentCombos++; ;
                     continue;
                 }
 
@@ -467,6 +481,25 @@ namespace DriveHUD.EquityCalculator.Analyzer
             return string.Join(string.Empty, boardCardsList.ToArray());
         }
 
+        private static bool CompareHandToHandSuit(HandSuitsEnum handSuit, string hand)
+        {
+            var handSuitText = $"{hand[1]}{hand[3]}";
+
+            if (handSuit.ToString().Equals(handSuitText, StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+
+            // if pair try reverted order
+            if (hand[0] == hand[2])
+            {
+                handSuitText = $"{hand[3]}{hand[1]}";
+                return handSuit.ToString().Equals(handSuitText, StringComparison.OrdinalIgnoreCase);
+            }
+
+            return false;
+        }
+
         #region Private helpers
 
         private class RangeItem
@@ -503,16 +536,80 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
         private class RangeItemCard
         {
+            public HandSuitsViewModel HandSuit { get; set; }
+
             public string Caption { get; set; }
 
+            public int Weight { get; set; }
+
             public List<int> Weights { get; set; } = new List<int>();
+
+            public PostFlopHand BestHand { get; set; } = PostFlopHand.kNoPair;
+
+            public bool IsMiddlePair { get; set; }
+
+            public bool IsTopKicker { get; set; }
+
+            public bool IsGoodKicker { get; set; }
+
+            public bool IsWeakKicker { get; set; }
+
+            public bool IsTopPair { get; set; }
+
+            public bool IsBottomPair { get; set; }
+
+            public bool IsConnectedToBoard { get; set; }
 
 #if DEBUG
             public override string ToString()
             {
-                return $"Caption: {Caption}";
+                return $"Caption: {Caption}; Weight={Weight}; BestHand: {BestHand}; IsTop={IsTopPair}; IsMiddle={IsMiddlePair}; IsBottom={IsBottomPair}; IsConnected={IsConnectedToBoard}";
             }
 #endif
+        }
+
+        private class RangeItemCardComparer : IComparer
+        {
+            public int Compare(RangeItemCard cards1, RangeItemCard cards2)
+            {
+                if (cards1 == null)
+                {
+                    throw new ArgumentNullException(nameof(cards1));
+                }
+
+                if (cards2 == null)
+                {
+                    throw new ArgumentNullException(nameof(cards2));
+                }
+
+                var wins1 = 0;
+                var wins2 = 0;
+
+
+                if (cards1.Weights.Count != cards2.Weights.Count)
+                {
+                    throw new InvalidOperationException("The list of weights of cards of range items to compare must be the same length.");
+                }
+
+                for (var k = 0; k < cards1.Weights.Count; k++)
+                {
+                    if (cards1.Weights[k] < cards2.Weights[k])
+                    {
+                        wins1++;
+                    }
+                    else if (cards1.Weights[k] > cards2.Weights[k])
+                    {
+                        wins2++;
+                    }
+                }
+
+                return wins1.CompareTo(wins2);
+            }
+
+            public int Compare(object x, object y)
+            {
+                return Compare(x as RangeItemCard, y as RangeItemCard);
+            }
         }
 
         /// <summary>

@@ -63,7 +63,7 @@ namespace DriveHUD.Application.TableConfigurators
                     Background = new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(diagram), BackgroundPlayerImage))),
                     Height = PLAYER_HEIGHT,
                     Width = PLAYER_WIDTH,
-                    StrokeThickness = 0,                    
+                    StrokeThickness = 0,
                     BorderThickness = new Thickness(0),
                     IsResizingEnabled = false,
                     IsRotationEnabled = false,
@@ -129,14 +129,15 @@ namespace DriveHUD.Application.TableConfigurators
 
         private void PlayerControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            var indicator = (sender as RadDiagramShape);
-            if (indicator != null)
+            if (sender is RadDiagramShape indicator)
             {
                 int seat = -1;
+
                 var viewModel = indicator.DataContext as SiteViewModel;
+
                 if (int.TryParse(indicator.Tag.ToString(), out seat) && (viewModel != null))
                 {
-                    if (viewModel.SelectedSeatModel.PreferredSeat != seat || !viewModel.SelectedSeatModel.IsPreferredSeatEnabled)
+                    if (seat != -1 && (viewModel.SelectedSeatModel.PreferredSeat != seat || !viewModel.SelectedSeatModel.IsPreferredSeatEnabled))
                     {
                         viewModel.SelectedSeatModel.PreferredSeat = seat;
                         viewModel.SelectedSeatModel.IsPreferredSeatEnabled = true;

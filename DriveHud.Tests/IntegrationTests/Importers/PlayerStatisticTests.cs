@@ -1633,6 +1633,18 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.NumberOfPlayersSawShowdown, fileName, pokerSite, playerName, expected);
         }
 
+        [TestCase(@"Hero-FoldedTo3BetInBTNvs3BetSB-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void FoldTo3BetInBTNvs3BetSBIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.FoldTo3BetInBTNvs3BetSB, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-FoldedTo3BetInBTNvs3BetSB-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
+        public void CouldFoldTo3BetInBTNvs3BetSBIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldFoldTo3BetInBTNvs3BetSB, fileName, pokerSite, playerName, expected);
+        }
+
         #endregion
     }
 }

@@ -227,6 +227,7 @@
     <Compile Include="UnitTests\ConverterTests.cs" />
     <Compile Include="UnitTests\PartyPokerJackpotTableFinderTests.cs" />
     <Compile Include="UnitTests\PlayerStatisticPerformanceTest.cs" />
+    <Compile Include="UnitTests\PlayerstatisticSerializationTests.cs" />
     <Compile Include="UnitTests\WinningPokerNetworkFileBasedImporterTests.cs" />
     <Compile Include="Utils\AssertionUtils.cs" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt" />

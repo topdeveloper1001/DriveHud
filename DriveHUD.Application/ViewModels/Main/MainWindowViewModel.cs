@@ -211,6 +211,8 @@ namespace DriveHUD.Application.ViewModels
             if (screenResolution.Width < ResolutionSettings.HighResolutionWidth)
             {
                 IsLowResolutionMode = true;
+                HudViewModel.IsLowResolutionMode = true;
+
                 WindowMinWidth = ResolutionSettings.LowResolutionWidth;
                 WindowWidth = ResolutionSettings.LowResolutionWidth;
             }
