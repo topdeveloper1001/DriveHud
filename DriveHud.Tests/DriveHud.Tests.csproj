@@ -311,9 +311,11 @@
     <Fakes Include="Fakes\System.fakes" />
     <Fakes Include="Fakes\mscorlib.fakes" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLH-Cash-PP-ES-1.txt" />
+    <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-hero-1\Result.xml" />
     <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-1\Result.xml" />
     <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-2\Result.xml" />
     <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-3\Result.xml" />
+    <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\plo-6-max-no-hero-1\Result.xml" />
     <Content Include="PipeImporterTests\PokerBaazi\TestData\RawData\RawData-1.txt" />
     <Content Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-6-max-no-hero\Result.xml">
       <SubType>Designer</SubType>
@@ -403,12 +405,16 @@
     <Content Include="ProxyImporterTests\Adda52Tests\TestData\Packets\0.0.0.0.8893-127.0.0.1.12032.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-hero-1\Source.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-1\Source.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-2\Source.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-3\Source.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\plo-6-max-no-hero-1\Source.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\InitResponse.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\RoundResponse.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\SpectatorResponse.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\StartGameResponse.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\TournamentDetailsResponse.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\UserButtonActionResponse-2.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\UserButtonActionResponse.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\WinnerResponse.json" />

@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Log;
 using System;
 
@@ -23,6 +24,8 @@ namespace DriveHUD.Importers.PokerBaazi.Model
 
         public uint RoomId { get; set; }
 
+        public long TournamentId { get; set; }
+
         public static bool TryParse(string data, out PokerBaaziPackage package)
         {
             package = null;
@@ -31,11 +34,14 @@ namespace DriveHUD.Importers.PokerBaazi.Model
 
             var packageType = ParsePackageType(jsonData);
 
+            var roomIdTournamentId = ParseRoomIdAndTournamentId(data);
+
             package = new PokerBaaziPackage
             {
                 PackageType = packageType,
                 JsonData = jsonData,
-                RoomId = ParseRoomId(data)
+                RoomId = roomIdTournamentId.Item1,
+                TournamentId = roomIdTournamentId.Item2
             };
 
             return packageType != PokerBaaziPackageType.Unknown;
@@ -98,7 +104,8 @@ namespace DriveHUD.Importers.PokerBaazi.Model
                 switch (actionText)
                 {
                     case "SpectatorResponse":
-                        return PokerBaaziPackageType.SpectatorResponse;
+                    case "StartGameResponse":
+                        return PokerBaaziPackageType.StartGameResponse;
                     case "InitResponse":
                         return PokerBaaziPackageType.InitResponse;
                     case "RoundResponse":
@@ -107,6 +114,8 @@ namespace DriveHUD.Importers.PokerBaazi.Model
                         return PokerBaaziPackageType.UserButtonActionResponse;
                     case "WinnerResponse":
                         return PokerBaaziPackageType.WinnerResponse;
+                    case "TournamentDetailsResponse":
+                        return PokerBaaziPackageType.TournamentDetailsResponse;
                     default:
                         return PokerBaaziPackageType.Unknown;
                 }
@@ -118,34 +127,48 @@ namespace DriveHUD.Importers.PokerBaazi.Model
             }
         }
 
-        private static uint ParseRoomId(string data)
+        private static Tuple<uint, long> ParseRoomIdAndTournamentId(string data)
         {
             var roomId = 0u;
+            var tournamentId = 0L;
 
             if (string.IsNullOrEmpty(data))
             {
-                return roomId;
+                return Tuple.Create(roomId, tournamentId);
             }
 
             var roomIdEndIndex = data.IndexOf(",", StringComparison.OrdinalIgnoreCase);
 
             if (roomIdEndIndex < 0)
             {
-                return roomId;
+                return Tuple.Create(roomId, tournamentId);
             }
 
             var roomIdStartIndex = data.LastIndexOf("/", roomIdEndIndex, StringComparison.OrdinalIgnoreCase);
 
             if (roomIdStartIndex < 0 || (roomIdEndIndex - roomIdStartIndex) < 2)
             {
-                return roomId;
+                return Tuple.Create(roomId, tournamentId);
             }
 
             var roomIdText = data.Substring(roomIdStartIndex + 1, roomIdEndIndex - roomIdStartIndex - 1);
 
+            if (roomIdText.ContainsIgnoreCase("T"))
+            {
+                roomIdStartIndex = roomIdText.LastIndexOf("T", StringComparison.OrdinalIgnoreCase);
+
+                var tournamentStartIndex = roomIdText.IndexOf(":", StringComparison.OrdinalIgnoreCase) + 1;
+
+                var tournamentIdText = roomIdText.Substring(tournamentStartIndex, roomIdStartIndex - tournamentStartIndex);
+
+                long.TryParse(tournamentIdText, out tournamentId);
+
+                roomIdText = roomIdText.Substring(roomIdStartIndex + 1);
+            }
+
             uint.TryParse(roomIdText, out roomId);
 
-            return roomId;
+            return Tuple.Create(roomId, tournamentId);
         }
 
         private static string ExtractJson(string data)

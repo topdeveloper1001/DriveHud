@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PokerBaaziPackageType.cs" company="Ace Poker Solutions">
+// <copyright file="PokerBaaziTournamentDetailsResponse.cs" company="Ace Poker Solutions">
 // Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,16 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Newtonsoft.Json;
+
 namespace DriveHUD.Importers.PokerBaazi.Model
 {
-    internal enum PokerBaaziPackageType
+    internal class PokerBaaziTournamentDetailsResponse
     {
-        Unknown = 0,
-        InitResponse = 1,
-        StartGameResponse = 2,        
-        UserButtonActionResponse = 3,
-        RoundResponse = 4,
-        WinnerResponse = 5,
-        TournamentDetailsResponse = 6
-    }
+        [JsonProperty("tournamentId")]
+        public long TournamentId { get; set; }
+
+        [JsonProperty("details")]
+        public PokerBaaziTournamentDetails Details { get; set; }
+    }    
 }

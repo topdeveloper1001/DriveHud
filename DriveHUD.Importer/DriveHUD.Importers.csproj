@@ -338,7 +338,9 @@
     <Compile Include="PokerBaazi\Model\PokerBaaziPlayerInfo.cs" />
     <Compile Include="PokerBaazi\Model\PokerBaaziResponse.cs" />
     <Compile Include="PokerBaazi\Model\PokerBaaziRoundResponse.cs" />
-    <Compile Include="PokerBaazi\Model\PokerBaaziSpectatorResponse.cs" />
+    <Compile Include="PokerBaazi\Model\PokerBaaziStartGameResponse.cs" />
+    <Compile Include="PokerBaazi\Model\PokerBaaziTournamentDetails.cs" />
+    <Compile Include="PokerBaazi\Model\PokerBaaziTournamentDetailsResponse.cs" />
     <Compile Include="PokerBaazi\Model\PokerBaaziUserActionResponse.cs" />
     <Compile Include="PokerBaazi\Model\PokerBaaziWinnerInfo.cs" />
     <Compile Include="PokerBaazi\Model\PokerBaaziWinnerResponse.cs" />

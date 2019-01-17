@@ -10,7 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Extensions;
+using DriveHUD.Importers.PokerBaazi.Model;
 using HandHistories.Objects.Cards;
+using HandHistories.Objects.GameDescription;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,7 +48,7 @@ namespace DriveHUD.Importers.PokerBaazi
             {
                 return false;
             }
-        }
+        }    
 
         private static Card ParseCard(string cardString)
         {

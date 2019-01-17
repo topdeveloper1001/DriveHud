@@ -29,11 +29,13 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
-        [TestCase("Packets\\SpectatorResponse.json", PokerBaaziPackageType.SpectatorResponse)]
+        [TestCase("Packets\\SpectatorResponse.json", PokerBaaziPackageType.StartGameResponse)]
         [TestCase("Packets\\InitResponse.json", PokerBaaziPackageType.InitResponse)]
         [TestCase("Packets\\RoundResponse.json", PokerBaaziPackageType.RoundResponse)]
         [TestCase("Packets\\UserButtonActionResponse.json", PokerBaaziPackageType.UserButtonActionResponse)]
         [TestCase("Packets\\WinnerResponse.json", PokerBaaziPackageType.WinnerResponse)]
+        [TestCase("Packets\\StartGameResponse.json", PokerBaaziPackageType.StartGameResponse)]
+        [TestCase("Packets\\TournamentDetailsResponse.json", PokerBaaziPackageType.TournamentDetailsResponse)]
         public void ParsePackageTypeTests(string file, PokerBaaziPackageType expectedPackageType)
         {
             file = Path.Combine(PokerBaaziTestsHelper.TestDataFolder, file);
@@ -49,10 +51,12 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
             Assert.That(actualPackageType, Is.EqualTo(expectedPackageType));
         }
 
-        [TestCase("RawData\\RawData-1.txt", 0, true, 100529u, PokerBaaziPackageType.InitResponse)]
-        [TestCase("RawData\\RawData-1.txt", 1, true, 876154u, PokerBaaziPackageType.RoundResponse)]
-        [TestCase("RawData\\RawData-1.txt", 2, false, 0u, PokerBaaziPackageType.Unknown)]
-        public void PokerBaaziPackageTryParseTest(string file, int lineNum, bool expectedResult, uint roomId, PokerBaaziPackageType expectedType)
+        [TestCase("RawData\\RawData-1.txt", 0, true, 100529u, 0L, PokerBaaziPackageType.InitResponse)]
+        [TestCase("RawData\\RawData-1.txt", 1, true, 876154u, 0L, PokerBaaziPackageType.RoundResponse)]
+        [TestCase("RawData\\RawData-1.txt", 2, false, 0u, 0L, PokerBaaziPackageType.Unknown)]
+        [TestCase("RawData\\RawData-1.txt", 3, true, 48710u, 292754L, PokerBaaziPackageType.StartGameResponse)]
+        [TestCase("RawData\\RawData-1.txt", 4, true, 0u, 292754L, PokerBaaziPackageType.TournamentDetailsResponse)]
+        public void PokerBaaziPackageTryParseTest(string file, int lineNum, bool expectedResult, uint roomId, long tournamentId, PokerBaaziPackageType expectedType)
         {
             var lines = GetFileLines(file);
 
@@ -68,6 +72,7 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
             {
                 Assert.That(result, Is.EqualTo(expectedResult), $"TryParse must return expected result.");
                 Assert.That(package.RoomId, Is.EqualTo(roomId), $"RoomId must be equal expected.");
+                Assert.That(package.TournamentId, Is.EqualTo(tournamentId), $"TournamentId must be equal expected.");
                 Assert.That(package.PackageType, Is.EqualTo(expectedType), $"PackageType must be equal expected.");
             });
         }

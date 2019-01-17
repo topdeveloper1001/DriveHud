@@ -39,5 +39,11 @@ namespace DriveHUD.Importers.PokerBaazi.Model
 
         [JsonProperty("straddle")]
         public bool Straddle { get; set; }
+
+        [JsonProperty("miniGameName")]
+        public string GameType { get; set; }
+
+        [JsonProperty("tournamentLevelName")]
+        public string GameLimit { get; set; }
     }
 }

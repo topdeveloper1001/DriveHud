@@ -85,6 +85,7 @@ namespace HandHistories.Parser.Parsers.Factory
                 case EnumPokerSites.PokerKing:
                 case EnumPokerSites.Adda52:
                 case EnumPokerSites.PPPoker:
+                case EnumPokerSites.PokerBaazi:
                     return new CommonHandHistoryParser(siteName);
                 case EnumPokerSites.Horizon:
                     return new HorizonFastParserImpl();

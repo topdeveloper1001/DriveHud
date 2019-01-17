@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PokerBaaziSpectatorResponse.cs" company="Ace Poker Solutions">
+// <copyright file="PokerBaaziTournamentDetails.cs" company="Ace Poker Solutions">
 // Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,19 +11,27 @@
 //----------------------------------------------------------------------
 
 using Newtonsoft.Json;
-using System.Collections.Generic;
 
 namespace DriveHUD.Importers.PokerBaazi.Model
 {
-    internal class PokerBaaziSpectatorResponse
+    internal class PokerBaaziTournamentDetails
     {
-        [JsonProperty("roomId")]
-        public uint RoomId { get; set; }
+        [JsonProperty("tournmentName")]
+        public string TournamentName { get; set; }
 
-        [JsonProperty("playGroupId")]
-        public long HandId { get; set; }
+        [JsonProperty("tournmentEntryFee")]
+        public int EntryFee { get; set; }
 
-        [JsonProperty("details")]
-        public Dictionary<int, PokerBaaziPlayerInfo> Players { get; set; }
-    }    
+        [JsonProperty("tournmentBuyIn")]
+        public int BuyIn { get; set; }
+
+        [JsonProperty("startingStake")]
+        public decimal StartingStake { get; set; }
+
+        [JsonProperty("tournmentRegPlayerCount")]
+        public int TotalPlayers { get; set; }
+
+        [JsonProperty("tournmentMaxEntries")]
+        public int MaxEntries { get; set; }
+    }
 }

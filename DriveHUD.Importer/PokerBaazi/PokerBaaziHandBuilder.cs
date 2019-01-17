@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
@@ -106,9 +107,9 @@ namespace DriveHUD.Importers.PokerBaazi
                 {
                     switch (package.PackageType)
                     {
-                        case PokerBaaziPackageType.SpectatorResponse:
+                        case PokerBaaziPackageType.StartGameResponse:
                             handHistory = new HandHistory();
-                            ParsePackage<PokerBaaziSpectatorResponse>(package, (response, timestamp) => ProcessSpectatorResponse(response, timestamp, handHistory));
+                            ParsePackage<PokerBaaziStartGameResponse>(package, (response, timestamp) => ProcessSpectatorResponse(response, timestamp, handHistory));
                             break;
                         case PokerBaaziPackageType.UserButtonActionResponse:
                             ParsePackage<PokerBaaziUserActionResponse>(package, response => ProcessUserActionResponse(response, handHistory));
@@ -144,7 +145,7 @@ namespace DriveHUD.Importers.PokerBaazi
         /// <returns>True if packages are valid; otherwise - false</returns>
         private bool Validate(List<PokerBaaziPackage> packages)
         {
-            return packages.Any(x => x.PackageType == PokerBaaziPackageType.SpectatorResponse);
+            return packages.Any(x => x.PackageType == PokerBaaziPackageType.StartGameResponse);
         }
 
         /// <summary>
@@ -166,11 +167,11 @@ namespace DriveHUD.Importers.PokerBaazi
         }
 
         /// <summary>
-        /// Processes the specified <see cref="PokerBaaziSpectatorResponse"/>
+        /// Processes the specified <see cref="PokerBaaziStartGameResponse"/>
         /// </summary>
         /// <param name="response">Response to process</param>
         /// <param name="handHistory">Hand history</param>
-        private void ProcessSpectatorResponse(PokerBaaziSpectatorResponse response, long timestamp, HandHistory handHistory)
+        private void ProcessSpectatorResponse(PokerBaaziStartGameResponse response, long timestamp, HandHistory handHistory)
         {
             if (!roomsInitResponses.TryGetValue(response.RoomId, out PokerBaaziInitResponse initResponse))
             {
@@ -183,7 +184,7 @@ namespace DriveHUD.Importers.PokerBaazi
             handHistory.GameDescription = new GameDescriptor(
                    PokerFormat.CashGame,
                    EnumPokerSites.PokerBaazi,
-                   GameType.NoLimitHoldem,
+                   ParseGameType(initResponse),
                    Limit.FromSmallBlindBigBlind(initResponse.SmallBlind, initResponse.BigBlind, currency),
                    TableType.FromTableTypeDescriptions(TableTypeDescription.Regular),
                    SeatType.FromMaxPlayers(initResponse.MaxPlayers),
@@ -196,7 +197,7 @@ namespace DriveHUD.Importers.PokerBaazi
             {
                 throw new HandBuilderException(response.HandId, $"SpectatorResponse.Players isn't set for room #{response.RoomId}");
             }
-          
+
             // add players
             foreach (var playerInfo in response.Players.Values)
             {
@@ -211,6 +212,16 @@ namespace DriveHUD.Importers.PokerBaazi
                     SeatNumber = playerInfo.Seat + 1,
                     StartingStack = playerInfo.Chips + playerInfo.BetAmount
                 };
+
+                if (initResponse.UserId == playerInfo.PlayerId)
+                {
+                    handHistory.Hero = player;
+                }
+
+                if (PokerBaaziUtils.TryParseCards(playerInfo.Cards, out Card[] holeCards))
+                {
+                    player.HoleCards = HoleCards.FromCards(playerInfo.PlayerName, holeCards);
+                }
 
                 handHistory.Players.Add(player);
 
@@ -229,8 +240,10 @@ namespace DriveHUD.Importers.PokerBaazi
                             actionType,
                             playerInfo.BetAmount,
                             Street.Preflop));
-                }
-            }            
+                }              
+            }
+
+            HandHistoryUtils.SortHandActions(handHistory);
         }
 
         /// <summary>
@@ -367,7 +380,7 @@ namespace DriveHUD.Importers.PokerBaazi
         /// </summary>
         /// <param name="actionType"></param>
         /// <returns></returns>
-        private HandActionType ParseHandActionType(string actionType)
+        private static HandActionType ParseHandActionType(string actionType)
         {
             switch (actionType)
             {
@@ -386,6 +399,36 @@ namespace DriveHUD.Importers.PokerBaazi
                 default:
                     throw new HandBuilderException($"Unknown action type: {actionType}");
             }
+        }
+
+        /// <summary>
+        /// Parses game type from the specified <see cref="PokerBaaziInitResponse"/>
+        /// </summary>
+        /// <param name="actionType"></param>
+        /// <returns></returns>
+        private GameType ParseGameType(PokerBaaziInitResponse initResponse)
+        {
+            if (string.IsNullOrEmpty(initResponse.GameType) || string.IsNullOrEmpty(initResponse.GameLimit))
+            {
+                LogProvider.Log.Warn(this, $"Empty game type/limit found in response '{initResponse.GameType}' '{initResponse.GameLimit}'. Use default type. [{loggerName}]");
+                return GameType.NoLimitHoldem;
+            }
+
+            if (initResponse.GameType.ContainsIgnoreCase("Hold'em") &&
+                initResponse.GameLimit.ContainsIgnoreCase("no limit"))
+            {
+                return GameType.NoLimitHoldem;
+            }
+
+            if (initResponse.GameType.ContainsIgnoreCase("Omaha") &&
+               initResponse.GameLimit.ContainsIgnoreCase("pot limit"))
+            {
+                return GameType.PotLimitOmaha;
+            }
+
+            LogProvider.Log.Warn(this, $"Unknown game type/limit parsed from response '{initResponse.GameType}' '{initResponse.GameLimit}'. Use default type. [{loggerName}]");
+
+            return GameType.NoLimitHoldem;
         }
     }
 }
