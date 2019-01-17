@@ -124,6 +124,7 @@ namespace HandHistories.Objects.Cards
         {
             _card = (CardEnum)((int)suit + (int)rank);
         }
+
         #endregion
 
         #region Operators

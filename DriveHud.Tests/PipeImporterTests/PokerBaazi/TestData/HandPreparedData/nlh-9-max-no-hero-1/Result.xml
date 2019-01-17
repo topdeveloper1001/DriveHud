@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HandHistory>
-  <DateOfHandUtc>2018-09-12T00:05:04Z</DateOfHandUtc>
+  <DateOfHandUtc>2019-01-08T14:13:44.083Z</DateOfHandUtc>
   <HandId>1546956924578</HandId>
-  <DealerButtonPosition>7</DealerButtonPosition>
+  <DealerButtonPosition>8</DealerButtonPosition>
   <TableName>Dazzling Deuces</TableName>
   <GameDescription>
     <PokerFormat>CashGame</PokerFormat>
@@ -22,7 +22,7 @@
   <Cancelled>false</Cancelled>
   <NumPlayersSeated>0</NumPlayersSeated>
   <TotalPot>34</TotalPot>
-  <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+  <Rake>2</Rake>
   <Actions>
     <HandAction PlayerName="meherzad7" HandActionType="SMALL_BLIND" Amount="-1" Street="Preflop" IsAllIn="false" />
     <HandAction PlayerName="aadi8851777105" HandActionType="BIG_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
@@ -38,17 +38,17 @@
     <HandAction PlayerName="Neizo" HandActionType="CALL" Amount="-6" Street="Flop" IsAllIn="false" />
     <HandAction PlayerName="meherzad7" HandActionType="BET" Amount="-8" Street="Turn" IsAllIn="false" />
     <HandAction PlayerName="Neizo" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" />
-    <HandAction PlayerName="Neizo" HandActionType="UNCALLED_BET" Amount="8" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="meherzad7" HandActionType="UNCALLED_BET" Amount="8" Street="Turn" IsAllIn="false" />
     <HandAction p3:type="WinningsAction" PlayerName="meherzad7" HandActionType="WINS" Amount="32" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
   </Actions>
-  <CommunityCards>2d5c2s3s</CommunityCards>
+  <CommunityCards>4d5c2s3s</CommunityCards>
   <Players>
-    <Player PlayerName="meherzad7" StartingStack="135" Bet="0" Win="32" SeatNumber="1" Cards="" IsSittingOut="false" />
-    <Player PlayerName="aadi8851777105" StartingStack="96" Bet="0" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
-    <Player PlayerName="Neizo" StartingStack="77" Bet="0" Win="0" SeatNumber="3" Cards="" IsSittingOut="false" />
-    <Player PlayerName="Janmejayxxx" StartingStack="111" Bet="0" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
-    <Player PlayerName="aditya333" StartingStack="141" Bet="0" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
-    <Player PlayerName="atul198904" StartingStack="89" Bet="0" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
-    <Player PlayerName="RarInG" StartingStack="43" Bet="0" Win="0" SeatNumber="7" Cards="" IsSittingOut="false" />
+    <Player PlayerName="aadi8851777105" StartingStack="98" Bet="2" Win="0" SeatNumber="1" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Neizo" StartingStack="77" Bet="16" Win="0" SeatNumber="3" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Janmejayxxx" StartingStack="111" Bet="0" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
+    <Player PlayerName="aditya333" StartingStack="141" Bet="0" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+    <Player PlayerName="atul198904" StartingStack="89" Bet="0" Win="0" SeatNumber="7" Cards="" IsSittingOut="false" />
+    <Player PlayerName="RarInG" StartingStack="43" Bet="0" Win="0" SeatNumber="8" Cards="" IsSittingOut="false" />
+    <Player PlayerName="meherzad7" StartingStack="136" Bet="24" Win="32" SeatNumber="9" Cards="" IsSittingOut="false" />
   </Players>
 </HandHistory>

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PokerBaaziResponse.cs" company="Ace Poker Solutions">
+// <copyright file="PokerBaaziWinnerInfo.cs" company="Ace Poker Solutions">
 // Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -14,15 +14,21 @@ using Newtonsoft.Json;
 
 namespace DriveHUD.Importers.PokerBaazi.Model
 {
-    internal class PokerBaaziResponse<T> where T : class
+    internal class PokerBaaziWinnerInfo
     {
-        [JsonProperty("classObj")]
-        public T ClassObj { get; set; }
+        [JsonProperty("userId")]
+        public uint PlayerId { get; set; }
 
-        /// <summary>
-        /// Unix timestamp (in milliseconds) (GMT+0)
-        /// </summary>
-        [JsonProperty("timestamp")]
-        public long Timestamp { get; set; }     
+        [JsonProperty("userName")]
+        public string PlayerName { get; set; }
+
+        [JsonProperty("winAmount")]
+        public int WinAmount { get; set; }
+
+        [JsonProperty("playersCards")]
+        public string HoleCards { get; set; }
+
+        [JsonProperty("tableIndex")]
+        public int Seat { get; set; }
     }
 }

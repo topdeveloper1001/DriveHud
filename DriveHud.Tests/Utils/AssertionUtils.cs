@@ -82,7 +82,7 @@ namespace DriveHud.Tests
                     Assert.That(actual.Players[i].Cards, Is.EqualTo(expected.Players[i].Cards), $"Player.Cards must be equal [{expected.Players[i].PlayerName}]");
                     Assert.That(actual.Players[i].SeatNumber, Is.EqualTo(expected.Players[i].SeatNumber), $"Player.SeatNumber must be equal [{expected.Players[i].PlayerName}]");
                     Assert.That(actual.Players[i].StartingStack, Is.EqualTo(expected.Players[i].StartingStack), $"Player.StartingStack must be equal [{expected.Players[i].PlayerName}]");
-                    Assert.That(actual.Players[i].Win, Is.EqualTo(expected.Players[i].Win), $"Player.Win must be equal []");
+                    Assert.That(actual.Players[i].Win, Is.EqualTo(expected.Players[i].Win), $"Player.Win must be equal [{expected.Players[i].PlayerName}]");
                 }
 
                 Assert.That(actual.HandActions, Is.EqualTo(expected.HandActions), "HandActions.Count must be equal");

@@ -225,7 +225,7 @@
       "8": {
         "d": true,
         "tierLevelName": "SOLDIER",
-        "betAmount": 0,
+        "betAmount": null,
         "status": 0,
         "imageUrl": "",
         "tempBetBalance": 89,

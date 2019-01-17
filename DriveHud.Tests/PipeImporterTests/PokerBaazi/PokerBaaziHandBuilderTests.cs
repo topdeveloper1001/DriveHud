@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Utils;
 using DriveHUD.Importers.PokerBaazi;
 using DriveHUD.Importers.PokerBaazi.Model;
 using HandHistories.Objects.Hand;
@@ -19,6 +20,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
 {
@@ -28,7 +30,7 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
         private const string SourceJsonFile = "Source.json";
         private const string ExpectedResultFile = "Result.xml";
 
-        private const string TestDataFolder = "HandsRawData";
+        private const string TestDataFolder = "HandPreparedData";
 
         [OneTimeSetUp]
         public virtual void SetUp()
@@ -36,7 +38,9 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
-        [TestCase("mtt-9-max-no-hero-1")]
+        [TestCase("nlh-9-max-no-hero-1")]
+        [TestCase("nlh-9-max-no-hero-2")]
+        [TestCase("nlh-9-max-no-hero-3")]
         public void TryBuildTest(string testFolder)
         {
             var packages = ReadPackages(testFolder);
@@ -47,7 +51,7 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
 
             HandHistory actual = null;
 
-            foreach (var package in packages)
+            foreach (var package in packages.Where(x => x.PackageType != PokerBaaziPackageType.Unknown))
             {
                 if (handBuilder.TryBuild(package, out actual))
                 {
@@ -94,7 +98,7 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
 
         private HandHistory ReadExpectedHandHistory(string testFolder)
         {
-            var xmlFile = Path.Combine(TestDataFolder, TestDataFolder, testFolder, ExpectedResultFile);
+            var xmlFile = Path.Combine(PokerBaaziTestsHelper.TestDataFolder, TestDataFolder, testFolder, ExpectedResultFile);
 
             FileAssert.Exists(xmlFile);
 

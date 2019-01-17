@@ -109,6 +109,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IPokerBaaziDataImporter, PokerBaaziDataImporter>();
             container.RegisterType<IPokerBaaziDataManager, PokerBaaziDataManager>();
             container.RegisterType<IPokerBaaziImporter, PokerBaaziImporter>();
+            container.RegisterType<IPokerBaaziHandBuilder, PokerBaaziHandBuilder>();
 
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());

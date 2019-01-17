@@ -92,8 +92,8 @@ namespace HandHistories.Parser.Utils
 
         public static void UpdateAllInActions(HandHistory handHistory)
         {
-            AllInActionHelper.IdentifyAllInActions(handHistory.Players, handHistory.HandActions);
-            handHistory.HandActions = AllInActionHelper.UpdateAllInActions(handHistory.HandActions);
+            var handActions = AllInActionHelper.IdentifyAllInActions(handHistory.Players, handHistory.HandActions);
+            handHistory.HandActions = AllInActionHelper.UpdateAllInActions(handActions);
         }
 
         /// <summary>

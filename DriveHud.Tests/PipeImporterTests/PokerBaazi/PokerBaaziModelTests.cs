@@ -14,6 +14,7 @@ using DriveHUD.Importers.PokerBaazi.Model;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
@@ -27,8 +28,111 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
-        [TestCase("Packets\\InitResponse.json")]
-        public void InitResponseDeserializationTest(string file)
+        [TestCaseSource("InitReponseTestData")]
+        public void InitResponseDeserializationTest(string file, PokerBaaziInitResponse expectedResponse)
+        {
+            var initResponse = ReadPackageFromFile<PokerBaaziResponse<PokerBaaziInitResponse>>(file);
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(initResponse.ClassObj.MaxPlayers, Is.EqualTo(expectedResponse.MaxPlayers));
+                Assert.That(initResponse.ClassObj.TournamentName, Is.EqualTo(expectedResponse.TournamentName));
+                Assert.That(initResponse.ClassObj.RoomId, Is.EqualTo(expectedResponse.RoomId));
+                Assert.That(initResponse.ClassObj.SmallBlind, Is.EqualTo(expectedResponse.SmallBlind));
+                Assert.That(initResponse.ClassObj.BigBlind, Is.EqualTo(expectedResponse.BigBlind));
+                Assert.That(initResponse.ClassObj.UserId, Is.EqualTo(expectedResponse.UserId));
+                Assert.That(initResponse.ClassObj.TournamentId, Is.EqualTo(expectedResponse.TournamentId));
+                Assert.That(initResponse.ClassObj.Straddle, Is.EqualTo(expectedResponse.Straddle));
+            });
+        }
+
+        [TestCaseSource("SpectatorResponseTestData")]
+        public void SpectatorResponseDeserializationTest(string file, PokerBaaziSpectatorResponse expectedResponse)
+        {
+            var spectatorResponse = ReadPackageFromFile<PokerBaaziResponse<PokerBaaziSpectatorResponse>>(file);
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(spectatorResponse.ClassObj.RoomId, Is.EqualTo(expectedResponse.RoomId));
+                Assert.That(spectatorResponse.ClassObj.HandId, Is.EqualTo(expectedResponse.HandId));
+
+                Assert.That(spectatorResponse.ClassObj.Players.Count, Is.EqualTo(expectedResponse.Players.Count));
+
+                foreach (var player in spectatorResponse.ClassObj.Players)
+                {
+                    Assert.IsTrue(expectedResponse.Players.TryGetValue(player.Key, out PokerBaaziPlayerInfo expectedPlayer));
+
+                    Assert.That(player.Value.Cards, Is.EqualTo(expectedPlayer.Cards));
+                    Assert.That(player.Value.Chips, Is.EqualTo(expectedPlayer.Chips));
+                    Assert.That(player.Value.IsBigBlind, Is.EqualTo(expectedPlayer.IsBigBlind));
+                    Assert.That(player.Value.IsDealer, Is.EqualTo(expectedPlayer.IsDealer));
+                    Assert.That(player.Value.IsSmallBlind, Is.EqualTo(expectedPlayer.IsSmallBlind));
+                    Assert.That(player.Value.PlayerId, Is.EqualTo(expectedPlayer.PlayerId));
+                    Assert.That(player.Value.PlayerName, Is.EqualTo(expectedPlayer.PlayerName));
+                    Assert.That(player.Value.Seat, Is.EqualTo(expectedPlayer.Seat));
+                    Assert.That(player.Value.BetAmount, Is.EqualTo(expectedPlayer.BetAmount));
+                }
+            });
+        }
+
+        [TestCaseSource("UserButtonActionResponseTestData")]
+        public void UserButtonActionResponseDeserializationTest(string file, PokerBaaziUserActionResponse expectedResponse)
+        {
+            var userActionResponse = ReadPackageFromFile<PokerBaaziResponse<PokerBaaziUserActionResponse>>(file);
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(userActionResponse.ClassObj.RoomId, Is.EqualTo(expectedResponse.RoomId));
+                Assert.That(userActionResponse.ClassObj.HandId, Is.EqualTo(expectedResponse.HandId));
+                Assert.That(userActionResponse.ClassObj.Action, Is.EqualTo(expectedResponse.Action));
+                Assert.That(userActionResponse.ClassObj.Amount, Is.EqualTo(expectedResponse.Amount));
+                Assert.That(userActionResponse.ClassObj.BetAmount, Is.EqualTo(expectedResponse.BetAmount));
+                Assert.That(userActionResponse.ClassObj.PlayerId, Is.EqualTo(expectedResponse.PlayerId));
+                Assert.That(userActionResponse.ClassObj.PlayerName, Is.EqualTo(expectedResponse.PlayerName));
+                Assert.That(userActionResponse.ClassObj.PotAmount, Is.EqualTo(expectedResponse.PotAmount));
+                Assert.That(userActionResponse.ClassObj.RemainingStack, Is.EqualTo(expectedResponse.RemainingStack));
+            });
+        }
+
+        [TestCaseSource("RoundReponseTestData")]
+        public void RoundResponseDeserializationTest(string file, PokerBaaziRoundResponse expectedResponse)
+        {
+            var roundResponse = ReadPackageFromFile<PokerBaaziResponse<PokerBaaziRoundResponse>>(file);
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(roundResponse.ClassObj.RoomId, Is.EqualTo(expectedResponse.RoomId));
+                Assert.That(roundResponse.ClassObj.HandId, Is.EqualTo(expectedResponse.HandId));
+                Assert.That(roundResponse.ClassObj.CommunitryCards, Is.EqualTo(expectedResponse.CommunitryCards));
+            });
+        }
+
+        [TestCaseSource("WinnerResponseTestData")]
+        public void WinnerResponseDeserializationTest(string file, PokerBaaziWinnerResponse expectedResponse)
+        {
+            var winnerResponse = ReadPackageFromFile<PokerBaaziResponse<PokerBaaziWinnerResponse>>(file);
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(winnerResponse.ClassObj.RoomId, Is.EqualTo(expectedResponse.RoomId));
+                Assert.That(winnerResponse.ClassObj.HandId, Is.EqualTo(expectedResponse.HandId));
+
+                Assert.That(winnerResponse.ClassObj.Winners.Count, Is.EqualTo(expectedResponse.Winners.Count));
+
+                foreach (var player in winnerResponse.ClassObj.Winners)
+                {
+                    Assert.IsTrue(expectedResponse.Winners.TryGetValue(player.Key, out PokerBaaziWinnerInfo expectedPlayer));
+
+                    Assert.That(player.Value.HoleCards, Is.EqualTo(expectedPlayer.HoleCards));
+                    Assert.That(player.Value.PlayerId, Is.EqualTo(expectedPlayer.PlayerId));
+                    Assert.That(player.Value.PlayerName, Is.EqualTo(expectedPlayer.PlayerName));
+                    Assert.That(player.Value.Seat, Is.EqualTo(expectedPlayer.Seat));
+                    Assert.That(player.Value.WinAmount, Is.EqualTo(expectedPlayer.WinAmount));
+                }
+            });
+        }
+
+        private T ReadPackageFromFile<T>(string file) where T : class
         {
             file = Path.Combine(PokerBaaziTestsHelper.TestDataFolder, file);
 
@@ -38,21 +142,264 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
 
             Assert.IsNotEmpty(data);
 
-            var actualPackageType = PokerBaaziPackage.ParsePackageType(data);
+            var response = JsonConvert.DeserializeObject<T>(data);
 
-            var initResponse = JsonConvert.DeserializeObject<PokerBaaziResponse<PokerBaaziInitResponse>>(data);
+            return response;
+        }
 
-            Assert.Multiple(() =>
-            {
-                Assert.That(initResponse.ClassObj.MaxPlayers, Is.EqualTo(9));
-                Assert.That(initResponse.ClassObj.TournamentName, Is.EqualTo("Dazzling Deuces"));
-                Assert.That(initResponse.ClassObj.RoomId, Is.EqualTo(100529));
-                Assert.That(initResponse.ClassObj.SmallBlind, Is.EqualTo(1));
-                Assert.That(initResponse.ClassObj.BigBlind, Is.EqualTo(2));
-                Assert.That(initResponse.ClassObj.UserId, Is.EqualTo(375337));
-                Assert.That(initResponse.ClassObj.TournamentId, Is.EqualTo(231044));
-                Assert.That(initResponse.ClassObj.Straddle, Is.EqualTo(false));
-            });
+        private static IEnumerable<TestCaseData> InitReponseTestData()
+        {
+            yield return new TestCaseData(
+                "Packets\\InitResponse.json",
+                new PokerBaaziInitResponse
+                {
+                    TournamentId = 231044,
+                    TournamentName = "Dazzling Deuces",
+                    MaxPlayers = 9,
+                    RoomId = 100529,
+                    SmallBlind = 1,
+                    BigBlind = 2,
+                    UserId = 375337,
+                    Straddle = false
+                }
+            );
+        }
+
+        private static IEnumerable<TestCaseData> SpectatorResponseTestData()
+        {
+            yield return new TestCaseData(
+                "Packets\\SpectatorResponse.json",
+                new PokerBaaziSpectatorResponse
+                {
+                    RoomId = 100529,
+                    HandId = 1546956879558,
+                    Players = new Dictionary<int, PokerBaaziPlayerInfo>
+                    {
+                        [0] = new PokerBaaziPlayerInfo
+                        {
+                            Cards = "card_back,card_back",
+                            Chips = 43,
+                            IsBigBlind = false,
+                            IsDealer = false,
+                            IsSmallBlind = true,
+                            PlayerId = 454215,
+                            PlayerName = "RarInG",
+                            Seat = 7,
+                            BetAmount = 1
+                        },
+                        [1] = new PokerBaaziPlayerInfo
+                        {
+                            Cards = "card_back,card_back",
+                            Chips = 136,
+                            IsBigBlind = true,
+                            IsDealer = false,
+                            IsSmallBlind = false,
+                            PlayerId = 272093,
+                            PlayerName = "meherzad7",
+                            Seat = 8,
+                            BetAmount = 2
+                        },
+                        [2] = new PokerBaaziPlayerInfo
+                        {
+                            Cards = "card_back,card_back",
+                            Chips = 98,
+                            IsBigBlind = false,
+                            IsDealer = false,
+                            IsSmallBlind = false,
+                            PlayerId = 255740,
+                            PlayerName = "aadi8851777105",
+                            Seat = 0,
+                            BetAmount = 2
+                        },
+                        [3] = new PokerBaaziPlayerInfo
+                        {
+                            Cards = "card_back,card_back",
+                            Chips = 54,
+                            IsBigBlind = false,
+                            IsDealer = false,
+                            IsSmallBlind = false,
+                            PlayerId = 501618,
+                            PlayerName = "scarry",
+                            Seat = 1
+                        },
+                        [4] = new PokerBaaziPlayerInfo
+                        {
+                            Cards = "card_back,card_back",
+                            Chips = 72,
+                            IsBigBlind = false,
+                            IsDealer = false,
+                            IsSmallBlind = false,
+                            PlayerId = 342356,
+                            PlayerName = "Neizo",
+                            Seat = 2
+                        },
+                        [5] = new PokerBaaziPlayerInfo
+                        {
+                            Cards = "card_back,card_back",
+                            Chips = 36,
+                            IsBigBlind = false,
+                            IsDealer = false,
+                            IsSmallBlind = false,
+                            PlayerId = 234609,
+                            PlayerName = "Vintos",
+                            Seat = 3
+                        },
+                        [6] = new PokerBaaziPlayerInfo
+                        {
+                            Cards = "card_back,card_back",
+                            Chips = 111,
+                            IsBigBlind = false,
+                            IsDealer = false,
+                            IsSmallBlind = false,
+                            PlayerId = 456618,
+                            PlayerName = "Janmejayxxx",
+                            Seat = 4
+                        },
+                        [7] = new PokerBaaziPlayerInfo
+                        {
+                            Cards = "card_back,card_back",
+                            Chips = 141,
+                            IsBigBlind = false,
+                            IsDealer = false,
+                            IsSmallBlind = false,
+                            PlayerId = 474929,
+                            PlayerName = "aditya333",
+                            Seat = 5
+                        },
+                        [8] = new PokerBaaziPlayerInfo
+                        {
+                            Cards = "card_back,card_back",
+                            Chips = 89,
+                            IsBigBlind = false,
+                            IsDealer = true,
+                            IsSmallBlind = false,
+                            PlayerId = 487994,
+                            PlayerName = "atul198904",
+                            Seat = 6
+                        }
+                    }
+                }
+            );
+        }
+
+        private static IEnumerable<TestCaseData> UserButtonActionResponseTestData()
+        {
+            yield return new TestCaseData(
+               "Packets\\UserButtonActionResponse.json",
+               new PokerBaaziUserActionResponse
+               {
+                   Action = "Check",
+                   Amount = 0,
+                   BetAmount = 0,
+                   HandId = 1546956879558,
+                   PlayerId = 255740,
+                   PlayerName = "aadi8851777105",
+                   PotAmount = 0,
+                   RemainingStack = 0,
+                   RoomId = 100529
+               }
+            );
+
+            yield return new TestCaseData(
+              "Packets\\UserButtonActionResponse-2.json",
+              new PokerBaaziUserActionResponse
+              {
+                  Action = "Raise",
+                  Amount = 6,
+                  BetAmount = 6,
+                  HandId = 1546956924578,
+                  PlayerId = 342356,
+                  PlayerName = "Neizo",
+                  PotAmount = 9,
+                  RemainingStack = 71,
+                  RoomId = 100529
+              }
+           );
+        }
+
+        private static IEnumerable<TestCaseData> RoundReponseTestData()
+        {
+            yield return new TestCaseData(
+                "Packets\\RoundResponse.json",
+                new PokerBaaziRoundResponse
+                {
+                    HandId = 1546956924578,
+                    RoomId = 100529,
+                    CommunitryCards = "diamond_4,club_5,spade_2"
+                }
+            );
+        }
+
+        private static IEnumerable<TestCaseData> WinnerResponseTestData()
+        {
+            yield return new TestCaseData(
+               "Packets\\WinnerResponse.json",
+               new PokerBaaziWinnerResponse
+               {
+                   HandId = 1546956924578,
+                   RoomId = 100529,
+                   PotAmount = 34,
+                   Winners = new Dictionary<int, PokerBaaziWinnerInfo>
+                   {
+                       [0] = new PokerBaaziWinnerInfo
+                       {
+                           PlayerId = 272093,
+                           PlayerName = "meherzad7",
+                           HoleCards = "card_back,card_back",
+                           Seat = 8,
+                           WinAmount = 32
+                       },
+                       [1] = new PokerBaaziWinnerInfo
+                       {
+                           PlayerId = 255740,
+                           PlayerName = "aadi8851777105",
+                           HoleCards = "card_back,card_back",
+                           Seat = 0,
+                           WinAmount = 0
+                       },
+                       [2] = new PokerBaaziWinnerInfo
+                       {
+                           PlayerId = 342356,
+                           PlayerName = "Neizo",
+                           HoleCards = "card_back,card_back",
+                           Seat = 2,
+                           WinAmount = 0
+                       },
+                       [3] = new PokerBaaziWinnerInfo
+                       {
+                           PlayerId = 456618,
+                           PlayerName = "Janmejayxxx",
+                           HoleCards = "card_back,card_back",
+                           Seat = 4,
+                           WinAmount = 0
+                       },
+                       [4] = new PokerBaaziWinnerInfo
+                       {
+                           PlayerId = 474929,
+                           PlayerName = "aditya333",
+                           HoleCards = "card_back,card_back",
+                           Seat = 5,
+                           WinAmount = 0
+                       },
+                       [5] = new PokerBaaziWinnerInfo
+                       {
+                           PlayerId = 487994,
+                           PlayerName = "atul198904",
+                           HoleCards = "card_back,card_back",
+                           Seat = 6,
+                           WinAmount = 0
+                       },
+                       [6] = new PokerBaaziWinnerInfo
+                       {
+                           PlayerId = 454215,
+                           PlayerName = "RarInG",
+                           HoleCards = "card_back,card_back",
+                           Seat = 7,
+                           WinAmount = 0
+                       }
+                   }
+               }
+           );
         }
     }
 }
