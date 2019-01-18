@@ -23,7 +23,7 @@ namespace DriveHUD.Importers.PokerBaazi
         /// <summary>
         /// Dll to be injected
         /// </summary>
-        private const string dllToInject = "BaaziHook.dll";
+        private const string dllToInject = "CapPipedPB.dll";
 
         /// <summary>
         /// Name of process in which dll will be injected
