@@ -350,6 +350,7 @@
     <Compile Include="PokerBaazi\PokerBaaziHandBuilder.cs" />
     <Compile Include="PokerBaazi\PokerBaaziDataImporter.cs" />
     <Compile Include="PokerBaazi\PokerBaaziImporter.cs" />
+    <Compile Include="PokerBaazi\PokerBaaziTournamentDateFormatConverter.cs" />
     <Compile Include="PokerBaazi\PokerBaaziUtils.cs" />
     <Compile Include="PokerCatcher.cs" />
     <Compile Include="PokerClientDataManagerInfo.cs" />

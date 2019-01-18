@@ -23,7 +23,22 @@ namespace DriveHUD.Importers.PokerBaazi.Model
         [JsonProperty("playGroupId")]
         public long HandId { get; set; }
 
+        [JsonProperty("totalAnteAmount", NullValueHandling = NullValueHandling.Ignore)]
+        public decimal TotalAnte { get; set; }
+
+        [JsonProperty("smallBlind", NullValueHandling = NullValueHandling.Ignore)]
+        public decimal SmallBlind { get; set; }
+
+        [JsonProperty("bigBlind", NullValueHandling = NullValueHandling.Ignore)]
+        public decimal BigBlind { get; set; }
+
+        [JsonProperty("ante", NullValueHandling = NullValueHandling.Ignore)]
+        public decimal Ante { get; set; }
+
+        [JsonProperty("tournamentId", NullValueHandling = NullValueHandling.Ignore)]
+        public long TournamentId { get; set; }
+
         [JsonProperty("details")]
         public Dictionary<int, PokerBaaziPlayerInfo> Players { get; set; }
-    }    
+    }
 }

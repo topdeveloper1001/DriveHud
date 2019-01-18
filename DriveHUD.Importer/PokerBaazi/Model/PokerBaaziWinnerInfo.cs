@@ -23,7 +23,7 @@ namespace DriveHUD.Importers.PokerBaazi.Model
         public string PlayerName { get; set; }
 
         [JsonProperty("winAmount")]
-        public int WinAmount { get; set; }
+        public decimal WinAmount { get; set; }
 
         [JsonProperty("playersCards")]
         public string HoleCards { get; set; }

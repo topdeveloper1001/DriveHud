@@ -228,7 +228,8 @@ namespace HandHistories.Parser.Utils
                 var preflopOrderedPlayers = orderedPlayers.Skip(blindsCount).Concat(orderedPlayers.Take(blindsCount)).ToArray();
                 var preflopOrderedPlayersDictionary = OrderedPlayersToDict(preflopOrderedPlayers);
 
-                orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Preflop && x.IsBlinds));
+                orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Preflop && x.HandActionType == HandActionType.ANTE));
+                orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Preflop && x.IsBlinds && x.HandActionType != HandActionType.ANTE));
                 orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, preflopOrderedPlayersDictionary, x => x.Street == Street.Preflop && !x.IsBlinds));
             }
 

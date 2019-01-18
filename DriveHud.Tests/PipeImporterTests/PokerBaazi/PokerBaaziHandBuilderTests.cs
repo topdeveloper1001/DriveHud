@@ -38,11 +38,12 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
-        [TestCase("nlh-9-max-no-hero-1")]
-        [TestCase("nlh-9-max-no-hero-2")]
-        [TestCase("nlh-9-max-no-hero-3")]
-        [TestCase("plo-6-max-no-hero-1")]
-        [TestCase("nlh-9-max-hero-1")]
+        //[TestCase("nlh-9-max-no-hero-1")]
+        //[TestCase("nlh-9-max-no-hero-2")]
+        //[TestCase("nlh-9-max-no-hero-3")]
+        //[TestCase("plo-6-max-no-hero-1")]
+        //[TestCase("nlh-9-max-hero-1")]
+        [TestCase("nlh-mtt-no-hero-1")]
         public void TryBuildTest(string testFolder)
         {
             var packages = ReadPackages(testFolder);

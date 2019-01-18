@@ -32,7 +32,7 @@ namespace DriveHUD.Importers.PokerBaazi.Model
         public bool IsBigBlind { get; set; }
 
         [JsonProperty("tempBetBalance")]
-        public int Chips { get; set; }
+        public decimal Chips { get; set; }
 
         [JsonProperty("playersCards")]
         public string Cards { get; set; }
@@ -41,6 +41,6 @@ namespace DriveHUD.Importers.PokerBaazi.Model
         public int Seat { get; set; }
 
         [JsonProperty("betAmount", NullValueHandling = NullValueHandling.Ignore)]
-        public int BetAmount { get; set; }
+        public decimal BetAmount { get; set; }
     }
 }

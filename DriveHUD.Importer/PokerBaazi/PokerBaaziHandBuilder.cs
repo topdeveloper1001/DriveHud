@@ -34,9 +34,11 @@ namespace DriveHUD.Importers.PokerBaazi
     {
         private Dictionary<uint, List<PokerBaaziPackage>> roomPackages = new Dictionary<uint, List<PokerBaaziPackage>>();
         private Dictionary<uint, PokerBaaziInitResponse> roomsInitResponses = new Dictionary<uint, PokerBaaziInitResponse>();
+        private Dictionary<long, PokerBaaziTournamentDetailsResponse> tournamentDetails = new Dictionary<long, PokerBaaziTournamentDetailsResponse>();
 
         private static readonly Currency currency = Currency.INR;
         private static readonly string loggerName = EnumPokerSites.PokerBaazi.ToString();
+        private static readonly EnumPokerSites PokerSite = EnumPokerSites.PokerBaazi;
 
         /// <summary>
         /// Finds the <see cref="PokerBaaziInitResponse"/> of the specified room
@@ -67,6 +69,11 @@ namespace DriveHUD.Importers.PokerBaazi
             if (package.PackageType == PokerBaaziPackageType.InitResponse)
             {
                 ParsePackage<PokerBaaziInitResponse>(package, x => ProcessInitResponse(x));
+                return false;
+            }
+            else if (package.PackageType == PokerBaaziPackageType.TournamentDetailsResponse)
+            {
+                ParsePackage<PokerBaaziTournamentDetailsResponse>(package, x => ProcessTournamentDetailsResponse(x));
                 return false;
             }
 
@@ -167,6 +174,24 @@ namespace DriveHUD.Importers.PokerBaazi
         }
 
         /// <summary>
+        /// Processes the specified <see cref="PokerBaaziTournamentDetails"/>
+        /// </summary>
+        /// <param name="response">Response to process</param>
+        private void ProcessTournamentDetailsResponse(PokerBaaziTournamentDetailsResponse response)
+        {
+            if (!tournamentDetails.ContainsKey(response.TournamentId))
+            {
+                tournamentDetails.Add(response.TournamentId, response);
+                LogProvider.Log.Info(this, $"Tournament data of tournament #{response.TournamentId} '{response.Details?.TournamentName}' has been stored. [{loggerName}]");
+                return;
+            }
+
+            tournamentDetails[response.TournamentId] = response;
+
+            LogProvider.Log.Info(this, $"Tournament data of tournament #{response.TournamentId} '{response.Details?.TournamentName}' has been updated. [{loggerName}]");
+        }
+
+        /// <summary>
         /// Processes the specified <see cref="PokerBaaziStartGameResponse"/>
         /// </summary>
         /// <param name="response">Response to process</param>
@@ -178,20 +203,18 @@ namespace DriveHUD.Importers.PokerBaazi
                 throw new HandBuilderException(response.HandId, $"InitResponse has not been found for room #{response.RoomId}");
             }
 
+            var isTournament = initResponse.TournamentId != 0;
+
             handHistory.HandId = response.HandId;
             handHistory.DateOfHandUtc = DateTimeHelper.UnixTimeInMilisecondsToDateTime(timestamp);
-            handHistory.TableName = initResponse.TournamentName;
-            handHistory.GameDescription = new GameDescriptor(
-                   PokerFormat.CashGame,
-                   EnumPokerSites.PokerBaazi,
-                   ParseGameType(initResponse),
-                   Limit.FromSmallBlindBigBlind(initResponse.SmallBlind, initResponse.BigBlind, currency),
-                   TableType.FromTableTypeDescriptions(TableTypeDescription.Regular),
-                   SeatType.FromMaxPlayers(initResponse.MaxPlayers),
-                   null)
-            {
-                Identifier = response.RoomId
-            };
+
+            handHistory.TableName = isTournament && !string.IsNullOrEmpty(initResponse.TournamentTableName) ?
+                initResponse.TournamentTableName : initResponse.TournamentName;
+
+            handHistory.GameDescription = isTournament ?
+                CreateTournamentGameDescriptor(initResponse, response) : CreateCashGameDescriptor(initResponse, response);
+
+            handHistory.GameDescription.Identifier = response.RoomId;
 
             if (response.Players == null)
             {
@@ -240,10 +263,77 @@ namespace DriveHUD.Importers.PokerBaazi
                             actionType,
                             playerInfo.BetAmount,
                             Street.Preflop));
-                }              
+                }
+
+                if (isTournament && response.Ante != 0)
+                {
+                    handHistory.HandActions.Add(
+                        new HandAction(playerInfo.PlayerName,
+                            HandActionType.ANTE,
+                            response.Ante,
+                            Street.Preflop));
+                }
             }
 
             HandHistoryUtils.SortHandActions(handHistory);
+        }
+
+        /// <summary>
+        /// Creates <see cref="GameDescriptor"/> for cash games
+        /// </summary>
+        /// <param name="initResponse">Init response</param>
+        /// <param name="response">Start game response</param>
+        /// <returns>GameDescriptor</returns>
+        private GameDescriptor CreateCashGameDescriptor(PokerBaaziInitResponse initResponse, PokerBaaziStartGameResponse response)
+        {
+            return new GameDescriptor(
+                PokerFormat.CashGame,
+                PokerSite,
+                ParseGameType(initResponse),
+                Limit.FromSmallBlindBigBlind(initResponse.SmallBlind, initResponse.BigBlind, currency),
+                TableType.FromTableTypeDescriptions(TableTypeDescription.Regular),
+                SeatType.FromMaxPlayers(initResponse.MaxPlayers),
+                null);
+        }
+
+        /// <summary>
+        /// Creates <see cref="GameDescriptor"/> for tournaments games
+        /// </summary>
+        /// <param name="initResponse">Init response</param>
+        /// <param name="startGameResponse">Start game response</param>
+        /// <returns>GameDescriptor</returns>
+        private GameDescriptor CreateTournamentGameDescriptor(PokerBaaziInitResponse initResponse, PokerBaaziStartGameResponse startGameResponse)
+        {
+            if (!tournamentDetails.TryGetValue(startGameResponse.TournamentId, out PokerBaaziTournamentDetailsResponse tournamentDetailsResponse))
+            {
+                throw new HandBuilderException(startGameResponse.HandId, $"TournamentDetailsResponse has not been found for tournament #{startGameResponse.TournamentId}");
+            }
+
+            if (tournamentDetailsResponse.Details == null)
+            {
+                throw new HandBuilderException(startGameResponse.HandId, $"TournamentDetailsResponse.Details are empty for tournament #{startGameResponse.TournamentId}");
+            }
+
+            var tournamentDescriptor = new TournamentDescriptor
+            {
+                StartDate = tournamentDetailsResponse.Details.TournamentStartDate,
+                TournamentName = tournamentDetailsResponse.Details.TournamentName,
+                StartingStack = (int)tournamentDetailsResponse.Details.StartingStake,
+                TotalPlayers = tournamentDetailsResponse.Details.TotalPlayers,
+                TournamentsTags = tournamentDetailsResponse.Details.MaxEntries > 9 ? TournamentsTags.MTT : TournamentsTags.STT,
+                Speed = TournamentSpeed.Regular,
+                TournamentId = tournamentDetailsResponse.TournamentId.ToString(),
+                BuyIn = Buyin.FromBuyinRake(tournamentDetailsResponse.Details.BuyIn, tournamentDetailsResponse.Details.EntryFee, currency)
+            };
+
+            return new GameDescriptor(
+                PokerFormat.Tournament,
+                PokerSite,
+                ParseGameType(initResponse),
+                Limit.FromSmallBlindBigBlind(startGameResponse.SmallBlind, startGameResponse.BigBlind, Currency.Chips, true, startGameResponse.Ante),
+                TableType.FromTableTypeDescriptions(TableTypeDescription.Regular),
+                SeatType.FromMaxPlayers(initResponse.MaxPlayers),
+                tournamentDescriptor);
         }
 
         /// <summary>

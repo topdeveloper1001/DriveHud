@@ -20,16 +20,16 @@ namespace DriveHUD.Importers.PokerBaazi.Model
         public string Action { get; set; }
 
         [JsonProperty("currentAmount", NullValueHandling = NullValueHandling.Ignore)]
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
 
         [JsonProperty("betAmount", NullValueHandling = NullValueHandling.Ignore)]
-        public int BetAmount { get; set; }
+        public decimal BetAmount { get; set; }
 
         [JsonProperty("potAmount", NullValueHandling = NullValueHandling.Ignore)]
-        public int PotAmount { get; set; }
+        public decimal PotAmount { get; set; }
 
         [JsonProperty("tempBetBalance", NullValueHandling = NullValueHandling.Ignore)]
-        public int RemainingStack { get; set; }
+        public decimal RemainingStack { get; set; }
 
         [JsonProperty("userId")]
         public int PlayerId { get; set; }

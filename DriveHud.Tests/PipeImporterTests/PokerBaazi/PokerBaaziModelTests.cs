@@ -45,6 +45,7 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
                 Assert.That(initResponse.ClassObj.Straddle, Is.EqualTo(expectedResponse.Straddle));
                 Assert.That(initResponse.ClassObj.GameType, Is.EqualTo(expectedResponse.GameType));
                 Assert.That(initResponse.ClassObj.GameLimit, Is.EqualTo(expectedResponse.GameLimit));
+                Assert.That(initResponse.ClassObj.TournamentTableName, Is.EqualTo(expectedResponse.TournamentTableName));
             });
         }
 
@@ -57,6 +58,11 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
             {
                 Assert.That(spectatorResponse.ClassObj.RoomId, Is.EqualTo(expectedResponse.RoomId));
                 Assert.That(spectatorResponse.ClassObj.HandId, Is.EqualTo(expectedResponse.HandId));
+                Assert.That(spectatorResponse.ClassObj.SmallBlind, Is.EqualTo(expectedResponse.SmallBlind));
+                Assert.That(spectatorResponse.ClassObj.BigBlind, Is.EqualTo(expectedResponse.BigBlind));
+                Assert.That(spectatorResponse.ClassObj.TotalAnte, Is.EqualTo(expectedResponse.TotalAnte));
+                Assert.That(spectatorResponse.ClassObj.Ante, Is.EqualTo(expectedResponse.Ante));
+                Assert.That(spectatorResponse.ClassObj.TournamentId, Is.EqualTo(expectedResponse.TournamentId));
 
                 Assert.That(spectatorResponse.ClassObj.Players.Count, Is.EqualTo(expectedResponse.Players.Count));
 
@@ -148,6 +154,7 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
                 Assert.That(tournamentDetailsResponse.ClassObj.Details.StartingStake, Is.EqualTo(expectedResponse.Details.StartingStake), $"StartingStake must be equal");
                 Assert.That(tournamentDetailsResponse.ClassObj.Details.TotalPlayers, Is.EqualTo(expectedResponse.Details.TotalPlayers), $"TotalPlayers must be equal");
                 Assert.That(tournamentDetailsResponse.ClassObj.Details.TournamentName, Is.EqualTo(expectedResponse.Details.TournamentName), $"TournamentName must be equal");
+                Assert.That(tournamentDetailsResponse.ClassObj.Details.TournamentStartDate, Is.EqualTo(expectedResponse.Details.TournamentStartDate), $"TournamentStartDate must be equal");
             });
         }
 
@@ -184,6 +191,24 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
                     GameLimit = "NO LIMIT"
                 }
             );
+
+            yield return new TestCaseData(
+              "Packets\\InitResponse-2.json",
+              new PokerBaaziInitResponse
+              {
+                  TournamentId = 292754,
+                  TournamentName = "The Summit 15 LAC GTD (RE)",
+                  TournamentTableName = "Table#1",
+                  MaxPlayers = 9,
+                  RoomId = 48710,
+                  SmallBlind = 800,
+                  BigBlind = 1600,
+                  UserId = 375337,
+                  Straddle = false,
+                  GameType = "Texas Hold'em",
+                  GameLimit = "NO LIMIT"
+              }
+          );
         }
 
         private static IEnumerable<TestCaseData> SpectatorResponseTestData()
@@ -415,6 +440,124 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
                   }
               }
           );
+
+            yield return new TestCaseData(
+              "Packets\\SpectatorResponse-2.json",
+              new PokerBaaziStartGameResponse
+              {
+                  RoomId = 48710,
+                  HandId = 1547746531954,
+                  TotalAnte = 1800,
+                  Ante = 200,
+                  SmallBlind = 800,
+                  BigBlind = 1600,
+                  TournamentId = 292754,
+                  Players = new Dictionary<int, PokerBaaziPlayerInfo>
+                  {
+                      [0] = new PokerBaaziPlayerInfo
+                      {
+                          Cards = "card_back,card_back",
+                          Chips = 47200,
+                          IsBigBlind = false,
+                          IsDealer = false,
+                          IsSmallBlind = true,
+                          PlayerId = 239059,
+                          PlayerName = "Ellis_Dee",
+                          Seat = 2,
+                          BetAmount = 800
+                      },
+                      [1] = new PokerBaaziPlayerInfo
+                      {
+                          Cards = "card_back,card_back",
+                          Chips = 61537,
+                          IsBigBlind = true,
+                          IsDealer = false,
+                          IsSmallBlind = false,
+                          PlayerId = 419286,
+                          PlayerName = "Jeet0",
+                          Seat = 3,
+                          BetAmount = 1600
+                      },
+                      [2] = new PokerBaaziPlayerInfo
+                      {
+                          Cards = "card_back,card_back",
+                          Chips = 42802,
+                          IsBigBlind = false,
+                          IsDealer = false,
+                          IsSmallBlind = false,
+                          PlayerId = 37902,
+                          PlayerName = "karan1515",
+                          Seat = 4
+                      },
+                      [3] = new PokerBaaziPlayerInfo
+                      {
+                          Cards = "card_back,card_back",
+                          Chips = 35139,
+                          IsBigBlind = false,
+                          IsDealer = false,
+                          IsSmallBlind = false,
+                          PlayerId = 35200,
+                          PlayerName = "LungFakeer",
+                          Seat = 5
+                      },
+                      [4] = new PokerBaaziPlayerInfo
+                      {
+                          Cards = "card_back,card_back",
+                          Chips = 62280,
+                          IsBigBlind = false,
+                          IsDealer = false,
+                          IsSmallBlind = false,
+                          PlayerId = 171158,
+                          PlayerName = "saurabhiim",
+                          Seat = 6
+                      },
+                      [5] = new PokerBaaziPlayerInfo
+                      {
+                          Cards = "card_back,card_back",
+                          Chips = 69208,
+                          IsBigBlind = false,
+                          IsDealer = false,
+                          IsSmallBlind = false,
+                          PlayerId = 100479,
+                          PlayerName = "ImHighIshove",
+                          Seat = 7
+                      },
+                      [6] = new PokerBaaziPlayerInfo
+                      {
+                          Cards = "card_back,card_back",
+                          Chips = 67057,
+                          IsBigBlind = false,
+                          IsDealer = false,
+                          IsSmallBlind = false,
+                          PlayerId = 521327,
+                          PlayerName = "Wynn",
+                          Seat = 8
+                      },
+                      [7] = new PokerBaaziPlayerInfo
+                      {
+                          Cards = "card_back,card_back",
+                          Chips = 55800,
+                          IsBigBlind = false,
+                          IsDealer = false,
+                          IsSmallBlind = false,
+                          PlayerId = 35024,
+                          PlayerName = "SpadeHunter",
+                          Seat = 0
+                      },
+                      [8] = new PokerBaaziPlayerInfo
+                      {
+                          Cards = "card_back,card_back",
+                          Chips = 24800,
+                          IsBigBlind = false,
+                          IsDealer = true,
+                          IsSmallBlind = false,
+                          PlayerId = 39094,
+                          PlayerName = "gangajal",
+                          Seat = 1
+                      }
+                  }
+              }
+          );
         }
 
         private static IEnumerable<TestCaseData> UserButtonActionResponseTestData()
@@ -551,7 +694,8 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
                       MaxEntries = 2500,
                       StartingStake = 25000,
                       TotalPlayers = 119,
-                      TournamentName = "The Summit 15 LAC GTD (RE)"
+                      TournamentName = "The Summit 15 LAC GTD (RE)",
+                      TournamentStartDate = new DateTime(2019, 01, 17, 17, 0, 0, DateTimeKind.Utc)
                   }
               }
             );

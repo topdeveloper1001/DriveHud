@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2019-01-17T17:34:43.272Z</DateOfHandUtc>
+  <HandId>1547746531954</HandId>
+  <DealerButtonPosition>2</DealerButtonPosition>
+  <TableName>Table#1</TableName>
+  <GameDescription>
+    <PokerFormat>Tournament</PokerFormat>
+    <Site>PokerBaazi</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>Chips</Currency>
+      <SmallBlind>800</SmallBlind>
+      <BigBlind>1600</BigBlind>
+      <IsAnteTable>true</IsAnteTable>
+      <Ante>200</Ante>
+    </Limit>
+    <SeatType MaxPlayers="9" />
+    <TableType>Regular</TableType>
+    <Tournament>
+      <TournamentId>292754</TournamentId>
+      <TournamentName>The Summit 15 LAC GTD (RE)</TournamentName>
+      <TournamentsTags>MTT</TournamentsTags>
+      <Speed>Regular</Speed>
+      <BuyIn>
+        <Currency>INR</Currency>
+        <PrizePoolValue>7500</PrizePoolValue>
+        <Rake>750</Rake>
+      </BuyIn>
+      <StartDate>2019-01-17T17:00:00</StartDate>
+      <TotalPlayers>119</TotalPlayers>
+    </Tournament>
+    <Identifier>48710</Identifier>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>11400</TotalPot>
+  <Actions>
+    <HandAction PlayerName="Ellis_Dee" HandActionType="ANTE" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Jeet0" HandActionType="ANTE" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="karan1515" HandActionType="ANTE" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="LungFakeer" HandActionType="ANTE" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="saurabhiim" HandActionType="ANTE" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="ImHighIshove" HandActionType="ANTE" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Wynn" HandActionType="ANTE" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="SpadeHunter" HandActionType="ANTE" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="gangajal" HandActionType="ANTE" Amount="-200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Ellis_Dee" HandActionType="SMALL_BLIND" Amount="-800" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Jeet0" HandActionType="BIG_BLIND" Amount="-1600" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="karan1515" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="LungFakeer" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="saurabhiim" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="ImHighIshove" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Wynn" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="SpadeHunter" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="gangajal" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Ellis_Dee" HandActionType="RAISE" Amount="-4000" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Jeet0" HandActionType="CALL" Amount="-3200" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Ellis_Dee" HandActionType="BET" Amount="-4100" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="Jeet0" HandActionType="FOLD" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="Ellis_Dee" HandActionType="UNCALLED_BET" Amount="4100" Street="Flop" IsAllIn="false" />
+    <HandAction p3:type="WinningsAction" PlayerName="Ellis_Dee" HandActionType="WINS" Amount="11400" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>4h2s2c</CommunityCards>
+  <Players>
+    <Player PlayerName="SpadeHunter" StartingStack="55800" Bet="200" Win="0" SeatNumber="1" Cards="" IsSittingOut="false" />
+    <Player PlayerName="gangajal" StartingStack="24800" Bet="200" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Ellis_Dee" StartingStack="48000" Bet="9100" Win="11400" SeatNumber="3" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Jeet0" StartingStack="63137" Bet="5000" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="karan1515" StartingStack="42802" Bet="200" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
+    <Player PlayerName="LungFakeer" StartingStack="35139" Bet="200" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+    <Player PlayerName="saurabhiim" StartingStack="62280" Bet="200" Win="0" SeatNumber="7" Cards="" IsSittingOut="false" />
+    <Player PlayerName="ImHighIshove" StartingStack="69208" Bet="200" Win="0" SeatNumber="8" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Wynn" StartingStack="67057" Bet="200" Win="0" SeatNumber="9" Cards="" IsSittingOut="false" />
+  </Players>
+</HandHistory>

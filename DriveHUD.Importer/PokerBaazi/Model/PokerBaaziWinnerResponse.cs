@@ -24,7 +24,7 @@ namespace DriveHUD.Importers.PokerBaazi.Model
         public long HandId { get; set; }
 
         [JsonProperty("potAmount")]
-        public int PotAmount { get; set; }
+        public decimal PotAmount { get; set; }
 
         [JsonProperty("otherDetails")]
         public Dictionary<int, PokerBaaziWinnerInfo> Winners { get; set; }

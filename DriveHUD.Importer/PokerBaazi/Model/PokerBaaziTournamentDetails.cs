@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using Newtonsoft.Json;
+using System;
 
 namespace DriveHUD.Importers.PokerBaazi.Model
 {
@@ -33,5 +34,9 @@ namespace DriveHUD.Importers.PokerBaazi.Model
 
         [JsonProperty("tournmentMaxEntries")]
         public int MaxEntries { get; set; }
+
+        [JsonProperty("tournmentStartTime")]
+        [JsonConverter(typeof(PokerBaaziTournamentDateFormatConverter), "MMM dd, yyyy HH:mm")]
+        public DateTime TournamentStartDate { get; set; }     
     }
 }

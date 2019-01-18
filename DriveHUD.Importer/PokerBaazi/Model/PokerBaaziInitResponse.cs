@@ -22,6 +22,9 @@ namespace DriveHUD.Importers.PokerBaazi.Model
         [JsonProperty("tournamentName")]
         public string TournamentName { get; set; }
 
+        [JsonProperty("tournamentTitle")]
+        public string TournamentTableName { get; set; }
+
         [JsonProperty("maxPlayers")]
         public int MaxPlayers { get; set; }
 
