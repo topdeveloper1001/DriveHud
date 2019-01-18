@@ -228,6 +228,7 @@
     <Compile Include="TcpImportersTests\PKTests\PKHandBuilderTests.cs" />
     <Compile Include="TcpImportersTests\PKTests\PKImporterTests.cs" />
     <Compile Include="TcpImportersTests\PKTests\PokerKingPacketManagerTests.cs" />
+    <Compile Include="TcpImportersTests\PMTests\KOPlayerEmulatorProviderTest.cs" />
     <Compile Include="TcpImportersTests\TcpImporterTestUtils.cs" />
     <Compile Include="UnitTests\ConverterTests.cs" />
     <Compile Include="UnitTests\PartyPokerJackpotTableFinderTests.cs" />

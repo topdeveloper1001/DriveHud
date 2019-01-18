@@ -173,6 +173,7 @@
     <Compile Include="Adda52\Model\Winner.cs" />
     <Compile Include="Adda52\Model\WinnerInfo.cs" />
     <Compile Include="Adda52\Model\WinnerPlayer.cs" />
+    <Compile Include="AndroidBase\EmulatorProviders\KOPlayerEmulatorProvider.cs" />
     <Compile Include="AndroidBase\IPackageBuilder.cs" />
     <Compile Include="AndroidBase\ITcpImporter.cs" />
     <Compile Include="AndroidBase\ITcpPacketImporter.cs" />

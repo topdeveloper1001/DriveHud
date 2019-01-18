@@ -77,12 +77,12 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
 
                         var cmdLine = x.GetCommandLine();
 
-                        var currentNoxInstanceNumber = GetInstanceNumber(cmdLine, InstanceArgumentPrefix, EmptyInstanceNumber);
+                        var currentInstanceNumber = GetInstanceNumber(cmdLine, InstanceArgumentPrefix, EmptyInstanceNumber);
 
                         return instanceNumber.HasValue ?
-                            currentNoxInstanceNumber == instanceNumber :
-                            (!currentNoxInstanceNumber.HasValue ||
-                                (currentNoxInstanceNumber.HasValue && VbEmptyInstanceNumber == currentNoxInstanceNumber));
+                            currentInstanceNumber == instanceNumber :
+                            (!currentInstanceNumber.HasValue ||
+                                (currentInstanceNumber.HasValue && VbEmptyInstanceNumber == currentInstanceNumber));
                     });
 
                 if (emulatorProcess != null)
@@ -114,10 +114,12 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
 
             if (instanceIndex > 0)
             {
-                var spaceAfterNoxInstanceIndex = cmd.IndexOf(' ', instanceIndex);
+                var spaceAfterInstanceIndex = instanceIndex + instanceArgumentPrefixLength < cmd.Length ?
+                    cmd.IndexOf(' ', instanceIndex + instanceArgumentPrefixLength) :
+                    cmd.IndexOf(' ', instanceIndex);
 
-                var instanceIndexText = spaceAfterNoxInstanceIndex > 0 ?
-                    cmd.Substring(instanceIndex + instanceArgumentPrefixLength, spaceAfterNoxInstanceIndex - instanceIndex - instanceArgumentPrefixLength) :
+                var instanceIndexText = spaceAfterInstanceIndex > 0 ?
+                    cmd.Substring(instanceIndex + instanceArgumentPrefixLength, spaceAfterInstanceIndex - instanceIndex - instanceArgumentPrefixLength) :
                     cmd.Substring(instanceIndex + instanceArgumentPrefixLength);
 
                 instanceIndexText = ExtractInstanceNumber(instanceIndexText);
