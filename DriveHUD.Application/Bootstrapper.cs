@@ -344,6 +344,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, WinamaxSiteSettingTableConfigurator>(EnumPokerSites.Winamax.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, Adda52SiteSettingTableConfiguration>(EnumPokerSites.Adda52.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.SpartanPoker.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.PokerBaazi.ToString());
 
             // Series providers
             Container.RegisterType<IGraphsProvider, GraphsProvider>();
