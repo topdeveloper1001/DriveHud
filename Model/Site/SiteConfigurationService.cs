@@ -55,7 +55,8 @@ namespace Model.Site
                 EnumPokerSites.PartyPoker,
                 EnumPokerSites.Horizon,
                 EnumPokerSites.Winamax,
-                EnumPokerSites.Adda52
+                EnumPokerSites.Adda52,
+                EnumPokerSites.PokerBaazi
             };
 
             foreach (EnumPokerSites site in sites)
@@ -101,7 +102,7 @@ namespace Model.Site
 
             return validationResults;
         }
-        
+
         /// <summary>
         /// Get site configuration
         /// </summary>

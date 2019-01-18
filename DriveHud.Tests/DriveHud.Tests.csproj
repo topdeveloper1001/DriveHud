@@ -214,6 +214,11 @@
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerBovadaFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
+    <Compile Include="PipeImporterTests\PokerBaazi\PokerBaaziHandBuilderTests.cs" />
+    <Compile Include="PipeImporterTests\PokerBaazi\PokerBaaziPackageTests.cs" />
+    <Compile Include="PipeImporterTests\PokerBaazi\PokerBaaziModelTests.cs" />
+    <Compile Include="PipeImporterTests\PokerBaazi\PokerBaaziTestsHelper.cs" />
+    <Compile Include="PipeImporterTests\PokerBaazi\PokerBaaziUtilsTests.cs" />
     <Compile Include="ProxyImporterTests\Adda52Tests\Adda52JsonPackageTests.cs" />
     <Compile Include="ProxyImporterTests\Adda52Tests\Adda52HandBuilderTests.cs" />
     <Compile Include="ProxyImporterTests\Adda52Tests\Adda52PacketManagerTests.cs" />
@@ -223,6 +228,7 @@
     <Compile Include="TcpImportersTests\PKTests\PKHandBuilderTests.cs" />
     <Compile Include="TcpImportersTests\PKTests\PKImporterTests.cs" />
     <Compile Include="TcpImportersTests\PKTests\PokerKingPacketManagerTests.cs" />
+    <Compile Include="TcpImportersTests\PMTests\KOPlayerEmulatorProviderTest.cs" />
     <Compile Include="TcpImportersTests\TcpImporterTestUtils.cs" />
     <Compile Include="UnitTests\ConverterTests.cs" />
     <Compile Include="UnitTests\PartyPokerJackpotTableFinderTests.cs" />
@@ -306,6 +312,14 @@
     <Fakes Include="Fakes\System.fakes" />
     <Fakes Include="Fakes\mscorlib.fakes" />
     <Content Include="IntegrationTests\Parsers\PartyPoker\TestData\Hands\NLH-Cash-PP-ES-1.txt" />
+    <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-hero-1\Result.xml" />
+    <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-1\Result.xml" />
+    <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-2\Result.xml" />
+    <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-3\Result.xml" />
+    <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-mtt-no-hero-1\Result.xml" />
+    <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-mtt-no-hero-2\Result.xml" />
+    <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\plo-6-max-no-hero-1\Result.xml" />
+    <Content Include="PipeImporterTests\PokerBaazi\TestData\RawData\RawData-1.txt" />
     <Content Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-6-max-no-hero\Result.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -394,6 +408,23 @@
     <Content Include="ProxyImporterTests\Adda52Tests\TestData\Packets\0.0.0.0.8893-127.0.0.1.12032.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-hero-1\Source.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-1\Source.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-2\Source.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-3\Source.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-mtt-no-hero-1\Source.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-mtt-no-hero-2\Source.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\plo-6-max-no-hero-1\Source.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\InitResponse-2.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\InitResponse.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\RoundResponse.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\SpectatorResponse-2.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\SpectatorResponse.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\StartGameResponse.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\TournamentDetailsResponse.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\UserButtonActionResponse-2.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\UserButtonActionResponse.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\WinnerResponse.json" />
     <None Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-6-max-no-hero\Source.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

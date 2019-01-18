@@ -1,0 +1,23 @@
+{
+  "classObj": {
+    "windowType": 0,
+    "actionPerformed": "Check",
+    "actionName": "checkaction",
+    "currentAmount": null,
+    "error": 0,
+    "betAmount": null,
+    "potAmount": null,
+    "gameResponse": true,
+    "userName": "aadi8851777105",
+    "userId": 255740,
+    "roomId": 100529,
+    "tournamentId": null,
+    "balance": 0,
+    "playGroupId": "1546956879558",
+    "playerInGame": false,
+    "tableIndex": 0,
+    "action": "UserButtonActionResponse",
+    "tempBetBalance": null
+  },
+  "timestamp": 1546956779072
+}

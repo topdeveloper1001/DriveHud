@@ -447,6 +447,7 @@
     <Compile Include="TableConfigurators\PositionProviders\PKPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\PMPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\HorizonPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\PokerBaaziPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\PPPokerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\ReplayerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\SpartanPokerPositionProvider.cs" />
@@ -588,6 +589,7 @@
     <Compile Include="ViewModels\Hud\PKHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PMHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\HorizonHudPanelService.cs" />
+    <Compile Include="ViewModels\Hud\PokerBaaziHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PPPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\ReplayerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\SpartanPokerHudPanelService.cs" />
@@ -1613,6 +1615,9 @@
     </Content>
     <Resource Include="images\pm-icon.ico" />
     <Resource Include="images\pk-icon.ico" />
+    <Content Include="Lib\BaaziHook.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Lib\CapPipedI2.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

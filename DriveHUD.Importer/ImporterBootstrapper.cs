@@ -21,6 +21,7 @@ using DriveHUD.Importers.IPoker;
 using DriveHUD.Importers.Loggers;
 using DriveHUD.Importers.Pacific888;
 using DriveHUD.Importers.PartyPoker;
+using DriveHUD.Importers.PokerBaazi;
 using DriveHUD.Importers.PokerKing;
 using DriveHUD.Importers.PokerKing.Model;
 using DriveHUD.Importers.PokerMaster;
@@ -104,6 +105,11 @@ namespace DriveHUD.Importers
             container.RegisterType<IAdda52Importer, Adda52Importer>();
             container.RegisterType<IAdda52HandBuilder, Adda52HandBuilder>();
             container.RegisterType<IAdda52TableService, Adda52TableService>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IPokerBaaziCatcher, PokerBaaziCatcher>();
+            container.RegisterType<IPokerBaaziDataImporter, PokerBaaziDataImporter>();
+            container.RegisterType<IPokerBaaziDataManager, PokerBaaziDataManager>();
+            container.RegisterType<IPokerBaaziImporter, PokerBaaziImporter>();
+            container.RegisterType<IPokerBaaziHandBuilder, PokerBaaziHandBuilder>();
 
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());
@@ -144,6 +150,9 @@ namespace DriveHUD.Importers
             importerService.Register<IAdda52Importer>();
             importerService.Register<IProxyImporter>();
             importerService.Register<IAdda52TableService>();
+            importerService.Register<IPokerBaaziCatcher>();
+            importerService.Register<IPokerBaaziDataImporter>();
+            importerService.Register<IPokerBaaziImporter>();
 
             var tcpImporter = importerService.GetImporter<ITcpImporter>();
             tcpImporter.RegisterImporter<IPKImporter>();

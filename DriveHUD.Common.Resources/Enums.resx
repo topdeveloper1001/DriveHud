@@ -1763,4 +1763,16 @@
   <data name="Enum_EquityCalculatorMode_HoldemSixPlus" xml:space="preserve">
     <value>Holdem 6+</value>
   </data>
+  <data name="Enum_EnumPokerNetworks_Adda52" xml:space="preserve">
+    <value>Adda52</value>
+  </data>
+  <data name="Enum_EnumPokerNetworks_BaaziNetworks" xml:space="preserve">
+    <value>Baazi Networks</value>
+  </data>
+  <data name="Enum_EnumPokerNetworks_QuadnetIndia" xml:space="preserve">
+    <value>Quadnet India</value>
+  </data>
+  <data name="Enum_EnumPokerSites_PokerBaazi" xml:space="preserve">
+    <value>Poker Baazi</value>
+  </data>
 </root>

@@ -1156,33 +1156,33 @@ namespace DriveHUD.Entities
 
         #region Pot/Amount/Stack based 
 
-        public double BetAmountPreflopInBB => BigBlind != 0 ? BetAmountPreflopInCents / (double)BigBlind * 100 : 0;
+        public double BetAmountPreflopInBB => BigBlind != 0 ? BetAmountPreflopInCents / (double)BigBlind / 100 : 0;
 
-        public double CallAmountPreflopInBB => BigBlind != 0 ? CallAmountPreflopInCents / (double)BigBlind * 100 : 0;
+        public double CallAmountPreflopInBB => BigBlind != 0 ? CallAmountPreflopInCents / (double)BigBlind / 100 : 0;
 
-        public double PostAmountPreflopInBB => BigBlind != 0 ? PostAmountPreflopInCents / (double)BigBlind * 100 : 0;
+        public double PostAmountPreflopInBB => BigBlind != 0 ? PostAmountPreflopInCents / (double)BigBlind / 100 : 0;
 
-        public double BetAmountFlopInBB => BigBlind != 0 ? BetAmountFlopInCents / (double)BigBlind * 100 : 0;
+        public double BetAmountFlopInBB => BigBlind != 0 ? BetAmountFlopInCents / (double)BigBlind / 100 : 0;
 
-        public double CallAmountFlopInBB => BigBlind != 0 ? CallAmountFlopInCents / (double)BigBlind * 100 : 0;
+        public double CallAmountFlopInBB => BigBlind != 0 ? CallAmountFlopInCents / (double)BigBlind / 100 : 0;
 
-        public double BetAmountTurnInBB => BigBlind != 0 ? BetAmountTurnInCents / (double)BigBlind * 100 : 0;
+        public double BetAmountTurnInBB => BigBlind != 0 ? BetAmountTurnInCents / (double)BigBlind / 100 : 0;
 
-        public double CallAmountTurnInBB => BigBlind != 0 ? CallAmountTurnInCents / (double)BigBlind * 100 : 0;
+        public double CallAmountTurnInBB => BigBlind != 0 ? CallAmountTurnInCents / (double)BigBlind / 100 : 0;
 
-        public double BetAmountRiverInBB => BigBlind != 0 ? BetAmountRiverInCents / (double)BigBlind * 100 : 0;
+        public double BetAmountRiverInBB => BigBlind != 0 ? BetAmountRiverInCents / (double)BigBlind / 100 : 0;
 
-        public double CallAmountRiverInBB => BigBlind != 0 ? CallAmountRiverInCents / (double)BigBlind * 100 : 0;
+        public double CallAmountRiverInBB => BigBlind != 0 ? CallAmountRiverInCents / (double)BigBlind / 100 : 0;
 
-        public double FlopPotSizeInBB => BigBlind != 0 ? FlopPotSizeInCents / (double)BigBlind * 100 : 0;
+        public double FlopPotSizeInBB => BigBlind != 0 ? FlopPotSizeInCents / (double)BigBlind / 100 : 0;
 
-        public double TurnPotSizeInBB => BigBlind != 0 ? TurnPotSizeInCents / (double)BigBlind * 100 : 0;
+        public double TurnPotSizeInBB => BigBlind != 0 ? TurnPotSizeInCents / (double)BigBlind / 100 : 0;
 
-        public double RiverPotSizeInBB => BigBlind != 0 ? RiverPotSizeInCents / (double)BigBlind * 100 : 0;
+        public double RiverPotSizeInBB => BigBlind != 0 ? RiverPotSizeInCents / (double)BigBlind / 100 : 0;
 
         public double PotInBB => BigBlind != 0 ? (double)Pot / (double)BigBlind : 0;
 
-        public double TotalWonInBB => BigBlind != 0 ? Totalamountwonincents / (double)BigBlind * 100 : 0;
+        public double TotalWonInBB => BigBlind != 0 ? Totalamountwonincents / (double)BigBlind / 100 : 0;
 
         #endregion
 

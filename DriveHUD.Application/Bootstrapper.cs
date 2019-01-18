@@ -301,6 +301,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, WinamaxConfiguration>(EnumPokerSites.Winamax.ToString());
             Container.RegisterType<ISiteConfiguration, Adda52SiteConfiguration>(EnumPokerSites.Adda52.ToString());
             Container.RegisterType<ISiteConfiguration, SpartanPokerConfiguration>(EnumPokerSites.SpartanPoker.ToString());
+            Container.RegisterType<ISiteConfiguration, PokerBaaziSiteConfiguration>(EnumPokerSites.PokerBaazi.ToString());
 
             // HUD designer 
             Container.RegisterType<IHudToolFactory, HudToolFactory>();

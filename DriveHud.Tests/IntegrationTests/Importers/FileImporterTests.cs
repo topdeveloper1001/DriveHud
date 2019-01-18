@@ -78,6 +78,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             unityContainer.RegisterType<ISiteConfiguration, WinamaxConfiguration>(EnumPokerSites.Winamax.ToString());
             unityContainer.RegisterType<ISiteConfiguration, Adda52SiteConfiguration>(EnumPokerSites.Adda52.ToString());
             unityContainer.RegisterType<ISiteConfiguration, SpartanPokerConfiguration>(EnumPokerSites.SpartanPoker.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, PokerBaaziSiteConfiguration>(EnumPokerSites.PokerBaazi.ToString());
             unityContainer.RegisterType<ISiteConfigurationService, SiteConfigurationService>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
         }

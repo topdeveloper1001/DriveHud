@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2019-01-17T12:32:27.454Z</DateOfHandUtc>
+  <HandId>1547728447816</HandId>
+  <DealerButtonPosition>8</DealerButtonPosition>
+  <TableName>Dazzling Deuces</TableName>
+  <GameDescription>
+    <PokerFormat>CashGame</PokerFormat>
+    <Site>PokerBaazi</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>INR</Currency>
+      <SmallBlind>1</SmallBlind>
+      <BigBlind>2</BigBlind>
+      <IsAnteTable>false</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="9" />
+    <TableType>Regular</TableType>
+    <Identifier>100399</Identifier>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>96</TotalPot>
+  <Rake>6</Rake>
+  <Actions>
+    <HandAction PlayerName="anod12105" HandActionType="SMALL_BLIND" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Janwar001" HandActionType="BIG_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="vijaydasingh" HandActionType="CALL" Amount="-2" Street="Preflop" IsAllIn="false" />    
+    <HandAction PlayerName="rahultalan" HandActionType="RAISE" Amount="-32" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="arunshekhar1018" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="ghost89" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="chat6" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="anod12105" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />    
+    <HandAction p3:type="AllInAction" PlayerName="Janwar001" HandActionType="ALL_IN" Amount="-29" Street="Preflop" IsAllIn="true" IsRaiseAllIn="false" SourceActionType="CALL" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />    
+    <HandAction PlayerName="vijaydasingh" HandActionType="CALL" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="vijaydasingh" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="rahultalan" HandActionType="BET" Amount="-18" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="vijaydasingh" HandActionType="FOLD" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="rahultalan" HandActionType="UNCALLED_BET" Amount="18" Street="Flop" IsAllIn="false" />          
+    <HandAction p3:type="WinningsAction" PlayerName="rahultalan" HandActionType="WINS" Amount="90" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>8h2c6sAh4h</CommunityCards>
+  <Players>
+    <Player PlayerName="anod12105" StartingStack="75" Bet="1" Win="0" SeatNumber="1" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Janwar001" StartingStack="31" Bet="31" Win="0" SeatNumber="3" Cards="TdKh" IsSittingOut="false" />
+    <Player PlayerName="vijaydasingh" StartingStack="94" Bet="32" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="rahultalan" StartingStack="161" Bet="50" Win="90" SeatNumber="5" Cards="7d7s" IsSittingOut="false" />
+    <Player PlayerName="arunshekhar1018" StartingStack="37" Bet="0" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+    <Player PlayerName="ghost89" StartingStack="102" Bet="0" Win="0" SeatNumber="7" Cards="" IsSittingOut="false" />
+    <Player PlayerName="chat6" StartingStack="43" Bet="0" Win="0" SeatNumber="8" Cards="" IsSittingOut="false" />    
+  </Players>
+</HandHistory>

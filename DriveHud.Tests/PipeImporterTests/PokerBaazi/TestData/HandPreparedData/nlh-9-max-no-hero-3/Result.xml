@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2019-01-17T14:39:46.147Z</DateOfHandUtc>
+  <HandId>1547736086459</HandId>
+  <DealerButtonPosition>2</DealerButtonPosition>
+  <TableName>Dazzling Deuces</TableName>
+  <GameDescription>
+    <PokerFormat>CashGame</PokerFormat>
+    <Site>PokerBaazi</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>INR</Currency>
+      <SmallBlind>1</SmallBlind>
+      <BigBlind>2</BigBlind>
+      <IsAnteTable>false</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="9" />
+    <TableType>Regular</TableType>
+    <Identifier>100347</Identifier>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>74</TotalPot>
+  <Rake>5</Rake>
+  <Actions>
+    <HandAction PlayerName="wasimakram727" HandActionType="SMALL_BLIND" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="bipin131991" HandActionType="BIG_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Msj123" HandActionType="POSTS" Amount="-2" Street="Preflop" IsAllIn="false" />        
+    <HandAction PlayerName="grvsunny" HandActionType="CALL" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="rudra7000" HandActionType="CALL" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Psk1970" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Jumann" HandActionType="CALL" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Msj123" HandActionType="CHECK" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Usos123" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="wasimakram727" HandActionType="CALL" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="bipin131991" HandActionType="CHECK" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="wasimakram727" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="bipin131991" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="grvsunny" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="rudra7000" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="Jumann" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="Msj123" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="wasimakram727" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="bipin131991" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="grvsunny" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />        
+    <HandAction p3:type="AllInAction" PlayerName="rudra7000" HandActionType="ALL_IN" Amount="-22" Street="Turn" IsAllIn="true" IsRaiseAllIn="true" SourceActionType="BET" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="Jumann" HandActionType="CALL" Amount="-22" Street="Turn" IsAllIn="false" />
+    <HandAction p3:type="AllInAction" PlayerName="Msj123" HandActionType="ALL_IN" Amount="-18" Street="Turn" IsAllIn="true" IsRaiseAllIn="false" SourceActionType="CALL" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="wasimakram727" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="bipin131991" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="grvsunny" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" /> 
+    <HandAction p3:type="WinningsAction" PlayerName="rudra7000" HandActionType="WINS" Amount="7" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction p3:type="WinningsAction" PlayerName="Msj123" HandActionType="WINS" Amount="62" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>5s8s8h6c2h</CommunityCards>
+  <Players>
+    <Player PlayerName="Msj123" StartingStack="20" Bet="20" Win="62" SeatNumber="1" Cards="6sAs" IsSittingOut="false" />
+    <Player PlayerName="Usos123" StartingStack="239" Bet="0" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
+    <Player PlayerName="wasimakram727" StartingStack="77" Bet="2" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="bipin131991" StartingStack="44" Bet="2" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
+    <Player PlayerName="grvsunny" StartingStack="125" Bet="2" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+    <Player PlayerName="rudra7000" StartingStack="24" Bet="24" Win="7" SeatNumber="7" Cards="6dQh" IsSittingOut="false" />
+    <Player PlayerName="Psk1970" StartingStack="13" Bet="0" Win="0" SeatNumber="8" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Jumann" StartingStack="129" Bet="24" Win="0" SeatNumber="9" Cards="Kd7c" IsSittingOut="false" />
+  </Players>
+</HandHistory>

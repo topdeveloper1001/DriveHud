@@ -315,4 +315,7 @@
   <data name="Settings_SpartanPokerHelpLink" xml:space="preserve">
     <value>http://drivehud.com/blog/manual/#</value>
   </data>
+  <data name="Settings_PokerBaaziHelpLink" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/</value>
+  </data>
 </root>

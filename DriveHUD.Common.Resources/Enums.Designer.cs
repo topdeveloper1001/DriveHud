@@ -151,6 +151,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adda52.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_Adda52 {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_Adda52", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Baazi Networks.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_BaaziNetworks {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_BaaziNetworks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Chico Poker Network.
         /// </summary>
         internal static string Enum_EnumPokerNetworks_Chico {
@@ -210,6 +228,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_EnumPokerNetworks_PokerStars {
             get {
                 return ResourceManager.GetString("Enum_EnumPokerNetworks_PokerStars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quadnet India.
+        /// </summary>
+        internal static string Enum_EnumPokerNetworks_QuadnetIndia {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerNetworks_QuadnetIndia", resourceCulture);
             }
         }
         
@@ -336,6 +363,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_EnumPokerSites_Poker888 {
             get {
                 return ResourceManager.GetString("Enum_EnumPokerSites_Poker888", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Poker Baazi.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_PokerBaazi {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_PokerBaazi", resourceCulture);
             }
         }
         

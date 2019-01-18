@@ -1,0 +1,23 @@
+{
+  "classObj": {
+    "windowType": 0,
+    "actionPerformed": "Raise",
+    "actionName": "raisedaction",
+    "currentAmount": 6,
+    "error": 0,
+    "betAmount": 6,
+    "potAmount": 9,
+    "gameResponse": true,
+    "userName": "Neizo",
+    "userId": 342356,
+    "roomId": 100529,
+    "tournamentId": null,
+    "balance": 0,
+    "playGroupId": "1546956924578",
+    "playerInGame": false,
+    "tableIndex": 2,
+    "action": "UserButtonActionResponse",
+    "tempBetBalance": 71
+  },
+  "timestamp": 1546956827216
+}

@@ -42,7 +42,7 @@ namespace Model.Settings
             IsProcessedDataLocationEnabled = true;
             ProcessedDataLocation = Path.Combine(StringFormatter.GetAppDataFolderPath(), "ProcessedData");
 
-            var sites = new [] 
+            var sites = new[]
             {
                 EnumPokerSites.Ignition,
                 EnumPokerSites.BetOnline,
@@ -60,7 +60,8 @@ namespace Model.Settings
                 EnumPokerSites.IPoker,
                 EnumPokerSites.Horizon,
                 EnumPokerSites.Winamax,
-                EnumPokerSites.Adda52
+                EnumPokerSites.Adda52,
+                EnumPokerSites.PokerBaazi
             };
 
             SitesModelList = sites.Select(x => new SiteModel

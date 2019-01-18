@@ -92,8 +92,8 @@ namespace HandHistories.Parser.Utils
 
         public static void UpdateAllInActions(HandHistory handHistory)
         {
-            AllInActionHelper.IdentifyAllInActions(handHistory.Players, handHistory.HandActions);
-            handHistory.HandActions = AllInActionHelper.UpdateAllInActions(handHistory.HandActions);
+            var handActions = AllInActionHelper.IdentifyAllInActions(handHistory.Players, handHistory.HandActions);
+            handHistory.HandActions = AllInActionHelper.UpdateAllInActions(handActions);
         }
 
         /// <summary>
@@ -228,7 +228,8 @@ namespace HandHistories.Parser.Utils
                 var preflopOrderedPlayers = orderedPlayers.Skip(blindsCount).Concat(orderedPlayers.Take(blindsCount)).ToArray();
                 var preflopOrderedPlayersDictionary = OrderedPlayersToDict(preflopOrderedPlayers);
 
-                orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Preflop && x.IsBlinds));
+                orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Preflop && x.HandActionType == HandActionType.ANTE));
+                orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Preflop && x.IsBlinds && x.HandActionType != HandActionType.ANTE));
                 orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, preflopOrderedPlayersDictionary, x => x.Street == Street.Preflop && !x.IsBlinds));
             }
 
