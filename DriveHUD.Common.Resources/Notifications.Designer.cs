@@ -234,6 +234,15 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
         /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PB {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
+        /// </summary>
         internal static string Notifications_HudLayout_PreLoadingText_PK {
             get {
                 return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PK", resourceCulture);

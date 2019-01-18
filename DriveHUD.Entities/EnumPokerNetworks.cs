@@ -14,6 +14,7 @@ namespace DriveHUD.Entities
 {
     public enum EnumPokerNetworks
     {
+        Unknown,
         Ignition,
         Chico,
         WPN,
@@ -26,6 +27,6 @@ namespace DriveHUD.Entities
         Winamax,
         Adda52,
         QuadnetIndia,
-        Unknown
+        BaaziNetworks
     }
 }

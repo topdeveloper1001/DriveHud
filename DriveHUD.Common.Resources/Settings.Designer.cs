@@ -304,6 +304,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/.
+        /// </summary>
+        internal static string Settings_PokerBaaziHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_PokerBaaziHelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-31.
         /// </summary>
         internal static string Settings_PokerStarsHelpLink {

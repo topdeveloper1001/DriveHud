@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Adda52PositionProvider.cs" company="Ace Poker Solutions">
-// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="PokerBaaziPositionProvider.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -14,9 +14,9 @@ using System.Collections.Generic;
 
 namespace DriveHUD.Application.TableConfigurators.PositionProviders
 {
-    internal sealed class Adda52PositionProvider : IPositionProvider
+    internal sealed class PokerBaaziPositionProvider : IPositionProvider
     {
-        public Adda52PositionProvider()
+        public PokerBaaziPositionProvider()
         {
             Positions = new Dictionary<int, int[,]>
             {
@@ -24,41 +24,27 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
                     2,
                     new int[,]
                     {
-                        { 677, 227 }, { 10,  227}
-                    }
-                },
-                {
-                    4,
-                    new int[,]
-                    {
-                        { 525, 98 }, { 525, 357 }, { 162, 357 }, { 162, 98 }
+                        { 38, 173 }, { 523,  173}
                     }
                 },
                 {
                     6,
                     new int[,]
                     {
-                        { 525, 98 }, { 677, 227 }, { 525, 357 }, { 162, 357 }, { 10, 227 }, { 162, 98 }
-                    }
-                },
-                {
-                    8,
-                    new int[,]
-                    {
-                        { 500, 91 }, { 677, 170 }, { 671, 278}, { 500, 361 },  { 187, 361 }, { 15, 278 }, { 10, 174 }, { 187, 91 }
+                        { 38, 173 }, { 147, 76 }, { 399, 76 }, { 523, 173 }, { 399, 288 }, { 147, 288 }
                     }
                 },
                 {
                     9,
                     new int[,]
                     {
-                        { 500, 91 }, { 677, 170 }, { 671, 278}, { 525, 361 }, { 344, 372 }, { 162, 361 }, { 15, 278 }, { 10, 174 }, { 187, 91 } 
+                        { 35, 218 }, { 35, 139 }, { 133, 76}, { 402, 76 }, { 528, 139 }, { 528, 218 }, { 433, 288 }, { 274, 302 }, { 120, 288 }
                     }
                 }
             };
 
-            PlayerLabelWidth = 143;
-            PlayerLabelHeight = 44;
+            PlayerLabelWidth = 128;
+            PlayerLabelHeight = 38;
         }
 
         public Dictionary<int, int[,]> Positions { get; }

@@ -54,6 +54,7 @@ namespace DriveHUD.Application
             container.RegisterType<IHudPanelService, Adda52HudPanelService>(EnumPokerSites.Adda52.ToString());
             container.RegisterType<IHudPanelService, SpartanPokerHudPanelService>(EnumPokerSites.SpartanPoker.ToString());
             container.RegisterType<IHudPanelService, PPPokerHudPanelService>(EnumPokerSites.PPPoker.ToString());
+            container.RegisterType<IHudPanelService, PokerBaaziHudPanelService>(EnumPokerSites.PokerBaazi.ToString());
             container.RegisterType<IHudPanelService, ReplayerHudPanelService>(EnumPokerSites.DriveHUDReplayer.ToString());
 
             // Position Providers
@@ -80,6 +81,7 @@ namespace DriveHUD.Application
             container.RegisterType<IPositionProvider, Adda52PositionProvider>(EnumPokerSites.Adda52.ToString());
             container.RegisterType<IPositionProvider, SpartanPokerPositionProvider>(EnumPokerSites.SpartanPoker.ToString());
             container.RegisterType<IPositionProvider, PPPokerPositionProvider>(EnumPokerSites.PPPoker.ToString());
+            container.RegisterType<IPositionProvider, PokerBaaziPositionProvider>(EnumPokerSites.PokerBaazi.ToString());
             container.RegisterType<IPositionProvider, ReplayerPositionProvider>(EnumPokerSites.DriveHUDReplayer.ToString());
         }
     }

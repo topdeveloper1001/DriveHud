@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2019-01-18T19:22:55.161Z</DateOfHandUtc>
+  <HandId>1547839446802</HandId>
+  <DealerButtonPosition>1</DealerButtonPosition>
+  <TableName>Table#2</TableName>
+  <GameDescription>
+    <PokerFormat>Tournament</PokerFormat>
+    <Site>PokerBaazi</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>Chips</Currency>
+      <SmallBlind>120</SmallBlind>
+      <BigBlind>240</BigBlind>
+      <IsAnteTable>true</IsAnteTable>
+      <Ante>30</Ante>
+    </Limit>
+    <SeatType MaxPlayers="9" />
+    <TableType>Regular</TableType>
+    <Tournament>
+      <TournamentId>296259</TournamentId>
+      <TournamentName>Turbo 1.5 LAC GTD (5RE)</TournamentName>
+      <BuyIn>
+        <Currency>INR</Currency>
+        <PrizePoolValue>1500</PrizePoolValue>
+        <Rake>150</Rake>
+        <IsKnockout>false</IsKnockout>
+        <KnockoutValue>0</KnockoutValue>
+      </BuyIn>
+      <Bounty>0</Bounty>
+      <Rebuy>0</Rebuy>
+      <Addon>0</Addon>
+      <Winning>0</Winning>
+      <TotalPrize>0</TotalPrize>
+      <FinishPosition>0</FinishPosition>
+      <TotalPlayers>52</TotalPlayers>
+      <StartDate>2019-01-18T21:00:00Z</StartDate>
+      <Speed>Regular</Speed>
+      <StartingStack>7000</StartingStack>
+      <TournamentsTags>MTT</TournamentsTags>
+    </Tournament>
+    <Identifier>71671</Identifier>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>15038</TotalPot>
+  <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+  <Actions>
+    <HandAction PlayerName="Deepakchawla87" HandActionType="ANTE" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Jocker900" HandActionType="ANTE" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="thejoker" HandActionType="ANTE" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Identity" HandActionType="ANTE" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Ellis_Dee" HandActionType="ANTE" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="PeeeKaBooo" HandActionType="ANTE" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Shivz91" HandActionType="ANTE" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="hvj4201" HandActionType="ANTE" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="msdhoni" HandActionType="ANTE" Amount="-30" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Deepakchawla87" HandActionType="SMALL_BLIND" Amount="-120" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Jocker900" HandActionType="BIG_BLIND" Amount="-240" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="thejoker" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Identity" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Ellis_Dee" HandActionType="RAISE" Amount="-960" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="PeeeKaBooo" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction p3:type="AllInAction" PlayerName="Shivz91" HandActionType="ALL_IN" Amount="-4488" Street="Preflop" IsAllIn="true" IsRaiseAllIn="true" SourceActionType="RAISE" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="hvj4201" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="msdhoni" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Deepakchawla87" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction p3:type="AllInAction" PlayerName="Jocker900" HandActionType="ALL_IN" Amount="-4840" Street="Preflop" IsAllIn="true" IsRaiseAllIn="true" SourceActionType="RAISE" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <HandAction PlayerName="Ellis_Dee" HandActionType="CALL" Amount="-4120" Street="Preflop" IsAllIn="false" />
+    <HandAction p3:type="WinningsAction" PlayerName="Ellis_Dee" HandActionType="WINS" Amount="15038" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>9d5hThQs5c</CommunityCards>
+  <Players>
+    <Player PlayerName="msdhoni" StartingStack="28165" Bet="30" Win="0" SeatNumber="1" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Deepakchawla87" StartingStack="16130" Bet="150" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Jocker900" StartingStack="5110" Bet="5110" Win="0" SeatNumber="3" Cards="6dTd" IsSittingOut="false" />
+    <Player PlayerName="thejoker" StartingStack="6915" Bet="30" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Identity" StartingStack="30045" Bet="30" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Ellis_Dee" StartingStack="17916" Bet="5110" Win="15038" SeatNumber="6" Cards="AdAc" IsSittingOut="false" />
+    <Player PlayerName="PeeeKaBooo" StartingStack="10164" Bet="30" Win="0" SeatNumber="7" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Shivz91" StartingStack="4518" Bet="4518" Win="0" SeatNumber="8" Cards="Qd7h" IsSittingOut="false" />
+    <Player PlayerName="hvj4201" StartingStack="19080" Bet="30" Win="0" SeatNumber="9" Cards="" IsSittingOut="false" />
+  </Players>
+</HandHistory>

@@ -34,6 +34,8 @@ namespace DriveHUD.Entities
                     return "PP";
                 case EnumPokerSites.Poker888:
                     return "888";
+                case EnumPokerSites.PokerBaazi:
+                    return "PB";
                 case EnumPokerSites.PokerKing:
                     return "PK";
                 case EnumPokerSites.PokerMaster:

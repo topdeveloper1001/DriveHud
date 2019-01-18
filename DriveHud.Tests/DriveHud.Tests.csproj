@@ -317,6 +317,7 @@
     <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-2\Result.xml" />
     <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-3\Result.xml" />
     <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-mtt-no-hero-1\Result.xml" />
+    <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-mtt-no-hero-2\Result.xml" />
     <Content Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\plo-6-max-no-hero-1\Result.xml" />
     <Content Include="PipeImporterTests\PokerBaazi\TestData\RawData\RawData-1.txt" />
     <Content Include="ProxyImporterTests\Adda52Tests\TestData\HandsRawData\regular-6-max-no-hero\Result.xml">
@@ -412,6 +413,7 @@
     <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-2\Source.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-9-max-no-hero-3\Source.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-mtt-no-hero-1\Source.json" />
+    <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\nlh-mtt-no-hero-2\Source.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\HandPreparedData\plo-6-max-no-hero-1\Source.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\InitResponse-2.json" />
     <None Include="PipeImporterTests\PokerBaazi\TestData\Packets\InitResponse.json" />

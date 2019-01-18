@@ -63,14 +63,14 @@
   </Actions>
   <CommunityCards>4h2s2c</CommunityCards>
   <Players>
-    <Player PlayerName="SpadeHunter" StartingStack="55800" Bet="200" Win="0" SeatNumber="1" Cards="" IsSittingOut="false" />
-    <Player PlayerName="gangajal" StartingStack="24800" Bet="200" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
-    <Player PlayerName="Ellis_Dee" StartingStack="48000" Bet="9100" Win="11400" SeatNumber="3" Cards="" IsSittingOut="false" />
-    <Player PlayerName="Jeet0" StartingStack="63137" Bet="5000" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
-    <Player PlayerName="karan1515" StartingStack="42802" Bet="200" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
-    <Player PlayerName="LungFakeer" StartingStack="35139" Bet="200" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
-    <Player PlayerName="saurabhiim" StartingStack="62280" Bet="200" Win="0" SeatNumber="7" Cards="" IsSittingOut="false" />
-    <Player PlayerName="ImHighIshove" StartingStack="69208" Bet="200" Win="0" SeatNumber="8" Cards="" IsSittingOut="false" />
-    <Player PlayerName="Wynn" StartingStack="67057" Bet="200" Win="0" SeatNumber="9" Cards="" IsSittingOut="false" />
+    <Player PlayerName="SpadeHunter" StartingStack="56000" Bet="200" Win="0" SeatNumber="1" Cards="" IsSittingOut="false" />
+    <Player PlayerName="gangajal" StartingStack="25000" Bet="200" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Ellis_Dee" StartingStack="48200" Bet="9100" Win="11400" SeatNumber="3" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Jeet0" StartingStack="63337" Bet="5000" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="karan1515" StartingStack="43002" Bet="200" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
+    <Player PlayerName="LungFakeer" StartingStack="35339" Bet="200" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+    <Player PlayerName="saurabhiim" StartingStack="62480" Bet="200" Win="0" SeatNumber="7" Cards="" IsSittingOut="false" />
+    <Player PlayerName="ImHighIshove" StartingStack="69408" Bet="200" Win="0" SeatNumber="8" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Wynn" StartingStack="67257" Bet="200" Win="0" SeatNumber="9" Cards="" IsSittingOut="false" />
   </Players>
 </HandHistory>

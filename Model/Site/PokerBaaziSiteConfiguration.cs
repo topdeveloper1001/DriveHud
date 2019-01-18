@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Adda52SiteConfiguration.cs" company="Ace Poker Solutions">
+// <copyright file="PokerBaaziSiteConfiguration.cs" company="Ace Poker Solutions">
 // Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -19,27 +19,25 @@ using System.IO;
 
 namespace Model.Site
 {
-    public class Adda52SiteConfiguration : BaseSiteConfiguration, ISiteConfiguration
+    public class PokerBaaziSiteConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
         private readonly string[] possibleFolders = new[]
-        {
-            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "Adda52Poker")
+       {
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "PokerBaazi")
         };
 
-        private const string launcherFile = "poker.exe";     
+        private const string launcherFile = "PokerBaazi.exe";
 
-        private readonly string[] defaultUninstallDisplayNames = new[] { "Adda52Poker" };
+        private readonly string[] defaultUninstallDisplayNames = new[] { "PokerBaazi" };
 
-        public Adda52SiteConfiguration()
+        public PokerBaaziSiteConfiguration()
         {
             prefferedSeat = new Dictionary<int, int>();
 
             tableTypes = new EnumTableType[]
             {
-                EnumTableType.HU,
-                EnumTableType.Four,
+                EnumTableType.HU,                
                 EnumTableType.Six,
-                EnumTableType.Eight,
                 EnumTableType.Nine
             };
         }
@@ -48,7 +46,7 @@ namespace Model.Site
         {
             get
             {
-                return EnumPokerSites.Adda52;
+                return EnumPokerSites.PokerBaazi;
             }
         }
 
@@ -84,7 +82,7 @@ namespace Model.Site
         {
             get
             {
-                return true;
+                return false;
             }
         }
 
@@ -92,7 +90,7 @@ namespace Model.Site
         {
             get
             {
-                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/adda52_logo.png";
+                return "/DriveHUD.Common.Resources;Component/images/SiteLogos/pokerbaazi_logo.png";
             }
         }
 
@@ -119,7 +117,7 @@ namespace Model.Site
         }
 
         /// <summary>
-        /// Detects whenever Adda52 poker client is installed
+        /// Detects whenever PokerBaazi poker client is installed
         /// </summary>
         /// <returns>True if installed, otherwise - false</returns>
         protected virtual bool DetectSite()

@@ -194,35 +194,35 @@ namespace DriveHUD.Importers.PokerBaazi
         /// <summary>
         /// Processes the specified <see cref="PokerBaaziStartGameResponse"/>
         /// </summary>
-        /// <param name="response">Response to process</param>
+        /// <param name="startGameResponse">Response to process</param>
         /// <param name="handHistory">Hand history</param>
-        private void ProcessSpectatorResponse(PokerBaaziStartGameResponse response, long timestamp, HandHistory handHistory)
+        private void ProcessSpectatorResponse(PokerBaaziStartGameResponse startGameResponse, long timestamp, HandHistory handHistory)
         {
-            if (!roomsInitResponses.TryGetValue(response.RoomId, out PokerBaaziInitResponse initResponse))
+            if (!roomsInitResponses.TryGetValue(startGameResponse.RoomId, out PokerBaaziInitResponse initResponse))
             {
-                throw new HandBuilderException(response.HandId, $"InitResponse has not been found for room #{response.RoomId}");
+                throw new HandBuilderException(startGameResponse.HandId, $"InitResponse has not been found for room #{startGameResponse.RoomId}");
             }
 
-            var isTournament = initResponse.TournamentId != 0;
+            var isTournament = startGameResponse.TournamentId != 0;
 
-            handHistory.HandId = response.HandId;
+            handHistory.HandId = startGameResponse.HandId;
             handHistory.DateOfHandUtc = DateTimeHelper.UnixTimeInMilisecondsToDateTime(timestamp);
 
             handHistory.TableName = isTournament && !string.IsNullOrEmpty(initResponse.TournamentTableName) ?
                 initResponse.TournamentTableName : initResponse.TournamentName;
 
             handHistory.GameDescription = isTournament ?
-                CreateTournamentGameDescriptor(initResponse, response) : CreateCashGameDescriptor(initResponse, response);
+                CreateTournamentGameDescriptor(initResponse, startGameResponse) : CreateCashGameDescriptor(initResponse, startGameResponse);
 
-            handHistory.GameDescription.Identifier = response.RoomId;
+            handHistory.GameDescription.Identifier = startGameResponse.RoomId;
 
-            if (response.Players == null)
+            if (startGameResponse.Players == null)
             {
-                throw new HandBuilderException(response.HandId, $"SpectatorResponse.Players isn't set for room #{response.RoomId}");
+                throw new HandBuilderException(startGameResponse.HandId, $"SpectatorResponse.Players isn't set for room #{startGameResponse.RoomId}");
             }
 
             // add players
-            foreach (var playerInfo in response.Players.Values)
+            foreach (var playerInfo in startGameResponse.Players.Values)
             {
                 if (playerInfo.PlayerId <= 0)
                 {
@@ -265,13 +265,15 @@ namespace DriveHUD.Importers.PokerBaazi
                             Street.Preflop));
                 }
 
-                if (isTournament && response.Ante != 0)
+                if (isTournament && startGameResponse.Ante != 0)
                 {
                     handHistory.HandActions.Add(
                         new HandAction(playerInfo.PlayerName,
                             HandActionType.ANTE,
-                            response.Ante,
+                            startGameResponse.Ante,
                             Street.Preflop));
+
+                    player.StartingStack += startGameResponse.Ante;
                 }
             }
 

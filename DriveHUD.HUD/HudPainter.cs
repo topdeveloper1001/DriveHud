@@ -100,7 +100,8 @@ namespace DriveHUD.HUD
             closeHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_DESTROY, closeCallback, processId);
             createHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_NAMECHANGE, createCallback, processId);
 
-            if (hudLayout.PokerSite == Entities.EnumPokerSites.Adda52)
+            if (hudLayout.PokerSite == Entities.EnumPokerSites.Adda52 ||
+                hudLayout.PokerSite == Entities.EnumPokerSites.PokerBaazi)
             {
                 foregroundChangedHook = WinApi.SetWinEventHook(WinApi.EVENT_SYSTEM_FOREGROUND, foregroundChangedCallback, processId);
             }
@@ -205,7 +206,8 @@ namespace DriveHUD.HUD
 
         private static WindowInteropHelper CreateWindowInteropHelper(HudWindow window, HudLayout hudLayout, IntPtr windowHandle)
         {
-            if (hudLayout.PokerSite == Entities.EnumPokerSites.Adda52)
+            if (hudLayout.PokerSite == Entities.EnumPokerSites.Adda52 ||
+                hudLayout.PokerSite == Entities.EnumPokerSites.PokerBaazi)
             {
                 return new WindowInteropHelper(window);
             }
@@ -218,7 +220,8 @@ namespace DriveHUD.HUD
 
         private static void PrepareWindow(HudWindowItem windowItem, HudLayout hudLayout, IntPtr windowHandle)
         {
-            if (hudLayout.PokerSite != Entities.EnumPokerSites.Adda52)
+            if (hudLayout.PokerSite != Entities.EnumPokerSites.Adda52 &&
+                hudLayout.PokerSite != Entities.EnumPokerSites.PokerBaazi)
             {
                 return;
             }
