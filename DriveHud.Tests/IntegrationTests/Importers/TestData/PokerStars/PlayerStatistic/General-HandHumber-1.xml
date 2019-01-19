@@ -1,0 +1,68 @@
+<session sessioncode="42109835876">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL</gametype>
+		<tablename>Table #7, $1,000 GTD [Freezeout] </tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2018-06-30 23:53:07</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<tournamentname>$1,000 GTD [Freezeout] </tournamentname>
+		<place>0</place>
+		<buyin>$15.0+$1.5</buyin>
+		<totalbuyin>$16.5</totalbuyin>
+		<win>0</win>
+		<maxplayers>9</maxplayers>
+		<pokersite>BetOnline</pokersite>
+	</general>
+	<game gamecode="315575540">
+		<general>
+			<startdate>2018-06-30 23:53:07</startdate>
+			<players>
+				<player seat="1" name="RiverGod37" chips="56" dealer="0" win="336" bet="56" rebuy="0" addon="0" />
+				<player seat="2" name="saxtonrd" chips="29281" dealer="0" win="0" bet="100" rebuy="0" addon="0" />
+				<player seat="3" name="terraformers" chips="22058" dealer="0" win="0" bet="100" rebuy="0" addon="0" />
+				<player seat="4" name="gimpy" chips="8525" dealer="0" win="0" bet="100" rebuy="0" addon="0" />
+				<player seat="5" name="IrieD" chips="31058" dealer="0" win="0" bet="100" rebuy="0" addon="0" />
+				<player seat="6" name="JoelEmbiid" chips="7911" dealer="1" win="220" bet="100" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="RiverGod37" type="15" sum="56" cards="" />
+			<action no="2" player="saxtonrd" type="15" sum="100" cards="" />
+			<action no="3" player="terraformers" type="15" sum="100" cards="" />
+			<action no="4" player="gimpy" type="15" sum="100" cards="" />
+			<action no="5" player="IrieD" type="15" sum="100" cards="" />
+			<action no="6" player="JoelEmbiid" type="15" sum="100" cards="" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="RiverGod37">H6 DJ</cards>
+			<cards type="Pocket" player="saxtonrd">X X</cards>
+			<cards type="Pocket" player="terraformers">X X</cards>
+			<cards type="Pocket" player="gimpy">X X</cards>
+			<cards type="Pocket" player="IrieD">X X</cards>
+			<cards type="Pocket" player="JoelEmbiid">C8 HA</cards>
+			<action no="7" player="saxtonrd" type="0" sum="0" cards="" />
+			<action no="8" player="terraformers" type="0" sum="0" cards="" />
+			<action no="9" player="gimpy" type="0" sum="0" cards="" />
+			<action no="10" player="IrieD" type="0" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CJ S7 C3</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C10</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">HK</cards>
+		</round>
+	</game>
+</session>

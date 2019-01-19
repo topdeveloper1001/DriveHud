@@ -424,9 +424,9 @@ namespace Model
                     limped = false;
             }
 
-
             stat.SmallBlind = Math.Abs(parsedHand.GameDescription.Limit.SmallBlind);
-            stat.BigBlind = Math.Abs(parsedHand.GameDescription.Limit.BigBlind);
+            stat.BigBlind = Math.Abs(parsedHand.GameDescription.Limit.BigBlind);         
+
             stat.Ante = 0;
 
             if (parsedHand.GameDescription.Limit.IsAnteTable)
@@ -839,7 +839,7 @@ namespace Model
             stat.FacedHandsUpOnFlop = playedFlop && (numberOfActivePlayerOnFlop == 2) ? 1 : 0;
             stat.FacedMultiWayOnFlop = playedFlop && (numberOfActivePlayerOnFlop > 2) ? 1 : 0;
 
-            stat.StackInBBs = stat.StartingStack / stat.BigBlind;
+            stat.StackInBBs = stat.BigBlind != 0 ? stat.StartingStack / stat.BigBlind : 0;
             stat.MRatio = CalculateMRatio(stat);
 
             stat.PreflopIP = preflopInPosition ? 1 : 0;
