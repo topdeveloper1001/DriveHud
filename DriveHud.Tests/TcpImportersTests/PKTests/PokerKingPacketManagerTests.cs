@@ -124,8 +124,9 @@ namespace DriveHud.Tests.PKTests
         [TestCase(@"Packets\27.155.82.113.31001-192.168.1.4.55025.txt", @"Packets\27.155.82.113.31001-192.168.1.4.55025-pkgt.txt", "yyyy/MM/dd HH:mm:ss", "")]
         [TestCase(@"Packets\170.33.8.75.31001-192.168.0.106.9535.txt", @"Packets\170.33.8.75.31001-192.168.0.106.9535-pkgt.txt", "dd/MM/yyyy HH:mm:ss", "")]
         [TestCase(@"Packets\192.168.0.106.9535-170.33.8.75.31001.txt", @"Packets\192.168.0.106.9535-170.33.8.75.31001-pkgt.txt", "dd/MM/yyyy HH:mm:ss", "")]
-        [TestCase(@"Packets\218.65.131.23.31001-192.168.1.101.2495.txt", @"Packets\218.65.131.23.31001-192.168.1.101.2495-pkgt.txt", "dd/MM/yyyy HH:mm:ss", "")]        
+        [TestCase(@"Packets\218.65.131.23.31001-192.168.1.101.2495.txt", @"Packets\218.65.131.23.31001-192.168.1.101.2495-pkgt.txt", "dd/MM/yyyy HH:mm:ss", "")]
         [TestCase(@"Packets\170.33.8.252.31001-192.168.0.109.51863.txt", @"Packets\170.33.8.252.31001-192.168.0.109.51863-pkgt.txt", "dd/MM/yyyy HH:mm:ss", "3631e0425ce3f883b9117ee154078b5a")]
+        [TestCase(@"Packets\170.33.8.252.31001-192.168.0.100.8553.txt", @"Packets\170.33.8.252.31001-192.168.0.100.8553-pkgt.txt", "dd/MM/yyyy HH:mm:ss", "2b9a55c70c8c8e7300f24b0c2c540d1e")]
         public void TryParseTest(string file, string expectedPackageTypesFile, string dateFormat, string token)
         {
             var packets = ReadCapturedPackets(file, null);

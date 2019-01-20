@@ -45,7 +45,7 @@ namespace DriveHud.Tests.TcpImportersTests
             var eventAggregator = Substitute.For<IEventAggregator>();
             unityContainer.RegisterInstance(eventAggregator);
 
-            var tableWindowProvider = Substitute.For<ITableWindowProvider>();
+            var tableWindowProvider = Substitute.For<IEmulatorService>();
             tableWindowProvider.GetTableWindowHandle(Arg.Any<Process>()).Returns(new IntPtr(1500));
             unityContainer.RegisterInstance(tableWindowProvider);
 

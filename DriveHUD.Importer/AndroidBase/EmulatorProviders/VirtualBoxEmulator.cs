@@ -52,8 +52,10 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
             }
         }
 
-        public IntPtr GetProcessWindowHandle(Process process)
+        public IntPtr GetProcessWindowHandle(Process process, out Process emulatorProcess)
         {
+            emulatorProcess = null;
+
             try
             {
                 if (process == null || process.HasExited)
@@ -67,7 +69,7 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
 
                 LogProvider.Log.Info(Logger, $"Check command line of '{process?.ProcessName}': '{cmd}'. Instance: {instanceNumber} [{EmulatorName}]");
 
-                var emulatorProcess = Process.GetProcesses().
+                emulatorProcess = Process.GetProcesses().
                     FirstOrDefault(x =>
                     {
                         if (!x.ProcessName.Equals(ProcessName, StringComparison.OrdinalIgnoreCase) || x.Id == process.Id)
@@ -137,5 +139,7 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
         {
             return instanceIndexText;
         }
+
+        public abstract string GetAdbLocation();
     }
 }

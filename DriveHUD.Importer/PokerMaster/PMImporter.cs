@@ -170,7 +170,7 @@ namespace DriveHUD.Importers.PokerMaster
         {
             var packetManager = ServiceLocator.Current.GetInstance<IPacketManager<PokerMasterPackage>>();
             var handBuilder = ServiceLocator.Current.GetInstance<IHandBuilder>();
-            var tableWindowProvider = ServiceLocator.Current.GetInstance<ITableWindowProvider>();
+            var tableWindowProvider = ServiceLocator.Current.GetInstance<IEmulatorService>();
             var handHistoriesToProcess = new ConcurrentDictionary<long, List<HandHistoryData>>();
 
             var connectionsService = ServiceLocator.Current.GetInstance<INetworkConnectionsService>();

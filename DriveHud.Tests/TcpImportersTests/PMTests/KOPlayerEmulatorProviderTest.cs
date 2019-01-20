@@ -42,7 +42,7 @@ namespace DriveHud.Tests.TcpImportersTests.PMTests
             Assert.IsNotNull(process);
 
             var koPlayerEmulatorProvider = new KOPlayerEmulatorProvider();
-            var actual = koPlayerEmulatorProvider.GetProcessWindowHandle(process).ToInt32();
+            var actual = koPlayerEmulatorProvider.GetProcessWindowHandle(process, out Process emulatorProcess).ToInt32();
 
             Assert.That(actual, Is.EqualTo(expected));
         }

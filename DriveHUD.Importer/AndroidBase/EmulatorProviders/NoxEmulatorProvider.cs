@@ -10,10 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Text;
+
 namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
 {
     internal class NoxEmulatorProvider : VirtualBoxEmulator
     {
+        // nox_adb.exe
+        private static readonly byte[] location = new byte[] { 0x6E, 0x6F, 0x78, 0x5F, 0x61, 0x64, 0x62, 0x2E, 0x65, 0x78, 0x65 };
+
         protected override string EmulatorName => "NOX";
 
         protected override string ProcessName => "Nox";
@@ -23,5 +28,10 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
         protected override string VbProcessName => "Nox";
 
         protected override string VbInstanceArgumentPrefix => "nox_";
+
+        public override string GetAdbLocation()
+        {
+            return Encoding.ASCII.GetString(location);
+        }
     }
 }

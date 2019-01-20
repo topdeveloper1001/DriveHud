@@ -33,6 +33,7 @@ using ProtoBuf;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -97,6 +98,7 @@ namespace DriveHUD.Importers.PokerKing
             }
 
             packetBuffer.Clear();
+            userTokens.Clear();
 
             protectedLogger.StopLogging();
 
@@ -142,8 +144,8 @@ namespace DriveHUD.Importers.PokerKing
         /// </summary>
         protected void ProcessBuffer()
         {
-            var tableWindowProvider = ServiceLocator.Current.GetInstance<ITableWindowProvider>();
-            tableWindowProvider.SetLogger(Logger);
+            var emulatorService = ServiceLocator.Current.GetInstance<IEmulatorService>();
+            emulatorService.SetLogger(Logger);
 
             var packetManager = ServiceLocator.Current.GetInstance<IPacketManager<PokerKingPackage>>();
             var handBuilder = ServiceLocator.Current.GetInstance<IPKHandBuilder>();
@@ -172,13 +174,6 @@ namespace DriveHUD.Importers.PokerKing
                         LogPacket(capturedPacket, ".log");
                     }
 
-                    if (capturedPacket.Destination.Port == PKImporterHelper.LoginPort ||
-                        capturedPacket.Source.Port == PKImporterHelper.LoginPort)
-                    {
-                        ProcessLoginPortPacket(capturedPacket);
-                        continue;
-                    }
-
                     if (!packetManager.TryParse(capturedPacket, out IList<PokerKingPackage> packages))
                     {
                         continue;
@@ -192,9 +187,9 @@ namespace DriveHUD.Importers.PokerKing
                         }
 
                         var process = connectionsService.GetProcess(capturedPacket);
-                        var windowHandle = tableWindowProvider.GetTableWindowHandle(process);
+                        var windowHandle = emulatorService.GetTableWindowHandle(process);
 
-                        if (!TryDecryptBody(package))
+                        if (!TryDecryptBody(package, process, emulatorService))
                         {
                             if (package.PackageType == PackageType.RequestLeaveRoom)
                             {
@@ -324,84 +319,73 @@ namespace DriveHUD.Importers.PokerKing
             });
         }
 
-        protected virtual void ProcessLoginPortPacket(CapturedPacket packet)
-        {
-            try
-            {
-                if (packet.Bytes.Length == 0)
-                {
-                    return;
-                }
+        // shell
+        private static readonly byte[] arg1 = new byte[] { 0x73, 0x68, 0x65, 0x6C, 0x6C };
 
-                var packetText = Encoding.UTF8.GetString(packet.Bytes);
+        // "cat /data/data/com.ylc.qp.Pokermate/shared_prefs/Cocos2dxPrefsFile.xml"
+        private static readonly byte[] arg2 = new byte[] {
+            0x22, 0x63, 0x61, 0x74, 0x20, 0x2F, 0x64, 0x61, 0x74, 0x61, 0x2F, 0x64, 0x61, 0x74, 0x61, 0x2F, 0x63, 0x6F, 0x6D,
+            0x2E, 0x79, 0x6C, 0x63, 0x2E, 0x71, 0x70, 0x2E, 0x50, 0x6F, 0x6B, 0x65, 0x72, 0x6D, 0x61, 0x74, 0x65, 0x2F, 0x73,
+            0x68, 0x61, 0x72, 0x65, 0x64, 0x5F, 0x70, 0x72, 0x65, 0x66, 0x73, 0x2F, 0x43, 0x6F, 0x63, 0x6F, 0x73, 0x32, 0x64,
+            0x78, 0x50, 0x72, 0x65, 0x66, 0x73, 0x46, 0x69, 0x6C, 0x65, 0x2E, 0x78, 0x6D, 0x6C, 0x22 };
 
-                var tokenIndex = packetText.IndexOf("token\":\"", StringComparison.OrdinalIgnoreCase);
 
-                if (tokenIndex <= 0)
-                {
-                    return;
-                }
-
-                var openBracketIndex = packetText.IndexOf("{", StringComparison.OrdinalIgnoreCase);
-
-                if (openBracketIndex < 0)
-                {
-                    return;
-                }
-
-                var closeBracketIndex = packetText.IndexOf("}", openBracketIndex, StringComparison.OrdinalIgnoreCase);
-
-                if (closeBracketIndex < 0)
-                {
-                    return;
-                }
-
-                var json = packetText.Substring(openBracketIndex, closeBracketIndex - openBracketIndex + 1);
-
-                var tokenInfo = JsonConvert.DeserializeObject<PKLoginTokenInfo>(json);
-
-                if (userTokens.TryGetValue(tokenInfo.UserId, out string token) &&
-                    token.Equals(tokenInfo.Token, StringComparison.OrdinalIgnoreCase))
-                {
-                    return;
-                }
-
-                userTokens.AddOrUpdate(tokenInfo.UserId, tokenInfo.Token, (key, oldValue) => tokenInfo.Token);
-
-                LogProvider.Log.Info(Logger, $"Token info {tokenInfo.Token} has been saved for user #{tokenInfo.UserId}");
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(Logger, $"Failed to save token info.", e);
-            }
-        }
-
-        protected virtual bool TryDecryptBody(PokerKingPackage package)
+        protected virtual bool TryDecryptBody(PokerKingPackage package, Process process, IEmulatorService emulatorService, bool withRepeat = true)
         {
             try
             {
                 if (!userTokens.TryGetValue(package.UserId, out string token))
                 {
-                    LogProvider.Log.Warn(Logger, $"Token for user #{package.UserId} not found");
-                    return false;
+                    withRepeat = false;
+
+                    LogProvider.Log.Info(Logger, $"Token for user #{package.UserId} not found");
+
+                    // read token from emulator
+                    var loginResponses = emulatorService.ExecuteAdbCommand(process,
+                        Encoding.ASCII.GetString(arg1),
+                        Encoding.ASCII.GetString(arg2));
+
+                    foreach (var loginResponseXml in loginResponses)
+                    {
+                        if (!PKLoginResponse.TryParse(loginResponseXml, out PKLoginResponse loginResponse))
+                        {
+                            LogProvider.Log.Warn(Logger, $"Failed to parse token for user #{package.UserId} from response.");
+                            continue;
+                        }
+
+                        userTokens.AddOrUpdate(loginResponse.UserId, loginResponse.UserToken, (dictKey, oldValue) => loginResponse.UserToken);
+                        LogProvider.Log.Info(Logger, $"Token for user #{loginResponse.UserId} has been updated.");
+
+                        if (loginResponse.UserId == package.UserId)
+                        {
+                            token = loginResponse.UserToken;
+                        }
+                    }
+
+                    if (string.IsNullOrEmpty(token))
+                    {
+                        LogProvider.Log.Warn(Logger, $"Failed to find token for user #{package.UserId}.");
+                        return false;
+                    }
                 }
 
                 var key = Encoding.ASCII.GetBytes(token);
 
-                var cipher = CipherUtilities.GetCipher("AES/ECB/PKCS5Padding");
-                cipher.Init(false, new KeyParameter(key));
-
-                var bytes = cipher.ProcessBytes(package.Body);
-                var final = cipher.DoFinal();
-
-                package.Body = (bytes == null) ? final :
-                    ((final == null) ? bytes : bytes.Concat(final).ToArray());
+                package.Body = PKCipherHelper.Decode(key, package.Body);
 
                 return true;
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(Logger, $"Couldn't decode body of {package.PackageType} user #{package.UserId} room #{package.RoomId}", e);
+                if (withRepeat)
+                {
+                    LogProvider.Log.Warn(Logger, $"Failed to read the body of user #{package.UserId} room #{package.RoomId}. Removing invalid token.");
+                    userTokens.TryRemove(package.UserId, out string removeToken);
+
+                    return TryDecryptBody(package, process, emulatorService, false);
+                }
+
+                LogProvider.Log.Error(Logger, $"Couldn't read the body of {package.PackageType} user #{package.UserId} room #{package.RoomId}", e);
             }
 
             return false;

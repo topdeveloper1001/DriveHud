@@ -10,10 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Text;
+
 namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
 {
     internal class KOPlayerEmulatorProvider : VirtualBoxEmulator
     {
+        // tools\\adb.exe
+        private static readonly byte[] location = new byte[] { 0x74, 0x6F, 0x6F, 0x6C, 0x73, 0x5C, 0x61, 0x64, 0x62, 0x2E, 0x65, 0x78, 0x65 };
+
         protected override string EmulatorName => "KOPlayer";
 
         protected override string ProcessName => "KOPLAYER";
@@ -25,5 +30,10 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
         protected override string VbInstanceArgumentPrefix => "KOPLAYER_";
 
         protected override int? VbEmptyInstanceNumber => 0;
+
+        public override string GetAdbLocation()
+        {
+            return Encoding.ASCII.GetString(location);
+        }
     }
 }

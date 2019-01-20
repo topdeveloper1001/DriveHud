@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+  <string name="user_card_back_type">CARD_BACK_1</string>
+  <string name="activity_16">1</string>
+  <boolean name="use_user_succ" value="true" />
+  <string name="user_password">123456</string>
+  <string name="last_gameType">0</string>
+  <string name="user_name">extacy1999</string>
+  <string name="user_table_back_type">TABLE_BACK_0</string>
+  <string name="user_token">lpy6l+d+7DakiCs9dmU/YrRVAtYjs+vlRJAZ008nJjFs9ykEnzZLgk0/yksieMkS</string>
+  <string name="user_id">105772</string>
+  <string name="user_card_face_type">CARD_FACE_0</string>
+</map>
