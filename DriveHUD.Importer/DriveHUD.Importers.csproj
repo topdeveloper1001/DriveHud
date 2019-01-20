@@ -368,6 +368,7 @@
     <Compile Include="PokerKing\Model\NoticeStartGame.cs" />
     <Compile Include="PokerKing\Model\PackageType.cs" />
     <Compile Include="PokerKing\Model\PayMoneyItems.cs" />
+    <Compile Include="PokerKing\Model\PKLoginResponse.cs" />
     <Compile Include="PokerKing\Model\PKLoginTokenInfo.cs" />
     <Compile Include="PokerKing\Model\PlayerBuyinInfo.cs" />
     <Compile Include="PokerKing\Model\PlayerInfo.cs" />
@@ -386,6 +387,7 @@
     <Compile Include="PokerKing\Model\ShowCardsSeatInfo.cs" />
     <Compile Include="PokerKing\Model\TableStates.cs" />
     <Compile Include="PokerKing\Model\WinPotInfo.cs" />
+    <Compile Include="PokerKing\PKCipherHelper.cs" />
     <Compile Include="PokerKing\PKHandBuilder.cs" />
     <Compile Include="PokerKing\PKImporter.cs" />
     <Compile Include="PokerKing\PKImporterHelper.cs" />
@@ -405,7 +407,7 @@
     <Compile Include="AndroidBase\INetworkConnectionsService.cs" />
     <Compile Include="AndroidBase\IPacketManager.cs" />
     <Compile Include="PokerMaster\IPMImporter.cs" />
-    <Compile Include="AndroidBase\ITableWindowProvider.cs" />
+    <Compile Include="AndroidBase\IEmulatorService.cs" />
     <Compile Include="PokerMaster\Model\CreateRoomType.cs" />
     <Compile Include="PokerMaster\Model\DefaultSettingInfoNet.cs" />
     <Compile Include="PokerMaster\Model\DeviceType.cs" />
@@ -455,7 +457,7 @@
     <Compile Include="PokerMaster\PMImporterHelper.cs" />
     <Compile Include="PokerMaster\PokerMasterPackageBuilder.cs" />
     <Compile Include="AndroidBase\SubPacket.cs" />
-    <Compile Include="AndroidBase\TableWindowProvider.cs" />
+    <Compile Include="AndroidBase\EmulatorService.cs" />
     <Compile Include="PokerMaster\PokerMasterPacketManager.cs" />
     <Compile Include="PokerStars\DataObjects\PlayerDataObject.cs" />
     <Compile Include="PokerStars\DataObjects\PokerStarsZoomCacheData.cs" />

@@ -16,9 +16,7 @@ namespace DriveHUD.Importers.PokerKing
     {
         public static bool IsPortMatch(int port)
         {
-            return port == 31001 || port == 38001 || port == LoginPort;
-        }
-
-        public const int LoginPort = 41001;
+            return port == 31001 || port == 38001;
+        }        
     }
 }

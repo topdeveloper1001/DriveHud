@@ -48,7 +48,7 @@ namespace PMCatcher.Tests
             Assert.IsNotNull(process);
 
             var noxEmulatorProvider = new MomoEmulatorProvider();
-            var actual = noxEmulatorProvider.GetProcessWindowHandle(process).ToInt32();
+            var actual = noxEmulatorProvider.GetProcessWindowHandle(process, out Process emulatorProcess).ToInt32();
 
             Assert.That(actual, Is.EqualTo(expected));
         }

@@ -87,7 +87,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IHandBuilder, HandBuilder>();
             container.RegisterType<IPKHandBuilder, PKHandBuilder>();
             container.RegisterType<INetworkConnectionsService, NetworkConnectionsService>();
-            container.RegisterType<ITableWindowProvider, TableWindowProvider>();
+            container.RegisterType<IEmulatorService, EmulatorService>();
             container.RegisterType<IPacketManager<PokerMasterPackage>, PokerMasterPacketManager>();
             container.RegisterType<IPacketManager<PokerKingPackage>, PokerKingPacketManager>();
             container.RegisterType<IPacketManager<Adda52Package>, Adda52PacketManager>();
