@@ -345,7 +345,6 @@
     <Compile Include="PokerBaazi\Model\PokerBaaziUserActionResponse.cs" />
     <Compile Include="PokerBaazi\Model\PokerBaaziWinnerInfo.cs" />
     <Compile Include="PokerBaazi\Model\PokerBaaziWinnerResponse.cs" />
-    <Compile Include="PokerBaazi\PokerBaaziBuildResult.cs" />
     <Compile Include="PokerBaazi\PokerBaaziCatcher.cs" />
     <Compile Include="PokerBaazi\PokerBaaziDataManager.cs" />
     <Compile Include="PokerBaazi\PokerBaaziHandBuilder.cs" />

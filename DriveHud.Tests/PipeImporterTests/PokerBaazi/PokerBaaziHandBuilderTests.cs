@@ -57,7 +57,7 @@ namespace DriveHud.Tests.PipeImporterTests.PokerBaazi
 
             foreach (var package in packages.Where(x => x.PackageType != PokerBaaziPackageType.Unknown))
             {
-                if (handBuilder.TryBuild(package, out actual))
+                if (handBuilder.TryBuild(package, out actual, out PokerBaaziHandBuilderError error))
                 {
                     break;
                 }
