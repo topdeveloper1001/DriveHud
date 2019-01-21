@@ -23,7 +23,7 @@ namespace DriveHud.Tests.TcpImportersTests
     [TestFixture]
     class EmulatorServiceTests
     {
-        [TestCase(20792)]
+        //[TestCase(20792)]
         public void TestAdbCommand(int processId)
         {
             var process = Process.GetProcessById(processId);
