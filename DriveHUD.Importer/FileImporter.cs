@@ -382,7 +382,7 @@ namespace DriveHUD.Importers
 
             return parsingResult;
         }
-        
+
         /// <summary>
         /// Insert hands in DB (to do: create and use repository from model, not here)
         /// </summary>
@@ -415,7 +415,7 @@ namespace DriveHUD.Importers
                         lock (locker)
                         {
                             using (var transaction = session.BeginTransaction())
-                            {                              
+                            {
                                 Stopwatch sw = null;
 
                                 if (!string.IsNullOrEmpty(importerSession))
@@ -752,8 +752,7 @@ namespace DriveHUD.Importers
                 Filename = processingFile != null ? processingFile.FullName : string.Empty,
                 Tourneynumber = parsedHand.GameDescription.Tournament.TournamentId,
                 Rakeincents = Utils.ConvertToCents(parsedHand.GameDescription.Tournament.BuyIn.Rake),
-                Tourneysize = (int)gameInfo.TableType > parsedHand.GameDescription.Tournament.TotalPlayers ?
-                     (int)gameInfo.TableType : parsedHand.GameDescription.Tournament.TotalPlayers,
+                Tourneysize = GetTourneySize(gameInfo, parsedHand),
                 Tourneytagscsv = parsedHand.GameDescription.Tournament.TournamentsTags.HasValue ?
                     parsedHand.GameDescription.Tournament.TournamentsTags.ToString() : string.Empty,
                 SiteId = parsingResult.HandHistory.PokersiteId,
@@ -762,6 +761,24 @@ namespace DriveHUD.Importers
             };
 
             return tournaments;
+        }
+
+        /// <summary>
+        /// Gets the size of tournament
+        /// </summary>
+        /// <param name="gameInfo"></param>
+        /// <param name="handHistory"></param>
+        /// <returns></returns>
+        private static int GetTourneySize(GameInfo gameInfo, HandHistory handHistory)
+        {
+            if (handHistory.GameDescription.Site == EnumPokerSites.PokerBaazi &&
+                handHistory.GameDescription.Tournament?.TournamentsTags == TournamentsTags.STT)
+            {
+                return handHistory.GameDescription.Tournament.TotalPlayers;
+            }
+
+            return (int)gameInfo.TableType > handHistory.GameDescription.Tournament.TotalPlayers ?
+                     (int)gameInfo.TableType : handHistory.GameDescription.Tournament.TotalPlayers;
         }
 
         /// <summary>
@@ -1105,10 +1122,10 @@ namespace DriveHUD.Importers
                 switch (sttType)
                 {
                     case STTTypes.DoubleUp:
-                        numberOfWinningPlaces = (totalPlayers / 2);
+                        numberOfWinningPlaces = totalPlayers / 2;
                         break;
                     case STTTypes.TripleUp:
-                        numberOfWinningPlaces = (totalPlayers / 3);
+                        numberOfWinningPlaces = totalPlayers / 3;
                         break;
                 }
             }
@@ -1161,7 +1178,8 @@ namespace DriveHUD.Importers
         /// Gets player's winnings amount for the tournament
         /// </summary>
         /// <returns>Winnings in cents</returns>
-        private int GetTournamentWinnings(string tournamentName, int finishPosition, int buyinInCents, int totalPlayers, Currency currency, short siteId, TournamentsTags tournamentTag = TournamentsTags.STT, decimal totalPrize = 0)
+        private int GetTournamentWinnings(string tournamentName, int finishPosition, int buyinInCents,
+            int totalPlayers, Currency currency, short siteId, TournamentsTags tournamentTag = TournamentsTags.STT, decimal totalPrize = 0)
         {
             // try to find tournament in the predefined tournaments 
             var predefinedTournament = TournamentsResolver.GetPredefinedTournament(tournamentName, buyinInCents, totalPlayers, currency);
@@ -1178,6 +1196,32 @@ namespace DriveHUD.Importers
                 switch (sttType)
                 {
                     case STTTypes.DoubleUp:
+
+                        // PB has different logic, because it's possible to play tournament with number of players <= table size
+                        if (siteId == (short)EnumPokerSites.PokerBaazi)
+                        {
+                            var mainWinners = totalPlayers / 2;
+                            var extraWinner = totalPlayers % 2;
+
+                            var prizePlaces = mainWinners + extraWinner;
+
+                            if (finishPosition > prizePlaces)
+                            {
+                                return 0;
+                            }
+
+                            totalPrize = buyinInCents * totalPlayers;
+
+                            var mainPrize = totalPrize / (mainWinners + 0.5m * extraWinner);
+
+                            if (extraWinner != 0 && finishPosition == prizePlaces)
+                            {
+                                return (int)(0.5m * mainPrize);
+                            }
+
+                            return (int)mainPrize;
+                        }
+
                         return (finishPosition <= (totalPlayers / 2)) ? buyinInCents * 2 : 0;
                     case STTTypes.TripleUp:
                         return (finishPosition <= (totalPlayers / 3)) ? buyinInCents * 3 : 0;

@@ -54,7 +54,7 @@
       <RollbackBoundary/>
       <ExePackage
          Id="VCRedistX86"
-         Name="Microsoft Visual C++ 2015 Redistributable Update 3"
+         Name="Microsoft Visual C++ 2017 Redistributable"
          Cache="no"
          Compressed="yes"
          PerMachine="yes"

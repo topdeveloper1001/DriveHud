@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPokerBaaziHandBuilder.cs" company="Ace Poker Solutions">
-// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="PokerBaaziBuildResult.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,15 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Importers.PokerBaazi.Model;
-using HandHistories.Objects.Hand;
-
 namespace DriveHUD.Importers.PokerBaazi
 {
-    internal interface IPokerBaaziHandBuilder
+    internal enum PokerBaaziBuildResult
     {
-        bool TryBuild(PokerBaaziPackage package, out HandHistory handHistory, out PokerBaaziHandBuilderError builderError);
-
-        PokerBaaziInitResponse FindInitResponse(uint roomId);
+        Failed = 0,
+        Success = 1,
+        TournamentDetailsNotFound = 2
     }
 }

@@ -57,9 +57,10 @@ namespace DriveHUD.Importers.PokerBaazi
         /// <param name="package">Package to buffer</param>
         /// <param name="handHistory">Hand history</param>
         /// <returns>True if hand can be built; otherwise - false</returns>
-        public bool TryBuild(PokerBaaziPackage package, out HandHistory handHistory)
+        public bool TryBuild(PokerBaaziPackage package, out HandHistory handHistory, out PokerBaaziHandBuilderError builderError)
         {
             handHistory = null;
+            builderError = PokerBaaziHandBuilderError.None;
 
             if (package == null)
             {
@@ -87,7 +88,7 @@ namespace DriveHUD.Importers.PokerBaazi
 
             if (package.PackageType == PokerBaaziPackageType.WinnerResponse)
             {
-                handHistory = BuildHand(packages);
+                handHistory = BuildHand(packages, out builderError);
             }
 
             return handHistory != null && handHistory.Players.Count > 0;
@@ -98,14 +99,17 @@ namespace DriveHUD.Importers.PokerBaazi
         /// </summary>
         /// <param name="packages">Packages</param>
         /// <returns><see cref="HandHistory"/> or null if it can't be built</returns>
-        private HandHistory BuildHand(List<PokerBaaziPackage> packages)
+        private HandHistory BuildHand(List<PokerBaaziPackage> packages, out PokerBaaziHandBuilderError error)
         {
             HandHistory handHistory = null;
+
+            error = PokerBaaziHandBuilderError.None;
 
             try
             {
                 if (!Validate(packages))
                 {
+                    error = PokerBaaziHandBuilderError.NotValid;
                     packages.Clear();
                     return handHistory;
                 }
@@ -136,6 +140,15 @@ namespace DriveHUD.Importers.PokerBaazi
             }
             catch (Exception e)
             {
+                if (e is PokerBaaziHandBuilderException builderException)
+                {
+                    error = builderException.Error;
+                }
+                else
+                {
+                    error = PokerBaaziHandBuilderError.System;
+                }
+
                 LogProvider.Log.Error(this, $"Failed to build hand #{handHistory?.HandId ?? 0} room #{handHistory?.GameDescription.Identifier ?? 0}. [{loggerName}]", e);
                 return null;
             }
@@ -200,7 +213,7 @@ namespace DriveHUD.Importers.PokerBaazi
         {
             if (!roomsInitResponses.TryGetValue(startGameResponse.RoomId, out PokerBaaziInitResponse initResponse))
             {
-                throw new HandBuilderException(startGameResponse.HandId, $"InitResponse has not been found for room #{startGameResponse.RoomId}");
+                throw new PokerBaaziHandBuilderException(startGameResponse.HandId, $"InitResponse has not been found for room #{startGameResponse.RoomId}");
             }
 
             var isTournament = startGameResponse.TournamentId != 0;
@@ -218,7 +231,7 @@ namespace DriveHUD.Importers.PokerBaazi
 
             if (startGameResponse.Players == null)
             {
-                throw new HandBuilderException(startGameResponse.HandId, $"SpectatorResponse.Players isn't set for room #{startGameResponse.RoomId}");
+                throw new PokerBaaziHandBuilderException(startGameResponse.HandId, $"SpectatorResponse.Players isn't set for room #{startGameResponse.RoomId}");
             }
 
             // add players
@@ -308,12 +321,13 @@ namespace DriveHUD.Importers.PokerBaazi
         {
             if (!tournamentDetails.TryGetValue(startGameResponse.TournamentId, out PokerBaaziTournamentDetailsResponse tournamentDetailsResponse))
             {
-                throw new HandBuilderException(startGameResponse.HandId, $"TournamentDetailsResponse has not been found for tournament #{startGameResponse.TournamentId}");
+                throw new PokerBaaziHandBuilderException(PokerBaaziHandBuilderError.TournamentDetailsNotFound,
+                    startGameResponse.HandId, $"TournamentDetailsResponse has not been found for tournament #{startGameResponse.TournamentId}");
             }
 
             if (tournamentDetailsResponse.Details == null)
             {
-                throw new HandBuilderException(startGameResponse.HandId, $"TournamentDetailsResponse.Details are empty for tournament #{startGameResponse.TournamentId}");
+                throw new PokerBaaziHandBuilderException(startGameResponse.HandId, $"TournamentDetailsResponse.Details are empty for tournament #{startGameResponse.TournamentId}");
             }
 
             var tournamentDescriptor = new TournamentDescriptor
@@ -366,7 +380,7 @@ namespace DriveHUD.Importers.PokerBaazi
         {
             if (!PokerBaaziUtils.TryParseCards(response.CommunitryCards, out Card[] cards))
             {
-                throw new HandBuilderException(response.HandId, $"Failed to parse community cards: {response.CommunitryCards}");
+                throw new PokerBaaziHandBuilderException(response.HandId, $"Failed to parse community cards: {response.CommunitryCards}");
             }
 
             handHistory.CommunityCards = BoardCards.FromCards(cards);
@@ -381,7 +395,7 @@ namespace DriveHUD.Importers.PokerBaazi
         {
             if (response.Winners == null)
             {
-                throw new HandBuilderException(response.HandId, $"Failed to read winners from winner response");
+                throw new PokerBaaziHandBuilderException(response.HandId, $"Failed to read winners from winner response");
             }
 
             foreach (var winnerInfo in response.Winners.Values)
@@ -489,7 +503,7 @@ namespace DriveHUD.Importers.PokerBaazi
                 case "AllIn":
                     return HandActionType.ALL_IN;
                 default:
-                    throw new HandBuilderException($"Unknown action type: {actionType}");
+                    throw new PokerBaaziHandBuilderException($"Unknown action type: {actionType}");
             }
         }
 

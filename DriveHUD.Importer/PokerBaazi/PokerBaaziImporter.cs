@@ -33,6 +33,7 @@ namespace DriveHUD.Importers.PokerBaazi
     internal class PokerBaaziImporter : GenericImporter, IPokerBaaziImporter
     {
         private const int NoDataDelay = 200;
+        private const int ShowPreHUDDelay = 2500;
 
         private readonly BlockingCollection<string> packetBuffer = new BlockingCollection<string>();
 
@@ -140,13 +141,28 @@ namespace DriveHUD.Importers.PokerBaazi
                             if (windowHandle != IntPtr.Zero)
                             {
                                 windows.Add(package.RoomId, windowHandle);
-                                SendPreImporedData("Notifications_HudLayout_PreLoadingText_PB", windowHandle);
+
+                                Task.Run(() =>
+                                {
+                                    Task.Delay(ShowPreHUDDelay).Wait();
+                                    SendPreImporedData("Notifications_HudLayout_PreLoadingText_PB", windowHandle);
+                                });
                             }
                         }
                     }
 
-                    if (!handBuilder.TryBuild(package, out HandHistory handHistory))
+                    if (!handBuilder.TryBuild(package, out HandHistory handHistory, out PokerBaaziHandBuilderError builderError))
                     {
+                        if (builderError == PokerBaaziHandBuilderError.TournamentDetailsNotFound &&
+                            windowHandle != IntPtr.Zero)
+                        {
+                            Task.Run(() =>
+                            {
+                                Task.Delay(ShowPreHUDDelay).Wait();
+                                SendPreImporedData("Notifications_HudLayout_PreLoadingText_NoTournamentDetails", windowHandle);
+                            });
+                        }
+
                         continue;
                     }
 

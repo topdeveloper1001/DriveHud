@@ -345,10 +345,13 @@
     <Compile Include="PokerBaazi\Model\PokerBaaziUserActionResponse.cs" />
     <Compile Include="PokerBaazi\Model\PokerBaaziWinnerInfo.cs" />
     <Compile Include="PokerBaazi\Model\PokerBaaziWinnerResponse.cs" />
+    <Compile Include="PokerBaazi\PokerBaaziBuildResult.cs" />
     <Compile Include="PokerBaazi\PokerBaaziCatcher.cs" />
     <Compile Include="PokerBaazi\PokerBaaziDataManager.cs" />
     <Compile Include="PokerBaazi\PokerBaaziHandBuilder.cs" />
     <Compile Include="PokerBaazi\PokerBaaziDataImporter.cs" />
+    <Compile Include="PokerBaazi\PokerBaaziHandBuilderError.cs" />
+    <Compile Include="PokerBaazi\PokerBaaziHandBuilderException.cs" />
     <Compile Include="PokerBaazi\PokerBaaziImporter.cs" />
     <Compile Include="PokerBaazi\PokerBaaziTournamentDateFormatConverter.cs" />
     <Compile Include="PokerBaazi\PokerBaaziUtils.cs" />

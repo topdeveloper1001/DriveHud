@@ -50,7 +50,7 @@ namespace DriveHUD.Importers
                     }
                 }
 
-                if (decryptedXml[decryptedXml.Length - 2] == '>')
+                if (decryptedXml.Length > 3 && decryptedXml[decryptedXml.Length - 2] == '>')
                 {
                     decryptedXml = decryptedXml.Remove(decryptedXml.Length - 1);
                 }

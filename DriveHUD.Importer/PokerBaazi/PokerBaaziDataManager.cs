@@ -76,11 +76,11 @@ namespace DriveHUD.Importers.PokerBaazi
         {
             try
             {
-                var encryptedData = Encoding.UTF8.GetString(data).Replace("\0", string.Empty);
+                var encryptedData = Encoding.UTF8.GetString(data).Trim();
 
-                //var dataText = Decrypt(encryptedData);
+                var dataText = Decrypt(encryptedData);
 
-                return encryptedData;
+                return dataText;
             }
             catch (Exception e)
             {

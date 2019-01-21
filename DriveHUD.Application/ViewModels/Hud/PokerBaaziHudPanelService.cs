@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
 using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -27,6 +28,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return initialTableSize;
             }
+        }
+
+        public override Tuple<double, double> GetInitialTrackConditionMeterPosition()
+        {
+            return new Tuple<double, double>(120, -30);
         }
     }
 }

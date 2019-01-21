@@ -223,6 +223,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DriveHUD cannot load a HUD. Tournament details not found. Please open tournament lobby..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_NoTournamentDetails {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_NoTournamentDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hud isn&apos;t supported in fast fold mode, but hands will be imported..
         /// </summary>
         internal static string Notifications_HudLayout_PreLoadingText_NotSupportedFastFold {
