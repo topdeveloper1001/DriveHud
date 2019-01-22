@@ -471,15 +471,9 @@ namespace DriveHUD.Bootstrapper.App.ViewModels
 
                 if (IsInteractive)
                 {
-                    BootstrapperApp.BootstrapperDispatcher.Invoke((Action)delegate
-                    {
-                        NotificationBox.Show(string.Format(Resources.Common_NewerVersionInstalledTitle, Bootstrapper.BundleName),
-                            string.Format(Resources.Common_NewerVersionInstalledMessage, Bootstrapper.BundleName),
-                            MessageBoxButtons.OK);
-                    });
+                    ErrorMessages.Add(string.Format(Resources.Common_NewerVersionInstalledMessage, Bootstrapper.BundleName));
+                    NavigateToPage(PageType.FinishErrorPage);
                 }
-
-                ShutDownWithCancelCode();
             }
             else if (IsInteractive)
             {
