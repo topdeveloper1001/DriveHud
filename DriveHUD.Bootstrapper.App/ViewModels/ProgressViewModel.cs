@@ -1,162 +1,199 @@
-﻿using DriveHUD.Bootstrapper.App.Models;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ProgressViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Bootstrapper.App.Common;
+using DriveHUD.Bootstrapper.App.Properties;
+using DriveHUD.Bootstrapper.App.Views;
+using GalaSoft.MvvmLight.Command;
 using Microsoft.Tools.WindowsInstallerXml.Bootstrapper;
-using DriveHUD.Bootstrapper.App.Enums;
-using System.Diagnostics;
+using System.Linq;
+using System.Windows.Forms;
 using System.Windows.Input;
-using DriveHUD.Bootstrapper.App.Infrastructure;
-using System.Windows;
-using GalaSoft.MvvmLight;
 
 namespace DriveHUD.Bootstrapper.App.ViewModels
 {
-    public class ProgressViewModel : ViewModelBase, ICancelable
+    public class ProgressViewModel : PageViewModel
     {
-        #region Fields
-        private BootstrapperAppSingletonModel _model
+        public ProgressViewModel(MainWindowViewModel mainViewModel) : base(mainViewModel)
         {
-            get { return BootstrapperAppSingletonModel.Instance; }
-        }
+            InitializeCommands();
+            InitializeEvents();
 
-        private int _cacheProgress;
-        private int _executeProgress;
-        #endregion
-
-        public ProgressViewModel()
-        {
-            State = InstallState.Initializing;
-
-            CancelCommand = new RelayCommand(Cancel);
-
-            WireUpEventHandlers();
-            UpdateActionText();
+            switch (MainViewModel.LaunchAction)
+            {
+                case LaunchAction.Install:
+                    ActionText = Resources.Common_PlanView_InstallAction;
+                    ActionDescription = Resources.Common_PlanView_InstallActionDescription;
+                    break;
+                case LaunchAction.Uninstall:
+                    ActionText = Resources.Common_PlanView_UninstallAction;
+                    ActionDescription = Resources.Common_PlanView_UninstallActionDescription;
+                    break;
+                case LaunchAction.Repair:
+                    ActionText = Resources.Common_PlanView_RepairAction;
+                    ActionDescription = Resources.Common_PlanView_RepairActionDescription;
+                    break;
+            }
         }
 
         #region Properties
-        private int _progressPercentage;
-        private int _progress;
-        private string _currentPackage;
-        private string _packageAction;
-        private string _currentAction;
-        private string _description;
 
-        public string Description
+        private int cacheProgress;
+        private int executeProgress;
+
+        public override PageType PageType
         {
-            get { return _description; }
-            set { _description = value; }
+            get
+            {
+                return PageType.ProgressPage;
+            }
         }
 
-        public string CurrentAction
-        {
-            get { return _currentAction; }
-            set { Set(() => CurrentAction, ref _currentAction, value); }
-        }
-
-        public string PackageAction
-        {
-            get { return _packageAction; }
-            set { Set(() => PackageAction, ref _packageAction, value); }
-        }
-
-        public string CurrentPackage
-        {
-            get { return _currentPackage; }
-            set { Set(() => CurrentPackage, ref _currentPackage, value); }
-        }
+        private int progress;
 
         public int Progress
         {
-            get { return _progress; }
-            set { Set(() => Progress, ref _progress, value); }
+            get
+            {
+                return progress;
+            }
+            set
+            {
+                Set(nameof(Progress), ref progress, value);
+            }
         }
+
+        private int progressPercentage;
 
         public int ProgressPercentage
         {
-            get { return _progressPercentage; }
-            set { Set(() => ProgressPercentage, ref _progressPercentage, value); }
+            get
+            {
+                return progressPercentage;
+            }
+            set
+            {
+                Set(nameof(ProgressPercentage), ref progressPercentage, value);
+            }
         }
 
-        public InstallState State { get; set; }
+        private string actionText;
+
+        public string ActionText
+        {
+            get
+            {
+                return actionText;
+            }
+            set
+            {
+                Set(nameof(ActionText), ref actionText, value);
+            }
+        }
+
+        private string actionDescription;
+
+        public string ActionDescription
+        {
+            get
+            {
+                return actionDescription;
+            }
+            set
+            {
+                Set(nameof(ActionDescription), ref actionDescription, value);
+            }
+        }
+
+        private string currentPackage;
+
+        public string CurrentPackage
+        {
+            get
+            {
+                return currentPackage;
+            }
+            set
+            {
+                Set(nameof(CurrentPackage), ref currentPackage, value);
+            }
+        }
+
+        private string packageAction;
+
+        public string PackageAction
+        {
+            get
+            {
+                return packageAction;
+            }
+            set
+            {
+                Set(nameof(PackageAction), ref packageAction, value);
+            }
+        }
+
         #endregion
 
-        #region ICommand
+        #region Commands
+
         public ICommand CancelCommand { get; private set; }
+
         #endregion
 
-        #region  Methods
-        private void UpdateActionText()
+        private void InitializeCommands()
         {
-            switch (_model.LastPlannedAction)
+            CancelCommand = new RelayCommand(() =>
             {
-                case LaunchAction.Uninstall:
-                    CurrentAction = "Uninstalling...";
-                    Description = "Please wait while setup uninstalls DriveHUD from your computer. This may take a few minutes..";
-                    break;
-                case LaunchAction.Install:
-                    CurrentAction = "Installing...";
-                    Description = "Please wait while setup installs DriveHUD from your computer. This may take a few minutes..";
-                    break;
-                case LaunchAction.Repair:
-                    CurrentAction = "Repairing...";
-                    Description = "Please wait while setup repairs DriveHUD from your computer. This may take a few minutes..";
-                    break;
-                default:
-                    break;
-            }
+                if (NotificationBox.Show(Resources.Common_CancelDialogTitle,
+                    Resources.Common_CancelDialogBody, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Log(LogLevel.Standard, $"User has cancelled {MainViewModel.LaunchAction} process.");
+
+                    ActionText = Resources.Common_ProgressView_Cancelling;
+                    ActionDescription = Resources.Common_ProgressView_CancellingDescription;
+
+                    MainViewModel.ShouldCancel = true;
+                    CommandManager.InvalidateRequerySuggested();
+                }
+            }, () => !MainViewModel.ShouldCancel);
         }
 
-        private void WireUpEventHandlers()
+        private void InitializeEvents()
         {
-            _model.Bootstrapper.ApplyBegin += ApplyBegin;
-            _model.Bootstrapper.ApplyComplete += ApplyComplete;
-
-            _model.Bootstrapper.ExecutePackageBegin += ExecutePackageBegin;
-            _model.Bootstrapper.ExecutePackageComplete += ExecutePackageComplete;
-
-            _model.Bootstrapper.CacheAcquireProgress += CacheAcquireProgress;
-            _model.Bootstrapper.ExecuteProgress += ExecuteProgress;
-
-            _model.Bootstrapper.ExecuteMsiMessage += ExecuteMsiMessage;
-
-            _model.Bootstrapper.Error += ExecuteError;
-
-            _model.Bootstrapper.ResolveSource += ResolveSource;
+            Bootstrapper.CacheAcquireProgress += Bootstrapper_CacheAcquireProgress;
+            Bootstrapper.CacheAcquireBegin += Bootstrapper_CacheAcquireBegin;
+            Bootstrapper.CacheAcquireComplete += Bootstrapper_CacheAcquireComplete;
+            Bootstrapper.ExecutePackageBegin += Bootstrapper_ExecuteBegin;
+            Bootstrapper.ExecutePackageComplete += Bootstrapper_ExecuteComplete;
+            Bootstrapper.ExecuteMsiMessage += Bootstrapper_ExecuteMsiMessage;
+            Bootstrapper.ExecuteProgress += Bootstrapper_ExecuteProgress;
+            Bootstrapper.Progress += Bootstrapper_Progress;
         }
 
-        private void RemoveEventHandlers()
+        private void Bootstrapper_Progress(object sender, ProgressEventArgs e)
         {
-            _model.Bootstrapper.ApplyBegin -= ApplyBegin;
-            _model.Bootstrapper.ApplyComplete -= ApplyComplete;
-
-            _model.Bootstrapper.ExecutePackageBegin -= ExecutePackageBegin;
-            _model.Bootstrapper.ExecutePackageComplete -= ExecutePackageComplete;
-
-            _model.Bootstrapper.CacheAcquireProgress -= CacheAcquireProgress;
-            _model.Bootstrapper.ExecuteProgress -= ExecuteProgress;
-
-            _model.Bootstrapper.ExecuteMsiMessage -= ExecuteMsiMessage;
-
-            _model.Bootstrapper.Error -= ExecuteError;
-
-            _model.Bootstrapper.ResolveSource -= ResolveSource;
+            HandleCancellation(e);
         }
 
-        private void ResolveSource(object sender, ResolveSourceEventArgs e)
+        private void Bootstrapper_ExecuteProgress(object sender, ExecuteProgressEventArgs e)
         {
-            if (!string.IsNullOrEmpty(e.DownloadSource))
-            {
-                e.Result = Result.Download;
-            }
-            else
-            {
-                e.Result = Result.Ok;
-            }
+            executeProgress = e.OverallPercentage;
+            ProgressPercentage = e.ProgressPercentage;
+            UpdateProgress();
+            HandleCancellation(e);
         }
 
-        private void ExecuteMsiMessage(object sender, ExecuteMsiMessageEventArgs e)
+        private void Bootstrapper_ExecuteMsiMessage(object sender, ExecuteMsiMessageEventArgs e)
         {
             switch (e.MessageType)
             {
@@ -169,97 +206,58 @@ namespace DriveHUD.Bootstrapper.App.ViewModels
                 default:
                     break;
             }
+
+            HandleCancellation(e);
         }
 
-        private void ApplyBegin(object sender, ApplyBeginEventArgs e)
+        private void Bootstrapper_ExecuteComplete(object sender, ExecutePackageCompleteEventArgs e)
         {
-            State = InstallState.Applying;
-
+            HandleCancellation(e);
         }
 
-        private void ApplyComplete(object sender, ApplyCompleteEventArgs e)
+        private void Bootstrapper_ExecuteBegin(object sender, ExecutePackageBeginEventArgs e)
         {
-            RemoveEventHandlers();
-            _model.FinalResult = e.Status;
-            _model.InvokeFinalView();
+            CurrentPackage = GetPackageNameById(e.PackageId);
+            HandleCancellation(e);
         }
 
-        private void ExecutePackageBegin(object sender, ExecutePackageBeginEventArgs e)
+        private void Bootstrapper_CacheAcquireComplete(object sender, CacheAcquireCompleteEventArgs e)
         {
-            var package = _model.BundleInfo.Packages.FirstOrDefault(x => x.Id == e.PackageId);
-            CurrentPackage = package?.DisplayName;
-            if (this.State == InstallState.Cancelled)
+            HandleCancellation(e);
+        }
+
+        private void Bootstrapper_CacheAcquireBegin(object sender, CacheAcquireBeginEventArgs e)
+        {
+            CurrentPackage = GetPackageNameById(e.PackageOrContainerId);
+            HandleCancellation(e);
+        }
+
+        private void Bootstrapper_CacheAcquireProgress(object sender, CacheAcquireProgressEventArgs e)
+        {
+            cacheProgress = e.OverallPercentage;
+            UpdateProgress();
+            HandleCancellation(e);
+        }
+
+        private void HandleCancellation(ResultEventArgs e)
+        {
+            if (!MainViewModel.ShouldCancel)
             {
-                e.Result = Result.Cancel;
-            }
-        }
-
-        private void ExecutePackageComplete(object sender, ExecutePackageCompleteEventArgs e)
-        {
-            var package = _model.BundleInfo.Packages.FirstOrDefault(x => x.Id == e.PackageId);
-            _model.LogMessage(string.Format("package: {0}, status: {1}, result: {2}", package?.DisplayName, e.Status, e.Result));
-            if (e.Status != 0)
-            {
-                _model.ErrorsList.Add(string.Format("Failed  to install {0}, the installation has been cancelled", package?.DisplayName));
-                this.State = InstallState.Cancelled;
+                return;
             }
 
-            if (this.State == InstallState.Cancelled)
-            {
-                e.Result = Result.Cancel;
-            }
+            e.Result = Result.Cancel;
         }
 
         private void UpdateProgress()
         {
-            this.Progress = (this._cacheProgress + this._executeProgress) / 2;
+            Progress = (cacheProgress + executeProgress) / 2;
         }
 
-        private void ExecuteProgress(object sender, ExecuteProgressEventArgs e)
+        private string GetPackageNameById(string packageId)
         {
-            this._executeProgress = e.OverallPercentage;
-            this.ProgressPercentage = e.ProgressPercentage;
-            UpdateProgress();
-
-            if (this.State == InstallState.Cancelled)
-            {
-                e.Result = Result.Cancel;
-            }
+            var package = Bootstrapper.BundleInfo?.Packages?.FirstOrDefault(x => x.Id.Equals(packageId));
+            return package != null && !string.IsNullOrEmpty(package.DisplayName) ? package.DisplayName : packageId;
         }
-
-        private void CacheAcquireProgress(object sender, CacheAcquireProgressEventArgs e)
-        {
-            this._cacheProgress = e.OverallPercentage;
-            UpdateProgress();
-        }
-
-        private void ExecuteError(object sender, ErrorEventArgs e)
-        {
-            _model.ProcessError(e);
-        }
-        #endregion
-
-        #region ICommand Implementation
-        public void Cancel(object ojb)
-        {
-            if (System.Windows.MessageBox.Show("Are you sure you want to cancel?", "Cancel", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-            {
-                this._model.LogMessage("Cancelling...");
-                this._model.ErrorsList.Add("Cancelled by user.");
-                this.CurrentAction = "Cancelling...";
-                this.Description = "Please wait while setup cancels the installation. This may take a few minutes.";
-
-                if (this.State == InstallState.Applying)
-                {
-                    this.State = InstallState.Cancelled;
-                }
-                else
-                {
-                    _model.InvokeFinalView();
-                }
-            }
-        }
-        #endregion
-
     }
 }

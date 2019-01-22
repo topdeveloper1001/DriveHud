@@ -1,145 +1,116 @@
-﻿using DriveHUD.Bootstrapper.App.Enums;
-using DriveHUD.Bootstrapper.App.Infrastructure;
-using DriveHUD.Bootstrapper.App.Models;
+﻿//-----------------------------------------------------------------------
+// <copyright file="MaintenanceViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Bootstrapper.App.Common;
+using DriveHUD.Bootstrapper.App.Properties;
 using DriveHUD.Bootstrapper.App.Views;
-using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using Microsoft.Tools.WindowsInstallerXml.Bootstrapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+using System.Windows.Forms;
 using System.Windows.Input;
 
 namespace DriveHUD.Bootstrapper.App.ViewModels
 {
-    public class MaintenanceViewModel : ViewModelBase, ICancelable
+    public class MaintenanceViewModel : PageViewModel
     {
-        #region Fields
-        private BootstrapperAppSingletonModel _model
+        public MaintenanceViewModel(MainWindowViewModel mainViewModel) : base(mainViewModel)
         {
-            get { return BootstrapperAppSingletonModel.Instance; }
+            InitializeCommands();
         }
-        #endregion
 
         #region Properties
-        private InstallState _state;
-        private bool? _isRemovePlayerData;
+
+        public override PageType PageType
+        {
+            get
+            {
+                return PageType.MaintenancePage;
+            }
+        }
+
+        private bool isRemovePlayerData;
 
         public bool IsRemovePlayerData
         {
             get
             {
-                if (_isRemovePlayerData == null)
-                {
-                    _isRemovePlayerData = _model.IsRemovePlayerData;
-                }
-                return _isRemovePlayerData.HasValue ? _isRemovePlayerData.Value : false;
+                return isRemovePlayerData;
             }
             set
             {
-                Set(nameof(IsRemovePlayerData), ref _isRemovePlayerData, value);
-                _model.IsRemovePlayerData = value;
-            }
-        }
+                Set(() => IsRemovePlayerData, ref isRemovePlayerData, value);
 
-        public InstallState State
-        {
-            get { return this._state; }
-            set
-            {
-                Set(() => State, ref this._state, value);
+                Bootstrapper.Engine.StringVariables[Variables.RemovePlayerData] = isRemovePlayerData ?
+                    isRemovePlayerData.ToString() : null;
             }
         }
 
         #endregion
 
-        #region ICommand
+        #region Commands
 
         public ICommand RepairCommand { get; private set; }
+
         public ICommand RemoveCommand { get; private set; }
+
         public ICommand CancelCommand { get; private set; }
 
+
         #endregion
 
-        public MaintenanceViewModel()
+        #region Infrastructure
+
+        private void InitializeCommands()
         {
-            State = InstallState.Initializing;
+            CancelCommand = new RelayCommand(() =>
+            {
+                if (NotificationBox.Show(Resources.Common_ExitMessage_Title, Resources.Common_ExitMessage_Text,
+                        MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    BootstrapperApp.BootstrapperDispatcher.InvokeShutdown();
+                }
+            });
 
-            WireUpEventHandlers();
-
+            RemoveCommand = new RelayCommand(Uninstall);
             RepairCommand = new RelayCommand(Repair);
-            RemoveCommand = new RelayCommand(Remove);
-            CancelCommand = new RelayCommand(Cancel);
         }
 
-        #region Methods
-        private void WireUpEventHandlers()
+        private bool GetDefaultIsRemovePlayerDataState()
         {
-            _model.Bootstrapper.PlanComplete += PlanComplete;
-            _model.Bootstrapper.Error += ExecuteError;
-        }
+            bool result = true;
 
-        private void RemoveEventHandlers()
-        {
-            _model.Bootstrapper.PlanComplete -= PlanComplete;
-            _model.Bootstrapper.Error -= ExecuteError;
-        }
-
-        private void PlanComplete(object sender, PlanCompleteEventArgs e)
-        {
-            RemoveEventHandlers();
-
-            if (this.State == InstallState.Cancelled)
+            if (MainViewModel.Bootstrapper.Engine.StringVariables.Contains(Variables.RemovePlayerData))
             {
-                _model.InvokeFinalView();
-                return;
-            }
+                var desktopShortcut = MainViewModel.Bootstrapper.Engine.StringVariables[Variables.RemovePlayerData];
 
-            Action action = delegate ()
-            {
-                _model.MainWindowViewModel.SelectedView = new ProgressView();
-            };
-            _model.Bootstrapper.Dispatcher.Invoke(action);
-
-            this._model.ApplyAction();
-        }
-
-        private void ExecuteError(object sender, ErrorEventArgs e)
-        {
-            _model.ProcessError(e);
-        }
-
-        #endregion
-
-        #region ICommand Implementation
-        public void Cancel(object obj)
-        {
-            if (System.Windows.MessageBox.Show("Are you sure you want to cancel?", "Cancel", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-            {
-                this._model.LogMessage("Cancelling...");
-                this._model.ErrorsList.Add("Cancelled by user.");
-
-                if (this.State == InstallState.Applying)
+                if (bool.TryParse(desktopShortcut, out result))
                 {
-                    this.State = InstallState.Cancelled;
-                }
-                else
-                {
-                    _model.InvokeFinalView();
+                    return result;
                 }
             }
+
+            return result;
         }
 
-        private void Repair(object obj)
+        private void Uninstall()
         {
-            this._model.PlanAction(LaunchAction.Repair);
+            Log(LogLevel.Standard, $"InstallView: Calling {nameof(Uninstall)}");
+            MainViewModel.PlanAction(LaunchAction.Uninstall);
         }
 
-        private void Remove(object obj)
+        private void Repair()
         {
-            this._model.PlanAction(LaunchAction.Uninstall);
+            Log(LogLevel.Standard, $"InstallView: Calling {nameof(Repair)}");
+            MainViewModel.PlanAction(LaunchAction.Repair);
         }
 
         #endregion

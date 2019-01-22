@@ -1,8 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//-----------------------------------------------------------------------
+// <copyright file="NotificationBox.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -20,10 +28,12 @@ namespace DriveHUD.Bootstrapper.App.Controls
     public class AnimatedContentControl : ContentControl
     {
         #region Generated static constructor
+
         static AnimatedContentControl()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(AnimatedContentControl), new FrameworkPropertyMetadata(typeof(AnimatedContentControl)));
         }
+
         #endregion
 
         Shape m_paintArea;
@@ -79,11 +89,18 @@ namespace DriveHUD.Bootstrapper.App.Controls
         private AnimationTimeline CreateAnimation(double from, double to, EventHandler whenDone = null)
         {
             IEasingFunction ease = new BackEase { Amplitude = 0.1, EasingMode = EasingMode.EaseOut };
+
             var duration = new Duration(TimeSpan.FromSeconds(0.5));
+
             var anim = new DoubleAnimation(from, to, duration) { EasingFunction = ease };
+
             if (whenDone != null)
+            {
                 anim.Completed += whenDone;
+            }
+
             anim.Freeze();
+
             return anim;
         }
 
@@ -94,11 +111,16 @@ namespace DriveHUD.Bootstrapper.App.Controls
         private Brush CreateBrushFromVisual(Visual v)
         {
             if (v == null)
+            {
                 throw new ArgumentNullException("v");
+            }
+
             var target = new RenderTargetBitmap((int)this.ActualWidth, (int)this.ActualHeight, 96, 96, PixelFormats.Pbgra32);
             target.Render(v);
+
             var brush = new ImageBrush(target);
             brush.Freeze();
+
             return brush;
         }
     }

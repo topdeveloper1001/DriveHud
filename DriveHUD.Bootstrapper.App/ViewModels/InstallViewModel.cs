@@ -1,208 +1,220 @@
-﻿using DriveHUD.Bootstrapper.App.Enums;
-using DriveHUD.Bootstrapper.App.Infrastructure;
-using DriveHUD.Bootstrapper.App.Models;
+﻿//-----------------------------------------------------------------------
+// <copyright file="InstallViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Bootstrapper.App.Common;
+using DriveHUD.Bootstrapper.App.Properties;
 using DriveHUD.Bootstrapper.App.Views;
-using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using Microsoft.Tools.WindowsInstallerXml.Bootstrapper;
 using System;
 using System.IO;
 using System.Reflection;
-using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 
 namespace DriveHUD.Bootstrapper.App.ViewModels
 {
-    public class InstallViewModel : ViewModelBase, ICancelable
+    public class InstallViewModel : PageViewModel
     {
-        #region Fields
-        private BootstrapperAppSingletonModel _model
+        public InstallViewModel(MainWindowViewModel mainViewModel) : base(mainViewModel)
         {
-            get { return BootstrapperAppSingletonModel.Instance; }
+            Initialize();
+            InitializeCommands();
+
+            SetLicenseAgreementText();
+
         }
-        #endregion
 
         #region Properties
-        private InstallState _state;
-        private bool? _isCreateDesktopShortcut;
-        private bool? _isCreateProgramMenuShortcut;
-        private string _installDir;
-        private string _licenseAgreementSource;
-        private string _title;
 
-        public string Title
+        public override PageType PageType
         {
-            get { return _title; }
-            set { _title = value; }
+            get
+            {
+                return PageType.InstallPage;
+            }
         }
 
+        private string installationPath;
+
+        public string InstallationPath
+        {
+            get
+            {
+                return installationPath;
+            }
+            set
+            {
+                Set(() => InstallationPath, ref installationPath, value);
+
+                Bootstrapper.Engine.StringVariables[Variables.InstallFolder] = installationPath;
+                CommandManager.InvalidateRequerySuggested();
+            }
+        }
+
+        private bool createDesktopShortcut;
+
+        public bool CreateDesktopShortcut
+        {
+            get
+            {
+                return createDesktopShortcut;
+            }
+            set
+            {
+                Set(() => CreateDesktopShortcut, ref createDesktopShortcut, value);
+
+                Bootstrapper.Engine.StringVariables[Variables.InstallDesktopShortcut] = createDesktopShortcut ?
+                    createDesktopShortcut.ToString() : null;
+            }
+        }
+
+        private bool createProgramMenuShortcut;
+
+        public bool CreateProgramMenuShortcut
+        {
+            get
+            {
+                return createProgramMenuShortcut;
+            }
+            set
+            {
+                Set(() => CreateProgramMenuShortcut, ref createProgramMenuShortcut, value);
+
+                Bootstrapper.Engine.StringVariables[Variables.InstallProgramMenuShortcut] = createProgramMenuShortcut ?
+                    createProgramMenuShortcut.ToString() : null;
+            }
+        }
+
+        private string licenseAgreementSource;
 
         public string LicenseAgreementSource
         {
-            get { return _licenseAgreementSource; }
-            set { Set(() => LicenseAgreementSource, ref _licenseAgreementSource, value); }
-        }
-
-        public InstallState State
-        {
-            get { return this._state; }
-            set
-            {
-                Set(() => State, ref this._state, value);
-            }
-        }
-
-        public string InstallDir
-        {
             get
             {
-                if (String.IsNullOrEmpty(_installDir))
-                {
-                    _installDir = _model.Bootstrapper.Engine.FormatString(_model.InstallDir);
-                }
-                return _installDir;
+                return licenseAgreementSource;
             }
             set
             {
-                Set(nameof(InstallDir), ref _installDir, value);
-                _model.InstallDir = _installDir;
+                Set(() => LicenseAgreementSource, ref licenseAgreementSource, value);
             }
         }
 
-        public bool IsCreateDesktopShortcut
-        {
-            get
-            {
-                if (_isCreateDesktopShortcut == null)
-                {
-                    _isCreateDesktopShortcut = _model.IsCreateDesktopShortcut;
-                }
-                return _isCreateDesktopShortcut.HasValue ? _isCreateDesktopShortcut.Value : false;
-            }
-            set
-            {
-                Set(nameof(IsCreateDesktopShortcut), ref _isCreateDesktopShortcut, value);
-                _model.IsCreateDesktopShortcut = value;
-            }
-        }
-
-        public bool IsCreateProgramMenuShortcut
-        {
-            get
-            {
-                if (_isCreateProgramMenuShortcut == null)
-                {
-                    _isCreateProgramMenuShortcut = _model.IsCreateProgramMenuShortcut;
-                }
-                return _isCreateProgramMenuShortcut.HasValue ? _isCreateProgramMenuShortcut.Value : false;
-            }
-            set
-            {
-                Set(nameof(IsCreateProgramMenuShortcut), ref _isCreateProgramMenuShortcut, value);
-                _model.IsCreateProgramMenuShortcut = value;
-            }
-        }
         #endregion
 
-        #region ICommand
+        #region Commands
 
         public ICommand InstallCommand { get; private set; }
+
         public ICommand CancelCommand { get; private set; }
+
         public ICommand OpenFileDialogCommand { get; private set; }
+
 
         #endregion
 
-        public InstallViewModel()
-        {
-            State = InstallState.Initializing;
-
-            WireUpEventHandlers();
-            SetLicenseAgreementText();
-
-            InstallCommand = new RelayCommand(Install);
-            CancelCommand = new RelayCommand(Cancel);
-            OpenFileDialogCommand = new RelayCommand(OpenFileDialog);
-        }
-
-        #region Methods
+        #region Infrastructure
 
         public void SetLicenseAgreementText()
         {
             LicenseAgreementSource = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "EULA.rtf");
         }
 
-        private void WireUpEventHandlers()
+        private void Initialize()
         {
-            _model.Bootstrapper.PlanComplete += PlanComplete;
-            _model.Bootstrapper.Error += ExecuteError;
+            InstallationPath = GetDefaultInstallPath();
+            CreateDesktopShortcut = GetDefaultDesktopShortcutState();
+            CreateProgramMenuShortcut = GetDefaultProgramMenuShortcutState();
         }
 
-        private void RemoveEventHandlers()
+        private void InitializeCommands()
         {
-            _model.Bootstrapper.PlanComplete -= PlanComplete;
-            _model.Bootstrapper.Error -= ExecuteError;
-        }
+            OpenFileDialogCommand = new RelayCommand(OpenFileDialog);
 
-        private void PlanComplete(object sender, PlanCompleteEventArgs e)
-        {
-            RemoveEventHandlers();
-
-            if (this.State == InstallState.Cancelled)
+            CancelCommand = new RelayCommand(() =>
             {
-                _model.InvokeFinalView();
-                return;
-            }
+                if (NotificationBox.Show(Resources.Common_ExitMessage_Title, Resources.Common_ExitMessage_Text,
+                    MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    BootstrapperApp.BootstrapperDispatcher.InvokeShutdown();
+                }
+            });
 
-            Action action = delegate
-            {
-                _model.MainWindowViewModel.SelectedView = new ProgressView();
-            };
-            _model.Bootstrapper.Dispatcher.Invoke(action);
-
-            this._model.ApplyAction();
-        }
-
-        private void ExecuteError(object sender, Microsoft.Tools.WindowsInstallerXml.Bootstrapper.ErrorEventArgs e)
-        {
-            _model.ProcessError(e);
+            InstallCommand = new RelayCommand(Install, () => !string.IsNullOrWhiteSpace(InstallationPath));
         }
 
         #endregion
 
         #region ICommand Implementation
-        public void Cancel(object obj)
-        {
-            if (System.Windows.MessageBox.Show("Are you sure you want to cancel?", "Cancel", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-            {
-                this._model.LogMessage("Cancelling...");
-                this._model.ErrorsList.Add("Cancelled by user.");
 
-                if (this.State == InstallState.Applying)
-                {
-                    this.State = InstallState.Cancelled;
-                }
-                else
-                {
-                    _model.InvokeFinalView();
-                }
-            }
+        private void Install()
+        {
+            Log(LogLevel.Standard, $"InstallView: Calling {nameof(Install)}");
+
+            MainViewModel.PlanAction(LaunchAction.Install);
         }
 
-        private void Install(object obj)
-        {
-            this._model.PlanAction(LaunchAction.Install);
-        }
-
-        private void OpenFileDialog(object ojb)
+        private void OpenFileDialog()
         {
             using (var folderBrowserDialog = new FolderBrowserDialog())
             {
                 if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                 {
-                    InstallDir = folderBrowserDialog.SelectedPath;
+                    InstallationPath = folderBrowserDialog.SelectedPath;
                 }
             }
         }
+
+        private string GetDefaultInstallPath()
+        {
+            var subFolder = MainViewModel.Bootstrapper.BundleName;
+            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), Bootstrapper.Engine.StringVariables[Variables.Manufacturer], subFolder);
+        }
+
+        private bool GetDefaultDesktopShortcutState()
+        {
+            bool result = true;
+
+            if (MainViewModel.Bootstrapper.Engine.StringVariables.Contains(Variables.InstallDesktopShortcut))
+            {
+                var desktopShortcut = MainViewModel.Bootstrapper.Engine.StringVariables[Variables.InstallDesktopShortcut];
+
+                if (bool.TryParse(desktopShortcut, out result))
+                {
+                    return result;
+                }
+            }
+
+            return result;
+        }
+
+        private bool GetDefaultProgramMenuShortcutState()
+        {
+            bool result = true;
+
+            if (MainViewModel.Bootstrapper.Engine.StringVariables.Contains(Variables.InstallProgramMenuShortcut))
+            {
+                var installProgramMenuShortcut = MainViewModel.Bootstrapper.Engine.StringVariables[Variables.InstallProgramMenuShortcut];
+
+                if (bool.TryParse(installProgramMenuShortcut, out result))
+
+                {
+                    return result;
+                }
+            }
+
+            return result;
+        }
+
         #endregion
     }
 }
