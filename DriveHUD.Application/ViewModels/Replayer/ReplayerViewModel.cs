@@ -329,11 +329,22 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             var gameType = new GeneralGameTypeEnum().ParseGameType(CurrentGame.GameDescription.GameType);
 
+            var isShortDeck = CurrentGame.GameDescription.TableTypeDescriptors.Contains(HandHistories.Objects.GameDescription.TableTypeDescription.ShortDeck);
+
             var equitySolverParams = new EquitySolverParams
             {
                 PlayersCards = ActivePlayerHasHoleCard.Select(x => x.HoleCards).ToArray(),
                 BoardCards = CurrentBoard,
-                Dead = AllDeadCards.Distinct(new LambdaComparer<HoleCards>((x, y) => x.ToString().Equals(y.ToString()))).SelectMany(x => x).ToArray(),
+                Dead = isShortDeck ?
+                    AllDeadCards
+                        .Distinct(new LambdaComparer<HoleCards>((x, y) => x.ToString().Equals(y.ToString())))
+                        .SelectMany(x => x)
+                        .Concat(CardGroup.GetDeadCardsForHoldem6Plus())
+                        .ToArray() :
+                    AllDeadCards
+                        .Distinct(new LambdaComparer<HoleCards>((x, y) => x.ToString().Equals(y.ToString())))
+                        .SelectMany(x => x)
+                        .ToArray(),
                 GameType = gameType
             };
 

@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IEquitySolver.cs" company="Ace Poker Solutions">
-// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="B100GraphIndicators.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,15 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using HandHistories.Objects.Hand;
-using System.Collections.Generic;
+using System;
 
-namespace Model.Solvers
+namespace Model.Data
 {
-    public interface IEquitySolver
+    public class B100GraphIndicators : LightIndicators
     {
-        Dictionary<string, EquityData> CalculateEquity(HandHistory handHistory);
-
-        EquitySolverResult[] CalculateEquity(EquitySolverParams equitySolverParams);        
+        public override decimal BB
+        {
+            get
+            {
+                var totalhands = (statisticCount < 100 ? 100 : statisticCount) / 100m;
+                return Math.Round(GetDivisionResult(netWonByBigBlind, totalhands), 2);
+            }
+        }
     }
 }

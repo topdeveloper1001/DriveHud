@@ -193,6 +193,7 @@
     <Compile Include="Condition.cs" />
     <Compile Include="ConditionalBet.cs" />
     <Compile Include="CustomModulesNames.cs" />
+    <Compile Include="Data\B100GraphIndicators.cs" />
     <Compile Include="Data\DashboardIndicators.cs" />
     <Compile Include="Data\ExportIndicators.cs" />
     <Compile Include="Data\HeatMapDto.cs" />

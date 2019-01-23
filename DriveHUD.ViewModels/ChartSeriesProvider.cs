@@ -11,9 +11,12 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Resources;
+using DriveHUD.Entities;
 using Model.Data;
 using Model.Enums;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 
 namespace DriveHUD.ViewModels
 {
@@ -218,7 +221,7 @@ namespace DriveHUD.ViewModels
         {
             var bb100ChartCollection = new List<ChartSeries>();
 
-            var bb100Indicator = new LightIndicators();
+            var bb100Indicator = new B100GraphIndicators();
 
             bb100ChartCollection.Add(new ChartSeries
             {
@@ -239,7 +242,7 @@ namespace DriveHUD.ViewModels
                     }
                     else
                     {
-                        bb100Indicator = new LightIndicators();
+                        bb100Indicator = new B100GraphIndicators();
                     }
 
                     bb100Indicator.AddStatistic(stat);
