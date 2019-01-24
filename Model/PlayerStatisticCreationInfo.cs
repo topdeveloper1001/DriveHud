@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers;
 using Model.Solvers;
 using System.Collections.Generic;
@@ -24,5 +25,18 @@ namespace Model
         public Players Player { get; set; }
 
         public Dictionary<string, EquityData> EquityData { get; set; }
+
+        public string GetServiceName()
+        {
+            if (ParsingResult != null && ParsingResult.Source != null &&
+                ParsingResult.Source.GameDescription != null &&
+                ParsingResult.Source.GameDescription.Site == EnumPokerSites.PokerKing &&
+                ParsingResult.Source.GameDescription.TableTypeDescriptors.Contains(TableTypeDescription.ShortDeck))
+            {
+                return PlayerStatisticCalculatorServiceNames.PKShortDeck;
+            }
+
+            return PlayerStatisticCalculatorServiceNames.Base;
+        }
     }
 }

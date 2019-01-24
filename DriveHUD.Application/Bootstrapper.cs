@@ -244,8 +244,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IHudElementViewModelCreator), typeof(HudElementViewModelCreator), false);
             RegisterTypeIfMissing(typeof(IHudLayoutsService), typeof(HudLayoutsService), true);
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
-            RegisterTypeIfMissing(typeof(IReplayerService), typeof(ReplayerService), true);
-            RegisterTypeIfMissing(typeof(IPlayerStatisticCalculator), typeof(PlayerStatisticCalculator), false);
+            RegisterTypeIfMissing(typeof(IReplayerService), typeof(ReplayerService), true);            
             RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
             RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
             RegisterTypeIfMissing(typeof(ILayoutMigrator), typeof(LayoutMigrator), false);

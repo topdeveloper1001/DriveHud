@@ -130,7 +130,12 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"Ginac808-EP-Position.xml", EnumPokerSites.BetOnline, "ginac808", "EP")]
         [TestCase(@"Ginac808-MP-Position.xml", EnumPokerSites.BetOnline, "ginac808", "MP")]
         [TestCase(@"AlexTh-CO-Position.txt", EnumPokerSites.Horizon, "AlexTh", "CO")]
-
+        [TestCase(@"Holdem6Plus-General-1.xml", EnumPokerSites.PokerKing, "2097148", "BTN")]
+        [TestCase(@"Holdem6Plus-General-1.xml", EnumPokerSites.PokerKing, "2047673", "EP")]
+        [TestCase(@"Holdem6Plus-General-1.xml", EnumPokerSites.PokerKing, "2129138", "EP")]
+        [TestCase(@"Holdem6Plus-General-1.xml", EnumPokerSites.PokerKing, "2016412", "MP")]
+        [TestCase(@"Holdem6Plus-General-1.xml", EnumPokerSites.PokerKing, "2089715", "MP")]
+        [TestCase(@"Holdem6Plus-General-1.xml", EnumPokerSites.PokerKing, "2118877", "CO")]
         public void PositionsAreImported(string fileName, EnumPokerSites pokerSite, string playerName, string expectedPosition)
         {
             AssertThatStatIsCalculated(x => x.PositionString, fileName, pokerSite, playerName, expectedPosition);
@@ -411,6 +416,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-BTN-DefendCORaise-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-BTN-DefendCORaise-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-BTN-DefendCORaise-3.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"Holdem6Plus-StealSituation-1.xml", EnumPokerSites.PokerKing, "2129138", 1)]
         public void ButtonstealfacedIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.Buttonstealfaced, fileName, pokerSite, playerName, expected);
@@ -427,6 +433,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-BTN-DefendCORaise-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
         [TestCase(@"DURKADURDUR-BTN-DefendCORaise-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
         [TestCase(@"DURKADURDUR-BTN-DefendCORaise-3.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"Holdem6Plus-StealSituation-1.xml", EnumPokerSites.PokerKing, "2129138", 1)]
         public void ButtonstealfoldedIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.Buttonstealfolded, fileName, pokerSite, playerName, expected);
@@ -449,11 +456,12 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
         [TestCase(@"DURKADURDUR-DidThreeBetIP-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-DidNotThreeBetIP-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
+        [TestCase(@"Holdem6Plus-General-1.xml", EnumPokerSites.PokerKing, "2097148", 1)]
+
         public void PreflopIPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.PreflopIP, fileName, pokerSite, playerName, expected);
         }
-
 
         [TestCase(@"DURKADURDUR-MP-DidNotFaceCBet-1.txt", EnumPokerSites.PokerStars, "FastEddie267", 0)]
         public void TurncontinuationbetmadeIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
@@ -599,6 +607,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
 
         [TestCase(@"DURKADURDUR-StealMade-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-StealMade-2.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
+        [TestCase(@"Holdem6Plus-StealSituation-1.xml", EnumPokerSites.PokerKing, "2118877", 1)]
         public void StealMadeIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.StealMade, fileName, pokerSite, playerName, expected);

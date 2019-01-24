@@ -202,7 +202,8 @@ namespace DriveHud.Tests.IntegrationTests.Base
 
         protected virtual void InitializePlayerStatisticCalculator(UnityContainer unityContainer)
         {
-            unityContainer.RegisterType<IPlayerStatisticCalculator, PlayerStatisticCalculator>();
+            unityContainer.RegisterType<IPlayerStatisticCalculator, PlayerStatisticCalculator>(PlayerStatisticCalculatorServiceNames.Base);
+            unityContainer.RegisterType<IPlayerStatisticCalculator, PKShortPlayerStatisticCalculator>(PlayerStatisticCalculatorServiceNames.PKShortDeck);
         }
 
         protected virtual void InitializeFileImporterLogger(UnityContainer unityContainer)

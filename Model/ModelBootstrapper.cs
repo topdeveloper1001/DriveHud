@@ -56,6 +56,8 @@ namespace Model
             container.RegisterType<IHudStoreUploadModel, HudStoreUploadModel>();
             container.RegisterType<IHudStoreWebService, HudStoreWebService>();
             container.RegisterType<IHudStoreModel, HudStoreModel>();
+            container.RegisterType<IPlayerStatisticCalculator, PlayerStatisticCalculator>(PlayerStatisticCalculatorServiceNames.Base);
+            container.RegisterType<IPlayerStatisticCalculator, PKShortPlayerStatisticCalculator>(PlayerStatisticCalculatorServiceNames.PKShortDeck);
         }
     }
 }

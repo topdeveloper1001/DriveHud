@@ -331,7 +331,9 @@
     <Compile Include="Mapping\PlayerstatisticMap.cs" />
     <Compile Include="Mapping\TournamentsMap.cs" />
     <Compile Include="ModelEntities.cs" />
+    <Compile Include="PKShortPlayerStatisticCalculator.cs" />
     <Compile Include="PlayerCollectionItem.cs" />
+    <Compile Include="PlayerStatisticCalculatorServiceNames.cs" />
     <Compile Include="PlayerStatisticCreationInfo.cs" />
     <Compile Include="PlayerStatisticRepository.cs" />
     <Compile Include="PreDefinedRangeModel.cs" />
