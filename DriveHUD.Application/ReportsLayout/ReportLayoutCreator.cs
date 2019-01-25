@@ -334,7 +334,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_4Bet_BB", nameof(Indicators.FourBetInBB), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_4Bet_Straddle", nameof(Indicators.FourBetInStraddle), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_4BetRange", nameof(Indicators.FourBetRange), ColumnType.Percentile),
-            new Tuple<string, string, ColumnType>("Reports_Column_4BetVsBlind3Bet", nameof(Indicators.FourBetRange), ColumnType.Percentile),
+            new Tuple<string, string, ColumnType>("Reports_Column_4BetVsBlind3Bet", nameof(Indicators.FourBetVsBlind3Bet), ColumnType.Percentile),
             // 5-bet based
             new Tuple<string, string, ColumnType>("Reports_Column_5Bet", nameof(Indicators.FiveBet), ColumnType.Percentile),
             // A
@@ -524,7 +524,7 @@ namespace DriveHUD.Application.ReportsLayout
             new Tuple<string, string, ColumnType>("Reports_Column_LimpBTNFoldToPFR", nameof(Indicators.LimpBTNFoldToPFR), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_LimpSBFoldToPFR", nameof(Indicators.LimpSBFoldToPFR), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_LimpReRaise", nameof(Indicators.DidLimpReraise), ColumnType.Percentile),
-            new Tuple<string, string, ColumnType>("Reports_Column_LimpReRaise", nameof(Indicators.LimpedPotFlopStealIP), ColumnType.Percentile),  
+            new Tuple<string, string, ColumnType>("Reports_Column_LimpedPotFlopStealIP", nameof(Indicators.LimpedPotFlopStealIP), ColumnType.Percentile),  
             // O
             new Tuple<string, string, ColumnType>("Reports_Column_OpenLimpEP", nameof(Indicators.OpenLimpEP), ColumnType.Percentile),
             new Tuple<string, string, ColumnType>("Reports_Column_OpenLimpMP", nameof(Indicators.OpenLimpMP), ColumnType.Percentile),

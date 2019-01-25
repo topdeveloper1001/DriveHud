@@ -3116,6 +3116,26 @@ namespace Model.Data
 
         #endregion
 
+        #region Cold Call 3/4-Bet
+
+        [ProtoMember(342)]
+        protected int didColdCall3Bet;
+
+        [ProtoMember(343)]
+        protected int couldColdCall3Bet;
+
+        public override decimal ColdCallThreeBet => GetPercentage(didColdCall3Bet, couldColdCall3Bet);
+
+        [ProtoMember(344)]
+        protected int didColdCall4Bet;
+
+        [ProtoMember(345)]
+        protected int couldColdCall4Bet;
+
+        public override decimal ColdCallFourBet => GetPercentage(didColdCall4Bet, couldColdCall4Bet);
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -3289,6 +3309,11 @@ namespace Model.Data
             didTripleBarrel += statistic.DidTripleBarrel;
             couldTripleBarrel += statistic.CouldTripleBarrel;
 
+            didColdCall3Bet += statistic.DidColdCall3Bet;
+            couldColdCall3Bet += statistic.CouldColdCall3Bet;
+            didColdCall4Bet += statistic.DidColdCall4Bet;
+            couldColdCall4Bet += statistic.CouldColdCall4Bet;
+
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
@@ -3458,6 +3483,11 @@ namespace Model.Data
             didTripleBarrel = 0;
             couldTripleBarrel = 0;
 
+            didColdCall3Bet = 0;
+            couldColdCall3Bet = 0;
+            didColdCall4Bet = 0;
+            couldColdCall4Bet = 0;
+
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
             CleanBetWhenCheckedToIn3BetPot();
@@ -3498,8 +3528,8 @@ namespace Model.Data
             positionCouldSqueeze?.Add(indicator.positionCouldSqueeze);
             positionCall4Bet?.Add(indicator.positionCall4Bet);
             positionFaced4Bet?.Add(indicator.positionFaced4Bet);
-            positionDidOpenLimp?.Add(indicator.positionFaced4Bet);
-            positionCouldOpenLimp?.Add(indicator.positionFaced4Bet);
+            positionDidOpenLimp?.Add(indicator.positionDidOpenLimp);
+            positionCouldOpenLimp?.Add(indicator.positionCouldOpenLimp);
 
             if (gameNumberMax < indicator.gameNumberMax)
             {
@@ -3665,6 +3695,11 @@ namespace Model.Data
             couldDoubleBarrel += indicator.couldDoubleBarrel;
             didTripleBarrel += indicator.didTripleBarrel;
             couldTripleBarrel += indicator.couldTripleBarrel;
+
+            didColdCall3Bet += indicator.didColdCall3Bet;
+            couldColdCall3Bet += indicator.couldColdCall3Bet;
+            didColdCall4Bet += indicator.didColdCall4Bet;
+            couldColdCall4Bet += indicator.couldColdCall4Bet;
 
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);

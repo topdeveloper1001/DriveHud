@@ -1186,7 +1186,6 @@ namespace DriveHUD.Entities
 
         #endregion
 
-
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -2422,6 +2421,18 @@ namespace DriveHUD.Entities
         public virtual int DidTripleBarrel => DidDoubleBarrel == 1 && RiverActions.StartsWith("B") ? 1 : 0;
 
         public virtual int CouldTripleBarrel => DidDoubleBarrel == 1 && CouldRiverBet == 1 ? 1 : 0;
+
+        #endregion
+
+        #region Cold call 3/4-Bet
+
+        public virtual int DidColdCall3Bet => FacingPreflop == EnumFacingPreflop.ThreeBet && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CouldColdCall3Bet => FacingPreflop == EnumFacingPreflop.ThreeBet ? 1 : 0;
+
+        public virtual int DidColdCall4Bet => FacingPreflop == EnumFacingPreflop.FourBet && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CouldColdCall4Bet => FacingPreflop == EnumFacingPreflop.FourBet ? 1 : 0;
 
         #endregion
 

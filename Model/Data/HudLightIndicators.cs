@@ -4686,8 +4686,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCallThreeBet,
-                    Occurred = Source.DidColdCallThreeBet,
-                    CouldOccurred = Source.CouldColdCallThreeBet
+                    Occurred = didColdCall3Bet,
+                    CouldOccurred = couldColdCall3Bet
                 };
             }
         }
@@ -4699,8 +4699,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCallFourBet,
-                    Occurred = Source.DidColdCallFourBet,
-                    CouldOccurred = Source.CouldColdCallFourBet
+                    Occurred = didColdCall4Bet,
+                    CouldOccurred = couldColdCall4Bet
                 };
             }
         }

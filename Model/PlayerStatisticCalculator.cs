@@ -368,18 +368,7 @@ namespace Model
             var turnRaise = playedTurn ? CalculateRaise(parsedHand.Turn, player, parsedHand.Players) : new ConditionalBet();
             var riverRaise = playedRiver ? CalculateRaise(parsedHand.River, player, parsedHand.Players) : new ConditionalBet();
 
-            #endregion
-
-            #region Check river on bx line
-
-            Condition checkRiverOnBxLine = new Condition();
-
-            if (playedRiver)
-            {
-                CalculateCheckRiverOnBxLine(checkRiverOnBxLine, parsedHand, player);
-            }
-
-            #endregion
+            #endregion           
 
             #region Limp
 
@@ -660,6 +649,11 @@ namespace Model
             stat.DidBetRiverOnBXLine = betOnFlop && checkOnTurn && betOnRiver ? 1 : 0;
             stat.CouldBetRiverOnBXLine = betOnFlop && checkOnTurn && stat.CouldRiverBet == 1 ? 1 : 0;
 
+            var checkOnRiver = playerHandActions.RiverAny(x => x.IsCheck);
+
+            stat.CouldCheckRiverOnBXLine = betOnFlop && checkOnTurn && stat.CouldRiverBet == 1 ? 1 : 0;
+            stat.DidCheckRiverOnBXLine = betOnFlop && checkOnTurn && checkOnRiver ? 1 : 0;
+
             stat.CouldTurnBet = playerHandActions.Any(x => x.Street == Street.Turn) && parsedHand.Turn.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
             stat.CouldFlopBet = playerHandActions.Any(x => x.Street == Street.Flop) && parsedHand.Flop.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
 
@@ -832,9 +826,6 @@ namespace Model
             stat.DidThreeBetVsSteal = stealAttempt.Faced && threeBet.Made ? 1 : 0;
 
             stat.PlayerFolded = playerFolded;
-
-            stat.CouldCheckRiverOnBXLine = checkRiverOnBxLine.Possible ? 1 : 0;
-            stat.DidCheckRiverOnBXLine = checkRiverOnBxLine.Made ? 1 : 0;
 
             stat.TotalAggressiveBets = flopTrueAggressionBets + turnTrueAggressionBets + riverTrueAggressionBets;
 
@@ -1405,22 +1396,6 @@ namespace Model
             decimal mRatioValue = stat.StartingStack / (Math.Abs(stat.SmallBlind) + Math.Abs(stat.BigBlind) + Math.Abs(totalAntes));
 
             return mRatioValue;
-        }
-
-        private void CalculateCheckRiverOnBxLine(Condition checkRiverOnBxLine, HandHistory parsedHand, string player)
-        {
-            var flopAction = parsedHand.Flop.FirstOrDefault(x => x.PlayerName == player);
-            var turnAction = parsedHand.Turn.FirstOrDefault(x => x.PlayerName == player);
-            var riverAction = parsedHand.River.FirstOrDefault(x => x.PlayerName == player);
-
-            if (flopAction != null && turnAction != null && riverAction != null)
-            {
-                if (flopAction.IsBet() && turnAction.HandActionType == HandActionType.CHECK)
-                {
-                    checkRiverOnBxLine.Possible = true;
-                    checkRiverOnBxLine.Happened = checkRiverOnBxLine.Made = riverAction.HandActionType == HandActionType.CHECK;
-                }
-            }
         }
 
         private static ConditionalBet CalculateRaise(IEnumerable<HandAction> streetActions, string player, PlayerList players)
@@ -2003,35 +1978,21 @@ namespace Model
                     coldCall3Bet.Made = true;
                     return;
                 }
-                else if (canThreeBet)
+                else if (canThreeBet && action.IsRaise())
                 {
-                    if (action.IsRaise())
-                    {
-                        if (action.PlayerName == player)
-                        {
-                            return;
-                        }
-
-                        raisers.Add(action.PlayerName);
-
-                        wasThreeBet = true;
-                    }
-                    else if (action.IsCall())
+                    if (action.PlayerName == player)
                     {
                         return;
                     }
+
+                    raisers.Add(action.PlayerName);
+
+                    wasThreeBet = true;
                 }
-                else
+                else if (action.IsRaise())
                 {
-                    if (action.IsRaise())
-                    {
-                        canThreeBet = true;
-                        raisers.Add(action.PlayerName);
-                    }
-                    else if (action.IsCall())
-                    {
-                        return;
-                    }
+                    canThreeBet = true;
+                    raisers.Add(action.PlayerName);
                 }
             }
         }
@@ -2071,47 +2032,26 @@ namespace Model
                     coldCall4Bet.Made = true;
                     return;
                 }
-                else if (wasThreeBet)
+                else if (wasThreeBet && action.IsRaise())
                 {
-                    if (action.IsRaise())
+                    if (action.PlayerName == player)
                     {
-                        if (action.PlayerName == player)
-                        {
-                            return;
-                        }
+                        return;
+                    }
 
-                        raisers.Add(action.PlayerName);
+                    raisers.Add(action.PlayerName);
 
-                        wasFourBet = true;
-                    }
-                    else if (action.IsCall())
-                    {
-                        return;
-                    }
+                    wasFourBet = true;
                 }
-                else if (canThreeBet)
+                else if (canThreeBet && action.IsRaise())
                 {
-                    if (action.IsRaise())
-                    {
-                        wasThreeBet = true;
-                        raisers.Add(action.PlayerName);
-                    }
-                    else if (action.IsCall())
-                    {
-                        return;
-                    }
+                    wasThreeBet = true;
+                    raisers.Add(action.PlayerName);
                 }
-                else
+                else if (action.IsRaise())
                 {
-                    if (action.IsRaise())
-                    {
-                        canThreeBet = true;
-                        raisers.Add(action.PlayerName);
-                    }
-                    else if (action.IsCall())
-                    {
-                        return;
-                    }
+                    canThreeBet = true;
+                    raisers.Add(action.PlayerName);
                 }
             }
         }

@@ -725,22 +725,6 @@ namespace Model.Data
             }
         }
 
-        public virtual decimal ColdCallThreeBet
-        {
-            get
-            {
-                return GetPercentage(Source.DidColdCallThreeBet, Source.CouldColdCallThreeBet);
-            }
-        }
-
-        public virtual decimal ColdCallFourBet
-        {
-            get
-            {
-                return GetPercentage(Source.DidColdCallFourBet, Source.CouldColdCallFourBet);
-            }
-        }
-
         public virtual decimal ColdCallVsBtnOpen
         {
             get
@@ -2359,6 +2343,26 @@ namespace Model.Data
 
         #endregion
 
+        #region Cold Call 3/4-Bet
+
+        public virtual decimal ColdCallThreeBet
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.DidColdCall3Bet), Statistics.Sum(x => x.CouldColdCall3Bet));
+            }
+        }
+
+        public virtual decimal ColdCallFourBet
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.DidColdCall4Bet), Statistics.Sum(x => x.CouldColdCall4Bet));
+            }
+        }
+
+        #endregion
+
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
         {
             foreach (var statistic in statistics)
@@ -2416,10 +2420,10 @@ namespace Model.Data
             positionLimpPossible?.Add(statistic.Position, statistic.LimpPossible);
             positionRaiseLimpers?.Add(statistic.Position, statistic.IsRaisedLimpers);
             positionCouldRaiseLimpers?.Add(statistic.Position, statistic.CouldRaiseLimpers);
-            positionDidColdCallThreeBet?.Add(statistic.Position, statistic.DidColdCallThreeBet);
-            positionCouldColdCallThreeBet?.Add(statistic.Position, statistic.CouldColdCallThreeBet);
-            positionDidColdCallFourBet?.Add(statistic.Position, statistic.DidColdCallFourBet);
-            positionCouldColdCallFourBet?.Add(statistic.Position, statistic.CouldColdCallFourBet);
+            positionDidColdCallThreeBet?.Add(statistic.Position, statistic.DidColdCall3Bet);
+            positionCouldColdCallThreeBet?.Add(statistic.Position, statistic.CouldColdCall3Bet);
+            positionDidColdCallFourBet?.Add(statistic.Position, statistic.DidColdCall4Bet);
+            positionCouldColdCallFourBet?.Add(statistic.Position, statistic.CouldColdCall4Bet);
             positionOpenMinraiseUOPFR?.Add(statistic.Position, statistic.OpenMinraise);
             positionDidSqueeze?.Add(statistic.Position, statistic.Didsqueeze);
             positionCouldSqueeze?.Add(statistic.Position, statistic.Couldsqueeze);

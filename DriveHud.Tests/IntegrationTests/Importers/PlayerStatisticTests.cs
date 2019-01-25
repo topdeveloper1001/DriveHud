@@ -1274,9 +1274,20 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         }
 
         [TestCase(@"Hero-CouldNot-ColdCall3Bet.txt", EnumPokerSites.PokerStars, "Hero", 0)]
+        [TestCase(@"Hero-DidNotColdCall3Bet-1.xml", EnumPokerSites.Ignition, "Hero", 0)]
+        [TestCase(@"Hero-DidNotColdCall3Bet-2.xml", EnumPokerSites.Ignition, "Hero", 0)]
+        [TestCase(@"Hero-DidNotColdCall3Bet-1.xml", EnumPokerSites.Ignition, "P3_649467OW", 1)]
+        [TestCase(@"Hero-DidNotColdCall3Bet-2.xml", EnumPokerSites.Ignition, "P3_149165VF", 1)]
         public void ColdCall3BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.DidColdCallThreeBet, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"Hero-CouldColdCall3Bet-1.xml", EnumPokerSites.Ignition, "Hero", 1)]
+        [TestCase(@"Hero-CouldColdCall3Bet-2.xml", EnumPokerSites.Ignition, "Hero", 1)]
+        public void CouldColdCall3BetIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.CouldColdCallThreeBet, fileName, pokerSite, playerName, expected);
         }
 
         [TestCase(@"Hero-FacedDelayedCBet-True-1.txt", EnumPokerSites.PokerStars, "Hero", 1)]
