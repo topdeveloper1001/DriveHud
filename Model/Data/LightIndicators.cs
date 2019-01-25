@@ -3136,6 +3136,18 @@ namespace Model.Data
 
         #endregion
 
+        #region
+
+        [ProtoMember(346)]
+        protected int didCheckRiverOnBXLine;
+
+        [ProtoMember(347)]
+        protected int couldCheckRiverOnBXLine;
+
+        public override decimal CheckRiverOnBXLine => GetPercentage(didCheckRiverOnBXLine, couldCheckRiverOnBXLine);
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -3314,6 +3326,9 @@ namespace Model.Data
             didColdCall4Bet += statistic.DidColdCall4Bet;
             couldColdCall4Bet += statistic.CouldColdCall4Bet;
 
+            didCheckRiverOnBXLine += statistic.DidCheckRiverOnBXLineVirtual;
+            couldCheckRiverOnBXLine += statistic.CouldCheckRiverOnBXLineVirtual;
+
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
             AddBetWhenCheckedToIn3BetPotStatistic(statistic);
@@ -3487,6 +3502,9 @@ namespace Model.Data
             couldColdCall3Bet = 0;
             didColdCall4Bet = 0;
             couldColdCall4Bet = 0;
+
+            didCheckRiverOnBXLine = 0;
+            couldCheckRiverOnBXLine = 0;
 
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
@@ -3700,6 +3718,9 @@ namespace Model.Data
             couldColdCall3Bet += indicator.couldColdCall3Bet;
             didColdCall4Bet += indicator.didColdCall4Bet;
             couldColdCall4Bet += indicator.couldColdCall4Bet;
+
+            didCheckRiverOnBXLine += indicator.didCheckRiverOnBXLine;
+            couldCheckRiverOnBXLine += indicator.couldCheckRiverOnBXLine;
 
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);

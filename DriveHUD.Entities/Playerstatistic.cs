@@ -2436,6 +2436,15 @@ namespace DriveHUD.Entities
 
         #endregion
 
+        #region Check River on BX Line
+
+        public virtual int DidCheckRiverOnBXLineVirtual => FlopActions.StartsWith("B") && TurnActions.StartsWith("X") && RiverActions.StartsWith("X") ? 1 : 0;
+
+        public virtual int CouldCheckRiverOnBXLineVirtual => FlopActions.StartsWith("B") && TurnActions.StartsWith("X") &&
+            CouldRiverBet == 1 ? 1 : 0;
+
+        #endregion
+
         #endregion
 
         #region Additional properties (not for serialization)

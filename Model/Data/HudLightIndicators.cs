@@ -717,8 +717,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = CheckRiverOnBXLine,
-                    Occurred = Source.DidCheckRiverOnBXLine,
-                    CouldOccurred = Source.CouldCheckRiverOnBXLine
+                    Occurred = didCheckRiverOnBXLine,
+                    CouldOccurred = couldCheckRiverOnBXLine
                 };
             }
         }

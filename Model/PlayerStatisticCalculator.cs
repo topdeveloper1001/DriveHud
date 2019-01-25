@@ -651,7 +651,7 @@ namespace Model
 
             var checkOnRiver = playerHandActions.RiverAny(x => x.IsCheck);
 
-            stat.CouldCheckRiverOnBXLine = betOnFlop && checkOnTurn && stat.CouldRiverBet == 1 ? 1 : 0;
+            stat.CouldCheckRiverOnBXLine = stat.CouldBetRiverOnBXLine;
             stat.DidCheckRiverOnBXLine = betOnFlop && checkOnTurn && checkOnRiver ? 1 : 0;
 
             stat.CouldTurnBet = playerHandActions.Any(x => x.Street == Street.Turn) && parsedHand.Turn.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
