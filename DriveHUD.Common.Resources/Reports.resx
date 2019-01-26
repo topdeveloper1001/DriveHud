@@ -121,7 +121,7 @@
     <value>3-Bet%</value>
   </data>
   <data name="Reports_Column_3BetCall" xml:space="preserve">
-    <value>3-Bet Call%</value>
+    <value>Call 3-Bet%</value>
   </data>
   <data name="Reports_Column_3BetVsSteal" xml:space="preserve">
     <value>3-Bet vs. Steal%</value>
@@ -886,34 +886,34 @@
     <value>Bet Turn when Checked to SRP%</value>
   </data>
   <data name="Reports_Column_ColdCall3BetInBB" xml:space="preserve">
-    <value>Cold call 3-Bet in BB%</value>
+    <value>Cold Call 3-Bet in BB%</value>
   </data>
   <data name="Reports_Column_ColdCall3BetInBTN" xml:space="preserve">
-    <value>Cold call 3-Bet in BTN%</value>
+    <value>Cold Call 3-Bet in BTN%</value>
   </data>
   <data name="Reports_Column_ColdCall3BetInCO" xml:space="preserve">
-    <value>Cold call 3-Bet in CO%</value>
+    <value>Cold Call 3-Bet in CO%</value>
   </data>
   <data name="Reports_Column_ColdCall3BetInMP" xml:space="preserve">
-    <value>Cold call 3-Bet in MP%</value>
+    <value>Cold Call 3-Bet in MP%</value>
   </data>
   <data name="Reports_Column_ColdCall3BetInSB" xml:space="preserve">
-    <value>Cold call 3-Bet in SB%</value>
+    <value>Cold Call 3-Bet in SB%</value>
   </data>
   <data name="Reports_Column_ColdCall4BetInBB" xml:space="preserve">
-    <value>Cold call 4-Bet in BB%</value>
+    <value>Cold Call 4-Bet in BB%</value>
   </data>
   <data name="Reports_Column_ColdCall4BetInBTN" xml:space="preserve">
-    <value>Cold call 4-Bet in BTN%</value>
+    <value>Cold Call 4-Bet in BTN%</value>
   </data>
   <data name="Reports_Column_ColdCall4BetInCO" xml:space="preserve">
-    <value>Cold call 4-Bet in CO%</value>
+    <value>Cold Call 4-Bet in CO%</value>
   </data>
   <data name="Reports_Column_ColdCall4BetInMP" xml:space="preserve">
-    <value>Cold call 4-Bet in MP%</value>
+    <value>Cold Call 4-Bet in MP%</value>
   </data>
   <data name="Reports_Column_ColdCall4BetInSB" xml:space="preserve">
-    <value>Cold call 4-Bet in SB%</value>
+    <value>Cold Call 4-Bet in SB%</value>
   </data>
   <data name="Reports_Column_FloatFlopThenBetTurn" xml:space="preserve">
     <value>Float Flop then Bet Turn%</value>
@@ -1391,5 +1391,32 @@
   </data>
   <data name="Reports_Column_TurnCBet" xml:space="preserve">
     <value>Turn C-Bet%</value>
+  </data>
+  <data name="Reports_Column_Call3BetBB" xml:space="preserve">
+    <value>Call 3-Bet BB%</value>
+  </data>
+  <data name="Reports_Column_Call3BetBTN" xml:space="preserve">
+    <value>Call 3-Bet BTN%</value>
+  </data>
+  <data name="Reports_Column_Call3BetCO" xml:space="preserve">
+    <value>Call 3-Bet CO%</value>
+  </data>
+  <data name="Reports_Column_Call3BetEP" xml:space="preserve">
+    <value>Call 3-Bet EP%</value>
+  </data>
+  <data name="Reports_Column_Call3BetIP" xml:space="preserve">
+    <value>Call 3-Bet IP%</value>
+  </data>
+  <data name="Reports_Column_Call3BetMP" xml:space="preserve">
+    <value>Call 3-Bet MP%</value>
+  </data>
+  <data name="Reports_Column_Call3BetOOP" xml:space="preserve">
+    <value>Call 3-Bet OOP%</value>
+  </data>
+  <data name="Reports_Column_Call3BetSB" xml:space="preserve">
+    <value>Call 3-Bet SB%</value>
+  </data>
+  <data name="Reports_Column_Call4Bet" xml:space="preserve">
+    <value>Call 4-Bet%</value>
   </data>
 </root>

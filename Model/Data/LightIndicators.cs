@@ -3136,7 +3136,7 @@ namespace Model.Data
 
         #endregion
 
-        #region
+        #region Check River on BX Line
 
         [ProtoMember(346)]
         protected int didCheckRiverOnBXLine;
@@ -3145,6 +3145,26 @@ namespace Model.Data
         protected int couldCheckRiverOnBXLine;
 
         public override decimal CheckRiverOnBXLine => GetPercentage(didCheckRiverOnBXLine, couldCheckRiverOnBXLine);
+
+        #endregion
+
+        #region Call 3-Bet IP/OOP
+
+        [ProtoMember(348)]
+        protected int call3BetIP;
+
+        [ProtoMember(349)]
+        protected int faced3BetIP;
+
+        public override decimal Call3BetIP => GetPercentage(call3BetIP, faced3BetIP);
+
+        [ProtoMember(350)]
+        protected int call3BetOOP;
+
+        [ProtoMember(351)]
+        protected int faced3BetOOP;
+
+        public override decimal Call3BetOOP => GetPercentage(call3BetOOP, faced3BetOOP);
 
         #endregion
 
@@ -3285,6 +3305,11 @@ namespace Model.Data
             faced4BetIP += statistic.Faced4BetIP;
             call4BetOOP += statistic.Call4BetOOP;
             faced4BetOOP += statistic.Faced4BetOOP;
+
+            call3BetIP += statistic.Call3BetIP;
+            faced3BetIP += statistic.Faced3BetIP;
+            call3BetOOP += statistic.Call3BetOOP;
+            faced3BetOOP += statistic.Faced3BetOOP;
 
             totalOverCallSRP += statistic.TotalOverCallSRP;
             couldTotalOverCallSRP += statistic.CouldTotalOverCallSRP;
@@ -3463,6 +3488,11 @@ namespace Model.Data
             call4BetOOP = 0;
             faced4BetOOP = 0;
 
+            call3BetIP = 0;
+            faced3BetIP = 0;
+            call3BetOOP = 0;
+            faced3BetOOP = 0;
+
             totalOverCallSRP = 0;
             couldTotalOverCallSRP = 0;
 
@@ -3548,6 +3578,8 @@ namespace Model.Data
             positionFaced4Bet?.Add(indicator.positionFaced4Bet);
             positionDidOpenLimp?.Add(indicator.positionDidOpenLimp);
             positionCouldOpenLimp?.Add(indicator.positionCouldOpenLimp);
+            positionCall3Bet?.Add(indicator.positionCall3Bet);
+            positionFaced3Bet?.Add(indicator.positionFaced3Bet);
 
             if (gameNumberMax < indicator.gameNumberMax)
             {
@@ -3678,6 +3710,11 @@ namespace Model.Data
             faced4BetIP += indicator.faced4BetIP;
             call4BetOOP += indicator.call4BetOOP;
             faced4BetOOP += indicator.faced4BetOOP;
+
+            call3BetIP += indicator.call3BetIP;
+            faced3BetIP += indicator.faced3BetIP;
+            call3BetOOP += indicator.call3BetOOP;
+            faced3BetOOP += indicator.faced3BetOOP;
 
             totalOverCallSRP += indicator.totalOverCallSRP;
             couldTotalOverCallSRP += indicator.couldTotalOverCallSRP;
