@@ -1775,4 +1775,31 @@
   <data name="Enum_EnumPokerSites_PokerBaazi" xml:space="preserve">
     <value>Poker Baazi</value>
   </data>
+  <data name="Enum_Stat_Call3Bet" xml:space="preserve">
+    <value>Call 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_Call3BetBTN" xml:space="preserve">
+    <value>Call 3-Bet BTN%</value>
+  </data>
+  <data name="Enum_Stat_Call3BetCO" xml:space="preserve">
+    <value>Call 3-Bet CO%</value>
+  </data>
+  <data name="Enum_Stat_Call3BetEP" xml:space="preserve">
+    <value>Call 3-Bet EP%</value>
+  </data>
+  <data name="Enum_Stat_Call3BetIP" xml:space="preserve">
+    <value>Call 3-Bet IP%</value>
+  </data>
+  <data name="Enum_Stat_Call3BetMP" xml:space="preserve">
+    <value>Call 3-Bet MP%</value>
+  </data>
+  <data name="Enum_Stat_Call3BetOOP" xml:space="preserve">
+    <value>Call 3-Bet OOP%</value>
+  </data>
+  <data name="Enum_Stat_Call3BetSB" xml:space="preserve">
+    <value>Call 3-Bet SB%</value>
+  </data>
+  <data name="Enum_Stat_Call4Bet" xml:space="preserve">
+    <value>Call 4-Bet%</value>
+  </data>
 </root>
