@@ -707,7 +707,7 @@ namespace DriveHUD.Importers
 
                 playerStat.SessionCode = session;
 
-                StorePlayerStatistic(playerStat, session);
+                StorePlayerStatistic(playerStat, true);
 
                 return playerStat;
             }
@@ -723,9 +723,9 @@ namespace DriveHUD.Importers
         /// </summary>
         /// <param name="playerStat"></param>
         /// <param name="session"></param>
-        protected virtual void StorePlayerStatistic(Playerstatistic playerStat, string session)
+        protected virtual void StorePlayerStatistic(Playerstatistic playerStat, bool isAsync)
         {
-            if (string.IsNullOrEmpty(session))
+            if (isAsync)
             {
                 Task.Run(() => playerStatisticRepository.Store(playerStat));
                 return;

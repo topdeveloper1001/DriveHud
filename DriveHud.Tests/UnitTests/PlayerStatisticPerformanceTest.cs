@@ -32,8 +32,11 @@ namespace DriveHud.Tests.UnitTests
     [TestFixture]
     class PlayerStatisticPerformanceTest
     {
-        //   [Test]
-        public void Test()
+        //private readonly string statisticPath = StringFormatter.GetPlayerStatisticDataFolderPath();
+        private readonly string statisticPath = @"c:\Users\Freeman\AppData\Roaming\DriveHUD\Database-en\";
+
+        // [TestCase(203)]
+        public void Test(int userId)
         {
             ResourceRegistrator.Initialization();
 
@@ -41,39 +44,39 @@ namespace DriveHud.Tests.UnitTests
             var advIndicator = new AdvancedIndicator();
             var advIndicator2 = new AdvancedIndicator();
 
-            var cycles = 5;
+            var cycles = 1;
 
             using (var pf = new PerformanceMonitor("Old way"))
             {
                 for (var i = 0; i < cycles; i++)
                 {
                     var repository = new PlayerStatisticRepository();
-                    repository.SetPlayerStatisticPath(StringFormatter.GetPlayerStatisticDataFolderPath());
-                    repository.GetPlayerStatistic(13078).ForEach(x => hudIndicator.AddStatistic(x));
+                    repository.SetPlayerStatisticPath(statisticPath);
+                    repository.GetPlayerStatistic(userId).ForEach(x => hudIndicator.AddStatistic(x));
                 }
             }
 
-            using (var pf = new PerformanceMonitor("New way"))
-            {
-                for (var i = 0; i < cycles; i++)
-                {
-                    var repository = new PlayerStatisticRepository();
-                    repository.SetPlayerStatisticPath(StringFormatter.GetPlayerStatisticDataFolderPath());
-                    var stats = repository.GetPlayerStatistic(13078).ToList();
+            //using (var pf = new PerformanceMonitor("New way"))
+            //{
+            //    for (var i = 0; i < cycles; i++)
+            //    {
+            //        var repository = new PlayerStatisticRepository();
+            //        repository.SetPlayerStatisticPath(statisticPath);
+            //        var stats = repository.GetPlayerStatistic(13078).ToList();
 
-                    Parallel.ForEach(stats, x => advIndicator.ProcessStatistic(x));
-                }
-            }
+            //        Parallel.ForEach(stats, x => advIndicator.ProcessStatistic(x));
+            //    }
+            //}
 
-            using (var pf = new PerformanceMonitor("New way2"))
-            {
-                for (var i = 0; i < cycles; i++)
-                {
-                    var repository = new PlayerStatisticRepository();
-                    repository.SetPlayerStatisticPath(StringFormatter.GetPlayerStatisticDataFolderPath());
-                    repository.GetPlayerStatistic(13078).ForEach(x => advIndicator2.ProcessStatistic(x));
-                }
-            }
+            //using (var pf = new PerformanceMonitor("New way2"))
+            //{
+            //    for (var i = 0; i < cycles; i++)
+            //    {
+            //        var repository = new PlayerStatisticRepository();
+            //        repository.SetPlayerStatisticPath(statisticPath);
+            //        repository.GetPlayerStatistic(13078).ForEach(x => advIndicator2.ProcessStatistic(x));
+            //    }
+            //}
         }
     }
 

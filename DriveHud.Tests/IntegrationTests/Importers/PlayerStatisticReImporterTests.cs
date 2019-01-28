@@ -330,7 +330,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.RaiseFlopCBetIn3BetPot, Is.EqualTo(expected.RaiseFlopCBetIn3BetPot), nameof(HudLightIndicators.RaiseFlopCBetIn3BetPot));
                 Assert.That(actual.FoldToThreeBetIP, Is.EqualTo(expected.FoldToThreeBetIP), nameof(HudLightIndicators.FoldToThreeBetIP));
                 Assert.That(actual.FoldToThreeBetOOP, Is.EqualTo(expected.FoldToThreeBetOOP), nameof(HudLightIndicators.FoldToThreeBetOOP));
-                Assert.That(actual.BetFlopWhenCheckedToSRP, Is.EqualTo(expected.BetFlopWhenCheckedToSRP), nameof(HudLightIndicators.BetFlopWhenCheckedToSRP));                
+                Assert.That(actual.BetFlopWhenCheckedToSRP, Is.EqualTo(expected.BetFlopWhenCheckedToSRP), nameof(HudLightIndicators.BetFlopWhenCheckedToSRP));
                 Assert.That(actual.TurnBet, Is.EqualTo(expected.TurnBet), nameof(HudLightIndicators.TurnBet));
                 Assert.That(actual.FlopBet, Is.EqualTo(expected.FlopBet), nameof(HudLightIndicators.FlopBet));
                 Assert.That(actual.RiverCBet, Is.EqualTo(expected.RiverCBet), nameof(HudLightIndicators.RiverCBet));
@@ -544,6 +544,16 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(actual.WTSDInStraddle, Is.EqualTo(expected.WTSDInStraddle), nameof(HudLightIndicators.WTSDInStraddle));
                 Assert.That(actual.SkipFlopCBetInSRPandCheckFoldFlopOOP, Is.EqualTo(expected.SkipFlopCBetInSRPandCheckFoldFlopOOP), nameof(HudLightIndicators.SkipFlopCBetInSRPandCheckFoldFlopOOP));
                 Assert.That(actual.FoldedToDelayedCBet, Is.EqualTo(expected.FoldedToDelayedCBet), nameof(HudLightIndicators.FoldedToDelayedCBet));
+                Assert.That(actual.TurnCBet, Is.EqualTo(expected.TurnCBet), nameof(HudLightIndicators.TurnCBet));
+                Assert.That(actual.RiverCBet, Is.EqualTo(expected.RiverCBet), nameof(HudLightIndicators.RiverCBet));
+                Assert.That(actual.Call3BetIP, Is.EqualTo(expected.Call3BetIP), nameof(HudLightIndicators.Call3BetIP));
+                Assert.That(actual.Call3BetOOP, Is.EqualTo(expected.Call3BetOOP), nameof(HudLightIndicators.Call3BetOOP));
+                Assert.That(actual.Call3BetEP, Is.EqualTo(expected.Call3BetEP), nameof(HudLightIndicators.Call3BetEP));
+                Assert.That(actual.Call3BetMP, Is.EqualTo(expected.Call3BetMP), nameof(HudLightIndicators.Call3BetMP));
+                Assert.That(actual.Call3BetCO, Is.EqualTo(expected.Call3BetCO), nameof(HudLightIndicators.Call3BetCO));
+                Assert.That(actual.Call3BetBTN, Is.EqualTo(expected.Call3BetBTN), nameof(HudLightIndicators.Call3BetBTN));
+                Assert.That(actual.Call3BetSB, Is.EqualTo(expected.Call3BetSB), nameof(HudLightIndicators.Call3BetSB));
+                Assert.That(actual.Call4Bet, Is.EqualTo(expected.Call4Bet), nameof(HudLightIndicators.Call4Bet));
             });
         }
 
@@ -611,4 +621,3 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         }
     }
 }
- 

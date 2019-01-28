@@ -95,6 +95,8 @@ namespace Model
             stat.TotalcallsTurn = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.Turn);
             stat.TotalcallsRiver = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.River);
 
+            stat.FacingPreflop = Converter.ToFacingPreflop(parsedHand.PreFlop, player);
+
             bool playerFolded = playerHandActions.Any(x => x.IsFold);
 
             bool wasRiver = CardHelper.IsStreetAvailable(parsedHand.CommunityCards, Street.River);
@@ -326,14 +328,25 @@ namespace Model
             #region Cold Call
 
             var coldCall = new Condition();
+
             if (pfrOcurred)
+            {
                 CalculateColdCall(coldCall, preflops, player);
+            }
 
             ConditionalBet coldCall3Bet = new ConditionalBet();
-            CalculateColdCall3Bet(coldCall3Bet, preflops, player);
+
+            if (stat.FacingPreflop == EnumFacingPreflop.ThreeBet)
+            {
+                CalculateColdCall3Bet(coldCall3Bet, preflops, player);
+            }
 
             ConditionalBet coldCall4Bet = new ConditionalBet();
-            CalculateColdCall4Bet(coldCall4Bet, preflops, player);
+
+            if (stat.FacingPreflop == EnumFacingPreflop.FourBet)
+            {
+                CalculateColdCall4Bet(coldCall4Bet, preflops, player);
+            }
 
             //calculation of cold call after open raise at BTN position
             ConditionalBet coldCallVsBtnOpen = new ConditionalBet();
@@ -786,8 +799,7 @@ namespace Model
             stat.Allin = Converter.ToAllin(parsedHand, stat);
             stat.Action = Converter.ToAction(stat);
             stat.Position = GetPlayerPosition(parsedHand, stat);
-            stat.PositionString = Converter.ToPositionString(stat.Position);
-            stat.FacingPreflop = Converter.ToFacingPreflop(parsedHand.PreFlop, player);
+            stat.PositionString = Converter.ToPositionString(stat.Position);            
 
             CalculateEquity(creationInfo, stat);
 

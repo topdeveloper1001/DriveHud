@@ -265,10 +265,9 @@ namespace DriveHud.Tests.IntegrationTests.Base
 
         private class TestFileImporter : FileImporter
         {
-            protected override void StorePlayerStatistic(Playerstatistic playerStat, string session)
+            protected override void StorePlayerStatistic(Playerstatistic playerStat, bool isAsync)
             {
-                session = "TestData";
-                base.StorePlayerStatistic(playerStat, session);
+                base.StorePlayerStatistic(playerStat, false);
             }
         }
     }
