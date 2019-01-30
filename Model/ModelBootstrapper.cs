@@ -14,6 +14,7 @@ using Microsoft.Practices.Unity;
 using Model.AppStore;
 using Model.AppStore.HudStore;
 using Model.Enums;
+using Model.Export;
 using Model.Filters;
 using Model.Hud;
 using Model.Reports;
@@ -58,6 +59,16 @@ namespace Model
             container.RegisterType<IHudStoreModel, HudStoreModel>();
             container.RegisterType<IPlayerStatisticCalculator, PlayerStatisticCalculator>(PlayerStatisticCalculatorServiceNames.Base);
             container.RegisterType<IPlayerStatisticCalculator, PKShortPlayerStatisticCalculator>(PlayerStatisticCalculatorServiceNames.PKShortDeck);
+            container.RegisterType<IHandExportService, HandExportService>();
+
+            #region Export services
+
+            container.RegisterType<IHandExportPreparingService, CommonHandExportPreparingService>(HandExportPreparingServiceProvider.Common);
+            container.RegisterType<IHandExportPreparingService, WPNHandExportPreparingService>(HandExportPreparingServiceProvider.WPN);
+            container.RegisterType<IHandExportPreparingService, DHBasedHandExportPreparingService>(HandExportPreparingServiceProvider.DriveHUD);
+            container.RegisterType<IHandExportPreparingService, IPokerHandExportPreparingService>(HandExportPreparingServiceProvider.CustomIPoker);
+
+            #endregion
         }
     }
 }

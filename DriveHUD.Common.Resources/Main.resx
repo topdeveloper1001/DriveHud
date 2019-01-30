@@ -133,7 +133,7 @@
     <value>Delete Hand</value>
   </data>
   <data name="Main_ContextMenu_DeleteTournament" xml:space="preserve">
-    <value>Delete tournament</value>
+    <value>Delete Tournament</value>
   </data>
   <data name="Main_ContextMenu_EditNote" xml:space="preserve">
     <value>Edit Note</value>
@@ -141,8 +141,14 @@
   <data name="Main_ContextMenu_EditTournament" xml:space="preserve">
     <value>Edit Tournament</value>
   </data>
+  <data name="Main_ContextMenu_ExportGridHands" xml:space="preserve">
+    <value>3rd party apps</value>
+  </data>
   <data name="Main_ContextMenu_ExportHand" xml:space="preserve">
     <value>Export Hand</value>
+  </data>
+  <data name="Main_ContextMenu_ExportHands" xml:space="preserve">
+    <value>Export Hands for 3rd party apps</value>
   </data>
   <data name="Main_ContextMenu_ExportLastHand" xml:space="preserve">
     <value>Export Last Hand</value>

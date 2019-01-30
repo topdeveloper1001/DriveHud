@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.Controls;
 using DriveHUD.Application.ReportsLayout;
+using DriveHUD.Application.ValueConverters;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Common.Ifrastructure;
 using DriveHUD.Common.Log;
@@ -35,6 +36,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -153,8 +155,12 @@ namespace DriveHUD.Application.Views
                 item.SetBinding(VisibilityProperty, binding);
             });
 
+            RadMenuItem exportTo3rdPartyItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ExportGridHandsResourceString), false, null,
+                command: nameof(ReportGadgetViewModel.ExportSelectedHandsTo3rdPartyCommand));
+
             RadMenuItem rawHistoryItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RawHandHistoryString), false, RawExportItem_Click);
             RadMenuItem plainTextHandHistoryItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.PlainTextHandHistoryString), false, PlainExportItem_Click);
+
 
             exportHandItem.Items.Add(twoPlustTwoItem);
             exportHandItem.Items.Add(cardsChatItem);
@@ -162,6 +168,8 @@ namespace DriveHUD.Application.Views
             exportHandItem.Items.Add(icmizerHistoryItem);
             exportHandItem.Items.Add(rawHistoryItem);
             exportHandItem.Items.Add(plainTextHandHistoryItem);
+            exportHandItem.Items.Add(exportTo3rdPartyItem);
+
             /* Replay hand */
             RadMenuItem replayHand = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ReplayHandResourceString), false, ReplayHand);
             /* Tag Hand */
@@ -194,12 +202,17 @@ namespace DriveHUD.Application.Views
             tournamentsGridContextMenu.Items.Add(deleteTournamentItem);
             tournamentsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RefreshReportResourceString), false, RefreshReport));
             tournamentsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ExportToExcelReportResourceString), false, ExportReport));
+            tournamentsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ExportHandsResourceString), false, null,
+                command: nameof(ReportGadgetViewModel.ExportSelectedReportsTo3rdPartyCommand)));
 
             reportsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RefreshReportResourceString), false, RefreshReport));
             reportsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ExportToExcelReportResourceString), false, ExportReport));
+            reportsGridContextMenu.Items.Add(CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ExportHandsResourceString), false, null,
+                command: nameof(ReportGadgetViewModel.ExportSelectedReportsTo3rdPartyCommand)));
         }
 
-        private RadMenuItem CreateRadMenuItem(string header, bool isCheckable, RadRoutedEventHandler clickAction, object tag = null, Action<RadMenuItem> extraAction = null, string command = null)
+        private RadMenuItem CreateRadMenuItem(string header, bool isCheckable, RadRoutedEventHandler clickAction, object tag = null,
+            Action<RadMenuItem> extraAction = null, string command = null)
         {
             var item = new RadMenuItem
             {
@@ -519,6 +532,7 @@ namespace DriveHUD.Application.Views
                 GridViewReport.Columns.Clear();
 
                 reportGadgetViewModel.ReportCollection.Clear();
+                reportGadgetViewModel.SelectedReportItems.Clear();
 
                 foreach (var item in await reportCollection)
                 {
@@ -796,10 +810,5 @@ namespace DriveHUD.Application.Views
         }
 
         #endregion
-
-        private void scrollviewer_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
-        {
-
-        }
     }
 }

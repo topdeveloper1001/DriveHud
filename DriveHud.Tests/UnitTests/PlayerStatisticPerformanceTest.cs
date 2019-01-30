@@ -17,6 +17,7 @@ using DriveHUD.Entities;
 using Model;
 using Model.Data;
 using Model.Enums;
+using Model.Export;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,15 @@ namespace DriveHud.Tests.UnitTests
     [TestFixture]
     class PlayerStatisticPerformanceTest
     {
+        [Test]
+        public void ExportTest()
+        {
+            var exportService = new HandExportService();
+
+
+        }
+
+
         //private readonly string statisticPath = StringFormatter.GetPlayerStatisticDataFolderPath();
         private readonly string statisticPath = @"c:\Users\Freeman\AppData\Roaming\DriveHUD\Database-en\";
 

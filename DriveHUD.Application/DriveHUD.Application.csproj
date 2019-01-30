@@ -486,6 +486,7 @@
     <Compile Include="ValueConverters\CollectionViewGroupWrapper.cs" />
     <Compile Include="ValueConverters\CountToItemsControlHeight.cs" />
     <Compile Include="ValueConverters\ChartCashSeriesWinningTypeToColorBrushConverter.cs" />
+    <Compile Include="ValueConverters\EnumReportToExportVisibilityConveter.cs" />
     <Compile Include="ValueConverters\LeftMarginMultiplierConverter.cs" />
     <Compile Include="ValueConverters\SelectedLayoutToCheckedConverter.cs" />
     <Compile Include="ValueConverters\TournamentSeriesValueTypeVisibilityConverter.cs" />

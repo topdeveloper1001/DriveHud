@@ -222,7 +222,7 @@ namespace DriveHUD.Application
                 LogProvider.Log.Error(this, e);
             }
         }
-     
+
         public static void RegisterRuntimeTypeModelTypes()
         {
             RuntimeTypeModel.Default.Add(typeof(System.Windows.Point), false).SetSurrogate(typeof(PointDto));
@@ -244,7 +244,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IHudElementViewModelCreator), typeof(HudElementViewModelCreator), false);
             RegisterTypeIfMissing(typeof(IHudLayoutsService), typeof(HudLayoutsService), true);
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
-            RegisterTypeIfMissing(typeof(IReplayerService), typeof(ReplayerService), true);            
+            RegisterTypeIfMissing(typeof(IReplayerService), typeof(ReplayerService), true);
             RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
             RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
             RegisterTypeIfMissing(typeof(ILayoutMigrator), typeof(LayoutMigrator), false);

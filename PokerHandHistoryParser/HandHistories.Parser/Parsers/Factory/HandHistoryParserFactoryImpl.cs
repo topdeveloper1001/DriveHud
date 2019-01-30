@@ -33,9 +33,7 @@ namespace HandHistories.Parser.Parsers.Factory
 
         public IHandHistoryParser GetFullHandHistoryParser(string handText)
         {
-            EnumPokerSites siteName;
-
-            if (EnumPokerSitesExtension.TryParse(handText, out siteName))
+            if (EnumPokerSitesExtension.TryParse(handText, out EnumPokerSites siteName))
             {
                 LastSelected = siteName;
 

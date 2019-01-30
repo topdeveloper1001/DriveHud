@@ -49,7 +49,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
 
             var testDataDirectoryInfo = new DirectoryInfo(TestDataFolder);
 
-            var handHistoryFiles = testDataDirectoryInfo.GetFiles("*.xml", SearchOption.AllDirectories);
+            var handHistoryFiles = testDataDirectoryInfo
+                .GetFiles("*.xml", SearchOption.AllDirectories)
+                .Concat(testDataDirectoryInfo.GetFiles("*.txt", SearchOption.AllDirectories));
 
             var parser = new IPokerFastParserImpl();
 

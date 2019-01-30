@@ -250,8 +250,10 @@
     <Compile Include="Bovada\Model\PocketCards.cs" />
     <Compile Include="Bovada\Model\Stack.cs" />
     <Compile Include="Bovada\Model\TourneyPlayerFinished.cs" />
+    <Compile Include="Builders\iPoker\GameExtensions.cs" />
     <Compile Include="Builders\iPoker\Hand.cs" />
     <Compile Include="Builders\iPoker\HandCombo.cs" />
+    <Compile Include="Builders\iPoker\HandHistoryToIPokerConverter.cs" />
     <Compile Include="Builders\iPoker\HiCardsComparer.cs" />
     <Compile Include="Builders\iPoker\HoldemEvaluator.cs" />
     <Compile Include="Builders\iPoker\ICardsComparer.cs" />
@@ -276,6 +278,7 @@
     <Compile Include="Builders\iPoker\PokerConfiguration.cs" />
     <Compile Include="Builders\iPoker\PokerEvaluator.cs" />
     <Compile Include="Builders\iPoker\StringExtensions.cs" />
+    <Compile Include="Builders\iPoker\ZoneHandAdjuster.cs" />
     <Compile Include="Events\DataImportedEvent.cs" />
     <Compile Include="Events\DataImportedEventArgs.cs" />
     <Compile Include="Base\FileBasedImporter.cs" />

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HandHistory.cs" company="Ace Poker Solutions">
+// <copyright file="IHandExportPreparingService.cs" company="Ace Poker Solutions">
 // Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,21 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using System.Collections.Generic;
-using System.Xml.Serialization;
 
-namespace DriveHUD.Importers.Builders.iPoker
+namespace Model.Export
 {
-    [XmlRoot("session")]
-    public class HandHistory
-    {
-        [XmlAttribute("sessioncode")]
-        public string SessionCode { get; set; }
-
-        [XmlElement("general")]
-        public General General { get; set; }
-
-        [XmlElement("game")]
-        public List<Game> Games { get; set; }
+    internal interface IHandExportPreparingService
+    {    
+        void WriteHandsToFile(string folder, IEnumerable<string> hands, EnumPokerSites site);
     }
 }

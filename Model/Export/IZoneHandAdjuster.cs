@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HandHistory.cs" company="Ace Poker Solutions">
+// <copyright file="IZoneHandAdjuster.cs" company="Ace Poker Solutions">
 // Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,21 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Xml.Serialization;
-
-namespace DriveHUD.Importers.Builders.iPoker
+namespace Model.Export
 {
-    [XmlRoot("session")]
-    public class HandHistory
+    public interface IZoneHandAdjuster
     {
-        [XmlAttribute("sessioncode")]
-        public string SessionCode { get; set; }
-
-        [XmlElement("general")]
-        public General General { get; set; }
-
-        [XmlElement("game")]
-        public List<Game> Games { get; set; }
+        string Adjust(string hand);
     }
 }

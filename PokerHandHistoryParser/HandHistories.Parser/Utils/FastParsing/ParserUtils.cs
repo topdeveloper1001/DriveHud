@@ -15,6 +15,7 @@ using DriveHUD.Common.Log;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -23,6 +24,15 @@ namespace HandHistories.Parser.Utils.FastParsing
 {
     public static class ParserUtils
     {
+        private static readonly Regex HandSplitRegex = new Regex("\r\n\r\n", RegexOptions.Compiled);
+
+        public static IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
+        {
+            return HandSplitRegex.Split(rawHandHistories)
+                            .Where(s => !string.IsNullOrWhiteSpace(s))
+                            .Select(s => s.Trim('\r', '\n'));
+        }
+
         public static TournamentSpeed ParseTournamentSpeed(string input)
         {
             if (input.IndexOf("Super Turbo", StringComparison.InvariantCultureIgnoreCase) >= 0)

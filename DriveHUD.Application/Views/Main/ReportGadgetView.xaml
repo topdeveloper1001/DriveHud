@@ -1824,7 +1824,7 @@
                     MaxHeight="260"
                     VerticalAlignment="Stretch"
                     RowHeight="40"
-                    SelectionMode="Single"
+                    SelectionMode="Extended"
                     FrozenColumnsSplitterVisibility="Collapsed"
                     CanUserFreezeColumns="True"
                     CanUserResizeColumns="True"
@@ -1863,6 +1863,12 @@
                             </telerik:RadContextMenu.ItemsPanel>
                         </telerik:RadContextMenu>
                     </telerik:RadContextMenu.ContextMenu>
+
+                    <i:Interaction.Behaviors>
+                        <dh:RadGridViewMultiSelectBehavior
+                            SelectedItems="{Binding SelectedReportItems}" />
+                    </i:Interaction.Behaviors>
+
                 </telerik:RadGridView>
 
                 <telerik:RadBusyIndicator
