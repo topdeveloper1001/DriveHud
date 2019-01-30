@@ -33,7 +33,7 @@ namespace Model
     /// </summary>
     public class PlayerStatisticCalculator : IPlayerStatisticCalculator
     {
-        public Playerstatistic CalculateStatistic(PlayerStatisticCreationInfo creationInfo)
+        public virtual Playerstatistic CalculateStatistic(PlayerStatisticCreationInfo creationInfo)
         {
             var parsedHand = creationInfo.ParsingResult.Source;
             var player = creationInfo.Player.Playername;
@@ -94,6 +94,8 @@ namespace Model
             stat.TotalcallsFlop = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.Flop);
             stat.TotalcallsTurn = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.Turn);
             stat.TotalcallsRiver = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.River);
+
+            stat.FacingPreflop = Converter.ToFacingPreflop(parsedHand.PreFlop, player);
 
             bool playerFolded = playerHandActions.Any(x => x.IsFold);
 
@@ -277,20 +279,20 @@ namespace Model
             {
                 var raiser = preflops.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE).PlayerName;
 
-                stat.FirstRaiserPosition = Converter.ToPosition(parsedHand, raiser);
+                stat.FirstRaiserPosition = GetPlayerPosition(parsedHand, raiser);
 
                 Calculate3Bet(threeBet, preflops, player, raiser);
 
                 if (threeBet.Happened)
                 {
-                    stat.ThreeBettorPosition = Converter.ToPosition(parsedHand, threeBet.HappenedByPlayer);
+                    stat.ThreeBettorPosition = GetPlayerPosition(parsedHand, threeBet.HappenedByPlayer);
                 }
 
                 Calculate4Bet(fourBet, preflops, player, raiser, parsedHand.Players);
 
                 if (fourBet.Happened)
                 {
-                    stat.FourBettorPosition = Converter.ToPosition(parsedHand, fourBet.HappenedByPlayer);
+                    stat.FourBettorPosition = GetPlayerPosition(parsedHand, fourBet.HappenedByPlayer);
                 }
 
                 Calculate5Bet(threeBet, fourBet, fiveBet, preflops, player, raiser);
@@ -326,22 +328,35 @@ namespace Model
             #region Cold Call
 
             var coldCall = new Condition();
+
             if (pfrOcurred)
+            {
                 CalculateColdCall(coldCall, preflops, player);
+            }
 
             ConditionalBet coldCall3Bet = new ConditionalBet();
-            CalculateColdCall3Bet(coldCall3Bet, preflops, player);
+
+            if (stat.FacingPreflop == EnumFacingPreflop.ThreeBet)
+            {
+                CalculateColdCall3Bet(coldCall3Bet, preflops, player);
+            }
 
             ConditionalBet coldCall4Bet = new ConditionalBet();
-            CalculateColdCall4Bet(coldCall4Bet, preflops, player);
+
+            if (stat.FacingPreflop == EnumFacingPreflop.FourBet)
+            {
+                CalculateColdCall4Bet(coldCall4Bet, preflops, player);
+            }
 
             //calculation of cold call after open raise at BTN position
             ConditionalBet coldCallVsBtnOpen = new ConditionalBet();
+
             if (dealer != null)
                 ColdCallafterPositionalOpenRaise(coldCallVsBtnOpen, preflops, player, dealer.PlayerName);
 
             //calculation of cold call after open raise at Sb position
             ConditionalBet coldCallVsSbOpen = new ConditionalBet();
+
             if (parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND) != null)
                 ColdCallafterPositionalOpenRaise(coldCallVsSbOpen, preflops, player, parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND).PlayerName);
 
@@ -366,18 +381,7 @@ namespace Model
             var turnRaise = playedTurn ? CalculateRaise(parsedHand.Turn, player, parsedHand.Players) : new ConditionalBet();
             var riverRaise = playedRiver ? CalculateRaise(parsedHand.River, player, parsedHand.Players) : new ConditionalBet();
 
-            #endregion
-
-            #region Check river on bx line
-
-            Condition checkRiverOnBxLine = new Condition();
-
-            if (playedRiver)
-            {
-                CalculateCheckRiverOnBxLine(checkRiverOnBxLine, parsedHand, player);
-            }
-
-            #endregion
+            #endregion           
 
             #region Limp
 
@@ -425,7 +429,7 @@ namespace Model
             }
 
             stat.SmallBlind = Math.Abs(parsedHand.GameDescription.Limit.SmallBlind);
-            stat.BigBlind = Math.Abs(parsedHand.GameDescription.Limit.BigBlind);         
+            stat.BigBlind = Math.Abs(parsedHand.GameDescription.Limit.BigBlind);
 
             stat.Ante = 0;
 
@@ -658,6 +662,11 @@ namespace Model
             stat.DidBetRiverOnBXLine = betOnFlop && checkOnTurn && betOnRiver ? 1 : 0;
             stat.CouldBetRiverOnBXLine = betOnFlop && checkOnTurn && stat.CouldRiverBet == 1 ? 1 : 0;
 
+            var checkOnRiver = playerHandActions.RiverAny(x => x.IsCheck);
+
+            stat.CouldCheckRiverOnBXLine = stat.CouldBetRiverOnBXLine;
+            stat.DidCheckRiverOnBXLine = betOnFlop && checkOnTurn && checkOnRiver ? 1 : 0;
+
             stat.CouldTurnBet = playerHandActions.Any(x => x.Street == Street.Turn) && parsedHand.Turn.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
             stat.CouldFlopBet = playerHandActions.Any(x => x.Street == Street.Flop) && parsedHand.Flop.TakeWhile(x => x.PlayerName != player).All(x => x.IsCheck || x.IsFold) ? 1 : 0;
 
@@ -789,17 +798,16 @@ namespace Model
             stat.Board = parsedHand.CommunityCards != null ? parsedHand.CommunityCards.ToString() : string.Empty;
             stat.Allin = Converter.ToAllin(parsedHand, stat);
             stat.Action = Converter.ToAction(stat);
-            stat.Position = Converter.ToPosition(parsedHand, stat);
-            stat.PositionString = Converter.ToPositionString(stat.Position);
-            stat.FacingPreflop = Converter.ToFacingPreflop(parsedHand.PreFlop, player);
+            stat.Position = GetPlayerPosition(parsedHand, stat);
+            stat.PositionString = Converter.ToPositionString(stat.Position);            
 
             CalculateEquity(creationInfo, stat);
 
+            var subType = parsedHand.GameDescription.TableTypeDescriptors.Contains(TableTypeDescription.FastFold) ? " (Fast)" :
+                   (parsedHand.GameDescription.TableTypeDescriptors.Contains(TableTypeDescription.ShortDeck) ? " (Short)" : string.Empty);
+
             if (parsedHand.GameDescription.Limit.SmallBlind >= 0 && parsedHand.GameDescription.Limit.BigBlind > 0)
             {
-                var subType = parsedHand.GameDescription.TableTypeDescriptors.Contains(TableTypeDescription.FastFold) ? " (Fast)" :
-                    (parsedHand.GameDescription.TableTypeDescriptors.Contains(TableTypeDescription.ShortDeck) ? " (Short)" : string.Empty);
-
                 stat.GameType = string.Format("{0}/{1} - {2}{3}",
                     parsedHand.GameDescription.Limit.SmallBlind,
                     parsedHand.GameDescription.Limit.BigBlind,
@@ -830,9 +838,6 @@ namespace Model
             stat.DidThreeBetVsSteal = stealAttempt.Faced && threeBet.Made ? 1 : 0;
 
             stat.PlayerFolded = playerFolded;
-
-            stat.CouldCheckRiverOnBXLine = checkRiverOnBxLine.Possible ? 1 : 0;
-            stat.DidCheckRiverOnBXLine = checkRiverOnBxLine.Made ? 1 : 0;
 
             stat.TotalAggressiveBets = flopTrueAggressionBets + turnTrueAggressionBets + riverTrueAggressionBets;
 
@@ -1405,22 +1410,6 @@ namespace Model
             return mRatioValue;
         }
 
-        private void CalculateCheckRiverOnBxLine(Condition checkRiverOnBxLine, HandHistory parsedHand, string player)
-        {
-            var flopAction = parsedHand.Flop.FirstOrDefault(x => x.PlayerName == player);
-            var turnAction = parsedHand.Turn.FirstOrDefault(x => x.PlayerName == player);
-            var riverAction = parsedHand.River.FirstOrDefault(x => x.PlayerName == player);
-
-            if (flopAction != null && turnAction != null && riverAction != null)
-            {
-                if (flopAction.IsBet() && turnAction.HandActionType == HandActionType.CHECK)
-                {
-                    checkRiverOnBxLine.Possible = true;
-                    checkRiverOnBxLine.Happened = checkRiverOnBxLine.Made = riverAction.HandActionType == HandActionType.CHECK;
-                }
-            }
-        }
-
         private static ConditionalBet CalculateRaise(IEnumerable<HandAction> streetActions, string player, PlayerList players)
         {
             var raise = new ConditionalBet();
@@ -1654,14 +1643,14 @@ namespace Model
             }
         }
 
-        private static void CalculateSteal(StealAttempt stealAttempt, HandHistory parsedHand, string player, bool isBlindPosition)
+        protected virtual void CalculateSteal(StealAttempt stealAttempt, HandHistory parsedHand, string player, bool isBlindPosition)
         {
             var stealers = new List<string>
-{
-    GetCutOffPlayer(parsedHand)?.PlayerName,
-    parsedHand.Players.FirstOrDefault(x => x.SeatNumber == parsedHand.DealerButtonPosition)?.PlayerName,
-    parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName
-};
+            {
+                GetCutOffPlayer(parsedHand)?.PlayerName,
+                parsedHand.Players.FirstOrDefault(x => x.SeatNumber == parsedHand.DealerButtonPosition)?.PlayerName,
+                parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName
+            };
 
             bool wasSteal = false;
 
@@ -1720,7 +1709,7 @@ namespace Model
             }
         }
 
-        private static void CalculateCoRaise(StealAttempt stealAtempt, HandHistory parsedHand, string player)
+        private void CalculateCoRaise(StealAttempt stealAtempt, HandHistory parsedHand, string player)
         {
             if (parsedHand.Players.FirstOrDefault(x => x.SeatNumber == parsedHand.DealerButtonPosition)?.PlayerName !=
                 player)
@@ -2001,35 +1990,21 @@ namespace Model
                     coldCall3Bet.Made = true;
                     return;
                 }
-                else if (canThreeBet)
+                else if (canThreeBet && action.IsRaise())
                 {
-                    if (action.IsRaise())
-                    {
-                        if (action.PlayerName == player)
-                        {
-                            return;
-                        }
-
-                        raisers.Add(action.PlayerName);
-
-                        wasThreeBet = true;
-                    }
-                    else if (action.IsCall())
+                    if (action.PlayerName == player)
                     {
                         return;
                     }
+
+                    raisers.Add(action.PlayerName);
+
+                    wasThreeBet = true;
                 }
-                else
+                else if (action.IsRaise())
                 {
-                    if (action.IsRaise())
-                    {
-                        canThreeBet = true;
-                        raisers.Add(action.PlayerName);
-                    }
-                    else if (action.IsCall())
-                    {
-                        return;
-                    }
+                    canThreeBet = true;
+                    raisers.Add(action.PlayerName);
                 }
             }
         }
@@ -2069,47 +2044,26 @@ namespace Model
                     coldCall4Bet.Made = true;
                     return;
                 }
-                else if (wasThreeBet)
+                else if (wasThreeBet && action.IsRaise())
                 {
-                    if (action.IsRaise())
+                    if (action.PlayerName == player)
                     {
-                        if (action.PlayerName == player)
-                        {
-                            return;
-                        }
+                        return;
+                    }
 
-                        raisers.Add(action.PlayerName);
+                    raisers.Add(action.PlayerName);
 
-                        wasFourBet = true;
-                    }
-                    else if (action.IsCall())
-                    {
-                        return;
-                    }
+                    wasFourBet = true;
                 }
-                else if (canThreeBet)
+                else if (canThreeBet && action.IsRaise())
                 {
-                    if (action.IsRaise())
-                    {
-                        wasThreeBet = true;
-                        raisers.Add(action.PlayerName);
-                    }
-                    else if (action.IsCall())
-                    {
-                        return;
-                    }
+                    wasThreeBet = true;
+                    raisers.Add(action.PlayerName);
                 }
-                else
+                else if (action.IsRaise())
                 {
-                    if (action.IsRaise())
-                    {
-                        canThreeBet = true;
-                        raisers.Add(action.PlayerName);
-                    }
-                    else if (action.IsCall())
-                    {
-                        return;
-                    }
+                    canThreeBet = true;
+                    raisers.Add(action.PlayerName);
                 }
             }
         }
@@ -2585,7 +2539,7 @@ namespace Model
             return false;
         }
 
-        private static Player GetCutOffPlayer(HandHistory hand)
+        protected virtual Player GetCutOffPlayer(HandHistory hand)
         {
             if (hand.Players.Count == 3)
             {
@@ -2613,8 +2567,6 @@ namespace Model
 
             var coPlayer = btnPlayerIndex == 0 ? orderedPlayers.Last() : orderedPlayers[btnPlayerIndex - 1];
 
-
-
             return coPlayer;
         }
 
@@ -2624,7 +2576,7 @@ namespace Model
             return buttonPlayer;
         }
 
-        private static Player GetInPositionPlayer(HandHistory hand, Street street, string player, bool foldAllowed = false)
+        protected virtual Player GetInPositionPlayer(HandHistory hand, Street street, string player, bool foldAllowed = false)
         {
             var actions = hand.HandActions.Street(street)
                 .Where(x => !string.IsNullOrWhiteSpace(x.PlayerName)
@@ -2762,6 +2714,16 @@ namespace Model
                 priorToHeroAction.All(x => x.IsCheck || x.IsFold) &&
                 priorToHeroAction.All(x => x.PlayerName != raiser)) &&
                 streetActions.Any(x => x.PlayerName == player && (x.IsBet() || x.IsCheck));
+        }
+
+        protected virtual EnumPosition GetPlayerPosition(HandHistory hand, string playerName)
+        {
+            return Converter.ToPosition(hand, playerName);
+        }
+
+        protected virtual EnumPosition GetPlayerPosition(HandHistory hand, Playerstatistic stat)
+        {
+            return Converter.ToPosition(hand, stat);
         }
 
         #endregion

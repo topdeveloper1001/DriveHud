@@ -61,11 +61,6 @@ namespace DriveHUD.PKCatcher.Services
 
             var limit = handHistory.GameDescription.Limit.BigBlind;
 
-            if (handHistory.GameDescription.IsStraddle)
-            {
-                limit *= 2;
-            }
-
             return limit <= cashLimit;
         }
     }

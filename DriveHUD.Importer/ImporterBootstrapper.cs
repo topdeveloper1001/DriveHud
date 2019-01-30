@@ -33,6 +33,7 @@ using DriveHUD.Importers.WinningPokerNetwork;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using Model.Enums;
+using Model.Export;
 using Model.Solvers;
 using System;
 
@@ -114,6 +115,9 @@ namespace DriveHUD.Importers
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());
             container.RegisterType<IPokerClientEncryptedLogger, BetOnlineTournamentLogger>(LogServices.BetOnlineTournament.ToString());
+
+            container.RegisterType<IHandHistoryToIPokerConverter, HandHistoryToIPokerConverter>();
+            container.RegisterType<IZoneHandAdjuster, ZoneHandAdjuster>();
         }
 
         public static void ConfigureImporterService()

@@ -87,7 +87,7 @@ namespace DriveHUD.Application.ViewModels
 
         private bool isAdvancedLoggingEnabled = true;
 
-        private const int ImportFileUpdateDelay = 750;
+        private const int ImportFileUpdateDelay = 1500;
 
         private static readonly object playerAddedLock = new object();
 

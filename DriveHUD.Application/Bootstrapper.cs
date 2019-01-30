@@ -113,139 +113,114 @@ namespace DriveHUD.Application
 
             try
             {
-                if (IsUninstall())
+                var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+                var settingsModel = settingsService.GetSettings();
+
+                mainWindowViewModel = new MainWindowViewModel();
+
+                var mainRadWindow = (RadWindow)Shell;
+
+                mainRadWindow.DataContext = mainWindowViewModel;
+
+                if (settingsModel != null && settingsModel.GeneralSettings != null)
                 {
-                    LogProvider.Log.Info(this, "Uninstalling all user's data...");
-                    var dataRemoverViewModel = new DataRemoverViewModel();
-                    dataRemoverViewModel.UninstallCommand.Execute(null);
-                }
-                else
-                {
-                    var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
-                    var settingsModel = settingsService.GetSettings();
+                    // set logging
+                    LogProvider.Log.IsAdvanced = settingsModel.GeneralSettings.IsAdvancedLoggingEnabled;
 
-                    mainWindowViewModel = new MainWindowViewModel();
+                    LogProvider.Log.Info($"Advanced logging: {settingsModel.GeneralSettings.IsAdvancedLoggingEnabled}");
 
-                    var mainRadWindow = (RadWindow)Shell;
-
-                    mainRadWindow.DataContext = mainWindowViewModel;
-
-                    if (settingsModel != null && settingsModel.GeneralSettings != null)
+                    if (settingsModel.GeneralSettings.RememberScreenPosition)
                     {
-                        // set logging
-                        LogProvider.Log.IsAdvanced = settingsModel.GeneralSettings.IsAdvancedLoggingEnabled;
-
-                        LogProvider.Log.Info($"Advanced logging: {settingsModel.GeneralSettings.IsAdvancedLoggingEnabled}");
-
-                        if (settingsModel.GeneralSettings.RememberScreenPosition)
+                        var positionsInfo = new WindowPositionsInfo
                         {
-                            var positionsInfo = new WindowPositionsInfo
-                            {
-                                Width = mainWindowViewModel.WindowMinWidth,
-                                Height = mainWindowViewModel.AppStartupHeight,
-                                DisplaySettings = settingsModel?.GeneralSettings?.DisplaySettings,
-                                StartupLocation = WindowStartupLocation.Manual
-                            };
+                            Width = mainWindowViewModel.WindowMinWidth,
+                            Height = mainWindowViewModel.AppStartupHeight,
+                            DisplaySettings = settingsModel?.GeneralSettings?.DisplaySettings,
+                            StartupLocation = WindowStartupLocation.Manual
+                        };
 
-                            WindowPositionsService.SetPosition(mainRadWindow, positionsInfo);
-                        }
+                        WindowPositionsService.SetPosition(mainRadWindow, positionsInfo);
                     }
+                }
 
-                    mainRadWindow.IsTopmost = true;
-                    mainRadWindow.Show();
-                    mainRadWindow.IsTopmost = false;
+                mainRadWindow.IsTopmost = true;
+                mainRadWindow.Show();
+                mainRadWindow.IsTopmost = false;
 
-                    App.SplashScreen.CloseSplashScreen();
+                App.SplashScreen.CloseSplashScreen();
 
-                    var mainWindow = mainRadWindow.ParentOfType<Window>();
+                var mainWindow = mainRadWindow.ParentOfType<Window>();
 
-                    if (mainWindow != null && App.Current.MainWindow != mainWindow)
-                    {
-                        App.Current.MainWindow = mainWindow;
-                    }
+                if (mainWindow != null && App.Current.MainWindow != mainWindow)
+                {
+                    App.Current.MainWindow = mainWindow;
+                }
 
-                    if (App.IsUpdateAvailable)
-                    {
-                        mainWindowViewModel.IsActive = true;
-                        mainWindowViewModel.ShowUpdate();
-                        mainWindowViewModel.IsActive = false;
-                    }
-
-                    var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
-
-                    if (!isLicenseValid || licenseService.IsTrial ||
-                        (licenseService.IsRegistered && licenseService.IsExpiringSoon) ||
-                        !licenseService.IsRegistered)
-                    {
-                        var registrationViewModel = new RegistrationViewModel(false);
-                        mainWindowViewModel.RegistrationViewRequest.Raise(registrationViewModel);
-                        mainWindowViewModel.UpdateHeader();
-                    }
-
-                    if (!licenseService.IsRegistered)
-                    {
-                        System.Windows.Application.Current.Shutdown();
-                    }
-
-                    mainWindowViewModel.IsTrial = licenseService.IsTrial;
-                    mainWindowViewModel.IsUpgradable = licenseService.IsUpgradable;
-
+                if (App.IsUpdateAvailable)
+                {
                     mainWindowViewModel.IsActive = true;
+                    mainWindowViewModel.ShowUpdate();
+                    mainWindowViewModel.IsActive = false;
+                }
 
-                    if (settingsModel != null && settingsModel.GeneralSettings != null)
+                var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
+
+                if (!isLicenseValid || licenseService.IsTrial ||
+                    (licenseService.IsRegistered && licenseService.IsExpiringSoon) ||
+                    !licenseService.IsRegistered)
+                {
+                    var registrationViewModel = new RegistrationViewModel(false);
+                    mainWindowViewModel.RegistrationViewRequest.Raise(registrationViewModel);
+                    mainWindowViewModel.UpdateHeader();
+                }
+
+                if (!licenseService.IsRegistered)
+                {
+                    System.Windows.Application.Current.Shutdown();
+                }
+
+                mainWindowViewModel.IsTrial = licenseService.IsTrial;
+                mainWindowViewModel.IsUpgradable = licenseService.IsUpgradable;
+
+                mainWindowViewModel.IsActive = true;
+
+                if (settingsModel != null && settingsModel.GeneralSettings != null)
+                {
+                    try
                     {
-                        try
+                        var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
+                             .ValidateSiteConfigurations().ToArray();
+
+                        var detectedSites = validationResults.Where(x => x.IsNew && x.IsDetected).ToArray();
+
+                        if (detectedSites.Length > 0)
                         {
-                            var validationResults = ServiceLocator.Current.GetInstance<ISiteConfigurationService>()
-                                 .ValidateSiteConfigurations().ToArray();
-
-                            var detectedSites = validationResults.Where(x => x.IsNew && x.IsDetected).ToArray();
-
-                            if (detectedSites.Length > 0)
-                            {
-                                var sitesSetupViewModel = new SitesSetupViewModel(detectedSites);
-                                mainWindowViewModel.SitesSetupViewRequest?.Raise(sitesSetupViewModel);
-                            }
-
-                            var incorrectlyConfiguredSites = validationResults
-                                .Where(x => x.HasIssue && x.IsEnabled && settingsModel.GeneralSettings.RunSiteDetection)
-                                .ToArray();
-
-                            if (incorrectlyConfiguredSites.Length > 0)
-                            {
-                                var incorrectlyConfiguredSitesViewModel = new IncorrectlyConfiguredSitesViewModel(incorrectlyConfiguredSites);
-                                mainWindowViewModel.IncorrectlyConfiguredSitesViewRequest?.Raise(incorrectlyConfiguredSitesViewModel);
-                            }
+                            var sitesSetupViewModel = new SitesSetupViewModel(detectedSites);
+                            mainWindowViewModel.SitesSetupViewRequest?.Raise(sitesSetupViewModel);
                         }
-                        catch (Exception ex)
+
+                        var incorrectlyConfiguredSites = validationResults
+                            .Where(x => x.HasIssue && x.IsEnabled && settingsModel.GeneralSettings.RunSiteDetection)
+                            .ToArray();
+
+                        if (incorrectlyConfiguredSites.Length > 0)
                         {
-                            LogProvider.Log.Error(this, "Site validation failed.", ex);
+                            var incorrectlyConfiguredSitesViewModel = new IncorrectlyConfiguredSitesViewModel(incorrectlyConfiguredSites);
+                            mainWindowViewModel.IncorrectlyConfiguredSitesViewRequest?.Raise(incorrectlyConfiguredSitesViewModel);
                         }
                     }
-
-                    mainWindowViewModel.StartHudCommand.Execute(null);
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Error(this, "Site validation failed.", ex);
+                    }
                 }
+
+                mainWindowViewModel.StartHudCommand.Execute(null);
             }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, e);
             }
-        }
-
-        private bool IsUninstall()
-        {
-            string[] args = Environment.GetCommandLineArgs();
-
-            foreach (string arg in args.Skip(1))
-            {
-                LogProvider.Log.Info(this, string.Format("Argument found {0}", arg));
-
-                if (arg == "-uninstall")
-                {
-                    return true;
-                }
-            }
-            return false;
         }
 
         public static void RegisterRuntimeTypeModelTypes()
@@ -270,7 +245,6 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IHudLayoutsService), typeof(HudLayoutsService), true);
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
             RegisterTypeIfMissing(typeof(IReplayerService), typeof(ReplayerService), true);
-            RegisterTypeIfMissing(typeof(IPlayerStatisticCalculator), typeof(PlayerStatisticCalculator), false);
             RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
             RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
             RegisterTypeIfMissing(typeof(ILayoutMigrator), typeof(LayoutMigrator), false);

@@ -14,7 +14,6 @@ using DriveHUD.Common;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Bovada;
 using Model.Site;
-using Model.Solvers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -454,7 +453,7 @@ namespace DriveHUD.Importers.Builders.iPoker
 
             var players = new List<Player>();
 
-            var winners = GetWinners(rounds);
+            var winners = rounds.GetWinners(handModel.GameType);
 
             foreach (var seat in handModel.SeatsDealt.OrderBy(x => x))
             {
@@ -1028,52 +1027,6 @@ namespace DriveHUD.Importers.Builders.iPoker
         private DateTime GetUTCTime(DateTime dateTime)
         {
             return dateTime.ToUniversalTime();
-        }
-
-        private IPokerEvaluator GetEvaluator()
-        {
-            switch (handModel.GameType)
-            {
-                case GameType.Omaha:
-                case GameType.OmahaHiLo:
-                    return new OmahaEvaluator();
-                case GameType.Holdem:
-                    return new HoldemEvaluator();
-                default:
-                    return null;
-            }
-        }
-
-        private IList<int> GetWinners(IEnumerable<Round> rounds)
-        {
-            var evaluator = GetEvaluator();
-
-            if (evaluator == null)
-            {
-                return new List<int>();
-            }
-
-            var roundCards = rounds.Where(x => x.Cards != null).SelectMany(x => x.Cards).ToArray();
-            var boardCards = roundCards.Where(x => x.Type != CardsType.Pocket).Select(x => x.Value).ToArray();
-            var boardCardsString = string.Join(" ", boardCards);
-
-            evaluator.SetCardsOnTable(boardCardsString);
-
-            var playersCards = roundCards.Where(x => x.Type == CardsType.Pocket && !x.Value.Contains(PokerConfiguration.UnknownCard)).ToArray();
-
-            if (playersCards.Length < 1)
-            {
-                return new List<int>();
-            }
-
-            foreach (var playerCards in playersCards)
-            {
-                evaluator.SetPlayerCards(playerCards.Seat, playerCards.Value);
-            }
-
-            var winners = evaluator.GetWinners();
-
-            return winners.All?.ToList() ?? new List<int>();
         }
 
         #endregion

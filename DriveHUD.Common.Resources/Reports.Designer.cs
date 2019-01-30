@@ -151,7 +151,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3-Bet Call%.
+        ///   Looks up a localized string similar to Call 3-Bet%.
         /// </summary>
         internal static string Reports_Column_3BetCall {
             get {
@@ -552,6 +552,87 @@ namespace DriveHUD.Common.Resources {
         internal static string Reports_Column_Buyin {
             get {
                 return ResourceManager.GetString("Reports_Column_Buyin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet BB%.
+        /// </summary>
+        internal static string Reports_Column_Call3BetBB {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call3BetBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet BTN%.
+        /// </summary>
+        internal static string Reports_Column_Call3BetBTN {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call3BetBTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet CO%.
+        /// </summary>
+        internal static string Reports_Column_Call3BetCO {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call3BetCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet EP%.
+        /// </summary>
+        internal static string Reports_Column_Call3BetEP {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call3BetEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet IP%.
+        /// </summary>
+        internal static string Reports_Column_Call3BetIP {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call3BetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet MP%.
+        /// </summary>
+        internal static string Reports_Column_Call3BetMP {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call3BetMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet OOP%.
+        /// </summary>
+        internal static string Reports_Column_Call3BetOOP {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call3BetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet SB%.
+        /// </summary>
+        internal static string Reports_Column_Call3BetSB {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call3BetSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 4-Bet%.
+        /// </summary>
+        internal static string Reports_Column_Call4Bet {
+            get {
+                return ResourceManager.GetString("Reports_Column_Call4Bet", resourceCulture);
             }
         }
         
@@ -1105,7 +1186,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cold call 3-Bet in BB%.
+        ///   Looks up a localized string similar to Cold Call 3-Bet in BB%.
         /// </summary>
         internal static string Reports_Column_ColdCall3BetInBB {
             get {
@@ -1114,7 +1195,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cold call 3-Bet in BTN%.
+        ///   Looks up a localized string similar to Cold Call 3-Bet in BTN%.
         /// </summary>
         internal static string Reports_Column_ColdCall3BetInBTN {
             get {
@@ -1123,7 +1204,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cold call 3-Bet in CO%.
+        ///   Looks up a localized string similar to Cold Call 3-Bet in CO%.
         /// </summary>
         internal static string Reports_Column_ColdCall3BetInCO {
             get {
@@ -1132,7 +1213,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cold call 3-Bet in MP%.
+        ///   Looks up a localized string similar to Cold Call 3-Bet in MP%.
         /// </summary>
         internal static string Reports_Column_ColdCall3BetInMP {
             get {
@@ -1141,7 +1222,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cold call 3-Bet in SB%.
+        ///   Looks up a localized string similar to Cold Call 3-Bet in SB%.
         /// </summary>
         internal static string Reports_Column_ColdCall3BetInSB {
             get {
@@ -1150,7 +1231,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cold call 4-Bet in BB%.
+        ///   Looks up a localized string similar to Cold Call 4-Bet in BB%.
         /// </summary>
         internal static string Reports_Column_ColdCall4BetInBB {
             get {
@@ -1159,7 +1240,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cold call 4-Bet in BTN%.
+        ///   Looks up a localized string similar to Cold Call 4-Bet in BTN%.
         /// </summary>
         internal static string Reports_Column_ColdCall4BetInBTN {
             get {
@@ -1168,7 +1249,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cold call 4-Bet in CO%.
+        ///   Looks up a localized string similar to Cold Call 4-Bet in CO%.
         /// </summary>
         internal static string Reports_Column_ColdCall4BetInCO {
             get {
@@ -1177,7 +1258,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cold call 4-Bet in MP%.
+        ///   Looks up a localized string similar to Cold Call 4-Bet in MP%.
         /// </summary>
         internal static string Reports_Column_ColdCall4BetInMP {
             get {
@@ -1186,7 +1267,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cold call 4-Bet in SB%.
+        ///   Looks up a localized string similar to Cold Call 4-Bet in SB%.
         /// </summary>
         internal static string Reports_Column_ColdCall4BetInSB {
             get {

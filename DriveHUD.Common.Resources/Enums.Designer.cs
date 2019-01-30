@@ -1627,6 +1627,87 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_Call3Bet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_Call3Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet BTN%.
+        /// </summary>
+        internal static string Enum_Stat_Call3BetBTN {
+            get {
+                return ResourceManager.GetString("Enum_Stat_Call3BetBTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet CO%.
+        /// </summary>
+        internal static string Enum_Stat_Call3BetCO {
+            get {
+                return ResourceManager.GetString("Enum_Stat_Call3BetCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet EP%.
+        /// </summary>
+        internal static string Enum_Stat_Call3BetEP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_Call3BetEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet IP%.
+        /// </summary>
+        internal static string Enum_Stat_Call3BetIP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_Call3BetIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet MP%.
+        /// </summary>
+        internal static string Enum_Stat_Call3BetMP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_Call3BetMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet OOP%.
+        /// </summary>
+        internal static string Enum_Stat_Call3BetOOP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_Call3BetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 3-Bet SB%.
+        /// </summary>
+        internal static string Enum_Stat_Call3BetSB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_Call3BetSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Call 4-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_Call4Bet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_Call4Bet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Call 4-Bet BB%.
         /// </summary>
         internal static string Enum_Stat_Call4BetBB {

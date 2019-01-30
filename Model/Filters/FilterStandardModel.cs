@@ -599,7 +599,7 @@ namespace Model.Filters
 
             var table6MaxChecked = Table6MaxCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
 
-            if (table6MaxChecked.Length > 0)
+            if (table6MaxChecked.Length > 0 && table6MaxChecked.Length != Table6MaxCollection.Count)
             {
                 sixRingPredicate = sixRingPredicate.And(x => table6MaxChecked.Contains(x.Position) &&
                    x.Position != EnumPosition.STRDL);
@@ -609,7 +609,7 @@ namespace Model.Filters
 
             var raiser6maxPositionsChecked = Raiser6maxPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
 
-            if (raiser6maxPositionsChecked.Length > 0)
+            if (raiser6maxPositionsChecked.Length > 0 && raiser6maxPositionsChecked.Length != Raiser6maxPositionsCollection.Count)
             {
                 sixRingPredicate = sixRingPredicate.And(x => x.FirstRaiserPosition != EnumPosition.Undefined &&
                    x.FirstRaiserPosition != EnumPosition.STRDL &&
@@ -621,7 +621,7 @@ namespace Model.Filters
 
             var threeBettor6maxPositionsChecked = ThreeBettor6maxPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
 
-            if (threeBettor6maxPositionsChecked.Length > 0)
+            if (threeBettor6maxPositionsChecked.Length > 0 && threeBettor6maxPositionsChecked.Length != ThreeBettor6maxPositionsCollection.Count)
             {
                 sixRingPredicate = sixRingPredicate.And(x => x.ThreeBettorPosition != EnumPosition.Undefined &&
                    x.ThreeBettorPosition != EnumPosition.STRDL &&
@@ -633,7 +633,7 @@ namespace Model.Filters
 
             var fourBettor6maxPositionsChecked = FourBettor6maxPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
 
-            if (fourBettor6maxPositionsChecked.Length > 0)
+            if (fourBettor6maxPositionsChecked.Length > 0 && fourBettor6maxPositionsChecked.Length != FourBettor6maxPositionsCollection.Count)
             {
                 sixRingPredicate = sixRingPredicate.And(x => x.FourBettorPosition != EnumPosition.Undefined &&
                    x.FourBettorPosition != EnumPosition.STRDL &&
@@ -649,7 +649,7 @@ namespace Model.Filters
 
             var tableFullRingChecked = TableFullRingCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
 
-            if (tableFullRingChecked.Length > 0)
+            if (tableFullRingChecked.Length > 0 && tableFullRingChecked.Length != TableFullRingCollection.Count)
             {
                 fullRingPredicate = fullRingPredicate.And(x => tableFullRingChecked.Contains(x.Position) &&
                    x.Position != EnumPosition.STRDL);
@@ -659,7 +659,7 @@ namespace Model.Filters
 
             var raiserFullRingPositionsChecked = RaiserFullRingPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
 
-            if (raiserFullRingPositionsChecked.Length > 0)
+            if (raiserFullRingPositionsChecked.Length > 0 && raiserFullRingPositionsChecked.Length != RaiserFullRingPositionsCollection.Count)
             {
                 fullRingPredicate = fullRingPredicate.And(x => x.FirstRaiserPosition != EnumPosition.Undefined &&
                        x.FirstRaiserPosition != EnumPosition.STRDL &&
@@ -671,7 +671,7 @@ namespace Model.Filters
 
             var threeBettorFullRingPositionsChecked = ThreeBettorFullRingPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
 
-            if (threeBettorFullRingPositionsChecked.Length > 0)
+            if (threeBettorFullRingPositionsChecked.Length > 0 && threeBettorFullRingPositionsChecked.Length != ThreeBettorFullRingPositionsCollection.Count)
             {
                 fullRingPredicate = fullRingPredicate.And(x => x.ThreeBettorPosition != EnumPosition.Undefined &&
                        x.ThreeBettorPosition != EnumPosition.STRDL &&
@@ -683,7 +683,7 @@ namespace Model.Filters
 
             var fourBettorFullRingPositionsChecked = FourBettorFullRingPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
 
-            if (fourBettorFullRingPositionsChecked.Length > 0)
+            if (fourBettorFullRingPositionsChecked.Length > 0 && fourBettorFullRingPositionsChecked.Length != FourBettorFullRingPositionsCollection.Count)
             {
                 fullRingPredicate = fullRingPredicate.And(x => x.FourBettorPosition != EnumPosition.Undefined &&
                        x.FourBettorPosition != EnumPosition.STRDL &&

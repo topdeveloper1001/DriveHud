@@ -322,7 +322,7 @@ namespace DriveHUD.Importers
         {
             try
             {
-                var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
+                var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>(playerStatisticCreationInfo.GetServiceName());
 
                 var statistic = playerStatisticCalculator.CalculateStatistic(playerStatisticCreationInfo);
 

@@ -133,6 +133,87 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export as IPoker hand history format.
+        /// </summary>
+        internal static string Notifications_ExportHands_ExportAsIPoker {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_ExportAsIPoker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some of selected hands are stored in DH format. This format isn&apos;t supported by other databases, but these hands can be converted into IPoker hand history format. Do you want to convert them?.
+        /// </summary>
+        internal static string Notifications_ExportHands_ExportAsIPokerContent {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_ExportAsIPokerContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        internal static string Notifications_ExportHands_ExportAsIPokerNo {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_ExportAsIPokerNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convert.
+        /// </summary>
+        internal static string Notifications_ExportHands_ExportAsIPokerYes {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_ExportAsIPokerYes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to export hands. Please check logs or contact support..
+        /// </summary>
+        internal static string Notifications_ExportHands_FailedContent {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_FailedContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export failed!.
+        /// </summary>
+        internal static string Notifications_ExportHands_FailedTitle {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_FailedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hands have been successfully exported! .
+        /// </summary>
+        internal static string Notifications_ExportHands_SuccessContent {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_SuccessContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hands have been successfully exported! {0} hands exported as Ipoker hand history format..
+        /// </summary>
+        internal static string Notifications_ExportHands_SuccessContentInInternalFormat {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_SuccessContentInInternalFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully exported!.
+        /// </summary>
+        internal static string Notifications_ExportHands_SuccessTitle {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_SuccessTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string Notifications_HudLayout_DeleteHudCancel {

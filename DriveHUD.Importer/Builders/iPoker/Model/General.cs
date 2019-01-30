@@ -95,11 +95,16 @@ namespace DriveHUD.Importers.Builders.iPoker
         [XmlElement("maxplayers"), DefaultValue(0)]
         public int MaxPlayers { get; set; }
 
-        [XmlElement("pokersite")]
+        [XmlElement("pokersite", IsNullable = true)]
         public EnumPokerSites? Site { get; set; }
 
         [XmlElement("tournamentstags", IsNullable = true)]
         public TournamentsTags? TournamentsTags { get; set; }
+
+        public bool ShouldSerializeSite()
+        {
+            return Site != null;
+        }
 
         public bool ShouldSerializeTournamentsTags()
         {

@@ -83,6 +83,8 @@ namespace DriveHUD.Common.Resources
         public static string RefreshReportResourceString = "Main_ContextMenu_RefreshReport";
         public static string ExportToExcelReportResourceString = "Main_ContextMenu_ExportToExcel";
         public static string DeleteHandResourceString = "Main_ContextMenu_DeleteHand";
+        public static string ExportHandsResourceString = "Main_ContextMenu_ExportHands";
+        public static string ExportGridHandsResourceString = "Main_ContextMenu_ExportGridHands";
 
 
         #endregion

@@ -17,6 +17,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model;
 using NSubstitute;
 using NUnit.Framework;
+using System;
 using System.IO;
 
 namespace DriveHud.Tests.IntegrationTests.Importers
@@ -120,7 +121,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         protected virtual bool GetCombinedPlayerstatisticFromStoreCall(ref Playerstatistic playerstatistic, Playerstatistic p, string playerName)
         {
             if (p.PlayerName.Equals(playerName))
-            {
+            {                
                 if (playerstatistic == null)
                 {
                     playerstatistic = p;
@@ -128,6 +129,11 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 else
                 {
                     playerstatistic += p;
+                }
+
+                if (playerstatistic.DidColdCallThreeBet == 1)
+                {
+                    Console.WriteLine("test");
                 }
             }
 

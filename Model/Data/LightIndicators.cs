@@ -3116,6 +3116,58 @@ namespace Model.Data
 
         #endregion
 
+        #region Cold Call 3/4-Bet
+
+        [ProtoMember(342)]
+        protected int didColdCall3Bet;
+
+        [ProtoMember(343)]
+        protected int couldColdCall3Bet;
+
+        public override decimal ColdCallThreeBet => GetPercentage(didColdCall3Bet, couldColdCall3Bet);
+
+        [ProtoMember(344)]
+        protected int didColdCall4Bet;
+
+        [ProtoMember(345)]
+        protected int couldColdCall4Bet;
+
+        public override decimal ColdCallFourBet => GetPercentage(didColdCall4Bet, couldColdCall4Bet);
+
+        #endregion
+
+        #region Check River on BX Line
+
+        [ProtoMember(346)]
+        protected int didCheckRiverOnBXLine;
+
+        [ProtoMember(347)]
+        protected int couldCheckRiverOnBXLine;
+
+        public override decimal CheckRiverOnBXLine => GetPercentage(didCheckRiverOnBXLine, couldCheckRiverOnBXLine);
+
+        #endregion
+
+        #region Call 3-Bet IP/OOP
+
+        [ProtoMember(348)]
+        protected int call3BetIP;
+
+        [ProtoMember(349)]
+        protected int faced3BetIP;
+
+        public override decimal Call3BetIP => GetPercentage(call3BetIP, faced3BetIP);
+
+        [ProtoMember(350)]
+        protected int call3BetOOP;
+
+        [ProtoMember(351)]
+        protected int faced3BetOOP;
+
+        public override decimal Call3BetOOP => GetPercentage(call3BetOOP, faced3BetOOP);
+
+        #endregion
+
         #endregion
 
         #region overridden methods
@@ -3254,6 +3306,11 @@ namespace Model.Data
             call4BetOOP += statistic.Call4BetOOP;
             faced4BetOOP += statistic.Faced4BetOOP;
 
+            call3BetIP += statistic.Call3BetIP;
+            faced3BetIP += statistic.Faced3BetIP;
+            call3BetOOP += statistic.Call3BetOOP;
+            faced3BetOOP += statistic.Faced3BetOOP;
+
             totalOverCallSRP += statistic.TotalOverCallSRP;
             couldTotalOverCallSRP += statistic.CouldTotalOverCallSRP;
 
@@ -3288,6 +3345,14 @@ namespace Model.Data
             couldDoubleBarrel += statistic.CouldDoubleBarrel;
             didTripleBarrel += statistic.DidTripleBarrel;
             couldTripleBarrel += statistic.CouldTripleBarrel;
+
+            didColdCall3Bet += statistic.DidColdCall3Bet;
+            couldColdCall3Bet += statistic.CouldColdCall3Bet;
+            didColdCall4Bet += statistic.DidColdCall4Bet;
+            couldColdCall4Bet += statistic.CouldColdCall4Bet;
+
+            didCheckRiverOnBXLine += statistic.DidCheckRiverOnBXLineVirtual;
+            couldCheckRiverOnBXLine += statistic.CouldCheckRiverOnBXLineVirtual;
 
             Add3BetVsRaiserInPosStatistic(statistic);
             AddFoldTo3BetInPosVs3BetPosStatistic(statistic);
@@ -3423,6 +3488,11 @@ namespace Model.Data
             call4BetOOP = 0;
             faced4BetOOP = 0;
 
+            call3BetIP = 0;
+            faced3BetIP = 0;
+            call3BetOOP = 0;
+            faced3BetOOP = 0;
+
             totalOverCallSRP = 0;
             couldTotalOverCallSRP = 0;
 
@@ -3457,6 +3527,14 @@ namespace Model.Data
             couldDoubleBarrel = 0;
             didTripleBarrel = 0;
             couldTripleBarrel = 0;
+
+            didColdCall3Bet = 0;
+            couldColdCall3Bet = 0;
+            didColdCall4Bet = 0;
+            couldColdCall4Bet = 0;
+
+            didCheckRiverOnBXLine = 0;
+            couldCheckRiverOnBXLine = 0;
 
             Clean3BetVsRaiserInPos();
             CleanFoldTo3BetInPosVs3BetPos();
@@ -3498,8 +3576,10 @@ namespace Model.Data
             positionCouldSqueeze?.Add(indicator.positionCouldSqueeze);
             positionCall4Bet?.Add(indicator.positionCall4Bet);
             positionFaced4Bet?.Add(indicator.positionFaced4Bet);
-            positionDidOpenLimp?.Add(indicator.positionFaced4Bet);
-            positionCouldOpenLimp?.Add(indicator.positionFaced4Bet);
+            positionDidOpenLimp?.Add(indicator.positionDidOpenLimp);
+            positionCouldOpenLimp?.Add(indicator.positionCouldOpenLimp);
+            positionCall3Bet?.Add(indicator.positionCall3Bet);
+            positionFaced3Bet?.Add(indicator.positionFaced3Bet);
 
             if (gameNumberMax < indicator.gameNumberMax)
             {
@@ -3631,6 +3711,11 @@ namespace Model.Data
             call4BetOOP += indicator.call4BetOOP;
             faced4BetOOP += indicator.faced4BetOOP;
 
+            call3BetIP += indicator.call3BetIP;
+            faced3BetIP += indicator.faced3BetIP;
+            call3BetOOP += indicator.call3BetOOP;
+            faced3BetOOP += indicator.faced3BetOOP;
+
             totalOverCallSRP += indicator.totalOverCallSRP;
             couldTotalOverCallSRP += indicator.couldTotalOverCallSRP;
 
@@ -3665,6 +3750,14 @@ namespace Model.Data
             couldDoubleBarrel += indicator.couldDoubleBarrel;
             didTripleBarrel += indicator.didTripleBarrel;
             couldTripleBarrel += indicator.couldTripleBarrel;
+
+            didColdCall3Bet += indicator.didColdCall3Bet;
+            couldColdCall3Bet += indicator.couldColdCall3Bet;
+            didColdCall4Bet += indicator.didColdCall4Bet;
+            couldColdCall4Bet += indicator.couldColdCall4Bet;
+
+            didCheckRiverOnBXLine += indicator.didCheckRiverOnBXLine;
+            couldCheckRiverOnBXLine += indicator.couldCheckRiverOnBXLine;
 
             Add3BetVsRaiserInPosIndicator(indicator);
             AddFoldTo3BetInPosVs3BetPosIndicator(indicator);

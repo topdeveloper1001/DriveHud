@@ -316,7 +316,7 @@ namespace Model.Solvers
 
                 if (handHistory.GameDescription.TableType.Contains(HandHistories.Objects.GameDescription.TableTypeDescription.ShortDeck))
                 {
-                    deadCards = deadCards.Concat(GetDeadCardsForHoldem6Plus()).ToArray();
+                    deadCards = deadCards.Concat(CardGroup.GetDeadCardsForHoldem6Plus()).ToArray();
                 }
 
                 if (pokerEvalLibLoaded)
@@ -624,11 +624,6 @@ namespace Model.Solvers
             }
 
             pokerEvalLibLoaded = true;
-        }
-
-        private HandHistories.Objects.Cards.Card[] GetDeadCardsForHoldem6Plus()
-        {
-            return CardGroup.Parse("2h2c2d2s3h3c3d3s4h4c4d4s5h5c5d5s");
         }
 
         [DllImport("pokereval.dll", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]

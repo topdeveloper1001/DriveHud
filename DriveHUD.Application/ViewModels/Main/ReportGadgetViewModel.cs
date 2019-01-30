@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.Views;
+using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
@@ -19,12 +20,13 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
+using HandHistories.Parser.Utils.Extensions;
 using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Enums;
 using Model.Events;
 using Model.Events.FilterEvents;
-using Model.Extensions;
+using Model.Export;
 using Model.Filters;
 using Model.Interfaces;
 using Model.Reports;
@@ -33,9 +35,11 @@ using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels
@@ -55,19 +59,23 @@ namespace DriveHUD.Application.ViewModels
 
         #region ICommand
 
-        public ICommand CalculateEquityCommand { get; set; }
+        public ICommand CalculateEquityCommand { get; private set; }
 
-        public ICommand ButtonFilterModelSectionRemove_CommandClick { get; set; }
+        public ICommand ButtonFilterModelSectionRemove_CommandClick { get; private set; }
 
-        public ICommand MakeNoteCommand { get; set; }
+        public ICommand MakeNoteCommand { get; private set; }
 
-        public ICommand DeleteHandCommand { get; set; }
+        public ICommand DeleteHandCommand { get; private set; }
 
-        public ICommand EditTournamentCommand { get; set; }
+        public ICommand EditTournamentCommand { get; private set; }
 
-        public ICommand DeleteTournamentCommand { get; set; }
+        public ICommand DeleteTournamentCommand { get; private set; }
 
-        public ICommand ReportRadioButtonClickCommand { get; set; }
+        public ICommand ReportRadioButtonClickCommand { get; private set; }
+
+        public ICommand ExportSelectedHandsTo3rdPartyCommand { get; private set; }
+
+        public ICommand ExportSelectedReportsTo3rdPartyCommand { get; private set; }
 
         #endregion
 
@@ -82,6 +90,7 @@ namespace DriveHUD.Application.ViewModels
 
             ReportCollection = new RangeObservableCollection<ReportIndicators>();
             FilteredReportSelectedItemStatisticsCollection = new RangeObservableCollection<ReportHandViewModel>();
+            SelectedReportItems = new ObservableCollection<ReportIndicators>();
 
             CalculateEquityCommand = new RelayCommand(ShowCalculateEquityView);
             ButtonFilterModelSectionRemove_CommandClick = new RelayCommand(ButtonFilterModelSectionRemove_OnClick);
@@ -90,6 +99,8 @@ namespace DriveHUD.Application.ViewModels
             EditTournamentCommand = new RelayCommand(EditTournament);
             DeleteTournamentCommand = new RelayCommand(DeleteTournament);
             ReportRadioButtonClickCommand = new RelayCommand(ReportRadioButtonClick);
+            ExportSelectedHandsTo3rdPartyCommand = new RelayCommand(ExportSelectedHandsTo3rdParty);
+            ExportSelectedReportsTo3rdPartyCommand = new RelayCommand(ExportSelectedReportsTo3rdParty);
 
             InitializeFilter();
             UpdateReport();
@@ -129,11 +140,146 @@ namespace DriveHUD.Application.ViewModels
 
         #region ICommand implementation
 
+        private async void ExportSelectedReportsTo3rdParty(object obj)
+        {
+            if (SelectedReportItems == null || SelectedReportItems.Count == 0)
+            {
+                return;
+            }
+
+            try
+            {
+                var exportInfos = SelectedReportItems
+                     .Where(x => x.Statistics != null)
+                     .SelectMany(x => x.Statistics)
+                     .Select(x => new HandExportInfo
+                     {
+                         HandNumber = x.GameNumber,
+                         Site = (EnumPokerSites)x.PokersiteId
+                     })
+                     .ToArray();
+
+                await ExportHandsTo3rdParty(exportInfos);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Failed to export selected reports to 3rd party apps.", e);
+            }
+        }
+
+        private async void ExportSelectedHandsTo3rdParty(object obj)
+        {
+            if (SelectedReportHands == null || SelectedReportHands.Count == 0)
+            {
+                return;
+            }
+
+            try
+            {
+                var exportInfos = SelectedReportHands
+                    .Select(x => new HandExportInfo
+                    {
+                        HandNumber = x.GameNumber,
+                        Site = (EnumPokerSites)x.PokerSiteId
+                    })
+                    .ToArray();
+
+                await ExportHandsTo3rdParty(exportInfos);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Failed to export selected hands to 3rd party apps.", e);
+            }
+        }
+
+        private async Task ExportHandsTo3rdParty(HandExportInfo[] exportInfos)
+        {
+            var folderDialog = new FolderBrowserDialog();
+
+            var result = folderDialog.ShowDialog();
+
+            if (result != DialogResult.OK ||
+                !Directory.Exists(folderDialog.SelectedPath))
+            {
+                return;
+            }
+
+            try
+            {
+                var sites = exportInfos
+                    .GroupBy(x => x.Site)
+                    .Select(x => x.Key)
+                    .ToArray();
+
+                var sitesInInternalFormat = sites
+                    .Where(x => x.IsStoredInInternalFormat())
+                    .ToArray();
+
+                var useCommonExporter = false;
+
+                if (sitesInInternalFormat.Length != 0)
+                {
+                    var notification = new PopupBaseNotification()
+                    {
+                        Title = CommonResourceManager.Instance.GetResourceString("Notifications_ExportHands_ExportAsIPoker"),
+                        CancelButtonCaption = CommonResourceManager.Instance.GetResourceString("Notifications_ExportHands_ExportAsIPokerNo"),
+                        ConfirmButtonCaption = CommonResourceManager.Instance.GetResourceString("Notifications_ExportHands_ExportAsIPokerYes"),
+                        Content = CommonResourceManager.Instance.GetResourceString("Notifications_ExportHands_ExportAsIPokerContent"),
+                        IsDisplayH1Text = true
+                    };
+
+                    PopupRequest.Raise(notification,
+                          confirmation =>
+                          {
+                              useCommonExporter = !confirmation.Confirmed;
+                          });
+                }
+
+                var handExportService = ServiceLocator.Current.GetInstance<IHandExportService>();
+
+                var mainViewModel = App.GetMainViewModel();
+
+                try
+                {
+                    await handExportService.ExportHands(folderDialog.SelectedPath, exportInfos, mainViewModel?.ProgressViewModel.Progress, useCommonExporter);
+                }
+                finally
+                {
+                    if (mainViewModel != null)
+                    {
+                        mainViewModel.ProgressViewModel.IsActive = false;
+                        mainViewModel.ProgressViewModel.Reset();
+                    }
+                }
+
+                if (sitesInInternalFormat.Length != 0 && !useCommonExporter ||
+                    sites.Any(x => x.IsStoredInIPokerFormat()))
+                {
+                    var sitesInIPokerFormat = sitesInInternalFormat.Concat(sites.Where(x => x.IsStoredInIPokerFormat()));
+
+                    RaiseNotification(
+                        string.Format(CommonResourceManager.Instance.GetResourceString("Notifications_ExportHands_SuccessContentInInternalFormat"),
+                            string.Join("/", sitesInIPokerFormat.Select(x => CommonResourceManager.Instance.GetEnumResource(x)))),
+                        CommonResourceManager.Instance.GetResourceString("Notifications_ExportHands_SuccessTitle"));
+
+                    return;
+                }
+
+                RaiseNotification(CommonResourceManager.Instance.GetResourceString("Notifications_ExportHands_SuccessContent"),
+                    CommonResourceManager.Instance.GetResourceString("Notifications_ExportHands_SuccessTitle"));
+            }
+            catch (Exception e)
+            {
+                RaiseNotification(CommonResourceManager.Instance.GetResourceString("Notifications_ExportHands_FailedContent"),
+                    CommonResourceManager.Instance.GetResourceString("Notifications_ExportHands_FailedTitle"));
+
+                throw new DHInternalException(new NonLocalizableString("Failed to export hands to 3rd party."), e);
+            }
+        }
+
         private void ShowCalculateEquityView(object obj)
         {
-            var reportHand = obj as ReportHandViewModel;
-
-            var requestEquityCalculatorEventArgs = reportHand != null ?
+            var requestEquityCalculatorEventArgs = obj is ReportHandViewModel reportHand ?
                 new RequestEquityCalculatorEventArgs(reportHand.GameNumber, (short)reportHand.PokerSiteId) :
                 new RequestEquityCalculatorEventArgs();
 
@@ -147,9 +293,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void MakeNote(object obj)
         {
-            var reportHand = obj as ReportHandViewModel;
-
-            if (reportHand == null)
+            if (!(obj is ReportHandViewModel reportHand))
             {
                 return;
             }
@@ -222,9 +366,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void EditTournament(object obj)
         {
-            var tournament = obj as TournamentReportRecord;
-
-            if (tournament == null)
+            if (!(obj is TournamentReportRecord tournament))
             {
                 return;
             }
@@ -238,9 +380,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void DeleteTournament(object obj)
         {
-            var tournament = obj as TournamentReportRecord;
-
-            if (tournament == null)
+            if (!(obj is TournamentReportRecord tournament))
             {
                 return;
             }
@@ -385,9 +525,8 @@ namespace DriveHUD.Application.ViewModels
 
         private async void LoadOpponentReportHands()
         {
-            var report = ReportSelectedItem as OpponentReportIndicators;
-
-            if (report == null || report.HasAllHands || report.ReportHands.Count >= filterAmountDictionarySelectedItem)
+            if (!(ReportSelectedItem is OpponentReportIndicators report) || report.HasAllHands ||
+                report.ReportHands.Count >= filterAmountDictionarySelectedItem)
             {
                 FilterReportSelectedItemStatisticsCollection();
                 return;
@@ -498,7 +637,6 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 SetProperty(ref reportSelectedItemStat, value);
-
             }
         }
 
@@ -536,6 +674,20 @@ namespace DriveHUD.Application.ViewModels
                 {
                     ReportSelectedItemStatisticsCollection = new ObservableCollection<ReportHandViewModel>();
                 }
+            }
+        }
+
+        private ObservableCollection<ReportIndicators> selectedReportItems;
+
+        public ObservableCollection<ReportIndicators> SelectedReportItems
+        {
+            get
+            {
+                return selectedReportItems;
+            }
+            private set
+            {
+                SetProperty(ref selectedReportItems, value);
             }
         }
 

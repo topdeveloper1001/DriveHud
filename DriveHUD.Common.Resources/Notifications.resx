@@ -141,6 +141,33 @@
   <data name="Notifications_DeleteTournament_Title" xml:space="preserve">
     <value>Delete tournament</value>
   </data>
+  <data name="Notifications_ExportHands_ExportAsIPoker" xml:space="preserve">
+    <value>Export as IPoker hand history format</value>
+  </data>
+  <data name="Notifications_ExportHands_ExportAsIPokerContent" xml:space="preserve">
+    <value>Some of selected hands are stored in DH format. This format isn't supported by other databases, but these hands can be converted into IPoker hand history format. Do you want to convert them?</value>
+  </data>
+  <data name="Notifications_ExportHands_ExportAsIPokerNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Notifications_ExportHands_ExportAsIPokerYes" xml:space="preserve">
+    <value>Convert</value>
+  </data>
+  <data name="Notifications_ExportHands_FailedContent" xml:space="preserve">
+    <value>Failed to export hands. Please check logs or contact support.</value>
+  </data>
+  <data name="Notifications_ExportHands_FailedTitle" xml:space="preserve">
+    <value>Export failed!</value>
+  </data>
+  <data name="Notifications_ExportHands_SuccessContent" xml:space="preserve">
+    <value>Hands have been successfully exported! </value>
+  </data>
+  <data name="Notifications_ExportHands_SuccessContentInInternalFormat" xml:space="preserve">
+    <value>Hands have been successfully exported! {0} hands exported as Ipoker hand history format.</value>
+  </data>
+  <data name="Notifications_ExportHands_SuccessTitle" xml:space="preserve">
+    <value>Successfully exported!</value>
+  </data>
   <data name="Notifications_HudLayout_DeleteHudCancel" xml:space="preserve">
     <value>Cancel</value>
   </data>

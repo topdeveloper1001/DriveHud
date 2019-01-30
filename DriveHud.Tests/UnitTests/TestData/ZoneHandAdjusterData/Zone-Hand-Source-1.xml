@@ -1,0 +1,53 @@
+<session sessioncode="0">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.10/$0.25</gametype>
+		<tablename>Zone Poker - Bengals</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2018-02-06 00:13:19</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>$0+$0</buyin>
+		<totalbuyin>$0</totalbuyin>
+		<win>0</win>
+	</general>
+	<game gamecode="3564000452">
+		<general>
+			<startdate>2018-02-06 01:56:26</startdate>
+			<players>
+				<player seat="1" name="P1_119136YP" chips="34.44" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="2" name="P2_440541XK" chips="7.24" dealer="0" win="0" bet="0.1" rebuy="0" addon="0" />
+				<player seat="3" name="P3_911042ER" chips="25" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
+				<player seat="4" name="P4_783018DF" chips="24.89" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="5" name="P5_152583WQ" chips="34.49" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="6" name="Hero" chips="40.21" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="P2_440541XK" type="1" sum="0.1" cards="[cards]" />
+			<action no="2" player="P3_911042ER" type="2" sum="0.25" cards="[cards]" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="P1_119136YP">X X</cards>
+			<cards type="Pocket" player="P2_440541XK">X X</cards>
+			<cards type="Pocket" player="P3_911042ER">X X</cards>
+			<cards type="Pocket" player="P4_783018DF">X X</cards>
+			<cards type="Pocket" player="P5_152583WQ">X X</cards>
+			<cards type="Pocket" player="Hero">C5 D9</cards>
+			<action no="3" player="P4_783018DF" type="0" sum="0" cards="" />
+			<action no="4" player="P5_152583WQ" type="0" sum="0" cards="" />
+			<action no="5" player="P1_119136YP" type="0" sum="0" cards="" />
+			<action no="6" player="Hero" type="0" sum="0" cards="" />
+			<action no="7" player="Hero" type="0" sum="0" cards="" />
+		</round>
+	</game>
+</session>

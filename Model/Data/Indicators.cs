@@ -725,22 +725,6 @@ namespace Model.Data
             }
         }
 
-        public virtual decimal ColdCallThreeBet
-        {
-            get
-            {
-                return GetPercentage(Source.DidColdCallThreeBet, Source.CouldColdCallThreeBet);
-            }
-        }
-
-        public virtual decimal ColdCallFourBet
-        {
-            get
-            {
-                return GetPercentage(Source.DidColdCallFourBet, Source.CouldColdCallFourBet);
-            }
-        }
-
         public virtual decimal ColdCallVsBtnOpen
         {
             get
@@ -1811,6 +1795,13 @@ namespace Model.Data
         [ProtoMember(25)]
         protected PositionalStat positionCouldOpenLimp = new PositionalStat();
 
+
+        [ProtoMember(26)]
+        protected PositionalStat positionCall3Bet = new PositionalStat();
+
+        [ProtoMember(27)]
+        protected PositionalStat positionFaced3Bet = new PositionalStat();
+
         #endregion
 
         #region Raise Limpers
@@ -2241,6 +2232,8 @@ namespace Model.Data
 
         #region Call 4-Bet positional 
 
+        public virtual decimal Call4Bet => GetPercentage(Source.Calledfourbetpreflop, Source.Facedfourbetpreflop);
+
         public virtual decimal Call4BetIP => GetPercentage(Statistics.Sum(x => x.Call4BetIP), Statistics.Sum(x => x.Faced4BetIP));
 
         public virtual decimal Call4BetOOP => GetPercentage(Statistics.Sum(x => x.Call4BetOOP), Statistics.Sum(x => x.Faced4BetOOP));
@@ -2359,6 +2352,44 @@ namespace Model.Data
 
         #endregion
 
+        #region Cold Call 3/4-Bet
+
+        public virtual decimal ColdCallThreeBet
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.DidColdCall3Bet), Statistics.Sum(x => x.CouldColdCall3Bet));
+            }
+        }
+
+        public virtual decimal ColdCallFourBet
+        {
+            get
+            {
+                return GetPercentage(Statistics.Sum(x => x.DidColdCall4Bet), Statistics.Sum(x => x.CouldColdCall4Bet));
+            }
+        }
+
+        #endregion
+
+        #region Call 3-Bet
+
+        public virtual decimal Call3BetIP => GetPercentage(Statistics.Sum(x => x.Call3BetIP), Statistics.Sum(x => x.Faced3BetIP));
+
+        public virtual decimal Call3BetOOP => GetPercentage(Statistics.Sum(x => x.Call3BetOOP), Statistics.Sum(x => x.Faced3BetOOP));
+
+        public virtual decimal Call3BetEP => GetPercentage(positionCall3Bet?.EP, positionFaced3Bet?.EP);
+
+        public virtual decimal Call3BetMP => GetPercentage(positionCall3Bet?.MP, positionFaced3Bet?.MP);
+
+        public virtual decimal Call3BetCO => GetPercentage(positionCall3Bet?.CO, positionFaced3Bet?.CO);
+
+        public virtual decimal Call3BetBTN => GetPercentage(positionCall3Bet?.BN, positionFaced3Bet?.BN);
+
+        public virtual decimal Call3BetSB => GetPercentage(positionCall3Bet?.SB, positionFaced3Bet?.SB);        
+
+        #endregion
+
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
         {
             foreach (var statistic in statistics)
@@ -2416,10 +2447,10 @@ namespace Model.Data
             positionLimpPossible?.Add(statistic.Position, statistic.LimpPossible);
             positionRaiseLimpers?.Add(statistic.Position, statistic.IsRaisedLimpers);
             positionCouldRaiseLimpers?.Add(statistic.Position, statistic.CouldRaiseLimpers);
-            positionDidColdCallThreeBet?.Add(statistic.Position, statistic.DidColdCallThreeBet);
-            positionCouldColdCallThreeBet?.Add(statistic.Position, statistic.CouldColdCallThreeBet);
-            positionDidColdCallFourBet?.Add(statistic.Position, statistic.DidColdCallFourBet);
-            positionCouldColdCallFourBet?.Add(statistic.Position, statistic.CouldColdCallFourBet);
+            positionDidColdCallThreeBet?.Add(statistic.Position, statistic.DidColdCall3Bet);
+            positionCouldColdCallThreeBet?.Add(statistic.Position, statistic.CouldColdCall3Bet);
+            positionDidColdCallFourBet?.Add(statistic.Position, statistic.DidColdCall4Bet);
+            positionCouldColdCallFourBet?.Add(statistic.Position, statistic.CouldColdCall4Bet);
             positionOpenMinraiseUOPFR?.Add(statistic.Position, statistic.OpenMinraise);
             positionDidSqueeze?.Add(statistic.Position, statistic.Didsqueeze);
             positionCouldSqueeze?.Add(statistic.Position, statistic.Couldsqueeze);
@@ -2427,6 +2458,8 @@ namespace Model.Data
             positionFaced4Bet?.Add(statistic.Position, statistic.Facedfourbetpreflop);
             positionDidOpenLimp?.Add(statistic.Position, statistic.DidOpenLimp);
             positionCouldOpenLimp?.Add(statistic.Position, statistic.CouldOpenLimp);
+            positionCall3Bet?.Add(statistic.Position, statistic.Calledthreebetpreflop);
+            positionFaced3Bet?.Add(statistic.Position, statistic.Facedthreebetpreflop);
         }
 
         protected virtual void ResetPositionalStats()
@@ -2455,6 +2488,8 @@ namespace Model.Data
             positionFaced4Bet?.Reset();
             positionDidOpenLimp?.Reset();
             positionCouldOpenLimp?.Reset();
+            positionCall3Bet?.Reset();
+            positionFaced3Bet?.Reset();
         }
 
         #region Helpers

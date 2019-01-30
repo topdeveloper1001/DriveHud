@@ -717,8 +717,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = CheckRiverOnBXLine,
-                    Occurred = Source.DidCheckRiverOnBXLine,
-                    CouldOccurred = Source.CouldCheckRiverOnBXLine
+                    Occurred = didCheckRiverOnBXLine,
+                    CouldOccurred = couldCheckRiverOnBXLine
                 };
             }
         }
@@ -3783,6 +3783,19 @@ namespace Model.Data
 
         #region Call 4-Bet positional 
 
+        public virtual StatDto Call4BetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call4Bet,
+                    Occurred = Source.Calledfourbetpreflop,
+                    CouldOccurred = Source.Facedfourbetpreflop
+                };
+            }
+        }
+
         public virtual StatDto Call4BetIPObject
         {
             get
@@ -4275,6 +4288,101 @@ namespace Model.Data
 
         #endregion
 
+        #region Call 3-Bet positional 
+
+        public virtual StatDto Call3BetIPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call3BetIP,
+                    Occurred = call3BetIP,
+                    CouldOccurred = faced3BetIP
+                };
+            }
+        }
+
+        public virtual StatDto Call3BetOOPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call3BetOOP,
+                    Occurred = call3BetOOP,
+                    CouldOccurred = faced3BetOOP
+                };
+            }
+        }
+
+        public virtual StatDto Call3BetEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call3BetEP,
+                    Occurred = positionCall3Bet?.EP ?? 0,
+                    CouldOccurred = positionFaced3Bet?.EP ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto Call3BetMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call3BetMP,
+                    Occurred = positionCall3Bet?.MP ?? 0,
+                    CouldOccurred = positionFaced3Bet?.MP ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto Call3BetCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call3BetCO,
+                    Occurred = positionCall3Bet?.CO ?? 0,
+                    CouldOccurred = positionFaced3Bet?.CO ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto Call3BetBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call3BetBTN,
+                    Occurred = positionCall3Bet?.BN ?? 0,
+                    CouldOccurred = positionFaced3Bet?.BN ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto Call3BetSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = Call3BetSB,
+                    Occurred = positionCall3Bet?.SB ?? 0,
+                    CouldOccurred = positionFaced3Bet?.SB ?? 0
+                };
+            }
+        }    
+
+        #endregion
+
         #endregion
 
         public virtual StatDto CheckRaiseFlopAsPFRObject
@@ -4686,8 +4794,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCallThreeBet,
-                    Occurred = Source.DidColdCallThreeBet,
-                    CouldOccurred = Source.CouldColdCallThreeBet
+                    Occurred = didColdCall3Bet,
+                    CouldOccurred = couldColdCall3Bet
                 };
             }
         }
@@ -4699,8 +4807,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = ColdCallFourBet,
-                    Occurred = Source.DidColdCallFourBet,
-                    CouldOccurred = Source.CouldColdCallFourBet
+                    Occurred = didColdCall4Bet,
+                    CouldOccurred = couldColdCall4Bet
                 };
             }
         }

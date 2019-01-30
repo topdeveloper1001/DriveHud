@@ -14,6 +14,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -391,24 +392,19 @@ namespace DriveHUD.Importers.BetOnline
         /// <returns>Client process if exist, otherwise - null</returns>
         private Process GetPokerClientProcess()
         {
+            var importerService = ServiceLocator.Current.GetInstance<IImporterService>();
+            var betOnlineCatcher = importerService.GetRunningImporter<IBetOnlineCatcher>();
+
+            if (betOnlineCatcher != null)
+            {
+                return betOnlineCatcher.PokerClientProcess;
+            }
+
             var processes = Process.GetProcesses();
 
-            var pokerClientProcess = processes.FirstOrDefault(x => x.ProcessName.Equals(ProcessName));
+            var pokerClientProcess = processes.FirstOrDefault(x => x.ProcessName.Equals(ProcessName, StringComparison.OrdinalIgnoreCase));
 
             return pokerClientProcess;
-        }
-
-        /// <summary>
-        /// Get client process
-        /// </summary>
-        /// <returns>Client process if exist, otherwise - null</returns>
-        protected virtual Process[] GetPokerClientProcesses()
-        {
-            var processes = Process.GetProcesses();
-
-            var pokerClientProcesses = processes.Where(x => x.ProcessName.Equals(ProcessName)).ToArray();
-
-            return pokerClientProcesses;
         }
 
         /// Raise process stopped event

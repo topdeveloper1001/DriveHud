@@ -19,6 +19,6 @@ namespace Model.Solvers
     {
         Dictionary<string, EquityData> CalculateEquity(HandHistory handHistory);
 
-        EquitySolverResult[] CalculateEquity(EquitySolverParams equitySolverParams);
+        EquitySolverResult[] CalculateEquity(EquitySolverParams equitySolverParams);        
     }
 }

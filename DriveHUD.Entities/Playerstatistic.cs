@@ -1186,7 +1186,6 @@ namespace DriveHUD.Entities
 
         #endregion
 
-
         #region Workarounds for broken stats
 
         public virtual int FoldedtothreebetpreflopVirtual
@@ -2228,7 +2227,7 @@ namespace DriveHUD.Entities
 
         #endregion
 
-        #region Call 4-Bet positional 
+        #region Call 4-Bet         
 
         public virtual int Call4BetIP => Calledfourbetpreflop == 1 && PreflopIP == 1 ? 1 : 0;
 
@@ -2422,6 +2421,59 @@ namespace DriveHUD.Entities
         public virtual int DidTripleBarrel => DidDoubleBarrel == 1 && RiverActions.StartsWith("B") ? 1 : 0;
 
         public virtual int CouldTripleBarrel => DidDoubleBarrel == 1 && CouldRiverBet == 1 ? 1 : 0;
+
+        #endregion
+
+        #region Cold call 3/4-Bet
+
+        public virtual int DidColdCall3Bet => FacingPreflop == EnumFacingPreflop.ThreeBet && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CouldColdCall3Bet => FacingPreflop == EnumFacingPreflop.ThreeBet ? 1 : 0;
+
+        public virtual int DidColdCall4Bet => FacingPreflop == EnumFacingPreflop.FourBet && PreflopActions.StartsWith("C") ? 1 : 0;
+
+        public virtual int CouldColdCall4Bet => FacingPreflop == EnumFacingPreflop.FourBet ? 1 : 0;
+
+        #endregion
+
+        #region Check River on BX Line
+
+        public virtual int DidCheckRiverOnBXLineVirtual => FlopActions.StartsWith("B") && TurnActions.StartsWith("X") && RiverActions.StartsWith("X") ? 1 : 0;
+
+        public virtual int CouldCheckRiverOnBXLineVirtual => FlopActions.StartsWith("B") && TurnActions.StartsWith("X") &&
+            CouldRiverBet == 1 ? 1 : 0;
+
+        #endregion
+
+        #region Call 3-Bet stats
+
+        public virtual int Call3BetIP => Calledthreebetpreflop == 1 && PreflopIP == 1 ? 1 : 0;
+
+        public virtual int Faced3BetIP => Facedthreebetpreflop == 1 && PreflopIP == 1 ? 1 : 0;
+
+        public virtual int Call3BetOOP => Calledthreebetpreflop == 1 && PreflopIP == 0 ? 1 : 0;
+
+        public virtual int Faced3BetOOP => Facedthreebetpreflop == 1 && PreflopIP == 0 ? 1 : 0;
+
+        public virtual int Call3BetEP => Calledthreebetpreflop == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int Faced3BetEP => Facedthreebetpreflop == 1 && Position.IsEPPosition() ? 1 : 0;
+
+        public virtual int Call3BetMP => Calledthreebetpreflop == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int Faced3BetMP => Facedthreebetpreflop == 1 && Position.IsMPPosition() ? 1 : 0;
+
+        public virtual int Call3BetCO => Calledthreebetpreflop == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int Faced3BetCO => Facedthreebetpreflop == 1 && Position.IsCOPosition() ? 1 : 0;
+
+        public virtual int Call3BetBTN => Calledthreebetpreflop == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int Faced3BetBTN => Facedthreebetpreflop == 1 && Position.IsBTNPosition() ? 1 : 0;
+
+        public virtual int Call3BetSB => Calledthreebetpreflop == 1 && Position.IsSBPosition() ? 1 : 0;
+
+        public virtual int Faced3BetSB => Facedthreebetpreflop == 1 && Position.IsSBPosition() ? 1 : 0;      
 
         #endregion
 

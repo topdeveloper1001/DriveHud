@@ -174,6 +174,11 @@ namespace DriveHUD.Importers.PokerBaazi
         /// <param name="response">Response to process</param>
         private void ProcessInitResponse(PokerBaaziInitResponse response)
         {
+            if (!string.IsNullOrEmpty(response.TournamentName))
+            {
+                response.TournamentName = response.TournamentName.Trim();
+            }
+
             if (!roomsInitResponses.ContainsKey(response.RoomId))
             {
                 roomsInitResponses.Add(response.RoomId, response);
@@ -333,7 +338,7 @@ namespace DriveHUD.Importers.PokerBaazi
             var tournamentDescriptor = new TournamentDescriptor
             {
                 StartDate = tournamentDetailsResponse.Details.TournamentStartDate,
-                TournamentName = tournamentDetailsResponse.Details.TournamentName,
+                TournamentName = tournamentDetailsResponse.Details.TournamentName?.Trim(),
                 StartingStack = (int)tournamentDetailsResponse.Details.StartingStake,
                 TotalPlayers = tournamentDetailsResponse.Details.TotalPlayers,
                 TournamentsTags = tournamentDetailsResponse.Details.MaxEntries > 9 ? TournamentsTags.MTT : TournamentsTags.STT,
