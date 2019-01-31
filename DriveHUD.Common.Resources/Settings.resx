@@ -319,6 +319,6 @@
     <value>http://drivehud.com/blog/manual/</value>
   </data>
   <data name="Settings_HudSpecialMode" xml:space="preserve">
-    <value>Enable special HUD mode (don't check until suport asked you to do that)</value>
+    <value>Enable special HUD mode (don't check until support asks you to do that)</value>
   </data>
 </root>

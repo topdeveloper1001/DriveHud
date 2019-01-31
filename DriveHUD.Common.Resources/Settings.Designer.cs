@@ -205,7 +205,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enable special HUD mode (don&apos;t check until suport asked you to do that).
+        ///   Looks up a localized string similar to Enable special HUD mode (don&apos;t check until support asks you to do that).
         /// </summary>
         internal static string Settings_HudSpecialMode {
             get {
