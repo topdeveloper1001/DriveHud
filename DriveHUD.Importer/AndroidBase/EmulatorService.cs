@@ -25,7 +25,7 @@ namespace DriveHUD.Importers.AndroidBase
 {
     internal class EmulatorService : IEmulatorService
     {
-        private const int exitTimeout = 5000;
+        private const int exitTimeout = 7000;
 
         private readonly Dictionary<int, TableWindow> windows = new Dictionary<int, TableWindow>();
 
@@ -33,7 +33,7 @@ namespace DriveHUD.Importers.AndroidBase
         {
             new NoxEmulatorProvider(),
             new MemuEmulatorProvider(),
-            new MomoEmulatorProvider()            
+            new MomoEmulatorProvider()
         };
 
         private string logger;
@@ -115,6 +115,15 @@ namespace DriveHUD.Importers.AndroidBase
                 var adb = Path.Combine(Path.GetDirectoryName(emulatorPath), provider.GetAdbLocation());
 
                 var devices = GetAdbDevices(adb);
+
+                var expectedNumberOfDevices = provider.GetNumberOfRunningInstances();
+
+                if (expectedNumberOfDevices > devices.Length)
+                {
+                    LogProvider.Log.Warn(this, $"Expected number of devices {expectedNumberOfDevices} doesn't match actual number {devices}. Trying to kill server and run command again.");
+                    AdbKillServer(adb);
+                    devices = GetAdbDevices(adb);
+                }
 
                 var result = new List<string>();
 
@@ -202,7 +211,7 @@ namespace DriveHUD.Importers.AndroidBase
                         return new string[0];
                     }
 
-                    foreach (var line in outputLines.Skip(1))
+                    foreach (var line in outputLines.Where(x => !x.StartsWith("*", StringComparison.OrdinalIgnoreCase)).Skip(1))
                     {
                         if (line.ContainsIgnoreCase("offline"))
                         {
@@ -229,6 +238,32 @@ namespace DriveHUD.Importers.AndroidBase
             }
 
             return new string[0];
+        }
+
+        private void AdbKillServer(string adb)
+        {
+            try
+            {
+                var processInfo = new ProcessStartInfo
+                {
+                    FileName = adb,
+                    Arguments = "kill-server",
+                    CreateNoWindow = true,
+                    UseShellExecute = false
+                };
+
+                using (var process = new Process())
+                {
+                    process.StartInfo = processInfo;
+                    process.Start();
+
+                    process.WaitForExit(exitTimeout);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Failed to execute kill server command.", e);
+            }
         }
 
         private class TableWindow
