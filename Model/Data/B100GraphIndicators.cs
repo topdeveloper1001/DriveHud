@@ -17,7 +17,27 @@ namespace Model.Data
 {
     public class B100GraphIndicators : LightIndicators
     {
-        private const int approximationRange = 5000;
+        public B100GraphIndicators(int totalHand = 0)
+        {
+            if (totalHand < 100)
+            {
+                approximationRange = 0;
+            }
+            else if (totalHand < 1000)
+            {
+                approximationRange = 100;
+            }
+            else if (totalHand < 10000)
+            {
+                approximationRange = 1000;
+            }
+            else
+            {
+                approximationRange = 5000;
+            }
+        }
+
+        private int approximationRange;
 
         public override decimal BB
         {
