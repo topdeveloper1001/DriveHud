@@ -68,6 +68,9 @@ namespace DriveHUD.Application.ViewModels.Hud
         [XmlIgnore, ProtoMember(11)]
         public string PreloadText { get; set; }
 
+        [XmlIgnore, ProtoMember(12)]
+        public bool IsSpecialMode { get; set; }
+
         public override string ToString()
         {
             try

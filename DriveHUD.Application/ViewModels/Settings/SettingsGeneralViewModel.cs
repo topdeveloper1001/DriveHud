@@ -136,6 +136,19 @@ namespace DriveHUD.Application.ViewModels.Settings
             }
         }
 
+        public bool HudSpecialMode
+        {
+            get { return SettingsModel?.HudSpecialMode ?? false; }
+            set
+            {
+                if (SettingsModel != null && SettingsModel.HudSpecialMode != value)
+                {
+                    SettingsModel.HudSpecialMode = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         public int TimeZoneOffset
         {
             get { return SettingsModel?.TimeZoneOffset ?? 0; }

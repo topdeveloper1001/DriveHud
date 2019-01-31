@@ -552,7 +552,9 @@ namespace DriveHUD.Application.ViewModels
                     LayoutName = activeLayout.Name,
                     AvailableLayouts = new List<string>(),
                     PreloadMode = true,
-                    PreloadText = e.LoadingText
+                    PreloadText = e.LoadingText,
+                    IsSpecialMode = gameInfo.PokerSite == EnumPokerSites.Adda52 ||
+                        ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.HudSpecialMode
                 };
 
                 byte[] serialized;
@@ -699,7 +701,9 @@ namespace DriveHUD.Application.ViewModels
                     GameNumber = gameInfo.GameNumber,
                     GameType = gameInfo.EnumGameType,
                     LayoutName = activeLayout.Name,
-                    AvailableLayouts = availableLayouts
+                    AvailableLayouts = availableLayouts,
+                    IsSpecialMode = gameInfo.PokerSite == EnumPokerSites.Adda52 ||
+                        ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.HudSpecialMode
                 };
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();

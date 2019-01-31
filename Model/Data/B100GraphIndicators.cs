@@ -16,11 +16,13 @@ namespace Model.Data
 {
     public class B100GraphIndicators : LightIndicators
     {
+        private const int approximationRange = 5000;
+
         public override decimal BB
         {
             get
             {
-                var totalhands = (statisticCount < 100 ? 100 : statisticCount) / 100m;
+                var totalhands = (statisticCount < approximationRange ? approximationRange : statisticCount) / 100m;
                 return Math.Round(GetDivisionResult(netWonByBigBlind, totalhands), 2);
             }
         }

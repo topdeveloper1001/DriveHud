@@ -205,6 +205,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable special HUD mode (don&apos;t check until suport asked you to do that).
+        /// </summary>
+        internal static string Settings_HudSpecialMode {
+            get {
+                return ResourceManager.GetString("Settings_HudSpecialMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://www.acepokerdrills.com/hud-store.
         /// </summary>
         internal static string Settings_HudStoreService {
