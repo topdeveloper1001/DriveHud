@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using System;
+using DriveHUD.Entities;
 
 namespace Model.Data
 {
@@ -25,6 +26,14 @@ namespace Model.Data
                 var totalhands = (statisticCount < approximationRange ? approximationRange : statisticCount) / 100m;
                 return Math.Round(GetDivisionResult(netWonByBigBlind, totalhands), 2);
             }
+        }
+
+        public override decimal TotalHands => statisticCount;
+
+        public override void AddStatistic(Playerstatistic statistic)
+        {
+            statisticCount++;
+            netWonByBigBlind += GetDivisionResult(statistic.NetWon, statistic.BigBlind);
         }
     }
 }

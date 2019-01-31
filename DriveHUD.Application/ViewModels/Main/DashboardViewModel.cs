@@ -154,7 +154,7 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            UpdateFilteredData();
+            UpdateFilteredData();            
 
             MoneyWonGraphViewModel?.Update();
             BB100GraphViewModel?.Update();
