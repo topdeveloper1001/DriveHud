@@ -42,7 +42,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     {
         protected string LayoutFileExtension;
         protected string MappingsFileName;
-        private readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Cash", "Vertical_1", "Horizontal", "Winamax" };
+        protected readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Cash", "Vertical_1", "Horizontal", "Winamax" };
 
         private static ReaderWriterLockSlim locker = new ReaderWriterLockSlim();
         private readonly IEventAggregator eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
@@ -73,7 +73,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <summary>
         /// Saves the mapping of the layout to the file on the default path
         /// </summary>
-        public void SaveLayoutMappings()
+        public virtual void SaveLayoutMappings()
         {
             var layoutsDirectory = GetLayoutsDirectory();
             var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
@@ -661,7 +661,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 if (!stickersStatistics.TryGetValue(sticker.Name, out HudStickerIndicators statistics) ||
                     statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0 ||
-                    !IsInRange(hudElement, sticker.Stats, statistics))
+                    !IsInRange(sticker.Stats, statistics))
                 {
                     continue;
                 }
@@ -705,7 +705,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="name">Name of layout to get</param>
         /// <returns>Layout</returns>
-        public HudLayoutInfoV2 GetLayout(string name)
+        public virtual HudLayoutInfoV2 GetLayout(string name)
         {
             var mapping = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
             return LoadLayout(mapping);
@@ -999,7 +999,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="fileName">File with layout</param>
         /// <returns>Mappings of layout</returns>
-        protected HudLayoutMappings LoadLayoutMappings(string fileName)
+        protected virtual HudLayoutMappings LoadLayoutMappings(string fileName)
         {
             if (!File.Exists(fileName))
             {
@@ -1150,7 +1150,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="tableType">Table type</param>
         /// <returns>Predefined <see cref="HudLayoutInfoV2"/> layout</returns>
-        private HudLayoutInfoV2 GetPredefinedLayout(EnumTableType tableType, string postfix)
+        protected HudLayoutInfoV2 GetPredefinedLayout(EnumTableType tableType, string postfix)
         {
             var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
 
@@ -1180,7 +1180,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Gets the predefined mappings
         /// </summary>
         /// <returns></returns>
-        private HudLayoutMappings GetPredefinedMappings()
+        protected HudLayoutMappings GetPredefinedMappings()
         {
             var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
 
@@ -1238,7 +1238,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     matchRatios.Sum(x => x.Ratio), matchRatios.Sum(x => x.ExtraMatchRatio));
         }
 
-        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats, HudLightIndicators source)
+        private bool IsInRange(IEnumerable<BaseHudRangeStat> rangeStats, HudLightIndicators source)
         {
             if (!rangeStats.Any(x => x.High.HasValue || x.Low.HasValue))
             {
@@ -1252,14 +1252,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     continue;
                 }
 
-                var stat = hudElement.StatInfoCollection.FirstOrDefault(x => x.Stat == rangeStat.Stat);
-
-                if (stat == null)
-                {
-                    return false;
-                }
-
-                var propertyName = StatsProvider.GetStatProperyName(stat.Stat);
+                var propertyName = StatsProvider.GetStatProperyName(rangeStat.Stat);
 
                 var currentStat = new StatInfo();
                 currentStat.AssignStatInfoValues(source, propertyName);
@@ -1281,7 +1274,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="hudLayoutInfo">Layout to save</param>
         /// <returns>Path to the saved layout</returns>
-        private string InternalSave(HudLayoutInfoV2 hudLayoutInfo)
+        protected virtual string InternalSave(HudLayoutInfoV2 hudLayoutInfo)
         {
             Check.ArgumentNotNull(() => hudLayoutInfo);
 

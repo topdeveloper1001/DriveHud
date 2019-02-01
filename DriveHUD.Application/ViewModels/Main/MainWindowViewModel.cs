@@ -648,9 +648,9 @@ namespace DriveHUD.Application.ViewModels
 
                 if (gameInfo.PokerSite != EnumPokerSites.PokerStars && activeLayout != null)
                 {
-                    var stickers = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
+                    var stickerFilters = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
 
-                    if (stickers.Count > 0)
+                    if (stickerFilters != null && stickerFilters.Count > 0)
                     {
                         var playersStickersCacheData = (from player in players
                                                         let playerItem = new PlayerCollectionItem
@@ -667,7 +667,7 @@ namespace DriveHUD.Application.ViewModels
                                                             Player = playerItem,
                                                             Layout = activeLayout.Name,
                                                             Statistic = lastHandStatistic,
-                                                            StickerFilters = stickers,
+                                                            StickerFilters = stickerFilters,
                                                             IsHero = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerItem)?.IsHero ?? false
                                                         }).ToArray();
 
