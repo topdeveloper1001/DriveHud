@@ -244,13 +244,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                 var playerNoteView = new PlayerNoteView(playerNoteViewModel);
                 playerNoteView.ShowDialog();
-
-                if (!playerNoteViewModel.HasNotes)
-                {
-                    return;
-                }
-
-                hudToolViewModel.Parent.NoteToolTip = playerNoteViewModel.Note;
+           
+                hudToolViewModel.Parent.NoteToolTip = playerNoteViewModel.HasNotes ? playerNoteViewModel.Note : string.Empty;
             };
 
             var contextMenu = new RadContextMenu();

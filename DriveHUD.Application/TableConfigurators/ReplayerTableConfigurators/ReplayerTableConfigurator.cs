@@ -305,7 +305,6 @@ namespace DriveHUD.Application.TableConfigurators
 
         private void LoadHUD(HudDragCanvas dgCanvas, ReplayerViewModel viewModel, HudLayoutInfoV2 activeLayout)
         {
-
             var seats = (int)CurrentCapacity;
 
             var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>(ReplayerPokerSite.ToString());
@@ -326,9 +325,9 @@ namespace DriveHUD.Application.TableConfigurators
 
             for (var i = 0; i < seats; i++)
             {
-                var player = viewModel.PlayersCollection[i];
+                var replayerPlayer = viewModel.PlayersCollection[i];
 
-                if (string.IsNullOrEmpty(player.Name))
+                if (string.IsNullOrEmpty(replayerPlayer.Name))
                 {
                     continue;
                 }
@@ -346,15 +345,18 @@ namespace DriveHUD.Application.TableConfigurators
                 var hudElement = hudElementCreator.Create(hudElementCreationInfo);
 
                 if (hudElement == null ||
-                    !playerIndicators.TryGetValue(player.Name, out HudIndicators playerData))
+                    !playerIndicators.TryGetValue(replayerPlayer.Name, out HudIndicators playerData))
                 {
                     continue;
                 }
 
-                hudElement.PlayerName = player.Name;
+                var player = dataService.GetPlayer(replayerPlayer.Name, viewModel.CurrentHand.PokersiteId);
+
+                hudElement.PlayerId = player?.PlayerId ?? 0;
+                hudElement.PlayerName = replayerPlayer.Name;
                 hudElement.TotalHands = playerData.TotalHands;
 
-                var playerNotes = dataService.GetPlayerNotes(player.Name, viewModel.CurrentHand.PokersiteId);
+                var playerNotes = dataService.GetPlayerNotes(player.PlayerId);
                 hudElement.NoteToolTip = NoteBuilder.BuildNote(playerNotes);
                 hudElement.IsXRayNoteVisible = playerNotes.Any(x => x.IsAutoNote);
 

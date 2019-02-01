@@ -186,6 +186,9 @@ namespace DriveHud.Tests.UnitTests
 
             hudElement.SetStatValue(Stat.VPIP, data.VPIP);
             hudElement.SetStatValue(Stat.PFR, data.PFR);
+            hudElement.SetStatValue(Stat.AF, data.AF);
+            hudElement.SetStatValue(Stat.WTSD, data.WTSD);
+            hudElement.SetStatValue(Stat.FoldToCBet, data.FoldToCBet);
             hudElement.SetStatValue(Stat.TotalHands, data.TotalHands);
 
             hudLayoutService.SetPlayerTypeIcon(new[] { hudElement }, layout);
@@ -207,7 +210,10 @@ namespace DriveHud.Tests.UnitTests
                     new PlayerProfileTestData
                     {
                         VPIP = 26.9m,
-                        PFR = 19.2m
+                        PFR = 19.2m,
+                        AF = 1.3m,
+                        WTSD = 25m,
+                        FoldToCBet = 50m
                     },
                     "Standard Reg"
                 ).SetName("Player Profile: Std Reg if not meet req.");
