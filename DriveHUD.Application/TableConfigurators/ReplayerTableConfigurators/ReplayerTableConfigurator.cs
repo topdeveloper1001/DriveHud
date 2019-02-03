@@ -332,6 +332,13 @@ namespace DriveHUD.Application.TableConfigurators
                     continue;
                 }
 
+                var player = dataService.GetPlayer(replayerPlayer.Name, viewModel.CurrentHand.PokersiteId);
+
+                if (player == null)
+                {
+                    continue;
+                }
+
                 var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
 
                 var hudElementCreationInfo = new HudElementViewModelCreationInfo
@@ -350,9 +357,7 @@ namespace DriveHUD.Application.TableConfigurators
                     continue;
                 }
 
-                var player = dataService.GetPlayer(replayerPlayer.Name, viewModel.CurrentHand.PokersiteId);
-
-                hudElement.PlayerId = player?.PlayerId ?? 0;
+                hudElement.PlayerId = player.PlayerId;
                 hudElement.PlayerName = replayerPlayer.Name;
                 hudElement.TotalHands = playerData.TotalHands;
 
