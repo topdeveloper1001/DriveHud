@@ -217,6 +217,37 @@ namespace DriveHud.Tests.UnitTests
                     },
                     "Standard Reg"
                 ).SetName("Player Profile: Std Reg if not meet req.");
+
+            yield return new TestCaseData(
+                "DH: 6-max",
+                new PlayerProfileTestData
+                {
+                    VPIP = 45m,
+                    PFR = 14m,
+                    AF = 2m,
+                    S3Bet = 5.6m
+                },
+                "Whale"
+            ).SetName("Player Profile: Bad LAG if not meet req.");
+
+
+            yield return new TestCaseData(
+                  "DH: 6-max",
+                  new PlayerProfileTestData
+                  {
+                      VPIP = 24.2m,
+                      PFR = 18.2m,
+                      AF = 2,
+                      WTSD = 20,
+                      FoldTo3Bet = 0,
+                      CBet = 33,
+                      WWSF = 60,
+                      AGG = 28.57m,
+                      Steal = 45.45m,
+                      TotalHands = 33
+                  },
+                  "Fish"
+              ).SetName("Player Profile: Fish if not meet req.");
         }
 
         //[Test]
