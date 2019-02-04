@@ -207,7 +207,7 @@ namespace DriveHUD.Importers.Adda52
                 [CashTableKey.From(400, 48000, TableTypeDescription.Regular, GameType.PotLimitOmaha, 6)] = "PLO Short",
                 [CashTableKey.From(600, 120000, TableTypeDescription.Regular, GameType.NoLimitHoldem, 6)] = "Daman Draw",
                 [CashTableKey.From(600, 120000, TableTypeDescription.Regular, GameType.PotLimitOmaha, 6)] = "PLO Score",
-                [CashTableKey.From(1000, 200000, TableTypeDescription.Regular, GameType.PotLimitOmaha, 6)] = "PLO Grande",
+                [CashTableKey.From(1000, 160000, TableTypeDescription.Regular, GameType.PotLimitOmaha, 6)] = "PLO Grande",
                 [CashTableKey.From(1000, 200000, TableTypeDescription.Regular, GameType.NoLimitHoldem, 6)] = "Gujarat Grande",
                 [CashTableKey.From(2000, 400000, TableTypeDescription.Regular, GameType.NoLimitHoldem, 6)] = "Rajasthan Royale",
                 [CashTableKey.From(2000, 400000, TableTypeDescription.Regular, GameType.PotLimitOmaha, 6)] = "PLO Royale",
