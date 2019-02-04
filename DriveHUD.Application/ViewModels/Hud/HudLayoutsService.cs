@@ -308,7 +308,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Imports <see cref="HudLayoutInfoV2"/> layout on the specified path
         /// </summary>
         /// <param name="path">Path to layout</param>
-        public HudLayoutInfoV2 Import(string path)
+        public virtual HudLayoutInfoV2 Import(string path)
         {
             if (!File.Exists(path))
             {
@@ -1222,7 +1222,15 @@ namespace DriveHUD.Application.ViewModels.Hud
                                let inRange = grouped != null ? (grouped.CurrentValue >= low && grouped.CurrentValue <= high) : !isStatDefined
                                let isGroupAndStatDefined = grouped != null && isStatDefined
                                let matchRatio = isGroupAndStatDefined ? Math.Abs(grouped.CurrentValue - average) : 0
-                               let extraMatchRatio = (isGroupAndStatDefined && (grouped.Stat == Stat.VPIP || grouped.Stat == Stat.PFR)) ? matchRatio : 0
+                               let extraMatchAllowed = isGroupAndStatDefined && (grouped.Stat == Stat.VPIP || grouped.Stat == Stat.PFR)
+                               let extraMathLowRatio = isGroupAndStatDefined ? Math.Abs(low - grouped.CurrentValue) : 0
+                               let extraMathHighRatio = isGroupAndStatDefined ? Math.Abs(high - grouped.CurrentValue) : 0
+                               let extraMatchRatioPossible = new[] {
+                                        matchRatio == 0 ? 0.001m : matchRatio,
+                                        isGroupAndStatDefined && extraMathLowRatio == 0 ? 0.001m : extraMathLowRatio,
+                                        isGroupAndStatDefined && extraMathHighRatio == 0 ? 0.001m : extraMathHighRatio,
+                                    }.Min()
+                               let extraMatchRatio = extraMatchAllowed ? extraMatchRatioPossible : 0
                                select
                                new
                                {

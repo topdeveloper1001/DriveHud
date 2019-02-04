@@ -24,6 +24,7 @@ using NUnit.Framework;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 
@@ -32,6 +33,8 @@ namespace DriveHud.Tests.UnitTests
     [TestFixture]
     public class HudLayoutsServiceTests
     {
+        private const string HudLayoutTestDataFolder = @"..\..\UnitTests\TestData\HudLayouts";
+
         private IUnityContainer unityContainer;
 
         private HudLayoutsService hudLayoutService;
@@ -58,6 +61,7 @@ namespace DriveHud.Tests.UnitTests
             ServiceLocator.SetLocatorProvider(() => locator);
 
             hudLayoutService = new HudLayoutsServiceStub();
+            hudLayoutService.Import("6maxHUDforDEV.xml");
         }
 
         [TestCaseSource("SetStickerDataSet")]
@@ -186,9 +190,16 @@ namespace DriveHud.Tests.UnitTests
 
             hudElement.SetStatValue(Stat.VPIP, data.VPIP);
             hudElement.SetStatValue(Stat.PFR, data.PFR);
+            hudElement.SetStatValue(Stat.AGG, data.AGG);
+            hudElement.SetStatValue(Stat.S3Bet, data.S3Bet);
             hudElement.SetStatValue(Stat.AF, data.AF);
-            hudElement.SetStatValue(Stat.WTSD, data.WTSD);
+            hudElement.SetStatValue(Stat.CBet, data.CBet);
             hudElement.SetStatValue(Stat.FoldToCBet, data.FoldToCBet);
+            hudElement.SetStatValue(Stat.FoldTo3Bet, data.FoldTo3Bet);
+            hudElement.SetStatValue(Stat.WWSF, data.WWSF);
+            hudElement.SetStatValue(Stat.WTSD, data.WTSD);
+            hudElement.SetStatValue(Stat.Steal, data.Steal);
+            hudElement.SetStatValue(Stat.DonkBet, data.DonkBet);
             hudElement.SetStatValue(Stat.TotalHands, data.TotalHands);
 
             hudLayoutService.SetPlayerTypeIcon(new[] { hudElement }, layout);
@@ -206,17 +217,17 @@ namespace DriveHud.Tests.UnitTests
         public static IEnumerable<TestCaseData> SetPlayerProfileDataSet()
         {
             yield return new TestCaseData(
-                    "DH: 6-max",
-                    new PlayerProfileTestData
-                    {
-                        VPIP = 26.9m,
-                        PFR = 19.2m,
-                        AF = 1.3m,
-                        WTSD = 25m,
-                        FoldToCBet = 50m
-                    },
-                    "Standard Reg"
-                ).SetName("Player Profile: Std Reg if not meet req.");
+                "DH: 6-max",
+                new PlayerProfileTestData
+                {
+                    VPIP = 26.9m,
+                    PFR = 19.2m,
+                    AF = 1.3m,
+                    WTSD = 25m,
+                    FoldToCBet = 50m
+                },
+                "Standard Reg"
+            ).SetName("Player Profile: Std Reg (not meet req.)");
 
             yield return new TestCaseData(
                 "DH: 6-max",
@@ -228,225 +239,80 @@ namespace DriveHud.Tests.UnitTests
                     S3Bet = 5.6m
                 },
                 "Whale"
-            ).SetName("Player Profile: Bad LAG if not meet req.");
+            ).SetName("Player Profile: Whale (not meet req.)");
 
 
             yield return new TestCaseData(
-                  "DH: 6-max",
-                  new PlayerProfileTestData
-                  {
-                      VPIP = 24.2m,
-                      PFR = 18.2m,
-                      AF = 2,
-                      WTSD = 20,
-                      FoldTo3Bet = 0,
-                      CBet = 33,
-                      WWSF = 60,
-                      AGG = 28.57m,
-                      Steal = 45.45m,
-                      TotalHands = 33
-                  },
-                  "Fish"
-              ).SetName("Player Profile: Fish if not meet req.");
+                "DH: 6-max",
+                new PlayerProfileTestData
+                {
+                    VPIP = 24.2m,
+                    PFR = 18.2m,
+                    AF = 2,
+                    WTSD = 20,
+                    FoldTo3Bet = 0,
+                    CBet = 33,
+                    WWSF = 60,
+                    AGG = 28.57m,
+                    Steal = 45.45m,
+                    TotalHands = 33
+                },
+                "Standard Reg"
+            ).SetName("Player Profile: Standard Reg (not meet req.)");
+
+            yield return new TestCaseData(
+                "DH: BOL 6 max test hud (12/27/18)",
+                new PlayerProfileTestData
+                {
+                    VPIP = 24.2m,
+                    PFR = 18.2m,
+                    AF = 2,
+                    WTSD = 20,
+                    FoldTo3Bet = 0,
+                    CBet = 33,
+                    WWSF = 60,
+                    AGG = 28.57m,
+                    Steal = 45.45m,
+                    TotalHands = 33
+                },
+                "Fish"
+            ).SetName("Player Profile: Fish (not meet req.)");
+
+            yield return new TestCaseData(
+                "DH: 6-max",
+                new PlayerProfileTestData
+                {
+                    VPIP = 15m,
+                    PFR = 14m,
+                    S3Bet = 3m
+                },
+                "Nit"
+            ).SetName("Player Profile: Nit (meet req.)");
+
+            yield return new TestCaseData(
+                "DH: 6-max",
+                new PlayerProfileTestData
+                {
+                    VPIP = 27.8m,
+                    PFR = 16.7m,
+                    AGG = 16.7m,
+                    S3Bet = 50m
+                },
+                "Standard Reg"
+            ).SetName("Player Profile: Standard Reg (not meet req.)");
+
+            yield return new TestCaseData(
+                "DH: 6-max",
+                new PlayerProfileTestData
+                {
+                    VPIP = 19m,
+                    PFR = 19m,
+                    AGG = 45m,
+                    S3Bet = 5m
+                },
+                "book"
+            ).SetName("Player Profile: Tight Reg (not meet req.)");
         }
-
-        //[Test]
-        //public void TestSetStickerODAndWTYAreSet()
-        //{
-        //    var hudLayoutService = CreateHudLayoutsService();
-        //    var hudElements = CreateHudElement();
-
-        //    var stat = new Playerstatistic();
-
-        //    stat.Flopcontinuationbetmade = 60;
-        //    stat.Flopcontinuationbetpossible = 100;
-
-        //    stat.Turncontinuationbetmade = 20;
-        //    stat.Turncontinuationbetpossible = 100;
-
-        //    stat.UO_PFR_EP = 21;
-        //    stat.PositionUnoppened = new PositionalStat() { EP = 100 };
-
-        //    stat.Totalhands = 20;
-
-        //    hudElements[0].SetStatValue(Stat.CBet, nameof(Indicators.FlopCBet), 60);
-        //    hudElements[0].SetStatValue(Stat.DoubleBarrel, nameof(Indicators.TurnCBet), 20);
-        //    hudElements[0].SetStatValue(Stat.UO_PFR_EP, nameof(Indicators.UO_PFR_EP), 21);
-
-        //    hudLayoutService.SetStickers(hudElements.FirstOrDefault(), new Dictionary<string, Playerstatistic>() { { "One and Done", stat }, { "Way Too Early", stat } }, LayoutName);
-
-        //    Assert.That(hudElements[0].Stickers[0].Label, Is.EqualTo("OD"));
-        //    Assert.That(hudElements[0].Stickers[1].Label, Is.EqualTo("WTE"));
-        //}
-
-        //[Test]
-        //public void TestSetPlayerTypeIconNitIsSet()
-        //{
-        //    var hudLayoutService = CreateHudLayoutsService();
-        //    var hudElements = CreateHudElement();
-
-        //    hudElements[0].SetStatValue(Stat.VPIP, 15);
-        //    hudElements[0].SetStatValue(Stat.PFR, 14);
-        //    hudElements[0].SetStatValue(Stat.S3Bet, 3);
-
-        //    hudLayoutService.SetPlayerTypeIcon(hudElements, LayoutName);
-
-        //    Assert.That(hudElements[0].PlayerIcon, Is.EqualTo("Nit.png"));
-        //}
-
-        //[Test]
-        //public void TestSetPlayerTypeIconBothPlayersAreNit()
-        //{
-        //    var hudLayoutService = CreateHudLayoutsService();
-        //    var hudElements = CreateHudElement();
-
-        //    hudElements[0].SetStatValue(Stat.VPIP, 15);
-        //    hudElements[0].SetStatValue(Stat.PFR, 14);
-        //    hudElements[0].SetStatValue(Stat.S3Bet, 3);
-
-        //    hudElements[1].SetStatValue(Stat.VPIP, 9);
-        //    hudElements[1].SetStatValue(Stat.PFR, 8);
-        //    hudElements[1].SetStatValue(Stat.S3Bet, 2);
-
-        //    hudLayoutService.SetPlayerTypeIcon(hudElements, LayoutName);
-
-        //    Assert.That(hudElements[0].PlayerIcon, Is.EqualTo("Nit.png"));
-        //    Assert.That(hudElements[1].PlayerIcon, Is.EqualTo("Nit.png"));
-        //}
-
-        //[Test]
-        //public void TestSetPlayerTypeExtraRatioIconStandardReg()
-        //{
-        //    var hudLayoutService = CreateHudLayoutsService();
-        //    var hudElements = CreateHudElement();
-
-        //    hudElements[0].SetStatValue(Stat.VPIP, 27.8m);
-        //    hudElements[0].SetStatValue(Stat.PFR, 16.7m);
-        //    hudElements[0].SetStatValue(Stat.AGG, 16.7m);
-        //    hudElements[0].SetStatValue(Stat.S3Bet, 50m);
-
-        //    hudLayoutService.SetPlayerTypeIcon(hudElements, LayoutName);
-
-        //    Assert.That(hudElements[0].PlayerIcon, Is.EqualTo("Standard Reg.png"));
-        //}
-
-        //[Test]
-        //public void TestSetPlayerTypeIconStandardAndTightAreSet()
-        //{
-        //    var hudLayoutService = CreateHudLayoutsService();
-        //    var hudElements = CreateHudElement();
-
-        //    hudElements[0].SetStatValue(Stat.VPIP, 23);
-        //    hudElements[0].SetStatValue(Stat.PFR, 18);
-        //    hudElements[0].SetStatValue(Stat.S3Bet, 5);
-        //    hudElements[0].SetStatValue(Stat.AGG, 43);
-
-        //    hudElements[1].SetStatValue(Stat.VPIP, 19);
-        //    hudElements[1].SetStatValue(Stat.PFR, 19);
-        //    hudElements[1].SetStatValue(Stat.S3Bet, 5);
-        //    hudElements[1].SetStatValue(Stat.AGG, 45);
-
-        //    hudLayoutService.SetPlayerTypeIcon(hudElements, LayoutName);
-
-        //    Assert.That(hudElements[0].PlayerIcon, Is.EqualTo("Standard Reg.png"));
-        //    Assert.That(hudElements[1].PlayerIconToolTip, Is.EqualTo("Tight Reg"));
-        //}
-
-        //[Test]
-        //public void TestSetPlayerTypeIconWhenEnablePlayerProfileIsFalse()
-        //{
-        //    var hudLayoutService = CreateHudLayoutsService();
-        //    var hudElements = CreateHudElement();
-
-        //    var hudSavedLayout = hudLayoutService.Layouts.Layouts.FirstOrDefault(x => x.LayoutId == LayoutId);
-
-        //    hudSavedLayout.HudPlayerTypes.ForEach(x => x.EnablePlayerProfile = false);
-
-        //    hudElements[0].SetStatValue(Stat.VPIP, 15);
-        //    hudElements[0].SetStatValue(Stat.PFR, 14);
-        //    hudElements[0].SetStatValue(Stat.S3Bet, 3);
-
-        //    hudLayoutService.SetPlayerTypeIcon(hudElements, LayoutName);
-
-        //    Assert.That(hudElements[0].PlayerIcon, Is.Null);
-        //    Assert.That(hudElements[0].PlayerIconToolTip, Is.Null);
-        //}
-
-        //[Test]
-        //public void TestSetPlayerTypeIconWhenDisplayPlayerIconIsFalse()
-        //{
-        //    var hudLayoutService = CreateHudLayoutsService();
-        //    var hudElements = CreateHudElement();
-
-        //    var hudSavedLayout = hudLayoutService.Layouts.Layouts.FirstOrDefault(x => x.LayoutId == LayoutId);
-
-        //    var playerProfileType = hudSavedLayout.HudPlayerTypes.FirstOrDefault(x => x.Name.Equals("Nit"));
-
-        //    playerProfileType.DisplayPlayerIcon = false;
-
-        //    hudElements[0].SetStatValue(Stat.VPIP, 15);
-        //    hudElements[0].SetStatValue(Stat.PFR, 14);
-        //    hudElements[0].SetStatValue(Stat.S3Bet, 3);
-
-        //    hudLayoutService.SetPlayerTypeIcon(hudElements, LayoutName);
-
-        //    Assert.That(hudElements[0].PlayerIcon, Is.Null);
-        //    Assert.That(hudElements[0].PlayerIconToolTip, Is.EqualTo("Nit"));
-        //}
-
-        //[Test]
-        //public void TestSetPlayerTypeIconWhenTableIs2Max()
-        //{
-        //    var hudLayoutService = CreateHudLayoutsService(EnumTableType.HU);
-        //    var hudElements = CreateHudElement();
-
-        //    var hudSavedLayout = hudLayoutService.Layouts.Layouts.FirstOrDefault(x => x.LayoutId == LayoutId);
-
-        //    var playerProfileType = hudSavedLayout.HudPlayerTypes.FirstOrDefault(x => x.Name.Equals("Nit"));
-
-        //    playerProfileType.DisplayPlayerIcon = false;
-
-        //    hudElements[0].SetStatValue(Stat.VPIP, 15);
-        //    hudElements[0].SetStatValue(Stat.PFR, 14);
-        //    hudElements[0].SetStatValue(Stat.S3Bet, 3);
-
-        //    hudLayoutService.SetPlayerTypeIcon(hudElements, LayoutName);
-
-        //    Assert.That(hudElements[0].PlayerIcon, Is.Null);
-        //    Assert.That(hudElements[0].PlayerIconToolTip, Is.EqualTo("Nit"));
-        //}
-
-        //[Test]
-        //public void TestSetPlayerTypeIconNutballIsSet()
-        //{
-        //    var hudLayoutService = CreateHudLayoutsService();
-        //    var hudElements = CreateHudElement();
-
-        //    hudElements[0].SetStatValue(Stat.VPIP, 41);
-        //    hudElements[0].SetStatValue(Stat.PFR, 23);
-
-        //    hudLayoutService.SetPlayerTypeIcon(hudElements, LayoutName);
-
-        //    Assert.That(hudElements[0].PlayerIcon, Is.EqualTo("Nutball.png"));
-        //}
-
-        //[Test]
-        //public void TestSetPlayerIconNitIfNoneMatchRequirements()
-        //{
-        //    var hudLayoutService = CreateHudLayoutsService();
-        //    var hudElements = CreateHudElement();
-
-        //    hudElements[0].SetStatValue(Stat.VPIP, 15);
-        //    hudElements[0].SetStatValue(Stat.PFR, 14);
-
-        //    hudElements[1].SetStatValue(Stat.VPIP, 9);
-        //    hudElements[1].SetStatValue(Stat.PFR, 8);
-
-        //    hudLayoutService.SetPlayerTypeIcon(hudElements, LayoutName);
-
-        //    Assert.That(hudElements[0].PlayerIcon, Is.EqualTo("Fish.png"));
-        //    Assert.That(hudElements[1].PlayerIcon, Is.EqualTo("Nit.png"));
-        //}
 
         #region Infrastructure
 
@@ -526,6 +392,26 @@ namespace DriveHud.Tests.UnitTests
             {
                 layouts.TryGetValue(name, out HudLayoutInfoV2 layout);
                 return layout;
+            }
+
+            public override HudLayoutInfoV2 Import(string path)
+            {
+                path = Path.Combine(HudLayoutTestDataFolder, path);
+
+                FileAssert.Exists(path);
+
+                return base.Import(path);
+            }
+
+            public override void SaveLayoutMappings()
+            {
+                // do nothing
+            }
+
+            protected override string InternalSave(HudLayoutInfoV2 hudLayoutInfo)
+            {
+                layouts.Add(hudLayoutInfo.Name, hudLayoutInfo);
+                return GetLayoutFileName(hudLayoutInfo.Name);
             }
         }
 
