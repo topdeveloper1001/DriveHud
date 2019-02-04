@@ -1030,6 +1030,7 @@
     <Content Include="UnitTests\TestData\Horizon.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\HudLayouts\6maxHUDforDEV.xml" />
     <Content Include="UnitTests\TestData\Ignition\ign-cash-2017-11-22.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
