@@ -54,6 +54,8 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
         [TestCase("8-max-regular-hero", 105772u)]
         [TestCase("6-max-short-all-in", 105772u)]
         [TestCase("8-max-regular-hero-wrong-order", 105772u)]
+        [TestCase("8-max-regular-no-hero-bet-on-preflop", 105772u)]
+        [TestCase("8-max-hero-raises-from-sb", 105772u)]
         public void TryBuildTest(string testFolder, uint heroId)
         {
             var packages = ReadPackages(testFolder);
@@ -87,6 +89,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
         [TestCase("multiple-accounts-raw-2")]
         [TestCase("multiple-accounts-raw-3")]
         [TestCase("multiple-accounts-raw-4")]
+        [TestCase("multiple-accounts-raw-5")]
         public void MultipleTryBuildTest(string folder)
         {
             var testFolder = Path.Combine(TestDataFolder, folder);
@@ -342,6 +345,8 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
 
         private class TestLogger : IDHLog
         {
+            public bool IsAdvanced { get; set; }
+
             public void Log(Type senderType, object message, LogMessageType logMessageType)
             {
             }

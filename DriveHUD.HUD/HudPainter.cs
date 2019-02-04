@@ -100,7 +100,7 @@ namespace DriveHUD.HUD
             closeHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_DESTROY, closeCallback, processId);
             createHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_NAMECHANGE, createCallback, processId);
 
-            if (hudLayout.PokerSite == Entities.EnumPokerSites.Adda52)
+            if (hudLayout.IsSpecialMode)
             {
                 foregroundChangedHook = WinApi.SetWinEventHook(WinApi.EVENT_SYSTEM_FOREGROUND, foregroundChangedCallback, processId);
             }
@@ -191,6 +191,13 @@ namespace DriveHUD.HUD
                         window.Refresh();
                     }
 
+                    if (hudLayout.PokerSite == Entities.EnumPokerSites.PokerBaazi)
+                    {
+                        WinApi.GetWindowRect(hwnd, out RECT rct);
+                        WinApi.SetWindowPos(hwnd, IntPtr.Zero, 0, 0, rct.Width + 1, rct.Height + 1, Swp.NOMOVE | Swp.NOZORDER | Swp.NOACTIVATE);
+                        WinApi.SetWindowPos(hwnd, IntPtr.Zero, 0, 0, rct.Width, rct.Height, Swp.NOMOVE | Swp.NOZORDER | Swp.NOACTIVATE);
+                    }
+
                     System.Windows.Threading.Dispatcher.Run();
                 }
                 catch (Exception e)
@@ -205,7 +212,7 @@ namespace DriveHUD.HUD
 
         private static WindowInteropHelper CreateWindowInteropHelper(HudWindow window, HudLayout hudLayout, IntPtr windowHandle)
         {
-            if (hudLayout.PokerSite == Entities.EnumPokerSites.Adda52)
+            if (hudLayout.IsSpecialMode)
             {
                 return new WindowInteropHelper(window);
             }
@@ -218,7 +225,7 @@ namespace DriveHUD.HUD
 
         private static void PrepareWindow(HudWindowItem windowItem, HudLayout hudLayout, IntPtr windowHandle)
         {
-            if (hudLayout.PokerSite != Entities.EnumPokerSites.Adda52)
+            if (!hudLayout.IsSpecialMode)
             {
                 return;
             }

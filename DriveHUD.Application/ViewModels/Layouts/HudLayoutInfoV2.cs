@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Entities;
+using Model.Enums;
 using Model.Hud;
 using System;
 using System.Collections.Generic;
@@ -100,6 +101,26 @@ namespace DriveHUD.Application.ViewModels.Layouts
             };
 
             return cloned;
+        }
+
+        /// <summary>
+        /// Return the distinct list of heat map stats
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Stat> GetHeatMapStats()
+        {
+            var heatMapStats = LayoutTools
+                .OfType<HudLayoutHeatMapTool>()
+                .Concat(LayoutTools
+                    .OfType<HudLayoutGaugeIndicator>()
+                    .Where(x => x.Tools != null)
+                    .SelectMany(x => x.Tools)
+                    .OfType<HudLayoutHeatMapTool>())
+                .Where(x => x.BaseStat != null)
+                .Select(x => x.BaseStat.Stat)
+                .Distinct();
+
+            return heatMapStats;
         }
     }
 }

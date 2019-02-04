@@ -19,7 +19,8 @@
     <Property Id="REINSTALLMODE" Value="amus" />
     <Property Id="MSIFASTINSTALL" Value="1" />
 
-    <MajorUpgrade      
+    <MajorUpgrade
+      AllowDowngrades="no"
       DowngradeErrorMessage="A newer version of [ProductName] is already installed."/>
 
     <!-- Properties -->
@@ -404,6 +405,9 @@
         <Condition>False</Condition>
         <File Id="CAPPIPEDP.DLL" Name="CapPipedP.dll" Source="$(var.BuildDirectory)\Lib\CapPipedP.dll" />
       </Component>
+      <Component Id="CAPPIPEDPB.DLL" Guid="{FBE74839-C6A8-4666-89F7-4C79BE0ECE3E}">
+        <File Id="CAPPIPEDPB.DLL" Name="CapPipedPB.dll" Source="$(var.BuildDirectory)\Lib\CapPipedPB.dll" />
+      </Component>
     </DirectoryRef>
 
     <DirectoryRef Id="X86">
@@ -526,7 +530,7 @@
 
     <!-- Custom Actions -->
     <CustomAction Id='DataCleaner' Directory='INSTALLDIR'
-                   ExeCommand='[SystemFolder]cmd.exe /C DriveHUD.Application.exe -uninstall' Execute='deferred' Return='ignore'  />
+                   ExeCommand='[SystemFolder]cmd.exe /C rd /S /Q [AppDataFolder]\DriveHUD' Execute='deferred' Return='ignore'  />
 
     <InstallExecuteSequence>
       <Custom Action="DataCleaner" After='InstallInitialize'>(NOT UPGRADINGPRODUCTCODE) AND (REMOVE="ALL") AND REMOVEPLAYERDATA</Custom>
@@ -639,6 +643,7 @@
       <ComponentRef Id="CAPPIPEDI.DLL" />
       <ComponentRef Id="CAPPIPEDI2.DLL" />
       <ComponentRef Id="CAPPIPEDP.DLL" />
+      <ComponentRef Id="CAPPIPEDPB.DLL" />
       <ComponentRef Id="PMCReg.dll" />
       <ComponentRef Id="PMHReg.dll" />
       <ComponentRef Id="PMOReg.dll" />

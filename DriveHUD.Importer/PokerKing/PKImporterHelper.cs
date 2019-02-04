@@ -10,17 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-
 namespace DriveHUD.Importers.PokerKing
 {
     internal class PKImporterHelper
     {
-        public static int PortFilter
+        public static bool IsPortMatch(int port)
         {
-            get
-            {
-                return 31001;
-            }
-        }
+            return port == 31001 || port == 38001;
+        }        
     }
 }

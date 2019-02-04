@@ -735,7 +735,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
             var c2 = (rank_value << 8);
             var c3 = suit_value;
             var c4 = (1 << (16 + rank_value));
-     
+
             return c1 | c2 | c3 | c4;
         }
 
@@ -826,7 +826,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 abs_rank[i] = abs_rank[minIndex];
                 abs_rank[minIndex] = tmp;
             }
-          
+
             int combo = 0, last_valid = -1;
 
             float last_percentile = 0;
@@ -883,33 +883,44 @@ namespace DriveHUD.EquityCalculator.Analyzer
         /// <returns></returns>
         internal void ConverToEquityCalculatorFormat(HandHistories.Objects.Hand.HandHistory history, HandHistories.Objects.Cards.Street currentStreet)
         {
-            //try
-            //{
             BBName = null;
 
-            //  XmlElement xeHandDetails = (XmlElement)xd.GetElementsByTagName("HandDetails")[0];
             // Read general hand information
-            this.HandDate = history.DateOfHandUtc.ToString();
-            this.SiteName = history.GameDescription.Site.ToString();
-            this.PokerGame = history.GameDescription.GameType.ToString();
-            this.PokerGameType = history.GameDescription.PokerFormat.ToString();
-            this.TableName = history.TableName;
-            this.MaxSeats = history.GameDescription.SeatType.MaxPlayers;
+            HandDate = history.DateOfHandUtc.ToString();
+            SiteName = history.GameDescription.Site.ToString();
+            PokerGame = history.GameDescription.GameType.ToString();
+            PokerGameType = history.GameDescription.PokerFormat.ToString();
+            TableName = history.TableName;
+            MaxSeats = history.GameDescription.SeatType.MaxPlayers;
 
-            this.ButtonSeat = history.DealerButtonPosition;
+            ButtonSeat = history.DealerButtonPosition;
 
-            this.SmallBlindAmount = (int)Math.Round(history.HandActions.First(x => x.HandActionType == HandHistories.Objects.Actions.HandActionType.SMALL_BLIND).Amount * 100);
-            if (this.SmallBlindAmount < 0)
-                this.SmallBlindAmount *= -1;
-            this.BigBlindAmount = (int)Math.Round(history.HandActions.First(x => x.HandActionType == HandHistories.Objects.Actions.HandActionType.BIG_BLIND).Amount * 100);
-            if (this.BigBlindAmount < 0)
-                this.BigBlindAmount *= -1;
-            this.Ante = 0;
+            var smallBlindAction = history.HandActions.FirstOrDefault(x => x.HandActionType == HandHistories.Objects.Actions.HandActionType.SMALL_BLIND);
+
+            SmallBlindAmount = smallBlindAction != null ? (int)Math.Round(smallBlindAction.Amount * 100) : 0;
+
+            if (SmallBlindAmount < 0)
+            {
+                SmallBlindAmount *= -1;
+            }
+
+            BigBlindAmount = (int)Math.Round(history.HandActions.First(x => x.HandActionType == HandHistories.Objects.Actions.HandActionType.BIG_BLIND).Amount * 100);
+
+            if (BigBlindAmount < 0)
+            {
+                BigBlindAmount *= -1;
+            }
+
+            Ante = 0;
+
             if (history.HandActions.Any(x => x.HandActionType == HandHistories.Objects.Actions.HandActionType.ANTE))
             {
-                this.Ante = (int)Math.Round(history.HandActions.First(x => x.HandActionType == HandHistories.Objects.Actions.HandActionType.ANTE).Amount * 100);
-                if (this.Ante < 0)
-                    this.Ante *= -1;
+                Ante = (int)Math.Round(history.HandActions.First(x => x.HandActionType == HandHistories.Objects.Actions.HandActionType.ANTE).Amount * 100);
+
+                if (Ante < 0)
+                {
+                    Ante *= -1;
+                }
             }
 
             // Track players still in the pot, and how much they have committed to the pot

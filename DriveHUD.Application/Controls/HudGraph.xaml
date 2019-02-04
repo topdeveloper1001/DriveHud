@@ -129,10 +129,8 @@
                 </Label>
 
                 <Label
-                    Margin="1 5 0
-                                                    5"
-                    Grid.Column="
-                                                    1"
+                    Margin="1 5 0 5"
+                    Grid.Column="1"
                     Style="{StaticResource LabelStyle}"
                     Foreground="White">
                     <Label.Content>
@@ -213,7 +211,7 @@
         </Grid>
 
         <!-- cards -->
-    
+
         <ItemsControl
             Grid.Row="0"
             Grid.Column="1"

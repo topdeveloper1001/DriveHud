@@ -87,7 +87,7 @@ namespace DriveHUD.Application.ViewModels
 
         private bool isAdvancedLoggingEnabled = true;
 
-        private const int ImportFileUpdateDelay = 750;
+        private const int ImportFileUpdateDelay = 1500;
 
         private static readonly object playerAddedLock = new object();
 
@@ -110,15 +110,15 @@ namespace DriveHUD.Application.ViewModels
 
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             eventAggregator.GetEvent<RequestEquityCalculatorEvent>().Subscribe(ShowCalculateEquityView);
-            eventAggregator.GetEvent<DataImportedEvent>().Subscribe(OnDataImported, ThreadOption.BackgroundThread, false);
-            eventAggregator.GetEvent<PlayersAddedEvent>().Subscribe(OnPlayersAdded, ThreadOption.BackgroundThread, false);
+            eventAggregator.GetEvent<DataImportedEvent>().Subscribe(OnDataImported, ThreadOption.BackgroundThread, true);
+            eventAggregator.GetEvent<PlayersAddedEvent>().Subscribe(OnPlayersAdded, ThreadOption.BackgroundThread, true);
             eventAggregator.GetEvent<SettingsUpdatedEvent>().Subscribe(HandleSettingsChangedEvent);
             eventAggregator.GetEvent<UpdateViewRequestedEvent>().Subscribe(UpdateCurrentView);
             eventAggregator.GetEvent<MainNotificationEvent>().Subscribe(RaiseNotification);
             eventAggregator.GetEvent<PokerStarsDetectedEvent>().Subscribe(OnPokerStarsDetected);
             eventAggregator.GetEvent<LoadDataRequestedEvent>().Subscribe(arg => Load());
-            eventAggregator.GetEvent<PreImportedDataEvent>().Subscribe(OnPreDataImported, ThreadOption.BackgroundThread, false);
-            eventAggregator.GetEvent<TableClosedEvent>().Subscribe(OnTableClosed, ThreadOption.BackgroundThread, false);
+            eventAggregator.GetEvent<PreImportedDataEvent>().Subscribe(OnPreDataImported, ThreadOption.BackgroundThread, true);
+            eventAggregator.GetEvent<TableClosedEvent>().Subscribe(OnTableClosed, ThreadOption.BackgroundThread, true);
 
             InitializeFilters();
             InitializeData();
@@ -211,6 +211,8 @@ namespace DriveHUD.Application.ViewModels
             if (screenResolution.Width < ResolutionSettings.HighResolutionWidth)
             {
                 IsLowResolutionMode = true;
+                HudViewModel.IsLowResolutionMode = true;
+
                 WindowMinWidth = ResolutionSettings.LowResolutionWidth;
                 WindowWidth = ResolutionSettings.LowResolutionWidth;
             }
@@ -270,6 +272,8 @@ namespace DriveHUD.Application.ViewModels
         {
             IsEnabled = false;
 
+            var success = false;
+
             await Task.Run(() =>
             {
                 try
@@ -283,12 +287,23 @@ namespace DriveHUD.Application.ViewModels
                     playerStatisticReImporter.ReImport();
 
                     LogProvider.Log.Info("Statistics rebuild has been completed.");
+
+                    success = true;
                 }
                 catch (Exception e)
                 {
                     LogProvider.Log.Error(this, "Statistics rebuilding failed.", e);
                 }
             });
+
+            if (success)
+            {
+                RaiseNotification(new MainNotificationEventArgs("Notifications_RebuildStats_SucceedTitle", "Notifications_RebuildStats_SucceedMessage"));
+            }
+            else
+            {
+                RaiseNotification(new MainNotificationEventArgs("Notifications_RebuildStats_FailedTitle", "Notifications_RebuildStats_FailedMessage"));
+            }
 
             Load();
 
@@ -537,7 +552,9 @@ namespace DriveHUD.Application.ViewModels
                     LayoutName = activeLayout.Name,
                     AvailableLayouts = new List<string>(),
                     PreloadMode = true,
-                    PreloadText = e.LoadingText
+                    PreloadText = e.LoadingText,
+                    IsSpecialMode = gameInfo.PokerSite == EnumPokerSites.Adda52 ||
+                        ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.HudSpecialMode
                 };
 
                 byte[] serialized;
@@ -571,7 +588,7 @@ namespace DriveHUD.Application.ViewModels
                 {
                     if (e.GameInfo.GameFormat != GameFormat.Zone)
                     {
-                        LogProvider.Log.Warn($"No window found for hand #{e.GameInfo.GameNumber}");
+                        LogProvider.Log.Warn(this, $"No window found for hand #{e.GameInfo.GameNumber}");
                     }
 
                     return;
@@ -612,7 +629,16 @@ namespace DriveHUD.Application.ViewModels
 
                     playersCacheInfo = playersCacheInfo.Where(x => x.GameNumber == e.GameNumber).ToList();
 
-                    importerSessionCacheService.AddOrUpdatePlayersStats(playersCacheInfo, gameInfo.Session, filter);
+                    var condition = new SessionStatisticCondition
+                    {
+                        Filter = filter,
+                        HeatMapStats = activeLayout.GetHeatMapStats()
+                    };
+
+                    using (var pf = new PerformanceMonitor($"AddOrUpdatePlayersStats for hand #{gameInfo.GameNumber}, session={gameInfo.Session}", isAdvancedLoggingEnabled, this))
+                    {
+                        importerSessionCacheService.AddOrUpdatePlayersStats(playersCacheInfo, gameInfo.Session, condition);
+                    }
                 }
 
                 if (e.DoNotUpdateHud)
@@ -622,9 +648,9 @@ namespace DriveHUD.Application.ViewModels
 
                 if (gameInfo.PokerSite != EnumPokerSites.PokerStars && activeLayout != null)
                 {
-                    var stickers = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
+                    var stickerFilters = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
 
-                    if (stickers.Count > 0)
+                    if (stickerFilters != null && stickerFilters.Count > 0)
                     {
                         var playersStickersCacheData = (from player in players
                                                         let playerItem = new PlayerCollectionItem
@@ -641,11 +667,14 @@ namespace DriveHUD.Application.ViewModels
                                                             Player = playerItem,
                                                             Layout = activeLayout.Name,
                                                             Statistic = lastHandStatistic,
-                                                            StickerFilters = stickers,
+                                                            StickerFilters = stickerFilters,
                                                             IsHero = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerItem)?.IsHero ?? false
                                                         }).ToArray();
 
-                        importerSessionCacheService.AddOrUpdatePlayerStickerStats(playersStickersCacheData, gameInfo.Session);
+                        using (var pf = new PerformanceMonitor($"AddOrUpdatePlayerStickerStats for hand #{gameInfo.GameNumber}, session={gameInfo.Session}", isAdvancedLoggingEnabled, this))
+                        {
+                            importerSessionCacheService.AddOrUpdatePlayerStickerStats(playersStickersCacheData, gameInfo.Session);
+                        }
                     }
                 }
 
@@ -662,7 +691,7 @@ namespace DriveHUD.Application.ViewModels
                     .Distinct()
                     .ToArray();
 
-                var availableLayouts = hudLayoutsService.GetAvailableLayouts(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
+                var availableLayouts = hudLayoutsService.GetAvailableLayouts(e.GameInfo.TableType);
 
                 var ht = new HudLayout
                 {
@@ -672,7 +701,9 @@ namespace DriveHUD.Application.ViewModels
                     GameNumber = gameInfo.GameNumber,
                     GameType = gameInfo.EnumGameType,
                     LayoutName = activeLayout.Name,
-                    AvailableLayouts = availableLayouts
+                    AvailableLayouts = availableLayouts,
+                    IsSpecialMode = gameInfo.PokerSite == EnumPokerSites.Adda52 ||
+                        ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.HudSpecialMode
                 };
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
@@ -780,7 +811,10 @@ namespace DriveHUD.Application.ViewModels
                             .ToArray()
                             .FirstOrDefault(p => p.Stat == x.BaseStat.Stat);
 
-                        x.HeatMap = playerData.HeatMaps[heatMapKey];
+                        if (heatMapKey != null)
+                        {
+                            x.HeatMap = playerData.HeatMaps[heatMapKey];
+                        }
                     });
 
                     var gaugeIndicatorTools = playerHudContent.HudElement.Tools.OfType<HudGaugeIndicatorViewModel>().ToArray();
@@ -887,7 +921,7 @@ namespace DriveHUD.Application.ViewModels
 
                 if (isAdvancedLoggingEnabled)
                 {
-                    LogProvider.Log.Info(this, $"Sending {serialized.Length} bytes to HUD [handle={ht.WindowId}, title={WinApi.GetWindowText(new IntPtr(ht.WindowId))}]");
+                    LogProvider.Log.Info(this, $"Sending {serialized.Length} bytes to HUD [{ht}]");
                 }
 
                 hudTransmitter.Send(serialized);
@@ -1660,6 +1694,9 @@ namespace DriveHUD.Application.ViewModels
             if (e.PropertyName == ReflectionHelper.GetPath<SingletonStorageModel>(p => p.PlayerSelectedItem))
             {
                 Load();
+
+                eventAggregator.GetEvent<UpdateFilterRequestEvent>()
+                    .Publish(new UpdateFilterRequestEventArgs());
             }
         }
 
@@ -1727,8 +1764,8 @@ namespace DriveHUD.Application.ViewModels
 
             var confirmation = new PopupActionNotification
             {
-                Title = obj.Title,
-                Content = obj.Message,
+                Title = CommonResourceManager.Instance.GetResourceString(obj.Title),
+                Content = CommonResourceManager.Instance.GetResourceString(obj.Message),
                 HyperLinkText = obj.HyperLink
             };
 

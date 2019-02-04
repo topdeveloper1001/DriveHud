@@ -17,6 +17,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model;
 using NSubstitute;
 using NUnit.Framework;
+using System;
 using System.IO;
 
 namespace DriveHud.Tests.IntegrationTests.Importers
@@ -106,7 +107,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 Assert.That(playerstatistic.Couldcoldcall, Is.EqualTo(13), nameof(playerstatistic.Couldcoldcall));
 
 
-                Assert.That(playerstatistic.DidColdCallThreeBet, Is.EqualTo(1), nameof(playerstatistic.DidColdCallThreeBet));
+                Assert.That(playerstatistic.DidColdCallThreeBet, Is.EqualTo(0), nameof(playerstatistic.DidColdCallThreeBet));
                 Assert.That(playerstatistic.DidColdCallFourBet, Is.EqualTo(0), nameof(playerstatistic.DidColdCallFourBet));
                 Assert.That(playerstatistic.DidColdCallVsOpenRaiseSb, Is.EqualTo(0), nameof(playerstatistic.DidColdCallVsOpenRaiseSb));
                 Assert.That(playerstatistic.DidColdCallVsOpenRaiseCo, Is.EqualTo(0), nameof(playerstatistic.DidColdCallVsOpenRaiseCo));
@@ -120,7 +121,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         protected virtual bool GetCombinedPlayerstatisticFromStoreCall(ref Playerstatistic playerstatistic, Playerstatistic p, string playerName)
         {
             if (p.PlayerName.Equals(playerName))
-            {
+            {                
                 if (playerstatistic == null)
                 {
                     playerstatistic = p;
@@ -128,6 +129,11 @@ namespace DriveHud.Tests.IntegrationTests.Importers
                 else
                 {
                     playerstatistic += p;
+                }
+
+                if (playerstatistic.DidColdCallThreeBet == 1)
+                {
+                    Console.WriteLine("test");
                 }
             }
 

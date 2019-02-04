@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="PlayerStatisticRepository.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -33,7 +33,7 @@ namespace Model
 
         private const string PlayerStatisticBackupExtenstion = ".bak";
 
-        private static ReaderWriterLockSlim rwLock = new ReaderWriterLockSlim();
+        private readonly static ConcurrentDictionary<string, ReaderWriterLockSlim> SyncLocks = new ConcurrentDictionary<string, ReaderWriterLockSlim>();
 
         protected readonly string dataPath = StringFormatter.GetAppDataFolderPath();
 
@@ -99,13 +99,15 @@ namespace Model
                 throw new ArgumentNullException(nameof(files));
             }
 
-            rwLock.EnterReadLock();
-
-            try
+            foreach (var file in files)
             {
-                foreach (var file in files)
+                var rwLock = GetLock(file);
+
+                rwLock.EnterUpgradeableReadLock();
+
+                try
                 {
-                    RestoreBackupFile(file);
+                    RestoreBackupFile(file, rwLock);
 
                     using (var sr = new StreamReaderWrapper(file))
                     {
@@ -142,10 +144,10 @@ namespace Model
                         }
                     }
                 }
-            }
-            finally
-            {
-                rwLock.ExitReadLock();
+                finally
+                {
+                    rwLock.ExitUpgradeableReadLock();
+                }
             }
         }
 
@@ -207,32 +209,35 @@ namespace Model
                                         from file in GetPlayerFiles(player.PlayerId)
                                         select new PlayerStatFile { Player = player, File = file }).ToArray();
 
-                rwLock.EnterReadLock();
 
-                try
+
+                var maxThreads = Environment.ProcessorCount + 1;
+
+                var runningTasks = new List<Task>();
+
+                var fileQueue = GetPlayerStatFileQueue(playersStatFiles);
+
+                var playersIndicators = (from playersStatFile in playersStatFiles
+                                         group playersStatFile by playersStatFile.Player.Playername into grouped
+                                         where grouped.Any()
+                                         let indicators = Activator.CreateInstance<T>()
+                                         select new { grouped.Key, Indicators = indicators }).ToDictionary(x => x.Key, x => x.Indicators);
+
+                while (fileQueue.Count > 0)
                 {
-                    var maxThreads = Environment.ProcessorCount + 1;
-
-                    var runningTasks = new List<Task>();
-
-                    var fileQueue = GetPlayerStatFileQueue(playersStatFiles);
-
-                    var playersIndicators = (from playersStatFile in playersStatFiles
-                                             group playersStatFile by playersStatFile.Player.Playername into grouped
-                                             where grouped.Any()
-                                             let indicators = Activator.CreateInstance<T>()
-                                             select new { grouped.Key, Indicators = indicators }).ToDictionary(x => x.Key, x => x.Indicators);
-
-
-                    while (fileQueue.Count > 0)
+                    while (runningTasks.Count < maxThreads && fileQueue.Count > 0)
                     {
-                        while (runningTasks.Count < maxThreads && fileQueue.Count > 0)
-                        {
-                            var playerStatFile = fileQueue.Dequeue();
+                        var playerStatFile = fileQueue.Dequeue();
 
-                            runningTasks.Add(Task.Run(() =>
+                        runningTasks.Add(Task.Run(() =>
+                        {
+                            var rwLock = GetLock(playerStatFile.File);
+
+                            rwLock.EnterUpgradeableReadLock();
+
+                            try
                             {
-                                RestoreBackupFile(playerStatFile.File);
+                                RestoreBackupFile(playerStatFile.File, rwLock);
 
                                 using (var sr = new StreamReaderWrapper(playerStatFile.File))
                                 {
@@ -250,22 +255,26 @@ namespace Model
                                         indicators.AddStatistic(stat);
                                     }
                                 }
-                            }));
-                        }
-
-                        var completedTask = Task.WhenAny(runningTasks).Result;
-
-                        runningTasks.Remove(completedTask);
+                            }
+                            catch (Exception ex)
+                            {
+                                LogProvider.Log.Error(this, $"Failed to build indicators for {string.Join(", ", playerNames)} by reading '{playerStatFile.File}' [{pokersiteId}]", ex);
+                            }
+                            finally
+                            {
+                                rwLock.ExitUpgradeableReadLock();
+                            }
+                        }));
                     }
 
-                    Task.WhenAll(runningTasks).Wait();
+                    var completedTask = Task.WhenAny(runningTasks).Result;
 
-                    return playersIndicators;
+                    runningTasks.Remove(completedTask);
                 }
-                finally
-                {
-                    rwLock.ExitReadLock();
-                }
+
+                Task.WhenAll(runningTasks).Wait();
+
+                return playersIndicators;
             }
             catch (Exception e)
             {
@@ -297,8 +306,6 @@ namespace Model
 
         public virtual void Store(Playerstatistic statistic)
         {
-            rwLock.EnterWriteLock();
-
             var file = string.Empty;
 
             try
@@ -307,27 +314,34 @@ namespace Model
 
                 file = GetPlayerstatisticFile(statistic, true);
 
-                RestoreBackupFile(file);
+                var rwLock = GetLock(file);
 
-                var data = string.Empty;
+                rwLock.EnterWriteLock();
 
-                using (var memoryStream = new MemoryStream())
+                try
                 {
-                    Serializer.Serialize(memoryStream, statistic);
-                    data = Convert.ToBase64String(memoryStream.ToArray()).Trim();
-                }
+                    RestoreBackupFile(file, rwLock);
 
-                File.AppendAllLines(file, new[] { data });
+                    var data = string.Empty;
+
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        Serializer.Serialize(memoryStream, statistic);
+                        data = Convert.ToBase64String(memoryStream.ToArray()).Trim();
+                    }
+
+                    File.AppendAllLines(file, new[] { data });
+                }
+                finally
+                {
+                    rwLock.ExitWriteLock();
+                }
 
                 UpdateStorageModel(statistic);
             }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, $"Could not save player statistic to the {file}.", e);
-            }
-            finally
-            {
-                rwLock.ExitWriteLock();
             }
         }
 
@@ -347,8 +361,6 @@ namespace Model
                                         Statistic = grouped.OrderBy(x => x.Playedyearandmonth).ToArray()
                                     }).ToArray();
 
-            rwLock.EnterWriteLock();
-
             try
             {
                 CreatePlayersFolderIfNotExist();
@@ -357,22 +369,33 @@ namespace Model
                 {
                     var fileName = GetPlayerstatisticFile(stats.PlayerId, stats.Playedyearandmonth.ToString(), true);
 
-                    RestoreBackupFile(fileName);
+                    var rwLock = GetLock(fileName);
 
-                    var statisticStringsToAppend = new List<string>();
+                    rwLock.EnterWriteLock();
 
-                    foreach (var stat in stats.Statistic)
+                    try
                     {
-                        using (var msTestString = new MemoryStream())
+                        RestoreBackupFile(fileName, rwLock);
+
+                        var statisticStringsToAppend = new List<string>();
+
+                        foreach (var stat in stats.Statistic)
                         {
-                            Serializer.Serialize(msTestString, stat);
-                            var data = Convert.ToBase64String(msTestString.ToArray()).Trim();
+                            using (var msTestString = new MemoryStream())
+                            {
+                                Serializer.Serialize(msTestString, stat);
+                                var data = Convert.ToBase64String(msTestString.ToArray()).Trim();
 
-                            statisticStringsToAppend.Add(data);
+                                statisticStringsToAppend.Add(data);
+                            }
                         }
-                    }
 
-                    File.AppendAllLines(fileName, statisticStringsToAppend);
+                        File.AppendAllLines(fileName, statisticStringsToAppend);
+                    }
+                    finally
+                    {
+                        rwLock.ExitWriteLock();
+                    }
 
                     UpdateStorageModel(stats.PlayerId, stats.Statistic);
                 }
@@ -380,10 +403,6 @@ namespace Model
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, $"Could not save player statistic.", e);
-            }
-            finally
-            {
-                rwLock.ExitWriteLock();
             }
         }
 
@@ -404,40 +423,43 @@ namespace Model
                 convertedStatistic = Convert.ToBase64String(msTestString.ToArray());
             }
 
-            rwLock.EnterWriteLock();
-
             try
             {
                 foreach (var file in files)
                 {
-                    string[] allLines = null;
-                    allLines = File.ReadAllLines(file);
+                    var rwLock = GetLock(file);
 
-                    if (allLines.Any(x => x.Equals(convertedStatistic, StringComparison.Ordinal)))
+                    try
                     {
-                        var newLines = new List<string>(allLines.Count());
+                        string[] allLines = null;
+                        allLines = File.ReadAllLines(file);
 
-                        foreach (var line in allLines)
+                        if (allLines.Any(x => x.Equals(convertedStatistic, StringComparison.Ordinal)))
                         {
-                            if (!line.Equals(convertedStatistic, StringComparison.Ordinal))
+                            var newLines = new List<string>(allLines.Count());
+
+                            foreach (var line in allLines)
                             {
-                                newLines.Add(line);
+                                if (!line.Equals(convertedStatistic, StringComparison.Ordinal))
+                                {
+                                    newLines.Add(line);
+                                }
                             }
+
+                            File.WriteAllLines(file, newLines);
+
+                            return;
                         }
-
-                        File.WriteAllLines(file, newLines);
-
-                        return;
+                    }
+                    finally
+                    {
+                        rwLock.ExitWriteLock();
                     }
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
-            }
-            finally
-            {
-                rwLock.ExitWriteLock();
+                LogProvider.Log.Error(this, $"Failed to delete playerstatistic for {statistic.PlayerId} {statistic.PlayerName} {statistic.Time}", e);
             }
         }
 
@@ -456,8 +478,6 @@ namespace Model
                              group new { File = playerStatisticFile, hand.Gamenumber } by playerStatisticFile
                              ).ToDictionary(x => x.Key, x => x.Select(y => y.Gamenumber).ToArray());
 
-            rwLock.EnterWriteLock();
-
             try
             {
                 Parallel.ForEach(fileHands, fh => DeletePlayerStatisticFromFile(fh.Key, new HashSet<long>(fh.Value.Distinct())));
@@ -468,10 +488,6 @@ namespace Model
                 LogProvider.Log.Error(this, $"Could not delete player statistic for players [{players}].");
                 throw;
             }
-            finally
-            {
-                rwLock.ExitWriteLock();
-            }
         }
 
         private void DeletePlayerStatisticFromFile(string file, HashSet<long> handNumbers)
@@ -480,6 +496,10 @@ namespace Model
             {
                 return;
             }
+
+            var rwLock = GetLock(file);
+
+            rwLock.EnterWriteLock();
 
             try
             {
@@ -514,6 +534,10 @@ namespace Model
                 LogProvider.Log.Error(this, $"Could not delete player statistic from file '{file}'");
                 throw;
             }
+            finally
+            {
+                rwLock.ExitWriteLock();
+            }
         }
 
         private void CreateBackupFile(string file)
@@ -546,12 +570,26 @@ namespace Model
             }
         }
 
-        private void RestoreBackupFile(string file)
+        private void RestoreBackupFile(string file, ReaderWriterLockSlim rwLock)
         {
             var backupFile = GetBackupFile(file);
 
             if (!File.Exists(backupFile))
             {
+                return;
+            }
+
+            var lockWasUpgraded = false;
+
+            if (!rwLock.IsWriteLockHeld && rwLock.IsUpgradeableReadLockHeld)
+            {
+                rwLock.EnterWriteLock();
+                lockWasUpgraded = true;
+            }
+
+            if (!rwLock.IsWriteLockHeld)
+            {
+                LogProvider.Log.Error(this, "Failed to restore backup file. Write lock wasn't held");
                 return;
             }
 
@@ -570,6 +608,13 @@ namespace Model
             {
                 LogProvider.Log.Error(this, $"Could not restore backup file '{backupFile}'", e);
             }
+            finally
+            {
+                if (lockWasUpgraded)
+                {
+                    rwLock.ExitWriteLock();
+                }
+            }
         }
 
         private static string GetBackupFile(string file)
@@ -584,27 +629,29 @@ namespace Model
                 throw new ArgumentNullException(nameof(files));
             }
 
-            rwLock.EnterReadLock();
+            var maxThreads = Environment.ProcessorCount + 1;
 
-            try
+            var runningTasks = new List<Task>();
+
+            var fileQueue = new Queue<string>(files);
+
+            var stats = new BlockingCollection<Playerstatistic>();
+
+            while (fileQueue.Count > 0)
             {
-                var maxThreads = Environment.ProcessorCount + 1;
-
-                var runningTasks = new List<Task>();
-
-                var fileQueue = new Queue<string>(files);
-
-                var stats = new BlockingCollection<Playerstatistic>();
-
-                while (fileQueue.Count > 0)
+                while (runningTasks.Count < maxThreads && fileQueue.Count > 0)
                 {
-                    while (runningTasks.Count < maxThreads && fileQueue.Count > 0)
-                    {
-                        var file = fileQueue.Dequeue();
+                    var file = fileQueue.Dequeue();
 
-                        runningTasks.Add(Task.Run(() =>
+                    runningTasks.Add(Task.Run(() =>
+                    {
+                        var rwLock = GetLock(file);
+
+                        rwLock.EnterUpgradeableReadLock();
+
+                        try
                         {
-                            RestoreBackupFile(file);
+                            RestoreBackupFile(file, rwLock);
 
                             using (var sr = new StreamReaderWrapper(file))
                             {
@@ -621,7 +668,7 @@ namespace Model
                                             LogProvider.Log.Warn(this, $"Empty line in {file}");
                                         }
 
-                                        /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
+                                            /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
                                         byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
 
                                         using (var ms = new MemoryStream(byteAfter64))
@@ -641,22 +688,22 @@ namespace Model
                                     }
                                 }
                             }
-                        }));
-                    }
-
-                    var completedTask = Task.WhenAny(runningTasks).Result;
-
-                    runningTasks.Remove(completedTask);
+                        }
+                        finally
+                        {
+                            rwLock.ExitUpgradeableReadLock();
+                        }
+                    }));
                 }
 
-                Task.WhenAll(runningTasks).Wait();
+                var completedTask = Task.WhenAny(runningTasks).Result;
 
-                return stats.ToList();
+                runningTasks.Remove(completedTask);
             }
-            finally
-            {
-                rwLock.ExitReadLock();
-            }
+
+            Task.WhenAll(runningTasks).Wait();
+
+            return stats.ToList();
         }
 
         #endregion
@@ -780,6 +827,11 @@ namespace Model
         #endregion
 
         #region Helpers
+
+        private ReaderWriterLockSlim GetLock(string file)
+        {
+            return SyncLocks.GetOrAdd(file, key => new ReaderWriterLockSlim());
+        }
 
         private class StreamReaderWrapper : IDisposable
         {

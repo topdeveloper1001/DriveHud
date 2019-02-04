@@ -43,9 +43,9 @@ namespace DriveHUD.Common.Log
 
             XmlConfigurator.ConfigureAndWatch(new FileInfo(LogConfigPath));
 
-            mainLog = LogManager.GetLogger("MainLog");           
+            mainLog = LogManager.GetLogger("MainLog");
         }
-     
+
         /// <summary>
         /// Log class
         /// </summary>
@@ -89,6 +89,8 @@ namespace DriveHUD.Common.Log
         /// </summary>
         private class InternalLog : IDHLog
         {
+            public bool IsAdvanced { get; set; }
+
             public void Log(Type senderType, object message, LogMessageType logMessageType)
             {
                 ILog log = senderType == null ? mainLog : LogManager.GetLogger(senderType);

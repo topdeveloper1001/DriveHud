@@ -34,6 +34,18 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
         /// </summary>
         /// <param name="process">Process to get the handle</param>
         /// <returns>The handle of the window</returns>
-        IntPtr GetProcessWindowHandle(Process process);
+        IntPtr GetProcessWindowHandle(Process process, out Process emulatorProcess);
+
+        /// <summary>
+        /// Gets the path to adb service
+        /// </summary>
+        /// <returns>Path to adb service</returns>
+        string GetAdbLocation();
+
+        /// <summary>
+        /// Gets the number of running instances
+        /// </summary>
+        /// <returns>Number of running instances</returns>
+        int GetNumberOfRunningInstances();
     }
 }

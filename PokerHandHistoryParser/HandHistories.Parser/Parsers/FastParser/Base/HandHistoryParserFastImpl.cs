@@ -20,6 +20,7 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Utils;
+using HandHistories.Parser.Utils.FastParsing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
     internal abstract class HandHistoryParserFastImpl : IHandHistoryParser
     {
         private static readonly Regex LineSplitRegex = new Regex("\n|\r", RegexOptions.Compiled);
-        private static readonly Regex HandSplitRegex = new Regex("\r\n\r\n", RegexOptions.Compiled);
 
         public abstract EnumPokerSites SiteName { get; }
 
@@ -95,9 +95,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         public virtual IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
-            return HandSplitRegex.Split(rawHandHistories)
-                            .Where(s => string.IsNullOrWhiteSpace(s) == false)
-                            .Select(s => s.Trim('\r', '\n'));
+            return ParserUtils.SplitUpMultipleHands(rawHandHistories);
         }
 
         public virtual IEnumerable<string[]> SplitUpMultipleHandsToLines(string rawHandHistories)

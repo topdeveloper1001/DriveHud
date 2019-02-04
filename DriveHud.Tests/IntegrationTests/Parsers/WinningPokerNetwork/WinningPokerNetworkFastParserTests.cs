@@ -437,10 +437,13 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary.txt", GameType.PotLimitHoldem, "6626931", 0, 0, TournamentSpeed.Regular)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary2.txt", GameType.NoLimitHoldem, "6626931", 1, 0.1, TournamentSpeed.Regular)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary3.txt", GameType.NoLimitHoldem, "6626931", 3, 0.3, TournamentSpeed.Regular)]
-        public void ParseTournamentSummaryTest(string handHistoryFile, GameType gameType, string tournamentId, decimal tournamentBuyIn, decimal tournamentRake, TournamentSpeed speed)
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary.txt", GameType.PotLimitHoldem, "6626931", 0, 0, 0, TournamentSpeed.Regular)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary2.txt", GameType.NoLimitHoldem, "6626931", 1, 0.1, 0, TournamentSpeed.Regular)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary3.txt", GameType.NoLimitHoldem, "6626931", 3, 0.3, 0, TournamentSpeed.Regular)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\20181224_20181230_JackpotHH.txt", GameType.NoLimitHoldem, "10335388", 1.89, 0.11, 4, TournamentSpeed.Regular)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\SnG2\JackpotHH-WithSummary.txt", GameType.NoLimitHoldem, "10354204", 1.89, 0.11, 4, TournamentSpeed.Regular)]
+        public void ParseTournamentSummaryTest(string handHistoryFile, GameType gameType, string tournamentId,
+            decimal tournamentBuyIn, decimal tournamentRake, decimal totalPrize, TournamentSpeed speed)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
 
@@ -448,8 +451,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             Assert.AreEqual(handHistory.GameDescription.Tournament.TournamentId, tournamentId);
             Assert.AreEqual(handHistory.GameDescription.GameType, gameType);
             Assert.AreEqual(handHistory.GameDescription.Tournament.Speed, speed);
-            Assert.AreEqual(handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue, tournamentBuyIn);
-            Assert.AreEqual(handHistory.GameDescription.Tournament.BuyIn.Rake, tournamentRake);
+            Assert.That(handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue, Is.EqualTo(tournamentBuyIn).Within(0.01));
+            Assert.That(handHistory.GameDescription.Tournament.BuyIn.Rake, Is.EqualTo(tournamentRake).Within(0.01));
+            Assert.That(handHistory.GameDescription.Tournament.TotalPrize, Is.EqualTo(totalPrize).Within(0.01));
         }
 
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\TournamentHyperTurbo.txt", TournamentSpeed.HyperTurbo)]
@@ -469,14 +473,15 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.Hero.Win, Is.EqualTo(win));
         }
-        
+
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\HH20180921 T9021671-G57904669.txt", 8)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary4.txt", 8)]
         public void SeatTypeMaxPlayersIsParsedTest(string handHistoryFile, int maxPlayers)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.GameDescription.SeatType.MaxPlayers, Is.EqualTo(maxPlayers));
         }
-        
+
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\HH20180921 T9021671-G57904669.txt", TournamentsTags.MTT)]
         public void TournamentsTagsIsParsedTest(string handHistoryFile, TournamentsTags tournamentTags)
         {

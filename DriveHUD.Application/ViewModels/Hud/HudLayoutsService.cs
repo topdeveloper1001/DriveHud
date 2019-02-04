@@ -42,7 +42,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     {
         protected string LayoutFileExtension;
         protected string MappingsFileName;
-        private readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Cash", "Vertical_1", "Horizontal", "Winamax" };
+        protected readonly string[] PredefinedLayoutPostfixes = new[] { string.Empty, "Cash", "Vertical_1", "Horizontal", "Winamax" };
 
         private static ReaderWriterLockSlim locker = new ReaderWriterLockSlim();
         private readonly IEventAggregator eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
@@ -73,7 +73,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <summary>
         /// Saves the mapping of the layout to the file on the default path
         /// </summary>
-        public void SaveLayoutMappings()
+        public virtual void SaveLayoutMappings()
         {
             var layoutsDirectory = GetLayoutsDirectory();
             var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
@@ -222,7 +222,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             if (!isNewLayout && hudData.Name.Equals(originalLayout.Name, StringComparison.OrdinalIgnoreCase) &&
                 originalLayout.IsDefault && originalLayout.TableType != hudData.LayoutInfo.TableType)
             {
-                eventAggregator.GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("DriveHUD", "The default layout can't be overwritten"));
+                eventAggregator.GetEvent<MainNotificationEvent>().Publish(
+                    new MainNotificationEventArgs("Notifications_HudLayout_SaveAsFailedTitle", "Notifications_HudLayout_SaveAsFailedDefaultLayout"));
+
                 return null;
             }
 
@@ -306,7 +308,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Imports <see cref="HudLayoutInfoV2"/> layout on the specified path
         /// </summary>
         /// <param name="path">Path to layout</param>
-        public HudLayoutInfoV2 Import(string path)
+        public virtual HudLayoutInfoV2 Import(string path)
         {
             if (!File.Exists(path))
             {
@@ -447,6 +449,31 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Exports <see cref="IEnumerable{BumperStickerType}"/> to the specified path
+        /// </summary>
+        /// <param name="path">Path to file</param>
+        public void ExportBumperStickerType(HudBumperStickerType[] bumperStickerTyps, string path)
+        {
+            if (bumperStickerTyps == null || bumperStickerTyps.Length == 0)
+            {
+                return;
+            }
+
+            try
+            {
+                using (var fs = File.Open(path, FileMode.Create))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudBumperStickerType[]));
+                    xmlSerializer.Serialize(fs, bumperStickerTyps);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Bumper sticker types has not been exported", e);
+            }
+        }
+
+        /// <summary>
         /// Imports <see cref="HudPlayerType"/> on the specified path
         /// </summary>
         /// <param name="path">Path to player type</param>
@@ -476,6 +503,37 @@ namespace DriveHUD.Application.ViewModels.Hud
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, $"Player type from '{path}' has not been imported.", e);
+            }
+
+            return null;
+        }
+
+
+        /// <summary>
+        /// Imports <see cref="HudBumperStickerType"/> on the specified path
+        /// </summary>
+        /// <param name="path">Path to bumper sticker type</param>
+        public HudBumperStickerType[] ImportBumperStickerType(string path)
+        {
+            if (!File.Exists(path))
+            {
+                LogProvider.Log.Error($"Bumper sticker type could not be imported. File '{path}' not found.");
+                return null;
+            }
+
+            try
+            {
+                using (var fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudBumperStickerType[]));
+                    var bumperStickerTypes = xmlSerializer.Deserialize(fs) as HudBumperStickerType[];
+
+                    return bumperStickerTypes;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Bumper sticker type from '{path}' has not been imported.", e);
             }
 
             return null;
@@ -590,7 +648,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <summary>
         /// Sets stickers for hud elements based on stats and bumper sticker settings
         /// </summary>
-        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, HudLightIndicators> stickersStatistics, HudLayoutInfoV2 layout)
+        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, HudStickerIndicators> stickersStatistics, HudLayoutInfoV2 layout)
         {
             hudElement.Stickers = new ObservableCollection<HudBumperStickerType>();
 
@@ -601,9 +659,9 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             foreach (var sticker in layout.HudBumperStickerTypes.Where(x => x.EnableBumperSticker))
             {
-                if (!stickersStatistics.TryGetValue(sticker.Name, out HudLightIndicators statistics) ||
+                if (!stickersStatistics.TryGetValue(sticker.Name, out HudStickerIndicators statistics) ||
                     statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0 ||
-                    !IsInRange(hudElement, sticker.Stats, statistics))
+                    !IsInRange(sticker.Stats, statistics))
                 {
                     continue;
                 }
@@ -647,7 +705,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="name">Name of layout to get</param>
         /// <returns>Layout</returns>
-        public HudLayoutInfoV2 GetLayout(string name)
+        public virtual HudLayoutInfoV2 GetLayout(string name)
         {
             var mapping = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
             return LoadLayout(mapping);
@@ -669,7 +727,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="pokerSite">Poker site</param>
         /// <param name="tableType">Type of table</param>
         /// <param name="gameType">Type of game</param>        
-        public IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType)
+        public IEnumerable<string> GetAvailableLayouts(EnumTableType tableType)
         {
             var defaultNames = HudLayoutMappings.Mappings.Where(m => m.TableType == tableType)
                         .Select(m => m.Name).Distinct().ToList();
@@ -941,7 +999,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="fileName">File with layout</param>
         /// <returns>Mappings of layout</returns>
-        protected HudLayoutMappings LoadLayoutMappings(string fileName)
+        protected virtual HudLayoutMappings LoadLayoutMappings(string fileName)
         {
             if (!File.Exists(fileName))
             {
@@ -1092,7 +1150,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="tableType">Table type</param>
         /// <returns>Predefined <see cref="HudLayoutInfoV2"/> layout</returns>
-        private HudLayoutInfoV2 GetPredefinedLayout(EnumTableType tableType, string postfix)
+        protected HudLayoutInfoV2 GetPredefinedLayout(EnumTableType tableType, string postfix)
         {
             var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
 
@@ -1122,7 +1180,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Gets the predefined mappings
         /// </summary>
         /// <returns></returns>
-        private HudLayoutMappings GetPredefinedMappings()
+        protected HudLayoutMappings GetPredefinedMappings()
         {
             var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
 
@@ -1164,7 +1222,15 @@ namespace DriveHUD.Application.ViewModels.Hud
                                let inRange = grouped != null ? (grouped.CurrentValue >= low && grouped.CurrentValue <= high) : !isStatDefined
                                let isGroupAndStatDefined = grouped != null && isStatDefined
                                let matchRatio = isGroupAndStatDefined ? Math.Abs(grouped.CurrentValue - average) : 0
-                               let extraMatchRatio = (isGroupAndStatDefined && (grouped.Stat == Stat.VPIP || grouped.Stat == Stat.PFR)) ? matchRatio : 0
+                               let extraMatchAllowed = isGroupAndStatDefined && (grouped.Stat == Stat.VPIP || grouped.Stat == Stat.PFR)
+                               let extraMathLowRatio = isGroupAndStatDefined ? Math.Abs(low - grouped.CurrentValue) : 0
+                               let extraMathHighRatio = isGroupAndStatDefined ? Math.Abs(high - grouped.CurrentValue) : 0
+                               let extraMatchRatioPossible = new[] {
+                                        matchRatio == 0 ? 0.001m : matchRatio,
+                                        isGroupAndStatDefined && extraMathLowRatio == 0 ? 0.001m : extraMathLowRatio,
+                                        isGroupAndStatDefined && extraMathHighRatio == 0 ? 0.001m : extraMathHighRatio,
+                                    }.Min()
+                               let extraMatchRatio = extraMatchAllowed ? extraMatchRatioPossible : 0
                                select
                                new
                                {
@@ -1180,7 +1246,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     matchRatios.Sum(x => x.Ratio), matchRatios.Sum(x => x.ExtraMatchRatio));
         }
 
-        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats, HudLightIndicators source)
+        private bool IsInRange(IEnumerable<BaseHudRangeStat> rangeStats, HudLightIndicators source)
         {
             if (!rangeStats.Any(x => x.High.HasValue || x.Low.HasValue))
             {
@@ -1194,14 +1260,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     continue;
                 }
 
-                var stat = hudElement.StatInfoCollection.FirstOrDefault(x => x.Stat == rangeStat.Stat);
-
-                if (stat == null)
-                {
-                    return false;
-                }
-
-                var propertyName = StatsProvider.GetStatProperyName(stat.Stat);
+                var propertyName = StatsProvider.GetStatProperyName(rangeStat.Stat);
 
                 var currentStat = new StatInfo();
                 currentStat.AssignStatInfoValues(source, propertyName);
@@ -1223,7 +1282,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="hudLayoutInfo">Layout to save</param>
         /// <returns>Path to the saved layout</returns>
-        private string InternalSave(HudLayoutInfoV2 hudLayoutInfo)
+        protected virtual string InternalSave(HudLayoutInfoV2 hudLayoutInfo)
         {
             Check.ArgumentNotNull(() => hudLayoutInfo);
 

@@ -1,0 +1,38 @@
+PokerStars Game #47151546157:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:18:25 ET
+Table 'Retsina' 6-max Seat #5 is the button
+Seat 1: FIrmFighter ($250 in chips) 
+Seat 2: stopme10 ($255.05 in chips) 
+Seat 3: maestroB ($114.20 in chips) 
+Seat 4: faridMahi ($201.25 in chips) 
+Seat 5: GorillzaT ($194 in chips) 
+Seat 6: Hero ($211.30 in chips) 
+Hero: posts small blind $1
+FIrmFighter: posts big blind $2
+*** HOLE CARDS ***
+stopme10: folds 
+maestroB: folds 
+faridMahi: calls $2
+GorillzaT: folds 
+Hero: raises $9 to $11
+FIrmFighter: raises $19 to $30
+faridMahi: calls $28
+Hero: folds 
+*** FLOP *** [8c 3c 3d]
+FIrmFighter: checks 
+faridMahi: checks 
+*** TURN *** [8c 3c 3d] [Ah]
+FIrmFighter: bets $44
+faridMahi: folds 
+Uncalled bet ($44) returned to FIrmFighter
+FIrmFighter collected $68 from pot
+FIrmFighter: doesn't show hand 
+*** SUMMARY ***
+Total pot $71 | Rake $3 
+Board [8c 3c 3d Ah]
+Seat 1: FIrmFighter (big blind) collected ($68)
+Seat 2: stopme10 folded before Flop (didn't bet)
+Seat 3: maestroB folded before Flop (didn't bet)
+Seat 4: faridMahi folded on the Turn
+Seat 5: GorillzaT (button) folded before Flop (didn't bet)
+Seat 6: Hero (small blind) folded before Flop
+

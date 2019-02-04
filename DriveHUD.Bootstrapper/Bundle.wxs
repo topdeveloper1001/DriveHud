@@ -4,7 +4,7 @@
      xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
 
   <?ifndef ProductVersion?>
-  <?define ProductVersion = "1.5.3.2486" ?>
+  <?define ProductVersion = "1.6.1.2698" ?>
   <?endif ?>
 
   <?ifndef ProductName?>
@@ -46,20 +46,26 @@
     <!-- Determine what items are installed in the event of an upgrade-->
     <util:RegistrySearch Root="HKCU" Key="Software\$(var.Manufacturer)\$(var.ProductName)" Variable="ProductSHMInstalled" Result="exists" />
 
-    <Variable Name="EXECUTABLE" bal:Overridable='yes' Value='"DriveHUD.Application.exe"'/>
-    <Variable Name="RELATIVEEXECUTABLEPATH" bal:Overridable='yes' Value='"$(var.ProductName)"'/>
+    <!-- Determine version of VC Redistributive 2017 -->
+    <util:ProductSearch Id="VCREDIST_140_x86"
+           UpgradeCode="65E5BD06-6392-3027-8C26-853107D3CF1A"
+           Result="version"
+           Variable="VCREDIST_140_x86" />
+
+    <Variable Name="LAUNCHPROGRAM" bal:Overridable='yes' Value='"DriveHUD.Application.exe"'/>
 
     <Chain DisableSystemRestore='yes'>
       <PackageGroupRef Id="NetFx461Web" />
       <RollbackBoundary/>
       <ExePackage
          Id="VCRedistX86"
-         Name="Microsoft Visual C++ 2015 Redistributable Update 3"
+         Name="Microsoft Visual C++ 2017 Redistributable"
          Cache="no"
          Compressed="yes"
          PerMachine="yes"
          Permanent="yes"
          Vital="yes"
+         DetectCondition="(VCREDIST_140_x86 &gt;= v14.16.27024)"
          SourceFile="..\dependencies\vc_redist.x86.exe"
          InstallCommand="/install /quiet /norestart">
         <ExitCode Value="3010" Behavior="forceReboot"/>

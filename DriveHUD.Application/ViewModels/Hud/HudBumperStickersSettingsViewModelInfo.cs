@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Model.Hud;
 using System;
 using System.Collections.Generic;
 

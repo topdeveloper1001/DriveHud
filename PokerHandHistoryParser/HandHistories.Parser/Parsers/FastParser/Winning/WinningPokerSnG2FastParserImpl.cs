@@ -26,11 +26,15 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using HandHistories.Objects.Hand;
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Extensions;
+using System.Text;
 
 namespace HandHistories.Parser.Parsers.FastParser.Winning
 {
     internal class WinningPokerSnG2FastParserImpl : HandHistoryParserFastImpl
     {
+        private const string GameLinePrefix = "Game Hand #";
+
         private int TournamentIdStartindex = -1;
 
         public override EnumPokerSites SiteName
@@ -80,32 +84,27 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
             var tournamentTitle = string.Empty;
 
+            var gameInfoHeader = string.Empty;
+
             // need to add tournament id to game information
             for (var i = 0; i < handsDraft.Length; i++)
             {
                 if (handsDraft[i].StartsWith("<Game Information>", StringComparison.OrdinalIgnoreCase))
                 {
-                    var titleStartIndex = handsDraft[0].IndexOf("Title:", StringComparison.OrdinalIgnoreCase) + 6;
-                    var titleEndIndex = handsDraft[0].IndexOf("\n", titleStartIndex, StringComparison.OrdinalIgnoreCase) - 1;
-
-                    if (titleStartIndex < 0 || titleEndIndex < 0 || (titleEndIndex - titleStartIndex < 1))
-                    {
-                        continue;
-                    }
-
-                    tournamentTitle = handsDraft[0].Substring(titleStartIndex, titleEndIndex - titleStartIndex).Trim();
+                    gameInfoHeader = handsDraft[i].Trim();
                     continue;
                 }
 
-                if (handsDraft[i].StartsWith("<Hand History>", StringComparison.OrdinalIgnoreCase))
+                if (!string.IsNullOrEmpty(gameInfoHeader))
                 {
-                    handsDraft[i] = handsDraft[i].Substring(15).Trim();
-                }
-
-                if (!string.IsNullOrWhiteSpace(tournamentTitle))
-                {
-                    var indexOfNewLine = handsDraft[i].IndexOf("\n");
-                    handsDraft[i] = handsDraft[i].Insert(indexOfNewLine + 1, $"Title '{tournamentTitle}'{Environment.NewLine}");
+                    if (handsDraft[i].StartsWith("<Hand History>", StringComparison.OrdinalIgnoreCase))
+                    {
+                        handsDraft[i] = $"{gameInfoHeader}{Environment.NewLine}{Environment.NewLine}{handsDraft[i]}";
+                    }
+                    else
+                    {
+                        handsDraft[i] = $"{gameInfoHeader}{Environment.NewLine}{Environment.NewLine}<Hand History>{Environment.NewLine}{handsDraft[i]}";
+                    }
                 }
 
                 hands.Add(handsDraft[i]);
@@ -127,7 +126,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         /// </summary>     
         public override bool IsValidHand(string[] handLines)
         {
-            return handLines.Length > 0 && handLines[0].StartsWith("Game Hand #", StringComparison.OrdinalIgnoreCase);
+            return handLines.Length > 0 && handLines.Count(x => x.StartsWith(GameLinePrefix, StringComparison.OrdinalIgnoreCase)) == 1;
         }
 
         /// <summary>
@@ -145,7 +144,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         protected override DateTime ParseDateUtc(string[] handLines)
         {
             // Game Hand #12908866 - Tournament #8034884 - Holdem(No Limit) - Level 1 (10.00/20.00)- 2017/05/08 08:32:30 UTC
-            var line = handLines[0];
+            var line = GetGameHandLine(handLines);
 
             var regex = new Regex(@"(?<year>\d{4})/(?<month>\d{2})/(?<day>\d{2}) (?<hour>\d{1,2}):(?<minute>\d{2}):(?<second>\d{2})");
 
@@ -180,7 +179,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         /// </summary>     
         protected override PokerFormat ParsePokerFormat(string[] handLines)
         {
-            var tournamentStartIndex = handLines[0].IndexOf("Tournament #", StringComparison.OrdinalIgnoreCase);
+            var tournamentStartIndex = GetGameHandLine(handLines).IndexOf("Tournament #", StringComparison.OrdinalIgnoreCase);
 
             if (tournamentStartIndex > 0)
             {
@@ -197,8 +196,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         /// </summary>    
         protected override GameType ParseGameType(string[] handLines)
         {
-            // currently only SnG2 games are only No Limit Holdem
-            return GameType.NoLimitHoldem;
+            // currently only SnG2 games are only No Limit Holdem and Pot Limit Omaha
+            var gameLine = GetGameHandLine(handLines);
+
+            return gameLine.ContainsIgnoreCase("Pot Limit") && gameLine.ContainsIgnoreCase("Omaha") ?
+                GameType.PotLimitOmaha :
+                GameType.NoLimitHoldem;
         }
 
         /// <summary>
@@ -206,10 +209,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         /// </summary>    
         protected override Limit ParseLimit(string[] handLines)
         {
-            var startIndex = handLines[0].LastIndexOf('(') + 1;
-            var lastIndex = handLines[0].LastIndexOf(')') - 1;
+            var gameLine = GetGameHandLine(handLines);
 
-            var limitSubstring = handLines[0].Substring(startIndex, lastIndex - startIndex + 1);
+            var startIndex = gameLine.LastIndexOf('(') + 1;
+            var lastIndex = gameLine.LastIndexOf(')') - 1;
+
+            var limitSubstring = gameLine.Substring(startIndex, lastIndex - startIndex + 1);
 
             var slashIndex = limitSubstring.IndexOf('/');
 
@@ -263,21 +268,77 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         protected override TournamentDescriptor ParseTournament(string[] handLines)
         {
             // Game Hand #12908866 - Tournament #8034884 - Holdem(No Limit) - Level 1 (10.00/20.00)- 2017/05/08 08:32:30 UTC
-            var endIndex = handLines[0].IndexOf(" -", TournamentIdStartindex, StringComparison.OrdinalIgnoreCase);
+            var gameLine = GetGameHandLine(handLines);
 
-            var tournamentId = handLines[0].Substring(TournamentIdStartindex, endIndex - TournamentIdStartindex);
+            var endIndex = gameLine.IndexOf(" -", TournamentIdStartindex, StringComparison.OrdinalIgnoreCase);
 
-            var buyin = ParseBuyin(handLines);
+            var tournamentId = gameLine.Substring(TournamentIdStartindex, endIndex - TournamentIdStartindex);
+
+            // Title: SNG 2.0 $5.50
+            // Title: $2 Jackpot Holdem
+            var titleLine = handLines.FirstOrDefault(x => x.StartsWith("Title: ", StringComparison.OrdinalIgnoreCase));
+
+            var tournamentName = string.Empty;
+
+            if (titleLine != null)
+            {
+                tournamentName = titleLine.Substring(7, titleLine.Length - 8);
+            }
+            else
+            {
+                tournamentName = gameLine.ContainsIgnoreCase(" *** ") ?
+                    $"Jackpot #{tournamentId}" :
+                    $"SNG 2.0 #{tournamentId}";
+            }
+
+            var isJackpot = tournamentName.ContainsIgnoreCase("Jackpot");
+
+            var buyin = isJackpot ? ParseJackpotBuyin(handLines, tournamentName) : ParseBuyin(handLines);
+
+            var totalPrize = isJackpot ? 2 * (buyin.PrizePoolValue + buyin.Rake) : 0;
 
             var tournamentDescriptor = new TournamentDescriptor
             {
                 TournamentId = tournamentId,
                 Speed = TournamentSpeed.Regular,
-                TournamentName = string.Format("SNG 2.0 #{0}", tournamentId),
-                BuyIn = buyin
+                TournamentName = tournamentName,
+                BuyIn = buyin,
+                TotalPrize = totalPrize
             };
 
             return tournamentDescriptor;
+        }
+
+        private Buyin ParseJackpotBuyin(string[] handLines, string tournamentName)
+        {
+            var handLine = handLines.FirstOrDefault(x => x.ContainsIgnoreCase(" *** Summary:"));
+
+            var buyinWithRake = 0m;
+
+            if (handLine == null)
+            {
+                var spaceIndex = tournamentName.IndexOf(' ');
+
+                var buyinText = tournamentName.Substring(0, spaceIndex);
+
+                ParserUtils.TryParseMoney(buyinText, out buyinWithRake);
+            }
+            else
+            {
+                var buyinIndex = handLine.IndexOf("TournamentBuyIn: ", StringComparison.OrdinalIgnoreCase);
+
+                if (buyinIndex > 0)
+                {
+                    var buyinText = handLine.Substring(buyinIndex + 17);
+
+                    ParserUtils.TryParseMoney(buyinText, out buyinWithRake);
+                }
+            }
+
+            var buyin = Math.Round(buyinWithRake / 1.06m, 2);
+            var rake = buyinWithRake - buyin;
+
+            return Buyin.FromBuyinRake(buyin, rake, Currency.USD);
         }
 
         /// <summary>
@@ -286,7 +347,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         protected override Buyin ParseBuyin(string[] handLines)
         {
             // Title 'SNG 2.0 $5.50'
-            var handLine = handLines.FirstOrDefault(x => x.StartsWith("Title '", StringComparison.OrdinalIgnoreCase));
+            var handLine = handLines.FirstOrDefault(x => x.StartsWith("Title: ", StringComparison.OrdinalIgnoreCase));
 
             if (handLine == null)
             {
@@ -326,10 +387,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         protected override long ParseHandId(string[] handLines)
         {
             // Game Hand #12908866 - Tournament #8034884 - Holdem(No Limit) - Level 1 (10.00/20.00)- 2017/05/08 08:32:30 UTC
-            var startIndexOfHandId = handLines[0].IndexOf("#") + 1;
-            var endIndexOfHandId = handLines[0].IndexOf(" -", startIndexOfHandId);
+            var gameLine = GetGameHandLine(handLines);
 
-            var handId = handLines[0].Substring(startIndexOfHandId, endIndexOfHandId - startIndexOfHandId);
+            var startIndexOfHandId = gameLine.IndexOf("#") + 1;
+            var endIndexOfHandId = gameLine.IndexOf(" -", startIndexOfHandId);
+
+            var handId = gameLine.Substring(startIndexOfHandId, endIndexOfHandId - startIndexOfHandId);
 
             return long.Parse(handId);
         }
@@ -1343,6 +1406,19 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             handHistory.Players.ForEach(x => x.PlayerName = players[x.PlayerName]);
 
             handHistory.HandActions.ForEach(x => x.PlayerName = players[x.PlayerName]);
+        }
+
+        private string GetGameHandLine(string[] handLines)
+        {
+            return handLines.First(x => x.StartsWith(GameLinePrefix, StringComparison.OrdinalIgnoreCase));
+        }
+
+        private string GetGameHandLine(string[] handLines, out int index)
+        {
+            var gameLine = handLines.First(x => x.StartsWith(GameLinePrefix, StringComparison.OrdinalIgnoreCase));
+            index = Array.IndexOf(handLines, gameLine);
+
+            return gameLine;
         }
     }
 }

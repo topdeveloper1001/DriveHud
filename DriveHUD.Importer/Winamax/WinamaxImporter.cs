@@ -60,7 +60,7 @@ namespace DriveHUD.Importers.Winamax
                 // Winamax supports the following options: top, right, left, lower; so we use 4-max table to configure preferred seating
                 var prefferedSeat = preferredSeats.FirstOrDefault(x => x.IsPreferredSeatEnabled && x.TableType == EnumTableType.Four);
 
-                if (prefferedSeat != null && preferredSeatsConvertingMap.ContainsKey(maxPlayers))
+                if (prefferedSeat != null && preferredSeatsConvertingMap.ContainsKey(maxPlayers) && prefferedSeat.PreferredSeat > 0)
                 {
                     var shift = (preferredSeatsConvertingMap[maxPlayers][prefferedSeat.PreferredSeat] - heroSeat) % maxPlayers;
 

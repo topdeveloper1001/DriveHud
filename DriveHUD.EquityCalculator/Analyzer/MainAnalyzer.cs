@@ -98,6 +98,11 @@ namespace DriveHUD.EquityCalculator.Analyzer
         {
             var result = new Dictionary<MadeHandType, int>();
 
+            if (!range.Any() || string.IsNullOrEmpty(boardCards))
+            {
+                return result;
+            }
+
             void AddResult(MadeHandType handType)
             {
                 if (!result.ContainsKey(handType))
@@ -111,16 +116,16 @@ namespace DriveHUD.EquityCalculator.Analyzer
 
             var ungroupedHands = HandAnalyzer.UngroupHands(range, boardCards, null);
 
-            var boardCard1 = boardCards.Substring(0, 2);
-            var boardCard2 = boardCards.Substring(2, 2);
-            var boardCard3 = boardCards.Substring(4, 2);
+            var boardCard1 = boardCards.Length >= 2 ? boardCards.Substring(0, 2) : null;
+            var boardCard2 = boardCards.Length >= 4 ? boardCards.Substring(2, 2) : null;
+            var boardCard3 = boardCards.Length >= 6 ? boardCards.Substring(4, 2) : null;
             var boardCard4 = boardCards.Length >= 8 ? boardCards.Substring(6, 2) : null;
             var boardCard5 = boardCards.Length >= 10 ? boardCards.Substring(8, 2) : null;
 
             // flop cards in binary format
-            var fBoardCard1 = HandHistory.fastCard(boardCard1[0], boardCard1[1]);
-            var fBoardCard2 = HandHistory.fastCard(boardCard2[0], boardCard2[1]);
-            var fBoardCard3 = HandHistory.fastCard(boardCard3[0], boardCard3[1]);
+            var fBoardCard1 = boardCard1 != null ? HandHistory.fastCard(boardCard1[0], boardCard1[1]) : 0;
+            var fBoardCard2 = boardCard2 != null ? HandHistory.fastCard(boardCard2[0], boardCard2[1]) : 0;
+            var fBoardCard3 = boardCard3 != null ? HandHistory.fastCard(boardCard3[0], boardCard3[1]) : 0;
             var fBoardCard4 = boardCard4 != null ? HandHistory.fastCard(boardCard4[0], boardCard4[1]) : 0;
             var fBoardCard5 = boardCard5 != null ? HandHistory.fastCard(boardCard5[0], boardCard5[1]) : 0;
 
@@ -213,7 +218,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
             }
         }
 
-        private static IEnumerable<EquityRangeSelectorItemViewModel> GroupHands(List<String> ungroupedHands)
+        private static IEnumerable<EquityRangeSelectorItemViewModel> GroupHands(List<string> ungroupedHands)
         {
             var cards = new List<string> { "A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2" };
 

@@ -1,0 +1,62 @@
+﻿Game started at: 2018/11/28 9:59:59 *** Summary: GameType: NL, TournamentId: 9230580, TournamentBuyIn: 1, TableType: 8
+Game ID: 1322768877 500/1000 The Venom Step1/6-113SeatsGTD to Step2/6, Table 23 (Hold'em)
+Seat 1 is the button
+Seat 1: la fumanda (250000).
+Seat 2: xsouldevicex (250000).
+Seat 3: BrownEyez1984 (250000).
+Seat 4: ScreenNameHere (250000).
+Seat 5: azesi (250000).
+Seat 6: pdpaul (250000).
+Seat 7: Peon_84 (250000).
+Seat 8: Turtle79 (250000).
+Player xsouldevicex ante (150)
+Player BrownEyez1984 ante (150)
+Player ScreenNameHere ante (150)
+Player azesi ante (150)
+Player pdpaul ante (150)
+Player Peon_84 ante (150)
+Player Turtle79 ante (150)
+Player la fumanda ante (150)
+Player xsouldevicex has small blind (500)
+Player BrownEyez1984 has big blind (1000)
+Player xsouldevicex received a card.
+Player xsouldevicex received a card.
+Player BrownEyez1984 received a card.
+Player BrownEyez1984 received a card.
+Player ScreenNameHere received a card.
+Player ScreenNameHere received a card.
+Player azesi received a card.
+Player azesi received a card.
+Player pdpaul received a card.
+Player pdpaul received a card.
+Player Peon_84 received card: [Jc]
+Player Peon_84 received card: [4h]
+Player Turtle79 received a card.
+Player Turtle79 received a card.
+Player la fumanda received a card.
+Player la fumanda received a card.
+Player ScreenNameHere folds
+Player azesi is timed out.
+Player azesi folds
+Player pdpaul is timed out.
+Player pdpaul folds
+Player Peon_84 folds
+Player Turtle79 calls (1000)
+Player la fumanda allin (249850)
+Player xsouldevicex folds
+Player BrownEyez1984 folds
+Player Turtle79 folds
+Uncalled bet (248850) returned to la fumanda
+Player la fumanda is timed out.
+Player la fumanda mucks cards
+------ Summary ------
+Pot: 4700
+*Player la fumanda mucks (does not show cards). Bets: 1150. Collects: 4700. Wins: 3550.
+Player xsouldevicex does not show cards.Bets: 650. Collects: 0. Loses: 650.
+Player BrownEyez1984 does not show cards.Bets: 1150. Collects: 0. Loses: 1150.
+Player ScreenNameHere does not show cards.Bets: 150. Collects: 0. Loses: 150.
+Player azesi does not show cards.Bets: 150. Collects: 0. Loses: 150.
+Player pdpaul does not show cards.Bets: 150. Collects: 0. Loses: 150.
+Player Peon_84 does not show cards.Bets: 150. Collects: 0. Loses: 150.
+Player Turtle79 does not show cards.Bets: 1150. Collects: 0. Loses: 1150.
+Game ended at: 2018/11/28 10:1:9

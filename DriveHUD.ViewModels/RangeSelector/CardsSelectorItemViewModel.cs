@@ -1,4 +1,5 @@
 ﻿using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Linq;
 using Model.Enums;
 using Model.Notifications;
 using Prism.Interactivity.InteractionRequest;
@@ -38,7 +39,7 @@ namespace DriveHUD.ViewModels
 
         }
 
-        public bool IsSelected
+        public virtual bool IsSelected
         {
             get
             {
@@ -59,6 +60,20 @@ namespace DriveHUD.ViewModels
                 }
 
                 SetProperty(ref _isSelected, value);
+            }
+        }
+
+        private bool isEnabled = true;
+
+        public bool IsEnabled
+        {
+            get
+            {
+                return isEnabled;
+            }
+            set
+            {
+                SetProperty(ref isEnabled, value);
             }
         }
 
@@ -190,7 +205,7 @@ namespace DriveHUD.ViewModels
 
         public virtual void HandUpdateAndRefresh()
         {
-            HandUpdate();            
+            HandUpdate();
         }
 
         public static RangeSelectorItemViewModel FromString(string s)

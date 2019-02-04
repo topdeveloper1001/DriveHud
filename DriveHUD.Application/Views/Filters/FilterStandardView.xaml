@@ -332,8 +332,26 @@
                     VerticalAlignment="Top"
                     Margin="0,10,5,0"
                     Grid.Column="1" />
+                <dh:ComboBoxEx
+                    Margin="0,10,0,0"
+                    Height="25"
+                    Width="180"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    SelectionChanged="ComboBox_SelectionChanged"
+                    ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
+                    ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
+                    ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
+                    ItemsSource="{Binding FilterModel.PreflopActorPositions}"
+                    SelectedItem="{Binding FilterModel.SelectedPreflopActorPosition}">
+                    <dh:ComboBoxEx.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock
+                                Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}" />
+                        </DataTemplate>
+                    </dh:ComboBoxEx.ItemTemplate>
+                </dh:ComboBoxEx>
             </Grid>
-
         </Border>
 
         <!-- PRE-FLOP ACTION (PreFlopActionCollection) -->

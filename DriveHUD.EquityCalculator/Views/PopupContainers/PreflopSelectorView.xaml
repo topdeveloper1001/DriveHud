@@ -8,15 +8,17 @@
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:prism="http://www.codeplex.com/prism"
     xmlns:converter="clr-namespace:DriveHUD.Common.Wpf.Converters;assembly=DriveHUD.Common.Wpf"
+    xmlns:cnv="clr-namespace:DriveHUD.EquityCalculator.Converters"
     xmlns:predef="clr-namespace:DriveHUD.Controls;assembly=DriveHUD.Controls"
-    xmlns:vm="clr-namespace:DriveHUD.EquityCalculator.ViewModels"
+    xmlns:eqvm="clr-namespace:DriveHUD.EquityCalculator.ViewModels"
+    xmlns:vm="clr-namespace:DriveHUD.ViewModels;assembly=DriveHUD.ViewModels"
     xmlns:v="clr-namespace:DriveHUD.EquityCalculator.Views"
     xmlns:enum="clr-namespace:Model.Enums;assembly=Model"
     xmlns:global="clr-namespace:System.Globalization;assembly=mscorlib"
     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     mc:Ignorable="d">
     <UserControl.DataContext>
-        <vm:PreflopSelectorViewModel />
+        <eqvm:PreflopSelectorViewModel />
     </UserControl.DataContext>
 
     <i:Interaction.Triggers>
@@ -84,8 +86,18 @@
 
             <converter:StaticResourceConverter
                 x:Key="StaticResourceConverter" />
+
             <converter:BoolToVisibilityConverterHiddenByDef
                 x:Key="BoolToVisibilityHidden" />
+
+            <cnv:EquityRangeItemToBackgroundConverter
+                x:Key="EquityRangeItemToBackgroundConverter"
+                RangeBackground="{StaticResource RangeBackgroundColor}"
+                SelectedRangeBackground="{StaticResource SelectedRangeBackgroundColor}"
+                FoldCheckRangeBackground="{StaticResource FoldCheckRangeColor}"
+                CallRangeBackground="{StaticResource CallRangeColor}"
+                BluffRangeBackground="{StaticResource BluffRangeColor}"
+                ValueBetRangeBackground="{StaticResource ValueBetRangeColor}" />
 
             <ControlTemplate
                 x:Key="MenuItemTemplate"
@@ -872,16 +884,29 @@
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 Margin="1"
+                                IsEnabled="{Binding IsEnabled}"
                                 MouseEnter="Grid_MouseEnter">
 
                                 <Grid.Style>
                                     <Style
                                         TargetType="Grid">
                                         <Setter
-                                            Property="Background"
-                                            Value="{StaticResource RangeBackground}" />
+                                            Property="Background">
+                                            <Setter.Value>
+                                                <MultiBinding
+                                                    Converter="{StaticResource EquityRangeItemToBackgroundConverter}">
+                                                    <Binding
+                                                        Path="Combos" />
+                                                    <Binding
+                                                        Path="IsSelected" />
+                                                    <Binding
+                                                        Path="." />
+                                                </MultiBinding>
+                                            </Setter.Value>
+                                        </Setter>
                                         <Style.Triggers>
                                             <!-- Selected w/o EQ -->
+                                            <!--
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
                                                     <Condition
@@ -895,7 +920,10 @@
                                                     Property="Background"
                                                     Value="{StaticResource SelectedRangeBackground}" />
                                             </MultiDataTrigger>
+
+                                            -->
                                             <!-- Selected /w EQ fold or check -->
+                                            <!--
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
                                                     <Condition
@@ -909,7 +937,9 @@
                                                     Property="Background"
                                                     Value="{StaticResource FoldCheckRangeBackground}" />
                                             </MultiDataTrigger>
+                                            -->
                                             <!-- Selected /w EQ call -->
+                                            <!--
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
                                                     <Condition
@@ -923,7 +953,9 @@
                                                     Property="Background"
                                                     Value="{StaticResource CallRangeBackground}" />
                                             </MultiDataTrigger>
+                                            -->
                                             <!-- Selected /w EQ bluff -->
+                                            <!--
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
                                                     <Condition
@@ -937,7 +969,9 @@
                                                     Property="Background"
                                                     Value="{StaticResource BluffRangeBackground}" />
                                             </MultiDataTrigger>
+                                            -->
                                             <!-- Selected /w EQ value bet -->
+                                            <!--
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
                                                     <Condition
@@ -950,7 +984,15 @@
                                                 <Setter
                                                     Property="Background"
                                                     Value="{StaticResource ValueBetRangeBackground}" />
-                                            </MultiDataTrigger>
+                                            </MultiDataTrigger>-->
+
+                                            <DataTrigger
+                                                Binding="{Binding IsEnabled}"
+                                                Value="False">
+                                                <Setter
+                                                    Property="Opacity"
+                                                    Value="0.3" />
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </Grid.Style>
@@ -1096,9 +1138,12 @@
                             Value="{Binding SliderValue, Mode=TwoWay}" />
                         <telerik:RadNumericUpDown
                             Style="{x:Null}"
-                            IsEnabled="False"
                             Value="{Binding SelectedPercentage, StringFormat={}{0:0.#}%}"
                             ValueFormat="Numeric"
+                            Maximum="100"
+                            Minimum="0"
+                            Foreground="#FFFFFF"
+                            Background="#202125"
                             Margin="10 0 0 0"
                             Grid.Column="1">
                             <telerik:RadNumericUpDown.NumberFormatInfo>
@@ -1498,13 +1543,88 @@
                                             Property="Background"
                                             Value="#1F2124" />
                                         <Style.Triggers>
-                                            <DataTrigger
-                                                Binding="{Binding IsSelected}"
-                                                Value="True">
+                                            <!-- Selected w/o EQ -->
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition
+                                                        Binding="{Binding IsSelected}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding SelectionMode}"
+                                                        Value="{x:Static vm:EquitySelectionMode.None}" />
+                                                </MultiDataTrigger.Conditions>
                                                 <Setter
                                                     Property="Background"
                                                     Value="#2a2d31" />
-                                            </DataTrigger>
+                                            </MultiDataTrigger>
+                                            <!-- Selected /w EQ fold or check -->
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition
+                                                        Binding="{Binding IsSelected}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding IsVisible}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding SelectionMode}"
+                                                        Value="{x:Static vm:EquitySelectionMode.FoldCheck}" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter
+                                                    Property="Background"
+                                                    Value="{StaticResource FoldCheckRangeBackground}" />
+                                            </MultiDataTrigger>
+                                            <!-- Selected /w EQ call -->
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition
+                                                        Binding="{Binding IsSelected}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding IsVisible}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding SelectionMode}"
+                                                        Value="{x:Static vm:EquitySelectionMode.Call}" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter
+                                                    Property="Background"
+                                                    Value="{StaticResource CallRangeBackground}" />
+                                            </MultiDataTrigger>
+                                            <!-- Selected /w EQ bluff -->
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition
+                                                        Binding="{Binding IsSelected}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding IsVisible}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding SelectionMode}"
+                                                        Value="{x:Static vm:EquitySelectionMode.Bluff}" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter
+                                                    Property="Background"
+                                                    Value="{StaticResource BluffRangeBackground}" />
+                                            </MultiDataTrigger>
+                                            <!-- Selected /w EQ value bet -->
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition
+                                                        Binding="{Binding IsSelected}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding IsVisible}"
+                                                        Value="True" />
+                                                    <Condition
+                                                        Binding="{Binding SelectionMode}"
+                                                        Value="{x:Static vm:EquitySelectionMode.ValueBet}" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter
+                                                    Property="Background"
+                                                    Value="{StaticResource ValueBetRangeBackground}" />
+                                            </MultiDataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </Grid.Style>

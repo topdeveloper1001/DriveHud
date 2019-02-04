@@ -1,0 +1,42 @@
+PokerStars Game #47153379302:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:24:12 ET
+Table 'Istria II' 6-max Seat #5 is the button
+Seat 1: stopme10 ($222.50 in chips) 
+Seat 2: mad.afurable ($456.35 in chips) 
+Seat 3: Hero ($206 in chips) 
+Seat 4: fakker11 ($203 in chips) 
+Seat 5: ramones099 ($141 in chips) 
+Seat 6: Bosas2 ($689.95 in chips) 
+Bosas2: posts small blind $1
+stopme10: posts big blind $2
+*** HOLE CARDS ***
+mad.afurable: folds 
+Hero: raises $4 to $6
+fakker11: folds 
+ramones099: calls $6
+Bosas2: folds 
+stopme10: folds 
+*** FLOP *** [Ac 8c 4c]
+Hero: checks 
+ramones099: bets $4
+Hero: calls $4
+*** TURN *** [Ac 8c 4c] [Ah]
+Hero: checks 
+ramones099: bets $6
+Hero: calls $6
+*** RIVER *** [Ac 8c 4c Ah] [2h]
+Hero: checks 
+ramones099: checks 
+*** SHOW DOWN ***
+Hero: shows [8s 9s] (two pair, Aces and Eights)
+ramones099: mucks hand 
+Hero collected $33.35 from pot
+*** SUMMARY ***
+Total pot $35 | Rake $1.65 
+Board [Ac 8c 4c Ah 2h]
+Seat 1: stopme10 (big blind) folded before Flop
+Seat 2: mad.afurable folded before Flop (didn't bet)
+Seat 3: Hero showed [8s 9s] and won ($33.35) with two pair, Aces and Eights
+Seat 4: fakker11 folded before Flop (didn't bet)
+Seat 5: ramones099 (button) mucked
+Seat 6: Bosas2 (small blind) folded before Flop
+

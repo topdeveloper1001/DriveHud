@@ -26,6 +26,7 @@ using Telerik.Windows;
 using System.ComponentModel;
 using Telerik.Windows.Controls;
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Resources;
 
 namespace DriveHUD.Application.Views
 {
@@ -177,8 +178,8 @@ namespace DriveHUD.Application.Views
                     var trackerXPosition = trackerConditionsMeterPositionOffset.X != 0 ? trackerConditionsMeterPositionOffset.X : trackerConditionsMeterPosition.Value.X;
                     var trackerYPosition = trackerConditionsMeterPositionOffset.Y != 0 ? trackerConditionsMeterPositionOffset.Y : trackerConditionsMeterPosition.Value.Y;
 
-                    Canvas.SetLeft(hudPanel, trackerXPosition * ScaleX);
-                    Canvas.SetTop(hudPanel, trackerYPosition * ScaleY);
+                    SetTrackConditionMeterPosition(hudPanel, trackerXPosition * ScaleX, trackerYPosition * ScaleY);
+
                     continue;
                 }
 
@@ -233,10 +234,13 @@ namespace DriveHUD.Application.Views
 
         private void UpdateTrackConditionMeterPosition(HudTrackConditionsViewModelInfo trackConditionViewModelInfo, FrameworkElement trackConditionView)
         {
+            double left = 0;
+            double top = 0;
+
             if (trackerConditionsMeterPosition != null)
             {
-                Canvas.SetLeft(trackConditionView, trackerConditionsMeterPosition.Value.X);
-                Canvas.SetTop(trackConditionView, trackerConditionsMeterPosition.Value.Y);
+                left = trackerConditionsMeterPosition.Value.X;
+                top = trackerConditionsMeterPosition.Value.Y;
             }
             else
             {
@@ -251,12 +255,38 @@ namespace DriveHUD.Application.Views
                     positions = hudPanelService.GetInitialTrackConditionMeterPosition();
                 }
 
-                Canvas.SetLeft(trackConditionView, positions.Item1);
-                Canvas.SetTop(trackConditionView, positions.Item2);
+                left = positions.Item1;
+                top = positions.Item2;
 
                 trackerConditionsMeterPosition = new Point(positions.Item1, positions.Item2);
                 trackerConditionsMeterPositionOffset = new Point(0, 0);
             }
+
+            SetTrackConditionMeterPosition(trackConditionView, left, top);
+        }
+
+        private void SetTrackConditionMeterPosition(FrameworkElement trackConditionView, double left, double top)
+        {
+            if (left < 0)
+            {
+                left = 0;
+            }
+            else if (left > ActualWidth - HudDefaultSettings.MinimumDistanceToTheBorder)
+            {
+                left = ActualWidth - HudDefaultSettings.MinimumDistanceToTheBorder;
+            }
+
+            if (top < -HudDefaultSettings.HudIconHeaderHeight)
+            {
+                top = -HudDefaultSettings.HudIconHeaderHeight;
+            }
+            else if (top > ActualHeight - HudDefaultSettings.MinimumDistanceToTheBorder - HudDefaultSettings.HudIconHeaderHeight)
+            {
+                top = ActualHeight - HudDefaultSettings.MinimumDistanceToTheBorder - HudDefaultSettings.HudIconHeaderHeight;
+            }
+
+            Canvas.SetLeft(trackConditionView, left);
+            Canvas.SetTop(trackConditionView, top);
         }
 
         private int GetPanelOffsetsKey(HudElementViewModel viewModel)

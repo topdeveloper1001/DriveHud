@@ -27,6 +27,7 @@ using Model.Data;
 using Model.Enums;
 using Model.Events;
 using Model.Filters;
+using Model.Hud;
 using Model.Settings;
 using Model.Stats;
 using Prism.Events;
@@ -427,6 +428,20 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private bool isLowResolutionMode;
+
+        public bool IsLowResolutionMode
+        {
+            get
+            {
+                return isLowResolutionMode;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isLowResolutionMode, value);
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -568,11 +583,12 @@ namespace DriveHUD.Application.ViewModels
         {
             base.InitializeCommands();
 
-            var canUseDataCommands = this.WhenAny(x => x.IsInDesignMode, x => !x.Value);
+            var canUseDataCommands = this.WhenAny(x => x.IsInDesignMode, x => x.CurrentLayout, (x1, x2) => !x1.GetValue() && x2.GetValue() != null);
+            var canImpo = this.WhenAny(x => x.IsInDesignMode, x => x.CurrentLayout, (x1, x2) => !x1.GetValue() && x2.GetValue() != null);
 
             DataSaveCommand = ReactiveCommand.Create(() => OpenDataSave(), canUseDataCommands);
             DataDeleteCommand = ReactiveCommand.Create(() => DataDelete(), canUseDataCommands);
-            DataImportCommand = ReactiveCommand.Create(() => DataImport(), canUseDataCommands);
+            DataImportCommand = ReactiveCommand.Create(() => DataImport(), this.WhenAny(x => x.IsInDesignMode, x => !x.GetValue()));
             DataExportCommand = ReactiveCommand.Create(() => DataExport(), canUseDataCommands);
             DuplicateCommand = ReactiveCommand.Create(() => OpenDuplicate(), canUseDataCommands);
             SpliterAddCommand = ReactiveCommand.Create(() => SpliterAdd());
@@ -592,7 +608,7 @@ namespace DriveHUD.Application.ViewModels
                 var requestInfo = new HudUploadToStoreRequestInfo(viewModelInfo);
 
                 OpenHudUploadToStoreRequest.Raise(requestInfo);
-            });
+            }, canUseDataCommands);
 
             AddToolCommand = new RelayCommand(x =>
             {
@@ -1063,6 +1079,11 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void OpenDuplicate()
         {
+            if (CurrentLayout == null)
+            {
+                return;
+            }
+
             var hudDuplicateLayoutViewModelInfo = new HudDuplicateLayoutViewModelInfo
             {
                 LayoutName = CurrentLayout.Name,
@@ -1192,7 +1213,7 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            if (!HudLayoutsService.Delete(CurrentLayout.Name))
+            if (CurrentLayout == null || !HudLayoutsService.Delete(CurrentLayout.Name))
             {
                 return;
             }
@@ -1362,9 +1383,7 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void SaveStatsSettings()
         {
-            var hudStatSettings = PopupViewModel as HudStatSettingsViewModel;
-
-            if (hudStatSettings == null)
+            if (!(PopupViewModel is HudStatSettingsViewModel hudStatSettings) || CurrentLayout == null)
             {
                 return;
             }
@@ -1444,9 +1463,13 @@ namespace DriveHUD.Application.ViewModels
             {
                 return;
             }
+
             var hudBumperStickers = CurrentLayout?.HudBumperStickerTypes;
+
             if (hudBumperStickers == null)
+            {
                 return;
+            }
 
             var hudBumperStickersSettingsViewModelInfo = new HudBumperStickersSettingsViewModelInfo
             {
@@ -1465,9 +1488,8 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void PlayerTypeSave()
         {
-            var hudPlayerSettingsViewModel = PopupViewModel as HudPlayerSettingsViewModel;
-
-            if (hudPlayerSettingsViewModel == null)
+            if (!(PopupViewModel is HudPlayerSettingsViewModel hudPlayerSettingsViewModel) ||
+                CurrentLayout == null)
             {
                 ClosePopup();
                 return;
@@ -1512,49 +1534,24 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void BumperStickerSave()
         {
-            var hudStickersSettingsViewModel = PopupViewModel as HudBumperStickersSettingsViewModel;
-
-            if (hudStickersSettingsViewModel == null)
+            if (!(PopupViewModel is HudBumperStickersSettingsViewModel hudStickersSettingsViewModel) ||
+                CurrentLayout == null)
             {
                 ClosePopup();
                 return;
             }
 
             // merge data to current layout (currently we do not expect new stats or deleted stats)
-            var stickersTypesToMerge = (from currentStickerType in CurrentLayout.HudBumperStickerTypes
-                                        join stickerType in hudStickersSettingsViewModel.BumperStickers on currentStickerType.Name equals stickerType.Name into stgj
-                                        from stgrouped in stgj.DefaultIfEmpty()
-                                        where stgrouped != null
-                                        select new { CurrentStickerType = currentStickerType, StickerType = stgrouped }).ToArray();
+            var stickersTypesToMergeDelete = (from currentStickerType in CurrentLayout.HudBumperStickerTypes
+                                              join stickerType in hudStickersSettingsViewModel.BumperStickers on currentStickerType.Name equals stickerType.Name into stgj
+                                              from stgrouped in stgj.DefaultIfEmpty()
+                                              select new { CurrentStickerType = currentStickerType, StickerType = stgrouped }).ToArray();
+
+            var stickersTypesToMerge = stickersTypesToMergeDelete.Where(x => x.StickerType != null);
 
             stickersTypesToMerge.ForEach(st =>
             {
-                st.CurrentStickerType.MinSample = st.StickerType.MinSample;
-                st.CurrentStickerType.EnableBumperSticker = st.StickerType.EnableBumperSticker;
-                st.CurrentStickerType.SelectedColor = st.StickerType.SelectedColor;
-                st.CurrentStickerType.Name = st.StickerType.Name;
-                st.CurrentStickerType.Description = st.StickerType.Description;
-
-                if (st.StickerType.FilterModelCollection != null)
-                {
-                    st.CurrentStickerType.FilterModelCollection = new IFilterModelCollection(st.StickerType.FilterModelCollection.Select(x => (IFilterModel)x.Clone()));
-                }
-                else
-                {
-                    st.CurrentStickerType.FilterModelCollection = new IFilterModelCollection();
-                }
-
-                var statsToMerge = (from currentStat in st.CurrentStickerType.Stats
-                                    join stat in st.StickerType.Stats on currentStat.Stat equals stat.Stat into gj
-                                    from grouped in gj.DefaultIfEmpty()
-                                    where grouped != null
-                                    select new { CurrentStat = currentStat, Stat = grouped }).ToArray();
-
-                statsToMerge.ForEach(s =>
-                {
-                    s.CurrentStat.Low = s.Stat.Low;
-                    s.CurrentStat.High = s.Stat.High;
-                });
+                st.CurrentStickerType.MergeWith(st.StickerType);
             });
 
             var stickerTypesToAdd = (from stickerType in hudStickersSettingsViewModel.BumperStickers
@@ -1566,6 +1563,13 @@ namespace DriveHUD.Application.ViewModels
             stickerTypesToAdd.ForEach(st =>
             {
                 CurrentLayout.HudBumperStickerTypes.Add(st.AddedPlayerType);
+            });
+
+            var stickersTypesToDelete = stickersTypesToMergeDelete.Where(x => x.StickerType == null).Select(x => x.CurrentStickerType).ToArray();
+
+            stickersTypesToDelete.ForEach(bs =>
+            {
+                CurrentLayout.HudBumperStickerTypes.Remove(bs);
             });
 
             CurrentLayout.HudBumperStickerTypes.ForEach(x => x.InitializeFilterPredicate());
@@ -1580,7 +1584,8 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeDesigner()
         {
-            if (IsInDesignMode)
+            if (IsInDesignMode ||
+                CurrentLayout == null)
             {
                 return;
             }

@@ -28,7 +28,6 @@ using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Threading;
@@ -202,6 +201,39 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
+        private EquityCalculatorMode equityCalculatorMode;
+
+        public EquityCalculatorMode EquityCalculatorMode
+        {
+            get
+            {
+                return equityCalculatorMode;
+            }
+            set
+            {
+                SetProperty(ref equityCalculatorMode, value);
+            }
+        }
+
+        public ObservableCollection<EquityCalculatorMode> EquityCalculatorModes => new ObservableCollection<EquityCalculatorMode> {
+            EquityCalculatorMode.Holdem,
+            EquityCalculatorMode.HoldemSixPlus
+        };
+
+        private bool isEquityCalculatorModeEnabled;
+
+        public bool IsEquityCalculatorModeEnabled
+        {
+            get
+            {
+                return isEquityCalculatorModeEnabled;
+            }
+            private set
+            {
+                SetProperty(ref isEquityCalculatorModeEnabled, value);
+            }
+        }
+
         #endregion
 
         #region ICommand
@@ -296,6 +328,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         internal IEnumerable<EquityRangeSelectorItemViewModel> GetHeroAutoRange(string heroName)
         {
+            if (_currentHandHistory == null)
+            {
+                return null;
+            }
+
             try
             {
                 var handHistory = _currentHandHistory.DeepClone();
@@ -306,6 +343,9 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
                 if (heroAutoHands != null && heroAutoHands.Any())
                 {
+                    heroAutoHands = heroAutoHands.Where(x => EquityCalculatorMode == EquityCalculatorMode.Holdem
+                        || (EquityCalculatorMode == EquityCalculatorMode.HoldemSixPlus && x.FisrtCard > RangeCardRank.Five && x.SecondCard > RangeCardRank.Five));
+
                     heroAutoHands.ForEach(r => r.UsedCards = _board.Cards);
 
                     var opponentsCount = CountOpponents();
@@ -376,34 +416,38 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private async Task CalculateEquity()
         {
             cts = new CancellationTokenSource();
+
             IsCalculationRunning = true;
-            List<double[]> result = new List<double[]>();
+
+            var result = new List<double[]>();
 
             try
             {
                 LogProvider.Log.Info("Equity calculation started");
+
                 var boardString = GetBoardText();
-                result = await HoldemEquityCalculator.CalculateEquityAsync(PlayersList.Select(x => string.Join(",", x.GetPlayersHand(true))), boardString, cts.Token);
+
+                result = await HoldemEquityCalculator.CalculateEquityAsync(
+                    PlayersList.Select(x => string.Join(",", x.GetPlayersHand(true))),
+                    boardString,
+                    EquityCalculatorMode == EquityCalculatorMode.HoldemSixPlus,
+                    cts.Token);
             }
             catch (OperationCanceledException)
             {
-                Debug.WriteLine("Canceled by user");
-                LogProvider.Log.Info("Equity calculation stopped by user");
+                LogProvider.Log.Info("Equity calculation stopped by user.");
             }
-            catch (ArgumentOutOfRangeException ex)
+            catch (Exception ex)
             {
-                LogProvider.Log.Error(this, "Equity calculation error", ex);
-            }
-            catch (ArgumentException ex)
-            {
-                LogProvider.Log.Error(this, "Equity calculation error", ex);
+                LogProvider.Log.Error(this, "Equity calculation error.", ex);
             }
             finally
             {
                 IsCalculationRunning = false;
                 cts.Dispose();
                 cts = null;
-                LogProvider.Log.Info("Equity calculation finished");
+
+                LogProvider.Log.Info("Equity calculation finished.");
             }
 
             if (result.Count() == PlayersList.Count())
@@ -415,6 +459,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     PlayersList.ElementAt(i).TiePrct = result[i][2];
                 }
             }
+
             IsCanExport = true;
         }
 
@@ -428,6 +473,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
                 if (obj.IsEmptyRequest)
                 {
+                    IsEquityCalculatorModeEnabled = true;
                     _currentHandHistory = null;
                     IsPreflopVisible = IsFlopVisible = IsTurnVisible = IsRiverVisible = false;
                     CurrentStreet = Street.Null;
@@ -445,6 +491,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 SetStreetVisibility(_currentHandHistory);
                 LoadBoardByCurrentStreet();
                 LoadPlayersData(_currentHandHistory);
+
+                EquityCalculatorMode = _currentHandHistory.GameDescription.TableType.Contains(HandHistories.Objects.GameDescription.TableTypeDescription.ShortDeck) ?
+                    EquityCalculatorMode.HoldemSixPlus : EquityCalculatorMode.Holdem;
+
+                IsEquityCalculatorModeEnabled = false;
 
                 var strongestOpponent = CalculateStrongestOpponent(_currentHandHistory, _currentStreet);
 
@@ -608,7 +659,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
                    CardsContainer = container,
                    SelectorType = selectorType,
                    UsedCards = GetProhibitedCardsFor(container),
-                   BoardCards = Board.Cards.Where(x => x.Rank != RangeCardRank.None && x.Suit != RangeCardSuit.None).ToList()
+                   BoardCards = Board.Cards.Where(x => x.Rank != RangeCardRank.None && x.Suit != RangeCardSuit.None).ToList(),
+                   EquityCalculatorMode = equityCalculatorMode
                },
                returned =>
                {

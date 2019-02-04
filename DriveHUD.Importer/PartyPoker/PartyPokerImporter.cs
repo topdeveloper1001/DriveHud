@@ -32,7 +32,7 @@ namespace DriveHUD.Importers.PartyPoker
     {
         private readonly Dictionary<string, string[]> playerNamesDictionary;
 
-        private readonly static string[] processNames = new[] { "PartyGaming", "PartyEspana" };
+        private readonly static string[] processNames = new[] { "PartyGaming", "PartyEspana", "PartyFrance" };
 
         public PartyPokerImporter()
         {
@@ -63,7 +63,7 @@ namespace DriveHUD.Importers.PartyPoker
             }
         }
 
-        private const string tournamentPattern = "({0}) - Table {1}";
+        private const string tournamentPattern = "({0}) Table {1}";
 
         protected override bool InternalMatch(string title, IntPtr handle, ParsingResult parsingResult)
         {
@@ -74,17 +74,12 @@ namespace DriveHUD.Importers.PartyPoker
             }
 
             if (parsingResult.Source.GameDescription.IsTournament)
-            {
-                if (IsJackpot(parsingResult.Source.GameDescription.Tournament.TournamentName))
-                {
-                    return IsJackpotMatch(title, parsingResult);
-                }
-
+            {               
                 var tableNumber = parsingResult.Source.TableName.Substring(parsingResult.Source.TableName.LastIndexOf(' ') + 1);
 
                 var tournamentTitle = string.Format(tournamentPattern, parsingResult.Source.GameDescription.Tournament.TournamentId, tableNumber);
 
-                return title.Contains(tournamentTitle);
+                return title.Replace(" - ", " ").Contains(tournamentTitle);
             }
 
             return title.Contains(parsingResult.Source.TableName);
@@ -147,7 +142,7 @@ namespace DriveHUD.Importers.PartyPoker
 
                 var prefferedSeat = preferredSeats.FirstOrDefault(x => (int)x.TableType == maxPlayers && x.IsPreferredSeatEnabled);
 
-                if (prefferedSeat != null)
+                if (prefferedSeat != null && prefferedSeat.PreferredSeat > 0)
                 {
                     var shift = (prefferedSeat.PreferredSeat - heroSeat) % maxPlayers;
 

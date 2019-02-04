@@ -25,23 +25,30 @@ namespace DriveHUD.Common.Log
 
         private readonly bool isEnabled;
 
-        private readonly string logger;
+        private readonly object logger;
 
-        public PerformanceMonitor(string message) : this(message, true, null)
+        private readonly bool checkMemory;
+
+        public PerformanceMonitor(string message) : this(message, true, null, true)
         {
         }
 
-        public PerformanceMonitor(string message, bool isEnabled, string logger)
+        public PerformanceMonitor(string message, bool isEnabled, object logger, bool checkMemory = false)
         {
             this.isEnabled = isEnabled;
             this.logger = logger;
+            this.checkMemory = checkMemory;
 
             if (!isEnabled)
             {
                 return;
             }
 
-            initialMemory = GC.GetTotalMemory(false);
+            if (checkMemory)
+            {
+                initialMemory = GC.GetTotalMemory(false);
+            }
+
             this.message = message;
             stopwatch.Start();
         }
@@ -59,13 +66,19 @@ namespace DriveHUD.Common.Log
             }
 
             var durationMessage = $"{message} (Duration): {stopwatch.ElapsedMilliseconds}ms";
-            var memoryMessage = $"{message} (Memory): {initialMemory}/{GC.GetTotalMemory(false)}";
-
+#if DEBUG
             Console.WriteLine(durationMessage);
-            Console.WriteLine(memoryMessage);
-
+#endif
             LogProvider.Log.Info(logger, durationMessage);
-            LogProvider.Log.Info(logger, memoryMessage);
+
+            if (checkMemory)
+            {
+                var memoryMessage = $"{message} (Memory): {initialMemory}/{GC.GetTotalMemory(false)}";
+#if DEBUG
+                Console.WriteLine(memoryMessage);
+#endif
+                LogProvider.Log.Info(logger, memoryMessage);
+            }
         }
     }
 }

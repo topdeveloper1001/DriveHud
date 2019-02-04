@@ -83,6 +83,8 @@ namespace DriveHUD.Common.Resources
         public static string RefreshReportResourceString = "Main_ContextMenu_RefreshReport";
         public static string ExportToExcelReportResourceString = "Main_ContextMenu_ExportToExcel";
         public static string DeleteHandResourceString = "Main_ContextMenu_DeleteHand";
+        public static string ExportHandsResourceString = "Main_ContextMenu_ExportHands";
+        public static string ExportGridHandsResourceString = "Main_ContextMenu_ExportGridHands";
 
 
         #endregion
@@ -110,6 +112,7 @@ namespace DriveHUD.Common.Resources
             [EnumPokerSites.Winamax] = "Settings_WinamaxHelpLink",
             [EnumPokerSites.Adda52] = "Settings_Adda52HelpLink",
             [EnumPokerSites.SpartanPoker] = "Settings_SpartanPokerHelpLink",
+            [EnumPokerSites.PokerBaazi] = "Settings_PokerBaaziHelpLink",
         };
 
         #endregion

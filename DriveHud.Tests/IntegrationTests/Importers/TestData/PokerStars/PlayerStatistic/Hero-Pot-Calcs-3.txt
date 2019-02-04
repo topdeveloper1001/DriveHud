@@ -1,0 +1,41 @@
+PokerStars Game #47183115493:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 22:23:25 ET
+Table 'Natalie' 6-max Seat #4 is the button
+Seat 1: Hero ($392.70 in chips) 
+Seat 2: roso19 ($163.05 in chips) 
+Seat 3: KodyKirlinko ($193.65 in chips) 
+Seat 4: bluffinmyway ($197.60 in chips) 
+Seat 5: dimsumboy ($217.45 in chips) 
+Seat 6: brizzybreech ($596.55 in chips) 
+dimsumboy: posts small blind $1
+brizzybreech: posts big blind $2
+*** HOLE CARDS ***
+Hero: raises $4 to $6
+roso19: folds 
+KodyKirlinko: folds 
+bluffinmyway: calls $6
+dimsumboy: folds 
+brizzybreech: folds 
+*** FLOP *** [Js 6h Jh]
+Hero: bets $11
+bluffinmyway: calls $11
+*** TURN *** [Js 6h Jh] [8c]
+Hero: bets $28
+bluffinmyway: calls $28
+*** RIVER *** [Js 6h Jh 8c] [8d]
+Hero: checks 
+bluffinmyway: bets $59
+Hero: calls $59
+*** SHOW DOWN ***
+bluffinmyway: shows [9h Th] (two pair, Jacks and Eights)
+Hero: shows [Td Kd] (two pair, Jacks and Eights - King kicker)
+Hero collected $208 from pot
+*** SUMMARY ***
+Total pot $211 | Rake $3 
+Board [Js 6h Jh 8c 8d]
+Seat 1: Hero showed [Td Kd] and won ($208) with two pair, Jacks and Eights
+Seat 2: roso19 folded before Flop (didn't bet)
+Seat 3: KodyKirlinko folded before Flop (didn't bet)
+Seat 4: bluffinmyway (button) showed [9h Th] and lost with two pair, Jacks and Eights
+Seat 5: dimsumboy (small blind) folded before Flop
+Seat 6: brizzybreech (big blind) folded before Flop
+

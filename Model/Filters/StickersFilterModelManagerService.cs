@@ -30,6 +30,7 @@ namespace Model.Filters
                     new FilterTuple { Name = "Hand Value", ModelType = EnumFilterModelType.FilterHandValueModel, ViewModelType = EnumViewModelType.FilterHandValueViewModel, },
                     new FilterTuple { Name = "Board Texture", ModelType = EnumFilterModelType.FilterBoardTextureModel, ViewModelType = EnumViewModelType.FilterBoardTextureViewModel },
                     new FilterTuple { Name = "Hand Action", ModelType = EnumFilterModelType.FilterHandActionModel, ViewModelType = EnumViewModelType.FilterHandActionViewModel, },
+                    new FilterTuple { Name = "Advanced", ModelType = EnumFilterModelType.FilterAdvancedModel, ViewModelType = EnumViewModelType.FilterAdvancedViewModel, },
                     new FilterTuple { Name = "Quick Filters", ModelType = EnumFilterModelType.FilterQuickModel, ViewModelType = EnumViewModelType.FilterQuickViewModel, },
                 });
 
@@ -46,7 +47,8 @@ namespace Model.Filters
                 new FilterHandActionModel { Id = Guid.Parse("{01C28033-1A53-40AD-B10B-B6F85DB4AC92}") },
                 new FilterQuickModel { Id = Guid.Parse("{D8AE4CE4-7FFE-4D68-B99E-4DCED4EE8812}") },
                 new FilterOmahaHandGridModel { Id = Guid.Parse("{ABFBCA7F-8DB7-437F-8DEE-A26C5EADF6B3}") },
-                new FilterHandGridModel { Id = Guid.Parse("{95C3B90B-A7C3-4988-9F39-16CE09399D61}"), Name = "Hand Grid" },
+                new FilterHandGridModel { Id = Guid.Parse("{95C3B90B-A7C3-4988-9F39-16CE09399D61}") },
+                new FilterAdvancedModel { Id = Guid.Parse("1EC8735E-F8A2-46BB-8687-9211DA7A97A4") }
             });
 
             list.ForEach(x => x.Initialize());

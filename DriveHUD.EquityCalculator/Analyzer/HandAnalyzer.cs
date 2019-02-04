@@ -5368,15 +5368,19 @@ namespace DriveHUD.EquityCalculator.Analyzer
                          *if our hero is open raising on the button (this means that positions in front of him folded pre-flop), then we want to increase opponents raising range to:
     60% if there's a fish or a whale in the Big blind or small blind. 
                         */
-                        String opponentName = handHistory.PreflopActions[i].PlayerName;
-                        String bbPlayerModel = Player.GetPlayerModel(handHistory.Is6Max, handHistory.Players[handHistory.BBName] as Player).ToLower();
-                        String sbPlayerModel = Player.GetPlayerModel(handHistory.Is6Max, handHistory.Players[handHistory.SBName] as Player).ToLower();
+                        var opponentName = handHistory.PreflopActions[i].PlayerName;
 
-                        bool heroOpenRaisesFromButtonAndPlayerIsFishOrWhale = heroOpenRaisesFromButton && (bbPlayerModel.Equals("fish") || bbPlayerModel.Equals("whale") || (sbPlayerModel.Equals("fish") || sbPlayerModel.Equals("whale")));
-                        if (heroOpenRaisesFromButtonAndPlayerIsFishOrWhale)
-                        {
+                        var bbPlayerModel = !string.IsNullOrEmpty(handHistory.SBName) ?
+                            Player.GetPlayerModel(handHistory.Is6Max, handHistory.Players[handHistory.BBName] as Player).ToLower() :
+                            string.Empty;
 
-                        }
+                        var sbPlayerModel = !string.IsNullOrEmpty(handHistory.SBName) ?
+                            Player.GetPlayerModel(handHistory.Is6Max, handHistory.Players[handHistory.SBName] as Player).ToLower() :
+                            string.Empty;
+
+                        bool heroOpenRaisesFromButtonAndPlayerIsFishOrWhale = heroOpenRaisesFromButton &&
+                            (bbPlayerModel.Equals("fish") || bbPlayerModel.Equals("whale") || sbPlayerModel.Equals("fish") || sbPlayerModel.Equals("whale"));
+
                         //END GHADY
 
                         if (raisers == 0) // Unraised pot
@@ -5644,13 +5648,20 @@ namespace DriveHUD.EquityCalculator.Analyzer
         internal int GetPlayerStackOnStreet(HandHistory handHistory, String playerName, Action action)
         {
             Player player = handHistory.Players[playerName] as Player;
+
             int startingStack = player.StartingStack;
-            if (handHistory.BBName.Equals(playerName))
+
+            if (!string.IsNullOrEmpty(handHistory.BBName) && handHistory.BBName.Equals(playerName))
+            {
                 startingStack -= (int)handHistory.BigBlindAmount;
-            else if (handHistory.SBName.Equals(playerName))
+            }
+            else if (!string.IsNullOrEmpty(handHistory.SBName) && handHistory.SBName.Equals(playerName))
+            {
                 startingStack -= (int)handHistory.SmallBlindAmount;
+            }
 
             bool stop = false;
+
             foreach (Action preflopAction in handHistory.PreflopActions)
             {
                 if (preflopAction == action)
@@ -5658,6 +5669,7 @@ namespace DriveHUD.EquityCalculator.Analyzer
                     stop = true;
                     break;
                 }
+
                 if (preflopAction.PlayerName.Equals(playerName))
                 {
                     if (preflopAction != action)
@@ -9277,17 +9289,20 @@ namespace DriveHUD.EquityCalculator.Analyzer
             {
                 if (handHistory.SmallBlindAmount < 100)
                 {
-                    d = d / (handHistory.SmallBlindAmount / 100);
+                    d = handHistory.SmallBlindAmount == 0 ? 0 : d / (handHistory.SmallBlindAmount / 100);
                     d = Math.Round(d, MidpointRounding.AwayFromZero);
                     d *= (handHistory.SmallBlindAmount / 100);
                     return d.ToString("0.00");
                 }
+
                 if (handHistory.BigBlindAmount > 100)
                 {
                     v = 0;
                 }
             }
+
             int n = 0;
+
             if (int.TryParse(d.ToString(), out n))
                 return n.ToString();
             if (v == 0)
@@ -9296,7 +9311,6 @@ namespace DriveHUD.EquityCalculator.Analyzer
                 return Math.Round(d, v).ToString("0.00");
             else return Math.Round(d, v).ToString();
         }
-
 
         static List<String> GetHandsTo3BetWith()
         {

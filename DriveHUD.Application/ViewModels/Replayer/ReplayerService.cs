@@ -58,15 +58,15 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 return;
             }
 
-            var statistics = playerStatisticRepository.GetPlayerStatistic(playerName, pokerSiteId).ToList();
-
-            var currentStat = statistics.FirstOrDefault(x => x.GameNumber == gamenumber);
-
+            var currentStat = _storageModel.StatisticCollection.FirstOrDefault(x => x.GameNumber == gamenumber);
+           
             if (currentStat == null)
             {
                 LogProvider.Log.Error(this, $"Cannot find statistics for player {playerName}, site {pokerSiteId}, game {gamenumber}");
                 return;
             }
+
+            var statistics = currentStat.IsTourney ? _storageModel.FilteredTournamentPlayerStatistic : _storageModel.FilteredCashPlayerStatistic;
 
             ReplayHand(currentStat, displayPotList ? statistics : new List<Playerstatistic>(), showHoleCards);
         }

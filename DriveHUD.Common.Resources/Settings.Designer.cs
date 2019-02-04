@@ -205,6 +205,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable special HUD mode (don&apos;t check until support asks you to do that).
+        /// </summary>
+        internal static string Settings_HudSpecialMode {
+            get {
+                return ResourceManager.GetString("Settings_HudSpecialMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://www.acepokerdrills.com/hud-store.
         /// </summary>
         internal static string Settings_HudStoreService {
@@ -300,6 +309,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Settings_Poker888HelpLink {
             get {
                 return ResourceManager.GetString("Settings_Poker888HelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/.
+        /// </summary>
+        internal static string Settings_PokerBaaziHelpLink {
+            get {
+                return ResourceManager.GetString("Settings_PokerBaaziHelpLink", resourceCulture);
             }
         }
         

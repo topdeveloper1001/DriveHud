@@ -67,13 +67,14 @@ namespace DriveHUD.Common.Extensions
             return new string(input.ToCharArray().Reverse().ToArray());
         }
 
-        public static string TakeBetween(this string input, string start, string end, bool useStartLastIndex = false, bool userEndLastIndex = false)
+        public static string TakeBetween(this string input, string start, string end, bool useStartLastIndex = false, 
+            bool userEndLastIndex = false, StringComparison stringComparison = StringComparison.Ordinal)
         {
             try
             {
                 var startIndex = useStartLastIndex ?
-                    input.LastIndexOf(start, StringComparison.Ordinal) :
-                    input.IndexOf(start, StringComparison.Ordinal);
+                    input.LastIndexOf(start, stringComparison) :
+                    input.IndexOf(start, stringComparison);
 
                 if (startIndex < 0)
                 {
@@ -84,8 +85,8 @@ namespace DriveHUD.Common.Extensions
 
                 var endIndex = !string.IsNullOrEmpty(end) ?
                     (userEndLastIndex ?
-                        input.LastIndexOf(end, StringComparison.Ordinal) :
-                        input.IndexOf(end, startIndex, StringComparison.Ordinal)) :
+                        input.LastIndexOf(end, stringComparison) :
+                        input.IndexOf(end, startIndex, stringComparison)) :
                     input.Length;
 
                 if (endIndex <= startIndex)

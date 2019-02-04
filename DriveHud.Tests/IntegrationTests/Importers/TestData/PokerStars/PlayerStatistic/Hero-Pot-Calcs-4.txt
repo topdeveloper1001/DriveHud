@@ -1,0 +1,35 @@
+PokerStars Game #47185442126:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:44:04 ET
+Table 'Natalie' 6-max Seat #2 is the button
+Seat 1: Hero ($392.70 in chips) 
+Seat 2: TODO ADENTR0 ($213.40 in chips) 
+Seat 3: grac ($411.75 in chips) 
+Seat 4: bluffinmyway ($229.45 in chips) 
+Seat 5: Fierytycoon ($214 in chips) 
+Seat 6: leukehond ($200 in chips) 
+grac: posts small blind $1
+bluffinmyway: posts big blind $2
+*** HOLE CARDS ***
+Fierytycoon: raises $4 to $6
+leukehond: folds 
+Hero: calls $6
+TODO ADENTR0: folds 
+grac: folds 
+bluffinmyway: calls $4
+*** FLOP *** [Tc 4d 2c]
+bluffinmyway: bets $10
+Fierytycoon: folds 
+Hero: raises $23 to $33
+bluffinmyway: folds 
+Uncalled bet ($23) returned to Hero
+Hero collected $37.10 from pot
+Hero: doesn't show hand 
+*** SUMMARY ***
+Total pot $39 | Rake $1.90 
+Board [Tc 4d 2c]
+Seat 1: Hero collected ($37.10)
+Seat 2: TODO ADENTR0 (button) folded before Flop (didn't bet)
+Seat 3: grac (small blind) folded before Flop
+Seat 4: bluffinmyway (big blind) folded on the Flop
+Seat 5: Fierytycoon folded on the Flop
+Seat 6: leukehond folded before Flop (didn't bet)
+

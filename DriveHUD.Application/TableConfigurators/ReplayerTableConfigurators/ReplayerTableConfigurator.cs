@@ -1,10 +1,25 @@
-﻿using DriveHUD.Application.ValueConverters;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ReplayerTableConfigurator.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Application.Controls;
+using DriveHUD.Application.TableConfigurators.PositionProviders;
+using DriveHUD.Application.ValueConverters;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Application.ViewModels.Popups;
 using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Application.Views.Popups;
 using DriveHUD.Application.Views.Replayer;
+using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Reflection;
@@ -18,9 +33,12 @@ using Model.Data;
 using Model.Enums;
 using Model.Interfaces;
 using Model.Stats;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -35,10 +53,10 @@ namespace DriveHUD.Application.TableConfigurators
     {
         #region Fields
 
-        private const int PLAYER_WIDTH = 150;
-        private const int PLAYER_HEIGHT = 60;
-        private const int BUTTON_HEIGHT = 31;
-        private const int BUTTON_WIDTH = 31;
+        public const int PLAYER_WIDTH = 150;
+        public const int PLAYER_HEIGHT = 60;
+        public const int BUTTON_HEIGHT = 31;
+        public const int BUTTON_WIDTH = 31;
 
         public const int CARD_WIDTH = 84;
         public const int CARD_HEIGHT = 112;
@@ -47,35 +65,30 @@ namespace DriveHUD.Application.TableConfigurators
 
         private const string BackgroundImage = "/DriveHUD.Common.Resources;component/images/ReplayerTable.png";
         private const string DealerImage = "/DriveHUD.Common.Resources;component/images/D.png";
+
         private readonly Point DefaultTablePosition = new Point(120, 60);
         private readonly Point TotalPotChipsPosition = new Point(560, 100);
 
         private readonly Dictionary<int, Tuple<double, double>> predefinedTableSizes = new Dictionary<int, Tuple<double, double>>
         {
-            {6, new Tuple<double, double>(420, 820)},
-            {9, new Tuple<double, double>(420, 820)},
-            {10, new Tuple<double, double>(420, 820)}
-        };
-
-        private readonly Dictionary<int, double[,]> predefinedLabelPositions = new Dictionary<int, double[,]>
-        {
-            { 6, new double[,] { { 50, 230 }, { 190, 70 }, { 720, 70 }, { 890, 230 }, { 720, 410 }, { 190, 410 } } },
-            { 9, new double[,] { { 75, 310}, {75, 130}, {325, 70}, {605, 70}, {835, 130}, {835, 310}, {645, 420}, {455, 420}, {245, 420} } },
-            { 10, new double[,] { { 125, 90}, { 315, 70}, {585, 70}, {815, 90}, {825, 260}, {765, 420}, {555, 420}, {355, 420}, {145, 420}, {65, 260} } }
+            { 6, new Tuple<double, double>(420, 820) },
+            { 9, new Tuple<double, double>(420, 820) },
+            { 10, new Tuple<double, double>(420, 820) }
         };
 
         private readonly Dictionary<int, double[,]> predefinedChipsPositions = new Dictionary<int, double[,]>
         {
-            {6, new double[,] { { 240, 260 }, { 360, 120 }, { 680, 120 }, { 820, 260 }, { 680, 320 }, { 370, 320 } } },
-            {9, new double[,] { { 240, 270 }, { 250, 160 }, { 390, 150 }, { 680, 160 }, { 790, 190 }, { 790, 270 }, { 700, 320 }, { 520, 320 }, { 310, 320 } } },
-            {10, new double[,] { { 280, 150 }, { 370, 160 }, { 645, 160 }, { 760, 150 }, { 780, 230 }, { 760, 320 }, { 620, 320 }, { 410, 320 }, { 250, 320 }, { 240, 250 } } },
+            { 6, new double[,] { { 240, 260 }, { 360, 120 }, { 680, 120 }, { 820, 260 }, { 680, 320 }, { 370, 320 } } },
+            { 9, new double[,] { { 240, 270 }, { 250, 160 }, { 390, 150 }, { 680, 160 }, { 790, 190 }, { 790, 270 }, { 700, 320 }, { 520, 320 }, { 310, 320 } } },
+            { 10, new double[,] { { 280, 150 }, { 370, 160 }, { 645, 160 }, { 760, 150 }, { 780, 230 }, { 760, 320 }, { 620, 320 }, { 410, 320 }, { 250, 320 }, { 240, 250 } } },
         };
 
         private RadDiagramShape table;
-        private IHudLayoutsService hudLayoutsService;
-        private IDataService dataService;
-        private IPlayerStatisticRepository playerStatisticRepository;
-        private SingletonStorageModel storageModel;
+
+        private readonly IHudLayoutsService hudLayoutsService;
+        private readonly IDataService dataService;
+        private readonly IPlayerStatisticRepository playerStatisticRepository;
+        private readonly SingletonStorageModel storageModel;
 
         #endregion
 
@@ -87,7 +100,7 @@ namespace DriveHUD.Application.TableConfigurators
             playerStatisticRepository = ServiceLocator.Current.GetInstance<IPlayerStatisticRepository>();
         }
 
-        public void ConfigureTable(RadDiagram diagram, ReplayerViewModel viewModel)
+        public void ConfigureTable(RadDiagram diagram, HudDragCanvas dgCanvas, ReplayerViewModel viewModel)
         {
             try
             {
@@ -100,39 +113,24 @@ namespace DriveHUD.Application.TableConfigurators
                 CurrentCapacity = GetTableSize(viewModel);
 
                 CreateTable(diagram);
-                CreatePlayersLayout(diagram, viewModel);
+                CreatePlayersLayout(diagram, dgCanvas, viewModel);
                 CreateCurrentPotValueLabel(diagram, viewModel);
                 CreateTotalPotValueLabel(diagram, viewModel);
                 PlaceTableCardPanels(diagram, viewModel);
-
-                var currentGame = viewModel.CurrentGame;
-                var statInfoCollection = GetHudStats(GetPokerSite(currentGame.GameDescription.Site), GetGameType(currentGame.GameDescription, viewModel.CurrentHand.Statistic.PlayerName), (EnumTableType)currentGame.GameDescription.SeatType.MaxPlayers);
-
-                if (statInfoCollection != null && statInfoCollection.Any())
-                {
-                    viewModel.PlayersCollection.ForEach(x => LoadPlayerHudStats(x, viewModel, statInfoCollection));
-                }
-                else
-                {
-                    // Load default
-                    statInfoCollection = GetHudStats(EnumPokerSites.Ignition, EnumGameType.CashHoldem, EnumTableType.Six);
-
-                    if (statInfoCollection != null && statInfoCollection.Any())
-                    {
-                        viewModel.PlayersCollection.ForEach(x => LoadPlayerHudStats(x, viewModel, statInfoCollection));
-                    }
-                }
+                InitializeHUD(dgCanvas, viewModel);
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error("ReplayerTable: Cannot configure table", e);
+                LogProvider.Log.Error(this, "ReplayerTable: Cannot configure table", e);
             }
         }
 
         private void CreateTable(RadDiagram diagram)
         {
-            int seats = (int)CurrentCapacity;
             diagram.Clear();
+
+            var seats = (int)CurrentCapacity;
+
             table = new RadDiagramShape()
             {
                 Name = "Table",
@@ -149,14 +147,19 @@ namespace DriveHUD.Application.TableConfigurators
             diagram.AddShape(table);
         }
 
-        private void CreatePlayersLayout(RadDiagram diagram, ReplayerViewModel viewModel)
-        {
-            int seats = (int)CurrentCapacity;
-            var labelPositions = predefinedLabelPositions[seats];
-            bool hasHoleCards = viewModel.CurrentGame.Players.Any(x => x.hasHoleCards);
-            int cardsCount = hasHoleCards ? viewModel.CurrentGame.Players.Where(x => x.hasHoleCards).Max(x => x.HoleCards.Count) : 2;
+        private const EnumPokerSites ReplayerPokerSite = EnumPokerSites.DriveHUDReplayer;
 
-            for (int i = 0; i < seats; i++)
+        private void CreatePlayersLayout(RadDiagram diagram, HudDragCanvas dgCanvas, ReplayerViewModel viewModel)
+        {
+            var seats = (int)CurrentCapacity;
+
+            var positionProvider = ServiceLocator.Current.GetInstance<IPositionProvider>(ReplayerPokerSite.ToString());
+
+            var labelPositions = positionProvider.Positions[seats];
+            var hasHoleCards = viewModel.CurrentGame.Players.Any(x => x.hasHoleCards);
+            var cardsCount = hasHoleCards ? viewModel.CurrentGame.Players.Where(x => x.hasHoleCards).Max(x => x.HoleCards.Count) : 2;
+
+            for (var i = 0; i < seats; i++)
             {
                 var player = viewModel.PlayersCollection[i];
                 var label = CreatePlayerLabel(player);
@@ -171,23 +174,292 @@ namespace DriveHUD.Application.TableConfigurators
 
                 AddPotPlayerLabel(diagram, viewModel.PlayersCollection[i], predefinedChipsPositions[seats][i, 0], predefinedChipsPositions[seats][i, 1]);
 
-                ReplayerHudPanel panel = CreateHudPanel(viewModel, i);
-
-                var hudOffsetX = (PLAYER_WIDTH - 150) / 2;
-                var hudOffsetY = PLAYER_HEIGHT - 10;
-                Point hudPanelPosition = new Point(labelPositions[i, 0] + hudOffsetX, labelPositions[i, 1] + hudOffsetY);
-
                 diagram.AddShape(label);
                 diagram.AddShape(player.ChipsContainer.ChipsShape);
-
-                var hudShape = diagram.AddShape(panel, position: hudPanelPosition) as RadDiagramShape;
-                hudShape.IsRotationEnabled = false;
-                hudShape.IsManipulationEnabled = false;
-                hudShape.IsConnectorsManipulationEnabled = false;
-                hudShape.IsManipulationAdornerVisible = false;
-                hudShape.IsResizingEnabled = false;
-                hudShape.IsEditable = false;
             }
+        }
+
+        private Dictionary<string, HudIndicators> playerIndicators = new Dictionary<string, HudIndicators>();
+        private HashSet<Stat> heatMapStats;
+
+        private async void InitializeHUD(HudDragCanvas dgCanvas, ReplayerViewModel viewModel)
+        {
+            ClearHUD(dgCanvas);
+
+            viewModel.IsLoadingHUD = true;
+
+            var seats = (int)CurrentCapacity;
+
+            var tableType = (EnumTableType)viewModel.CurrentGame.GameDescription.SeatType.MaxPlayers;
+
+            // need to add DriveHUDReplayer to sites, add provider, panel service etc.
+            var activeLayout = hudLayoutsService.GetActiveLayout(ReplayerPokerSite,
+                tableType,
+                EnumGameType.CashHoldem);
+
+            viewModel.LayoutName = activeLayout.Name;
+            viewModel.LayoutsCollection = new ObservableCollection<string>(hudLayoutsService.GetAvailableLayouts(tableType));
+            viewModel.LoadLayoutCommand = new RelayCommand(obj =>
+            {
+                try
+                {
+                    var layoutName = obj?.ToString();
+
+                    if (string.IsNullOrWhiteSpace(layoutName))
+                    {
+                        return;
+                    }
+
+                    viewModel.LayoutName = layoutName;
+
+                    var layout = hudLayoutsService.GetLayout(layoutName);
+
+                    var layoutHeatMapStats = new HashSet<Stat>(layout.GetHeatMapStats());
+
+                    // there are no loaded heat map stats
+                    if (layoutHeatMapStats.Count > 0 &&
+                        layoutHeatMapStats.Any(x => !heatMapStats.Contains(x)))
+                    {
+                        viewModel.IsLoadingHUD = true;
+                        playerIndicators.Clear();
+                        LoadIndicators(seats, viewModel, layoutHeatMapStats);
+                        heatMapStats = layoutHeatMapStats;
+                        viewModel.IsLoadingHUD = false;
+                    }
+
+                    ClearHUD(dgCanvas);
+                    LoadHUD(dgCanvas, viewModel, layout);
+
+                    hudLayoutsService.SetActiveLayout(layout, ReplayerPokerSite, EnumGameType.CashHoldem, tableType);
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Failed to load layout", e);
+                }
+            });
+
+            heatMapStats = new HashSet<Stat>(activeLayout.GetHeatMapStats());
+
+            await Task.Run(() => LoadIndicators(seats, viewModel, heatMapStats));
+
+            LoadHUD(dgCanvas, viewModel, activeLayout);
+
+            viewModel.IsLoadingHUD = false;
+        }
+
+        private void LoadIndicators(int seats, ReplayerViewModel viewModel, IEnumerable<Stat> heatMapStats)
+        {
+            var tasksToLoad = new List<Task>();
+
+            for (var i = 0; i < seats; i++)
+            {
+                var player = viewModel.PlayersCollection[i];
+
+                if (playerIndicators.ContainsKey(player.Name))
+                {
+                    continue;
+                }
+
+                var playerData = new HudIndicators(heatMapStats);
+
+                // read data from statistic
+                var taskToReadPlayerStats = Task.Run(() =>
+                {
+                    if (player.Name == storageModel.PlayerSelectedItem.Name &&
+                        (short?)storageModel.PlayerSelectedItem.PokerSite == viewModel.CurrentHand.PokersiteId)
+                    {
+                        storageModel.StatisticCollection.ToList()
+                           .Where(stat => (stat.PokersiteId == (short)viewModel.CurrentGame.GameDescription.Site) &&
+                                stat.IsTourney == viewModel.CurrentGame.GameDescription.IsTournament &&
+                                GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, viewModel.CurrentGame.GameDescription.GameType))
+                           .ForEach(stat => playerData.AddStatistic(stat));
+
+                        return;
+                    }
+
+                    playerStatisticRepository
+                       .GetPlayerStatistic(player.Name, (short)viewModel.CurrentGame.GameDescription.Site)
+                       .Where(stat => (stat.PokersiteId == (short)viewModel.CurrentGame.GameDescription.Site) &&
+                           stat.IsTourney == viewModel.CurrentGame.GameDescription.IsTournament &&
+                           GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, viewModel.CurrentGame.GameDescription.GameType))
+                       .ForEach(stat => playerData.AddStatistic(stat));
+                });
+
+                tasksToLoad.Add(taskToReadPlayerStats);
+
+                playerIndicators.Add(player.Name, playerData);
+            }
+
+            Task.WhenAll(tasksToLoad).Wait();
+        }
+
+        private void ClearHUD(HudDragCanvas dgCanvas)
+        {
+            foreach (var panel in dgCanvas.Children.OfType<FrameworkElement>().ToList())
+            {
+                dgCanvas.Children.Remove(panel);
+            }
+
+            dgCanvas.UpdateLayout();
+        }
+
+        private void LoadHUD(HudDragCanvas dgCanvas, ReplayerViewModel viewModel, HudLayoutInfoV2 activeLayout)
+        {
+            var seats = (int)CurrentCapacity;
+
+            var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>(ReplayerPokerSite.ToString());
+
+            var nonToolLayoutStats = activeLayout
+                .HudPlayerTypes
+                .SelectMany(x => x.Stats)
+                .Select(x => x.Stat)
+                .Concat(activeLayout
+                    .HudBumperStickerTypes
+                    .SelectMany(x => x.Stats)
+                    .Select(x => x.Stat))
+                .Concat(new[] { Stat.TotalHands })
+                .Distinct()
+                .ToArray();
+
+            var hudElements = new List<HudElementViewModel>();
+
+            for (var i = 0; i < seats; i++)
+            {
+                var replayerPlayer = viewModel.PlayersCollection[i];
+
+                if (string.IsNullOrEmpty(replayerPlayer.Name))
+                {
+                    continue;
+                }
+
+                var player = dataService.GetPlayer(replayerPlayer.Name, viewModel.CurrentHand.PokersiteId);
+
+                if (player == null)
+                {
+                    continue;
+                }
+
+                var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
+
+                var hudElementCreationInfo = new HudElementViewModelCreationInfo
+                {
+                    GameType = EnumGameType.CashHoldem,
+                    HudLayoutInfo = activeLayout,
+                    PokerSite = ReplayerPokerSite,
+                    SeatNumber = i + 1
+                };
+
+                var hudElement = hudElementCreator.Create(hudElementCreationInfo);
+
+                if (hudElement == null ||
+                    !playerIndicators.TryGetValue(replayerPlayer.Name, out HudIndicators playerData))
+                {
+                    continue;
+                }
+
+                hudElement.PlayerId = player.PlayerId;
+                hudElement.PlayerName = replayerPlayer.Name;
+                hudElement.TotalHands = playerData.TotalHands;
+
+                var playerNotes = dataService.GetPlayerNotes(player.PlayerId);
+                hudElement.NoteToolTip = NoteBuilder.BuildNote(playerNotes);
+                hudElement.IsXRayNoteVisible = playerNotes.Any(x => x.IsAutoNote);
+
+                var graphTools = hudElement.Tools.OfType<HudGraphViewModel>().ToArray();
+
+                foreach (var graphTool in graphTools)
+                {
+                    graphTool.StatSessionCollection = new ReactiveList<decimal>();
+                }
+
+                var heatMapTools = hudElement.Tools.OfType<HudHeatMapViewModel>()
+                    .Concat(hudElement.Tools.OfType<HudGaugeIndicatorViewModel>()
+                        .SelectMany(x => x.GroupedStats)
+                        .SelectMany(x => x.Stats)
+                        .Where(x => x.HeatMapViewModel != null)
+                        .Select(x => x.HeatMapViewModel))
+                    .ToArray();
+
+                heatMapTools.ForEach(x =>
+                {
+                    var heatMapKey = playerData.HeatMaps.Keys
+                        .ToArray()
+                        .FirstOrDefault(p => p.Stat == x.BaseStat.Stat);
+
+                    if (heatMapKey != null)
+                    {
+                        x.HeatMap = playerData.HeatMaps[heatMapKey];
+                    }
+                });
+
+                var gaugeIndicatorTools = hudElement.Tools.OfType<HudGaugeIndicatorViewModel>().ToArray();
+
+                hudElement.SessionMoneyWonCollection = new ObservableCollection<decimal>();
+
+                var activeLayoutHudStats = hudElement.ToolsStatInfoCollection
+                    .Concat(heatMapTools.Select(x => x.BaseStat))
+                    .Concat(gaugeIndicatorTools.Select(x => x.BaseStat))
+                    .ToList();
+
+                var extraStats = (from nonToolLayoutStat in nonToolLayoutStats
+                                  join activateLayoutHudStat in activeLayoutHudStats on nonToolLayoutStat equals activateLayoutHudStat.Stat into grouped
+                                  from extraStat in grouped.DefaultIfEmpty()
+                                  where extraStat == null
+                                  select new StatInfo
+                                  {
+                                      Stat = nonToolLayoutStat
+                                  }).ToArray();
+
+                activeLayoutHudStats.AddRange(extraStats);
+
+                StatsProvider.UpdateStats(activeLayoutHudStats);
+
+                foreach (var statInfo in activeLayoutHudStats)
+                {
+                    var propertyName = StatsProvider.GetStatProperyName(statInfo.Stat);
+
+                    if (!string.IsNullOrEmpty(propertyName))
+                    {
+                        if (playerData.TotalHands < statInfo.MinSample)
+                        {
+                            statInfo.IsNotVisible = true;
+                        }
+
+                        statInfo.AssignStatInfoValues(playerData, propertyName);
+                    }
+                    else if (!(statInfo is StatInfoBreak) && statInfo.Stat != Stat.PlayerInfoIcon)
+                    {
+                        continue;
+                    }
+                }
+
+                hudElement.StatInfoCollection = activeLayoutHudStats;
+
+                var isNoteIconSet = false;
+
+                foreach (var toolViewModel in hudElement.Tools.Where(x => x is IHudNonPopupToolViewModel).ToArray())
+                {
+                    if (!isNoteIconSet && toolViewModel is HudPlainStatBoxViewModel && !(toolViewModel is HudFourStatsBoxViewModel))
+                    {
+                        (toolViewModel as HudPlainStatBoxViewModel).IsNoteIconEnabled = true;
+                        isNoteIconSet = true;
+                    }
+
+                    var panel = hudPanelService.Create(toolViewModel);
+
+                    if (panel != null)
+                    {
+                        dgCanvas.Children.Add(panel);
+
+                        Canvas.SetLeft(panel, toolViewModel.Position.X);
+                        Canvas.SetTop(panel, toolViewModel.Position.Y);
+                    }
+                }
+
+                hudElements.Add(hudElement);
+            }
+
+            hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout);
         }
 
         private void AddPotPlayerLabel(RadDiagram diagram, ReplayerPlayerViewModel player, double x, double y)
@@ -497,10 +769,12 @@ namespace DriveHUD.Application.TableConfigurators
         private EnumReplayerTableType GetTableSize(ReplayerViewModel viewModel)
         {
             SeatType seatType = SeatType.FromMaxPlayers(viewModel.CurrentGame.GameDescription.SeatType.MaxPlayers, true);
+
             if (seatType.MaxPlayers <= 6)
             {
                 return EnumReplayerTableType.Six;
             }
+
             if (seatType.MaxPlayers <= 9)
             {
                 return EnumReplayerTableType.Nine;

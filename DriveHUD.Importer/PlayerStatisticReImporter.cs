@@ -320,17 +320,25 @@ namespace DriveHUD.Importers
         /// <param name="player"></param>
         private void BuildPlayerStatistic(Handhistory dbHandHistory, PlayerStatisticCreationInfo playerStatisticCreationInfo)
         {
-            var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>();
-
-            var statistic = playerStatisticCalculator.CalculateStatistic(playerStatisticCreationInfo);
-
-            if (!string.IsNullOrEmpty(dbHandHistory.Tourneynumber))
+            try
             {
-                statistic.IsTourney = true;
-                statistic.TournamentId = dbHandHistory.Tourneynumber;
-            }
+                var playerStatisticCalculator = ServiceLocator.Current.GetInstance<IPlayerStatisticCalculator>(playerStatisticCreationInfo.GetServiceName());
 
-            StorePlayerStatistic(statistic);
+                var statistic = playerStatisticCalculator.CalculateStatistic(playerStatisticCreationInfo);
+
+                if (!string.IsNullOrEmpty(dbHandHistory.Tourneynumber))
+                {
+                    statistic.IsTourney = true;
+                    statistic.TournamentId = dbHandHistory.Tourneynumber;
+                }
+
+                StorePlayerStatistic(statistic);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Failed to process hand #{dbHandHistory.Gamenumber}, player {playerStatisticCreationInfo.Player?.Playername} .", e);
+                throw new DHInternalException(new NonLocalizableString($"Failed to rebuild stats of hand #{dbHandHistory.Gamenumber}"));
+            }
         }
 
         /// <summary>

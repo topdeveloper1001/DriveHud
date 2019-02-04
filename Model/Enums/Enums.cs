@@ -36,6 +36,7 @@ namespace Model.Enums
         SettingsCurrencyViewModel,
         SettingsRakeBackViewModel,
         SettingsUpgradeViewModel,
+        FilterAdvancedViewModel
     }
 
     public enum EnumPubSubMessageType

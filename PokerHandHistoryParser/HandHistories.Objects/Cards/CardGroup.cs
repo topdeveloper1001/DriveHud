@@ -119,6 +119,11 @@ namespace HandHistories.Objects.Cards
             return Cards.GetEnumerator();
         }
 
+        public static Card[] GetDeadCardsForHoldem6Plus()
+        {
+            return Parse("2h2c2d2s3h3c3d3s4h4c4d4s5h5c5d5s");
+        }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();

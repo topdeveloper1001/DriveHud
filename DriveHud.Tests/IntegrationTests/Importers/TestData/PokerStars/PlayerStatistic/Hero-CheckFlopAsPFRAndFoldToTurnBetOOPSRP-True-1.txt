@@ -1,0 +1,36 @@
+PokerStars Game #47151164745:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 8:05:20 ET
+Table 'Idelsonia' 6-max Seat #6 is the button
+Seat 1: stopme10 ($291.55 in chips) 
+Seat 2: Desateur ($531.60 in chips) 
+Seat 3: Chojjasd ($286.45 in chips) 
+Seat 4: Hero ($200 in chips) 
+Seat 5: LuckKi$$Me ($227.05 in chips) 
+Seat 6: ankurk ($221.95 in chips) 
+stopme10: posts small blind $1
+Desateur: posts big blind $2
+*** HOLE CARDS ***
+Chojjasd: folds 
+Hero: raises $4 to $6
+LuckKi$$Me: folds 
+ankurk: calls $6
+stopme10: folds 
+Desateur: folds 
+*** FLOP *** [9s Th Qs]
+Hero: checks 
+ankurk: checks 
+*** TURN *** [9s Th Qs] [Ks]
+Hero: checks 
+ankurk: bets $8
+Hero: folds 
+Uncalled bet ($8) returned to ankurk
+ankurk collected $14.25 from pot
+*** SUMMARY ***
+Total pot $15 | Rake $0.75 
+Board [9s Th Qs Ks]
+Seat 1: stopme10 (small blind) folded before Flop
+Seat 2: Desateur (big blind) folded before Flop
+Seat 3: Chojjasd folded before Flop (didn't bet)
+Seat 4: Hero folded on the Turn
+Seat 5: LuckKi$$Me folded before Flop (didn't bet)
+Seat 6: ankurk (button) collected ($14.25)
+

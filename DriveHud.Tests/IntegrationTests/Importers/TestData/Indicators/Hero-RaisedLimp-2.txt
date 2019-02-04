@@ -1,0 +1,38 @@
+PokerStars Game #47185343574:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:40:29 ET
+Table 'Malabar III' 6-max Seat #5 is the button
+Seat 1: imthesky ($352.05 in chips) 
+Seat 2: TODO ADENTR0 ($227 in chips) 
+Seat 4: hellokittery ($200 in chips) 
+Seat 5: MooMooTin ($60.20 in chips) 
+Seat 6: Hero ($441.05 in chips) 
+Hero: posts small blind $1
+imthesky: posts big blind $2
+*** HOLE CARDS ***
+TODO ADENTR0: folds 
+hellokittery: folds 
+MooMooTin: calls $2
+Hero: folds 
+imthesky: checks 
+*** FLOP *** [7c Qd 7d]
+imthesky: checks 
+leukehond joins the table at seat #3 
+MooMooTin: checks 
+*** TURN *** [7c Qd 7d] [Jd]
+imthesky: checks 
+MooMooTin: checks 
+*** RIVER *** [7c Qd 7d Jd] [8d]
+imthesky: checks 
+MooMooTin: checks 
+*** SHOW DOWN ***
+imthesky: shows [3d Ah] (a flush, Queen high)
+MooMooTin: mucks hand 
+imthesky collected $4.75 from pot
+*** SUMMARY ***
+Total pot $5 | Rake $0.25 
+Board [7c Qd 7d Jd 8d]
+Seat 1: imthesky (big blind) showed [3d Ah] and won ($4.75) with a flush, Queen high
+Seat 2: TODO ADENTR0 folded before Flop (didn't bet)
+Seat 4: hellokittery folded before Flop (didn't bet)
+Seat 5: MooMooTin (button) mucked
+Seat 6: Hero (small blind) folded before Flop
+

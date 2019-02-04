@@ -108,8 +108,26 @@ namespace DriveHUD.Common.Utils
         /// <param name="strIn">Input string</param>
         /// <returns>True if email is valid, otherwise - false</returns>
         public static bool IsValidEmail(string strIn)
-        {
-            if (String.IsNullOrEmpty(strIn))
+        {            
+            invalid = false;
+
+            if (string.IsNullOrEmpty(strIn))
+            {
+                return false;
+            }
+
+            // Use IdnMapping class to convert Unicode domain names.
+            try
+            {
+                strIn = Regex.Replace(strIn, @"(@)(.+)$", DomainMapper,
+                                      RegexOptions.None, TimeSpan.FromMilliseconds(200));
+            }
+            catch
+            {
+                return false;
+            }
+
+            if (invalid)
             {
                 return false;
             }
@@ -117,7 +135,7 @@ namespace DriveHUD.Common.Utils
             try
             {
                 return Regex.IsMatch(strIn,
-                      @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                      @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z_])@))" +
                       @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$",
                       RegexOptions.IgnoreCase);
             }
@@ -288,6 +306,27 @@ namespace DriveHUD.Common.Utils
             var pokerClientProcesses = processes.Where(x => processNames.Any(p => x.ProcessName.Equals(p, StringComparison.OrdinalIgnoreCase))).ToArray();
 
             return pokerClientProcesses;
+        }
+
+        private static bool invalid = false;
+
+        private static string DomainMapper(Match match)
+        {
+            // IdnMapping class with default property values.
+            var idn = new IdnMapping();
+
+            var domainName = match.Groups[2].Value;
+
+            try
+            {
+                domainName = idn.GetAscii(domainName);
+            }
+            catch (ArgumentException)
+            {
+                invalid = true;
+            }
+
+            return match.Groups[1].Value + domainName;
         }
     }
 }

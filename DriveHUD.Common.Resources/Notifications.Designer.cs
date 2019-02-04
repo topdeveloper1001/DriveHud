@@ -133,6 +133,87 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export as IPoker hand history format.
+        /// </summary>
+        internal static string Notifications_ExportHands_ExportAsIPoker {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_ExportAsIPoker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some of selected hands are stored in DH format. This format isn&apos;t supported by other databases, but these hands can be converted into IPoker hand history format. Do you want to convert them?.
+        /// </summary>
+        internal static string Notifications_ExportHands_ExportAsIPokerContent {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_ExportAsIPokerContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        internal static string Notifications_ExportHands_ExportAsIPokerNo {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_ExportAsIPokerNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convert.
+        /// </summary>
+        internal static string Notifications_ExportHands_ExportAsIPokerYes {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_ExportAsIPokerYes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to export hands. Please check logs or contact support..
+        /// </summary>
+        internal static string Notifications_ExportHands_FailedContent {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_FailedContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export failed!.
+        /// </summary>
+        internal static string Notifications_ExportHands_FailedTitle {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_FailedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hands have been successfully exported! .
+        /// </summary>
+        internal static string Notifications_ExportHands_SuccessContent {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_SuccessContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hands have been successfully exported! {0} hands exported as Ipoker hand history format..
+        /// </summary>
+        internal static string Notifications_ExportHands_SuccessContentInInternalFormat {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_SuccessContentInInternalFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully exported!.
+        /// </summary>
+        internal static string Notifications_ExportHands_SuccessTitle {
+            get {
+                return ResourceManager.GetString("Notifications_ExportHands_SuccessTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string Notifications_HudLayout_DeleteHudCancel {
@@ -223,11 +304,29 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DriveHUD cannot load a HUD. Tournament details not found. Please open tournament lobby..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_NoTournamentDetails {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_NoTournamentDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hud isn&apos;t supported in fast fold mode, but hands will be imported..
         /// </summary>
         internal static string Notifications_HudLayout_PreLoadingText_NotSupportedFastFold {
             get {
                 return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_NotSupportedFastFold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One full hand must be played before HUD appears. Please wait..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PB {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PB", resourceCulture);
             }
         }
         
@@ -255,6 +354,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Notifications_HudLayout_PreLoadingText_PK_NoLicense {
             get {
                 return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PK_NoLicense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD cannot load a HUD. Please try to restart emulators via MultiManager..
+        /// </summary>
+        internal static string Notifications_HudLayout_PreLoadingText_PK_Relogin {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_PreLoadingText_PK_Relogin", resourceCulture);
             }
         }
         
@@ -295,6 +403,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The default layout can&apos;t be overwritten..
+        /// </summary>
+        internal static string Notifications_HudLayout_SaveAsFailedDefaultLayout {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_SaveAsFailedDefaultLayout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed!.
+        /// </summary>
+        internal static string Notifications_HudLayout_SaveAsFailedTitle {
+            get {
+                return ResourceManager.GetString("Notifications_HudLayout_SaveAsFailedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Changes have been made to your HUD layout. Would you like to save them now?.
         /// </summary>
         internal static string Notifications_HudLayout_SaveDesignContent {
@@ -327,6 +453,42 @@ namespace DriveHUD.Common.Resources {
         internal static string Notifications_HudLayout_SaveDesignYes {
             get {
                 return ResourceManager.GetString("Notifications_HudLayout_SaveDesignYes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to rebuild stats. Please contact support..
+        /// </summary>
+        internal static string Notifications_RebuildStats_FailedMessage {
+            get {
+                return ResourceManager.GetString("Notifications_RebuildStats_FailedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed!.
+        /// </summary>
+        internal static string Notifications_RebuildStats_FailedTitle {
+            get {
+                return ResourceManager.GetString("Notifications_RebuildStats_FailedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stats have been rebuilt successfully..
+        /// </summary>
+        internal static string Notifications_RebuildStats_SucceedMessage {
+            get {
+                return ResourceManager.GetString("Notifications_RebuildStats_SucceedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Succeed!.
+        /// </summary>
+        internal static string Notifications_RebuildStats_SucceedTitle {
+            get {
+                return ResourceManager.GetString("Notifications_RebuildStats_SucceedTitle", resourceCulture);
             }
         }
         

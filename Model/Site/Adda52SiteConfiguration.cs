@@ -119,7 +119,7 @@ namespace Model.Site
         }
 
         /// <summary>
-        /// Detects whenever Betonline poker client is installed
+        /// Detects whenever Adda52 poker client is installed
         /// </summary>
         /// <returns>True if installed, otherwise - false</returns>
         protected virtual bool DetectSite()

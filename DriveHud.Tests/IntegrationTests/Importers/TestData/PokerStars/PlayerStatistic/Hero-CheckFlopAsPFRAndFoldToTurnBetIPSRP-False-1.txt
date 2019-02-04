@@ -1,0 +1,39 @@
+PokerStars Game #47154091801:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 9:48:18 ET
+Table 'Malabar III' 6-max Seat #6 is the button
+Seat 1: gebek8923 ($224.80 in chips) 
+Seat 2: mad.afurable ($500.65 in chips) 
+Seat 4: fakker11 ($203 in chips) 
+Seat 5: chrisdm ($217 in chips) 
+Seat 6: Hero ($203 in chips) 
+gebek8923: posts small blind $1
+mad.afurable: posts big blind $2
+*** HOLE CARDS ***
+fakker11: folds 
+chrisdm has timed out
+chrisdm: folds 
+Hero: raises $4 to $6
+iancu4 joins the table at seat #3 
+gebek8923: calls $5
+mad.afurable: folds 
+*** FLOP *** [Ac Kc 5c]
+gebek8923: checks 
+Hero: checks 
+*** TURN *** [Ac Kc 5c] [Tc]
+gebek8923: checks 
+Hero: checks 
+*** RIVER *** [Ac Kc 5c Tc] [Jd]
+gebek8923: checks 
+Hero: checks 
+*** SHOW DOWN ***
+gebek8923: shows [7d 7s] (a pair of Sevens)
+Hero: mucks hand 
+gebek8923 collected $13.30 from pot
+*** SUMMARY ***
+Total pot $14 | Rake $0.70 
+Board [Ac Kc 5c Tc Jd]
+Seat 1: gebek8923 (small blind) showed [7d 7s] and won ($13.30) with a pair of Sevens
+Seat 2: mad.afurable (big blind) folded before Flop
+Seat 4: fakker11 folded before Flop (didn't bet)
+Seat 5: chrisdm folded before Flop (didn't bet)
+Seat 6: Hero (button) mucked
+

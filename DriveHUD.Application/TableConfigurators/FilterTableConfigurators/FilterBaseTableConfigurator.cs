@@ -30,6 +30,8 @@ namespace DriveHUD.Application.TableConfigurators
         private readonly Point tablePosition = new Point(28.0, 0.0);
         private readonly Point activeIndicatorRelativePosition = new Point(10, 33);
 
+        private int seats = 6;
+
         private readonly Dictionary<int, double[,]> predefinedPlayerPositions = new Dictionary<int, double[,]>()
         {
             {  6, new double[,] { { 120, 220 }, { 50, 125 }, { 120, 30 }, { 330, 30 }, { 400, 125 }, { 330, 220 } } },
@@ -38,6 +40,12 @@ namespace DriveHUD.Application.TableConfigurators
 
 
         public void ConfigureTable(RadDiagram diagram, FilterStandardViewModel viewModel, int seats)
+        {
+            this.seats = seats;
+            ConfigureTable(diagram, viewModel);
+        }
+
+        public void ConfigureTable(RadDiagram diagram, FilterStandardViewModel viewModel)
         {
             diagram.Clear();
 
@@ -54,21 +62,22 @@ namespace DriveHUD.Application.TableConfigurators
 
             diagram.AddShape(table);
 
-            CreatePlayerLabels(diagram, viewModel, seats);
+            CreatePlayerLabels(diagram, viewModel);
         }
 
-        private void CreatePlayerLabels(RadDiagram diagram, FilterStandardViewModel viewModel, int seats)
+        private void CreatePlayerLabels(RadDiagram diagram, FilterStandardViewModel viewModel)
         {
             var positions = predefinedPlayerPositions[seats];
+
             IList<TableRingItem> collection;
+
             switch ((EnumTableType)seats)
             {
                 case EnumTableType.Six:
-                    collection = viewModel.FilterModel.Table6MaxCollection;
+                    collection = viewModel.FilterModel.ActiveTable6MaxCollection;
                     break;
-                case EnumTableType.Nine:
                 default:
-                    collection = viewModel.FilterModel.TableFullRingCollection;
+                    collection = viewModel.FilterModel.ActiveTableFullRingCollection;
                     break;
             }
 
@@ -92,9 +101,9 @@ namespace DriveHUD.Application.TableConfigurators
                     IsHitTestVisible = true,
                     FontSize = 13,
                 };
+
                 player.X = positions[tableItem.Seat - 1, 0];
                 player.Y = positions[tableItem.Seat - 1, 1];
-
 
                 var indicator = AddActiveIndicator(player, tableItem);
 

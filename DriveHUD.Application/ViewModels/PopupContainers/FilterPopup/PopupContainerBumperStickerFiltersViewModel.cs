@@ -1,11 +1,22 @@
-﻿using DriveHUD.Application.ViewModels.Filters;
-using DriveHUD.Application.ViewModels.Hud;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PopupContainerBumperStickerFiltersViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Application.ViewModels.Filters;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Application.Views;
 using Model.Enums;
 using Model.Filters;
+using Model.Hud;
 using Prism.Interactivity.InteractionRequest;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace DriveHUD.Application.ViewModels.PopupContainers
@@ -36,16 +47,15 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         protected override void InitializeViewModelCollection()
         {
-            this.FilterViewCollection = new ObservableCollection<IFilterView>
-                (
-                    new List<IFilterView>()
-                    {
-                        new FilterBoardTextureView(FilterModelManager),
-                        new FilterHandActionView(FilterModelManager),
-                        new FilterHandValueView(FilterModelManager),
-                        new FilterQuickView(FilterModelManager),
-                        new FilterHandGridView(FilterModelManager),
-                    });
+            FilterViewCollection = new ObservableCollection<IFilterView>
+            {
+                new FilterBoardTextureView(FilterModelManager),
+                new FilterHandActionView(FilterModelManager),
+                new FilterHandValueView(FilterModelManager),
+                new FilterQuickView(FilterModelManager),
+                new FilterAdvancedView(FilterModelManager),
+                new FilterHandGridView(FilterModelManager)
+            };
         }
 
         #endregion
@@ -101,6 +111,5 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         }
 
         #endregion
-
     }
 }

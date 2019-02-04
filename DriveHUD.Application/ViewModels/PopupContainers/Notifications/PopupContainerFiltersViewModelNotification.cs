@@ -10,8 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels.Hud;
 using Model.Filters;
+using Model.Hud;
 using Prism.Interactivity.InteractionRequest;
 
 namespace DriveHUD.Application.ViewModels.PopupContainers.Notifications

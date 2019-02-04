@@ -604,6 +604,7 @@
                 <ColumnDefinition
                     Width="20" />
                 <ColumnDefinition
+                    MinWidth="800"
                     Width="*" />
                 <ColumnDefinition
                     Width="Auto" />
@@ -754,7 +755,7 @@
                         Grid.Column="0"
                         Grid.Row="0"
                         Grid.ColumnSpan="2"
-                        Width="199"
+                        Width="159"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
                         Style="{StaticResource ControlButtonStyle}"
@@ -765,7 +766,7 @@
                     <Button
                         Grid.Column="0"
                         Grid.Row="1"
-                        Width="95"
+                        Width="75"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Bottom"
                         Style="{StaticResource ControlButtonStyle}"
@@ -776,7 +777,7 @@
                     <Button
                         Grid.Column="1"
                         Grid.Row="1"
-                        Width="95"
+                        Width="75"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
                         Style="{StaticResource ControlButtonStyle}"
@@ -787,7 +788,7 @@
                     <Button
                         Grid.Column="0"
                         Grid.Row="2"
-                        Width="95"
+                        Width="75"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Bottom"
                         Style="{StaticResource ControlButtonStyle}"
@@ -798,7 +799,7 @@
                     <Button
                         Grid.Column="1"
                         Grid.Row="2"
-                        Width="95"
+                        Width="75"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
                         Style="{StaticResource ControlButtonStyle}"
@@ -810,7 +811,7 @@
                         Grid.Column="0"
                         Grid.Row="3"
                         Grid.ColumnSpan="2"
-                        Width="199"
+                        Width="159"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
                         Style="{StaticResource ControlButtonStyle}"
@@ -825,10 +826,12 @@
                     Margin="0,5,0,0"
                     Style="{StaticResource HudDesignerTextBlockStyle}"
                     HorizontalAlignment="Center"
+                    Width="159"
+                    FontSize="15"
                     Text="{ResX Key=Common_HudSideBar_Title}" />
 
                 <UniformGrid
-                    Width="185"
+                    Width="159"
                     Margin="0,15,0,0"
                     Columns="2">
 
@@ -845,116 +848,116 @@
                         </dh:ImageButton.ToolTip>
                     </dh:ImageButton>
 
-                   <dh:ImageButton
+                    <dh:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/plain stat box.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource PlainStatBoxAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlainStatBox}">
-                       <dh:ImageButton.ToolTip>
+                        <dh:ImageButton.ToolTip>
                             <ToolTip
                                 MaxWidth="300"
                                 Content="{ResX Key=Common_HudSideBar_PlainStatBoxTool}" />
                         </dh:ImageButton.ToolTip>
                     </dh:ImageButton>
 
-                   <dh:ImageButton
+                    <dh:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/graph.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.Graph}">
-                       <dh:ImageButton.ToolTip>
+                        <dh:ImageButton.ToolTip>
                             <ToolTip
                                 MaxWidth="300"
                                 Content="{ResX Key=Common_HudSideBar_GraphTool}" />
                         </dh:ImageButton.ToolTip>
                     </dh:ImageButton>
 
-                   <dh:ImageButton
+                    <dh:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/heatmap.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource GraphAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.HeatMap}">
-                       <dh:ImageButton.ToolTip>
+                        <dh:ImageButton.ToolTip>
                             <ToolTip
                                 MaxWidth="300"
                                 Content="{ResX Key=Common_HudSideBar_HeatMapTool}" />
                         </dh:ImageButton.ToolTip>
                     </dh:ImageButton>
 
-                   <dh:ImageButton
+                    <dh:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/4-stat.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource FourStatBoxAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.FourStatBox}">
-                       <dh:ImageButton.ToolTip>
+                        <dh:ImageButton.ToolTip>
                             <ToolTip
                                 MaxWidth="300"
                                 Content="{ResX Key=Common_HudSideBar_4StatDHBoxTool}" />
                         </dh:ImageButton.ToolTip>
                     </dh:ImageButton>
 
-                   <dh:ImageButton
+                    <dh:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/profile.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource PlayerIconAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.PlayerProfileIcon}">
-                       <dh:ImageButton.ToolTip>
+                        <dh:ImageButton.ToolTip>
                             <ToolTip
                                 MaxWidth="300"
                                 Content="{ResX Key=Common_HudSideBar_PlayerProfileIconTool}" />
                         </dh:ImageButton.ToolTip>
                     </dh:ImageButton>
 
-                   <dh:ImageButton
+                    <dh:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/bumpers.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource BumperStickersAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.BumperStickers}">
-                       <dh:ImageButton.ToolTip>
+                        <dh:ImageButton.ToolTip>
                             <ToolTip
                                 MaxWidth="300"
                                 Content="{ResX Key=Common_HudSideBar_BumperStickersTool}" />
                         </dh:ImageButton.ToolTip>
                     </dh:ImageButton>
 
-                   <dh:ImageButton
+                    <dh:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/break line.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.LineBreak}">
-                       <dh:ImageButton.ToolTip>
+                        <dh:ImageButton.ToolTip>
                             <ToolTip
                                 MaxWidth="300"
                                 Content="{ResX Key=Common_HudSideBar_BreakLine}" />
                         </dh:ImageButton.ToolTip>
                     </dh:ImageButton>
 
-                   <dh:ImageButton
+                    <dh:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/tilt.meter.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource TiltMeterAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TiltMeter}">
-                       <dh:ImageButton.ToolTip>
+                        <dh:ImageButton.ToolTip>
                             <ToolTip
                                 MaxWidth="300"
                                 Content="{ResX Key=Common_HudSideBar_TiltMeterTool}" />
                         </dh:ImageButton.ToolTip>
                     </dh:ImageButton>
 
-                   <dh:ImageButton
+                    <dh:ImageButton
                         Style="{StaticResource HudDesignerToolButtonStyle}"
                         Image="/DriveHUD.Common.Resources;Component/images/icons/textbox.png"
                         dh:DragDrop.IsDragSource="True"
                         dh:DragDrop.DragAdornerTemplate="{StaticResource TextBoxAdornerTemplate}"
                         dh:DragDrop.DragDropData="{x:Static vm:HudDesignerToolType.TextBox}">
-                       <dh:ImageButton.ToolTip>
+                        <dh:ImageButton.ToolTip>
                             <ToolTip
                                 MaxWidth="300"
                                 Content="{ResX Key=Common_HudSideBar_TextBoxTool}" />
@@ -976,6 +979,7 @@
                     <ColumnDefinition
                         Width="Auto" />
                     <ColumnDefinition
+                        MinWidth="38"
                         Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
@@ -989,8 +993,7 @@
 
                 <telerik:RadDiagram
                     Grid.Row="1"
-                    Grid.Column="1"
-                    Style="{StaticResource HudTableDiagramStyle}">
+                    Grid.Column="1">
                     <i:Interaction.Behaviors>
                         <bhv:HudDesignerBehavior
                             IsReadOnly="{Binding IsInDesignMode, Converter={dh:BoolNotConverter}}"
@@ -999,6 +1002,21 @@
                             ToolbarTemplate="{StaticResource HudToolBarControlTemplate}"
                             HudElements="{Binding HudElements}" />
                     </i:Interaction.Behaviors>
+                    <telerik:RadDiagram.Style>
+                        <Style
+                            TargetType="{x:Type telerik:RadDiagram}"
+                            BasedOn="{StaticResource HudTableDiagramStyle}">
+                            <Style.Triggers>
+                                <DataTrigger
+                                    Binding="{Binding IsLowResolutionMode}"
+                                    Value="True">
+                                    <Setter
+                                        Property="Width"
+                                        Value="{x:Static res:HudDefaultSettings.HudTableLowResolutionWidth}" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </telerik:RadDiagram.Style>
                 </telerik:RadDiagram>
 
                 <StackPanel
@@ -1010,8 +1028,9 @@
                     Visibility="{Binding IsInDesignMode, Converter={dh:BoolToVisibilityConverter}}">
 
                     <Button
-                        Width="40"
-                        Height="40"
+                        MinWidth="35"
+                        Width="35"
+                        Height="35"
                         Background="{StaticResource CloseButtonBackground}"
                         Command="{Binding SaveDesignCommand}">
 
@@ -1029,8 +1048,9 @@
                     </Button>
 
                     <Button
-                        Width="40"
-                        Height="40"
+                        MinWidth="35"
+                        Width="35"
+                        Height="35"
                         Margin="0,2,0,0"
                         Background="{StaticResource CloseButtonBackground}"
                         Command="{Binding CancelDesignCommand}">
@@ -1149,9 +1169,9 @@
                                 Text="{ResX Key=Common_Hud_AllStats}">
                             </TextBlock>
 
-                            <TextBox                                
+                            <TextBox
                                 Grid.Column="1"
-                                Style="{StaticResource SearchTextBoxStyle}"                                                     
+                                Style="{StaticResource SearchTextBoxStyle}"
                                 Margin="0,0,7,0"
                                 HorizontalAlignment="Right"
                                 Text="{Binding StatFilter, UpdateSourceTrigger=PropertyChanged}" />
@@ -1352,8 +1372,8 @@
 
         <dh:NonTopmostPopup
             IsOpen="{Binding IsPopupOpened}"
-            AllowsTransparency="True"   
-            AlwaysNonTopmost="True"            
+            AllowsTransparency="True"
+            AlwaysNonTopmost="True"
             Placement="Center">
 
             <Grid>

@@ -91,5 +91,8 @@ namespace DriveHUD.Importers.PokerKing.Model
 
         [ProtoMember(25)]
         public JsStringGameUUid[] GameUuidsJs { get; set; }
+
+        [ProtoMember(26)]
+        public uint GameId { get; set; }
     }
 }

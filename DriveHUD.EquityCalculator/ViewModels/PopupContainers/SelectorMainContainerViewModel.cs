@@ -1,16 +1,21 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ChangeEquityCalculatorPopupViewEventArgs.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.EquityCalculator.Views;
 using Microsoft.Practices.ServiceLocation;
-using Model;
-using Model.Enums;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
-using Prism.Regions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -28,48 +33,23 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         public ChangeEquityCalculatorPopupViewEventArgs(ViewType viewType)
         {
-            this.PopupViewType = viewType;
+            PopupViewType = viewType;
         }
     }
 
     public class ChangeEquityCalculatorPopupViewEvent : PubSubEvent<ChangeEquityCalculatorPopupViewEventArgs>
     {
-
     }
 
     public class SelectorMainContainerViewModel : BaseViewModel, IInteractionRequestAware
     {
-        private INotification _notification;
-        private Action _finishInteraction;
         private UserControl _selectedView;
 
         public ICommand OnViewLoadedCommand { get; set; }
 
-        public Action FinishInteraction
-        {
-            get
-            {
-                return _finishInteraction;
-            }
+        public Action FinishInteraction { get; set; }
 
-            set
-            {
-                _finishInteraction = value;
-            }
-        }
-
-        public INotification Notification
-        {
-            get
-            {
-                return _notification;
-            }
-
-            set
-            {
-                _notification = value;
-            }
-        }
+        public INotification Notification { get; set; }
 
         public UserControl SelectedView
         {
@@ -85,6 +65,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     ((IInteractionRequestAware)(value.DataContext)).Notification = this.Notification;
                     ((IInteractionRequestAware)(value.DataContext)).FinishInteraction = this.FinishInteraction;
                 }
+
                 SetProperty(ref _selectedView, value);
             }
         }
@@ -98,9 +79,9 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
         private void ViewLoaded(object obj)
         {
-            if (_notification != null && _notification is CardSelectorNotification)
+            if (Notification != null && Notification is CardSelectorNotification)
             {
-                var v = _notification as CardSelectorNotification;
+                var v = Notification as CardSelectorNotification;
 
                 if (v.SelectorType != CardSelectorType.BoardSelector)
                 {

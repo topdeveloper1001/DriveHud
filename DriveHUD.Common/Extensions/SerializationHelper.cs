@@ -32,7 +32,7 @@ namespace DriveHUD.Common.Extensions
         /// <param name="enc">Encoding of the serialized output.</param>
         /// <returns>Serialized (xml) object.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times")]
-        public static string SerializeObject<T>(T obj, Encoding enc)
+        public static string SerializeObject<T>(T obj, Encoding enc, bool omitXmlDeclaration = false)
         {
             if (obj == null)
             {
@@ -47,7 +47,7 @@ namespace DriveHUD.Common.Extensions
                     // Code analysis does not understand that. That's why there is a suppress message.
                     CloseOutput = false,
                     Encoding = enc,
-                    OmitXmlDeclaration = false,
+                    OmitXmlDeclaration = omitXmlDeclaration,
                     Indent = true
                 };
 
@@ -67,9 +67,9 @@ namespace DriveHUD.Common.Extensions
         /// <typeparam name="T">Type of object to serialize.</typeparam>
         /// <param name="obj">Object to serialize.</param>        
         /// <returns>Serialized (xml) object.</returns>        
-        public static string SerializeObject<T>(T obj)
+        public static string SerializeObject<T>(T obj, bool omitXmlDeclaration = false)
         {
-            var result = SerializeObject(obj, Encoding.UTF8);
+            var result = SerializeObject(obj, Encoding.UTF8, omitXmlDeclaration);
 
             var _byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
 

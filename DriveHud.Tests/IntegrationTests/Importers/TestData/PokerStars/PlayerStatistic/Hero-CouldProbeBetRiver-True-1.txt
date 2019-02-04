@@ -1,0 +1,39 @@
+PokerStars Game #47149797340:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 7:07:16 ET
+Table 'Pan IV' 6-max Seat #3 is the button
+Seat 1: stopme10 ($328.50 in chips) 
+Seat 2: MegaMarc1 ($332.05 in chips) 
+Seat 3: thomaswkm ($369.40 in chips) 
+Seat 4: Hero ($200 in chips) 
+Seat 5: alepa ($204.25 in chips) 
+Seat 6: twofinger777 ($194.90 in chips) 
+Hero: posts small blind $1
+alepa: posts big blind $2
+*** HOLE CARDS ***
+twofinger777: raises $4 to $6
+stopme10: folds 
+MegaMarc1: folds 
+thomaswkm: folds 
+Hero: calls $5
+alepa: folds 
+*** FLOP *** [7c 2d 4c]
+Hero: checks 
+twofinger777: checks 
+*** TURN *** [7c 2d 4c] [Jd]
+Hero: checks 
+twofinger777: checks 
+*** RIVER *** [7c 2d 4c Jd] [Qd]
+Hero: bets $9
+twofinger777: folds 
+Uncalled bet ($9) returned to Hero
+Hero collected $13.30 from pot
+Hero: doesn't show hand 
+*** SUMMARY ***
+Total pot $14 | Rake $0.70 
+Board [7c 2d 4c Jd Qd]
+Seat 1: stopme10 folded before Flop (didn't bet)
+Seat 2: MegaMarc1 folded before Flop (didn't bet)
+Seat 3: thomaswkm (button) folded before Flop (didn't bet)
+Seat 4: Hero (small blind) collected ($13.30)
+Seat 5: alepa (big blind) folded before Flop
+Seat 6: twofinger777 folded on the River
+

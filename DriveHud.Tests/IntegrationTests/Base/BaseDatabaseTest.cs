@@ -202,7 +202,8 @@ namespace DriveHud.Tests.IntegrationTests.Base
 
         protected virtual void InitializePlayerStatisticCalculator(UnityContainer unityContainer)
         {
-            unityContainer.RegisterType<IPlayerStatisticCalculator, PlayerStatisticCalculator>();
+            unityContainer.RegisterType<IPlayerStatisticCalculator, PlayerStatisticCalculator>(PlayerStatisticCalculatorServiceNames.Base);
+            unityContainer.RegisterType<IPlayerStatisticCalculator, PKShortPlayerStatisticCalculator>(PlayerStatisticCalculatorServiceNames.PKShortDeck);
         }
 
         protected virtual void InitializeFileImporterLogger(UnityContainer unityContainer)
@@ -264,10 +265,9 @@ namespace DriveHud.Tests.IntegrationTests.Base
 
         private class TestFileImporter : FileImporter
         {
-            protected override void StorePlayerStatistic(Playerstatistic playerStat, string session)
+            protected override void StorePlayerStatistic(Playerstatistic playerStat, bool isAsync)
             {
-                session = "TestData";
-                base.StorePlayerStatistic(playerStat, session);
+                base.StorePlayerStatistic(playerStat, false);
             }
         }
     }

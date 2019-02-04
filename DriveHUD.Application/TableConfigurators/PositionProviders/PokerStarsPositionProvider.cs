@@ -31,7 +31,7 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
                     3,
                     new int[,]
                     {
-                        { 320, 50 }, { 541, 422 }, { 161, 422 }
+                        { 616, 106 }, { 320, 374 }, { 23, 106 }
                     }
                 },
                 {

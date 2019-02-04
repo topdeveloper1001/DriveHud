@@ -1,4 +1,17 @@
-﻿using DriveHUD.Common.Infrastructure.Base;
+﻿//-----------------------------------------------------------------------
+// <copyright file="CardSelectorViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Linq;
 using DriveHUD.EquityCalculator.Models;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
@@ -13,9 +26,10 @@ namespace DriveHUD.EquityCalculator.ViewModels
 {
     public class CardSelectorViewModel : BaseViewModel, IInteractionRequestAware
     {
-        private readonly int suitLenght = 13;
+        private readonly int suitLength = 13;
 
-        #region fields
+        #region Fields
+
         private CardSelectorNotification _notification;
         private CardSelectorType _selectorType = CardSelectorType.BoardSelector;
         private List<CardModel> _selectedCards = new List<CardModel>();
@@ -28,33 +42,35 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private List<CheckableCardModel> _spadesSource = new List<CheckableCardModel>();
 
         private List<CardModel> _usedCards = new List<CardModel>();
+
         #endregion
 
         #region Properties
+
         public List<CheckableCardModel> ClubsSource
         {
             get
             {
                 return _clubsSource;
             }
-
             set
             {
-                _clubsSource = value;
+                SetProperty(ref _clubsSource, value);
             }
         }
+
         public List<CheckableCardModel> DiamondsSource
         {
             get
             {
                 return _diamondsSource;
             }
-
             set
             {
-                _diamondsSource = value;
+                SetProperty(ref _diamondsSource, value);
             }
         }
+
         public List<CheckableCardModel> HeartsSource
         {
             get
@@ -64,19 +80,19 @@ namespace DriveHUD.EquityCalculator.ViewModels
 
             set
             {
-                _heartsSource = value;
+                SetProperty(ref _heartsSource, value);
             }
         }
+
         public List<CheckableCardModel> SpadesSource
         {
             get
             {
                 return _spadesSource;
             }
-
             set
             {
-                _spadesSource = value;
+                SetProperty(ref _spadesSource, value);
             }
         }
 
@@ -88,7 +104,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
             set
             {
-                _usedCards = value;
+                SetProperty(ref _usedCards, value);
             }
         }
 
@@ -98,7 +114,6 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 return _selectorType;
             }
-
             set
             {
                 SetProperty(ref _selectorType, value);
@@ -111,7 +126,6 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 return _isSelectError;
             }
-
             set
             {
                 SetProperty(ref _isSelectError, value);
@@ -136,27 +150,35 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             get
             {
-                return this._notification;
+                return _notification;
             }
             set
             {
-                if (value is CardSelectorNotification)
+                if (!(value is CardSelectorNotification notification))
                 {
-                    _notification = value as CardSelectorNotification;
-                    SelectorType = this._notification.SelectorType;
-                    UsedCards = new List<CardModel>(this._notification.UsedCards);
-                    SetSelectedCards();
-                    RaisePropertyChanged();
+                    return;
                 }
+
+                _notification = notification;
+                SelectorType = _notification.SelectorType;
+                UsedCards = new List<CardModel>(_notification.UsedCards);
+                ResetVisibility();
+                SetSelectedCards();
+                RaisePropertyChanged();
             }
         }
         #endregion
 
-        #region ICommand
+        #region Commands
+
         public ICommand SelectionChangedCommand { get; set; }
+
         public ICommand SaveCommand { get; set; }
+
         public ICommand ResetCommand { get; set; }
+
         public ICommand ShowPreflopViewCommand { get; set; }
+
         #endregion
 
         public CardSelectorViewModel()
@@ -179,9 +201,10 @@ namespace DriveHUD.EquityCalculator.ViewModels
         }
 
         #region Class Members
+
         private void Init()
         {
-            for (int i = suitLenght - 1; i >= 0; i--)
+            for (var i = suitLength - 1; i >= 0; i--)
             {
                 ClubsSource.Add(new CheckableCardModel((RangeCardRank)i, RangeCardSuit.Clubs));
                 DiamondsSource.Add(new CheckableCardModel((RangeCardRank)i, RangeCardSuit.Diamonds));
@@ -195,6 +218,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             IsOneCard = false;
             IsSelectError = false;
             _selectedCards.Clear();
+
             ClubsSource.Where(x => x.IsChecked).ToList().ForEach(x => x.IsChecked = false);
             DiamondsSource.Where(x => x.IsChecked).ToList().ForEach(x => x.IsChecked = false);
             HeartsSource.Where(x => x.IsChecked).ToList().ForEach(x => x.IsChecked = false);
@@ -204,7 +228,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
         private void SetSelectedCards()
         {
             ResetView();
-            foreach (var card in this._notification.CardsContainer.Cards.Where(x => (x.Rank != RangeCardRank.None) && (x.Suit != RangeCardSuit.None)))
+
+            foreach (var card in _notification.CardsContainer.Cards.Where(x => (x.Rank != RangeCardRank.None) && (x.Suit != RangeCardSuit.None)))
             {
                 switch (card.Suit)
                 {
@@ -221,15 +246,29 @@ namespace DriveHUD.EquityCalculator.ViewModels
                         SpadesSource.First(x => x.Rank == card.Rank).IsChecked = true;
                         break;
                 }
+
                 _selectedCards.Add(card);
             }
         }
+
+        private void ResetVisibility()
+        {
+            ClubsSource
+                .Concat(DiamondsSource)
+                .Concat(HeartsSource)
+                .Concat(SpadesSource)
+                .ForEach(x => x.IsVisible = _notification.EquityCalculatorMode != EquityCalculatorMode.HoldemSixPlus ||
+                    x.Rank > RangeCardRank.Five);
+        }
+
         #endregion
 
         #region ICommand implementation
+
         private void SelectionChanged(object obj)
         {
             IsOneCard = false;
+
             if (obj != null)
             {
                 if (obj is CheckableCardModel)
@@ -316,6 +355,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             ResetView();
         }
+
         #endregion
     }
 }

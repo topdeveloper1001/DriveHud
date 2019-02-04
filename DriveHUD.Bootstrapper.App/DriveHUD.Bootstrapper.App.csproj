@@ -71,16 +71,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BootstrapperApp.cs" />
+    <Compile Include="Common\BurnInstallationState.cs" />
+    <Compile Include="Common\PageType.cs" />
+    <Compile Include="Common\UpdateState.cs" />
+    <Compile Include="Common\Variables.cs" />
+    <Compile Include="Common\VersionStatus.cs" />
     <Compile Include="Controls\AnimatedContentControl.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\MarkupExtensionConverterBase.cs" />
     <Compile Include="Enums\InstallState.cs" />
-    <Compile Include="ICancelable.cs" />
-    <Compile Include="Infrastructure\RelayCommand.cs" />
     <Compile Include="Infrastructure\RTFSourceAttached.cs" />
-    <Compile Include="Infrastructure\Variables.cs" />
     <Compile Include="MainWindowView.xaml.cs">
       <DependentUpon>MainWindowView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\BootstrapperAppModel.cs" />
+    <Compile Include="Model\BundleAttributes.cs" />
+    <Compile Include="Model\BundleCondition.cs" />
+    <Compile Include="Model\BundleInfo.cs" />
+    <Compile Include="Model\BundleInfoLoader.cs" />
+    <Compile Include="Model\PackageInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -94,17 +102,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SilentModeHelper.cs" />
-    <Compile Include="Utilities\BundleAttributes.cs" />
-    <Compile Include="Utilities\BundleCondition.cs" />
-    <Compile Include="Utilities\BundleInfo.cs" />
-    <Compile Include="Utilities\BundleInfoLoader.cs" />
-    <Compile Include="Utilities\PackageInfo.cs" />
-    <Compile Include="ValueConverters\BoolToVisibilityConverter.cs" />
-    <Compile Include="ViewModels\FinalView.cs" />
+    <Compile Include="ViewModels\FinalViewModel.cs" />
     <Compile Include="ViewModels\InstallViewModel.cs" />
     <Compile Include="ViewModels\MaintenanceViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\NotificationViewModel.cs" />
+    <Compile Include="ViewModels\NotificationViewModelInfo.cs" />
+    <Compile Include="ViewModels\PageViewModel.cs" />
     <Compile Include="ViewModels\ProgressViewModel.cs" />
     <Compile Include="Views\FinalView.xaml.cs">
       <DependentUpon>FinalView.xaml</DependentUpon>
@@ -115,11 +119,15 @@
     <Compile Include="Views\MaintenanceView.xaml.cs">
       <DependentUpon>MaintenanceView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\NotificationBox.cs" />
+    <Compile Include="Views\NotificationView.xaml.cs">
+      <DependentUpon>NotificationView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ProgressView.xaml.cs">
       <DependentUpon>ProgressView.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
@@ -163,11 +171,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\NotificationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ProgressView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2019-01-17T18:13:28.113Z</DateOfHandUtc>
+  <HandId>1547748908472</HandId>
+  <DealerButtonPosition>8</DealerButtonPosition>
+  <TableName>Dazzling Deuces</TableName>
+  <GameDescription>
+    <PokerFormat>CashGame</PokerFormat>
+    <Site>PokerBaazi</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>INR</Currency>
+      <SmallBlind>1</SmallBlind>
+      <BigBlind>2</BigBlind>
+      <IsAnteTable>false</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="9" />
+    <TableType>Regular</TableType>
+    <Identifier>100399</Identifier>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>57</TotalPot>
+  <Rake>4</Rake>
+  <Actions>
+    <HandAction PlayerName="Mangesh1986" HandActionType="SMALL_BLIND" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="niketshah04" HandActionType="BIG_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="masterpiece" HandActionType="POSTS" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="patelprajay" HandActionType="CALL" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="nish4x" HandActionType="RAISE" Amount="-9" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="lily" HandActionType="CALL" Amount="-9" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="preharman1" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Vijendra14" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="masterpiece" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="abhishek1289" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Mangesh1986" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="niketshah04" HandActionType="CALL" Amount="-7" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="patelprajay" HandActionType="CALL" Amount="-7" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="niketshah04" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="patelprajay" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="nish4x" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="lily" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="niketshah04" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="patelprajay" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="nish4x" HandActionType="BET" Amount="-9" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="lily" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="niketshah04" HandActionType="CALL" Amount="-9" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="patelprajay" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="niketshah04" HandActionType="BET" Amount="-29" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="nish4x" HandActionType="FOLD" Amount="0" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="niketshah04" HandActionType="UNCALLED_BET" Amount="29" Street="River" IsAllIn="false" />
+    <HandAction p3:type="WinningsAction" PlayerName="niketshah04" HandActionType="WINS" Amount="53" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>9sJcAhQd7d</CommunityCards>
+  <Players>
+    <Player PlayerName="niketshah04" StartingStack="283" Bet="47" Win="53" SeatNumber="1" Cards="" IsSittingOut="false" />
+    <Player PlayerName="patelprajay" StartingStack="218" Bet="9" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
+    <Player PlayerName="nish4x" StartingStack="98" Bet="18" Win="0" SeatNumber="3" Cards="" IsSittingOut="false" />
+    <Player PlayerName="lily" StartingStack="86" Bet="9" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="preharman1" StartingStack="190" Bet="0" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Vijendra14" StartingStack="36" Bet="0" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+    <Player PlayerName="masterpiece" StartingStack="100" Bet="2" Win="0" SeatNumber="7" Cards="2h6c" IsSittingOut="false" />
+    <Player PlayerName="abhishek1289" StartingStack="76" Bet="0" Win="0" SeatNumber="8" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Mangesh1986" StartingStack="18" Bet="1" Win="0" SeatNumber="9" Cards="" IsSittingOut="false" />
+  </Players>
+  <HeroName>masterpiece</HeroName>
+</HandHistory>

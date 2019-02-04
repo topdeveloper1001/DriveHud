@@ -41,7 +41,7 @@
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -71,13 +71,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.5.3.2486, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.6.1.2698, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.5.3.2486, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.6.1.2698, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.5.3.2486, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.6.1.2698, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="EPPlus, Version=4.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
@@ -397,6 +397,7 @@
     <Compile Include="Migration\Migrations\Migration0030_AddTableTypeColumnToGameInfo.cs" />
     <Compile Include="Migration\Migrations\Migration0031_UpdateHudPopupTextStyles.cs" />
     <Compile Include="Migration\Migrations\Migration0032_AddTournamentIndexOnHandHistory.cs" />
+    <Compile Include="Migration\Migrations\Migration0033_RemoveFilters.cs" />
     <Compile Include="Migration\Migrators\HudLayoutsMigrationService.cs" />
     <Compile Include="Migration\Migrators\ILayoutMigrator.cs" />
     <Compile Include="Migration\Migrators\LayoutMigrator.cs" />
@@ -446,7 +447,9 @@
     <Compile Include="TableConfigurators\PositionProviders\PKPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\PMPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\HorizonPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\PokerBaaziPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\PPPokerPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\ReplayerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\SpartanPokerPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\WinamaxPositionProvider.cs" />
     <Compile Include="TableConfigurators\PositionProviders\WinningPositionProvider.cs" />
@@ -479,8 +482,12 @@
     <Compile Include="TableConfigurators\SeatArea\TableSeatAreaHelper.cs" />
     <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
+    <Compile Include="ValueConverters\CollectionViewGroupConverter.cs" />
+    <Compile Include="ValueConverters\CollectionViewGroupWrapper.cs" />
     <Compile Include="ValueConverters\CountToItemsControlHeight.cs" />
     <Compile Include="ValueConverters\ChartCashSeriesWinningTypeToColorBrushConverter.cs" />
+    <Compile Include="ValueConverters\EnumReportToExportVisibilityConveter.cs" />
+    <Compile Include="ValueConverters\LeftMarginMultiplierConverter.cs" />
     <Compile Include="ValueConverters\SelectedLayoutToCheckedConverter.cs" />
     <Compile Include="ValueConverters\TournamentSeriesValueTypeVisibilityConverter.cs" />
     <Compile Include="ViewModels\Alias\AliasAddEditViewModel.cs" />
@@ -499,6 +506,11 @@
     <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\RakebackAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\TrainingAppStoreViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterAdvancedViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterEditValuePopupRequestInfo.cs" />
+    <Compile Include="ViewModels\Filters\FilterEditValuePopupViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterEditValuePopupViewModelInfo.cs" />
+    <Compile Include="ViewModels\Filters\IFilterEditValuePopupViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Graphs\BarSeriesChartBehavior.cs" />
     <Compile Include="ViewModels\Graphs\BaseGraphViewModel.cs" />
@@ -578,7 +590,9 @@
     <Compile Include="ViewModels\Hud\PKHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PMHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\HorizonHudPanelService.cs" />
+    <Compile Include="ViewModels\Hud\PokerBaaziHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PPPokerHudPanelService.cs" />
+    <Compile Include="ViewModels\Hud\ReplayerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\SpartanPokerHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\WinamaxHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
@@ -586,7 +600,6 @@
     <Compile Include="ViewModels\Hud\BetOnlineHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\HudBumperStickersSettingsViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudBumperStickersSettingsViewModelInfo.cs" />
-    <Compile Include="ViewModels\Hud\HudBumperStickerType.cs" />
     <Compile Include="ViewModels\Hud\HudTrackConditionsViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudTrackConditionsViewModelInfo.cs" />
     <Compile Include="Controls\IDropDownMenuItem.cs" />
@@ -668,6 +681,12 @@
     </Compile>
     <Compile Include="Views\AppStore\RakebackAppStoreView.xaml.cs">
       <DependentUpon>RakebackAppStoreView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\FilterAdvancedView.xaml.cs">
+      <DependentUpon>FilterAdvancedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\FilterEditValuePopupView.xaml.cs">
+      <DependentUpon>FilterEditValuePopupView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Graphs\CashGraphPopupView.xaml.cs">
       <DependentUpon>CashGraphPopupView.xaml</DependentUpon>
@@ -1155,6 +1174,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Filters\FilterAdvancedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Filters\FilterEditValuePopupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Graphs\CashGraphPopupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1589,6 +1616,9 @@
     </Content>
     <Resource Include="images\pm-icon.ico" />
     <Resource Include="images\pk-icon.ico" />
+    <Content Include="Lib\CapPipedPB.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Lib\CapPipedI2.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

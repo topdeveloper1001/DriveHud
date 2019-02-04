@@ -120,7 +120,7 @@
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>D:\Git\DriveHUD.PlayerXRay\packages\Prism.Wpf.6.3.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xaml" />
@@ -193,12 +193,14 @@
     <Compile Include="Condition.cs" />
     <Compile Include="ConditionalBet.cs" />
     <Compile Include="CustomModulesNames.cs" />
+    <Compile Include="Data\B100GraphIndicators.cs" />
     <Compile Include="Data\DashboardIndicators.cs" />
     <Compile Include="Data\ExportIndicators.cs" />
     <Compile Include="Data\HeatMapDto.cs" />
     <Compile Include="Data\HoleCardsReportRecord.cs" />
     <Compile Include="Data\HudIndicators.cs" />
     <Compile Include="Data\HudLightIndicators.cs" />
+    <Compile Include="Data\HudStickerIndicators.cs" />
     <Compile Include="Data\Indicators.cs" />
     <Compile Include="Data\IThreadSafeIndicators.cs" />
     <Compile Include="Data\LightIndicators.cs" />
@@ -245,13 +247,28 @@
     <Compile Include="ExpectedValueSolver\ExpectedValueItem.cs" />
     <Compile Include="ExpectedValueSolver\ExpectedValuePotItem.cs" />
     <Compile Include="ExpectedValueSolver\ExpectedValueSolver.cs" />
+    <Compile Include="Export\CommonHandExportPreparingService.cs" />
+    <Compile Include="Export\DHBasedHandExportPreparingService.cs" />
+    <Compile Include="Export\HandExportInfo.cs" />
+    <Compile Include="Export\HandExportPreparingServiceProvider.cs" />
+    <Compile Include="Export\HandExportService.cs" />
+    <Compile Include="Export\IHandExportPreparingService.cs" />
+    <Compile Include="Export\IHandExportService.cs" />
+    <Compile Include="Export\IHandHistoryToIPokerConverter.cs" />
+    <Compile Include="Export\IPokerHandExportPreparingService.cs" />
+    <Compile Include="Export\IZoneHandAdjuster.cs" />
+    <Compile Include="Export\WPNHandExportPreparingService.cs" />
     <Compile Include="Extensions\CardHelper.cs" />
     <Compile Include="Extensions\CurrencyHelper.cs" />
     <Compile Include="Extensions\HandActionExtension.cs" />
     <Compile Include="Converter.cs" />
     <Compile Include="DataService.cs" />
     <Compile Include="Extensions\ComparableCard.cs" />
+    <Compile Include="Filters\AdvancedFilterType.cs" />
     <Compile Include="Filters\BuiltFilterModel.cs" />
+    <Compile Include="Filters\FilterAdvancedItem.cs" />
+    <Compile Include="Filters\FilterAdvancedModel.cs" />
+    <Compile Include="Filters\FilterAdvancedStageType.cs" />
     <Compile Include="Filters\FilterDataService.cs" />
     <Compile Include="Filters\FilterDateModel.cs" />
     <Compile Include="Filters\FilterHandGridModel.cs" />
@@ -292,9 +309,12 @@
     <Compile Include="HandAnalyzers\TwoPairAnalyzers.cs" />
     <Compile Include="ExpectedValueSolver\IExpectedValueSolver.cs" />
     <Compile Include="Hud\BaseHudRangeStat.cs" />
+    <Compile Include="Hud\HudBumperStickerService.cs" />
+    <Compile Include="Hud\HudBumperStickerType.cs" />
     <Compile Include="Hud\HudPlayerType.cs" />
     <Compile Include="Hud\HudPlayerTypeService.cs" />
     <Compile Include="Hud\HudPlayerTypeStat.cs" />
+    <Compile Include="Hud\IHudBumperStickerService.cs" />
     <Compile Include="Hud\IHudPlayerTypeService.cs" />
     <Compile Include="Hud\IHudRangeStat.cs" />
     <Compile Include="Interfaces\ICleanable.cs" />
@@ -322,7 +342,9 @@
     <Compile Include="Mapping\PlayerstatisticMap.cs" />
     <Compile Include="Mapping\TournamentsMap.cs" />
     <Compile Include="ModelEntities.cs" />
+    <Compile Include="PKShortPlayerStatisticCalculator.cs" />
     <Compile Include="PlayerCollectionItem.cs" />
+    <Compile Include="PlayerStatisticCalculatorServiceNames.cs" />
     <Compile Include="PlayerStatisticCreationInfo.cs" />
     <Compile Include="PlayerStatisticRepository.cs" />
     <Compile Include="PreDefinedRangeModel.cs" />
@@ -396,6 +418,7 @@
     <Compile Include="Site\Poker888Configuration.cs" />
     <Compile Include="Site\AmericasCardroomConfiguration.cs" />
     <Compile Include="Site\HorizonConfiguration.cs" />
+    <Compile Include="Site\PokerBaaziSiteConfiguration.cs" />
     <Compile Include="Site\SiteValidationResult.cs" />
     <Compile Include="Site\SpartanPokerConfiguration.cs" />
     <Compile Include="Site\SportsBettingConfiguration.cs" />

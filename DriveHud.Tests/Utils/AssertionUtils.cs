@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using HandHistories.Objects.Hand;
+using Model.Data;
 using NUnit.Framework;
 using System.Linq;
 
@@ -53,7 +54,7 @@ namespace DriveHud.Tests
                 Assert.That(actual.GameDescription.CashBuyInHigh, Is.EqualTo(expected.GameDescription.CashBuyInHigh), "GameDescription.CashBuyInHigh must be equal");
 
                 if (actual.GameDescription.IsTournament)
-                {                    
+                {
                     Assert.That(actual.GameDescription.Tournament.TournamentId, Is.EqualTo(expected.GameDescription.Tournament.TournamentId), "GameDescription.Tournament.TournamentId must be equal");
                     Assert.That(actual.GameDescription.Tournament.TournamentInGameId, Is.EqualTo(expected.GameDescription.Tournament.TournamentInGameId), "GameDescription.Tournament.TournamentInGameId must be equal");
                     Assert.That(actual.GameDescription.Tournament.TournamentName, Is.EqualTo(expected.GameDescription.Tournament.TournamentName), "GameDescription.Tournament.TournamentName must be equal");
@@ -81,7 +82,7 @@ namespace DriveHud.Tests
                     Assert.That(actual.Players[i].Cards, Is.EqualTo(expected.Players[i].Cards), $"Player.Cards must be equal [{expected.Players[i].PlayerName}]");
                     Assert.That(actual.Players[i].SeatNumber, Is.EqualTo(expected.Players[i].SeatNumber), $"Player.SeatNumber must be equal [{expected.Players[i].PlayerName}]");
                     Assert.That(actual.Players[i].StartingStack, Is.EqualTo(expected.Players[i].StartingStack), $"Player.StartingStack must be equal [{expected.Players[i].PlayerName}]");
-                    Assert.That(actual.Players[i].Win, Is.EqualTo(expected.Players[i].Win), $"Player.Win must be equal []");
+                    Assert.That(actual.Players[i].Win, Is.EqualTo(expected.Players[i].Win), $"Player.Win must be equal [{expected.Players[i].PlayerName}]");
                 }
 
                 Assert.That(actual.HandActions, Is.EqualTo(expected.HandActions), "HandActions.Count must be equal");
@@ -97,6 +98,16 @@ namespace DriveHud.Tests
                     Assert.That(actualActions[i].PlayerName, Is.EqualTo(expectedActions[i].PlayerName), "HandActions.PlayerName must be equal");
                     Assert.That(actualActions[i].Street, Is.EqualTo(expectedActions[i].Street), "HandActions.Street must be equal");
                 }
+            });
+        }
+
+        public static void AssertStatDto(StatDto actual, StatDto expected)
+        {
+            Assert.Multiple(() =>
+            {
+                Assert.That(actual.Value, Is.EqualTo(expected.Value), "Value must be equal");
+                Assert.That(actual.Occurred, Is.EqualTo(expected.Occurred), "Occurred must be equal");
+                Assert.That(actual.CouldOccurred, Is.EqualTo(expected.CouldOccurred), "CouldOccurred must be equal");
             });
         }
     }

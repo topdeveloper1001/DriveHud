@@ -1,0 +1,1606 @@
+Game #18010522114 starts.
+
+#Game No : 18010522114 
+***** Hand History for Game 18010522114 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:29:02 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 5 is the button
+Total number of players : 5/6 
+Seat 2: Blauman2 ( €2 EUR )
+Seat 3: Player3 ( €2.93 EUR )
+Seat 4: Player4 ( €2.87 EUR )
+Seat 5: Player5 ( €1.22 EUR )
+Seat 6: Player6 ( €1.90 EUR )
+Player6 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  8s Qc ]
+I_I_I_I calls [€0.02 EUR]
+Patromer folds
+terreW3 folds
+hilton1954 calls [€0.01 EUR]
+Blauman2 checks
+** Dealing Flop ** [ 4d, 3d, Kd ]
+hilton1954 checks
+Blauman2 checks
+I_I_I_I bets [€0.04 EUR]
+Fabricot98 has joined the table.
+hilton1954 folds
+Blauman2 calls [€0.04 EUR]
+** Dealing Turn ** [ 8c ]
+Blauman2 bets [€0.07 EUR]
+I_I_I_I raises [€0.35 EUR]
+Blauman2 folds
+I_I_I_I does not show cards.
+I_I_I_I wins €0.55 EUR
+Game #18010523781 starts.
+
+#Game No : 18010523781 
+***** Hand History for Game 18010523781 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:29:40 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 6 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.87 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €3.07 EUR )
+Seat 4: Patromer ( €2.87 EUR )
+Seat 6: hilton1954 ( €1.88 EUR )
+Seat 5: terreW3 ( €1.22 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+I_I_I_I posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Js 8d ]
+Patromer folds
+terreW3 calls [€0.02 EUR]
+hilton1954 folds
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Blauman2 calls [€0.01 EUR]
+I_I_I_I checks
+** Dealing Flop ** [ 5d, 4h, Ts ]
+Blauman2 checks
+I_I_I_I checks
+terreW3 bets [€0.10 EUR]
+Blauman2 folds
+I_I_I_I folds
+terreW3 does not show cards.
+terreW3 wins €0.16 EUR
+Game #18010526303 starts.
+
+#Game No : 18010526303 
+***** Hand History for Game 18010526303 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:30:26 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.85 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €3.05 EUR )
+Seat 4: Patromer ( €2.87 EUR )
+Seat 6: hilton1954 ( €1.88 EUR )
+Seat 5: terreW3 ( €1.26 EUR )
+I_I_I_I posts small blind [€0.01 EUR].
+Patromer posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7h 5d ]
+terreW3 calls [€0.02 EUR]
+hilton1954 calls [€0.02 EUR]
+Blauman2 calls [€0.02 EUR]
+I_I_I_I calls [€0.01 EUR]
+Patromer checks
+** Dealing Flop ** [ 4c, Kc, 6h ]
+I_I_I_I checks
+Patromer bets [€0.02 EUR]
+terreW3 calls [€0.02 EUR]
+hilton1954 folds
+Blauman2 calls [€0.02 EUR]
+I_I_I_I calls [€0.02 EUR]
+** Dealing Turn ** [ 8h ]
+I_I_I_I checks
+Patromer bets [€0.17 EUR]
+terreW3 calls [€0.17 EUR]
+Blauman2 raises [€0.34 EUR]
+I_I_I_I folds
+Patromer calls [€0.17 EUR]
+terreW3 folds
+** Dealing River ** [ 7d ]
+Patromer checks
+Blauman2 bets [€0.97 EUR]
+Patromer folds
+Blauman2 does not show cards.
+Blauman2 wins €1.94 EUR
+Game #18010530178 starts.
+
+#Game No : 18010530178 
+***** Hand History for Game 18010530178 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:31:43 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €2.44 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €3.01 EUR )
+Seat 4: Patromer ( €2.49 EUR )
+Seat 6: hilton1954 ( €1.86 EUR )
+Seat 5: terreW3 ( €1.05 EUR )
+Patromer posts small blind [€0.01 EUR].
+terreW3 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  6d 4d ]
+hilton1954 folds
+Blauman2 folds
+I_I_I_I folds
+Patromer calls [€0.01 EUR]
+terreW3 checks
+** Dealing Flop ** [ 3c, Kd, 2c ]
+Patromer bets [€0.04 EUR]
+terreW3 folds
+Patromer does not show cards.
+Patromer wins €0.08 EUR
+Game #18010531299 starts.
+
+#Game No : 18010531299 
+***** Hand History for Game 18010531299 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:32:09 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €2.44 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €3.01 EUR )
+Seat 4: Patromer ( €2.51 EUR )
+Seat 6: hilton1954 ( €1.86 EUR )
+Seat 5: terreW3 ( €1.03 EUR )
+terreW3 posts small blind [€0.01 EUR].
+hilton1954 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  6h Qh ]
+Blauman2 calls [€0.02 EUR]
+I_I_I_I folds
+Patromer calls [€0.02 EUR]
+terreW3 calls [€0.01 EUR]
+hilton1954 checks
+** Dealing Flop ** [ Ac, 8c, 6d ]
+terreW3 checks
+hilton1954 bets [€0.08 EUR]
+Blauman2 calls [€0.08 EUR]
+Patromer folds
+terreW3 raises [€0.16 EUR]
+hilton1954 calls [€0.08 EUR]
+Blauman2 folds
+** Dealing Turn ** [ Jh ]
+terreW3 checks
+hilton1954 bets [€0.33 EUR]
+terreW3 calls [€0.33 EUR]
+** Dealing River ** [ 8h ]
+terreW3 checks
+hilton1954 bets [€1.07 EUR]
+terreW3 is all-In  [€0.52 EUR]
+hilton1954 shows [ 6c, 6s ]a full house, Sixes full of Eights.
+terreW3 doesn't show [ Ah, 4h ]two pairs, Aces and Eights.
+hilton1954 wins €0.55 EUR from the side pot 1 with a full house, Sixes full of Eights.
+hilton1954 wins €2.04 EUR from the main pot with a full house, Sixes full of Eights.
+Game #18010534318 starts.
+
+#Game No : 18010534318 
+***** Hand History for Game 18010534318 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:33:17 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 6 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €2.34 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €3.01 EUR )
+Seat 4: Patromer ( €2.49 EUR )
+Seat 6: hilton1954 ( €2.87 EUR )
+Seat 5: terreW3 ( €0 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+I_I_I_I posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Qh Qc ]
+Patromer calls [€0.02 EUR]
+hilton1954 folds
+Blauman2 raises [€0.09 EUR]
+I_I_I_I folds
+Patromer calls [€0.08 EUR]
+** Dealing Flop ** [ Jh, Ah, 5s ]
+Blauman2 bets [€0.15 EUR]
+Patromer calls [€0.15 EUR]
+** Dealing Turn ** [ 9d ]
+Blauman2 checks
+Patromer checks
+** Dealing River ** [ Js ]
+Blauman2 bets [€0.24 EUR]
+Patromer calls [€0.24 EUR]
+Blauman2 shows [ Qh, Qc ]two pairs, Queens and Jacks.
+Patromer shows [ 6c, Ad ]two pairs, Aces and Jacks.
+Patromer wins €0.94 EUR from the main pot with two pairs, Aces and Jacks.
+Game #18010535938 starts.
+
+#Game No : 18010535938 
+***** Hand History for Game 18010535938 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:33:53 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.85 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €2.99 EUR )
+Seat 4: Patromer ( €2.94 EUR )
+Seat 6: hilton1954 ( €2.87 EUR )
+Seat 5: terreW3 ( €2 EUR )
+I_I_I_I posts small blind [€0.01 EUR].
+Patromer posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7s Ac ]
+terreW3 folds
+hilton1954 folds
+Blauman2 calls [€0.02 EUR]
+I_I_I_I folds
+Patromer checks
+** Dealing Flop ** [ Ts, 9h, 4d ]
+Patromer bets [€0.05 EUR]
+Blauman2 calls [€0.05 EUR]
+** Dealing Turn ** [ 4s ]
+Patromer bets [€0.14 EUR]
+Blauman2 folds
+Patromer does not show cards.
+Patromer wins €0.28 EUR
+hilton1954 has left the table.
+Game #18010537301 starts.
+
+#Game No : 18010537301 
+***** Hand History for Game 18010537301 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:34:25 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 3 is the button
+Total number of players : 5/6 
+Seat 2: Blauman2 ( €1.78 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €2.98 EUR )
+Seat 4: Patromer ( €3.01 EUR )
+Seat 5: terreW3 ( €2 EUR )
+Patromer posts small blind [€0.01 EUR].
+terreW3 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  6s 6c ]
+jkeyblade has joined the table.
+Blauman2 raises [€0.04 EUR]
+I_I_I_I folds
+Patromer calls [€0.03 EUR]
+terreW3 folds
+** Dealing Flop ** [ 7d, 5h, 9c ]
+Patromer checks
+Blauman2 checks
+** Dealing Turn ** [ Jh ]
+Patromer bets [€0.10 EUR]
+Blauman2 folds
+Patromer does not show cards.
+Patromer wins €0.20 EUR
+Game #18010538967 starts.
+
+#Game No : 18010538967 
+***** Hand History for Game 18010538967 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:34:52 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.74 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €2.98 EUR )
+Seat 4: Patromer ( €3.07 EUR )
+Seat 6: jkeyblade ( €2 EUR )
+Seat 5: terreW3 ( €1.98 EUR )
+terreW3 posts small blind [€0.01 EUR].
+jkeyblade posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  6c 2d ]
+Blauman2 folds
+I_I_I_I folds
+Patromer folds
+terreW3 calls [€0.01 EUR]
+jkeyblade will be using their time bank for this hand.
+jkeyblade checks
+** Dealing Flop ** [ Ts, 8d, 2s ]
+terreW3 checks
+jkeyblade checks
+** Dealing Turn ** [ Qd ]
+terreW3 bets [€0.04 EUR]
+jkeyblade folds
+terreW3 does not show cards.
+terreW3 wins €0.08 EUR
+Patromer has left the table.
+Game #18010541830 starts.
+
+#Game No : 18010541830 
+***** Hand History for Game 18010541830 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:35:45 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 5 is the button
+Total number of players : 5/6 
+Seat 2: Blauman2 ( €1.74 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €2.98 EUR )
+Seat 6: jkeyblade ( €1.98 EUR )
+Seat 5: terreW3 ( €2 EUR )
+jkeyblade posts small blind [€0.01 EUR].
+Fabricot98 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Ad 4d ]
+Blauman2 raises [€0.10 EUR]
+I_I_I_I folds
+terreW3 calls [€0.10 EUR]
+OBV_DAY has joined the table.
+jkeyblade folds
+Fabricot98 folds
+** Dealing Flop ** [ Qh, Jd, Ts ]
+Blauman2 checks
+terreW3 checks
+** Dealing Turn ** [ 5s ]
+Blauman2 checks
+terreW3 checks
+** Dealing River ** [ 6s ]
+Blauman2 checks
+terreW3 bets [€0.22 EUR]
+Blauman2 folds
+terreW3 does not show cards.
+terreW3 wins €0.44 EUR
+Game #18010544735 starts.
+
+#Game No : 18010544735 
+***** Hand History for Game 18010544735 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:36:38 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 6 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.64 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €2.98 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €1.97 EUR )
+Seat 5: terreW3 ( €2.12 EUR )
+Fabricot98 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  4c 7c ]
+I_I_I_I folds
+terreW3 calls [€0.02 EUR]
+jkeyblade calls [€0.02 EUR]
+Fabricot98 folds
+Blauman2 checks
+** Dealing Flop ** [ 3c, 4h, Kh ]
+Blauman2 checks
+terreW3 checks
+jkeyblade bets [€0.04 EUR]
+Blauman2 calls [€0.04 EUR]
+terreW3 calls [€0.04 EUR]
+** Dealing Turn ** [ 9s ]
+Blauman2 checks
+terreW3 checks
+jkeyblade bets [€0.06 EUR]
+Blauman2 folds
+terreW3 folds
+jkeyblade does not show cards.
+jkeyblade wins €0.24 EUR
+Game #18010546856 starts.
+
+#Game No : 18010546856 
+***** Hand History for Game 18010546856 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:37:26 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.58 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €2.98 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.09 EUR )
+Seat 5: terreW3 ( €2.06 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+I_I_I_I posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Kc Jc ]
+terreW3 folds
+jkeyblade folds
+Fabricot98 folds
+Blauman2 raises [€0.03 EUR]
+I_I_I_I folds
+Blauman2 does not show cards.
+Blauman2 wins €0.06 EUR
+Game #18010547527 starts.
+
+#Game No : 18010547527 
+***** Hand History for Game 18010547527 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:37:41 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.60 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €2.96 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.09 EUR )
+Seat 5: terreW3 ( €2.06 EUR )
+I_I_I_I posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Jc 8h ]
+terreW3 folds
+jkeyblade did not respond in time
+jkeyblade folds
+Fabricot98 folds
+Blauman2 raises [€0.06 EUR]
+I_I_I_I folds
+OBV_DAY raises [€0.20 EUR]
+Blauman2 folds
+OBV_DAY does not show cards.
+OBV_DAY wins €0.29 EUR
+Game #18010549469 starts.
+
+#Game No : 18010549469 
+***** Hand History for Game 18010549469 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:38:25 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.54 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €2.95 EUR )
+Seat 4: OBV_DAY ( €2.07 EUR )
+Seat 6: jkeyblade ( €2.09 EUR )
+Seat 5: terreW3 ( €2.06 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+terreW3 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7s Js ]
+jkeyblade did not respond in time
+jkeyblade folds
+Fabricot98 folds
+Blauman2 calls [€0.02 EUR]
+I_I_I_I calls [€0.02 EUR]
+OBV_DAY folds
+terreW3 checks
+** Dealing Flop ** [ 6s, Td, 5c ]
+terreW3 bets [€0.07 EUR]
+Blauman2 folds
+I_I_I_I folds
+terreW3 does not show cards.
+terreW3 wins €0.14 EUR
+Game #18010551477 starts.
+
+#Game No : 18010551477 
+***** Hand History for Game 18010551477 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:39:07 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.52 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €2.93 EUR )
+Seat 4: OBV_DAY ( €2.06 EUR )
+Seat 6: jkeyblade ( €2.09 EUR )
+Seat 5: terreW3 ( €2.11 EUR )
+terreW3 posts small blind [€0.01 EUR].
+jkeyblade posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  6h 8s ]
+Fabricot98 folds
+Blauman2 folds
+I_I_I_I raises [€0.08 EUR]
+OBV_DAY folds
+terreW3 folds
+jkeyblade calls [€0.06 EUR]
+** Dealing Flop ** [ 7s, 2h, Th ]
+jkeyblade checks
+I_I_I_I bets [€0.16 EUR]
+jkeyblade calls [€0.16 EUR]
+** Dealing Turn ** [ 3h ]
+jkeyblade checks
+I_I_I_I bets [€0.23 EUR]
+jkeyblade calls [€0.23 EUR]
+** Dealing River ** [ 7h ]
+jkeyblade checks
+I_I_I_I checks
+jkeyblade shows [ Ah, Qc ]a flush, Ace high.
+I_I_I_I shows [ Ac, As ]two pairs, Aces and Sevens.
+jkeyblade wins €0.89 EUR from the main pot with a flush, Ace high.
+Game #18010554000 starts.
+
+#Game No : 18010554000 
+***** Hand History for Game 18010554000 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:39:53 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.52 EUR )
+Seat 1: Fabricot98 ( €2 EUR )
+Seat 3: I_I_I_I ( €2.46 EUR )
+Seat 4: OBV_DAY ( €2.06 EUR )
+Seat 6: jkeyblade ( €2.51 EUR )
+Seat 5: terreW3 ( €2.10 EUR )
+jkeyblade posts small blind [€0.01 EUR].
+Fabricot98 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  5c Qc ]
+Blauman2 calls [€0.02 EUR]
+I_I_I_I folds
+OBV_DAY raises [€0.10 EUR]
+terreW3 folds
+jkeyblade folds
+Fabricot98 calls [€0.08 EUR]
+Blauman2 calls [€0.08 EUR]
+** Dealing Flop ** [ 3s, 8h, 8c ]
+Fabricot98 checks
+Blauman2 checks
+OBV_DAY checks
+** Dealing Turn ** [ 9s ]
+Fabricot98 bets [€0.14 EUR]
+Blauman2 folds
+OBV_DAY folds
+Fabricot98 does not show cards.
+Fabricot98 wins €0.43 EUR
+Game #18010556998 starts.
+
+#Game No : 18010556998 
+***** Hand History for Game 18010556998 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:41:01 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 6 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.42 EUR )
+Seat 1: Fabricot98 ( €2.19 EUR )
+Seat 3: I_I_I_I ( €2.46 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.50 EUR )
+Seat 5: terreW3 ( €2.10 EUR )
+Fabricot98 posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  9d 9c ]
+I_I_I_I folds
+OBV_DAY folds
+terreW3 folds
+jkeyblade folds
+Fabricot98 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.03 EUR
+Game #18010557921 starts.
+
+#Game No : 18010557921 
+***** Hand History for Game 18010557921 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:41:22 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.43 EUR )
+Seat 1: Fabricot98 ( €2.18 EUR )
+Seat 3: I_I_I_I ( €2.46 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.50 EUR )
+Seat 5: terreW3 ( €2.10 EUR )
+I_I_I_I posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Ac Ad ]
+terreW3 calls [€0.02 EUR]
+Fabricot98 has left the table.
+jkeyblade folds
+Blauman2 raises [€0.09 EUR]
+I_I_I_I folds
+OBV_DAY folds
+terreW3 calls [€0.07 EUR]
+** Dealing Flop ** [ Kd, Ah, 8h ]
+terreW3 checks
+Blauman2 checks
+** Dealing Turn ** [ 3h ]
+terreW3 bets [€0.20 EUR]
+Blauman2 raises [€0.40 EUR]
+saluzapata has joined the table.
+terreW3 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.77 EUR
+Game #18010560252 starts.
+
+#Game No : 18010560252 
+***** Hand History for Game 18010560252 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:42:03 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.71 EUR )
+Seat 3: I_I_I_I ( €2.45 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.50 EUR )
+Seat 1: saluzapata ( €2 EUR )
+Seat 5: terreW3 ( €1.81 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+terreW3 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  9h 6c ]
+jkeyblade folds
+Blauman2 calls [€0.02 EUR]
+I_I_I_I folds
+OBV_DAY calls [€0.01 EUR]
+terreW3 checks
+** Dealing Flop ** [ Qh, Ac, Jc ]
+OBV_DAY checks
+terreW3 checks
+Blauman2 bets [€0.06 EUR]
+OBV_DAY folds
+terreW3 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.12 EUR
+Game #18010562106 starts.
+
+#Game No : 18010562106 
+***** Hand History for Game 18010562106 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:42:46 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.75 EUR )
+Seat 3: I_I_I_I ( €2.45 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.50 EUR )
+Seat 1: saluzapata ( €2 EUR )
+Seat 5: terreW3 ( €1.79 EUR )
+terreW3 posts small blind [€0.01 EUR].
+jkeyblade posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  9c 7d ]
+Blauman2 raises [€0.09 EUR]
+I_I_I_I folds
+OBV_DAY raises [€0.19 EUR]
+terreW3 raises [€0.28 EUR]
+jkeyblade folds
+Blauman2 folds
+OBV_DAY is all-In  [€1.81 EUR]
+terreW3 is all-In  [€1.50 EUR]
+** Dealing Flop ** [ 8s, 9h, 7s ]
+** Dealing Turn ** [ Ah ]
+** Dealing River ** [ 8h ]
+terreW3 shows [ Jh, Js ]two pairs, Jacks and Eights.
+OBV_DAY shows [ Jd, Jc ]two pairs, Jacks and Eights.
+OBV_DAY wins €0.21 EUR from the side pot 1 with two pairs, Jacks and Eights.
+terreW3 wins €1.73 EUR from the main pot with two pairs, Jacks and Eights.
+OBV_DAY wins €1.72 EUR from the main pot with two pairs, Jacks and Eights.
+Game #18010564398 starts.
+
+#Game No : 18010564398 
+***** Hand History for Game 18010564398 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:43:27 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.66 EUR )
+Seat 3: I_I_I_I ( €2.45 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.48 EUR )
+Seat 1: saluzapata ( €2 EUR )
+Seat 5: terreW3 ( €1.73 EUR )
+jkeyblade posts small blind [€0.01 EUR].
+saluzapata posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  2s 7c ]
+Blauman2 calls [€0.02 EUR]
+I_I_I_I calls [€0.02 EUR]
+OBV_DAY folds
+terreW3 calls [€0.02 EUR]
+jkeyblade calls [€0.01 EUR]
+saluzapata checks
+** Dealing Flop ** [ Tc, Qc, 3h ]
+jkeyblade checks
+saluzapata checks
+Blauman2 bets [€0.10 EUR]
+I_I_I_I calls [€0.10 EUR]
+terreW3 calls [€0.10 EUR]
+jkeyblade calls [€0.10 EUR]
+saluzapata folds
+** Dealing Turn ** [ 8s ]
+jkeyblade checks
+Blauman2 checks
+I_I_I_I checks
+terreW3 checks
+** Dealing River ** [ 7h ]
+jkeyblade checks
+Blauman2 bets [€0.15 EUR]
+I_I_I_I folds
+terreW3 raises [€0.30 EUR]
+jkeyblade folds
+Blauman2 folds
+terreW3 does not show cards.
+terreW3 wins €0.90 EUR
+Game #18010570119 starts.
+
+#Game No : 18010570119 
+***** Hand History for Game 18010570119 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:45:30 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 6 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.39 EUR )
+Seat 3: I_I_I_I ( €2.33 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.36 EUR )
+Seat 1: saluzapata ( €2 EUR )
+Seat 5: terreW3 ( €2.21 EUR )
+saluzapata posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Kh 8d ]
+I_I_I_I calls [€0.02 EUR]
+OBV_DAY folds
+terreW3 calls [€0.02 EUR]
+jkeyblade folds
+saluzapata raises [€0.09 EUR]
+Blauman2 folds
+I_I_I_I calls [€0.08 EUR]
+terreW3 calls [€0.08 EUR]
+** Dealing Flop ** [ Th, 8s, 4h ]
+saluzapata bets [€0.10 EUR]
+I_I_I_I folds
+terreW3 folds
+saluzapata does not show cards.
+saluzapata wins €0.40 EUR
+Game #18010572227 starts.
+
+#Game No : 18010572227 
+***** Hand History for Game 18010572227 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:46:19 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.37 EUR )
+Seat 3: I_I_I_I ( €2.23 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.36 EUR )
+Seat 1: saluzapata ( €2.20 EUR )
+Seat 5: terreW3 ( €2.11 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+I_I_I_I posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  5s Ks ]
+OBV_DAY folds
+terreW3 calls [€0.02 EUR]
+saluzapata folds
+Blauman2 calls [€0.01 EUR]
+I_I_I_I checks
+** Dealing Flop ** [ Ac, 5d, 6c ]
+Blauman2 checks
+I_I_I_I checks
+terreW3 checks
+** Dealing Turn ** [ Qs ]
+Blauman2 checks
+I_I_I_I bets [€0.04 EUR]
+terreW3 calls [€0.04 EUR]
+Blauman2 calls [€0.04 EUR]
+** Dealing River ** [ 8d ]
+Blauman2 checks
+I_I_I_I checks
+terreW3 bets [€0.17 EUR]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Blauman2 folds
+I_I_I_I folds
+terreW3 does not show cards.
+terreW3 wins €0.34 EUR
+Game #18010575996 starts.
+
+#Game No : 18010575996 
+***** Hand History for Game 18010575996 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:47:24 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.31 EUR )
+Seat 3: I_I_I_I ( €2.17 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.36 EUR )
+Seat 1: saluzapata ( €2.20 EUR )
+Seat 5: terreW3 ( €2.22 EUR )
+I_I_I_I posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  8s Kd ]
+terreW3 calls [€0.02 EUR]
+saluzapata folds
+Blauman2 calls [€0.02 EUR]
+I_I_I_I folds
+OBV_DAY raises [€0.08 EUR]
+terreW3 calls [€0.08 EUR]
+Blauman2 calls [€0.08 EUR]
+** Dealing Flop ** [ Qd, Kh, 6d ]
+OBV_DAY checks
+terreW3 checks
+Blauman2 bets [€0.29 EUR]
+OBV_DAY folds
+terreW3 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.58 EUR
+Game #18010577514 starts.
+
+#Game No : 18010577514 
+***** Hand History for Game 18010577514 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:48:00 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.50 EUR )
+Seat 3: I_I_I_I ( €2.16 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.36 EUR )
+Seat 1: saluzapata ( €2.20 EUR )
+Seat 5: terreW3 ( €2.12 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+terreW3 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7h Js ]
+saluzapata raises [€0.05 EUR]
+Blauman2 calls [€0.05 EUR]
+I_I_I_I calls [€0.05 EUR]
+OBV_DAY folds
+terreW3 calls [€0.03 EUR]
+** Dealing Flop ** [ 2s, 5h, Jc ]
+terreW3 checks
+saluzapata checks
+Blauman2 bets [€0.20 EUR]
+I_I_I_I folds
+terreW3 calls [€0.20 EUR]
+saluzapata folds
+** Dealing Turn ** [ 6d ]
+terreW3 bets [€0.57 EUR]
+Blauman2 raises [€1.14 EUR]
+terreW3 folds
+Blauman2 does not show cards.
+Blauman2 wins €2.21 EUR
+Game #18010580545 starts.
+
+#Game No : 18010580545 
+***** Hand History for Game 18010580545 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:49:10 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €2.32 EUR )
+Seat 3: I_I_I_I ( €2.11 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.36 EUR )
+Seat 1: saluzapata ( €2.15 EUR )
+Seat 5: terreW3 ( €1.30 EUR )
+terreW3 posts small blind [€0.01 EUR].
+saluzapata posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Qc 7c ]
+Blauman2 calls [€0.02 EUR]
+I_I_I_I folds
+OBV_DAY folds
+terreW3 calls [€0.01 EUR]
+saluzapata checks
+** Dealing Flop ** [ 3s, 5h, 3c ]
+terreW3 checks
+saluzapata checks
+Blauman2 checks
+** Dealing Turn ** [ 9s ]
+terreW3 bets [€0.10 EUR]
+saluzapata folds
+Blauman2 folds
+terreW3 does not show cards.
+terreW3 wins €0.16 EUR
+Game #18010582298 starts.
+
+#Game No : 18010582298 
+***** Hand History for Game 18010582298 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:49:51 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €2.30 EUR )
+Seat 3: I_I_I_I ( €2.11 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: jkeyblade ( €2.36 EUR )
+Seat 1: saluzapata ( €2.13 EUR )
+Seat 5: terreW3 ( €1.34 EUR )
+saluzapata posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Kc 2s ]
+I_I_I_I folds
+OBV_DAY raises [€0.06 EUR]
+terreW3 folds
+saluzapata folds
+Blauman2 calls [€0.04 EUR]
+** Dealing Flop ** [ 7c, 2d, Ks ]
+Blauman2 bets [€0.13 EUR]
+jkeyblade has left the table.
+OBV_DAY folds
+Blauman2 does not show cards.
+Blauman2 wins €0.26 EUR
+I_I_I_I has left the table.
+Game #18010583439 starts.
+
+#Game No : 18010583439 
+***** Hand History for Game 18010583439 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:50:18 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 1 is the button
+Total number of players : 4/6 
+Seat 2: Blauman2 ( €2.37 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 1: saluzapata ( €2.12 EUR )
+Seat 5: terreW3 ( €1.34 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Kd Qs ]
+terreW3 calls [€0.02 EUR]
+saluzapata folds
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Blauman2 calls [€0.01 EUR]
+OBV_DAY checks
+** Dealing Flop ** [ 5s, Jh, Tc ]
+Blauman2 checks
+OBV_DAY bets [€0.06 EUR]
+terreW3 calls [€0.06 EUR]
+Blauman2 calls [€0.06 EUR]
+** Dealing Turn ** [ Ts ]
+Blauman2 checks
+OBV_DAY bets [€0.23 EUR]
+terreW3 folds
+PickAndSprint has joined the table.
+Blauman2 calls [€0.23 EUR]
+** Dealing River ** [ 3s ]
+Blauman2 bets [€0.33 EUR]
+OBV_DAY calls [€0.33 EUR]
+Blauman2 shows [ Kd, Qs ]a pair of Tens.
+OBV_DAY shows [ Jd, 3h ]two pairs, Jacks and Tens.
+OBV_DAY wins €1.27 EUR from the main pot with two pairs, Jacks and Tens.
+Game #18010586748 starts.
+
+#Game No : 18010586748 
+***** Hand History for Game 18010586748 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:51:22 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 2 is the button
+Total number of players : 5/6 
+Seat 2: Blauman2 ( €1.73 EUR )
+Seat 4: OBV_DAY ( €2.63 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2.12 EUR )
+Seat 5: terreW3 ( €1.26 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+terreW3 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7s 8d ]
+saluzapata folds
+Blauman2 calls [€0.02 EUR]
+OBV_DAY folds
+terreW3 checks
+** Dealing Flop ** [ 5h, 9h, 6h ]
+terreW3 checks
+Blauman2 bets [€0.50 EUR]
+terreW3 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.55 EUR
+Game #18010588558 starts.
+
+#Game No : 18010588558 
+***** Hand History for Game 18010588558 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:51:52 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 4 is the button
+Total number of players : 5/6 
+Seat 2: Blauman2 ( €1.76 EUR )
+Seat 4: OBV_DAY ( €2.62 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2.12 EUR )
+Seat 5: terreW3 ( €1.24 EUR )
+terreW3 posts small blind [€0.01 EUR].
+PickAndSprint posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  9s Qd ]
+saluzapata raises [€0.06 EUR]
+Blauman2 calls [€0.06 EUR]
+OBV_DAY folds
+terreW3 calls [€0.05 EUR]
+PickAndSprint calls [€0.04 EUR]
+** Dealing Flop ** [ 2d, 7h, Ah ]
+terreW3 checks
+PickAndSprint checks
+saluzapata bets [€0.08 EUR]
+Blauman2 folds
+terreW3 calls [€0.08 EUR]
+PickAndSprint folds
+** Dealing Turn ** [ 5s ]
+terreW3 checks
+saluzapata bets [€0.28 EUR]
+terreW3 raises [€0.56 EUR]
+saluzapata calls [€0.28 EUR]
+** Dealing River ** [ 4d ]
+terreW3 is all-In  [€0.54 EUR]
+Jpaubert has joined the table.
+saluzapata calls [€0.54 EUR]
+terreW3 shows [ 5c, As ]two pairs, Aces and Fives.
+saluzapata shows [ Ad, Td ]a pair of Aces.
+terreW3 wins €2.43 EUR from the main pot with two pairs, Aces and Fives.
+Game #18010592999 starts.
+
+#Game No : 18010592999 
+***** Hand History for Game 18010592999 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:53:35 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.70 EUR )
+Seat 3: Jpaubert ( €2 EUR )
+Seat 4: OBV_DAY ( €2.62 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2 EUR )
+Seat 5: terreW3 ( €2.43 EUR )
+PickAndSprint posts small blind [€0.01 EUR].
+saluzapata posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Ts 3s ]
+Blauman2 raises [€0.10 EUR]
+OBV_DAY calls [€0.10 EUR]
+terreW3 folds
+PickAndSprint folds
+saluzapata folds
+** Dealing Flop ** [ 8s, As, Qs ]
+Blauman2 bets [€0.22 EUR]
+OBV_DAY folds
+Blauman2 does not show cards.
+Blauman2 wins €0.44 EUR
+Game #18010594725 starts.
+
+#Game No : 18010594725 
+***** Hand History for Game 18010594725 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:54:13 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 6 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.82 EUR )
+Seat 3: Jpaubert ( €2 EUR )
+Seat 4: OBV_DAY ( €2.52 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2 EUR )
+Seat 5: terreW3 ( €2.43 EUR )
+saluzapata posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  9s 5c ]
+OBV_DAY folds
+terreW3 calls [€0.02 EUR]
+PickAndSprint folds
+saluzapata folds
+Blauman2 checks
+** Dealing Flop ** [ Ts, 5s, 3h ]
+Blauman2 checks
+terreW3 bets [€0.10 EUR]
+Blauman2 folds
+terreW3 does not show cards.
+terreW3 wins €0.15 EUR
+Game #18010596824 starts.
+
+#Game No : 18010596824 
+***** Hand History for Game 18010596824 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:55:01 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.80 EUR )
+Seat 3: Jpaubert ( €2 EUR )
+Seat 4: OBV_DAY ( €2.52 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2 EUR )
+Seat 5: terreW3 ( €2.46 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+Jpaubert posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Qh 9c ]
+OBV_DAY folds
+terreW3 folds
+PickAndSprint folds
+saluzapata raises [€0.05 EUR]
+Blauman2 calls [€0.04 EUR]
+Jpaubert calls [€0.03 EUR]
+** Dealing Flop ** [ 9s, 2h, 3s ]
+Blauman2 bets [€0.14 EUR]
+Jpaubert calls [€0.14 EUR]
+saluzapata calls [€0.14 EUR]
+** Dealing Turn ** [ Ks ]
+Blauman2 checks
+Jpaubert checks
+saluzapata bets [€0.40 EUR]
+Blauman2 folds
+Jpaubert folds
+saluzapata does not show cards.
+saluzapata wins €0.94 EUR
+Game #18010600311 starts.
+
+#Game No : 18010600311 
+***** Hand History for Game 18010600311 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:56:23 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.61 EUR )
+Seat 3: Jpaubert ( €1.81 EUR )
+Seat 4: OBV_DAY ( €2.52 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2.35 EUR )
+Seat 5: terreW3 ( €2.46 EUR )
+Jpaubert posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Jc 3s ]
+terreW3 calls [€0.02 EUR]
+PickAndSprint folds
+saluzapata raises [€0.08 EUR]
+Blauman2 calls [€0.08 EUR]
+Jpaubert folds
+OBV_DAY raises [€0.22 EUR]
+terreW3 folds
+saluzapata folds
+Blauman2 folds
+OBV_DAY does not show cards.
+OBV_DAY wins €0.43 EUR
+Game #18010602248 starts.
+
+#Game No : 18010602248 
+***** Hand History for Game 18010602248 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:57:08 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.53 EUR )
+Seat 3: Jpaubert ( €1.80 EUR )
+Seat 4: OBV_DAY ( €2.71 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2.27 EUR )
+Seat 5: terreW3 ( €2.44 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+terreW3 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Qd 2h ]
+PickAndSprint folds
+saluzapata folds
+Blauman2 folds
+Jpaubert raises [€0.06 EUR]
+OBV_DAY raises [€0.18 EUR]
+terreW3 folds
+Jpaubert calls [€0.13 EUR]
+** Dealing Flop ** [ 9s, 3d, 3s ]
+OBV_DAY bets [€0.12 EUR]
+Jpaubert raises [€0.43 EUR]
+OBV_DAY folds
+Jpaubert does not show cards.
+Jpaubert wins €0.91 EUR
+Game #18010604165 starts.
+
+#Game No : 18010604165 
+***** Hand History for Game 18010604165 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:58:10 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.53 EUR )
+Seat 3: Jpaubert ( €2.09 EUR )
+Seat 4: OBV_DAY ( €2.40 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2.27 EUR )
+Seat 5: terreW3 ( €2.42 EUR )
+terreW3 posts small blind [€0.01 EUR].
+saluzapata posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  6c 7c ]
+Blauman2 raises [€0.08 EUR]
+Jpaubert calls [€0.08 EUR]
+OBV_DAY folds
+terreW3 folds
+saluzapata folds
+** Dealing Flop ** [ 3s, 2s, Kd ]
+Blauman2 checks
+Jpaubert checks
+** Dealing Turn ** [ 6s ]
+Blauman2 bets [€0.09 EUR]
+Jpaubert folds
+Blauman2 does not show cards.
+Blauman2 wins €0.27 EUR
+Game #18010606727 starts.
+
+#Game No : 18010606727 
+***** Hand History for Game 18010606727 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 15:59:16 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.63 EUR )
+Seat 3: Jpaubert ( €2.01 EUR )
+Seat 4: OBV_DAY ( €2.40 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2.25 EUR )
+Seat 5: terreW3 ( €2.41 EUR )
+saluzapata posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  9d 6c ]
+Jpaubert folds
+OBV_DAY raises [€0.06 EUR]
+terreW3 folds
+saluzapata calls [€0.05 EUR]
+Blauman2 calls [€0.04 EUR]
+** Dealing Flop ** [ 3h, Qc, 5c ]
+saluzapata checks
+Blauman2 checks
+OBV_DAY bets [€0.17 EUR]
+saluzapata folds
+Blauman2 folds
+OBV_DAY does not show cards.
+OBV_DAY wins €0.34 EUR
+Game #18010608613 starts.
+
+#Game No : 18010608613 
+***** Hand History for Game 18010608613 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:00:02 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.57 EUR )
+Seat 3: Jpaubert ( €2.01 EUR )
+Seat 4: OBV_DAY ( €2.51 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2.19 EUR )
+Seat 5: terreW3 ( €2.41 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+Jpaubert posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Ah 3s ]
+OBV_DAY raises [€0.06 EUR]
+terreW3 calls [€0.06 EUR]
+saluzapata folds
+Blauman2 calls [€0.05 EUR]
+Jpaubert folds
+** Dealing Flop ** [ 2c, 3c, Th ]
+Blauman2 bets [€0.09 EUR]
+OBV_DAY folds
+terreW3 folds
+Blauman2 does not show cards.
+Blauman2 wins €0.28 EUR
+Game #18010609709 starts.
+
+#Game No : 18010609709 
+***** Hand History for Game 18010609709 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:00:33 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.70 EUR )
+Seat 3: Jpaubert ( €1.99 EUR )
+Seat 4: OBV_DAY ( €2.45 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2.19 EUR )
+Seat 5: terreW3 ( €2.35 EUR )
+Jpaubert posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Ah 2d ]
+terreW3 calls [€0.02 EUR]
+saluzapata raises [€0.08 EUR]
+Blauman2 calls [€0.08 EUR]
+Jpaubert folds
+OBV_DAY folds
+terreW3 calls [€0.06 EUR]
+** Dealing Flop ** [ 5h, Tc, As ]
+terreW3 checks
+saluzapata bets [€0.06 EUR]
+Blauman2 raises [€0.12 EUR]
+terreW3 folds
+saluzapata calls [€0.06 EUR]
+** Dealing Turn ** [ 3c ]
+saluzapata checks
+Blauman2 bets [€0.48 EUR]
+saluzapata folds
+Blauman2 does not show cards.
+Blauman2 wins €0.96 EUR
+Game #18010612055 starts.
+
+#Game No : 18010612055 
+***** Hand History for Game 18010612055 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:01:27 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.98 EUR )
+Seat 3: Jpaubert ( €1.98 EUR )
+Seat 4: OBV_DAY ( €2.43 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2 EUR )
+Seat 5: terreW3 ( €2.27 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+terreW3 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  2c 2s ]
+saluzapata folds
+Blauman2 calls [€0.02 EUR]
+Jpaubert calls [€0.02 EUR]
+OBV_DAY folds
+terreW3 checks
+** Dealing Flop ** [ Qh, 6h, 7d ]
+terreW3 checks
+Blauman2 checks
+Jpaubert checks
+** Dealing Turn ** [ 4c ]
+terreW3 checks
+Blauman2 checks
+Jpaubert checks
+** Dealing River ** [ Js ]
+terreW3 bets [€0.07 EUR]
+Blauman2 folds
+Jpaubert calls [€0.07 EUR]
+terreW3 shows [ Qd, Qs ]three of a kind, Queens.
+Jpaubert doesn't show [ 9c, Jd ]a pair of Jacks.
+terreW3 wins €0.20 EUR from the main pot with three of a kind, Queens.
+Game #18010614367 starts.
+
+#Game No : 18010614367 
+***** Hand History for Game 18010614367 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:02:24 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.96 EUR )
+Seat 3: Jpaubert ( €1.89 EUR )
+Seat 4: OBV_DAY ( €2.42 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2 EUR )
+Seat 5: terreW3 ( €2.38 EUR )
+terreW3 posts small blind [€0.01 EUR].
+saluzapata posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  5d Jd ]
+Blauman2 calls [€0.02 EUR]
+Jpaubert folds
+OBV_DAY raises [€0.10 EUR]
+terreW3 calls [€0.09 EUR]
+saluzapata folds
+Blauman2 calls [€0.08 EUR]
+** Dealing Flop ** [ 3d, Kh, Qd ]
+terreW3 bets [€0.30 EUR]
+Blauman2 calls [€0.30 EUR]
+OBV_DAY folds
+** Dealing Turn ** [ 4c ]
+terreW3 checks
+Blauman2 checks
+** Dealing River ** [ Jh ]
+terreW3 bets [€0.86 EUR]
+Blauman2 folds
+terreW3 does not show cards.
+terreW3 wins €1.72 EUR
+Game #18010617727 starts.
+
+#Game No : 18010617727 
+***** Hand History for Game 18010617727 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:03:28 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.56 EUR )
+Seat 3: Jpaubert ( €1.89 EUR )
+Seat 4: OBV_DAY ( €2.32 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2 EUR )
+Seat 5: terreW3 ( €2.84 EUR )
+saluzapata posts small blind [€0.01 EUR].
+Blauman2 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  9c 2c ]
+Jpaubert folds
+OBV_DAY folds
+terreW3 folds
+saluzapata calls [€0.01 EUR]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Blauman2 checks
+** Dealing Flop ** [ 5c, 6h, As ]
+saluzapata checks
+Blauman2 checks
+** Dealing Turn ** [ Kh ]
+saluzapata bets [€0.02 EUR]
+Blauman2 calls [€0.02 EUR]
+** Dealing River ** [ Qh ]
+saluzapata checks
+Blauman2 checks
+saluzapata shows [ 4s, 7s ]high card Ace.
+Blauman2 shows [ 9c, 2c ]high card Ace with Nine kicker.
+Blauman2 wins €0.08 EUR from the main pot with high card, Ace with Nine kicker.
+Game #18010620100 starts.
+
+#Game No : 18010620100 
+***** Hand History for Game 18010620100 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:04:22 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.60 EUR )
+Seat 3: Jpaubert ( €1.89 EUR )
+Seat 4: OBV_DAY ( €2.32 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2 EUR )
+Seat 5: terreW3 ( €2.84 EUR )
+Blauman2 posts small blind [€0.01 EUR].
+Jpaubert posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  4d Ts ]
+OBV_DAY raises [€0.06 EUR]
+terreW3 calls [€0.06 EUR]
+saluzapata calls [€0.06 EUR]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Blauman2 calls [€0.05 EUR]
+Jpaubert folds
+** Dealing Flop ** [ 4c, 5h, 6c ]
+Blauman2 checks
+OBV_DAY checks
+terreW3 checks
+saluzapata checks
+** Dealing Turn ** [ 8s ]
+Blauman2 checks
+OBV_DAY checks
+terreW3 bets [€0.25 EUR]
+saluzapata raises [€0.88 EUR]
+Blauman2 folds
+OBV_DAY folds
+terreW3 folds
+saluzapata does not show cards.
+saluzapata wins €1.34 EUR
+Game #18010624486 starts.
+
+#Game No : 18010624486 
+***** Hand History for Game 18010624486 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:05:48 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.54 EUR )
+Seat 3: Jpaubert ( €1.87 EUR )
+Seat 4: OBV_DAY ( €2.26 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2.40 EUR )
+Seat 5: terreW3 ( €2.53 EUR )
+Jpaubert posts small blind [€0.01 EUR].
+OBV_DAY posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  Jd 7h ]
+terreW3 calls [€0.02 EUR]
+saluzapata folds
+Blauman2 calls [€0.02 EUR]
+Jpaubert folds
+OBV_DAY checks
+** Dealing Flop ** [ 9s, 2c, 3d ]
+OBV_DAY checks
+terreW3 checks
+Blauman2 checks
+** Dealing Turn ** [ Qc ]
+OBV_DAY bets [€0.07 EUR]
+terreW3 calls [€0.07 EUR]
+Blauman2 folds
+** Dealing River ** [ 4s ]
+OBV_DAY bets [€0.20 EUR]
+terreW3 raises [€0.40 EUR]
+OBV_DAY folds
+terreW3 does not show cards.
+terreW3 wins €0.77 EUR
+Game #18010628072 starts.
+
+#Game No : 18010628072 
+***** Hand History for Game 18010628072 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:07:06 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.52 EUR )
+Seat 3: Jpaubert ( €1.86 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2.40 EUR )
+Seat 5: terreW3 ( €2.81 EUR )
+OBV_DAY posts small blind [€0.01 EUR].
+terreW3 posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  7s 3c ]
+saluzapata folds
+Blauman2 folds
+Jpaubert raises [€0.04 EUR]
+OBV_DAY raises [€0.16 EUR]
+terreW3 calls [€0.15 EUR]
+Jpaubert calls [€0.13 EUR]
+** Dealing Flop ** [ 6c, As, Kd ]
+OBV_DAY checks
+terreW3 bets [€0.48 EUR]
+Jpaubert will be using their time bank for this hand.
+Jpaubert calls [€0.48 EUR]
+OBV_DAY folds
+** Dealing Turn ** [ 6s ]
+terreW3 bets [€0.19 EUR]
+Jpaubert calls [€0.19 EUR]
+** Dealing River ** [ Qh ]
+terreW3 checks
+Jpaubert checks
+terreW3 shows [ Kh, 4d ]two pairs, Kings and Sixes.
+Jpaubert shows [ Ac, Th ]two pairs, Aces and Sixes.
+Jpaubert wins €1.73 EUR from the main pot with two pairs, Aces and Sixes.
+Game #18010633737 starts.
+
+#Game No : 18010633737 
+***** Hand History for Game 18010633737 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:08:58 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.52 EUR )
+Seat 3: Jpaubert ( €2.75 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2.40 EUR )
+Seat 5: terreW3 ( €1.97 EUR )
+terreW3 posts small blind [€0.01 EUR].
+PickAndSprint posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  4s 6c ]
+saluzapata folds
+Blauman2 folds
+Jpaubert calls [€0.02 EUR]
+OBV_DAY folds
+terreW3 calls [€0.01 EUR]
+PickAndSprint checks
+** Dealing Flop ** [ 7d, 2c, Ac ]
+terreW3 checks
+PickAndSprint checks
+Jpaubert bets [€0.03 EUR]
+terreW3 calls [€0.03 EUR]
+PickAndSprint folds
+** Dealing Turn ** [ 3d ]
+terreW3 checks
+Jpaubert checks
+** Dealing River ** [ 2h ]
+terreW3 bets [€0.23 EUR]
+Jpaubert folds
+terreW3 does not show cards.
+terreW3 wins €0.35 EUR
+Game #18010637920 starts.
+
+#Game No : 18010637920 
+***** Hand History for Game 18010637920 *****
+€0.01/€0.02 EUR NL Texas Hold'em - Friday, November 30, 16:10:17 CET 2018
+Table Corbeil-Essonnes (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 2: Blauman2 ( €1.52 EUR )
+Seat 3: Jpaubert ( €2.70 EUR )
+Seat 4: OBV_DAY ( €2 EUR )
+Seat 6: PickAndSprint ( €2 EUR )
+Seat 1: saluzapata ( €2.40 EUR )
+Seat 5: terreW3 ( €2.04 EUR )
+PickAndSprint posts small blind [€0.01 EUR].
+saluzapata posts big blind [€0.02 EUR].
+** Dealing down cards **
+Dealt to Blauman2 [  3s Tc ]
+Blauman2 calls [€0.02 EUR]
+Jpaubert calls [€0.02 EUR]
+OBV_DAY folds
+terreW3 folds
+PickAndSprint folds
+saluzapata checks
+** Dealing Flop ** [ Qh, Ac, Jd ]
+saluzapata checks
+Blauman2 checks
+Jpaubert checks
+** Dealing Turn ** [ Jc ]
+saluzapata checks
+Blauman2 checks
+Jpaubert checks
+** Dealing River ** [ Kh ]
+saluzapata checks
+Blauman2 checks
+Jpaubert checks
+saluzapata shows [ 7c, 6c ]a pair of Jacks.
+Blauman2 shows [ 3s, Tc ]a straight, Ten to Ace.
+Jpaubert shows [ Ah, 3h ]two pairs, Aces and Jacks.
+Blauman2 wins €0.07 EUR from the main pot with a straight, Ten to Ace.

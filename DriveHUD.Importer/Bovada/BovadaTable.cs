@@ -10,10 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
+using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using DriveHUD.Importers.Builders.iPoker;
 using HandHistories.Parser.Parsers;
@@ -467,7 +470,7 @@ namespace DriveHUD.Importers.Bovada
 
                     break;
 
-                case "JACKPOT_PRIZE":                             
+                case "JACKPOT_PRIZE":
                     IsJackpotTable = true;
                     MaxSeat = JackpotMaxSeats;
                     GameFormat = GameFormat.SnG;
@@ -815,7 +818,7 @@ namespace DriveHUD.Importers.Bovada
 
                     UpdatePlayersAddedRemoved(handModel, configuration, false);
 
-                    LogProvider.Log.Info(this, string.Format("Hand {0} processed. [{1}]", handModel.HandNumber, Identifier));
+                    LogProvider.Log.Info(this, $"Hand {handModel.HandNumber} [{handModel.GameType}, {handModel.GameFormat}, {MaxSeat}, {WindowHandle}] processed. [{Identifier}]");
 
                     var gameInfo = new GameInfo
                     {
@@ -1008,13 +1011,29 @@ namespace DriveHUD.Importers.Bovada
             {
                 parsingResult = dbImporter.Import(handHistoryXml.InnerXml, progress, gameInfo);
             }
+            catch (DHLicenseNotSupportedException)
+            {
+                LogProvider.Log.Error(this, $"Hand {handNumber} has not been imported. License issue. [{Identifier}]");
+
+                if (WindowHandle != IntPtr.Zero && WinApi.IsWindow(WindowHandle))
+                {
+                    var preImportedArgs = new PreImportedDataEventArgs(gameInfo,
+                         CommonResourceManager.Instance.GetResourceString("Notifications_HudLayout_PreLoadingText_NoLicense"));
+
+                    eventAggregator.GetEvent<PreImportedDataEvent>().Publish(preImportedArgs);
+                }
+
+                return;
+            }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, string.Format("Hand {0} has not been imported. [{1}]", handNumber, Identifier), e);
+                return;
             }
 
             if (parsingResult == null)
             {
+                LogProvider.Log.Warn(this, string.Format("Hand {0} has not been parsed. Result is null. [{1}]", handNumber, Identifier));
                 return;
             }
 

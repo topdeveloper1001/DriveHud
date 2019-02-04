@@ -117,62 +117,154 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="strActionCanceled" xml:space="preserve">
-    <value>Action canceled.</value>
+  <data name="Common_CancelAlreadyInProgressMessageBoxBody" xml:space="preserve">
+    <value>Cancellation is already in progress.</value>
   </data>
-  <data name="strCanceling" xml:space="preserve">
-    <value>Canceling...</value>
+  <data name="Common_CancelAlreadyInProgressMessageBoxTitle" xml:space="preserve">
+    <value>DriveHUD Setup</value>
   </data>
-  <data name="strInstallationStateUnknown" xml:space="preserve">
-    <value>The installation state is unknown.</value>
+  <data name="Common_ExitMessage_Text" xml:space="preserve">
+    <value>Are you sure you want to exit?</value>
   </data>
-  <data name="strInstallComplete" xml:space="preserve">
-    <value>Installation complete.</value>
+  <data name="Common_ExitMessage_Title" xml:space="preserve">
+    <value>DriveHUD - Abort installation?</value>
   </data>
-  <data name="strInstalling" xml:space="preserve">
+  <data name="Common_InstallErrorMessageTitle" xml:space="preserve">
+    <value>{0} - Error while installing</value>
+  </data>
+  <data name="Common_InstallView_Browse" xml:space="preserve">
+    <value> ... </value>
+  </data>
+  <data name="Common_InstallView_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_InstallView_CreateDesktopShortcut" xml:space="preserve">
+    <value>Create Desktop Shortcut</value>
+  </data>
+  <data name="Common_InstallView_CreateProgramMenuShortcut" xml:space="preserve">
+    <value>Create Start Menu Shortcut</value>
+  </data>
+  <data name="Common_InstallView_Install" xml:space="preserve">
+    <value>Install</value>
+  </data>
+  <data name="Common_InstallView_LicenseAgreementTitle" xml:space="preserve">
+    <value>Please agree to the DriveHUD license agreement to continue your setup.</value>
+  </data>
+  <data name="Common_InstallView_LicenseCheckBoxContent" xml:space="preserve">
+    <value>I agree to the License Terms and Conditions</value>
+  </data>
+  <data name="Common_NewerVersionInstalledMessage" xml:space="preserve">
+    <value>A newer version of {0} is already installed</value>
+  </data>
+  <data name="Common_NewerVersionInstalledTitle" xml:space="preserve">
+    <value>{0} - Newer version already installed</value>
+  </data>
+  <data name="Common_NotificationView_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_NotificationView_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Common_NotificationView_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common_NotificationView_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Common_Title" xml:space="preserve">
+    <value>DriveHUD - {0}</value>
+  </data>
+  <data name="Common_Version" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="Common_CancelDialogBody" xml:space="preserve">
+    <value>Are you sure you want to cancel the installation?</value>
+  </data>
+  <data name="Common_CancelDialogTitle" xml:space="preserve">
+    <value>DriveHUD Setup - Cancellation</value>
+  </data>
+  <data name="Common_FinalView_ErrorText" xml:space="preserve">
+    <value>One or more issues caused the setup to fail. Please fix the issues and then retry setup.</value>
+  </data>
+  <data name="Common_FinalView_Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="Common_FinalView_InstallFailed" xml:space="preserve">
+    <value>Install failed</value>
+  </data>
+  <data name="Common_FinalView_InstallSucceeded" xml:space="preserve">
+    <value>Install completed</value>
+  </data>
+  <data name="Common_FinalView_RepairFailed" xml:space="preserve">
+    <value>Repair failed</value>
+  </data>
+  <data name="Common_FinalView_RepairSucceeded" xml:space="preserve">
+    <value>Repair completed</value>
+  </data>
+  <data name="Common_FinalView_ThankYouText" xml:space="preserve">
+    <value>Thank you for using DriveHUD!</value>
+  </data>
+  <data name="Common_FinalView_UninstallFailed" xml:space="preserve">
+    <value>Uninstall failed</value>
+  </data>
+  <data name="Common_FinalView_UninstallSucceeded" xml:space="preserve">
+    <value>Uninstall completed</value>
+  </data>
+  <data name="Common_MaintenanceView_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_MaintenanceView_Description" xml:space="preserve">
+    <value>Select operation you wish to perform</value>
+  </data>
+  <data name="Common_MaintenanceView_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Common_MaintenanceView_RemoveDescription" xml:space="preserve">
+    <value>Removes from your computer.</value>
+  </data>
+  <data name="Common_MaintenanceView_RemovePlayerData" xml:space="preserve">
+    <value>Remove all the player's and database data</value>
+  </data>
+  <data name="Common_MaintenanceView_Repair" xml:space="preserve">
+    <value>Repair</value>
+  </data>
+  <data name="Common_MaintenanceView_RepairDescription" xml:space="preserve">
+    <value>Repairs errors in the most recent installation state.</value>
+  </data>
+  <data name="Common_MaintenanceView_Title" xml:space="preserve">
+    <value>Repair or Remove installation</value>
+  </data>
+  <data name="Common_PlanView_InstallAction" xml:space="preserve">
     <value>Installing...</value>
   </data>
-  <data name="strInstallLicenseTerms" xml:space="preserve">
-    <value>You must agree the license term before you can install {0}.</value>
+  <data name="Common_PlanView_InstallActionDescription" xml:space="preserve">
+    <value>Please wait while setup installs DriveHUD from your computer. This may take a few minutes.</value>
   </data>
-  <data name="strInstallThankyou" xml:space="preserve">
-    <value>Thank you for installing {0}!</value>
-  </data>
-  <data name="strMessageInitialize" xml:space="preserve">
-    <value>Configuring your computer</value>
-  </data>
-  <data name="strPleaseWaitWhileCanceling" xml:space="preserve">
-    <value>Please wait while setup cancels the installation.
-This may take a few minutes..</value>
-  </data>
-  <data name="strPleaseWaitWhileInstalling" xml:space="preserve">
-    <value>Please wait while setup installs {0} on your computer. 
-This may take a few minutes..</value>
-  </data>
-  <data name="strPleaseWaitWhileRepairing" xml:space="preserve">
-    <value>Please wait while setup repairs {0} on your computer.
-This may take a few minutes..</value>
-  </data>
-  <data name="strPleaseWaitWhileUninstalling" xml:space="preserve">
-    <value>Please wait while setup uninstalls {0} from your computer.
-This may take a few minutes..</value>
-  </data>
-  <data name="strRepairComplete" xml:space="preserve">
-    <value>Repair complete.</value>
-  </data>
-  <data name="strRepairing" xml:space="preserve">
+  <data name="Common_PlanView_RepairAction" xml:space="preserve">
     <value>Repairing...</value>
   </data>
-  <data name="strRepairThankyou" xml:space="preserve">
-    <value>Thank you for using {0}!</value>
+  <data name="Common_PlanView_RepairActionDescription" xml:space="preserve">
+    <value>Please wait while setup repairs DriveHUD from your computer. This may take a few minutes.</value>
   </data>
-  <data name="strUninstallComplete" xml:space="preserve">
-    <value>Uninstall complete.</value>
-  </data>
-  <data name="strUninstalling" xml:space="preserve">
+  <data name="Common_PlanView_UninstallAction" xml:space="preserve">
     <value>Uninstalling...</value>
   </data>
-  <data name="strUninstallThankyou" xml:space="preserve">
-    <value>Thank you for using {0}!</value>
+  <data name="Common_PlanView_UninstallActionDescription" xml:space="preserve">
+    <value>Please wait while setup uninstalls DriveHUD from your computer. This may take a few minutes.</value>
+  </data>
+  <data name="Common_ProgressView_Acquiring" xml:space="preserve">
+    <value>Acquiring:</value>
+  </data>
+  <data name="Common_ProgressView_Applying" xml:space="preserve">
+    <value>Applying:</value>
+  </data>
+  <data name="Common_ProgressView_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_ProgressView_Cancelling" xml:space="preserve">
+    <value>Cancelling...</value>
+  </data>
+  <data name="Common_ProgressView_CancellingDescription" xml:space="preserve">
+    <value>Please wait while setup cancels the installation. This may take a few minutes.</value>
   </data>
 </root>

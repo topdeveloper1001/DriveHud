@@ -19,6 +19,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Base;
+using HandHistories.Parser.Utils.FastParsing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,7 +79,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Common
 
         public IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
-            return new[] { rawHandHistories };
+            return ParserUtils.SplitUpMultipleHands(rawHandHistories);
         }
 
         #region Not implemented methods

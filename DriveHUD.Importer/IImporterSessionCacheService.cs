@@ -53,7 +53,7 @@ namespace DriveHUD.Importers
         /// Stores specified player data in cache
         /// </summary>
         /// <param name="cacheInfo"><see cref="PlayerStatsSessionCacheInfo"/> to store in cache</param>    
-        void AddOrUpdatePlayersStats(IEnumerable<PlayerStatsSessionCacheInfo> cacheInfos, string session, ISessionStatisticFilter filter);
+        void AddOrUpdatePlayersStats(IEnumerable<PlayerStatsSessionCacheInfo> cacheInfos, string session, SessionStatisticCondition condition);
 
         /// <summary>
         /// Gets statistic of the player's last hand
@@ -75,6 +75,6 @@ namespace DriveHUD.Importers
         /// <param name="session">Session</param>
         /// <param name="player">Player name</param>
         /// <returns>Dictionary of sticker-related statistics accessed by sticker name</returns>
-        Dictionary<string, HudLightIndicators> GetPlayersStickersStatistics(string session, PlayerCollectionItem player);
+        Dictionary<string, HudStickerIndicators> GetPlayersStickersStatistics(string session, PlayerCollectionItem player);
     }
 }

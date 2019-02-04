@@ -1,0 +1,33 @@
+PokerStars Game #47143727411:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 1:26:02 ET
+Table 'Piazzia IV' 6-max Seat #5 is the button
+Seat 3: shnizzel ($395.95 in chips) 
+Seat 4: Hero ($227.50 in chips) 
+Seat 5: brizzybreech ($200 in chips) 
+Seat 6: pablostar ($248.10 in chips) 
+pablostar: posts small blind $1
+shnizzel: posts big blind $2
+*** HOLE CARDS ***
+Hero: raises $4 to $6
+brizzybreech: folds 
+pablostar: folds 
+shnizzel: calls $4
+*** FLOP *** [9h Ts Kd]
+shnizzel: checks 
+Hero: checks 
+*** TURN *** [9h Ts Kd] [Ad]
+shnizzel: bets $10
+Hero: calls $10
+*** RIVER *** [9h Ts Kd Ad] [5c]
+shnizzel: bets $24
+Hero: folds 
+Uncalled bet ($24) returned to shnizzel
+shnizzel collected $31.40 from pot
+shnizzel: doesn't show hand 
+*** SUMMARY ***
+Total pot $33 | Rake $1.60 
+Board [9h Ts Kd Ad 5c]
+Seat 3: shnizzel (big blind) collected ($31.40)
+Seat 4: Hero folded on the River
+Seat 5: brizzybreech (button) folded before Flop (didn't bet)
+Seat 6: pablostar (small blind) folded before Flop
+

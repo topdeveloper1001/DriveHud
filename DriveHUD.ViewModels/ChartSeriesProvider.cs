@@ -11,9 +11,12 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Resources;
+using DriveHUD.Entities;
 using Model.Data;
 using Model.Enums;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 
 namespace DriveHUD.ViewModels
 {
@@ -29,7 +32,7 @@ namespace DriveHUD.ViewModels
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
                 ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
                 Format = "{0:0.##}$",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                UpdateChartSeriesItem = (current, previous, stat, index, total) =>
                 {
                     if (current == null)
                     {
@@ -51,7 +54,7 @@ namespace DriveHUD.ViewModels
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.NonShowdown,
                 ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
                 Format = "{0:0.##}",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                UpdateChartSeriesItem = (current, previous, stat, index, total) =>
                 {
                     if (current == null)
                     {
@@ -76,7 +79,7 @@ namespace DriveHUD.ViewModels
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.Showdown,
                 ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
                 Format = "{0:0.##}",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                UpdateChartSeriesItem = (current, previous, stat, index, total) =>
                 {
                     if (current == null)
                     {
@@ -101,7 +104,7 @@ namespace DriveHUD.ViewModels
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.EV,
                 ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
                 Format = "{0:0.##}$",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                UpdateChartSeriesItem = (current, previous, stat, index, total) =>
                 {
                     if (current == null)
                     {
@@ -123,7 +126,7 @@ namespace DriveHUD.ViewModels
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
                 ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
                 Format = "{0:0}$",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                UpdateChartSeriesItem = (current, previous, stat, index, total) =>
                 {
                     if (current == null)
                     {
@@ -145,7 +148,7 @@ namespace DriveHUD.ViewModels
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.NonShowdown,
                 ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
                 Format = "{0:0.##}",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                UpdateChartSeriesItem = (current, previous, stat, index, total) =>
                 {
                     if (current == null)
                     {
@@ -170,7 +173,7 @@ namespace DriveHUD.ViewModels
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.Showdown,
                 ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
                 Format = "{0:0.##}",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                UpdateChartSeriesItem = (current, previous, stat, index, total) =>
                 {
                     if (current == null)
                     {
@@ -195,7 +198,7 @@ namespace DriveHUD.ViewModels
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.EV,
                 ChartCashSeriesValueType = ChartCashSeriesValueType.BB,
                 Format = "{0:0}$",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                UpdateChartSeriesItem = (current, previous, stat, index, total) =>
                 {
                     if (current == null)
                     {
@@ -218,7 +221,7 @@ namespace DriveHUD.ViewModels
         {
             var bb100ChartCollection = new List<ChartSeries>();
 
-            var bb100Indicator = new LightIndicators();
+            var bb100Indicator = new B100GraphIndicators();
 
             bb100ChartCollection.Add(new ChartSeries
             {
@@ -226,7 +229,7 @@ namespace DriveHUD.ViewModels
                 ChartCashSeriesWinningType = ChartCashSeriesWinningType.Netwon,
                 ChartCashSeriesValueType = ChartCashSeriesValueType.Currency,
                 Format = "{0:0.##}$",
-                UpdateChartSeriesItem = (current, previous, stat, index) =>
+                UpdateChartSeriesItem = (current, previous, stat, index, total) =>
                 {
                     if (current == null)
                     {
@@ -239,7 +242,7 @@ namespace DriveHUD.ViewModels
                     }
                     else
                     {
-                        bb100Indicator = new LightIndicators();
+                        bb100Indicator = new B100GraphIndicators(total);
                     }
 
                     bb100Indicator.AddStatistic(stat);

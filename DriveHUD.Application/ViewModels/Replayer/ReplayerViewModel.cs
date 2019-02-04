@@ -129,7 +129,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 ReplayerTableState lastAction = TableStateList.LastOrDefault();
 
                 if (lastAction != null && lastAction.CurrentStreet != action.Street && action.Street >= Street.Flop && action.Street <= Street.River)
-                {                
+                {
                     // if we are inside this "if" we create an extra state between two actions
                     totalPotValue = currentPotValue;
                     state.TotalPotValue = totalPotValue;
@@ -188,7 +188,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private static bool IsSkipAction(HandAction action)
         {
             return action.HandActionType == HandActionType.SHOW
-                || action.HandActionType == HandActionType.SHOWS_FOR_LOW              
+                || action.HandActionType == HandActionType.SHOWS_FOR_LOW
                 || action.HandActionType == HandActionType.UNKNOWN;
         }
 
@@ -218,12 +218,14 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private void SetPlayersDefaults()
         {
             PlayersCollection.ForEach(x => x.Reset());
+
             if (CurrentGame == null)
             {
                 return;
             }
 
             var dealer = CurrentGame.Players.FirstOrDefault(x => x.SeatNumber == CurrentGame.DealerButtonPosition);
+
             foreach (Player player in CurrentGame.Players)
             {
                 int i = GetPlayersSeatNumber(player, CurrentGame.Players, CurrentGame.GameDescription.SeatType.MaxPlayers);
@@ -327,11 +329,27 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             var gameType = new GeneralGameTypeEnum().ParseGameType(CurrentGame.GameDescription.GameType);
 
-            var equities = equitySolver.CalculateEquity(ActivePlayerHasHoleCard.Select(x => x.HoleCards).ToArray(),
-                CurrentBoard,
-                AllDeadCards.Distinct(new LambdaComparer<HoleCards>((x, y) => x.ToString().Equals(y.ToString()))).ToArray(),
-                gameType)
-                .Select(x => Math.Round(x * 100, 2))
+            var isShortDeck = CurrentGame.GameDescription.TableTypeDescriptors.Contains(HandHistories.Objects.GameDescription.TableTypeDescription.ShortDeck);
+
+            var equitySolverParams = new EquitySolverParams
+            {
+                PlayersCards = ActivePlayerHasHoleCard.Select(x => x.HoleCards).ToArray(),
+                BoardCards = CurrentBoard,
+                Dead = isShortDeck ?
+                    AllDeadCards
+                        .Distinct(new LambdaComparer<HoleCards>((x, y) => x.ToString().Equals(y.ToString())))
+                        .SelectMany(x => x)
+                        .Concat(CardGroup.GetDeadCardsForHoldem6Plus())
+                        .ToArray() :
+                    AllDeadCards
+                        .Distinct(new LambdaComparer<HoleCards>((x, y) => x.ToString().Equals(y.ToString())))
+                        .SelectMany(x => x)
+                        .ToArray(),
+                GameType = gameType
+            };
+
+            var equities = equitySolver.CalculateEquity(equitySolverParams)
+                .Select(x => Math.Round((decimal)x.Equity * 100, 2))
                 .ToArray();
 
             // updating states in replayer view             
@@ -687,20 +705,35 @@ namespace DriveHUD.Application.ViewModels.Replayer
         #endregion
 
         #region ICommand
+
         public ICommand NextStepCommand { get; set; }
+
         public ICommand PlayCommand { get; set; }
+
         public ICommand StopCommand { get; set; }
+
         public ICommand PrevStepCommand { get; set; }
+
         public ICommand ToStartCommand { get; set; }
+
         public ICommand ToEndCommand { get; set; }
+
         public ICommand ToStreetCommand { get; set; }
+
         public ICommand TwitterOAuthCommand { get; set; }
+
         public ICommand FacebookOAuthCommand { get; set; }
+
         public ICommand HandNoteCommand { get; set; }
+
         public ICommand ShowSupportForumsCommand { get; set; }
+
+        public ICommand LoadLayoutCommand { get; set; }
+
         #endregion
 
         #region Properties
+
         private ReplayerDataModel _currentHand;
         private ReplayerDataModel _selectedLastHand;
         private ReplayerDataModel _selectedSessionHand;
@@ -737,8 +770,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 _selectedSessionHand = SessionHandsCollection?.FirstOrDefault(x => x?.GameNumber == value?.GameNumber);
                 _selectedLastHand = LastHandsCollection?.FirstOrDefault(x => x?.GameNumber == value?.GameNumber);
 
-                OnPropertyChanged(nameof(SelectedLastHand));
-                OnPropertyChanged(nameof(SelectedSessionHand));
+                RaisePropertyChanged(nameof(SelectedLastHand));
+                RaisePropertyChanged(nameof(SelectedSessionHand));
             }
         }
 
@@ -864,6 +897,49 @@ namespace DriveHUD.Application.ViewModels.Replayer
             set
             {
                 _activePlayerName = value;
+            }
+        }
+
+        private ObservableCollection<string> layoutsCollection;
+
+        public ObservableCollection<string> LayoutsCollection
+        {
+            get
+            {
+                return layoutsCollection;
+            }
+            set
+            {
+                SetProperty(ref layoutsCollection, value);
+            }
+        }
+
+        private string layoutName;
+
+        public string LayoutName
+        {
+            get
+            {
+                return layoutName;
+            }
+            set
+            {
+                layoutName = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        private bool isLoadingHUD;
+
+        public bool IsLoadingHUD
+        {
+            get
+            {
+                return isLoadingHUD;
+            }
+            set
+            {
+                SetProperty(ref isLoadingHUD, value);
             }
         }
 

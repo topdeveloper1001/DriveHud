@@ -1,19 +1,30 @@
-﻿using DriveHUD.Common.Annotations;
+﻿//-----------------------------------------------------------------------
+// <copyright file="BuiltFilterModel.cs" company="Ace Poker Solutions">
+// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Linq;
 using DriveHUD.Entities;
 using HandHistories.Objects.Cards;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.Extensions;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace Model.Filters
 {
-    public class BuiltFilterModel : INotifyPropertyChanged
+    public class BuiltFilterModel : BindableBase
     {
         #region  Properties
 
@@ -59,15 +70,22 @@ namespace Model.Filters
             get { return FilterModelManager.FilterModelCollection.OfType<FilterQuickModel>().FirstOrDefault(); }
         }
 
+        private FilterAdvancedModel AdvancedFilterModel
+        {
+            get { return FilterModelManager.FilterModelCollection.OfType<FilterAdvancedModel>().FirstOrDefault(); }
+        }
+
         private ObservableCollection<FilterSectionItem> _filterSectionCollection;
+
         public ObservableCollection<FilterSectionItem> FilterSectionCollection
         {
-            get { return _filterSectionCollection; }
+            get
+            {
+                return _filterSectionCollection;
+            }
             set
             {
-                if (value == _filterSectionCollection) return;
-                _filterSectionCollection = value;
-                OnPropertyChanged();
+                SetProperty(ref _filterSectionCollection, value);
             }
         }
 
@@ -91,6 +109,12 @@ namespace Model.Filters
                 new FilterSectionItem() { Name = EnumFilterSectionItemType.Currency.ToString(), ItemType = EnumFilterSectionItemType.Currency },
                 new FilterSectionItem() { Name = EnumFilterSectionItemType.TableSixRing.ToString(), ItemType = EnumFilterSectionItemType.TableSixRing },
                 new FilterSectionItem() { Name = EnumFilterSectionItemType.TableNineRing.ToString(), ItemType = EnumFilterSectionItemType.TableNineRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.RaiserSixRing.ToString(), ItemType = EnumFilterSectionItemType.RaiserSixRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.RaiserNineRing.ToString(), ItemType = EnumFilterSectionItemType.RaiserNineRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.ThreeBettorSixRing.ToString(), ItemType = EnumFilterSectionItemType.ThreeBettorSixRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.ThreeBettorNineRing.ToString(), ItemType = EnumFilterSectionItemType.ThreeBettorNineRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.FourBettorSixRing.ToString(), ItemType = EnumFilterSectionItemType.FourBettorSixRing },
+                new FilterSectionItem() { Name = EnumFilterSectionItemType.FourBettorNineRing.ToString(), ItemType = EnumFilterSectionItemType.FourBettorNineRing },
                 new FilterSectionItem() { Name = EnumFilterSectionItemType.PlayersBetween.ToString(), ItemType = EnumFilterSectionItemType.PlayersBetween },
                 new FilterSectionItem() { Name = EnumFilterSectionItemType.HoleCards.ToString(), ItemType = EnumFilterSectionItemType.HoleCards },
                 new FilterSectionItem() { Name = EnumFilterSectionItemType.FlopHandValue.ToString(), ItemType = EnumFilterSectionItemType.FlopHandValue },
@@ -254,6 +278,12 @@ namespace Model.Filters
             QuickFilterItem.OnTriState.Invoke();
 
             #endregion
+
+            #region Advanced Filter 
+
+            AdvancedFilterModel?.SetBuiltFilterModel(this);
+
+            #endregion
         }
 
         public void RemoveBuiltFilterItem(FilterSectionItem param)
@@ -277,6 +307,12 @@ namespace Model.Filters
                     break;
                 case EnumFilterSectionItemType.TableSixRing:
                 case EnumFilterSectionItemType.TableNineRing:
+                case EnumFilterSectionItemType.RaiserSixRing:
+                case EnumFilterSectionItemType.RaiserNineRing:
+                case EnumFilterSectionItemType.ThreeBettorSixRing:
+                case EnumFilterSectionItemType.ThreeBettorNineRing:
+                case EnumFilterSectionItemType.FourBettorSixRing:
+                case EnumFilterSectionItemType.FourBettorNineRing:
                     RemoveTableRingItem(param);
                     break;
                 case EnumFilterSectionItemType.PlayersBetween:
@@ -318,14 +354,18 @@ namespace Model.Filters
                 case EnumFilterSectionItemType.QuickFilterItem:
                     RemoveQuickFilterItem(param);
                     break;
+                case EnumFilterSectionItemType.AdvancedFilterItem:
+                    RemoveAdvancedFilterItem(param);
+                    break;
             }
         }
 
         public BuiltFilterModel Clone()
         {
-            var model = new BuiltFilterModel();
-
-            model.FilterSectionCollection = new ObservableCollection<FilterSectionItem>(this.FilterSectionCollection.Select(x => (FilterSectionItem)x.Clone()));
+            var model = new BuiltFilterModel
+            {
+                FilterSectionCollection = new ObservableCollection<FilterSectionItem>(this.FilterSectionCollection.Select(x => (FilterSectionItem)x.Clone()))
+            };
 
             return model;
         }
@@ -378,8 +418,10 @@ namespace Model.Filters
             {
                 return;
             }
+
             var filterItemValue = param.Value;
             var statItem = StandardModel?.StatCollection.FirstOrDefault(x => x.PropertyName == filterItemValue);
+
             if (statItem != null)
             {
                 statItem.CurrentTriState = EnumTriState.Any;
@@ -483,26 +525,34 @@ namespace Model.Filters
         #endregion
 
         #region Table Ring (Standard Filter)
+
         private void SetTableRingItems()
         {
             if (StandardModel != null)
             {
-                SetTableItem(this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableSixRing), StandardModel.Table6MaxCollection, "Position(6max)={0}");
-                SetTableItem(this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableNineRing), StandardModel.TableFullRingCollection, "Position(Full Ring)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableSixRing), StandardModel.Table6MaxCollection, "Position(6max)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableNineRing), StandardModel.TableFullRingCollection, "Position(Full Ring)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.RaiserSixRing), StandardModel.Raiser6maxPositionsCollection, "Opponent PFR position(6max)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.RaiserNineRing), StandardModel.RaiserFullRingPositionsCollection, "Opponent PFR position (Full Ring)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.ThreeBettorSixRing), StandardModel.ThreeBettor6maxPositionsCollection, "Opponent 3-Bet position(6max)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.ThreeBettorNineRing), StandardModel.ThreeBettorFullRingPositionsCollection, "Opponent 3-Bet position(Full Ring)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.FourBettorSixRing), StandardModel.FourBettor6maxPositionsCollection, "Opponent 4-Bet position(6max)={0}");
+                SetTableItem(FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.FourBettorNineRing), StandardModel.FourBettorFullRingPositionsCollection, "Opponent 4-Bet position(Full Ring)={0}");
             }
         }
 
         private void SetTableItem(FilterSectionItem filterSectionItem, ObservableCollection<TableRingItem> collection, string formatString)
         {
             var selectedTableItems = collection.Where(x => x.IsChecked);
-            if (selectedTableItems == null || !collection.Any(x => !x.IsChecked))
+
+            if (selectedTableItems == null || collection.All(x => x.IsChecked) || collection.All(x => !x.IsChecked))
             {
                 filterSectionItem.IsActive = false;
                 return;
             }
 
-            var tableItemsString = String.Join(",", selectedTableItems.Select(x => x.Name));
-            filterSectionItem.Name = String.Format(formatString, tableItemsString);
+            var tableItemsString = string.Join(",", selectedTableItems.Select(x => x.Name));
+            filterSectionItem.Name = string.Format(formatString, tableItemsString);
             filterSectionItem.IsActive = true;
         }
 
@@ -511,13 +561,32 @@ namespace Model.Filters
             switch (param.ItemType)
             {
                 case EnumFilterSectionItemType.TableSixRing:
-                    StandardModel?.ResetTableRingCollection(EnumTableType.Six);
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Six, PreflopActorPosition.Hero);
                     break;
                 case EnumFilterSectionItemType.TableNineRing:
-                    StandardModel?.ResetTableRingCollection(EnumTableType.Nine);
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Nine, PreflopActorPosition.Hero);
+                    break;
+                case EnumFilterSectionItemType.RaiserSixRing:
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Six, PreflopActorPosition.Raiser);
+                    break;
+                case EnumFilterSectionItemType.RaiserNineRing:
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Nine, PreflopActorPosition.Raiser);
+                    break;
+                case EnumFilterSectionItemType.ThreeBettorSixRing:
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Six, PreflopActorPosition.ThreeBettor);
+                    break;
+                case EnumFilterSectionItemType.ThreeBettorNineRing:
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Nine, PreflopActorPosition.ThreeBettor);
+                    break;
+                case EnumFilterSectionItemType.FourBettorSixRing:
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Six, PreflopActorPosition.FourBettor);
+                    break;
+                case EnumFilterSectionItemType.FourBettorNineRing:
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Nine, PreflopActorPosition.FourBettor);
                     break;
             }
         }
+
         #endregion
 
         #region Players Between Item (Standard Filter)
@@ -999,22 +1068,24 @@ namespace Model.Filters
                 fastFilterItem.CurrentTriState = EnumTriState.Any;
             }
         }
-        #endregion
 
         #endregion
 
-        #region  INotifyPropertyChanged
-        public event PropertyChangedEventHandler PropertyChanged;
+        #region Advanced Filter Item
 
-        [NotifyPropertyChangedInvocator]
-        public virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        private void RemoveAdvancedFilterItem(FilterSectionItem param)
         {
-            var handler = PropertyChanged;
-            if (handler != null)
+            if (param.ItemType != EnumFilterSectionItemType.AdvancedFilterItem ||
+                string.IsNullOrEmpty(param.Name))
             {
-                handler(this, new PropertyChangedEventArgs(propertyName));
+                return;
             }
+
+            AdvancedFilterModel?.SelectedFilters.RemoveByCondition(x => x.ToolTip == param.Name);
         }
+
+        #endregion
+
         #endregion
     }
 }

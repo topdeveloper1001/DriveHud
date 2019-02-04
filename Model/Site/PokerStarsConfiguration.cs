@@ -56,6 +56,7 @@ namespace Model.Site
             tableTypes = new EnumTableType[]
             {
                 EnumTableType.HU,
+                EnumTableType.Three,
                 EnumTableType.Four,
                 EnumTableType.Six,
                 EnumTableType.Eight,
@@ -189,6 +190,7 @@ namespace Model.Site
                 IsEnabled = siteModel.Enabled,
                 FastPokerEnabled = true
             };
+
 
             InstallAuditIni(validationResult);
 
@@ -473,6 +475,11 @@ namespace Model.Site
             try
             {
                 var installPaths = GetInstallPaths();
+
+                if (installPaths.Count == 0)
+                {
+                    return;
+                }
 
                 var isPokerStarsRunning = IsPokerStarsRunning();
 

@@ -12,6 +12,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
@@ -85,6 +86,20 @@ namespace DriveHUD.Common.WinApi
 
         [DllImport("kernel32.dll", CharSet = CharSet.None, ExactSpelling = false, SetLastError = true)]
         public static extern IntPtr LoadLibraryEx(string file, IntPtr handle, uint flags);
+
+        [DllImport("kernel32.dll")]
+        public static extern bool QueryFullProcessImageName([In] IntPtr hProcess, [In] uint dwFlags, [Out] StringBuilder lpExeName, [In, Out] ref uint lpdwSize);
+
+        public static string GetMainModuleFileName(Process process, int buffer = 1024)
+        {
+            var fileNameBuilder = new StringBuilder(buffer);
+
+            var bufferLength = (uint)fileNameBuilder.Capacity + 1;
+
+            return QueryFullProcessImageName(process.Handle, 0, fileNameBuilder, ref bufferLength) ?
+                fileNameBuilder.ToString() :
+                null;
+        }
 
         #endregion
 

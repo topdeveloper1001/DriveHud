@@ -14,6 +14,7 @@ using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
+using HandHistories.Parser.Parsers.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -91,8 +92,8 @@ namespace HandHistories.Parser.Utils
 
         public static void UpdateAllInActions(HandHistory handHistory)
         {
-            AllInActionHelper.IdentifyAllInActions(handHistory.Players, handHistory.HandActions);
-            handHistory.HandActions = AllInActionHelper.UpdateAllInActions(handHistory.HandActions);
+            var handActions = AllInActionHelper.IdentifyAllInActions(handHistory.Players, handHistory.HandActions);
+            handHistory.HandActions = AllInActionHelper.UpdateAllInActions(handActions);
         }
 
         /// <summary>
@@ -160,9 +161,16 @@ namespace HandHistories.Parser.Utils
                 {
                     winAction.Amount -= diffBetweenPots;
 
-                    if (handHistory.Players[playerPutMaxInPot.Key].Win > 0)
+                    var player = handHistory.Players[playerPutMaxInPot.Key];
+
+                    if (player == null)
                     {
-                        handHistory.Players[playerPutMaxInPot.Key].Win -= diffBetweenPots;
+                        throw new InvalidHandException(string.Empty, $"Player {playerPutMaxInPot.Key} wasn't found in the list of players.");
+                    }
+
+                    if (player.Win > 0)
+                    {
+                        player.Win -= diffBetweenPots;
                     }
 
                     if (winAction.Amount == 0)
@@ -220,7 +228,8 @@ namespace HandHistories.Parser.Utils
                 var preflopOrderedPlayers = orderedPlayers.Skip(blindsCount).Concat(orderedPlayers.Take(blindsCount)).ToArray();
                 var preflopOrderedPlayersDictionary = OrderedPlayersToDict(preflopOrderedPlayers);
 
-                orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Preflop && x.IsBlinds));
+                orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Preflop && x.HandActionType == HandActionType.ANTE));
+                orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, orderedPlayersDictionary, x => x.Street == Street.Preflop && x.IsBlinds && x.HandActionType != HandActionType.ANTE));
                 orderedHandActions.AddRange(OrderStreetHandActions(handHistory.HandActions, preflopOrderedPlayersDictionary, x => x.Street == Street.Preflop && !x.IsBlinds));
             }
 

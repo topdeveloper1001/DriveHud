@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
@@ -21,6 +22,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
     internal class IPokerBovadaFastParserImpl : IPokerFastParserImpl
     {
+        public override EnumPokerSites SiteName => EnumPokerSites.Ignition;
+
         public override bool RequiresSeatTypeAdjustment
         {
             get

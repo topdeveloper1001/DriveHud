@@ -67,6 +67,66 @@ namespace Model.Data
 
         public override decimal TotalHands => totalHands;
 
+        public override decimal ThreeBetMPvsEP => 0;
+
+        public override decimal ThreeBetCOvsEP => 0;
+
+        public override decimal ThreeBetCOvsMP => 0;
+
+        public override decimal ThreeBetBTNvsEP => 0;
+
+        public override decimal ThreeBetBTNvsMP => 0;
+
+        public override decimal ThreeBetBTNvsCO => 0;
+
+        public override decimal ThreeBetSBvsEP => 0;
+
+        public override decimal ThreeBetSBvsMP => 0;
+
+        public override decimal ThreeBetSBvsCO => 0;
+
+        public override decimal ThreeBetSBvsBTN => 0;
+
+        public override decimal ThreeBetBBvsEP => 0;
+
+        public override decimal ThreeBetBBvsMP => 0;
+
+        public override decimal ThreeBetBBvsCO => 0;
+
+        public override decimal ThreeBetBBvsBTN => 0;
+
+        public override decimal ThreeBetBBvsSB => 0;
+
+        public override decimal FoldTo3BetInEPvs3BetMP => 0;
+
+        public override decimal FoldTo3BetInEPvs3BetCO => 0;
+
+        public override decimal FoldTo3BetInEPvs3BetBTN => 0;
+
+        public override decimal FoldTo3BetInEPvs3BetSB => 0;
+
+        public override decimal FoldTo3BetInEPvs3BetBB => 0;
+
+        public override decimal FoldTo3BetInMPvs3BetCO => 0;
+
+        public override decimal FoldTo3BetInMPvs3BetBTN => 0;
+
+        public override decimal FoldTo3BetInMPvs3BetSB => 0;
+
+        public override decimal FoldTo3BetInMPvs3BetBB => 0;
+
+        public override decimal FoldTo3BetInCOvs3BetBTN => 0;
+
+        public override decimal FoldTo3BetInCOvs3BetSB => 0;
+
+        public override decimal FoldTo3BetInCOvs3BetBB => 0;
+
+        public override decimal FoldTo3BetInBTNvs3BetSB => 0;
+
+        public override decimal FoldTo3BetInBTNvs3BetBB => 0;
+
+        public override decimal CheckRaiseFlopAsPFR => 0;
+
         public override void AddStatistic(Playerstatistic statistic)
         {
             AddStatValue(ref vpiphands, statistic.Vpiphands);

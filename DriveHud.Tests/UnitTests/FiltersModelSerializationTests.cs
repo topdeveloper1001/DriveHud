@@ -14,6 +14,7 @@ using DriveHud.Tests.UnitTests.Helpers;
 using DriveHUD.Application.ViewModels.Hud;
 using HandHistories.Objects.Actions;
 using Model.Filters;
+using Model.Hud;
 using NUnit.Framework;
 using System;
 using System.IO;

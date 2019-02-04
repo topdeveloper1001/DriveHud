@@ -1,0 +1,50 @@
+#Game No : 18059009224 
+***** Hand History for Game 18059009224 *****
+NL Texas Hold'em $2.20 USD Buy-in Trny:193269825 Level:10  Blinds-Antes(600/1.2K -150) - Thursday, December 13, 13:20:54 COT 2018
+Table Warm Up. $1.5K Gtd  (193269825) Table #30 (Real Money)
+Seat 2 is the button
+Total number of players : 8/8
+Seat 6: CaioFCassino ( 81,619 )
+Seat 1: Caxepok ( 33,795 )
+Seat 4: OGaviriAA ( 49,475 )
+Seat 2: Rtt989459 ( 35,224 )
+Seat 3: TheGambler7999 ( 51,025 )
+Seat 3: TheGambler7999 ( 51,025 )
+Seat 5: WonderCrab ( 47,462 )
+Seat 7: belausv ( 30,386 )
+Seat 8: unknown_13 ( 128,699 )
+Trny:193269825 Level:10
+Blinds-Antes(600/1.200 -150)
+Caxepok posts ante [150]
+Rtt989459 posts ante [150]
+TheGambler7999 posts ante [150]
+OGaviriAA posts ante [150]
+WonderCrab posts ante [150]
+CaioFCassino posts ante [150]
+belausv posts ante [150]
+unknown_13 posts ante [150]
+TheGambler7999 posts small blind [600].
+OGaviriAA posts big blind [1,200].
+** Dealing down cards **
+Dealt to OGaviriAA [  4s 3s ]
+WonderCrab folds
+CaioFCassino folds
+belausv raises [3,000]
+unknown_13 folds
+Caxepok folds
+Rtt989459 calls [3,000]
+TheGambler7999 folds
+OGaviriAA folds
+** Dealing Flop ** [ 3c, Kd, Tc ]
+belausv checks
+Rtt989459 checks
+** Dealing Turn ** [ Kc ]
+belausv checks
+Rtt989459 bets [1,200]
+belausv calls [1,200]
+** Dealing River ** [ 4h ]
+belausv checks
+Rtt989459 bets [11,400]
+belausv folds
+Rtt989459 does not show cards.
+Rtt989459 wins 22,800 chips

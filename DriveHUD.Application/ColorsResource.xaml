@@ -503,19 +503,29 @@
 
     <!--#region Range colors -->
 
+    <Color
+        x:Key="RangeBackgroundColor">#2A2D31</Color>
+    
     <SolidColorBrush
         x:Key="RangeBackground"
-        Color="#2A2D31" />
+        Color="{StaticResource RangeBackgroundColor}" />
 
+    <Color
+        x:Key="SelectedRangeBackgroundColor">#33519B</Color>
+    
     <SolidColorBrush
         x:Key="SelectedRangeBackground"
-        Color="#33519B" />
+        Color="{StaticResource SelectedRangeBackgroundColor}" />
 
     <Color
         x:Key="RangeButtonCheckedForegroundColor">#FFFFFF</Color>
 
     <Color
         x:Key="RangeButtonDisabledColor">#FFAEA5A5</Color>
+
+    <SolidColorBrush
+        x:Key="RangeButtonDisabledBrush"
+        Color="{StaticResource RangeButtonDisabledColor}" />
 
     <Color
         x:Key="FoldCheckRangeColor">#B19BD9</Color>

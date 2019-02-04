@@ -296,6 +296,10 @@
                     Height="5" />
                 <RowDefinition
                     Height="Auto" />
+                <RowDefinition
+                    Height="5" />
+                <RowDefinition
+                    Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
@@ -315,7 +319,7 @@
             <Button
                 Grid.Column="1"
                 Width="100"
-                Height="30"             
+                Height="30"
                 HorizontalAlignment="Right"
                 Content="{ResX Key=Settings_RebuildStats}"
                 Command="{Binding RebuildStatsCommand}" />
@@ -333,7 +337,7 @@
                 Grid.Row="2"
                 Grid.Column="1"
                 Width="100"
-                Height="30"              
+                Height="30"
                 HorizontalAlignment="Right"
                 Content="{ResX Key=Settings_RecoverStats}"
                 Command="{Binding RecoverStatsCommand}" />
@@ -362,6 +366,14 @@
                 Style="{StaticResource CheckBoxRight}"
                 IsChecked="{Binding IsAPIEnabled, Mode=TwoWay}"
                 Content="{ResX Key=Settings_IsAPIEnabled}"
+                Margin="15 5" />
+
+            <CheckBox
+                Grid.Row="8"
+                Grid.ColumnSpan="2"
+                Style="{StaticResource CheckBoxRight}"
+                IsChecked="{Binding HudSpecialMode, Mode=TwoWay}"
+                Content="{ResX Key=Settings_HudSpecialMode}"
                 Margin="15 5" />
 
         </Grid>

@@ -1,0 +1,39 @@
+PokerStars Game #47184542529:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:12:12 ET
+Table 'Neckar VII' 6-max Seat #3 is the button
+Seat 1: TODO ADENTR0 ($397.30 in chips) 
+Seat 2: DURKADURDUR ($206.05 in chips) 
+Seat 3: Fierytycoon ($254 in chips) 
+Seat 4: Hero ($206.25 in chips) 
+Seat 5: FLA LEFEVRE ($289.55 in chips) 
+Seat 6: LingXY ($215.30 in chips) 
+Hero: posts small blind $1
+FLA LEFEVRE: posts big blind $2
+*** HOLE CARDS ***
+LingXY: folds 
+TODO ADENTR0: folds 
+DURKADURDUR: raises $4 to $6
+Fierytycoon: folds 
+Hero: calls $5
+FLA LEFEVRE: raises $12 to $18
+DURKADURDUR: folds 
+Hero: calls $12
+*** FLOP *** [5c 6h 4c]
+Hero: checks 
+FLA LEFEVRE: checks 
+*** TURN *** [5c 6h 4c] [Qs]
+Hero: checks 
+FLA LEFEVRE: bets $12
+Hero: raises $32 to $44
+FLA LEFEVRE: raises $227.55 to $271.55 and is all-in
+Hero: folds 
+Uncalled bet ($227.55) returned to FLA LEFEVRE
+FLA LEFEVRE collected $127 from pot
+*** SUMMARY ***
+Total pot $130 | Rake $3 
+Board [5c 6h 4c Qs]
+Seat 1: TODO ADENTR0 folded before Flop (didn't bet)
+Seat 2: DURKADURDUR folded before Flop
+Seat 3: Fierytycoon (button) folded before Flop (didn't bet)
+Seat 4: Hero (small blind) folded on the Turn
+Seat 5: FLA LEFEVRE (big blind) collected ($127)
+Seat 6: LingXY folded before Flop (didn't bet)

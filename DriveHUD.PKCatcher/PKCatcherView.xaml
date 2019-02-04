@@ -42,6 +42,7 @@
     </UserControl.Resources>
 
     <Grid
+        IsEnabled="{Binding OperationInfo.IsBusy, Converter={dh:BoolNotConverter}}"
         Background="{StaticResource WindowBackgroundBrush}">
 
         <Grid.RowDefinitions>
@@ -129,6 +130,13 @@
                     Visibility="{Binding IsUpgradable, Converter={dh:BoolToVisibilityConverter}}"
                     Command="{Binding PurchaseCommand}"
                     Content="{ResX Key=PKC_MainView_Purchase}" />
+
+                <Button
+                    Margin="10,0,0,0"
+                    Height="27"
+                    Width="80"
+                    Command="{Binding GenerateLogCommand}"
+                    Content="{ResX Key=PKC_MainView_GenerateLog}" />
 
             </StackPanel>
 

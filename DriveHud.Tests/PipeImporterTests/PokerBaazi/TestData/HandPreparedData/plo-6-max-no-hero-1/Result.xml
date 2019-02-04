@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2019-01-17T16:49:54.829Z</DateOfHandUtc>
+  <HandId>1547743895199</HandId>
+  <DealerButtonPosition>6</DealerButtonPosition>
+  <TableName>Rangers DeepStack</TableName>
+  <GameDescription>
+    <PokerFormat>CashGame</PokerFormat>
+    <Site>PokerBaazi</Site>
+    <GameType>PotLimitOmaha</GameType>
+    <Limit>
+      <Currency>INR</Currency>
+      <SmallBlind>1</SmallBlind>
+      <BigBlind>2</BigBlind>
+      <IsAnteTable>false</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="6" />
+    <TableType>Regular</TableType>
+    <Identifier>100400</Identifier>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>76</TotalPot>
+  <Rake>5</Rake>
+  <Actions>
+    <HandAction PlayerName="Surajkori" HandActionType="SMALL_BLIND" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="gill0807" HandActionType="BIG_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="barunbiswas" HandActionType="POSTS" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Ajay1995" HandActionType="POSTS" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="barunbiswas" HandActionType="CHECK" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Ajay1995" HandActionType="RAISE" Amount="-7" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Tunia" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="haha456" HandActionType="CALL" Amount="-9" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Surajkori" HandActionType="CALL" Amount="-8" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="gill0807" HandActionType="CALL" Amount="-7" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="barunbiswas" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Surajkori" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="gill0807" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="Ajay1995" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="haha456" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="Surajkori" HandActionType="CHECK" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="gill0807" HandActionType="BET" Amount="-19" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="Ajay1995" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="haha456" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="Surajkori" HandActionType="CALL" Amount="-19" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="Surajkori" HandActionType="CHECK" Amount="0" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="gill0807" HandActionType="CHECK" Amount="0" Street="River" IsAllIn="false" />
+    <HandAction p3:type="WinningsAction" PlayerName="gill0807" HandActionType="WINS" Amount="71" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>3d2h6sAs5h</CommunityCards>
+  <Players>
+    <Player PlayerName="Surajkori" StartingStack="167" Bet="28" Win="0" SeatNumber="1" Cards="5s9dQdAc" IsSittingOut="false" />
+    <Player PlayerName="gill0807" StartingStack="196" Bet="28" Win="71" SeatNumber="2" Cards="9h3cAhAd" IsSittingOut="false" />
+    <Player PlayerName="barunbiswas" StartingStack="20" Bet="2" Win="0" SeatNumber="3" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Ajay1995" StartingStack="20" Bet="9" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Tunia" StartingStack="122" Bet="0" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
+    <Player PlayerName="haha456" StartingStack="428" Bet="9" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+  </Players>
+</HandHistory>

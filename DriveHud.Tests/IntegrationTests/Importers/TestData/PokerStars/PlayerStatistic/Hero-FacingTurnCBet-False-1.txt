@@ -1,0 +1,42 @@
+PokerStars Game #47185534430:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 23:47:29 ET
+Table 'Thoas' 6-max Seat #3 is the button
+Seat 1: mdeckND ($212.75 in chips)
+Seat 2: Hero ($728.25 in chips)
+Seat 3: Jetize ($238.40 in chips)
+Seat 4: mojox ($139.55 in chips)
+Seat 5: FrAnWaN ($328.50 in chips)
+Seat 6: asseral ($200 in chips)
+mojox: posts small blind $1
+FrAnWaN: posts big blind $2
+*** HOLE CARDS ***
+asseral: raises $5 to $7
+mdeckND: folds
+Hero: calls $7
+Jetize: folds
+mojox: calls $6
+FrAnWaN: folds
+*** FLOP *** [As 4d 7d]
+mojox: checks
+asseral: checks
+Hero: checks
+*** TURN *** [As 4d 7d] [Tc]
+mojox: checks
+asseral: bets $13
+Hero: calls $13
+mojox: folds
+*** RIVER *** [As 4d 7d Tc] [Td]
+asseral: checks
+Hero: checks
+*** SHOW DOWN ***
+asseral: shows [Kc Kd] (two pair, Kings and Tens)
+Hero: mucks hand
+asseral collected $46.65 from pot
+*** SUMMARY ***
+Total pot $49 | Rake $2.35
+Board [As 4d 7d Tc Td]
+Seat 1: mdeckND folded before Flop (didn't bet)
+Seat 2: Hero mucked
+Seat 3: Jetize (button) folded before Flop (didn't bet)
+Seat 4: mojox (small blind) folded on the Turn
+Seat 5: FrAnWaN (big blind) folded before Flop
+Seat 6: asseral showed [Kc Kd] and won ($46.65) with two pair, Kings and Tens

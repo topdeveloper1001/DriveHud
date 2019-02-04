@@ -61,6 +61,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exporting hands {0}/{1}.
+        /// </summary>
+        internal static string Progress_ExportingHands {
+            get {
+                return ResourceManager.GetString("Progress_ExportingHands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Parsing.
         /// </summary>
         internal static string Progress_Parsing {

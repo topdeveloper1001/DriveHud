@@ -17,11 +17,13 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using HandHistories.Objects.GameDescription;
 using Model.Enums;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Xml.Serialization;
 
 namespace Model.Filters
 {
@@ -30,7 +32,8 @@ namespace Model.Filters
     {
         #region Constructor
 
-        public FilterStandardModel(int playerCountMinAvailable = 2, int playerCountMinSelectedItem = 2, int playerCountMaxAvailable = 10, int playerCountMaxSelectedItem = 10)
+        public FilterStandardModel(int playerCountMinAvailable = 2, int playerCountMinSelectedItem = 2,
+            int playerCountMaxAvailable = 10, int playerCountMaxSelectedItem = 10)
         {
             Name = "Standard Filters";
 
@@ -40,6 +43,9 @@ namespace Model.Filters
             PlayerCountMaxAvailable = playerCountMaxAvailable;
 
             FilterSectionPlayersBetweenCollectionInitialize();
+
+            PreflopActorPositions = new ObservableCollection<PreflopActorPosition>(
+                Enum.GetValues(typeof(PreflopActorPosition)).Cast<PreflopActorPosition>());
         }
 
         public void Initialize()
@@ -130,7 +136,7 @@ namespace Model.Filters
                         new CurrencyItem() { Name = "CAD", Value = Currency.CAD, IsChecked = true },
                         new CurrencyItem() { Name = "YUAN", Value = Currency.YUAN, IsChecked = true },
                         new CurrencyItem() { Name = "EUR", Value = Currency.EURO, IsChecked = true },
-                        new CurrencyItem() { Name = "INR", Value = Currency.INR, IsChecked = true }                        
+                        new CurrencyItem() { Name = "INR", Value = Currency.INR, IsChecked = true }
                     }
                 );
         }
@@ -157,27 +163,45 @@ namespace Model.Filters
 
         public void FilterSectionTableRingCollectionInitialize()
         {
-            Table6MaxCollection = new ObservableCollection<TableRingItem>()
-            {
-                new TableRingItem() { IsChecked = true, Seat = 5, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.BTN, Name = "BTN" },
-                new TableRingItem() { IsChecked = true, Seat = 6, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.SB, Name = "SB" },
-                new TableRingItem() { IsChecked = true, Seat = 1, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.BB, Name = "BB" },
-                new TableRingItem() { IsChecked = true, Seat = 2, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.UTG, Name = "UTG" },
-                new TableRingItem() { IsChecked = true, Seat = 3, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.MP1, Name = "MP1" },
-                new TableRingItem() { IsChecked = true, Seat = 4, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.CO, Name = "CO" },
-            };
+            Table6MaxCollection = Create6MaxCollection();
+            TableFullRingCollection = CreateFullRingCollection();
 
-            TableFullRingCollection = new ObservableCollection<TableRingItem>()
+            Raiser6maxPositionsCollection = Create6MaxCollection();
+            RaiserFullRingPositionsCollection = CreateFullRingCollection();
+
+            ThreeBettor6maxPositionsCollection = Create6MaxCollection();
+            ThreeBettorFullRingPositionsCollection = CreateFullRingCollection();
+
+            FourBettor6maxPositionsCollection = Create6MaxCollection();
+            FourBettorFullRingPositionsCollection = CreateFullRingCollection();
+        }
+
+        private static ObservableCollection<TableRingItem> Create6MaxCollection()
+        {
+            return new ObservableCollection<TableRingItem>()
             {
-                new TableRingItem() { IsChecked = true, Seat = 6, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.BTN, Name = "BTN" },
-                new TableRingItem() { IsChecked = true, Seat = 7, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.SB, Name = "SB" },
-                new TableRingItem() { IsChecked = true, Seat = 8, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.BB, Name = "BB" },
-                new TableRingItem() { IsChecked = true, Seat = 9, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.UTG, Name = "UTG" },
-                new TableRingItem() { IsChecked = true, Seat = 1, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.UTG_1, Name = "UTG+1" },
-                new TableRingItem() { IsChecked = true, Seat = 2, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.UTG_2, Name = "UTG+2" },
-                new TableRingItem() { IsChecked = true, Seat = 3, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.MP1, Name = "MP1" },
-                new TableRingItem() { IsChecked = true, Seat = 4, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.MP2, Name = "MP2" },
-                new TableRingItem() { IsChecked = true, Seat = 5, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.CO, Name = "CO" },
+                new TableRingItem() { IsChecked = false, Seat = 5, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.BTN, Name = "BTN" },
+                new TableRingItem() { IsChecked = false, Seat = 6, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.SB, Name = "SB" },
+                new TableRingItem() { IsChecked = false, Seat = 1, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.BB, Name = "BB" },
+                new TableRingItem() { IsChecked = false, Seat = 2, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.UTG, Name = "UTG" },
+                new TableRingItem() { IsChecked = false, Seat = 3, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.MP1, Name = "MP1" },
+                new TableRingItem() { IsChecked = false, Seat = 4, TableType = EnumTableType.Six, PlayerPosition = EnumPosition.CO, Name = "CO" },
+            };
+        }
+
+        private static ObservableCollection<TableRingItem> CreateFullRingCollection()
+        {
+            return new ObservableCollection<TableRingItem>()
+            {
+                new TableRingItem() { IsChecked = false, Seat = 6, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.BTN, Name = "BTN" },
+                new TableRingItem() { IsChecked = false, Seat = 7, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.SB, Name = "SB" },
+                new TableRingItem() { IsChecked = false, Seat = 8, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.BB, Name = "BB" },
+                new TableRingItem() { IsChecked = false, Seat = 9, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.UTG, Name = "UTG" },
+                new TableRingItem() { IsChecked = false, Seat = 1, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.UTG_1, Name = "UTG+1" },
+                new TableRingItem() { IsChecked = false, Seat = 2, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.UTG_2, Name = "UTG+2" },
+                new TableRingItem() { IsChecked = false, Seat = 3, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.MP1, Name = "MP1" },
+                new TableRingItem() { IsChecked = false, Seat = 4, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.MP2, Name = "MP2" },
+                new TableRingItem() { IsChecked = false, Seat = 5, TableType = EnumTableType.Nine, PlayerPosition = EnumPosition.CO, Name = "CO" },
             };
         }
 
@@ -335,8 +359,14 @@ namespace Model.Filters
                 ResetFilterBuyinTo(filterToLoad.BuyinCollection);
                 ResetFilterPreFlopActionTo(filterToLoad.PreFlopActionCollection);
                 ResetFilterCurrencyTo(filterToLoad.CurrencyCollection);
-                ResetFilterTableRingTo(filterToLoad.Table6MaxCollection, EnumTableType.Six);
-                ResetFilterTableRingTo(filterToLoad.TableFullRingCollection, EnumTableType.Nine);
+                ResetFilterTableRingTo(Table6MaxCollection, filterToLoad.Table6MaxCollection);
+                ResetFilterTableRingTo(TableFullRingCollection, filterToLoad.TableFullRingCollection);
+                ResetFilterTableRingTo(Raiser6maxPositionsCollection, filterToLoad.Raiser6maxPositionsCollection);
+                ResetFilterTableRingTo(RaiserFullRingPositionsCollection, filterToLoad.RaiserFullRingPositionsCollection);
+                ResetFilterTableRingTo(ThreeBettor6maxPositionsCollection, filterToLoad.ThreeBettor6maxPositionsCollection);
+                ResetFilterTableRingTo(ThreeBettorFullRingPositionsCollection, filterToLoad.ThreeBettorFullRingPositionsCollection);
+                ResetFilterTableRingTo(FourBettor6maxPositionsCollection, filterToLoad.FourBettor6maxPositionsCollection);
+                ResetFilterTableRingTo(FourBettorFullRingPositionsCollection, filterToLoad.FourBettorFullRingPositionsCollection);
                 ResetFilterPlayersBetweenTo(filterToLoad.PlayerCountMinSelectedItem.Value, filterToLoad.PlayerCountMaxSelectedItem.Value);
             }
         }
@@ -344,24 +374,58 @@ namespace Model.Filters
         #endregion
 
         #region Reset Filter
+
         public void ResetTableRingCollection()
         {
-            ResetTableRingCollection(EnumTableType.Six);
-            ResetTableRingCollection(EnumTableType.Nine);
+            ResetCollection(Table6MaxCollection);
+            ResetCollection(TableFullRingCollection);
+            ResetCollection(Raiser6maxPositionsCollection);
+            ResetCollection(RaiserFullRingPositionsCollection);
+            ResetCollection(ThreeBettor6maxPositionsCollection);
+            ResetCollection(ThreeBettorFullRingPositionsCollection);
+            ResetCollection(FourBettor6maxPositionsCollection);
+            ResetCollection(FourBettorFullRingPositionsCollection);
         }
 
-        public void ResetTableRingCollection(EnumTableType tableType)
+        public void ResetTableRingCollection(EnumTableType tableType, PreflopActorPosition position)
         {
-            switch (tableType)
+            if (tableType == EnumTableType.Six && position == PreflopActorPosition.Hero)
             {
-                case EnumTableType.Six:
-                    Table6MaxCollection.ToList().ForEach(x => x.IsChecked = true);
-                    break;
-
-                case EnumTableType.Nine:
-                    TableFullRingCollection.ToList().ForEach(x => x.IsChecked = true);
-                    break;
+                ResetCollection(Table6MaxCollection);
             }
+            else if (tableType == EnumTableType.Nine && position == PreflopActorPosition.Hero)
+            {
+                ResetCollection(TableFullRingCollection);
+            }
+            else if (tableType == EnumTableType.Six && position == PreflopActorPosition.Raiser)
+            {
+                ResetCollection(Raiser6maxPositionsCollection);
+            }
+            else if (tableType == EnumTableType.Nine && position == PreflopActorPosition.Raiser)
+            {
+                ResetCollection(RaiserFullRingPositionsCollection);
+            }
+            else if (tableType == EnumTableType.Six && position == PreflopActorPosition.ThreeBettor)
+            {
+                ResetCollection(ThreeBettor6maxPositionsCollection);
+            }
+            else if (tableType == EnumTableType.Nine && position == PreflopActorPosition.ThreeBettor)
+            {
+                ResetCollection(ThreeBettorFullRingPositionsCollection);
+            }
+            else if (tableType == EnumTableType.Six && position == PreflopActorPosition.FourBettor)
+            {
+                ResetCollection(FourBettor6maxPositionsCollection);
+            }
+            else if (tableType == EnumTableType.Nine && position == PreflopActorPosition.FourBettor)
+            {
+                ResetCollection(FourBettorFullRingPositionsCollection);
+            }
+        }
+
+        private void ResetCollection(ObservableCollection<TableRingItem> tableRingItems)
+        {
+            tableRingItems?.ToList().ForEach(x => x.IsChecked = false);
         }
 
         public void ResetStakeLevelCollection()
@@ -388,6 +452,7 @@ namespace Model.Filters
         {
             StatCollection.ToList().ForEach(x => x.CurrentTriState = EnumTriState.Any);
         }
+
         #endregion
 
         #region Restore Defaults
@@ -460,32 +525,22 @@ namespace Model.Filters
             }
         }
 
-        private void ResetFilterTableRingTo(IEnumerable<TableRingItem> tableRingList, EnumTableType tableType)
+        private void ResetFilterTableRingTo(IEnumerable<TableRingItem> source, IEnumerable<TableRingItem> tableRingList)
         {
-            IList<TableRingItem> curCollection;
-
-            switch (tableType)
+            if (tableRingList == null)
             {
-                case EnumTableType.Six:
-                    curCollection = Table6MaxCollection;
-                    break;
-
-                case EnumTableType.Nine:
-                default:
-                    curCollection = TableFullRingCollection;
-                    break;
+                return;
             }
 
             foreach (var item in tableRingList)
             {
-                var cur = curCollection.FirstOrDefault(x => x.Seat == item.Seat);
+                var cur = source.FirstOrDefault(x => x.Seat == item.Seat);
 
                 if (cur != null)
                 {
                     cur.IsChecked = item.IsChecked;
                 }
             }
-
         }
 
         private void ResetFilterPlayersBetweenTo(int minSelected, int maxSelected)
@@ -536,24 +591,122 @@ namespace Model.Filters
 
         private Expression<Func<Playerstatistic, bool>> GetTableRingPredicate()
         {
-            var sixRingUnchecked = Table6MaxCollection.Where(x => !x.IsChecked);
-            var fullRingUnchecked = TableFullRingCollection.Where(x => !x.IsChecked);
+            var is6MaxTable = false;
+            var isFullRingTable = false;
 
             var sixRingPredicate = PredicateBuilder.True<Playerstatistic>();
             sixRingPredicate = sixRingPredicate.And(x => x.Numberofplayers <= 6);
-            foreach (var tableItem in sixRingUnchecked)
+
+            var table6MaxChecked = Table6MaxCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (table6MaxChecked.Length > 0 && table6MaxChecked.Length != Table6MaxCollection.Count)
             {
-                sixRingPredicate = sixRingPredicate.And(x => x.Position != tableItem.PlayerPosition);
+                sixRingPredicate = sixRingPredicate.And(x => table6MaxChecked.Contains(x.Position) &&
+                   x.Position != EnumPosition.STRDL);
+
+                is6MaxTable = true;
+            }
+
+            var raiser6maxPositionsChecked = Raiser6maxPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (raiser6maxPositionsChecked.Length > 0 && raiser6maxPositionsChecked.Length != Raiser6maxPositionsCollection.Count)
+            {
+                sixRingPredicate = sixRingPredicate.And(x => x.FirstRaiserPosition != EnumPosition.Undefined &&
+                   x.FirstRaiserPosition != EnumPosition.STRDL &&
+                   x.FirstRaiserPosition != x.Position &&
+                   raiser6maxPositionsChecked.Contains(x.FirstRaiserPosition));
+
+                is6MaxTable = true;
+            }
+
+            var threeBettor6maxPositionsChecked = ThreeBettor6maxPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (threeBettor6maxPositionsChecked.Length > 0 && threeBettor6maxPositionsChecked.Length != ThreeBettor6maxPositionsCollection.Count)
+            {
+                sixRingPredicate = sixRingPredicate.And(x => x.ThreeBettorPosition != EnumPosition.Undefined &&
+                   x.ThreeBettorPosition != EnumPosition.STRDL &&
+                   x.ThreeBettorPosition != x.Position &&
+                   threeBettor6maxPositionsChecked.Contains(x.ThreeBettorPosition));
+
+                is6MaxTable = true;
+            }
+
+            var fourBettor6maxPositionsChecked = FourBettor6maxPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (fourBettor6maxPositionsChecked.Length > 0 && fourBettor6maxPositionsChecked.Length != FourBettor6maxPositionsCollection.Count)
+            {
+                sixRingPredicate = sixRingPredicate.And(x => x.FourBettorPosition != EnumPosition.Undefined &&
+                   x.FourBettorPosition != EnumPosition.STRDL &&
+                   x.FourBettorPosition != x.Position &&
+                   fourBettor6maxPositionsChecked.Contains(x.FourBettorPosition));
+
+                is6MaxTable = true;
             }
 
             var fullRingPredicate = PredicateBuilder.True<Playerstatistic>();
+
             fullRingPredicate = fullRingPredicate.And(x => x.Numberofplayers > 6);
-            foreach (var tableItem in fullRingUnchecked)
+
+            var tableFullRingChecked = TableFullRingCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (tableFullRingChecked.Length > 0 && tableFullRingChecked.Length != TableFullRingCollection.Count)
             {
-                fullRingPredicate = fullRingPredicate.And(x => x.Position != tableItem.PlayerPosition);
+                fullRingPredicate = fullRingPredicate.And(x => tableFullRingChecked.Contains(x.Position) &&
+                   x.Position != EnumPosition.STRDL);
+
+                isFullRingTable = true;
             }
 
-            return sixRingPredicate.Or(fullRingPredicate);
+            var raiserFullRingPositionsChecked = RaiserFullRingPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (raiserFullRingPositionsChecked.Length > 0 && raiserFullRingPositionsChecked.Length != RaiserFullRingPositionsCollection.Count)
+            {
+                fullRingPredicate = fullRingPredicate.And(x => x.FirstRaiserPosition != EnumPosition.Undefined &&
+                       x.FirstRaiserPosition != EnumPosition.STRDL &&
+                       x.FirstRaiserPosition != x.Position &&
+                       raiserFullRingPositionsChecked.Contains(x.FirstRaiserPosition));
+
+                isFullRingTable = true;
+            }
+
+            var threeBettorFullRingPositionsChecked = ThreeBettorFullRingPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (threeBettorFullRingPositionsChecked.Length > 0 && threeBettorFullRingPositionsChecked.Length != ThreeBettorFullRingPositionsCollection.Count)
+            {
+                fullRingPredicate = fullRingPredicate.And(x => x.ThreeBettorPosition != EnumPosition.Undefined &&
+                       x.ThreeBettorPosition != EnumPosition.STRDL &&
+                       x.ThreeBettorPosition != x.Position &&
+                       threeBettorFullRingPositionsChecked.Contains(x.ThreeBettorPosition));
+
+                isFullRingTable = true;
+            }
+
+            var fourBettorFullRingPositionsChecked = FourBettorFullRingPositionsCollection.Where(x => x.IsChecked).Select(x => x.PlayerPosition).ToArray();
+
+            if (fourBettorFullRingPositionsChecked.Length > 0 && fourBettorFullRingPositionsChecked.Length != FourBettorFullRingPositionsCollection.Count)
+            {
+                fullRingPredicate = fullRingPredicate.And(x => x.FourBettorPosition != EnumPosition.Undefined &&
+                       x.FourBettorPosition != EnumPosition.STRDL &&
+                       x.FourBettorPosition != x.Position &&
+                       fourBettorFullRingPositionsChecked.Contains(x.FourBettorPosition));
+
+                isFullRingTable = true;
+            }
+
+            if (is6MaxTable && isFullRingTable)
+            {
+                return sixRingPredicate.Or(fullRingPredicate);
+            }
+            else if (is6MaxTable)
+            {
+                return sixRingPredicate;
+            }
+            else if (isFullRingTable)
+            {
+                return fullRingPredicate;
+            }
+
+            return PredicateBuilder.True<Playerstatistic>();
         }
 
         private Expression<Func<Playerstatistic, bool>> GetCurrencyPredicate()
@@ -635,6 +788,12 @@ namespace Model.Filters
         private ObservableCollection<StatItem> _statCollection;
         private ObservableCollection<TableRingItem> _table6maxCollection;
         private ObservableCollection<TableRingItem> _tableFullRingCollection;
+        private ObservableCollection<TableRingItem> _raiser6maxPositionsCollection;
+        private ObservableCollection<TableRingItem> _raiserFullRingPositionsCollection;
+        private ObservableCollection<TableRingItem> _3Bettor6maxPositionsCollection;
+        private ObservableCollection<TableRingItem> _3BettorFullRingPositionsCollection;
+        private ObservableCollection<TableRingItem> _4Bettor6maxPositionsCollection;
+        private ObservableCollection<TableRingItem> _4BettorFullRingPositionsCollection;
 
         public EnumFilterModelType Type
         {
@@ -782,7 +941,10 @@ namespace Model.Filters
 
         public ObservableCollection<TableRingItem> Table6MaxCollection
         {
-            get { return _table6maxCollection; }
+            get
+            {
+                return _table6maxCollection;
+            }
             set
             {
                 SetProperty(ref _table6maxCollection, value);
@@ -791,14 +953,157 @@ namespace Model.Filters
 
         public ObservableCollection<TableRingItem> TableFullRingCollection
         {
-            get { return _tableFullRingCollection; }
+            get
+            {
+                return _tableFullRingCollection;
+            }
             set
             {
                 SetProperty(ref _tableFullRingCollection, value);
             }
         }
 
+        public ObservableCollection<TableRingItem> Raiser6maxPositionsCollection
+        {
+            get
+            {
+                return _raiser6maxPositionsCollection;
+            }
+            set
+            {
+                SetProperty(ref _raiser6maxPositionsCollection, value);
+            }
+        }
+
+        public ObservableCollection<TableRingItem> RaiserFullRingPositionsCollection
+        {
+            get
+            {
+                return _raiserFullRingPositionsCollection;
+            }
+            set
+            {
+                SetProperty(ref _raiserFullRingPositionsCollection, value);
+            }
+        }
+
+        public ObservableCollection<TableRingItem> ThreeBettor6maxPositionsCollection
+        {
+            get
+            {
+                return _3Bettor6maxPositionsCollection;
+            }
+            set
+            {
+                SetProperty(ref _3Bettor6maxPositionsCollection, value);
+            }
+        }
+
+        public ObservableCollection<TableRingItem> ThreeBettorFullRingPositionsCollection
+        {
+            get
+            {
+                return _3BettorFullRingPositionsCollection;
+            }
+            set
+            {
+                SetProperty(ref _3BettorFullRingPositionsCollection, value);
+            }
+        }
+
+        public ObservableCollection<TableRingItem> FourBettor6maxPositionsCollection
+        {
+            get
+            {
+                return _4Bettor6maxPositionsCollection;
+            }
+            set
+            {
+                SetProperty(ref _4Bettor6maxPositionsCollection, value);
+            }
+        }
+
+        public ObservableCollection<TableRingItem> FourBettorFullRingPositionsCollection
+        {
+            get
+            {
+                return _4BettorFullRingPositionsCollection;
+            }
+            set
+            {
+                SetProperty(ref _4BettorFullRingPositionsCollection, value);
+            }
+        }
+
+        [XmlIgnore, JsonIgnore]
+        private PreflopActorPosition selectedPreflopActorPosition;
+
+        public PreflopActorPosition SelectedPreflopActorPosition
+        {
+            get
+            {
+                return selectedPreflopActorPosition;
+            }
+            set
+            {
+                SetProperty(ref selectedPreflopActorPosition, value);
+            }
+        }
+
+        [XmlIgnore, JsonIgnore]
+        public ObservableCollection<PreflopActorPosition> PreflopActorPositions { get; }
+
+        [XmlIgnore, JsonIgnore]
+        public ObservableCollection<TableRingItem> ActiveTable6MaxCollection
+        {
+            get
+            {
+                switch (SelectedPreflopActorPosition)
+                {
+                    case PreflopActorPosition.Hero:
+                        return _table6maxCollection;
+                    case PreflopActorPosition.Raiser:
+                        return _raiser6maxPositionsCollection;
+                    case PreflopActorPosition.ThreeBettor:
+                        return _3Bettor6maxPositionsCollection;
+                    case PreflopActorPosition.FourBettor:
+                        return _4Bettor6maxPositionsCollection;
+                }
+
+                return null;
+            }
+        }
+
+        [XmlIgnore, JsonIgnore]
+        public ObservableCollection<TableRingItem> ActiveTableFullRingCollection
+        {
+            get
+            {
+                switch (SelectedPreflopActorPosition)
+                {
+                    case PreflopActorPosition.Hero:
+                        return _tableFullRingCollection;
+                    case PreflopActorPosition.Raiser:
+                        return _raiserFullRingPositionsCollection;
+                    case PreflopActorPosition.ThreeBettor:
+                        return _3BettorFullRingPositionsCollection;
+                    case PreflopActorPosition.FourBettor:
+                        return _4BettorFullRingPositionsCollection;
+                }
+
+                return null;
+            }
+        }
+
         #endregion
+    }
+
+    public enum PreflopActorPosition
+    {
+        Hero,
+        Raiser,
+        ThreeBettor,
+        FourBettor
     }
 
     [Serializable]
@@ -932,11 +1237,19 @@ namespace Model.Filters
 
         public bool IsChecked
         {
-            get { return _isChecked; }
+            get
+            {
+                return _isChecked;
+            }
             set
             {
-                if (value == _isChecked) return;
+                if (value == _isChecked)
+                {
+                    return;
+                }
+
                 _isChecked = value;
+
                 RaisePropertyChanged();
 
                 if (OnIsChecked != null) OnIsChecked.Invoke();

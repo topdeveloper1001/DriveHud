@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="EnumPokerSitesExtension.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -11,7 +11,9 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using HandHistories.Parser.Utils.FastParsing;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
@@ -92,6 +94,13 @@ namespace HandHistories.Parser.Utils.Extensions
             {
                 try
                 {
+                    var hands = ParserUtils.SplitUpMultipleHands(handText);
+
+                    if (hands.Count() > 1)
+                    {
+                        handText = hands.First();
+                    }
+
                     var xElement = XElement.Parse(handText);
 
                     // iPoker starts with <session>
@@ -133,6 +142,37 @@ namespace HandHistories.Parser.Utils.Extensions
             }
 
             return true;
+        }
+
+        private static readonly HashSet<EnumPokerSites> sitesStoredInInternalFormat = new HashSet<EnumPokerSites>
+        {
+            EnumPokerSites.Adda52,
+            EnumPokerSites.GGN,
+            EnumPokerSites.PokerBaazi,
+            EnumPokerSites.PokerKing,
+            EnumPokerSites.PokerMaster,
+            EnumPokerSites.PPPoker
+        };
+
+        private static readonly HashSet<EnumPokerSites> sitesStoredInIPokerFormat = new HashSet<EnumPokerSites>
+        {
+            EnumPokerSites.BetOnline,
+            EnumPokerSites.Bodog,
+            EnumPokerSites.Bovada,
+            EnumPokerSites.Ignition,
+            EnumPokerSites.SpartanPoker,
+            EnumPokerSites.SportsBetting,
+            EnumPokerSites.TigerGaming
+        };
+
+        public static bool IsStoredInInternalFormat(this EnumPokerSites site)
+        {
+            return sitesStoredInInternalFormat.Contains(site);
+        }
+
+        public static bool IsStoredInIPokerFormat(this EnumPokerSites site)
+        {
+            return sitesStoredInIPokerFormat.Contains(site);
         }
     }
 }
