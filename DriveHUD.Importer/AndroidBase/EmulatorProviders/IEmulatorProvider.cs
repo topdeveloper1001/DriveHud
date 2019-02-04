@@ -41,5 +41,11 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
         /// </summary>
         /// <returns>Path to adb service</returns>
         string GetAdbLocation();
+
+        /// <summary>
+        /// Gets the number of running instances
+        /// </summary>
+        /// <returns>Number of running instances</returns>
+        int GetNumberOfRunningInstances();
     }
 }

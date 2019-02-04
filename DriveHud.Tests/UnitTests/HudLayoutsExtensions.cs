@@ -11,7 +11,13 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Common.Reflection;
+using Model.Data;
 using Model.Enums;
+using Model.Stats;
+using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DriveHud.Tests.UnitTests
@@ -25,33 +31,37 @@ namespace DriveHud.Tests.UnitTests
                 return;
             }
 
+            if (hudElement.StatInfoCollection == null)
+            {
+                hudElement.StatInfoCollection = new List<StatInfo>();
+            }
+
             var statInfo = hudElement.StatInfoCollection.FirstOrDefault(x => x.Stat == stat);
 
             if (statInfo == null)
             {
-                return;
+                statInfo = new StatInfo
+                {
+                    Stat = stat
+                };
+
+                hudElement.StatInfoCollection.Add(statInfo);
             }
 
             statInfo.Caption = string.Format(statInfo.Format, value);
             statInfo.CurrentValue = value;
         }
 
-        public static void SetStatValue(this HudElementViewModel hudElement, Stat stat, string propertyName, decimal value)
+        public static decimal GetStatValue(this Indicators indicators, Stat stat)
         {
-            if (hudElement == null)
-            {
-                return;
-            }
+            var propertyName = StatsProvider.GetStatProperyName(stat);
 
-            var statInfo = hudElement.StatInfoCollection.FirstOrDefault(x => x.Stat == stat);
+            Assert.IsNotNull(propertyName, $"Property for {stat} must be defined");
+            Assert.True(indicators.HasProperty(propertyName), $"Indicators must have property {propertyName}");
 
-            if (statInfo == null)
-            {
-                return;
-            }
+            var propValue = ReflectionHelper.GetPropertyValue(indicators, propertyName);
 
-            statInfo.Caption = string.Format(statInfo.Format, value);
-            statInfo.CurrentValue = value;        
+            return Convert.ToDecimal(propValue);
         }
     }
 }

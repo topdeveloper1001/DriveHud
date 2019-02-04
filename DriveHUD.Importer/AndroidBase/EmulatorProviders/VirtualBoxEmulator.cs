@@ -141,5 +141,20 @@ namespace DriveHUD.Importers.AndroidBase.EmulatorProviders
         }
 
         public abstract string GetAdbLocation();
+
+        public virtual int GetNumberOfRunningInstances()
+        {
+            try
+            {
+                return Process.GetProcesses().
+                           Count(x => x.ProcessName.Equals(ProcessName, StringComparison.OrdinalIgnoreCase));
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(Logger, $"Failed to get number of running instances of {EmulatorName} emulator.", e);
+            }
+
+            return 0;
+        }
     }
 }

@@ -1033,6 +1033,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check/fold flop when 3-betting OOP.
+        /// </summary>
+        internal static string Reports_Column_CheckFoldFlop3BetOop {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFoldFlop3BetOop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check/fold flop when PFR OOP.
+        /// </summary>
+        internal static string Reports_Column_CheckFoldFlopPfrOop {
+            get {
+                return ResourceManager.GetString("Reports_Column_CheckFoldFlopPfrOop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check Straddle%.
         /// </summary>
         internal static string Reports_Column_CheckInStraddle {

@@ -1419,4 +1419,10 @@
   <data name="Reports_Column_Call4Bet" xml:space="preserve">
     <value>Call 4-Bet%</value>
   </data>
+  <data name="Reports_Column_CheckFoldFlop3BetOop" xml:space="preserve">
+    <value>Check/fold flop when 3-betting OOP</value>
+  </data>
+  <data name="Reports_Column_CheckFoldFlopPfrOop" xml:space="preserve">
+    <value>Check/fold flop when PFR OOP</value>
+  </data>
 </root>

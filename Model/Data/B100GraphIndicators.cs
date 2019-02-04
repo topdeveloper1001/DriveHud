@@ -11,18 +11,49 @@
 //----------------------------------------------------------------------
 
 using System;
+using DriveHUD.Entities;
 
 namespace Model.Data
 {
     public class B100GraphIndicators : LightIndicators
     {
+        public B100GraphIndicators(int totalHand = 0)
+        {
+            if (totalHand < 100)
+            {
+                approximationRange = 0;
+            }
+            else if (totalHand < 1000)
+            {
+                approximationRange = 100;
+            }
+            else if (totalHand < 10000)
+            {
+                approximationRange = 1000;
+            }
+            else
+            {
+                approximationRange = 5000;
+            }
+        }
+
+        private int approximationRange;
+
         public override decimal BB
         {
             get
             {
-                var totalhands = (statisticCount < 100 ? 100 : statisticCount) / 100m;
+                var totalhands = (statisticCount < approximationRange ? approximationRange : statisticCount) / 100m;
                 return Math.Round(GetDivisionResult(netWonByBigBlind, totalhands), 2);
             }
+        }
+
+        public override decimal TotalHands => statisticCount;
+
+        public override void AddStatistic(Playerstatistic statistic)
+        {
+            statisticCount++;
+            netWonByBigBlind += GetDivisionResult(statistic.NetWon, statistic.BigBlind);
         }
     }
 }

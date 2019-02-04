@@ -50,7 +50,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
-        public Action<ChartSeriesItem, ChartSeriesItem, Playerstatistic, int> UpdateChartSeriesItem
+        public Action<ChartSeriesItem, ChartSeriesItem, Playerstatistic, int, int> UpdateChartSeriesItem
         {
             get;
             set;

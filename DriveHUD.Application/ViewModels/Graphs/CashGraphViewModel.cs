@@ -195,8 +195,8 @@ namespace DriveHUD.Application.ViewModels.Graphs
                     {
                         previousChartSeriesItem = chartSeriesItem = chartSeriesItems[chartSerie].LastOrDefault();
                     }
-
-                    chartSerie.UpdateChartSeriesItem(chartSeriesItem, previousChartSeriesItem, stat, statIndex);
+                    
+                    chartSerie.UpdateChartSeriesItem(chartSeriesItem, previousChartSeriesItem, stat, statIndex, stats.Length);
                 }
             }
 

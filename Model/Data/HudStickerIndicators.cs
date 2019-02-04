@@ -28,7 +28,9 @@ namespace Model.Data
         public override void AddStatistic(Playerstatistic statistic)
         {
             Source += statistic;
-            UpdatePositionalStats(statistic);
+
+            var unopened = statistic.IsUnopened ? 1 : 0;
+            positionUnoppened?.Add(statistic.Position, unopened);
 
             if (gameNumberMax < statistic.GameNumber)
             {
@@ -50,6 +52,12 @@ namespace Model.Data
             {
                 sessionEndTime = statistic.Time;
             }
+
+            didDoubleBarrel += statistic.DidDoubleBarrel;
+            couldDoubleBarrel += statistic.CouldDoubleBarrel;
+
+            faced3Bet += statistic.FacedthreebetpreflopVirtual;
+            foldedTo3Bet += statistic.FoldedtothreebetpreflopVirtual;
         }
     }
 }

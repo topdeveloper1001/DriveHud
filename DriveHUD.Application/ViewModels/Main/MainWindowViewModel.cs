@@ -552,7 +552,9 @@ namespace DriveHUD.Application.ViewModels
                     LayoutName = activeLayout.Name,
                     AvailableLayouts = new List<string>(),
                     PreloadMode = true,
-                    PreloadText = e.LoadingText
+                    PreloadText = e.LoadingText,
+                    IsSpecialMode = gameInfo.PokerSite == EnumPokerSites.Adda52 ||
+                        ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.HudSpecialMode
                 };
 
                 byte[] serialized;
@@ -646,9 +648,9 @@ namespace DriveHUD.Application.ViewModels
 
                 if (gameInfo.PokerSite != EnumPokerSites.PokerStars && activeLayout != null)
                 {
-                    var stickers = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
+                    var stickerFilters = activeLayout.HudBumperStickerTypes?.ToDictionary(x => x.Name, x => x.FilterPredicate.Compile());
 
-                    if (stickers.Count > 0)
+                    if (stickerFilters != null && stickerFilters.Count > 0)
                     {
                         var playersStickersCacheData = (from player in players
                                                         let playerItem = new PlayerCollectionItem
@@ -665,7 +667,7 @@ namespace DriveHUD.Application.ViewModels
                                                             Player = playerItem,
                                                             Layout = activeLayout.Name,
                                                             Statistic = lastHandStatistic,
-                                                            StickerFilters = stickers,
+                                                            StickerFilters = stickerFilters,
                                                             IsHero = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerItem)?.IsHero ?? false
                                                         }).ToArray();
 
@@ -699,7 +701,9 @@ namespace DriveHUD.Application.ViewModels
                     GameNumber = gameInfo.GameNumber,
                     GameType = gameInfo.EnumGameType,
                     LayoutName = activeLayout.Name,
-                    AvailableLayouts = availableLayouts
+                    AvailableLayouts = availableLayouts,
+                    IsSpecialMode = gameInfo.PokerSite == EnumPokerSites.Adda52 ||
+                        ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.HudSpecialMode
                 };
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
