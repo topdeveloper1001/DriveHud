@@ -1,208 +1,337 @@
-﻿<UserControl x:Class="DriveHUD.Application.Views.Alias.AliasAddEditView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
-             xmlns:local="clr-namespace:DriveHUD.Application.Views.Alias"
-             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
-             xmlns:model="clr-namespace:Model;assembly=Model"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             mc:Ignorable="d" 
-             Height="400"
-             Width="580"
-             d:DesignHeight="300" d:DesignWidth="300">
-    <UserControl.Resources>
-        <SolidColorBrush x:Key="CloseButtonBackground" Color="#191a1e" />
+﻿<UserControl
+    x:Class="DriveHUD.Application.Views.Alias.AliasAddEditView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:local="clr-namespace:DriveHUD.Application.Views.Alias"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Height="400"
+    Width="580">
 
-        <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource {x:Type TextBlock}}">
-            <Setter Property="Foreground" Value="White" />
-            <Setter Property="Margin" Value="10 5"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
+    <UserControl.Resources>
+        <SolidColorBrush
+            x:Key="CloseButtonBackground"
+            Color="#191a1e" />
+
+        <Style
+            TargetType="{x:Type TextBlock}"
+            BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter
+                Property="Foreground"
+                Value="White" />
+            <Setter
+                Property="Margin"
+                Value="10 5" />
+            <Setter
+                Property="VerticalAlignment"
+                Value="Center" />
         </Style>
 
-        <Style x:Key="ButtonInList" TargetType="{x:Type Button}">
-            <Setter Property="MinHeight" Value="23" />
-            <Setter Property="SnapsToDevicePixels" Value="true" />
-            <Setter Property="Background" Value="{StaticResource BackgroundBrush3}" />
-            <Setter Property="OverridesDefaultStyle" Value="true" />
-            <Setter Property="Foreground" Value="White" />
-            <Setter Property="Margin" Value="5" />
-            <Setter Property="Template">
+        <Style
+            x:Key="ButtonInList"
+            TargetType="{x:Type Button}">
+            <Setter
+                Property="MinHeight"
+                Value="23" />
+            <Setter
+                Property="SnapsToDevicePixels"
+                Value="true" />
+            <Setter
+                Property="Background"
+                Value="{StaticResource BackgroundBrush3}" />
+            <Setter
+                Property="OverridesDefaultStyle"
+                Value="true" />
+            <Setter
+                Property="Foreground"
+                Value="White" />
+            <Setter
+                Property="Margin"
+                Value="5" />
+            <Setter
+                Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border x:Name="Border"
-                                TextBlock.Foreground="{TemplateBinding Foreground}"
-                                Padding="{TemplateBinding Padding}"
-                                CornerRadius="2"
-                                BorderThickness="0"
-                                Background="{TemplateBinding Background}">
+                    <ControlTemplate
+                        TargetType="Button">
+                        <Border
+                            x:Name="Border"
+                            TextBlock.Foreground="{TemplateBinding Foreground}"
+                            Padding="{TemplateBinding Padding}"
+                            CornerRadius="2"
+                            BorderThickness="0"
+                            Background="{TemplateBinding Background}">
                             <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup
+                                    x:Name="CommonStates">
                                     <VisualStateGroup.Transitions>
-                                        <VisualTransition GeneratedDuration="0:0:0.5" />
-                                        <VisualTransition GeneratedDuration="0" To="Pressed" />
+                                        <VisualTransition
+                                            GeneratedDuration="0:0:0.5" />
+                                        <VisualTransition
+                                            GeneratedDuration="0"
+                                            To="Pressed" />
                                     </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="Normal" />
-                                    <VisualState x:Name="MouseOver">
+                                    <VisualState
+                                        x:Name="Normal" />
+                                    <VisualState
+                                        x:Name="MouseOver">
                                         <Storyboard>
-                                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
-                                                                          Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
-                                                <EasingColorKeyFrame KeyTime="0"
-                                                                     Value="#4b6cc2" />
+                                            <ColorAnimationUsingKeyFrames
+                                                Storyboard.TargetName="Border"
+                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                                <EasingColorKeyFrame
+                                                    KeyTime="0"
+                                                    Value="#4b6cc2" />
                                             </ColorAnimationUsingKeyFrames>
                                         </Storyboard>
                                     </VisualState>
-                                    <VisualState x:Name="Pressed">
+                                    <VisualState
+                                        x:Name="Pressed">
                                         <Storyboard>
-                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                                          Storyboard.TargetName="Border">
-                                                <EasingColorKeyFrame KeyTime="0" 
-                                                                     Value="#2c437f" />
+                                            <ColorAnimationUsingKeyFrames
+                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                Storyboard.TargetName="Border">
+                                                <EasingColorKeyFrame
+                                                    KeyTime="0"
+                                                    Value="#2c437f" />
                                             </ColorAnimationUsingKeyFrames>
                                         </Storyboard>
                                     </VisualState>
-                                    <VisualState x:Name="Disabled">
+                                    <VisualState
+                                        x:Name="Disabled">
                                         <Storyboard>
-                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                                          Storyboard.TargetName="Border">
-                                                <EasingColorKeyFrame KeyTime="0"
-                                                                     Value="#FFAEA5A5" />
+                                            <ColorAnimationUsingKeyFrames
+                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                Storyboard.TargetName="Border">
+                                                <EasingColorKeyFrame
+                                                    KeyTime="0"
+                                                    Value="#FFAEA5A5" />
                                             </ColorAnimationUsingKeyFrames>
                                         </Storyboard>
                                     </VisualState>
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
-                            <ContentPresenter Margin="2"
-                                              HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"
-                                              RecognizesAccessKey="True" />
+                            <ContentPresenter
+                                Margin="2"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                RecognizesAccessKey="True" />
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
 
-        <Style x:Key="CommandButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
-            <Setter Property="Margin" Value="10" />
-            <Setter Property="Width" Value="85" />
-            <Setter Property="Height" Value="30" />
+        <Style
+            x:Key="CommandButton"
+            TargetType="{x:Type Button}"
+            BasedOn="{StaticResource {x:Type Button}}">
+            <Setter
+                Property="Margin"
+                Value="10" />
+            <Setter
+                Property="Width"
+                Value="85" />
+            <Setter
+                Property="Height"
+                Value="30" />
         </Style>
 
-        <Style x:Key="CommandOkButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
-            <Setter Property="Margin" Value="10" />
-            <Setter Property="Width" Value="85" />
-            <Setter Property="Height" Value="30" />
-            <Setter Property="IsEnabled" Value="True"/>
+        <Style
+            x:Key="CommandOkButton"
+            TargetType="{x:Type Button}"
+            BasedOn="{StaticResource {x:Type Button}}">
+            <Setter
+                Property="Margin"
+                Value="10" />
+            <Setter
+                Property="Width"
+                Value="85" />
+            <Setter
+                Property="Height"
+                Value="30" />
+            <Setter
+                Property="IsEnabled"
+                Value="True" />
             <Style.Triggers>
-                <DataTrigger Binding="{Binding ElementName=AliasName, Path=Text}" Value="">
-                    <Setter Property="IsEnabled" Value="False"/>
+                <DataTrigger
+                    Binding="{Binding ElementName=AliasName, Path=Text}"
+                    Value="">
+                    <Setter
+                        Property="IsEnabled"
+                        Value="False" />
                 </DataTrigger>
             </Style.Triggers>
         </Style>
 
-        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
-            <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
-            <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="Margin" Value="15 0 0 0" />
-            <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="VerticalContentAlignment" Value="Center" />
-            <Setter Property="HorizontalAlignment" Value="Stretch" />
-            <Setter Property="Height" Value="28" />
-            <Setter Property="MaxLength" Value="70" />
-            <Setter Property="Foreground" Value="White" />
+        <Style
+            TargetType="{x:Type TextBox}"
+            BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter
+                Property="Background"
+                Value="{StaticResource BackgroundBrush}" />
+            <Setter
+                Property="BorderThickness"
+                Value="0" />
+            <Setter
+                Property="Margin"
+                Value="15 0 0 0" />
+            <Setter
+                Property="VerticalAlignment"
+                Value="Center" />
+            <Setter
+                Property="VerticalContentAlignment"
+                Value="Center" />
+            <Setter
+                Property="HorizontalAlignment"
+                Value="Stretch" />
+            <Setter
+                Property="Height"
+                Value="28" />
+            <Setter
+                Property="MaxLength"
+                Value="70" />
+            <Setter
+                Property="Foreground"
+                Value="White" />
         </Style>
 
-        <ControlTemplate x:Key="SearchTextBoxTemplate" TargetType="{x:Type TextBox}">
-            <Border Name="Border" 
-                    CornerRadius="2"
-                    Background="{TemplateBinding Background}"
-                    BorderThickness="{TemplateBinding BorderThickness}" 
-                    Padding="2">
+        <ControlTemplate
+            x:Key="SearchTextBoxTemplate"
+            TargetType="{x:Type TextBox}">
+            <Border
+                Name="Border"
+                CornerRadius="2"
+                Background="{TemplateBinding Background}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Padding="2">
                 <Grid>
-                    <TextBlock Text="Search"
-                               Style="{StaticResource Title_H2}"
-                               Name="Hint"
-                               Margin="5 0 0 0"
-                               Visibility="Collapsed"
-                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-                    <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                    <TextBlock
+                        Text="{ResX Key=Common_AliasAddEditView_Search}"
+                        Style="{StaticResource Title_H2}"
+                        Name="Hint"
+                        Margin="5 0 0 0"
+                        Visibility="Collapsed"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" />
+                    <ScrollViewer
+                        Margin="0"
+                        x:Name="PART_ContentHost" />
                 </Grid>
             </Border>
             <ControlTemplate.Triggers>
-                <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
-                    <Setter TargetName="Hint" Property="Visibility" Value="Visible" />
+                <Trigger
+                    Property="Text"
+                    Value="{x:Static sys:String.Empty}">
+                    <Setter
+                        TargetName="Hint"
+                        Property="Visibility"
+                        Value="Visible" />
                 </Trigger>
-                <Trigger Property="IsKeyboardFocused" Value="True">
-                    <Setter TargetName="Hint" Property="Visibility" Value="Collapsed" />
+                <Trigger
+                    Property="IsKeyboardFocused"
+                    Value="True">
+                    <Setter
+                        TargetName="Hint"
+                        Property="Visibility"
+                        Value="Collapsed" />
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
 
-        <Style TargetType="{x:Type telerik:RadListBox}">
-            <Setter Property="SelectionMode" Value="Multiple" />
-            <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="Foreground" Value="White" />
-            <Setter Property="Background" Value="Transparent" />
-            <Setter Property="Margin" Value="10 5"/>
-            <Setter Property="DragDropBehavior">
+        <Style
+            TargetType="{x:Type telerik:RadListBox}">
+            <Setter
+                Property="SelectionMode"
+                Value="Multiple" />
+            <Setter
+                Property="BorderThickness"
+                Value="0" />
+            <Setter
+                Property="Foreground"
+                Value="White" />
+            <Setter
+                Property="Background"
+                Value="Transparent" />
+            <Setter
+                Property="Margin"
+                Value="10 5" />
+            <Setter
+                Property="DragDropBehavior">
                 <Setter.Value>
                     <telerik:ListBoxDragDropBehavior />
                 </Setter.Value>
             </Setter>
         </Style>
 
-        <Style x:Key="ListViewItemStyle"
-               TargetType="{x:Type telerik:RadListBoxItem}">
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Foreground" Value="#7d7e82" />
-            <Setter Property="Template">
+        <Style
+            x:Key="ListViewItemStyle"
+            TargetType="{x:Type telerik:RadListBoxItem}">
+            <Setter
+                Property="VerticalContentAlignment"
+                Value="Center" />
+            <Setter
+                Property="Foreground"
+                Value="#7d7e82" />
+            <Setter
+                Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type telerik:RadListBoxItem}">
-                        <Border x:Name="MainBody"
-                                Background="#202125"
-                                CornerRadius="2"
-                                Height="35"
-                                Margin="0,0,8,8">
+                    <ControlTemplate
+                        TargetType="{x:Type telerik:RadListBoxItem}">
+                        <Border
+                            x:Name="MainBody"
+                            Background="#202125"
+                            CornerRadius="2"
+                            Height="35"
+                            Margin="0,0,8,8">
                             <DockPanel>
-                                <ContentPresenter x:Name="MainContent"
-                                                  DockPanel.Dock="Left"
-                                                  TextBlock.Foreground="#7d7e82"
-                                                  Content="{Binding DecodedName}"
-                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                  Margin="10,0,0,0" />
+                                <ContentPresenter
+                                    x:Name="MainContent"
+                                    DockPanel.Dock="Left"
+                                    TextBlock.Foreground="#7d7e82"
+                                    Content="{Binding DecodedName}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    Margin="10,0,0,0" />
 
-                                <TextBlock HorizontalAlignment="Right"
-                                           DockPanel.Dock="Right"
-                                           FontSize="10"
-                                           Margin="0,0,10,0"
-                                           Foreground="{TemplateBinding Foreground}"
-                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                           Text="{Binding PokerSite}"/>
+                                <TextBlock
+                                    HorizontalAlignment="Right"
+                                    DockPanel.Dock="Right"
+                                    FontSize="10"
+                                    Margin="0,0,10,0"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    Text="{Binding PokerSite}" />
                             </DockPanel>
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter TargetName="MainBody"
-                                        Property="Background"
-                                        Value="#313035" />
-                                <Setter TargetName="MainContent"
-                                        Property="TextBlock.Foreground"
-                                        Value="#828387" />
-                                <Setter Property="TextBlock.Foreground"
-                                        Value="#828387"/>
+                            <Trigger
+                                Property="IsMouseOver"
+                                Value="true">
+                                <Setter
+                                    TargetName="MainBody"
+                                    Property="Background"
+                                    Value="#313035" />
+                                <Setter
+                                    TargetName="MainContent"
+                                    Property="TextBlock.Foreground"
+                                    Value="#828387" />
+                                <Setter
+                                    Property="TextBlock.Foreground"
+                                    Value="#828387" />
                             </Trigger>
-                            <Trigger Property="IsSelected"
-                                     Value="true">
-                                <Setter TargetName="MainBody"
-                                        Property="Background"
-                                        Value="#34529b" />
-                                <Setter TargetName="MainContent"
-                                        Property="TextBlock.Foreground"
-                                        Value="#ffffff" />
-                                <Setter Property="TextBlock.Foreground"
-                                        Value="#ffffff"/>
+                            <Trigger
+                                Property="IsSelected"
+                                Value="true">
+                                <Setter
+                                    TargetName="MainBody"
+                                    Property="Background"
+                                    Value="#34529b" />
+                                <Setter
+                                    TargetName="MainContent"
+                                    Property="TextBlock.Foreground"
+                                    Value="#ffffff" />
+                                <Setter
+                                    Property="TextBlock.Foreground"
+                                    Value="#ffffff" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -211,80 +340,134 @@
         </Style>
     </UserControl.Resources>
 
-    <Border BorderBrush="{StaticResource BackgroundBrush1}" Padding="15 15 15 0" BorderThickness="1"
-            Background="#1F2124">
-        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+    <Border
+        BorderBrush="{StaticResource BackgroundBrush1}"
+        Padding="15 15 15 0"
+        BorderThickness="1"
+        Background="#1F2124">
+        <Grid
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition Width="40"></ColumnDefinition>
+                <ColumnDefinition
+                    Width="40"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
+                <RowDefinition
+                    Height="30"></RowDefinition>
+                <RowDefinition
+                    Height="*"></RowDefinition>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <DockPanel Grid.ColumnSpan="3">
-                <TextBlock DockPanel.Dock="Left" Text="Alias:" />
-                <TextBox Name="AliasName" Text="{Binding Path=AliasName}" />
+            <DockPanel
+                Grid.ColumnSpan="3">
+                <TextBlock
+                    DockPanel.Dock="Left"
+                    Text="{ResX Key=Common_AliasAddEditView_Alias}" />
+                <TextBox
+                    Name="AliasName"
+                    Text="{Binding Path=AliasName}" />
             </DockPanel>
 
-            <TextBlock Grid.Row="1" Text="Players" />
+            <TextBlock
+                Grid.Row="1"
+                Text="{ResX Key=Common_AliasAddEditView_Players}" />
 
-            <TextBlock Grid.Row="1" Grid.Column="2" Text="Selected players" />
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="2"
+                Text="{ResX Key=Common_AliasAddEditView_SelectedPlayers}" />
 
-            <Border Grid.Row="2" Background="{StaticResource BackgroundBrush1}" BorderThickness="0">
+            <Border
+                Grid.Row="2"
+                Background="{StaticResource BackgroundBrush1}"
+                BorderThickness="0">
                 <DockPanel>
-                    <TextBox Grid.Row="2" Text="{Binding AllSearchFilter, UpdateSourceTrigger=PropertyChanged}"
-                             Template="{StaticResource SearchTextBoxTemplate}"
-                             DockPanel.Dock="Top"
-                             Margin="10 5"/>
-                    <telerik:RadListBox ItemsSource="{Binding AllPlayersSorted.View}"
-                                        SelectedIndex="{Binding AllPlayersSelectdIndex, Mode=TwoWay}"
-                                        ItemContainerStyle="{StaticResource ListViewItemStyle}"
-                                        Grid.Row="3" Grid.Column="0"
-                                        Name="AllPlayersList" />
+                    <TextBox
+                        Grid.Row="2"
+                        Text="{Binding AllSearchFilter, UpdateSourceTrigger=PropertyChanged}"
+                        Template="{StaticResource SearchTextBoxTemplate}"
+                        DockPanel.Dock="Top"
+                        Margin="10 5" />
+                    <telerik:RadListBox
+                        ItemsSource="{Binding AllPlayersSorted.View}"
+                        SelectedIndex="{Binding AllPlayersSelectdIndex, Mode=TwoWay}"
+                        ItemContainerStyle="{StaticResource ListViewItemStyle}"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Name="AllPlayersList" />
                 </DockPanel>
             </Border>
 
-            <StackPanel Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">
-                <Button Style="{StaticResource ButtonInList}" 
-                        Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
-                        CommandParameter="{Binding ElementName=AllPlayersList, Path=(SelectedItems)}">
+            <StackPanel
+                Grid.Column="1"
+                Grid.Row="2"
+                VerticalAlignment="Center">
+                <Button
+                    Style="{StaticResource ButtonInList}"
+                    Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
+                    CommandParameter="{Binding ElementName=AllPlayersList, Path=SelectedItems}">
                     <Button.Content>
-                        <Path Data="M 0,5 L 10,5 M 5,0 L 5,10" Stroke="White" StrokeThickness="2" />
+                        <Path
+                            Data="M 0,5 L 10,5 M 5,0 L 5,10"
+                            Stroke="White"
+                            StrokeThickness="2" />
                     </Button.Content>
                 </Button>
-                <Button Style="{StaticResource ButtonInList}" 
-                        Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
-                        CommandParameter="{Binding ElementName=SelectedList, Path=(SelectedItems)}">
+                <Button
+                    Style="{StaticResource ButtonInList}"
+                    Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:AliasAddEditView}}}"
+                    CommandParameter="{Binding ElementName=SelectedList, Path=SelectedItems}">
                     <Button.Content>
-                        <Path Data="M 0,5 L 10,5" Stroke="White" StrokeThickness="2" />
+                        <Path
+                            Data="M 0,5 L 10,5"
+                            Stroke="White"
+                            StrokeThickness="2" />
                     </Button.Content>
                 </Button>
             </StackPanel>
 
-            <Border Grid.Row="2" Grid.Column="2" Background="{StaticResource BackgroundBrush1}" BorderThickness="0">
+            <Border
+                Grid.Row="2"
+                Grid.Column="2"
+                Background="{StaticResource BackgroundBrush1}"
+                BorderThickness="0">
                 <DockPanel>
-                    <TextBox Text="{Binding SelectedSearchFilter, UpdateSourceTrigger=PropertyChanged}" 
-                             Template="{StaticResource SearchTextBoxTemplate}"
-                             DockPanel.Dock="Top"
-                             Margin="10 5"/>
-                    <telerik:RadListBox ItemsSource="{Binding SelectedPlayersSorted.View}"
-                                        SelectedIndex="{Binding SelectedPlayersSelectdIndex, Mode=TwoWay}"
-                                        ItemContainerStyle="{StaticResource ListViewItemStyle}"
-                                        Grid.Row="3" Grid.Column="2"
-                                        Name="SelectedList" />
+                    <TextBox
+                        Text="{Binding SelectedSearchFilter, UpdateSourceTrigger=PropertyChanged}"
+                        Template="{StaticResource SearchTextBoxTemplate}"
+                        DockPanel.Dock="Top"
+                        Margin="10 5" />
+                    <telerik:RadListBox
+                        ItemsSource="{Binding SelectedPlayersSorted.View}"
+                        SelectedIndex="{Binding SelectedPlayersSelectdIndex, Mode=TwoWay}"
+                        ItemContainerStyle="{StaticResource ListViewItemStyle}"
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        Name="SelectedList" />
                 </DockPanel>
             </Border>
 
-            <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Command="{Binding OKCommand}" Content="{ResX Key=Common_OK}"
-                        Style="{StaticResource CommandOkButton}" />
-                <Button Command="{Binding CancelCommand}" Content="{ResX Key=Common_Cancel}" 
-                        Style="{StaticResource CommandButton}" />
+            <StackPanel
+                Grid.Row="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right">
+                <Button
+                    Command="{Binding OKCommand}"
+                    Content="{ResX Key=Common_OK}"
+                    Style="{StaticResource CommandOkButton}" />
+                <Button
+                    Command="{Binding CancelCommand}"
+                    Content="{ResX Key=Common_Cancel}"
+                    Style="{StaticResource CommandButton}" />
             </StackPanel>
         </Grid>
     </Border>

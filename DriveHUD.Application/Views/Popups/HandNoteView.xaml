@@ -1,62 +1,63 @@
-﻿<Window x:Class="DriveHUD.Application.ViewModels.HandNoteView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Hand Note"
-        FontFamily="./Fonts/#Open Sans"
-        Height="195"
-        Width="350"
-        Icon ="/images/drivehud.ico"
-        ResizeMode="NoResize"
-        Foreground="#7D7F84"
-        Background="#1F2124"
-        WindowStartupLocation="CenterScreen">
+﻿<Window
+    x:Class="DriveHUD.Application.ViewModels.HandNoteView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="{ResX Key=Common_HandNoteView_Title}"
+    FontFamily="./Fonts/#Open Sans"
+    Height="195"
+    Width="350"
+    Icon="/images/drivehud.ico"
+    ResizeMode="NoResize"
+    Foreground="#7D7F84"
+    Background="#1F2124"
+    WindowStartupLocation="CenterScreen">
+    
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition
+                Width="Auto" />
+            <ColumnDefinition
+                Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-           <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="Auto" />
         </Grid.RowDefinitions>
 
-
         <!--SN-->
-        <TextBlock Grid.Row="0" Grid.Column="0"  HorizontalAlignment="Left" Text="Note Text:" Margin="5" />
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalAlignment="Left"
+            Text="{ResX Key=Common_HandNoteView_NoteText}"
+            Margin="5" />
 
-        <TextBox  
-            Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"
+        <TextBox
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="5"
             MaxLength="1000"
             TextWrapping="Wrap"
             AcceptsReturn="True"
-            BorderThickness="1" 
+            BorderThickness="1"
             VerticalContentAlignment="Stretch"
             Text="{Binding Path=Note, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
             HorizontalContentAlignment="Stretch" />
 
-        <!--<TextBox Style="{StaticResource FontTextBoxStyle}"
-              HorizontalAlignment="Left"
-              MaxLength="1000"
-              TextWrapping="Wrap"
-              AcceptsReturn="True"
-              Width="{Binding Path=MaxWindowWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type telerik:RadWindow}}}"
-              Grid.Row="1" BorderThickness="0" Height="150"
-              Margin="10,10,0,0"
-              IsReadOnly="True" Padding="5" Text="{Binding Path=Job.COMMENTS}"/>-->
+        <Button
+            Command="{Binding SaveCommand}"
+            Margin="5"
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Style="{StaticResource ButtonStyle}"
+            Content="{ResX Key=Common_HandNoteView_Save}"
+            HorizontalAlignment="Right" />
 
-        <Button Command="{Binding SaveCommand}" Margin="5" Grid.Row="2"  Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ButtonStyle}"  Content="Save" HorizontalAlignment="Right"/>
-        <!--<StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Orientation="Horizontal" HorizontalAlignment="Right">
-      <telerik:RadButton Width="{StaticResource ButtonHalfDefaultWidth}" Height="{StaticResource ButtonDefaultHeight}"
-          Command="{Binding OkCommand}"
-          Content="Ok"
-          IsDefault="True"
-          Margin="0,10,0,10"
-          HorizontalAlignment="Right" />
-
-      <telerik:RadButton Width="{StaticResource ButtonHalfDefaultWidth}" Height="{StaticResource ButtonDefaultHeight}"
-                         Command="{Binding CancelCommand}"
-                         Content="Cancel" Margin="10" />
-    </StackPanel>-->
     </Grid>
 </Window>

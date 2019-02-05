@@ -69,13 +69,13 @@
                     Width="120"
                     Command="{Binding LaunchCommand}"
                     Visibility="{Binding IsCanLaunch, Converter={cnv:BoolToVisibilityConverter}}"
-                    Content="Launch" />
+                    Content="{x:Static res:Resources.Common_FinalView_Launch}" />
                 <Button
                     Margin="5"
                     Height="30"
                     Width="120"
                     Command="{Binding CloseCommand}"
-                    Content="Close" />
+                    Content="{x:Static res:Resources.Common_FinalView_Close}" />
             </StackPanel>
         </StackPanel>
     </Grid>

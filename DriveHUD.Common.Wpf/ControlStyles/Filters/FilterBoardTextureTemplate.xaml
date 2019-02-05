@@ -1,239 +1,360 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:templateSelectors="clr-namespace:DriveHUD.Common.Wpf.DataTemplateSelectors"
-                    xmlns:enum="clr-namespace:Model.Enums;assembly=Model"
-                    xmlns:streetEnum="clr-namespace:HandHistories.Objects.Cards;assembly=HandHistories.Objects"
-                    xmlns:control="clr-namespace:DriveHUD.Common.Wpf.Controls"
-                    xmlns:res="clr-namespace:DriveHUD.Common.Wpf.ResX">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:control="clr-namespace:DriveHUD.Common.Wpf.Controls"
+    xmlns:templateSelectors="clr-namespace:DriveHUD.Common.Wpf.DataTemplateSelectors"
+    xmlns:res="clr-namespace:DriveHUD.Common.Wpf.ResX"
+    xmlns:streetEnum="clr-namespace:HandHistories.Objects.Cards;assembly=HandHistories.Objects"
+    xmlns:enum="clr-namespace:Model.Enums;assembly=Model">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="FilterComboBoxTemplate.xaml" />
+        <ResourceDictionary
+            Source="FilterComboBoxTemplate.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="StreetRunStyle" TargetType="Run">
-        <Setter Property="Text" Value=""/>
+    <Style
+        x:Key="StreetRunStyle"
+        TargetType="Run">
+        <Setter
+            Property="Text"
+            Value="" />
         <Style.Triggers>
-            <DataTrigger Binding="{Binding TargetStreet}" Value="{x:Static streetEnum:Street.River}">
-                <Setter Property="Text" Value=" or turn"/>
+            <DataTrigger
+                Binding="{Binding TargetStreet}"
+                Value="{x:Static streetEnum:Street.River}">
+                <Setter
+                    Property="Text"
+                    Value="{res:ResX Key=Common_FilterBoardTextureTemplate_OrTurn}" />
             </DataTrigger>
         </Style.Triggers>
     </Style>
 
 
     <!--#region DataTemplates -->
-    <DataTemplate x:Key="HighCardTemplate">
-        <StackPanel Orientation="Horizontal"  >
-            <TextBlock Text="High Card of  "/>
-            <control:ComboBoxEx Style="{StaticResource RankComboBoxStyle}" />
+    <DataTemplate
+        x:Key="HighCardTemplate">
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_HighCardOf}" />
+            <control:ComboBoxEx
+                Style="{StaticResource RankComboBoxStyle}" />
             <TextBlock>
-                <Run Text=" So the highest card on "/><Run Text="{Binding TargetStreet}"/><Run Text=" is whatever is selected"/>
+                <Run
+                    Text="{res:ResX Key=Common_FilterBoardTextureTemplate_SoTheHighestCardOn}" /><Run
+                    Text="{Binding TargetStreet}" /><Run
+                    Text="{res:ResX Key=Common_FilterBoardTextureTemplate_IsWhateverIsSelected}" />
             </TextBlock>
         </StackPanel>
     </DataTemplate>
 
-    <DataTemplate x:Key="NoFlushPossibleTemplate">
-        <TextBlock Text="No Flush Possible" />
+    <DataTemplate
+        x:Key="NoFlushPossibleTemplate">
+        <TextBlock
+            Text="{res:ResX Key=Common_FilterBoardTextureTemplate_NoFlushPossible}" />
     </DataTemplate>
 
-    <DataTemplate x:Key="FlushPossibleTemplate">
-        <TextBlock Text="Flush Possible [3 of the same suit]"/>
+    <DataTemplate
+        x:Key="FlushPossibleTemplate">
+        <TextBlock
+            Text="{res:ResX Key=Common_FilterBoardTextureTemplate_FlushPossible3OfSameSuit}" />
     </DataTemplate>
 
-    <DataTemplate x:Key="FourFlushTemplate">
-        <TextBlock Text="Four Flush [4 of the same suit]"/>
+    <DataTemplate
+        x:Key="FourFlushTemplate">
+        <TextBlock
+            Text="{res:ResX Key=Common_FilterBoardTextureTemplate_FlushPossible4OfSameSuit}" />
     </DataTemplate>
 
-    <DataTemplate x:Key="FlushOnBoardTemplate">
-        <TextBlock Text="Flush on Board [All 5 of the same suit]"/>
+    <DataTemplate
+        x:Key="FlushOnBoardTemplate">
+        <TextBlock
+            Text="{res:ResX Key=Common_FilterBoardTextureTemplate_FlushOnBoardAll5OfSameSuit}" />
     </DataTemplate>
 
-    <DataTemplate x:Key="RainbowTemplate" >
+    <DataTemplate
+        x:Key="RainbowTemplate">
         <TextBlock>
-            <Run Text="Rainbow ["/><Run Text="{Binding IntStreetValue, Mode=OneWay}"/><Run Text=" different suits]"/>
+            <Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_Rainbow}" /><Run
+                Text="{Binding IntStreetValue, Mode=OneWay}" /><Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_RainbowDifferentSuits}" />
         </TextBlock>
     </DataTemplate>
 
-    <DataTemplate x:Key="TwoToneTemplate">
-        <TextBlock Text="Two-Tone [2 of the same suit]" />
+    <DataTemplate
+        x:Key="TwoToneTemplate">
+        <TextBlock
+            Text="{res:ResX Key=Common_FilterBoardTextureTemplate_TwoTone2OfSameSuit}" />
     </DataTemplate>
 
-    <DataTemplate x:Key="TwoFlushDrawsTemplate">
-        <TextBlock Text="Two Flush Draws [2 sets of 2 suits]"/>
+    <DataTemplate
+        x:Key="TwoFlushDrawsTemplate">
+        <TextBlock
+            Text="{res:ResX Key=Common_FilterBoardTextureTemplate_TwoFlushDraws2SetsOf2Suits}" />
     </DataTemplate>
 
-    <DataTemplate x:Key="ThreeToneTemplate">
-        <TextBlock Text="Three-Tone [3 of the same suit]" />
+    <DataTemplate
+        x:Key="ThreeToneTemplate">
+        <TextBlock
+            Text="{res:ResX Key=Common_FilterBoardTextureTemplate_ThreeTone3OfSameSuit}" />
     </DataTemplate>
 
-    <DataTemplate x:Key="MonotoneTemplate">
+    <DataTemplate
+        x:Key="MonotoneTemplate">
         <TextBlock>
-            <Run Text="Monotone [All "/><Run Text="{Binding IntStreetValue, Mode=OneWay}"/><Run Text=" of the same  suit]"/>
+            <Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_MonotoneAll}" /><Run
+                Text="{Binding IntStreetValue, Mode=OneWay}" /><Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_MonotoneAllOfSameSuit}" />
         </TextBlock>
     </DataTemplate>
 
-    <DataTemplate x:Key="UncoordinatedTemplate">
-        <TextBlock Text="Uncoordinated [No connected cards]" />
+    <DataTemplate
+        x:Key="UncoordinatedTemplate">
+        <TextBlock
+            Text="{res:ResX Key=Common_FilterBoardTextureTemplate_UncoordinatedNoConnectedCards}" />
     </DataTemplate>
 
-    <DataTemplate x:Key="OneGapperTemplate">
-        <TextBlock Text="1 Gapper [Semi-coordinated with 1 gap between 2 cards. EX: 6x8x]"/>
+    <DataTemplate
+        x:Key="OneGapperTemplate">
+        <TextBlock
+            Text="{res:ResX Key=Common_FilterBoardTextureTemplate_OneGapper}" />
     </DataTemplate>
 
-    <DataTemplate x:Key="TwoGapperTemplate">
-        <TextBlock Text="2 Gapper [Less Coordinated with 2 gaps between 2 cards. EX: 5x8x]"/>
+    <DataTemplate
+        x:Key="TwoGapperTemplate">
+        <TextBlock
+            Text="{res:ResX Key=Common_FilterBoardTextureTemplate_TwoGapper}" />
     </DataTemplate>
 
-    <DataTemplate x:Key="ThreeConnectedTemplate">
+    <DataTemplate
+        x:Key="ThreeConnectedTemplate">
         <TextBlock>
-            <Run Text="Three connected cards ["/><Run Text="{Binding TargetStreet}"/><Run Text=" creates 3 connected card. EX: 7x8x9x]" />
+            <Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_ThreeConnected}" /><Run
+                Text="{Binding TargetStreet}" /><Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_ThreeConnectedCreates3Connected}" />
         </TextBlock>
     </DataTemplate>
 
-    <DataTemplate x:Key="FourConnectedTemplate">
+    <DataTemplate
+        x:Key="FourConnectedTemplate">
         <TextBlock>
-            <Run Text="Four connected cards ["/><Run Text="{Binding TargetStreet}"/><Run Text=" creates 4 connected cards. EX: 7x8x9xTx]"/>
+            <Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_FourConnected}" /><Run
+                Text="{Binding TargetStreet}" /><Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_FourConnectedCreates4Connected}" />
         </TextBlock>
     </DataTemplate>
 
-    <DataTemplate x:Key="OpenEndedStraightTemplate">
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Open Ended "/>
-            <control:ComboBoxEx Style="{StaticResource EqualityComboBoxStyle}"/>
-            <TextBlock Text=" # of open ended straights "/>
-            <control:ComboBoxEx Style="{StaticResource NumericComboBoxStyle}"/>
+    <DataTemplate
+        x:Key="OpenEndedStraightTemplate">
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_OpenEnded}" />
+            <control:ComboBoxEx
+                Style="{StaticResource EqualityComboBoxStyle}" />
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_OpenEndedOfOpenEndedStraights}" />
+            <control:ComboBoxEx
+                Style="{StaticResource NumericComboBoxStyle}" />
         </StackPanel>
     </DataTemplate>
 
-    <DataTemplate x:Key="MadeStraightTemplate">
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Made Straight " />
-            <control:ComboBoxEx Style="{StaticResource EqualityComboBoxStyle}"/>
-            <TextBlock Text=" # of made straights "/>
-            <control:ComboBoxEx Style="{StaticResource NumericComboBoxStyle}"/>
+    <DataTemplate
+        x:Key="MadeStraightTemplate">
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_MadeStraight}" />
+            <control:ComboBoxEx
+                Style="{StaticResource EqualityComboBoxStyle}" />
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_MadeStraightOfMadeStraights}" />
+            <control:ComboBoxEx
+                Style="{StaticResource NumericComboBoxStyle}" />
         </StackPanel>
     </DataTemplate>
 
-    <DataTemplate x:Key="OpenEndedBeatNutsTemplate">
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Open Ended that Beat Nuts "/>
-            <control:ComboBoxEx Style="{StaticResource EqualityComboBoxStyle}"/>
-            <TextBlock Text=" # of open ended straights that beat the Nuts " />
-            <control:ComboBoxEx Style="{StaticResource NumericComboBoxStyle}"/>
+    <DataTemplate
+        x:Key="OpenEndedBeatNutsTemplate">
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_OpenEndedBeatNuts}" />
+            <control:ComboBoxEx
+                Style="{StaticResource EqualityComboBoxStyle}" />
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_OpenEndedBeatNutsOfOpenEndedStraights}" />
+            <control:ComboBoxEx
+                Style="{StaticResource NumericComboBoxStyle}" />
         </StackPanel>
     </DataTemplate>
 
-    <DataTemplate x:Key="GutShotBeatNutsTemplate">
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="GutShot that Beats Nuts " />
-            <control:ComboBoxEx Style="{StaticResource EqualityComboBoxStyle}"/>
-            <TextBlock Text=" # of gutshot straights that beat the Nuts " />
-            <control:ComboBoxEx Style="{StaticResource NumericComboBoxStyle}"/>
+    <DataTemplate
+        x:Key="GutShotBeatNutsTemplate">
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_GusShotBeatNuts}" />
+            <control:ComboBoxEx
+                Style="{StaticResource EqualityComboBoxStyle}" />
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_GusShotBeatNutsOfGutshotStraights}" />
+            <control:ComboBoxEx
+                Style="{StaticResource NumericComboBoxStyle}" />
         </StackPanel>
     </DataTemplate>
 
-    <DataTemplate x:Key="NoPairTemplate">
+    <DataTemplate
+        x:Key="NoPairTemplate">
         <TextBlock>
-            <Run Text="No Pair ["/><Run Text="{Binding TargetStreet}"/><Run Text=" contains no paired cards]"/>
+            <Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_NoPair}" /><Run
+                Text="{Binding TargetStreet}" /><Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_NoPairContainsNoPairedCards}" />
         </TextBlock>
     </DataTemplate>
 
-    <DataTemplate x:Key="SinglePairTemplate">
+    <DataTemplate
+        x:Key="SinglePairTemplate">
         <TextBlock>
-            <Run 
-                Text="Single Pair ["/><Run
-                Text="{Binding TargetStreet}"/><Run 
-                Text=" pairs a flop"/><Run 
-                Style="{StaticResource StreetRunStyle}"/><Run 
-                Text=" card]"/>
+            <Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_SinglePair}" /><Run
+                Text="{Binding TargetStreet}" /><Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_SinglePairPairsFlop}" /><Run
+                Style="{StaticResource StreetRunStyle}" /><Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_SinglePairPairsFlopCard}" />
         </TextBlock>
     </DataTemplate>
 
-    <DataTemplate x:Key="TwoPairTemplate">
+    <DataTemplate
+        x:Key="TwoPairTemplate">
         <TextBlock>
-            <Run 
-                Text="Two Pair ["/><Run 
-                Text="{Binding TargetStreet}"/><Run 
-                Text=" brings a second pair to the flop"/><Run 
-                Style="{StaticResource StreetRunStyle}"/><Run 
-                Text="]"/>
+            <Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_TwoPair}" /><Run
+                Text="{Binding TargetStreet}" /><Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_TwoPairBringsSecondPairToFlop}" /><Run
+                Style="{StaticResource StreetRunStyle}" /><Run
+                Text="]" />
         </TextBlock>
 
     </DataTemplate>
 
-    <DataTemplate x:Key="ThreeOfAKindTemplate">
+    <DataTemplate
+        x:Key="ThreeOfAKindTemplate">
         <TextBlock>
-            <Run Text="Three of a Kind ["/><Run Text="{Binding TargetStreet}"/><Run Text=" creates 3 of a kind]"/>
+            <Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_ThreeOfKind}" /><Run
+                Text="{Binding TargetStreet}" /><Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_ThreeOfKindCreates3OfKind}" />
         </TextBlock>
     </DataTemplate>
 
-    <DataTemplate x:Key="FourOfAkindTemplate">
+    <DataTemplate
+        x:Key="FourOfAkindTemplate">
         <TextBlock>
-            <Run Text="Four of a Kind [" /><Run Text="{Binding TargetStreet}"/><Run Text=" creates quads]" />
+            <Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_FourOfKind}" /><Run
+                Text="{Binding TargetStreet}" /><Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_FourOfKindCreatesQuads}" />
         </TextBlock>
     </DataTemplate>
 
-    <DataTemplate x:Key="FullHouseTemplate">
+    <DataTemplate
+        x:Key="FullHouseTemplate">
         <TextBlock>
-            <Run Text="Full House ["/><Run Text="{Binding TargetStreet}"/><Run Text=" brings full house]"/>
+            <Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_FullHouse}" /><Run
+                Text="{Binding TargetStreet}" /><Run
+                Text="{res:ResX Key=Common_FilterBoardTextureTemplate_FullHouseBringsFullHouse}" />
         </TextBlock>
     </DataTemplate>
 
     <!--#endregion-->
 
-    <templateSelectors:BoardTextureTemplateSelector x:Key="BoardTemplateSelector">
+    <templateSelectors:BoardTextureTemplateSelector
+        x:Key="BoardTemplateSelector">
         <templateSelectors:BoardTextureTemplateSelector.Templates>
             <templateSelectors:TemplateCollection>
 
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.HighCard}"
-                                            DataTemplate="{StaticResource HighCardTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.NoFlushPossible}"
-                                            DataTemplate="{StaticResource NoFlushPossibleTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.FlushPossible}"
-                                            DataTemplate="{StaticResource FlushPossibleTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.FourFlush}"
-                                            DataTemplate="{StaticResource FourFlushTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.FlushOnBoard}"
-                                            DataTemplate="{StaticResource FlushOnBoardTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.Rainbow}" 
-                                            DataTemplate="{StaticResource RainbowTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.TwoTone}"
-                                            DataTemplate="{StaticResource TwoToneTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.TwoFlushDraws}"
-                                            DataTemplate="{StaticResource TwoFlushDrawsTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.ThreeTone}"
-                                            DataTemplate="{StaticResource ThreeToneTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.Monotone}"
-                                            DataTemplate="{StaticResource MonotoneTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.Uncoordinated}"
-                                            DataTemplate="{StaticResource UncoordinatedTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.OneGapper}"
-                                            DataTemplate="{StaticResource OneGapperTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.TwoGapper}"
-                                            DataTemplate="{StaticResource TwoGapperTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.ThreeConnected}"
-                                            DataTemplate="{StaticResource ThreeConnectedTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.FourConnected}"
-                                            DataTemplate="{StaticResource FourConnectedTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.OpenEndedStraight}"
-                                            DataTemplate="{StaticResource OpenEndedStraightTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.MadeStraight}"
-                                            DataTemplate="{StaticResource MadeStraightTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.OpenEndedBeatNuts}"
-                                            DataTemplate="{StaticResource OpenEndedBeatNutsTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.GutShotBeatNuts}"
-                                            DataTemplate="{StaticResource GutShotBeatNutsTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.NoPair}"
-                                            DataTemplate="{StaticResource NoPairTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.SinglePair}"
-                                            DataTemplate="{StaticResource SinglePairTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.TwoPair}"
-                                            DataTemplate="{StaticResource TwoPairTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.ThreeOfAKind}"
-                                            DataTemplate="{StaticResource ThreeOfAKindTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.FourOfAKind}"
-                                            DataTemplate="{StaticResource FourOfAkindTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:BoardTextures.FullHouse}"
-                                            DataTemplate="{StaticResource FullHouseTemplate}"/>
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.HighCard}"
+                    DataTemplate="{StaticResource HighCardTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.NoFlushPossible}"
+                    DataTemplate="{StaticResource NoFlushPossibleTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.FlushPossible}"
+                    DataTemplate="{StaticResource FlushPossibleTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.FourFlush}"
+                    DataTemplate="{StaticResource FourFlushTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.FlushOnBoard}"
+                    DataTemplate="{StaticResource FlushOnBoardTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.Rainbow}"
+                    DataTemplate="{StaticResource RainbowTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.TwoTone}"
+                    DataTemplate="{StaticResource TwoToneTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.TwoFlushDraws}"
+                    DataTemplate="{StaticResource TwoFlushDrawsTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.ThreeTone}"
+                    DataTemplate="{StaticResource ThreeToneTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.Monotone}"
+                    DataTemplate="{StaticResource MonotoneTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.Uncoordinated}"
+                    DataTemplate="{StaticResource UncoordinatedTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.OneGapper}"
+                    DataTemplate="{StaticResource OneGapperTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.TwoGapper}"
+                    DataTemplate="{StaticResource TwoGapperTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.ThreeConnected}"
+                    DataTemplate="{StaticResource ThreeConnectedTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.FourConnected}"
+                    DataTemplate="{StaticResource FourConnectedTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.OpenEndedStraight}"
+                    DataTemplate="{StaticResource OpenEndedStraightTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.MadeStraight}"
+                    DataTemplate="{StaticResource MadeStraightTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.OpenEndedBeatNuts}"
+                    DataTemplate="{StaticResource OpenEndedBeatNutsTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.GutShotBeatNuts}"
+                    DataTemplate="{StaticResource GutShotBeatNutsTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.NoPair}"
+                    DataTemplate="{StaticResource NoPairTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.SinglePair}"
+                    DataTemplate="{StaticResource SinglePairTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.TwoPair}"
+                    DataTemplate="{StaticResource TwoPairTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.ThreeOfAKind}"
+                    DataTemplate="{StaticResource ThreeOfAKindTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.FourOfAKind}"
+                    DataTemplate="{StaticResource FourOfAkindTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:BoardTextures.FullHouse}"
+                    DataTemplate="{StaticResource FullHouseTemplate}" />
 
             </templateSelectors:TemplateCollection>
         </templateSelectors:BoardTextureTemplateSelector.Templates>

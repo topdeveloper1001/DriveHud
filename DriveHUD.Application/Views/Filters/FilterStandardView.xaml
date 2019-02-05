@@ -106,7 +106,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock
-                Text="Players Between"
+                Text="{ResX Key=Common_FilterStandardView_PlayersBetween}"
                 Grid.Row="0"
                 Grid.Column="0"
                 Margin="10"
@@ -132,7 +132,7 @@
                 </controls:ComboBoxEx>
 
                 <TextBlock
-                    Text="and"
+                    Text="{ResX Key=Common_FilterStandardView_And}"
                     Margin="10"
                     Style="{StaticResource Title_H1}" />
 
@@ -253,7 +253,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock
-                Text="Currency"
+                Text="{ResX Key=Common_FilterStandardView_Currency}"
                 Grid.Column="0"
                 Margin="10"
                 Style="{StaticResource Title_H1}" />
@@ -356,7 +356,7 @@
 
         <!-- PRE-FLOP ACTION (PreFlopActionCollection) -->
         <TextBlock
-            Text="Pre-flop Action Facing Hero"
+            Text="{ResX Key=Common_FilterStandardView_PreFlopActionFacingHero}"
             Grid.Row="5"
             Grid.Column="0"
             Margin="5 10"
@@ -392,7 +392,7 @@
 
         <!-- FILTER LIST (StatsCollection) -->
         <TextBlock
-            Text="Filter List"
+            Text="{ResX Key=Common_FilterStandardView_FilterList}"
             Grid.Row="0"
             Grid.Column="2"
             Margin="10"

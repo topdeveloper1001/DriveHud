@@ -4,20 +4,20 @@
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
     xmlns:prism="http://www.codeplex.com/prism"
     xmlns:application="clr-namespace:DriveHUD.Application"
+    xmlns:ctls="clr-namespace:DriveHUD.Application.Controls"
+    xmlns:valueConverters="clr-namespace:DriveHUD.Application.ValueConverters"
     xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.Replayer"
     xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
     xmlns:controls="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
     xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
     xmlns:streetEnum="clr-namespace:HandHistories.Objects.Cards;assembly=HandHistories.Objects"
-    xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"
-    xmlns:ctls="clr-namespace:DriveHUD.Application.Controls"
     xmlns:me="clr-namespace:Model.Enums;assembly=Model"
-    xmlns:valueConverters="clr-namespace:DriveHUD.Application.ValueConverters"
-    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"
     FontFamily="./Fonts/#Open Sans"
-    Header="Replayer"
+    Header="{ResX Key=Common_ReplayerView_Replayer}"
     Width="1100"
     Height="755"
     WindowStartupLocation="CenterScreen"
@@ -492,7 +492,7 @@
                 VerticalAlignment="Center"
                 Visibility="{Binding IsLoadingHUD, Converter={dh:BoolToVisibilityConverter}}"
                 HorizontalAlignment="Center"
-                Text="Loading HUD..." />
+                Text="{ResX Key=Common_ReplayerView_LoadingHud}" />
 
         </Grid>
 

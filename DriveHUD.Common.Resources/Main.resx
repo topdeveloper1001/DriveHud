@@ -186,6 +186,18 @@
   <data name="Main_ContextMenu_TreatAsTableSize" xml:space="preserve">
     <value>Treat as {0}-max</value>
   </data>
+  <data name="Main_RadWindow_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Main_RadWindow_Maximize" xml:space="preserve">
+    <value>Maximize</value>
+  </data>
+  <data name="Main_RadWindow_Minimize" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="Main_RadWindow_Restore" xml:space="preserve">
+    <value>Restore</value>
+  </data>
   <data name="Main_ReplayerHeader" xml:space="preserve">
     <value>DriveHUD Replayer: {0} - {1}</value>
   </data>

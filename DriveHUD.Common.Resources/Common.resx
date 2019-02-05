@@ -1431,4 +1431,322 @@ This will add a line spacer in any pop-up menu. It's used to break up large chun
   <data name="Common_FilterEditValuePopupView_Title" xml:space="preserve">
     <value>Set filter value</value>
   </data>
+  <data name="Common_HudGraph_CurrentSession" xml:space="preserve">
+    <value>Current Session</value>
+  </data>
+  <data name="Common_HudPlayerToolTip_CurrentSession" xml:space="preserve">
+    <value>Current Session</value>
+  </data>
+  <data name="Common_Main_Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Common_Main_ImportFromDirectory" xml:space="preserve">
+    <value>Import from directory</value>
+  </data>
+  <data name="Common_Main_ImportFromFile" xml:space="preserve">
+    <value>Import from file</value>
+  </data>
+  <data name="Common_AliasAddEditView_Alias" xml:space="preserve">
+    <value>Alias:</value>
+  </data>
+  <data name="Common_AliasAddEditView_Players" xml:space="preserve">
+    <value>Players</value>
+  </data>
+  <data name="Common_AliasAddEditView_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Common_AliasAddEditView_SelectedPlayers" xml:space="preserve">
+    <value>Selected players</value>
+  </data>
+  <data name="Common_AliasView_Aliases" xml:space="preserve">
+    <value>Aliases</value>
+  </data>
+  <data name="Common_AliasView_CreateNew" xml:space="preserve">
+    <value>Create New</value>
+  </data>
+  <data name="Common_AliasView_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Common_AppsAppStoreView_Launch" xml:space="preserve">
+    <value>Launch</value>
+  </data>
+  <data name="Common_AppsView_Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Common_AppsView_Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Common_AppsView_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Common_DashboardView_Collapse" xml:space="preserve">
+    <value>Collapse</value>
+  </data>
+  <data name="Common_EditTournamentView_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_EditTournamentView_EditTournament" xml:space="preserve">
+    <value>Edit Tournament</value>
+  </data>
+  <data name="Common_EditTournamentView_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Common_FacebookOAuth_Comment" xml:space="preserve">
+    <value>Comment:</value>
+  </data>
+  <data name="Common_FacebookOAuth_Post" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="Common_FilterAdvancedView_Filters" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="Common_FilterAdvancedView_SelectedFilters" xml:space="preserve">
+    <value>Selected filters</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_FlushOnBoardAll5OfSameSuit" xml:space="preserve">
+    <value>Flush on Board [All 5 of the same suit]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_FlushPossible3OfSameSuit" xml:space="preserve">
+    <value>Flush Possible [3 of the same suit]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_FlushPossible4OfSameSuit" xml:space="preserve">
+    <value>Four Flush [4 of the same suit]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_FourConnected" xml:space="preserve">
+    <value>Four connected cards [ </value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_FourConnectedCreates4Connected" xml:space="preserve">
+    <value>creates 4 connected cards. EX: 7x8x9xTx]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_FourOfKind" xml:space="preserve">
+    <value>Four of a Kind [</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_FourOfKindCreatesQuads" xml:space="preserve">
+    <value>creates quads]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_FullHouse" xml:space="preserve">
+    <value>Full House [</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_FullHouseBringsFullHouse" xml:space="preserve">
+    <value>brings full house]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_GusShotBeatNuts" xml:space="preserve">
+    <value>GutShot that Beats Nuts </value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_GusShotBeatNutsOfGutshotStraights" xml:space="preserve">
+    <value># of gutshot straights that beat the Nuts </value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_HighCardOf" xml:space="preserve">
+    <value>High Card of </value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_IsWhateverIsSelected" xml:space="preserve">
+    <value>is whatever is selected</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_MadeStraight" xml:space="preserve">
+    <value>Made Straight </value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_MadeStraightOfMadeStraights" xml:space="preserve">
+    <value># of made straights </value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_MonotoneAll" xml:space="preserve">
+    <value>Monotone [All </value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_MonotoneAllOfSameSuit" xml:space="preserve">
+    <value>of the same  suit]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_NoFlushPossible" xml:space="preserve">
+    <value>No Flush Possible</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_NoPair" xml:space="preserve">
+    <value>No Pair [</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_NoPairContainsNoPairedCards" xml:space="preserve">
+    <value>contains no paired cards]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_OneGapper" xml:space="preserve">
+    <value>1 Gapper [Semi-coordinated with 1 gap between 2 cards. EX: 6x8x]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_OpenEnded" xml:space="preserve">
+    <value>Open Ended </value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_OpenEndedBeatNuts" xml:space="preserve">
+    <value>Open Ended that Beat Nuts </value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_OpenEndedBeatNutsOfOpenEndedStraights" xml:space="preserve">
+    <value># of open ended straights that beat the Nuts </value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_OpenEndedOfOpenEndedStraights" xml:space="preserve">
+    <value># of open ended straights</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_OrTurn" xml:space="preserve">
+    <value> or turn</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_Rainbow" xml:space="preserve">
+    <value>Rainbow [</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_RainbowDifferentSuits" xml:space="preserve">
+    <value>different suits]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_SinglePair" xml:space="preserve">
+    <value>Single Pair [</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_SinglePairPairsFlop" xml:space="preserve">
+    <value>pairs a flop</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_SinglePairPairsFlopCard" xml:space="preserve">
+    <value>card]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_SoTheHighestCardOn" xml:space="preserve">
+    <value>So the highest card on </value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_ThreeConnected" xml:space="preserve">
+    <value>Three connected cards [ </value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_ThreeConnectedCreates3Connected" xml:space="preserve">
+    <value>creates 3 connected card. EX: 7x8x9x]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_ThreeOfKind" xml:space="preserve">
+    <value>Three of a Kind [</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_ThreeOfKindCreates3OfKind" xml:space="preserve">
+    <value>creates 3 of a kind]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_ThreeTone3OfSameSuit" xml:space="preserve">
+    <value>Three-Tone [3 of the same suit]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_TwoFlushDraws2SetsOf2Suits" xml:space="preserve">
+    <value>Two Flush Draws [2 sets of 2 suits]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_TwoGapper" xml:space="preserve">
+    <value>2 Gapper [Less Coordinated with 2 gaps between 2 cards. EX: 5x8x]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_TwoPair" xml:space="preserve">
+    <value>Two Pair [</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_TwoPairBringsSecondPairToFlop" xml:space="preserve">
+    <value>brings a second pair to the flop</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_TwoTone2OfSameSuit" xml:space="preserve">
+    <value>Two-Tone [2 of the same suit]</value>
+  </data>
+  <data name="Common_FilterBoardTextureTemplate_UncoordinatedNoConnectedCards" xml:space="preserve">
+    <value>Uncoordinated [No connected cards]</value>
+  </data>
+  <data name="Common_FilterHandActionView_Empty" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="Common_FilterOmahaHandGridTemplate_FourCardWrap" xml:space="preserve">
+    <value>Four Card Wrap </value>
+  </data>
+  <data name="Common_FilterOmahaHandGridTemplate_HoleCardPairOnePair" xml:space="preserve">
+    <value>Hole Card Pair - One Pair </value>
+  </data>
+  <data name="Common_FilterOmahaHandGridTemplate_HoleCardStructure" xml:space="preserve">
+    <value>Hole Card Structure -</value>
+  </data>
+  <data name="Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfAces" xml:space="preserve">
+    <value>No. of Aces</value>
+  </data>
+  <data name="Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfBroadways" xml:space="preserve">
+    <value>No. of Broadway's [K-T]</value>
+  </data>
+  <data name="Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfLowCards" xml:space="preserve">
+    <value>No. of Low Cards [5-2]</value>
+  </data>
+  <data name="Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfMidHands" xml:space="preserve">
+    <value>No. of Mid Hands [9-6]</value>
+  </data>
+  <data name="Common_FilterOmahaHandGridTemplate_ThreeCardWrap" xml:space="preserve">
+    <value>Three Card Wrap </value>
+  </data>
+  <data name="Common_FilterOmahaHandGridTemplate_TwoCardWrap" xml:space="preserve">
+    <value>Two Card Wrap </value>
+  </data>
+  <data name="Common_FilterStandardView_And" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="Common_FilterStandardView_Currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="Common_FilterStandardView_FilterList" xml:space="preserve">
+    <value>Filter List</value>
+  </data>
+  <data name="Common_FilterStandardView_PlayersBetween" xml:space="preserve">
+    <value>Players Between</value>
+  </data>
+  <data name="Common_FilterStandardView_PreFlopActionFacingHero" xml:space="preserve">
+    <value>Pre-flop Action Facing Hero</value>
+  </data>
+  <data name="Common_HandNoteView_NoteText" xml:space="preserve">
+    <value>Note Text:</value>
+  </data>
+  <data name="Common_HandNoteView_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Common_HandNoteView_Title" xml:space="preserve">
+    <value>Hand Note</value>
+  </data>
+  <data name="Common_HudUploadToStoreView_EnterZeroForFree" xml:space="preserve">
+    <value>(enter 0 for free)</value>
+  </data>
+  <data name="Common_PlayerNoteView_Title" xml:space="preserve">
+    <value>Player Note</value>
+  </data>
+  <data name="Common_PopupContainerFiltersView_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Common_PopupContainerFiltersView_CurrentlyBuiltFilter" xml:space="preserve">
+    <value>Currently Built Filter</value>
+  </data>
+  <data name="Common_PopupContainerFiltersView_Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Common_PopupContainerFiltersView_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Common_PopupContainerFiltersView_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Common_ReplayerView_LoadingHud" xml:space="preserve">
+    <value>Loading HUD...</value>
+  </data>
+  <data name="Common_ReplayerView_Replayer" xml:space="preserve">
+    <value>Replayer</value>
+  </data>
+  <data name="Common_SettingsBonusesAddEditView_SelectToday" xml:space="preserve">
+    <value>Select Today</value>
+  </data>
+  <data name="Common_SettingsSiteView_ActivateDeactivate" xml:space="preserve">
+    <value>Activate/Deactivate</value>
+  </data>
+  <data name="Common_SettingsSiteView_Enable" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="Common_SettingsSiteView_HandHistoryLocation" xml:space="preserve">
+    <value>Hand History Location</value>
+  </data>
+  <data name="Common_SettingsSiteView_MoveProcessedFilesTo" xml:space="preserve">
+    <value>Move Processed Files to:</value>
+  </data>
+  <data name="Common_SettingsSiteView_Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Common_TournamentView_Collapse" xml:space="preserve">
+    <value>Collapse</value>
+  </data>
+  <data name="Common_TwitterOAuth_EnterPin" xml:space="preserve">
+    <value>Enter PIN:</value>
+  </data>
+  <data name="Common_TwitterOAuth_Post" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="Common_TwitterOAuth_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Common_TwitterOAuth_Tweet" xml:space="preserve">
+    <value>Tweet:</value>
+  </data>
+  <data name="Common_TwitterOAuth_Verify" xml:space="preserve">
+    <value>Verify</value>
+  </data>
 </root>

@@ -725,9 +725,6 @@
     <Compile Include="Views\PopupContainers\PopupContainerSupportView.xaml.cs">
       <DependentUpon>PopupContainerSupportView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Hud\HudSelectSiteGameTypeView.xaml.cs">
-      <DependentUpon>HudSelectSiteGameTypeView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Popups\PlayerNoteView.xaml.cs">
       <DependentUpon>PlayerNoteView.xaml</DependentUpon>
     </Compile>
@@ -739,12 +736,8 @@
     </Compile>
     <Compile Include="Security\UserSession.cs" />
     <Compile Include="ViewModels\Popups\EditTournamentViewModel.cs" />
-    <Compile Include="ViewModels\Popups\DataRemoverViewModel.cs" />
     <Compile Include="Views\Popups\EditTournamentView.xaml.cs">
       <DependentUpon>EditTournamentView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Popups\DataRemoverView.xaml.cs">
-      <DependentUpon>DataRemoverView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\HudDragCanvas.cs" />
     <Compile Include="Controls\HudRichPanel.xaml.cs">
@@ -865,9 +858,6 @@
     <Compile Include="ReportsLayout\SessionsLayoutCreator.cs" />
     <Compile Include="ReportsLayout\StakesLayoutCreator.cs" />
     <Compile Include="ReportsLayout\TimeLayoutCreator.cs" />
-    <Compile Include="Reports\OverAllReport.xaml.cs">
-      <DependentUpon>OverAllReport.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Main\TournamentView.xaml.cs">
       <DependentUpon>TournamentView.xaml</DependentUpon>
     </Compile>
@@ -1234,10 +1224,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Hud\HudSelectSiteGameTypeView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\Popups\PlayerNoteView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1247,10 +1233,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Popups\EditTournamentView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Popups\DataRemoverView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1386,10 +1368,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Main\ReportGadgetView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Reports\OverAllReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -196,7 +196,7 @@
                         MaxLength="50" />
 
                     <Button
-                        Content="Search"
+                        Content="{ResX Key=Common_AppsView_Search}"
                         Margin="-2,0,0,0"
                         HorizontalAlignment="Right"
                         Command="{Binding SearchCommand}"
@@ -245,7 +245,7 @@
                 Grid.Column="0"
                 Style="{StaticResource NextPrevButtonStyle}"
                 Command="{Binding PreviousPageCommand}"
-                Content="Previous" />
+                Content="{ResX Key=Common_AppsView_Previous}" />
 
             <ScrollViewer
                 Grid.Column="1"
@@ -279,7 +279,7 @@
                 Grid.Column="2"
                 Style="{StaticResource NextPrevButtonStyle}"
                 Command="{Binding NextPageCommand}"
-                Content="Next" />
+                Content="{ResX Key=Common_AppsView_Next}" />
 
         </Grid>
 
