@@ -32,9 +32,33 @@ namespace DriveHUD.Application.ViewModels.Filters
 
         #region Properties
 
-        public CollectionView FiltersCollectionView { get; private set; }
+        private CollectionView filtersCollectionView;
 
-        public CollectionView SelectedFiltersCollectionView { get; private set; }
+        public CollectionView FiltersCollectionView
+        {
+            get
+            {
+                return filtersCollectionView;
+            }
+            private set
+            {
+                SetProperty(ref filtersCollectionView, value);
+            }
+        }
+
+        private CollectionView selectedFiltersCollectionView;
+
+        public CollectionView SelectedFiltersCollectionView
+        {
+            get
+            {
+                return selectedFiltersCollectionView;
+            }
+            private set
+            {
+                SetProperty(ref selectedFiltersCollectionView, value);
+            }
+        }
 
         public InteractionRequest<INotification> EnterValuePopupRequest { get; private set; }
 
@@ -50,22 +74,32 @@ namespace DriveHUD.Application.ViewModels.Filters
 
         #region Infrastructure
 
+        public override void InitializeFilterModel()
+        {
+            base.InitializeFilterModel();
+            InitializeCollectionViews();
+        }
+
         private void InitializeCollectionViews()
         {
             // get default view return same object for that collection
-            FiltersCollectionView = (CollectionView)CollectionViewSource.GetDefaultView(FilterModel.Filters);
+            var filtersCollectionView = (CollectionView)CollectionViewSource.GetDefaultView(FilterModel.Filters);
 
-            if (FiltersCollectionView.GroupDescriptions.Count == 0)
+            if (filtersCollectionView.GroupDescriptions.Count == 0)
             {
-                FiltersCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(nameof(FilterAdvancedItem.Stage)));
+                filtersCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(nameof(FilterAdvancedItem.Stage)));
             }
 
-            SelectedFiltersCollectionView = (CollectionView)CollectionViewSource.GetDefaultView(FilterModel.SelectedFilters);
+            FiltersCollectionView = filtersCollectionView;
 
-            if (SelectedFiltersCollectionView.GroupDescriptions.Count == 0)
+            var selectedFiltersCollectionView = (CollectionView)CollectionViewSource.GetDefaultView(FilterModel.SelectedFilters);
+
+            if (selectedFiltersCollectionView.GroupDescriptions.Count == 0)
             {
-                SelectedFiltersCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(nameof(FilterAdvancedItem.Stage)));
+                selectedFiltersCollectionView.GroupDescriptions.Add(new PropertyGroupDescription(nameof(FilterAdvancedItem.Stage)));
             }
+
+            SelectedFiltersCollectionView = selectedFiltersCollectionView;
         }
 
         private void InitializeCommands()
