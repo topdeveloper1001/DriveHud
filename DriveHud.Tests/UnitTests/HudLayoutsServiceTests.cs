@@ -312,6 +312,20 @@ namespace DriveHud.Tests.UnitTests
                 },
                 "book"
             ).SetName("Player Profile: Tight Reg (not meet req.)");
+
+            yield return new TestCaseData(
+             "DH: 9-max Cash",
+             new PlayerProfileTestData
+             {
+                 VPIP = 27m,
+                 PFR = 2m,
+                 AGG = 20m,
+                 S3Bet = 1.3m,
+                 CBet = 82m,
+                 TotalHands = 47
+             },
+             "Fish"
+         ).SetName("Player Profile: Fish (not meet req.)");
         }
 
         #region Infrastructure

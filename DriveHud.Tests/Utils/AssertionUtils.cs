@@ -58,6 +58,7 @@ namespace DriveHud.Tests
                     Assert.That(actual.GameDescription.Tournament.TournamentId, Is.EqualTo(expected.GameDescription.Tournament.TournamentId), "GameDescription.Tournament.TournamentId must be equal");
                     Assert.That(actual.GameDescription.Tournament.TournamentInGameId, Is.EqualTo(expected.GameDescription.Tournament.TournamentInGameId), "GameDescription.Tournament.TournamentInGameId must be equal");
                     Assert.That(actual.GameDescription.Tournament.TournamentName, Is.EqualTo(expected.GameDescription.Tournament.TournamentName), "GameDescription.Tournament.TournamentName must be equal");
+                    Assert.That(actual.GameDescription.Tournament.TournamentsTags, Is.EqualTo(expected.GameDescription.Tournament.TournamentsTags), "GameDescription.Tournament.TournamentsTags must be equal");
                     Assert.That(actual.GameDescription.Tournament.BuyIn, Is.EqualTo(expected.GameDescription.Tournament.BuyIn), "GameDescription.Tournament.BuyIn must be equal");
                     Assert.That(actual.GameDescription.Tournament.Bounty, Is.EqualTo(expected.GameDescription.Tournament.Bounty), "GameDescription.Tournament.Bounty must be equal");
                     Assert.That(actual.GameDescription.Tournament.Rebuy, Is.EqualTo(expected.GameDescription.Tournament.Rebuy), "GameDescription.Tournament.Rebuy must be equal");
