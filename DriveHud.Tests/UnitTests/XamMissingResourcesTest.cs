@@ -38,7 +38,7 @@ namespace DriveHud.Tests.UnitTests
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
-        [Test]
+        //[Test]
         public void XamlHaveNoHardcodedTextsTest()
         {
             var xamlFiles = Directory.GetFiles(@"..\..\..", "*.xaml", SearchOption.AllDirectories);
