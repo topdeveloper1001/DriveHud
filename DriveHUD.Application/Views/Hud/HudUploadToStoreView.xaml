@@ -560,7 +560,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Style="{StaticResource TextBlockStyle}"
-                            Text="(enter 0 for free)" />
+                            Text="{ResX Key=Common_HudUploadToStoreView_EnterZeroForFree}" />
                     </StackPanel>
 
                     <!-- Images -->

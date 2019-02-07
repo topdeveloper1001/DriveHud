@@ -84,6 +84,8 @@ namespace DriveHUD.Common.Ifrastructure
             }
         };
 
+        private static readonly Random HeaderRandom = new Random();
+
         #region Export Functions
 
         public static string ExportHand(long gamenumber, short pokerSiteId, EnumExportType exportType, bool isSetClipboard = false)
@@ -144,7 +146,17 @@ namespace DriveHUD.Common.Ifrastructure
                     playerIndicators = playerStatisticRepository.GetPlayersIndicators<ExportIndicators>(playerNames, (short)handHistory.GameDescription.Site);
                 }
 
-                result.AppendLine("Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software");
+                var headerRandomNumber = HeaderRandom.Next(0, 2);
+
+                if (headerRandomNumber == 0)
+                {
+                    result.AppendLine("Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software");
+                }
+                else
+                {
+                    result.AppendLine("Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker HUD[/url] and Database Software");
+                }
+
                 result.AppendLine();
                 result.AppendLine($"[U][B]{ConvertGameType(handHistory)} ${handHistory.GameDescription.Limit.BigBlind}(BB)[/B][/U]");
 

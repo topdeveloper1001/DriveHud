@@ -173,7 +173,7 @@
     <StackPanel>
 
         <TextBlock
-            Text="Move Processed Files to:"
+            Text="{ResX Key=Common_SettingsSiteView_MoveProcessedFilesTo}"
             Style="{StaticResource Title_H1}" />
 
         <Grid>
@@ -198,13 +198,13 @@
                 Margin="2,0,0,0"
                 Width="50"
                 Height="25"
-                Content="Select"
+                Content="{ResX Key=Common_SettingsSiteView_Select}"
                 Command="{Binding SelectDirectoryCommand}" />
 
             <CheckBox
                 Grid.Column="2"
                 Margin="25 0 15 0"
-                Content="Enable"
+                Content="{ResX Key=Common_SettingsSiteView_Enable}"
                 Width="80"
                 Style="{StaticResource CheckBoxRight}"
                 IsChecked="{Binding IsCustomProcessedDataLocationEnabled}" />
@@ -274,7 +274,7 @@
                     <TextBlock
                         VerticalAlignment="Center"
                         Foreground="{StaticResource ForegroundBrush}"
-                        Text="Activate/Deactivate" />
+                        Text="{ResX Key=Common_SettingsSiteView_ActivateDeactivate}" />
 
                     <Button
                         Command="{Binding EnableCommand}"
@@ -316,7 +316,7 @@
 
                     <telerik:GridViewDataColumn
                         DataMemberBinding="{Binding}"
-                        Header="Hand History Location"
+                        Header="{ResX Key=Common_SettingsSiteView_HandHistoryLocation}"
                         Width="*" />
 
                 </telerik:RadGridView.Columns>

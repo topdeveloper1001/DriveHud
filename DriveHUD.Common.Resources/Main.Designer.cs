@@ -268,6 +268,42 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        internal static string Main_RadWindow_Close {
+            get {
+                return ResourceManager.GetString("Main_RadWindow_Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximize.
+        /// </summary>
+        internal static string Main_RadWindow_Maximize {
+            get {
+                return ResourceManager.GetString("Main_RadWindow_Maximize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimize.
+        /// </summary>
+        internal static string Main_RadWindow_Minimize {
+            get {
+                return ResourceManager.GetString("Main_RadWindow_Minimize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restore.
+        /// </summary>
+        internal static string Main_RadWindow_Restore {
+            get {
+                return ResourceManager.GetString("Main_RadWindow_Restore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DriveHUD Replayer: {0} - {1}.
         /// </summary>
         internal static string Main_ReplayerHeader {

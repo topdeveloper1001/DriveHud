@@ -117,7 +117,7 @@
 
             <!-- ACTIVE FILTER CAPTION -->
             <TextBlock
-                Text="Currently Built Filter"
+                Text="{ResX Key=Common_PopupContainerFiltersView_CurrentlyBuiltFilter}"
                 Grid.Column="0"
                 IsHitTestVisible="False"
                 VerticalAlignment="Center"
@@ -159,25 +159,25 @@
                 HorizontalAlignment="Right">
 
                 <telerik:RadButton
-                    Content="Save"
+                    Content="{ResX Key=Common_PopupContainerFiltersView_Save}"
                     Command="{Binding Path=Save_CommandClick}"
                     Width="85"
                     Margin="5"
                     Style="{StaticResource ButtonStyle}" />
                 <telerik:RadButton
-                    Content="Load"
+                    Content="{ResX Key=Common_PopupContainerFiltersView_Load}"
                     Width="85"
                     Command="{Binding Path=Load_CommandClick}"
                     Margin="5"
                     Style="{StaticResource {x:Type Button}}" />
                 <telerik:RadButton
-                    Content="{ResX Common_Apply}"
+                    Content="{ResX Key=Common_PopupContainerFiltersView_Apply}"
                     Width="85"
                     Command="{Binding Apply_CommandClick}"
                     Margin="5"
                     Style="{StaticResource {x:Type Button}}" />
                 <telerik:RadButton
-                    Content="Reset"
+                    Content="{ResX Key=Common_PopupContainerFiltersView_Reset}"
                     Width="85"
                     Command="{Binding Path=Reset_CommandClick}"
                     Margin="5"

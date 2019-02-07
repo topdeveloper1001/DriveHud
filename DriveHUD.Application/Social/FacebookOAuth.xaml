@@ -1,46 +1,75 @@
-﻿<Window x:Class="DriveHUD.Application.Social.FacebookOAuth"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Icon ="../images/drivehud.ico"
-        FontFamily="./Fonts/#Open Sans"
-        Foreground="#7D7F84"
-        Background="#1F2124"
-        ResizeMode="NoResize"
-        Title="Facebook" 
-        Height="400" Width="600"
-        WindowStartupLocation="CenterScreen">
+﻿<Window
+    x:Class="DriveHUD.Application.Social.FacebookOAuth"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+    Icon="../images/drivehud.ico"
+    FontFamily="./Fonts/#Open Sans"
+    Foreground="#7D7F84"
+    Background="#1F2124"
+    ResizeMode="NoResize"
+    Title="Facebook"
+    Height="400"
+    Width="600"
+    WindowStartupLocation="CenterScreen">
 
     <Grid>
 
-        <Grid Visibility="Collapsed" x:Name="gridPostComment">
+        <Grid
+            Visibility="Collapsed"
+            x:Name="gridPostComment">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition
+                    Width="Auto" />
+                <ColumnDefinition
+                    Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="Auto" />
             </Grid.RowDefinitions>
 
             <!--SN-->
-            <TextBlock Grid.Row="0" Grid.Column="0"  HorizontalAlignment="Left" Text="Comment:" Margin="5" />
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalAlignment="Left"
+                Text="{ResX Key=Common_FacebookOAuth_Comment}"
+                Margin="5" />
 
-            <TextBox  x:Name="txtComment"
-                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"
+            <TextBox
+                x:Name="txtComment"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="5"
                 MaxLength="500"
                 TextWrapping="Wrap"
                 AcceptsReturn="True"
-                BorderThickness="1" 
+                BorderThickness="1"
                 VerticalContentAlignment="Stretch"
                 HorizontalContentAlignment="Stretch" />
 
-            <Button Click="PostButton_Click" Margin="5" Grid.Row="2"  Grid.Column="0" Grid.ColumnSpan="2" 
-                    Style="{StaticResource ButtonStyle}"  Content="Post" HorizontalAlignment="Right"/>
+            <Button
+                Click="PostButton_Click"
+                Margin="5"
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Style="{StaticResource ButtonStyle}"
+                Content="{ResX Key=Common_FacebookOAuth_Post}"
+                HorizontalAlignment="Right" />
 
         </Grid>
 
-        <WebBrowser Visibility="Visible" Name="WBrowser" Navigated="WBrowser_OnNavigated" />
-        
+        <WebBrowser
+            Visibility="Visible"
+            Name="WBrowser"
+            Navigated="WBrowser_OnNavigated" />
+
     </Grid>
 </Window>

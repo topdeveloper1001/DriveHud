@@ -124,6 +124,69 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alias:.
+        /// </summary>
+        internal static string Common_AliasAddEditView_Alias {
+            get {
+                return ResourceManager.GetString("Common_AliasAddEditView_Alias", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Players.
+        /// </summary>
+        internal static string Common_AliasAddEditView_Players {
+            get {
+                return ResourceManager.GetString("Common_AliasAddEditView_Players", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        internal static string Common_AliasAddEditView_Search {
+            get {
+                return ResourceManager.GetString("Common_AliasAddEditView_Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selected players.
+        /// </summary>
+        internal static string Common_AliasAddEditView_SelectedPlayers {
+            get {
+                return ResourceManager.GetString("Common_AliasAddEditView_SelectedPlayers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aliases.
+        /// </summary>
+        internal static string Common_AliasView_Aliases {
+            get {
+                return ResourceManager.GetString("Common_AliasView_Aliases", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create New.
+        /// </summary>
+        internal static string Common_AliasView_CreateNew {
+            get {
+                return ResourceManager.GetString("Common_AliasView_CreateNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        internal static string Common_AliasView_Search {
+            get {
+                return ResourceManager.GetString("Common_AliasView_Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         internal static string Common_All {
@@ -165,6 +228,42 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_ApplyButtonForCalendars {
             get {
                 return ResourceManager.GetString("Common_ApplyButtonForCalendars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launch.
+        /// </summary>
+        internal static string Common_AppsAppStoreView_Launch {
+            get {
+                return ResourceManager.GetString("Common_AppsAppStoreView_Launch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        internal static string Common_AppsView_Next {
+            get {
+                return ResourceManager.GetString("Common_AppsView_Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Previous.
+        /// </summary>
+        internal static string Common_AppsView_Previous {
+            get {
+                return ResourceManager.GetString("Common_AppsView_Previous", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        internal static string Common_AppsView_Search {
+            get {
+                return ResourceManager.GetString("Common_AppsView_Search", resourceCulture);
             }
         }
         
@@ -619,6 +718,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collapse.
+        /// </summary>
+        internal static string Common_DashboardView_Collapse {
+            get {
+                return ResourceManager.GetString("Common_DashboardView_Collapse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Money Won :.
         /// </summary>
         internal static string Common_DashboardView_MoneyWon {
@@ -724,6 +832,33 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Edit {
             get {
                 return ResourceManager.GetString("Common_Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Common_EditTournamentView_Cancel {
+            get {
+                return ResourceManager.GetString("Common_EditTournamentView_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Tournament.
+        /// </summary>
+        internal static string Common_EditTournamentView_EditTournament {
+            get {
+                return ResourceManager.GetString("Common_EditTournamentView_EditTournament", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string Common_EditTournamentView_Save {
+            get {
+                return ResourceManager.GetString("Common_EditTournamentView_Save", resourceCulture);
             }
         }
         
@@ -953,6 +1088,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Comment:.
+        /// </summary>
+        internal static string Common_FacebookOAuth_Comment {
+            get {
+                return ResourceManager.GetString("Common_FacebookOAuth_Comment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Post.
+        /// </summary>
+        internal static string Common_FacebookOAuth_Post {
+            get {
+                return ResourceManager.GetString("Common_FacebookOAuth_Post", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fast Filter.
         /// </summary>
         internal static string Common_FastFilter {
@@ -967,6 +1120,411 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_FatalError {
             get {
                 return ResourceManager.GetString("Common_FatalError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filters.
+        /// </summary>
+        internal static string Common_FilterAdvancedView_Filters {
+            get {
+                return ResourceManager.GetString("Common_FilterAdvancedView_Filters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selected filters.
+        /// </summary>
+        internal static string Common_FilterAdvancedView_SelectedFilters {
+            get {
+                return ResourceManager.GetString("Common_FilterAdvancedView_SelectedFilters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flush on Board [All 5 of the same suit].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_FlushOnBoardAll5OfSameSuit {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_FlushOnBoardAll5OfSameSuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flush Possible [3 of the same suit].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_FlushPossible3OfSameSuit {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_FlushPossible3OfSameSuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Four Flush [4 of the same suit].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_FlushPossible4OfSameSuit {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_FlushPossible4OfSameSuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Four connected cards [ .
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_FourConnected {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_FourConnected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to creates 4 connected cards. EX: 7x8x9xTx].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_FourConnectedCreates4Connected {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_FourConnectedCreates4Connected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Four of a Kind [.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_FourOfKind {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_FourOfKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to creates quads].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_FourOfKindCreatesQuads {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_FourOfKindCreatesQuads", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full House [.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_FullHouse {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_FullHouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to brings full house].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_FullHouseBringsFullHouse {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_FullHouseBringsFullHouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GutShot that Beats Nuts .
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_GusShotBeatNuts {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_GusShotBeatNuts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # of gutshot straights that beat the Nuts .
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_GusShotBeatNutsOfGutshotStraights {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_GusShotBeatNutsOfGutshotStraights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to High Card of .
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_HighCardOf {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_HighCardOf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to is whatever is selected.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_IsWhateverIsSelected {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_IsWhateverIsSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Made Straight .
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_MadeStraight {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_MadeStraight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # of made straights .
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_MadeStraightOfMadeStraights {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_MadeStraightOfMadeStraights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monotone [All .
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_MonotoneAll {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_MonotoneAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to of the same  suit].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_MonotoneAllOfSameSuit {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_MonotoneAllOfSameSuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Flush Possible.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_NoFlushPossible {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_NoFlushPossible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Pair [.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_NoPair {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_NoPair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to contains no paired cards].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_NoPairContainsNoPairedCards {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_NoPairContainsNoPairedCards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 Gapper [Semi-coordinated with 1 gap between 2 cards. EX: 6x8x].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_OneGapper {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_OneGapper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Ended .
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_OpenEnded {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_OpenEnded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Ended that Beat Nuts .
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_OpenEndedBeatNuts {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_OpenEndedBeatNuts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # of open ended straights that beat the Nuts .
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_OpenEndedBeatNutsOfOpenEndedStraights {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_OpenEndedBeatNutsOfOpenEndedStraights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # of open ended straights.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_OpenEndedOfOpenEndedStraights {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_OpenEndedOfOpenEndedStraights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  or turn.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_OrTurn {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_OrTurn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rainbow [.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_Rainbow {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_Rainbow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to different suits].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_RainbowDifferentSuits {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_RainbowDifferentSuits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Single Pair [.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_SinglePair {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_SinglePair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to pairs a flop.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_SinglePairPairsFlop {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_SinglePairPairsFlop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to card].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_SinglePairPairsFlopCard {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_SinglePairPairsFlopCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to So the highest card on .
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_SoTheHighestCardOn {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_SoTheHighestCardOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Three connected cards [ .
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_ThreeConnected {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_ThreeConnected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to creates 3 connected card. EX: 7x8x9x].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_ThreeConnectedCreates3Connected {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_ThreeConnectedCreates3Connected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Three of a Kind [.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_ThreeOfKind {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_ThreeOfKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to creates 3 of a kind].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_ThreeOfKindCreates3OfKind {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_ThreeOfKindCreates3OfKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Three-Tone [3 of the same suit].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_ThreeTone3OfSameSuit {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_ThreeTone3OfSameSuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Two Flush Draws [2 sets of 2 suits].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_TwoFlushDraws2SetsOf2Suits {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_TwoFlushDraws2SetsOf2Suits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2 Gapper [Less Coordinated with 2 gaps between 2 cards. EX: 5x8x].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_TwoGapper {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_TwoGapper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Two Pair [.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_TwoPair {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_TwoPair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to brings a second pair to the flop.
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_TwoPairBringsSecondPairToFlop {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_TwoPairBringsSecondPairToFlop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Two-Tone [2 of the same suit].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_TwoTone2OfSameSuit {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_TwoTone2OfSameSuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uncoordinated [No connected cards].
+        /// </summary>
+        internal static string Common_FilterBoardTextureTemplate_UncoordinatedNoConnectedCards {
+            get {
+                return ResourceManager.GetString("Common_FilterBoardTextureTemplate_UncoordinatedNoConnectedCards", resourceCulture);
             }
         }
         
@@ -1007,11 +1565,146 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Empty.
+        /// </summary>
+        internal static string Common_FilterHandActionView_Empty {
+            get {
+                return ResourceManager.GetString("Common_FilterHandActionView_Empty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Four Card Wrap .
+        /// </summary>
+        internal static string Common_FilterOmahaHandGridTemplate_FourCardWrap {
+            get {
+                return ResourceManager.GetString("Common_FilterOmahaHandGridTemplate_FourCardWrap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hole Card Pair - One Pair .
+        /// </summary>
+        internal static string Common_FilterOmahaHandGridTemplate_HoleCardPairOnePair {
+            get {
+                return ResourceManager.GetString("Common_FilterOmahaHandGridTemplate_HoleCardPairOnePair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hole Card Structure -.
+        /// </summary>
+        internal static string Common_FilterOmahaHandGridTemplate_HoleCardStructure {
+            get {
+                return ResourceManager.GetString("Common_FilterOmahaHandGridTemplate_HoleCardStructure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No. of Aces.
+        /// </summary>
+        internal static string Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfAces {
+            get {
+                return ResourceManager.GetString("Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfAces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No. of Broadway&apos;s [K-T].
+        /// </summary>
+        internal static string Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfBroadways {
+            get {
+                return ResourceManager.GetString("Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfBroadways", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No. of Low Cards [5-2].
+        /// </summary>
+        internal static string Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfLowCards {
+            get {
+                return ResourceManager.GetString("Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfLowCards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No. of Mid Hands [9-6].
+        /// </summary>
+        internal static string Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfMidHands {
+            get {
+                return ResourceManager.GetString("Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfMidHands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Three Card Wrap .
+        /// </summary>
+        internal static string Common_FilterOmahaHandGridTemplate_ThreeCardWrap {
+            get {
+                return ResourceManager.GetString("Common_FilterOmahaHandGridTemplate_ThreeCardWrap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Two Card Wrap .
+        /// </summary>
+        internal static string Common_FilterOmahaHandGridTemplate_TwoCardWrap {
+            get {
+                return ResourceManager.GetString("Common_FilterOmahaHandGridTemplate_TwoCardWrap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Filters.
         /// </summary>
         internal static string Common_Filters {
             get {
                 return ResourceManager.GetString("Common_Filters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to and.
+        /// </summary>
+        internal static string Common_FilterStandardView_And {
+            get {
+                return ResourceManager.GetString("Common_FilterStandardView_And", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Currency.
+        /// </summary>
+        internal static string Common_FilterStandardView_Currency {
+            get {
+                return ResourceManager.GetString("Common_FilterStandardView_Currency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter List.
+        /// </summary>
+        internal static string Common_FilterStandardView_FilterList {
+            get {
+                return ResourceManager.GetString("Common_FilterStandardView_FilterList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Players Between.
+        /// </summary>
+        internal static string Common_FilterStandardView_PlayersBetween {
+            get {
+                return ResourceManager.GetString("Common_FilterStandardView_PlayersBetween", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pre-flop Action Facing Hero.
+        /// </summary>
+        internal static string Common_FilterStandardView_PreFlopActionFacingHero {
+            get {
+                return ResourceManager.GetString("Common_FilterStandardView_PreFlopActionFacingHero", resourceCulture);
             }
         }
         
@@ -1048,6 +1741,33 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_GraphsPopup_Title {
             get {
                 return ResourceManager.GetString("Common_GraphsPopup_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Note Text:.
+        /// </summary>
+        internal static string Common_HandNoteView_NoteText {
+            get {
+                return ResourceManager.GetString("Common_HandNoteView_NoteText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string Common_HandNoteView_Save {
+            get {
+                return ResourceManager.GetString("Common_HandNoteView_Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hand Note.
+        /// </summary>
+        internal static string Common_HandNoteView_Title {
+            get {
+                return ResourceManager.GetString("Common_HandNoteView_Title", resourceCulture);
             }
         }
         
@@ -1286,6 +2006,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Current Session.
+        /// </summary>
+        internal static string Common_HudGraph_CurrentSession {
+            get {
+                return ResourceManager.GetString("Common_HudGraph_CurrentSession", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string Common_HudLayout_Cancel {
@@ -1408,6 +2137,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudLayout_SelectLabel {
             get {
                 return ResourceManager.GetString("Common_HudLayout_SelectLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Session.
+        /// </summary>
+        internal static string Common_HudPlayerToolTip_CurrentSession {
+            get {
+                return ResourceManager.GetString("Common_HudPlayerToolTip_CurrentSession", resourceCulture);
             }
         }
         
@@ -2107,6 +2845,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to (enter 0 for free).
+        /// </summary>
+        internal static string Common_HudUploadToStoreView_EnterZeroForFree {
+            get {
+                return ResourceManager.GetString("Common_HudUploadToStoreView_EnterZeroForFree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to At least one game type must be selected.
         /// </summary>
         internal static string Common_HudUploadToStoreView_GameTypeMustBeSelected {
@@ -2651,6 +3398,33 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Import.
+        /// </summary>
+        internal static string Common_Main_Import {
+            get {
+                return ResourceManager.GetString("Common_Main_Import", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import from directory.
+        /// </summary>
+        internal static string Common_Main_ImportFromDirectory {
+            get {
+                return ResourceManager.GetString("Common_Main_ImportFromDirectory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import from file.
+        /// </summary>
+        internal static string Common_Main_ImportFromFile {
+            get {
+                return ResourceManager.GetString("Common_Main_ImportFromFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PURCHASE.
         /// </summary>
         internal static string Common_Main_Purchase {
@@ -2777,6 +3551,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Player Note.
+        /// </summary>
+        internal static string Common_PlayerNoteView_Title {
+            get {
+                return ResourceManager.GetString("Common_PlayerNoteView_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Poker Site.
         /// </summary>
         internal static string Common_PokerSite {
@@ -2791,6 +3574,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Population {
             get {
                 return ResourceManager.GetString("Common_Population", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apply.
+        /// </summary>
+        internal static string Common_PopupContainerFiltersView_Apply {
+            get {
+                return ResourceManager.GetString("Common_PopupContainerFiltersView_Apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Currently Built Filter.
+        /// </summary>
+        internal static string Common_PopupContainerFiltersView_CurrentlyBuiltFilter {
+            get {
+                return ResourceManager.GetString("Common_PopupContainerFiltersView_CurrentlyBuiltFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load.
+        /// </summary>
+        internal static string Common_PopupContainerFiltersView_Load {
+            get {
+                return ResourceManager.GetString("Common_PopupContainerFiltersView_Load", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset.
+        /// </summary>
+        internal static string Common_PopupContainerFiltersView_Reset {
+            get {
+                return ResourceManager.GetString("Common_PopupContainerFiltersView_Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string Common_PopupContainerFiltersView_Save {
+            get {
+                return ResourceManager.GetString("Common_PopupContainerFiltersView_Save", resourceCulture);
             }
         }
         
@@ -3345,6 +4173,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Loading HUD....
+        /// </summary>
+        internal static string Common_ReplayerView_LoadingHud {
+            get {
+                return ResourceManager.GetString("Common_ReplayerView_LoadingHud", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replayer.
+        /// </summary>
+        internal static string Common_ReplayerView_Replayer {
+            get {
+                return ResourceManager.GetString("Common_ReplayerView_Replayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Replay Hand.
         /// </summary>
         internal static string Common_ReplayHand {
@@ -3521,6 +4367,60 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Send {
             get {
                 return ResourceManager.GetString("Common_Send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Today.
+        /// </summary>
+        internal static string Common_SettingsBonusesAddEditView_SelectToday {
+            get {
+                return ResourceManager.GetString("Common_SettingsBonusesAddEditView_SelectToday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Activate/Deactivate.
+        /// </summary>
+        internal static string Common_SettingsSiteView_ActivateDeactivate {
+            get {
+                return ResourceManager.GetString("Common_SettingsSiteView_ActivateDeactivate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable.
+        /// </summary>
+        internal static string Common_SettingsSiteView_Enable {
+            get {
+                return ResourceManager.GetString("Common_SettingsSiteView_Enable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hand History Location.
+        /// </summary>
+        internal static string Common_SettingsSiteView_HandHistoryLocation {
+            get {
+                return ResourceManager.GetString("Common_SettingsSiteView_HandHistoryLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Move Processed Files to:.
+        /// </summary>
+        internal static string Common_SettingsSiteView_MoveProcessedFilesTo {
+            get {
+                return ResourceManager.GetString("Common_SettingsSiteView_MoveProcessedFilesTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        internal static string Common_SettingsSiteView_Select {
+            get {
+                return ResourceManager.GetString("Common_SettingsSiteView_Select", resourceCulture);
             }
         }
         
@@ -3831,6 +4731,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collapse.
+        /// </summary>
+        internal static string Common_TournamentView_Collapse {
+            get {
+                return ResourceManager.GetString("Common_TournamentView_Collapse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Total MTT&apos;s : .
         /// </summary>
         internal static string Common_TournamentView_TotalMTTs {
@@ -3872,6 +4781,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Turn {
             get {
                 return ResourceManager.GetString("Common_Turn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter PIN:.
+        /// </summary>
+        internal static string Common_TwitterOAuth_EnterPin {
+            get {
+                return ResourceManager.GetString("Common_TwitterOAuth_EnterPin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Post.
+        /// </summary>
+        internal static string Common_TwitterOAuth_Post {
+            get {
+                return ResourceManager.GetString("Common_TwitterOAuth_Post", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh.
+        /// </summary>
+        internal static string Common_TwitterOAuth_Refresh {
+            get {
+                return ResourceManager.GetString("Common_TwitterOAuth_Refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tweet:.
+        /// </summary>
+        internal static string Common_TwitterOAuth_Tweet {
+            get {
+                return ResourceManager.GetString("Common_TwitterOAuth_Tweet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verify.
+        /// </summary>
+        internal static string Common_TwitterOAuth_Verify {
+            get {
+                return ResourceManager.GetString("Common_TwitterOAuth_Verify", resourceCulture);
             }
         }
         

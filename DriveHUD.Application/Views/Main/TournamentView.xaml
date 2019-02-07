@@ -142,7 +142,7 @@
     </UserControl.Resources>
     <telerik:RadExpander
         Style="{StaticResource RadExpanderStyle_CollapseButton}"
-        Header="Collapse"
+        Header="{ResX Key=Common_TournamentView_Collapse}"
         HorizontalAlignment="Center"
         ExpandDirection="Up"
         IsExpanded="{Binding IsExpanded, Mode=TwoWay}">
