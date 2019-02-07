@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="ReplayerViewModel.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -20,11 +20,13 @@ using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Players;
 using Microsoft.Practices.ServiceLocation;
+using Model;
 using Model.Enums;
 using Model.Events;
 using Model.Importer;
 using Model.Interfaces;
 using Model.Replayer;
+using Model.Settings;
 using Model.Solvers;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
@@ -43,11 +45,15 @@ namespace DriveHUD.Application.ViewModels.Replayer
     public class ReplayerViewModel : BaseViewModel
     {
         #region Fields
+
         private const int PLAYERS_COLLECTION_SIZE = 10;
         private const int TIMER_INTERVAL_MS = 500;
 
         private IDataService _dataService;
         private DispatcherTimer _timer;
+
+        private readonly ISettingsService settingsService;
+        private readonly SingletonStorageModel storageModel;
 
         #endregion
 
@@ -56,13 +62,15 @@ namespace DriveHUD.Application.ViewModels.Replayer
         public ReplayerViewModel()
         {
             _dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+            storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
 
             Initialize();
         }
 
         private void Initialize()
         {
-            this.NotificationRequest = new InteractionRequest<INotification>();
+            NotificationRequest = new InteractionRequest<INotification>();
 
             ToEndCommand = new RelayCommand(ToEnd);
             NextStepCommand = new RelayCommand(NextStep);
@@ -87,6 +95,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
             _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromMilliseconds(TIMER_INTERVAL_MS);
             _timer.Tick += OnTimerTick;
+
+            BBFilter = settingsService.GetSettings().GeneralSettings.ReplayerBBFilter;
         }
 
         #endregion
@@ -940,6 +950,37 @@ namespace DriveHUD.Application.ViewModels.Replayer
             set
             {
                 SetProperty(ref isLoadingHUD, value);
+            }
+        }
+
+        private decimal bbFilter;
+
+        public decimal BBFilter
+        {
+            get
+            {
+                return bbFilter;
+            }
+            set
+            {
+                SetProperty(ref bbFilter, value);
+
+                var settings = settingsService.GetSettings();
+                settings.GeneralSettings.ReplayerBBFilter = bbFilter;
+                settingsService.SaveSettings(settings);
+
+                if (CurrentHand == null || CurrentHand.Statistic == null ||
+                    string.IsNullOrWhiteSpace(CurrentHand.Statistic.PlayerName) ||
+                    !CurrentGame.Players.Any(x => x.PlayerName == CurrentHand.Statistic.PlayerName && !x.IsSittingOut))
+                {
+                    return;
+                }
+             
+                var statistics = CurrentHand.Statistic.IsTourney ?
+                    storageModel.FilteredTournamentPlayerStatistic :
+                    storageModel.FilteredCashPlayerStatistic;
+
+                SessionHandsCollection = new ObservableCollection<ReplayerDataModel>(ReplayerHelpers.CreateSessionHandsList(statistics, CurrentHand.Statistic));
             }
         }
 
