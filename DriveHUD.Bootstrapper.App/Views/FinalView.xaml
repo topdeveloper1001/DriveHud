@@ -2,6 +2,7 @@
     x:Class="DriveHUD.Bootstrapper.App.Views.FinalView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:res="clr-namespace:DriveHUD.Bootstrapper.App.Properties"
     xmlns:cnv="clr-namespace:DriveHUD.Bootstrapper.App.Converters">
 
     <UserControl.Resources>
@@ -69,13 +70,13 @@
                     Width="120"
                     Command="{Binding LaunchCommand}"
                     Visibility="{Binding IsCanLaunch, Converter={cnv:BoolToVisibilityConverter}}"
-                    Content="Launch" />
+                    Content="{x:Static res:Resources.Common_FinalView_Launch}" />
                 <Button
                     Margin="5"
                     Height="30"
                     Width="120"
                     Command="{Binding CloseCommand}"
-                    Content="Close" />
+                    Content="{x:Static res:Resources.Common_FinalView_Close}" />
             </StackPanel>
         </StackPanel>
     </Grid>

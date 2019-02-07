@@ -74,6 +74,8 @@ namespace DriveHud.Tests.UnitTests
             var handHistory = parser.ParseFullHandHistory(handHistoryText);
 
             var actualHandHistoryForumText = ExportFunctions.ConvertHHToForumFormat(handHistory, exportType, true);
+            actualHandHistoryForumText = ReplaceHeader(actualHandHistoryForumText);
+
             var expectedHandHistoryForumText = File.ReadAllText(expectedResultFile);
 
             Assert.That(actualHandHistoryForumText, Is.EqualTo(expectedHandHistoryForumText));
@@ -346,6 +348,13 @@ namespace DriveHud.Tests.UnitTests
             EnumPokerSites.Ignition,
             null
            );
+        }
+
+        private static string ReplaceHeader(string text)
+        {
+            return text
+                .Replace("Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker HUD[/url] and Database Software",
+                "Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software");
         }
 
         public abstract class TestIndicatorsAbstract : ExportIndicators

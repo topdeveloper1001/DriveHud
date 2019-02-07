@@ -267,4 +267,10 @@
   <data name="Common_ProgressView_CancellingDescription" xml:space="preserve">
     <value>Please wait while setup cancels the installation. This may take a few minutes.</value>
   </data>
+  <data name="Common_FinalView_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Common_FinalView_Launch" xml:space="preserve">
+    <value>Launch</value>
+  </data>
 </root>

@@ -1,128 +1,180 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:templateSelectors="clr-namespace:DriveHUD.Common.Wpf.DataTemplateSelectors"
-                    xmlns:control="clr-namespace:DriveHUD.Common.Wpf.Controls"
-                    xmlns:enum="clr-namespace:Model.Enums;assembly=Model"
-                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:control="clr-namespace:DriveHUD.Common.Wpf.Controls"
+    xmlns:templateSelectors="clr-namespace:DriveHUD.Common.Wpf.DataTemplateSelectors"
+    xmlns:res="clr-namespace:DriveHUD.Common.Wpf.ResX"
+    xmlns:enum="clr-namespace:Model.Enums;assembly=Model"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="FilterComboBoxTemplate.xaml" />
+        <ResourceDictionary
+            Source="FilterComboBoxTemplate.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <x:Array x:Key="HoleCardStructureArray" Type="sys:Int32">
+    <x:Array
+        x:Key="HoleCardStructureArray"
+        Type="sys:Int32">
         <sys:Int32>1</sys:Int32>
         <sys:Int32>2</sys:Int32>
         <sys:Int32>3</sys:Int32>
         <sys:Int32>4</sys:Int32>
     </x:Array>
 
-    <DataTemplate x:Key="HighCardTemplate">
-        <StackPanel Orientation="Horizontal"  >
-            <TextBlock Text="Hole Card Pair - One Pair "/>
-            <control:ComboBoxEx Style="{StaticResource FilterDefaultComboBoxStyle}" 
-                                ItemsSource="{Binding RanksList}" 
-                                Width="80"
-                                DisplayMemberPath="Item1" 
-                                SelectedItem="{Binding SelectedRank}"/>
+    <DataTemplate
+        x:Key="HighCardTemplate">
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterOmahaHandGridTemplate_HoleCardPairOnePair}" />
+            <control:ComboBoxEx
+                Style="{StaticResource FilterDefaultComboBoxStyle}"
+                ItemsSource="{Binding RanksList}"
+                Width="80"
+                DisplayMemberPath="Item1"
+                SelectedItem="{Binding SelectedRank}" />
         </StackPanel>
     </DataTemplate>
 
-    <DataTemplate x:Key="TwoCardWrapTemplate">
-        <StackPanel Orientation="Horizontal"  >
-            <TextBlock Text="Two Card Wrap "/>
-            <control:ComboBoxEx Style="{StaticResource FilterDefaultComboBoxStyle}" 
-                                ItemsSource="{Binding GapsList}" 
-                                Width="120"
-                                DisplayMemberPath="Item1" 
-                                SelectedItem="{Binding SelectedGap}"/>
+    <DataTemplate
+        x:Key="TwoCardWrapTemplate">
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterOmahaHandGridTemplate_TwoCardWrap}" />
+            <control:ComboBoxEx
+                Style="{StaticResource FilterDefaultComboBoxStyle}"
+                ItemsSource="{Binding GapsList}"
+                Width="120"
+                DisplayMemberPath="Item1"
+                SelectedItem="{Binding SelectedGap}" />
         </StackPanel>
     </DataTemplate>
 
-    <DataTemplate x:Key="ThreeCardWrapTemplate">
-        <StackPanel Orientation="Horizontal"  >
-            <TextBlock Text="Three Card Wrap "/>
-            <control:ComboBoxEx Style="{StaticResource FilterDefaultComboBoxStyle}" 
-                                ItemsSource="{Binding GapsList}" 
-                                Width="120"
-                                DisplayMemberPath="Item1" 
-                                SelectedItem="{Binding SelectedGap}"/>
+    <DataTemplate
+        x:Key="ThreeCardWrapTemplate">
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterOmahaHandGridTemplate_ThreeCardWrap}" />
+            <control:ComboBoxEx
+                Style="{StaticResource FilterDefaultComboBoxStyle}"
+                ItemsSource="{Binding GapsList}"
+                Width="120"
+                DisplayMemberPath="Item1"
+                SelectedItem="{Binding SelectedGap}" />
         </StackPanel>
     </DataTemplate>
 
-    <DataTemplate x:Key="FourCardWrapTemplate">
-        <StackPanel Orientation="Horizontal"  >
-            <TextBlock Text="Four Card Wrap "/>
-            <control:ComboBoxEx Style="{StaticResource FilterDefaultComboBoxStyle}" 
-                                ItemsSource="{Binding GapsList}" 
-                                Width="120"
-                                DisplayMemberPath="Item1" 
-                                SelectedItem="{Binding SelectedGap}"/>
+    <DataTemplate
+        x:Key="FourCardWrapTemplate">
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterOmahaHandGridTemplate_FourCardWrap}" />
+            <control:ComboBoxEx
+                Style="{StaticResource FilterDefaultComboBoxStyle}"
+                ItemsSource="{Binding GapsList}"
+                Width="120"
+                DisplayMemberPath="Item1"
+                SelectedItem="{Binding SelectedGap}" />
         </StackPanel>
     </DataTemplate>
 
-    <DataTemplate x:Key="HoleCardStructureAces">
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Hole Card Structure - "/>
-            <control:ComboBoxEx Style="{StaticResource FilterDefaultComboBoxStyle}"
-                                ItemsSource="{StaticResource HoleCardStructureArray}"
-                                Width="60"
-                                SelectedItem="{Binding SelectedNumber}"/>
-            <TextBlock Text=" No. of Aces" />
+    <DataTemplate
+        x:Key="HoleCardStructureAces">
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterOmahaHandGridTemplate_HoleCardStructure}" />
+            <control:ComboBoxEx
+                Style="{StaticResource FilterDefaultComboBoxStyle}"
+                ItemsSource="{StaticResource HoleCardStructureArray}"
+                Width="60"
+                SelectedItem="{Binding SelectedNumber}" />
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfAces}" />
         </StackPanel>
     </DataTemplate>
-    
-    <DataTemplate x:Key="HoleCardStructureBroadways">
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Hole Card Structure - "/>
-            <control:ComboBoxEx Style="{StaticResource FilterDefaultComboBoxStyle}"
-                                ItemsSource="{StaticResource HoleCardStructureArray}"
-                                Width="60"
-                                SelectedItem="{Binding SelectedNumber}" />
-            <TextBlock Text=" No. of Broadway's [K-T]" />
+
+    <DataTemplate
+        x:Key="HoleCardStructureBroadways">
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterOmahaHandGridTemplate_HoleCardStructure}" />
+            <control:ComboBoxEx
+                Style="{StaticResource FilterDefaultComboBoxStyle}"
+                ItemsSource="{StaticResource HoleCardStructureArray}"
+                Width="60"
+                SelectedItem="{Binding SelectedNumber}" />
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfBroadways}" />
         </StackPanel>
     </DataTemplate>
-    
-    <DataTemplate x:Key="HoleCardStructureMidHands">
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Hole Card Structure - "/>
-            <control:ComboBoxEx Style="{StaticResource FilterDefaultComboBoxStyle}"
-                                ItemsSource="{StaticResource HoleCardStructureArray}"
-                                Width="60"
-                                SelectedItem="{Binding SelectedNumber}" />
-            <TextBlock Text=" No. of Mid Hands [9-6]" />
+
+    <DataTemplate
+        x:Key="
+                HoleCardStructureMidHands">
+        <StackPanel
+            Orientation="
+                Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterOmahaHandGridTemplate_HoleCardStructure}" />
+            <control:ComboBoxEx
+                Style="{StaticResource FilterDefaultComboBoxStyle}"
+                ItemsSource="{StaticResource HoleCardStructureArray}"
+                Width="60"
+                SelectedItem="{Binding SelectedNumber}" />
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfMidHands}" />
         </StackPanel>
     </DataTemplate>
-    
-    <DataTemplate x:Key="HoleCardStructureLowCards">
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Hole Card Structure - "/>
-            <control:ComboBoxEx Style="{StaticResource FilterDefaultComboBoxStyle}"
-                                ItemsSource="{StaticResource HoleCardStructureArray}"
-                                Width="60"
-                                SelectedItem ="{Binding SelectedNumber}" />
-            <TextBlock Text=" No. of Low Cards [5-2]" />
+
+    <DataTemplate
+        x:Key="HoleCardStructureLowCards">
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterOmahaHandGridTemplate_HoleCardStructure}" />
+            <control:ComboBoxEx
+                Style="{StaticResource FilterDefaultComboBoxStyle}"
+                ItemsSource="{StaticResource HoleCardStructureArray}"
+                Width="60"
+                SelectedItem="{Binding SelectedNumber}" />
+            <TextBlock
+                Text="{res:ResX Key=Common_FilterOmahaHandGridTemplate_HoleCardStructureNoOfLowCards}" />
         </StackPanel>
     </DataTemplate>
 
 
-    <templateSelectors:OmahaHandGridTemplateSelector x:Key="OmahaHandGridTemplateSelector">
+    <templateSelectors:OmahaHandGridTemplateSelector
+        x:Key="OmahaHandGridTemplateSelector">
         <templateSelectors:OmahaHandGridTemplateSelector.Templates>
             <templateSelectors:TemplateCollection>
-                <templateSelectors:Template Value="{x:Static enum:OmahaHoleCards.OnePair}"
-                                            DataTemplate="{StaticResource HighCardTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:OmahaHoleCards.TwoCardWrap}"
-                                            DataTemplate="{StaticResource TwoCardWrapTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:OmahaHoleCards.ThreeCardWrap}"
-                                            DataTemplate="{StaticResource ThreeCardWrapTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:OmahaHoleCards.FourCardWrap}"
-                                            DataTemplate="{StaticResource FourCardWrapTemplate}"/>
-                <templateSelectors:Template Value="{x:Static enum:OmahaHoleCards.CardStructureAces}"
-                                            DataTemplate="{StaticResource HoleCardStructureAces}"/>
-                <templateSelectors:Template Value="{x:Static enum:OmahaHoleCards.CardStructureBroadways}"
-                                            DataTemplate="{StaticResource HoleCardStructureBroadways}"/>
-                <templateSelectors:Template Value="{x:Static enum:OmahaHoleCards.CardStructureMidHands}"
-                                            DataTemplate="{StaticResource HoleCardStructureMidHands}"/>
-                <templateSelectors:Template Value="{x:Static enum:OmahaHoleCards.CardStructureLowCards}"
-                                            DataTemplate="{StaticResource HoleCardStructureLowCards}"/>
+                <templateSelectors:Template
+                    Value="{x:Static enum:OmahaHoleCards.OnePair}"
+                    DataTemplate="{StaticResource HighCardTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:OmahaHoleCards.TwoCardWrap}"
+                    DataTemplate="{StaticResource TwoCardWrapTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:OmahaHoleCards.ThreeCardWrap}"
+                    DataTemplate="{StaticResource ThreeCardWrapTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:OmahaHoleCards.FourCardWrap}"
+                    DataTemplate="{StaticResource FourCardWrapTemplate}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:OmahaHoleCards.CardStructureAces}"
+                    DataTemplate="{StaticResource HoleCardStructureAces}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:OmahaHoleCards.CardStructureBroadways}"
+                    DataTemplate="{StaticResource HoleCardStructureBroadways}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:OmahaHoleCards.CardStructureMidHands}"
+                    DataTemplate="{StaticResource HoleCardStructureMidHands}" />
+                <templateSelectors:Template
+                    Value="{x:Static enum:OmahaHoleCards.CardStructureLowCards}"
+                    DataTemplate="{StaticResource HoleCardStructureLowCards}" />
             </templateSelectors:TemplateCollection>
         </templateSelectors:OmahaHandGridTemplateSelector.Templates>
     </templateSelectors:OmahaHandGridTemplateSelector>

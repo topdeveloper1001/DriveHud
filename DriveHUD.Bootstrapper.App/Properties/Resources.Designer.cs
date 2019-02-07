@@ -115,6 +115,15 @@ namespace DriveHUD.Bootstrapper.App.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        public static string Common_FinalView_Close {
+            get {
+                return ResourceManager.GetString("Common_FinalView_Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to One or more issues caused the setup to fail. Please fix the issues and then retry setup..
         /// </summary>
         public static string Common_FinalView_ErrorText {
@@ -147,6 +156,15 @@ namespace DriveHUD.Bootstrapper.App.Properties {
         public static string Common_FinalView_InstallSucceeded {
             get {
                 return ResourceManager.GetString("Common_FinalView_InstallSucceeded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launch.
+        /// </summary>
+        public static string Common_FinalView_Launch {
+            get {
+                return ResourceManager.GetString("Common_FinalView_Launch", resourceCulture);
             }
         }
         

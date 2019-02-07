@@ -1716,7 +1716,7 @@
                 <telerik:RadRibbonDropDownButton
                     Foreground="White"
                     VerticalAlignment="Stretch"
-                    Text="Import"
+                    Text="{ResX Key=Common_Main_Import}"
                     Margin="0"
                     Width="100"
                     Background="{StaticResource BackgroundBrush3}"
@@ -1728,10 +1728,10 @@
                             Background="{StaticResource BackgroundBrush3}"
                             Style="{StaticResource RadContextMenuStyle1}">
                             <telerik:RadMenuItem
-                                Header="Import from file"
+                                Header="{ResX Key=Common_Main_ImportFromFile}"
                                 Command="{Binding ImportFromFileCommand}" />
                             <telerik:RadMenuItem
-                                Header="Import from directory"
+                                Header="{ResX Key=Common_Main_ImportFromDirectory}"
                                 Command="{Binding ImportFromDirectoryCommand}" />
                         </telerik:RadContextMenu>
                     </telerik:RadRibbonDropDownButton.DropDownContent>

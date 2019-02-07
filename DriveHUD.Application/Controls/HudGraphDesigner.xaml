@@ -182,7 +182,7 @@
                 Margin="5 0 5 5"
                 Padding="1"
                 Grid.Row="3"
-                Text="Current Session"
+                Text="{ResX Key=Common_HudGraph_CurrentSession}"
                 FontWeight="Normal"
                 Style="{StaticResource Title_H1}" />
 

@@ -111,7 +111,8 @@
                         </Style>
                     </ac:ActionTreeNode.Style>
                 </ac:ActionTreeNode>
-                <ac:ActionTreeNode UserContent="Empty" IsEmptyNode="True"/>
+                <ac:ActionTreeNode
+                    UserContent="{ResX Key=Common_FilterHandActionView_Empty}" IsEmptyNode="True"/>
             </x:Array>
 
             <x:Array x:Key="FlopItems" Type="ac:ActionTreeNode">
