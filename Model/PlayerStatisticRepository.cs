@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
@@ -29,6 +30,8 @@ namespace Model
 {
     public class PlayerStatisticRepository : IPlayerStatisticRepository
     {
+        private readonly Lazy<IHandNoteCacheService> handNoteCacheService = new Lazy<IHandNoteCacheService>(() => ServiceLocator.Current.GetInstance<IHandNoteCacheService>());
+
         private const string PlayerStatisticExtension = ".stat";
 
         private const string PlayerStatisticBackupExtenstion = ".bak";
@@ -668,7 +671,7 @@ namespace Model
                                             LogProvider.Log.Warn(this, $"Empty line in {file}");
                                         }
 
-                                            /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
+                                        /* replace '-' and '_' characters in order to convert back from Modified Base64 (https://en.wikipedia.org/wiki/Base64#Implementations_and_history) */
                                         byte[] byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/').Trim());
 
                                         using (var ms = new MemoryStream(byteAfter64))
@@ -766,6 +769,14 @@ namespace Model
             if (storageModel != null && storageModel.PlayerSelectedItem != null &&
                 (playerId == storageModel.PlayerSelectedItem.PlayerId || storageModel.PlayerSelectedItem.PlayerIds.Contains(playerId)))
             {
+                statistic.Where(x => !string.IsNullOrEmpty(x.SessionCode) && x.HandNote == null).ForEach(x =>
+                {
+                    if (handNoteCacheService.Value.TryGetNote(x.GameNumber, x.PokersiteId, out Handnotes handNote))
+                    {
+                        x.HandNote = handNote;
+                    }
+                });
+
                 storageModel.StatisticCollection.AddRange(statistic);
             }
         }

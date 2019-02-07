@@ -97,7 +97,8 @@ namespace DriveHUD.Importers.PokerStars
                     PokerSite = EnumPokerSites.PokerStars,
                     GameType = catcherDataObject.GameType,
                     TableType = catcherDataObject.TableType,
-                    GameFormat = catcherDataObject.GameFormat
+                    GameFormat = catcherDataObject.GameFormat,
+                    GameNumber = catcherDataObject.HandNumber
                 };
 
                 // Initialize cache

@@ -180,6 +180,9 @@
   <data name="Main_ContextMenu_TagLastHand" xml:space="preserve">
     <value>Tag Last Hand</value>
   </data>
+  <data name="Main_ContextMenu_TagLastHands" xml:space="preserve">
+    <value>Tag Last 3 Hands</value>
+  </data>
   <data name="Main_ContextMenu_TreatAs" xml:space="preserve">
     <value>Treat HUD as</value>
   </data>

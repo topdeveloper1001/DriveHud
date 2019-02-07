@@ -87,9 +87,7 @@ namespace DriveHUD.HUD
                 }
             }
 
-            uint processId = 0;
-
-            WinApi.GetWindowThreadProcessId(hwnd, out processId);
+            WinApi.GetWindowThreadProcessId(hwnd, out uint processId);
 
             if (processId == 0)
             {

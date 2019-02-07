@@ -60,6 +60,7 @@ namespace Model
             container.RegisterType<IPlayerStatisticCalculator, PlayerStatisticCalculator>(PlayerStatisticCalculatorServiceNames.Base);
             container.RegisterType<IPlayerStatisticCalculator, PKShortPlayerStatisticCalculator>(PlayerStatisticCalculatorServiceNames.PKShortDeck);
             container.RegisterType<IHandExportService, HandExportService>();
+            container.RegisterType<IHandNoteCacheService, HandNoteCacheService>(new ContainerControlledLifetimeManager());
 
             #region Export services
 

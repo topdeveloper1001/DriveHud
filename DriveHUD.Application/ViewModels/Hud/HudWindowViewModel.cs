@@ -17,6 +17,7 @@ using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
 using DriveHUD.HUD.Service;
@@ -41,6 +42,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private HudLayout layout;
         private Dictionary<HudToolKey, Point> panelOffsets;
         private readonly Dispatcher dispatcher;
+        private FixedSizeList<long> lastHands;
 
         public HudWindowViewModel(Dispatcher dispatcher)
         {
@@ -54,6 +56,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             ExportHandCommand = new RelayCommand(ExportHand);
             TagHandCommand = new RelayCommand(TagHand);
+            TagLastHandsCommand = new RelayCommand(TagLastHands);
             ReplayLastHandCommand = new RelayCommand(ReplayLastHand);
             LoadLayoutCommand = new RelayCommand(LoadLayout);
             ApplyPositionsCommand = new RelayCommand(ApplyPositions);
@@ -64,6 +67,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             var tableTypes = Enum.GetValues(typeof(EnumTableType)).Cast<byte>().ToArray();
 
             treatAs = new ObservableCollection<byte>(tableTypes);
+            lastHands = new FixedSizeList<long>(3);
         }
 
         #region Properties
@@ -198,6 +202,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public ICommand TagHandCommand { get; private set; }
 
+        public ICommand TagLastHandsCommand { get; private set; }
+
         public ICommand ReplayLastHandCommand { get; private set; }
 
         public ICommand LoadLayoutCommand { get; private set; }
@@ -241,6 +247,11 @@ namespace DriveHUD.Application.ViewModels.Hud
                     this.layout = layout;
                     LayoutName = layout.LayoutName;
 
+                    if (!lastHands.Contains(layout.GameNumber))
+                    {
+                        lastHands.Add(layout.GameNumber);
+                    }
+
                     if (layout.AvailableLayouts != null)
                     {
                         LayoutsCollection = new ObservableCollection<string>(layout.AvailableLayouts);
@@ -272,22 +283,34 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
-            await Task.Run(() =>
+            await Task.Run(() => TagHands(new[] { layout.GameNumber }, obj));
+        }
+
+        private async void TagLastHands(object obj)
+        {
+            if (layout == null || obj == null)
             {
-                using (var readToken = readerWriterLock.Read())
+                return;
+            }
+
+            await Task.Run(() => TagHands(lastHands, obj));
+        }
+
+        private void TagHands(IEnumerable<long> handNumbers, object handTagObject)
+        {
+            using (var readToken = readerWriterLock.Read())
+            {
+                EnumHandTag tag = EnumHandTag.None;
+
+                if (!Enum.TryParse(handTagObject.ToString(), out tag))
                 {
-                    EnumHandTag tag = EnumHandTag.None;
-
-                    if (!Enum.TryParse(obj.ToString(), out tag))
-                    {
-                        return;
-                    }
-
-                    LogProvider.Log.Info($"Tagging hand {layout.GameNumber} for {obj} [{layout.PokerSite}]");
-
-                    HudNamedPipeBindingService.TagHand(layout.GameNumber, (short)layout.PokerSite, (int)tag);
+                    return;
                 }
-            });
+
+                LogProvider.Log.Info($"Tagging hand(s) {string.Join(", ", handNumbers)} for {handTagObject} [{layout.PokerSite}]");
+
+                HudNamedPipeBindingService.TagHands(handNumbers, (short)layout.PokerSite, (int)tag);
+            }
         }
 
         private async void ExportHand(object obj)
