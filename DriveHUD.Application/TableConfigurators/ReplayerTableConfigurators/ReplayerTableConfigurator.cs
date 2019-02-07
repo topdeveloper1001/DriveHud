@@ -251,6 +251,8 @@ namespace DriveHUD.Application.TableConfigurators
         {
             var tasksToLoad = new List<Task>();
 
+            var selectedPlayer = storageModel.PlayerSelectedItem;
+
             for (var i = 0; i < seats; i++)
             {
                 var player = viewModel.PlayersCollection[i];
@@ -265,8 +267,9 @@ namespace DriveHUD.Application.TableConfigurators
                 // read data from statistic
                 var taskToReadPlayerStats = Task.Run(() =>
                 {
-                    if (player.Name == storageModel.PlayerSelectedItem.Name &&
-                        (short?)storageModel.PlayerSelectedItem.PokerSite == viewModel.CurrentHand.PokersiteId)
+                    if (selectedPlayer != null &&
+                        player.Name == selectedPlayer.Name &&
+                        (short?)selectedPlayer.PokerSite == viewModel.CurrentHand.PokersiteId)
                     {
                         storageModel.StatisticCollection.ToList()
                            .Where(stat => (stat.PokersiteId == (short)viewModel.CurrentGame.GameDescription.Site) &&
