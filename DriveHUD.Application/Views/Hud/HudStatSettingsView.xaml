@@ -912,7 +912,7 @@
                                     Width="64"
                                     Height="28">
                                     <TextBlock
-                                        Text="AaBbCc"
+                                        Text="{ResX Key=Common_HudStatSettingsView_FontPreviewText}"
                                         FontFamily="{Binding SelectedItem.SettingsAppearanceFontFamily}"
                                         FontSize="{Binding SelectedItem.SettingsAppearanceFontSize}"
                                         FontWeight="{Binding SelectedItem.SettingsAppearanceFontBold}"

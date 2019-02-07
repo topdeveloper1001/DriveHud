@@ -27,9 +27,17 @@ namespace DriveHud.Tests.UnitTests
     {
         private readonly static Regex[] TextAttributesRegex = new[] {
             new Regex("Text=\"[^\\{]+", RegexOptions.Compiled),
-            new Regex("Content=\"[^\\{]+", RegexOptions.Compiled),
+            new Regex(@"\sContent=""[^\{]+", RegexOptions.Compiled),
             new Regex("Header=\"[^\\{]+", RegexOptions.Compiled),
             new Regex("Title=\"[^\\{]+", RegexOptions.Compiled),
+        };
+
+        private readonly static string[] ExcludedPaths = new[]
+        {
+            @"..\..\..\Simulator",
+            @"..\..\..\tools",
+            "SplashWindow.xaml",
+            "MainWindowView.xaml"
         };
 
         [SetUp]
@@ -38,7 +46,7 @@ namespace DriveHud.Tests.UnitTests
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
-        //[Test]
+        [Test]
         public void XamlHaveNoHardcodedTextsTest()
         {
             var xamlFiles = Directory.GetFiles(@"..\..\..", "*.xaml", SearchOption.AllDirectories);
@@ -47,6 +55,11 @@ namespace DriveHud.Tests.UnitTests
 
             xamlFiles.ForEach(x =>
             {
+                if (ExcludedPaths.Any(p => x.Contains(p)))
+                {
+                    return;
+                }
+
                 var results = CheckXamlForHardcodedTexts(x);
 
                 if (results.Count > 0)
@@ -74,6 +87,11 @@ namespace DriveHud.Tests.UnitTests
 
                     foreach (Match match in matches)
                     {
+                        if (!CheckMatchValue(match.Value))
+                        {
+                            continue;
+                        }
+
                         var checkResult = new XamlCheckResult
                         {
                             Line = i + 1,
@@ -86,6 +104,33 @@ namespace DriveHud.Tests.UnitTests
             }
 
             return checkResults;
+        }
+
+        private static bool CheckMatchValue(string matchText)
+        {
+            var startQuoteIndex = matchText.IndexOf('"');
+
+            if (startQuoteIndex < 0)
+            {
+                return false;
+            }
+
+            var endQuoteIndex = matchText.IndexOf('"', startQuoteIndex + 1);
+
+            if (endQuoteIndex < 0 || (endQuoteIndex - startQuoteIndex) <= 1)
+            {
+                return false;
+            }
+
+            var text = matchText.Substring(startQuoteIndex + 1, endQuoteIndex - startQuoteIndex - 1);
+
+            if (text.Length < 3 || (text.StartsWith("M ") && text.EndsWith(" Z")) 
+                || text.Count(x => char.IsLetter(x)) < 3)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         private class XamlCheckResult

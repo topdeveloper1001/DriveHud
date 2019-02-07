@@ -1106,6 +1106,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Facebook.
+        /// </summary>
+        internal static string Common_FacebookOAuth_Title {
+            get {
+                return ResourceManager.GetString("Common_FacebookOAuth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fast Filter.
         /// </summary>
         internal static string Common_FastFilter {
@@ -2561,6 +2570,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_HudStatSettings_TableFilterEmptyText {
             get {
                 return ResourceManager.GetString("Common_HudStatSettings_TableFilterEmptyText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AaBbCc.
+        /// </summary>
+        internal static string Common_HudStatSettingsView_FontPreviewText {
+            get {
+                return ResourceManager.GetString("Common_HudStatSettingsView_FontPreviewText", resourceCulture);
             }
         }
         
@@ -4808,6 +4826,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_TwitterOAuth_Refresh {
             get {
                 return ResourceManager.GetString("Common_TwitterOAuth_Refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tweet.
+        /// </summary>
+        internal static string Common_TwitterOAuth_Title {
+            get {
+                return ResourceManager.GetString("Common_TwitterOAuth_Title", resourceCulture);
             }
         }
         
