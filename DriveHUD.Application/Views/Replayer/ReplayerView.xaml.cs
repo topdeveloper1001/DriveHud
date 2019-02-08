@@ -59,10 +59,10 @@ namespace DriveHUD.Application.Views.Replayer
             ViewModel.PropertyChanged += ViewModel_PropertyChanged;
 
             ViewModel.IsShowHoleCards = showHoleCards;
-            ViewModel.ActivePlayerName = dataModel.Statistic.PlayerName;
-            ViewModel.CurrentHand = dataModel;
+            ViewModel.ActivePlayerName = dataModel.Statistic.PlayerName;           
             ViewModel.LastHandsCollection = new ObservableCollection<ReplayerDataModel>(dataModelList);
             ViewModel.SessionHandsCollection = new ObservableCollection<ReplayerDataModel>(sessionHandsList);
+            ViewModel.CurrentHand = dataModel;
         }
 
         private void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)

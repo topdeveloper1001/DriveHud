@@ -36,8 +36,10 @@ using Model.Interfaces;
 using Model.Stats;
 using ReactiveUI;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
@@ -180,11 +182,14 @@ namespace DriveHUD.Application.TableConfigurators
             }
         }
 
-        private Dictionary<string, HudIndicators> playerIndicators = new Dictionary<string, HudIndicators>();
+        private ConcurrentDictionary<string, HudIndicators> playerIndicators = new ConcurrentDictionary<string, HudIndicators>();
         private HashSet<Stat> heatMapStats;
 
         private async void InitializeHUD(HudDragCanvas dgCanvas, ReplayerViewModel viewModel)
         {
+            var gameNumber = viewModel.CurrentHand.GameNumber;
+            var pokerSite = viewModel.CurrentHand.PokersiteId;
+
             ClearHUD(dgCanvas);
 
             viewModel.IsLoadingHUD = true;
@@ -245,6 +250,12 @@ namespace DriveHUD.Application.TableConfigurators
 
             await Task.Run(() => LoadIndicators(seats, viewModel, heatMapStats));
 
+            if (gameNumber != viewModel.CurrentHand.GameNumber ||
+                pokerSite != viewModel.CurrentHand.PokersiteId)
+            {
+                return;
+            }
+
             LoadHUD(dgCanvas, viewModel, activeLayout);
 
             viewModel.IsLoadingHUD = false;
@@ -256,11 +267,13 @@ namespace DriveHUD.Application.TableConfigurators
 
             var selectedPlayer = storageModel.PlayerSelectedItem;
 
+            var players = viewModel.PlayersCollection.Select(x => x.Name).ToArray();
+
             for (var i = 0; i < seats; i++)
             {
-                var player = viewModel.PlayersCollection[i];
+                var player = players[i];
 
-                if (playerIndicators.ContainsKey(player.Name))
+                if (playerIndicators.ContainsKey(player))
                 {
                     continue;
                 }
@@ -271,7 +284,7 @@ namespace DriveHUD.Application.TableConfigurators
                 var taskToReadPlayerStats = Task.Run(() =>
                 {
                     if (selectedPlayer != null &&
-                        player.Name == selectedPlayer.Name &&
+                        player == selectedPlayer.Name &&
                         (short?)selectedPlayer.PokerSite == viewModel.CurrentHand.PokersiteId)
                     {
                         storageModel.StatisticCollection.ToList()
@@ -280,20 +293,21 @@ namespace DriveHUD.Application.TableConfigurators
                                 GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, viewModel.CurrentGame.GameDescription.GameType))
                            .ForEach(stat => playerData.AddStatistic(stat));
 
+                        playerIndicators.AddOrUpdate(player, playerData, (key, old) => playerData);                        
                         return;
                     }
 
                     playerStatisticRepository
-                       .GetPlayerStatistic(player.Name, (short)viewModel.CurrentGame.GameDescription.Site)
+                       .GetPlayerStatistic(player, (short)viewModel.CurrentGame.GameDescription.Site)
                        .Where(stat => (stat.PokersiteId == (short)viewModel.CurrentGame.GameDescription.Site) &&
                            stat.IsTourney == viewModel.CurrentGame.GameDescription.IsTournament &&
                            GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, viewModel.CurrentGame.GameDescription.GameType))
                        .ForEach(stat => playerData.AddStatistic(stat));
+
+                    playerIndicators.AddOrUpdate(player, playerData, (key, old) => playerData);
                 });
 
                 tasksToLoad.Add(taskToReadPlayerStats);
-
-                playerIndicators.Add(player.Name, playerData);
             }
 
             Task.WhenAll(tasksToLoad).Wait();

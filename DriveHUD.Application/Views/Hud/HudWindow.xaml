@@ -41,6 +41,14 @@
         </ResourceDictionary>
     </Window.Resources>
 
+    <Window.InputBindings>
+        <KeyBinding
+            Key="T"
+            Modifiers="Ctrl"
+            Command="{Binding TagLastHandsCommand}"
+            CommandParameter="{x:Static enum:EnumHandTag.ForReview}" />
+    </Window.InputBindings>
+
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger
             SourceObject="{Binding NotificationRequest}">
