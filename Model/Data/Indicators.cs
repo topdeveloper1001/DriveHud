@@ -2386,7 +2386,7 @@ namespace Model.Data
 
         public virtual decimal Call3BetBTN => GetPercentage(positionCall3Bet?.BN, positionFaced3Bet?.BN);
 
-        public virtual decimal Call3BetSB => GetPercentage(positionCall3Bet?.SB, positionFaced3Bet?.SB);        
+        public virtual decimal Call3BetSB => GetPercentage(positionCall3Bet?.SB, positionFaced3Bet?.SB);
 
         #endregion
 
@@ -2432,9 +2432,9 @@ namespace Model.Data
 
         protected virtual void UpdatePositionalStats(Playerstatistic statistic)
         {
-            var unopened = statistic.IsUnopened ? 1 : 0;
+            var unopened = statistic.IsUnopened && statistic.NumberOfWalks == 0 ? 1 : 0;
 
-            positionTotal?.Add(statistic.Position, 1);
+            positionTotal?.Add(statistic.Position, 1 - statistic.NumberOfWalks);
             positionUnoppened?.Add(statistic.Position, unopened);
             positionVPIP?.Add(statistic.Position, statistic.Vpiphands);
             positionDidColdCall?.Add(statistic.Position, statistic.Didcoldcall);

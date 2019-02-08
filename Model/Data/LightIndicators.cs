@@ -251,6 +251,40 @@ namespace Model.Data
 
         #endregion
 
+        #region Positional PFR
+
+        public override decimal PFRInEP
+        {
+            get { return GetPercentage(Source.PfrInEp, positionTotal?.EP); }
+        }
+
+        public override decimal PFRInMP
+        {
+            get { return GetPercentage(Source.PfrInMp, positionTotal?.MP); }
+        }
+
+        public override decimal PFRInCO
+        {
+            get { return GetPercentage(Source.PfrInCo, positionTotal?.CO); }
+        }
+
+        public override decimal PFRInBTN
+        {
+            get { return GetPercentage(Source.PfrInBtn, positionTotal?.BN); }
+        }
+
+        public override decimal PFRInBB
+        {
+            get { return GetPercentage(Source.PfrInBb, positionTotal?.BB); }
+        }
+
+        public override decimal PFRInSB
+        {
+            get { return GetPercentage(Source.PfrInSb, positionTotal?.SB); }
+        }
+
+        #endregion
+
         #region Positional 3-Bet
 
         public override decimal ThreeBet_EP

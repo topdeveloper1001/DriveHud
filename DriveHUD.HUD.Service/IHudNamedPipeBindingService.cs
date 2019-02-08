@@ -47,8 +47,8 @@ namespace DriveHUD.HUD.Service
         [OperationContract(Name = "LoadLayout", IsOneWay = true)]
         void LoadLayout(string layoutName, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType);
 
-        [OperationContract(Name = "TagHand", IsOneWay = true)]
-        void TagHand(long gameNumber, short pokerSiteId, int tag);
+        [OperationContract(Name = "TagHands", IsOneWay = true)]
+        void TagHands(IEnumerable<long> gameNumber, short pokerSiteId, int tag);
 
         [OperationContract(Name = "TreatTableAs", IsOneWay = true)]
         void TreatTableAs(IntPtr handle, EnumTableType tableType);

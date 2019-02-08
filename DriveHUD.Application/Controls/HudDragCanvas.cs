@@ -39,9 +39,9 @@ namespace DriveHUD.Application.Controls
         private bool isDragInProgress;
         private bool isGroupDragInProgress;
 
-        internal double XFraction { get; set; }
+        internal double XFraction { get; set; } = 1;
 
-        internal double YFraction { get; set; }
+        internal double YFraction { get; set; } = 1;
 
         #endregion
 

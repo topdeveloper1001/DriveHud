@@ -13,6 +13,7 @@
     xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
     xmlns:controls="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
     xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
+    xmlns:enum="clr-namespace:DriveHUD.Entities;assembly=DriveHUD.Entities"
     xmlns:streetEnum="clr-namespace:HandHistories.Objects.Cards;assembly=HandHistories.Objects"
     xmlns:me="clr-namespace:Model.Enums;assembly=Model"
     xmlns:primitives="clr-namespace:Telerik.Windows.Controls.Diagrams.Primitives;assembly=Telerik.Windows.Controls.Diagrams"
@@ -24,6 +25,21 @@
     Foreground="#7D7F84"
     Background="#1F2124"
     Closed="RadWindow_Closed">
+
+    <telerik:RadWindow.InputBindings>
+        <KeyBinding
+            Key="Right"
+            Command="{Binding NextStepCommand}" />
+        <KeyBinding
+            Key="Left"
+            Command="{Binding PrevStepCommand}" />
+        <KeyBinding
+            Key="Up"
+            Command="{Binding NextSessionHandCommand}" />
+        <KeyBinding
+            Key="Down"
+            Command="{Binding PreviousSessionHandCommand}" />
+    </telerik:RadWindow.InputBindings>
 
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger
@@ -71,15 +87,13 @@
         Margin="5 0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition
-                Width="200" />
+                MinWidth="200"
+                Width="*" />
             <ColumnDefinition
-                Width="33*" />
+                Width="Auto" />
             <ColumnDefinition
-                Width="460*" />
-            <ColumnDefinition
-                Width="177*" />
-            <ColumnDefinition
-                Width="200" />
+                MinWidth="300"
+                Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition
@@ -98,9 +112,10 @@
             ItemsSource="{Binding LastHandsCollection, Mode=TwoWay}"
             SelectedItem="{Binding SelectedLastHand, Mode=TwoWay}"
             Height="40"
+            Width="200"
             Margin="0,0,0,1"
             VerticalAlignment="Bottom"
-            HorizontalAlignment="Stretch"
+            HorizontalAlignment="Left"
             ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
             ItemContainerStyle="{StaticResource ReplayerComboboxItemContainerStyle}"
             ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}">
@@ -129,12 +144,54 @@
         <StackPanel
             Orientation="Horizontal"
             HorizontalAlignment="Right"
-            Grid.Column="3"
+            Grid.Column="2"
             Grid.Row="0"
             application:MarginSetter.Margin="10 0 0 0"
             Grid.ColumnSpan="2"
             Width="246">
 
+            <Button
+                Width="40"
+                Command="{Binding ShowSupportForumsCommand}">
+                <Grid
+                    Height="25"
+                    Width="25">
+                    <Path
+                        Data="{StaticResource PurgePath_1}"
+                        Fill="#FFFFFFFF"
+                        Margin="3.979,3.183,4.774,3.979"
+                        Stretch="Fill" />
+                    <Path
+                        Data="{StaticResource PurgePath_2}"
+                        Fill="#FF9B9B9B"
+                        Stretch="Fill" />
+
+                </Grid>
+            </Button>
+            <Button
+                Width="40"
+                Command="{Binding TwitterOAuthCommand}">
+                <Path
+                    Visibility="Visible"
+                    Data="{StaticResource TwitterPath}">
+                    <Path.Fill>
+                        <SolidColorBrush
+                            Color="{StaticResource BackgroundBrushColor4}" />
+                    </Path.Fill>
+                </Path>
+            </Button>
+            <Button
+                Width="40"
+                Command="{Binding FacebookOAuthCommand}">
+                <Path
+                    Visibility="Visible"
+                    Data="{StaticResource FacebookPath}">
+                    <Path.Fill>
+                        <SolidColorBrush
+                            Color="{StaticResource BackgroundBrushColor4}" />
+                    </Path.Fill>
+                </Path>
+            </Button>
             <telerik:RadRibbonDropDownButton
                 Width="40"
                 Background="{StaticResource BackgroundBrush2}"
@@ -187,50 +244,6 @@
                     </telerik:RadContextMenu>
                 </telerik:RadRibbonDropDownButton.DropDownContent>
             </telerik:RadRibbonDropDownButton>
-
-            <Button
-                Width="40"
-                Command="{Binding ShowSupportForumsCommand}">
-                <!-- Command="{Binding PurgeCommand}" -->
-                <Grid
-                    Height="25"
-                    Width="25">
-                    <Path
-                        Data="{StaticResource PurgePath_1}"
-                        Fill="#FFFFFFFF"
-                        Margin="3.979,3.183,4.774,3.979"
-                        Stretch="Fill" />
-                    <Path
-                        Data="{StaticResource PurgePath_2}"
-                        Fill="#FF9B9B9B"
-                        Stretch="Fill" />
-
-                </Grid>
-            </Button>
-            <Button
-                Width="40"
-                Command="{Binding TwitterOAuthCommand}">
-                <Path
-                    Visibility="Visible"
-                    Data="{StaticResource TwitterPath}">
-                    <Path.Fill>
-                        <SolidColorBrush
-                            Color="{StaticResource BackgroundBrushColor4}" />
-                    </Path.Fill>
-                </Path>
-            </Button>
-            <Button
-                Width="40"
-                Command="{Binding FacebookOAuthCommand}">
-                <Path
-                    Visibility="Visible"
-                    Data="{StaticResource FacebookPath}">
-                    <Path.Fill>
-                        <SolidColorBrush
-                            Color="{StaticResource BackgroundBrushColor4}" />
-                    </Path.Fill>
-                </Path>
-            </Button>
             <Button
                 Width="40"
                 Command="{Binding HandNoteCommand}">
@@ -267,15 +280,14 @@
             Grid.Row="1"
             Grid.ColumnSpan="5"
             AllowDragging="True"
-            AllowDragOutOfView="True"
+            AllowDragOutOfView="False"
             AllowDrop="False" />
 
         <StackPanel
             Grid.Row="2"
-            Grid.Column="2"
+            Grid.Column="1"
             Orientation="Horizontal"
-            HorizontalAlignment="Center"
-            Margin="192,0,48,0">
+            HorizontalAlignment="Center">
 
             <Button
                 HorizontalAlignment="Left"
@@ -343,7 +355,7 @@
                 Style="{StaticResource ReplayerDefaultButton}"
                 VerticalAlignment="Center"
                 Width="40"
-                Command="{Binding  NextStepCommand}"
+                Command="{Binding NextStepCommand}"
                 Name="btnNext">
                 <Path
                     Data="{StaticResource NextElement}"
@@ -371,10 +383,30 @@
             VerticalAlignment="Center"
             Height="40"
             HorizontalAlignment="Right"
-            Grid.Column="4"
+            Grid.Column="2"
             Grid.Row="2"
             application:MarginSetter.Margin="10 0 0 0"
             Margin="0,10">
+
+            <!-- Min BB filter -->
+            <StackPanel
+                Orientation="Horizontal">
+                <TextBlock
+                    VerticalAlignment="Center"
+                    Text="{ResX Key=Common_ReplayerView_MinBB}" />
+
+                <telerik:RadNumericUpDown
+                    Margin="5,0,0,0"
+                    Minimum="0"
+                    Width="50"
+                    Height="30"
+                    Foreground="{StaticResource ForegroundBrush}"
+                    NumberDecimalDigits="1"
+                    SmallChange="0.1"
+                    Value="{Binding BBFilter, UpdateSourceTrigger=PropertyChanged, Delay=1000}"
+                    Maximum="10000" />
+
+            </StackPanel>
             <Button
                 Width="40"
                 Command="{Binding ToStreetCommand}"
@@ -422,12 +454,12 @@
             </ListBox.ItemsPanel>
         </ListBox>
 
+        <!-- DH Logo with menu -->
         <Grid
             Margin="0,10,0,0"
-            Grid.Column="2"
+            Grid.Column="1"
             VerticalAlignment="Top"
-            HorizontalAlignment="Center"
-            Grid.ColumnSpan="2">
+            HorizontalAlignment="Center">
             <Image
                 HorizontalAlignment="Center"
                 Source="/DriveHUD.Common.Resources;component/images/logo32x32.png"
@@ -437,6 +469,26 @@
                 <telerik:RadContextMenu.ContextMenu>
                     <telerik:RadContextMenu
                         IsEnabled="{Binding IsLoadingHUD, Converter={dh:BoolNotConverter}}">
+                        <!-- Tag last hand -->
+                        <telerik:RadMenuItem
+                            Header="{ResX Main_ContextMenu_TagHand}">
+                            <telerik:RadMenuItem
+                                Header="{ResX Key=Enum_HandTag_ForReview}"
+                                CommandParameter="{x:Static enum:EnumHandTag.ForReview}"
+                                Command="{Binding TagHandCommand}" />
+                            <telerik:RadMenuItem
+                                Header="{ResX Key=Enum_HandTag_Bluff}"
+                                CommandParameter="{x:Static enum:EnumHandTag.Bluff}"
+                                Command="{Binding TagHandCommand}" />
+                            <telerik:RadMenuItem
+                                Header="{ResX Key=Enum_HandTag_HeroCall}"
+                                CommandParameter="{x:Static enum:EnumHandTag.HeroCall}"
+                                Command="{Binding TagHandCommand}" />
+                            <telerik:RadMenuItem
+                                Header="{ResX Key=Enum_HandTag_BigFold}"
+                                CommandParameter="{x:Static enum:EnumHandTag.BigFold}"
+                                Command="{Binding TagHandCommand}" />
+                        </telerik:RadMenuItem>
                         <!-- Load HUD -->
                         <telerik:RadMenuItem
                             Header="{ResX Main_ContextMenu_LoadHud}"
@@ -480,6 +532,10 @@
                                 </Style>
                             </telerik:RadMenuItem.ItemContainerStyle>
                         </telerik:RadMenuItem>
+                        <!-- Save hud positions -->
+                        <telerik:RadMenuItem
+                            Header="{ResX Main_ContextMenu_SaveHudPosition}"
+                            Command="{Binding SaveHUDPositionsCommand}" />
                     </telerik:RadContextMenu>
                 </telerik:RadContextMenu.ContextMenu>
             </Image>

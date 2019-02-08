@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="ImporterBootstrapper.cs" company="Ace Poker Solutions">
-// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -117,14 +117,12 @@ namespace DriveHUD.Importers
             container.RegisterType<IPokerClientEncryptedLogger, BetOnlineTournamentLogger>(LogServices.BetOnlineTournament.ToString());
 
             container.RegisterType<IHandHistoryToIPokerConverter, HandHistoryToIPokerConverter>();
-            container.RegisterType<IZoneHandAdjuster, ZoneHandAdjuster>();
+            container.RegisterType<IZoneHandAdjuster, ZoneHandAdjuster>();            
         }
 
         public static void ConfigureImporterService()
         {
-            var importerService = ServiceLocator.Current.GetInstance<IImporterService>() as IImporterInternalService;
-
-            if (importerService == null)
+            if (!(ServiceLocator.Current.GetInstance<IImporterService>() is IImporterInternalService importerService))
             {
                 throw new InvalidCastException("Importers could not be registered");
             }

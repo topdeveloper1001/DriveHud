@@ -250,6 +250,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tag Last 3 Hands.
+        /// </summary>
+        internal static string Main_ContextMenu_TagLastHands {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_TagLastHands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Treat HUD as.
         /// </summary>
         internal static string Main_ContextMenu_TreatAs {

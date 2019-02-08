@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="ReplayerViewModel.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -16,15 +16,18 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.Wpf.Actions;
+using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Players;
 using Microsoft.Practices.ServiceLocation;
+using Model;
 using Model.Enums;
 using Model.Events;
 using Model.Importer;
 using Model.Interfaces;
 using Model.Replayer;
+using Model.Settings;
 using Model.Solvers;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
@@ -43,11 +46,15 @@ namespace DriveHUD.Application.ViewModels.Replayer
     public class ReplayerViewModel : BaseViewModel
     {
         #region Fields
+
         private const int PLAYERS_COLLECTION_SIZE = 10;
         private const int TIMER_INTERVAL_MS = 500;
 
         private IDataService _dataService;
         private DispatcherTimer _timer;
+
+        private readonly ISettingsService settingsService;
+        private readonly SingletonStorageModel storageModel;
 
         #endregion
 
@@ -56,13 +63,15 @@ namespace DriveHUD.Application.ViewModels.Replayer
         public ReplayerViewModel()
         {
             _dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+            storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
 
             Initialize();
         }
 
         private void Initialize()
         {
-            this.NotificationRequest = new InteractionRequest<INotification>();
+            NotificationRequest = new InteractionRequest<INotification>();
 
             ToEndCommand = new RelayCommand(ToEnd);
             NextStepCommand = new RelayCommand(NextStep);
@@ -76,7 +85,10 @@ namespace DriveHUD.Application.ViewModels.Replayer
             FacebookOAuthCommand = new RelayCommand(FacebookOAuthCommandHandler);
             HandNoteCommand = new RelayCommand(HandNoteShow);
             ShowSupportForumsCommand = new RelayCommand(ShowSupportForums);
-
+            TagHandCommand = new RelayCommand(TagHand);
+            PreviousSessionHandCommand = new RelayCommand(() => MoveToSessionHand(false));
+            NextSessionHandCommand = new RelayCommand(() => MoveToSessionHand(true));
+          
             TableStateList = new List<ReplayerTableState>();
             PlayersCollection = new ObservableCollection<ReplayerPlayerViewModel>();
             for (int i = 0; i < PLAYERS_COLLECTION_SIZE; i++)
@@ -87,7 +99,9 @@ namespace DriveHUD.Application.ViewModels.Replayer
             _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromMilliseconds(TIMER_INTERVAL_MS);
             _timer.Tick += OnTimerTick;
-        }
+
+            BBFilter = settingsService.GetSettings().GeneralSettings.ReplayerBBFilter;
+        }        
 
         #endregion
 
@@ -580,6 +594,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         #endregion
 
         #region ICommand Implementations
+
         private void ToEnd(object obj)
         {
             StopTimer(null);
@@ -702,6 +717,75 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 LogProvider.Log.Error(this, "Couldn't show support forum", e);
             }
         }
+
+        private void TagHand(object obj)
+        {
+            var tag = EnumHandTag.None;
+
+            if (!Enum.TryParse(obj.ToString(), out tag))
+            {
+                return;
+            }
+
+            try
+            {
+                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+
+                var handNote = dataService.GetHandNote(CurrentHand.GameNumber, CurrentHand.PokersiteId);
+
+                if (handNote == null)
+                {
+                    handNote = new Handnotes
+                    {
+                        Gamenumber = CurrentHand.GameNumber,
+                        PokersiteId = CurrentHand.PokersiteId
+                    };
+                }
+
+                handNote.HandTag = (int)tag;
+
+                dataService.Store(handNote);
+
+                var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
+
+                var statistic = storageModel.StatisticCollection.FirstOrDefault(x => x.GameNumber == CurrentHand.GameNumber && x.PokersiteId == CurrentHand.PokersiteId);
+
+                if (statistic == null)
+                {
+                    return;
+                }
+
+                statistic.HandNote = handNote;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not tag hand #{CurrentHand.GameNumber} for {(EnumPokerSites)CurrentHand.PokersiteId} from replayer.", e);
+            }
+        }
+    
+        private void MoveToSessionHand(bool forward)
+        {
+            if (SessionHandsCollection == null)
+            {
+                return;
+            }
+
+            var currentIndex = SessionHandsCollection.IndexOf(CurrentHand);
+
+            if ((forward && currentIndex >= SessionHandsCollection.Count - 1) ||
+                (!forward && currentIndex <= 0))
+            {
+                return;
+
+            }
+
+            var nextIndex = forward ? ++currentIndex : --currentIndex;
+
+            CurrentHand.IsActive = false;
+            CurrentHand = SessionHandsCollection[nextIndex];
+            CurrentHand.IsActive = true;
+        }
+
         #endregion
 
         #region ICommand
@@ -730,6 +814,14 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         public ICommand LoadLayoutCommand { get; set; }
 
+        public ICommand SaveHUDPositionsCommand { get; set; }
+
+        public ICommand TagHandCommand { get; set; }
+
+        public ICommand NextSessionHandCommand { get; set; }
+
+        public ICommand PreviousSessionHandCommand { get; set; }
+
         #endregion
 
         #region Properties
@@ -753,7 +845,9 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private string _activePlayerName;
 
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
+
         private ReplayerDataModel _replayerDataModel { get; set; }
+
         public ReplayerDataModel CurrentHand
         {
             get { return _currentHand; }
@@ -777,7 +871,10 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         public ReplayerDataModel SelectedLastHand
         {
-            get { return _selectedLastHand; }
+            get
+            {
+                return _selectedLastHand;
+            }
             set
             {
                 CurrentHand = value;
@@ -786,7 +883,10 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         public ReplayerDataModel SelectedSessionHand
         {
-            get { return _selectedSessionHand; }
+            get
+            {
+                return _selectedSessionHand;
+            }
             set
             {
                 CurrentHand = value;
@@ -940,6 +1040,37 @@ namespace DriveHUD.Application.ViewModels.Replayer
             set
             {
                 SetProperty(ref isLoadingHUD, value);
+            }
+        }
+
+        private decimal bbFilter;
+
+        public decimal BBFilter
+        {
+            get
+            {
+                return bbFilter;
+            }
+            set
+            {
+                SetProperty(ref bbFilter, value);
+
+                var settings = settingsService.GetSettings();
+                settings.GeneralSettings.ReplayerBBFilter = bbFilter;
+                settingsService.SaveSettings(settings);
+
+                if (CurrentHand == null || CurrentHand.Statistic == null ||
+                    string.IsNullOrWhiteSpace(CurrentHand.Statistic.PlayerName) ||
+                    !CurrentGame.Players.Any(x => x.PlayerName == CurrentHand.Statistic.PlayerName && !x.IsSittingOut))
+                {
+                    return;
+                }
+
+                var statistics = CurrentHand.Statistic.IsTourney ?
+                    storageModel.FilteredTournamentPlayerStatistic :
+                    storageModel.FilteredCashPlayerStatistic;
+
+                SessionHandsCollection = new ObservableCollection<ReplayerDataModel>(ReplayerHelpers.CreateSessionHandsList(statistics, CurrentHand.Statistic));
             }
         }
 
