@@ -4379,7 +4379,7 @@ namespace Model.Data
                     CouldOccurred = positionFaced3Bet?.SB ?? 0
                 };
             }
-        }    
+        }
 
         #endregion
 
@@ -4542,6 +4542,88 @@ namespace Model.Data
         }
 
         #region Positional
+
+        #region PFR Positional
+
+        public virtual StatDto PFRInEPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = PFRInEP,
+                    Occurred = Source.PfrInEp,
+                    CouldOccurred = positionTotal?.EP ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto PFRInMPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = PFRInMP,
+                    Occurred = Source.PfrInMp,
+                    CouldOccurred = positionTotal?.MP ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto PFRInCOObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = PFRInCO,
+                    Occurred = Source.PfrInCo,
+                    CouldOccurred = positionTotal?.CO ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto PFRInBTNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = PFRInBTN,
+                    Occurred = Source.PfrInBtn,
+                    CouldOccurred = positionTotal?.BN ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto PFRInSBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = PFRInSB,
+                    Occurred = Source.PfrInSb,
+                    CouldOccurred = positionTotal?.SB ?? 0
+                };
+            }
+        }
+
+        public virtual StatDto PFRInBBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = PFRInBB,
+                    Occurred = Source.PfrInBb,
+                    CouldOccurred = positionTotal?.BB ?? 0
+                };
+            }
+        }
+
+        #endregion
 
         #region Unopened Pot        
 
