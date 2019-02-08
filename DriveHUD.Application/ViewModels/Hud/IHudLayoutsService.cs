@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Entities;
+using DriveHUD.HUD.Service;
 using Model.Data;
 using Model.Hud;
 using System.Collections.Generic;
@@ -50,6 +51,12 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="hudLayout">The layout to save</param>
         void Save(HudLayoutInfoV2 hudLayout);
+
+        /// <summary>
+        /// Updates existing HUD using data from the specified <see cref="HudLayoutContract"/>
+        /// </summary>
+        /// <param name="hudLayoutContract">Contrat to update existing HUD</param>
+        void Save(HudLayoutContract hudLayoutContract);
 
         /// <summary>
         /// Saves layout based on the specified <see cref="HudSavedDataInfo"/> data

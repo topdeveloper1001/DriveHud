@@ -740,6 +740,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         public ICommand LoadLayoutCommand { get; set; }
 
+        public ICommand SaveHUDPositionsCommand { get; set; }
+
         #endregion
 
         #region Properties

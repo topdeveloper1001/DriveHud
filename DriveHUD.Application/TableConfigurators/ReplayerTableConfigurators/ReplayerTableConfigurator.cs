@@ -25,6 +25,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Reflection;
 using DriveHUD.Common.Wpf.Converters;
 using DriveHUD.Entities;
+using DriveHUD.HUD.Service;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using Microsoft.Practices.ServiceLocation;
@@ -237,6 +238,8 @@ namespace DriveHUD.Application.TableConfigurators
                     LogProvider.Log.Error(this, "Failed to load layout", e);
                 }
             });
+
+            viewModel.SaveHUDPositionsCommand = new RelayCommand(obj => SaveHUDPositions(dgCanvas, viewModel));
 
             heatMapStats = new HashSet<Stat>(activeLayout.GetHeatMapStats());
 
@@ -463,6 +466,56 @@ namespace DriveHUD.Application.TableConfigurators
             }
 
             hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout);
+        }
+
+        private void SaveHUDPositions(HudDragCanvas dgCanvas, ReplayerViewModel viewModel)
+        {
+            var layout = hudLayoutsService.GetLayout(viewModel.LayoutName);
+
+            if (layout == null)
+            {
+                LogProvider.Log.Warn($"Failed to save HUD positions. Could not find layout '{viewModel.LayoutName}'");
+                return;
+            }
+
+            try
+            {
+                var hudLayoutContract = new HudLayoutContract
+                {
+                    LayoutName = viewModel.LayoutName,
+                    GameType = EnumGameType.CashHoldem,
+                    PokerSite = ReplayerPokerSite,
+                    TableType = layout.TableType,
+                    HudPositions = new List<HudPositionContract>()
+                };
+
+                // clone is needed
+                var toolViewModels = dgCanvas.Children.OfType<FrameworkElement>()
+                    .Where(x => x != null && (x.DataContext is IHudNonPopupToolViewModel))
+                    .Select(x => (x.DataContext as HudBaseToolViewModel))
+                    .ToList();
+
+                foreach (var toolViewModel in toolViewModels)
+                {
+                    var seatNumber = toolViewModel.Parent != null ? toolViewModel.Parent.Seat : 1;
+
+                    var xPos = toolViewModel.OffsetX != 0 ? toolViewModel.OffsetX : toolViewModel.Position.X;
+                    var yPos = toolViewModel.OffsetY != 0 ? toolViewModel.OffsetY : toolViewModel.Position.Y;
+
+                    hudLayoutContract.HudPositions.Add(new HudPositionContract
+                    {
+                        Id = toolViewModel.Id,
+                        Position = new Point(xPos, yPos),
+                        SeatNumber = seatNumber
+                    });
+                }
+
+                hudLayoutsService.Save(hudLayoutContract);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Failed to save HUD positions in replayer.", e);
+            }
         }
 
         private void AddPotPlayerLabel(RadDiagram diagram, ReplayerPlayerViewModel player, double x, double y)
