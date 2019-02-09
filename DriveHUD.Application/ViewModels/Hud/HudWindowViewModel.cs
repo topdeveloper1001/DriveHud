@@ -234,7 +234,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             if (toolViewModel != null && panelOffsets.ContainsKey(toolKey))
             {
-                panelOffsets[toolKey] = new Point(toolViewModel.OffsetX, toolViewModel.OffsetY);
+                panelOffsets[toolKey] = new Point(toolViewModel.OffsetX ?? 0, toolViewModel.OffsetY ?? 0);
             }
         }
 
@@ -413,8 +413,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             var nonPopupToolViewModels = baseHUDPlayer.HudElement.Tools.OfType<IHudNonPopupToolViewModel>();
 
             var toolOffsetsDictionary = (from nonPopupToolViewModel in nonPopupToolViewModels
-                                         let toolOffsetX = nonPopupToolViewModel.OffsetX != 0 ? nonPopupToolViewModel.OffsetX : nonPopupToolViewModel.Position.X
-                                         let toolOffsetY = nonPopupToolViewModel.OffsetY != 0 ? nonPopupToolViewModel.OffsetY : nonPopupToolViewModel.Position.Y
+                                         let toolOffsetX = nonPopupToolViewModel.OffsetX ?? nonPopupToolViewModel.Position.X
+                                         let toolOffsetY = nonPopupToolViewModel.OffsetY ?? nonPopupToolViewModel.Position.Y
                                          let shiftX = toolOffsetX - baseSeatPosition.X
                                          let shiftY = toolOffsetY - baseSeatPosition.Y
                                          select new { ToolId = nonPopupToolViewModel.Id, ShiftX = shiftX, ShiftY = shiftY }).ToDictionary(x => x.ToolId);

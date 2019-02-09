@@ -46,9 +46,9 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         #region IHudWindowElement
 
-        private double offsetX;
+        private double? offsetX;
 
-        public double OffsetX
+        public double? OffsetX
         {
             get
             {
@@ -60,9 +60,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private double offsetY;
+        private double? offsetY;
 
-        public double OffsetY
+        public double? OffsetY
         {
             get
             {

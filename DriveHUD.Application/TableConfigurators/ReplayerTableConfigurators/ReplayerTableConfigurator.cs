@@ -513,8 +513,8 @@ namespace DriveHUD.Application.TableConfigurators
                 {
                     var seatNumber = toolViewModel.Parent != null ? toolViewModel.Parent.Seat : 1;
 
-                    var xPos = toolViewModel.OffsetX != 0 ? toolViewModel.OffsetX : toolViewModel.Position.X;
-                    var yPos = toolViewModel.OffsetY != 0 ? toolViewModel.OffsetY : toolViewModel.Position.Y;
+                    var xPos = toolViewModel.OffsetX ?? toolViewModel.Position.X;
+                    var yPos = toolViewModel.OffsetY ?? toolViewModel.Position.Y;
 
                     hudLayoutContract.HudPositions.Add(new HudPositionContract
                     {
