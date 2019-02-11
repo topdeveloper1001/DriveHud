@@ -12,7 +12,6 @@
 
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
-using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Microsoft.Win32;
 using Model.Settings;
@@ -26,11 +25,9 @@ namespace Model.Site
 {
     public class Poker888Configuration : BaseSiteConfiguration, ISiteConfiguration
     {
-        private static readonly string[] PossibleFolders = new string[] { "888poker" };
+        private static readonly string[] PossibleFolders = new string[] { "888poker", "DelawareParkPoker" };
 
-        private static string[] registryKeys = new[] { "{8C4CF142-0807-473A-A0E5-08FE1CA14BBC}", "{4D7C3811-3AC4-4B8A-BA1B-416A5133E6A1}" };
-        
-        private const string LanguageRegistryKey = @"SOFTWARE\pacificpoker\poker\INIT";
+        private static readonly string[] LanguageRegistryKeys = new[] { @"SOFTWARE\pacificpoker\poker\INIT", @"SOFTWARE\DelawareParkPoker\poker\INIT" };
         private const string LanguageRegistryKeyValue = "CURRENT_LANG_ID";
 
         private const string HandHistoryPathTag = "HistoryPath";
@@ -206,22 +203,25 @@ namespace Model.Site
 
             try
             {
-                var languageRegistryKey = Registry.CurrentUser.OpenSubKey(LanguageRegistryKey);
-
-                if (languageRegistryKey != null)
+                foreach (var registryKey in LanguageRegistryKeys)
                 {
-                    var language = Convert.ToUInt32(languageRegistryKey.GetValue(LanguageRegistryKeyValue));
+                    var languageRegistryKey = Registry.CurrentUser.OpenSubKey(registryKey);
 
-                    if (language != 0)
+                    if (languageRegistryKey != null)
                     {
-                        var issue = string.Format(CommonResourceManager.Instance.GetResourceString("Error_888_Validation_HHLanguage"));
-                        validationResult.Issues.Add(issue);
+                        var language = Convert.ToUInt32(languageRegistryKey.GetValue(LanguageRegistryKeyValue));
+
+                        if (language != 0)
+                        {
+                            var issue = string.Format(CommonResourceManager.Instance.GetResourceString("Error_888_Validation_HHLanguage"));
+                            validationResult.Issues.Add(issue);
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                LogProvider.Log.Error(this, $"Could not read '{LanguageRegistryKey}'", ex);
+                LogProvider.Log.Error(this, $"Could not read '{LanguageRegistryKeys}'", ex);
             }
 
             return validationResult;
@@ -235,7 +235,8 @@ namespace Model.Site
         {
             try
             {
-                var isInstalled = RegistryUtils.UninstallRegistryContainsKeys(registryKeys) || Registry.CurrentUser.OpenSubKey(LanguageRegistryKey) != null;
+                var isInstalled = LanguageRegistryKeys.Any(key => Registry.CurrentUser.OpenSubKey(key) != null);
+
                 return isInstalled;
             }
             catch (Exception e)
