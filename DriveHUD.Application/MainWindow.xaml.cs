@@ -11,8 +11,6 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.ViewModels;
-using System;
-using System.Windows;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
 
@@ -42,15 +40,10 @@ namespace DriveHUD.Application
 
         private void ScrollViewer_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            var mainWindowViewModel = DataContext as MainWindowViewModel;
-
-            if (mainWindowViewModel != null && !mainWindowViewModel.IsEnabled)
+            if (DataContext is MainWindowViewModel mainWindowViewModel && !mainWindowViewModel.IsEnabled)
             {
                 e.Handled = true;
             }
-        }
-       
-
-
+        }       
     }
 }

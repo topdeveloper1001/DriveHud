@@ -36,8 +36,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
+using Telerik.Windows.Controls;
 using HandHistory = HandHistories.Objects.Hand.HandHistory;
 using Player = HandHistories.Objects.Players.Player;
 
@@ -50,11 +52,12 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private const int PLAYERS_COLLECTION_SIZE = 10;
         private const int TIMER_INTERVAL_MS = 500;
 
-        private IDataService _dataService;
-        private DispatcherTimer _timer;
+        private IDataService dataService;
+        private DispatcherTimer timer;
 
         private readonly ISettingsService settingsService;
         private readonly SingletonStorageModel storageModel;
+        private readonly IEventAggregator eventAggregator;
 
         #endregion
 
@@ -62,9 +65,10 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         public ReplayerViewModel()
         {
-            _dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            dataService = ServiceLocator.Current.GetInstance<IDataService>();
             settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
             storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
+            eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
 
             Initialize();
         }
@@ -88,20 +92,34 @@ namespace DriveHUD.Application.ViewModels.Replayer
             TagHandCommand = new RelayCommand(TagHand);
             PreviousSessionHandCommand = new RelayCommand(() => MoveToSessionHand(false));
             NextSessionHandCommand = new RelayCommand(() => MoveToSessionHand(true));
-          
+            OpenEquityCalculatorCommand = new RelayCommand(() =>
+            {
+                if (CurrentHand == null)
+                {
+                    return;
+                }
+
+                var requestEquityCalculatorEventArgs = new RequestEquityCalculatorEventArgs(CurrentHand.GameNumber, CurrentHand.PokersiteId);
+                eventAggregator.GetEvent<RequestEquityCalculatorEvent>().Publish(requestEquityCalculatorEventArgs);
+
+                System.Windows.Application.Current.MainWindow.Topmost = true;
+                System.Windows.Application.Current.MainWindow.Topmost = false;
+            });
+
             TableStateList = new List<ReplayerTableState>();
             PlayersCollection = new ObservableCollection<ReplayerPlayerViewModel>();
+
             for (int i = 0; i < PLAYERS_COLLECTION_SIZE; i++)
             {
                 PlayersCollection.Add(new ReplayerPlayerViewModel());
             }
 
-            _timer = new DispatcherTimer();
-            _timer.Interval = TimeSpan.FromMilliseconds(TIMER_INTERVAL_MS);
-            _timer.Tick += OnTimerTick;
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(TIMER_INTERVAL_MS);
+            timer.Tick += OnTimerTick;
 
             BBFilter = settingsService.GetSettings().GeneralSettings.ReplayerBBFilter;
-        }        
+        }
 
         #endregion
 
@@ -211,7 +229,9 @@ namespace DriveHUD.Application.ViewModels.Replayer
             ReplayerPlayerViewModel activePlayer;
 
             string activePlayerName = action.PlayerName;
+
             ReplayerTableState activePlayerLastState = TableStateList.LastOrDefault(x => x.ActivePlayer != null && x.ActivePlayer.Name == activePlayerName);
+
             if (activePlayerLastState == null)
             {
                 activePlayer = PlayersCollection.LastOrDefault(x => x.Name == activePlayerName);
@@ -223,7 +243,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             if (activePlayer == null)
             {
-                throw new ArgumentNullException("activePlayer", "Cannot find player with name: " + activePlayerName);
+                throw new ArgumentNullException(nameof(activePlayer), $"Cannot find player with name: {activePlayerName}");
             }
 
             return activePlayer;
@@ -271,12 +291,15 @@ namespace DriveHUD.Application.ViewModels.Replayer
         }
 
         public List<Player> ActivePlayerHasHoleCard { get; set; }
+
         public List<Player> ActivePlayerHasHoleCardFolded { get; set; }
 
         public List<HoleCards> AllDeadCards = new List<HoleCards>();
+
         public string AllDeadCardsString = string.Empty;
 
         public string CurrentBoardCards { get; set; }
+
         public Card[] CurrentBoard { get; set; }
 
         private void UpdatePlayersEquityWin(ReplayerTableState state)
@@ -415,12 +438,12 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 return;
             }
 
-            bool isBackward = stateIndex < this.StateIndex;
-            bool isRefreshPlayersRequired = Math.Abs(stateIndex - this.StateIndex) > 1;
+            bool isBackward = stateIndex < StateIndex;
+            bool isRefreshPlayersRequired = Math.Abs(stateIndex - StateIndex) > 1;
             ReplayerTableState state = TableStateList[stateIndex];
             UpdatePlayersEquityWin(state);
-            this.CurrentStreet = state.CurrentStreet;
-            this.CurrentPotValue = state.CurrentPotValue;
+            CurrentStreet = state.CurrentStreet;
+            CurrentPotValue = state.CurrentPotValue;
             UpdateTotalPot(state.TotalPotValue);
 
             if (!IsShowHoleCards)
@@ -442,12 +465,14 @@ namespace DriveHUD.Application.ViewModels.Replayer
             }
 
             var activePlayer = GetActivePlayerForState(state);
+
             if (activePlayer != null)
             {
                 if (activePlayer.IsWin)
                 {
                     ResetPlayersPot(PlayersCollection.AsQueryable().Where(x => x != activePlayer));
                 }
+
                 activePlayer.UpdateChips();
             }
         }
@@ -470,12 +495,15 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private void UpdatePlayersToState(ReplayerTableState state)
         {
             var prevStates = TableStateList.Take(TableStateList.IndexOf(state));
+
             foreach (var player in PlayersCollection)
             {
                 var playerAction = prevStates.LastOrDefault(x => x.ActivePlayer?.Name == player.Name);
+
                 if (playerAction == null)
                 {
                     playerAction = TableStateList.FirstOrDefault(x => x.ActivePlayer.Name == player.Name);
+
                     if (playerAction != null)
                     {
                         player.Bank = playerAction.ActivePlayer.OldBank;
@@ -483,6 +511,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
                         player.IsActive = playerAction.ActivePlayer.IsActive;
                         player.UpdateChips();
                     }
+
                     continue;
                 }
 
@@ -498,6 +527,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             }
 
             var activePlayer = PlayersCollection.FirstOrDefault(x => x.Name == state.ActivePlayer.Name);
+
             if (activePlayer != null)
             {
                 ReplayerPlayerViewModel.Copy(state.ActivePlayer, activePlayer);
@@ -509,10 +539,12 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private void ResetLastActivePlayer(bool resetChipsToPreviousState = false)
         {
             var prevActive = PlayersCollection.FirstOrDefault(x => x.IsActive);
+
             if (prevActive != null)
             {
                 prevActive.IsActive = false;
                 prevActive.ActionString = string.Empty;
+
                 if (resetChipsToPreviousState)
                 {
                     prevActive.Bank = prevActive.OldBank;
@@ -536,10 +568,10 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void UpdateTotalPot(decimal amount)
         {
-            if (this.TotalPotValue != amount)
+            if (TotalPotValue != amount)
             {
-                this.TotalPotValue = amount;
-                this.TotalPotChipsContainer.UpdateChips(this.TotalPotValue);
+                TotalPotValue = amount;
+                TotalPotChipsContainer.UpdateChips(TotalPotValue);
             }
         }
 
@@ -571,7 +603,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         {
             try
             {
-                CurrentGame = value == null ? null : _dataService.GetGame(value.GameNumber, value.PokersiteId);
+                CurrentGame = value == null ? null : dataService.GetGame(value.GameNumber, value.PokersiteId);
                 Update();
             }
             catch (Exception ex)
@@ -582,7 +614,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         internal void RaiseNotification(string content, string title)
         {
-            this.NotificationRequest.Raise(
+            NotificationRequest.Raise(
                     new PopupActionNotification
                     {
                         Content = content,
@@ -629,17 +661,17 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void StartTimer(object obj)
         {
-            if (!_timer.IsEnabled)
+            if (!timer.IsEnabled)
             {
-                _timer.Start();
+                timer.Start();
             }
         }
 
         private void StopTimer(object obj)
         {
-            if (_timer.IsEnabled)
+            if (timer.IsEnabled)
             {
-                _timer.Stop();
+                timer.Stop();
             }
         }
 
@@ -652,47 +684,52 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             StopTimer(null);
 
-            Street outStreet;
-            if (Enum.TryParse<Street>(obj.ToString(), out outStreet))
+            if (Enum.TryParse(obj.ToString(), out Street outStreet))
             {
                 var streetState = TableStateList.FirstOrDefault(x => x.CurrentStreet == outStreet);
+
                 if (streetState != null)
                 {
                     if (outStreet <= Street.Preflop)
                     {
                         PlayersCollection.Where(x => x.IsFinished && TableStateList.Any(t => t.ActivePlayer.Name == x.Name)).ForEach(x => x.IsFinished = false);
                     }
+
                     StateIndex = TableStateList.IndexOf(streetState);
+
                     UpdatePlayersEquityWin(TableStateList.FirstOrDefault(x => x.CurrentStreet == outStreet)); //update equity win property of all players
                 }
             }
-
         }
 
         private void FacebookOAuthCommandHandler()
         {
-            var frm = new Social.FacebookOAuth();
-            frm.Owner = System.Windows.Application.Current.MainWindow;
-            frm.ShowDialog();
+            OpenWindowDialog(new Social.FacebookOAuth());
         }
 
         private void TwitterOAuthCommandHandler()
         {
-            var frm = new Social.TwitterOAuth();
-            frm.Owner = System.Windows.Application.Current.MainWindow;
-            frm.ShowDialog();
+            OpenWindowDialog(new Social.TwitterOAuth());
+        }
+
+        private void OpenWindowDialog(Window window)
+        {
+            window.Owner = System.Windows.Application.Current.MainWindow;
+            window.ShowDialog();
         }
 
         private void HandNoteShow()
         {
+            if (CurrentHand == null)
+            {
+                return;
+            }
+
             var viewModel = new HandNoteViewModel(CurrentHand.GameNumber, CurrentHand.PokersiteId);
 
-            var handNoteView = new HandNoteView(viewModel)
-            {
-                Owner = System.Windows.Application.Current.MainWindow
-            };
+            var handNoteView = new HandNoteView(viewModel);
 
-            handNoteView.ShowDialog();
+            OpenWindowDialog(handNoteView);
 
             if (viewModel.HandNoteEntity == null)
             {
@@ -701,7 +738,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             CurrentHand.Statistic.HandNote = viewModel.HandNoteEntity;
 
-            ServiceLocator.Current.GetInstance<IEventAggregator>()
+            eventAggregator
                 .GetEvent<HandNoteUpdatedEvent>()
                 .Publish(new HandNoteUpdatedEventArgs(CurrentHand.GameNumber, viewModel.HandNoteEntity.Note));
         }
@@ -762,7 +799,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 LogProvider.Log.Error(this, $"Could not tag hand #{CurrentHand.GameNumber} for {(EnumPokerSites)CurrentHand.PokersiteId} from replayer.", e);
             }
         }
-    
+
         private void MoveToSessionHand(bool forward)
         {
             if (SessionHandsCollection == null)
@@ -822,70 +859,66 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         public ICommand PreviousSessionHandCommand { get; set; }
 
+        public ICommand OpenEquityCalculatorCommand { get; set; }
+
         #endregion
 
         #region Properties
 
-        private ReplayerDataModel _currentHand;
-        private ReplayerDataModel _selectedLastHand;
-        private ReplayerDataModel _selectedSessionHand;
-        private ObservableCollection<ReplayerDataModel> _lastHandsCollection;
-        private ObservableCollection<ReplayerDataModel> _sessionHandsCollection;
-        private HandHistory _currentGame;
-        private IList<ReplayerCardViewModel> _communityCards;
-        private ObservableCollection<ReplayerPlayerViewModel> _playersCollection;
-        private List<ReplayerTableState> _tableStateList;
-        private decimal _currentPotValue;
-        private decimal _totalPotValue;
-        private int _stateIndex;
-        private Street _currentStreet;
-        private ReplayerChipsContainer _totalPotChipsContainer;
-        private int _sliderMax;
-        private bool _isShowHoleCards;
-        private string _activePlayerName;
-
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
-        private ReplayerDataModel _replayerDataModel { get; set; }
+        private ReplayerDataModel replayerDataModel { get; set; }
+
+        private ReplayerDataModel currentHand;
 
         public ReplayerDataModel CurrentHand
         {
-            get { return _currentHand; }
-
+            get
+            {
+                return currentHand;
+            }
             set
             {
-                if (value == _currentHand || value == null)
+                if (value == currentHand || value == null)
+                {
                     return;
-                _replayerDataModel = value;
+                }
+
+                replayerDataModel = value;
 
                 LoadGame(value);
-                SetProperty(ref _currentHand, value);
 
-                _selectedSessionHand = SessionHandsCollection?.FirstOrDefault(x => x?.GameNumber == value?.GameNumber);
-                _selectedLastHand = LastHandsCollection?.FirstOrDefault(x => x?.GameNumber == value?.GameNumber);
+                SetProperty(ref currentHand, value);
+
+                selectedSessionHand = SessionHandsCollection?.FirstOrDefault(x => x?.GameNumber == value?.GameNumber);
+                selectedLastHand = LastHandsCollection?.FirstOrDefault(x => x?.GameNumber == value?.GameNumber);
 
                 RaisePropertyChanged(nameof(SelectedLastHand));
                 RaisePropertyChanged(nameof(SelectedSessionHand));
             }
         }
 
+        private ReplayerDataModel selectedLastHand;
+
         public ReplayerDataModel SelectedLastHand
         {
             get
             {
-                return _selectedLastHand;
+                return selectedLastHand;
             }
             set
             {
                 CurrentHand = value;
             }
         }
+
+        private ReplayerDataModel selectedSessionHand;
 
         public ReplayerDataModel SelectedSessionHand
         {
             get
             {
-                return _selectedSessionHand;
+                return selectedSessionHand;
             }
             set
             {
@@ -893,51 +926,112 @@ namespace DriveHUD.Application.ViewModels.Replayer
             }
         }
 
+        private ObservableCollection<ReplayerDataModel> lastHandsCollection;
+
         public ObservableCollection<ReplayerDataModel> LastHandsCollection
         {
-            get { return _lastHandsCollection; }
-            set { SetProperty(ref _lastHandsCollection, value); }
+            get
+            {
+                return lastHandsCollection;
+            }
+            set
+            {
+                SetProperty(ref lastHandsCollection, value);
+            }
         }
+
+        private ObservableCollection<ReplayerDataModel> sessionHandsCollection;
 
         public ObservableCollection<ReplayerDataModel> SessionHandsCollection
         {
-            get { return _sessionHandsCollection; }
-            set { SetProperty(ref _sessionHandsCollection, value); }
+            get
+            {
+                return sessionHandsCollection;
+            }
+            set
+            {
+                SetProperty(ref sessionHandsCollection, value);
+            }
         }
+
+        private HandHistory currentGame;
 
         internal HandHistory CurrentGame
         {
-            get { return _currentGame; }
-            set { _currentGame = value; }
+            get
+            {
+                return currentGame;
+            }
+            set
+            {
+                SetProperty(ref currentGame, value);
+            }
         }
+
+        private ObservableCollection<ReplayerPlayerViewModel> playersCollection;
 
         public ObservableCollection<ReplayerPlayerViewModel> PlayersCollection
         {
-            get { return _playersCollection; }
-            set { _playersCollection = value; }
+            get
+            {
+                return playersCollection;
+            }
+            set
+            {
+                SetProperty(ref playersCollection, value);
+            }
         }
+
+        private List<ReplayerTableState> tableStateList;
 
         internal List<ReplayerTableState> TableStateList
         {
-            get { return _tableStateList; }
-            set { _tableStateList = value; }
+            get
+            {
+                return tableStateList;
+            }
+            set
+            {
+                SetProperty(ref tableStateList, value);
+            }
         }
+
+        private decimal currentPotValue;
 
         public decimal CurrentPotValue
         {
-            get { return _currentPotValue; }
-            set { SetProperty(ref _currentPotValue, value); }
+            get
+            {
+                return currentPotValue;
+            }
+            set
+            {
+                SetProperty(ref currentPotValue, value);
+            }
         }
+
+        private decimal totalPotValue;
 
         public decimal TotalPotValue
         {
-            get { return _totalPotValue; }
-            set { SetProperty(ref _totalPotValue, value); }
+            get
+            {
+                return totalPotValue;
+            }
+            set
+            {
+                SetProperty(ref totalPotValue, value);
+            }
         }
+
+        private int stateIndex;
 
         public int StateIndex
         {
-            get { return _stateIndex; }
+            get
+            {
+                return stateIndex;
+            }
             set
             {
                 if (value < 0 || value >= TableStateList.Count)
@@ -945,58 +1039,94 @@ namespace DriveHUD.Application.ViewModels.Replayer
                     StopTimer(null);
                     return;
                 }
+
                 LoadState(value);
-                SetProperty(ref _stateIndex, value);
+
+                SetProperty(ref stateIndex, value);
             }
         }
 
+        private IList<ReplayerCardViewModel> communityCards;
+
         internal IList<ReplayerCardViewModel> CommunityCards
         {
-            get { return _communityCards; }
-            set { _communityCards = value; }
+            get
+            {
+                return communityCards;
+            }
+            set
+            {
+                SetProperty(ref communityCards, value);
+            }
         }
+
+        private Street currentStreet;
 
         public Street CurrentStreet
         {
-            get { return _currentStreet; }
-            set { SetProperty(ref _currentStreet, value); }
+            get
+            {
+                return currentStreet;
+            }
+            set
+            {
+                SetProperty(ref currentStreet, value);
+            }
         }
+
+        private ReplayerChipsContainer totalPotChipsContainer;
 
         internal ReplayerChipsContainer TotalPotChipsContainer
         {
-            get { return _totalPotChipsContainer; }
-            set { _totalPotChipsContainer = value; }
+            get
+            {
+                return totalPotChipsContainer;
+            }
+            set
+            {
+                SetProperty(ref totalPotChipsContainer, value);
+            }
         }
+
+        private int sliderMax;
 
         public int SliderMax
         {
-            get { return _sliderMax; }
-            set { SetProperty(ref _sliderMax, value); }
+            get
+            {
+                return sliderMax;
+            }
+            set
+            {
+                SetProperty(ref sliderMax, value);
+            }
         }
+
+        private bool isShowHoleCards;
 
         internal bool IsShowHoleCards
         {
             get
             {
-                return _isShowHoleCards;
+                return isShowHoleCards;
             }
-
             set
             {
-                _isShowHoleCards = value;
+                SetProperty(ref isShowHoleCards, value);
             }
         }
+
+        private string activePlayerName;
 
         internal string ActivePlayerName
         {
             get
             {
-                return _activePlayerName;
+                return activePlayerName;
             }
-
             set
             {
-                _activePlayerName = value;
+                SetProperty(ref activePlayerName, value);
             }
         }
 

@@ -53,16 +53,25 @@ namespace DriveHUD.Application.Views.Replayer
 
             var dataModel = dataModelList.First(x => x.IsActive);
 
-            Owner = App.Current.MainWindow;
             Header = StringFormatter.GetReplayerHeaderString(dataModel.GameType, dataModel.Time);
 
             ViewModel.PropertyChanged += ViewModel_PropertyChanged;
 
             ViewModel.IsShowHoleCards = showHoleCards;
-            ViewModel.ActivePlayerName = dataModel.Statistic.PlayerName;           
+            ViewModel.ActivePlayerName = dataModel.Statistic.PlayerName;
             ViewModel.LastHandsCollection = new ObservableCollection<ReplayerDataModel>(dataModelList);
             ViewModel.SessionHandsCollection = new ObservableCollection<ReplayerDataModel>(sessionHandsList);
             ViewModel.CurrentHand = dataModel;
+
+            Loaded += ReplayerView_Loaded;
+        }
+
+        private void ReplayerView_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (Parent is Window window)
+            {
+                window.ShowInTaskbar = true;
+            }
         }
 
         private void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)

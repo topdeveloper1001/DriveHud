@@ -56,13 +56,13 @@ namespace DriveHUD.Common.Wpf.Actions
 
             window.Loaded += (o, e) =>
             {
-                var parent = window.Parent as Window;
-
-                if (parent != null)
+                if (!(window.Parent is Window parent))
                 {
-                    parent.Title = context != null ? context.Title : string.Empty;
-                    parent.ShowInTaskbar = false;
+                    return;
                 }
+
+                parent.Title = context != null ? context.Title : string.Empty;
+                parent.ShowInTaskbar = false;
             };
 
             if (StartupLocation == StartupLocationOption.CenterScreen)
