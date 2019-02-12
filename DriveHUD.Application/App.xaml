@@ -5,7 +5,7 @@
     xmlns:application="clr-namespace:DriveHUD.Application"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     xmlns:system="clr-namespace:System;assembly=mscorlib"
-    DispatcherUnhandledException="Application_DispatcherUnhandledException"
+    DispatcherUnhandledException="Application_DispatcherUnhandledException"    
     Exit="Application_Exit">
     <Application.Resources>
         <ResourceDictionary>
