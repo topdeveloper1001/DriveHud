@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="MainWindow.xaml.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -22,7 +22,7 @@ namespace DriveHUD.Application
     public partial class MainWindow : RadWindow
     {
         public MainWindow()
-        {            
+        {
             InitializeComponent();
         }
 
@@ -44,6 +44,12 @@ namespace DriveHUD.Application
             {
                 e.Handled = true;
             }
-        }       
+        }
+
+        protected override void OnClosed()
+        {
+            base.OnClosed();
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }
