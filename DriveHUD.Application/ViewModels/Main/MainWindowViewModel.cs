@@ -414,7 +414,7 @@ namespace DriveHUD.Application.ViewModels
         private void OnImportingStopped(object sender, EventArgs e)
         {
             try
-            {
+            {                
                 hudTransmitter.Dispose();
 
                 importerSessionCacheService.End();
@@ -1631,8 +1631,9 @@ namespace DriveHUD.Application.ViewModels
                 {
                     importerService.StopImport();
                 }
-
+                
                 hudTransmitter.Dispose();
+
                 importerSessionCacheService.End();
 
                 if (StorageModel.PlayerSelectedItem != null)

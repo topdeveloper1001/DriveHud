@@ -69,6 +69,6 @@ namespace DriveHUD.HUD.Services
             {
                 LogProvider.Log.Error(this, "HUD service failed to read data", e);
             }
-        }
+        }       
     }
 }

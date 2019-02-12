@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IHudTransmitter.cs" company="Ace Poker Solutions">
+// <copyright file="HotkeyModifiers.cs" company="Ace Poker Solutions">
 // Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,16 +11,15 @@
 //----------------------------------------------------------------------
 
 using System;
-using System.Threading.Tasks;
 
-namespace DriveHUD.Application.HudServices
+namespace DriveHUD.Common.Utils
 {
-    public interface IHudTransmitter : IDisposable
+    [Flags]
+    public enum HotkeyModifiers
     {
-        Task InitializeAsync();
-
-        void Send(byte[] data);
-
-        void CloseTable(int handle);
+        None = 0x0,
+        Ctrl = 0x1,
+        Alt = 0x2,
+        Shift = 0x4
     }
 }
