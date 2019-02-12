@@ -1549,7 +1549,7 @@ namespace Model.Data
         {
             get
             {
-                return GetDivisionResult(Source.RiverWonOnFacingBet, Source.RiverCallSizeOnFacingBet);
+                return GetDivisionResult(Source.TotalWonAmountOnRiverCall, Source.TotalCallAmountOnRiver);
             }
         }
 
