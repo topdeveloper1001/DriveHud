@@ -61,6 +61,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             LoadLayoutCommand = new RelayCommand(LoadLayout);
             ApplyPositionsCommand = new RelayCommand(ApplyPositions);
             TreatAsCommand = new RelayCommand(DoTreatAs);
+            RotateHUDToRightCommand = new RelayCommand(() => RotateHud(true));
+            RotateHUDToLeftCommand = new RelayCommand(() => RotateHud(false));
 
             panelOffsets = new Dictionary<HudToolKey, Point>();
 
@@ -212,6 +214,10 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public ICommand TreatAsCommand { get; private set; }
 
+        public ICommand RotateHUDToRightCommand { get; private set; }
+
+        public ICommand RotateHUDToLeftCommand { get; private set; }
+
         #endregion
 
         #region Methods
@@ -244,6 +250,12 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 if (layout != null)
                 {
+                    if (TableType.HasValue && TableType != layout.TableType)
+                    {
+                        SeatRotations.Clear();
+                        PanelOffsets.Clear();
+                    }
+
                     this.layout = layout;
                     LayoutName = layout.LayoutName;
 
@@ -469,6 +481,116 @@ namespace DriveHUD.Application.ViewModels.Hud
             RefreshHud?.Invoke();
         }
 
+        public Dictionary<int, int> SeatRotations { get; set; } = new Dictionary<int, int>();
+
+        private void RotateHud(bool clockwise)
+        {
+            if (!TableType.HasValue)
+            {
+                return;
+            }
+
+            try
+            {
+                var tableSize = (int)TableType;
+
+                var positionProvider = ServiceLocator.Current.GetInstance<IPositionProvider>(layout.PokerSite.ToString());
+
+                if (!positionProvider.Positions.TryGetValue(tableSize, out int[,] seatsPositions))
+                {
+                    return;
+                }
+
+                var basePlayerHudContent = layout.ListHUDPlayer.FirstOrDefault();
+
+                if (basePlayerHudContent == null)
+                {
+                    return;
+                }
+
+                // need to rotate all positions even if there is no player on position
+                for (var seat = 1; seat <= tableSize; seat++)
+                {
+                    var playerHudContent = layout.ListHUDPlayer.FirstOrDefault(x => x.SeatNumber == seat);
+
+                    var hudElement = playerHudContent != null ? playerHudContent.HudElement :
+                        layout.EmptySeatsViewModels.FirstOrDefault(x => x.Seat == seat);
+
+                    if (hudElement == null)
+                    {
+                        continue;
+                    }
+
+                    if (!SeatRotations.TryGetValue(seat, out int rotatedSeat))
+                    {
+                        rotatedSeat = seat;
+                    }
+
+                    var baseSeatPosition = new Point(seatsPositions[rotatedSeat - 1, 0], seatsPositions[rotatedSeat - 1, 1]);
+
+                    var nonPopupTools = hudElement.Tools.OfType<IHudNonPopupToolViewModel>();
+
+                    var toolsOffsets = (from nonPopupTool in nonPopupTools
+                                        let toolKey = playerHudContent == null ? new HudToolKey { Id = nonPopupTool.Id, Seat = seat } : null
+                                        let hasOffset = toolKey != null && PanelOffsets.ContainsKey(toolKey)
+                                        let toolOffsetX = hasOffset ?
+                                            PanelOffsets[toolKey].X :
+                                            (nonPopupTool.OffsetX ?? nonPopupTool.Position.X)
+                                        let toolOffsetY = hasOffset ?
+                                              PanelOffsets[toolKey].Y :
+                                            nonPopupTool.OffsetY ?? nonPopupTool.Position.Y
+                                        let shiftX = toolOffsetX - baseSeatPosition.X
+                                        let shiftY = toolOffsetY - baseSeatPosition.Y
+                                        select new { ToolId = nonPopupTool.Id, Tool = nonPopupTool, ShiftX = shiftX, ShiftY = shiftY }).ToArray();
+
+                    var newSeat = clockwise ? rotatedSeat + 1 : rotatedSeat - 1;
+
+                    if (newSeat > tableSize)
+                    {
+                        newSeat = 1;
+                    }
+                    else if (newSeat < 1)
+                    {
+                        newSeat = tableSize;
+                    }
+
+                    SeatRotations[seat] = newSeat;
+
+                    var newSeatPosition = new Point(seatsPositions[newSeat - 1, 0], seatsPositions[newSeat - 1, 1]);
+
+                    foreach (var toolOffset in toolsOffsets)
+                    {
+                        var toolKey = new HudToolKey
+                        {
+                            Id = toolOffset.ToolId,
+                            Seat = seat
+                        };
+
+                        var offsetX = newSeatPosition.X + toolOffset.ShiftX;
+                        var offsetY = newSeatPosition.Y + toolOffset.ShiftY;
+
+                        toolOffset.Tool.OffsetX = offsetX;
+                        toolOffset.Tool.OffsetY = offsetY;
+
+                        if (!PanelOffsets.ContainsKey(toolKey))
+                        {
+                            PanelOffsets.Add(toolKey, new Point(offsetX, offsetY));
+                        }
+                        else
+                        {
+                            PanelOffsets[toolKey] = new Point(offsetX, offsetY);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Failed to rotate hud for table. [{WindowHandle}]", e);
+            }
+
+            RefreshHud?.Invoke();
+        }
+
         private void RaiseNotification(string content, string title)
         {
             dispatcher.Invoke(() =>
@@ -495,6 +617,10 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     var tableType = (EnumTableType)obj;
                     TableType = tableType;
+
+                    SeatRotations.Clear();
+                    PanelOffsets.Clear();
+
                     HudNamedPipeBindingService.TreatTableAs(WindowHandle, tableType);
                 }
             });

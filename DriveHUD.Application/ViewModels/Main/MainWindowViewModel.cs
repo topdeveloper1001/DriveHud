@@ -414,7 +414,7 @@ namespace DriveHUD.Application.ViewModels
         private void OnImportingStopped(object sender, EventArgs e)
         {
             try
-            {                
+            {
                 hudTransmitter.Dispose();
 
                 importerSessionCacheService.End();
@@ -708,6 +708,17 @@ namespace DriveHUD.Application.ViewModels
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
 
+                var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
+
+                var hudElementCreationInfo = new HudElementViewModelCreationInfo
+                {
+                    GameType = gameInfo.EnumGameType,
+                    HudLayoutInfo = activeLayout,
+                    PokerSite = gameInfo.PokerSite
+                };
+
+                var emptySeats = Enumerable.Range(1, (int)gameInfo.TableType).ToList();
+
                 foreach (var player in players)
                 {
                     var playerCollectionItem = new PlayerCollectionItem
@@ -753,15 +764,9 @@ namespace DriveHUD.Application.ViewModels
 
                     #endregion
 
-                    var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
+                    emptySeats.Remove(player.SeatNumber);
 
-                    var hudElementCreationInfo = new HudElementViewModelCreationInfo
-                    {
-                        GameType = gameInfo.EnumGameType,
-                        HudLayoutInfo = activeLayout,
-                        PokerSite = gameInfo.PokerSite,
-                        SeatNumber = player.SeatNumber
-                    };
+                    hudElementCreationInfo.SeatNumber = player.SeatNumber;
 
                     playerHudContent.HudElement = hudElementCreator.Create(hudElementCreationInfo);
 
@@ -910,6 +915,22 @@ namespace DriveHUD.Application.ViewModels
                 };
 
                 ht.HudTrackConditionsMeter = trackConditionsInfo;
+
+                #region Add empty seats for rotation logic 
+
+                var emptySeatsViewModels = new List<HudElementViewModel>();
+
+                emptySeats.ForEach(emptySeat =>
+                {
+                    hudElementCreationInfo.SeatNumber = emptySeat;
+
+                    var emptySeatHudElement = hudElementCreator.Create(hudElementCreationInfo);
+                    emptySeatsViewModels.Add(emptySeatHudElement);
+                });
+
+                ht.EmptySeatsViewModels = emptySeatsViewModels;
+
+                #endregion
 
                 byte[] serialized;
 
@@ -1631,7 +1652,7 @@ namespace DriveHUD.Application.ViewModels
                 {
                     importerService.StopImport();
                 }
-                
+
                 hudTransmitter.Dispose();
 
                 importerSessionCacheService.End();
