@@ -36,6 +36,7 @@ namespace DriveHud.Tests.UnitTests
         [TestCase("PokerStarsBadHeader.txt", EnumPokerSites.PokerStars)]
         [TestCase("888PokerHands.txt", EnumPokerSites.Poker888)]
         [TestCase("888PokerSummary.txt", EnumPokerSites.Poker888)]
+        [TestCase("DelawareparkHands.txt", EnumPokerSites.Poker888)]
         [TestCase("ACR-SnG2.txt", EnumPokerSites.WinningPokerNetwork)]
         [TestCase("GGN-6-max-cash.xml", EnumPokerSites.GGN)]
         [TestCase("Horizon.txt", EnumPokerSites.Horizon)]
