@@ -94,6 +94,7 @@ namespace DriveHUD.Application.Views
 
             // set parents for tools
             Layout.ListHUDPlayer.Select(x => x.HudElement).ForEach(h => h.Tools.ForEach(t => t.Parent = h));
+            Layout.EmptySeatsViewModels.ForEach(h => h.Tools.ForEach(t => t.Parent = h));
 
             if (hudPanelService == null)
             {
@@ -140,11 +141,7 @@ namespace DriveHUD.Application.Views
 
                     var toolKey = HudWindowViewModel.HudToolKey.BuildKey(toolViewModel);
 
-                    if (!ViewModel.PanelOffsets.ContainsKey(toolKey))
-                    {
-                        ViewModel.PanelOffsets.Add(toolKey, new Point(0, 0));
-                    }
-                    else
+                    if (ViewModel.PanelOffsets.ContainsKey(toolKey))
                     {
                         toolViewModel.OffsetX = ViewModel.PanelOffsets[toolKey].X;
                         toolViewModel.OffsetY = ViewModel.PanelOffsets[toolKey].Y;
@@ -187,7 +184,8 @@ namespace DriveHUD.Application.Views
 
                 var toolKey = HudWindowViewModel.HudToolKey.BuildKey(toolViewModel);
 
-                if (toolViewModel != null)
+                if (toolViewModel != null &&
+                    (toolViewModel.OffsetX.HasValue || toolViewModel.OffsetY.HasValue))
                 {
                     ViewModel.PanelOffsets[toolKey] = new Point(toolViewModel.OffsetX ?? 0, toolViewModel.OffsetY ?? 0);
                 }

@@ -104,7 +104,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
                 System.Windows.Application.Current.MainWindow.Topmost = true;
                 System.Windows.Application.Current.MainWindow.Topmost = false;
-            });
+            });          
 
             TableStateList = new List<ReplayerTableState>();
             PlayersCollection = new ObservableCollection<ReplayerPlayerViewModel>();
@@ -860,6 +860,10 @@ namespace DriveHUD.Application.ViewModels.Replayer
         public ICommand PreviousSessionHandCommand { get; set; }
 
         public ICommand OpenEquityCalculatorCommand { get; set; }
+
+        public ICommand RotateHUDToRightCommand { get; set; }
+
+        public ICommand RotateHUDToLeftCommand { get; set; }
 
         #endregion
 

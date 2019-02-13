@@ -554,6 +554,16 @@
                         <telerik:RadMenuItem
                             Header="{ResX Main_ContextMenu_SaveHudPosition}"
                             Command="{Binding SaveHUDPositionsCommand}" />
+                        <!-- Rotate -->
+                        <telerik:RadMenuItem
+                            Header="{ResX Main_ContextMenu_RotateHUD}">
+                            <telerik:RadMenuItem
+                                Header="{ResX Key=Main_ContextMenu_RotateHUDToRight}"
+                                Command="{Binding RotateHUDToRightCommand}" />
+                            <telerik:RadMenuItem
+                                Header="{ResX Key=Main_ContextMenu_RotateHUDToLeft}"
+                                Command="{Binding RotateHUDToLeftCommand}" />
+                        </telerik:RadMenuItem>
                     </telerik:RadContextMenu>
                 </telerik:RadContextMenu.ContextMenu>
             </Image>

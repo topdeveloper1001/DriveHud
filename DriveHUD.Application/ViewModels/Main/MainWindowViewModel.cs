@@ -918,17 +918,13 @@ namespace DriveHUD.Application.ViewModels
 
                 #region Add empty seats for rotation logic 
 
-                var emptySeatsViewModels = new List<HudElementViewModel>();
-
                 emptySeats.ForEach(emptySeat =>
                 {
                     hudElementCreationInfo.SeatNumber = emptySeat;
 
                     var emptySeatHudElement = hudElementCreator.Create(hudElementCreationInfo);
-                    emptySeatsViewModels.Add(emptySeatHudElement);
+                    ht.EmptySeatsViewModels.Add(emptySeatHudElement);
                 });
-
-                ht.EmptySeatsViewModels = emptySeatsViewModels;
 
                 #endregion
 

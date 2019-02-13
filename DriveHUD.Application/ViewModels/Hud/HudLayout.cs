@@ -72,7 +72,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         public bool IsSpecialMode { get; set; }
 
         [XmlIgnore, ProtoMember(13)]
-        public IEnumerable<HudElementViewModel> EmptySeatsViewModels { get; set; }
+        public IList<HudElementViewModel> EmptySeatsViewModels { get; set; } = new List<HudElementViewModel>();
 
         public override string ToString()
         {
