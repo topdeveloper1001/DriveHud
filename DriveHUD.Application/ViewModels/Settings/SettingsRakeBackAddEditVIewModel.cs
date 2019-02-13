@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="SettingsRakeBackAddEditViewModel.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -16,6 +16,7 @@ using Model;
 using Model.Settings;
 using ReactiveUI;
 using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace DriveHUD.Application.ViewModels.Settings
@@ -50,6 +51,14 @@ namespace DriveHUD.Application.ViewModels.Settings
             set
             {
                 this.RaiseAndSetIfChanged(ref rakeBackName, value);
+            }
+        }
+
+        public ObservableCollection<PlayerCollectionItem> Players
+        {
+            get
+            {
+                return new ObservableCollection<PlayerCollectionItem>(StorageModel.PlayerCollection.OfType<PlayerCollectionItem>());
             }
         }
 
@@ -124,14 +133,23 @@ namespace DriveHUD.Application.ViewModels.Settings
             settingsModel = infoViewModel?.Model;
 
             RakeBackName = settingsModel?.RakeBackName ?? string.Empty;
-            Player = StorageModel.PlayerCollection.OfType<PlayerCollectionItem>().FirstOrDefault(pl => pl.DecodedName == (settingsModel?.Player ?? string.Empty));
+            Player = StorageModel.PlayerCollection.OfType<PlayerCollectionItem>()
+                .FirstOrDefault(pl => pl.PlayerId == settingsModel?.PlayerId);
+
             DateBegan = settingsModel?.DateBegan ?? DateTime.Now;
             Percentage = settingsModel?.Percentage ?? 0m;
         }
 
         private void SaveChanges()
         {
+            // site must be set
+            if (!Player.PokerSite.HasValue)
+            {
+                return;
+            }
+
             bool isAdd = false;
+
             if (settingsModel == null)
             {
                 isAdd = true;
@@ -140,8 +158,10 @@ namespace DriveHUD.Application.ViewModels.Settings
 
             settingsModel.RakeBackName = RakeBackName;
             settingsModel.Player = Player.DecodedName;
+            settingsModel.PokerSite = (short)Player.PokerSite;
             settingsModel.DateBegan = DateBegan;
             settingsModel.Percentage = Percentage;
+            settingsModel.PlayerId = Player.PlayerId;
 
             if (isAdd)
             {

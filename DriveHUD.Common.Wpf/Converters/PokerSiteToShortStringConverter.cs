@@ -26,7 +26,7 @@ namespace DriveHUD.Common.Wpf.Converters
             {
                 return EnumPokerSites.Unknown;
             }
-
+            
             if (Enum.TryParse(value.ToString(), out EnumPokerSites site))
             {
                 return site.ToShortPokerSiteName();
