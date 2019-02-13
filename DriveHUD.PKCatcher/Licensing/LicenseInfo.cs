@@ -130,7 +130,7 @@ namespace DriveHUD.PKCatcher.Licensing
         {
             get
             {
-                return IsRegistered && !IsTrial && TimeRemaining < TimeSpan.FromDays(30);
+                return IsRegistered && !IsTrial && TimeRemaining < TimeSpan.FromDays(10);
             }
         }
 
