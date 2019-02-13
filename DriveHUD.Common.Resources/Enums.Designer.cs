@@ -862,6 +862,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Last 24 hours.
+        /// </summary>
+        internal static string Enum_HudStatsDataFreshness_Last1Day {
+            get {
+                return ResourceManager.GetString("Enum_HudStatsDataFreshness_Last1Day", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Last 30 days.
         /// </summary>
         internal static string Enum_HudStatsDataFreshness_Last30Days {
