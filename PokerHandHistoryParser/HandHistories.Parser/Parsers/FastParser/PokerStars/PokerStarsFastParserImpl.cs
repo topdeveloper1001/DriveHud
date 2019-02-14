@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
@@ -724,10 +725,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     // actually 'Hand canceled' can be in any line between line 2 and i-1
                     for (int k = i - 1; k >= 2; k--)
                     {
-                        var cancelledLine = handLines[k];
-                        bool cancelled = (cancelledLine[0] == 'H' && cancelledLine[cancelledLine.Length - 1] == 'd' && cancelledLine[cancelledLine.Length - 2] == 'e');
-
-                        if (cancelled)
+                        if (handLines[k].ContainsIgnoreCase("Hand canceled"))
                         {
                             isCancelled = true;
                             break;

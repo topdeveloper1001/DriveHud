@@ -1,0 +1,30 @@
+PokerStars Game #47159293856:  Hold'em No Limit ($1/$2 USD) - 2010/07/23 12:23:08 ET
+Table 'Iris IV' 6-max Seat #1 is the button
+Seat 1: sexygee ($240.65 in chips)
+Seat 2: AceKanone ($337.85 in chips)
+Seat 3: TheKaas ($231.20 in chips)
+Seat 4: HeidiKlummm ($299.85 in chips)
+Seat 5: 4Karinie ($303 in chips)
+Seat 6: Zyrano86 ($94 in chips)
+AceKanone: posts small blind $1
+TheKaas: posts big blind $2
+*** HOLE CARDS ***
+HeidiKlummm is connected
+HeidiKlummm: folds
+4Karinie: folds
+Zyrano86: raises $2.50 to $4.50
+sexygee: folds
+AceKanone: raises $9.50 to $14
+TheKaas: folds
+Zyrano86: folds
+Uncalled bet ($9.50) returned to AceKanone
+AceKanone collected $11 from pot
+AceKanone: doesn't show hand
+*** SUMMARY ***
+Total pot $11 | Rake $0
+Seat 1: sexygee (button) folded before Flop (didn't bet)
+Seat 2: AceKanone (small blind) collected ($11)
+Seat 3: TheKaas (big blind) folded before Flop
+Seat 4: HeidiKlummm folded before Flop (didn't bet)
+Seat 5: 4Karinie folded before Flop (didn't bet)
+Seat 6: Zyrano86 folded before Flop

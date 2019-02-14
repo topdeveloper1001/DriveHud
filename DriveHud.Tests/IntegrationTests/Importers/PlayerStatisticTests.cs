@@ -1579,6 +1579,13 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.CouldFoldTo3BetInBTNvs3BetSB, fileName, pokerSite, playerName, expected);
         }
 
+        [TestCase(@"TotalRake-1.txt", EnumPokerSites.PokerStars, "AceKanone", 0)]
+        [TestCase(@"TotalRake-2.xml", EnumPokerSites.Ignition, "Hero", 0)]
+        public void TotalRakeInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.Totalrakeincents, fileName, pokerSite, playerName, expected);
+        }
+
         #endregion
     }
 }

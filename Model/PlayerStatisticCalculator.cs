@@ -18,6 +18,7 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
+using HandHistories.Parser.Utils;
 using Microsoft.Practices.ServiceLocation;
 using Model.Extensions;
 using Model.Importer;
@@ -525,15 +526,7 @@ namespace Model
             stat.Totalpostflopstreetsplayed = (playedFlop ? 1 : 0) + (playedTurn ? 1 : 0) + (playedRiver ? 1 : 0);
             stat.Totalaggressivepostflopstreetsseen = (aggresiveFlop ? 1 : 0) + (aggresiveRiver ? 1 : 0) + (aggresiveTurn ? 1 : 0);
             stat.Totalamountwonincents = (int)(netWon * 100);
-
-            if (parsedHand.Rake != null && stat.Numberofplayers > 0)
-            {
-                stat.Totalrakeincents = ((int)decimal.Round((decimal)(parsedHand.Rake / stat.Numberofplayers) * 100, MidpointRounding.AwayFromZero));
-            }
-            else
-            {
-                stat.Totalrakeincents = 0;
-            }
+            stat.Totalrakeincents = CalculateRake(parsedHand, stat);
 
             if (cutoff != null)
             {
@@ -799,7 +792,7 @@ namespace Model
             stat.Allin = Converter.ToAllin(parsedHand, stat);
             stat.Action = Converter.ToAction(stat);
             stat.Position = GetPlayerPosition(parsedHand, stat);
-            stat.PositionString = Converter.ToPositionString(stat.Position);            
+            stat.PositionString = Converter.ToPositionString(stat.Position);
 
             CalculateEquity(creationInfo, stat);
 
@@ -2724,6 +2717,30 @@ namespace Model
         protected virtual EnumPosition GetPlayerPosition(HandHistory hand, Playerstatistic stat)
         {
             return Converter.ToPosition(hand, stat);
+        }
+
+        protected virtual int CalculateRake(HandHistory hand, Playerstatistic playerstatistic)
+        {
+            var totalPot = Math.Abs(hand.HandActions.Where(x => !x.IsWinningsAction).Sum(x => x.Amount));
+
+            if (totalPot == 0)
+            {
+                return 0;
+            }
+
+            var totalRake = hand.Rake ?? totalPot - hand.WinningActions.Sum(x => x.Amount);
+
+            if (totalRake < 0)
+            {
+                return 0;
+            }
+
+            var playerPutInPot = Math.Abs(hand.HandActions
+                .Where(x => x.PlayerName == playerstatistic.PlayerName && !x.IsWinningsAction).Sum(x => x.Amount));
+
+            var rake = (int)Math.Round(playerPutInPot / totalPot * totalRake * 100, MidpointRounding.AwayFromZero);
+
+            return rake;
         }
 
         #endregion

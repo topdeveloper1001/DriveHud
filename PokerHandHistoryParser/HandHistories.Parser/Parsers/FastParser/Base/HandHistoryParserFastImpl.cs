@@ -249,11 +249,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     ParseBlinds(handHistory);
                 }
 
-                if (handHistory.TotalPot == null)
-                {
-                    handHistory.TotalPot = handHistory.HandActions.Where(x => x.Amount < 0).Sum(x => Math.Abs(x.Amount));
-                }
-
                 if (RequiresActionSorting)
                 {
                     handHistory.HandActions = OrderHandActions(handHistory.HandActions, handHistory.Players, handHistory);
@@ -287,6 +282,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 if (RequiresUncalledBetCalculations)
                 {
                     CalculateUncalledBets(handLines, handHistory);
+                }
+
+                if (handHistory.TotalPot == null)
+                {
+                    HandHistoryUtils.CalculateTotalPot(handHistory);
                 }
 
                 HandAction anteAction = handHistory.HandActions.FirstOrDefault(a => a.HandActionType == HandActionType.ANTE);
