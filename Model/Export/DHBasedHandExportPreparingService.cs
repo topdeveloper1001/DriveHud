@@ -18,6 +18,8 @@ namespace Model.Export
 {
     internal class DHBasedHandExportPreparingService : CommonHandExportPreparingService
     {
+        protected override string HandHistoryFilePatternName => "dh_exported_file_{0}.xml";
+
         public override string PrepareHand(string hand, EnumPokerSites site)
         {
             var parserFactory = ServiceLocator.Current.GetInstance<IHandHistoryParserFactory>();
