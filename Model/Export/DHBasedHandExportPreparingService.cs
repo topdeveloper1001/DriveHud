@@ -16,9 +16,13 @@ using Microsoft.Practices.ServiceLocation;
 
 namespace Model.Export
 {
-    internal class DHBasedHandExportPreparingService : CommonHandExportPreparingService
+    internal class DHBasedHandExportPreparingService : IPokerHandExportPreparingService
     {
-        protected override string HandHistoryFilePatternName => "dh_exported_file_{0}.xml";
+        protected override bool TryParseFastFoldPokerPrefix(string hand, EnumPokerSites site, out string adjustedHand)
+        {
+            adjustedHand = null;
+            return false;
+        }
 
         public override string PrepareHand(string hand, EnumPokerSites site)
         {
@@ -32,6 +36,12 @@ namespace Model.Export
             hand = convert.Convert(handHistory);
 
             return hand;
+        }
+
+        protected override HandInfo PrepareHandInfo(string hand, EnumPokerSites site)
+        {
+            hand = PrepareHand(hand, site);
+            return base.PrepareHandInfo(hand, site);
         }
     }
 }
