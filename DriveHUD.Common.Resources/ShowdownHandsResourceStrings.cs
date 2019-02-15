@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DriveHUD.Common.Resources
+﻿namespace DriveHUD.Common.Resources
 {
     public static class ShowdownHandsResourceStrings
     {
@@ -46,6 +40,15 @@ namespace DriveHUD.Common.Resources
         public static string TopPairResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_TopPair");
         public static string TopPairTopKickerResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_TopPairTopKicker");
         public static string TwoPairNoTopPairResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_TwoPairNoTopPair");
-        public static string TwoPairTopTwoPaiResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_TwoPairTopTwoPair");
+        public static string TwoPairTopTwoPairResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_TwoPairTopTwoPair");
+        public static string PairedBoardResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_PairedBoard");
+        public static string OnBoardTwoPairResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_OnBoardTwoPair");
+        public static string OnBoardThreeOfAKindResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_OnBoardThreeOfAKind");
+        public static string OnBoardStraightResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_OnBoardStraight");
+        public static string FlushOnBoardResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_FlushOnBoard");
+        public static string FullHouseOnBoardResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_FullHouseOnBoard");
+        public static string OnBoardFourOfAKindResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_OnBoardFourOfAKind");
+        public static string OnBoardStraightFlushResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_OnBoardStraightFlush");
+        public static string OnBoardRoyalFlushResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_OnBoardRoyalFlush");
     }
 }

@@ -48,7 +48,7 @@ namespace Model.Data
                     case (ShowdownHands.TwoPairNoTopPair):
                         return ShowdownHandsResourceStrings.TwoPairNoTopPairResourceString;
                     case (ShowdownHands.TwoPairTopTwoPair):
-                        return ShowdownHandsResourceStrings.TwoPairTopTwoPaiResourceString;
+                        return ShowdownHandsResourceStrings.TwoPairTopTwoPairResourceString;
                     case (ShowdownHands.ThreeOfAKindTopSet):
                         return ShowdownHandsResourceStrings.ThreeOfAKindTopSetResourceString;
                     case ShowdownHands.ThreeOfAKindSecondSet:
@@ -107,6 +107,24 @@ namespace Model.Data
                         return ShowdownHandsResourceStrings.RoyalFlushOneHoleCardResourceString;
                     case (ShowdownHands.RoyalFlushTwoPocketCards):
                         return ShowdownHandsResourceStrings.RoyalFlushTwoPocketCardsResourceString;
+                    case ShowdownHands.PairedBoard:
+                        return ShowdownHandsResourceStrings.PairedBoardResourceString;
+                    case ShowdownHands.OnBoardTwoPair:
+                        return ShowdownHandsResourceStrings.OnBoardTwoPairResourceString;
+                    case ShowdownHands.OnBoardThreeOfAKind:
+                        return ShowdownHandsResourceStrings.OnBoardThreeOfAKindResourceString;
+                    case ShowdownHands.OnBoardStraight:
+                        return ShowdownHandsResourceStrings.OnBoardStraightResourceString;
+                    case ShowdownHands.FlushOnBoard:
+                        return ShowdownHandsResourceStrings.FlushOnBoardResourceString;
+                    case ShowdownHands.FullHouseOnBoard:
+                        return ShowdownHandsResourceStrings.FullHouseOnBoardResourceString;
+                    case ShowdownHands.OnBoardFourOfAKind:
+                        return ShowdownHandsResourceStrings.OnBoardFourOfAKindResourceString;
+                    case ShowdownHands.OnBoardStraightFlush:
+                        return ShowdownHandsResourceStrings.OnBoardStraightFlushResourceString;
+                    case ShowdownHands.OnBoardRoyalFlush:
+                        return ShowdownHandsResourceStrings.OnBoardRoyalFlushResourceString;
                 }
 
                 return ShowdownHand.ToString();
@@ -128,16 +146,7 @@ namespace Model.Data
 
         public static IEnumerable<IGrouping<IAnalyzer, Playerstatistic>> FilterHands(IEnumerable<IGrouping<IAnalyzer, Playerstatistic>> hands)
         {
-            return hands.Where(x => x.Key.GetRank() != ShowdownHands.None
-                            && x.Key.GetRank() != ShowdownHands.PairedBoard
-                            && x.Key.GetRank() != ShowdownHands.OnBoardTwoPair
-                            && x.Key.GetRank() != ShowdownHands.OnBoardThreeOfAKind
-                            && x.Key.GetRank() != ShowdownHands.OnBoardStraight
-                            && x.Key.GetRank() != ShowdownHands.FlushOnBoard
-                            && x.Key.GetRank() != ShowdownHands.FullHouseOnBoard
-                            && x.Key.GetRank() != ShowdownHands.OnBoardFourOfAKind
-                            && x.Key.GetRank() != ShowdownHands.OnBoardStraightFlush
-                            && x.Key.GetRank() != ShowdownHands.OnBoardRoyalFlush);
+            return hands.Where(x => x.Key.GetRank() != ShowdownHands.None);
         }
     }
 }

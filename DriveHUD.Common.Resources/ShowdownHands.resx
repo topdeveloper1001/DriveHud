@@ -120,6 +120,9 @@
   <data name="Showdown_BottomPair" xml:space="preserve">
     <value>B) One Pair: Bottom Pair</value>
   </data>
+  <data name="Showdown_FlushOnBoard" xml:space="preserve">
+    <value>F) Flush: Flush on Board</value>
+  </data>
   <data name="Showdown_FlushOneCardHigh" xml:space="preserve">
     <value>F) Flush: One Card High Flush</value>
   </data>
@@ -144,6 +147,9 @@
   <data name="Showdown_FourOfAKindPocketPair" xml:space="preserve">
     <value>H) Four of a Kind: With Pocket Pair</value>
   </data>
+  <data name="Showdown_FullHouseOnBoard" xml:space="preserve">
+    <value>G) Full House: Full House on Board</value>
+  </data>
   <data name="Showdown_FullHouseOneHoleCardNoTripsOnBoard" xml:space="preserve">
     <value>G) Full House: With 1 Hole Card – No Trips on Board</value>
   </data>
@@ -158,6 +164,27 @@
   </data>
   <data name="Showdown_HighCard" xml:space="preserve">
     <value>A) High Card</value>
+  </data>
+  <data name="Showdown_OnBoardFourOfAKind" xml:space="preserve">
+    <value>H) Four of a Kind: Four of a Kind on Board</value>
+  </data>
+  <data name="Showdown_OnBoardRoyalFlush" xml:space="preserve">
+    <value>J) Royal Flush: Royal Flush on Board</value>
+  </data>
+  <data name="Showdown_OnBoardStraight" xml:space="preserve">
+    <value>E) Straight: Straight on Board </value>
+  </data>
+  <data name="Showdown_OnBoardStraightFlush" xml:space="preserve">
+    <value>I) Straight Flush: Straight Flush on Board</value>
+  </data>
+  <data name="Showdown_OnBoardThreeOfAKind" xml:space="preserve">
+    <value>D) Three of a Kind: Trips on Board</value>
+  </data>
+  <data name="Showdown_OnBoardTwoPair" xml:space="preserve">
+    <value>C) Two Pair: Two Pair on Board</value>
+  </data>
+  <data name="Showdown_PairedBoard" xml:space="preserve">
+    <value>B) One Pair: Paired Board</value>
   </data>
   <data name="Showdown_PocketPairOverpair" xml:space="preserve">
     <value>B) One Pair: Pocket Pair – Overpair</value>
@@ -187,7 +214,7 @@
     <value>E) Straight: One Card Bottom Straight</value>
   </data>
   <data name="Showdown_StraightOneCardNut" xml:space="preserve">
-    <value>E) Straight:  One Card Nut Straight</value>
+    <value>E) Straight: One Card Nut Straight</value>
   </data>
   <data name="Showdown_StraightTwoCard" xml:space="preserve">
     <value>E) Straight: Two Card Straight</value>
@@ -196,7 +223,7 @@
     <value>E) Straight: Two Card Bottom Straight</value>
   </data>
   <data name="Showdown_StraightTwoCardNut" xml:space="preserve">
-    <value>E) Straight:  Two Card Nut Straight</value>
+    <value>E) Straight: Two Card Nut Straight</value>
   </data>
   <data name="Showdown_ThirdPair" xml:space="preserve">
     <value>B) One Pair: Third Pair</value>
