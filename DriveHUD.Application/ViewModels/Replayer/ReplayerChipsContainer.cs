@@ -25,18 +25,19 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private SortedDictionary<decimal, EnumChipColor> ChipRates = new SortedDictionary<decimal, EnumChipColor>()
         {
+            { 100000, EnumChipColor.Orange }, { 50000, EnumChipColor.Blue }, { 10000, EnumChipColor.Green },
             { 5000, EnumChipColor.Red }, { 2000, EnumChipColor.Yellow }, { 1000, EnumChipColor.Grey }, { 500, EnumChipColor.Purple },
             { 100, EnumChipColor.Black }, { 50, EnumChipColor.Orange }, { 10, EnumChipColor.Blue }, { 5, EnumChipColor.Green },
             { 1, EnumChipColor.Grey }, { 0.25m, EnumChipColor.Purple }, { 0.10m, EnumChipColor.Red }, { 0.05m, EnumChipColor.Yellow }
         };
 
-        internal ReplayerChipsContainer( )
+        internal ReplayerChipsContainer()
         {
             Chips = new ObservableCollection<ChipModel>();
 
             ChipsShape = new RadDiagramShape()
             {
-                Height =  CHIP_VIEW_HEIGHT,
+                Height = CHIP_VIEW_HEIGHT,
                 Width = CHIP_VIEW_WIDTH,
                 StrokeThickness = 0,
                 BorderThickness = new Thickness(0),

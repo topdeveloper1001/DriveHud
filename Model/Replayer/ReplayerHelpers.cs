@@ -39,7 +39,7 @@ namespace Model.Replayer
             {
                 if (current.IsTourney)
                 {
-                    potStat = statistics.Where(x => x.TournamentId == current.TournamentId).OrderByDescending(x => x.Time).Take(30);
+                    potStat = statistics.Where(x => x.TournamentId == current.TournamentId).OrderByDescending(x => x.Time);
                 }
                 else
                 {
