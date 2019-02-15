@@ -207,6 +207,9 @@
   <data name="Showdown_ThreeOfAKindMiddleSet" xml:space="preserve">
     <value>D) Three of a Kind: Set – Middle Set</value>
   </data>
+  <data name="Showdown_ThreeOfAKindSecondSet" xml:space="preserve">
+    <value>D) Three of a Kind: Set – Second Set</value>
+  </data>
   <data name="Showdown_ThreeOfAKindTopSet" xml:space="preserve">
     <value>D) Three of a Kind: Set – Top Set</value>
   </data>

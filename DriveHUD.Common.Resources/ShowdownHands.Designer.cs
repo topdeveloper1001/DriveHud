@@ -331,6 +331,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to D) Three of a Kind: Set – Second Set.
+        /// </summary>
+        internal static string Showdown_ThreeOfAKindSecondSet {
+            get {
+                return ResourceManager.GetString("Showdown_ThreeOfAKindSecondSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to D) Three of a Kind: Set – Top Set.
         /// </summary>
         internal static string Showdown_ThreeOfAKindTopSet {

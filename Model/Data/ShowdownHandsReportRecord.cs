@@ -31,7 +31,7 @@ namespace Model.Data
                 {
                     case (ShowdownHands.HighCard):
                         return ShowdownHandsResourceStrings.HighCardResourceString;
-                        case (ShowdownHands.PocketPairOverpair):
+                    case (ShowdownHands.PocketPairOverpair):
                         return ShowdownHandsResourceStrings.PocketPairOverpairResourceString;
                     case (ShowdownHands.PocketPairSecondOrWorse):
                         return ShowdownHandsResourceStrings.PocketPairSecondOrWorseResourceString;
@@ -51,6 +51,8 @@ namespace Model.Data
                         return ShowdownHandsResourceStrings.TwoPairTopTwoPaiResourceString;
                     case (ShowdownHands.ThreeOfAKindTopSet):
                         return ShowdownHandsResourceStrings.ThreeOfAKindTopSetResourceString;
+                    case ShowdownHands.ThreeOfAKindSecondSet:
+                        return ShowdownHandsResourceStrings.ThreeOfAKindSecondSetResourceString;
                     case (ShowdownHands.ThreeOfAKindMiddleSet):
                         return ShowdownHandsResourceStrings.ThreeOfAKindMiddleSetResourceString;
                     case (ShowdownHands.ThreeOfAKindBottomSet):

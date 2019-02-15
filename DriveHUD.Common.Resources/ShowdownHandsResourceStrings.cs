@@ -38,6 +38,7 @@ namespace DriveHUD.Common.Resources
         public static string ThirdPairResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_ThirdPair");
         public static string ThreeOfAKindBottomSetResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_ThreeOfAKindBottomSet");
         public static string ThreeOfAKindMiddleSetResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_ThreeOfAKindMiddleSet");
+        public static string ThreeOfAKindSecondSetResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_ThreeOfAKindSecondSet");
         public static string ThreeOfAKindTopSetResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_ThreeOfAKindTopSet");
         public static string ThreeOfAKindTripsHighKickerResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_ThreeOfAKindTripsHighKicker");
         public static string ThreeOfAKindTripsOnFlopResourceString = CommonResourceManager.Instance.GetResourceString("Showdown_ThreeOfAKindTripsOnFlop");
