@@ -1398,7 +1398,8 @@ namespace Model
         internal static decimal CalculateMRatio(Playerstatistic stat)
         {
             decimal totalAntes = stat.Ante * stat.Numberofplayers;
-            decimal mRatioValue = stat.StartingStack / (Math.Abs(stat.SmallBlind) + Math.Abs(stat.BigBlind) + Math.Abs(totalAntes));
+            var totalPosts = Math.Abs(stat.SmallBlind) + Math.Abs(stat.BigBlind) + Math.Abs(totalAntes);
+            decimal mRatioValue = totalPosts != 0 ? stat.StartingStack / totalPosts : 0;
 
             return mRatioValue;
         }
