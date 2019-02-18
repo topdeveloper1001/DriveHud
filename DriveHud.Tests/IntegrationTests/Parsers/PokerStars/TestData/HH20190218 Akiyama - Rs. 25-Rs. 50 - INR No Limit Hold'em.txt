@@ -1,0 +1,1301 @@
+﻿PokerStars Hand #197202814998:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:36:50 IST [2019/02/18 8:06:50 ET]
+Table 'Akiyama' 6-max Seat #3 is the button
+Seat 1: othaomala (Rs. 5605.43 in chips) 
+Seat 2: smitty123455 (Rs. 4219.31 in chips) 
+Seat 3: Shovekid83 (Rs. 1749.19 in chips) 
+Seat 4: tooofan209 (Rs. 7551.65 in chips) 
+Seat 5: deck108 (Rs. 2082.32 in chips) 
+Seat 6: bhavil777 (Rs. 3316.28 in chips) 
+tooofan209: posts small blind Rs. 25
+deck108: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Kh Jc]
+tooofan209 said, "plasyed it wrong but thought dont wnat your whole stack"
+Shovekid83 said, "rehne de..."
+bhavil777: raises Rs. 100 to Rs. 150
+othaomala: folds 
+smitty123455: calls Rs. 150
+Shovekid83: calls Rs. 150
+tooofan209: folds 
+deck108: calls Rs. 100
+*** FLOP *** [6h 2c 8c]
+tooofan209 said, "sach dost"
+deck108: checks 
+bhavil777: checks 
+smitty123455: bets Rs. 296.41
+Shovekid83 said, "next time show your card bro....seems unlikey"
+tooofan209 said, "i call 800 u shuv onb river i call with nuts"
+Shovekid83: raises Rs. 1302.78 to Rs. 1599.19 and is all-in
+deck108: folds 
+bhavil777: folds 
+smitty123455: folds 
+Uncalled bet (Rs. 1302.78) returned to Shovekid83
+tooofan209 said, "show i will not"
+Shovekid83 collected Rs. 1155.10 from pot
+Shovekid83: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 1217.82 | Rake Rs. 62.72 
+Board [6h 2c 8c]
+Seat 1: othaomala folded before Flop (didn't bet)
+Seat 2: smitty123455 folded on the Flop
+Seat 3: Shovekid83 (button) collected (Rs. 1155.10)
+Seat 4: tooofan209 (small blind) folded before Flop
+Seat 5: deck108 (big blind) folded on the Flop
+Seat 6: bhavil777 folded on the Flop
+
+
+
+PokerStars Hand #197202837536:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:37:44 IST [2019/02/18 8:07:44 ET]
+Table 'Akiyama' 6-max Seat #4 is the button
+Seat 1: othaomala (Rs. 5605.43 in chips) 
+Seat 2: smitty123455 (Rs. 3772.90 in chips) 
+Seat 3: Shovekid83 (Rs. 2457.88 in chips) 
+Seat 4: tooofan209 (Rs. 7526.65 in chips) 
+Seat 5: deck108 (Rs. 1932.32 in chips) 
+Seat 6: bhavil777 (Rs. 3166.28 in chips) 
+deck108: posts small blind Rs. 25
+bhavil777: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Ac 8d]
+tooofan209 said, "believe me if u want oit"
+othaomala: raises Rs. 50 to Rs. 100
+smitty123455: calls Rs. 100
+Shovekid83: folds 
+tooofan209 said, "had set of 22"
+tooofan209: folds 
+deck108: folds 
+bhavil777: folds 
+*** FLOP *** [9s 3d Ks]
+othaomala: bets Rs. 130.42
+smitty123455: folds 
+Uncalled bet (Rs. 130.42) returned to othaomala
+othaomala collected Rs. 260.84 from pot
+othaomala: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 275 | Rake Rs. 14.16 
+Board [9s 3d Ks]
+Seat 1: othaomala collected (Rs. 260.84)
+Seat 2: smitty123455 folded on the Flop
+Seat 3: Shovekid83 folded before Flop (didn't bet)
+Seat 4: tooofan209 (button) folded before Flop (didn't bet)
+Seat 5: deck108 (small blind) folded before Flop
+Seat 6: bhavil777 (big blind) folded before Flop
+
+
+
+PokerStars Hand #197202847208:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:38:07 IST [2019/02/18 8:08:07 ET]
+Table 'Akiyama' 6-max Seat #5 is the button
+Seat 1: othaomala (Rs. 5766.27 in chips) 
+Seat 2: smitty123455 (Rs. 3672.90 in chips) 
+Seat 3: Shovekid83 (Rs. 2457.88 in chips) 
+Seat 4: tooofan209 (Rs. 7526.65 in chips) 
+Seat 5: deck108 (Rs. 1907.32 in chips) 
+Seat 6: bhavil777 (Rs. 3116.28 in chips) 
+bhavil777: posts small blind Rs. 25
+othaomala: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Qs Ts]
+Shovekid83 said, "ill call u till river next time to see ur cards"
+tooofan209 said, "sure"
+smitty123455: calls Rs. 50
+Shovekid83: calls Rs. 50
+tooofan209: folds 
+deck108: calls Rs. 50
+tooofan209 said, "should have been lst hand"
+bhavil777: folds 
+othaomala: checks 
+*** FLOP *** [Qd 6c 3s]
+othaomala: checks 
+smitty123455: checks 
+tooofan209 said, "]everytime tuff to hit big"
+Shovekid83: bets Rs. 106.71
+deck108: calls Rs. 106.71
+othaomala: folds 
+smitty123455: calls Rs. 106.71
+*** TURN *** [Qd 6c 3s] [5s]
+smitty123455: checks 
+Shovekid83 said, "im not hitting any tonight"
+Shovekid83: bets Rs. 50
+tooofan209 said, "dont have to everytime"
+deck108: raises Rs. 250 to Rs. 300
+smitty123455: folds 
+Shovekid83: calls Rs. 250
+*** RIVER *** [Qd 6c 3s 5s] [Qc]
+tooofan209 said, "other salso  hit"
+Shovekid83: checks 
+deck108: bets Rs. 550
+Shovekid83: calls Rs. 550
+*** SHOW DOWN ***
+deck108: shows [Qs Ts] (three of a kind, Queens)
+Shovekid83: mucks hand 
+deck108 collected Rs. 2129.51 from pot
+*** SUMMARY ***
+Total pot Rs. 2245.13 | Rake Rs. 115.62 
+Board [Qd 6c 3s 5s Qc]
+Seat 1: othaomala (big blind) folded on the Flop
+Seat 2: smitty123455 folded on the Turn
+Seat 3: Shovekid83 mucked [Qh 9c]
+Seat 4: tooofan209 folded before Flop (didn't bet)
+Seat 5: deck108 (button) showed [Qs Ts] and won (Rs. 2129.51) with three of a kind, Queens
+Seat 6: bhavil777 (small blind) folded before Flop
+
+
+
+PokerStars Hand #197202876439:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:39:16 IST [2019/02/18 8:09:16 ET]
+Table 'Akiyama' 6-max Seat #6 is the button
+Seat 1: othaomala (Rs. 5716.27 in chips) 
+Seat 2: smitty123455 (Rs. 3516.19 in chips) 
+Seat 3: Shovekid83 (Rs. 1451.17 in chips) 
+Seat 4: tooofan209 (Rs. 7526.65 in chips) 
+Seat 5: deck108 (Rs. 3030.12 in chips) 
+Seat 6: bhavil777 (Rs. 4091.28 in chips) 
+othaomala: posts small blind Rs. 25
+smitty123455: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [3h 9h]
+Shovekid83: folds 
+tooofan209: raises Rs. 100 to Rs. 150
+deck108: folds 
+bhavil777: calls Rs. 150
+othaomala: folds 
+smitty123455: calls Rs. 100
+*** FLOP *** [Tc Qc Kc]
+smitty123455: checks 
+tooofan209: bets Rs. 300.36
+bhavil777: calls Rs. 300.36
+smitty123455: folds 
+*** TURN *** [Tc Qc Kc] [6c]
+Shovekid83 said, "and when I hit a Q someone has a better pair...so had to play it slow last hand"
+tooofan209: checks 
+bhavil777: bets Rs. 500
+tooofan209: calls Rs. 500
+*** RIVER *** [Tc Qc Kc 6c] [5c]
+tooofan209: checks 
+bhavil777: checks 
+*** SHOW DOWN ***
+tooofan209: shows [As Js] (a flush, King high)
+bhavil777: shows [9s Ks] (a flush, King high)
+tooofan209 collected Rs. 984.41 from pot
+bhavil777 collected Rs. 984.41 from pot
+*** SUMMARY ***
+Total pot Rs. 2075.72 | Rake Rs. 106.90 
+Board [Tc Qc Kc 6c 5c]
+Seat 1: othaomala (small blind) folded before Flop
+Seat 2: smitty123455 (big blind) folded on the Flop
+Seat 3: Shovekid83 folded before Flop (didn't bet)
+Seat 4: tooofan209 showed [As Js] and won (Rs. 984.41) with a flush, King high
+Seat 5: deck108 folded before Flop (didn't bet)
+Seat 6: bhavil777 (button) showed [9s Ks] and won (Rs. 984.41) with a flush, King high
+
+
+
+PokerStars Hand #197202892956:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:39:55 IST [2019/02/18 8:09:55 ET]
+Table 'Akiyama' 6-max Seat #1 is the button
+Seat 1: othaomala (Rs. 5691.27 in chips) 
+Seat 2: smitty123455 (Rs. 3366.19 in chips) 
+Seat 3: Shovekid83 (Rs. 1451.17 in chips) 
+Seat 4: tooofan209 (Rs. 7560.70 in chips) 
+Seat 5: deck108 (Rs. 3030.12 in chips) 
+Seat 6: bhavil777 (Rs. 4125.33 in chips) 
+smitty123455: posts small blind Rs. 25
+Shovekid83: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [4s Ac]
+tooofan209: calls Rs. 50
+deck108: folds 
+bhavil777: folds 
+othaomala: folds 
+smitty123455: raises Rs. 150 to Rs. 200
+Shovekid83: folds 
+tooofan209: calls Rs. 150
+*** FLOP *** [9s Ts 9h]
+smitty123455: checks 
+tooofan209: bets Rs. 284.55
+smitty123455: folds 
+Uncalled bet (Rs. 284.55) returned to tooofan209
+tooofan209 collected Rs. 426.82 from pot
+*** SUMMARY ***
+Total pot Rs. 450 | Rake Rs. 23.18 
+Board [9s Ts 9h]
+Seat 1: othaomala (button) folded before Flop (didn't bet)
+Seat 2: smitty123455 (small blind) folded on the Flop
+Seat 3: Shovekid83 (big blind) folded before Flop
+Seat 4: tooofan209 collected (Rs. 426.82)
+Seat 5: deck108 folded before Flop (didn't bet)
+Seat 6: bhavil777 folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197202904452:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:40:22 IST [2019/02/18 8:10:22 ET]
+Table 'Akiyama' 6-max Seat #2 is the button
+Seat 1: othaomala (Rs. 5691.27 in chips) 
+Seat 2: smitty123455 (Rs. 3166.19 in chips) 
+Seat 3: Shovekid83 (Rs. 1401.17 in chips) 
+Seat 4: tooofan209 (Rs. 7787.52 in chips) 
+Seat 5: deck108 (Rs. 3030.12 in chips) 
+Seat 6: bhavil777 (Rs. 4125.33 in chips) 
+Shovekid83: posts small blind Rs. 25
+tooofan209: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [6d Qh]
+deck108: folds 
+bhavil777: folds 
+othaomala: folds 
+smitty123455: folds 
+Shovekid83: folds 
+Uncalled bet (Rs. 25) returned to tooofan209
+tooofan209 collected Rs. 50 from pot
+*** SUMMARY ***
+Total pot Rs. 50 | Rake Rs. 0 
+Seat 1: othaomala folded before Flop (didn't bet)
+Seat 2: smitty123455 (button) folded before Flop (didn't bet)
+Seat 3: Shovekid83 (small blind) folded before Flop
+Seat 4: tooofan209 (big blind) collected (Rs. 50)
+Seat 5: deck108 folded before Flop (didn't bet)
+Seat 6: bhavil777 folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197202909383:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:40:33 IST [2019/02/18 8:10:33 ET]
+Table 'Akiyama' 6-max Seat #3 is the button
+Seat 1: othaomala (Rs. 5691.27 in chips) 
+Seat 2: smitty123455 (Rs. 3166.19 in chips) 
+Seat 3: Shovekid83 (Rs. 1376.17 in chips) 
+Seat 4: tooofan209 (Rs. 7812.52 in chips) 
+Seat 5: deck108 (Rs. 3030.12 in chips) 
+Seat 6: bhavil777 (Rs. 4125.33 in chips) 
+tooofan209: posts small blind Rs. 25
+deck108: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [5d Th]
+bhavil777: raises Rs. 125 to Rs. 175
+othaomala: folds 
+smitty123455: calls Rs. 175
+Shovekid83: folds 
+tooofan209: folds 
+deck108: folds 
+*** FLOP *** [6h Ts 6d]
+bhavil777: bets Rs. 201.56
+smitty123455: raises Rs. 201.56 to Rs. 403.12
+bhavil777: calls Rs. 201.56
+*** TURN *** [6h Ts 6d] [5c]
+bhavil777: checks 
+smitty123455: bets Rs. 1167.83
+bhavil777: folds 
+Uncalled bet (Rs. 1167.83) returned to smitty123455
+smitty123455 collected Rs. 1167.83 from pot
+smitty123455: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 1231.24 | Rake Rs. 63.41 
+Board [6h Ts 6d 5c]
+Seat 1: othaomala folded before Flop (didn't bet)
+Seat 2: smitty123455 collected (Rs. 1167.83)
+Seat 3: Shovekid83 (button) folded before Flop (didn't bet)
+Seat 4: tooofan209 (small blind) folded before Flop
+Seat 5: deck108 (big blind) folded before Flop
+Seat 6: bhavil777 folded on the Turn
+
+
+
+PokerStars Hand #197202921857:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:41:03 IST [2019/02/18 8:11:03 ET]
+Table 'Akiyama' 6-max Seat #4 is the button
+Seat 1: othaomala (Rs. 5691.27 in chips) 
+Seat 2: smitty123455 (Rs. 3755.90 in chips) 
+Seat 3: Shovekid83 (Rs. 1376.17 in chips) 
+Seat 4: tooofan209 (Rs. 7787.52 in chips) 
+Seat 5: deck108 (Rs. 2980.12 in chips) 
+Seat 6: bhavil777 (Rs. 3547.21 in chips) 
+deck108: posts small blind Rs. 25
+bhavil777: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [5s 2h]
+othaomala: raises Rs. 50 to Rs. 100
+smitty123455: calls Rs. 100
+Shovekid83: folds 
+tooofan209: raises Rs. 125 to Rs. 225
+deck108: folds 
+bhavil777: folds 
+othaomala: calls Rs. 125
+smitty123455: calls Rs. 125
+*** FLOP *** [4h Js 2c]
+othaomala: checks 
+smitty123455: checks 
+tooofan209: bets Rs. 474.25
+othaomala: folds 
+smitty123455: folds 
+Uncalled bet (Rs. 474.25) returned to tooofan209
+tooofan209 collected Rs. 711.38 from pot
+tooofan209: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 750 | Rake Rs. 38.62 
+Board [4h Js 2c]
+Seat 1: othaomala folded on the Flop
+Seat 2: smitty123455 folded on the Flop
+Seat 3: Shovekid83 folded before Flop (didn't bet)
+Seat 4: tooofan209 (button) collected (Rs. 711.38)
+Seat 5: deck108 (small blind) folded before Flop
+Seat 6: bhavil777 (big blind) folded before Flop
+
+
+
+PokerStars Hand #197202946781:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:42:02 IST [2019/02/18 8:12:02 ET]
+Table 'Akiyama' 6-max Seat #5 is the button
+Seat 1: othaomala (Rs. 5466.27 in chips) 
+Seat 2: smitty123455 (Rs. 3530.90 in chips) 
+Seat 3: Shovekid83 (Rs. 1376.17 in chips) 
+Seat 4: tooofan209 (Rs. 8273.90 in chips) 
+Seat 5: deck108 (Rs. 2955.12 in chips) 
+Seat 6: bhavil777 (Rs. 3497.21 in chips) 
+bhavil777: posts small blind Rs. 25
+othaomala: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [7s 6d]
+smitty123455: calls Rs. 50
+Shovekid83: calls Rs. 50
+tooofan209: folds 
+deck108: calls Rs. 50
+bhavil777: folds 
+othaomala: checks 
+*** FLOP *** [8h 6h 7h]
+othaomala: checks 
+smitty123455: bets Rs. 150
+Shovekid83: calls Rs. 150
+deck108: raises Rs. 398.05 to Rs. 548.05
+othaomala: folds 
+smitty123455: folds 
+Shovekid83: calls Rs. 398.05
+*** TURN *** [8h 6h 7h] [9d]
+Shovekid83: checks 
+deck108: bets Rs. 837.20
+Shovekid83: calls Rs. 778.12 and is all-in
+Uncalled bet (Rs. 59.08) returned to deck108
+*** RIVER *** [8h 6h 7h 9d] [5d]
+*** SHOW DOWN ***
+Shovekid83: shows [Ah 8s] (a straight, Five to Nine)
+deck108: shows [7s 6d] (a straight, Five to Nine)
+Shovekid83 collected Rs. 1435.72 from pot
+deck108 collected Rs. 1435.71 from pot
+*** SUMMARY ***
+Total pot Rs. 3027.34 | Rake Rs. 155.91 
+Board [8h 6h 7h 9d 5d]
+Seat 1: othaomala (big blind) folded on the Flop
+Seat 2: smitty123455 folded on the Flop
+Seat 3: Shovekid83 showed [Ah 8s] and won (Rs. 1435.72) with a straight, Five to Nine
+Seat 4: tooofan209 folded before Flop (didn't bet)
+Seat 5: deck108 (button) showed [7s 6d] and won (Rs. 1435.71) with a straight, Five to Nine
+Seat 6: bhavil777 (small blind) folded before Flop
+
+
+
+PokerStars Hand #197202976495:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:43:12 IST [2019/02/18 8:13:12 ET]
+Table 'Akiyama' 6-max Seat #6 is the button
+Seat 1: othaomala (Rs. 5416.27 in chips) 
+Seat 2: smitty123455 (Rs. 3330.90 in chips) 
+Seat 3: Shovekid83 (Rs. 1435.72 in chips) 
+Seat 4: tooofan209 (Rs. 8273.90 in chips) 
+Seat 5: deck108 (Rs. 3014.66 in chips) 
+Seat 6: bhavil777 (Rs. 3472.21 in chips) 
+othaomala: posts small blind Rs. 25
+smitty123455: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Jh 8s]
+Shovekid83: raises Rs. 100 to Rs. 150
+tooofan209: folds 
+deck108: folds 
+bhavil777: folds 
+othaomala: folds 
+smitty123455: calls Rs. 100
+*** FLOP *** [7s 4c Ac]
+smitty123455: checks 
+Shovekid83: bets Rs. 154.13
+smitty123455: calls Rs. 154.13
+*** TURN *** [7s 4c Ac] [Kd]
+smitty123455: bets Rs. 600.65
+Shovekid83: calls Rs. 600.65
+*** RIVER *** [7s 4c Ac Kd] [7h]
+smitty123455: bets Rs. 870.04
+Shovekid83: calls Rs. 530.94 and is all-in
+Uncalled bet (Rs. 339.10) returned to smitty123455
+*** SHOW DOWN ***
+smitty123455: shows [Kc 9d] (two pair, Kings and Sevens)
+Shovekid83: shows [Kh Ah] (two pair, Aces and Kings)
+Shovekid83 collected Rs. 2747.27 from pot
+*** SUMMARY ***
+Total pot Rs. 2896.44 | Rake Rs. 149.17 
+Board [7s 4c Ac Kd 7h]
+Seat 1: othaomala (small blind) folded before Flop
+Seat 2: smitty123455 (big blind) showed [Kc 9d] and lost with two pair, Kings and Sevens
+Seat 3: Shovekid83 showed [Kh Ah] and won (Rs. 2747.27) with two pair, Aces and Kings
+Seat 4: tooofan209 folded before Flop (didn't bet)
+Seat 5: deck108 folded before Flop (didn't bet)
+Seat 6: bhavil777 (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197202999413:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:44:07 IST [2019/02/18 8:14:07 ET]
+Table 'Akiyama' 6-max Seat #2 is the button
+Seat 2: smitty123455 (Rs. 1895.18 in chips) 
+Seat 3: Shovekid83 (Rs. 2747.27 in chips) 
+Seat 5: deck108 (Rs. 3014.66 in chips) 
+Seat 6: bhavil777 (Rs. 3472.21 in chips) 
+Shovekid83: posts small blind Rs. 25
+deck108: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [8d Jh]
+bhavil777: raises Rs. 125 to Rs. 175
+smitty123455: raises Rs. 1720.18 to Rs. 1895.18 and is all-in
+Shovekid83: raises Rs. 852.09 to Rs. 2747.27 and is all-in
+deck108: folds 
+bhavil777: calls Rs. 2572.27
+*** FLOP *** [Kh 5c 4d]
+*** TURN *** [Kh 5c 4d] [9c]
+*** RIVER *** [Kh 5c 4d 9c] [2d]
+*** SHOW DOWN ***
+Shovekid83: shows [Qh Qd] (a pair of Queens)
+bhavil777: shows [Th Ts] (a pair of Tens)
+Shovekid83 collected Rs. 1704.18 from side pot
+smitty123455: shows [Ks 5h] (two pair, Kings and Fives)
+smitty123455 collected Rs. 5585.54 from main pot
+*** SUMMARY ***
+Total pot Rs. 7439.72 Main pot Rs. 5585.54. Side pot Rs. 1704.18. | Rake Rs. 150 
+Board [Kh 5c 4d 9c 2d]
+Seat 2: smitty123455 (button) showed [Ks 5h] and won (Rs. 5585.54) with two pair, Kings and Fives
+Seat 3: Shovekid83 (small blind) showed [Qh Qd] and won (Rs. 1704.18) with a pair of Queens
+Seat 5: deck108 (big blind) folded before Flop
+Seat 6: bhavil777 showed [Th Ts] and lost with a pair of Tens
+
+
+
+PokerStars Hand #197203011945:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:44:36 IST [2019/02/18 8:14:36 ET]
+Table 'Akiyama' 6-max Seat #3 is the button
+Seat 2: smitty123455 (Rs. 5585.54 in chips) 
+Seat 3: Shovekid83 (Rs. 1704.18 in chips) 
+Seat 5: deck108 (Rs. 2964.66 in chips) 
+Seat 6: bhavil777 (Rs. 724.94 in chips) 
+deck108: posts small blind Rs. 25
+bhavil777: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [7h 3h]
+smitty123455: calls Rs. 50
+Shovekid83: raises Rs. 100 to Rs. 150
+deck108: folds 
+bhavil777: folds 
+Shovekid83 said, "smitty u shove with K5"
+smitty123455: calls Rs. 100
+*** FLOP *** [Kc Ah 3d]
+smitty123455: checks 
+Shovekid83: checks 
+*** TURN *** [Kc Ah 3d] [3s]
+smitty123455: checks 
+Shovekid83: bets Rs. 177.85
+smitty123455: folds 
+Uncalled bet (Rs. 177.85) returned to Shovekid83
+Shovekid83 collected Rs. 355.69 from pot
+Shovekid83: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 375 | Rake Rs. 19.31 
+Board [Kc Ah 3d 3s]
+Seat 2: smitty123455 folded on the Turn
+Seat 3: Shovekid83 (button) collected (Rs. 355.69)
+Seat 5: deck108 (small blind) folded before Flop
+Seat 6: bhavil777 (big blind) folded before Flop
+
+
+
+PokerStars Hand #197203029842:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:45:18 IST [2019/02/18 8:15:18 ET]
+Table 'Akiyama' 6-max Seat #5 is the button
+Seat 2: smitty123455 (Rs. 5435.54 in chips) 
+Seat 3: Shovekid83 (Rs. 1909.87 in chips) 
+Seat 5: deck108 (Rs. 2939.66 in chips) 
+Seat 6: bhavil777 (Rs. 674.94 in chips) 
+bhavil777: posts small blind Rs. 25
+smitty123455: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Js 9d]
+Shovekid83: calls Rs. 50
+bhavil777 said, "i knew he had shiit"
+deck108: calls Rs. 50
+bhavil777: folds 
+smitty123455: checks 
+*** FLOP *** [9h 2h Qs]
+smitty123455: checks 
+bhavil777 said, "i was hoping for you to have AK AQ or soemthing of that sort"
+Shovekid83 said, "isse acha matka khel lo"
+Shovekid83: checks 
+deck108: bets Rs. 100
+smitty123455: folds 
+Shovekid83: calls Rs. 100
+*** TURN *** [9h 2h Qs] [Td]
+Shovekid83: checks 
+deck108: checks 
+*** RIVER *** [9h 2h Qs Td] [6c]
+Shovekid83: bets Rs. 177.85
+deck108: calls Rs. 177.85
+*** SHOW DOWN ***
+Shovekid83: shows [Jh 8c] (a straight, Eight to Queen)
+deck108: mucks hand 
+Shovekid83 collected Rs. 693.07 from pot
+*** SUMMARY ***
+Total pot Rs. 730.70 | Rake Rs. 37.63 
+Board [9h 2h Qs Td 6c]
+Seat 2: smitty123455 (big blind) folded on the Flop
+Seat 3: Shovekid83 showed [Jh 8c] and won (Rs. 693.07) with a straight, Eight to Queen
+Seat 5: deck108 (button) mucked [Js 9d]
+Seat 6: bhavil777 (small blind) folded before Flop
+
+
+
+PokerStars Hand #197203055419:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:46:18 IST [2019/02/18 8:16:18 ET]
+Table 'Akiyama' 6-max Seat #6 is the button
+Seat 2: smitty123455 (Rs. 5385.54 in chips) 
+Seat 3: Shovekid83 (Rs. 2275.09 in chips) 
+Seat 5: deck108 (Rs. 2611.81 in chips) 
+Seat 6: bhavil777 (Rs. 649.94 in chips) 
+smitty123455: posts small blind Rs. 25
+Shovekid83: posts big blind Rs. 50
+tooofan209: sits out 
+*** HOLE CARDS ***
+Dealt to deck108 [9c 5h]
+deck108: folds 
+bhavil777: folds 
+smitty123455: raises Rs. 50 to Rs. 100
+Shovekid83: calls Rs. 50
+*** FLOP *** [4d 6d Qd]
+smitty123455: bets Rs. 189.70
+Shovekid83: folds 
+Uncalled bet (Rs. 189.70) returned to smitty123455
+smitty123455 collected Rs. 189.70 from pot
+smitty123455: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 200 | Rake Rs. 10.30 
+Board [4d 6d Qd]
+Seat 2: smitty123455 (small blind) collected (Rs. 189.70)
+Seat 3: Shovekid83 (big blind) folded on the Flop
+Seat 5: deck108 folded before Flop (didn't bet)
+Seat 6: bhavil777 (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197203064168:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:46:39 IST [2019/02/18 8:16:39 ET]
+Table 'Akiyama' 6-max Seat #2 is the button
+Seat 1: othaomala (Rs. 5391.27 in chips) 
+Seat 2: smitty123455 (Rs. 5475.24 in chips) 
+Seat 3: Shovekid83 (Rs. 2175.09 in chips) 
+Seat 4: tooofan209 (Rs. 8273.90 in chips) 
+Seat 5: deck108 (Rs. 2611.81 in chips) 
+Seat 6: bhavil777 (Rs. 649.94 in chips) 
+Shovekid83: posts small blind Rs. 25
+tooofan209: posts big blind Rs. 50
+othaomala: posts small & big blinds Rs. 75
+*** HOLE CARDS ***
+Dealt to deck108 [Kh Ts]
+deck108: folds 
+bhavil777: folds 
+othaomala: raises Rs. 150 to Rs. 200
+smitty123455: calls Rs. 200
+Shovekid83: folds 
+tooofan209: folds 
+*** FLOP *** [5c 2h 3d]
+othaomala: checks 
+smitty123455: checks 
+*** TURN *** [5c 2h 3d] [As]
+othaomala: checks 
+smitty123455: checks 
+*** RIVER *** [5c 2h 3d As] [Th]
+othaomala: checks 
+smitty123455: checks 
+*** SHOW DOWN ***
+othaomala: shows [9d Qd] (high card Ace)
+smitty123455: mucks hand 
+othaomala collected Rs. 474.25 from pot
+*** SUMMARY ***
+Total pot Rs. 500 | Rake Rs. 25.75 
+Board [5c 2h 3d As Th]
+Seat 1: othaomala showed [9d Qd] and won (Rs. 474.25) with high card Ace
+Seat 2: smitty123455 (button) mucked [9c 8s]
+Seat 3: Shovekid83 (small blind) folded before Flop
+Seat 4: tooofan209 (big blind) folded before Flop
+Seat 5: deck108 folded before Flop (didn't bet)
+Seat 6: bhavil777 folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197203082292:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:47:21 IST [2019/02/18 8:17:21 ET]
+Table 'Akiyama' 6-max Seat #3 is the button
+Seat 1: othaomala (Rs. 5640.52 in chips) 
+Seat 2: smitty123455 (Rs. 5275.24 in chips) 
+Seat 3: Shovekid83 (Rs. 2150.09 in chips) 
+Seat 4: tooofan209 (Rs. 8223.90 in chips) 
+Seat 5: deck108 (Rs. 2611.81 in chips) 
+Seat 6: bhavil777 (Rs. 649.94 in chips) 
+tooofan209: posts small blind Rs. 25
+deck108: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [2d 9c]
+bhavil777: raises Rs. 599.94 to Rs. 649.94 and is all-in
+othaomala: folds 
+smitty123455: folds 
+Shovekid83: folds 
+tooofan209: folds 
+deck108: folds 
+Uncalled bet (Rs. 599.94) returned to bhavil777
+bhavil777 collected Rs. 125 from pot
+bhavil777: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 125 | Rake Rs. 0 
+Seat 1: othaomala folded before Flop (didn't bet)
+Seat 2: smitty123455 folded before Flop (didn't bet)
+Seat 3: Shovekid83 (button) folded before Flop (didn't bet)
+Seat 4: tooofan209 (small blind) folded before Flop
+Seat 5: deck108 (big blind) folded before Flop
+Seat 6: bhavil777 collected (Rs. 125)
+
+
+
+PokerStars Hand #197203089804:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:47:38 IST [2019/02/18 8:17:38 ET]
+Table 'Akiyama' 6-max Seat #4 is the button
+Seat 1: othaomala (Rs. 5640.52 in chips) 
+Seat 2: smitty123455 (Rs. 5275.24 in chips) 
+Seat 3: Shovekid83 (Rs. 2150.09 in chips) 
+Seat 4: tooofan209 (Rs. 8198.90 in chips) 
+Seat 5: deck108 (Rs. 2561.81 in chips) 
+Seat 6: bhavil777 (Rs. 724.94 in chips) 
+deck108: posts small blind Rs. 25
+bhavil777: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [7h Ac]
+othaomala: folds 
+smitty123455: calls Rs. 50
+Shovekid83: raises Rs. 100 to Rs. 150
+tooofan209: folds 
+deck108: folds 
+bhavil777: folds 
+smitty123455: calls Rs. 100
+*** FLOP *** [6c Qs 5d]
+smitty123455: checks 
+Shovekid83: bets Rs. 177.85
+smitty123455: folds 
+Uncalled bet (Rs. 177.85) returned to Shovekid83
+Shovekid83 collected Rs. 355.69 from pot
+Shovekid83: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 375 | Rake Rs. 19.31 
+Board [6c Qs 5d]
+Seat 1: othaomala folded before Flop (didn't bet)
+Seat 2: smitty123455 folded on the Flop
+Seat 3: Shovekid83 collected (Rs. 355.69)
+Seat 4: tooofan209 (button) folded before Flop (didn't bet)
+Seat 5: deck108 (small blind) folded before Flop
+Seat 6: bhavil777 (big blind) folded before Flop
+
+
+
+PokerStars Hand #197203104481:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:48:13 IST [2019/02/18 8:18:13 ET]
+Table 'Akiyama' 6-max Seat #5 is the button
+Seat 1: othaomala (Rs. 5640.52 in chips) 
+Seat 2: smitty123455 (Rs. 5125.24 in chips) 
+Seat 3: Shovekid83 (Rs. 2355.78 in chips) 
+Seat 4: tooofan209 (Rs. 8198.90 in chips) 
+Seat 5: deck108 (Rs. 2536.81 in chips) 
+Seat 6: bhavil777 (Rs. 674.94 in chips) 
+bhavil777: posts small blind Rs. 25
+othaomala: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Qd 3s]
+smitty123455: calls Rs. 50
+Shovekid83: calls Rs. 50
+tooofan209: folds 
+deck108: folds 
+bhavil777: raises Rs. 624.94 to Rs. 674.94 and is all-in
+othaomala: folds 
+smitty123455: folds 
+Shovekid83: folds 
+Uncalled bet (Rs. 624.94) returned to bhavil777
+bhavil777 collected Rs. 200 from pot
+bhavil777: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 200 | Rake Rs. 0 
+Seat 1: othaomala (big blind) folded before Flop
+Seat 2: smitty123455 folded before Flop
+Seat 3: Shovekid83 folded before Flop
+Seat 4: tooofan209 folded before Flop (didn't bet)
+Seat 5: deck108 (button) folded before Flop (didn't bet)
+Seat 6: bhavil777 (small blind) collected (Rs. 200)
+
+
+
+PokerStars Hand #197203112522:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:48:31 IST [2019/02/18 8:18:31 ET]
+Table 'Akiyama' 6-max Seat #6 is the button
+Seat 1: othaomala (Rs. 5590.52 in chips) 
+Seat 2: smitty123455 (Rs. 5075.24 in chips) 
+Seat 3: Shovekid83 (Rs. 2305.78 in chips) 
+Seat 4: tooofan209 (Rs. 8198.90 in chips) 
+Seat 5: deck108 (Rs. 2536.81 in chips) 
+Seat 6: bhavil777 (Rs. 824.94 in chips) 
+othaomala: posts small blind Rs. 25
+smitty123455: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [2s 7h]
+Shovekid83: folds 
+tooofan209: folds 
+deck108: folds 
+bhavil777: raises Rs. 125 to Rs. 175
+othaomala: folds 
+smitty123455: calls Rs. 125
+*** FLOP *** [Qd Js 9d]
+smitty123455: checks 
+bhavil777: bets Rs. 649.94 and is all-in
+smitty123455: folds 
+Uncalled bet (Rs. 649.94) returned to bhavil777
+bhavil777 collected Rs. 355.69 from pot
+bhavil777: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 375 | Rake Rs. 19.31 
+Board [Qd Js 9d]
+Seat 1: othaomala (small blind) folded before Flop
+Seat 2: smitty123455 (big blind) folded on the Flop
+Seat 3: Shovekid83 folded before Flop (didn't bet)
+Seat 4: tooofan209 folded before Flop (didn't bet)
+Seat 5: deck108 folded before Flop (didn't bet)
+Seat 6: bhavil777 (button) collected (Rs. 355.69)
+
+
+
+PokerStars Hand #197203120698:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:48:50 IST [2019/02/18 8:18:50 ET]
+Table 'Akiyama' 6-max Seat #1 is the button
+Seat 1: othaomala (Rs. 5565.52 in chips) 
+Seat 2: smitty123455 (Rs. 4900.24 in chips) 
+Seat 3: Shovekid83 (Rs. 2305.78 in chips) 
+Seat 4: tooofan209 (Rs. 8198.90 in chips) 
+Seat 5: deck108 (Rs. 2536.81 in chips) 
+Seat 6: bhavil777 (Rs. 1005.63 in chips) 
+smitty123455: posts small blind Rs. 25
+Shovekid83: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Td 6c]
+tooofan209: raises Rs. 100 to Rs. 150
+deck108: folds 
+bhavil777: folds 
+othaomala: calls Rs. 150
+smitty123455: folds 
+Shovekid83: calls Rs. 100
+*** FLOP *** [9c 4d 5s]
+Shovekid83: checks 
+tooofan209: bets Rs. 300.36
+othaomala: folds 
+Shovekid83: folds 
+Uncalled bet (Rs. 300.36) returned to tooofan209
+tooofan209 collected Rs. 450.54 from pot
+*** SUMMARY ***
+Total pot Rs. 475 | Rake Rs. 24.46 
+Board [9c 4d 5s]
+Seat 1: othaomala (button) folded on the Flop
+Seat 2: smitty123455 (small blind) folded before Flop
+Seat 3: Shovekid83 (big blind) folded on the Flop
+Seat 4: tooofan209 collected (Rs. 450.54)
+Seat 5: deck108 folded before Flop (didn't bet)
+Seat 6: bhavil777 folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197203131713:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:49:16 IST [2019/02/18 8:19:16 ET]
+Table 'Akiyama' 6-max Seat #2 is the button
+Seat 1: othaomala (Rs. 5415.52 in chips) 
+Seat 2: smitty123455 (Rs. 4875.24 in chips) 
+Seat 3: Shovekid83 (Rs. 2155.78 in chips) 
+Seat 4: tooofan209 (Rs. 8499.44 in chips) 
+Seat 5: deck108 (Rs. 2536.81 in chips) 
+Seat 6: bhavil777 (Rs. 1005.63 in chips) 
+Shovekid83: posts small blind Rs. 25
+tooofan209: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [4h 4c]
+deck108: raises Rs. 100 to Rs. 150
+bhavil777: raises Rs. 855.63 to Rs. 1005.63 and is all-in
+othaomala: folds 
+smitty123455: folds 
+Shovekid83: folds 
+tooofan209: folds 
+deck108: folds 
+Uncalled bet (Rs. 855.63) returned to bhavil777
+bhavil777 collected Rs. 375 from pot
+bhavil777: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 375 | Rake Rs. 0 
+Seat 1: othaomala folded before Flop (didn't bet)
+Seat 2: smitty123455 (button) folded before Flop (didn't bet)
+Seat 3: Shovekid83 (small blind) folded before Flop
+Seat 4: tooofan209 (big blind) folded before Flop
+Seat 5: deck108 folded before Flop
+Seat 6: bhavil777 collected (Rs. 375)
+
+
+
+PokerStars Hand #197203160177:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:50:23 IST [2019/02/18 8:20:23 ET]
+Table 'Akiyama' 6-max Seat #3 is the button
+Seat 1: othaomala (Rs. 5415.52 in chips) 
+Seat 2: smitty123455 (Rs. 4875.24 in chips) 
+Seat 3: Shovekid83 (Rs. 2130.78 in chips) 
+Seat 4: tooofan209 (Rs. 8449.44 in chips) 
+Seat 5: deck108 (Rs. 2386.81 in chips) 
+Seat 6: bhavil777 (Rs. 1230.63 in chips) 
+tooofan209: posts small blind Rs. 25
+deck108: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [6h 4h]
+bhavil777: folds 
+othaomala: calls Rs. 50
+smitty123455: raises Rs. 175 to Rs. 225
+Shovekid83: folds 
+tooofan209: folds 
+deck108: folds 
+othaomala: calls Rs. 175
+*** FLOP *** [6c 8c Kc]
+othaomala: checks 
+smitty123455: bets Rs. 248.98
+othaomala: folds 
+Uncalled bet (Rs. 248.98) returned to smitty123455
+smitty123455 collected Rs. 497.96 from pot
+smitty123455: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 525 | Rake Rs. 27.04 
+Board [6c 8c Kc]
+Seat 1: othaomala folded on the Flop
+Seat 2: smitty123455 collected (Rs. 497.96)
+Seat 3: Shovekid83 (button) folded before Flop (didn't bet)
+Seat 4: tooofan209 (small blind) folded before Flop
+Seat 5: deck108 (big blind) folded before Flop
+Seat 6: bhavil777 folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197203173023:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:50:52 IST [2019/02/18 8:20:52 ET]
+Table 'Akiyama' 6-max Seat #4 is the button
+Seat 1: othaomala (Rs. 5190.52 in chips) 
+Seat 2: smitty123455 (Rs. 5148.20 in chips) 
+Seat 3: Shovekid83 (Rs. 2130.78 in chips) 
+Seat 4: tooofan209 (Rs. 8424.44 in chips) 
+Seat 5: deck108 (Rs. 2336.81 in chips) 
+Seat 6: bhavil777 (Rs. 1230.63 in chips) 
+deck108: posts small blind Rs. 25
+bhavil777: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Td Th]
+othaomala: folds 
+smitty123455: calls Rs. 50
+Shovekid83: calls Rs. 50
+tooofan209: folds 
+deck108: raises Rs. 200 to Rs. 250
+bhavil777: folds 
+smitty123455: calls Rs. 200
+Shovekid83: calls Rs. 200
+*** FLOP *** [2d 6d 5c]
+deck108: bets Rs. 455.28
+smitty123455: folds 
+Shovekid83: raises Rs. 1425.50 to Rs. 1880.78 and is all-in
+deck108: calls Rs. 1425.50
+*** TURN *** [2d 6d 5c] [Kh]
+*** RIVER *** [2d 6d 5c Kh] [Ts]
+*** SHOW DOWN ***
+deck108: shows [Td Th] (three of a kind, Tens)
+Shovekid83: shows [5s 4s] (a pair of Fives)
+deck108 collected Rs. 4326.64 from pot
+*** SUMMARY ***
+Total pot Rs. 4561.56 | Rake Rs. 234.92 
+Board [2d 6d 5c Kh Ts]
+Seat 1: othaomala folded before Flop (didn't bet)
+Seat 2: smitty123455 folded on the Flop
+Seat 3: Shovekid83 showed [5s 4s] and lost with a pair of Fives
+Seat 4: tooofan209 (button) folded before Flop (didn't bet)
+Seat 5: deck108 (small blind) showed [Td Th] and won (Rs. 4326.64) with three of a kind, Tens
+Seat 6: bhavil777 (big blind) folded before Flop
+
+
+
+PokerStars Hand #197203191638:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:51:36 IST [2019/02/18 8:21:36 ET]
+Table 'Akiyama' 6-max Seat #5 is the button
+Seat 1: othaomala (Rs. 5190.52 in chips) 
+Seat 2: smitty123455 (Rs. 4898.20 in chips) 
+Seat 4: tooofan209 (Rs. 8424.44 in chips) 
+Seat 5: deck108 (Rs. 4532.67 in chips) 
+Seat 6: bhavil777 (Rs. 1180.63 in chips) 
+bhavil777: posts small blind Rs. 25
+othaomala: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Ks 8s]
+Shovekid83 leaves the table
+smitty123455: folds 
+tooofan209: folds 
+deck108: raises Rs. 100 to Rs. 150
+bhavil777: raises Rs. 1030.63 to Rs. 1180.63 and is all-in
+othaomala: folds 
+deck108: folds 
+Uncalled bet (Rs. 1030.63) returned to bhavil777
+bhavil777 collected Rs. 350 from pot
+bhavil777: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 350 | Rake Rs. 0 
+Seat 1: othaomala (big blind) folded before Flop
+Seat 2: smitty123455 folded before Flop (didn't bet)
+Seat 4: tooofan209 folded before Flop (didn't bet)
+Seat 5: deck108 (button) folded before Flop
+Seat 6: bhavil777 (small blind) collected (Rs. 350)
+
+
+
+PokerStars Hand #197203201281:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:51:58 IST [2019/02/18 8:21:58 ET]
+Table 'Akiyama' 6-max Seat #6 is the button
+Seat 1: othaomala (Rs. 5140.52 in chips) 
+Seat 2: smitty123455 (Rs. 4898.20 in chips) 
+Seat 4: tooofan209 (Rs. 8424.44 in chips) 
+Seat 5: deck108 (Rs. 4382.67 in chips) 
+Seat 6: bhavil777 (Rs. 1380.63 in chips) 
+othaomala: posts small blind Rs. 25
+smitty123455: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [4s 9d]
+tooofan209: folds 
+deck108: folds 
+bhavil777: folds 
+othaomala: raises Rs. 100 to Rs. 150
+smitty123455: calls Rs. 100
+*** FLOP *** [6c Js 5s]
+othaomala: bets Rs. 142.28
+smitty123455: raises Rs. 284.56 to Rs. 426.84
+othaomala: folds 
+Uncalled bet (Rs. 284.56) returned to smitty123455
+smitty123455 collected Rs. 554.46 from pot
+smitty123455: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 584.56 | Rake Rs. 30.10 
+Board [6c Js 5s]
+Seat 1: othaomala (small blind) folded on the Flop
+Seat 2: smitty123455 (big blind) collected (Rs. 554.46)
+Seat 4: tooofan209 folded before Flop (didn't bet)
+Seat 5: deck108 folded before Flop (didn't bet)
+Seat 6: bhavil777 (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197203215540:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:52:31 IST [2019/02/18 8:22:31 ET]
+Table 'Akiyama' 6-max Seat #1 is the button
+Seat 1: othaomala (Rs. 4848.24 in chips) 
+Seat 2: smitty123455 (Rs. 5160.38 in chips) 
+Seat 4: tooofan209 (Rs. 8424.44 in chips) 
+Seat 5: deck108 (Rs. 4382.67 in chips) 
+Seat 6: bhavil777 (Rs. 1380.63 in chips) 
+smitty123455: posts small blind Rs. 25
+tooofan209: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Ad 4h]
+deck108: folds 
+bhavil777: raises Rs. 100 to Rs. 150
+othaomala: calls Rs. 150
+smitty123455: folds 
+tooofan209: folds 
+*** FLOP *** [Js 5s 9c]
+bhavil777: bets Rs. 177.85
+othaomala: calls Rs. 177.85
+*** TURN *** [Js 5s 9c] [Jh]
+bhavil777: checks 
+othaomala: bets Rs. 346.54
+bhavil777: folds 
+Uncalled bet (Rs. 346.54) returned to othaomala
+othaomala collected Rs. 693.07 from pot
+othaomala: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 730.70 | Rake Rs. 37.63 
+Board [Js 5s 9c Jh]
+Seat 1: othaomala (button) collected (Rs. 693.07)
+Seat 2: smitty123455 (small blind) folded before Flop
+Seat 4: tooofan209 (big blind) folded before Flop
+Seat 5: deck108 folded before Flop (didn't bet)
+Seat 6: bhavil777 folded on the Turn
+
+
+
+PokerStars Hand #197203226184:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:52:56 IST [2019/02/18 8:22:56 ET]
+Table 'Akiyama' 6-max Seat #2 is the button
+Seat 1: othaomala (Rs. 5213.46 in chips) 
+Seat 2: smitty123455 (Rs. 5135.38 in chips) 
+Seat 4: tooofan209 (Rs. 8374.44 in chips) 
+Seat 5: deck108 (Rs. 4382.67 in chips) 
+Seat 6: bhavil777 (Rs. 1052.78 in chips) 
+tooofan209: posts small blind Rs. 25
+deck108: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [4d Tc]
+bhavil777: calls Rs. 50
+othaomala: calls Rs. 50
+smitty123455: folds 
+tooofan209: folds 
+deck108: checks 
+*** FLOP *** [4s 3h 9s]
+deck108: checks 
+bhavil777: checks 
+othaomala: bets Rs. 165.99
+deck108: folds 
+bhavil777: folds 
+Uncalled bet (Rs. 165.99) returned to othaomala
+othaomala collected Rs. 165.99 from pot
+othaomala: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 175 | Rake Rs. 9.01 
+Board [4s 3h 9s]
+Seat 1: othaomala collected (Rs. 165.99)
+Seat 2: smitty123455 (button) folded before Flop (didn't bet)
+Seat 4: tooofan209 (small blind) folded before Flop
+Seat 5: deck108 (big blind) folded on the Flop
+Seat 6: bhavil777 folded on the Flop
+
+
+
+PokerStars Hand #197203240599:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:53:29 IST [2019/02/18 8:23:29 ET]
+Table 'Akiyama' 6-max Seat #4 is the button
+Seat 1: othaomala (Rs. 5329.45 in chips) 
+Seat 2: smitty123455 (Rs. 5135.38 in chips) 
+Seat 4: tooofan209 (Rs. 8349.44 in chips) 
+Seat 5: deck108 (Rs. 4332.67 in chips) 
+Seat 6: bhavil777 (Rs. 1002.78 in chips) 
+deck108: posts small blind Rs. 25
+bhavil777: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [9h As]
+othaomala: calls Rs. 50
+smitty123455: raises Rs. 175 to Rs. 225
+tooofan209: folds 
+deck108: folds 
+bhavil777: raises Rs. 777.78 to Rs. 1002.78 and is all-in
+othaomala: folds 
+smitty123455: calls Rs. 777.78
+*** FLOP *** [3h Kh 6h]
+*** TURN *** [3h Kh 6h] [Td]
+*** RIVER *** [3h Kh 6h Td] [6d]
+*** SHOW DOWN ***
+bhavil777: shows [Ad 8c] (a pair of Sixes)
+smitty123455: shows [Tc Th] (a full house, Tens full of Sixes)
+smitty123455 collected Rs. 1973.41 from pot
+*** SUMMARY ***
+Total pot Rs. 2080.56 | Rake Rs. 107.15 
+Board [3h Kh 6h Td 6d]
+Seat 1: othaomala folded before Flop
+Seat 2: smitty123455 showed [Tc Th] and won (Rs. 1973.41) with a full house, Tens full of Sixes
+Seat 4: tooofan209 (button) folded before Flop (didn't bet)
+Seat 5: deck108 (small blind) folded before Flop
+Seat 6: bhavil777 (big blind) showed [Ad 8c] and lost with a pair of Sixes
+
+
+
+PokerStars Hand #197203259200:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:54:12 IST [2019/02/18 8:24:12 ET]
+Table 'Akiyama' 6-max Seat #5 is the button
+Seat 1: othaomala (Rs. 5279.45 in chips) 
+Seat 2: smitty123455 (Rs. 6106.01 in chips) 
+Seat 4: tooofan209 (Rs. 8349.44 in chips) 
+Seat 5: deck108 (Rs. 4307.67 in chips) 
+othaomala: posts small blind Rs. 25
+smitty123455: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Ah Js]
+tooofan209: raises Rs. 100 to Rs. 150
+bhavil777 leaves the table
+deck108: calls Rs. 150
+othaomala: folds 
+smitty123455: calls Rs. 100
+*** FLOP *** [3d 5s 8c]
+smitty123455: bets Rs. 225.27
+tooofan209: calls Rs. 225.27
+deck108: folds 
+*** TURN *** [3d 5s 8c] [Qc]
+smitty123455: bets Rs. 50
+tooofan209: calls Rs. 50
+*** RIVER *** [3d 5s 8c Qc] [7d]
+smitty123455: bets Rs. 1150
+tooofan209: folds 
+Uncalled bet (Rs. 1150) returned to smitty123455
+smitty123455 collected Rs. 972.72 from pot
+smitty123455: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 1025.54 | Rake Rs. 52.82 
+Board [3d 5s 8c Qc 7d]
+Seat 1: othaomala (small blind) folded before Flop
+Seat 2: smitty123455 (big blind) collected (Rs. 972.72)
+Seat 4: tooofan209 folded on the River
+Seat 5: deck108 (button) folded on the Flop
+
+
+
+PokerStars Hand #197203280263:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:55:00 IST [2019/02/18 8:25:00 ET]
+Table 'Akiyama' 6-max Seat #1 is the button
+Seat 1: othaomala (Rs. 5254.45 in chips) 
+Seat 2: smitty123455 (Rs. 6653.46 in chips) 
+Seat 4: tooofan209 (Rs. 7924.17 in chips) 
+Seat 5: deck108 (Rs. 4157.67 in chips) 
+smitty123455: posts small blind Rs. 25
+tooofan209: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [As 9s]
+deck108: raises Rs. 100 to Rs. 150
+othaomala: folds 
+smitty123455: folds 
+tooofan209: folds 
+Uncalled bet (Rs. 100) returned to deck108
+deck108 collected Rs. 125 from pot
+deck108: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 125 | Rake Rs. 0 
+Seat 1: othaomala (button) folded before Flop (didn't bet)
+Seat 2: smitty123455 (small blind) folded before Flop
+Seat 4: tooofan209 (big blind) folded before Flop
+Seat 5: deck108 collected (Rs. 125)
+
+
+
+PokerStars Hand #197203287455:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:55:17 IST [2019/02/18 8:25:17 ET]
+Table 'Akiyama' 6-max Seat #2 is the button
+Seat 1: othaomala (Rs. 5254.45 in chips) 
+Seat 2: smitty123455 (Rs. 6628.46 in chips) 
+Seat 4: tooofan209 (Rs. 7874.17 in chips) 
+Seat 5: deck108 (Rs. 4232.67 in chips) 
+tooofan209: posts small blind Rs. 25
+deck108: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Jc 3s]
+othaomala: calls Rs. 50
+smitty123455: calls Rs. 50
+tooofan209: folds 
+deck108: checks 
+*** FLOP *** [8s 8h Ks]
+deck108: checks 
+othaomala: checks 
+smitty123455: checks 
+*** TURN *** [8s 8h Ks] [Td]
+deck108: checks 
+othaomala: checks 
+smitty123455: checks 
+*** RIVER *** [8s 8h Ks Td] [3c]
+deck108: checks 
+othaomala: checks 
+smitty123455: checks 
+*** SHOW DOWN ***
+deck108: shows [Jc 3s] (two pair, Eights and Threes)
+othaomala: mucks hand 
+smitty123455: mucks hand 
+deck108 collected Rs. 165.99 from pot
+*** SUMMARY ***
+Total pot Rs. 175 | Rake Rs. 9.01 
+Board [8s 8h Ks Td 3c]
+Seat 1: othaomala mucked [Qc 4c]
+Seat 2: smitty123455 (button) mucked [Qs 6d]
+Seat 4: tooofan209 (small blind) folded before Flop
+Seat 5: deck108 (big blind) showed [Jc 3s] and won (Rs. 165.99) with two pair, Eights and Threes
+
+
+
+PokerStars Hand #197203309825:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:56:09 IST [2019/02/18 8:26:09 ET]
+Table 'Akiyama' 6-max Seat #4 is the button
+Seat 1: othaomala (Rs. 5204.45 in chips) 
+Seat 2: smitty123455 (Rs. 6578.46 in chips) 
+Seat 4: tooofan209 (Rs. 7849.17 in chips) 
+Seat 5: deck108 (Rs. 4348.66 in chips) 
+deck108: posts small blind Rs. 25
+othaomala: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [4h 7h]
+smitty123455: calls Rs. 50
+tooofan209: raises Rs. 175 to Rs. 225
+deck108: folds 
+othaomala: folds 
+smitty123455: calls Rs. 175
+*** FLOP *** [4s 5s 8h]
+smitty123455: checks 
+tooofan209: bets Rs. 331.97
+smitty123455: calls Rs. 331.97
+*** TURN *** [4s 5s 8h] [3h]
+smitty123455: checks 
+tooofan209: checks 
+*** RIVER *** [4s 5s 8h 3h] [Jh]
+smitty123455: bets Rs. 1127.71
+tooofan209: folds 
+Uncalled bet (Rs. 1127.71) returned to smitty123455
+smitty123455 collected Rs. 1127.71 from pot
+smitty123455: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 1188.94 | Rake Rs. 61.23 
+Board [4s 5s 8h 3h Jh]
+Seat 1: othaomala (big blind) folded before Flop
+Seat 2: smitty123455 collected (Rs. 1127.71)
+Seat 4: tooofan209 (button) folded on the River
+Seat 5: deck108 (small blind) folded before Flop
+
+
+
+PokerStars Hand #197203338111:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:57:14 IST [2019/02/18 8:27:14 ET]
+Table 'Akiyama' 6-max Seat #5 is the button
+Seat 1: othaomala (Rs. 5154.45 in chips) 
+Seat 2: smitty123455 (Rs. 7149.20 in chips) 
+Seat 4: tooofan209 (Rs. 7292.20 in chips) 
+Seat 5: deck108 (Rs. 4323.66 in chips) 
+othaomala: posts small blind Rs. 25
+smitty123455: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Ad 2c]
+tooofan209: raises Rs. 100 to Rs. 150
+deck108: folds 
+othaomala: folds 
+smitty123455: calls Rs. 100
+*** FLOP *** [9d 8c 9c]
+smitty123455: checks 
+tooofan209: bets Rs. 205.51
+smitty123455: folds 
+Uncalled bet (Rs. 205.51) returned to tooofan209
+tooofan209 collected Rs. 308.26 from pot
+*** SUMMARY ***
+Total pot Rs. 325 | Rake Rs. 16.74 
+Board [9d 8c 9c]
+Seat 1: othaomala (small blind) folded before Flop
+Seat 2: smitty123455 (big blind) folded on the Flop
+Seat 4: tooofan209 collected (Rs. 308.26)
+Seat 5: deck108 (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197203348277:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:57:38 IST [2019/02/18 8:27:38 ET]
+Table 'Akiyama' 6-max Seat #1 is the button
+Seat 1: othaomala (Rs. 5129.45 in chips) 
+Seat 2: smitty123455 (Rs. 6999.20 in chips) 
+Seat 4: tooofan209 (Rs. 7450.46 in chips) 
+Seat 5: deck108 (Rs. 4323.66 in chips) 
+smitty123455: posts small blind Rs. 25
+tooofan209: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [4c Jc]
+deck108: folds 
+othaomala: raises Rs. 125 to Rs. 175
+smitty123455: calls Rs. 150
+tooofan209: calls Rs. 125
+*** FLOP *** [3h Jd 3s]
+smitty123455: checks 
+tooofan209: bets Rs. 331.97
+othaomala: calls Rs. 331.97
+smitty123455: folds 
+*** TURN *** [3h Jd 3s] [4d]
+tooofan209: checks 
+othaomala: checks 
+*** RIVER *** [3h Jd 3s 4d] [2h]
+tooofan209: checks 
+othaomala: bets Rs. 1250
+tooofan209: calls Rs. 1250
+*** SHOW DOWN ***
+othaomala: shows [Ad 5d] (a straight, Ace to Five)
+tooofan209: mucks hand 
+othaomala collected Rs. 3538.94 from pot
+*** SUMMARY ***
+Total pot Rs. 3688.94 | Rake Rs. 150 
+Board [3h Jd 3s 4d 2h]
+Seat 1: othaomala (button) showed [Ad 5d] and won (Rs. 3538.94) with a straight, Ace to Five
+Seat 2: smitty123455 (small blind) folded on the Flop
+Seat 4: tooofan209 (big blind) mucked [Ks Jh]
+Seat 5: deck108 folded before Flop (didn't bet)
+
+
+

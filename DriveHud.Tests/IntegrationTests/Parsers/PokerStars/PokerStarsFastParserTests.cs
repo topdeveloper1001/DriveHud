@@ -145,6 +145,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 20)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Cash-INR.txt", 50)]
         public void BigBlindIsParsedTest(string handHistoryFile, decimal bigBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -153,6 +154,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 10)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Cash-INR.txt", 25)]
         public void SmallBlindIsParsedTest(string handHistoryFile, decimal smallBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -160,8 +162,10 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", Currency.All)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", Currency.Chips)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT-INR.txt", Currency.Chips)]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Zoom-6-max-0.02-0.05.txt", Currency.USD)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Cash-INR.txt", Currency.INR)]
         public void CurrencyIsParsedTest(string handHistoryFile, Currency currency)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -203,6 +207,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 0.44)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT-INR.txt", 0.44)]
         public void BuyInPrizePoolIsParsedTest(string handHistoryFile, decimal buyin)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -211,6 +216,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", Currency.USD)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT-INR.txt", Currency.INR)]
         public void BuyInCurrencyIsParsedTest(string handHistoryFile, Currency currency)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -219,6 +225,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 0.06)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT-INR.txt", 0.06)]
         public void BuyInRakeIsParsedTest(string handHistoryFile, decimal rake)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -377,6 +384,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 1500)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Cash-INR.txt", 2082.32)]
         public void HeroStartingStackIsParsedTest(string handHistoryFile, decimal startingStack)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

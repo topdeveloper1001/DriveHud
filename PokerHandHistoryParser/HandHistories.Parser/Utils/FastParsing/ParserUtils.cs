@@ -75,7 +75,7 @@ namespace HandHistories.Parser.Utils.FastParsing
             return defaultValue;
         }
 
-        private static readonly Regex MoneyRegex = new Regex(@"^(?<currency1>[^\d\.]+)?\s?(?<money>\d+(?:\.\d+)?)\s?(?<currency2>[^\.\d]+)?$", RegexOptions.Compiled);
+        private static readonly Regex MoneyRegex = new Regex(@"^(?<currency1>[^\d\.]+|Rs\.)?\s?(?<money>\d+(?:\.\d+)?)\s?(?<currency2>[^\.\d]+)?$", RegexOptions.Compiled);
 
         public static bool TryParseMoney(string moneyText, out decimal money, out Currency currency, NumberFormatInfo numberFormatInfo = null)
         {
@@ -104,7 +104,7 @@ namespace HandHistories.Parser.Utils.FastParsing
 
             if (currency1Group != null && currency1Group.Success && !string.IsNullOrEmpty(match.Groups["currency1"].Value))
             {
-                switch (match.Groups["currency1"].Value)
+                switch (match.Groups["currency1"].Value.Trim())
                 {
                     case "€":
                         currency = Currency.EURO;
@@ -116,6 +116,7 @@ namespace HandHistories.Parser.Utils.FastParsing
                         currency = Currency.YUAN;
                         break;
                     case "₹":
+                    case "Rs.":
                         currency = Currency.INR;
                         break;
                 }
@@ -136,9 +137,22 @@ namespace HandHistories.Parser.Utils.FastParsing
         /// <returns></returns>
         public static decimal ParseMoney(string moneyText)
         {
-            var money = 0m;
+            if (!TryParseMoney(moneyText, out decimal money))
+            {
+                throw new FormatException($"{moneyText} is not in the correct format");
+            }
 
-            if (!TryParseMoney(moneyText, out money))
+            return money;
+        }
+
+        /// <summary>
+        /// Parse money text into money value (we expect that only 2 number are allowed after decimal separator)
+        /// </summary>
+        /// <param name="moneyText"></param>
+        /// <returns></returns>
+        public static decimal ParseMoney(string moneyText, out Currency currency)
+        {
+            if (!TryParseMoney(moneyText, out decimal money, out currency))
             {
                 throw new FormatException($"{moneyText} is not in the correct format");
             }
