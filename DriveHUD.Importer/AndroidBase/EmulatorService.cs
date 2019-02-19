@@ -120,7 +120,7 @@ namespace DriveHUD.Importers.AndroidBase
 
                 if (expectedNumberOfDevices > devices.Length)
                 {
-                    LogProvider.Log.Warn(this, $"Expected number of devices {expectedNumberOfDevices} doesn't match actual number {devices}. Trying to kill server and run command again.");
+                    LogProvider.Log.Warn(this, $"Expected number of devices {expectedNumberOfDevices} doesn't match actual number {devices.Length}. Trying to kill server and run command again.");
                     AdbKillServer(adb);
                     devices = GetAdbDevices(adb);
                 }
@@ -187,24 +187,22 @@ namespace DriveHUD.Importers.AndroidBase
 
                 using (var process = new Process())
                 {
-                    process.StartInfo = processInfo;
-                    process.StartInfo.RedirectStandardOutput = true;
-                    process.Start();
-
-                    var reader = process.StandardOutput;
-
                     var devices = new List<string>();
                     var outputLines = new List<string>();
 
-                    while (!process.StandardOutput.EndOfStream)
+                    process.StartInfo = processInfo;
+                    process.StartInfo.RedirectStandardOutput = true;
+                    process.OutputDataReceived += (s, a) =>
                     {
-                        var line = process.StandardOutput.ReadLine();
-
-                        if (!string.IsNullOrEmpty(line))
+                        if (!string.IsNullOrEmpty(a.Data))
                         {
-                            outputLines.Add(line);
+                            outputLines.Add(a.Data);
                         }
-                    }
+                    };
+
+                    process.Start();
+                    process.BeginOutputReadLine();
+                    process.WaitForExit(exitTimeout);
 
                     if (outputLines.Count == 0)
                     {
@@ -226,8 +224,6 @@ namespace DriveHUD.Importers.AndroidBase
                             devices.Add(device);
                         }
                     }
-
-                    process.WaitForExit(exitTimeout);
 
                     return devices.ToArray();
                 }
