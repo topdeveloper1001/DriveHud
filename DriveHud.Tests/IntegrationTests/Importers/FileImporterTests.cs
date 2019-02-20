@@ -136,7 +136,8 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("2450627306", "Peon84", 2)]
         [TestCase("2450627306", "koko55", 1)]
         [TestCase("16612340", "AlexTh", 1)]
-        [TestCase("16612276", "AlexTh", 93)]        
+        [TestCase("16612276", "AlexTh", 93)]
+        [TestCase("2539056602", "00Laplace00", 1)]
         public void TournamentsFinishPositionIsImported(string tournamentNumber, string playerName, int expectedFinishPosition)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsPlacesAreImported"))
@@ -171,6 +172,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("918178286", "anhanga", 21)]
         [TestCase("918178286", "CVETANKA71", 14)]
         [TestCase("16612340", "AlexTh", 66)]
+        [TestCase("2539056602", "00Laplace00", 180)]
         public void TournamentsWinIsImported(string tournamentNumber, string playerName, int winningInCents)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsWinIsImported"))
@@ -198,6 +200,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("125460058", "Justfold88", 1000)]
         [TestCase("102233028", "Peon84", 134)]
         [TestCase("16612340", "AlexTh", 22)]
+        [TestCase("2539056602", "00Laplace00", 46)]
         public void TournamentsBuyinIsImported(string tournamentNumber, string playerName, int buyInInCents)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsBuyinIsImported"))
@@ -225,6 +228,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase("125460058", "Justfold88", 50)]
         [TestCase("102233028", "Peon84", 16)]
         [TestCase("16612340", "AlexTh", 3)]
+        [TestCase("2539056602", "00Laplace00", 4)]
         public void TournamentsRakeIsImported(string tournamentNumber, string playerName, int rakeInInCents)
         {
             using (var perfScope = new PerformanceMonitor("TournamentsRakeIsImported"))
@@ -336,9 +340,10 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             Tuple.Create(@"iPoker\NLH-9-max-6780120497.xml", EnumPokerSites.IPoker, (IFileTestImporter)null),
             Tuple.Create(@"PokerStars\HH20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),
             Tuple.Create(@"PokerStars\TS20161206 T1705825174 No Limit Hold'em Freeroll.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),
+            Tuple.Create(@"PokerStars\HH20190215 T2539056602 No Limit Hold'em €0.46 + €0.04.txt", EnumPokerSites.PokerStars, (IFileTestImporter)null),
             Tuple.Create(@"WinningPokerNetwork\20170507_20170511_Sng2HH.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),
             Tuple.Create(@"Horizon\HH20180420 The Colosseum - $100 GTD T16612276.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),
-            Tuple.Create(@"Horizon\HH20180420 Hyper Turbo NLH 3-max - $0.25 T16612340.txt", EnumPokerSites.Unknown, (IFileTestImporter)null)            
+            Tuple.Create(@"Horizon\HH20180420 Hyper Turbo NLH 3-max - $0.25 T16612340.txt", EnumPokerSites.Unknown, (IFileTestImporter)null),       
         };
 
         private class TestDataSet

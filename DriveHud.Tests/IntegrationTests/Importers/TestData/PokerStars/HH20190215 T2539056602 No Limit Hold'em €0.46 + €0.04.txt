@@ -1,0 +1,2923 @@
+﻿PokerStars Hand #197091958860: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level I (10/20) - 2019/02/15 21:45:14 CET [2019/02/15 15:45:14 ET]
+Table '2539056602 1' 6-max Seat #1 is the button
+Seat 1: juveleo0676 (1500 in chips) 
+Seat 2: ImNeikan (1500 in chips) 
+Seat 3: melkorz (1500 in chips) 
+Seat 4: 00Laplace00 (1500 in chips) 
+Seat 5: JLM-POK (1500 in chips) 
+Seat 6: wearedeadbro (1500 in chips) 
+juveleo0676: posts the ante 3
+ImNeikan: posts the ante 3
+melkorz: posts the ante 3
+00Laplace00: posts the ante 3
+JLM-POK: posts the ante 3
+wearedeadbro: posts the ante 3
+ImNeikan: posts small blind 10
+melkorz: posts big blind 20
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [7s Js]
+00Laplace00: folds 
+JLM-POK: folds 
+wearedeadbro: folds 
+juveleo0676: raises 1477 to 1497 and is all-in
+ImNeikan: folds 
+melkorz: folds 
+Uncalled bet (1477) returned to juveleo0676
+juveleo0676 collected 68 from pot
+juveleo0676: doesn't show hand 
+*** SUMMARY ***
+Total pot 68 | Rake 0 
+Seat 1: juveleo0676 (button) collected (68)
+Seat 2: ImNeikan (small blind) folded before Flop
+Seat 3: melkorz (big blind) folded before Flop
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK folded before Flop (didn't bet)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197091977366: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level I (10/20) - 2019/02/15 21:45:38 CET [2019/02/15 15:45:38 ET]
+Table '2539056602 1' 6-max Seat #2 is the button
+Seat 1: juveleo0676 (1545 in chips) 
+Seat 2: ImNeikan (1487 in chips) 
+Seat 3: melkorz (1477 in chips) 
+Seat 4: 00Laplace00 (1497 in chips) 
+Seat 5: JLM-POK (1497 in chips) 
+Seat 6: wearedeadbro (1497 in chips) 
+juveleo0676: posts the ante 3
+ImNeikan: posts the ante 3
+melkorz: posts the ante 3
+00Laplace00: posts the ante 3
+JLM-POK: posts the ante 3
+wearedeadbro: posts the ante 3
+melkorz: posts small blind 10
+00Laplace00: posts big blind 20
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [4s 8s]
+JLM-POK: folds 
+wearedeadbro: folds 
+juveleo0676: calls 20
+ImNeikan: folds 
+melkorz: calls 10
+00Laplace00: checks 
+*** FLOP *** [6c 7d Qd]
+melkorz: checks 
+00Laplace00: checks 
+juveleo0676: checks 
+*** TURN *** [6c 7d Qd] [Ks]
+melkorz: checks 
+00Laplace00: checks 
+juveleo0676: checks 
+*** RIVER *** [6c 7d Qd Ks] [Tc]
+melkorz: checks 
+00Laplace00: checks 
+juveleo0676: bets 40
+melkorz: folds 
+00Laplace00: folds 
+Uncalled bet (40) returned to juveleo0676
+juveleo0676 collected 78 from pot
+juveleo0676: doesn't show hand 
+*** SUMMARY ***
+Total pot 78 | Rake 0 
+Board [6c 7d Qd Ks Tc]
+Seat 1: juveleo0676 collected (78)
+Seat 2: ImNeikan (button) folded before Flop (didn't bet)
+Seat 3: melkorz (small blind) folded on the River
+Seat 4: 00Laplace00 (big blind) folded on the River
+Seat 5: JLM-POK folded before Flop (didn't bet)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092066160: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level I (10/20) - 2019/02/15 21:47:33 CET [2019/02/15 15:47:33 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 1: juveleo0676 (1597 in chips) 
+Seat 2: ImNeikan (1481 in chips) 
+Seat 3: melkorz (1351 in chips) 
+Seat 4: 00Laplace00 (1461 in chips) is sitting out
+Seat 5: JLM-POK (1619 in chips) 
+Seat 6: wearedeadbro (1491 in chips) 
+juveleo0676: posts the ante 3
+ImNeikan: posts the ante 3
+melkorz: posts the ante 3
+00Laplace00: posts the ante 3
+JLM-POK: posts the ante 3
+wearedeadbro: posts the ante 3
+JLM-POK: posts small blind 10
+wearedeadbro: posts big blind 20
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Tc Ks]
+00Laplace00 has returned
+juveleo0676: calls 20
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: folds 
+JLM-POK: calls 10
+wearedeadbro: checks 
+*** FLOP *** [2c 3s 6s]
+JLM-POK: checks 
+wearedeadbro: checks 
+juveleo0676: checks 
+*** TURN *** [2c 3s 6s] [9s]
+JLM-POK: checks 
+wearedeadbro: checks 
+juveleo0676: checks 
+*** RIVER *** [2c 3s 6s 9s] [Js]
+JLM-POK: checks 
+wearedeadbro: checks 
+juveleo0676: bets 40
+JLM-POK: folds 
+wearedeadbro: folds 
+Uncalled bet (40) returned to juveleo0676
+juveleo0676 collected 78 from pot
+juveleo0676: doesn't show hand 
+*** SUMMARY ***
+Total pot 78 | Rake 0 
+Board [2c 3s 6s 9s Js]
+Seat 1: juveleo0676 collected (78)
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 5: JLM-POK (small blind) folded on the River
+Seat 6: wearedeadbro (big blind) folded on the River
+
+
+
+PokerStars Hand #197092118862: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level I (10/20) - 2019/02/15 21:48:40 CET [2019/02/15 15:48:40 ET]
+Table '2539056602 1' 6-max Seat #5 is the button
+Seat 1: juveleo0676 (1652 in chips) 
+Seat 2: ImNeikan (1478 in chips) 
+Seat 3: melkorz (1348 in chips) 
+Seat 4: 00Laplace00 (1458 in chips) 
+Seat 5: JLM-POK (1596 in chips) 
+Seat 6: wearedeadbro (1468 in chips) 
+juveleo0676: posts the ante 3
+ImNeikan: posts the ante 3
+melkorz: posts the ante 3
+00Laplace00: posts the ante 3
+JLM-POK: posts the ante 3
+wearedeadbro: posts the ante 3
+wearedeadbro: posts small blind 10
+juveleo0676: posts big blind 20
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Th Ts]
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: raises 40 to 60
+JLM-POK: folds 
+wearedeadbro: folds 
+juveleo0676: calls 40
+*** FLOP *** [Qd 3d Jc]
+juveleo0676: bets 140
+00Laplace00: folds 
+Uncalled bet (140) returned to juveleo0676
+juveleo0676 collected 148 from pot
+juveleo0676: doesn't show hand 
+*** SUMMARY ***
+Total pot 148 | Rake 0 
+Board [Qd 3d Jc]
+Seat 1: juveleo0676 (big blind) collected (148)
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 folded on the Flop
+Seat 5: JLM-POK (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) folded before Flop
+
+
+
+PokerStars Hand #197092142324: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level I (10/20) - 2019/02/15 21:49:11 CET [2019/02/15 15:49:11 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 1: juveleo0676 (1737 in chips) 
+Seat 2: ImNeikan (1475 in chips) 
+Seat 3: melkorz (1345 in chips) 
+Seat 4: 00Laplace00 (1395 in chips) 
+Seat 5: JLM-POK (1593 in chips) 
+Seat 6: wearedeadbro (1455 in chips) 
+juveleo0676: posts the ante 3
+ImNeikan: posts the ante 3
+melkorz: posts the ante 3
+00Laplace00: posts the ante 3
+JLM-POK: posts the ante 3
+wearedeadbro: posts the ante 3
+juveleo0676: posts small blind 10
+ImNeikan: posts big blind 20
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Th As]
+melkorz: folds 
+00Laplace00: folds 
+JLM-POK: folds 
+wearedeadbro: raises 30 to 50
+juveleo0676: folds 
+ImNeikan: folds 
+Uncalled bet (30) returned to wearedeadbro
+wearedeadbro collected 68 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 68 | Rake 0 
+Seat 1: juveleo0676 (small blind) folded before Flop
+Seat 2: ImNeikan (big blind) folded before Flop
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK folded before Flop (didn't bet)
+Seat 6: wearedeadbro (button) collected (68)
+
+
+
+PokerStars Hand #197092160850: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level I (10/20) - 2019/02/15 21:49:35 CET [2019/02/15 15:49:35 ET]
+Table '2539056602 1' 6-max Seat #1 is the button
+Seat 1: juveleo0676 (1724 in chips) 
+Seat 2: ImNeikan (1452 in chips) 
+Seat 3: melkorz (1342 in chips) 
+Seat 4: 00Laplace00 (1392 in chips) 
+Seat 5: JLM-POK (1590 in chips) 
+Seat 6: wearedeadbro (1500 in chips) 
+juveleo0676: posts the ante 3
+ImNeikan: posts the ante 3
+melkorz: posts the ante 3
+00Laplace00: posts the ante 3
+JLM-POK: posts the ante 3
+wearedeadbro: posts the ante 3
+ImNeikan: posts small blind 10
+melkorz: posts big blind 20
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [4c Jc]
+00Laplace00: folds 
+JLM-POK: folds 
+wearedeadbro: raises 30 to 50
+juveleo0676: raises 1671 to 1721 and is all-in
+ImNeikan: folds 
+melkorz: folds 
+wearedeadbro: folds 
+Uncalled bet (1671) returned to juveleo0676
+juveleo0676 collected 148 from pot
+juveleo0676: doesn't show hand 
+*** SUMMARY ***
+Total pot 148 | Rake 0 
+Seat 1: juveleo0676 (button) collected (148)
+Seat 2: ImNeikan (small blind) folded before Flop
+Seat 3: melkorz (big blind) folded before Flop
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK folded before Flop (didn't bet)
+Seat 6: wearedeadbro folded before Flop
+
+
+
+PokerStars Hand #197092174341: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level I (10/20) - 2019/02/15 21:49:52 CET [2019/02/15 15:49:52 ET]
+Table '2539056602 1' 6-max Seat #2 is the button
+Seat 1: juveleo0676 (1819 in chips) 
+Seat 2: ImNeikan (1439 in chips) 
+Seat 3: melkorz (1319 in chips) 
+Seat 4: 00Laplace00 (1389 in chips) 
+Seat 5: JLM-POK (1587 in chips) 
+Seat 6: wearedeadbro (1447 in chips) 
+juveleo0676: posts the ante 3
+ImNeikan: posts the ante 3
+melkorz: posts the ante 3
+00Laplace00: posts the ante 3
+JLM-POK: posts the ante 3
+wearedeadbro: posts the ante 3
+melkorz: posts small blind 10
+00Laplace00: posts big blind 20
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Tc 4c]
+JLM-POK: folds 
+wearedeadbro: raises 30 to 50
+juveleo0676: folds 
+ImNeikan: folds 
+melkorz: calls 40
+00Laplace00: folds 
+*** FLOP *** [8s Ad 6d]
+melkorz: checks 
+wearedeadbro: checks 
+*** TURN *** [8s Ad 6d] [7c]
+melkorz: bets 40
+wearedeadbro: folds 
+Uncalled bet (40) returned to melkorz
+melkorz collected 138 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 138 | Rake 0 
+Board [8s Ad 6d 7c]
+Seat 1: juveleo0676 folded before Flop (didn't bet)
+Seat 2: ImNeikan (button) folded before Flop (didn't bet)
+Seat 3: melkorz (small blind) collected (138)
+Seat 4: 00Laplace00 (big blind) folded before Flop
+Seat 5: JLM-POK folded before Flop (didn't bet)
+Seat 6: wearedeadbro folded on the Turn
+
+
+
+PokerStars Hand #197092195034: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level II (15/30) - 2019/02/15 21:50:19 CET [2019/02/15 15:50:19 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 1: juveleo0676 (1816 in chips) 
+Seat 2: ImNeikan (1436 in chips) 
+Seat 3: melkorz (1404 in chips) 
+Seat 4: 00Laplace00 (1366 in chips) 
+Seat 5: JLM-POK (1584 in chips) 
+Seat 6: wearedeadbro (1394 in chips) 
+juveleo0676: posts the ante 4
+ImNeikan: posts the ante 4
+melkorz: posts the ante 4
+00Laplace00: posts the ante 4
+JLM-POK: posts the ante 4
+wearedeadbro: posts the ante 4
+00Laplace00: posts small blind 15
+JLM-POK: posts big blind 30
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [3h 4d]
+wearedeadbro: folds 
+juveleo0676: folds 
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: folds 
+Uncalled bet (15) returned to JLM-POK
+JLM-POK collected 54 from pot
+JLM-POK: doesn't show hand 
+*** SUMMARY ***
+Total pot 54 | Rake 0 
+Seat 1: juveleo0676 folded before Flop (didn't bet)
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz (button) folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (small blind) folded before Flop
+Seat 5: JLM-POK (big blind) collected (54)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092207440: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level II (15/30) - 2019/02/15 21:50:35 CET [2019/02/15 15:50:35 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 1: juveleo0676 (1812 in chips) 
+Seat 2: ImNeikan (1432 in chips) 
+Seat 3: melkorz (1400 in chips) 
+Seat 4: 00Laplace00 (1347 in chips) 
+Seat 5: JLM-POK (1619 in chips) 
+Seat 6: wearedeadbro (1390 in chips) 
+juveleo0676: posts the ante 4
+ImNeikan: posts the ante 4
+melkorz: posts the ante 4
+00Laplace00: posts the ante 4
+JLM-POK: posts the ante 4
+wearedeadbro: posts the ante 4
+JLM-POK: posts small blind 15
+wearedeadbro: posts big blind 30
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [4c 7s]
+juveleo0676: folds 
+ImNeikan: raises 30 to 60
+melkorz: folds 
+00Laplace00: folds 
+JLM-POK: folds 
+wearedeadbro: calls 30
+*** FLOP *** [4s 3c 7h]
+wearedeadbro: checks 
+ImNeikan: bets 60
+wearedeadbro: calls 60
+*** TURN *** [4s 3c 7h] [Ts]
+wearedeadbro: checks 
+ImNeikan: bets 140
+wearedeadbro: calls 140
+*** RIVER *** [4s 3c 7h Ts] [Qd]
+wearedeadbro: checks 
+ImNeikan: bets 280
+wearedeadbro: folds 
+Uncalled bet (280) returned to ImNeikan
+ImNeikan collected 559 from pot
+*** SUMMARY ***
+Total pot 559 | Rake 0 
+Board [4s 3c 7h Ts Qd]
+Seat 1: juveleo0676 folded before Flop (didn't bet)
+Seat 2: ImNeikan collected (559)
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 5: JLM-POK (small blind) folded before Flop
+Seat 6: wearedeadbro (big blind) folded on the River
+
+
+
+PokerStars Hand #197092251952: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level II (15/30) - 2019/02/15 21:51:32 CET [2019/02/15 15:51:32 ET]
+Table '2539056602 1' 6-max Seat #5 is the button
+Seat 1: juveleo0676 (1808 in chips) 
+Seat 2: ImNeikan (1727 in chips) 
+Seat 3: melkorz (1396 in chips) 
+Seat 4: 00Laplace00 (1343 in chips) 
+Seat 5: JLM-POK (1600 in chips) 
+Seat 6: wearedeadbro (1126 in chips) 
+juveleo0676: posts the ante 4
+ImNeikan: posts the ante 4
+melkorz: posts the ante 4
+00Laplace00: posts the ante 4
+JLM-POK: posts the ante 4
+wearedeadbro: posts the ante 4
+wearedeadbro: posts small blind 15
+juveleo0676: posts big blind 30
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Jc 8h]
+ImNeikan: folds 
+melkorz: raises 30 to 60
+00Laplace00: folds 
+JLM-POK: folds 
+wearedeadbro: folds 
+juveleo0676: raises 30 to 90
+melkorz: calls 30
+*** FLOP *** [9s 5h 3h]
+juveleo0676: bets 30
+melkorz: calls 30
+*** TURN *** [9s 5h 3h] [3s]
+juveleo0676: checks 
+melkorz: bets 60
+juveleo0676: folds 
+Uncalled bet (60) returned to melkorz
+melkorz collected 279 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 279 | Rake 0 
+Board [9s 5h 3h 3s]
+Seat 1: juveleo0676 (big blind) folded on the Turn
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz collected (279)
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) folded before Flop
+
+
+
+PokerStars Hand #197092288957: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level II (15/30) - 2019/02/15 21:52:20 CET [2019/02/15 15:52:20 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 1: juveleo0676 (1684 in chips) 
+Seat 2: ImNeikan (1723 in chips) 
+Seat 3: melkorz (1551 in chips) 
+Seat 4: 00Laplace00 (1339 in chips) 
+Seat 5: JLM-POK (1596 in chips) 
+Seat 6: wearedeadbro (1107 in chips) 
+juveleo0676: posts the ante 4
+ImNeikan: posts the ante 4
+melkorz: posts the ante 4
+00Laplace00: posts the ante 4
+JLM-POK: posts the ante 4
+wearedeadbro: posts the ante 4
+juveleo0676: posts small blind 15
+ImNeikan: posts big blind 30
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [2d 3s]
+melkorz: folds 
+00Laplace00: folds 
+JLM-POK: calls 30
+wearedeadbro: folds 
+juveleo0676: calls 15
+ImNeikan: checks 
+*** FLOP *** [Ks 5d 7d]
+juveleo0676: checks 
+ImNeikan: checks 
+JLM-POK: bets 60
+juveleo0676: folds 
+ImNeikan: folds 
+Uncalled bet (60) returned to JLM-POK
+JLM-POK collected 114 from pot
+JLM-POK: doesn't show hand 
+*** SUMMARY ***
+Total pot 114 | Rake 0 
+Board [Ks 5d 7d]
+Seat 1: juveleo0676 (small blind) folded on the Flop
+Seat 2: ImNeikan (big blind) folded on the Flop
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK collected (114)
+Seat 6: wearedeadbro (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092328426: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level II (15/30) - 2019/02/15 21:53:05 CET [2019/02/15 15:53:05 ET]
+Table '2539056602 1' 6-max Seat #1 is the button
+Seat 1: juveleo0676 (1650 in chips) 
+Seat 2: ImNeikan (1689 in chips) 
+Seat 3: melkorz (1547 in chips) 
+Seat 4: 00Laplace00 (1335 in chips) 
+Seat 5: JLM-POK (1676 in chips) 
+Seat 6: wearedeadbro (1103 in chips) 
+juveleo0676: posts the ante 4
+ImNeikan: posts the ante 4
+melkorz: posts the ante 4
+00Laplace00: posts the ante 4
+JLM-POK: posts the ante 4
+wearedeadbro: posts the ante 4
+ImNeikan: posts small blind 15
+melkorz: posts big blind 30
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Ks 8h]
+00Laplace00: folds 
+JLM-POK: calls 30
+wearedeadbro: folds 
+juveleo0676: calls 30
+ImNeikan: folds 
+melkorz: checks 
+*** FLOP *** [2s Th 3h]
+melkorz: checks 
+JLM-POK: checks 
+juveleo0676: checks 
+*** TURN *** [2s Th 3h] [2d]
+melkorz: checks 
+JLM-POK: checks 
+juveleo0676: checks 
+*** RIVER *** [2s Th 3h 2d] [4s]
+melkorz: bets 60
+JLM-POK: folds 
+juveleo0676: folds 
+Uncalled bet (60) returned to melkorz
+melkorz collected 129 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 129 | Rake 0 
+Board [2s Th 3h 2d 4s]
+Seat 1: juveleo0676 (button) folded on the River
+Seat 2: ImNeikan (small blind) folded before Flop
+Seat 3: melkorz (big blind) collected (129)
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK folded on the River
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092366602: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level II (15/30) - 2019/02/15 21:53:54 CET [2019/02/15 15:53:54 ET]
+Table '2539056602 1' 6-max Seat #2 is the button
+Seat 1: juveleo0676 (1616 in chips) 
+Seat 2: ImNeikan (1670 in chips) 
+Seat 3: melkorz (1642 in chips) 
+Seat 4: 00Laplace00 (1331 in chips) 
+Seat 5: JLM-POK (1642 in chips) 
+Seat 6: wearedeadbro (1099 in chips) 
+juveleo0676: posts the ante 4
+ImNeikan: posts the ante 4
+melkorz: posts the ante 4
+00Laplace00: posts the ante 4
+JLM-POK: posts the ante 4
+wearedeadbro: posts the ante 4
+melkorz: posts small blind 15
+00Laplace00: posts big blind 30
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [3c 5c]
+JLM-POK: folds 
+wearedeadbro: folds 
+juveleo0676: calls 30
+ImNeikan: folds 
+melkorz: calls 15
+00Laplace00: checks 
+*** FLOP *** [Jh Jc 4s]
+melkorz: checks 
+00Laplace00: checks 
+juveleo0676: bets 1582 and is all-in
+melkorz: folds 
+00Laplace00: folds 
+Uncalled bet (1582) returned to juveleo0676
+juveleo0676 collected 114 from pot
+juveleo0676: doesn't show hand 
+*** SUMMARY ***
+Total pot 114 | Rake 0 
+Board [Jh Jc 4s]
+Seat 1: juveleo0676 collected (114)
+Seat 2: ImNeikan (button) folded before Flop (didn't bet)
+Seat 3: melkorz (small blind) folded on the Flop
+Seat 4: 00Laplace00 (big blind) folded on the Flop
+Seat 5: JLM-POK folded before Flop (didn't bet)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092400518: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level II (15/30) - 2019/02/15 21:54:39 CET [2019/02/15 15:54:39 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 1: juveleo0676 (1696 in chips) 
+Seat 2: ImNeikan (1666 in chips) 
+Seat 3: melkorz (1608 in chips) 
+Seat 4: 00Laplace00 (1297 in chips) 
+Seat 5: JLM-POK (1638 in chips) 
+Seat 6: wearedeadbro (1095 in chips) 
+juveleo0676: posts the ante 4
+ImNeikan: posts the ante 4
+melkorz: posts the ante 4
+00Laplace00: posts the ante 4
+JLM-POK: posts the ante 4
+wearedeadbro: posts the ante 4
+00Laplace00: posts small blind 15
+JLM-POK: posts big blind 30
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [2s Qs]
+wearedeadbro: folds 
+juveleo0676: calls 30
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: folds 
+JLM-POK: checks 
+*** FLOP *** [9d Jh 2c]
+JLM-POK: checks 
+juveleo0676: checks 
+*** TURN *** [9d Jh 2c] [7s]
+JLM-POK: bets 99
+juveleo0676: calls 99
+*** RIVER *** [9d Jh 2c 7s] [Js]
+JLM-POK: bets 1505 and is all-in
+juveleo0676: folds 
+Uncalled bet (1505) returned to JLM-POK
+JLM-POK collected 297 from pot
+JLM-POK: doesn't show hand 
+*** SUMMARY ***
+Total pot 297 | Rake 0 
+Board [9d Jh 2c 7s Js]
+Seat 1: juveleo0676 folded on the River
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz (button) folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (small blind) folded before Flop
+Seat 5: JLM-POK (big blind) collected (297)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092429672: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 21:55:21 CET [2019/02/15 15:55:21 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 1: juveleo0676 (1563 in chips) 
+Seat 2: ImNeikan (1662 in chips) 
+Seat 3: melkorz (1604 in chips) 
+Seat 4: 00Laplace00 (1278 in chips) 
+Seat 5: JLM-POK (1802 in chips) 
+Seat 6: wearedeadbro (1091 in chips) 
+juveleo0676: posts the ante 6
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+JLM-POK: posts small blind 25
+wearedeadbro: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [8c 8h]
+juveleo0676: calls 50
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: raises 150 to 200
+JLM-POK: folds 
+wearedeadbro: folds 
+juveleo0676: raises 1357 to 1557 and is all-in
+00Laplace00: calls 1072 and is all-in
+Uncalled bet (285) returned to juveleo0676
+*** FLOP *** [7s 9c 6h]
+*** TURN *** [7s 9c 6h] [Tc]
+*** RIVER *** [7s 9c 6h Tc] [Kc]
+*** SHOW DOWN ***
+juveleo0676: shows [Qs Ks] (a pair of Kings)
+00Laplace00: shows [8c 8h] (a straight, Six to Ten)
+00Laplace00 collected 2655 from pot
+*** SUMMARY ***
+Total pot 2655 | Rake 0 
+Board [7s 9c 6h Tc Kc]
+Seat 1: juveleo0676 showed [Qs Ks] and lost with a pair of Kings
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (button) showed [8c 8h] and won (2655) with a straight, Six to Ten
+Seat 5: JLM-POK (small blind) folded before Flop
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197092454093: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 21:56:02 CET [2019/02/15 15:56:02 ET]
+Table '2539056602 1' 6-max Seat #5 is the button
+Seat 1: juveleo0676 (285 in chips) 
+Seat 2: ImNeikan (1656 in chips) 
+Seat 3: melkorz (1598 in chips) 
+Seat 4: 00Laplace00 (2655 in chips) 
+Seat 5: JLM-POK (1771 in chips) 
+Seat 6: wearedeadbro (1035 in chips) 
+juveleo0676: posts the ante 6
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+wearedeadbro: posts small blind 25
+juveleo0676: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Tc Qc]
+ImNeikan: folds 
+melkorz: raises 100 to 150
+00Laplace00: folds 
+JLM-POK: folds 
+wearedeadbro: folds 
+juveleo0676: raises 129 to 279 and is all-in
+melkorz: calls 129
+*** FLOP *** [Ah 6h 7d]
+*** TURN *** [Ah 6h 7d] [Js]
+*** RIVER *** [Ah 6h 7d Js] [Th]
+*** SHOW DOWN ***
+juveleo0676: shows [4d Kc] (high card Ace)
+melkorz: shows [Ad As] (three of a kind, Aces)
+melkorz collected 619 from pot
+juveleo0676 finished the tournament in 6th place
+*** SUMMARY ***
+Total pot 619 | Rake 0 
+Board [Ah 6h 7d Js Th]
+Seat 1: juveleo0676 (big blind) showed [4d Kc] and lost with high card Ace
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz showed [Ad As] and won (619) with three of a kind, Aces
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) folded before Flop
+
+
+
+PokerStars Hand #197092471488: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 21:56:31 CET [2019/02/15 15:56:31 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 2: ImNeikan (1650 in chips) 
+Seat 3: melkorz (1932 in chips) 
+Seat 4: 00Laplace00 (2649 in chips) 
+Seat 5: JLM-POK (1765 in chips) 
+Seat 6: wearedeadbro (1004 in chips) 
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+ImNeikan: posts small blind 25
+melkorz: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [4d 5s]
+00Laplace00: folds 
+JLM-POK: calls 50
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: checks 
+*** FLOP *** [7h Jh 4h]
+melkorz: bets 100
+JLM-POK: folds 
+Uncalled bet (100) returned to melkorz
+melkorz collected 155 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 155 | Rake 0 
+Board [7h Jh 4h]
+Seat 2: ImNeikan (small blind) folded before Flop
+Seat 3: melkorz (big blind) collected (155)
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK folded on the Flop
+Seat 6: wearedeadbro (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092493415: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 21:57:08 CET [2019/02/15 15:57:08 ET]
+Table '2539056602 1' 6-max Seat #2 is the button
+Seat 2: ImNeikan (1619 in chips) 
+Seat 3: melkorz (2031 in chips) 
+Seat 4: 00Laplace00 (2643 in chips) 
+Seat 5: JLM-POK (1709 in chips) 
+Seat 6: wearedeadbro (998 in chips) 
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+melkorz: posts small blind 25
+00Laplace00: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [2h 5s]
+JLM-POK: folds 
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: calls 25
+00Laplace00: checks 
+*** FLOP *** [Jd Ts Ks]
+melkorz: bets 50
+00Laplace00: folds 
+Uncalled bet (50) returned to melkorz
+melkorz collected 130 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 130 | Rake 0 
+Board [Jd Ts Ks]
+Seat 2: ImNeikan (button) folded before Flop (didn't bet)
+Seat 3: melkorz (small blind) collected (130)
+Seat 4: 00Laplace00 (big blind) folded on the Flop
+Seat 5: JLM-POK folded before Flop (didn't bet)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092504289: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 21:57:26 CET [2019/02/15 15:57:26 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 2: ImNeikan (1613 in chips) 
+Seat 3: melkorz (2105 in chips) 
+Seat 4: 00Laplace00 (2587 in chips) 
+Seat 5: JLM-POK (1703 in chips) 
+Seat 6: wearedeadbro (992 in chips) 
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+00Laplace00: posts small blind 25
+JLM-POK: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [4c 8c]
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: folds 
+Uncalled bet (25) returned to JLM-POK
+JLM-POK collected 80 from pot
+JLM-POK: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz (button) folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (small blind) folded before Flop
+Seat 5: JLM-POK (big blind) collected (80)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092508618: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 21:57:33 CET [2019/02/15 15:57:33 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 2: ImNeikan (1607 in chips) 
+Seat 3: melkorz (2099 in chips) 
+Seat 4: 00Laplace00 (2556 in chips) 
+Seat 5: JLM-POK (1752 in chips) 
+Seat 6: wearedeadbro (986 in chips) 
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+JLM-POK: posts small blind 25
+wearedeadbro: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Ad 3s]
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: raises 70 to 120
+JLM-POK: folds 
+wearedeadbro: folds 
+Uncalled bet (70) returned to 00Laplace00
+00Laplace00 collected 155 from pot
+00Laplace00: doesn't show hand 
+*** SUMMARY ***
+Total pot 155 | Rake 0 
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (button) collected (155)
+Seat 5: JLM-POK (small blind) folded before Flop
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197092516573: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 21:57:47 CET [2019/02/15 15:57:47 ET]
+Table '2539056602 1' 6-max Seat #5 is the button
+Seat 2: ImNeikan (1601 in chips) 
+Seat 3: melkorz (2093 in chips) 
+Seat 4: 00Laplace00 (2655 in chips) 
+Seat 5: JLM-POK (1721 in chips) 
+Seat 6: wearedeadbro (930 in chips) 
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+wearedeadbro: posts small blind 25
+ImNeikan: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Qh 3d]
+melkorz: folds 
+00Laplace00: folds 
+JLM-POK: folds 
+wearedeadbro: calls 25
+ImNeikan: checks 
+*** FLOP *** [8h Tc Ks]
+wearedeadbro: bets 50
+ImNeikan: folds 
+Uncalled bet (50) returned to wearedeadbro
+wearedeadbro collected 130 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 130 | Rake 0 
+Board [8h Tc Ks]
+Seat 2: ImNeikan (big blind) folded on the Flop
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) collected (130)
+
+
+
+PokerStars Hand #197092529072: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 21:58:08 CET [2019/02/15 15:58:08 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 2: ImNeikan (1545 in chips) 
+Seat 3: melkorz (2087 in chips) 
+Seat 4: 00Laplace00 (2649 in chips) 
+Seat 5: JLM-POK (1715 in chips) 
+Seat 6: wearedeadbro (1004 in chips) 
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+ImNeikan: posts small blind 25
+melkorz: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [9c 4c]
+00Laplace00: folds 
+JLM-POK: folds 
+wearedeadbro: folds 
+ImNeikan: folds 
+Uncalled bet (25) returned to melkorz
+melkorz collected 80 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 2: ImNeikan (small blind) folded before Flop
+Seat 3: melkorz (big blind) collected (80)
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK folded before Flop (didn't bet)
+Seat 6: wearedeadbro (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092532969: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 21:58:14 CET [2019/02/15 15:58:14 ET]
+Table '2539056602 1' 6-max Seat #2 is the button
+Seat 2: ImNeikan (1514 in chips) 
+Seat 3: melkorz (2136 in chips) 
+Seat 4: 00Laplace00 (2643 in chips) 
+Seat 5: JLM-POK (1709 in chips) 
+Seat 6: wearedeadbro (998 in chips) 
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+melkorz: posts small blind 25
+00Laplace00: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Jc Td]
+JLM-POK: calls 50
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: calls 25
+00Laplace00: checks 
+*** FLOP *** [Ah 2h Ad]
+melkorz: checks 
+00Laplace00: checks 
+JLM-POK: bets 150
+melkorz: raises 150 to 300
+00Laplace00: folds 
+JLM-POK: calls 150
+*** TURN *** [Ah 2h Ad] [3s]
+melkorz: checks 
+JLM-POK: checks 
+*** RIVER *** [Ah 2h Ad 3s] [6d]
+melkorz: bets 250
+JLM-POK: folds 
+Uncalled bet (250) returned to melkorz
+melkorz collected 780 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 780 | Rake 0 
+Board [Ah 2h Ad 3s 6d]
+Seat 2: ImNeikan (button) folded before Flop (didn't bet)
+Seat 3: melkorz (small blind) collected (780)
+Seat 4: 00Laplace00 (big blind) folded on the Flop
+Seat 5: JLM-POK folded on the River
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092565016: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 21:59:07 CET [2019/02/15 15:59:07 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 2: ImNeikan (1508 in chips) 
+Seat 3: melkorz (2560 in chips) 
+Seat 4: 00Laplace00 (2587 in chips) 
+Seat 5: JLM-POK (1353 in chips) 
+Seat 6: wearedeadbro (992 in chips) 
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+00Laplace00: posts small blind 25
+JLM-POK: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [2s Ah]
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: raises 70 to 120
+JLM-POK: calls 70
+*** FLOP *** [Kh 8h Ks]
+00Laplace00: checks 
+JLM-POK: bets 1227 and is all-in
+00Laplace00: folds 
+Uncalled bet (1227) returned to JLM-POK
+JLM-POK collected 270 from pot
+JLM-POK: doesn't show hand 
+*** SUMMARY ***
+Total pot 270 | Rake 0 
+Board [Kh 8h Ks]
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz (button) folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (small blind) folded on the Flop
+Seat 5: JLM-POK (big blind) collected (270)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092578610: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 21:59:30 CET [2019/02/15 15:59:30 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 2: ImNeikan (1502 in chips) 
+Seat 3: melkorz (2554 in chips) 
+Seat 4: 00Laplace00 (2461 in chips) 
+Seat 5: JLM-POK (1497 in chips) 
+Seat 6: wearedeadbro (986 in chips) 
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+JLM-POK: posts small blind 25
+wearedeadbro: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Qh 6s]
+ImNeikan: raises 100 to 150
+melkorz: folds 
+00Laplace00: folds 
+JLM-POK: folds 
+wearedeadbro: folds 
+Uncalled bet (100) returned to ImNeikan
+ImNeikan collected 155 from pot
+*** SUMMARY ***
+Total pot 155 | Rake 0 
+Seat 2: ImNeikan collected (155)
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 5: JLM-POK (small blind) folded before Flop
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197092587635: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 21:59:45 CET [2019/02/15 15:59:45 ET]
+Table '2539056602 1' 6-max Seat #5 is the button
+Seat 2: ImNeikan (1601 in chips) 
+Seat 3: melkorz (2548 in chips) 
+Seat 4: 00Laplace00 (2455 in chips) 
+Seat 5: JLM-POK (1466 in chips) 
+Seat 6: wearedeadbro (930 in chips) 
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+wearedeadbro: posts small blind 25
+ImNeikan: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Kc 9s]
+melkorz: folds 
+00Laplace00: folds 
+JLM-POK: folds 
+wearedeadbro: calls 25
+ImNeikan: checks 
+*** FLOP *** [Jh 5s Qd]
+wearedeadbro: bets 50
+ImNeikan: calls 50
+*** TURN *** [Jh 5s Qd] [8d]
+wearedeadbro: checks 
+ImNeikan: checks 
+*** RIVER *** [Jh 5s Qd 8d] [5d]
+wearedeadbro: checks 
+ImNeikan: bets 115
+wearedeadbro: folds 
+Uncalled bet (115) returned to ImNeikan
+ImNeikan collected 230 from pot
+*** SUMMARY ***
+Total pot 230 | Rake 0 
+Board [Jh 5s Qd 8d 5d]
+Seat 2: ImNeikan (big blind) collected (230)
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) folded on the River
+
+
+
+PokerStars Hand #197092605409: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level III (25/50) - 2019/02/15 22:00:13 CET [2019/02/15 16:00:13 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 2: ImNeikan (1725 in chips) 
+Seat 3: melkorz (2542 in chips) 
+Seat 4: 00Laplace00 (2449 in chips) 
+Seat 5: JLM-POK (1460 in chips) 
+Seat 6: wearedeadbro (824 in chips) 
+ImNeikan: posts the ante 6
+melkorz: posts the ante 6
+00Laplace00: posts the ante 6
+JLM-POK: posts the ante 6
+wearedeadbro: posts the ante 6
+ImNeikan: posts small blind 25
+melkorz: posts big blind 50
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [4d Jh]
+00Laplace00: folds 
+JLM-POK: calls 50
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: checks 
+*** FLOP *** [9s 2d Qc]
+melkorz: checks 
+JLM-POK: bets 1404 and is all-in
+melkorz: folds 
+Uncalled bet (1404) returned to JLM-POK
+JLM-POK collected 155 from pot
+JLM-POK: doesn't show hand 
+*** SUMMARY ***
+Total pot 155 | Rake 0 
+Board [9s 2d Qc]
+Seat 2: ImNeikan (small blind) folded before Flop
+Seat 3: melkorz (big blind) folded on the Flop
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK collected (155)
+Seat 6: wearedeadbro (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092624991: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:00:44 CET [2019/02/15 16:00:44 ET]
+Table '2539056602 1' 6-max Seat #2 is the button
+Seat 2: ImNeikan (1694 in chips) 
+Seat 3: melkorz (2486 in chips) 
+Seat 4: 00Laplace00 (2443 in chips) 
+Seat 5: JLM-POK (1559 in chips) 
+Seat 6: wearedeadbro (818 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+JLM-POK: posts the ante 10
+wearedeadbro: posts the ante 10
+melkorz: posts small blind 40
+00Laplace00: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [2h 8h]
+JLM-POK: folds 
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: calls 40
+00Laplace00: checks 
+*** FLOP *** [Kh 5s 7s]
+melkorz: bets 80
+00Laplace00: folds 
+Uncalled bet (80) returned to melkorz
+melkorz collected 210 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 210 | Rake 0 
+Board [Kh 5s 7s]
+Seat 2: ImNeikan (button) folded before Flop (didn't bet)
+Seat 3: melkorz (small blind) collected (210)
+Seat 4: 00Laplace00 (big blind) folded on the Flop
+Seat 5: JLM-POK folded before Flop (didn't bet)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092650585: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:01:21 CET [2019/02/15 16:01:21 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 2: ImNeikan (1684 in chips) 
+Seat 3: melkorz (2606 in chips) 
+Seat 4: 00Laplace00 (2353 in chips) 
+Seat 5: JLM-POK (1549 in chips) 
+Seat 6: wearedeadbro (808 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+JLM-POK: posts the ante 10
+wearedeadbro: posts the ante 10
+00Laplace00: posts small blind 40
+JLM-POK: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [4s 5h]
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: folds 
+Uncalled bet (40) returned to JLM-POK
+JLM-POK collected 130 from pot
+JLM-POK: doesn't show hand 
+*** SUMMARY ***
+Total pot 130 | Rake 0 
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz (button) folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (small blind) folded before Flop
+Seat 5: JLM-POK (big blind) collected (130)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092659661: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:01:33 CET [2019/02/15 16:01:33 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 2: ImNeikan (1674 in chips) 
+Seat 3: melkorz (2596 in chips) 
+Seat 4: 00Laplace00 (2303 in chips) 
+Seat 5: JLM-POK (1629 in chips) 
+Seat 6: wearedeadbro (798 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+JLM-POK: posts the ante 10
+wearedeadbro: posts the ante 10
+JLM-POK: posts small blind 40
+wearedeadbro: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [2s Jc]
+ImNeikan: raises 80 to 160
+melkorz: folds 
+00Laplace00: folds 
+JLM-POK: calls 120
+wearedeadbro: folds 
+*** FLOP *** [6s Th Tc]
+JLM-POK: checks 
+ImNeikan: checks 
+*** TURN *** [6s Th Tc] [Qh]
+JLM-POK: checks 
+ImNeikan: checks 
+*** RIVER *** [6s Th Tc Qh] [Kh]
+JLM-POK: bets 450
+ImNeikan: calls 450
+*** SHOW DOWN ***
+JLM-POK: shows [Kc 7c] (two pair, Kings and Tens)
+ImNeikan: shows [Jd Ad] (a straight, Ten to Ace)
+ImNeikan collected 1350 from pot
+*** SUMMARY ***
+Total pot 1350 | Rake 0 
+Board [6s Th Tc Qh Kh]
+Seat 2: ImNeikan showed [Jd Ad] and won (1350) with a straight, Ten to Ace
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 5: JLM-POK (small blind) showed [Kc 7c] and lost with two pair, Kings and Tens
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197092678763: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:01:59 CET [2019/02/15 16:01:59 ET]
+Table '2539056602 1' 6-max Seat #5 is the button
+Seat 2: ImNeikan (2404 in chips) 
+Seat 3: melkorz (2586 in chips) 
+Seat 4: 00Laplace00 (2293 in chips) 
+Seat 5: JLM-POK (1009 in chips) 
+Seat 6: wearedeadbro (708 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+JLM-POK: posts the ante 10
+wearedeadbro: posts the ante 10
+wearedeadbro: posts small blind 40
+ImNeikan: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Ac 7c]
+melkorz: folds 
+00Laplace00: raises 112 to 192
+JLM-POK: folds 
+wearedeadbro: folds 
+ImNeikan: folds 
+Uncalled bet (112) returned to 00Laplace00
+00Laplace00 collected 250 from pot
+00Laplace00: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 2: ImNeikan (big blind) folded before Flop
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 collected (250)
+Seat 5: JLM-POK (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) folded before Flop
+
+
+
+PokerStars Hand #197092694545: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:02:19 CET [2019/02/15 16:02:19 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 2: ImNeikan (2314 in chips) 
+Seat 3: melkorz (2576 in chips) 
+Seat 4: 00Laplace00 (2453 in chips) 
+Seat 5: JLM-POK (999 in chips) 
+Seat 6: wearedeadbro (658 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+JLM-POK: posts the ante 10
+wearedeadbro: posts the ante 10
+ImNeikan: posts small blind 40
+melkorz: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [2h 8c]
+00Laplace00: folds 
+JLM-POK: raises 909 to 989 and is all-in
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: folds 
+Uncalled bet (909) returned to JLM-POK
+JLM-POK collected 250 from pot
+JLM-POK: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 2: ImNeikan (small blind) folded before Flop
+Seat 3: melkorz (big blind) folded before Flop
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK collected (250)
+Seat 6: wearedeadbro (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092711309: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:02:41 CET [2019/02/15 16:02:41 ET]
+Table '2539056602 1' 6-max Seat #2 is the button
+Seat 2: ImNeikan (2264 in chips) 
+Seat 3: melkorz (2486 in chips) 
+Seat 4: 00Laplace00 (2443 in chips) 
+Seat 5: JLM-POK (1159 in chips) 
+Seat 6: wearedeadbro (648 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+JLM-POK: posts the ante 10
+wearedeadbro: posts the ante 10
+melkorz: posts small blind 40
+00Laplace00: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Ac 2c]
+JLM-POK: raises 1069 to 1149 and is all-in
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: folds 
+Uncalled bet (1069) returned to JLM-POK
+JLM-POK collected 250 from pot
+JLM-POK: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 2: ImNeikan (button) folded before Flop (didn't bet)
+Seat 3: melkorz (small blind) folded before Flop
+Seat 4: 00Laplace00 (big blind) folded before Flop
+Seat 5: JLM-POK collected (250)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092725059: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:03:00 CET [2019/02/15 16:03:00 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 2: ImNeikan (2254 in chips) 
+Seat 3: melkorz (2436 in chips) 
+Seat 4: 00Laplace00 (2353 in chips) 
+Seat 5: JLM-POK (1319 in chips) 
+Seat 6: wearedeadbro (638 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+JLM-POK: posts the ante 10
+wearedeadbro: posts the ante 10
+00Laplace00: posts small blind 40
+JLM-POK: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Kd 2d]
+wearedeadbro: raises 548 to 628 and is all-in
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: folds 
+JLM-POK: calls 548
+*** FLOP *** [3d 9d 4d]
+*** TURN *** [3d 9d 4d] [3c]
+*** RIVER *** [3d 9d 4d 3c] [6s]
+*** SHOW DOWN ***
+JLM-POK: shows [Ts Qc] (a pair of Threes)
+wearedeadbro: shows [Qd Td] (a flush, Queen high)
+wearedeadbro collected 1346 from pot
+*** SUMMARY ***
+Total pot 1346 | Rake 0 
+Board [3d 9d 4d 3c 6s]
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz (button) folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (small blind) folded before Flop
+Seat 5: JLM-POK (big blind) showed [Ts Qc] and lost with a pair of Threes
+Seat 6: wearedeadbro showed [Qd Td] and won (1346) with a flush, Queen high
+
+
+
+PokerStars Hand #197092738074: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:03:17 CET [2019/02/15 16:03:17 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 2: ImNeikan (2244 in chips) 
+Seat 3: melkorz (2426 in chips) 
+Seat 4: 00Laplace00 (2303 in chips) 
+Seat 5: JLM-POK (681 in chips) 
+Seat 6: wearedeadbro (1346 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+JLM-POK: posts the ante 10
+wearedeadbro: posts the ante 10
+JLM-POK: posts small blind 40
+wearedeadbro: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Tc 3d]
+ImNeikan: folds 
+melkorz: raises 80 to 160
+00Laplace00: folds 
+JLM-POK: calls 120
+wearedeadbro: folds 
+*** FLOP *** [8s Kd 9h]
+JLM-POK: checks 
+melkorz: bets 80
+JLM-POK: raises 431 to 511 and is all-in
+melkorz: folds 
+Uncalled bet (431) returned to JLM-POK
+JLM-POK collected 610 from pot
+JLM-POK: doesn't show hand 
+*** SUMMARY ***
+Total pot 610 | Rake 0 
+Board [8s Kd 9h]
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz folded on the Flop
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 5: JLM-POK (small blind) collected (610)
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197092768795: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:03:56 CET [2019/02/15 16:03:56 ET]
+Table '2539056602 1' 6-max Seat #5 is the button
+Seat 2: ImNeikan (2234 in chips) 
+Seat 3: melkorz (2176 in chips) 
+Seat 4: 00Laplace00 (2293 in chips) 
+Seat 5: JLM-POK (1041 in chips) 
+Seat 6: wearedeadbro (1256 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+JLM-POK: posts the ante 10
+wearedeadbro: posts the ante 10
+wearedeadbro: posts small blind 40
+ImNeikan: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [4d Ad]
+melkorz: folds 
+00Laplace00: raises 112 to 192
+JLM-POK: folds 
+wearedeadbro: folds 
+ImNeikan: folds 
+Uncalled bet (112) returned to 00Laplace00
+00Laplace00 collected 250 from pot
+00Laplace00: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 2: ImNeikan (big blind) folded before Flop
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 collected (250)
+Seat 5: JLM-POK (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) folded before Flop
+
+
+
+PokerStars Hand #197092779438: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:04:09 CET [2019/02/15 16:04:09 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 2: ImNeikan (2144 in chips) 
+Seat 3: melkorz (2166 in chips) 
+Seat 4: 00Laplace00 (2453 in chips) 
+Seat 5: JLM-POK (1031 in chips) 
+Seat 6: wearedeadbro (1206 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+JLM-POK: posts the ante 10
+wearedeadbro: posts the ante 10
+ImNeikan: posts small blind 40
+melkorz: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [3d Qs]
+00Laplace00: folds 
+JLM-POK: folds 
+wearedeadbro: raises 1116 to 1196 and is all-in
+ImNeikan: folds 
+melkorz: folds 
+Uncalled bet (1116) returned to wearedeadbro
+wearedeadbro collected 250 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 2: ImNeikan (small blind) folded before Flop
+Seat 3: melkorz (big blind) folded before Flop
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 5: JLM-POK folded before Flop (didn't bet)
+Seat 6: wearedeadbro (button) collected (250)
+
+
+
+PokerStars Hand #197092794745: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:04:29 CET [2019/02/15 16:04:29 ET]
+Table '2539056602 1' 6-max Seat #2 is the button
+Seat 2: ImNeikan (2094 in chips) 
+Seat 3: melkorz (2076 in chips) 
+Seat 4: 00Laplace00 (2443 in chips) 
+Seat 5: JLM-POK (1021 in chips) 
+Seat 6: wearedeadbro (1366 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+JLM-POK: posts the ante 10
+wearedeadbro: posts the ante 10
+melkorz: posts small blind 40
+00Laplace00: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [6s 7c]
+JLM-POK: raises 931 to 1011 and is all-in
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: folds 
+Uncalled bet (931) returned to JLM-POK
+JLM-POK collected 250 from pot
+JLM-POK: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 2: ImNeikan (button) folded before Flop (didn't bet)
+Seat 3: melkorz (small blind) folded before Flop
+Seat 4: 00Laplace00 (big blind) folded before Flop
+Seat 5: JLM-POK collected (250)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092806513: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:04:44 CET [2019/02/15 16:04:44 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 2: ImNeikan (2084 in chips) 
+Seat 3: melkorz (2026 in chips) 
+Seat 4: 00Laplace00 (2353 in chips) 
+Seat 5: JLM-POK (1181 in chips) 
+Seat 6: wearedeadbro (1356 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+JLM-POK: posts the ante 10
+wearedeadbro: posts the ante 10
+00Laplace00: posts small blind 40
+JLM-POK: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [As Qc]
+wearedeadbro: raises 120 to 200
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: folds 
+JLM-POK: calls 120
+*** FLOP *** [Ts 2s 4s]
+JLM-POK: bets 971 and is all-in
+wearedeadbro: calls 971
+*** TURN *** [Ts 2s 4s] [Qh]
+*** RIVER *** [Ts 2s 4s Qh] [9d]
+*** SHOW DOWN ***
+JLM-POK: shows [Kd 4h] (a pair of Fours)
+wearedeadbro: shows [Ah Qs] (a pair of Queens)
+wearedeadbro collected 2432 from pot
+JLM-POK finished the tournament in 5th place
+*** SUMMARY ***
+Total pot 2432 | Rake 0 
+Board [Ts 2s 4s Qh 9d]
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz (button) folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (small blind) folded before Flop
+Seat 5: JLM-POK (big blind) showed [Kd 4h] and lost with a pair of Fours
+Seat 6: wearedeadbro showed [Ah Qs] and won (2432) with a pair of Queens
+
+
+
+PokerStars Hand #197092828471: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level IV (40/80) - 2019/02/15 22:05:12 CET [2019/02/15 16:05:12 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 2: ImNeikan (2074 in chips) 
+Seat 3: melkorz (2016 in chips) 
+Seat 4: 00Laplace00 (2303 in chips) 
+Seat 6: wearedeadbro (2607 in chips) 
+ImNeikan: posts the ante 10
+melkorz: posts the ante 10
+00Laplace00: posts the ante 10
+wearedeadbro: posts the ante 10
+wearedeadbro: posts small blind 40
+ImNeikan: posts big blind 80
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [3s 6d]
+melkorz: folds 
+00Laplace00: folds 
+wearedeadbro: raises 120 to 200
+ImNeikan: folds 
+Uncalled bet (120) returned to wearedeadbro
+wearedeadbro collected 200 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 2: ImNeikan (big blind) folded before Flop
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) collected (200)
+
+
+
+PokerStars Hand #197092845597: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:05:34 CET [2019/02/15 16:05:34 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 2: ImNeikan (1984 in chips) 
+Seat 3: melkorz (2006 in chips) 
+Seat 4: 00Laplace00 (2293 in chips) 
+Seat 6: wearedeadbro (2717 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+ImNeikan: posts small blind 60
+melkorz: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [7s Qc]
+00Laplace00: folds 
+wearedeadbro: raises 2582 to 2702 and is all-in
+ImNeikan: folds 
+melkorz: folds 
+Uncalled bet (2582) returned to wearedeadbro
+wearedeadbro collected 360 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 360 | Rake 0 
+Seat 2: ImNeikan (small blind) folded before Flop
+Seat 3: melkorz (big blind) folded before Flop
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 6: wearedeadbro (button) collected (360)
+
+
+
+PokerStars Hand #197092867843: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:06:02 CET [2019/02/15 16:06:02 ET]
+Table '2539056602 1' 6-max Seat #2 is the button
+Seat 2: ImNeikan (1909 in chips) 
+Seat 3: melkorz (1871 in chips) 
+Seat 4: 00Laplace00 (2278 in chips) 
+Seat 6: wearedeadbro (2942 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+melkorz: posts small blind 60
+00Laplace00: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Kd Kh]
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: calls 60
+00Laplace00: raises 168 to 288
+melkorz: calls 168
+*** FLOP *** [8d Qd 6h]
+melkorz: checks 
+00Laplace00: bets 413
+melkorz: raises 413 to 826
+00Laplace00: raises 1149 to 1975 and is all-in
+melkorz: calls 742 and is all-in
+Uncalled bet (407) returned to 00Laplace00
+*** TURN *** [8d Qd 6h] [5s]
+*** RIVER *** [8d Qd 6h 5s] [2c]
+*** SHOW DOWN ***
+melkorz: shows [5d 6c] (two pair, Sixes and Fives)
+00Laplace00: shows [Kd Kh] (a pair of Kings)
+melkorz collected 3772 from pot
+*** SUMMARY ***
+Total pot 3772 | Rake 0 
+Board [8d Qd 6h 5s 2c]
+Seat 2: ImNeikan (button) folded before Flop (didn't bet)
+Seat 3: melkorz (small blind) showed [5d 6c] and won (3772) with two pair, Sixes and Fives
+Seat 4: 00Laplace00 (big blind) showed [Kd Kh] and lost with a pair of Kings
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092910414: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:06:56 CET [2019/02/15 16:06:56 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 2: ImNeikan (1894 in chips) 
+Seat 3: melkorz (3772 in chips) 
+Seat 4: 00Laplace00 (407 in chips) 
+Seat 6: wearedeadbro (2927 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+00Laplace00: posts small blind 60
+wearedeadbro: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Kc 8d]
+00Laplace00 said, "lol"
+melkorz said, "sry"
+melkorz said, "tilt"
+ImNeikan: raises 1759 to 1879 and is all-in
+melkorz: folds 
+00Laplace00: folds 
+wearedeadbro: folds 
+Uncalled bet (1759) returned to ImNeikan
+ImNeikan collected 360 from pot
+00Laplace00 said, "what a player"
+*** SUMMARY ***
+Total pot 360 | Rake 0 
+Seat 2: ImNeikan collected (360)
+Seat 3: melkorz (button) folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (small blind) folded before Flop
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197092930384: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:07:22 CET [2019/02/15 16:07:22 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 2: ImNeikan (2119 in chips) 
+Seat 3: melkorz (3757 in chips) 
+Seat 4: 00Laplace00 (332 in chips) 
+Seat 6: wearedeadbro (2792 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+wearedeadbro: posts small blind 60
+ImNeikan: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [6s Jc]
+melkorz: folds 
+00Laplace00: raises 197 to 317 and is all-in
+wearedeadbro: raises 2460 to 2777 and is all-in
+ImNeikan: folds 
+Uncalled bet (2460) returned to wearedeadbro
+*** FLOP *** [Kc 5h Ks]
+*** TURN *** [Kc 5h Ks] [9h]
+*** RIVER *** [Kc 5h Ks 9h] [Jh]
+*** SHOW DOWN ***
+wearedeadbro: shows [As 9s] (two pair, Kings and Nines)
+00Laplace00: shows [6s Jc] (two pair, Kings and Jacks)
+00Laplace00 collected 814 from pot
+*** SUMMARY ***
+Total pot 814 | Rake 0 
+Board [Kc 5h Ks 9h Jh]
+Seat 2: ImNeikan (big blind) folded before Flop
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (button) showed [6s Jc] and won (814) with two pair, Kings and Jacks
+Seat 6: wearedeadbro (small blind) showed [As 9s] and lost with two pair, Kings and Nines
+
+
+
+PokerStars Hand #197092950048: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:07:47 CET [2019/02/15 16:07:47 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 2: ImNeikan (1984 in chips) 
+Seat 3: melkorz (3742 in chips) 
+Seat 4: 00Laplace00 (814 in chips) 
+Seat 6: wearedeadbro (2460 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+ImNeikan: posts small blind 60
+melkorz: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [5d 7h]
+00Laplace00: folds 
+wearedeadbro: folds 
+ImNeikan: folds 
+Uncalled bet (60) returned to melkorz
+melkorz collected 180 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 180 | Rake 0 
+Seat 2: ImNeikan (small blind) folded before Flop
+Seat 3: melkorz (big blind) collected (180)
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 6: wearedeadbro (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092955972: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:07:55 CET [2019/02/15 16:07:55 ET]
+Table '2539056602 1' 6-max Seat #2 is the button
+Seat 2: ImNeikan (1909 in chips) 
+Seat 3: melkorz (3847 in chips) 
+Seat 4: 00Laplace00 (799 in chips) 
+Seat 6: wearedeadbro (2445 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+melkorz: posts small blind 60
+00Laplace00: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Ks Qs]
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: raises 120 to 240
+00Laplace00: raises 544 to 784 and is all-in
+melkorz: folds 
+Uncalled bet (544) returned to 00Laplace00
+00Laplace00 collected 540 from pot
+00Laplace00: doesn't show hand 
+*** SUMMARY ***
+Total pot 540 | Rake 0 
+Seat 2: ImNeikan (button) folded before Flop (didn't bet)
+Seat 3: melkorz (small blind) folded before Flop
+Seat 4: 00Laplace00 (big blind) collected (540)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197092972377: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:08:16 CET [2019/02/15 16:08:16 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 2: ImNeikan (1894 in chips) 
+Seat 3: melkorz (3592 in chips) 
+Seat 4: 00Laplace00 (1084 in chips) 
+Seat 6: wearedeadbro (2430 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+00Laplace00: posts small blind 60
+wearedeadbro: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Ah 3s]
+ImNeikan: folds 
+melkorz: folds 
+00Laplace00: raises 949 to 1069 and is all-in
+wearedeadbro: folds 
+Uncalled bet (949) returned to 00Laplace00
+00Laplace00 collected 300 from pot
+00Laplace00: doesn't show hand 
+*** SUMMARY ***
+Total pot 300 | Rake 0 
+Seat 2: ImNeikan folded before Flop (didn't bet)
+Seat 3: melkorz (button) folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (small blind) collected (300)
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197092983957: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:08:31 CET [2019/02/15 16:08:31 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 2: ImNeikan (1879 in chips) 
+Seat 3: melkorz (3577 in chips) 
+Seat 4: 00Laplace00 (1249 in chips) 
+Seat 6: wearedeadbro (2295 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+wearedeadbro: posts small blind 60
+ImNeikan: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Kh 8h]
+melkorz: folds 
+00Laplace00: folds 
+wearedeadbro: raises 2160 to 2280 and is all-in
+ImNeikan: folds 
+Uncalled bet (2160) returned to wearedeadbro
+wearedeadbro collected 300 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 300 | Rake 0 
+Seat 2: ImNeikan (big blind) folded before Flop
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) collected (300)
+
+
+
+PokerStars Hand #197092992697: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:08:42 CET [2019/02/15 16:08:42 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 2: ImNeikan (1744 in chips) 
+Seat 3: melkorz (3562 in chips) 
+Seat 4: 00Laplace00 (1234 in chips) 
+Seat 6: wearedeadbro (2460 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+ImNeikan: posts small blind 60
+melkorz: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Ad 4c]
+00Laplace00: folds 
+wearedeadbro: folds 
+ImNeikan: folds 
+Uncalled bet (60) returned to melkorz
+melkorz collected 180 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 180 | Rake 0 
+Seat 2: ImNeikan (small blind) folded before Flop
+Seat 3: melkorz (big blind) collected (180)
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 6: wearedeadbro (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197093002418: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:08:55 CET [2019/02/15 16:08:55 ET]
+Table '2539056602 1' 6-max Seat #2 is the button
+Seat 2: ImNeikan (1669 in chips) 
+Seat 3: melkorz (3667 in chips) 
+Seat 4: 00Laplace00 (1219 in chips) 
+Seat 6: wearedeadbro (2445 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+melkorz: posts small blind 60
+00Laplace00: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Ah 8d]
+wearedeadbro: folds 
+ImNeikan: folds 
+melkorz: calls 60
+00Laplace00: raises 1084 to 1204 and is all-in
+melkorz: folds 
+Uncalled bet (1084) returned to 00Laplace00
+00Laplace00 collected 300 from pot
+00Laplace00: doesn't show hand 
+*** SUMMARY ***
+Total pot 300 | Rake 0 
+Seat 2: ImNeikan (button) folded before Flop (didn't bet)
+Seat 3: melkorz (small blind) folded before Flop
+Seat 4: 00Laplace00 (big blind) collected (300)
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197093026589: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:09:26 CET [2019/02/15 16:09:26 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 2: ImNeikan (1654 in chips) 
+Seat 3: melkorz (3532 in chips) 
+Seat 4: 00Laplace00 (1384 in chips) 
+Seat 6: wearedeadbro (2430 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+00Laplace00: posts small blind 60
+wearedeadbro: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Qs Ad]
+ImNeikan: raises 1519 to 1639 and is all-in
+melkorz: folds 
+00Laplace00: calls 1309 and is all-in
+wearedeadbro: folds 
+Uncalled bet (270) returned to ImNeikan
+*** FLOP *** [6d 6h Jc]
+*** TURN *** [6d 6h Jc] [8h]
+*** RIVER *** [6d 6h Jc 8h] [3s]
+*** SHOW DOWN ***
+00Laplace00: shows [Qs Ad] (a pair of Sixes)
+ImNeikan: shows [As 2s] (a pair of Sixes - lower kicker)
+00Laplace00 collected 2918 from pot
+*** SUMMARY ***
+Total pot 2918 | Rake 0 
+Board [6d 6h Jc 8h 3s]
+Seat 2: ImNeikan showed [As 2s] and lost with a pair of Sixes
+Seat 3: melkorz (button) folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (small blind) showed [Qs Ad] and won (2918) with a pair of Sixes
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197093045800: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:09:50 CET [2019/02/15 16:09:50 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 2: ImNeikan (270 in chips) 
+Seat 3: melkorz (3517 in chips) 
+Seat 4: 00Laplace00 (2918 in chips) 
+Seat 6: wearedeadbro (2295 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+wearedeadbro: posts small blind 60
+ImNeikan: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [2c Qh]
+melkorz: folds 
+00Laplace00: folds 
+wearedeadbro: raises 180 to 300
+ImNeikan: calls 135 and is all-in
+Uncalled bet (45) returned to wearedeadbro
+*** FLOP *** [Jc 9h Jh]
+*** TURN *** [Jc 9h Jh] [Td]
+*** RIVER *** [Jc 9h Jh Td] [4d]
+*** SHOW DOWN ***
+wearedeadbro: shows [Qc 5s] (a pair of Jacks)
+ImNeikan: shows [8s Jd] (three of a kind, Jacks)
+ImNeikan collected 570 from pot
+*** SUMMARY ***
+Total pot 570 | Rake 0 
+Board [Jc 9h Jh Td 4d]
+Seat 2: ImNeikan (big blind) showed [8s Jd] and won (570) with three of a kind, Jacks
+Seat 3: melkorz folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) showed [Qc 5s] and lost with a pair of Jacks
+
+
+
+PokerStars Hand #197093058726: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level V (60/120) - 2019/02/15 22:10:06 CET [2019/02/15 16:10:06 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 2: ImNeikan (570 in chips) 
+Seat 3: melkorz (3502 in chips) 
+Seat 4: 00Laplace00 (2903 in chips) 
+Seat 6: wearedeadbro (2025 in chips) 
+ImNeikan: posts the ante 15
+melkorz: posts the ante 15
+00Laplace00: posts the ante 15
+wearedeadbro: posts the ante 15
+ImNeikan: posts small blind 60
+melkorz: posts big blind 120
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [7h 8d]
+00Laplace00: folds 
+wearedeadbro: folds 
+ImNeikan: folds 
+Uncalled bet (60) returned to melkorz
+melkorz collected 180 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 180 | Rake 0 
+Seat 2: ImNeikan (small blind) folded before Flop
+Seat 3: melkorz (big blind) collected (180)
+Seat 4: 00Laplace00 folded before Flop (didn't bet)
+Seat 6: wearedeadbro (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197093069683: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:10:20 CET [2019/02/15 16:10:20 ET]
+Table '2539056602 1' 6-max Seat #2 is the button
+Seat 2: ImNeikan (495 in chips) 
+Seat 3: melkorz (3607 in chips) 
+Seat 4: 00Laplace00 (2888 in chips) 
+Seat 6: wearedeadbro (2010 in chips) 
+ImNeikan: posts the ante 20
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+melkorz: posts small blind 80
+00Laplace00: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Td 9c]
+wearedeadbro: folds 
+ImNeikan: raises 315 to 475 and is all-in
+melkorz: calls 395
+00Laplace00: folds 
+*** FLOP *** [Ks 8s Kd]
+*** TURN *** [Ks 8s Kd] [7d]
+*** RIVER *** [Ks 8s Kd 7d] [2h]
+*** SHOW DOWN ***
+melkorz: shows [7h 8d] (two pair, Kings and Eights)
+ImNeikan: shows [5s Ac] (a pair of Kings)
+melkorz collected 1190 from pot
+ImNeikan finished the tournament in 4th place
+*** SUMMARY ***
+Total pot 1190 | Rake 0 
+Board [Ks 8s Kd 7d 2h]
+Seat 2: ImNeikan (button) showed [5s Ac] and lost with a pair of Kings
+Seat 3: melkorz (small blind) showed [7h 8d] and won (1190) with two pair, Kings and Eights
+Seat 4: 00Laplace00 (big blind) folded before Flop
+Seat 6: wearedeadbro folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197093085492: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:10:41 CET [2019/02/15 16:10:41 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 3: melkorz (4302 in chips) 
+Seat 4: 00Laplace00 (2708 in chips) 
+Seat 6: wearedeadbro (1990 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+00Laplace00: posts small blind 80
+wearedeadbro: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [2h Qh]
+melkorz: folds 
+00Laplace00: raises 224 to 384
+wearedeadbro: folds 
+Uncalled bet (224) returned to 00Laplace00
+00Laplace00 collected 380 from pot
+00Laplace00: doesn't show hand 
+*** SUMMARY ***
+Total pot 380 | Rake 0 
+Seat 3: melkorz (button) folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (small blind) collected (380)
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197093097477: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:10:56 CET [2019/02/15 16:10:56 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 3: melkorz (4282 in chips) 
+Seat 4: 00Laplace00 (2908 in chips) 
+Seat 6: wearedeadbro (1810 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+wearedeadbro: posts small blind 80
+melkorz: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Jd 3s]
+00Laplace00: folds 
+wearedeadbro: folds 
+Uncalled bet (80) returned to melkorz
+melkorz collected 220 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 220 | Rake 0 
+Seat 3: melkorz (big blind) collected (220)
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) folded before Flop
+
+
+
+PokerStars Hand #197093102031: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:11:02 CET [2019/02/15 16:11:02 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 3: melkorz (4402 in chips) 
+Seat 4: 00Laplace00 (2888 in chips) 
+Seat 6: wearedeadbro (1710 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+melkorz: posts small blind 80
+00Laplace00: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [9h Qd]
+wearedeadbro: folds 
+melkorz: raises 160 to 320
+00Laplace00: folds 
+Uncalled bet (160) returned to melkorz
+melkorz collected 380 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 380 | Rake 0 
+Seat 3: melkorz (small blind) collected (380)
+Seat 4: 00Laplace00 (big blind) folded before Flop
+Seat 6: wearedeadbro (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197093109776: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:11:12 CET [2019/02/15 16:11:12 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 3: melkorz (4602 in chips) 
+Seat 4: 00Laplace00 (2708 in chips) 
+Seat 6: wearedeadbro (1690 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+00Laplace00: posts small blind 80
+wearedeadbro: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Td Qc]
+melkorz: raises 320 to 480
+00Laplace00: folds 
+wearedeadbro: folds 
+Uncalled bet (320) returned to melkorz
+melkorz collected 460 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 460 | Rake 0 
+Seat 3: melkorz (button) collected (460)
+Seat 4: 00Laplace00 (small blind) folded before Flop
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197093124046: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:11:30 CET [2019/02/15 16:11:30 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 3: melkorz (4882 in chips) 
+Seat 4: 00Laplace00 (2608 in chips) 
+Seat 6: wearedeadbro (1510 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+wearedeadbro: posts small blind 80
+melkorz: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [3s Ks]
+00Laplace00: folds 
+wearedeadbro: folds 
+Uncalled bet (80) returned to melkorz
+melkorz collected 220 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 220 | Rake 0 
+Seat 3: melkorz (big blind) collected (220)
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) folded before Flop
+
+
+
+PokerStars Hand #197093132172: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:11:41 CET [2019/02/15 16:11:41 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 3: melkorz (5002 in chips) 
+Seat 4: 00Laplace00 (2588 in chips) 
+Seat 6: wearedeadbro (1410 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+melkorz: posts small blind 80
+00Laplace00: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [6c Kh]
+wearedeadbro: raises 1230 to 1390 and is all-in
+melkorz: folds 
+00Laplace00: folds 
+Uncalled bet (1230) returned to wearedeadbro
+wearedeadbro collected 460 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 460 | Rake 0 
+Seat 3: melkorz (small blind) folded before Flop
+Seat 4: 00Laplace00 (big blind) folded before Flop
+Seat 6: wearedeadbro (button) collected (460)
+
+
+
+PokerStars Hand #197093139862: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:11:51 CET [2019/02/15 16:11:51 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 3: melkorz (4902 in chips) 
+Seat 4: 00Laplace00 (2408 in chips) 
+Seat 6: wearedeadbro (1690 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+00Laplace00: posts small blind 80
+wearedeadbro: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [5h 7h]
+melkorz: folds 
+00Laplace00: folds 
+Uncalled bet (80) returned to wearedeadbro
+wearedeadbro collected 220 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 220 | Rake 0 
+Seat 3: melkorz (button) folded before Flop (didn't bet)
+Seat 4: 00Laplace00 (small blind) folded before Flop
+Seat 6: wearedeadbro (big blind) collected (220)
+
+
+
+PokerStars Hand #197093144768: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:11:57 CET [2019/02/15 16:11:57 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 3: melkorz (4882 in chips) 
+Seat 4: 00Laplace00 (2308 in chips) 
+Seat 6: wearedeadbro (1810 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+wearedeadbro: posts small blind 80
+melkorz: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [5s 6h]
+00Laplace00: folds 
+wearedeadbro: folds 
+Uncalled bet (80) returned to melkorz
+melkorz collected 220 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 220 | Rake 0 
+Seat 3: melkorz (big blind) collected (220)
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) folded before Flop
+
+
+
+PokerStars Hand #197093149578: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:12:03 CET [2019/02/15 16:12:03 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 3: melkorz (5002 in chips) 
+Seat 4: 00Laplace00 (2288 in chips) 
+Seat 6: wearedeadbro (1710 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+melkorz: posts small blind 80
+00Laplace00: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [5d Th]
+wearedeadbro: folds 
+melkorz: calls 80
+00Laplace00: checks 
+*** FLOP *** [Ks Js 7s]
+melkorz: bets 160
+00Laplace00: folds 
+Uncalled bet (160) returned to melkorz
+melkorz collected 380 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 380 | Rake 0 
+Board [Ks Js 7s]
+Seat 3: melkorz (small blind) collected (380)
+Seat 4: 00Laplace00 (big blind) folded on the Flop
+Seat 6: wearedeadbro (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197093162314: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:12:20 CET [2019/02/15 16:12:20 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 3: melkorz (5202 in chips) 
+Seat 4: 00Laplace00 (2108 in chips) 
+Seat 6: wearedeadbro (1690 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+00Laplace00: posts small blind 80
+wearedeadbro: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [4d 9d]
+melkorz: raises 160 to 320
+00Laplace00: folds 
+wearedeadbro: folds 
+Uncalled bet (160) returned to melkorz
+melkorz collected 460 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 460 | Rake 0 
+Seat 3: melkorz (button) collected (460)
+Seat 4: 00Laplace00 (small blind) folded before Flop
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197093170194: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:12:30 CET [2019/02/15 16:12:30 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 3: melkorz (5482 in chips) 
+Seat 4: 00Laplace00 (2008 in chips) 
+Seat 6: wearedeadbro (1510 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+wearedeadbro: posts small blind 80
+melkorz: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [6s 2d]
+00Laplace00: folds 
+wearedeadbro: raises 1330 to 1490 and is all-in
+melkorz: calls 1330
+*** FLOP *** [8c 5h 3d]
+*** TURN *** [8c 5h 3d] [Ac]
+*** RIVER *** [8c 5h 3d Ac] [Jh]
+*** SHOW DOWN ***
+wearedeadbro: shows [5d Qd] (a pair of Fives)
+melkorz: shows [9s Ks] (high card Ace)
+wearedeadbro collected 3040 from pot
+*** SUMMARY ***
+Total pot 3040 | Rake 0 
+Board [8c 5h 3d Ac Jh]
+Seat 3: melkorz (big blind) showed [9s Ks] and lost with high card Ace
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) showed [5d Qd] and won (3040) with a pair of Fives
+
+
+
+PokerStars Hand #197093183854: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:12:47 CET [2019/02/15 16:12:47 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 3: melkorz (3972 in chips) 
+Seat 4: 00Laplace00 (1988 in chips) 
+Seat 6: wearedeadbro (3040 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+melkorz: posts small blind 80
+00Laplace00: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [2s 7h]
+wearedeadbro: folds 
+melkorz: raises 160 to 320
+00Laplace00: folds 
+Uncalled bet (160) returned to melkorz
+melkorz collected 380 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 380 | Rake 0 
+Seat 3: melkorz (small blind) collected (380)
+Seat 4: 00Laplace00 (big blind) folded before Flop
+Seat 6: wearedeadbro (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197093195064: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:13:02 CET [2019/02/15 16:13:02 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 3: melkorz (4172 in chips) 
+Seat 4: 00Laplace00 (1808 in chips) 
+Seat 6: wearedeadbro (3020 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+00Laplace00: posts small blind 80
+wearedeadbro: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Ad Kc]
+melkorz: raises 160 to 320
+00Laplace00: raises 1468 to 1788 and is all-in
+wearedeadbro: folds 
+melkorz: calls 1468
+*** FLOP *** [Qh Ks 2d]
+*** TURN *** [Qh Ks 2d] [3s]
+*** RIVER *** [Qh Ks 2d 3s] [5c]
+*** SHOW DOWN ***
+00Laplace00: shows [Ad Kc] (a pair of Kings)
+melkorz: shows [Ac 2c] (a pair of Deuces)
+00Laplace00 collected 3796 from pot
+*** SUMMARY ***
+Total pot 3796 | Rake 0 
+Board [Qh Ks 2d 3s 5c]
+Seat 3: melkorz (button) showed [Ac 2c] and lost with a pair of Deuces
+Seat 4: 00Laplace00 (small blind) showed [Ad Kc] and won (3796) with a pair of Kings
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197093208810: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:13:20 CET [2019/02/15 16:13:20 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 3: melkorz (2364 in chips) 
+Seat 4: 00Laplace00 (3796 in chips) 
+Seat 6: wearedeadbro (2840 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+wearedeadbro: posts small blind 80
+melkorz: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [8s 7h]
+00Laplace00: folds 
+wearedeadbro: raises 200 to 360
+melkorz: calls 200
+*** FLOP *** [5d Kh 4s]
+wearedeadbro: bets 480
+melkorz: folds 
+Uncalled bet (480) returned to wearedeadbro
+wearedeadbro collected 780 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 780 | Rake 0 
+Board [5d Kh 4s]
+Seat 3: melkorz (big blind) folded on the Flop
+Seat 4: 00Laplace00 (button) folded before Flop (didn't bet)
+Seat 6: wearedeadbro (small blind) collected (780)
+
+
+
+PokerStars Hand #197093224042: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:13:39 CET [2019/02/15 16:13:39 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 3: melkorz (1984 in chips) 
+Seat 4: 00Laplace00 (3776 in chips) 
+Seat 6: wearedeadbro (3240 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+melkorz: posts small blind 80
+00Laplace00: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [4c 7s]
+wearedeadbro: folds 
+melkorz: calls 80
+00Laplace00: checks 
+*** FLOP *** [4s Qc 8d]
+melkorz: checks 
+00Laplace00: checks 
+*** TURN *** [4s Qc 8d] [2s]
+melkorz: checks 
+00Laplace00: bets 247
+melkorz: raises 727 to 974
+00Laplace00: folds 
+Uncalled bet (727) returned to melkorz
+melkorz collected 874 from pot
+melkorz: doesn't show hand 
+*** SUMMARY ***
+Total pot 874 | Rake 0 
+Board [4s Qc 8d 2s]
+Seat 3: melkorz (small blind) collected (874)
+Seat 4: 00Laplace00 (big blind) folded on the Turn
+Seat 6: wearedeadbro (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #197093254021: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:14:18 CET [2019/02/15 16:14:18 ET]
+Table '2539056602 1' 6-max Seat #3 is the button
+Seat 3: melkorz (2431 in chips) 
+Seat 4: 00Laplace00 (3349 in chips) 
+Seat 6: wearedeadbro (3220 in chips) 
+melkorz: posts the ante 20
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+00Laplace00: posts small blind 80
+wearedeadbro: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [4d Kd]
+melkorz: raises 160 to 320
+00Laplace00: folds 
+wearedeadbro: raises 2880 to 3200 and is all-in
+melkorz: calls 2091 and is all-in
+Uncalled bet (789) returned to wearedeadbro
+*** FLOP *** [Ac 9d 3s]
+*** TURN *** [Ac 9d 3s] [3d]
+*** RIVER *** [Ac 9d 3s 3d] [6d]
+00Laplace00 said, "lol"
+*** SHOW DOWN ***
+wearedeadbro: shows [5h Ah] (two pair, Aces and Threes)
+melkorz: shows [Jh Ks] (a pair of Threes)
+wearedeadbro collected 4962 from pot
+melkorz finished the tournament in 3rd place
+*** SUMMARY ***
+Total pot 4962 | Rake 0 
+Board [Ac 9d 3s 3d 6d]
+Seat 3: melkorz (button) showed [Jh Ks] and lost with a pair of Threes
+Seat 4: 00Laplace00 (small blind) folded before Flop
+Seat 6: wearedeadbro (big blind) showed [5h Ah] and won (4962) with two pair, Aces and Threes
+
+
+
+PokerStars Hand #197093278284: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VI (80/160) - 2019/02/15 22:14:49 CET [2019/02/15 16:14:49 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 4: 00Laplace00 (3249 in chips) 
+Seat 6: wearedeadbro (5751 in chips) 
+00Laplace00: posts the ante 20
+wearedeadbro: posts the ante 20
+wearedeadbro: posts small blind 80
+00Laplace00: posts big blind 160
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [5c 7h]
+wearedeadbro: calls 80
+00Laplace00: checks 
+*** FLOP *** [9d Ah Ac]
+00Laplace00: checks 
+wearedeadbro: checks 
+*** TURN *** [9d Ah Ac] [9s]
+00Laplace00: checks 
+wearedeadbro: bets 160
+00Laplace00: folds 
+Uncalled bet (160) returned to wearedeadbro
+wearedeadbro collected 360 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 360 | Rake 0 
+Board [9d Ah Ac 9s]
+Seat 4: 00Laplace00 (big blind) folded on the Turn
+Seat 6: wearedeadbro (button) (small blind) collected (360)
+
+
+
+PokerStars Hand #197093307012: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:15:26 CET [2019/02/15 16:15:26 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 4: 00Laplace00 (3069 in chips) 
+Seat 6: wearedeadbro (5931 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+00Laplace00: posts small blind 100
+wearedeadbro: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [5c 9s]
+00Laplace00: folds 
+Uncalled bet (100) returned to wearedeadbro
+wearedeadbro collected 250 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 4: 00Laplace00 (button) (small blind) folded before Flop
+Seat 6: wearedeadbro (big blind) collected (250)
+
+
+
+PokerStars Hand #197093312823: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:15:33 CET [2019/02/15 16:15:33 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 4: 00Laplace00 (2944 in chips) 
+Seat 6: wearedeadbro (6056 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+wearedeadbro: posts small blind 100
+00Laplace00: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [8c 2s]
+wearedeadbro: calls 100
+00Laplace00: checks 
+*** FLOP *** [9d Qd 5d]
+00Laplace00: checks 
+wearedeadbro: checks 
+*** TURN *** [9d Qd 5d] [Th]
+00Laplace00: checks 
+wearedeadbro: bets 247
+00Laplace00: folds 
+Uncalled bet (247) returned to wearedeadbro
+wearedeadbro collected 450 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 450 | Rake 0 
+Board [9d Qd 5d Th]
+Seat 4: 00Laplace00 (big blind) folded on the Turn
+Seat 6: wearedeadbro (button) (small blind) collected (450)
+
+
+
+PokerStars Hand #197093327315: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:15:51 CET [2019/02/15 16:15:51 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 4: 00Laplace00 (2719 in chips) 
+Seat 6: wearedeadbro (6281 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+00Laplace00: posts small blind 100
+wearedeadbro: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [As Tc]
+00Laplace00: raises 2494 to 2694 and is all-in
+wearedeadbro: calls 2494
+*** FLOP *** [7c 4c 6c]
+*** TURN *** [7c 4c 6c] [8d]
+*** RIVER *** [7c 4c 6c 8d] [Qs]
+*** SHOW DOWN ***
+wearedeadbro: shows [Jh Ks] (high card King)
+00Laplace00: shows [As Tc] (high card Ace)
+00Laplace00 collected 5438 from pot
+*** SUMMARY ***
+Total pot 5438 | Rake 0 
+Board [7c 4c 6c 8d Qs]
+Seat 4: 00Laplace00 (button) (small blind) showed [As Tc] and won (5438) with high card Ace
+Seat 6: wearedeadbro (big blind) showed [Jh Ks] and lost with high card King
+
+
+
+PokerStars Hand #197093338342: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:16:05 CET [2019/02/15 16:16:05 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 4: 00Laplace00 (5438 in chips) 
+Seat 6: wearedeadbro (3562 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+wearedeadbro: posts small blind 100
+00Laplace00: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Qd Ts]
+wearedeadbro: calls 100
+00Laplace00: checks 
+*** FLOP *** [7h 5h 5c]
+00Laplace00: checks 
+wearedeadbro: bets 247
+00Laplace00: folds 
+Uncalled bet (247) returned to wearedeadbro
+wearedeadbro collected 450 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 450 | Rake 0 
+Board [7h 5h 5c]
+Seat 4: 00Laplace00 (big blind) folded on the Flop
+Seat 6: wearedeadbro (button) (small blind) collected (450)
+
+
+
+PokerStars Hand #197093360833: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:16:34 CET [2019/02/15 16:16:34 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 4: 00Laplace00 (5213 in chips) 
+Seat 6: wearedeadbro (3787 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+00Laplace00: posts small blind 100
+wearedeadbro: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [9h Ah]
+00Laplace00: raises 4988 to 5188 and is all-in
+wearedeadbro: folds 
+Uncalled bet (4988) returned to 00Laplace00
+00Laplace00 collected 450 from pot
+00Laplace00: doesn't show hand 
+*** SUMMARY ***
+Total pot 450 | Rake 0 
+Seat 4: 00Laplace00 (button) (small blind) collected (450)
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197093366798: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:16:41 CET [2019/02/15 16:16:41 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 4: 00Laplace00 (5438 in chips) 
+Seat 6: wearedeadbro (3562 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+wearedeadbro: posts small blind 100
+00Laplace00: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Qh Ad]
+wearedeadbro: folds 
+Uncalled bet (100) returned to 00Laplace00
+00Laplace00 collected 250 from pot
+00Laplace00: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 4: 00Laplace00 (big blind) collected (250)
+Seat 6: wearedeadbro (button) (small blind) folded before Flop
+
+
+
+PokerStars Hand #197093370270: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:16:46 CET [2019/02/15 16:16:46 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 4: 00Laplace00 (5563 in chips) 
+Seat 6: wearedeadbro (3437 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+00Laplace00: posts small blind 100
+wearedeadbro: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [8d 6c]
+00Laplace00: folds 
+Uncalled bet (100) returned to wearedeadbro
+wearedeadbro collected 250 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 4: 00Laplace00 (button) (small blind) folded before Flop
+Seat 6: wearedeadbro (big blind) collected (250)
+
+
+
+PokerStars Hand #197093373744: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:16:50 CET [2019/02/15 16:16:50 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 4: 00Laplace00 (5438 in chips) 
+Seat 6: wearedeadbro (3562 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+wearedeadbro: posts small blind 100
+00Laplace00: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Td Qd]
+wearedeadbro: raises 3337 to 3537 and is all-in
+00Laplace00: folds 
+Uncalled bet (3337) returned to wearedeadbro
+wearedeadbro collected 450 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 450 | Rake 0 
+Seat 4: 00Laplace00 (big blind) folded before Flop
+Seat 6: wearedeadbro (button) (small blind) collected (450)
+
+
+
+PokerStars Hand #197093378888: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:16:57 CET [2019/02/15 16:16:57 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 4: 00Laplace00 (5213 in chips) 
+Seat 6: wearedeadbro (3787 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+00Laplace00: posts small blind 100
+wearedeadbro: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Qc Jc]
+00Laplace00: raises 280 to 480
+wearedeadbro: calls 280
+*** FLOP *** [Kh 2h 6d]
+wearedeadbro: checks 
+00Laplace00: checks 
+*** TURN *** [Kh 2h 6d] [9h]
+wearedeadbro: checks 
+00Laplace00: checks 
+*** RIVER *** [Kh 2h 6d 9h] [4d]
+wearedeadbro: checks 
+00Laplace00: checks 
+*** SHOW DOWN ***
+wearedeadbro: shows [8c Ks] (a pair of Kings)
+00Laplace00: mucks hand 
+wearedeadbro collected 1010 from pot
+*** SUMMARY ***
+Total pot 1010 | Rake 0 
+Board [Kh 2h 6d 9h 4d]
+Seat 4: 00Laplace00 (button) (small blind) mucked [Qc Jc]
+Seat 6: wearedeadbro (big blind) showed [8c Ks] and won (1010) with a pair of Kings
+
+
+
+PokerStars Hand #197093399515: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:17:22 CET [2019/02/15 16:17:22 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 4: 00Laplace00 (4708 in chips) 
+Seat 6: wearedeadbro (4292 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+wearedeadbro: posts small blind 100
+00Laplace00: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [5s 9s]
+wearedeadbro: calls 100
+00Laplace00: checks 
+*** FLOP *** [5d 4h Qh]
+00Laplace00: checks 
+wearedeadbro: bets 247
+00Laplace00: calls 247
+*** TURN *** [5d 4h Qh] [2s]
+00Laplace00: checks 
+wearedeadbro: checks 
+*** RIVER *** [5d 4h Qh 2s] [5h]
+00Laplace00: bets 614
+wearedeadbro: calls 614
+*** SHOW DOWN ***
+00Laplace00: shows [5s 9s] (three of a kind, Fives)
+wearedeadbro: mucks hand 
+00Laplace00 collected 2172 from pot
+*** SUMMARY ***
+Total pot 2172 | Rake 0 
+Board [5d 4h Qh 2s 5h]
+Seat 4: 00Laplace00 (big blind) showed [5s 9s] and won (2172) with three of a kind, Fives
+Seat 6: wearedeadbro (button) (small blind) mucked [Qs 6h]
+
+
+
+PokerStars Hand #197093427337: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:17:57 CET [2019/02/15 16:17:57 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 4: 00Laplace00 (5794 in chips) 
+Seat 6: wearedeadbro (3206 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+00Laplace00: posts small blind 100
+wearedeadbro: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [2d 9d]
+00Laplace00: folds 
+Uncalled bet (100) returned to wearedeadbro
+wearedeadbro collected 250 from pot
+wearedeadbro: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 4: 00Laplace00 (button) (small blind) folded before Flop
+Seat 6: wearedeadbro (big blind) collected (250)
+
+
+
+PokerStars Hand #197093437199: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:18:10 CET [2019/02/15 16:18:10 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 4: 00Laplace00 (5669 in chips) 
+Seat 6: wearedeadbro (3331 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+wearedeadbro: posts small blind 100
+00Laplace00: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [8s Ah]
+wearedeadbro: calls 100
+00Laplace00: raises 5444 to 5644 and is all-in
+wearedeadbro: folds 
+Uncalled bet (5444) returned to 00Laplace00
+00Laplace00 collected 450 from pot
+00Laplace00: doesn't show hand 
+*** SUMMARY ***
+Total pot 450 | Rake 0 
+Seat 4: 00Laplace00 (big blind) collected (450)
+Seat 6: wearedeadbro (button) (small blind) folded before Flop
+
+
+
+PokerStars Hand #197093448546: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:18:24 CET [2019/02/15 16:18:24 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 4: 00Laplace00 (5894 in chips) 
+Seat 6: wearedeadbro (3106 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+00Laplace00: posts small blind 100
+wearedeadbro: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [Qc Tc]
+00Laplace00: raises 5669 to 5869 and is all-in
+wearedeadbro: folds 
+Uncalled bet (5669) returned to 00Laplace00
+00Laplace00 collected 450 from pot
+00Laplace00: doesn't show hand 
+*** SUMMARY ***
+Total pot 450 | Rake 0 
+Seat 4: 00Laplace00 (button) (small blind) collected (450)
+Seat 6: wearedeadbro (big blind) folded before Flop
+
+
+
+PokerStars Hand #197093457328: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:18:35 CET [2019/02/15 16:18:35 ET]
+Table '2539056602 1' 6-max Seat #6 is the button
+Seat 4: 00Laplace00 (6119 in chips) 
+Seat 6: wearedeadbro (2881 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+wearedeadbro: posts small blind 100
+00Laplace00: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [7h Ks]
+wearedeadbro: folds 
+Uncalled bet (100) returned to 00Laplace00
+00Laplace00 collected 250 from pot
+00Laplace00: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 4: 00Laplace00 (big blind) collected (250)
+Seat 6: wearedeadbro (button) (small blind) folded before Flop
+
+
+
+PokerStars Hand #197093459845: Tournament #2539056602, €0.46+€0.04 EUR Hold'em No Limit - Level VII (100/200) - 2019/02/15 22:18:38 CET [2019/02/15 16:18:38 ET]
+Table '2539056602 1' 6-max Seat #4 is the button
+Seat 4: 00Laplace00 (6244 in chips) 
+Seat 6: wearedeadbro (2756 in chips) 
+00Laplace00: posts the ante 25
+wearedeadbro: posts the ante 25
+00Laplace00: posts small blind 100
+wearedeadbro: posts big blind 200
+*** HOLE CARDS ***
+Dealt to 00Laplace00 [9h 9d]
+00Laplace00: raises 6019 to 6219 and is all-in
+wearedeadbro: calls 2531 and is all-in
+Uncalled bet (3488) returned to 00Laplace00
+*** FLOP *** [Ad 9c 2s]
+*** TURN *** [Ad 9c 2s] [8s]
+*** RIVER *** [Ad 9c 2s 8s] [3d]
+*** SHOW DOWN ***
+wearedeadbro: shows [7d Kh] (high card Ace)
+00Laplace00: shows [9h 9d] (three of a kind, Nines)
+00Laplace00 collected 5512 from pot
+wearedeadbro finished the tournament in 2nd place and received €0.96.
+00Laplace00 wins the tournament and receives €1.80 - congratulations!
+*** SUMMARY ***
+Total pot 5512 | Rake 0 
+Board [Ad 9c 2s 8s 3d]
+Seat 4: 00Laplace00 (button) (small blind) showed [9h 9d] and won (5512) with three of a kind, Nines
+Seat 6: wearedeadbro (big blind) showed [7d Kh] and lost with high card Ace
+
+
+
