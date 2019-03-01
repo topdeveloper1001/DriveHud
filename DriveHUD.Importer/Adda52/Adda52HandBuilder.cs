@@ -426,6 +426,7 @@ namespace DriveHUD.Importers.Adda52
         {
             tournament.TournamentsTags = TournamentsTags.STT;
             tournament.TournamentId = roomName.Substring(roomName.IndexOf('#') + 1);
+            tournament.TournamentName = roomName;
 
             if (string.IsNullOrEmpty(roomData.BuyinFees))
             {

@@ -429,6 +429,11 @@ namespace Model.Importer
 
         public static STTTypes ToSitNGoType(string tournamentName)
         {
+            if (string.IsNullOrEmpty(tournamentName))
+            {
+                return STTTypes.Normal;
+            }
+
             if (tournamentName.IndexOf("Beginner", StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 return STTTypes.Beginner;
