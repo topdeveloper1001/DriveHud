@@ -513,11 +513,17 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         private class PokerStarsImporterStub : PokerStarsImporter
         {
-            protected override string WindowClassName => null;
+            protected override string[] WindowClassNames => new[] { string.Empty };
 
             public new bool Match(string title, IntPtr handle, ParsingResult parsingResult)
             {
                 return base.Match(title, handle, parsingResult);
+            }
+
+            protected override bool TryMatchWindowClass(IntPtr handle, out string outWindowClassName)
+            {
+                outWindowClassName = string.Empty;
+                return true;
             }
         }
     }

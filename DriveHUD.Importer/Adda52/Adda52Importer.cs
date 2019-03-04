@@ -144,6 +144,9 @@ namespace DriveHUD.Importers.Adda52
                         Task.Delay(NoDataDelay).Wait();
                         continue;
                     }
+#if DEBUG
+                    // LogPacket(capturedPacket, ".log");
+#endif
 
                     if (!packetManager.TryParse(capturedPacket, out IList<Adda52Package> packages))
                     {
