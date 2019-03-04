@@ -20,12 +20,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.AndroidBase
 {
     internal class EmulatorService : IEmulatorService
     {
-        private const int exitTimeout = 7000;
+        private const int exitTimeout = 10000;
 
         private readonly Dictionary<int, TableWindow> windows = new Dictionary<int, TableWindow>();
 
@@ -122,7 +123,19 @@ namespace DriveHUD.Importers.AndroidBase
                 {
                     LogProvider.Log.Warn(this, $"Expected number of devices {expectedNumberOfDevices} doesn't match actual number {devices.Length}. Trying to kill server and run command again.");
                     AdbKillServer(adb);
-                    devices = GetAdbDevices(adb);
+                    Task.Delay(5000).Wait();                    
+
+                    var repeatDevices = GetAdbDevices(adb);
+
+                    if (repeatDevices.Length != expectedNumberOfDevices)
+                    {
+                        LogProvider.Log.Warn(this, $"Expected number of devices {expectedNumberOfDevices} still doesn't match actual number {devices.Length}.");
+                        devices = devices.Concat(repeatDevices).Distinct().ToArray();
+                    }
+                    else
+                    {
+                        devices = repeatDevices;
+                    }
                 }
 
                 var result = new List<string>();
@@ -192,7 +205,17 @@ namespace DriveHUD.Importers.AndroidBase
 
                     process.StartInfo = processInfo;
                     process.StartInfo.RedirectStandardOutput = true;
+                    process.StartInfo.RedirectStandardError = true;
+
                     process.OutputDataReceived += (s, a) =>
+                    {
+                        if (!string.IsNullOrEmpty(a.Data))
+                        {
+                            outputLines.Add(a.Data);
+                        }
+                    };
+
+                    process.ErrorDataReceived += (s, a) =>
                     {
                         if (!string.IsNullOrEmpty(a.Data))
                         {
@@ -202,6 +225,8 @@ namespace DriveHUD.Importers.AndroidBase
 
                     process.Start();
                     process.BeginOutputReadLine();
+                    process.BeginErrorReadLine();
+
                     process.WaitForExit(exitTimeout);
 
                     if (outputLines.Count == 0)

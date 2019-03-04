@@ -719,7 +719,7 @@ namespace Model.Filters
                 curPredicate = curPredicate.Or(x => x.CurrencyId == (short)state.Value);
             }
 
-            curPredicate = curPredicate.Or(x => x.CurrencyId == (short)Currency.All);
+            curPredicate = curPredicate.Or(x => x.CurrencyId == (short)Currency.All || x.CurrencyId == (short)Currency.Chips);
 
             return curPredicate;
         }
