@@ -10,6 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
 using System;
 using System.Linq;
 
@@ -93,8 +96,11 @@ namespace DriveHUD.Importers.PokerBaazi
         }
 
         protected override bool IsEnabled()
-        {           
-            return true;
+        {
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == EnumPokerSites.PokerBaazi);
+         
+            return siteSettings != null && siteSettings.Enabled;
         }       
 
         #endregion

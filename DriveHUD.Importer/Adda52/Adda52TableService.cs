@@ -168,16 +168,16 @@ namespace DriveHUD.Importers.Adda52
         private static readonly ReadOnlyDictionary<CashTableKey, string> ringTables = new ReadOnlyDictionary<CashTableKey, string>(
             new Dictionary<CashTableKey, string>
             {
-                [CashTableKey.From(2, 80, TableTypeDescription.Regular, GameType.NoLimitHoldem, 9)] = "Pune Pockets",
+                [CashTableKey.From(2, 80, TableTypeDescription.Regular, GameType.NoLimitHoldem, 6)] = "Pune Pockets",
                 [CashTableKey.From(2, 80, TableTypeDescription.Regular, GameType.PotLimitOmahaHiLo, 6)] = "PLO Hi/Lo",
                 [CashTableKey.From(2, 200, TableTypeDescription.Speed, GameType.PotLimitOmaha, 6)] = "PLO Joint",
-                [CashTableKey.From(4, 200, TableTypeDescription.Regular, GameType.NoLimitHoldem, 9)] = "Ahmedabad Aces",
+                [CashTableKey.From(4, 200, TableTypeDescription.Regular, GameType.NoLimitHoldem, 6)] = "Ahmedabad Aces",
                 [CashTableKey.From(4, 400, TableTypeDescription.Regular, GameType.NoLimitHoldem, 6)] = "Chandigarh Crack",
                 [CashTableKey.From(4, 400, TableTypeDescription.Speed, GameType.PotLimitOmaha, 6)] = "PLO Adda",
                 [CashTableKey.From(6, 600, TableTypeDescription.Regular, GameType.NoLimitHoldem, 6)] = "Kolkata Riders",
                 [CashTableKey.From(6, 600, TableTypeDescription.Speed, GameType.PotLimitOmaha, 6)] = "PLO Raiders",
                 [CashTableKey.From(10, 1000, TableTypeDescription.Speed, GameType.PotLimitOmaha, 6)] = "Pot Limit Omaha",
-                [CashTableKey.From(10, 1000, TableTypeDescription.Regular, GameType.NoLimitHoldem, 9)] = "Trichi Trips",
+                [CashTableKey.From(10, 1000, TableTypeDescription.Regular, GameType.NoLimitHoldem, 6)] = "Trichi Trips",
                 [CashTableKey.From(10, 1600, TableTypeDescription.Speed, GameType.NoLimitHoldem, 2)] = "Lucknow Headsup",
                 [CashTableKey.From(10, 1000, TableTypeDescription.Speed, GameType.PotLimitOmahaHiLo, 6)] = "PLO Hi/Lo Devil",
                 [CashTableKey.From(10, 1200, TableTypeDescription.Speed, GameType.NoLimitHoldem, 6)] = "Taj Texas",

@@ -151,7 +151,8 @@ namespace HandHistories.Parser.Utils.Extensions
             EnumPokerSites.PokerBaazi,
             EnumPokerSites.PokerKing,
             EnumPokerSites.PokerMaster,
-            EnumPokerSites.PPPoker
+            EnumPokerSites.PPPoker,
+            EnumPokerSites.RedDragon
         };
 
         private static readonly HashSet<EnumPokerSites> sitesStoredInIPokerFormat = new HashSet<EnumPokerSites>

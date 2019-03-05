@@ -44,6 +44,8 @@ namespace DriveHUD.Entities
                     return "PS";
                 case EnumPokerSites.PPPoker:
                     return "PPP";
+                case EnumPokerSites.RedDragon:
+                    return "RD";
                 case EnumPokerSites.SpartanPoker:
                     return "TSP";
                 case EnumPokerSites.SportsBetting:
