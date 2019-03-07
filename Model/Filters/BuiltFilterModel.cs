@@ -590,6 +590,7 @@ namespace Model.Filters
         #endregion
 
         #region Players Between Item (Standard Filter)
+
         private void SetPlayersBetweenItems()
         {
             if (StandardModel == null)
@@ -597,10 +598,12 @@ namespace Model.Filters
                 return;
             }
 
-            FilterSectionItem filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.PlayersBetween);
+            var filterSectionItem = FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.PlayersBetween);
 
-            filterSectionItem.Name = String.Format("Players={0}-{1}", StandardModel.PlayerCountMinSelectedItem, StandardModel.PlayerCountMaxSelectedItem);
-            filterSectionItem.IsActive = (StandardModel.PlayerCountMaxSelectedItem != StandardModel.PlayerCountMaxAvailable) || (StandardModel.PlayerCountMinSelectedItem != StandardModel.PlayerCountMinAvailable);
+            filterSectionItem.Name = $"Players={StandardModel.PlayerCountMinSelectedItem}-{StandardModel.PlayerCountMaxSelectedItem}";
+
+            filterSectionItem.IsActive = (StandardModel.PlayerCountMaxSelectedItem != StandardModel.PlayerCountMaxAvailable) ||
+                (StandardModel.PlayerCountMinSelectedItem != StandardModel.PlayerCountMinAvailable);
         }
 
         private void RemovePlayersBetweenItem()
