@@ -17,28 +17,29 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading;
 
 namespace Model.Reports
 {
     public class OpponentAnalysisReportCreator : CashBaseReportCreator<ReportIndicators>
     {
-        public override ObservableCollection<ReportIndicators> Create(List<Playerstatistic> statistics, bool forceRefresh = false)
+        public override ObservableCollection<ReportIndicators> Create(List<Playerstatistic> statistics, CancellationToken cancellationToken, bool forceRefresh = false)
         {
             var opponentReportService = ServiceLocator.Current.GetInstance<IOpponentReportService>();
 
-            var report = opponentReportService.GetReport();
+            var report = opponentReportService.GetReport(cancellationToken);
 
             return report != null ?
                 new ObservableCollection<ReportIndicators>(report) :
                 new ObservableCollection<ReportIndicators>();
         }
 
-        protected override List<ReportIndicators> CombineChunkedIndicators(BlockingCollection<ReportIndicators> chunkedIndicators)
+        protected override List<ReportIndicators> CombineChunkedIndicators(BlockingCollection<ReportIndicators> chunkedIndicators, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
 
-        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<ReportIndicators> chunkedIndicators)
+        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<ReportIndicators> chunkedIndicators, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }

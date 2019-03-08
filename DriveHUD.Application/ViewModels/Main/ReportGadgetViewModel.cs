@@ -25,7 +25,6 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Enums;
 using Model.Events;
-using Model.Events.FilterEvents;
 using Model.Export;
 using Model.Filters;
 using Model.Interfaces;
@@ -77,6 +76,8 @@ namespace DriveHUD.Application.ViewModels
 
         public ICommand ExportSelectedReportsTo3rdPartyCommand { get; private set; }
 
+        public ICommand CancelReportLoadingCommand { get; private set; }
+
         #endregion
 
         #region Initialize
@@ -101,6 +102,7 @@ namespace DriveHUD.Application.ViewModels
             ReportRadioButtonClickCommand = new RelayCommand(ReportRadioButtonClick);
             ExportSelectedHandsTo3rdPartyCommand = new RelayCommand(ExportSelectedHandsTo3rdParty);
             ExportSelectedReportsTo3rdPartyCommand = new RelayCommand(ExportSelectedReportsTo3rdParty);
+            CancelReportLoadingCommand = new RelayCommand(CancelReportLoading);
 
             InitializeFilter();
             UpdateReport();
@@ -277,6 +279,11 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private void CancelReportLoading(object obj)
+        {
+            eventAggregator.GetEvent<CancelReportLoadingEvent>().Publish(new EventArgs());
+        }
+
         private void ShowCalculateEquityView(object obj)
         {
             var requestEquityCalculatorEventArgs = obj is ReportHandViewModel reportHand ?
@@ -423,12 +430,6 @@ namespace DriveHUD.Application.ViewModels
 
         internal void UpdateReport(object obj = null)
         {
-            var filterPredicate = IsShowTournamentData ?
-                StorageModel?.TournamentFilterPredicate :
-                StorageModel?.CashFilterPredicate;
-
-            eventAggregator.GetEvent<UpdateReportEvent>().Publish(filterPredicate);
-
             App.Current.Dispatcher.Invoke(() =>
             {
                 if (ReportSelectedItemStat == EnumReports.None)

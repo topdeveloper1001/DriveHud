@@ -20,6 +20,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 
 namespace Model.Reports
 {
@@ -27,7 +28,7 @@ namespace Model.Reports
     {
         private Dictionary<short, TournamentGrouped> groupedTournaments;
 
-        public override ObservableCollection<ReportIndicators> Create(List<Playerstatistic> statistics, bool forceRefresh = false)
+        public override ObservableCollection<ReportIndicators> Create(List<Playerstatistic> statistics, CancellationToken cancellationToken, bool forceRefresh = false)
         {
             var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
 
@@ -41,15 +42,20 @@ namespace Model.Reports
                     Winning = x.Sum(t => t.Winningsincents)
                 });
 
-            return base.Create(statistics, forceRefresh);
+            return base.Create(statistics, cancellationToken, forceRefresh);
         }
 
-        protected override List<TournamentReportRecord> CombineChunkedIndicators(BlockingCollection<TournamentReportRecord> chunkedIndicators)
+        protected override List<TournamentReportRecord> CombineChunkedIndicators(BlockingCollection<TournamentReportRecord> chunkedIndicators, CancellationToken cancellationToken)
         {
             var reports = new List<TournamentReportRecord>();
 
             foreach (var chunkedIndicatorsGroup in chunkedIndicators.GroupBy(x => x.PokerSiteId))
             {
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    return reports;
+                }
+
                 var report = chunkedIndicatorsGroup.First();
 
                 chunkedIndicatorsGroup.Skip(1).ForEach(r => report.AddIndicator(r));
@@ -59,7 +65,7 @@ namespace Model.Reports
             return reports;
         }
 
-        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<TournamentReportRecord> chunkedIndicators)
+        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<TournamentReportRecord> chunkedIndicators, CancellationToken cancellationToken)
         {
             if (groupedTournaments == null)
             {
@@ -68,6 +74,11 @@ namespace Model.Reports
 
             foreach (var tournaments in groupedTournaments)
             {
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    return;
+                }
+
                 var report = new TournamentReportRecord
                 {
                     PokerSiteId = tournaments.Key
@@ -75,6 +86,11 @@ namespace Model.Reports
 
                 foreach (var playerstatistic in statistics.Where(x => tournaments.Key == x.PokersiteId && tournaments.Value.TournamentIds.Contains(x.TournamentId)))
                 {
+                    if (cancellationToken.IsCancellationRequested)
+                    {
+                        return;
+                    }
+
                     report.AddStatistic(playerstatistic);
                 }
 

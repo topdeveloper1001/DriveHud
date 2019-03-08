@@ -16,6 +16,7 @@ using Model.Data;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace Model.Reports
 {
@@ -26,31 +27,55 @@ namespace Model.Reports
 
         protected abstract GroupType GroupBy(T indicator);
 
-        protected override List<T> CombineChunkedIndicators(BlockingCollection<T> chunkedIndicators)
+        protected override List<T> CombineChunkedIndicators(BlockingCollection<T> chunkedIndicators, CancellationToken cancellationToken)
         {
             var reports = new List<T>();
 
             foreach (var chunkedIndicatorsByCards in chunkedIndicators.GroupBy(GroupBy))
             {
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    break;
+                }
+
                 var report = chunkedIndicatorsByCards.First();
 
-                chunkedIndicatorsByCards.Skip(1).ForEach(r => report.AddIndicator(r));
+                chunkedIndicatorsByCards.Skip(1).ForEach(r =>
+                {
+                    if (cancellationToken.IsCancellationRequested)
+                    {
+                        return;
+                    }
+
+                    report.AddIndicator(r);
+                });
+
                 reports.Add(report);
             }
 
             return reports;
         }
 
-        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<T> chunkedIndicators)
+        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<T> chunkedIndicators, CancellationToken cancellationToken)
         {
             foreach (var statisticsByCards in statistics.GroupBy(GroupBy).ToArray())
             {
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    return;
+                }
+
                 var report = CreateIndicator(statisticsByCards.Key);
 
                 chunkedIndicators.Add(report);
 
                 foreach (var playerstatistic in statisticsByCards)
                 {
+                    if (cancellationToken.IsCancellationRequested)
+                    {
+                        return;
+                    }
+
                     report.AddStatistic(playerstatistic);
                 }
             }

@@ -18,6 +18,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Cards = HandHistories.Objects.Cards;
 
 namespace Model.Reports
@@ -34,12 +35,17 @@ namespace Model.Reports
             }
         }
 
-        protected override List<ShowdownHandsReportRecord> CombineChunkedIndicators(BlockingCollection<ShowdownHandsReportRecord> chunkedIndicators)
+        protected override List<ShowdownHandsReportRecord> CombineChunkedIndicators(BlockingCollection<ShowdownHandsReportRecord> chunkedIndicators, CancellationToken cancellationToken)
         {
             var reports = new List<ShowdownHandsReportRecord>();
 
             foreach (var chunkedIndicatorsByCards in chunkedIndicators.GroupBy(x => x.ShowdownHand))
             {
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    return reports;
+                }
+
                 var report = chunkedIndicatorsByCards.First();
 
                 chunkedIndicatorsByCards.Skip(1).ForEach(r => report.AddIndicator(r));
@@ -49,7 +55,7 @@ namespace Model.Reports
             return reports;
         }
 
-        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<ShowdownHandsReportRecord> chunkedIndicators)
+        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<ShowdownHandsReportRecord> chunkedIndicators, CancellationToken cancellationToken)
         {
             var showdownStatistic = statistics
                 .Where(x => !string.IsNullOrEmpty(x.Cards) &&
@@ -62,6 +68,11 @@ namespace Model.Reports
 
             foreach (var showdownStatisticByCards in showdownStatistic)
             {
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    return;
+                }
+
                 if (showdownStatisticByCards.Key == null)
                 {
                     continue;
@@ -71,6 +82,11 @@ namespace Model.Reports
 
                 foreach (var playerstatistic in showdownStatisticByCards)
                 {
+                    if (cancellationToken.IsCancellationRequested)
+                    {
+                        return;
+                    }
+
                     report.AddStatistic(playerstatistic);
                     report.ShowdownHand = showdownStatisticByCards.Key.GetRank();
                 }

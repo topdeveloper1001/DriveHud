@@ -17,6 +17,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace Model.Reports
 {
@@ -24,14 +25,19 @@ namespace Model.Reports
     {
         private static TimeSpan sessionInterval = TimeSpan.FromMinutes(30);
 
-        protected override List<SessionReportIndicators> CombineChunkedIndicators(BlockingCollection<SessionReportIndicators> chunkedIndicators)
-        {
+        protected override List<SessionReportIndicators> CombineChunkedIndicators(BlockingCollection<SessionReportIndicators> chunkedIndicators, CancellationToken cancellationToken)
+        {           
             var reports = new List<SessionReportIndicators>();
 
             SessionReportIndicators report = null;
 
             foreach (var chunkedIndicator in chunkedIndicators.OrderByDescending(x => x.SessionEnd))
             {
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    return reports;
+                }
+
                 if (report != null && chunkedIndicator.SessionEnd.HasValue &&
                     Utils.IsDateInDateRange(chunkedIndicator.SessionEnd.Value, report.SessionStart, report.SessionEnd, sessionInterval))
                 {
@@ -47,12 +53,17 @@ namespace Model.Reports
             return reports;
         }
 
-        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<SessionReportIndicators> chunkedIndicators)
+        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<SessionReportIndicators> chunkedIndicators, CancellationToken cancellationToken)
         {
             SessionReportIndicators report = null;
 
             foreach (var playerstatistic in statistics.OrderByDescending(x => x.Time).ToArray())
             {
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    return;
+                }
+
                 if (report != null &&
                     Utils.IsDateInDateRange(playerstatistic.Time, report.SessionStart, report.SessionEnd, sessionInterval))
                 {

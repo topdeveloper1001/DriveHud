@@ -14,12 +14,13 @@ using DriveHUD.Entities;
 using Model.Data;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading;
 
 namespace Model.Reports
 {
     public interface IReportCreator
     {
-        ObservableCollection<ReportIndicators> Create(List<Playerstatistic> statistics, bool forceRefresh = false);
+        ObservableCollection<ReportIndicators> Create(List<Playerstatistic> statistics, CancellationToken cancellationToken, bool forceRefresh = false);
 
         bool IsTournament { get; }
     }

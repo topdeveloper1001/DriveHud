@@ -28,6 +28,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Model.Reports
@@ -65,18 +66,18 @@ namespace Model.Reports
         /// <summary>
         /// Gets population data
         /// </summary>        
-        public IEnumerable<ReportIndicators> GetReport(bool forceRefresh)
+        public IEnumerable<ReportIndicators> GetReport(bool forceRefresh, CancellationToken cancellationToken)
         {
             try
             {
                 if (!TryLoadCachedData())
                 {
                     ValidateCache();
-                    BuildReportData();
+                    BuildReportData(cancellationToken);
                 }
                 else if (!ValidateCache() || forceRefresh)
                 {
-                    BuildReportData();
+                    BuildReportData(cancellationToken);
                 }
 
                 return populationData.Report.ToList();
@@ -210,7 +211,7 @@ namespace Model.Reports
         /// <summary>
         /// Builds report data
         /// </summary>
-        private void BuildReportData()
+        private void BuildReportData(CancellationToken cancellationToken)
         {
             LogProvider.Log.Info("Building population report.");
 
@@ -241,14 +242,24 @@ namespace Model.Reports
 
                     var filterPredicate = storageModel.CashFilterPredicate.Compile();
 
-                    Parallel.ForEach(players, player =>
+                    Parallel.ForEach(players, (player, loopState) =>
                     {
+                        if (cancellationToken.IsCancellationRequested)
+                        {
+                            loopState.Break();
+                        }
+
                         var playerIndicators = new LightIndicators();
 
                         playerStatisticRepository.GetPlayerStatistic(player.PlayerId)
                             .Where(x => !x.IsTourney && FilterStatistic(x))
                             .ForEach(x =>
                             {
+                                if (cancellationToken.IsCancellationRequested)
+                                {
+                                    return;
+                                }
+
                                 playerIndicators.AddStatistic(x);
 
                                 if (filterPredicate(x))
@@ -265,14 +276,24 @@ namespace Model.Reports
 
                         if (playerType != null)
                         {
+                            if (cancellationToken.IsCancellationRequested)
+                            {
+                                return;
+                            }
+
                             playerStatisticRepository.GetPlayerStatistic(player.PlayerId)
                                 .Where(x => !x.IsTourney && FilterStatistic(x) && filterPredicate(x))
                                 .ForEach(x =>
                                 {
+                                    if (cancellationToken.IsCancellationRequested)
+                                    {
+                                        return;
+                                    }
+
                                     lock (populationIndicators[playerType.Name])
                                     {
                                         populationIndicators[playerType.Name].AddStatistic(x);
-                                    }                                    
+                                    }
                                 }
                             );
                         }
@@ -285,6 +306,12 @@ namespace Model.Reports
                     populationIndicators.Values.ForEach(x => x.PrepareHands());
 
                     populationData.Report = populationIndicators.Values.ToList();
+
+                    if (cancellationToken.IsCancellationRequested)
+                    {
+                        LogProvider.Log.Info("Population report has been cancelled.");
+                        return;
+                    }
 
                     SaveCachedData();
 

@@ -17,6 +17,7 @@ using Model.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace Model.Replayer
 {
@@ -43,7 +44,11 @@ namespace Model.Replayer
                 }
                 else
                 {
-                    var session = new SessionsReportCreator().Create(statistics.ToList()).Where(x => x.Statistics.Any(s => s.GameNumber == current.GameNumber));
+                    var cancellationTokenSource = new CancellationTokenSource();
+
+                    var session = new SessionsReportCreator()
+                        .Create(statistics.ToList(), cancellationTokenSource.Token)
+                        .Where(x => x.Statistics.Any(s => s.GameNumber == current.GameNumber));
 
                     if (session != null && session.Count() > 0)
                     {

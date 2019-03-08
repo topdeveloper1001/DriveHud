@@ -22,6 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 
 namespace Model.Reports
 {
@@ -64,7 +65,7 @@ namespace Model.Reports
         /// Gets the opponent report 
         /// </summary>
         /// <returns>The list of <see cref="Indicators"/></returns>
-        public IEnumerable<ReportIndicators> GetReport()
+        public IEnumerable<ReportIndicators> GetReport(CancellationToken cancellationToken)
         {
             if (storageModel == null ||
                 storageModel.PlayerSelectedItem == null)
@@ -96,7 +97,16 @@ namespace Model.Reports
             {
                 lock (syncLock)
                 {
-                    playersNetWonsToUpdate.ForEach(x => LoadPlayerData(x.PlayerId));
+                    playersNetWonsToUpdate.ForEach(x =>
+                    {
+                        if (cancellationToken.IsCancellationRequested)
+                        {
+                            return;
+                        }
+
+                        LoadPlayerData(x.PlayerId, cancellationToken);
+                    });
+
                     SaveData();
                 }
             }
@@ -290,7 +300,7 @@ namespace Model.Reports
         /// Loads and adds the data of the specified player to the report
         /// </summary>
         /// <param name="player">Player to load data</param>
-        private void LoadPlayerData(int playerId)
+        private void LoadPlayerData(int playerId, CancellationToken cancellationToken)
         {
             var opponentReportIndicators = new OpponentReportIndicators
             {
@@ -301,7 +311,15 @@ namespace Model.Reports
 
             playerStatisticRepository.GetPlayerStatistic(playerId)
                 .Where(x => playerHands.Contains(new HandHistoryKey(x.GameNumber, x.PokersiteId)) && !x.IsTourney)
-                .ForEach(x => opponentReportIndicators.AddStatistic(x));
+                .ForEach(x =>
+                {
+                    if (cancellationToken.IsCancellationRequested)
+                    {
+                        return;
+                    }
+
+                    opponentReportIndicators.AddStatistic(x);
+                });
 
             opponentReportIndicators.ShrinkReportHands();
         }
