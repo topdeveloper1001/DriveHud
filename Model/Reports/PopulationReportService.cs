@@ -310,6 +310,7 @@ namespace Model.Reports
                     if (cancellationToken.IsCancellationRequested)
                     {
                         LogProvider.Log.Info("Population report has been cancelled.");
+                        populationData.Report = new List<PopulationReportIndicators>();
                         return;
                     }
 
