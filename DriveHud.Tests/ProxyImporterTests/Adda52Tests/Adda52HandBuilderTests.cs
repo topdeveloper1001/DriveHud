@@ -56,6 +56,7 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
             ServiceLocator.SetLocatorProvider(() => locator);
         }
 
+        [TestCase("regular-6-max-no-hero-1")]
         [TestCase("regular-6-max-no-hero")]
         [TestCase("regular-9-max-hero")]
         [TestCase("regular-9-max-no-hero-1")]

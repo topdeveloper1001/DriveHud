@@ -461,7 +461,7 @@ namespace DriveHUD.Importers.Adda52
 
             var playerName = userAction.PlayerId.ToString();
 
-            var actionType = GetHandActionType(userAction.Action, handHistory, playerName, street);
+            var actionType = GetHandActionType(userAction, handHistory, playerName, street);
 
             HandAction action;
 
@@ -750,9 +750,9 @@ namespace DriveHUD.Importers.Adda52
             throw new HandBuilderException($"Unsupported game type: {roomData.RingVariant} {roomData.BettingRule}");
         }
 
-        private HandActionType GetHandActionType(UserActionType userActionType, HandHistory handHistory, string playerName, Street street)
+        private HandActionType GetHandActionType(UserAction userAction, HandHistory handHistory, string playerName, Street street)
         {
-            switch (userActionType)
+            switch (userAction.Action)
             {
                 case UserActionType.Fold:
                     return HandActionType.FOLD;
@@ -779,23 +779,9 @@ namespace DriveHUD.Importers.Adda52
                         return HandActionType.BET;
                     }
                 case UserActionType.CheckOrCall:
-                    {
-                        if (street == Street.Preflop)
-                        {
-                            return HandActionType.CALL;
-                        }
-
-                        var streetActions = handHistory.HandActions.Where(x => x.Street == street);
-
-                        if (streetActions.Any(x => x.Amount < 0))
-                        {
-                            return HandActionType.CALL;
-                        }
-
-                        return HandActionType.CHECK;
-                    }
+                    return userAction.Amount == 0 ? HandActionType.CHECK : HandActionType.CALL;
                 default:
-                    throw new HandBuilderException($"Unknown action type: {userActionType}");
+                    throw new HandBuilderException($"Unknown action type: {userAction.Action}");
             }
         }
 
