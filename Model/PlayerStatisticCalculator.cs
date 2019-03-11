@@ -128,7 +128,7 @@ namespace Model
 
             stat.OpenRaisePreflopInBBs = pfrAction != null && stat.BigBlind != 0 ? Math.Abs(pfrAction.Amount) / stat.BigBlind : 0;
 
-            bool vpip = playerHandActions.PreFlopAny(handAction => handAction.IsRaise() || handAction.IsCall());
+            bool vpip = playerHandActions.PreFlopAny(handAction => handAction.IsRaise() || (handAction.IsCall() && handAction.Amount != 0));
             bool pfr = pfrAction != null;
             bool pfrOcurred = parsedHand.PreFlop.Any(handAction => handAction.HandActionType == HandActionType.RAISE);
             int pfrRaisers = parsedHand.PreFlop.Where(x => x.HandActionType == HandActionType.RAISE).Count();
