@@ -357,14 +357,8 @@ namespace Model.Reports
         /// </summary>
         private void LoadPlayerHands()
         {
-            if (storageModel.StatisticCollection == null)
-            {
-                playerHands = new HashSet<HandHistoryKey>();
-                return;
-            }
-
-            playerHands = new HashSet<HandHistoryKey>(storageModel.StatisticCollection
-                .ToArray()
+            playerHands = new HashSet<HandHistoryKey>(storageModel
+                .GetStatisticCollection()
                 .Select(x => new HandHistoryKey(x.GameNumber, x.PokersiteId)));
         }
 

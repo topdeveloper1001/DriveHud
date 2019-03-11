@@ -145,7 +145,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
             var chartItemDataBuilder = CreateChartItemDataBuilder(ChartDisplayRange);
 
             // filter and orders
-            var stats = chartItemDataBuilder.PrepareStatistic(StorageModel.FilteredCashPlayerStatistic);
+            var stats = chartItemDataBuilder.PrepareStatistic(StorageModel.GetFilteredCashPlayerStatistic());
 
             object previousGroupKey = null;
 
@@ -205,7 +205,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 HandsCount = itemsCounter;
             }
 
-            App.Current.Dispatcher.Invoke(() => ChartCollection?.ForEach(x => x.ItemsCollection.Clear()));
+            App.Current.Dispatcher.Invoke(() => ChartCollection?.ForEach(x => x.ItemsCollection?.Clear()));
 
             if (chartSeriesItems.Count > 0)
             {

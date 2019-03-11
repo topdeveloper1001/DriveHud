@@ -777,7 +777,7 @@ namespace Model
                     }
                 });
 
-                storageModel.StatisticCollection.AddRange(statistic);
+                storageModel.AddStatistic(statistic);
             }
         }
 

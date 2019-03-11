@@ -104,7 +104,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
                 System.Windows.Application.Current.MainWindow.Topmost = true;
                 System.Windows.Application.Current.MainWindow.Topmost = false;
-            });          
+            });
 
             TableStateList = new List<ReplayerTableState>();
             PlayersCollection = new ObservableCollection<ReplayerPlayerViewModel>();
@@ -785,7 +785,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
                 var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
 
-                var statistic = storageModel.StatisticCollection.FirstOrDefault(x => x.GameNumber == CurrentHand.GameNumber && x.PokersiteId == CurrentHand.PokersiteId);
+                var statistic = storageModel.FindStatistic(x => x.GameNumber == CurrentHand.GameNumber && x.PokersiteId == CurrentHand.PokersiteId);
 
                 if (statistic == null)
                 {
@@ -1201,8 +1201,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 }
 
                 var statistics = CurrentHand.Statistic.IsTourney ?
-                    storageModel.FilteredTournamentPlayerStatistic :
-                    storageModel.FilteredCashPlayerStatistic;
+                    storageModel.GetFilteredTournamentPlayerStatistic() :
+                    storageModel.GetFilteredCashPlayerStatistic();
 
                 SessionHandsCollection = new ObservableCollection<ReplayerDataModel>(ReplayerHelpers.CreateSessionHandsList(statistics, CurrentHand.Statistic));
             }

@@ -289,11 +289,12 @@ namespace DriveHUD.Application.TableConfigurators
                         player == selectedPlayer.Name &&
                         (short?)selectedPlayer.PokerSite == viewModel.CurrentHand.PokersiteId)
                     {
-                        storageModel.StatisticCollection.ToList()
-                           .Where(stat => (stat.PokersiteId == (short)viewModel.CurrentGame.GameDescription.Site) &&
+                        storageModel
+                            .GetStatisticCollection()
+                            .Where(stat => (stat.PokersiteId == (short)viewModel.CurrentGame.GameDescription.Site) &&
                                 stat.IsTourney == viewModel.CurrentGame.GameDescription.IsTournament &&
                                 GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, viewModel.CurrentGame.GameDescription.GameType))
-                           .ForEach(stat => playerData.AddStatistic(stat));
+                            .ForEach(stat => playerData.AddStatistic(stat));
 
                         playerIndicators.AddOrUpdate(player, playerData, (key, old) => playerData);
                         return;
@@ -740,7 +741,7 @@ namespace DriveHUD.Application.TableConfigurators
             if (storageModel.PlayerSelectedItem.Name == replayerPlayer.Name &&
                 (short?)storageModel.PlayerSelectedItem.PokerSite == replayerViewModel.CurrentHand.PokersiteId)
             {
-                hudIndicators = new HudLightIndicators(storageModel.StatisticCollection.ToList());
+                hudIndicators = new HudLightIndicators(storageModel.GetStatisticCollection());
             }
             else
             {

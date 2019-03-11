@@ -145,7 +145,6 @@ namespace DriveHUD.Application.ViewModels
 
             SwitchViewModel(EnumViewModelType.DashboardViewModel);
 
-            StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
             StorageModel.PlayerCollection = new ObservableCollection<IPlayer>(dataService.GetPlayersList());
             StorageModel.PlayerCollection.AddRange(dataService.GetAliasesList());
             StorageModel.PropertyChanged += OnStorageModelPropertyChanged;
@@ -249,13 +248,9 @@ namespace DriveHUD.Application.ViewModels
 
             AddHandTags(statistics);
 
-            if (statistics != null || statistics.Any())
+            if (statistics != null && statistics.Count > 0)
             {
-                StorageModel.StatisticCollection.Reset(statistics);
-            }
-            else
-            {
-                StorageModel.StatisticCollection.Clear();
+                StorageModel.SetStatisticCollection(statistics);
             }
 
             CreatePositionReport();
@@ -452,7 +447,7 @@ namespace DriveHUD.Application.ViewModels
         {
             if (args.IsUpdatePlayersCollection)
             {
-                StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
+                StorageModel.ResetStatisticCollection();
                 StorageModel.PlayerCollection = new ObservableCollection<IPlayer>(dataService.GetPlayersList());
                 StorageModel.PlayerCollection.AddRange(dataService.GetAliasesList());
 

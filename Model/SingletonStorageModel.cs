@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="SingletonStorageModel.cs" company="Ace Poker Solutions">
-// Copyright © 2017 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,33 +10,119 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Annotations;
+using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
-using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Runtime.CompilerServices;
+using System.Threading;
 
 namespace Model
 {
-    public sealed class SingletonStorageModel : INotifyPropertyChanged
+    public sealed class SingletonStorageModel : BindableBase
     {
-        #region fields
-
-        #endregion
-
-        #region Constructor
+        private static readonly ReaderWriterLockSlim syncLock = new ReaderWriterLockSlim();
 
         public SingletonStorageModel()
         {
+            statisticCollection = new RangeObservableCollection<Playerstatistic>();
+            statisticCollection.CollectionChanged += OnStatisticCollectionCollectionChanged;
+        }
 
+        #region Properties
+
+        private static readonly Lazy<SingletonStorageModel> lazyInstance = new Lazy<SingletonStorageModel>(() => new SingletonStorageModel());
+
+        public static SingletonStorageModel Instance => lazyInstance.Value;
+
+        private readonly RangeObservableCollection<Playerstatistic> statisticCollection;
+        private List<Playerstatistic> filteredCashPlayerStatistic;
+        private List<Playerstatistic> filteredTournamentPlayerStatistic;
+
+        private Expression<Func<Playerstatistic, bool>> cashFilterPredicate = PredicateBuilder.True<Playerstatistic>();
+
+        public Expression<Func<Playerstatistic, bool>> CashFilterPredicate
+        {
+            get
+            {
+                return cashFilterPredicate;
+            }
+            set
+            {
+                cashFilterPredicate = value;
+
+                using (syncLock.Write())
+                {
+                    filteredCashPlayerStatistic = statisticCollection
+                        .Where(x => !x.IsTourney)
+                        .AsQueryable()
+                        .Where(CashFilterPredicate)
+                        .ToList();
+                }
+
+                RaisePropertyChanged();
+            }
+        }
+
+        private Expression<Func<Playerstatistic, bool>> tournamentFilterPredicate = PredicateBuilder.True<Playerstatistic>();
+
+        public Expression<Func<Playerstatistic, bool>> TournamentFilterPredicate
+        {
+            get
+            {
+                return tournamentFilterPredicate;
+            }
+            set
+            {
+                tournamentFilterPredicate = value;
+
+                using (syncLock.Write())
+                {
+                    filteredTournamentPlayerStatistic = statisticCollection
+                        .Where(x => x.IsTourney)
+                        .AsQueryable()
+                        .Where(TournamentFilterPredicate)
+                        .ToList();
+                }
+
+                RaisePropertyChanged();
+            }
+        }
+
+        private ObservableCollection<IPlayer> playerCollection;
+
+        public ObservableCollection<IPlayer> PlayerCollection
+        {
+            get
+            {
+                return playerCollection;
+            }
+            set
+            {
+                SetProperty(ref playerCollection, value);
+            }
+        }
+
+        private IPlayer playerSelectedItem;
+
+        public IPlayer PlayerSelectedItem
+        {
+            get
+            {
+                return playerSelectedItem;
+            }
+            set
+            {
+                SetProperty(ref playerSelectedItem, value);
+                RaisePropertyChanged("Indicators");
+            }
         }
 
         #endregion
@@ -78,16 +164,122 @@ namespace Model
             }
         }
 
-        private void StatisticCollection_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        public void AddStatistic(IEnumerable<Playerstatistic> playerstatistic)
         {
-            if (FilteredCashPlayerStatistic == null)
+            try
             {
-                FilteredCashPlayerStatistic = new List<Playerstatistic>();
+                syncLock.EnterWriteLock();
+                statisticCollection.AddRange(playerstatistic);
+            }
+            finally
+            {
+                syncLock.ExitWriteLock();
+            }
+        }
+
+        public List<Playerstatistic> GetStatisticCollection()
+        {
+            try
+            {
+                syncLock.EnterReadLock();
+                return statisticCollection.ToList();
+            }
+            finally
+            {
+                syncLock.ExitReadLock();
+            }
+        }
+
+        public Playerstatistic FindStatistic(Func<Playerstatistic, bool> predicate)
+        {
+            try
+            {
+                syncLock.EnterReadLock();
+                return statisticCollection.FirstOrDefault(predicate);
+            }
+            finally
+            {
+                syncLock.ExitReadLock();
+            }
+        }
+
+        public int RemoveStatistic(Func<Playerstatistic, bool> condition)
+        {
+            try
+            {
+                syncLock.EnterWriteLock();
+                return statisticCollection.RemoveByCondition(condition);
+            }
+            finally
+            {
+                syncLock.EnterWriteLock();
+            }
+        }
+
+        public List<Playerstatistic> GetFilteredCashPlayerStatistic()
+        {
+            try
+            {
+                syncLock.EnterReadLock();
+                return filteredCashPlayerStatistic?.ToList();
+            }
+            finally
+            {
+                syncLock.ExitReadLock();
+            }
+        }
+
+        public List<Playerstatistic> GetFilteredTournamentPlayerStatistic()
+        {
+            try
+            {
+                syncLock.EnterReadLock();
+                return filteredTournamentPlayerStatistic?.ToList();
+            }
+            finally
+            {
+                syncLock.ExitReadLock();
+            }
+        }
+
+        public void SetStatisticCollection(IEnumerable<Playerstatistic> statistic)
+        {
+            try
+            {
+                syncLock.EnterWriteLock();
+                statisticCollection.Reset(statistic);
+                UpdateFilteredStatistics();
+            }
+            finally
+            {
+                syncLock.ExitWriteLock();
+            }
+        }
+
+        public void ResetStatisticCollection()
+        {
+            try
+            {
+                syncLock.EnterWriteLock();
+                statisticCollection.Clear();
+                UpdateFilteredStatistics();
+            }
+            finally
+            {
+                syncLock.ExitWriteLock();
+            }
+        }
+
+        private void OnStatisticCollectionCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            if (filteredCashPlayerStatistic == null)
+            {
+                filteredCashPlayerStatistic = new List<Playerstatistic>();
             }
 
-            if (FilteredTournamentPlayerStatistic == null)
+            if (filteredTournamentPlayerStatistic == null)
             {
-                FilteredTournamentPlayerStatistic = new List<Playerstatistic>();
+                filteredTournamentPlayerStatistic = new List<Playerstatistic>();
             }
 
             switch (e.Action)
@@ -102,12 +294,12 @@ namespace Model
 
                     if (newCashItems != null && newCashItems.Any())
                     {
-                        FilteredCashPlayerStatistic.AddRange(newCashItems);
+                        filteredCashPlayerStatistic.AddRange(newCashItems);
                     }
 
                     if (newTournamentItems != null && newTournamentItems.Any())
                     {
-                        FilteredTournamentPlayerStatistic.AddRange(newTournamentItems);
+                        filteredTournamentPlayerStatistic.AddRange(newTournamentItems);
                     }
 
                     if (oldItems != null)
@@ -115,8 +307,8 @@ namespace Model
                         var oldCashItems = oldItems.Where(x => !x.IsTourney).AsQueryable().Where(CashFilterPredicate).ToList();
                         var oldTournamentItems = oldItems.Where(x => x.IsTourney).AsQueryable().Where(TournamentFilterPredicate).ToList();
 
-                        FilteredCashPlayerStatistic.RemoveRange(oldCashItems);
-                        FilteredTournamentPlayerStatistic.RemoveRange(oldTournamentItems);
+                        filteredCashPlayerStatistic.RemoveRange(oldCashItems);
+                        filteredTournamentPlayerStatistic.RemoveRange(oldTournamentItems);
                     }
 
                     break;
@@ -131,168 +323,10 @@ namespace Model
 
         private void UpdateFilteredStatistics()
         {
-            var statistic = StatisticCollection?.ToList();
-            FilteredCashPlayerStatistic = statistic?.Where(x => !x.IsTourney).AsQueryable().Where(CashFilterPredicate).ToList();
-            FilteredTournamentPlayerStatistic = statistic?.Where(x => x.IsTourney).AsQueryable().Where(TournamentFilterPredicate).ToList();
+            filteredCashPlayerStatistic = statisticCollection.Where(x => !x.IsTourney).AsQueryable().Where(CashFilterPredicate).ToList();
+            filteredTournamentPlayerStatistic = statisticCollection.Where(x => x.IsTourney).AsQueryable().Where(TournamentFilterPredicate).ToList();
         }
 
-        #endregion
-
-        #region Properties
-
-        private static readonly Lazy<SingletonStorageModel> lazy = new Lazy<SingletonStorageModel>(() => new SingletonStorageModel());
-        public static SingletonStorageModel Instance { get { return lazy.Value; } }
-
-        private RangeObservableCollection<Playerstatistic> _statisticCollection;
-        private ObservableCollection<IPlayer> _playerCollection;
-        private IPlayer _playerSelectedItem;
-
-        public RangeObservableCollection<Playerstatistic> StatisticCollection
-        {
-            get
-            {
-                return _statisticCollection;
-            }
-            set
-            {
-                if (StatisticCollection != null)
-                {
-                    StatisticCollection.CollectionChanged -= StatisticCollection_CollectionChanged;
-                }
-
-                _statisticCollection = value;
-
-                if (StatisticCollection != null)
-                {
-                    StatisticCollection.CollectionChanged += StatisticCollection_CollectionChanged;
-                }
-
-                OnPropertyChanged();
-            }
-        }
-
-        public ObservableCollection<IPlayer> PlayerCollection
-        {
-            get { return _playerCollection; }
-            set
-            {
-                _playerCollection = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public IPlayer PlayerSelectedItem
-        {
-            get { return _playerSelectedItem; }
-            set
-            {
-                if (_playerSelectedItem == value) return;
-
-                _playerSelectedItem = value;
-
-                OnPropertyChanged();
-                OnPropertyChanged("Indicators");
-            }
-        }
-
-        private Expression<Func<Playerstatistic, bool>> cashFilterPredicate = PredicateBuilder.True<Playerstatistic>();
-
-        public Expression<Func<Playerstatistic, bool>> CashFilterPredicate
-        {
-            get
-            {
-                return cashFilterPredicate;
-            }
-            set
-            {
-                cashFilterPredicate = value;
-
-                FilteredCashPlayerStatistic = StatisticCollection?
-                    .ToList()
-                    .Where(x => !x.IsTourney)
-                    .AsQueryable()
-                    .Where(CashFilterPredicate)
-                    .ToList();
-
-                OnPropertyChanged();
-            }
-        }
-
-        private Expression<Func<Playerstatistic, bool>> tournamentFilterPredicate = PredicateBuilder.True<Playerstatistic>();
-
-        public Expression<Func<Playerstatistic, bool>> TournamentFilterPredicate
-        {
-            get
-            {
-                return tournamentFilterPredicate;
-            }
-            set
-            {
-                tournamentFilterPredicate = value;
-
-                FilteredTournamentPlayerStatistic = StatisticCollection?
-                    .ToList()
-                    .Where(x => x.IsTourney)
-                    .AsQueryable()
-                    .Where(TournamentFilterPredicate)
-                    .ToList();
-
-                OnPropertyChanged();
-            }
-        }
-
-        private List<Playerstatistic> filteredCashPlayerStatistic;
-
-        public List<Playerstatistic> FilteredCashPlayerStatistic
-        {
-            get
-            {
-                return filteredCashPlayerStatistic;
-            }
-            set
-            {
-                if (ReferenceEquals(filteredCashPlayerStatistic, value))
-                {
-                    return;
-                }
-
-                filteredCashPlayerStatistic = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private List<Playerstatistic> filteredTournamentPlayerStatistic;
-
-        public List<Playerstatistic> FilteredTournamentPlayerStatistic
-        {
-            get
-            {
-                return filteredTournamentPlayerStatistic;
-            }
-            set
-            {
-                if (ReferenceEquals(filteredTournamentPlayerStatistic, value))
-                {
-                    return;
-                }
-
-                filteredTournamentPlayerStatistic = value;
-                OnPropertyChanged();
-            }
-        }
-
-        #endregion
-
-        #region Events
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        #endregion
+        #endregion      
     }
 }

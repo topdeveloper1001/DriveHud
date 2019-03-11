@@ -54,7 +54,7 @@ namespace DriveHUD.API
 
         public HandHistory[] GetHands(string date)
         {
-            var statisticCollection = storageModel.StatisticCollection.ToList();
+            var statisticCollection = storageModel.GetStatisticCollection();
 
             DateTime parsedDate = ParseDate(date, statisticCollection.Max(x => x.Time));
 
@@ -96,7 +96,7 @@ namespace DriveHUD.API
 
         public HandInfoDataContract[] GetHandsList(string date)
         {
-            var statisticCollection = storageModel.StatisticCollection.ToList();
+            var statisticCollection = storageModel.GetStatisticCollection();
 
             DateTime parsedDate = ParseDate(date, statisticCollection.Max(x => x.Time));
 

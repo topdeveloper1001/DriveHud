@@ -148,13 +148,8 @@ namespace DriveHUD.Application.ViewModels
         }
 
         private void InternalUpdate()
-        {
-            if (StorageModel.StatisticCollection == null)
-            {
-                return;
-            }
-
-            UpdateFilteredData();            
+        {            
+            UpdateFilteredData();
 
             MoneyWonGraphViewModel?.Update();
             BB100GraphViewModel?.Update();
@@ -172,14 +167,14 @@ namespace DriveHUD.Application.ViewModels
             else
             {
                 IndicatorCollection.Clean();
-            }
+            }        
 
-            if (StorageModel.FilteredCashPlayerStatistic == null)
+            var statistics = StorageModel.GetFilteredCashPlayerStatistic();
+
+            if (statistics == null)
             {
                 return;
             }
-
-            var statistics = StorageModel.FilteredCashPlayerStatistic.ToList();
 
             IndicatorCollection.UpdateSource(statistics);
 

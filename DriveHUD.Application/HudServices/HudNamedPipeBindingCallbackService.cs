@@ -129,7 +129,7 @@ namespace DriveHUD.Application.HudServices
 
                 var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
 
-                var statistic = storageModel.StatisticCollection.FirstOrDefault(x => x.GameNumber == gameNumber && x.PokersiteId == pokerSiteId);
+                var statistic = storageModel.FindStatistic(x => x.GameNumber == gameNumber && x.PokersiteId == pokerSiteId);
 
                 if (statistic == null)
                 {

@@ -362,7 +362,7 @@ namespace DriveHUD.Application.ViewModels
                           {
                               ReportSelectedItemStatisticsCollection.Remove(x);
                               ReportSelectedItem.ReportHands.Remove(x);
-                              StorageModel.StatisticCollection.RemoveByCondition(s => s.GameNumber == x.GameNumber && s.PokersiteId == x.PokerSiteId);
+                              StorageModel.RemoveStatistic(s => s.GameNumber == x.GameNumber && s.PokersiteId == x.PokerSiteId);
                           });
 
                           eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = true });
@@ -915,8 +915,7 @@ namespace DriveHUD.Application.ViewModels
             }
 
             ReportSelectedItemStatisticsCollection = new ObservableCollection<ReportHandViewModel>(StorageModel
-                .StatisticCollection
-                .ToList()
+                .GetStatisticCollection()
                 .Where(x => x.TournamentId == obj.TournamentNumber)
                 .Select(x => new ReportHandViewModel(x)));
         }

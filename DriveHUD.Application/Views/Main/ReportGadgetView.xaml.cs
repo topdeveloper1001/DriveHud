@@ -537,7 +537,9 @@ namespace DriveHUD.Application.Views
 
                 var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
 
-                var statistic = creator.IsTournament ? storageModel.FilteredTournamentPlayerStatistic : storageModel.FilteredCashPlayerStatistic;
+                var statistic = creator.IsTournament ?
+                    storageModel.GetFilteredTournamentPlayerStatistic() :
+                    storageModel.GetFilteredCashPlayerStatistic();
 
                 // stop loading report
                 reportCancellationTokenSource?.Cancel();

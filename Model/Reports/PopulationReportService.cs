@@ -136,14 +136,16 @@ namespace Model.Reports
                 case EnumDateFiterStruct.EnumDateFiter.LastMonth:
                     var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
 
-                    var lastCashAvailableDate = storageModel.StatisticCollection?
-                        .ToArray()
+                    var lastCashAvailableDate = storageModel
+                        .GetStatisticCollection()
                         .Where(x => !x.IsTourney)
                         .MaxOrDefault(x => Converter.ToLocalizedDateTime(x.Time));
 
-                    lastCashAvailableDate = lastCashAvailableDate ?? DateTime.Now;
+                    lastCashAvailableDate = lastCashAvailableDate == DateTime.MinValue ?
+                        DateTime.Now :
+                        lastCashAvailableDate;
 
-                    startDate = lastCashAvailableDate.Value.FirstDayOfMonth();
+                    startDate = lastCashAvailableDate.FirstDayOfMonth();
                     break;
             }
 
@@ -299,7 +301,7 @@ namespace Model.Reports
                         }
                     });
 
-                    allPlayersIndicator.PrepareHands(storageModel?.FilteredCashPlayerStatistic);
+                    allPlayersIndicator.PrepareHands(storageModel?.GetFilteredCashPlayerStatistic());
 
                     populationIndicators.Add(allPlayersIndicator.PlayerTypeName, allPlayersIndicator);
 
