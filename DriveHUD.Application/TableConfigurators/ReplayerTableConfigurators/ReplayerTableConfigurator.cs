@@ -364,6 +364,11 @@ namespace DriveHUD.Application.TableConfigurators
 
                 hudElementCreationInfo.SeatNumber = i + 1;
 
+                if ((int)activeLayout.TableType < hudElementCreationInfo.SeatNumber)
+                {
+                    continue;
+                }
+
                 var hudElement = hudElementCreator.Create(hudElementCreationInfo);
 
                 if (string.IsNullOrEmpty(replayerPlayer.Name))
