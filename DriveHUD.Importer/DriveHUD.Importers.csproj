@@ -101,6 +101,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dependencies\SharpPcap.dll</HintPath>
     </Reference>
+    <Reference Include="SmartFox2X">
+      <HintPath>..\dependencies\SmartFox2X.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="StreamExtended, Version=1.0.81.0, Culture=neutral, PublicKeyToken=bbfa0f1d54f50043, processorArchitecture=MSIL">
       <HintPath>..\packages\StreamExtended.1.0.81\lib\net45\StreamExtended.dll</HintPath>
     </Reference>
@@ -156,11 +160,12 @@
     <Compile Include="Adda52\Model\HoleCardsInfo.cs" />
     <Compile Include="Adda52\Model\MTTDetailedInfo.cs" />
     <Compile Include="Adda52\Model\MTTInfo.cs" />
-    <Compile Include="Adda52\Model\MTTPrize.cs" />
+    <Compile Include="Adda52\Model\MTTTable.cs" />
     <Compile Include="Adda52\Model\MTTPrizeInfo.cs" />
     <Compile Include="Adda52\Model\MTTPrizes.cs" />
     <Compile Include="Adda52\Model\MTTTableInfo.cs" />
     <Compile Include="Adda52\Model\MTTTables.cs" />
+    <Compile Include="Adda52\Model\PlayerActionChoices.cs" />
     <Compile Include="Adda52\Model\PlayerRank.cs" />
     <Compile Include="Adda52\Model\RoomData.cs" />
     <Compile Include="Adda52\Model\RoomSeatInfo.cs" />
@@ -563,7 +568,9 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Adda52\Libs\SmartFox2X.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

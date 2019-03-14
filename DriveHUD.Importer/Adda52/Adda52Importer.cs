@@ -271,7 +271,10 @@ namespace DriveHUD.Importers.Adda52
         {
             try
             {
-                var contentJson = Encoding.UTF8.GetString(package.Bytes);
+                if (!Adda52JsonPackage.TryParseJsonData(package.Bytes, out string contentJson))
+                {
+                    return;
+                }
 
                 var ignoreList = new[] { "game.keepAlive", "game.Message", "game.usercount", "game.avgstack", "game.account" };
 

@@ -33,17 +33,11 @@ namespace DriveHUD.Importers.Adda52
             {
                 return false;
             }
-
-            var jsonBytes = bytes.Skip(offset).SkipWhile(x => x != 0x7B).ToArray();
-            var lastBracketsIndex = Array.FindLastIndex(jsonBytes, x => x == 0x7D);
-
-            if (lastBracketsIndex > 0)
+         
+            package = new Adda52Package
             {
-                package = new Adda52Package
-                {
-                    Bytes = jsonBytes.Take(lastBracketsIndex + 1).ToArray()
-                };
-            }
+                Bytes = bytes.Skip(offset).ToArray()
+            };
 
             return package != null && package.Bytes.Length != 0;
         }

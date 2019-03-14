@@ -377,8 +377,8 @@ namespace DriveHUD.Importers.Adda52
 
             var tournamentData = mttData.Values.FirstOrDefault(x =>
                     x.MTTTables != null && x.MTTTables.MTTTableInfo != null &&
-                    x.MTTTables.MTTTableInfo.MTTPrizes != null &&
-                    x.MTTTables.MTTTableInfo.MTTPrizes.Any(m => m.TableName.Equals(roomName)));
+                    x.MTTTables.MTTTableInfo.MTTTables != null &&
+                    x.MTTTables.MTTTableInfo.MTTTables.Any(m => m.TableName.Equals(roomName)));
 
             if (tournamentData == null)
             {

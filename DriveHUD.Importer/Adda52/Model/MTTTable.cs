@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
-    internal sealed class MTTPrize
+    internal sealed class MTTTable
     {
         [JsonProperty("tbl")]
         public string TableName { get; set; }
