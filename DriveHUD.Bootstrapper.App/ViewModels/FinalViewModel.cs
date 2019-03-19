@@ -73,7 +73,8 @@ namespace DriveHUD.Bootstrapper.App.ViewModels
         {
             get
             {
-                return ErrorsList.Count > 0;
+                return ErrorsList.Count > 0 || 
+                    MainViewModel.BurnInstallationState == BurnInstallationState.Failed;
             }
         }
 

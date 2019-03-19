@@ -30,8 +30,8 @@
           IconSourceFile="..\DriveHUD.Application\images\drivehud.ico"
           UpgradeCode="d57055f7-9cf4-4582-a873-d606ac3ab658">
 
-    <bal:Condition  Message="This software can only be installed on Windows Vista and higher.">
-      <![CDATA[VersionNT >= v6.0]]>
+    <bal:Condition  Message="This software can only be installed on Windows 7 with Service Pack 1 and higher.">
+      <![CDATA[((VersionNT = v6.1) AND (ServicePackLevel >= 1)) OR VersionNT > v6.1]]>
     </bal:Condition>
 
     <BootstrapperApplicationRef Id='ManagedBootstrapperApplicationHost'>
