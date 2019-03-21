@@ -37,6 +37,7 @@ namespace DriveHUD.Importers.Adda52
         private Dictionary<int, RoomData> roomsData = new Dictionary<int, RoomData>();
         private Dictionary<string, MTTCombinedData> mttData = new Dictionary<string, MTTCombinedData>();
 
+        private const int DefaultStartingStack = 1500;
         private static readonly Currency currency = Currency.INR;
         private static string heroName;
         private static readonly string loggerName = EnumPokerSites.Adda52.ToString();
@@ -417,6 +418,12 @@ namespace DriveHUD.Importers.Adda52
                 }
                 else
                 {
+                    entryChips = tournamentData.MTTInfo?.MTTDetailedInfo?.EntryChipInfo?.EntryChips?.FirstOrDefault();
+
+                    tournament.StartingStack = entryChips != null ? entryChips.InitialStakes : DefaultStartingStack;
+
+                    tournament.BuyIn = Buyin.FromBuyinRake(0, 0, currency);
+
                     LogProvider.Log.Warn(this, $"Failed to find buyin info for {tournamentData.MTTTables.RoomName}. [{loggerName}]");
                 }
             }
