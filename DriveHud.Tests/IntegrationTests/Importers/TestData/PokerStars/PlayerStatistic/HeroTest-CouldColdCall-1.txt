@@ -1,0 +1,47 @@
+PokerStars Hand #3120951745: Hold'em No Limit ($0.50/$1) - 2015/08/24 18:39:08
+Table '#9958038' Seat #3 is the button
+Seat 1: PLR_3297610FA ($120.09 in chips)
+Seat 2: PLR_1114897MX ($10.35 in chips)
+Seat 3: HeroTest ($93.50 in chips)
+Seat 4: PLR_8645595SY ($60.25 in chips)
+Seat 5: PLR_6037388CY ($61.30 in chips)
+Seat 6: PLR_5836226FQ ($24.55 in chips)
+Seat 7: Hero ($99 in chips)
+Seat 8: PLR_5788432JK ($95.50 in chips)
+Seat 9: PLR_5086791VC ($100 in chips)
+PLR_8645595SY: posts small blind $0.50
+PLR_6037388CY: posts big blind $1
+PLR_5086791VC: posts big blind $1
+*** HOLE CARDS ***
+Dealt to Hero [6d 4s]
+PLR_5836226FQ: calls $1 
+Hero: folds
+PLR_5788432JK: folds
+PLR_5086791VC: checks
+PLR_3297610FA: folds
+PLR_1114897MX: raises $9.35 to $10.35 and is all-in
+HeroTest: folds
+PLR_8645595SY: folds
+PLR_6037388CY: folds
+PLR_5836226FQ: folds
+PLR_5086791VC: calls $9.35 
+*** FLOP *** [3h Qc Js]
+*** TURN *** [3h Qc Js] [3d]
+*** RIVER *** [3h Qc Js 3d] [9h]
+*** SHOW DOWN ***
+PLR_1114897MX: shows [3c 3s] (four of a kind, Threes)
+PLR_5086791VC: shows [4c Kc] (a pair of Threes)
+PLR_1114897MX collected $22.05 from pot
+*** SUMMARY ***
+Total pot $23.2 | Rake $1.15
+Board [3h Qc Js 3d 9h]
+Seat 1: PLR_3297610FA showed
+Seat 2: PLR_1114897MX showed [3c 3s] and won ($22.05) with four of a kind, Threes
+Seat 3: HeroTest (button) showed
+Seat 4: PLR_8645595SY (small blind) showed
+Seat 5: PLR_6037388CY (big blind) showed
+Seat 6: PLR_5836226FQ showed
+Seat 7: Hero showed
+Seat 8: PLR_5788432JK showed
+Seat 9: PLR_5086791VC showed [4c Kc] and lost with a pair of Threes
+

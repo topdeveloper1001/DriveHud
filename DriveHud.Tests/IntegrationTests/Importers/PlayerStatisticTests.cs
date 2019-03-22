@@ -1586,6 +1586,12 @@ namespace DriveHud.Tests.IntegrationTests.Importers
             AssertThatStatIsCalculated(x => x.Totalrakeincents, fileName, pokerSite, playerName, expected);
         }
 
+        [TestCase(@"HeroTest-CouldColdCall-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        public void CouldColdCallIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.Couldcoldcall, fileName, pokerSite, playerName, expected);
+        }
+
         #endregion
     }
 }

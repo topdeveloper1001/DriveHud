@@ -130,8 +130,9 @@ namespace Model
 
             bool vpip = playerHandActions.PreFlopAny(handAction => handAction.IsRaise() || (handAction.IsCall() && handAction.Amount != 0));
             bool pfr = pfrAction != null;
-            bool pfrOcurred = parsedHand.PreFlop.Any(handAction => handAction.HandActionType == HandActionType.RAISE);
-            int pfrRaisers = parsedHand.PreFlop.Where(x => x.HandActionType == HandActionType.RAISE).Count();
+
+            int pfrRaisers = parsedHand.PreFlop.Where(handAction => handAction.IsRaise()).Count();
+            bool pfrOcurred = pfrRaisers > 0;
 
             var preflops = parsedHand.PreFlop.ToList();
 
@@ -278,7 +279,7 @@ namespace Model
 
             if (pfrOcurred)
             {
-                var raiser = preflops.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE).PlayerName;
+                var raiser = preflops.FirstOrDefault(x => x.IsRaise()).PlayerName;
 
                 stat.FirstRaiserPosition = GetPlayerPosition(parsedHand, raiser);
 
@@ -2519,7 +2520,8 @@ namespace Model
                 {
                     ConditionalBet threeBet = new ConditionalBet();
 
-                    var raiser = group.FirstOrDefault(x => x.HandActionType == HandActionType.RAISE);
+                    var raiser = group.FirstOrDefault(x => x.IsRaise());
+
                     if (raiser != null)
                     {
                         Calculate3Bet(threeBet, group.ToList(), player, raiser.PlayerName);
