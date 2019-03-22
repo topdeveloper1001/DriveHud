@@ -68,8 +68,7 @@ namespace DriveHUD.Importers.Adda52
 
         public bool IsMatch(Request request)
         {
-            return request.RequestUri.Port == 8893 &&
-                request.RequestUri.Host.Contains("adda52.com") &&
+            return request.RequestUri.Host.Contains("adda52.com") &&
                 request.RequestUri.AbsolutePath.Contains("websocket");
         }
 
