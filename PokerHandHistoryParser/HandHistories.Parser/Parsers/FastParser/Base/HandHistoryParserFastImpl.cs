@@ -583,7 +583,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 {
                     HandAction currentAction = actions[i];
 
-                    if (currentAction.HandActionType != HandActionType.RAISE)
+                    if (currentAction.HandActionType != HandActionType.RAISE && !(currentAction is AllInAction) ||
+                        (currentAction is AllInAction allInAction) && allInAction.SourceActionType != HandActionType.RAISE)
                     {
                         continue;
                     }
@@ -617,7 +618,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                                 currentAction.DecreaseAmount(actions[j].Amount);
                                 continue;
                             }
-
 
                             // Player who posted SB/BB/SB+BB can check on their first action
                             if (actions[j].HandActionType == HandActionType.CHECK)

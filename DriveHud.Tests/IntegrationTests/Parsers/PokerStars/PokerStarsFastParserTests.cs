@@ -105,6 +105,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 161248135942)]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Bad-Header.txt", 163995445015)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max.txt", 35587765)]
         public void HandIdIsParsedTest(string handHistoryFile, long handId)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -113,6 +114,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", GameType.NoLimitHoldem)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max.txt", GameType.NoLimitHoldem)]
         public void GameTypeIsParsedTest(string handHistoryFile, GameType gameType)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -182,6 +184,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 9)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max.txt", 7)]
         public void SeatTypeMaxPlayersIsParsedTest(string handHistoryFile, int maxPlayers)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -421,17 +424,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.DealerButtonPosition, Is.EqualTo(dealerButtonPosition));
-        }
-
-        //[Test]
-        //[TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Zoom-6-max-0.02-0.05.txt", "2016/11/17 22:23:21")]
-        //public void DateOfHandUtcIsParsedTest(string handHistoryFile, string dateOfHand)
-        //{
-        //    var handHistory = ParseHandHistory(handHistoryFile);
-        //    var dateTime = DateTime.Parse(dateOfHand, CultureInfo.InvariantCulture);
-        //    var dateTimeUtc = dateTime.ToUniversalTime();
-        //    Assert.That(handHistory.DateOfHandUtc, Is.EqualTo(dateTimeUtc));
-        //}
+        }      
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 8, HandActionType.FOLD)]
@@ -455,6 +448,10 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", "leo.criv", -75, HandActionType.BET, Street.Turn, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", "leo.criv", 75, HandActionType.UNCALLED_BET, Street.Turn, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", "leo.criv", 150, HandActionType.WINS, Street.Summary, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max.txt", "KingFish", 200, HandActionType.WINS, Street.Summary, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max.txt", "KingFish", 4143.75, HandActionType.UNCALLED_BET, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max.txt", "KingFish", -4143.75, HandActionType.ALL_IN, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max-straddle.txt", "Devildareman", -200, HandActionType.STRADDLE, Street.Preflop, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

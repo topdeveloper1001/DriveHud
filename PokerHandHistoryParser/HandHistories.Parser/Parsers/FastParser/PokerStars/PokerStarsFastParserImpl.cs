@@ -36,7 +36,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
     {
         static readonly TimeZoneInfo PokerStarsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
 
-        private const string tournamentSummaryHeader = "PokerStars Tournament #";
+        private readonly static string[] tournamentSummaryHeaders = new[] { "PokerStars Tournament #", "9stacks Poker Tournament #", "9stacks Tournament #" };
 
         private int GameIdStartIndex = 17;
         private int TournamentIdStartindex = 43;
@@ -283,7 +283,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
         protected override bool IsSummaryHand(string[] handLines)
         {
-            return handLines.Length > 0 && handLines.Take(10).Any(x => x.StartsWith(tournamentSummaryHeader, StringComparison.InvariantCultureIgnoreCase));
+            return handLines.Length > 0 && handLines.Take(10).Any(x => tournamentSummaryHeaders.Any(t => x.StartsWith(t, StringComparison.OrdinalIgnoreCase)));
         }
 
         private const string summaryYouFinishedInText = "You finished in ";
@@ -300,9 +300,21 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             var handLineIndex = 0;
 
+            string tournamentSummaryHeader = null;
+
             foreach (var handLine in handLines)
             {
                 handLineIndex++;
+
+                if (tournamentSummaryHeader == null)
+                {
+                    tournamentSummaryHeader = tournamentSummaryHeaders.FirstOrDefault(x => handLine.ContainsIgnoreCase(x));
+
+                    if (tournamentSummaryHeader == null)
+                    {
+                        continue;
+                    }
+                }
 
                 var tournamentIndex = handLine.IndexOf(tournamentSummaryHeader, StringComparison.InvariantCultureIgnoreCase);
 
@@ -467,12 +479,22 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
         protected override SeatType ParseSeatType(string[] handLines)
         {
-            // line two looks like :
-            // Table 'Alcor V' 6-max Seat #4 is the button
-            int secondDash = handLines[1].LastIndexOf('\'');
+            int maxPlayers = 0;
 
-            // 2-max, 6-max or 9-max
-            int maxPlayers = FastInt.Parse(handLines[1][secondDash + 2], 1);
+            var seatTypeEndIndex = handLines[1].LastIndexOf("-max", StringComparison.OrdinalIgnoreCase);
+
+            if (seatTypeEndIndex > 0)
+            {
+                maxPlayers = FastInt.Parse(handLines[1][seatTypeEndIndex - 1], 1);
+            }
+            else
+            {
+                // line two looks like :
+                // Table 'Alcor V' 6-max Seat #4 is the button
+                int secondDash = handLines[1].LastIndexOf('\'');
+                // 2-max, 6-max or 9-max
+                maxPlayers = FastInt.Parse(handLines[1][secondDash + 2], 1);
+            }
 
             // can't have 1max so must be 10max
             if (maxPlayers == 1)
@@ -825,6 +847,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
                 }
             }
+
             throw new HandActionException(string.Join(Environment.NewLine, handLines), "No end of posting actions");
         }
 
@@ -1137,8 +1160,18 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             // bingo185: posts the ante $0.05
             // bingo185: posts small & big blinds $0.75
 
+            char identifierChar;
+
             // the column w/ the & is a unique identifier
-            char identifierChar = actionLine[colonIndex + 14];
+            if (actionLine.Length < colonIndex + 15)
+            {
+                identifierChar = actionLine[colonIndex + 2];
+            }
+            else
+            {
+                identifierChar = actionLine[colonIndex + 14];
+            }
+
             char lastChar = actionLine[actionLine.Length - 1];
 
             // Gaby66916: posts big blind $0.25 and is all-in
@@ -1154,8 +1187,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             int firstDigitIndex;
             HandActionType handActionType;
-
-
 
             switch (identifierChar)
             {
@@ -1174,6 +1205,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     handActionType = HandActionType.ANTE;
                     break;
 
+                case 'u':
+                    firstDigitIndex = colonIndex + 9;
+                    handActionType = HandActionType.STRADDLE;
+                    break;
+
                 case '&':
                     firstDigitIndex = colonIndex + 27;
                     handActionType = HandActionType.POSTS;
@@ -1183,6 +1219,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             }
 
             decimal amount = ParserUtils.ParseMoney(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex));
+
+            if (amount == 0 && handActionType == HandActionType.STRADDLE)
+            {
+                return null;
+            }
+
             return new HandAction(playerName, handActionType, amount, Street.Preflop, isAllIn);
         }
 
@@ -1192,6 +1234,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             // all-in likes look like: 'Piotr280688: raises $8.32 to $12.88 and is all-in' 
             bool isAllIn = actionLine[actionLine.Length - 1] == 'n';
+
             // Remove the  ' and is all in' and just proceed like normal
             if (isAllIn)
             {
@@ -1247,6 +1290,15 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     break;
                 default:
                     throw new HandActionException(actionLine, "ParseRegularActionLine: Unrecognized line:" + actionLine);
+            }
+
+            if (isAllIn)
+            {
+                return new AllInAction(playerName,
+                    amount,
+                    currentStreet,
+                    actionType == HandActionType.RAISE || actionType == HandActionType.BET,
+                    actionType);
             }
 
             return new HandAction(playerName, actionType, amount, currentStreet, isAllIn);

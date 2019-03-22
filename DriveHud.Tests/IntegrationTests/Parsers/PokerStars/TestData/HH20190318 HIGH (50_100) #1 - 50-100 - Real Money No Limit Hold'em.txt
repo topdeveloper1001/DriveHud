@@ -1,0 +1,3103 @@
+﻿9stacks Poker Hand #35587744:  Hold'em No Limit (50/100) - 2019/03/18 12:32:24 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (3,000 in chips)
+Seat 4: KingFish (3,000 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Qc Kd]
+KingFish: raises 150 to 200
+vish1784: calls 100
+*** FLOP *** [As 4c Ks]
+vish1784: checks
+KingFish: checks
+*** TURN *** [As 4c Ks] [6h]
+vish1784: bets 150
+KingFish: calls 150
+*** RIVER *** [As 4c Ks 6h] [Qs]
+vish1784: bets 150
+KingFish: raises 600 to 600
+vish1784: calls 450
+*** SHOW DOWN ***
+KingFish: shows [Qc Kd] (two pair, Kings and Queens)
+vish1784: mucks hand
+KingFish collected 1,805 from pot
+*** SUMMARY ***
+Total pot 1,805 | Rake 95 
+Board [As 4c Ks 6h Qs]
+Seat 3: vish1784 (big blind) mucked
+Seat 4: KingFish (button) (small blind) showed [Qc Kd] and won (1,805) with two pair, Kings and Queens
+
+
+9stacks Poker Hand #35587754:  Hold'em No Limit (50/100) - 2019/03/18 12:33:07 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (2,050 in chips)
+Seat 4: KingFish (3,855 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Jc 9h]
+vish1784: raises 200 to 250
+KingFish: calls 150
+*** FLOP *** [Jh 7d 4d]
+KingFish: checks
+vish1784: checks
+*** TURN *** [Jh 7d 4d] [8s]
+KingFish: bets 237.50
+vish1784: calls 237.50
+*** RIVER *** [Jh 7d 4d 8s] [8c]
+KingFish: checks
+vish1784: checks
+*** SHOW DOWN ***
+KingFish: shows [Jc 9h] (two pair, Jacks and Eights)
+vish1784: mucks hand
+KingFish collected 926.25 from pot
+*** SUMMARY ***
+Total pot 926.25 | Rake 48.75 
+Board [Jh 7d 4d 8s 8c]
+Seat 3: vish1784 (button) (small blind) mucked
+Seat 4: KingFish (big blind) showed [Jc 9h] and won (926.25) with two pair, Jacks and Eights
+
+
+9stacks Poker Hand #35587761:  Hold'em No Limit (50/100) - 2019/03/18 12:33:35 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (1,562.50 in chips)
+Seat 4: KingFish (4,293.75 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Qc 3s]
+KingFish: folds
+Uncalled bet (50) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: vish1784 (big blind) collected (100)
+Seat 4: KingFish (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35587765:  Hold'em No Limit (50/100) - 2019/03/18 12:33:47 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (1,612.50 in chips)
+Seat 4: KingFish (4,243.75 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [As 8h]
+vish1784: calls 50
+KingFish: raises 4,143.75 to 4,243.75 and is all-in
+vish1784: folds
+Uncalled bet (4,143.75) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 3: vish1784 (button) (small blind) folded before Flop 
+Seat 4: KingFish (big blind) collected (200)
+
+
+9stacks Poker Hand #35587772:  Hold'em No Limit (50/100) - 2019/03/18 12:34:27 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (1,512.50 in chips)
+Seat 4: KingFish (4,343.75 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [8s Ks]
+KingFish: raises 4,293.75 to 4,343.75 and is all-in
+vish1784: folds
+Uncalled bet (4,243.75) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 3: vish1784 (big blind) folded before Flop 
+Seat 4: KingFish (button) (small blind) collected (200)
+
+
+9stacks Poker Hand #35587774:  Hold'em No Limit (50/100) - 2019/03/18 12:34:41 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (1,412.50 in chips)
+Seat 4: KingFish (4,443.75 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [6c Kc]
+vish1784: calls 50
+KingFish: checks
+*** FLOP *** [Jh 5d 3s]
+KingFish: checks
+vish1784: bets 190
+KingFish: folds
+Uncalled bet (190) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 190 from pot
+*** SUMMARY ***
+Total pot 190 | Rake 10 
+Board [Jh 5d 3s]
+Seat 3: vish1784 (button) (small blind) collected (190)
+Seat 4: KingFish (big blind) folded on the Flop 
+
+
+9stacks Poker Hand #35587780:  Hold'em No Limit (50/100) - 2019/03/18 12:35:01 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (1,502.50 in chips)
+Seat 4: KingFish (4,343.75 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Ks Kh]
+KingFish: raises 150 to 200
+vish1784: calls 100
+*** FLOP *** [Ad 8d 8c]
+vish1784: checks
+KingFish: checks
+*** TURN *** [Ad 8d 8c] [Ah]
+vish1784: checks
+KingFish: checks
+*** RIVER *** [Ad 8d 8c Ah] [4c]
+vish1784: bets 200
+KingFish: calls 200
+*** SHOW DOWN ***
+vish1784: shows [6s 8h] (a full house, Eights full of Aces)
+KingFish: mucks hand
+vish1784 collected 760 from pot
+*** SUMMARY ***
+Total pot 760 | Rake 40 
+Board [Ad 8d 8c Ah 4c]
+Seat 3: vish1784 (big blind) showed [6s 8h] and won (760) with a full house, Eights full of Aces
+Seat 4: KingFish (button) (small blind) mucked
+
+
+9stacks Poker Hand #35587786:  Hold'em No Limit (50/100) - 2019/03/18 12:35:25 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (1,862.50 in chips)
+Seat 4: KingFish (3,943.75 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [6s Kd]
+vish1784: calls 50
+KingFish: checks
+*** FLOP *** [Ac Kh 7s]
+KingFish: checks
+vish1784: bets 142.50
+KingFish: calls 142.50
+*** TURN *** [Ac Kh 7s] [8c]
+KingFish: checks
+vish1784: checks
+*** RIVER *** [Ac Kh 7s 8c] [Js]
+KingFish: checks
+vish1784: checks
+*** SHOW DOWN ***
+KingFish: shows [6s Kd] (a pair of Kings)
+vish1784: mucks hand
+KingFish collected 460.75 from pot
+*** SUMMARY ***
+Total pot 460.75 | Rake 24.25 
+Board [Ac Kh 7s 8c Js]
+Seat 3: vish1784 (button) (small blind) mucked
+Seat 4: KingFish (big blind) showed [6s Kd] and won (460.75) with a pair of Kings
+
+
+9stacks Poker Hand #35587792:  Hold'em No Limit (50/100) - 2019/03/18 12:35:53 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (1,620 in chips)
+Seat 4: KingFish (4,162 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [4c 7d]
+KingFish: folds
+Uncalled bet (50) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: vish1784 (big blind) collected (100)
+Seat 4: KingFish (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35587798:  Hold'em No Limit (50/100) - 2019/03/18 12:36:13 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (1,670 in chips)
+Seat 4: KingFish (4,112 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [3c Js]
+vish1784: raises 200 to 250
+KingFish: folds
+Uncalled bet (150) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 3: vish1784 (button) (small blind) collected (200)
+Seat 4: KingFish (big blind) folded before Flop 
+
+
+9stacks Poker Hand #35587803:  Hold'em No Limit (50/100) - 2019/03/18 12:36:29 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (1,770 in chips)
+Seat 4: KingFish (4,012 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Jh 3c]
+KingFish: folds
+Uncalled bet (50) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: vish1784 (big blind) collected (100)
+Seat 4: KingFish (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35587807:  Hold'em No Limit (50/100) - 2019/03/18 12:36:41 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (1,820 in chips)
+Seat 4: KingFish (3,962 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [2d 6d]
+vish1784: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: vish1784 (button) (small blind) folded before Flop 
+Seat 4: KingFish (big blind) collected (100)
+
+
+9stacks Poker Hand #35587811:  Hold'em No Limit (50/100) - 2019/03/18 12:36:53 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (1,770 in chips)
+Seat 4: KingFish (4,012 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Kc 3d]
+KingFish: raises 150 to 200
+vish1784: raises 500 to 600
+KingFish: folds
+Uncalled bet (400) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 400 from pot
+*** SUMMARY ***
+Total pot 400 | Rake 0 
+Seat 3: vish1784 (big blind) collected (400)
+Seat 4: KingFish (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35587815:  Hold'em No Limit (50/100) - 2019/03/18 12:37:10 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (1,970 in chips)
+Seat 4: KingFish (3,812 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [8s Kh]
+vish1784: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: vish1784 (button) (small blind) folded before Flop 
+Seat 4: KingFish (big blind) collected (100)
+
+
+9stacks Poker Hand #35587818:  Hold'em No Limit (50/100) - 2019/03/18 12:37:20 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (1,920 in chips)
+Seat 4: KingFish (3,862 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [2s Js]
+KingFish: folds
+Uncalled bet (50) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: vish1784 (big blind) collected (100)
+Seat 4: KingFish (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35587821:  Hold'em No Limit (50/100) - 2019/03/18 12:37:31 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (1,970 in chips)
+Seat 4: KingFish (3,812 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Ad Qs]
+vish1784: calls 50
+KingFish: raises 200 to 300
+vish1784: folds
+Uncalled bet (200) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 3: vish1784 (button) (small blind) folded before Flop 
+Seat 4: KingFish (big blind) collected (200)
+
+
+9stacks Poker Hand #35587826:  Hold'em No Limit (50/100) - 2019/03/18 12:37:54 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (1,870 in chips)
+Seat 4: KingFish (3,912 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [5s As]
+KingFish: raises 150 to 200
+vish1784: calls 100
+*** FLOP *** [5h Ac Tc]
+vish1784: checks
+KingFish: bets 170
+vish1784: folds
+Uncalled bet (170) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 380 from pot
+*** SUMMARY ***
+Total pot 380 | Rake 20 
+Board [5h Ac Tc]
+Seat 3: vish1784 (big blind) folded on the Flop 
+Seat 4: KingFish (button) (small blind) collected (380)
+
+
+9stacks Poker Hand #35587833:  Hold'em No Limit (50/100) - 2019/03/18 12:38:15 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (1,670 in chips)
+Seat 4: KingFish (4,092 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [2s 7c]
+vish1784: calls 50
+KingFish: checks
+*** FLOP *** [Jd 8s 6c]
+KingFish: checks
+vish1784: checks
+*** TURN *** [Jd 8s 6c] [7d]
+KingFish: checks
+vish1784: checks
+*** RIVER *** [Jd 8s 6c 7d] [5s]
+KingFish: checks
+vish1784: bets 100
+KingFish: folds
+Uncalled bet (100) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 190 from pot
+*** SUMMARY ***
+Total pot 190 | Rake 10 
+Board [Jd 8s 6c 7d 5s]
+Seat 3: vish1784 (button) (small blind) collected (190)
+Seat 4: KingFish (big blind) folded on the River 
+
+
+9stacks Poker Hand #35587844:  Hold'em No Limit (50/100) - 2019/03/18 12:39:18 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (1,760 in chips)
+Seat 4: KingFish (3,992 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [8d 8h]
+KingFish: raises 150 to 200
+vish1784: calls 100
+*** FLOP *** [7h 3h Qs]
+vish1784: checks
+KingFish: checks
+*** TURN *** [7h 3h Qs] [Qd]
+vish1784: bets 150
+KingFish: calls 150
+*** RIVER *** [7h 3h Qs Qd] [4s]
+vish1784: bets 350
+KingFish: calls 350
+*** SHOW DOWN ***
+vish1784: shows [6s 5h] (a straight, Three to Seven)
+KingFish: mucks hand
+vish1784 collected 1,330 from pot
+*** SUMMARY ***
+Total pot 1,330 | Rake 70 
+Board [7h 3h Qs Qd 4s]
+Seat 3: vish1784 (big blind) showed [6s 5h] and won (1,330) with a straight, Three to Seven
+Seat 4: KingFish (button) (small blind) mucked
+
+
+9stacks Poker Hand #35587852:  Hold'em No Limit (50/100) - 2019/03/18 12:39:53 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (2,390 in chips)
+Seat 4: KingFish (3,292 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [6s Kc]
+vish1784: calls 50
+KingFish: checks
+*** FLOP *** [4h Qd 4c]
+KingFish: checks
+vish1784: bets 100
+KingFish: calls 100
+*** TURN *** [4h Qd 4c] [2c]
+KingFish: checks
+vish1784: checks
+*** RIVER *** [4h Qd 4c 2c] [6c]
+KingFish: checks
+vish1784: checks
+*** SHOW DOWN ***
+KingFish: shows [6s Kc] (two pair, Sixes and Fours)
+vish1784: mucks hand
+KingFish collected 380 from pot
+*** SUMMARY ***
+Total pot 380 | Rake 20 
+Board [4h Qd 4c 2c 6c]
+Seat 3: vish1784 (button) (small blind) mucked
+Seat 4: KingFish (big blind) showed [6s Kc] and won (380) with two pair, Sixes and Fours
+
+
+9stacks Poker Hand #35587860:  Hold'em No Limit (50/100) - 2019/03/18 12:40:22 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (2,190 in chips)
+Seat 4: KingFish (3,472 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [5c Qc]
+KingFish: raises 150 to 200
+vish1784: calls 100
+*** FLOP *** [2d 2c Ac]
+vish1784: checks
+KingFish: bets 190
+vish1784: folds
+Uncalled bet (190) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 380 from pot
+*** SUMMARY ***
+Total pot 380 | Rake 20 
+Board [2d 2c Ac]
+Seat 3: vish1784 (big blind) folded on the Flop 
+Seat 4: KingFish (button) (small blind) collected (380)
+
+
+9stacks Poker Hand #35587868:  Hold'em No Limit (50/100) - 2019/03/18 12:40:44 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (1,990 in chips)
+Seat 4: KingFish (3,652 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [4d 7c]
+vish1784: calls 50
+KingFish: checks
+*** FLOP *** [5s 8d Ah]
+KingFish: checks
+vish1784: bets 150
+KingFish: folds
+Uncalled bet (150) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 190 from pot
+*** SUMMARY ***
+Total pot 190 | Rake 10 
+Board [5s 8d Ah]
+Seat 3: vish1784 (button) (small blind) collected (190)
+Seat 4: KingFish (big blind) folded on the Flop 
+
+
+9stacks Poker Hand #35587872:  Hold'em No Limit (50/100) - 2019/03/18 12:41:08 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (2,080 in chips)
+Seat 4: KingFish (3,552 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Jh 4c]
+KingFish: folds
+Uncalled bet (50) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: vish1784 (big blind) collected (100)
+Seat 4: KingFish (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35587877:  Hold'em No Limit (50/100) - 2019/03/18 12:41:20 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (2,130 in chips)
+Seat 4: KingFish (3,502 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Ks As]
+vish1784: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: vish1784 (button) (small blind) folded before Flop 
+Seat 4: KingFish (big blind) collected (100)
+
+
+9stacks Poker Hand #35587880:  Hold'em No Limit (50/100) - 2019/03/18 12:41:30 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (2,080 in chips)
+Seat 4: KingFish (3,552 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Th Qd]
+KingFish: raises 150 to 200
+vish1784: folds
+Uncalled bet (100) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 3: vish1784 (big blind) folded before Flop 
+Seat 4: KingFish (button) (small blind) collected (200)
+
+
+9stacks Poker Hand #35587883:  Hold'em No Limit (50/100) - 2019/03/18 12:41:42 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (1,980 in chips)
+Seat 4: KingFish (3,652 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Jh 5d]
+vish1784: calls 50
+KingFish: checks
+*** FLOP *** [Ts Qc Th]
+KingFish: checks
+vish1784: checks
+*** TURN *** [Ts Qc Th] [4d]
+KingFish: checks
+vish1784: checks
+*** RIVER *** [Ts Qc Th 4d] [Jd]
+KingFish: checks
+vish1784: checks
+*** SHOW DOWN ***
+KingFish: shows [Jh 5d] (two pair, Jacks and Tens)
+vish1784: mucks hand
+KingFish collected 190 from pot
+*** SUMMARY ***
+Total pot 190 | Rake 10 
+Board [Ts Qc Th 4d Jd]
+Seat 3: vish1784 (button) (small blind) mucked
+Seat 4: KingFish (big blind) showed [Jh 5d] and won (190) with two pair, Jacks and Tens
+
+
+9stacks Poker Hand #35587892:  Hold'em No Limit (50/100) - 2019/03/18 12:42:18 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (1,880 in chips)
+Seat 4: KingFish (3,742 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [3h 6h]
+KingFish: raises 150 to 200
+vish1784: calls 100
+*** FLOP *** [6d 7s 4d]
+vish1784: checks
+KingFish: checks
+*** TURN *** [6d 7s 4d] [9c]
+vish1784: bets 150
+KingFish: calls 150
+*** RIVER *** [6d 7s 4d 9c] [5s]
+vish1784: bets 400
+KingFish: calls 400
+*** SHOW DOWN ***
+vish1784: shows [4s Kc] (a pair of Fours)
+KingFish: shows [3h 6h] (a straight, Three to Seven)
+KingFish collected 1,425 from pot
+*** SUMMARY ***
+Total pot 1,425 | Rake 75 
+Board [6d 7s 4d 9c 5s]
+Seat 3: vish1784 (big blind) showed [4s Kc] and lost with a pair of Fours
+Seat 4: KingFish (button) (small blind) showed [3h 6h] and won (1,425) with a straight, Three to Seven
+
+
+9stacks Poker Hand #35587981:  Hold'em No Limit (50/100) - 2019/03/18 12:48:28 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (3,000 in chips)
+Seat 4: KingFish (4,417 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [3c 2d]
+vish1784: calls 50
+KingFish: checks
+*** FLOP *** [5d Jd 9d]
+KingFish: checks
+vish1784: bets 142.50
+KingFish: folds
+Uncalled bet (142.50) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 190 from pot
+*** SUMMARY ***
+Total pot 190 | Rake 10 
+Board [5d Jd 9d]
+Seat 3: vish1784 (button) (small blind) collected (190)
+Seat 4: KingFish (big blind) folded on the Flop 
+
+
+9stacks Poker Hand #35587990:  Hold'em No Limit (50/100) - 2019/03/18 12:48:49 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (3,090 in chips)
+Seat 4: KingFish (4,317 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [4d 3h]
+KingFish: folds
+Uncalled bet (50) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: vish1784 (big blind) collected (100)
+Seat 4: KingFish (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35587994:  Hold'em No Limit (50/100) - 2019/03/18 12:49:03 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (3,140 in chips)
+Seat 4: KingFish (4,267 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [5c 2s]
+vish1784: calls 50
+KingFish: checks
+*** FLOP *** [5d As 3s]
+KingFish: checks
+vish1784: bets 200
+KingFish: folds
+Uncalled bet (200) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 190 from pot
+*** SUMMARY ***
+Total pot 190 | Rake 10 
+Board [5d As 3s]
+Seat 3: vish1784 (button) (small blind) collected (190)
+Seat 4: KingFish (big blind) folded on the Flop 
+
+
+9stacks Poker Hand #35587998:  Hold'em No Limit (50/100) - 2019/03/18 12:49:25 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (3,230 in chips)
+Seat 4: KingFish (4,167 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Tc Kc]
+KingFish: raises 150 to 200
+vish1784: folds
+Uncalled bet (100) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 3: vish1784 (big blind) folded before Flop 
+Seat 4: KingFish (button) (small blind) collected (200)
+
+
+9stacks Poker Hand #35588001:  Hold'em No Limit (50/100) - 2019/03/18 12:49:38 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (3,130 in chips)
+Seat 4: KingFish (4,267 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [7d 4d]
+vish1784: raises 200 to 250
+KingFish: calls 150
+*** FLOP *** [5d Kh 8c]
+KingFish: checks
+vish1784: bets 250
+KingFish: calls 250
+*** TURN *** [5d Kh 8c] [Qs]
+KingFish: checks
+vish1784: checks
+*** RIVER *** [5d Kh 8c Qs] [4h]
+KingFish: checks
+vish1784: checks
+*** SHOW DOWN ***
+KingFish: shows [7d 4d] (a pair of Fours)
+vish1784: mucks hand
+KingFish collected 950 from pot
+*** SUMMARY ***
+Total pot 950 | Rake 50 
+Board [5d Kh 8c Qs 4h]
+Seat 3: vish1784 (button) (small blind) mucked
+Seat 4: KingFish (big blind) showed [7d 4d] and won (950) with a pair of Fours
+
+
+9stacks Poker Hand #35588009:  Hold'em No Limit (50/100) - 2019/03/18 12:50:14 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (2,630 in chips)
+Seat 4: KingFish (4,717 in chips)
+KingFish: posts small blind 50
+vish1784: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [6h 5s]
+rr105 joins the table at seat #7
+KingFish: raises 150 to 200
+vish1784: calls 100
+*** FLOP *** [7c 8d Ad]
+vish1784: checks
+KingFish: bets 190
+vish1784: folds
+Uncalled bet (190) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 380 from pot
+*** SUMMARY ***
+Total pot 380 | Rake 20 
+Board [7c 8d Ad]
+Seat 3: vish1784 (big blind) folded on the Flop 
+Seat 4: KingFish (button) (small blind) collected (380)
+
+
+9stacks Poker Hand #35588017:  Hold'em No Limit (50/100) - 2019/03/18 12:50:34 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (2,430 in chips)
+Seat 4: KingFish (4,897 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [7d Kh]
+vish1784: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: vish1784 (button) (small blind) folded before Flop 
+Seat 4: KingFish (big blind) collected (100)
+
+
+9stacks Poker Hand #35588022:  Hold'em No Limit (50/100) - 2019/03/18 12:50:44 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (2,380 in chips)
+Seat 4: KingFish (4,947 in chips)
+Seat 7: rr105 (5,000 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+vish1784: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [3d 3s]
+KingFish: calls 150
+rr105: calls 100
+vish1784: checks
+*** FLOP *** [5c 2d 2s]
+KingFish: checks
+rr105: checks
+vish1784: checks
+*** TURN *** [5c 2d 2s] [4s]
+KingFish: checks
+rr105: bets 427.50
+vish1784: calls 427.50
+KingFish: folds
+*** RIVER *** [5c 2d 2s 4s] [9s]
+rr105: bets 691.12
+vish1784: calls 691.12
+*** SHOW DOWN ***
+rr105: shows [6d Td] (a pair of Deuces)
+vish1784: shows [Qh 4d] (two pair, Fours and Deuces)
+vish1784 collected 2,695.38 from pot
+*** SUMMARY ***
+Total pot 2,695.38 | Rake 141.86 
+Board [5c 2d 2s 4s 9s]
+Seat 3: vish1784 (button) showed [Qh 4d] and won (2,695.38) with two pair, Fours and Deuces
+Seat 4: KingFish (small blind) folded on the Turn 
+Seat 7: rr105 (big blind) showed [6d Td] and lost with a pair of Deuces
+
+
+9stacks Poker Hand #35588037:  Hold'em No Limit (50/100) - 2019/03/18 12:51:56 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (3,756.76 in chips)
+Seat 4: KingFish (4,747 in chips)
+Seat 7: rr105 (3,681.38 in chips)
+rr105: posts small blind 50
+vish1784: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [9c 2d]
+rr105: folds
+vish1784: folds
+Uncalled bet (100) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 250 from pot
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 3: vish1784 (big blind) folded before Flop 
+Seat 4: KingFish (button) collected (250)
+Seat 7: rr105 (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35588045:  Hold'em No Limit (50/100) - 2019/03/18 12:52:16 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 3: vish1784 (3,656.76 in chips)
+Seat 4: KingFish (4,897 in chips)
+Seat 7: rr105 (3,631.38 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [7s Qd]
+rr105: folds
+vish1784: raises 200 to 250
+KingFish: calls 150
+*** FLOP *** [Kh Qc Qh]
+vish1784: checks
+KingFish: checks
+*** TURN *** [Kh Qc Qh] [9s]
+vish1784: bets 200
+KingFish: calls 200
+*** RIVER *** [Kh Qc Qh 9s] [Ts]
+vish1784: bets 300
+KingFish: calls 300
+*** SHOW DOWN ***
+vish1784: shows [Ac Ah] (two pair, Aces and Queens)
+KingFish: shows [7s Qd] (three of a kind, Queens)
+KingFish collected 1,425 from pot
+*** SUMMARY ***
+Total pot 1,425 | Rake 75 
+Board [Kh Qc Qh 9s Ts]
+Seat 3: vish1784 (small blind) showed [Ac Ah] and lost with two pair, Aces and Queens
+Seat 4: KingFish (big blind) showed [7s Qd] and won (1,425) with three of a kind, Queens
+Seat 7: rr105 (button) folded before Flop (didn't bet)
+
+
+9stacks Poker Hand #35588056:  Hold'em No Limit (50/100) - 2019/03/18 12:53:03 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (2,906.76 in chips)
+Seat 4: KingFish (5,572 in chips)
+Seat 7: rr105 (3,631.38 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+vish1784: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [Th 6c]
+vish1784: raises 300 to 300
+KingFish: folds
+rr105: folds
+Uncalled bet (200) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 250 from pot
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 3: vish1784 (button) collected (250)
+Seat 4: KingFish (small blind) folded before Flop 
+Seat 7: rr105 (big blind) folded before Flop 
+
+
+9stacks Poker Hand #35588062:  Hold'em No Limit (50/100) - 2019/03/18 12:53:22 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: vish1784 (3,056.76 in chips)
+Seat 4: KingFish (5,522 in chips)
+Seat 7: rr105 (3,531.38 in chips)
+rr105: posts small blind 50
+vish1784: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [2s Td]
+rr105: folds
+vish1784: calls 100
+KingFish: checks
+*** FLOP *** [2c Js 6d]
+vish1784: checks
+KingFish: checks
+*** TURN *** [2c Js 6d] [5c]
+vish1784: checks
+KingFish: checks
+*** RIVER *** [2c Js 6d 5c] [8s]
+vish1784: bets 320.63
+KingFish: folds
+Uncalled bet (320.63) returned to vish1784
+*** SHOW DOWN ***
+vish1784: doesn't show hand
+vish1784 collected 427.50 from pot
+*** SUMMARY ***
+Total pot 427.50 | Rake 22.50 
+Board [2c Js 6d 5c 8s]
+Seat 3: vish1784 (big blind) collected (427.50)
+Seat 4: KingFish (button) folded on the River (didn't bet)
+Seat 7: rr105 (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592201:  Hold'em No Limit (50/100) - 2019/03/18 12:54:14 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (5,322 in chips)
+Seat 7: rr105 (3,481.38 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Kd Ks]
+rr105: raises 250 to 300
+KingFish: raises 1,011 to 1,111
+rr105: calls 811
+*** FLOP *** [5h 3d 9d]
+KingFish: bets 4,211 and is all-in
+rr105: calls 2,370.38 and is all-in
+Uncalled bet (1,840.62) returned to KingFish
+*** TURN *** [5h 3d 9d] [Ad]
+*** RIVER *** [5h 3d 9d Ad] [4s]
+*** SHOW DOWN ***
+KingFish: shows [Kd Ks] (a pair of Kings)
+rr105: shows [Qh 9h] (a pair of Nines)
+KingFish collected 6,614.63 from pot
+*** SUMMARY ***
+Total pot 6,614.63 | Rake 348.13 
+Board [5h 3d 9d Ad 4s]
+Seat 4: KingFish (big blind) showed [Kd Ks] and won (6,614.63) with a pair of Kings
+Seat 7: rr105 (button) (small blind) showed [Qh 9h] and lost with a pair of Nines
+
+
+9stacks Poker Hand #35592205:  Hold'em No Limit (50/100) - 2019/03/18 12:54:45 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (8,455.25 in chips)
+Seat 7: rr105 (5,000 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [9h 4d]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592207:  Hold'em No Limit (50/100) - 2019/03/18 12:54:58 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (8,405.25 in chips)
+Seat 7: rr105 (5,050 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [2d 8d]
+rr105: raises 250 to 300
+KingFish: folds
+Uncalled bet (200) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 4: KingFish (big blind) folded before Flop 
+Seat 7: rr105 (button) (small blind) collected (200)
+
+
+9stacks Poker Hand #35592210:  Hold'em No Limit (50/100) - 2019/03/18 12:55:12 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (8,305.25 in chips)
+Seat 7: rr105 (5,150 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [9c 4s]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592212:  Hold'em No Limit (50/100) - 2019/03/18 12:55:23 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (8,255.25 in chips)
+Seat 7: rr105 (5,200 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Qs Td]
+rr105: raises 250 to 300
+KingFish: calls 200
+*** FLOP *** [3c 8c Ah]
+KingFish: checks
+rr105: bets 285
+KingFish: folds
+Uncalled bet (285) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 570 from pot
+*** SUMMARY ***
+Total pot 570 | Rake 30 
+Board [3c 8c Ah]
+Seat 4: KingFish (big blind) folded on the Flop 
+Seat 7: rr105 (button) (small blind) collected (570)
+
+
+9stacks Poker Hand #35592214:  Hold'em No Limit (50/100) - 2019/03/18 12:55:44 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,955.25 in chips)
+Seat 7: rr105 (5,470 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Kc 7d]
+KingFish: raises 200 to 250
+rr105: folds
+Uncalled bet (150) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 4: KingFish (button) (small blind) collected (200)
+Seat 7: rr105 (big blind) folded before Flop 
+
+
+9stacks Poker Hand #35592216:  Hold'em No Limit (50/100) - 2019/03/18 12:56:00 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (8,055.25 in chips)
+Seat 7: rr105 (5,370 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [5d Ah]
+rr105: calls 50
+KingFish: raises 250 to 350
+rr105: folds
+Uncalled bet (250) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 4: KingFish (big blind) collected (200)
+Seat 7: rr105 (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592217:  Hold'em No Limit (50/100) - 2019/03/18 12:56:24 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (8,155.25 in chips)
+Seat 7: rr105 (5,270 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [2h Jd]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592219:  Hold'em No Limit (50/100) - 2019/03/18 12:56:36 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (8,105.25 in chips)
+Seat 7: rr105 (5,320 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Qs 9d]
+rr105: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592225:  Hold'em No Limit (50/100) - 2019/03/18 12:56:51 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (8,155.25 in chips)
+Seat 7: rr105 (5,270 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Qc 6s]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592227:  Hold'em No Limit (50/100) - 2019/03/18 12:57:04 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (8,105.25 in chips)
+Seat 7: rr105 (5,320 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Jd 4h]
+rr105: raises 250 to 300
+KingFish: folds
+Uncalled bet (200) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 4: KingFish (big blind) folded before Flop 
+Seat 7: rr105 (button) (small blind) collected (200)
+
+
+9stacks Poker Hand #35592229:  Hold'em No Limit (50/100) - 2019/03/18 12:57:20 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (8,005.25 in chips)
+Seat 7: rr105 (5,420 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [6d As]
+KingFish: raises 200 to 250
+rr105: calls 150
+*** FLOP *** [Ks 8s 6s]
+rr105: checks
+KingFish: bets 237.50
+rr105: calls 237.50
+*** TURN *** [Ks 8s 6s] [5s]
+rr105: bets 100
+KingFish: calls 100
+*** RIVER *** [Ks 8s 6s 5s] [Kd]
+rr105: bets 837.18
+KingFish: raises 7,417.75 to 7,417.75 and is all-in
+rr105: folds
+Uncalled bet (6,580.57) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 2,706.90 from pot
+*** SUMMARY ***
+Total pot 2,706.90 | Rake 142.46 
+Board [Ks 8s 6s 5s Kd]
+Seat 4: KingFish (button) (small blind) collected (2,706.90)
+Seat 7: rr105 (big blind) folded on the River 
+
+
+9stacks Poker Hand #35592239:  Hold'em No Limit (50/100) - 2019/03/18 12:58:27 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (9,287.47 in chips)
+Seat 7: rr105 (3,995.32 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [7d Th]
+rr105: raises 250 to 300
+KingFish: calls 200
+*** FLOP *** [Td Ad 5h]
+KingFish: checks
+rr105: checks
+*** TURN *** [Td Ad 5h] [3d]
+KingFish: checks
+rr105: bets 285
+KingFish: calls 285
+*** RIVER *** [Td Ad 5h 3d] [5s]
+KingFish: checks
+rr105: checks
+*** SHOW DOWN ***
+KingFish: shows [7d Th] (two pair, Tens and Fives)
+rr105: mucks hand
+KingFish collected 1,111.50 from pot
+*** SUMMARY ***
+Total pot 1,111.50 | Rake 58.50 
+Board [Td Ad 5h 3d 5s]
+Seat 4: KingFish (big blind) showed [7d Th] and won (1,111.50) with two pair, Tens and Fives
+Seat 7: rr105 (button) (small blind) mucked
+
+
+9stacks Poker Hand #35592243:  Hold'em No Limit (50/100) - 2019/03/18 12:59:07 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (9,813.97 in chips)
+Seat 7: rr105 (3,410.32 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [6d 3d]
+KingFish: raises 150 to 200
+rr105: calls 100
+*** FLOP *** [3h 6c 2c]
+rr105: checks
+KingFish: bets 190
+rr105: calls 190
+*** TURN *** [3h 6c 2c] [5d]
+rr105: checks
+KingFish: checks
+*** RIVER *** [3h 6c 2c 5d] [Tc]
+rr105: bets 370.50
+KingFish: folds
+Uncalled bet (370.50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 741 from pot
+*** SUMMARY ***
+Total pot 741 | Rake 39 
+Board [3h 6c 2c 5d Tc]
+Seat 4: KingFish (button) (small blind) folded on the River 
+Seat 7: rr105 (big blind) collected (741)
+
+
+9stacks Poker Hand #35592258:  Hold'em No Limit (50/100) - 2019/03/18 13:00:21 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (9,423.97 in chips)
+Seat 7: rr105 (3,761.32 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Js 5s]
+rr105: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592261:  Hold'em No Limit (50/100) - 2019/03/18 13:00:33 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (9,473.97 in chips)
+Seat 7: rr105 (3,711.32 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Ks Kh]
+KingFish: raises 150 to 200
+rr105: calls 100
+*** FLOP *** [3h 6s 2d]
+rr105: checks
+KingFish: bets 140
+rr105: calls 140
+*** TURN *** [3h 6s 2d] [Js]
+rr105: bets 646
+KingFish: calls 646
+*** RIVER *** [3h 6s 2d Js] [4c]
+rr105: checks
+KingFish: bets 1,405.05
+rr105: folds
+Uncalled bet (1,405.05) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 1,873.40 from pot
+*** SUMMARY ***
+Total pot 1,873.40 | Rake 98.60 
+Board [3h 6s 2d Js 4c]
+Seat 4: KingFish (button) (small blind) collected (1,873.40)
+Seat 7: rr105 (big blind) folded on the River 
+
+
+9stacks Poker Hand #35592278:  Hold'em No Limit (50/100) - 2019/03/18 13:01:25 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (10,361.37 in chips)
+Seat 7: rr105 (2,725.32 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Ah 7c]
+rr105: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592281:  Hold'em No Limit (50/100) - 2019/03/18 13:01:36 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (10,411.37 in chips)
+Seat 7: rr105 (2,675.32 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Qd As]
+KingFish: raises 150 to 200
+rr105: raises 500 to 600
+KingFish: raises 10,211.37 to 10,411.37 and is all-in
+rr105: calls 2,075.32 and is all-in
+Uncalled bet (7,736.05) returned to KingFish
+*** FLOP *** [Th 6h 5s]
+*** TURN *** [Th 6h 5s] [2c]
+*** RIVER *** [Th 6h 5s 2c] [9c]
+*** SHOW DOWN ***
+rr105: shows [Jc Jh] (a pair of Jacks)
+KingFish: shows [Qd As] (high card Ace)
+rr105 collected 5,083.11 from pot
+*** SUMMARY ***
+Total pot 5,083.11 | Rake 267.53 
+Board [Th 6h 5s 2c 9c]
+Seat 4: KingFish (button) (small blind) showed [Qd As] and lost with high card Ace
+Seat 7: rr105 (big blind) showed [Jc Jh] and won (5,083.11) with a pair of Jacks
+
+
+9stacks Poker Hand #35592289:  Hold'em No Limit (50/100) - 2019/03/18 13:02:07 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,736.05 in chips)
+Seat 7: rr105 (5,083.11 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [9c 2s]
+rr105: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592292:  Hold'em No Limit (50/100) - 2019/03/18 13:02:20 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,786.05 in chips)
+Seat 7: rr105 (5,033.11 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [3d Ts]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592296:  Hold'em No Limit (50/100) - 2019/03/18 13:02:32 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,736.05 in chips)
+Seat 7: rr105 (5,083.11 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Qs 9h]
+rr105: raises 150 to 200
+KingFish: calls 100
+*** FLOP *** [5d Td Ac]
+KingFish: checks
+rr105: bets 190
+KingFish: folds
+Uncalled bet (190) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 380 from pot
+*** SUMMARY ***
+Total pot 380 | Rake 20 
+Board [5d Td Ac]
+Seat 4: KingFish (big blind) folded on the Flop 
+Seat 7: rr105 (button) (small blind) collected (380)
+
+
+9stacks Poker Hand #35592306:  Hold'em No Limit (50/100) - 2019/03/18 13:02:55 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,536.05 in chips)
+Seat 7: rr105 (5,263.11 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [9d 4c]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592308:  Hold'em No Limit (50/100) - 2019/03/18 13:03:06 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,486.05 in chips)
+Seat 7: rr105 (5,313.11 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Ts Kd]
+rr105: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592310:  Hold'em No Limit (50/100) - 2019/03/18 13:03:17 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,536.05 in chips)
+Seat 7: rr105 (5,263.11 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Jd Td]
+KingFish: raises 200 to 250
+rr105: calls 150
+*** FLOP *** [7s 8h 6s]
+rr105: checks
+KingFish: bets 237.50
+rr105: calls 237.50
+*** TURN *** [7s 8h 6s] [Ad]
+rr105: checks
+KingFish: bets 463.12
+rr105: folds
+Uncalled bet (463.12) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 926.25 from pot
+*** SUMMARY ***
+Total pot 926.25 | Rake 48.75 
+Board [7s 8h 6s Ad]
+Seat 4: KingFish (button) (small blind) collected (926.25)
+Seat 7: rr105 (big blind) folded on the Turn 
+
+
+9stacks Poker Hand #35592325:  Hold'em No Limit (50/100) - 2019/03/18 13:04:06 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,974.80 in chips)
+Seat 7: rr105 (4,775.61 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [7c Qd]
+rr105: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592333:  Hold'em No Limit (50/100) - 2019/03/18 13:04:19 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (8,024.80 in chips)
+Seat 7: rr105 (4,725.61 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Ks Kc]
+KingFish: raises 200 to 250
+rr105: folds
+Uncalled bet (150) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 4: KingFish (button) (small blind) collected (200)
+Seat 7: rr105 (big blind) folded before Flop 
+
+
+9stacks Poker Hand #35592338:  Hold'em No Limit (50/100) - 2019/03/18 13:04:35 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (8,124.80 in chips)
+Seat 7: rr105 (4,625.61 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Kd 8s]
+cr4ck joins the table at seat #6
+rr105: raises 250 to 300
+KingFish: calls 200
+*** FLOP *** [7d Ks 2c]
+KingFish: checks
+rr105: bets 285
+KingFish: calls 285
+*** TURN *** [7d Ks 2c] [3h]
+KingFish: checks
+rr105: checks
+*** RIVER *** [7d Ks 2c 3h] [Ad]
+KingFish: checks
+rr105: bets 555.75
+KingFish: folds
+Uncalled bet (555.75) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 1,111.50 from pot
+*** SUMMARY ***
+Total pot 1,111.50 | Rake 58.50 
+Board [7d Ks 2c 3h Ad]
+Seat 4: KingFish (big blind) folded on the River 
+Seat 7: rr105 (button) (small blind) collected (1,111.50)
+
+
+9stacks Poker Hand #35592351:  Hold'em No Limit (50/100) - 2019/03/18 13:05:12 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,539.80 in chips)
+Seat 6: cr4ck (10,000 in chips)
+Seat 7: rr105 (5,152.11 in chips)
+KingFish: posts small blind 50
+cr4ck: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [Kc 3s]
+rr105: folds
+KingFish: calls 50
+cr4ck: raises 200 to 300
+KingFish: folds
+Uncalled bet (200) returned to cr4ck
+*** SHOW DOWN ***
+cr4ck: doesn't show hand
+cr4ck collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 4: KingFish (small blind) folded before Flop 
+Seat 6: cr4ck (big blind) collected (200)
+Seat 7: rr105 (button) folded before Flop (didn't bet)
+
+
+9stacks Poker Hand #35592357:  Hold'em No Limit (50/100) - 2019/03/18 13:05:29 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,439.80 in chips)
+Seat 7: rr105 (5,152.11 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Kd 5c]
+KingFish: raises 200 to 250
+rr105: calls 150
+*** FLOP *** [Ts 3s Ad]
+rr105: checks
+KingFish: bets 237.50
+rr105: calls 237.50
+*** TURN *** [Ts 3s Ad] [5s]
+rr105: checks
+KingFish: checks
+*** RIVER *** [Ts 3s Ad 5s] [Ah]
+rr105: checks
+KingFish: checks
+*** SHOW DOWN ***
+rr105: shows [Ks 3d] (two pair, Aces and Threes)
+KingFish: shows [Kd 5c] (two pair, Aces and Fives)
+KingFish collected 926.25 from pot
+*** SUMMARY ***
+Total pot 926.25 | Rake 48.75 
+Board [Ts 3s Ad 5s Ah]
+Seat 4: KingFish (button) (small blind) showed [Kd 5c] and won (926.25) with two pair, Aces and Fives
+Seat 7: rr105 (big blind) showed [Ks 3d] and lost with two pair, Aces and Threes
+
+
+9stacks Poker Hand #35592367:  Hold'em No Limit (50/100) - 2019/03/18 13:06:11 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,878.55 in chips)
+Seat 7: rr105 (4,664.61 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Ah Ts]
+rr105: raises 150 to 200
+KingFish: raises 650 to 750
+rr105: calls 550
+*** FLOP *** [Ks As 2s]
+KingFish: checks
+rr105: checks
+*** TURN *** [Ks As 2s] [6h]
+KingFish: bets 712.50
+rr105: folds
+Uncalled bet (712.50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 1,425 from pot
+*** SUMMARY ***
+Total pot 1,425 | Rake 75 
+Board [Ks As 2s 6h]
+Seat 4: KingFish (big blind) collected (1,425)
+Seat 7: rr105 (button) (small blind) folded on the Turn 
+
+
+9stacks Poker Hand #35592378:  Hold'em No Limit (50/100) - 2019/03/18 13:06:51 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (8,553.55 in chips)
+Seat 7: rr105 (3,914.61 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [8d Jc]
+KingFish: raises 200 to 250
+rr105: folds
+Uncalled bet (150) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 4: KingFish (button) (small blind) collected (200)
+Seat 7: rr105 (big blind) folded before Flop 
+
+
+9stacks Poker Hand #35592388:  Hold'em No Limit (50/100) - 2019/03/18 13:07:06 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: Devildareman (3,000 in chips)
+Seat 4: KingFish (8,653.55 in chips)
+Seat 7: rr105 (3,814.61 in chips)
+rr105: posts small blind 50
+Devildareman: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [9d Ah]
+rr105: folds
+Devildareman: folds
+Uncalled bet (100) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 250 from pot
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 3: Devildareman (big blind) folded before Flop 
+Seat 4: KingFish (button) collected (250)
+Seat 7: rr105 (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592393:  Hold'em No Limit (50/100) - 2019/03/18 13:07:20 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 3: Devildareman (2,900 in chips)
+Seat 4: KingFish (8,803.55 in chips)
+Seat 7: rr105 (3,764.61 in chips)
+Devildareman: posts small blind 50
+KingFish: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [Td Kc]
+rr105: folds
+Devildareman: calls 50
+KingFish: checks
+*** FLOP *** [3c 7h 2c]
+Devildareman: bets 190
+KingFish: calls 190
+*** TURN *** [3c 7h 2c] [Qh]
+Devildareman: bets 551
+KingFish: folds
+Uncalled bet (551) returned to Devildareman
+*** SHOW DOWN ***
+Devildareman: doesn't show hand
+Devildareman collected 551 from pot
+*** SUMMARY ***
+Total pot 551 | Rake 29 
+Board [3c 7h 2c Qh]
+Seat 3: Devildareman (small blind) collected (551)
+Seat 4: KingFish (big blind) folded on the Turn 
+Seat 7: rr105 (button) folded before Flop (didn't bet)
+
+
+9stacks Poker Hand #35592400:  Hold'em No Limit (50/100) - 2019/03/18 13:07:56 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: Devildareman (3,161 in chips)
+Seat 4: KingFish (8,513.55 in chips)
+Seat 7: rr105 (3,764.61 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+Devildareman: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [Kd 7c]
+KingFish: calls 150
+rr105: calls 100
+Devildareman: checks
+*** FLOP *** [Jc 8d Ad]
+KingFish: checks
+rr105: checks
+Devildareman: checks
+*** TURN *** [Jc 8d Ad] [Jh]
+KingFish: checks
+rr105: checks
+Devildareman: checks
+*** RIVER *** [Jc 8d Ad Jh] [Qc]
+KingFish: checks
+rr105: checks
+Devildareman: checks
+*** SHOW DOWN ***
+KingFish: shows [Kd 7c] (a pair of Jacks)
+rr105: shows [Qs 5d] (two pair, Queens and Jacks)
+Devildareman: mucks hand
+rr105 collected 570 from pot
+*** SUMMARY ***
+Total pot 570 | Rake 30 
+Board [Jc 8d Ad Jh Qc]
+Seat 3: Devildareman (button) mucked
+Seat 4: KingFish (small blind) showed [Kd 7c] and lost with a pair of Jacks
+Seat 7: rr105 (big blind) showed [Qs 5d] and won (570) with two pair, Queens and Jacks
+
+
+9stacks Poker Hand #35592414:  Hold'em No Limit (50/100) - 2019/03/18 13:08:41 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: Devildareman (2,961 in chips)
+Seat 4: KingFish (8,313.55 in chips)
+Seat 7: rr105 (4,134.61 in chips)
+rr105: posts small blind 50
+Devildareman: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [Ac 8d]
+rr105: folds
+Devildareman: calls 100
+KingFish: raises 8,113.55 to 8,313.55 and is all-in
+Devildareman: folds
+Uncalled bet (8,113.55) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 450 from pot
+*** SUMMARY ***
+Total pot 450 | Rake 0 
+Seat 3: Devildareman (big blind) folded before Flop 
+Seat 4: KingFish (button) collected (450)
+Seat 7: rr105 (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592422:  Hold'em No Limit (50/100) - 2019/03/18 13:09:02 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 3: Devildareman (2,761 in chips)
+Seat 4: KingFish (8,563.55 in chips)
+Seat 7: rr105 (4,084.61 in chips)
+Devildareman: posts small blind 50
+KingFish: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [8h 5s]
+rr105: folds
+Devildareman: raises 250 to 300
+KingFish: folds
+Uncalled bet (200) returned to Devildareman
+*** SHOW DOWN ***
+Devildareman: doesn't show hand
+Devildareman collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 3: Devildareman (small blind) collected (200)
+Seat 4: KingFish (big blind) folded before Flop 
+Seat 7: rr105 (button) folded before Flop (didn't bet)
+
+
+9stacks Poker Hand #35592428:  Hold'em No Limit (50/100) - 2019/03/18 13:09:19 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: Devildareman (2,861 in chips)
+Seat 4: KingFish (8,463.55 in chips)
+Seat 7: rr105 (4,084.61 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+Devildareman: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [Qh 8c]
+KingFish: calls 150
+rr105: folds
+Devildareman: checks
+*** FLOP *** [7h 8h Kc]
+KingFish: checks
+Devildareman: checks
+*** TURN *** [7h 8h Kc] [5s]
+KingFish: bets 237.50
+Devildareman: calls 237.50
+*** RIVER *** [7h 8h Kc 5s] [2s]
+KingFish: checks
+Devildareman: checks
+*** SHOW DOWN ***
+KingFish: shows [Qh 8c] (a pair of Eights)
+Devildareman: mucks hand
+KingFish collected 926.25 from pot
+*** SUMMARY ***
+Total pot 926.25 | Rake 48.75 
+Board [7h 8h Kc 5s 2s]
+Seat 3: Devildareman (button) mucked
+Seat 4: KingFish (small blind) showed [Qh 8c] and won (926.25) with a pair of Eights
+Seat 7: rr105 (big blind) folded before Flop 
+
+
+9stacks Poker Hand #35592437:  Hold'em No Limit (50/100) - 2019/03/18 13:09:49 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: Devildareman (2,423.50 in chips)
+Seat 4: KingFish (8,952.30 in chips)
+Seat 7: rr105 (3,984.61 in chips)
+rr105: posts small blind 50
+Devildareman: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [Qd Kc]
+rr105: folds
+Devildareman: calls 100
+KingFish: raises 8,752.30 to 8,952.30 and is all-in
+Devildareman: folds
+Uncalled bet (8,752.30) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 450 from pot
+*** SUMMARY ***
+Total pot 450 | Rake 0 
+Seat 3: Devildareman (big blind) folded before Flop 
+Seat 4: KingFish (button) collected (450)
+Seat 7: rr105 (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592445:  Hold'em No Limit (50/100) - 2019/03/18 13:10:11 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 3: Devildareman (2,223.50 in chips)
+Seat 4: KingFish (9,202.30 in chips)
+Seat 7: rr105 (3,934.61 in chips)
+Devildareman: posts small blind 50
+KingFish: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [Jd Td]
+rr105: raises 300 to 300
+Devildareman: calls 250
+KingFish: calls 200
+*** FLOP *** [Ts 6h 2c]
+Devildareman: checks
+KingFish: checks
+rr105: bets 427.50
+Devildareman: raises 1,923.50 to 1,923.50 and is all-in
+KingFish: folds
+rr105: calls 1,496
+*** TURN *** [Ts 6h 2c] [5c]
+*** RIVER *** [Ts 6h 2c 5c] [2h]
+*** SHOW DOWN ***
+Devildareman: shows [As Ac] (two pair, Aces and Deuces)
+rr105: shows [9d 9c] (two pair, Nines and Deuces)
+Devildareman collected 4,509.65 from pot
+*** SUMMARY ***
+Total pot 4,509.65 | Rake 237.35 
+Board [Ts 6h 2c 5c 2h]
+Seat 3: Devildareman (small blind) showed [As Ac] and won (4,509.65) with two pair, Aces and Deuces
+Seat 4: KingFish (big blind) folded on the Flop 
+Seat 7: rr105 (button) showed [9d 9c] and lost with two pair, Nines and Deuces
+
+
+9stacks Poker Hand #35592457:  Hold'em No Limit (50/100) - 2019/03/18 13:10:48 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: Devildareman (4,509.65 in chips)
+Seat 4: KingFish (8,902.30 in chips)
+Seat 7: rr105 (1,711.11 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+Devildareman: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [Tc 7s]
+Devildareman: folds
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: Devildareman (button) folded before Flop (didn't bet)
+Seat 4: KingFish (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592462:  Hold'em No Limit (50/100) - 2019/03/18 13:11:01 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: Devildareman (4,509.65 in chips)
+Seat 4: KingFish (8,852.30 in chips)
+Seat 7: rr105 (1,761.11 in chips)
+rr105: posts small blind 50
+Devildareman: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [Tc 8s]
+rr105: folds
+Devildareman: calls 100
+KingFish: checks
+*** FLOP *** [Qd 8d 3h]
+Devildareman: checks
+KingFish: checks
+*** TURN *** [Qd 8d 3h] [Ad]
+Devildareman: checks
+KingFish: checks
+*** RIVER *** [Qd 8d 3h Ad] [2c]
+Devildareman: checks
+KingFish: checks
+*** SHOW DOWN ***
+Devildareman: shows [7h Ks] (high card Ace)
+KingFish: shows [Tc 8s] (a pair of Eights)
+KingFish collected 427.50 from pot
+*** SUMMARY ***
+Total pot 427.50 | Rake 22.50 
+Board [Qd 8d 3h Ad 2c]
+Seat 3: Devildareman (big blind) showed [7h Ks] and lost with high card Ace
+Seat 4: KingFish (button) showed [Tc 8s] and won (427.50) with a pair of Eights
+Seat 7: rr105 (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592471:  Hold'em No Limit (50/100) - 2019/03/18 13:11:32 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 3: Devildareman (4,309.65 in chips)
+Seat 4: KingFish (9,079.80 in chips)
+Seat 7: rr105 (1,711.11 in chips)
+Devildareman: posts small blind 50
+KingFish: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [Qh Kd]
+rr105: folds
+Ashu21 joins the table at seat #1
+Devildareman: calls 50
+KingFish: raises 250 to 350
+Devildareman: calls 250
+*** FLOP *** [5s Qd Ac]
+Ashu21 leaves the table
+Devildareman: checks
+KingFish: checks
+*** TURN *** [5s Qd Ac] [8c]
+Devildareman: checks
+KingFish: bets 332.50
+Devildareman: calls 332.50
+*** RIVER *** [5s Qd Ac 8c] [7d]
+Devildareman: checks
+KingFish: checks
+*** SHOW DOWN ***
+Devildareman: shows [9s 8s] (a pair of Eights)
+KingFish: shows [Qh Kd] (a pair of Queens)
+KingFish collected 1,296.75 from pot
+*** SUMMARY ***
+Total pot 1,296.75 | Rake 68.25 
+Board [5s Qd Ac 8c 7d]
+Seat 3: Devildareman (small blind) showed [9s 8s] and lost with a pair of Eights
+Seat 4: KingFish (big blind) showed [Qh Kd] and won (1,296.75) with a pair of Queens
+Seat 7: rr105 (button) folded before Flop (didn't bet)
+
+
+9stacks Poker Hand #35592484:  Hold'em No Limit (50/100) - 2019/03/18 13:12:14 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: Devildareman (3,627.15 in chips)
+Seat 4: KingFish (9,694.05 in chips)
+Seat 7: rr105 (1,711.11 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+Devildareman: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [4s Tc]
+KingFish: folds
+rr105: raises 550 to 650
+Devildareman: folds
+Uncalled bet (450) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 450 from pot
+*** SUMMARY ***
+Total pot 450 | Rake 0 
+Seat 3: Devildareman (button) folded before Flop (didn't bet)
+Seat 4: KingFish (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (450)
+
+
+9stacks Poker Hand #35592488:  Hold'em No Limit (50/100) - 2019/03/18 13:12:34 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: Devildareman (3,427.15 in chips)
+Seat 4: KingFish (9,644.05 in chips)
+Seat 7: rr105 (1,961.11 in chips)
+rr105: posts small blind 50
+Devildareman: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [Qd 4c]
+rr105: raises 650 to 700
+Devildareman: folds
+KingFish: folds
+Uncalled bet (500) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 500 from pot
+*** SUMMARY ***
+Total pot 500 | Rake 0 
+Seat 3: Devildareman (big blind) folded before Flop 
+Seat 4: KingFish (button) folded before Flop (didn't bet)
+Seat 7: rr105 (small blind) collected (500)
+
+
+9stacks Poker Hand #35592496:  Hold'em No Limit (50/100) - 2019/03/18 13:12:56 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 3: Devildareman (3,327.15 in chips)
+Seat 4: KingFish (9,444.05 in chips)
+Seat 7: rr105 (2,261.11 in chips)
+Devildareman: posts small blind 50
+KingFish: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [8s 9d]
+rr105: raises 300 to 300
+Devildareman: calls 250
+KingFish: calls 200
+*** FLOP *** [Kh 5s Qd]
+Devildareman: checks
+KingFish: checks
+rr105: checks
+*** TURN *** [Kh 5s Qd] [7h]
+Devildareman: checks
+KingFish: checks
+rr105: bets 427.50
+Devildareman: calls 427.50
+KingFish: folds
+*** RIVER *** [Kh 5s Qd 7h] [5d]
+Devildareman: checks
+rr105: checks
+*** SHOW DOWN ***
+Devildareman: shows [9c Kc] (two pair, Kings and Fives)
+rr105: mucks hand
+Devildareman collected 1,667.25 from pot
+*** SUMMARY ***
+Total pot 1,667.25 | Rake 87.75 
+Board [Kh 5s Qd 7h 5d]
+Seat 3: Devildareman (small blind) showed [9c Kc] and won (1,667.25) with two pair, Kings and Fives
+Seat 4: KingFish (big blind) folded on the Turn 
+Seat 7: rr105 (button) mucked
+
+
+9stacks Poker Hand #35592506:  Hold'em No Limit (50/100) - 2019/03/18 13:13:55 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: Devildareman (4,266.90 in chips)
+Seat 4: KingFish (9,144.05 in chips)
+Seat 7: rr105 (1,533.61 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+Devildareman: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [2c 9s]
+Devildareman: folds
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: Devildareman (button) folded before Flop (didn't bet)
+Seat 4: KingFish (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592513:  Hold'em No Limit (50/100) - 2019/03/18 13:14:09 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: Devildareman (4,266.90 in chips)
+Seat 4: KingFish (9,094.05 in chips)
+Seat 7: rr105 (1,583.61 in chips)
+rr105: posts small blind 50
+Devildareman: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [5s Jc]
+rr105: folds
+Devildareman: calls 100
+KingFish: checks
+*** FLOP *** [2d 8h Ad]
+Devildareman: checks
+KingFish: checks
+*** TURN *** [2d 8h Ad] [7c]
+Devildareman: checks
+KingFish: bets 213.75
+Devildareman: calls 213.75
+*** RIVER *** [2d 8h Ad 7c] [Ks]
+Devildareman: checks
+KingFish: checks
+*** SHOW DOWN ***
+Devildareman: shows [Tc Td] (a pair of Tens)
+KingFish: mucks hand
+Devildareman collected 833.63 from pot
+*** SUMMARY ***
+Total pot 833.63 | Rake 43.87 
+Board [2d 8h Ad 7c Ks]
+Seat 3: Devildareman (big blind) showed [Tc Td] and won (833.63) with a pair of Tens
+Seat 4: KingFish (button) mucked
+Seat 7: rr105 (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592519:  Hold'em No Limit (50/100) - 2019/03/18 13:14:45 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 3: Devildareman (4,686.78 in chips)
+Seat 4: KingFish (8,680.30 in chips)
+Seat 7: rr105 (1,533.61 in chips)
+Devildareman: posts small blind 50
+KingFish: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [2d Qd]
+Ashok1949 joins the table at seat #5
+rr105: raises 300 to 300
+Ashok1949 leaves the table
+Devildareman: calls 250
+KingFish: folds
+*** FLOP *** [Qc Tc 6d]
+Devildareman: checks
+Ashok1949 joins the table at seat #5
+rr105: bets 300
+Devildareman: calls 300
+*** TURN *** [Qc Tc 6d] [2c]
+Devildareman: checks
+rr105: bets 933.61 and is all-in
+Devildareman: calls 933.61
+*** RIVER *** [Qc Tc 6d 2c] [9h]
+*** SHOW DOWN ***
+Devildareman: shows [Qh 7h] (a pair of Queens)
+rr105: shows [Ac 5d] (high card Ace)
+Devildareman collected 3,008.86 from pot
+*** SUMMARY ***
+Total pot 3,008.86 | Rake 158.36 
+Board [Qc Tc 6d 2c 9h]
+Seat 3: Devildareman (small blind) showed [Qh 7h] and won (3,008.86) with a pair of Queens
+Seat 4: KingFish (big blind) folded before Flop 
+Seat 7: rr105 (button) showed [Ac 5d] and lost with high card Ace
+
+
+9stacks Poker Hand #35592529:  Hold'em No Limit (50/100) - 2019/03/18 13:15:22 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: Devildareman (6,162.03 in chips)
+Seat 4: KingFish (8,580.30 in chips)
+Seat 5: Ashok1949 (3,000 in chips)
+Seat 7: rr105 (5,000 in chips)
+KingFish: posts small blind 50
+Ashok1949: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [2h 9c]
+rr105: raises 300 to 300
+Devildareman: calls 300
+KingFish: folds
+Ashok1949: raises 2,900 to 3,000 and is all-in
+rr105: folds
+Devildareman: calls 2,700
+*** FLOP *** [5h 2s 5c]
+*** TURN *** [5h 2s 5c] [2c]
+*** RIVER *** [5h 2s 5c 2c] [8s]
+*** SHOW DOWN ***
+Ashok1949: shows [Qd Jd] (two pair, Fives and Deuces)
+Devildareman: shows [Kh As] (two pair, Fives and Deuces)
+Devildareman collected 6,032.50 from pot
+*** SUMMARY ***
+Total pot 6,032.50 | Rake 317.50 
+Board [5h 2s 5c 2c 8s]
+Seat 3: Devildareman (button) showed [Kh As] and won (6,032.50) with two pair, Fives and Deuces
+Seat 4: KingFish (small blind) folded before Flop 
+Seat 5: Ashok1949 (big blind) showed [Qd Jd] and lost with two pair, Fives and Deuces
+Seat 7: rr105 folded before Flop 
+
+
+9stacks Poker Hand #35592533:  Hold'em No Limit (100/200) - 2019/03/18 13:15:51 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 3: Devildareman (9,194.53 in chips)
+Seat 4: KingFish (8,530.30 in chips)
+Seat 7: rr105 (4,700 in chips)
+rr105: posts big blind 100
+Devildareman: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [8s 3d]
+Devildareman: folds
+KingFish: folds
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 3: Devildareman folded before Flop (didn't bet)
+Seat 4: KingFish (button) folded before Flop (didn't bet)
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592534:  Hold'em No Limit (50/100) - 2019/03/18 13:16:04 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (8,530.30 in chips)
+Seat 7: rr105 (4,700 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Kh 2s]
+rr105: raises 250 to 300
+KingFish: calls 200
+*** FLOP *** [6d 5c 8c]
+KingFish: checks
+rr105: bets 285
+KingFish: folds
+Uncalled bet (285) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 570 from pot
+*** SUMMARY ***
+Total pot 570 | Rake 30 
+Board [6d 5c 8c]
+Seat 4: KingFish (big blind) folded on the Flop 
+Seat 7: rr105 (button) (small blind) collected (570)
+
+
+9stacks Poker Hand #35592549:  Hold'em No Limit (50/100) - 2019/03/18 13:17:14 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (8,230.30 in chips)
+Seat 7: rr105 (4,970 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Jh 6d]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592553:  Hold'em No Limit (50/100) - 2019/03/18 13:17:28 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (8,180.30 in chips)
+Seat 7: rr105 (5,020 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Ad 8s]
+rr105: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592556:  Hold'em No Limit (50/100) - 2019/03/18 13:17:40 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (8,230.30 in chips)
+Seat 7: rr105 (4,970 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [2c 7d]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592558:  Hold'em No Limit (50/100) - 2019/03/18 13:17:51 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (8,180.30 in chips)
+Seat 7: rr105 (5,020 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [4s Kd]
+rr105: raises 200 to 250
+KingFish: calls 150
+*** FLOP *** [3h Ac 3s]
+KingFish: checks
+rr105: bets 237.50
+KingFish: folds
+Uncalled bet (237.50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 475 from pot
+*** SUMMARY ***
+Total pot 475 | Rake 25 
+Board [3h Ac 3s]
+Seat 4: KingFish (big blind) folded on the Flop 
+Seat 7: rr105 (button) (small blind) collected (475)
+
+
+9stacks Poker Hand #35592562:  Hold'em No Limit (50/100) - 2019/03/18 13:18:15 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,930.30 in chips)
+Seat 7: rr105 (5,245 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Qc 6d]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592567:  Hold'em No Limit (50/100) - 2019/03/18 13:18:26 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,880.30 in chips)
+Seat 7: rr105 (5,295 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [3s 9c]
+rr105: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592570:  Hold'em No Limit (50/100) - 2019/03/18 13:18:38 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,930.30 in chips)
+Seat 7: rr105 (5,245 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Kd 6c]
+KingFish: raises 200 to 250
+rr105: calls 150
+*** FLOP *** [Ah Th 8d]
+rr105: checks
+KingFish: bets 237.50
+rr105: calls 237.50
+*** TURN *** [Ah Th 8d] [7c]
+rr105: checks
+KingFish: checks
+*** RIVER *** [Ah Th 8d 7c] [Qd]
+rr105: checks
+KingFish: checks
+*** SHOW DOWN ***
+rr105: shows [7s 9d] (a pair of Sevens)
+KingFish: mucks hand
+rr105 collected 926.25 from pot
+*** SUMMARY ***
+Total pot 926.25 | Rake 48.75 
+Board [Ah Th 8d 7c Qd]
+Seat 4: KingFish (button) (small blind) mucked
+Seat 7: rr105 (big blind) showed [7s 9d] and won (926.25) with a pair of Sevens
+
+
+9stacks Poker Hand #35592577:  Hold'em No Limit (50/100) - 2019/03/18 13:19:13 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,442.80 in chips)
+Seat 7: rr105 (5,683.75 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Qd 4c]
+rr105: raises 200 to 250
+KingFish: folds
+Uncalled bet (150) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 4: KingFish (big blind) folded before Flop 
+Seat 7: rr105 (button) (small blind) collected (200)
+
+
+9stacks Poker Hand #35592580:  Hold'em No Limit (50/100) - 2019/03/18 13:19:29 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,342.80 in chips)
+Seat 7: rr105 (5,783.75 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [9d 3d]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592583:  Hold'em No Limit (50/100) - 2019/03/18 13:19:40 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,292.80 in chips)
+Seat 7: rr105 (5,833.75 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [5d 5c]
+rr105: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592586:  Hold'em No Limit (50/100) - 2019/03/18 13:19:52 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,342.80 in chips)
+Seat 7: rr105 (5,783.75 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [5s 4d]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592590:  Hold'em No Limit (50/100) - 2019/03/18 13:20:06 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,292.80 in chips)
+Seat 7: rr105 (5,833.75 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [9d 6h]
+rr105: raises 250 to 300
+KingFish: folds
+Uncalled bet (200) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 4: KingFish (big blind) folded before Flop 
+Seat 7: rr105 (button) (small blind) collected (200)
+
+
+9stacks Poker Hand #35592592:  Hold'em No Limit (50/100) - 2019/03/18 13:20:20 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,192.80 in chips)
+Seat 7: rr105 (5,933.75 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Ac 9h]
+KingFish: raises 200 to 250
+rr105: folds
+Uncalled bet (150) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 4: KingFish (button) (small blind) collected (200)
+Seat 7: rr105 (big blind) folded before Flop 
+
+
+9stacks Poker Hand #35592596:  Hold'em No Limit (50/100) - 2019/03/18 13:20:33 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,292.80 in chips)
+Seat 7: rr105 (5,833.75 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [6s 5s]
+rr105: calls 50
+KingFish: raises 250 to 350
+rr105: folds
+Uncalled bet (250) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 4: KingFish (big blind) collected (200)
+Seat 7: rr105 (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592600:  Hold'em No Limit (50/100) - 2019/03/18 13:21:05 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,392.80 in chips)
+Seat 7: rr105 (5,733.75 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Qc 7h]
+KingFish: raises 200 to 250
+rr105: raises 650 to 750
+KingFish: folds
+Uncalled bet (500) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 500 from pot
+*** SUMMARY ***
+Total pot 500 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (500)
+
+
+9stacks Poker Hand #35592603:  Hold'em No Limit (50/100) - 2019/03/18 13:21:23 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,142.80 in chips)
+Seat 7: rr105 (5,983.75 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [2d Ks]
+rr105: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592606:  Hold'em No Limit (50/100) - 2019/03/18 13:21:35 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,192.80 in chips)
+Seat 7: rr105 (5,933.75 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [6d Jh]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592608:  Hold'em No Limit (50/100) - 2019/03/18 13:21:47 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,142.80 in chips)
+Seat 7: rr105 (5,983.75 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [9h 7c]
+rr105: raises 200 to 250
+KingFish: calls 150
+*** FLOP *** [7h 9c As]
+KingFish: checks
+rr105: bets 356.25
+KingFish: raises 1,200 to 1,200
+rr105: folds
+Uncalled bet (843.75) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 1,151.88 from pot
+*** SUMMARY ***
+Total pot 1,151.88 | Rake 60.62 
+Board [7h 9c As]
+Seat 4: KingFish (big blind) collected (1,151.88)
+Seat 7: rr105 (button) (small blind) folded on the Flop 
+
+
+9stacks Poker Hand #35592614:  Hold'em No Limit (50/100) - 2019/03/18 13:22:26 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,688.43 in chips)
+Seat 7: rr105 (5,377.50 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [9h 5c]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592617:  Hold'em No Limit (50/100) - 2019/03/18 13:22:37 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,638.43 in chips)
+Seat 7: rr105 (5,427.50 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [6h 4c]
+Ashu21 joins the table at seat #2
+rr105: raises 200 to 250
+KingFish: folds
+Uncalled bet (150) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 4: KingFish (big blind) folded before Flop 
+Seat 7: rr105 (button) (small blind) collected (200)
+
+
+9stacks Poker Hand #35592621:  Hold'em No Limit (50/100) - 2019/03/18 13:22:55 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 4: KingFish (7,538.43 in chips)
+Seat 7: rr105 (5,527.50 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [9h 4s]
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (button) (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592624:  Hold'em No Limit (50/100) - 2019/03/18 13:23:06 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 2: Ashu21 (3,000 in chips)
+Seat 4: KingFish (7,488.43 in chips)
+Seat 7: rr105 (5,577.50 in chips)
+rr105: posts small blind 50
+Ashu21: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [7h Js]
+rr105: folds
+Ashu21: calls 100
+KingFish: checks
+*** FLOP *** [2c Jc 8d]
+Ashu21: checks
+KingFish: checks
+*** TURN *** [2c Jc 8d] [Ts]
+Ashu21: checks
+KingFish: bets 213.75
+Ashu21: folds
+Uncalled bet (213.75) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 427.50 from pot
+*** SUMMARY ***
+Total pot 427.50 | Rake 22.50 
+Board [2c Jc 8d Ts]
+Seat 2: Ashu21 (big blind) folded on the Turn 
+Seat 4: KingFish (button) collected (427.50)
+Seat 7: rr105 (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592633:  Hold'em No Limit (50/100) - 2019/03/18 13:23:40 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 2: Ashu21 (2,800 in chips)
+Seat 4: KingFish (7,715.93 in chips)
+Seat 7: rr105 (5,527.50 in chips)
+Ashu21: posts small blind 50
+KingFish: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [5h Qh]
+rr105 has timed out
+rr105: folds
+Ashu21: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 2: Ashu21 (small blind) folded before Flop 
+Seat 4: KingFish (big blind) collected (100)
+
+
+9stacks Poker Hand #35592639:  Hold'em No Limit (50/100) - 2019/03/18 13:24:06 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #2 is the button
+Seat 2: Ashu21 (2,750 in chips)
+Seat 4: KingFish (7,765.93 in chips)
+Seat 7: rr105 (5,527.50 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+Ashu21: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [5s 4s]
+Ashu21: folds
+KingFish: calls 50
+rr105: checks
+*** FLOP *** [Kh 7c Qs]
+KingFish: checks
+rr105: checks
+*** TURN *** [Kh 7c Qs] [5h]
+KingFish: checks
+rr105: bets 142.50
+KingFish: calls 142.50
+*** RIVER *** [Kh 7c Qs 5h] [3d]
+KingFish: checks
+rr105: bets 230.37
+KingFish: folds
+Uncalled bet (230.37) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 460.75 from pot
+*** SUMMARY ***
+Total pot 460.75 | Rake 24.25 
+Board [Kh 7c Qs 5h 3d]
+Seat 2: Ashu21 (button) folded before Flop (didn't bet)
+Seat 4: KingFish (small blind) folded on the River 
+Seat 7: rr105 (big blind) collected (460.75)
+
+
+9stacks Poker Hand #35592650:  Hold'em No Limit (50/100) - 2019/03/18 13:24:52 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 2: Ashu21 (2,750 in chips)
+Seat 4: KingFish (7,523.43 in chips)
+Seat 7: rr105 (5,745.75 in chips)
+rr105: posts small blind 50
+Ashu21: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [8d Ts]
+rr105: folds
+Ashu21: folds
+Uncalled bet (100) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 250 from pot
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 2: Ashu21 (big blind) folded before Flop 
+Seat 4: KingFish (button) collected (250)
+Seat 7: rr105 (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592653:  Hold'em No Limit (50/100) - 2019/03/18 13:25:11 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 2: Ashu21 (2,650 in chips)
+Seat 4: KingFish (7,673.43 in chips)
+Seat 7: rr105 (5,695.75 in chips)
+Ashu21: posts small blind 50
+KingFish: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [8h Kh]
+rr105: raises 300 to 300
+Ashu21: folds
+KingFish: calls 200
+*** FLOP *** [Tc 2c 6c]
+KingFish: checks
+rr105: checks
+*** TURN *** [Tc 2c 6c] [2d]
+KingFish: checks
+rr105: checks
+*** RIVER *** [Tc 2c 6c 2d] [8c]
+KingFish: checks
+rr105: checks
+*** SHOW DOWN ***
+KingFish: shows [8h Kh] (two pair, Eights and Deuces)
+rr105: shows [Ah 4c] (a flush, Ten high)
+rr105 collected 617.50 from pot
+*** SUMMARY ***
+Total pot 617.50 | Rake 32.50 
+Board [Tc 2c 6c 2d 8c]
+Seat 2: Ashu21 (small blind) folded before Flop 
+Seat 4: KingFish (big blind) showed [8h Kh] and lost with two pair, Eights and Deuces
+Seat 7: rr105 (button) showed [Ah 4c] and won (617.50) with a flush, Ten high
+
+
+9stacks Poker Hand #35592665:  Hold'em No Limit (50/100) - 2019/03/18 13:25:53 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #2 is the button
+Seat 2: Ashu21 (2,600 in chips)
+Seat 4: KingFish (7,373.43 in chips)
+Seat 7: rr105 (6,013.25 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+Ashu21: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [9d 4h]
+Ashu21: folds
+KingFish: folds
+Uncalled bet (50) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 2: Ashu21 (button) folded before Flop (didn't bet)
+Seat 4: KingFish (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (100)
+
+
+9stacks Poker Hand #35592666:  Hold'em No Limit (50/100) - 2019/03/18 13:26:06 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 2: Ashu21 (2,600 in chips)
+Seat 4: KingFish (7,323.43 in chips)
+Seat 7: rr105 (6,063.25 in chips)
+rr105: posts small blind 50
+Ashu21: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [4c Jh]
+rr105: calls 150
+Ashu21: folds
+KingFish: checks
+*** FLOP *** [Td 9c Kc]
+rr105: checks
+KingFish: bets 237.50
+rr105: calls 237.50
+*** TURN *** [Td 9c Kc] [5h]
+rr105: checks
+KingFish: bets 463.12
+rr105: raises 1,389.36 to 1,389.36
+KingFish: folds
+Uncalled bet (926.24) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 1,806.18 from pot
+*** SUMMARY ***
+Total pot 1,806.18 | Rake 95.06 
+Board [Td 9c Kc 5h]
+Seat 2: Ashu21 (big blind) folded before Flop 
+Seat 4: KingFish (button) folded on the Turn 
+Seat 7: rr105 (small blind) collected (1,806.18)
+
+
+9stacks Poker Hand #35592683:  Hold'em No Limit (50/100) - 2019/03/18 13:27:03 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 2: Ashu21 (2,500 in chips)
+Seat 4: KingFish (6,422.81 in chips)
+Seat 7: rr105 (6,968.81 in chips)
+Ashu21: posts small blind 50
+KingFish: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [Ah 5d]
+rr105: folds
+Ashu21: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 2: Ashu21 (small blind) folded before Flop 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) folded before Flop (didn't bet)
+
+
+9stacks Poker Hand #35592686:  Hold'em No Limit (50/100) - 2019/03/18 13:27:15 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #2 is the button
+Seat 2: Ashu21 (2,450 in chips)
+Seat 4: KingFish (6,472.81 in chips)
+Seat 7: rr105 (6,968.81 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+Ashu21: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [5c 5h]
+Ashu21: calls 100
+KingFish: calls 50
+rr105: checks
+*** FLOP *** [Js 7h 8h]
+KingFish: checks
+rr105: checks
+Ashu21: checks
+*** TURN *** [Js 7h 8h] [Kc]
+KingFish: checks
+rr105: checks
+Ashu21: checks
+*** RIVER *** [Js 7h 8h Kc] [9h]
+KingFish: checks
+rr105: checks
+Ashu21: checks
+*** SHOW DOWN ***
+KingFish: shows [5c 5h] (a pair of Fives)
+rr105: shows [6h Qh] (a flush, Queen high)
+Ashu21: mucks hand
+rr105 collected 285 from pot
+*** SUMMARY ***
+Total pot 285 | Rake 15 
+Board [Js 7h 8h Kc 9h]
+Seat 2: Ashu21 (button) mucked
+Seat 4: KingFish (small blind) showed [5c 5h] and lost with a pair of Fives
+Seat 7: rr105 (big blind) showed [6h Qh] and won (285) with a flush, Queen high
+
+
+9stacks Poker Hand #35592690:  Hold'em No Limit (50/100) - 2019/03/18 13:27:50 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 2: Ashu21 (2,350 in chips)
+Seat 4: KingFish (6,372.81 in chips)
+Seat 7: rr105 (7,153.81 in chips)
+rr105: posts small blind 50
+Ashu21: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [2d 5s]
+rr105: calls 150
+Ashu21: folds
+KingFish: checks
+*** FLOP *** [3d 6d 4h]
+rr105: checks
+KingFish: bets 237.50
+rr105: calls 237.50
+*** TURN *** [3d 6d 4h] [2h]
+rr105: checks
+KingFish: bets 463.12
+rr105: folds
+Uncalled bet (463.12) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 926.25 from pot
+*** SUMMARY ***
+Total pot 926.25 | Rake 48.75 
+Board [3d 6d 4h 2h]
+Seat 2: Ashu21 (big blind) folded before Flop 
+Seat 4: KingFish (button) collected (926.25)
+Seat 7: rr105 (small blind) folded on the Turn 
+
+
+9stacks Poker Hand #35592698:  Hold'em No Limit (50/100) - 2019/03/18 13:28:24 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 2: Ashu21 (2,250 in chips)
+Seat 4: KingFish (6,861.56 in chips)
+Seat 7: rr105 (6,716.31 in chips)
+Ashu21: posts small blind 50
+KingFish: posts big blind 100
+rr105: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [9s Jc]
+rr105: folds
+Ashu21: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 2: Ashu21 (small blind) folded before Flop 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) folded before Flop (didn't bet)
+
+
+9stacks Poker Hand #35592699:  Hold'em No Limit (50/100) - 2019/03/18 13:28:36 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #2 is the button
+Seat 2: Ashu21 (2,200 in chips)
+Seat 4: KingFish (6,911.56 in chips)
+Seat 7: rr105 (6,716.31 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+Ashu21: unknown 0
+*** HOLE CARDS ***
+Dealt to KingFish [Kc Ac]
+Ashu21: folds
+KingFish: raises 300 to 350
+rr105: folds
+Uncalled bet (250) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 2: Ashu21 (button) folded before Flop (didn't bet)
+Seat 4: KingFish (small blind) collected (200)
+Seat 7: rr105 (big blind) folded before Flop 
+
+
+9stacks Poker Hand #35592706:  Hold'em No Limit (50/100) - 2019/03/18 13:28:54 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #4 is the button
+Seat 2: Ashu21 (2,200 in chips)
+Seat 4: KingFish (7,011.56 in chips)
+Seat 7: rr105 (6,616.31 in chips)
+rr105: posts small blind 50
+Ashu21: posts big blind 100
+KingFish: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [8d 8s]
+rr105: calls 150
+Ashu21: calls 100
+KingFish: raises 800 to 1,000
+rr105: folds
+Ashu21: folds
+Uncalled bet (800) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 600 from pot
+*** SUMMARY ***
+Total pot 600 | Rake 0 
+Seat 2: Ashu21 (big blind) folded before Flop 
+Seat 4: KingFish (button) collected (600)
+Seat 7: rr105 (small blind) folded before Flop 
+
+
+9stacks Poker Hand #35592711:  Hold'em No Limit (50/100) - 2019/03/18 13:29:24 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #7 is the button
+Seat 4: KingFish (7,411.56 in chips)
+Seat 7: rr105 (6,416.31 in chips)
+rr105: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [Js Ac]
+rr105: folds
+Uncalled bet (50) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 100 from pot
+*** SUMMARY ***
+Total pot 100 | Rake 0 
+Seat 4: KingFish (big blind) collected (100)
+Seat 7: rr105 (button) (small blind) folded before Flop 
