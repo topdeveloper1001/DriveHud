@@ -544,6 +544,7 @@ namespace DriveHUD.Common.Ifrastructure
                 .Replace("[color=blue]", string.Empty)
                 .Replace("[/color]", string.Empty)
                 .Replace("[url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software", "Poker Tracking Software - http://drivehud.com")
+                .Replace("[url=http://drivehud.com/?t=hh]Poker HUD[/url] and Database Software", "Poker HUD and Database Software - http://drivehud.com")
                 .Replace("[/url]", string.Empty)
                 .Replace($"[spoil]{Environment.NewLine}", string.Empty)
                 .Replace($"{Environment.NewLine}[/spoil]", string.Empty)
