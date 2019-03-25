@@ -1802,4 +1802,7 @@
   <data name="Enum_Stat_Call4Bet" xml:space="preserve">
     <value>Call 4-Bet%</value>
   </data>
+  <data name="Enum_HudStatsDataFreshness_Last1Day" xml:space="preserve">
+    <value>Last 24 hours</value>
+  </data>
 </root>

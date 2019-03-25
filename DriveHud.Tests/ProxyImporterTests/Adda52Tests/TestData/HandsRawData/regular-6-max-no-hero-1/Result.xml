@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HandHistory>
+  <DateOfHandUtc>2018-09-12T00:05:04Z</DateOfHandUtc>
+  <HandId>354106900205</HandId>
+  <DealerButtonPosition>6</DealerButtonPosition>
+  <TableName>RING6#3541069</TableName>
+  <GameDescription>
+    <PokerFormat>CashGame</PokerFormat>
+    <Site>Adda52</Site>
+    <GameType>NoLimitHoldem</GameType>
+    <Limit>
+      <Currency>INR</Currency>
+      <SmallBlind>1</SmallBlind>
+      <BigBlind>2</BigBlind>
+      <IsAnteTable>false</IsAnteTable>
+      <Ante>0</Ante>
+    </Limit>
+    <SeatType MaxPlayers="6" />
+    <TableType>Regular</TableType>
+    <Identifier>236</Identifier>
+    <CashBuyInHigh>80</CashBuyInHigh>
+  </GameDescription>
+  <Cancelled>false</Cancelled>
+  <NumPlayersSeated>0</NumPlayersSeated>
+  <TotalPot>12</TotalPot>
+  <Rake p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+  <Actions>
+    <HandAction PlayerName="suri33833" HandActionType="SMALL_BLIND" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="raki87mech" HandActionType="BIG_BLIND" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Lovekesh141" HandActionType="CALL" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="Rahul20081987" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="don30081987" HandActionType="CALL" Amount="-2" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="psolarireli" HandActionType="FOLD" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="suri33833" HandActionType="CALL" Amount="-1" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="raki87mech" HandActionType="CHECK" Amount="0" Street="Preflop" IsAllIn="false" />
+    <HandAction PlayerName="suri33833" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="raki87mech" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="Lovekesh141" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="don30081987" HandActionType="CHECK" Amount="0" Street="Flop" IsAllIn="false" />
+    <HandAction PlayerName="suri33833" HandActionType="BET" Amount="-2" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="raki87mech" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="Lovekesh141" HandActionType="CALL" Amount="-2" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="don30081987" HandActionType="FOLD" Amount="0" Street="Turn" IsAllIn="false" />
+    <HandAction PlayerName="suri33833" HandActionType="BET" Amount="-8" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="Lovekesh141" HandActionType="FOLD" Amount="0" Street="River" IsAllIn="false" />
+    <HandAction PlayerName="suri33833" HandActionType="UNCALLED_BET" Amount="8" Street="River" IsAllIn="false" />
+    <HandAction p3:type="WinningsAction" PlayerName="suri33833" HandActionType="WINS" Amount="11" Street="Summary" IsAllIn="false" PotNumber="0" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </Actions>
+  <CommunityCards>3h9dJhJc7s</CommunityCards>
+  <Players>
+    <Player PlayerName="suri33833" StartingStack="25" Bet="12" Win="11" SeatNumber="1" Cards="" IsSittingOut="false" />
+    <Player PlayerName="raki87mech" StartingStack="38" Bet="2" Win="0" SeatNumber="2" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Lovekesh141" StartingStack="16" Bet="4" Win="0" SeatNumber="3" Cards="" IsSittingOut="false" />
+    <Player PlayerName="Rahul20081987" StartingStack="121" Bet="0" Win="0" SeatNumber="4" Cards="" IsSittingOut="false" />
+    <Player PlayerName="don30081987" StartingStack="54" Bet="2" Win="0" SeatNumber="5" Cards="" IsSittingOut="false" />
+    <Player PlayerName="psolarireli" StartingStack="116" Bet="0" Win="0" SeatNumber="6" Cards="" IsSittingOut="false" />
+  </Players>
+</HandHistory>

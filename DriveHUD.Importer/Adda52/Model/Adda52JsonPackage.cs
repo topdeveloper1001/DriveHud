@@ -10,8 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Sfs2X.Entities.Data;
+using Sfs2X.Protocol.Serialization;
+using Sfs2X.Util;
 using System;
-using System.Text;
+using System.Linq;
+using System.Reflection;
 
 namespace DriveHUD.Importers.Adda52.Model
 {
@@ -27,18 +31,12 @@ namespace DriveHUD.Importers.Adda52.Model
 
         private readonly static string[] validPrefixes = new string[] { "game", "mtt", "user" };
 
-        public static bool TryParse(byte[] bytes, out Adda52JsonPackage package)
+        public static bool TryParse(string jsonData, out Adda52JsonPackage package)
         {
             package = null;
 
-            if (bytes == null || bytes.Length == 0)
-            {
-                return false;
-            }
-
             try
             {
-                var jsonData = Encoding.UTF8.GetString(bytes);
 
                 var packageTypeStartIndex = -1;
 
@@ -126,9 +124,9 @@ namespace DriveHUD.Importers.Adda52.Model
 
                 if (packageType != Adda52PackageType.AccessToken)
                 {
-                    var roomIdStartIndex = jsonData.IndexOf("r\":") + 3;
+                    var roomIdStartIndex = jsonData.IndexOf("\"r\":") + 4;
 
-                    if (roomIdStartIndex <= 3)
+                    if (roomIdStartIndex <= 4)
                     {
                         return false;
                     }
@@ -152,7 +150,7 @@ namespace DriveHUD.Importers.Adda52.Model
                 {
                     PackageType = packageType,
                     RoomId = roomId,
-                    JsonData = jsonData,
+                    JsonData = FormatJson(jsonData),
                     TimestampUtc = DateTime.UtcNow
                 };
 
@@ -162,6 +160,64 @@ namespace DriveHUD.Importers.Adda52.Model
             {
                 return false;
             }
+        }
+
+        public static bool TryParse(byte[] bytes, out Adda52JsonPackage package)
+        {
+            package = null;
+
+            if (bytes == null || bytes.Length == 0)
+            {
+                return false;
+            }
+
+            if (!TryParseJsonData(bytes, out string jsonData))
+            {
+                return false;
+            }
+
+            return TryParse(jsonData, out package);
+        }
+
+        public static bool TryParseJsonData(byte[] bytes, out string json)
+        {
+            json = null;
+
+            if (bytes == null || bytes.Length < 4)
+            {
+                return false;
+            }
+
+            if (DefaultSFSDataSerializer.RunningAssembly == null)
+            {
+                DefaultSFSDataSerializer.RunningAssembly = Assembly.GetExecutingAssembly();
+            }
+
+            try
+            {
+                var compressed = bytes[0] == 0xA0;
+                var byteArray = new ByteArray(bytes.Skip(3).ToArray());
+
+                if (compressed)
+                {
+                    byteArray.Uncompress();
+                }
+
+                var sFSObject = SFSObject.NewFromBinaryData(byteArray);
+
+                json = sFSObject.ToJson();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private static string FormatJson(string json)
+        {
+            return json != null ? json.Replace(":\"{", ":{").Replace("}\",", "},").Replace("\\\"", "\"") : json;
         }
     }
 }

@@ -29,7 +29,8 @@ namespace Model.Site
     public class PokerStarsConfiguration : BaseSiteConfiguration, ISiteConfiguration
     {
         private static readonly string[] PossibleFolders = new string[] { "PokerStars", "PokerStars.EU", "PokerStars.USNJ", "PokerStars.PT", "PokerStars.UK", "PokerStars.FR",
-            "PokerStars.DK", "PokerStars.BE", "PokerStars.BG", "PokerStars.IT", "PokerStars.ES", "PokerStars.EE", "PokerStars.CZ", "PokerStars.SH", "PokerStars.RO", "PokerStars.RUSO" };
+            "PokerStars.DK", "PokerStars.BE", "PokerStars.BG", "PokerStars.IT", "PokerStars.ES", "PokerStars.EE",
+            "PokerStars.CZ", "PokerStars.SH", "PokerStars.RO", "PokerStars.RUSO", "PokerStars.IN" };
 
         private const string defaultHandHistoryFolder = "HandHistory";
         private const string defaultTourneySummaryFolder = "TournSummary";
@@ -42,7 +43,7 @@ namespace Model.Site
         private const string iniSaveMyHandsPath = "SaveMyHandsPath";
         private const string iniSaveMyTournSummariesPath = "SaveMyTournSummariesPath";
         private const string settingsFileName = "user.ini";
-        private const string correctLanguageSetting = "0";
+        private static readonly string[] correctLanguageSettings = new[] { "0", "33" };
         private const string psClientLaunchFile = "PokerStars.exe";
         private const string displayNameKey = "DisplayName";
         private const string displayNameKeyValuePattern = "PokerStars";
@@ -215,10 +216,10 @@ namespace Model.Site
 
                     LogProvider.Log.Info($"PS Settings: Locale: {localeSetting}; HHLocale: {hhLocaleSetting}; TSLocale: {tsLocaleSetting}");
 
-                    var isLocaleSettingCorrect = localeSetting == correctLanguageSetting;
+                    var isLocaleSettingCorrect = correctLanguageSettings.Contains(localeSetting);
 
-                    bool isHHLanguageCorrect = string.IsNullOrWhiteSpace(hhLocaleSetting) ? isLocaleSettingCorrect : hhLocaleSetting == correctLanguageSetting;
-                    bool isTSLanguageCorrect = string.IsNullOrWhiteSpace(tsLocaleSetting) ? isLocaleSettingCorrect : tsLocaleSetting == correctLanguageSetting;
+                    bool isHHLanguageCorrect = string.IsNullOrWhiteSpace(hhLocaleSetting) ? isLocaleSettingCorrect : correctLanguageSettings.Contains(hhLocaleSetting);
+                    bool isTSLanguageCorrect = string.IsNullOrWhiteSpace(tsLocaleSetting) ? isLocaleSettingCorrect : correctLanguageSettings.Contains(tsLocaleSetting);
                     bool isHHEnabled = hhEnabledSetting == "1";
                     bool isTSEnabled = tsEnabledSetting == "1";
 

@@ -1,0 +1,22 @@
+9stacks Poker Hand #35592484:  Hold'em No Limit (50/100) - 2019/03/18 13:12:14 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: Devildareman (3,627.15 in chips)
+Seat 4: KingFish (9,694.05 in chips)
+Seat 7: rr105 (1,711.11 in chips)
+KingFish: posts small blind 50
+rr105: posts big blind 100
+Devildareman: unknown 200
+*** HOLE CARDS ***
+Dealt to KingFish [4s Tc]
+KingFish: folds
+rr105: raises 550 to 650
+Devildareman: folds
+Uncalled bet (450) returned to rr105
+*** SHOW DOWN ***
+rr105: doesn't show hand
+rr105 collected 450 from pot
+*** SUMMARY ***
+Total pot 450 | Rake 0 
+Seat 3: Devildareman (button) folded before Flop (didn't bet)
+Seat 4: KingFish (small blind) folded before Flop 
+Seat 7: rr105 (big blind) collected (450)

@@ -11,7 +11,7 @@
     xmlns:vp="clr-namespace:DriveHUD.Application.Views.PopupContainers"
     xmlns:conv="clr-namespace:DriveHUD.Common.Wpf.Converters;assembly=DriveHUD.Common.Wpf"
     mc:Ignorable="d"
-    Width="950"
+    Width="950"    
     Unloaded="UserControl_Unloaded">
 
     <UserControl.Resources>

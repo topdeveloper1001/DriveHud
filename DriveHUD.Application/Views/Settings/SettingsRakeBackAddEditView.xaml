@@ -554,7 +554,7 @@
                 Background="{StaticResource BackgroundBrush2}"
                 SelectedItem="{Binding Player, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                 DisplayMemberPath="DecodedName"
-                ItemsSource="{Binding StorageModel.PlayerCollection, Mode=OneWay}"
+                ItemsSource="{Binding Players, Mode=OneWay}"
                 Style="{StaticResource PlayerComboBoxStyle}"
                 ItemContainerStyle="{StaticResource PlayerComboBoxItemStyle}">
                 <telerik:RadComboBox.ItemsPanel>

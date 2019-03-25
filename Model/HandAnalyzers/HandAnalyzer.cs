@@ -27,7 +27,7 @@ namespace Model.HandAnalyzers
 
                 var highestHand = CardHelper.FindBestHand(string.Join("", playerCards.Select(c => c.CardStringValue)), boardCards.ToString());
 
-                var analyzers = ReferenceEquals(highestHand, null) ? _combinations : _combinations.Where(x => x.IsValidAnalyzer(highestHand));
+                var analyzers = ReferenceEquals(highestHand, null) ? _combinations : _combinations.Where(x => x.IsValidAnalyzer(highestHand)).ToArray();
 
                 if (playerCards.Count() > 2 && !string.IsNullOrEmpty(highestHand.PocketCards))
                 {
@@ -68,6 +68,8 @@ namespace Model.HandAnalyzers
                     new TwoPairTopTwoPairAnalyzer(),
                     new ThreeOfAKindOnBoardAnalyzer(),
                     new ThreeOfAKindTopSetAnalyzer(),
+                    new ThreeOfAKindSecondSetAnalyzer(),
+                    new ThreeOfAKindMiddleSetAnalyzer(),
                     new ThreeOfAKindBottomSetAnalyzer(),
                     new ThreeOfAKindTripsHighKickerAnalyzer(),
                     new ThreeOfAKindTripsWeakKickerAnalyzer(),

@@ -1,14 +1,14 @@
 ﻿{
-  "c": 1,
   "p": {
-    "c": "game.Dealer",
-    "r": 44275,
     "p": {
-      "dealer": 9,
-      "timestamp": "2018-09-12 01:01:17:837",
-      "roomName": "RING9#3178412",
-      "useConverter": false
-    }
+      "dealer": 1,
+      "useConverter": false,
+      "roomName": "RING6#3548002",
+      "timestamp": "2019-03-14 21:24:16:337"
+    },
+    "r": 3084,
+    "c": "game.Dealer"
   },
-  "a": 13
+  "a": 13,
+  "c": 1
 }

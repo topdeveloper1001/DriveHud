@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="MTTPrize.cs" company="Ace Poker Solutions">
-// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="HotkeyModifiers.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,13 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Newtonsoft.Json;
+using System;
 
-namespace DriveHUD.Importers.Adda52.Model
+namespace DriveHUD.Common.Utils
 {
-    internal sealed class MTTPrize
+    [Flags]
+    public enum HotkeyModifiers
     {
-        [JsonProperty("tbl")]
-        public string TableName { get; set; }
+        None = 0x0,
+        Ctrl = 0x1,
+        Alt = 0x2,
+        Shift = 0x4
     }
 }

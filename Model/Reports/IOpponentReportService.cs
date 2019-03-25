@@ -13,6 +13,7 @@
 using DriveHUD.Entities;
 using Model.Data;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Model.Reports
 {
@@ -25,7 +26,7 @@ namespace Model.Reports
         /// Gets the opponent report 
         /// </summary>
         /// <returns>The list of <see cref="Indicators"/></returns>
-        IEnumerable<ReportIndicators> GetReport();
+        IEnumerable<ReportIndicators> GetReport(CancellationToken cancellationToken);
 
         /// <summary>
         /// Updates stats in the opponents report

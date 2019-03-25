@@ -105,6 +105,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 161248135942)]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Bad-Header.txt", 163995445015)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max.txt", 35587765)]
         public void HandIdIsParsedTest(string handHistoryFile, long handId)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -113,6 +114,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", GameType.NoLimitHoldem)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max.txt", GameType.NoLimitHoldem)]
         public void GameTypeIsParsedTest(string handHistoryFile, GameType gameType)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -145,6 +147,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 20)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Cash-INR.txt", 50)]
         public void BigBlindIsParsedTest(string handHistoryFile, decimal bigBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -153,6 +156,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 10)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Cash-INR.txt", 25)]
         public void SmallBlindIsParsedTest(string handHistoryFile, decimal smallBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -160,8 +164,10 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", Currency.All)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", Currency.Chips)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT-INR.txt", Currency.Chips)]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Zoom-6-max-0.02-0.05.txt", Currency.USD)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Cash-INR.txt", Currency.INR)]
         public void CurrencyIsParsedTest(string handHistoryFile, Currency currency)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -178,6 +184,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 9)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max.txt", 7)]
         public void SeatTypeMaxPlayersIsParsedTest(string handHistoryFile, int maxPlayers)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -203,6 +210,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 0.44)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT-INR.txt", 0.44)]
         public void BuyInPrizePoolIsParsedTest(string handHistoryFile, decimal buyin)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -211,6 +219,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", Currency.USD)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT-INR.txt", Currency.INR)]
         public void BuyInCurrencyIsParsedTest(string handHistoryFile, Currency currency)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -219,6 +228,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 0.06)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT-INR.txt", 0.06)]
         public void BuyInRakeIsParsedTest(string handHistoryFile, decimal rake)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -377,6 +387,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 1500)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Cash-INR.txt", 2082.32)]
         public void HeroStartingStackIsParsedTest(string handHistoryFile, decimal startingStack)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -413,17 +424,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.DealerButtonPosition, Is.EqualTo(dealerButtonPosition));
-        }
-
-        //[Test]
-        //[TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Zoom-6-max-0.02-0.05.txt", "2016/11/17 22:23:21")]
-        //public void DateOfHandUtcIsParsedTest(string handHistoryFile, string dateOfHand)
-        //{
-        //    var handHistory = ParseHandHistory(handHistoryFile);
-        //    var dateTime = DateTime.Parse(dateOfHand, CultureInfo.InvariantCulture);
-        //    var dateTimeUtc = dateTime.ToUniversalTime();
-        //    Assert.That(handHistory.DateOfHandUtc, Is.EqualTo(dateTimeUtc));
-        //}
+        }      
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", 8, HandActionType.FOLD)]
@@ -447,6 +448,10 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", "leo.criv", -75, HandActionType.BET, Street.Turn, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", "leo.criv", 75, HandActionType.UNCALLED_BET, Street.Turn, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", "leo.criv", 150, HandActionType.WINS, Street.Summary, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max.txt", "KingFish", 200, HandActionType.WINS, Street.Summary, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max.txt", "KingFish", 4143.75, HandActionType.UNCALLED_BET, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max.txt", "KingFish", -4143.75, HandActionType.ALL_IN, Street.Preflop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-9Stack-7-max-straddle.txt", "Devildareman", -200, HandActionType.STRADDLE, Street.Preflop, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -505,11 +510,17 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 
         private class PokerStarsImporterStub : PokerStarsImporter
         {
-            protected override string WindowClassName => null;
+            protected override string[] WindowClassNames => new[] { string.Empty };
 
             public new bool Match(string title, IntPtr handle, ParsingResult parsingResult)
             {
                 return base.Match(title, handle, parsingResult);
+            }
+
+            protected override bool TryMatchWindowClass(IntPtr handle, out string outWindowClassName)
+            {
+                outWindowClassName = string.Empty;
+                return true;
             }
         }
     }

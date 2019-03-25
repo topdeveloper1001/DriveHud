@@ -210,17 +210,17 @@ namespace DriveHUD.Importers.BetOnline
 
                 if (!string.IsNullOrEmpty(handHistory.General.BuyIn))
                 {
-                    handHistory.General.BuyIn = handHistory.General.BuyIn.Replace(currencySymbol, string.Empty);
+                    handHistory.General.BuyIn = handHistory.General.BuyIn.Replace(currencySymbol, "₹");
                 }
 
                 if (!string.IsNullOrEmpty(handHistory.General.TotalBuyIn))
                 {
-                    handHistory.General.TotalBuyIn = handHistory.General.TotalBuyIn.Replace(currencySymbol, string.Empty);
+                    handHistory.General.TotalBuyIn = handHistory.General.TotalBuyIn.Replace(currencySymbol, "₹");
                 }
 
                 if (!string.IsNullOrEmpty(handHistory.General.TotalPrizePool))
                 {
-                    handHistory.General.TotalPrizePool = handHistory.General.TotalPrizePool.Replace(currencySymbol, string.Empty);
+                    handHistory.General.TotalPrizePool = handHistory.General.TotalPrizePool.Replace(currencySymbol, "₹");
                 }
 
                 currencySymbol = string.Empty;

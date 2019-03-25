@@ -148,14 +148,14 @@ namespace Model.Filters
                 return;
             }
 
-            var minCount = (PlayerCountMaxSelectedItem ?? PlayerCountMaxAvailable) - 2;
+            var minCount = (PlayerCountMaxSelectedItem ?? PlayerCountMaxAvailable) - 1;
 
             PlayerCountMinList = (from v in Enumerable.Range(PlayerCountMinAvailable, minCount) select v).ToList();
             PlayerCountMinSelectedItem = _playerCountMinList.Contains(PlayerCountMinSelectedItem ?? -1) ? PlayerCountMinSelectedItem : PlayerCountMinList.ElementAt(0);
 
-            var maxCount = this.PlayerCountMaxAvailable - (PlayerCountMinSelectedItem ?? PlayerCountMinAvailable);
+            var maxCount = PlayerCountMaxAvailable - (PlayerCountMinSelectedItem ?? PlayerCountMinAvailable);
 
-            PlayerCountMaxList = (from v in Enumerable.Range((PlayerCountMinSelectedItem ?? PlayerCountMinAvailable) + 1, maxCount) select v).ToList();
+            PlayerCountMaxList = (from v in Enumerable.Range((PlayerCountMinSelectedItem ?? PlayerCountMinAvailable), maxCount + 1) select v).ToList();
             PlayerCountMaxSelectedItem = _playerCountMaxList.Contains(PlayerCountMaxSelectedItem ?? -1) ? PlayerCountMaxSelectedItem : PlayerCountMaxList.ElementAt(0);
 
             OnPlayersBetweenChanged?.Invoke();
@@ -719,7 +719,7 @@ namespace Model.Filters
                 curPredicate = curPredicate.Or(x => x.CurrencyId == (short)state.Value);
             }
 
-            curPredicate = curPredicate.Or(x => x.CurrencyId == (short)Currency.All);
+            curPredicate = curPredicate.Or(x => x.CurrencyId == (short)Currency.All || x.CurrencyId == (short)Currency.Chips);
 
             return curPredicate;
         }

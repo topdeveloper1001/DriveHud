@@ -16,6 +16,7 @@ using Model.Data;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace Model.Reports
 {
@@ -24,8 +25,8 @@ namespace Model.Reports
     /// </summary>
     public class OverAllReportCreator : CashBaseReportCreator<ReportIndicators>
     {
-        protected override List<ReportIndicators> CombineChunkedIndicators(BlockingCollection<ReportIndicators> chunkedIndicators)
-        {
+        protected override List<ReportIndicators> CombineChunkedIndicators(BlockingCollection<ReportIndicators> chunkedIndicators, CancellationToken cancellationToken)
+        {           
             var report = chunkedIndicators.FirstOrDefault();
 
             if (report == null)
@@ -33,7 +34,15 @@ namespace Model.Reports
                 return new List<ReportIndicators>();
             }
 
-            chunkedIndicators.Skip(1).ForEach(r => report.AddIndicator(r));
+            chunkedIndicators.Skip(1).ForEach(r =>
+            {
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    return;
+                }
+
+                report.AddIndicator(r);
+            });
 
             return new List<ReportIndicators>
             {
@@ -41,7 +50,7 @@ namespace Model.Reports
             };
         }
 
-        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<ReportIndicators> chunkedIndicators)
+        protected override void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<ReportIndicators> chunkedIndicators, CancellationToken cancellationToken)
         {
             var report = new ReportIndicators();
 
@@ -49,8 +58,13 @@ namespace Model.Reports
 
             foreach (var playerstatistic in statistics)
             {
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    return;
+                }
+
                 report.AddStatistic(playerstatistic);
             }
         }
-    }    
+    }
 }

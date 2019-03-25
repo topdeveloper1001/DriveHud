@@ -120,7 +120,7 @@ namespace DriveHUD.Common.Linq
         public static void RemoveRange(this IList list, IEnumerable items)
         {
             items.ForEach(list.Remove);
-        }
+        }     
 
         public static void ForEach(this IEnumerable enumerable, Action<object> action)
         {

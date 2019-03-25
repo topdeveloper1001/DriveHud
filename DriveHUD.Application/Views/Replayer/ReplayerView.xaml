@@ -24,6 +24,7 @@
     WindowStartupLocation="CenterScreen"
     Foreground="#7D7F84"
     Background="#1F2124"
+    
     Closed="RadWindow_Closed">
 
     <telerik:RadWindow.InputBindings>
@@ -148,7 +149,7 @@
             Grid.Row="0"
             application:MarginSetter.Margin="10 0 0 0"
             Grid.ColumnSpan="2"
-            Width="246">
+            Width="296">
 
             <Button
                 Width="40"
@@ -192,11 +193,29 @@
                     </Path.Fill>
                 </Path>
             </Button>
+            <Button
+                Width="40"
+                Command="{Binding OpenEquityCalculatorCommand}">
+                <Path
+                    Margin="5,7,5,6"
+                    Stretch="Uniform">
+                    <Path.Data>
+                        <PathGeometry
+                            Figures="m 15 30 -11.25 0 0 -14.375 0 -14.375 11.25 0 11.25 0 0 14.375 L 26.25 30 15 30 Z m -3.75 -2.5 5 0 0 -1.25 0 -1.25 -5 0 -5 0 0 1.25 0 1.25 5 0 z m 7.5 0 C 19.4375 27.5 20 26.9375 20 26.25 20 25.5625 19.4375 25 18.75 25 c -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m 3.75 0 1.25 0 0 -3.125 0 -3.125 -1.25 0 -1.25 0 0 3.125 0 3.125 1.25 0 z m -15 -3.75 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m 3.75 0 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m 3.75 0 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m 3.75 0 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z M 7.5 20 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m 3.75 0 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z M 15 20 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m 3.75 0 C 19.4375 20 20 19.4375 20 18.75 20 18.0625 19.4375 17.5 18.75 17.5 c -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m 3.75 0 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m -15 -3.75 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m 3.75 0 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m 3.75 0 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m 3.75 0 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m 3.75 0 c 0.6875 0 1.25 -0.5625 1.25 -1.25 0 -0.6875 -0.5625 -1.25 -1.25 -1.25 -0.6875 0 -1.25 0.5625 -1.25 1.25 0 0.6875 0.5625 1.25 1.25 1.25 z m -7.5 -5 8.75 0 0 -3.75 0 -3.75 -8.75 0 -8.75 0 0 3.75 0 3.75 8.75 0 z"
+                            FillRule="NonZero" />
+                    </Path.Data>
+                    <Path.Fill>
+                        <SolidColorBrush
+                            Color="{StaticResource BackgroundBrushColor4}" />
+                    </Path.Fill>
+                </Path>
+            </Button>
             <telerik:RadRibbonDropDownButton
                 Width="40"
                 Background="{StaticResource BackgroundBrush2}"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
+                Cursor="Hand"
                 Style="{StaticResource RadRibbonDropDownButtonNoArrowStyle}">
                 <telerik:RadRibbonDropDownButton.Content>
                     <Path
@@ -222,7 +241,6 @@
                                     Value="2" />
                             </Style>
                         </telerik:RadContextMenu.Resources>
-
                         <telerik:RadMenuItem
                             Header="{ResX Enum_HandExport_TwoPlusTwo}"
                             Tag="{x:Static me:EnumExportType.TwoPlusTwo}"
@@ -536,6 +554,16 @@
                         <telerik:RadMenuItem
                             Header="{ResX Main_ContextMenu_SaveHudPosition}"
                             Command="{Binding SaveHUDPositionsCommand}" />
+                        <!-- Rotate -->
+                        <telerik:RadMenuItem
+                            Header="{ResX Main_ContextMenu_RotateHUD}">
+                            <telerik:RadMenuItem
+                                Header="{ResX Key=Main_ContextMenu_RotateHUDToRight}"
+                                Command="{Binding RotateHUDToRightCommand}" />
+                            <telerik:RadMenuItem
+                                Header="{ResX Key=Main_ContextMenu_RotateHUDToLeft}"
+                                Command="{Binding RotateHUDToLeftCommand}" />
+                        </telerik:RadMenuItem>
                     </telerik:RadContextMenu>
                 </telerik:RadContextMenu.ContextMenu>
             </Image>

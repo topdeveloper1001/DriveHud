@@ -10,6 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Log;
 using DriveHUD.Importers.Adda52;
 using DriveHUD.Importers.AndroidBase;
 using DriveHUD.Importers.BetOnline;
@@ -36,6 +38,8 @@ using Model.Enums;
 using Model.Export;
 using Model.Solvers;
 using System;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace DriveHUD.Importers
 {
@@ -117,7 +121,9 @@ namespace DriveHUD.Importers
             container.RegisterType<IPokerClientEncryptedLogger, BetOnlineTournamentLogger>(LogServices.BetOnlineTournament.ToString());
 
             container.RegisterType<IHandHistoryToIPokerConverter, HandHistoryToIPokerConverter>();
-            container.RegisterType<IZoneHandAdjuster, ZoneHandAdjuster>();            
+            container.RegisterType<IZoneHandAdjuster, ZoneHandAdjuster>();
+
+            LoadLibrariesOnDemand();
         }
 
         public static void ConfigureImporterService()
@@ -161,6 +167,43 @@ namespace DriveHUD.Importers
 
             var proxyImporter = importerService.GetImporter<IProxyImporter>();
             proxyImporter.RegisterImporter<IAdda52Importer>();
+        }
+
+        private static Dictionary<string, bool> loadedAssemblies = new Dictionary<string, bool>();
+
+        private static void LoadLibrariesOnDemand()
+        {
+            AppDomain.CurrentDomain.AssemblyResolve += (s, e) =>
+            {
+                if (loadedAssemblies.ContainsKey(e.Name))
+                {
+                    return null;
+                }
+
+                try
+                {
+                    if (e.Name.ContainsIgnoreCase("SmartFox2X"))
+                    {
+                        using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("DriveHUD.Importers.Adda52.Libs.SmartFox2X.dll"))
+                        {
+                            byte[] bytes = new byte[(int)stream.Length];
+                            stream.Read(bytes, 0, (int)stream.Length);
+
+                            var assembly = Assembly.Load(bytes);
+
+                            loadedAssemblies[e.Name] = true;
+
+                            return assembly;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(typeof(ImporterBootstrapper), $"Failed to resolve '{e.Name}' assembly dependencies.", ex);
+                }
+
+                return null;
+            };
         }
     }
 }

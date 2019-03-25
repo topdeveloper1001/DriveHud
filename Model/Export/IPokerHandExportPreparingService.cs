@@ -30,12 +30,12 @@ namespace Model.Export
         private const string BetOnlineFastPokerPrefix = "Fast Fold";
         private const string IPokerFastPokerPrefix = "Speed";
 
-        private Dictionary<string, string> sessionToFile = new Dictionary<string, string>();
+        protected Dictionary<string, string> sessionToFile = new Dictionary<string, string>();
         private Dictionary<FastFoldKey, string> fastFoldSessions = new Dictionary<FastFoldKey, string>();
 
         protected override string HandHistoryFilePatternName => "dh_exported_file_{0}.xml";
 
-        private bool TryParseFastFoldPokerPrefix(string hand, EnumPokerSites site, out string adjustedHand)
+        protected virtual bool TryParseFastFoldPokerPrefix(string hand, EnumPokerSites site, out string adjustedHand)
         {
             adjustedHand = null;
 
@@ -118,7 +118,7 @@ namespace Model.Export
             });
         }
 
-        private HandInfo PrepareHandInfo(string hand, EnumPokerSites site)
+        protected virtual HandInfo PrepareHandInfo(string hand, EnumPokerSites site)
         {
             // insert pokersite tag
             if (!hand.ContainsIgnoreCase("<pokersite"))
@@ -175,7 +175,7 @@ namespace Model.Export
             return adjustedHand;
         }
 
-        private class HandInfo
+        protected class HandInfo
         {
             public string Session { get; set; }
 
@@ -198,7 +198,7 @@ namespace Model.Export
             }
         }
 
-        private class FastFoldKey
+        protected class FastFoldKey
         {
             public string GameType { get; set; }
 

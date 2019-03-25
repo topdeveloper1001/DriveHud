@@ -113,8 +113,7 @@
     </DataTemplate>
 
     <DataTemplate
-        x:Key="
-                HoleCardStructureMidHands">
+        x:Key="HoleCardStructureMidHands">
         <StackPanel
             Orientation="
                 Horizontal">

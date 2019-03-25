@@ -1,0 +1,64 @@
+<session sessioncode="986320">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $2/$4</gametype>
+		<tablename>Table17716457</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2019-02-07 18:35:12</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>$0+$0</buyin>
+		<totalbuyin>$0</totalbuyin>
+		<win>0</win>
+		<maxplayers>9</maxplayers>
+		<pokersite>Ignition</pokersite>
+	</general>
+	<game gamecode="3727645295">
+		<general>
+			<startdate>2019-02-07 18:39:42</startdate>
+			<players>
+				<player seat="1" name="P1_547271QF" chips="2510" dealer="0" win="468" bet="308" rebuy="0" addon="0" />
+				<player seat="2" name="P2_357914MG" chips="74" dealer="0" win="0" bet="74" rebuy="0" addon="0" />
+				<player seat="3" name="P3_326409QB" chips="350" dealer="1" win="0" bet="74" rebuy="0" addon="0" />
+				<player seat="5" name="Hero" chips="112" dealer="0" win="0" bet="12" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Hero" type="1" sum="2" cards="[cards]" />
+			<action no="2" player="P1_547271QF" type="2" sum="4" cards="[cards]" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="P1_547271QF">H9 C9</cards>
+			<cards type="Pocket" player="P2_357914MG">H8 D8</cards>
+			<cards type="Pocket" player="P3_326409QB">X X</cards>
+			<cards type="Pocket" player="Hero">H7 D7</cards>
+			<action no="3" player="P2_357914MG" type="3" sum="4" cards="" />
+			<action no="4" player="P3_326409QB" type="23" sum="12" cards="" />
+			<action no="5" player="Hero" type="3" sum="10" cards="" />
+			<action no="6" player="P1_547271QF" type="23" sum="74" cards="" />
+			<action no="7" player="P2_357914MG" type="7" sum="70" cards="" />
+			<action no="8" player="P3_326409QB" type="3" sum="62" cards="" />
+			<action no="9" player="Hero" type="0" sum="0" cards="" />
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C7 DK C5</cards>
+			<action no="10" player="P1_547271QF" type="5" sum="234" cards="" />
+			<action no="11" player="P3_326409QB" type="0" sum="0" cards="" />
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S6</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C10</cards>
+		</round>
+	</game>
+</session>

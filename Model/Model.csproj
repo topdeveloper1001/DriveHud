@@ -224,7 +224,7 @@
     <Compile Include="Enums\RangeCardsEnums.cs" />
     <Compile Include="Enums\ShowdownHands.cs" />
     <Compile Include="Enums\Stat.cs" />
-    <Compile Include="Events\FilterEvents\UpdateReportEvent.cs" />
+    <Compile Include="Events\CancelReportLoadingEvent.cs" />
     <Compile Include="Events\FilterEvents\BuiltFilterChangedEvent.cs" />
     <Compile Include="Events\CalculateEquityEvent.cs" />
     <Compile Include="Events\FilterEvents\DateFilterChangedEvent.cs" />

@@ -38,7 +38,7 @@ namespace DriveHUD.Bootstrapper.App.ViewModels
 
         protected void Log(LogLevel level, string message)
         {
-            MainViewModel.Log(level, $"{PageType} page: $message");
+            MainViewModel.Log(level, $"{PageType} page: {message}");
         }
     }
 }

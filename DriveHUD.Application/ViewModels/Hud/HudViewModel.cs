@@ -900,7 +900,8 @@ namespace DriveHUD.Application.ViewModels
                 statsCollection.ForEach(x => x.SetPopupDefaults());
             }
 
-            var statTool = GetToolToModifyStats();
+            var statTool = GetToolToModifyStats(x => x.ToolType == HudDesignerToolType.PlainStatBox)
+                .FirstOrDefault();
 
             if (statTool == null)
             {
@@ -931,8 +932,10 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            var statTool = GetToolToModifyStats();
-            statTool?.Stats.RemoveRange(statsCollection);
+            var statTools = GetToolToModifyStats(x => x.ToolType == HudDesignerToolType.PlainStatBox ||
+                        x.ToolType == HudDesignerToolType.FourStatBox);
+
+            statTools.ForEach(statTool => statTool.Stats.RemoveRange(statsCollection));
 
             // if selected tools is base stat tool then we don't delete any tool
             if (SelectedToolViewModel != null && SelectedToolViewModel is IHudBaseStatToolViewModel)
@@ -961,7 +964,7 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private IHudStatsToolViewModel GetToolToModifyStats()
+        private IEnumerable<IHudStatsToolViewModel> GetToolToModifyStats(Func<HudBaseToolViewModel, bool> predicate)
         {
             var hudElement = HudElements?.FirstOrDefault();
 
@@ -970,23 +973,22 @@ namespace DriveHUD.Application.ViewModels
                 return null;
             }
 
-            IHudStatsToolViewModel statTool;
+            IEnumerable<IHudStatsToolViewModel> statTools;
 
             if (SelectedToolViewModel != null)
             {
-                statTool = hudElement.Tools
+                statTools = hudElement.Tools
                     .OfType<IHudStatsToolViewModel>()
-                    .FirstOrDefault(x => ReferenceEquals(x, SelectedToolViewModel));
+                    .Where(x => ReferenceEquals(x, SelectedToolViewModel));
             }
             else
             {
-                statTool = hudElement.Tools
-                   .Where(x => x.ToolType == HudDesignerToolType.PlainStatBox)
-                   .OfType<IHudStatsToolViewModel>()
-                   .FirstOrDefault();
+                statTools = hudElement.Tools
+                   .Where(predicate)
+                   .OfType<IHudStatsToolViewModel>();
             }
 
-            return statTool;
+            return statTools;
         }
 
         /// <summary>

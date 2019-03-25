@@ -56,6 +56,7 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
             ServiceLocator.SetLocatorProvider(() => locator);
         }
 
+        [TestCase("regular-6-max-no-hero-1")]
         [TestCase("regular-6-max-no-hero")]
         [TestCase("regular-9-max-hero")]
         [TestCase("regular-9-max-no-hero-1")]
@@ -107,10 +108,9 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
 
             foreach (var packet in testObject.Packages)
             {
-                var json = JsonConvert.SerializeObject(packet);
-                var jsonBytes = Encoding.UTF8.GetBytes(json);
+                var json = JsonConvert.SerializeObject(packet);                
 
-                if (Adda52JsonPackage.TryParse(jsonBytes, out Adda52JsonPackage package))
+                if (Adda52JsonPackage.TryParse(json, out Adda52JsonPackage package))
                 {
                     packages.Add(package);
                 }

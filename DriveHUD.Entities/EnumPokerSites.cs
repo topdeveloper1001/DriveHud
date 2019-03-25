@@ -68,6 +68,8 @@ namespace DriveHUD.Entities
         [EnumMember]
         DriveHUDReplayer = 24,
         [EnumMember]
-        PokerBaazi = 25
+        PokerBaazi = 25,
+        [EnumMember]
+        RedDragon = 26
     }
 }

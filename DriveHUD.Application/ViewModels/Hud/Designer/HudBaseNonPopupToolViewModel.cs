@@ -94,9 +94,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <exception cref="DHBusinessException" />
         public override void InitializePositions(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType)
         {
-            var tool = Tool as T;
-
-            if (tool == null)
+            if (!(Tool is T tool))
             {
                 return;
             }

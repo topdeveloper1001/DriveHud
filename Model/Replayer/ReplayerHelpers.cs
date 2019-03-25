@@ -17,6 +17,7 @@ using Model.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace Model.Replayer
 {
@@ -39,11 +40,15 @@ namespace Model.Replayer
             {
                 if (current.IsTourney)
                 {
-                    potStat = statistics.Where(x => x.TournamentId == current.TournamentId).OrderByDescending(x => x.Time).Take(30);
+                    potStat = statistics.Where(x => x.TournamentId == current.TournamentId).OrderByDescending(x => x.Time);
                 }
                 else
                 {
-                    var session = new SessionsReportCreator().Create(statistics.ToList()).Where(x => x.Statistics.Any(s => s.GameNumber == current.GameNumber));
+                    var cancellationTokenSource = new CancellationTokenSource();
+
+                    var session = new SessionsReportCreator()
+                        .Create(statistics.ToList(), cancellationTokenSource.Token)
+                        .Where(x => x.Statistics.Any(s => s.GameNumber == current.GameNumber));
 
                     if (session != null && session.Count() > 0)
                     {
@@ -52,7 +57,7 @@ namespace Model.Replayer
                 }
             }
 
-            var result = potStat.Where(x => Math.Abs(x.NetWon) > (bbFilter * x.BigBlind) && x.Vpiphands > 0).Select(x => new ReplayerDataModel(x));
+            var result = potStat.Where(x => Math.Abs(x.NetWon) >= (bbFilter * x.BigBlind)).Select(x => new ReplayerDataModel(x));
 
             return result;
         }

@@ -4,7 +4,7 @@
      xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
 
   <?ifndef ProductVersion?>
-  <?define ProductVersion = "1.6.1.2706" ?>
+  <?define ProductVersion = "1.6.1.2785" ?>
   <?endif ?>
 
   <?ifndef ProductName?>
@@ -30,8 +30,8 @@
           IconSourceFile="..\DriveHUD.Application\images\drivehud.ico"
           UpgradeCode="d57055f7-9cf4-4582-a873-d606ac3ab658">
 
-    <bal:Condition  Message="This software can only be installed on Windows Vista and higher.">
-      <![CDATA[VersionNT >= v6.0]]>
+    <bal:Condition  Message="This software can only be installed on Windows 7 with Service Pack 1 and higher.">
+      <![CDATA[((VersionNT = v6.1) AND (ServicePackLevel >= 1)) OR VersionNT > v6.1]]>
     </bal:Condition>
 
     <BootstrapperApplicationRef Id='ManagedBootstrapperApplicationHost'>
@@ -68,7 +68,7 @@
          DetectCondition="(VCREDIST_140_x86 &gt;= v14.16.27024)"
          SourceFile="..\dependencies\vc_redist.x86.exe"
          InstallCommand="/install /quiet /norestart">
-        <ExitCode Value="3010" Behavior="forceReboot"/>
+        <ExitCode Value="3010" Behavior="scheduleReboot"/>
         <ExitCode Value="1638" Behavior="success"/>
       </ExePackage>
       <RollbackBoundary />

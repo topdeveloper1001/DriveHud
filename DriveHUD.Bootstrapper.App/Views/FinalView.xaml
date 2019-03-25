@@ -45,6 +45,7 @@
             Text="{Binding FinalText}"
             Margin="0 5 0 5"
             FontWeight="Bold"
+            TextWrapping="Wrap"
             FontSize="26" />
         <TextBlock
             Grid.Row="1"
@@ -71,6 +72,13 @@
                     Command="{Binding LaunchCommand}"
                     Visibility="{Binding IsCanLaunch, Converter={cnv:BoolToVisibilityConverter}}"
                     Content="{x:Static res:Resources.Common_FinalView_Launch}" />
+                <Button
+                    Margin="5"
+                    Height="30"
+                    Width="120"
+                    Command="{Binding RebootCommand}"
+                    Visibility="{Binding IsRebootVisible, Converter={cnv:BoolToVisibilityConverter}}"
+                    Content="{x:Static res:Resources.Common_FinalView_Reboot}" />
                 <Button
                     Margin="5"
                     Height="30"

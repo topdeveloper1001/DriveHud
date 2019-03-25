@@ -1,18 +1,15 @@
-﻿using System;
+﻿using DriveHUD.Common.Linq;
+using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
+using Model.Enums;
+using Model.OmahaHoleCardsAnalyzers;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using DriveHUD.Entities;
-using DriveHUD.Common.Utils;
-using HandHistories.Objects.Cards;
-using Model.Enums;
-using System.Collections.ObjectModel;
-using DriveHUD.Common.Linq;
-using Model.OmahaHoleCardsAnalyzers;
 using System.Xml.Serialization;
-using Newtonsoft.Json;
 
 namespace Model.Filters
 {

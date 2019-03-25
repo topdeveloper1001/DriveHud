@@ -190,7 +190,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             {
                 foreach (var filter in FilterModelManager.FilterModelCollection)
                 {
-                    var filterPredicate = filter.GetFilterPredicate();
+                    var filterPredicate = filter.GetFilterPredicate();                 
 
                     if (filterPredicate != null)
                     {

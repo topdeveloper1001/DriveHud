@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="Adda52PacketManager.cs" company="Ace Poker Solutions">
-// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -22,7 +22,7 @@ namespace DriveHUD.Importers.Adda52
 
         public override bool IsStartingPacket(byte[] bytes)
         {
-            return bytes != null && bytes.Length > 0 && bytes[0] == 0x81;
+            return bytes != null && bytes.Length > 0 && (bytes[0] == 0x82 || bytes[0] == 0x80 || bytes[0] == 0x81);
         }
 
         public override int ReadPacketLength(byte[] bytes)
@@ -32,7 +32,7 @@ namespace DriveHUD.Importers.Adda52
                 return 0;
             }
 
-            if (bytes[1] == 0x7E && bytes[0] == 0x81)
+            if (bytes[1] == 0x7E && (bytes[0] == 0x82 || bytes[0] == 0x80 || bytes[0] == 0x81))
             {
                 var numArray = new byte[] { bytes[2], bytes[3] };
 

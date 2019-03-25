@@ -10,6 +10,7 @@ using Model.Replayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows;
 
 namespace DriveHUD.Application.ViewModels.Replayer
 {
@@ -58,15 +59,17 @@ namespace DriveHUD.Application.ViewModels.Replayer
                 return;
             }
 
-            var currentStat = _storageModel.StatisticCollection.FirstOrDefault(x => x.GameNumber == gamenumber);
-           
+            var currentStat = _storageModel.FindStatistic(x => x.GameNumber == gamenumber);
+
             if (currentStat == null)
             {
                 LogProvider.Log.Error(this, $"Cannot find statistics for player {playerName}, site {pokerSiteId}, game {gamenumber}");
                 return;
             }
 
-            var statistics = currentStat.IsTourney ? _storageModel.FilteredTournamentPlayerStatistic : _storageModel.FilteredCashPlayerStatistic;
+            var statistics = currentStat.IsTourney ?
+                _storageModel.GetFilteredTournamentPlayerStatistic() :
+                _storageModel.GetFilteredCashPlayerStatistic();
 
             ReplayHand(currentStat, displayPotList ? statistics : new List<Playerstatistic>(), showHoleCards);
         }
@@ -104,7 +107,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             App.Current.Dispatcher.Invoke(() =>
             {
-                ReplayerView replayer = new ReplayerView(replayerDataModelList, ReplayerHelpers.CreateSessionHandsList(statistics, currentStat), showHoleCards);
+                var replayer = new ReplayerView(replayerDataModelList, ReplayerHelpers.CreateSessionHandsList(statistics, currentStat), showHoleCards);
                 replayer.IsTopmost = true;
                 replayer.Show();
                 replayer.IsTopmost = false;

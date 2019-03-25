@@ -16,7 +16,7 @@ namespace DriveHUD.Importers.Adda52.Model
 {
     internal sealed class MTTTableInfo
     {
-        [JsonProperty("mttPrizes")]
-        public MTTPrize[] MTTPrizes { get; set; }
+        [JsonProperty("mttTables")]
+        public MTTTable[] MTTTables { get; set; }
     }
 }

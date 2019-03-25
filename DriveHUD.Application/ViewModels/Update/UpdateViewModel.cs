@@ -21,6 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Reactive.Linq;
 using System.Web;
 
@@ -111,6 +112,20 @@ namespace DriveHUD.Application.ViewModels.Update
 
                 Notes.Add(updateReleaseNoteViewModel);
             }
+
+            var orderedNotes = Notes.OrderByDescending(x => x.Version).ToArray();
+
+            var firstNote = orderedNotes.FirstOrDefault();
+
+            if (firstNote == null)
+            {
+                return;
+            }
+
+            firstNote.Notes = string.Join(Environment.NewLine, orderedNotes.Select(x => x.Notes.Trim()));
+
+            Notes.Clear();
+            Notes.Add(firstNote);
         }
 
         private void Update()

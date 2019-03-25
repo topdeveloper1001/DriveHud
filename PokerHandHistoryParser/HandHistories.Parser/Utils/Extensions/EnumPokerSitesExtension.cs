@@ -38,7 +38,9 @@ namespace HandHistories.Parser.Utils.Extensions
                 return false;
             }
 
-            if (handText.Length >= 50 && handText.IndexOf("PokerStars", 0, 50) > -1)
+            if (handText.Length >= 50 &&
+                (handText.IndexOf("PokerStars", 0, 50) > -1 ||
+                handText.IndexOf("9stacks Poker", 0, 50) > -1))
             {
                 siteName = EnumPokerSites.PokerStars;
                 return true;
@@ -151,7 +153,8 @@ namespace HandHistories.Parser.Utils.Extensions
             EnumPokerSites.PokerBaazi,
             EnumPokerSites.PokerKing,
             EnumPokerSites.PokerMaster,
-            EnumPokerSites.PPPoker
+            EnumPokerSites.PPPoker,
+            EnumPokerSites.RedDragon
         };
 
         private static readonly HashSet<EnumPokerSites> sitesStoredInIPokerFormat = new HashSet<EnumPokerSites>

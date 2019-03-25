@@ -1,0 +1,19 @@
+9stacks Poker Hand #35587765:  Hold'em No Limit (50/100) - 2019/03/18 12:33:47 UTC
+Table 'HIGH (50/100) #1'(35528763) 7-max (Real Money) Seat #3 is the button
+Seat 3: vish1784 (1,612.50 in chips)
+Seat 4: KingFish (4,243.75 in chips)
+vish1784: posts small blind 50
+KingFish: posts big blind 100
+*** HOLE CARDS ***
+Dealt to KingFish [As 8h]
+vish1784: calls 50
+KingFish: raises 4,143.75 to 4,243.75 and is all-in
+vish1784: folds
+Uncalled bet (4,143.75) returned to KingFish
+*** SHOW DOWN ***
+KingFish: doesn't show hand
+KingFish collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | Rake 0 
+Seat 3: vish1784 (button) (small blind) folded before Flop 
+Seat 4: KingFish (big blind) collected (200)

@@ -1,0 +1,497 @@
+#Game No : 441002371
+***** Delawarepark.com Hand History for Game 441002371 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:19:28
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,500 )
+Seat 2: JnDe84 ( 1,500 )
+Seat 4: benztoyzII ( 1,500 )
+Seat 6: gijoetex ( 1,500 )
+Seat 7: Apo_91 ( 1,500 )
+Seat 9: rebelins ( 1,500 )
+JnDe84 posts small blind [10]
+benztoyzII posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ Kd, 3s ]
+gijoetex folds
+Apo_91 folds
+rebelins folds
+Player414 folds
+JnDe84 folds
+** Summary **
+benztoyzII did not show his hand
+benztoyzII collected [ 30 ]
+
+
+
+#Game No : 441002372
+***** Delawarepark.com Hand History for Game 441002372 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:19:35
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,500 )
+Seat 2: JnDe84 ( 1,490 )
+Seat 4: benztoyzII ( 1,510 )
+Seat 6: gijoetex ( 1,500 )
+Seat 7: Apo_91 ( 1,500 )
+Seat 9: rebelins ( 1,500 )
+benztoyzII posts small blind [10]
+gijoetex posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ Kc, Ac ]
+Apo_91 folds
+rebelins folds
+Player414 folds
+JnDe84 raises [60]
+benztoyzII folds
+gijoetex folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 50 ]
+
+
+
+#Game No : 441002373
+***** Delawarepark.com Hand History for Game 441002373 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:19:45
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,500 )
+Seat 2: JnDe84 ( 1,520 )
+Seat 4: benztoyzII ( 1,500 )
+Seat 6: gijoetex ( 1,480 )
+Seat 7: Apo_91 ( 1,500 )
+Seat 9: rebelins ( 1,500 )
+gijoetex posts small blind [10]
+Apo_91 posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ Qh, 6d ]
+rebelins folds
+Player414 folds
+JnDe84 raises [40]
+benztoyzII folds
+gijoetex folds
+Apo_91 folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 50 ]
+
+
+
+#Game No : 441002374
+***** Delawarepark.com Hand History for Game 441002374 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:19:52
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,500 )
+Seat 2: JnDe84 ( 1,550 )
+Seat 4: benztoyzII ( 1,500 )
+Seat 6: gijoetex ( 1,470 )
+Seat 7: Apo_91 ( 1,480 )
+Seat 9: rebelins ( 1,500 )
+Apo_91 posts small blind [10]
+rebelins posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ Tc, 2c ]
+Player414 folds
+JnDe84 raises [40]
+benztoyzII folds
+gijoetex folds
+Apo_91 folds
+rebelins folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 50 ]
+
+
+
+#Game No : 441002375
+***** Delawarepark.com Hand History for Game 441002375 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:19:59
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,500 )
+Seat 2: JnDe84 ( 1,580 )
+Seat 4: benztoyzII ( 1,500 )
+Seat 6: gijoetex ( 1,470 )
+Seat 7: Apo_91 ( 1,470 )
+Seat 9: rebelins ( 1,480 )
+rebelins posts small blind [10]
+Player414 posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ 7h, Jh ]
+JnDe84 raises [40]
+benztoyzII folds
+gijoetex folds
+Apo_91 folds
+rebelins folds
+Player414 folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 50 ]
+
+
+
+#Game No : 441002376
+***** Delawarepark.com Hand History for Game 441002376 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:20:06
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,480 )
+Seat 2: JnDe84 ( 1,610 )
+Seat 4: benztoyzII ( 1,500 )
+Seat 6: gijoetex ( 1,470 )
+Seat 7: Apo_91 ( 1,470 )
+Seat 9: rebelins ( 1,470 )
+Player414 posts small blind [10]
+JnDe84 posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ 9c, Ts ]
+benztoyzII folds
+gijoetex folds
+Apo_91 folds
+rebelins folds
+Player414 folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 30 ]
+
+
+
+#Game No : 441002377
+***** Delawarepark.com Hand History for Game 441002377 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:20:11
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,470 )
+Seat 2: JnDe84 ( 1,620 )
+Seat 4: benztoyzII ( 1,500 )
+Seat 6: gijoetex ( 1,470 )
+Seat 7: Apo_91 ( 1,470 )
+Seat 9: rebelins ( 1,470 )
+JnDe84 posts small blind [10]
+benztoyzII posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ As, Jd ]
+gijoetex folds
+Apo_91 folds
+rebelins folds
+Player414 folds
+JnDe84 raises [30]
+benztoyzII folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 40 ]
+
+
+
+#Game No : 441002378
+***** Delawarepark.com Hand History for Game 441002378 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:20:18
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,470 )
+Seat 2: JnDe84 ( 1,640 )
+Seat 4: benztoyzII ( 1,480 )
+Seat 6: gijoetex ( 1,470 )
+Seat 7: Apo_91 ( 1,470 )
+Seat 9: rebelins ( 1,470 )
+benztoyzII posts small blind [10]
+gijoetex posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ 6d, 7c ]
+Apo_91 folds
+rebelins folds
+Player414 folds
+JnDe84 raises [40]
+benztoyzII folds
+gijoetex folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 50 ]
+
+
+
+#Game No : 441002379
+***** Delawarepark.com Hand History for Game 441002379 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:20:24
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,470 )
+Seat 2: JnDe84 ( 1,670 )
+Seat 4: benztoyzII ( 1,470 )
+Seat 6: gijoetex ( 1,450 )
+Seat 7: Apo_91 ( 1,470 )
+Seat 9: rebelins ( 1,470 )
+gijoetex posts small blind [10]
+Apo_91 posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ 9s, Kc ]
+rebelins folds
+Player414 folds
+JnDe84 raises [40]
+benztoyzII folds
+gijoetex folds
+Apo_91 folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 50 ]
+
+
+
+#Game No : 441002380
+***** Delawarepark.com Hand History for Game 441002380 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:20:31
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,470 )
+Seat 2: JnDe84 ( 1,700 )
+Seat 4: benztoyzII ( 1,470 )
+Seat 6: gijoetex ( 1,440 )
+Seat 7: Apo_91 ( 1,450 )
+Seat 9: rebelins ( 1,470 )
+Apo_91 posts small blind [10]
+rebelins posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ 9s, 7d ]
+Player414 folds
+JnDe84 raises [40]
+benztoyzII folds
+gijoetex folds
+Apo_91 folds
+rebelins folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 50 ]
+
+
+
+#Game No : 441002381
+***** Delawarepark.com Hand History for Game 441002381 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:20:39
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,470 )
+Seat 2: JnDe84 ( 1,730 )
+Seat 4: benztoyzII ( 1,470 )
+Seat 6: gijoetex ( 1,440 )
+Seat 7: Apo_91 ( 1,440 )
+Seat 9: rebelins ( 1,450 )
+rebelins posts small blind [10]
+Player414 posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ Td, 6s ]
+JnDe84 raises [40]
+benztoyzII folds
+gijoetex folds
+Apo_91 folds
+rebelins folds
+Player414 folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 50 ]
+
+
+
+#Game No : 441002382
+***** Delawarepark.com Hand History for Game 441002382 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:20:46
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,450 )
+Seat 2: JnDe84 ( 1,760 )
+Seat 4: benztoyzII ( 1,470 )
+Seat 6: gijoetex ( 1,440 )
+Seat 7: Apo_91 ( 1,440 )
+Seat 9: rebelins ( 1,440 )
+Player414 posts small blind [10]
+JnDe84 posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ Ts, 9c ]
+benztoyzII folds
+gijoetex folds
+Apo_91 folds
+rebelins folds
+Player414 folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 30 ]
+
+
+
+#Game No : 441002383
+***** Delawarepark.com Hand History for Game 441002383 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:20:51
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,440 )
+Seat 2: JnDe84 ( 1,770 )
+Seat 4: benztoyzII ( 1,470 )
+Seat 6: gijoetex ( 1,440 )
+Seat 7: Apo_91 ( 1,440 )
+Seat 9: rebelins ( 1,440 )
+JnDe84 posts small blind [10]
+benztoyzII posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ Jc, Jh ]
+gijoetex folds
+Apo_91 folds
+rebelins folds
+Player414 folds
+JnDe84 folds
+** Summary **
+benztoyzII did not show his hand
+benztoyzII collected [ 30 ]
+
+
+
+#Game No : 441002384
+***** Delawarepark.com Hand History for Game 441002384 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:21:18
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,440 )
+Seat 2: JnDe84 ( 1,760 )
+Seat 4: benztoyzII ( 1,480 )
+Seat 6: gijoetex ( 1,440 )
+Seat 7: Apo_91 ( 1,440 )
+Seat 9: rebelins ( 1,440 )
+benztoyzII posts small blind [10]
+gijoetex posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ Ts, Ac ]
+Apo_91 folds
+rebelins folds
+Player414 folds
+JnDe84 folds
+benztoyzII folds
+** Summary **
+gijoetex did not show his hand
+gijoetex collected [ 30 ]
+
+
+
+#Game No : 441002385
+***** Delawarepark.com Hand History for Game 441002385 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:21:23
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,440 )
+Seat 2: JnDe84 ( 1,760 )
+Seat 4: benztoyzII ( 1,470 )
+Seat 6: gijoetex ( 1,450 )
+Seat 7: Apo_91 ( 1,440 )
+Seat 9: rebelins ( 1,440 )
+gijoetex posts small blind [10]
+Apo_91 posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ 9c, 3d ]
+rebelins folds
+Player414 folds
+JnDe84 folds
+benztoyzII folds
+gijoetex folds
+** Summary **
+Apo_91 did not show his hand
+Apo_91 collected [ 30 ]
+
+
+
+#Game No : 441002386
+***** Delawarepark.com Hand History for Game 441002386 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:21:29
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,440 )
+Seat 2: JnDe84 ( 1,760 )
+Seat 4: benztoyzII ( 1,470 )
+Seat 6: gijoetex ( 1,440 )
+Seat 7: Apo_91 ( 1,450 )
+Seat 9: rebelins ( 1,440 )
+Apo_91 posts small blind [10]
+rebelins posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ 8c, Ac ]
+Player414 folds
+JnDe84 raises [40]
+benztoyzII folds
+gijoetex folds
+Apo_91 folds
+rebelins folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 50 ]
+
+
+
+#Game No : 441002387
+***** Delawarepark.com Hand History for Game 441002387 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:21:35
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,440 )
+Seat 2: JnDe84 ( 1,790 )
+Seat 4: benztoyzII ( 1,470 )
+Seat 6: gijoetex ( 1,440 )
+Seat 7: Apo_91 ( 1,440 )
+Seat 9: rebelins ( 1,420 )
+rebelins posts small blind [10]
+Player414 posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ 2d, 4h ]
+JnDe84 raises [40]
+benztoyzII folds
+gijoetex folds
+Apo_91 folds
+rebelins folds
+Player414 folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 50 ]
+
+
+
+#Game No : 441002388
+***** Delawarepark.com Hand History for Game 441002388 *****
+10/20 Blinds No Limit Holdem - *** 12 02 2019 03:21:43
+Tournament #463539 10 + 1 - Table #1 6 Max (Play Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: Player414 ( 1,420 )
+Seat 2: JnDe84 ( 1,820 )
+Seat 4: benztoyzII ( 1,470 )
+Seat 6: gijoetex ( 1,440 )
+Seat 7: Apo_91 ( 1,440 )
+Seat 9: rebelins ( 1,410 )
+Player414 posts small blind [10]
+JnDe84 posts big blind [20]
+** Dealing down cards **
+Dealt to JnDe84 [ Ts, 8s ]
+benztoyzII folds
+gijoetex folds
+Apo_91 folds
+rebelins folds
+Player414 folds
+** Summary **
+JnDe84 did not show his hand
+JnDe84 collected [ 30 ]
+
+
+

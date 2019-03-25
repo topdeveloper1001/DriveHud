@@ -196,6 +196,8 @@ namespace DriveHUD.Bootstrapper.App.ViewModels
             }
         }
 
+        public bool IsRestartRequired { get; set; }
+
         #endregion
 
         #region Public methods

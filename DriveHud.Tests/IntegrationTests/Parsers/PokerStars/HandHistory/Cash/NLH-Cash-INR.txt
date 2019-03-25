@@ -1,0 +1,44 @@
+PokerStars Hand #197202814998:  Hold'em No Limit (Rs. 25/Rs. 50 INR) - 2019/02/18 18:36:50 IST [2019/02/18 8:06:50 ET]
+Table 'Akiyama' 6-max Seat #3 is the button
+Seat 1: othaomala (Rs. 5605.43 in chips) 
+Seat 2: smitty123455 (Rs. 4219.31 in chips) 
+Seat 3: Shovekid83 (Rs. 1749.19 in chips) 
+Seat 4: tooofan209 (Rs. 7551.65 in chips) 
+Seat 5: deck108 (Rs. 2082.32 in chips) 
+Seat 6: bhavil777 (Rs. 3316.28 in chips) 
+tooofan209: posts small blind Rs. 25
+deck108: posts big blind Rs. 50
+*** HOLE CARDS ***
+Dealt to deck108 [Kh Jc]
+tooofan209 said, "plasyed it wrong but thought dont wnat your whole stack"
+Shovekid83 said, "rehne de..."
+bhavil777: raises Rs. 100 to Rs. 150
+othaomala: folds 
+smitty123455: calls Rs. 150
+Shovekid83: calls Rs. 150
+tooofan209: folds 
+deck108: calls Rs. 100
+*** FLOP *** [6h 2c 8c]
+tooofan209 said, "sach dost"
+deck108: checks 
+bhavil777: checks 
+smitty123455: bets Rs. 296.41
+Shovekid83 said, "next time show your card bro....seems unlikey"
+tooofan209 said, "i call 800 u shuv onb river i call with nuts"
+Shovekid83: raises Rs. 1302.78 to Rs. 1599.19 and is all-in
+deck108: folds 
+bhavil777: folds 
+smitty123455: folds 
+Uncalled bet (Rs. 1302.78) returned to Shovekid83
+tooofan209 said, "show i will not"
+Shovekid83 collected Rs. 1155.10 from pot
+Shovekid83: doesn't show hand 
+*** SUMMARY ***
+Total pot Rs. 1217.82 | Rake Rs. 62.72 
+Board [6h 2c 8c]
+Seat 1: othaomala folded before Flop (didn't bet)
+Seat 2: smitty123455 folded on the Flop
+Seat 3: Shovekid83 (button) collected (Rs. 1155.10)
+Seat 4: tooofan209 (small blind) folded before Flop
+Seat 5: deck108 (big blind) folded on the Flop
+Seat 6: bhavil777 folded on the Flop

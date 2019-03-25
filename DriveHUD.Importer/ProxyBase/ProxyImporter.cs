@@ -130,6 +130,9 @@ namespace DriveHUD.Importers.ProxyBase
                 return;
             }
 
+            // remove compression
+            e.WebSession.Request.Headers.RemoveHeader("Sec-WebSocket-Extensions");
+
             await Task.Run(() =>
             {
                 e.DataReceived += (s, a) =>

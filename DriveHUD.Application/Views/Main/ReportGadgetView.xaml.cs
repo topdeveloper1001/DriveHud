@@ -28,10 +28,12 @@ using Microsoft.Win32;
 using Model;
 using Model.Data;
 using Model.Enums;
+using Model.Events;
 using Model.Hud;
 using Model.Interfaces;
 using Model.Reports;
 using OfficeOpenXml;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -40,6 +42,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -69,6 +72,8 @@ namespace DriveHUD.Application.Views
         public ReportGadgetView()
         {
             InitializeComponent();
+
+            reportCancellationTokenSource = new CancellationTokenSource();
 
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
 
@@ -107,6 +112,14 @@ namespace DriveHUD.Application.Views
                     LogProvider.Log.Error(ex);
                 }
             };
+
+            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+
+            eventAggregator.GetEvent<CancelReportLoadingEvent>().Subscribe(x =>
+            {
+                reportCancellationTokenSource?.Cancel();
+                reportCancellationTokenSource = new CancellationTokenSource();
+            });
         }
 
         private void InitContextMenu()
@@ -524,9 +537,22 @@ namespace DriveHUD.Application.Views
 
                 var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
 
-                var statistic = creator.IsTournament ? storageModel.FilteredTournamentPlayerStatistic : storageModel.FilteredCashPlayerStatistic;
+                var statistic = creator.IsTournament ?
+                    storageModel.GetFilteredTournamentPlayerStatistic() :
+                    storageModel.GetFilteredCashPlayerStatistic();
 
-                var reportCollection = GetReportCollectionAsync(creator, statistic, forceRefresh);
+                // stop loading report
+                reportCancellationTokenSource?.Cancel();
+                reportCancellationTokenSource = new CancellationTokenSource();
+
+                var reportCancellationToken = reportCancellationTokenSource.Token;
+
+                var reportCollection = GetReportCollectionAsync(creator, statistic, forceRefresh, reportCancellationToken);
+
+                if (reportCancellationToken.IsCancellationRequested)
+                {
+                    return;
+                }
 
                 // clear columns in order to avoid  Binding exceptions
                 GridViewReport.Columns.Clear();
@@ -558,13 +584,16 @@ namespace DriveHUD.Application.Views
             }
         }
 
-        private Task<ObservableCollection<ReportIndicators>> GetReportCollectionAsync(IReportCreator reportCreator, List<Playerstatistic> playerstatistics, bool forceRefresh)
+        private Task<ObservableCollection<ReportIndicators>> GetReportCollectionAsync(IReportCreator reportCreator,
+            List<Playerstatistic> playerstatistics, bool forceRefresh, CancellationToken reportCancellationToken)
         {
             return Task.Run(() =>
             {
-                return reportCreator.Create(playerstatistics, forceRefresh);
+                return reportCreator.Create(playerstatistics, reportCancellationToken, forceRefresh);
             });
         }
+
+        private CancellationTokenSource reportCancellationTokenSource;
 
         private async void ReportUpdate(bool forceRefresh = false)
         {
