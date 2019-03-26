@@ -62,6 +62,7 @@ namespace DriveHUD.Application.Views.Replayer
             ViewModel.LastHandsCollection = new ObservableCollection<ReplayerDataModel>(dataModelList);
             ViewModel.SessionHandsCollection = new ObservableCollection<ReplayerDataModel>(sessionHandsList);
             ViewModel.CurrentHand = dataModel;
+            ViewModel.ReplayerWindow = this;
 
             Loaded += ReplayerView_Loaded;
         }

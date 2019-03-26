@@ -714,7 +714,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void OpenWindowDialog(Window window)
         {
-            window.Owner = System.Windows.Application.Current.MainWindow;
+            var owner = ReplayerWindow.ParentOfType<Window>();
+            window.Owner = owner ?? System.Windows.Application.Current.MainWindow;
             window.ShowDialog();
         }
 
@@ -868,6 +869,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
         #endregion
 
         #region Properties
+
+        public RadWindow ReplayerWindow { get; set; }
 
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
