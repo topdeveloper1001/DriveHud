@@ -12,6 +12,7 @@
 
 using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Infrastructure.CustomServices;
+using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using DriveHUD.Importers.AndroidBase;
@@ -26,6 +27,7 @@ using Model;
 using Model.Settings;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using NHibernate.Linq;
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Security;
 using PacketDotNet;
@@ -153,11 +155,15 @@ namespace DriveHUD.Importers.PokerKing
             var connectionsService = ServiceLocator.Current.GetInstance<INetworkConnectionsService>();
             connectionsService.SetLogger(Logger);
 
+            var importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
+
             var detectedTableWindows = new HashSet<IntPtr>();
 
             var handHistoriesToProcess = new ConcurrentDictionary<long, List<HandHistoryData>>();
 
             var usersRooms = new Dictionary<uint, int>();
+
+            var playerNamePlayerIdMap = new Dictionary<string, int>();
 
             while (!cancellationTokenSource.IsCancellationRequested && !IsDisabled())
             {
@@ -179,8 +185,13 @@ namespace DriveHUD.Importers.PokerKing
                         continue;
                     }
 
+                    var isFastFold = PKImporterHelper.IsFastFoldPort(capturedPacket.Destination.Port) ||
+                        PKImporterHelper.IsFastFoldPort(capturedPacket.Source.Port);
+
                     foreach (var package in packages)
                     {
+                        package.IsFastFold = isFastFold;
+
                         if (!IsAllowedPackage(package))
                         {
                             continue;
@@ -189,7 +200,7 @@ namespace DriveHUD.Importers.PokerKing
                         var process = connectionsService.GetProcess(capturedPacket);
                         var windowHandle = emulatorService.GetTableWindowHandle(process);
 
-                        if (!TryDecryptBody(package, process, emulatorService))
+                        if (!isFastFold && !TryDecryptBody(package, process, emulatorService))
                         {
                             if (package.PackageType == PackageType.RequestLeaveRoom)
                             {
@@ -222,9 +233,9 @@ namespace DriveHUD.Importers.PokerKing
                                       usersRooms[package.UserId] = body.RoomId;
                                   }
 
-                                  LogProvider.Log.Info(Logger, $"User {package.UserId} entered room {body.RoomId}.");
+                                  LogProvider.Log.Info(Logger, $"User {package.UserId} entered room {body.RoomId}{(isFastFold ? " (Fast Fold)" : string.Empty)}.");
                               },
-                              () => LogProvider.Log.Info(Logger, $"User {package.UserId} entered room."));
+                              () => LogProvider.Log.Info(Logger, $"User {package.UserId} entered room{(isFastFold ? " (Fast Fold)" : string.Empty)}."));
 
                             continue;
                         }
@@ -237,8 +248,34 @@ namespace DriveHUD.Importers.PokerKing
                                 {
                                     LogProvider.Log.Info(Logger, $"User {package.UserId} left room {body.RoomId}.");
                                     handBuilder.CleanRoom(windowHandle.ToInt32(), body.RoomId);
+
                                 },
                                 () => LogProvider.Log.Info(Logger, $"User {package.UserId} left room {package.RoomId}."));
+
+                            CloseHUD(windowHandle);
+
+                            detectedTableWindows.Remove(windowHandle);
+                            continue;
+                        }
+
+                        if (isFastFold && package.PackageType == PackageType.NoticeQuickLeave)
+                        {
+                            ParsePackage<NoticeQuickLeave>(package,
+                                body =>
+                                {
+                                    handBuilder.CleanFastFoldRooms(package, windowHandle.ToInt32(), out List<HandHistory> handHistories);
+
+                                    foreach (var fastFoldHandHistory in handHistories)
+                                    {
+                                        LogProvider.Log.Info(Logger,
+                                            $"Hand #{fastFoldHandHistory.HandId} user #{package.UserId} room #{package.RoomId}: Process={(process != null ? process.Id : 0)}, windows={windowHandle}.");
+
+                                        ExportHandHistory(package, fastFoldHandHistory, windowHandle, handHistoriesToProcess, false);
+                                    }
+
+                                    LogProvider.Log.Info(Logger, $"User {package.UserId} left room {body.RoomId} (Fast Fold).");
+                                },
+                                () => LogProvider.Log.Info(Logger, $"User {package.UserId} left room {package.RoomId} (Fast Fold)."));
 
                             CloseHUD(windowHandle);
 
@@ -263,13 +300,34 @@ namespace DriveHUD.Importers.PokerKing
                             }
                         }
 
+                        if (isFastFold && unexpectedRoomDetected &&
+                            package.PackageType == PackageType.NoticeResetGame)
+                        {
+                            ParsePackage<NoticeResetGame>(package,
+                                noticeResetGame =>
+                                {
+                                    var fastFoldImportDto = new FastFoldImportDto
+                                    {
+                                        HandBuilder = handBuilder,
+                                        ImporterSessionCacheService = importerSessionCacheService,
+                                        NoticeResetGame = noticeResetGame,
+                                        Package = package,
+                                        PlayerNamePlayerIdMap = playerNamePlayerIdMap,
+                                        WindowHandle = windowHandle
+                                    };
+
+                                    ProcessFastFoldNoticeGameReset(fastFoldImportDto);
+                                },
+                                () => LogProvider.Log.Info(Logger, $"Failed to process NoticeResetGame for {package.UserId} of {package.RoomId} (Fast Fold)."));
+                        }
+
                         if (handBuilder.TryBuild(package, windowHandle.ToInt32(), out HandHistory handHistory))
                         {
                             if (IsAdvancedLogEnabled)
                             {
                                 var unexpectedRoomLogMessage = string.Empty;
 
-                                if (unexpectedRoomDetected)
+                                if (unexpectedRoomDetected && !isFastFold)
                                 {
                                     unexpectedRoomLogMessage = " Unexpected room detected. No data will be sent to HUD.";
                                 }
@@ -278,26 +336,7 @@ namespace DriveHUD.Importers.PokerKing
                                     $"Hand #{handHistory.HandId} user #{package.UserId} room #{package.RoomId}: Process={(process != null ? process.Id : 0)}, windows={windowHandle}.{unexpectedRoomLogMessage}");
                             }
 
-                            var handHistoryData = new HandHistoryData
-                            {
-                                Uuid = package.UserId,
-                                HandHistory = handHistory,
-                                WindowHandle = !unexpectedRoomDetected ? windowHandle : IntPtr.Zero
-                            };
-
-                            if (!pkCatcherService.CheckHand(handHistory))
-                            {
-                                LogProvider.Log.Info(Logger, $"License doesn't support cash hand {handHistory.HandId}. [BB={handHistory.GameDescription.Limit.BigBlind}]");
-
-                                if (handHistoryData.WindowHandle != IntPtr.Zero)
-                                {
-                                    SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK_NoLicense", windowHandle);
-                                }
-
-                                continue;
-                            }
-
-                            ExportHandHistory(handHistoryData, handHistoriesToProcess);
+                            ExportHandHistory(package, handHistory, windowHandle, handHistoriesToProcess, unexpectedRoomDetected);
                         }
                     }
                 }
@@ -306,6 +345,146 @@ namespace DriveHUD.Importers.PokerKing
                     LogProvider.Log.Error(Logger, $"Could not process captured packet.", e);
                 }
             }
+        }
+
+        protected virtual void ProcessFastFoldNoticeGameReset(FastFoldImportDto fastFoldImportDto)
+        {
+            var noticeGameSnapshot = fastFoldImportDto.HandBuilder.GetNoticeRoomSnapShot(fastFoldImportDto.Package);
+
+            if (noticeGameSnapshot == null ||
+                fastFoldImportDto.NoticeResetGame.Players == null ||
+                !long.TryParse(fastFoldImportDto.NoticeResetGame.GameId, out long handId))
+            {
+                LogProvider.Log.Error(Logger, $"Failed to get snapshot for {fastFoldImportDto.Package.UserId} of {fastFoldImportDto.Package.RoomId} (Fast Fold).");
+                return;
+            }
+
+            // load players from db
+            var playersToAdd = fastFoldImportDto.NoticeResetGame.Players
+                .Select(x => x.Playerid.ToString())
+                .Where(x => !fastFoldImportDto.PlayerNamePlayerIdMap.ContainsKey(x))
+                .ToArray();
+
+            if (playersToAdd.Length > 0)
+            {
+                using (var session = ModelEntities.OpenSession())
+                {
+                    var playerNamePlayerIdToAdd = session.Query<Players>()
+                        .Where(x => x.PokersiteId == (short)Site && playersToAdd.Contains(x.Playername))
+                        .Select(x => new { x.Playername, x.PlayerId })
+                        .ToArray();
+
+                    playerNamePlayerIdToAdd.ForEach(x => fastFoldImportDto.PlayerNamePlayerIdMap.Add(x.Playername, x.PlayerId));
+                }
+            }
+
+            var gameInfo = new GameInfo
+            {
+                Session = $"{fastFoldImportDto.Package.RoomId}{fastFoldImportDto.Package.UserId}",
+                WindowHandle = fastFoldImportDto.WindowHandle.ToInt32(),
+                PokerSite = Site,
+                GameType = Bovada.GameType.Holdem,
+                TableType = (EnumTableType)noticeGameSnapshot.Params.PlayerCountMax,
+                GameFormat = GameFormat.FastFold,
+                GameNumber = handId
+            };
+
+            // Initialize cache
+            gameInfo.ResetPlayersCacheInfo();
+
+            var players = new PlayerList(fastFoldImportDto.NoticeResetGame.Players.Select(x =>
+                  new Player(x.Playerid.ToString(), 0, x.Seatid + 1)
+                  {
+                      PlayerId = fastFoldImportDto.PlayerNamePlayerIdMap.ContainsKey(x.Playerid.ToString()) ?
+                        fastFoldImportDto.PlayerNamePlayerIdMap[x.Playerid.ToString()] : 0,
+                      PlayerNick = x.Name
+                  }));
+
+            Player heroPlayer = null;
+
+            foreach (var player in players)
+            {
+                if (player.PlayerId == 0)
+                {
+                    continue;
+                }
+
+                var isHero = false;
+
+                if (player.PlayerName.Equals(fastFoldImportDto.Package.UserId.ToString()))
+                {
+                    heroPlayer = player;
+                    isHero = true;
+                }
+
+                var playerCollectionItem = new PlayerCollectionItem
+                {
+                    PlayerId = player.PlayerId,
+                    Name = player.PlayerName,
+                    PokerSite = Site
+                };
+
+                var playerCacheStatistic = fastFoldImportDto.ImporterSessionCacheService.GetPlayerStats(gameInfo.Session, playerCollectionItem, out bool exists);
+
+                if (exists && playerCacheStatistic.IsHero)
+                {
+                    heroPlayer = player;
+                    gameInfo.GameFormat = playerCacheStatistic.GameFormat;
+                    break;
+                }
+                else if (!exists && gameInfo.GameFormat == GameFormat.FastFold)
+                {
+                    var playerCacheInfo = new PlayerStatsSessionCacheInfo
+                    {
+                        Session = gameInfo.Session,
+                        GameFormat = gameInfo.GameFormat,
+                        Player = playerCollectionItem,
+                        IsHero = isHero,
+                        Stats = new Playerstatistic
+                        {
+                            SessionCode = gameInfo.Session,
+                            PokergametypeId = (short)HandHistories.Objects.GameDescription.GameType.NoLimitHoldem
+                        }
+                    };
+
+                    if (playerCacheInfo.Stats.PokergametypeId != 0)
+                    {
+                        gameInfo.AddToPlayersCacheInfo(playerCacheInfo);
+                    }
+                }
+            }
+
+            PreparePlayerList(players,
+                noticeGameSnapshot.Params.PlayerCountMax,
+                heroPlayer != null ? heroPlayer.SeatNumber : 0);
+
+            var importedArgs = new DataImportedEventArgs(players, gameInfo, heroPlayer, 0);
+            eventAggregator.GetEvent<DataImportedEvent>().Publish(importedArgs);
+        }
+
+        protected virtual void ExportHandHistory(PokerKingPackage package, HandHistory handHistory, IntPtr windowHandle,
+            ConcurrentDictionary<long, List<HandHistoryData>> handHistoriesToProcess, bool unexpectedRoomDetected)
+        {
+            var handHistoryData = new HandHistoryData
+            {
+                Uuid = package.UserId,
+                HandHistory = handHistory,
+                WindowHandle = !unexpectedRoomDetected ? windowHandle : IntPtr.Zero
+            };
+
+            if (!pkCatcherService.CheckHand(handHistory))
+            {
+                LogProvider.Log.Info(Logger, $"License doesn't support cash hand {handHistory.HandId}. [BB={handHistory.GameDescription.Limit.BigBlind}]");
+
+                if (handHistoryData.WindowHandle != IntPtr.Zero)
+                {
+                    SendPreImporedData("Notifications_HudLayout_PreLoadingText_PK_NoLicense", windowHandle);
+                }
+
+                return;
+            }
+
+            ExportHandHistory(handHistoryData, handHistoriesToProcess);
         }
 
         protected virtual void CloseHUD(IntPtr windowHandle)
@@ -438,8 +617,10 @@ namespace DriveHUD.Importers.PokerKing
                 case PackageType.NoticePlayerStayPosition:
                 case PackageType.NoticeResetGame:
                 case PackageType.NoticeStartGame:
+                case PackageType.NoticeQuickLeave:
                 case PackageType.RequestLeaveRoom:
                 case PackageType.RequestJoinRoom:
+                case PackageType.RequestQuickFold:
                     return true;
 
                 default:
@@ -510,6 +691,12 @@ namespace DriveHUD.Importers.PokerKing
                 case PackageType.RequestHeartBeat:
                     LogPackage<RequestHeartBeat>(package);
                     break;
+                case PackageType.RequestQuickFold:
+                    LogPackage<RequestQuickFold>(package);
+                    break;
+                case PackageType.NoticeQuickLeave:
+                    LogPackage<NoticeQuickLeave>(package);
+                    break;
             }
         }
 
@@ -527,7 +714,10 @@ namespace DriveHUD.Importers.PokerKing
                 {
                     PackageType = package.PackageType,
                     Content = packageContent,
-                    Time = package.Timestamp
+                    Time = package.Timestamp,
+                    UserId = package.UserId,
+                    RoomId = package.RoomId,
+                    IsFastFold = package.IsFastFold
                 };
 
                 var json = JsonConvert.SerializeObject(packageJson, Formatting.Indented, new StringEnumConverter());
@@ -581,6 +771,12 @@ namespace DriveHUD.Importers.PokerKing
             public DateTime Time { get; set; }
 
             public T Content { get; set; }
+
+            public uint UserId { get; set; }
+
+            public int RoomId { get; set; }
+
+            public bool IsFastFold { get; set; }
         }
 #endif
 
@@ -606,11 +802,16 @@ namespace DriveHUD.Importers.PokerKing
         protected override PlayerList GetPlayerList(HandHistory handHistory, GameInfo gameInfo)
         {
             var playerList = handHistory.Players;
-
             var maxPlayers = handHistory.GameDescription.SeatType.MaxPlayers;
-
             var heroSeat = handHistory.Hero != null ? handHistory.Hero.SeatNumber : 0;
 
+            PreparePlayerList(playerList, maxPlayers, heroSeat);
+
+            return playerList;
+        }
+
+        protected virtual void PreparePlayerList(PlayerList playerList, int maxPlayers, int heroSeat)
+        {
             if (heroSeat != 0 && autoCenterSeats.ContainsKey(maxPlayers))
             {
                 var prefferedSeat = autoCenterSeats[maxPlayers];
@@ -622,13 +823,37 @@ namespace DriveHUD.Importers.PokerKing
                     player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, maxPlayers);
                 }
             }
-
-            return playerList;
         }
 
         protected override IntPtr FindWindow(ParsingResult parsingResult)
         {
             return IntPtr.Zero;
+        }
+
+        protected override void PublishImportedResults(DataImportedEventArgs args)
+        {
+            // do not update HUD when hand is imported for FF games
+            if (args.GameInfo.GameFormat == GameFormat.FastFold)
+            {
+                args.DoNotUpdateHud = true;
+            }
+
+            base.PublishImportedResults(args);
+        }
+
+        protected class FastFoldImportDto
+        {
+            public PokerKingPackage Package { get; set; }
+
+            public IPKHandBuilder HandBuilder { get; set; }
+
+            public IntPtr WindowHandle { get; set; }
+
+            public Dictionary<string, int> PlayerNamePlayerIdMap { get; set; }
+
+            public IImporterSessionCacheService ImporterSessionCacheService { get; set; }
+
+            public NoticeResetGame NoticeResetGame { get; set; }
         }
     }
 }

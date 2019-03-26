@@ -90,6 +90,8 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
         [TestCase("multiple-accounts-raw-3")]
         [TestCase("multiple-accounts-raw-4")]
         [TestCase("multiple-accounts-raw-5")]
+        [TestCase("multiple-accounts-raw-6")]
+        [TestCase("multiple-accounts-raw-7")]
         public void MultipleTryBuildTest(string folder)
         {
             var testFolder = Path.Combine(TestDataFolder, folder);

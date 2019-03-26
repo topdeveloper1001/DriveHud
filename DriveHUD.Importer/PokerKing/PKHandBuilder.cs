@@ -84,12 +84,43 @@ namespace DriveHUD.Importers.PokerKing
             return roomsData.ContainsKey(package.RoomId);
         }
 
+        public NoticeGameSnapShot GetNoticeRoomSnapShot(PokerKingPackage package)
+        {
+            if (package == null || package.RoomId == 0 ||
+                !roomsData.TryGetValue(package.RoomId, out NoticeGameSnapShot noticeGameSnapShot))
+            {
+                return null;
+            }
+
+            return noticeGameSnapShot;
+        }
+
         public void CleanRoom(int identifier, int roomId)
         {
             if (userPackages.TryGetValue(identifier, out Dictionary<int, List<PokerKingPackage>> roomPackages) &&
                 roomPackages.TryGetValue(roomId, out List<PokerKingPackage> packages))
             {
                 packages.Clear();
+            }
+        }
+
+        public void CleanFastFoldRooms(PokerKingPackage package, int identifier, out List<HandHistory> handHistories)
+        {
+            handHistories = new List<HandHistory>();
+
+            if (!userPackages.TryGetValue(identifier, out Dictionary<int, List<PokerKingPackage>> roomsPackages))
+            {
+                return;
+            }
+
+            foreach (var packages in roomsPackages.Values)
+            {
+                var handHistory = BuildHand(packages, identifier, package.UserId, true);
+
+                if (handHistory != null)
+                {
+                    handHistories.Add(handHistory);
+                }
             }
         }
 
@@ -128,13 +159,13 @@ namespace DriveHUD.Importers.PokerKing
             return isValid;
         }
 
-        private HandHistory BuildHand(List<PokerKingPackage> packages, int identifier, uint userId)
+        private HandHistory BuildHand(List<PokerKingPackage> packages, int identifier, uint userId, bool doNotValidate = false)
         {
             HandHistory handHistory = null;
 
             try
             {
-                if (!ValidatePackages(packages, userId))
+                if (!doNotValidate && !ValidatePackages(packages, userId))
                 {
                     packages.Clear();
                     return handHistory;
@@ -179,7 +210,7 @@ namespace DriveHUD.Importers.PokerKing
                             ParsePackage<NoticeGameElectDealer>(package, x => ProcessNoticeGameElectDealer(x, handHistory));
                             break;
                         case PackageType.NoticeGameBlind:
-                            ParsePackage<NoticeGameBlind>(package, x => ProcessNoticeGameBlind(x, handHistory));
+                            ParsePackage<NoticeGameBlind>(package, x => ProcessNoticeGameBlind(x, handHistory, package.IsFastFold));
                             break;
                         case PackageType.NoticeGameAnte:
                             ParsePackage<NoticeGameAnte>(package, x => ProcessNoticeGameAnte(x, handHistory));
@@ -223,7 +254,7 @@ namespace DriveHUD.Importers.PokerKing
             {
                 return;
             }
-       
+
             HandHistoryUtils.UpdateAllInActions(handHistory);
             HandHistoryUtils.CalculateBets(handHistory);
             HandHistoryUtils.CalculateUncalledBets(handHistory, true);
@@ -339,7 +370,7 @@ namespace DriveHUD.Importers.PokerKing
             }
         }
 
-        private void ProcessNoticeGameBlind(NoticeGameBlind noticeGameBlind, HandHistory handHistory)
+        private void ProcessNoticeGameBlind(NoticeGameBlind noticeGameBlind, HandHistory handHistory, bool isFastFold)
         {
             if (!roomsData.TryGetValue(noticeGameBlind.RoomId, out NoticeGameSnapShot noticeGameSnapShot))
             {
@@ -355,11 +386,22 @@ namespace DriveHUD.Importers.PokerKing
                 ante = ante < gameRoomInfo.RuleAnteAmount ? gameRoomInfo.RuleAnteAmount : ante;
             }
 
+            TableType tableType;
+
+            if (isFastFold)
+            {
+                tableType = TableType.FromTableTypeDescriptions(TableTypeDescription.FastFold);
+            }
+            else
+            {
+                tableType = TableType.FromTableTypeDescriptions(gameRoomInfo.GameMode == 3 ? TableTypeDescription.ShortDeck : TableTypeDescription.Regular);
+            }
+
             handHistory.GameDescription = new GameDescriptor(
                 EnumPokerSites.PokerKing,
                 GameType.NoLimitHoldem,
                 Limit.FromSmallBlindBigBlind(noticeGameBlind.SBAmount, noticeGameBlind.BBAmount, Currency.YUAN, ante != 0, ante),
-                TableType.FromTableTypeDescriptions(gameRoomInfo.GameMode == 3 ? TableTypeDescription.ShortDeck : TableTypeDescription.Regular),
+                tableType,
                 SeatType.FromMaxPlayers(gameRoomInfo.PlayerCountMax), null);
 
             handHistory.GameDescription.Identifier = noticeGameBlind.RoomId;

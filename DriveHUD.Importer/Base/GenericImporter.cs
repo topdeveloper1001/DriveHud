@@ -230,9 +230,9 @@ namespace DriveHUD.Importers
                     return parsingResult.TournamentsTags == TournamentsTags.MTT ? GameFormat.MTT : GameFormat.SnG;
                 }
 
-                if (Site == EnumPokerSites.PokerStars && parsingResult.Source.GameDescription.TableType.Contains(TableTypeDescription.FastFold))
+                if (parsingResult.Source.GameDescription.TableType.Contains(TableTypeDescription.FastFold))
                 {
-                    return GameFormat.Zoom;
+                    return Site == EnumPokerSites.PokerStars ? GameFormat.Zoom : GameFormat.FastFold;
                 }
             }
 

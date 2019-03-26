@@ -10,13 +10,23 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Collections.Generic;
+using System.Linq;
+
 namespace DriveHUD.Importers.PokerKing
 {
     internal class PKImporterHelper
     {
         public static bool IsPortMatch(int port)
         {
-            return port == 31001 || port == 38001 || port == 35001;
-        }        
+            return port == 31001 || port == 38001 || IsFastFoldPort(port);
+        }
+
+        public static bool IsFastFoldPort(int port)
+        {
+            return fasfFoldPorts.Contains(port);
+        }
+
+        private static readonly HashSet<int> fasfFoldPorts = new HashSet<int>(Enumerable.Range(0, 10).Select(x => 35001 + x * 100));
     }
 }

@@ -158,6 +158,11 @@ namespace DriveHUD.Importers.PokerKing.Model
         RequestJoinRoomWithFirst = 10142,
         ResponseJoinRoomWithFirst = 10143,
         RequestBuyinWithFirst = 10144,
-        ResponseBuyinWithFirst = 10145
+        ResponseBuyinWithFirst = 10145,
+        RequestQuickLeave = 10152,
+        ResponseQuickLeave = 10153,
+        NoticeQuickLeave = 10154,
+        RequestQuickFold = 10155,
+        ResponseQuickFold = 10156
     }
 }

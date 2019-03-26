@@ -12,6 +12,7 @@
 
 using DriveHUD.Importers.PokerKing.Model;
 using HandHistories.Objects.Hand;
+using System.Collections.Generic;
 
 namespace DriveHUD.Importers.PokerKing
 {
@@ -21,6 +22,10 @@ namespace DriveHUD.Importers.PokerKing
 
         bool IsRoomSnapShotAvailable(PokerKingPackage package);
 
+        NoticeGameSnapShot GetNoticeRoomSnapShot(PokerKingPackage package);
+
         void CleanRoom(int identifier, int roomId);
+
+        void CleanFastFoldRooms(PokerKingPackage package, int identifier, out List<HandHistory> handHistories);
     }
 }
