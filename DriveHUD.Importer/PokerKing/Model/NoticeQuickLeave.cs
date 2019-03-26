@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PokerKingPackage.cs" company="Ace Poker Solutions">
-// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="NoticeQuickLeave.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -11,36 +11,34 @@
 //----------------------------------------------------------------------
 
 using ProtoBuf;
-using System;
 
 namespace DriveHUD.Importers.PokerKing.Model
 {
     [ProtoContract]
-    internal class PokerKingPackage
+    internal class NoticeQuickLeave
     {
         [ProtoMember(1)]
-        public DateTime Timestamp { get; set; }
-
-        [ProtoMember(2)]
-        public PackageType PackageType { get; set; }
-
-        [ProtoMember(3)]
-        public uint UserId { get; set; }
-
-        [ProtoMember(4)]
         public int RoomId { get; set; }
 
+        [ProtoMember(2)]
+        public string RoomName { get; set; }
+
+        [ProtoMember(3)]
+        public int PlayerId { get; set; }
+
+        [ProtoMember(4)]
+        public string Name { get; set; }
+
         [ProtoMember(5)]
-        public byte[] Body { get; set; }
+        public long CurrStake { get; set; }
 
         [ProtoMember(6)]
-        public bool IsFastFold { get; set; }
+        public long SettleStake { get; set; }
 
-#if DEBUG
-        public override string ToString()
-        {
-            return $"{PackageType}: {Timestamp}; BodyLength: {Body.Length}";
-        }
-#endif
+        [ProtoMember(7)]
+        public long InGameTime { get; set; }
+
+        [ProtoMember(8)]
+        public long HandCount { get; set; }
     }
 }

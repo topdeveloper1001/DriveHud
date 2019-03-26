@@ -396,6 +396,7 @@
     <Compile Include="PokerKing\Model\NoticePlayerActionTurn.cs" />
     <Compile Include="PokerKing\Model\NoticePlayerShowCard.cs" />
     <Compile Include="PokerKing\Model\NoticePlayerStayPosition.cs" />
+    <Compile Include="PokerKing\Model\NoticeQuickLeave.cs" />
     <Compile Include="PokerKing\Model\NoticeResetGame.cs" />
     <Compile Include="PokerKing\Model\NoticeSitDown.cs" />
     <Compile Include="PokerKing\Model\NoticeStandup.cs" />
@@ -416,6 +417,8 @@
     <Compile Include="PokerKing\Model\RequestJoinRoom.cs" />
     <Compile Include="PokerKing\Model\RequestLeaveRoom.cs" />
     <Compile Include="PokerKing\Model\RequestLogon.cs" />
+    <Compile Include="PokerKing\Model\RequestQuickFold.cs" />
+    <Compile Include="PokerKing\Model\RequestQuickLeave.cs" />
     <Compile Include="PokerKing\Model\RoomParams.cs" />
     <Compile Include="PokerKing\Model\RoomStates.cs" />
     <Compile Include="PokerKing\Model\ShowCardsSeatInfo.cs" />
