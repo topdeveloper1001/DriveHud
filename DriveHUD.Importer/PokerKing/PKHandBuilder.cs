@@ -37,6 +37,8 @@ namespace DriveHUD.Importers.PokerKing
 
         private Dictionary<long, Dictionary<int, List<PokerKingPackage>>> userPackages = new Dictionary<long, Dictionary<int, List<PokerKingPackage>>>();
 
+        private Dictionary<uint, int> fastFoldRoomByUser = new Dictionary<uint, int>();
+
         public bool TryBuild(PokerKingPackage package, int identifier, out HandHistory handHistory)
         {
             handHistory = null;
@@ -48,7 +50,7 @@ namespace DriveHUD.Importers.PokerKing
 
             if (package.PackageType == PackageType.NoticeGameSnapShot)
             {
-                ParsePackage<NoticeGameSnapShot>(package, x => ProcessNoticeGameSnapShot(x));
+                ParsePackage<NoticeGameSnapShot>(package, x => ProcessNoticeGameSnapShot(x, package));
                 return false;
             }
 
@@ -95,6 +97,12 @@ namespace DriveHUD.Importers.PokerKing
             return noticeGameSnapShot;
         }
 
+        public int GetFastFoldRoomByUser(uint userId)
+        {
+            fastFoldRoomByUser.TryGetValue(userId, out int roomId);
+            return roomId;
+        }
+
         public void CleanRoom(int identifier, int roomId)
         {
             if (userPackages.TryGetValue(identifier, out Dictionary<int, List<PokerKingPackage>> roomPackages) &&
@@ -110,6 +118,7 @@ namespace DriveHUD.Importers.PokerKing
 
             if (!userPackages.TryGetValue(identifier, out Dictionary<int, List<PokerKingPackage>> roomsPackages))
             {
+                fastFoldRoomByUser.Remove(package.UserId);
                 return;
             }
 
@@ -122,6 +131,8 @@ namespace DriveHUD.Importers.PokerKing
                     handHistories.Add(handHistory);
                 }
             }
+
+            fastFoldRoomByUser.Remove(package.UserId);
         }
 
         private bool ValidatePackages(List<PokerKingPackage> packages, uint userId)
@@ -159,13 +170,13 @@ namespace DriveHUD.Importers.PokerKing
             return isValid;
         }
 
-        private HandHistory BuildHand(List<PokerKingPackage> packages, int identifier, uint userId, bool doNotValidate = false)
+        private HandHistory BuildHand(List<PokerKingPackage> packages, int identifier, uint userId, bool fastFoldLastHand = false)
         {
             HandHistory handHistory = null;
 
             try
             {
-                if (!doNotValidate && !ValidatePackages(packages, userId))
+                if (!fastFoldLastHand && !ValidatePackages(packages, userId))
                 {
                     packages.Clear();
                     return handHistory;
@@ -210,7 +221,7 @@ namespace DriveHUD.Importers.PokerKing
                             ParsePackage<NoticeGameElectDealer>(package, x => ProcessNoticeGameElectDealer(x, handHistory));
                             break;
                         case PackageType.NoticeGameBlind:
-                            ParsePackage<NoticeGameBlind>(package, x => ProcessNoticeGameBlind(x, handHistory, package.IsFastFold));
+                            ParsePackage<NoticeGameBlind>(package, x => ProcessNoticeGameBlind(x, handHistory, package));
                             break;
                         case PackageType.NoticeGameAnte:
                             ParsePackage<NoticeGameAnte>(package, x => ProcessNoticeGameAnte(x, handHistory));
@@ -229,6 +240,13 @@ namespace DriveHUD.Importers.PokerKing
                             break;
                         case PackageType.NoticeGameSettlement:
                             ParsePackage<NoticeGameSettlement>(package, x => ProcessNoticeGameSettlement(x, handHistory));
+                            break;
+                        case PackageType.RequestQuickFold:
+                            if (fastFoldLastHand)
+                            {
+                                ParsePackage<RequestQuickFold>(package, x => ProcessRequestQuickFold(x, handHistory));
+                            }
+
                             break;
                     }
                 }
@@ -302,8 +320,13 @@ namespace DriveHUD.Importers.PokerKing
             action?.Invoke(packageBody);
         }
 
-        private void ProcessNoticeGameSnapShot(NoticeGameSnapShot noticeGameSnapShot)
+        private void ProcessNoticeGameSnapShot(NoticeGameSnapShot noticeGameSnapShot, PokerKingPackage package)
         {
+            if (package.IsFastFold && !fastFoldRoomByUser.ContainsKey(package.UserId))
+            {
+                fastFoldRoomByUser[package.UserId] = noticeGameSnapShot.RoomId;
+            }
+
             if (!roomsData.ContainsKey(noticeGameSnapShot.RoomId))
             {
                 roomsData.Add(noticeGameSnapShot.RoomId, noticeGameSnapShot);
@@ -370,7 +393,7 @@ namespace DriveHUD.Importers.PokerKing
             }
         }
 
-        private void ProcessNoticeGameBlind(NoticeGameBlind noticeGameBlind, HandHistory handHistory, bool isFastFold)
+        private void ProcessNoticeGameBlind(NoticeGameBlind noticeGameBlind, HandHistory handHistory, PokerKingPackage package)
         {
             if (!roomsData.TryGetValue(noticeGameBlind.RoomId, out NoticeGameSnapShot noticeGameSnapShot))
             {
@@ -388,7 +411,7 @@ namespace DriveHUD.Importers.PokerKing
 
             TableType tableType;
 
-            if (isFastFold)
+            if (package.IsFastFold)
             {
                 tableType = TableType.FromTableTypeDescriptions(TableTypeDescription.FastFold);
             }
@@ -404,7 +427,8 @@ namespace DriveHUD.Importers.PokerKing
                 tableType,
                 SeatType.FromMaxPlayers(gameRoomInfo.PlayerCountMax), null);
 
-            handHistory.GameDescription.Identifier = noticeGameBlind.RoomId;
+            handHistory.GameDescription.Identifier = package.IsFastFold && fastFoldRoomByUser.ContainsKey(package.UserId) ?
+                fastFoldRoomByUser[package.UserId] : noticeGameBlind.RoomId;
 
             handHistory.TableName = gameRoomInfo.GameName;
 
@@ -609,6 +633,22 @@ namespace DriveHUD.Importers.PokerKing
 
                 player.Win = winner.Amount;
             }
+        }
+
+        private void ProcessRequestQuickFold(RequestQuickFold requestQuickFold, HandHistory handHistory)
+        {
+            if (handHistory.Hero == null ||
+                handHistory.HandActions.Any(x => x.PlayerName == handHistory.Hero.PlayerName && x.IsFold))
+            {
+                return;
+            }
+
+            var foldAction = new HandAction(handHistory.Hero.PlayerName,
+                HandActionType.FOLD,
+                0,
+                handHistory.CommunityCards.Street);
+
+            handHistory.HandActions.Add(foldAction);
         }
 
         #region Static helpers

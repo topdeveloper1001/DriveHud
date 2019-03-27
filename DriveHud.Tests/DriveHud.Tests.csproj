@@ -565,6 +565,12 @@
     <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-7\192.168.0.105.24922-170.33.9.172.35101.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-8\170.33.9.172.35201-192.168.0.105.25797.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TcpImportersTests\PKTests\TestData\HandsRawData\multiple-accounts-raw-8\192.168.0.105.25797-170.33.9.172.35201.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="TcpImportersTests\PKTests\TestData\Packets\NoticeGameSnapShotPacket.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

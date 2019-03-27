@@ -24,6 +24,8 @@ namespace DriveHUD.Importers.PokerKing
 
         NoticeGameSnapShot GetNoticeRoomSnapShot(PokerKingPackage package);
 
+        int GetFastFoldRoomByUser(uint userId);
+
         void CleanRoom(int identifier, int roomId);
 
         void CleanFastFoldRooms(PokerKingPackage package, int identifier, out List<HandHistory> handHistories);

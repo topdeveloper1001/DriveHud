@@ -579,7 +579,7 @@ namespace DriveHUD.Application.ViewModels
                 }
 
                 // if no handle available then we don't need to do anything with this data, because hud won't show up
-                if (e.GameInfo.WindowHandle == 0)
+                if (!e.DoNotUpdateHud && e.GameInfo.WindowHandle == 0)
                 {
                     if (e.GameInfo.GameFormat != GameFormat.Zone)
                     {

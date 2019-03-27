@@ -378,9 +378,17 @@ namespace DriveHUD.Importers.PokerKing
                 }
             }
 
+            var fastFoldRoomId = fastFoldImportDto.HandBuilder
+                .GetFastFoldRoomByUser(fastFoldImportDto.Package.UserId);
+
+            if (fastFoldRoomId == 0)
+            {
+                fastFoldRoomId = fastFoldImportDto.Package.RoomId;
+            }
+
             var gameInfo = new GameInfo
             {
-                Session = $"{fastFoldImportDto.Package.RoomId}{fastFoldImportDto.Package.UserId}",
+                Session = $"{fastFoldRoomId}{fastFoldImportDto.Package.UserId}",
                 WindowHandle = fastFoldImportDto.WindowHandle.ToInt32(),
                 PokerSite = Site,
                 GameType = Bovada.GameType.Holdem,
@@ -448,7 +456,7 @@ namespace DriveHUD.Importers.PokerKing
                     };
 
                     if (playerCacheInfo.Stats.PokergametypeId != 0)
-                    {
+                    {                        
                         gameInfo.AddToPlayersCacheInfo(playerCacheInfo);
                     }
                 }
@@ -456,7 +464,7 @@ namespace DriveHUD.Importers.PokerKing
 
             PreparePlayerList(players,
                 noticeGameSnapshot.Params.PlayerCountMax,
-                heroPlayer != null ? heroPlayer.SeatNumber : 0);
+                heroPlayer != null ? heroPlayer.SeatNumber : 0);            
 
             var importedArgs = new DataImportedEventArgs(players, gameInfo, heroPlayer, 0);
             eventAggregator.GetEvent<DataImportedEvent>().Publish(importedArgs);
