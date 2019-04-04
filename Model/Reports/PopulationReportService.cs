@@ -243,6 +243,7 @@ namespace Model.Reports
                     };
 
                     var filterPredicate = storageModel.CashFilterPredicate.Compile();
+                    var heroId = storageModel.PlayerSelectedItem?.PlayerId ?? 0;               
 
                     Parallel.ForEach(players, (player, loopState) =>
                     {
@@ -251,10 +252,15 @@ namespace Model.Reports
                             loopState.Break();
                         }
 
+                        if (player.PlayerId == heroId)
+                        {
+                            return;
+                        }
+
                         var playerIndicators = new LightIndicators();
 
                         playerStatisticRepository.GetPlayerStatistic(player.PlayerId)
-                            .Where(x => !x.IsTourney && FilterStatistic(x))
+                            .Where(x => !x.IsTourney && FilterStatistic(x) && filterPredicate(x))
                             .ForEach(x =>
                             {
                                 if (cancellationToken.IsCancellationRequested)
@@ -272,7 +278,7 @@ namespace Model.Reports
                                     }
                                 }
                             }
-                        );
+                        );                       
 
                         var playerType = hudPlayerTypeService.Match(playerIndicators, playerTypes, true);
 
@@ -299,7 +305,7 @@ namespace Model.Reports
                                 }
                             );
                         }
-                    });
+                    });                    
 
                     allPlayersIndicator.PrepareHands(storageModel?.GetFilteredCashPlayerStatistic());
 

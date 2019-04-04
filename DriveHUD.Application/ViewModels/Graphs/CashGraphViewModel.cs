@@ -205,7 +205,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 HandsCount = itemsCounter;
             }
 
-            App.Current.Dispatcher.Invoke(() => ChartCollection?.ForEach(x => x.ItemsCollection?.Clear()));
+            App.Current?.Dispatcher.Invoke(() => ChartCollection?.ForEach(x => x.ItemsCollection?.Clear()));
 
             if (chartSeriesItems.Count > 0)
             {
