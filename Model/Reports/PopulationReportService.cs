@@ -239,11 +239,11 @@ namespace Model.Reports
                     {
                         PlayerTypeName = allPlayersType.Name,
                         PlayerType = allPlayersType,
-                        CanAddHands = false
+                        CanAddHands = true
                     };
 
                     var filterPredicate = storageModel.CashFilterPredicate.Compile();
-                    var heroId = storageModel.PlayerSelectedItem?.PlayerId ?? 0;               
+                    var heroId = storageModel.PlayerSelectedItem?.PlayerId ?? 0;
 
                     Parallel.ForEach(players, (player, loopState) =>
                     {
@@ -278,7 +278,7 @@ namespace Model.Reports
                                     }
                                 }
                             }
-                        );                       
+                        );
 
                         var playerType = hudPlayerTypeService.Match(playerIndicators, playerTypes, true);
 
@@ -305,9 +305,7 @@ namespace Model.Reports
                                 }
                             );
                         }
-                    });                    
-
-                    allPlayersIndicator.PrepareHands(storageModel?.GetFilteredCashPlayerStatistic());
+                    });
 
                     populationIndicators.Add(allPlayersIndicator.PlayerTypeName, allPlayersIndicator);
 
