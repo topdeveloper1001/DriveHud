@@ -1,0 +1,54 @@
+<session sessioncode="1443448">
+	<general>
+		<mode>real</mode>
+		<gametype>Holdem NL $0.25/$0.50</gametype>
+		<tablename>Table17275515</tablename>
+		<duration>N/A</duration>
+		<gamecount>0</gamecount>
+		<startdate>2018-12-21 02:26:47</startdate>
+		<currency>USD</currency>
+		<nickname>Hero</nickname>
+		<bets>0</bets>
+		<wins>0</wins>
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>0</statuspoints>
+		<awardpoints>0</awardpoints>
+		<place>0</place>
+		<buyin>$0+$0</buyin>
+		<totalbuyin>$0</totalbuyin>
+		<win>0</win>
+		<maxplayers>9</maxplayers>
+		<pokersite>Ignition</pokersite>
+	</general>
+	<game gamecode="3703317534">
+		<general>
+			<startdate>2018-12-21 02:38:08</startdate>
+			<players>
+				<player seat="1" name="Hero" chips="61.98" dealer="0" win="0" bet="1.5" rebuy="0" addon="0" />
+				<player seat="2" name="P2_824788IQ" chips="45.15" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+				<player seat="3" name="P3_482147RK" chips="39.79" dealer="0" win="6" bet="4" rebuy="0" addon="0" />
+				<player seat="4" name="P4_814458PE" chips="13.97" dealer="0" win="0" bet="0.5" rebuy="0" addon="0" />
+				<player seat="5" name="P5_890251HG" chips="38.35" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="P3_482147RK" type="1" sum="0.25" cards="[cards]" />
+			<action no="2" player="P4_814458PE" type="2" sum="0.5" cards="[cards]" />
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Hero">HA D7</cards>
+			<cards type="Pocket" player="P2_824788IQ">X X</cards>
+			<cards type="Pocket" player="P3_482147RK">X X</cards>
+			<cards type="Pocket" player="P4_814458PE">X X</cards>
+			<cards type="Pocket" player="P5_890251HG">X X</cards>
+			<action no="3" player="P5_890251HG" type="0" sum="0" cards="" />
+			<action no="4" player="Hero" type="23" sum="1.5" cards="" />
+			<action no="5" player="P2_824788IQ" type="0" sum="0" cards="" />
+			<action no="6" player="P3_482147RK" type="23" sum="4" cards="" />
+			<action no="7" player="P4_814458PE" type="0" sum="0" cards="" />
+			<action no="8" player="Hero" type="0" sum="0" cards="" />
+		</round>
+	</game>
+</session>

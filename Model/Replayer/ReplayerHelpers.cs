@@ -1,10 +1,23 @@
-﻿using DriveHUD.Entities;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ReplayerHelpers.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
 using Model.Reports;
+using Model.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Model.Replayer
 {
@@ -18,17 +31,24 @@ namespace Model.Replayer
         /// <returns></returns>
         public static IEnumerable<ReplayerDataModel> CreateSessionHandsList(IEnumerable<Playerstatistic> statistics, Playerstatistic current)
         {
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            var bbFilter = settings.GeneralSettings.ReplayerBBFilter;
+
             IEnumerable<Playerstatistic> potStat = new List<Playerstatistic>();
 
             if (statistics != null && statistics.Count() > 0)
             {
                 if (current.IsTourney)
                 {
-                    potStat = statistics.Where(x => x.TournamentId == current.TournamentId).OrderByDescending(x => x.Time).Take(30);
+                    potStat = statistics.Where(x => x.TournamentId == current.TournamentId).OrderByDescending(x => x.Time);
                 }
                 else
                 {
-                    var session = new SessionsReportCreator().Create(statistics.ToList()).Where(x => x.Statistics.Any(s => s.GameNumber == current.GameNumber));
+                    var cancellationTokenSource = new CancellationTokenSource();
+
+                    var session = new SessionsReportCreator()
+                        .Create(statistics.ToList(), cancellationTokenSource.Token)
+                        .Where(x => x.Statistics.Any(s => s.GameNumber == current.GameNumber));
 
                     if (session != null && session.Count() > 0)
                     {
@@ -37,10 +57,9 @@ namespace Model.Replayer
                 }
             }
 
-            var result = potStat.Where(x => Math.Abs(x.NetWon) > (6 * x.BigBlind) && x.Vpiphands > 0).Select(x => new ReplayerDataModel(x));
+            var result = potStat.Where(x => Math.Abs(x.NetWon) >= (bbFilter * x.BigBlind)).Select(x => new ReplayerDataModel(x));
 
             return result;
         }
-
     }
 }

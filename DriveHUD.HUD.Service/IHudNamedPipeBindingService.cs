@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="IHudNamedPipeBindingService.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -32,7 +32,7 @@ namespace DriveHUD.HUD.Service
 
         [OperationContract(Name = "ConnectCallbackChannel", IsOneWay = true)]
         void ConnectCallbackChannel(string name);
-
+   
         #endregion
     }
 
@@ -47,8 +47,8 @@ namespace DriveHUD.HUD.Service
         [OperationContract(Name = "LoadLayout", IsOneWay = true)]
         void LoadLayout(string layoutName, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType);
 
-        [OperationContract(Name = "TagHand", IsOneWay = true)]
-        void TagHand(long gameNumber, short pokerSiteId, int tag);
+        [OperationContract(Name = "TagHands", IsOneWay = true)]
+        void TagHands(IEnumerable<long> gameNumber, short pokerSiteId, int tag);
 
         [OperationContract(Name = "TreatTableAs", IsOneWay = true)]
         void TreatTableAs(IntPtr handle, EnumTableType tableType);

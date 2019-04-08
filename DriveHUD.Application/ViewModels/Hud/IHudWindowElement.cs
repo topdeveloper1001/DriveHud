@@ -19,8 +19,8 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// </summary>
     internal interface IHudWindowElement
     {
-        double OffsetX { get; set; }
+        double? OffsetX { get; set; }
 
-        double OffsetY { get; set; }
+        double? OffsetY { get; set; }
     }
 }

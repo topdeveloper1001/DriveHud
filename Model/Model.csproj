@@ -224,7 +224,7 @@
     <Compile Include="Enums\RangeCardsEnums.cs" />
     <Compile Include="Enums\ShowdownHands.cs" />
     <Compile Include="Enums\Stat.cs" />
-    <Compile Include="Events\FilterEvents\UpdateReportEvent.cs" />
+    <Compile Include="Events\CancelReportLoadingEvent.cs" />
     <Compile Include="Events\FilterEvents\BuiltFilterChangedEvent.cs" />
     <Compile Include="Events\CalculateEquityEvent.cs" />
     <Compile Include="Events\FilterEvents\DateFilterChangedEvent.cs" />
@@ -308,6 +308,7 @@
     <Compile Include="HandAnalyzers\ThreeOfAKindAnalyzers.cs" />
     <Compile Include="HandAnalyzers\TwoPairAnalyzers.cs" />
     <Compile Include="ExpectedValueSolver\IExpectedValueSolver.cs" />
+    <Compile Include="HandNoteCacheService.cs" />
     <Compile Include="Hud\BaseHudRangeStat.cs" />
     <Compile Include="Hud\HudBumperStickerService.cs" />
     <Compile Include="Hud\HudBumperStickerType.cs" />
@@ -317,6 +318,7 @@
     <Compile Include="Hud\IHudBumperStickerService.cs" />
     <Compile Include="Hud\IHudPlayerTypeService.cs" />
     <Compile Include="Hud\IHudRangeStat.cs" />
+    <Compile Include="IHandNoteCacheService.cs" />
     <Compile Include="Interfaces\ICleanable.cs" />
     <Compile Include="Interfaces\IDataService.cs" />
     <Compile Include="IPlayer.cs" />

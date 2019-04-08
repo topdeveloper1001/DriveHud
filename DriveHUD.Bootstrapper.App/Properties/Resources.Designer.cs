@@ -160,11 +160,29 @@ namespace DriveHUD.Bootstrapper.App.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Install completed. Reboot is required..
+        /// </summary>
+        public static string Common_FinalView_InstallSucceededWithReboot {
+            get {
+                return ResourceManager.GetString("Common_FinalView_InstallSucceededWithReboot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Launch.
         /// </summary>
         public static string Common_FinalView_Launch {
             get {
                 return ResourceManager.GetString("Common_FinalView_Launch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reboot.
+        /// </summary>
+        public static string Common_FinalView_Reboot {
+            get {
+                return ResourceManager.GetString("Common_FinalView_Reboot", resourceCulture);
             }
         }
         

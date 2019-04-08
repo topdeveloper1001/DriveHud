@@ -88,15 +88,15 @@ namespace Model.Filters
         {
             var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
 
-            var lastCashAvailableDate = storageModel.StatisticCollection?.ToArray().Where(x => !x.IsTourney).MaxOrDefault(x => Converter.ToLocalizedDateTime(x.Time));
-            var lastTournamentAvailableDate = storageModel.StatisticCollection?.ToArray().Where(x => x.IsTourney).MaxOrDefault(x => Converter.ToLocalizedDateTime(x.Time));
+            var lastCashAvailableDate = storageModel.GetStatisticCollection().Where(x => !x.IsTourney).MaxOrDefault(x => Converter.ToLocalizedDateTime(x.Time));
+            var lastTournamentAvailableDate = storageModel.GetStatisticCollection().Where(x => x.IsTourney).MaxOrDefault(x => Converter.ToLocalizedDateTime(x.Time));
 
-            lastCashAvailableDate = lastCashAvailableDate ?? DateTime.Now;
-            lastTournamentAvailableDate = lastTournamentAvailableDate ?? DateTime.Now;
+            lastCashAvailableDate = lastCashAvailableDate == DateTime.MinValue ? DateTime.Now : lastCashAvailableDate;
+            lastTournamentAvailableDate = lastTournamentAvailableDate == DateTime.MinValue ? DateTime.Now : lastTournamentAvailableDate;
 
             var lastMonthPredicateExpression = PredicateBuilder.Create<Playerstatistic>(x => Converter.ToLocalizedDateTime(x.Time) >= (x.IsTourney ?
-                   lastTournamentAvailableDate.Value.FirstDayOfMonth() :
-                   lastCashAvailableDate.Value.FirstDayOfMonth()));
+                   lastTournamentAvailableDate.FirstDayOfMonth() :
+                   lastCashAvailableDate.FirstDayOfMonth()));
 
             return GetFilterPredicate(x => Converter.ToLocalizedDateTime(x.Time), lastMonthPredicateExpression);
         }

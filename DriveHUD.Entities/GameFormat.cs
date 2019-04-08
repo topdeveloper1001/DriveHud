@@ -21,6 +21,7 @@ namespace DriveHUD.Entities
         SnG,
         MTT,
         Zone,
-        Zoom
+        Zoom,
+        FastFold
     }
 }

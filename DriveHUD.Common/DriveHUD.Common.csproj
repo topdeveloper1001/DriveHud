@@ -123,6 +123,8 @@
     <Compile Include="Utils\EncodingDetector.cs" />
     <Compile Include="Utils\FileHelper.cs" />
     <Compile Include="Utils\FixedSizeList.cs" />
+    <Compile Include="Utils\HotkeyHelper.cs" />
+    <Compile Include="Utils\HotkeyModifiers.cs" />
     <Compile Include="Utils\IniFileHelpers.cs" />
     <Compile Include="Utils\Network\LocalConnection.cs" />
     <Compile Include="Utils\Network\MibTcpExtenstions.cs" />

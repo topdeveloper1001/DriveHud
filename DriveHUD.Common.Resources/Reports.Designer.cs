@@ -2887,6 +2887,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rakeback.
+        /// </summary>
+        internal static string Reports_Column_Rakeback {
+            get {
+                return ResourceManager.GetString("Reports_Column_Rakeback", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Re-buy.
         /// </summary>
         internal static string Reports_Column_Rebuy {

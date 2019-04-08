@@ -41,7 +41,7 @@ namespace DriveHUD.Importers.Builders.iPoker
         {
             if (game.Rounds == null || game.Rounds.Count < 2)
             {
-                LogProvider.Log.Warn(this, $"Couldn't adjust zone hand #{game.GameCode}: Rounds aren't set or preflop doesn't exist.");
+                LogProvider.Log.Warn(this, $"Couldn't adjust fast fold hand #{game.GameCode}: Rounds aren't set or preflop doesn't exist.");
                 return;
             }
 
@@ -59,7 +59,7 @@ namespace DriveHUD.Importers.Builders.iPoker
                 {
                     if (string.IsNullOrEmpty(action.Player))
                     {
-                        LogProvider.Log.Warn(this, $"Couldn't adjust zone hand #{game.GameCode}: Action no={action.No} has no player.");
+                        LogProvider.Log.Warn(this, $"Couldn't adjust fast fold hand #{game.GameCode}: Action no={action.No} has no player.");
                         return;
                     }
 
@@ -101,7 +101,7 @@ namespace DriveHUD.Importers.Builders.iPoker
 
             if (winnerName == null)
             {
-                LogProvider.Log.Warn(this, $"Couldn't adjust zone hand #{game.GameCode}: The name of the winner of #{game.GameCode} couldn't be determined.");
+                LogProvider.Log.Warn(this, $"Couldn't adjust fast fold hand #{game.GameCode}: The name of the winner of #{game.GameCode} couldn't be determined.");
                 return;
             }
 
@@ -109,7 +109,7 @@ namespace DriveHUD.Importers.Builders.iPoker
 
             if (winner == null)
             {
-                LogProvider.Log.Warn(this, $"Couldn't adjust zone hand #{game.GameCode}: Winner {winnerName} of #{game.GameCode} doesn't exist in the players list.");
+                LogProvider.Log.Warn(this, $"Couldn't adjust fast fold hand #{game.GameCode}: Winner {winnerName} of #{game.GameCode} doesn't exist in the players list.");
                 return;
             }
 
@@ -231,7 +231,7 @@ namespace DriveHUD.Importers.Builders.iPoker
 
             if (dealer == null)
             {
-                LogProvider.Log.Warn(this, $"Couldn't adjust zone hand #{game.GameCode}: Dealer isn't set in hand #{game.GameCode}.");
+                LogProvider.Log.Warn(this, $"Couldn't adjust fast fold hand #{game.GameCode}: Dealer isn't set in hand #{game.GameCode}.");
                 return null;
             }
 
@@ -343,7 +343,7 @@ namespace DriveHUD.Importers.Builders.iPoker
 
             if (playersSeatsGrouped.Any(x => x.Count() > 1))
             {
-                LogProvider.Log.Warn(this, $"Couldn't adjust zone hand #{game.GameCode}: Couldn't adjust winnings. Found 2+ players with the same name.");
+                LogProvider.Log.Warn(this, $"Couldn't adjust fast fold hand #{game.GameCode}: Couldn't adjust winnings. Found 2+ players with the same name.");
                 return;
             }
 

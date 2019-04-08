@@ -1,14 +1,9 @@
-﻿using Model.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Model.Settings;
-using System.Windows.Input;
-using DriveHUD.Common.Infrastructure.Base;
-using System.Collections.ObjectModel;
+﻿using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
+using Model.Settings;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Settings
 {

@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="HudNamedPipeBindingService.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -12,6 +12,7 @@
 
 using DriveHUD.Entities;
 using System;
+using System.Collections.Generic;
 
 namespace DriveHUD.HUD.Service
 {
@@ -36,9 +37,9 @@ namespace DriveHUD.HUD.Service
             _callback?.LoadLayout(layoutName, pokerSite, gameType, tableType);
         }
 
-        public static void TagHand(long gameNumber, short pokerSiteId, int tag)
+        public static void TagHands(IEnumerable<long> gameNumbers, short pokerSiteId, int tag)
         {
-            _callback?.TagHand(gameNumber, pokerSiteId, tag);
+            _callback?.TagHands(gameNumbers, pokerSiteId, tag);
         }
 
         public static void TreatTableAs(IntPtr handle, EnumTableType tableType)

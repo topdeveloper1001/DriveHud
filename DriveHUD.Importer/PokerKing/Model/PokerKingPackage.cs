@@ -33,6 +33,9 @@ namespace DriveHUD.Importers.PokerKing.Model
         [ProtoMember(5)]
         public byte[] Body { get; set; }
 
+        [ProtoMember(6)]
+        public bool IsFastFold { get; set; }
+
 #if DEBUG
         public override string ToString()
         {

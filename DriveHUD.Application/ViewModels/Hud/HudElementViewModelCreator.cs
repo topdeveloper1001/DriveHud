@@ -40,9 +40,11 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var layoutTools = GetHudLayoutTools(creationInfo);
 
-            var hudElementViewModel = new HudElementViewModel(layoutTools);
-            hudElementViewModel.Seat = creationInfo.SeatNumber;
-            hudElementViewModel.Opacity = creationInfo.HudLayoutInfo.Opacity;
+            var hudElementViewModel = new HudElementViewModel(layoutTools)
+            {
+                Seat = creationInfo.SeatNumber,
+                Opacity = creationInfo.HudLayoutInfo.Opacity
+            };
 
             try
             {

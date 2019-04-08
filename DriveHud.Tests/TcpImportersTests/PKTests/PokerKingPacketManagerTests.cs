@@ -127,6 +127,8 @@ namespace DriveHud.Tests.PKTests
         [TestCase(@"Packets\218.65.131.23.31001-192.168.1.101.2495.txt", @"Packets\218.65.131.23.31001-192.168.1.101.2495-pkgt.txt", "dd/MM/yyyy HH:mm:ss", "")]
         [TestCase(@"Packets\170.33.8.252.31001-192.168.0.109.51863.txt", @"Packets\170.33.8.252.31001-192.168.0.109.51863-pkgt.txt", "dd/MM/yyyy HH:mm:ss", "3631e0425ce3f883b9117ee154078b5a")]
         [TestCase(@"Packets\170.33.8.252.31001-192.168.0.100.8553.txt", @"Packets\170.33.8.252.31001-192.168.0.100.8553-pkgt.txt", "dd/MM/yyyy HH:mm:ss", "2b9a55c70c8c8e7300f24b0c2c540d1e")]
+        [TestCase(@"Packets\170.33.9.172.35201-192.168.0.105.62336.txt", @"Packets\170.33.9.172.35201-192.168.0.105.62336-pkgt.txt", "dd/MM/yyyy HH:mm:ss", "")]
+        [TestCase(@"Packets\192.168.0.105.62336-170.33.9.172.35201.txt", @"Packets\192.168.0.105.62336-170.33.9.172.35201-pkgt.txt", "dd/MM/yyyy HH:mm:ss", "")]
         public void TryParseTest(string file, string expectedPackageTypesFile, string dateFormat, string token)
         {
             var packets = ReadCapturedPackets(file, null);
@@ -239,6 +241,12 @@ namespace DriveHud.Tests.PKTests
                     break;
                 case PackageType.RequestHeartBeat:
                     AssertPackage<RequestHeartBeat>(package, capturedPacket);
+                    break;
+                case PackageType.NoticeQuickLeave:
+                    AssertPackage<NoticeQuickLeave>(package, capturedPacket);
+                    break;
+                case PackageType.RequestQuickFold:
+                    AssertPackage<RequestQuickFold>(package, capturedPacket);
                     break;
             }
         }

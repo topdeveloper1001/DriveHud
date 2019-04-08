@@ -12,6 +12,7 @@
 
 using Model.Data;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Model.Reports
 {
@@ -24,6 +25,6 @@ namespace Model.Reports
         /// Gets the population report 
         /// </summary>
         /// <returns>The list of <see cref="Indicators"/></returns>
-        IEnumerable<ReportIndicators> GetReport(bool forceRefresh);                       
+        IEnumerable<ReportIndicators> GetReport(bool forceRefresh, CancellationToken cancellationToken);
     }
 }

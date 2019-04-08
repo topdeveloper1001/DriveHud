@@ -1425,4 +1425,7 @@
   <data name="Reports_Column_CheckFoldFlopPfrOop" xml:space="preserve">
     <value>Check/fold flop when PFR OOP</value>
   </data>
+  <data name="Reports_Column_Rakeback" xml:space="preserve">
+    <value>Rakeback</value>
+  </data>
 </root>

@@ -260,12 +260,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         internal void InternalUpdate()
-        {
-            if (StorageModel.StatisticCollection == null)
-            {
-                return;
-            }
-
+        {           
             TournamentGraphViewModel?.Update();
 
             var playerTournaments = StorageModel.PlayerSelectedItem != null ?
@@ -278,8 +273,7 @@ namespace DriveHUD.Application.ViewModels
             TotalSTT = 0;
 
             var tournamentsOfStatistic = new HashSet<TournamentKey>(StorageModel
-                .FilteredTournamentPlayerStatistic
-                .ToArray()
+                .GetFilteredTournamentPlayerStatistic()                
                 .Select(x => new TournamentKey(x.PokersiteId, x.TournamentId))
                 .Distinct());
 

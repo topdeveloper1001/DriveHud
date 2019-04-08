@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="MTTPrize.cs" company="Ace Poker Solutions">
-// Copyright © 2018 Ace Poker Solutions. All Rights Reserved.
+// <copyright file="RequestQuickFold.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -10,13 +10,20 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Newtonsoft.Json;
+using ProtoBuf;
 
-namespace DriveHUD.Importers.Adda52.Model
+namespace DriveHUD.Importers.PokerKing.Model
 {
-    internal sealed class MTTPrize
+    [ProtoContract]
+    internal class RequestQuickFold
     {
-        [JsonProperty("tbl")]
-        public string TableName { get; set; }
+        [ProtoMember(1)]
+        public int RoomId { get; set; }
+
+        [ProtoMember(2)]
+        public bool CheckBet { get; set; }
+
+        [ProtoMember(3)]
+        public int KeepEnd { get; set; }
     }
 }

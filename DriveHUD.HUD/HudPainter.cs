@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------
 // <copyright file="HudPainter.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
 // controlled or licensed by Ace Poker Solutions and may not be used without 
@@ -16,11 +16,13 @@ using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
+using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
+using System.Windows.Forms;
 using System.Windows.Interop;
 using System.Windows.Threading;
 
@@ -41,13 +43,13 @@ namespace DriveHUD.HUD
         private static IntPtr createHook;
         private static IntPtr foregroundChangedHook;
 
-        //Create delegate instances to prevent GC collecting.
+        // Create delegate instances to prevent GC collecting.
         private static WinApi.WinEventDelegate moveCallback = WindowMoved;
         private static WinApi.WinEventDelegate closeCallback = WindowClosed;
         private static WinApi.WinEventDelegate createCallback = WindowMoved;
         private static WinApi.WinEventDelegate foregroundChangedCallback = ForegroundChanged;
 
-        private static readonly ReaderWriterLockSlim rwWindowsLock = new ReaderWriterLockSlim();
+        private static readonly ReaderWriterLockSlim rwWindowsLock = new ReaderWriterLockSlim();        
 
         public static void UpdateHud(HudLayout hudLayout)
         {
@@ -55,6 +57,8 @@ namespace DriveHUD.HUD
             {
                 return;
             }
+
+            InitializeHotkeys();
 
             var hwnd = new IntPtr(hudLayout.WindowId);
 
@@ -87,9 +91,7 @@ namespace DriveHUD.HUD
                 }
             }
 
-            uint processId = 0;
-
-            WinApi.GetWindowThreadProcessId(hwnd, out processId);
+            WinApi.GetWindowThreadProcessId(hwnd, out uint processId);
 
             if (processId == 0)
             {
@@ -98,7 +100,7 @@ namespace DriveHUD.HUD
 
             moveHook = WinApi.SetWinEventHook(WinApi.EVENT_SYSTEM_MOVESIZEEND, moveCallback, processId);
             closeHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_DESTROY, closeCallback, processId);
-            createHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_NAMECHANGE, createCallback, processId);
+            createHook = WinApi.SetWinEventHook(WinApi.EVENT_OBJECT_NAMECHANGE, createCallback, processId);            
 
             if (hudLayout.IsSpecialMode)
             {
@@ -126,7 +128,7 @@ namespace DriveHUD.HUD
             window.Window.Dispatcher.Invoke(() => window.Window.Close());
             windows.Remove(hwnd);
         }
-
+       
         private static void CreateHudWindow(IntPtr hwnd, HudLayout hudLayout)
         {
             var thread = new Thread(() =>
@@ -191,7 +193,8 @@ namespace DriveHUD.HUD
                         window.Refresh();
                     }
 
-                    if (hudLayout.PokerSite == Entities.EnumPokerSites.PokerBaazi)
+                    // workaround for unresponsive PB window after attaching HUD
+                    if (hudLayout.PokerSite == EnumPokerSites.PokerBaazi)
                     {
                         WinApi.GetWindowRect(hwnd, out RECT rct);
                         WinApi.SetWindowPos(hwnd, IntPtr.Zero, 0, 0, rct.Width + 1, rct.Height + 1, Swp.NOMOVE | Swp.NOZORDER | Swp.NOACTIVATE);
@@ -300,6 +303,34 @@ namespace DriveHUD.HUD
             dispatcherTimer.Start();
         }
 
+        private static HotkeyHelper hotkeyHelper;
+
+        private static void InitializeHotkeys()
+        {
+            if (hotkeyHelper != null)
+            {
+                return;
+            }
+
+            hotkeyHelper = new HotkeyHelper();
+
+            hotkeyHelper.RegisterKeyAction(Keys.T, HotkeyModifiers.Ctrl, () =>
+            {
+                var foregroundWindow = WinApi.GetForegroundWindow();
+
+                if ((foregroundWindow == IntPtr.Zero) ||
+                    !windows.TryGetValue(foregroundWindow, out HudWindowItem window) ||
+                    window.Window == null)
+                {
+                    return;
+                }
+
+                window.Window.Dispatcher.Invoke(() => window.Window.ViewModel?.TagLastHandsCommand.Execute(EnumHandTag.ForReview));
+            });
+
+            hotkeyHelper.SetHotkeys();
+        }
+
         #region Infrastructure
 
         private static void WindowMoved(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
@@ -332,12 +363,7 @@ namespace DriveHUD.HUD
 
         private static void WindowClosed(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
         {
-            if (idObject != 0 || idChild != 0)
-            {
-                return;
-            }
-
-            if (!windows.ContainsKey(hwnd))
+            if (idObject != 0 || idChild != 0 || !windows.ContainsKey(hwnd))
             {
                 return;
             }

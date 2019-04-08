@@ -70,6 +70,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to F) Flush: Flush on Board.
+        /// </summary>
+        internal static string Showdown_FlushOnBoard {
+            get {
+                return ResourceManager.GetString("Showdown_FlushOnBoard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to F) Flush: One Card High Flush.
         /// </summary>
         internal static string Showdown_FlushOneCardHigh {
@@ -142,6 +151,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to G) Full House: Full House on Board.
+        /// </summary>
+        internal static string Showdown_FullHouseOnBoard {
+            get {
+                return ResourceManager.GetString("Showdown_FullHouseOnBoard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to G) Full House: With 1 Hole Card – No Trips on Board.
         /// </summary>
         internal static string Showdown_FullHouseOneHoleCardNoTripsOnBoard {
@@ -183,6 +201,69 @@ namespace DriveHUD.Common.Resources {
         internal static string Showdown_HighCard {
             get {
                 return ResourceManager.GetString("Showdown_HighCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to H) Four of a Kind: Four of a Kind on Board.
+        /// </summary>
+        internal static string Showdown_OnBoardFourOfAKind {
+            get {
+                return ResourceManager.GetString("Showdown_OnBoardFourOfAKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to J) Royal Flush: Royal Flush on Board.
+        /// </summary>
+        internal static string Showdown_OnBoardRoyalFlush {
+            get {
+                return ResourceManager.GetString("Showdown_OnBoardRoyalFlush", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E) Straight: Straight on Board .
+        /// </summary>
+        internal static string Showdown_OnBoardStraight {
+            get {
+                return ResourceManager.GetString("Showdown_OnBoardStraight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to I) Straight Flush: Straight Flush on Board.
+        /// </summary>
+        internal static string Showdown_OnBoardStraightFlush {
+            get {
+                return ResourceManager.GetString("Showdown_OnBoardStraightFlush", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D) Three of a Kind: Trips on Board.
+        /// </summary>
+        internal static string Showdown_OnBoardThreeOfAKind {
+            get {
+                return ResourceManager.GetString("Showdown_OnBoardThreeOfAKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C) Two Pair: Two Pair on Board.
+        /// </summary>
+        internal static string Showdown_OnBoardTwoPair {
+            get {
+                return ResourceManager.GetString("Showdown_OnBoardTwoPair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to B) One Pair: Paired Board.
+        /// </summary>
+        internal static string Showdown_PairedBoard {
+            get {
+                return ResourceManager.GetString("Showdown_PairedBoard", resourceCulture);
             }
         }
         
@@ -268,7 +349,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to E) Straight:  One Card Nut Straight.
+        ///   Looks up a localized string similar to E) Straight: One Card Nut Straight.
         /// </summary>
         internal static string Showdown_StraightOneCardNut {
             get {
@@ -295,7 +376,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to E) Straight:  Two Card Nut Straight.
+        ///   Looks up a localized string similar to E) Straight: Two Card Nut Straight.
         /// </summary>
         internal static string Showdown_StraightTwoCardNut {
             get {
@@ -327,6 +408,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Showdown_ThreeOfAKindMiddleSet {
             get {
                 return ResourceManager.GetString("Showdown_ThreeOfAKindMiddleSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D) Three of a Kind: Set – Second Set.
+        /// </summary>
+        internal static string Showdown_ThreeOfAKindSecondSet {
+            get {
+                return ResourceManager.GetString("Showdown_ThreeOfAKindSecondSet", resourceCulture);
             }
         }
         

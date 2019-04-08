@@ -125,7 +125,7 @@ namespace DriveHUD.Importers.AndroidBase
                     PokerSite = Site,
                     WindowHandle = handHistoryData.WindowHandle.ToInt32(),
                     GameNumber = handHistoryData.HandHistory.HandId,
-                    Session = $"{handHistoryData.HandHistory.GameDescription.Identifier}{handHistoryData.Uuid}"
+                    Session = GetSession(handHistoryData)
                 };
 
                 if (mainGameInfo == null)
@@ -166,6 +166,11 @@ namespace DriveHUD.Importers.AndroidBase
 
                 ProcessHand(handHistoryText, gameInfo);
             }
+        }
+
+        protected virtual string GetSession(HandHistoryData handHistoryData)
+        {
+            return $"{handHistoryData.HandHistory.GameDescription.Identifier}{handHistoryData.Uuid}";
         }
 
         protected class HandHistoryData

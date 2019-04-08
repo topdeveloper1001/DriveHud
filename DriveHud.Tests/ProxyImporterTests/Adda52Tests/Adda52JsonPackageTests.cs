@@ -22,10 +22,8 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
     {
         [Test, TestCaseSource("TestAdd52Packages")]
         public void TryParseTest(string json, Adda52PackageType packageType)
-        {
-            var jsonBytes = Encoding.UTF8.GetBytes(json);
-
-            var result = Adda52JsonPackage.TryParse(jsonBytes, out Adda52JsonPackage jsonPackage);
+        {            
+            var result = Adda52JsonPackage.TryParse(json, out Adda52JsonPackage jsonPackage);
 
             Assert.IsTrue(result);
             Assert.That(jsonPackage.PackageType, Is.EqualTo(packageType));

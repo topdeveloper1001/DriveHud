@@ -12,8 +12,15 @@ namespace DriveHUD.Application.Views.PopupContainers
         public PopupContainerFiltersView()
         {
             InitializeComponent();
+            Loaded += PopupContainerFiltersView_Loaded;
         }
-    
+
+        private void PopupContainerFiltersView_Loaded(object sender, RoutedEventArgs e)
+        {
+            contentPresenter.Visibility = Visibility.Collapsed;
+            contentPresenter.Visibility = Visibility.Visible;
+        }
+
         private void UserControl_Unloaded(object sender, RoutedEventArgs e)
         {
             (DataContext as PopupContainerBaseFilterViewModel).RestoreDefaultFiltersState_Command.Execute(null);

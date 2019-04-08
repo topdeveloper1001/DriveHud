@@ -145,7 +145,6 @@ namespace DriveHUD.Application.ViewModels
 
             SwitchViewModel(EnumViewModelType.DashboardViewModel);
 
-            StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
             StorageModel.PlayerCollection = new ObservableCollection<IPlayer>(dataService.GetPlayersList());
             StorageModel.PlayerCollection.AddRange(dataService.GetAliasesList());
             StorageModel.PropertyChanged += OnStorageModelPropertyChanged;
@@ -249,13 +248,9 @@ namespace DriveHUD.Application.ViewModels
 
             AddHandTags(statistics);
 
-            if (statistics != null || statistics.Any())
+            if (statistics != null && statistics.Count > 0)
             {
-                StorageModel.StatisticCollection.Reset(statistics);
-            }
-            else
-            {
-                StorageModel.StatisticCollection.Clear();
+                StorageModel.SetStatisticCollection(statistics);
             }
 
             CreatePositionReport();
@@ -452,7 +447,7 @@ namespace DriveHUD.Application.ViewModels
         {
             if (args.IsUpdatePlayersCollection)
             {
-                StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
+                StorageModel.ResetStatisticCollection();
                 StorageModel.PlayerCollection = new ObservableCollection<IPlayer>(dataService.GetPlayersList());
                 StorageModel.PlayerCollection.AddRange(dataService.GetAliasesList());
 
@@ -584,7 +579,7 @@ namespace DriveHUD.Application.ViewModels
                 }
 
                 // if no handle available then we don't need to do anything with this data, because hud won't show up
-                if (e.GameInfo.WindowHandle == 0)
+                if (!e.DoNotUpdateHud && e.GameInfo.WindowHandle == 0)
                 {
                     if (e.GameInfo.GameFormat != GameFormat.Zone)
                     {
@@ -708,6 +703,17 @@ namespace DriveHUD.Application.ViewModels
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
 
+                var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
+
+                var hudElementCreationInfo = new HudElementViewModelCreationInfo
+                {
+                    GameType = gameInfo.EnumGameType,
+                    HudLayoutInfo = activeLayout,
+                    PokerSite = gameInfo.PokerSite
+                };
+
+                var emptySeats = Enumerable.Range(1, (int)gameInfo.TableType).ToList();
+
                 foreach (var player in players)
                 {
                     var playerCollectionItem = new PlayerCollectionItem
@@ -753,15 +759,9 @@ namespace DriveHUD.Application.ViewModels
 
                     #endregion
 
-                    var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
+                    emptySeats.Remove(player.SeatNumber);
 
-                    var hudElementCreationInfo = new HudElementViewModelCreationInfo
-                    {
-                        GameType = gameInfo.EnumGameType,
-                        HudLayoutInfo = activeLayout,
-                        PokerSite = gameInfo.PokerSite,
-                        SeatNumber = player.SeatNumber
-                    };
+                    hudElementCreationInfo.SeatNumber = player.SeatNumber;
 
                     playerHudContent.HudElement = hudElementCreator.Create(hudElementCreationInfo);
 
@@ -910,6 +910,18 @@ namespace DriveHUD.Application.ViewModels
                 };
 
                 ht.HudTrackConditionsMeter = trackConditionsInfo;
+
+                #region Add empty seats for rotation logic 
+
+                emptySeats.ForEach(emptySeat =>
+                {
+                    hudElementCreationInfo.SeatNumber = emptySeat;
+
+                    var emptySeatHudElement = hudElementCreator.Create(hudElementCreationInfo);
+                    ht.EmptySeatsViewModels.Add(emptySeatHudElement);
+                });
+
+                #endregion
 
                 byte[] serialized;
 
@@ -1633,6 +1645,7 @@ namespace DriveHUD.Application.ViewModels
                 }
 
                 hudTransmitter.Dispose();
+
                 importerSessionCacheService.End();
 
                 if (StorageModel.PlayerSelectedItem != null)

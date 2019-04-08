@@ -223,6 +223,33 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rotate HUD.
+        /// </summary>
+        internal static string Main_ContextMenu_RotateHUD {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_RotateHUD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rotate one seat position to the left.
+        /// </summary>
+        internal static string Main_ContextMenu_RotateHUDToLeft {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_RotateHUDToLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rotate one seat position to the right.
+        /// </summary>
+        internal static string Main_ContextMenu_RotateHUDToRight {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_RotateHUDToRight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save HUD Position.
         /// </summary>
         internal static string Main_ContextMenu_SaveHudPosition {
@@ -246,6 +273,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Main_ContextMenu_TagLastHand {
             get {
                 return ResourceManager.GetString("Main_ContextMenu_TagLastHand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tag Last 3 Hands.
+        /// </summary>
+        internal static string Main_ContextMenu_TagLastHands {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_TagLastHands", resourceCulture);
             }
         }
         

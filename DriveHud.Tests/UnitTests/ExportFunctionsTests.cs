@@ -354,7 +354,9 @@ namespace DriveHud.Tests.UnitTests
         {
             return text
                 .Replace("Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker HUD[/url] and Database Software",
-                "Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software");
+                "Hand History driven straight to this forum with DriveHUD [url=http://drivehud.com/?t=hh]Poker Tracking[/url] Software")
+                .Replace("Hand History driven straight to this forum with DriveHUD Poker HUD and Database Software",
+                "Hand History driven straight to this forum with DriveHUD Poker Tracking Software");
         }
 
         public abstract class TestIndicatorsAbstract : ExportIndicators

@@ -19,6 +19,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Model.Reports
@@ -28,7 +29,7 @@ namespace Model.Reports
     {
         public abstract bool IsTournament { get; }
 
-        public virtual ObservableCollection<ReportIndicators> Create(List<Playerstatistic> statistics, bool forceRefresh = false)
+        public virtual ObservableCollection<ReportIndicators> Create(List<Playerstatistic> statistics, CancellationToken cancellationToken, bool forceRefresh = false)
         {
             using (var perfomance = new PerformanceMonitor($"Report.{GetType().Name} build time", LogProvider.Log.IsAdvanced, this))
             {
@@ -51,9 +52,19 @@ namespace Model.Reports
                 {
                     while (runningTasks.Count < maxThreads && splittedStatistic.Count > 0)
                     {
+                        if (cancellationToken.IsCancellationRequested)
+                        {
+                            break;
+                        }
+
                         var statisticChunk = splittedStatistic.Dequeue();
 
-                        runningTasks.Add(Task.Run(() => ProcessChunkedStatistic(statisticChunk, chunkedIndicators)));
+                        runningTasks.Add(Task.Run(() => ProcessChunkedStatistic(statisticChunk, chunkedIndicators, cancellationToken)));
+                    }
+
+                    if (cancellationToken.IsCancellationRequested)
+                    {
+                        break;
                     }
 
                     var completedTask = Task.WhenAny(runningTasks).Result;
@@ -63,7 +74,7 @@ namespace Model.Reports
 
                 Task.WhenAll(runningTasks).Wait();
 
-                report.AddRange(OrderResult(CombineChunkedIndicators(chunkedIndicators)));
+                report.AddRange(OrderResult(CombineChunkedIndicators(chunkedIndicators, cancellationToken)));
 
                 return report;
             }
@@ -80,9 +91,9 @@ namespace Model.Reports
                 (statistics.Count + maxThreads - 1) / maxThreads;
         }
 
-        protected abstract List<T> CombineChunkedIndicators(BlockingCollection<T> chunkedIndicators);
+        protected abstract List<T> CombineChunkedIndicators(BlockingCollection<T> chunkedIndicators, CancellationToken cancellationToken);
 
-        protected abstract void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<T> chunkedIndicators);
+        protected abstract void ProcessChunkedStatistic(List<Playerstatistic> statistics, BlockingCollection<T> chunkedIndicators, CancellationToken cancellationToken);
 
         protected virtual IEnumerable<T> OrderResult(IEnumerable<T> reports)
         {

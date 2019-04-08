@@ -17,6 +17,7 @@ using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
+using DriveHUD.HUD.Service;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Data;
@@ -270,6 +271,105 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
 
             return layout;
+        }
+
+        /// <summary>
+        /// Updates existing HUD using data from the specified <see cref="HudLayoutContract"/>
+        /// </summary>
+        /// <param name="hudLayoutContract">Contrat to update existing HUD</param>
+        public void Save(HudLayoutContract hudLayoutContract)
+        {
+            if (hudLayoutContract == null)
+            {
+                LogProvider.Log.Warn(this, "hudLayoutContract is null");
+                return;
+            }
+
+            try
+            {
+                var existingHudLayout = GetLayout(hudLayoutContract.LayoutName);
+
+                if (existingHudLayout == null)
+                {
+                    LogProvider.Log.Info(this, $"Could not find layout {hudLayoutContract.LayoutName}");
+                    return;
+                }
+
+                if (existingHudLayout.TrackMeterPositions == null)
+                {
+                    existingHudLayout.TrackMeterPositions = new List<HudPositionsInfo>();
+                }
+
+                if (hudLayoutContract.TrackMeterPosition != null)
+                {
+                    var trackMeterPosition = existingHudLayout.TrackMeterPositions
+                        .FirstOrDefault(x => x.GameType == hudLayoutContract.GameType && x.PokerSite == hudLayoutContract.PokerSite);
+
+                    if (trackMeterPosition == null)
+                    {
+                        trackMeterPosition = new HudPositionsInfo
+                        {
+                            GameType = hudLayoutContract.GameType,
+                            PokerSite = hudLayoutContract.PokerSite
+                        };
+
+                        existingHudLayout.TrackMeterPositions.Add(trackMeterPosition);
+                    }
+
+                    trackMeterPosition.HudPositions.Clear();
+
+                    trackMeterPosition.HudPositions.Add(new HudPositionInfo
+                    {
+                        Position = new System.Windows.Point(hudLayoutContract.TrackMeterPosition.X,
+                            hudLayoutContract.TrackMeterPosition.Y)
+                    });
+                }
+
+                HudPositionsInfo existingHudPositions = null;
+
+                var tools = existingHudLayout.LayoutTools.OfType<HudLayoutNonPopupTool>().ToArray();
+
+                foreach (var tool in tools)
+                {
+                    existingHudPositions = tool.Positions.FirstOrDefault(p => p.PokerSite == hudLayoutContract.PokerSite && p.GameType == hudLayoutContract.GameType);
+
+                    if (existingHudPositions == null)
+                    {
+                        existingHudPositions = new HudPositionsInfo
+                        {
+                            GameType = hudLayoutContract.GameType,
+                            PokerSite = hudLayoutContract.PokerSite,
+                            HudPositions = new List<HudPositionInfo>()
+                        };
+
+                        tool.Positions.Add(existingHudPositions);
+                    }
+
+                    // update positions 
+                    foreach (var hudPosition in hudLayoutContract.HudPositions.Where(x => x.Id == tool.Id))
+                    {
+                        var hudPositionForUpdate = existingHudPositions.HudPositions.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber);
+
+                        if (hudPositionForUpdate == null)
+                        {
+                            hudPositionForUpdate = new HudPositionInfo
+                            {
+                                Seat = hudPosition.SeatNumber
+                            };
+
+                            existingHudPositions.HudPositions.Add(hudPositionForUpdate);
+                        }
+
+                        hudPositionForUpdate.Position = hudPosition.Position;
+                    }
+                }
+
+                Save(existingHudLayout);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Could not save layout #{hudLayoutContract.LayoutName} for {hudLayoutContract.PokerSite}, {hudLayoutContract.TableType}, {hudLayoutContract.GameType}", e);
+            }
         }
 
         /// <summary>

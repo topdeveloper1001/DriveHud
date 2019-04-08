@@ -17,6 +17,7 @@ using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
 using DriveHUD.HUD.Service;
@@ -26,6 +27,7 @@ using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -41,6 +43,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private HudLayout layout;
         private Dictionary<HudToolKey, Point> panelOffsets;
         private readonly Dispatcher dispatcher;
+        private FixedSizeList<long> lastHands;
 
         public HudWindowViewModel(Dispatcher dispatcher)
         {
@@ -54,16 +57,20 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             ExportHandCommand = new RelayCommand(ExportHand);
             TagHandCommand = new RelayCommand(TagHand);
+            TagLastHandsCommand = new RelayCommand(TagLastHands);
             ReplayLastHandCommand = new RelayCommand(ReplayLastHand);
             LoadLayoutCommand = new RelayCommand(LoadLayout);
             ApplyPositionsCommand = new RelayCommand(ApplyPositions);
             TreatAsCommand = new RelayCommand(DoTreatAs);
+            RotateHUDToRightCommand = new RelayCommand(() => RotateHud(true));
+            RotateHUDToLeftCommand = new RelayCommand(() => RotateHud(false));
 
             panelOffsets = new Dictionary<HudToolKey, Point>();
 
             var tableTypes = Enum.GetValues(typeof(EnumTableType)).Cast<byte>().ToArray();
 
             treatAs = new ObservableCollection<byte>(tableTypes);
+            lastHands = new FixedSizeList<long>(3);
         }
 
         #region Properties
@@ -198,6 +205,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public ICommand TagHandCommand { get; private set; }
 
+        public ICommand TagLastHandsCommand { get; private set; }
+
         public ICommand ReplayLastHandCommand { get; private set; }
 
         public ICommand LoadLayoutCommand { get; private set; }
@@ -205,6 +214,10 @@ namespace DriveHUD.Application.ViewModels.Hud
         public ICommand ApplyPositionsCommand { get; private set; }
 
         public ICommand TreatAsCommand { get; private set; }
+
+        public ICommand RotateHUDToRightCommand { get; private set; }
+
+        public ICommand RotateHUDToLeftCommand { get; private set; }
 
         #endregion
 
@@ -226,9 +239,10 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             var toolKey = HudToolKey.BuildKey(toolViewModel);
 
-            if (toolViewModel != null && panelOffsets.ContainsKey(toolKey))
+            if (toolViewModel != null &&
+                (toolViewModel.OffsetX.HasValue || toolViewModel.OffsetY.HasValue))
             {
-                panelOffsets[toolKey] = new Point(toolViewModel.OffsetX, toolViewModel.OffsetY);
+                panelOffsets[toolKey] = new Point(toolViewModel.OffsetX ?? 0, toolViewModel.OffsetY ?? 0);
             }
         }
 
@@ -238,8 +252,18 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 if (layout != null)
                 {
+                    if (TableType.HasValue && TableType != layout.TableType)
+                    {
+                        PanelOffsets.Clear();
+                    }
+
                     this.layout = layout;
                     LayoutName = layout.LayoutName;
+
+                    if (!lastHands.Contains(layout.GameNumber))
+                    {
+                        lastHands.Add(layout.GameNumber);
+                    }
 
                     if (layout.AvailableLayouts != null)
                     {
@@ -272,22 +296,34 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
-            await Task.Run(() =>
+            await Task.Run(() => TagHands(new[] { layout.GameNumber }, obj));
+        }
+
+        private async void TagLastHands(object obj)
+        {
+            if (layout == null || obj == null)
             {
-                using (var readToken = readerWriterLock.Read())
+                return;
+            }
+
+            await Task.Run(() => TagHands(lastHands, obj));
+        }
+
+        private void TagHands(IEnumerable<long> handNumbers, object handTagObject)
+        {
+            using (var readToken = readerWriterLock.Read())
+            {
+                EnumHandTag tag = EnumHandTag.None;
+
+                if (!Enum.TryParse(handTagObject.ToString(), out tag))
                 {
-                    EnumHandTag tag = EnumHandTag.None;
-
-                    if (!Enum.TryParse(obj.ToString(), out tag))
-                    {
-                        return;
-                    }
-
-                    LogProvider.Log.Info($"Tagging hand {layout.GameNumber} for {obj} [{layout.PokerSite}]");
-
-                    HudNamedPipeBindingService.TagHand(layout.GameNumber, (short)layout.PokerSite, (int)tag);
+                    return;
                 }
-            });
+
+                LogProvider.Log.Info($"Tagging hand(s) {string.Join(", ", handNumbers)} for {handTagObject} [{layout.PokerSite}]");
+
+                HudNamedPipeBindingService.TagHands(handNumbers, (short)layout.PokerSite, (int)tag);
+            }
         }
 
         private async void ExportHand(object obj)
@@ -390,8 +426,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             var nonPopupToolViewModels = baseHUDPlayer.HudElement.Tools.OfType<IHudNonPopupToolViewModel>();
 
             var toolOffsetsDictionary = (from nonPopupToolViewModel in nonPopupToolViewModels
-                                         let toolOffsetX = nonPopupToolViewModel.OffsetX != 0 ? nonPopupToolViewModel.OffsetX : nonPopupToolViewModel.Position.X
-                                         let toolOffsetY = nonPopupToolViewModel.OffsetY != 0 ? nonPopupToolViewModel.OffsetY : nonPopupToolViewModel.Position.Y
+                                         let toolOffsetX = nonPopupToolViewModel.OffsetX ?? nonPopupToolViewModel.Position.X
+                                         let toolOffsetY = nonPopupToolViewModel.OffsetY ?? nonPopupToolViewModel.Position.Y
                                          let shiftX = toolOffsetX - baseSeatPosition.X
                                          let shiftY = toolOffsetY - baseSeatPosition.Y
                                          select new { ToolId = nonPopupToolViewModel.Id, ShiftX = shiftX, ShiftY = shiftY }).ToDictionary(x => x.ToolId);
@@ -416,14 +452,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     var offsetX = seatPosition.X + tool.ShiftX;
                     var offsetY = seatPosition.Y + tool.ShiftY;
 
-                    if (!PanelOffsets.ContainsKey(toolKey))
-                    {
-                        PanelOffsets.Add(toolKey, new Point(offsetX, offsetY));
-                    }
-                    else
-                    {
-                        PanelOffsets[toolKey] = new Point(offsetX, offsetY);
-                    }
+                    PanelOffsets[toolKey] = new Point(offsetX, offsetY);
                 }
             }
 
@@ -442,6 +471,95 @@ namespace DriveHUD.Application.ViewModels.Hud
                     }
                 });
             });
+
+            RefreshHud?.Invoke();
+        }
+
+        private void RotateHud(bool clockwise)
+        {
+            if (!TableType.HasValue)
+            {
+                return;
+            }
+
+            try
+            {
+                var tableSize = (int)TableType;
+
+                var toolsBySeats = layout.ListHUDPlayer
+                   .SelectMany(x => x.HudElement.Tools)
+                   .OfType<IHudNonPopupToolViewModel>()
+                   .Concat(layout.EmptySeatsViewModels
+                       .SelectMany(x => x.Tools)
+                       .OfType<IHudNonPopupToolViewModel>())
+                   .GroupBy(x => x.Parent.Seat)
+                   .ToDictionary(x => x.Key, x => x.ToArray());
+
+                var toolsById = toolsBySeats.Values
+                   .SelectMany(x => x)
+                   .GroupBy(x => x.Id, x => new
+                   {
+                       OffsetX = x.OffsetX ?? x.Position.X,
+                       OffsetY = x.OffsetY ?? x.Position.Y,
+                       x.Parent.Seat
+                   })
+                   .ToDictionary(x => x.Key, x => x.GroupBy(p => p.Seat).ToDictionary(p => p.Key, p => p.FirstOrDefault()));             
+
+                // need to rotate all positions even if there is no player on position
+                for (var seat = 1; seat <= tableSize; seat++)
+                {
+                    var newSeat = clockwise ? seat + 1 : seat - 1;
+
+                    if (newSeat > tableSize)
+                    {
+                        newSeat = 1;
+                    }
+                    else if (newSeat < 1)
+                    {
+                        newSeat = tableSize;
+                    }
+
+                    var nonPopupTools = toolsBySeats[seat];
+
+                    foreach (var nonPopupTool in nonPopupTools)
+                    {
+                        if (!toolsById.ContainsKey(nonPopupTool.Id) ||
+                            !toolsById[nonPopupTool.Id].ContainsKey(newSeat))
+                        {
+                            continue;
+                        }
+
+                        var newOffsets = toolsById[nonPopupTool.Id][newSeat];
+
+                        if (newOffsets == null)
+                        {
+                            continue;
+                        }
+
+                        nonPopupTool.OffsetX = newOffsets.OffsetX;
+                        nonPopupTool.OffsetY = newOffsets.OffsetY;
+
+                        var toolKey = new HudToolKey
+                        {
+                            Id = nonPopupTool.Id,
+                            Seat = seat
+                        };
+
+                        if (!PanelOffsets.ContainsKey(toolKey))
+                        {
+                            PanelOffsets.Add(toolKey, new Point(newOffsets.OffsetX, newOffsets.OffsetY));
+                        }
+                        else
+                        {
+                            PanelOffsets[toolKey] = new Point(newOffsets.OffsetX, newOffsets.OffsetY);
+                        }
+                    }
+                }             
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Failed to rotate hud for table. [{WindowHandle}]", e);
+            }
 
             RefreshHud?.Invoke();
         }
@@ -472,6 +590,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     var tableType = (EnumTableType)obj;
                     TableType = tableType;
+
+                    PanelOffsets.Clear();
+
                     HudNamedPipeBindingService.TreatTableAs(WindowHandle, tableType);
                 }
             });

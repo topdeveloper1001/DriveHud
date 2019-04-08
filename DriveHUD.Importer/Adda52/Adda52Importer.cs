@@ -68,8 +68,7 @@ namespace DriveHUD.Importers.Adda52
 
         public bool IsMatch(Request request)
         {
-            return request.RequestUri.Port == 8893 &&
-                request.RequestUri.Host.Contains("adda52.com") &&
+            return request.RequestUri.Host.Contains("adda52.com") &&
                 request.RequestUri.AbsolutePath.Contains("websocket");
         }
 
@@ -134,6 +133,8 @@ namespace DriveHUD.Importers.Adda52
         {
             var packetManager = ServiceLocator.Current.GetInstance<IPacketManager<Adda52Package>>();
             var handBuilder = ServiceLocator.Current.GetInstance<IAdda52HandBuilder>();
+            var packetManagerFails = 0;
+            var jsonPackageTryParseFails = 0;
 
             while (!cancellationTokenSource.IsCancellationRequested && !IsDisabled())
             {
@@ -144,9 +145,18 @@ namespace DriveHUD.Importers.Adda52
                         Task.Delay(NoDataDelay).Wait();
                         continue;
                     }
+#if DEBUG
+                    // LogPacket(capturedPacket, ".log");
+#endif
 
                     if (!packetManager.TryParse(capturedPacket, out IList<Adda52Package> packages))
                     {
+                        if (IsAdvancedLogEnabled && packetManagerFails < 10)
+                        {
+                            LogProvider.Log.Warn(this, $"Failed to parse packet: '{Convert.ToBase64String(capturedPacket.Bytes)}' [{SiteString}]");
+                            packetManagerFails++;
+                        }
+
                         continue;
                     }
 
@@ -159,6 +169,12 @@ namespace DriveHUD.Importers.Adda52
 
                         if (!Adda52JsonPackage.TryParse(package.Bytes, out Adda52JsonPackage jsonPackage))
                         {
+                            if (IsAdvancedLogEnabled && jsonPackageTryParseFails < 10)
+                            {
+                                LogProvider.Log.Warn(this, $"Failed to parse json from packet: '{Convert.ToBase64String(capturedPacket.Bytes)}' [{SiteString}]");
+                                jsonPackageTryParseFails++;
+                            }
+
                             continue;
                         }
 
@@ -192,7 +208,7 @@ namespace DriveHUD.Importers.Adda52
                 }
                 catch (Exception e)
                 {
-                    LogProvider.Log.Error(this, $"Failed to process captured packet.", e);
+                    LogProvider.Log.Error(this, $"Failed to process captured packet. [{SiteString}]", e);
                 }
             }
         }
@@ -268,7 +284,10 @@ namespace DriveHUD.Importers.Adda52
         {
             try
             {
-                var contentJson = Encoding.UTF8.GetString(package.Bytes);
+                if (!Adda52JsonPackage.TryParseJsonData(package.Bytes, out string contentJson))
+                {
+                    return;
+                }
 
                 var ignoreList = new[] { "game.keepAlive", "game.Message", "game.usercount", "game.avgstack", "game.account" };
 

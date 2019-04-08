@@ -245,6 +245,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     if (gameType.Equals("FL")) { return GameType.FixedLimitOmahaHiLo; }
                     if (gameType.Equals("NL")) { return GameType.NoLimitOmahaHiLo; }
                     return GameType.PotLimitOmahaHiLo;
+                case "(Six Plus Hold'em)":
+                    return GameType.NoLimitHoldem;
                 default:
                     throw new UnrecognizedGameTypeException(line, "GameType: " + game);
             }
@@ -511,13 +513,20 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         protected override TableType ParseTableType(string[] handLines)
         {
             List<TableTypeDescription> descriptions = new List<TableTypeDescription>();
-            if (handLines[1].Contains("(JP)"))
+
+            if (handLines[1].ContainsIgnoreCase("(JP)"))
             {
                 descriptions.Add(TableTypeDescription.Jackpot);
             }
-            if (handLines[1].Contains(" CAP "))
+
+            if (handLines[1].ContainsIgnoreCase(" CAP "))
             {
                 descriptions.Add(TableTypeDescription.Cap);
+            }
+
+            if (handLines[1].ContainsIgnoreCase("Six Plus"))
+            {
+                descriptions.Add(TableTypeDescription.ShortDeck);
             }
 
             return descriptions.Count == 0

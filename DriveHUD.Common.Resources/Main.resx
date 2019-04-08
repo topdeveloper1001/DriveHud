@@ -171,6 +171,15 @@
   <data name="Main_ContextMenu_ReplayLastHand" xml:space="preserve">
     <value>Replay Last Hand</value>
   </data>
+  <data name="Main_ContextMenu_RotateHUD" xml:space="preserve">
+    <value>Rotate HUD</value>
+  </data>
+  <data name="Main_ContextMenu_RotateHUDToLeft" xml:space="preserve">
+    <value>Rotate one seat position to the left</value>
+  </data>
+  <data name="Main_ContextMenu_RotateHUDToRight" xml:space="preserve">
+    <value>Rotate one seat position to the right</value>
+  </data>
   <data name="Main_ContextMenu_SaveHudPosition" xml:space="preserve">
     <value>Save HUD Position</value>
   </data>
@@ -179,6 +188,9 @@
   </data>
   <data name="Main_ContextMenu_TagLastHand" xml:space="preserve">
     <value>Tag Last Hand</value>
+  </data>
+  <data name="Main_ContextMenu_TagLastHands" xml:space="preserve">
+    <value>Tag Last 3 Hands</value>
   </data>
   <data name="Main_ContextMenu_TreatAs" xml:space="preserve">
     <value>Treat HUD as</value>

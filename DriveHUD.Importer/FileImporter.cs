@@ -1266,7 +1266,7 @@ namespace DriveHUD.Importers
                 }
 
                 var prizePool = buyinInCents * totalPlayers;
-
+           
                 var prizeRatesDictionary = TournamentSettings.GetWinningsMultiplier((EnumPokerSites)siteId,
                     sttType == STTTypes.Beginner,
                     tournamentName.IndexOf("BOUNTY", StringComparison.OrdinalIgnoreCase) >= 0);
@@ -1277,6 +1277,11 @@ namespace DriveHUD.Importers
                 }
 
                 var prizeRates = prizeRatesDictionary[totalPlayers];
+
+                if (siteNetwork == EnumPokerNetworks.PokerStars)
+                {
+                    return CalculateSngResultAsPokerStars(prizeRates, finishPosition, prizePool);
+                }
 
                 if (finishPosition <= prizeRates.Count())
                 {
@@ -1316,6 +1321,35 @@ namespace DriveHUD.Importers
             {
                 LogProvider.Log.Error(this, "Could not build auto notes", e);
             }
+        }
+
+        private int CalculateSngResultAsPokerStars(decimal[] prizeRates, int finishPosition, int prizePool)
+        {
+            if (prizeRates.Length < finishPosition)
+            {
+                return 0;
+            }
+
+            var tempPrize = 0;
+
+            for (var i = prizeRates.Length - 1; i > 0; i--)
+            {
+                var prize = (int)(prizeRates[i] * prizePool);
+
+                if (i == finishPosition - 1)
+                {
+                    return prize;
+                }
+
+                tempPrize += prize;
+            }
+
+            if (finishPosition == 1)
+            {
+                return prizePool - tempPrize;
+            }
+
+            return 0;
         }
     }
 }

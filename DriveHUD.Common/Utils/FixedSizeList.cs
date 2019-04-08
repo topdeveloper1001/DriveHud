@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Common.Utils
 {
@@ -16,16 +13,16 @@ namespace DriveHUD.Common.Utils
 
         public FixedSizeList(int capacity = 10)
         {
-            this.Capacity = capacity;
+            Capacity = capacity;
         }
 
         public new void Add(T elem)
         {
             base.Add(elem);
 
-            while (this.Count > Capacity)
+            while (Count > Capacity)
             {
-                this.RemoveAt(0);
+                RemoveAt(0);
             }
         }
 
@@ -36,8 +33,8 @@ namespace DriveHUD.Common.Utils
         {
             T removedItem = this[oldIndex];
 
-            base.RemoveAt(oldIndex);
-            base.Insert(newIndex, removedItem);
+            RemoveAt(oldIndex);
+            Insert(newIndex, removedItem);
         }
 
         public new int Capacity
@@ -56,6 +53,5 @@ namespace DriveHUD.Common.Utils
                 _capacity = value;
             }
         }
-
     }
 }

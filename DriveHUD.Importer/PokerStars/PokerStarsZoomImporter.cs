@@ -31,7 +31,7 @@ namespace DriveHUD.Importers.PokerStars
     {
         private const string ProcessName = "PokerStars";
 
-        private const string WindowClassName = "PokerStarsTableFrameClass";
+        private static readonly string[] WindowClassNames = new[] { "PokerStarsTableFrameClass", "GLFW" };
 
         private const string AuditFileFilter = "*.dat";
 
@@ -311,7 +311,8 @@ namespace DriveHUD.Importers.PokerStars
                         var windowClassName = WinApi.GetClassName(hWnd);
 
                         if (!string.IsNullOrEmpty(title) &&
-                            windowClassName.Equals(WindowClassName, StringComparison.OrdinalIgnoreCase) &&
+                            !string.IsNullOrEmpty(windowClassName) &&
+                            WindowClassNames.Any(x => windowClassName.ContainsIgnoreCase(x)) &&
                             (!tableName.Contains("#") && !title.Contains("#") || tableName.Contains("#")) &&
                             title.Replace(" Table ", " ").ContainsIgnoreCase(tableName) && !title.ContainsIgnoreCase(" Lobby") &&
                             title.ContainsIgnoreCase("Logged In"))

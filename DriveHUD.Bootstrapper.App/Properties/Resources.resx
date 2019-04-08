@@ -273,4 +273,10 @@
   <data name="Common_FinalView_Launch" xml:space="preserve">
     <value>Launch</value>
   </data>
+  <data name="Common_FinalView_InstallSucceededWithReboot" xml:space="preserve">
+    <value>Install completed. Reboot is required.</value>
+  </data>
+  <data name="Common_FinalView_Reboot" xml:space="preserve">
+    <value>Reboot</value>
+  </data>
 </root>

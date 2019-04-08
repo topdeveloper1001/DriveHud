@@ -28,7 +28,7 @@ namespace Model.Filters
         {
             return new ObservableCollection<FilterDropDownModel>()
             {
-                new FilterDropDownModel("Create Filter", EnumFilterDropDown.FilterCreate),
+                new FilterDropDownModel("Load / Create Filter", EnumFilterDropDown.FilterCreate),
                 new FilterDropDownModel("Filter Today", EnumFilterDropDown.FilterToday),
                 new FilterDropDownModel("Filter This Week", EnumFilterDropDown.FilterThisWeek),
                 new FilterDropDownModel("Filter This Month", EnumFilterDropDown.FilterThisMonth),

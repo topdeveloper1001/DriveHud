@@ -33,7 +33,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
     {
         private const string SourceJsonFile = "Source.json";
         private const string ExpectedResultFile = "Result.xml";
-        private const int destinationPort = 31001;
+        private static readonly int[] destinationPorts = new[] { 31001, 35001, 35101, 35201 };
 
         private const int identifier = 7777;
 
@@ -85,12 +85,15 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
             AssertionUtils.AssertHandHistory(actual, expected);
         }
 
-        [TestCase("multiple-accounts-raw-1")]
-        [TestCase("multiple-accounts-raw-2")]
-        [TestCase("multiple-accounts-raw-3")]
-        [TestCase("multiple-accounts-raw-4")]
-        [TestCase("multiple-accounts-raw-5")]
-        public void MultipleTryBuildTest(string folder)
+        [TestCase("multiple-accounts-raw-1", 8)]
+        [TestCase("multiple-accounts-raw-2", 33)]
+        [TestCase("multiple-accounts-raw-3", 55)]
+        [TestCase("multiple-accounts-raw-4", 158)]
+        [TestCase("multiple-accounts-raw-5", 2)]
+        [TestCase("multiple-accounts-raw-6", 6)]
+        [TestCase("multiple-accounts-raw-7", 8)]
+        [TestCase("multiple-accounts-raw-8", 5)]
+        public void MultipleTryBuildTest(string folder, int expectedTotalHands)
         {
             var testFolder = Path.Combine(TestDataFolder, folder);
 
@@ -120,8 +123,13 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
                     continue;
                 }
 
+                var isFastFold = PKImporterHelper.IsFastFoldPort(capturedPacket.Destination.Port) ||
+                     PKImporterHelper.IsFastFoldPort(capturedPacket.Source.Port);
+
                 foreach (var package in packages)
                 {
+                    package.IsFastFold = isFastFold;
+
                     if (!PKImporterStub.IsAllowedPackage(package))
                     {
                         continue;
@@ -140,7 +148,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
                         continue;
                     }
 
-                    var port = capturedPacket.Destination.Port != destinationPort ? capturedPacket.Destination.Port : capturedPacket.Source.Port;
+                    var port = destinationPorts.Contains(capturedPacket.Destination.Port) ? capturedPacket.Destination.Port : capturedPacket.Source.Port;
 
                     if (package.PackageType == PackageType.RequestLeaveRoom)
                     {
@@ -155,6 +163,26 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
                         continue;
                     }
 
+                    if (isFastFold && package.PackageType == PackageType.NoticeQuickLeave)
+                    {
+                        debugPKImporter.ParsePackage<NoticeQuickLeave>(package,
+                            body =>
+                            {
+                                handBuilder.CleanFastFoldRooms(package, port, out List<HandHistory> fastFoldHandHistories);
+
+                                foreach (var fastFoldHandHistory in fastFoldHandHistories)
+                                {
+                                    LogProvider.Log.Info($"Hand #{fastFoldHandHistory.HandId} user #{package.UserId} room #{package.RoomId}");
+                                    handHistories.Add(fastFoldHandHistory);
+                                }
+
+                                LogProvider.Log.Info($"User {package.UserId} left room {body.RoomId} (Fast Fold).");
+                            },
+                            () => LogProvider.Log.Info($"User {package.UserId} left room {package.RoomId} (Fast Fold)."));
+
+                        continue;
+                    }
+
                     if (handBuilder.TryBuild(package, port, out HandHistory handHistory))
                     {
                         handHistories.Add(handHistory);
@@ -165,7 +193,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
 
             WriteHandHistoriesToFile(handHistories);
 
-            Assert.IsTrue(handHistories.Count > 0);
+            Assert.That(handHistories.Count, Is.EqualTo(expectedTotalHands));
         }
 
         private void WriteHandHistoriesToFile(IEnumerable<HandHistory> handHistories)
@@ -376,7 +404,7 @@ namespace DriveHud.Tests.TcpImportersTests.PKTests
 
             public void LogPackage(CapturedPacket capturedPacket, PokerKingPackage package)
             {
-                var port = capturedPacket.Destination.Port != destinationPort ? capturedPacket.Destination.Port : capturedPacket.Source.Port;
+                var port = destinationPorts.Contains(capturedPacket.Destination.Port) ? capturedPacket.Destination.Port : capturedPacket.Source.Port;
 
                 if (!loggers.TryGetValue(port, out DebugPKLogger logger))
                 {

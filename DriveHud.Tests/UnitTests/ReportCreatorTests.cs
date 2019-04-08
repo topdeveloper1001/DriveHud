@@ -19,6 +19,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -44,8 +45,10 @@ namespace DriveHud.Tests.UnitTests
 
                 var sessionsReportCreator = new SessionsReportCreator();
 
+                var canellationTokenSource = new CancellationTokenSource();
+
                 var report = sessionsReportCreator
-                    .Create(playerStatistic)
+                    .Create(playerStatistic, canellationTokenSource.Token)
                     .OrderBy(x => x.SessionStart)
                     .ToArray();
 

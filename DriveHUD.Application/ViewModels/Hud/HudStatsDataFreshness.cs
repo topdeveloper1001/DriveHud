@@ -15,6 +15,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     public enum HudStatsDataFreshness : int
     {
         All = 0,
+        Last1Day= 1,
         Last30Days = 30,
         Last60Days = 60,
         Last90Days = 90,

@@ -40,7 +40,7 @@ namespace DriveHUD.Importers.Builders.iPoker
             { HandActionType.BET, ActionType.Bet },
             { HandActionType.RAISE, ActionType.RaiseTo },
             { HandActionType.ALL_IN, ActionType.AllIn },
-            { HandActionType.STRADDLE, ActionType.RaiseTo }
+            { HandActionType.STRADDLE, ActionType.BB }
         };
 
         private static readonly HashSet<Street> ValidStreets = new HashSet<Street>
@@ -57,6 +57,7 @@ namespace DriveHUD.Importers.Builders.iPoker
             HandActionType.SMALL_BLIND,
             HandActionType.BIG_BLIND,
             HandActionType.POSTS,
+            HandActionType.STRADDLE,
         };
 
         private static readonly Dictionary<Street, CardsType> StreetCardsTypeMapping = new Dictionary<Street, CardsType>
@@ -306,7 +307,8 @@ namespace DriveHUD.Importers.Builders.iPoker
                 {
                      HandActionType.SMALL_BLIND,
                      HandActionType.BIG_BLIND,
-                     HandActionType.POSTS
+                     HandActionType.POSTS,
+                     HandActionType.STRADDLE
                 };
 
                 var players = history.Players.ToList();

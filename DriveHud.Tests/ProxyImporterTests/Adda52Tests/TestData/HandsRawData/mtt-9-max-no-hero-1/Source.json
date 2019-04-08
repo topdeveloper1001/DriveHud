@@ -132,7 +132,7 @@
           "roomName": "MTTLobby#71683",
           "useConverter": false,
           "MttTableInfo": {
-            "mttPrizes": [
+            "mttTables": [
               {
                 "lt": 8404,
                 "pl": 8,
@@ -1870,7 +1870,7 @@
           "roomName": "MTTLobby#71683",
           "useConverter": false,
           "MttTableInfo": {
-            "mttPrizes": [
+            "mttTables": [
               {
                 "lt": 6956,
                 "pl": 8,
@@ -2681,7 +2681,7 @@
           "roomName": "MTTLobby#71683",
           "useConverter": false,
           "MttTableInfo": {
-            "mttPrizes": [
+            "mttTables": [
               {
                 "lt": 6956,
                 "pl": 8,

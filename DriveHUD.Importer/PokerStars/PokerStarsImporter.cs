@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
@@ -31,6 +32,8 @@ namespace DriveHUD.Importers.PokerStars
     {
         private readonly static string[] processNames = new[] { "PokerStars" };
 
+        private readonly static string[] windowClassNames = new[] { "PokerStarsTableFrameClass", "GLFW" };
+
         protected override string[] ProcessNames
         {
             get
@@ -47,11 +50,11 @@ namespace DriveHUD.Importers.PokerStars
             }
         }
 
-        protected virtual string WindowClassName
+        protected virtual string[] WindowClassNames
         {
             get
             {
-                return "PokerStarsTableFrameClass";
+                return windowClassNames;
             }
         }
 
@@ -105,7 +108,7 @@ namespace DriveHUD.Importers.PokerStars
         {
             if (string.IsNullOrWhiteSpace(title) || parsingResult == null ||
                parsingResult.Source == null || parsingResult.Source.GameDescription == null || string.IsNullOrEmpty(parsingResult.Source.TableName) ||
-               (!string.IsNullOrEmpty(WindowClassName) && !WindowClassName.Equals(WinApi.GetClassName(handle), StringComparison.OrdinalIgnoreCase)))
+               !TryMatchWindowClass(handle, out string windowClassName))
             {
                 return false;
             }
@@ -145,10 +148,20 @@ namespace DriveHUD.Importers.PokerStars
 
             if (IsAdvancedLogEnabled)
             {
-                LogProvider.Log.Info($"Check if window '{title}' [{handle}] matches '{tableName}': {result}. [{SiteString}]");
+                LogProvider.Log.Info($"Check if window '{title}' [{handle}, '{windowClassName}'] matches '{tableName}': {result}. [{SiteString}]");
             }
 
             return result;
+        }
+
+        protected virtual bool TryMatchWindowClass(IntPtr handle, out string outWindowClassName)
+        {
+            var windowClassName = WinApi.GetClassName(handle);
+
+            outWindowClassName = windowClassName;
+
+            return !string.IsNullOrEmpty(windowClassName) &&
+                WindowClassNames.Any(x => windowClassName.ContainsIgnoreCase(x));
         }
 
         protected override void PublishImportedResults(DataImportedEventArgs args)

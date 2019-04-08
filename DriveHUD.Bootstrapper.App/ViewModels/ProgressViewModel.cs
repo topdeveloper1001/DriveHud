@@ -212,6 +212,12 @@ namespace DriveHUD.Bootstrapper.App.ViewModels
 
         private void Bootstrapper_ExecuteComplete(object sender, ExecutePackageCompleteEventArgs e)
         {
+            if (e.Restart == ApplyRestart.RestartInitiated ||
+               e.Restart == ApplyRestart.RestartRequired)
+            {
+                MainViewModel.IsRestartRequired = true;
+            }
+
             HandleCancellation(e);
         }
 

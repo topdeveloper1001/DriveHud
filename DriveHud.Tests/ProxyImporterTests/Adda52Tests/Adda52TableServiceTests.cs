@@ -102,7 +102,7 @@ namespace DriveHud.Tests.ProxyImporterTests.Adda52Tests
                             GameType.NoLimitHoldem,
                             Limit.FromSmallBlindBigBlind(1, 2, Currency.INR),
                             TableType.FromTableTypeDescriptions(TableTypeDescription.Regular),
-                            SeatType.FromMaxPlayers(9), null)
+                            SeatType.FromMaxPlayers(6), null)
                         {
                             CashBuyInHigh = 80
                         }

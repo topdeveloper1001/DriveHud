@@ -20,12 +20,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.AndroidBase
 {
     internal class EmulatorService : IEmulatorService
     {
-        private const int exitTimeout = 7000;
+        private const int exitTimeout = 10000;
 
         private readonly Dictionary<int, TableWindow> windows = new Dictionary<int, TableWindow>();
 
@@ -120,9 +121,21 @@ namespace DriveHUD.Importers.AndroidBase
 
                 if (expectedNumberOfDevices > devices.Length)
                 {
-                    LogProvider.Log.Warn(this, $"Expected number of devices {expectedNumberOfDevices} doesn't match actual number {devices}. Trying to kill server and run command again.");
+                    LogProvider.Log.Warn(this, $"Expected number of devices {expectedNumberOfDevices} doesn't match actual number {devices.Length}. Trying to kill server and run command again.");
                     AdbKillServer(adb);
-                    devices = GetAdbDevices(adb);
+                    Task.Delay(5000).Wait();                    
+
+                    var repeatDevices = GetAdbDevices(adb);
+
+                    if (repeatDevices.Length != expectedNumberOfDevices)
+                    {
+                        LogProvider.Log.Warn(this, $"Expected number of devices {expectedNumberOfDevices} still doesn't match actual number {devices.Length}.");
+                        devices = devices.Concat(repeatDevices).Distinct().ToArray();
+                    }
+                    else
+                    {
+                        devices = repeatDevices;
+                    }
                 }
 
                 var result = new List<string>();
@@ -187,24 +200,34 @@ namespace DriveHUD.Importers.AndroidBase
 
                 using (var process = new Process())
                 {
-                    process.StartInfo = processInfo;
-                    process.StartInfo.RedirectStandardOutput = true;
-                    process.Start();
-
-                    var reader = process.StandardOutput;
-
                     var devices = new List<string>();
                     var outputLines = new List<string>();
 
-                    while (!process.StandardOutput.EndOfStream)
-                    {
-                        var line = process.StandardOutput.ReadLine();
+                    process.StartInfo = processInfo;
+                    process.StartInfo.RedirectStandardOutput = true;
+                    process.StartInfo.RedirectStandardError = true;
 
-                        if (!string.IsNullOrEmpty(line))
+                    process.OutputDataReceived += (s, a) =>
+                    {
+                        if (!string.IsNullOrEmpty(a.Data))
                         {
-                            outputLines.Add(line);
+                            outputLines.Add(a.Data);
                         }
-                    }
+                    };
+
+                    process.ErrorDataReceived += (s, a) =>
+                    {
+                        if (!string.IsNullOrEmpty(a.Data))
+                        {
+                            outputLines.Add(a.Data);
+                        }
+                    };
+
+                    process.Start();
+                    process.BeginOutputReadLine();
+                    process.BeginErrorReadLine();
+
+                    process.WaitForExit(exitTimeout);
 
                     if (outputLines.Count == 0)
                     {
@@ -226,8 +249,6 @@ namespace DriveHUD.Importers.AndroidBase
                             devices.Add(device);
                         }
                     }
-
-                    process.WaitForExit(exitTimeout);
 
                     return devices.ToArray();
                 }

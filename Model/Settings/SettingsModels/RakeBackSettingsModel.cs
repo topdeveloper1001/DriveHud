@@ -1,8 +1,18 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="RakeBackSettingsModel.cs" company="Ace Poker Solutions">
+// Copyright © 2019 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Model.Settings
@@ -39,6 +49,8 @@ namespace Model.Settings
         private string _player;
         private decimal _percentage;
         private DateTime _dateBegan;
+        private short _pokerSite;
+        private int _playerId;
 
         [XmlAttribute]
         public DateTime DateBegan
@@ -72,6 +84,30 @@ namespace Model.Settings
             {
                 if (_player == value) return;
                 _player = value;
+                OnPropertyChanged(nameof(Player));
+            }
+        }
+
+        [XmlAttribute]
+        public short PokerSite
+        {
+            get { return _pokerSite; }
+            set
+            {
+                if (_pokerSite == value) return;
+                _pokerSite = value;
+                OnPropertyChanged(nameof(Player));
+            }
+        }
+
+        [XmlAttribute]
+        public int PlayerId
+        {
+            get { return _playerId; }
+            set
+            {
+                if (_playerId == value) return;
+                _playerId = value;
                 OnPropertyChanged(nameof(Player));
             }
         }

@@ -73,6 +73,7 @@
     <Compile Include="BootstrapperApp.cs" />
     <Compile Include="Common\BurnInstallationState.cs" />
     <Compile Include="Common\PageType.cs" />
+    <Compile Include="Common\TokenAdjuster.cs" />
     <Compile Include="Common\UpdateState.cs" />
     <Compile Include="Common\Variables.cs" />
     <Compile Include="Common\VersionStatus.cs" />

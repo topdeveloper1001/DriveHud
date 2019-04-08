@@ -25,6 +25,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Reflection;
 using DriveHUD.Common.Wpf.Converters;
 using DriveHUD.Entities;
+using DriveHUD.HUD.Service;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using Microsoft.Practices.ServiceLocation;
@@ -35,8 +36,10 @@ using Model.Interfaces;
 using Model.Stats;
 using ReactiveUI;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
@@ -179,11 +182,14 @@ namespace DriveHUD.Application.TableConfigurators
             }
         }
 
-        private Dictionary<string, HudIndicators> playerIndicators = new Dictionary<string, HudIndicators>();
+        private ConcurrentDictionary<string, HudIndicators> playerIndicators = new ConcurrentDictionary<string, HudIndicators>();
         private HashSet<Stat> heatMapStats;
 
         private async void InitializeHUD(HudDragCanvas dgCanvas, ReplayerViewModel viewModel)
         {
+            var gameNumber = viewModel.CurrentHand.GameNumber;
+            var pokerSite = viewModel.CurrentHand.PokersiteId;
+
             ClearHUD(dgCanvas);
 
             viewModel.IsLoadingHUD = true;
@@ -238,9 +244,19 @@ namespace DriveHUD.Application.TableConfigurators
                 }
             });
 
+            viewModel.SaveHUDPositionsCommand = new RelayCommand(obj => SaveHUDPositions(dgCanvas, viewModel));
+            viewModel.RotateHUDToLeftCommand = new RelayCommand(() => RotateHUD(false, tableType, dgCanvas));
+            viewModel.RotateHUDToRightCommand = new RelayCommand(() => RotateHUD(true, tableType, dgCanvas));
+
             heatMapStats = new HashSet<Stat>(activeLayout.GetHeatMapStats());
 
             await Task.Run(() => LoadIndicators(seats, viewModel, heatMapStats));
+
+            if (gameNumber != viewModel.CurrentHand.GameNumber ||
+                pokerSite != viewModel.CurrentHand.PokersiteId)
+            {
+                return;
+            }
 
             LoadHUD(dgCanvas, viewModel, activeLayout);
 
@@ -251,11 +267,15 @@ namespace DriveHUD.Application.TableConfigurators
         {
             var tasksToLoad = new List<Task>();
 
+            var selectedPlayer = storageModel.PlayerSelectedItem;
+
+            var players = viewModel.PlayersCollection.Select(x => x.Name).ToArray();
+
             for (var i = 0; i < seats; i++)
             {
-                var player = viewModel.PlayersCollection[i];
+                var player = players[i];
 
-                if (playerIndicators.ContainsKey(player.Name))
+                if (playerIndicators.ContainsKey(player))
                 {
                     continue;
                 }
@@ -265,29 +285,32 @@ namespace DriveHUD.Application.TableConfigurators
                 // read data from statistic
                 var taskToReadPlayerStats = Task.Run(() =>
                 {
-                    if (player.Name == storageModel.PlayerSelectedItem.Name &&
-                        (short?)storageModel.PlayerSelectedItem.PokerSite == viewModel.CurrentHand.PokersiteId)
+                    if (selectedPlayer != null &&
+                        player == selectedPlayer.Name &&
+                        (short?)selectedPlayer.PokerSite == viewModel.CurrentHand.PokersiteId)
                     {
-                        storageModel.StatisticCollection.ToList()
-                           .Where(stat => (stat.PokersiteId == (short)viewModel.CurrentGame.GameDescription.Site) &&
+                        storageModel
+                            .GetStatisticCollection()
+                            .Where(stat => (stat.PokersiteId == (short)viewModel.CurrentGame.GameDescription.Site) &&
                                 stat.IsTourney == viewModel.CurrentGame.GameDescription.IsTournament &&
                                 GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, viewModel.CurrentGame.GameDescription.GameType))
-                           .ForEach(stat => playerData.AddStatistic(stat));
+                            .ForEach(stat => playerData.AddStatistic(stat));
 
+                        playerIndicators.AddOrUpdate(player, playerData, (key, old) => playerData);
                         return;
                     }
 
                     playerStatisticRepository
-                       .GetPlayerStatistic(player.Name, (short)viewModel.CurrentGame.GameDescription.Site)
+                       .GetPlayerStatistic(player, (short)viewModel.CurrentGame.GameDescription.Site)
                        .Where(stat => (stat.PokersiteId == (short)viewModel.CurrentGame.GameDescription.Site) &&
                            stat.IsTourney == viewModel.CurrentGame.GameDescription.IsTournament &&
                            GameTypeUtils.CompareGameType((GameType)stat.PokergametypeId, viewModel.CurrentGame.GameDescription.GameType))
                        .ForEach(stat => playerData.AddStatistic(stat));
+
+                    playerIndicators.AddOrUpdate(player, playerData, (key, old) => playerData);
                 });
 
                 tasksToLoad.Add(taskToReadPlayerStats);
-
-                playerIndicators.Add(player.Name, playerData);
             }
 
             Task.WhenAll(tasksToLoad).Wait();
@@ -301,7 +324,10 @@ namespace DriveHUD.Application.TableConfigurators
             }
 
             dgCanvas.UpdateLayout();
+            EmptySeats.Clear();
         }
+
+        private readonly List<HudElementViewModel> EmptySeats = new List<HudElementViewModel>();
 
         private void LoadHUD(HudDragCanvas dgCanvas, ReplayerViewModel viewModel, HudLayoutInfoV2 activeLayout)
         {
@@ -323,12 +349,31 @@ namespace DriveHUD.Application.TableConfigurators
 
             var hudElements = new List<HudElementViewModel>();
 
+            var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
+
+            var hudElementCreationInfo = new HudElementViewModelCreationInfo
+            {
+                GameType = EnumGameType.CashHoldem,
+                HudLayoutInfo = activeLayout,
+                PokerSite = ReplayerPokerSite
+            };
+
             for (var i = 0; i < seats; i++)
             {
                 var replayerPlayer = viewModel.PlayersCollection[i];
 
+                hudElementCreationInfo.SeatNumber = i + 1;
+
+                if ((int)activeLayout.TableType < hudElementCreationInfo.SeatNumber)
+                {
+                    continue;
+                }
+
+                var hudElement = hudElementCreator.Create(hudElementCreationInfo);
+
                 if (string.IsNullOrEmpty(replayerPlayer.Name))
                 {
+                    if (hudElement != null) EmptySeats.Add(hudElement);
                     continue;
                 }
 
@@ -336,20 +381,9 @@ namespace DriveHUD.Application.TableConfigurators
 
                 if (player == null)
                 {
+                    if (hudElement != null) EmptySeats.Add(hudElement);
                     continue;
                 }
-
-                var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
-
-                var hudElementCreationInfo = new HudElementViewModelCreationInfo
-                {
-                    GameType = EnumGameType.CashHoldem,
-                    HudLayoutInfo = activeLayout,
-                    PokerSite = ReplayerPokerSite,
-                    SeatNumber = i + 1
-                };
-
-                var hudElement = hudElementCreator.Create(hudElementCreationInfo);
 
                 if (hudElement == null ||
                     !playerIndicators.TryGetValue(replayerPlayer.Name, out HudIndicators playerData))
@@ -460,6 +494,143 @@ namespace DriveHUD.Application.TableConfigurators
             }
 
             hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout);
+        }
+
+        private void SaveHUDPositions(HudDragCanvas dgCanvas, ReplayerViewModel viewModel)
+        {
+            var layout = hudLayoutsService.GetLayout(viewModel.LayoutName);
+
+            if (layout == null)
+            {
+                LogProvider.Log.Warn($"Failed to save HUD positions. Could not find layout '{viewModel.LayoutName}'");
+                return;
+            }
+
+            try
+            {
+                var hudLayoutContract = new HudLayoutContract
+                {
+                    LayoutName = viewModel.LayoutName,
+                    GameType = EnumGameType.CashHoldem,
+                    PokerSite = ReplayerPokerSite,
+                    TableType = layout.TableType,
+                    HudPositions = new List<HudPositionContract>()
+                };
+
+                // clone is needed
+                var toolViewModels = dgCanvas.Children.OfType<FrameworkElement>()
+                    .Where(x => x != null && (x.DataContext is IHudNonPopupToolViewModel))
+                    .Select(x => x.DataContext as HudBaseToolViewModel)
+                    .Concat(EmptySeats
+                        .SelectMany(x => x.Tools)
+                        .OfType<IHudNonPopupToolViewModel>()
+                        .Cast<HudBaseToolViewModel>());
+
+                foreach (var toolViewModel in toolViewModels)
+                {
+                    var seatNumber = toolViewModel.Parent != null ? toolViewModel.Parent.Seat : 1;
+
+                    var xPos = toolViewModel.OffsetX ?? toolViewModel.Position.X;
+                    var yPos = toolViewModel.OffsetY ?? toolViewModel.Position.Y;
+
+                    hudLayoutContract.HudPositions.Add(new HudPositionContract
+                    {
+                        Id = toolViewModel.Id,
+                        Position = new Point(xPos, yPos),
+                        SeatNumber = seatNumber
+                    });
+                }
+
+                hudLayoutsService.Save(hudLayoutContract);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Failed to save HUD positions in replayer.", e);
+            }
+        }
+
+        private void RotateHUD(bool clockwise, EnumTableType tableType, HudDragCanvas dgCanvas)
+        {
+            try
+            {
+                var tableSize = (int)tableType;
+
+                var toolsBySeats = dgCanvas.Children.OfType<FrameworkElement>()
+                       .Where(x => x != null && (x.DataContext is IHudNonPopupToolViewModel))
+                       .Select(x => new
+                       {
+                           Tool = x.DataContext as HudBaseToolViewModel,
+                           Panel = x
+                       })
+                       .Concat(EmptySeats
+                           .SelectMany(x => x.Tools)
+                           .OfType<IHudNonPopupToolViewModel>()
+                           .Cast<HudBaseToolViewModel>()
+                           .Select(x => new
+                           {
+                               Tool = x as HudBaseToolViewModel,
+                               Panel = (FrameworkElement)null
+                           }))
+                       .GroupBy(x => x.Tool.Parent.Seat)
+                       .ToDictionary(x => x.Key, x => x.ToArray());
+
+                var toolsById = toolsBySeats.Values
+                    .SelectMany(x => x)
+                    .GroupBy(x => x.Tool.Id, x => new
+                    {
+                        OffsetX = x.Tool.OffsetX ?? x.Tool.Position.X,
+                        OffsetY = x.Tool.OffsetY ?? x.Tool.Position.Y,
+                        x.Tool.Parent.Seat
+                    })
+                    .ToDictionary(x => x.Key, x => x.GroupBy(p => p.Seat).ToDictionary(p => p.Key, p => p.FirstOrDefault()));
+
+                for (var seat = 1; seat <= tableSize; seat++)
+                {
+                    var newSeat = clockwise ? seat + 1 : seat - 1;
+
+                    if (newSeat > tableSize)
+                    {
+                        newSeat = 1;
+                    }
+                    else if (newSeat < 1)
+                    {
+                        newSeat = tableSize;
+                    }
+
+                    var nonPopupTools = toolsBySeats[seat];
+
+                    foreach (var nonPopupTool in nonPopupTools)
+                    {
+                        if (!toolsById.ContainsKey(nonPopupTool.Tool.Id) ||
+                            !toolsById[nonPopupTool.Tool.Id].ContainsKey(newSeat))
+                        {
+                            continue;
+                        }
+
+                        var newOffsets = toolsById[nonPopupTool.Tool.Id][newSeat];
+
+                        if (newOffsets == null)
+                        {
+                            continue;
+                        }
+
+                        nonPopupTool.Tool.OffsetX = newOffsets.OffsetX;
+                        nonPopupTool.Tool.OffsetY = newOffsets.OffsetY;
+
+                        if (nonPopupTool.Panel == null)
+                        {
+                            continue;
+                        }
+
+                        Canvas.SetLeft(nonPopupTool.Panel, newOffsets.OffsetX);
+                        Canvas.SetTop(nonPopupTool.Panel, newOffsets.OffsetY);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Failed to rotate HUD positions in replayer.", e);
+            }
         }
 
         private void AddPotPlayerLabel(RadDiagram diagram, ReplayerPlayerViewModel player, double x, double y)
@@ -575,7 +746,7 @@ namespace DriveHUD.Application.TableConfigurators
             if (storageModel.PlayerSelectedItem.Name == replayerPlayer.Name &&
                 (short?)storageModel.PlayerSelectedItem.PokerSite == replayerViewModel.CurrentHand.PokersiteId)
             {
-                hudIndicators = new HudLightIndicators(storageModel.StatisticCollection.ToList());
+                hudIndicators = new HudLightIndicators(storageModel.GetStatisticCollection());
             }
             else
             {

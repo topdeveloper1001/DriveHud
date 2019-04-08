@@ -457,6 +457,7 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         [TestCase(@"DURKADURDUR-DidThreeBetIP-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 1)]
         [TestCase(@"DURKADURDUR-DidNotThreeBetIP-1.txt", EnumPokerSites.PokerStars, "DURKADURDUR", 0)]
         [TestCase(@"Holdem6Plus-General-1.xml", EnumPokerSites.PokerKing, "2097148", 1)]
+        [TestCase(@"Hero-IsOutOfPosition.xml", EnumPokerSites.Ignition, "Hero", 0)]
 
         public void PreflopIPIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
@@ -1576,6 +1577,19 @@ namespace DriveHud.Tests.IntegrationTests.Importers
         public void CouldFoldTo3BetInBTNvs3BetSBIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
         {
             AssertThatStatIsCalculated(x => x.CouldFoldTo3BetInBTNvs3BetSB, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"TotalRake-1.txt", EnumPokerSites.PokerStars, "AceKanone", 0)]
+        [TestCase(@"TotalRake-2.xml", EnumPokerSites.Ignition, "Hero", 0)]
+        public void TotalRakeInCentsIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.Totalrakeincents, fileName, pokerSite, playerName, expected);
+        }
+
+        [TestCase(@"HeroTest-CouldColdCall-1.txt", EnumPokerSites.PokerStars, "HeroTest", 1)]
+        public void CouldColdCallIsCalculated(string fileName, EnumPokerSites pokerSite, string playerName, int expected)
+        {
+            AssertThatStatIsCalculated(x => x.Couldcoldcall, fileName, pokerSite, playerName, expected);
         }
 
         #endregion

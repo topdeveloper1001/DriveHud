@@ -34,6 +34,7 @@ namespace Model.Export
                 case EnumPokerSites.PPPoker:
                 case EnumPokerSites.PokerKing:
                 case EnumPokerSites.PokerMaster:
+                case EnumPokerSites.RedDragon:
                     return DriveHUD;
                 case EnumPokerSites.AmericasCardroom:
                 case EnumPokerSites.BlackChipPoker:

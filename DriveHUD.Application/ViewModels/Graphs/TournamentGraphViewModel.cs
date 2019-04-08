@@ -124,8 +124,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
             var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player?.PlayerIds);
 
             var tournamentsOfStatistic = new HashSet<TournamentKey>(StorageModel
-                .FilteredTournamentPlayerStatistic
-                .ToArray()
+                .GetFilteredTournamentPlayerStatistic()
                 .Select(x => new TournamentKey(x.PokersiteId, x.TournamentId))
                 .Distinct());
 
@@ -202,7 +201,7 @@ namespace DriveHUD.Application.ViewModels.Graphs
                 .GroupBy(x => x.BuildKey()).ToDictionary(x => x.Key, x => x.FirstOrDefault());
 
             var filteredTournamentPlayerStatistic = StorageModel
-                .FilteredTournamentPlayerStatistic
+                .GetFilteredTournamentPlayerStatistic()
                 .Where(x => groupedTournaments.ContainsKey(new TournamentKey(x.PokersiteId, x.TournamentId)))
                 .ToArray();
 
